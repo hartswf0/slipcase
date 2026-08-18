@@ -12,18 +12,18 @@ for c in cases_data:
 
 print(f"Loaded {len(all_notes)} zettels across {len(cases_data)} slipcases.")
 
-# 2. Update map-02.html with clean WYSIWYG reading & no duplicate title slips
+# 2. Update map-02.html with clean WYSIWYG reading
+os.system(f"python3 {os.path.join(BASE_DIR, 'build_map_html.py')}")
+
+# 3. Update map-02.html with 1244 cards
 map02_path = os.path.join(BASE_DIR, "map-02.html")
 if os.path.exists(map02_path):
     with open(map02_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Strip existing window.ZETTEL_DATA block if present
     content = re.sub(r'\n?\s*<script>\s*window\.ZETTEL_DATA\s*=\s*\[.*?\];\s*</script>', '', content, flags=re.DOTALL)
-
     data_block = f"\n    <script>\n    window.ZETTEL_DATA = {json.dumps(all_notes)};\n    </script>\n"
 
-    # Inject data before main script
     if "<!-- =========================================================\n     DATA" in content:
         parts = content.split("<!-- =========================================================\n     DATA", 1)
         subparts = parts[1].split("<script>", 1)
@@ -33,18 +33,16 @@ if os.path.exists(map02_path):
 
     with open(map02_path, "w", encoding="utf-8") as f:
         f.write(new_content)
-    print("Updated map-02.html with 1,244 cards and clean WYSIWYG layout.")
+    print("Updated map-02.html with 1,244 cards.")
 
-# 3. Update box.html with tactile click/haptic, hidden search, and clean WYSIWYG flow
+# 4. Update box.html with tactile click/haptic, hidden search, and clean WYSIWYG flow
 box_path = os.path.join(BASE_DIR, "box.html")
 if os.path.exists(box_path):
     with open(box_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Strip existing window.ZETTEL_DATA block
     content = re.sub(r'\n?\s*<script>\s*window\.ZETTEL_DATA\s*=\s*\[.*?\];\s*</script>', '', content, flags=re.DOTALL)
 
-    # Hide search slip in CSS for zero typing finger-less play
     if "#searchSlip {" in content and "display: none !important;" not in content:
         content = content.replace("#searchSlip {", "#searchSlip {\n            display: none !important;\n")
 
@@ -56,7 +54,6 @@ if os.path.exists(box_path):
     else:
         new_content = content + data_block
 
-    # Add audio click & haptic synthesizer helper into script
     sound_script = """
         /* Audio & Haptic Feedback Synthesizer for Finger-less Play */
         const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -88,7 +85,7 @@ if os.path.exists(box_path):
         f.write(new_content)
     print("Updated box.html with 1,244 cards, zero-typing tactile clicks, and clean flow.")
 
-# 4. Rebuild index.html and slipcase-reader-v3.html
+# 5. Rebuild index.html and slipcase-reader-v3.html
 os.system(f"python3 {os.path.join(BASE_DIR, 'build_index_html.py')}")
 os.system(f"python3 {os.path.join(BASE_DIR, 'build_reader_v3.py')}")
 print("All repository research instruments compiled and synchronized!")

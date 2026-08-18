@@ -4010,34 +4010,10 @@
                 if (
                     picked.kind === "SLIP"
                 ) {
-
-                    const now =
-                        performance.now();
-
-
-                    const isDouble =
-                        lastClick.id === picked.id &&
-                        now - lastClick.time < 320;
-
-
-                    lastClick = {
-                        id: picked.id,
-                        time: now
-                    };
-
-
-                    if (isDouble) {
-
-                        openReader(
-                            picked.id
-                        );
-
-                    } else {
-
-                        toggleSlipSelection(
-                            picked.id
-                        );
-                    }
+                    openReader(
+                        picked.id
+                    );
+                    if (navigator.vibrate) navigator.vibrate(10);
                 }
             }
         );
