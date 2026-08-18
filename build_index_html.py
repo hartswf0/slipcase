@@ -199,12 +199,11 @@ for folder_idx, folder in enumerate(folders):
         'specials': specials
     })
 
-# Build Relational Graph Model (Cases of Cases, Slips of Slips)
+# Build Relational Graph Model
 graph_nodes = []
 graph_links = []
 case_relation_matrix = {}
 
-# 1. Add 31 Case Hub Nodes
 for c_idx, c in enumerate(cases_data):
     graph_nodes.append({
         'id': f"case_{c['id']}",
@@ -218,7 +217,6 @@ for c_idx, c in enumerate(cases_data):
         'r': 18
     })
 
-# 2. Add 1,244 Slip Nodes & Containment Links
 for card in all_notes:
     graph_nodes.append({
         'id': f"slip_{card['id']}",
@@ -231,7 +229,6 @@ for card in all_notes:
         'card_idx': card['num'] - 1,
         'r': 6
     })
-    # Case -> Slip link
     graph_links.append({
         'source': f"case_{card['case_id']}",
         'target': f"slip_{card['id']}",
@@ -239,7 +236,6 @@ for card in all_notes:
         'w': 1
     })
 
-# 3. Add Verified Card-to-Card Links & Cross-Case Bridges
 for card in all_notes:
     for link_target in card['links']:
         target_card = cards_lookup.get(link_target.lower())
@@ -254,7 +250,6 @@ for card in all_notes:
                 pair = tuple(sorted([card['case_id'], target_card['case_id']]))
                 case_relation_matrix[pair] = case_relation_matrix.get(pair, 0) + 1
 
-# 4. Add Cross-Case Bridges
 for (c1, c2), count in case_relation_matrix.items():
     graph_links.append({
         'source': f"case_{c1}",
@@ -270,7 +265,7 @@ graph_data = {
     'meta_clusters': META_CLUSTERS
 }
 
-# Save standalone JSON datasets
+# Save standalone JSON dataset
 with open(os.path.join(BASE_DIR, 'slipcases.json'), 'w') as f:
     json.dump(cases_data, f, indent=2)
 
@@ -330,7 +325,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--blue); outl
   flex-direction: column;
 }
 
-/* -- LOADER: The mark draws itself, slips rise -- */
+/* Loader */
 #loader {
   position: fixed;
   inset: 0;
@@ -353,7 +348,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--blue); outl
 @keyframes rise { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fade { to { opacity: 1; } }
 
-/* -- MASTER HEADER -- */
+/* Header */
 header {
   flex: 0 0 auto;
   padding: calc(8px + var(--top)) 16px 8px;
@@ -457,7 +452,7 @@ header {
   border-color: var(--blue);
 }
 
-/* -- METHODOLOGY TRIAD NAVIGATION (PRESERVE · RELATE · RETURN) -- */
+/* Nav Bar */
 .methodology-bar {
   flex: 0 0 auto;
   height: 44px;
@@ -516,7 +511,7 @@ header {
   margin: 0 6px;
 }
 
-/* -- SUB-TOOLBAR (Filter Chips for LINES) -- */
+/* Sub-toolbar */
 .subtoolbar {
   flex: 0 0 auto;
   height: 36px;
@@ -550,7 +545,7 @@ header {
   border-color: var(--ink);
 }
 
-/* -- MAIN STAGE CONTAINER -- */
+/* Viewport */
 main {
   flex: 1 1 auto;
   position: relative;
@@ -569,9 +564,7 @@ main {
 .pane.active { display: block; }
 .pane.no-scroll { overflow: hidden; }
 
-/* =========================================================
-   1. TABLE VIEW (INFINITE 2D VOID SPATIAL WORKBENCH)
-   ========================================================= */
+/* 1. TABLE */
 #tableStage {
   position: absolute;
   inset: 0;
@@ -602,7 +595,6 @@ main {
 .reg .h { width: 34px; height: 1px; }
 .reg .v { width: 1px; height: 34px; }
 
-/* SLIP CARD on TABLE */
 .card {
   position: absolute;
   width: 280px;
@@ -663,7 +655,6 @@ main {
 .card[data-k="head"] .cBody { font-family: var(--sans); font-weight: 640; letter-spacing: -.015em; font-size: 14.5px; line-height: 1.34; }
 .card[data-k="code"] .cBody { font-family: var(--mono); font-size: 10.5px; line-height: 1.55; background: var(--field); }
 
-/* Table Floating Toolbars */
 .table-bar {
   position: absolute;
   z-index: 60;
@@ -671,18 +662,8 @@ main {
   gap: 6px;
   align-items: center;
 }
-#tableTopbar {
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  justify-content: space-between;
-}
-#tableBotbar {
-  bottom: calc(10px + var(--bottom));
-  left: 10px;
-  right: 10px;
-  justify-content: space-between;
-}
+#tableTopbar { top: 10px; left: 10px; right: 10px; justify-content: space-between; }
+#tableBotbar { bottom: calc(10px + var(--bottom)); left: 10px; right: 10px; justify-content: space-between; }
 .tgrp {
   display: flex;
   gap: 6px;
@@ -723,9 +704,7 @@ main {
   max-width: 44vw;
 }
 
-/* =========================================================
-   2. FIELD VIEW (NON-SCROLLING UNIT-PER-SCREEN & SLIP DECK)
-   ========================================================= */
+/* 2. FIELD VIEW */
 #fieldStage {
   position: absolute;
   inset: 0;
@@ -733,11 +712,7 @@ main {
   display: flex;
   flex-direction: column;
 }
-.fieldViewWrap {
-  flex: 1 1 auto;
-  position: relative;
-  overflow: hidden;
-}
+.fieldViewWrap { flex: 1 1 auto; position: relative; overflow: hidden; }
 .fieldGrid {
   position: absolute;
   inset: 0;
@@ -747,12 +722,8 @@ main {
   grid-template-rows: repeat(3, 1fr);
   gap: 12px;
 }
-@media(min-width:680px) {
-  .fieldGrid { grid-template-columns: repeat(3, 1fr); padding: 20px; gap: 14px; }
-}
-@media(min-width:1020px) {
-  .fieldGrid { grid-template-columns: repeat(4, 1fr); max-width: 1180px; left: 50%; transform: translateX(-50%); width: 100%; }
-}
+@media(min-width:680px) { .fieldGrid { grid-template-columns: repeat(3, 1fr); padding: 20px; gap: 14px; } }
+@media(min-width:1020px) { .fieldGrid { grid-template-columns: repeat(4, 1fr); max-width: 1180px; left: 50%; transform: translateX(-50%); width: 100%; } }
 .caseCard {
   background: var(--paper);
   border: 1.5px solid var(--pale);
@@ -774,7 +745,6 @@ main {
 .caseCount { font-family: var(--mono); font-size: 8.5px; color: var(--grey); letter-spacing: .06em; }
 .emptyField { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--grey); font-family: var(--mono); font-size: 11.5px; letter-spacing: .06em; }
 
-/* SLIP VIEW inside FIELD */
 .slipWrap {
   position: absolute;
   inset: 0;
@@ -842,12 +812,10 @@ main {
 .slip.collected { background: var(--pale); }
 .slip.collected .slipBody { background: transparent; }
 
-/* Zone touch pagers */
 .zone { position: absolute; top: 0; bottom: 0; width: 17%; z-index: 5; }
 .zone.prev { left: 0; }
 .zone.next { right: 0; }
 
-/* Field Footer */
 .fieldFooter {
   flex: 0 0 auto;
   padding: 8px 14px calc(8px + var(--bottom));
@@ -888,9 +856,7 @@ main {
 .factBtn { height: 38px; padding: 0 14px; border: 1.5px solid var(--blue); border-radius: 6px; color: var(--blue); font-family: var(--mono); font-size: 9.5px; font-weight: 800; letter-spacing: .1em; white-space: nowrap; }
 .factBtn.filled { background: var(--blue); color: var(--paper); }
 
-/* =========================================================
-   3. LINES VIEW (ROW-BY-ROW INSPECTOR)
-   ========================================================= */
+/* 3. LINES VIEW */
 .lines-container {
   max-width: 860px;
   margin: 0 auto;
@@ -942,7 +908,6 @@ main {
 
 .empty { padding: 60px 20px; text-align: center; color: var(--muted-dark); font-size: 13.5px; line-height: 1.6; }
 
-/* Floating Selection Bar */
 .selection {
   position: absolute;
   z-index: 40;
@@ -965,7 +930,6 @@ main {
 .selection button { height: 36px; padding: 0 12px; border-radius: 6px; background: #262930; color: #fff; font-size: 10px; font-weight: 850; letter-spacing: .06em; }
 .selection .primary { background: var(--blue); color: #fff; }
 
-/* Stack Sheet (Continuous Line Reading) */
 .stack {
   position: absolute;
   z-index: 70;
@@ -985,9 +949,7 @@ main {
 .stackMeta { font-family: var(--mono); font-size: 9px; color: var(--blue); font-weight: 800; letter-spacing: .08em; margin-bottom: 6px; text-transform: uppercase; }
 .stackText { font-family: var(--serif); font-size: 18.5px; line-height: 1.55; white-space: pre-wrap; }
 
-/* =========================================================
-   4. RELATE: 3D FIELD, GRAPH, MATRIX
-   ========================================================= */
+/* 4. RELATE */
 .three-pane-wrap, .graph-pane-wrap { width: 100%; height: 100%; position: relative; background: #FFFFFF; }
 #graphCanvas { width: 100%; height: 100%; display: block; }
 .three-hud, .graph-hud {
@@ -1043,7 +1005,7 @@ main {
 .graph-insp-desc { font-size: 12px; color: var(--muted-dark); line-height: 1.4; margin-bottom: 10px; }
 .graph-insp-actions { display: flex; gap: 6px; }
 
-/* NESTED MATRIX */
+/* Matrix */
 .matrix-wrap { max-width: 860px; margin: 0 auto; padding: 16px 16px calc(28px + var(--bottom)); }
 .matrix-intro { background: var(--paper); border: 1.5px solid var(--pale); border-left: 3px solid var(--blue); border-radius: 8px; padding: 14px 16px; margin-bottom: 16px; }
 .matrix-intro-k { font-family: var(--mono); font-size: 9px; font-weight: 900; color: var(--blue); letter-spacing: .08em; margin-bottom: 4px; }
@@ -1060,9 +1022,7 @@ main {
 .matrix-case-name { font-size: 13px; font-weight: 800; }
 .matrix-case-counts { font-family: var(--mono); font-size: 9px; font-weight: 800; color: var(--muted-dark); white-space: nowrap; }
 
-/* =========================================================
-   5. RETURN: PDFS, MAPS, PROMPTS
-   ========================================================= */
+/* 5. RETURN */
 .pdf-wrap, .maps-wrap, .prompts-wrap { padding: 16px 16px calc(24px + var(--bottom)); max-width: 860px; margin: 0 auto; }
 .pdf-filter-bar, .maps-tabs, .poml-stepper { display: flex; gap: 6px; margin-bottom: 14px; overflow-x: auto; scrollbar-width: none; }
 .pdf-filter-bar::-webkit-scrollbar, .maps-tabs::-webkit-scrollbar, .poml-stepper::-webkit-scrollbar { display: none; }
@@ -1101,7 +1061,7 @@ main {
 .poml-btn.primary { background: var(--blue); color: #fff; border-color: var(--blue); }
 .poml-code-box { font-family: var(--mono); font-size: 11px; line-height: 1.6; white-space: pre-wrap; background: var(--paper); border: 1.5px solid var(--pale); border-radius: 8px; padding: 16px; max-height: 480px; overflow-y: auto; }
 
-/* -- TABLE DRAWER: Lay out slips on the table -- */
+/* Table Drawer */
 #drawer {
   position: fixed;
   z-index: 280;
@@ -1165,7 +1125,6 @@ main {
 .chip.placed { background: var(--pale); color: var(--blue); border-color: var(--pale); }
 .dEmpty { padding: 34px 10px; text-align: center; font-family: var(--mono); font-size: 11px; letter-spacing: .06em; color: var(--grey); }
 
-/* Modals & Scrims */
 .scrim { position: fixed; inset: 0; z-index: 200; background: rgba(17,19,24,.12); display: none; }
 .scrim.open { display: block; }
 .sheet {
@@ -1196,7 +1155,6 @@ main {
 .caseRowTitle { font-size: 12.5px; font-weight: 800; letter-spacing: -.01em; margin-top: 1px; }
 .caseRowMeta { font-family: var(--mono); font-size: 9px; font-weight: 800; color: var(--muted-dark); white-space: nowrap; }
 
-/* Toast */
 .toast {
   position: fixed;
   z-index: 400;
@@ -1216,7 +1174,6 @@ main {
 }
 .toast.open { display: block; }
 
-/* PDF Reader Modal */
 .pdf-modal {
   position: fixed;
   z-index: 250;
@@ -1254,7 +1211,7 @@ main {
 <body>
 <div id="app">
 
-  <!-- ANIMATED LOADER -->
+  <!-- LOADER -->
   <div id="loader">
     <svg viewBox="0 0 96 78" aria-hidden="true">
       <g>
@@ -1295,7 +1252,7 @@ main {
     <button id="caseNavBtn" class="accession-badge-btn">ALL CASES (31)</button>
   </header>
 
-  <!-- METHODOLOGY TRIAD NAVIGATION (PRESERVE · RELATE · RETURN) -->
+  <!-- METHODOLOGY BAR (PRESERVE · RELATE · RETURN) -->
   <div class="methodology-bar" id="methodologyBar">
     <div class="nav-triad-group">
       <span class="nav-pillar-label">PRESERVE</span>
@@ -1323,7 +1280,7 @@ main {
     </div>
   </div>
 
-  <!-- Sub-toolbar (Filter Chips for LINES) -->
+  <!-- Sub-toolbar -->
   <div class="subtoolbar" id="linesSubtoolbar">
     <button class="subchip on" data-filter="ALL">ALL</button>
     <button class="subchip" data-filter="QUESTION">QUESTIONS</button>
@@ -1336,10 +1293,10 @@ main {
     <button class="subchip" id="moreFiltersBtn">FIELD FILTER...</button>
   </div>
 
-  <!-- MAIN VIEWPORT -->
+  <!-- VIEWPORT -->
   <main id="mainViewport">
     
-    <!-- 1. TABLE PANE (PRESERVE: INFINITE 2D SPATIAL WORKBENCH) -->
+    <!-- 1. TABLE PANE -->
     <div class="pane active no-scroll" id="pane-table">
       <div id="tableStage">
         <div id="grain"></div>
@@ -1371,7 +1328,7 @@ main {
       </div>
     </div>
 
-    <!-- 2. FIELD PANE (PRESERVE: NON-SCROLLING UNIT-PER-SCREEN & SLIP DECK) -->
+    <!-- 2. FIELD PANE -->
     <div class="pane no-scroll" id="pane-field">
       <div id="fieldStage">
         <div class="fieldViewWrap" id="fieldStageInner"></div>
@@ -1389,14 +1346,14 @@ main {
       </div>
     </div>
 
-    <!-- 3. LINES PANE (PRESERVE: ROW-BY-ROW INSPECTOR) -->
+    <!-- 3. LINES PANE -->
     <div class="pane" id="pane-lines">
       <div class="lines-container">
         <div id="table"></div>
       </div>
     </div>
 
-    <!-- 4. MAPS PANE (PRESERVE) -->
+    <!-- 4. MAPS PANE -->
     <div class="pane" id="pane-maps">
       <div class="maps-wrap">
         <div class="maps-tabs" id="mapsTabs"></div>
@@ -1408,7 +1365,7 @@ main {
       </div>
     </div>
 
-    <!-- 5. 3D SLIPCASE FIELD PANE (RELATE - THREE.JS) -->
+    <!-- 5. 3D FIELD PANE -->
     <div class="pane no-scroll" id="pane-three">
       <div class="three-pane-wrap">
         <div class="three-hud">
@@ -1439,7 +1396,7 @@ main {
       </div>
     </div>
 
-    <!-- 6. MASSIVE GRAPH PANE (RELATE) -->
+    <!-- 6. GRAPH PANE -->
     <div class="pane no-scroll" id="pane-graph">
       <div class="graph-pane-wrap">
         <div class="graph-hud">
@@ -1471,7 +1428,7 @@ main {
       </div>
     </div>
 
-    <!-- 7. NESTED MATRIX PANE (RELATE) -->
+    <!-- 7. NESTED MATRIX PANE -->
     <div class="pane" id="pane-matrix">
       <div class="matrix-wrap">
         <div class="matrix-intro">
@@ -1482,7 +1439,7 @@ main {
       </div>
     </div>
 
-    <!-- 8. PDF LIBRARY PANE (RETURN) -->
+    <!-- 8. PDFS PANE -->
     <div class="pane" id="pane-pdfs">
       <div class="pdf-wrap">
         <div class="pdf-filter-bar">
@@ -1494,7 +1451,7 @@ main {
       </div>
     </div>
 
-    <!-- 9. PROMPT OPERATOR PANE (RETURN - COOL RADIO) -->
+    <!-- 9. PROMPTS PANE -->
     <div class="pane" id="pane-prompts">
       <div class="prompts-wrap">
         <div class="poml-stepper" id="pomlStepper"></div>
@@ -1505,7 +1462,7 @@ main {
 
   </main>
 
-  <!-- TABLE DRAWER: Deals slips from all 31 cases onto the void -->
+  <!-- TABLE DRAWER -->
   <section id="drawer">
     <div class="dHead">
       <input id="dSearch" class="dSearch" placeholder="Search 31 slipcases and 1,244 cards..." autocomplete="off">
@@ -1521,7 +1478,7 @@ main {
     <button id="stackBtn" class="primary">READ STACK</button>
   </div>
 
-  <!-- Stack Modal (Continuous Line Reading) -->
+  <!-- Stack Modal -->
   <section class="stack" id="stack">
     <div class="stackHead">
       <button id="stackBack">&larr;</button>
@@ -1585,13 +1542,13 @@ main {
 (()=>{
 "use strict";
 
-/* Embedded Datasets */
 const CASES_DATA = /* DATA_CASES */;
 const ALL_NOTES = /* DATA_NOTES */;
 const ALL_PDFS = /* DATA_PDFS */;
 const GRAPH = /* DATA_GRAPH */;
 const PROMPTS = /* DATA_PROMPTS */;
 
+window.CASES_DATA = CASES_DATA;
 window.ZETTEL_DATA = ALL_NOTES;
 
 const FIELD_ORDER = [
@@ -1618,9 +1575,8 @@ function valueFor(n, f) {
   return (n.fields && n.fields[f]) || "";
 }
 
-/* Master State */
 let currentTab = "table";
-let selectedCaseIdx = -1; // -1 = ALL CASES
+let selectedCaseIdx = -1;
 let lineFilter = "ALL";
 let pdfCategory = "ALL";
 let currentPromptIdx = 0;
@@ -1638,9 +1594,6 @@ function getActivePdfs() {
   return CASES_DATA[selectedCaseIdx]?.pdfs || [];
 }
 
-/* =========================================================
-   1. NAVIGATION & METHODOLOGY SWITCHING
-   ========================================================= */
 function setTab(tab) {
   currentTab = tab;
   $$(".nav-tab-btn").forEach(b => b.classList.toggle("on", b.dataset.tab === tab));
@@ -1676,9 +1629,6 @@ $("#brandBtn").onclick = () => {
   setTab("table");
 };
 
-/* =========================================================
-   2. CASE SWITCHER
-   ========================================================= */
 function updateActiveCaseLabel() {
   if (selectedCaseIdx === -1) {
     $("#caseNavBtn").textContent = "ALL CASES (31)";
@@ -1738,9 +1688,7 @@ $("#caseScrim").addEventListener("pointerdown", e => {
   if (e.target === $("#caseScrim")) $("#caseScrim").classList.remove("open");
 });
 
-/* =========================================================
-   3. TABLE ENGINE (INFINITE 2D VOID SPATIAL WORKBENCH)
-   ========================================================= */
+/* TABLE ENGINE */
 const MAX_CARDS = 400;
 const MAX_VISIBLE = 180;
 const CARD_W = 280, CARD_H_EST = 230, CULL_PAD = 420;
@@ -1756,7 +1704,6 @@ const mountedTableCards = new Map();
 let tableGest = null;
 const tablePts = new Map();
 
-// Kasten indexing for Table & Field
 const KASTEN_CASES = [];
 const kastenById = new Map();
 
@@ -1905,7 +1852,6 @@ function toggleOpenTableCard() {
   autosaveTable();
 }
 
-/* Pointer Handlers for Table */
 tableStage.addEventListener("pointerdown", e => {
   tablePts.set(e.pointerId, { x: e.clientX, y: e.clientY });
   if (tablePts.size === 2) {
@@ -2104,7 +2050,6 @@ function tableStatus(msg) {
   tableStatusTimer = setTimeout(() => { $("#tableStatus").textContent = tableCards.length ? tableCards.length + " SLIPS ON THE TABLE" : "EMPTY TABLE"; }, 2600);
 }
 
-/* -- TABLE DRAWER -- */
 let drawerCaseIdx = -1, drawerQueryTokens = [], drawerTimer = 0;
 
 function monolineCaseIcon(count) {
@@ -2206,14 +2151,12 @@ $("#dSearch").addEventListener("input", e => {
   }, 110);
 });
 
-/* =========================================================
-   4. FIELD ENGINE (NON-SCROLLING UNIT-PER-SCREEN & SLIP DECK)
-   ========================================================= */
-let fieldViewMode = "FIELD"; // "FIELD" | "SLIP" | "TRAY"
+/* FIELD ENGINE */
+let fieldViewMode = "FIELD";
 let fieldFilteredIndices = KASTEN_CASES.map((_, k) => k);
 let fieldPage = 0;
 let fieldOpenCaseK = 0, fieldSlipIdx = 0;
-let fieldTray = []; // [{i, f}]
+let fieldTray = [];
 let fieldTrayIdx = 0;
 
 function fieldPageSize() { return innerWidth >= 1020 ? 12 : innerWidth >= 680 ? 9 : 6; }
@@ -2390,9 +2333,7 @@ $("#fPrevBtn").onclick = () => navField(-1);
 $("#fNextBtn").onclick = () => navField(1);
 $("#fActBtn").onclick = actField;
 
-/* =========================================================
-   5. LINES MODULE (ROW-BY-ROW INSPECTOR)
-   ========================================================= */
+/* LINES MODULE */
 function rowKey(id, field) { return id + "|||" + field; }
 function unpack(key) { const i = key.indexOf("|||"); return [key.slice(0,i), key.slice(i+3)]; }
 
@@ -2566,9 +2507,7 @@ $("#stackBtn").onclick = openStack;
 $("#stackBack").onclick = closeStack;
 $("#copyBtn").onclick = copySelectedLines;
 
-/* =========================================================
-   6. RELATE: MASSIVE GRAPH ENGINE (HTML5 CANVAS)
-   ========================================================= */
+/* GRAPH ENGINE */
 let graphMode = "all";
 let graphAnimId = null, graphNodes = [], graphLinks = [];
 let graphTransform = { x: 0, y: 0, k: 1 };
@@ -2830,9 +2769,7 @@ window.resetGraphView = function() {
   initGraphEngine();
 };
 
-/* =========================================================
-   7. RELATE: NESTED MATRIX
-   ========================================================= */
+/* NESTED MATRIX */
 function renderMatrix() {
   const container = $("#matrixClusterContainer");
   let html = "";
@@ -2868,9 +2805,7 @@ function renderMatrix() {
   container.innerHTML = html;
 }
 
-/* =========================================================
-   8. RETURN: PDFS, MAPS, PROMPTS
-   ========================================================= */
+/* PDFS */
 function renderPdfs() {
   const pdfs = getActivePdfs();
   const q = $("#search").value.trim().toLowerCase();
@@ -3068,9 +3003,7 @@ window.downloadPromptFile = function() {
   toast(`Downloaded ${p.file}`);
 };
 
-/* =========================================================
-   9. GLOBAL SEARCH & KEYBOARD SHORTCUTS
-   ========================================================= */
+/* SEARCH & SHORTCUTS */
 $("#search").addEventListener("input", () => {
   if (currentTab === "field") { fieldPage = 0; renderFieldView(); }
   if (currentTab === "lines") renderLines();
@@ -3114,7 +3047,6 @@ function toast(msg) {
   toastTimer = setTimeout(() => $("#toast").classList.remove("open"), 1400);
 }
 
-/* Boot Table from Hash or Storage */
 (function bootTable() {
   const reg = document.createElement("div");
   reg.className = "reg";
@@ -3229,7 +3161,7 @@ function initThree() {
     }
     caseMeshes = [];
 
-    const CASES_DATA = /* DATA_CASES */;
+    const CASES_DATA = window.CASES_DATA || [];
 
     if (threeViewMode === "all") {
       const cols = 6;
@@ -3342,7 +3274,7 @@ function initThree() {
       }
       if (topGroup.userData && topGroup.userData.caseData) {
         const c = topGroup.userData.caseData;
-        const CASES_DATA = /* DATA_CASES */;
+        const CASES_DATA = window.CASES_DATA || [];
         const cIdx = CASES_DATA.findIndex(x => x.id === c.id);
         showThreeInspector(c, cIdx);
       }
@@ -3391,4 +3323,4 @@ html_rendered = html_template.replace('/* DATA_CASES */', json.dumps(cases_data)
 with open(os.path.join(BASE_DIR, 'index.html'), 'w', encoding='utf-8') as f:
     f.write(html_rendered)
 
-print('Successfully re-indexed and wrote index.html and slipcases.json with Table, Field, Lines, 3D, Graph, Matrix, PDFs, Maps, and Prompts.')
+print('Successfully re-indexed and wrote optimized index.html and slipcases.json.')
