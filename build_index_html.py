@@ -1393,6 +1393,7 @@ mark { background: var(--pale); color: inherit; }
       <button class="nav-tab-btn" data-tab="graph">MASSIVE GRAPH</button>
       <button class="nav-tab-btn" data-tab="matrix">NESTED MATRIX</button>
       <a class="nav-tab-btn" href="map.html" target="_blank" style="text-decoration:none;">3D MAP &nearr;</a>
+      <a class="nav-tab-btn" href="atlas.html" target="_blank" style="text-decoration:none;">LEGO ATLAS &nearr;</a>
     </div>
 
     <div class="nav-divider"></div>

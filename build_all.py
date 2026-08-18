@@ -12,8 +12,9 @@ for c in cases_data:
 
 print(f"Loaded {len(all_notes)} zettels across {len(cases_data)} slipcases.")
 
-# 2. Update map-02.html with clean WYSIWYG reading
+# 2. Update map.html & atlas.html
 os.system(f"python3 {os.path.join(BASE_DIR, 'build_map_html.py')}")
+os.system(f"python3 {os.path.join(BASE_DIR, 'build_atlas_html.py')}")
 
 # 3. Update map-02.html with 1244 cards
 map02_path = os.path.join(BASE_DIR, "map-02.html")
