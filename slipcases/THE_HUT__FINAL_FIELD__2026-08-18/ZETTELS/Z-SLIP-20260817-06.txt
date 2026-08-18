@@ -1,0 +1,80 @@
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-06
+
+    TITLE:
+    A CONSTRAINT HISTORY CAN PRESERVE DECISIONS AND STILL LOSE THE THEORY
+
+    SOURCE:
+    Peter Naur — “Programming as Theory Building” — 1985 — Microprocessing and Microprogramming 15(5), pp. 253–261.
+
+    SOURCE URL:
+    https://doi.org/10.1016/0165-6074(85)90032-8
+
+    PASSAGE:
+    [PARAPHRASE] Naur argues that the primary achievement of programming is a theory held by programmers about how the problem is solved, and that program text and documentation can fail to transfer that theory adequately.
+
+    RESEARCH OBJECT:
+    Replacing chat history with constraint history is not enough if the system preserves what survived but not why those distinctions mattered.
+
+    LOCAL MOVE:
+    Naur shifts the unit of programming away from textual product toward the programmer’s acquired understanding needed for explanation and modification.
+
+    SOURCE TERMS:
+    theory building; program text; explanation; modification; programmer knowledge
+
+    WHAT BECAME STRANGE:
+    A perfect archive of constraints may remain theoretically dead if it cannot support principled response to a novel case.
+
+    QUESTION:
+    What must a constraint genealogy preserve in order to carry a theory rather than only a history?
+
+    DEEPER QUESTION:
+    Can an AI inherit theory from rationale, counterexamples, and modification histories, or only imitate their sediment?
+
+    MECHANISM:
+    problem engagement → theory acquired → program produced/modified; text may survive while theory fails to transfer.
+
+    FORMAL SHIFT:
+    <PROGRAM HISTORY> → <TEXT + DOCUMENTATION> → [TRANSFER] → <POSSIBLE THEORY LOSS>
+
+    SOURCE FORMALISM:
+    NONE
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] THEORY = constraints + reasons + analogies + causal expectations + rules for novel cases.
+
+    TENSION:
+    Structured constraint memory is better than raw chat but may still fall short of the understanding Naur describes.
+
+    MISSING:
+    Representations for rationale, causal model, analogy, and conditions for relaxing invariants.
+
+    BOUNDARY:
+    Naur does not discuss LLMs or prompt histories; this application is an inference.
+
+    CITATION TRAIL:
+    Design rationale; truth-maintenance systems; reflective practice.
+
+    TEST:
+    Compare agents receiving final prompt, constraint history, and constraint history plus rationale on an unforeseen modification.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[PROGRAMMING AS THEORY BUILDING]]
+[[GENEALOGY OF CONSTRAINTS]]
+
+    BIBTEX:
+    @article{naur1985programming,
+  author={Naur, Peter},
+  title={Programming as Theory Building},
+  journal={Microprocessing and Microprogramming},
+  volume={15},
+  number={5},
+  pages={253--261},
+  year={1985},
+  doi={10.1016/0165-6074(85)90032-8}
+}

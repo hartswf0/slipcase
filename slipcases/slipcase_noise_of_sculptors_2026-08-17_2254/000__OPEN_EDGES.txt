@@ -1,0 +1,1637 @@
+OPEN EDGES — CURRENT CHECKPOINT
+
+## SON-GENEALOGY-001 — “BASED ON STABLE DIFFUSION” is a genealogy claim the paper has not yet earned.
+QUESTION:
+What primary evidence establishes a direct technical dependency between Midjourney V1–V3 and Stable Diffusion?
+
+DEEPER QUESTION:
+If that dependency cannot be established, what is the actual technical genealogy connecting Midjourney, CLIP-guided generation, diffusion models, Latent Diffusion Models, and Stable Diffusion?
+
+TENSION:
+The parent may be directionally right that Midjourney belongs to the same diffusion-model revolution while being historically wrong about the specific ancestor.
+
+A weaker genealogy may survive even if the stronger one dies.
+
+MISSING:
+Primary-source architecture descriptions for Midjourney V1–V3.
+
+Contemporaneous statements by David Holz or Midjourney developers naming CompVis, Rombach et al., Stable Diffusion, Latent Diffusion Models, or specific borrowed implementations.
+
+Code, model-card, checkpoint, collaboration, or acknowledgment evidence.
+
+BOUNDARY:
+Release chronology does not prove absence of private access before public release.
+
+This ZETTEL therefore does not conclude that Midjourney was independent of Stable Diffusion. It concludes that the parent’s specific dependency claim remains unverified.
+
+TEST:
+Search only contemporaneous 2021–2022 primary evidence from Midjourney, David Holz, CompVis, Stability AI, Runway, and named developers.
+
+Search specifically for:
+
+“Midjourney” + “Stable Diffusion”
+“Midjourney” + “latent diffusion”
+“Midjourney” + “CompVis”
+“David Holz” + “Rombach”
+“Midjourney architecture”
+“Midjourney model” + “CLIP”
+
+Classify every result as:
+
+DIRECT DEPENDENCE
+SHARED ANCESTOR
+COLLABORATION
+RESEMBLANCE
+NO EVIDENCE
+
+Do not infer influence from similarity.
+
+## SON-LATENT-002 — The “latent-space mountain” may be useful prompt folklore, but LATENT means something much more specific in Latent Diffusion Models.
+QUESTION:
+Which computational space are Midjourney users actually exploring when they say they are exploring “latent space”?
+
+DEEPER QUESTION:
+Is prompt craft better modeled as movement through a latent representation, movement through a text-embedding space, or black-box search over an input/output function whose internal geometry remains inaccessible?
+
+TENSION:
+The mountain metaphor may be technically inaccurate and practically powerful at the same time.
+
+It could accurately describe the experienced RESPONSE SURFACE:
+
+prompt variation
+→ output variation
+→ human valuation
+
+without accurately describing the model’s latent representation.
+
+MISSING:
+The proprietary architecture of Midjourney V3.
+
+Evidence establishing whether Midjourney used an LDM-style autoencoder latent, a different diffusion architecture, or another representation.
+
+Evidence identifying which internal object Midjourney community members meant by “latent space.”
+
+BOUNDARY:
+Rombach et al. describe Latent Diffusion Models.
+
+Their machinery must not be silently attributed to Midjourney without separate evidence.
+
+TEST:
+Take the parent’s mountain metaphor and separately map:
+
+TEXT EMBEDDING SPACE
+IMAGE LATENT SPACE
+NOISE / SAMPLE SPACE
+PROMPT RESPONSE SURFACE
+HUMAN AESTHETIC FITNESS LANDSCAPE
+
+For each, find a primary technical source specifying:
+
+representation
+distance
+state
+operation
+transition
+
+Determine which one, if any, actually has the properties Joseph attributes to mountains and peaks.
+
+## SON-CONTROL-003 — CONTROL in diffusion is divisible: seed controls reproducibility while guidance controls a fidelity–diversity tradeoff.
+QUESTION:
+Which kinds of control were Midjourney super users actually learning to exercise?
+
+DEEPER QUESTION:
+Can prompt craft be decomposed into separate control dimensions whose effects can be experimentally distinguished?
+
+TENSION:
+A user can increase semantic prompt adherence while decreasing diversity.
+
+Therefore “more control” can destroy exactly the novelty that the user values.
+
+The parent’s control/serendipity tension may be an actual technical tradeoff rather than merely an artistic attitude.
+
+MISSING:
+The exact sampling and guidance machinery used by Midjourney V3.
+
+Whether Midjourney exposed equivalent hidden or explicit parameters.
+
+Whether interviewees distinguished reproducibility from semantic adherence when saying “control.”
+
+BOUNDARY:
+Classifier-free guidance and Stable Diffusion parameters establish mechanisms available in one documented diffusion architecture.
+
+They do not establish identical implementation in Midjourney.
+
+TEST:
+Use an open text-to-image diffusion model.
+
+Hold model and prompt constant.
+
+Run factorial comparisons varying only:
+
+A. seed
+B. guidance scale
+C. sampling steps
+D. prompt wording
+
+Measure separately:
+
+image-image variance
+text-image similarity
+human aesthetic preference
+structural reproducibility
+
+Determine which intervention corresponds most closely to interviewees’ language of “control.”
+
+## SON-WORDPOWER-004 — A prompt word does not directly command pixels; cross-attention supplies one mechanism by which words acquire spatial influence.
+QUESTION:
+When a Midjourney user discovers that one word dramatically changes an image, what computational pathway produces that leverage?
+
+DEEPER QUESTION:
+Are “magic words” genuinely privileged semantic coordinates, unusually influential attention patterns, correlations inherited from training data, interactions among tokens, or artifacts of repeated stochastic search?
+
+TENSION:
+The mechanism makes prompt effects less mystical without making them fully predictable.
+
+Knowing that cross-attention mediates textual control does not automatically tell the user what attention map a novel phrase will induce.
+
+Explainability can therefore reveal machinery without eliminating prompt experimentation.
+
+MISSING:
+Whether Midjourney V3 used a comparable cross-attention mechanism.
+
+Whether Shambibble’s “word reinforcement” changed attention intensity, text representation, parsing, weighting, or some proprietary preprocessing stage.
+
+Direct experiments on the specific prompt techniques described in the interviews.
+
+BOUNDARY:
+Hertz et al. analyze a documented text-conditioned diffusion architecture.
+
+Cross-attention must not be retroactively attributed to Midjourney without architecture evidence.
+
+TEST:
+Choose a documented diffusion model exposing cross-attention.
+
+Fix:
+
+seed
+sampler
+guidance
+steps
+
+Generate a baseline prompt.
+
+Then separately:
+
+replace one noun
+replace one adjective
+repeat one word
+add one style phrase
+
+Capture cross-attention maps through denoising.
+
+Test whether large visual changes correspond to identifiable changes in token-specific attention.
+
+## SON-IEC-005 — “Trial and error is the teacher” has a technical ancestor: interactive evolutionary computation makes subjective human judgment the fitness function.
+QUESTION:
+Is prompt craft better understood as linguistic composition or as interactive optimization over an opaque generative system?
+
+DEEPER QUESTION:
+What knowledge resides in the prompt itself, and what knowledge exists only in the user's iterative selection procedure?
+
+TENSION:
+Midjourney prompting is not literally an evolutionary algorithm merely because users iterate.
+
+Many users alter prompts without explicit populations, mutation operators, recombination, or algorithmic selection.
+
+The relationship may therefore be FORMAL RESEMBLANCE rather than historical genealogy.
+
+That distinction must remain open.
+
+MISSING:
+Detailed prompt histories from expert users.
+
+Evidence of how users decide what to preserve, mutate, discard, or recombine.
+
+Whether expert prompting can be predicted better by final-prompt features or by properties of the preceding search trajectory.
+
+BOUNDARY:
+IEC provides a formal ancestor for subjective interactive search.
+
+It does not establish that Midjourney users consciously adopted evolutionary computation or that their practices instantiate every component of an evolutionary algorithm.
+
+TEST:
+Record complete generation histories from expert and novice prompt users.
+
+For each transition classify:
+
+KEEP
+DELETE
+MUTATE
+RECOMBINE
+RANDOMIZE
+RETURN
+BRANCH
+
+Then compare final-output quality under two conditions:
+
+A. give a new user only the expert’s final prompt
+B. give the new user the expert’s search procedure but not the final prompt
+
+If B preserves more expertise than A, craft resides substantially in the search policy rather than the prompt artifact.
+
+## SON-SAFETY-006 — BANNED WORDS are only one possible safety layer; Stable Diffusion places a safety intervention after image generation.
+QUESTION:
+At which exact computational layer did each Midjourney 2022 moderation mechanism operate?
+
+DEEPER QUESTION:
+What political and semantic consequences change when safety policy is attached to WORDS rather than generated IMAGES, model training data, user behavior, or publication?
+
+TENSION:
+Lexical prohibition acts early and cheaply but struggles with polysemy, metaphor, identity terms, translation, misspelling, and circumvention.
+
+Output classification can inspect what was actually generated but permits generation to occur before intervention and introduces its own classifier errors.
+
+Neither layer solves moderation by itself.
+
+MISSING:
+Primary technical documentation for Midjourney’s 2022 NSFW scoring system.
+
+Whether the numeric values reported by moderators applied to:
+
+prompt tokens
+user risk
+generated imagery
+bot heuristics
+or combinations of these.
+
+The relationship between automated filtering and moderator judgment.
+
+BOUNDARY:
+The Stable Diffusion safety checker is evidence that a different safety architecture existed in a neighboring text-to-image system.
+
+It is not evidence that Midjourney used the same checker.
+
+TEST:
+Reconstruct the 2022 Midjourney moderation pipeline exclusively from contemporaneous primary evidence.
+
+For every observed intervention, identify:
+
+INPUT
+STATE AVAILABLE
+DECISION RULE
+ACTION
+HUMAN/MACHINE
+TIMING
+
+Classify each as:
+
+PRE-GENERATION
+IN-GENERATION
+POST-GENERATION
+POST-PUBLICATION
+ACCOUNT-LEVEL
+
+Do not use the phrase “NSFW algorithm” until these mechanisms have been separated.
+
+## SON-PROMPTSEMANTICS-007 — “MAGIC WORDS” become stranger under CLIP: text can control images because language has been trained as a reference system for learned visual concepts.
+QUESTION:
+When users learn prompt craft, are they learning to describe images better or learning the idiosyncratic translation rules of a learned text–image representation?
+
+DEEPER QUESTION:
+When ordinary language becomes an executable conditioning interface, what remains of ordinary linguistic meaning and what becomes model-specific operational meaning?
+
+TENSION:
+This helps explain “magic words” without proving that every reported magic word reflects stable model structure.
+
+A discovered phrase might instead be:
+
+a reproducible representational effect
+a prompt interaction
+a training-data artifact
+a stochastic coincidence
+a version-specific behavior
+or user superstition.
+
+MISSING:
+Controlled replications of the magical prompts reported by Midjourney users.
+
+Prompt/output histories across model versions.
+
+The exact text representation used by Midjourney V3.
+
+BOUNDARY:
+CLIP establishes a concrete mechanism by which natural language can reference learned visual concepts.
+
+It does not establish that Midjourney V3 used precisely OpenAI CLIP or identical embeddings.
+
+TEST:
+Collect claimed “magic words” from the parent interviews.
+
+For each phrase construct:
+
+literal paraphrases
+synonyms
+word-order variants
+nonsense controls
+token deletions
+
+Run each across:
+
+multiple seeds
+multiple model versions
+multiple text-to-image architectures
+
+A real representational effect should show reproducible structure.
+
+A stochastic anecdote should collapse under replication.
+
+A platform-specific magic word should survive only within one architecture or version.
+
+## SON-IEC-005-A — THE OBJECTIVE CAN BE THE TRAP: the image you are trying to reach can make its own stepping stones invisible.
+QUESTION:
+How often does goal-directed prompt iteration eliminate outputs that would have become productive stepping stones under further mutation?
+
+DEEPER QUESTION:
+What if expert prompt craft is not primarily the ability to describe a destination, but the ability to recognize valuable departures whose destination cannot yet be named?
+
+TENSION:
+Generative-image prompting is not an evolutionary optimization algorithm merely because users iterate.
+
+The analogy becomes mechanically stronger only when candidate generation, selection, retention, and branching can be identified.
+
+Furthermore, abandoning an objective does not mean behaving randomly.
+
+Lehman and Stanley explicitly distinguish novelty search from random search.
+
+MISSING:
+Complete prompt genealogies rather than final prompts.
+
+Cases where an apparently failed image later became an indispensable ancestor.
+
+A behavioral characterization suitable for measuring novelty among generated images without simply substituting another hidden aesthetic objective.
+
+Evidence comparing expert users who optimize resemblance with users who deliberately preserve strange deviations.
+
+BOUNDARY:
+Lehman and Stanley demonstrate deceptive objectives in evolutionary search domains including maze navigation and biped locomotion.
+
+The existence and prevalence of equivalent deceptive landscapes in text-to-image prompting remain empirical questions.
+
+FORMAL RESEMBLANCE is not genealogy.
+
+TEST:
+Construct a controlled image-generation study.
+
+Give participants the same difficult target image and equal generation budgets.
+
+CONDITION A — TARGET:
+At every round, preserve candidates judged most similar to the target.
+
+CONDITION B — NOVELTY:
+At every round, preserve candidates judged most different from previously explored outputs while remaining minimally interesting.
+
+CONDITION C — HYBRID:
+Maintain separate branches for target similarity and novelty.
+
+Record full ancestry.
+
+At the end compare:
+
+best target match
+human preference
+semantic diversity
+number of distinct branches
+distance trajectories
+whether successful outputs descend through temporary decreases in target similarity
+
+The decisive evidence is not whether novelty produces stranger pictures.
+
+It is whether superior target-reaching lineages contain ancestors that objective selection would have killed.
+
+## SON-IEC-005-B — AN IMAGE CAN HAVE ANCESTORS IT DOES NOT RESEMBLE: Picbreeder turns creativity from authorship into genealogy.
+QUESTION:
+What would prompt culture look like if prompts and generations were treated as branchable phylogenies rather than isolated works or secret recipes?
+
+DEEPER QUESTION:
+Can a creative contribution consist primarily in discovering a stepping stone whose significance is visible only through descendants created by strangers?
+
+TENSION:
+Midjourney remix culture superficially resembles Picbreeder branching, but ordinary prompt remixing does not automatically preserve a formal genotype, mutation operator, or complete ancestry.
+
+The deeper similarity may lie in social search rather than evolutionary computation.
+
+Likewise, public ancestry can support collective discovery while conflicting directly with the parent paper’s treatment of prompts as trade secrets and competitive assets.
+
+MISSING:
+Complete historical branching data from early Midjourney prompt communities.
+
+Cases where a famous style or prompt family descended from an apparently minor public generation.
+
+Methods for distinguishing:
+
+copying
+remixing
+branching
+independent convergence
+shared model bias
+
+A measure of descendant generativity.
+
+BOUNDARY:
+Picbreeder was deliberately engineered as a collaborative interactive evolutionary system.
+
+Midjourney was not.
+
+The Picbreeder genealogy therefore supplies a technical counterexample and possible design model, not evidence of direct historical influence.
+
+TEST:
+Take a corpus with complete remix or generation ancestry.
+
+For every node calculate:
+
+number of descendants
+maximum descendant depth
+number of distinct users who branch from it
+semantic distance between ancestor and descendants
+quality of best descendant
+
+Then test whether visually unimpressive or low-rated nodes sometimes exhibit high DESCENDANT_GENERATIVITY.
+
+If so, artifact quality and evolutionary value are empirically distinct properties.
+
+## SON-IEC-005-C — OPEN-ENDEDNESS MAY REQUIRE FORGETTING: one remembered step helped VLM explorers; more memory sometimes made them collapse into themselves.
+QUESTION:
+Is forgetting an active ingredient of generative creativity rather than merely a limitation of memory?
+
+DEEPER QUESTION:
+How much history should an artificial creative agent retain before memory changes from a map of explored territory into an attractor that keeps returning the agent to its own prior tastes?
+
+TENSION:
+The experiment does not establish a universal optimum at CL=1.
+
+Different metrics respond differently, full-history runs also gained diversity under an additional novelty-oriented instruction, and context length is only a crude proxy for human memory.
+
+Human remembering is selective, reconstructive, lossy, embodied, and distributed across time.
+
+A token window is not human memory.
+
+MISSING:
+Experiments with selective rather than contiguous memory.
+
+Memory of:
+
+only failures
+only distant ancestors
+only surprising transitions
+only semantic summaries
+random prior states
+contradictory preferences
+
+Comparison with human participants under controlled memory aids.
+
+Whether the harmful variable is amount of history, repetitive wording, self-generated justification, attention dilution, or reinforcement of explicit identity/preferences.
+
+BOUNDARY:
+The result concerns specific VLM-driven Picbreeder experiments in a constrained evolutionary image system.
+
+It does not establish that longer context generally reduces creativity in language models.
+
+The important finding is non-monotonicity, not “short context is always better.”
+
+TEST:
+Run identical generative-search agents under six memory policies:
+
+A. NONE
+B. LAST TURN
+C. FULL HISTORY
+D. RANDOM SAMPLE OF HISTORY
+E. NOVELTY-ONLY MEMORY
+F. COMPRESSED CONTRADICTION MEMORY
+
+Hold model, generation budget, candidate space, and selection instructions constant.
+
+Measure:
+
+duplicate rate
+semantic coverage
+visual coverage
+branch depth
+branch balance
+return-to-prior-motif frequency
+human interestingness
+
+Then inspect whether selective forgetting outperforms both amnesia and total recall.
+
+## SON-PROMPTSEMANTICS-007-A — A WORD CAN ENTER THROUGH THE IMAGE AND STILL ACT LIKE A COMMAND.
+QUESTION:
+When language becomes part of the sensory world of a multimodal model, where does PROMPT end and WORLD begin?
+
+DEEPER QUESTION:
+Can operational language migrate between modalities—text command, rendered inscription, image feature, learned concept—while retaining causal force?
+
+TENSION:
+A typographic attack against CLIP classification is not the same thing as prompting a generative image model.
+
+The source demonstrates cross-modal semantic intervention, not a universal modality-independent command language.
+
+Nevertheless, it falsifies the simple division:
+
+WORDS ARE INSTRUCTIONS
+IMAGES ARE CONTENT.
+
+MISSING:
+Tests on multimodal generative models where written language appears inside image inputs.
+
+Whether text rendered inside generated images can recursively steer downstream models consuming those images.
+
+Whether typographic effects remain under OCR removal, font variation, rotation, occlusion, translation, or invented words.
+
+Whether contemporary multimodal systems explicitly separate textual and visual semantics better than CLIP.
+
+BOUNDARY:
+The demonstrated mechanism concerns CLIP.
+
+No claim is made that Midjourney V3 used identical multimodal neurons or that a typographic attack would steer its generator.
+
+TEST:
+Construct paired inputs for a multimodal model:
+
+IMAGE A:
+dog
+
+IMAGE B:
+same dog + rendered word “BANK”
+
+IMAGE C:
+same dog + semantically unrelated word
+
+IMAGE D:
+same dog + visually similar nonsense glyphs
+
+IMAGE E:
+same dog + synonym
+
+Measure changes in:
+
+classification
+caption
+embedding
+generation
+attention
+
+Then repeat with the rendered text progressively treated more like part of the world:
+
+painted sign
+tattoo
+shadow
+architecture
+handwriting
+distorted typography
+
+Determine whether semantic causal force follows the linguistic symbol across visual transformations.
+
+## SON-PROMPTSEMANTICS-007-B — THE MODEL CAN KNOW SAN FRANCISCO WITHOUT HAVING A SAN FRANCISCO NEURON.
+QUESTION:
+What exactly does a prompt word address if its corresponding model concept has no identifiable location?
+
+DEEPER QUESTION:
+Can an executable language have meaningful terms whose denotations exist only as distributed transformations across a high-dimensional system?
+
+TENSION:
+Failure to discover a “San Francisco” neuron does not prove that no more localized representation exists.
+
+Interpretability methods are incomplete.
+
+The source itself frames direction/manifold encoding as a hypothesis.
+
+Therefore the strange result is epistemic as much as architectural:
+
+MODEL CAPABILITY
+>
+OUR ABILITY TO LOCATE ITS REPRESENTATION.
+
+MISSING:
+Causal interventions identifying where geolocation information is represented.
+
+Comparison across model layers and architectures.
+
+Whether concepts used effectively in text-to-image prompting exhibit localized, directional, manifold-like, or highly distributed representations.
+
+A theory of MODEL REFERENCE that does not require symbolic storage.
+
+BOUNDARY:
+The source concerns CLIP interpretability.
+
+“Direction” and “manifold” are proposed possibilities in this passage, not demonstrated representations of San Francisco.
+
+TEST:
+Choose concepts for which a model demonstrates strong behavioral competence.
+
+For each concept attempt:
+
+single-unit ablation
+sparse-unit probing
+linear-direction probing
+distributed-subspace probing
+activation patching
+
+Measure which intervention most strongly changes concept-specific behavior.
+
+Then ask whether prompt sensitivity predicts the localization structure.
+
+If powerful prompt terms correspond to distributed rather than localized representations, “magic words” may be handles on transformations that have no single internal referent.
+
+## SON-LATENT-002-A — THE SAME VECTOR CAN MEAN WINTER HERE AND NIGHT THERE.
+QUESTION:
+Does a latent direction contain a semantic meaning, or does meaning emerge only from the interaction between direction and current generative state?
+
+DEEPER QUESTION:
+Could operational semantics in generative systems be fundamentally contextual in the strong sense that the same executable transformation means different things in different worlds?
+
+TENSION:
+Calling these directions “semantic” can conceal two different claims:
+
+1. the transformation produces a human-interpretable regularity
+2. the transformation internally represents a stable semantic concept
+
+GANSpace directly supports the first.
+
+It does not automatically prove the second.
+
+A direction may encode correlated visual variation rather than a concept in any stronger symbolic sense.
+
+MISSING:
+Whether equivalent contextual directions exist in diffusion-model latent or activation spaces.
+
+Whether prompt embeddings interact with those directions compositionally.
+
+Whether the same prompt phrase generates systematically different operational transformations depending on image state in ways analogous to GANSpace’s class-dependent direction meanings.
+
+A distinction between:
+
+INTERPRETABLE DIRECTION
+SEMANTIC DIRECTION
+CAUSAL FEATURE
+CORRELATED DATASET AXIS
+
+BOUNDARY:
+GANSpace analyzes pretrained GANs including StyleGAN and BigGAN.
+
+Its latent machinery must not be imported directly into Midjourney or Latent Diffusion Models.
+
+The source shows that the folk metaphor of “moving through latent space” can be technically literal in some architectures while remaining architecture-specific.
+
+TEST:
+Take one discovered latent direction d across multiple classes or base states.
+
+For every application collect:
+
+numerical transformation
+generated before/after pair
+human semantic labels
+model-generated labels
+feature changes
+
+Then test:
+
+INVARIANT OPERATION?
+INVARIANT VISUAL PROPERTY?
+INVARIANT HUMAN MEANING?
+
+If operation remains stable while human meaning changes, semantic labels belong to the transformation-in-context rather than the vector alone.
+
+Repeat the experiment with text-conditioning directions in a diffusion model.
+
+## SON-IEC-005-A-A — THE PROBLEM CAN EVOLVE TOO: POET turns search from finding answers into generating new questions that make new answers possible.
+QUESTION:
+What changes if generative prompting is allowed to evolve not only candidate outputs but the task, constraint, or question those outputs are supposed to satisfy?
+
+DEEPER QUESTION:
+Could creative discovery require a system in which ANSWERS invent QUESTIONS that could not have been formulated before those answers existed?
+
+TENSION:
+This cuts against a central assumption in prompt engineering:
+
+that the user must formulate the correct request before the model can produce the correct result.
+
+POET suggests another possibility:
+
+the inability to formulate the correct prompt may not be a user failure.
+
+The correct problem may literally not exist yet.
+
+But POET’s environments are explicitly represented computational objects.
+
+A human creative brief is not automatically an evolvable environment.
+
+MISSING:
+A representation of creative PROBLEMS that can mutate without collapsing into arbitrary task drift.
+
+A minimal criterion distinguishing:
+
+productive reframing
+from
+changing the subject.
+
+Evidence that transferring artifacts between evolving prompts produces breakthroughs unavailable through optimization of a fixed brief.
+
+BOUNDARY:
+POET establishes the computational possibility of coevolving problems and solutions in reinforcement-learning environments.
+
+It does not establish that human creative practice or prompt craft follows this mechanism.
+
+Similarity is not genealogy.
+
+TEST:
+Build three generative-search conditions with identical generation budgets.
+
+A. FIXED PROMPT:
+Only candidate outputs may vary.
+
+B. MUTABLE PROMPT:
+The prompt itself may mutate, but all branches retain the original success criterion.
+
+C. COEVOLVING PROBLEM:
+Both the prompt and its evaluation criterion may mutate, provided each descendant remains connected by explicit ancestry.
+
+Permit outputs from one branch to be imported as seeds into another branch.
+
+Record:
+
+problem ancestry
+artifact ancestry
+cross-branch transfers
+quality
+novelty
+whether final valued artifacts satisfy goals absent from the initial task
+
+The critical case is:
+
+FINAL VALUE
+>
+anything reachable under original evaluation
+
+AND
+
+the valued criterion itself emerged during search.
+
+## SON-PROMPTSEMANTICS-007-B-A — THE MODEL CAN HAVE MORE CONCEPTS THAN PLACES TO PUT THEM.
+QUESTION:
+If multiple concepts occupy overlapping representational dimensions, what exactly is a prompt activating when it appears to invoke one concept?
+
+DEEPER QUESTION:
+Can model semantics be understood as interference patterns in which concepts exist not as stored objects but as recoverable directions through shared representational matter?
+
+TENSION:
+Superposition provides a mechanism for more features than dimensions in toy models.
+
+It does not establish that every polysemantic neuron in a production model is explained by this mechanism.
+
+Nor does “feature direction” automatically equal a human semantic concept.
+
+The source makes the concept-location problem harder, not solved.
+
+MISSING:
+Causal evidence connecting specific prompt-sensitive concepts to superposed features in multimodal generative systems.
+
+Measures of interference between prompt concepts.
+
+Whether apparently strange prompt interactions occur because two desired concepts share representational dimensions.
+
+Whether prompt specificity works partly by disambiguating overlapping feature directions.
+
+BOUNDARY:
+The paper deliberately studies toy models.
+
+Its value here is mechanistic possibility, not proof that Midjourney or CLIP implements identical geometry.
+
+TEST:
+Identify pairs of concepts whose prompt effects interfere unexpectedly.
+
+For each pair:
+
+measure internal representation directions
+estimate cosine similarity
+activate separately
+activate jointly
+intervene on suspected shared dimensions
+
+Compare:
+
+independent-feature prediction
+versus
+superposition/interference prediction.
+
+The strongest evidence would be:
+
+A and B individually controllable
++
+A+B produces systematic interference
++
+the interference is causally altered by manipulating their shared representational subspace.
+
+## SON-PROMPTSEMANTICS-007-B-B — EVEN AFTER WE FIND THE “FEATURES,” THERE MAY BE NO ONE TRUE SET OF FEATURES.
+QUESTION:
+If equally functional decompositions carve model activity at different semantic granularities, what warrants calling any extracted feature a genuine unit of model meaning?
+
+DEEPER QUESTION:
+Could model semantics lack a privileged ontology altogether—so that “concepts” emerge partly from the resolution at which an interpreter chooses to describe computation?
+
+TENSION:
+The paper does not prove that canonical units do not exist.
+
+It shows that current SAE methods do not identify them and casts doubt on simple convergence stories.
+
+There may still be a privileged decomposition inaccessible to these methods.
+
+Alternatively, asking for one privileged decomposition may itself be the category error.
+
+MISSING:
+A criterion for deciding when two decompositions are merely alternative descriptions and when one better captures causal computation.
+
+Evidence for or against irreducible features independent of dictionary architecture.
+
+Tests of whether downstream control is more reliable at one semantic granularity than another.
+
+A theory of interpretation that tolerates plural decompositions without collapsing into “anything goes.”
+
+BOUNDARY:
+The source studies SAEs applied to GPT-2 Small and Gemma 2 2B among its experiments.
+
+Its conclusion concerns what these interpretability methods recover, not metaphysical proof that neural computation has no canonical structure.
+
+TEST:
+Train multiple independently initialized sparse dictionaries at:
+
+1×
+2×
+4×
+8×
+16×
+
+the model activation dimension.
+
+For a target concept C:
+
+find all associated latents
+perform causal steering
+perform ablation
+compare reconstruction
+map splitting and composition across scales
+
+Ask:
+
+Does one feature persist as a stable causal object?
+
+Or does C continually redistribute across valid decompositions?
+
+The decisive evidence for non-canonicity would be multiple incompatible decompositions with comparable:
+
+reconstruction
+predictive power
+and causal control.
+
+## SON-LATENT-002-A-A — THE MODEL PUTS THE WEEK ON A CIRCLE: some meanings are not directions but shapes that computation moves around.
+QUESTION:
+Which concepts require shapes rather than directions for their computational representation?
+
+DEEPER QUESTION:
+Could part of what we call “meaning” inside a model be the topology of the transformations a concept permits?
+
+TENSION:
+A discovered circle need not be the only representation involved in weekday reasoning.
+
+Models may contain redundant or parallel mechanisms.
+
+The evidence is strongest for the studied tasks and architectures.
+
+Nor should every cyclical human concept be assumed to receive circular neural geometry.
+
+MISSING:
+Comparable geometries for:
+
+color hue
+musical pitch classes
+seasons
+narrative cycles
+social hierarchies
+spatial orientation
+grammatical tense
+kinship
+political spectra
+
+Evidence that prompt effects can be predicted from manifold topology.
+
+Whether generative image models encode stylistic or visual variables as circles, tori, trees, or other nonlinear manifolds.
+
+BOUNDARY:
+This source studies language-model representations, not image-generator latent spaces.
+
+The child changes the conceptual possibilities for “latent geometry” without claiming identical implementation in Midjourney.
+
+TEST:
+Choose concept families with known relational structure:
+
+LINE:
+small → large
+
+CIRCLE:
+January → ... → December → January
+
+TREE:
+animal → mammal → dog
+
+GRID:
+north/south × east/west
+
+For each, probe model activations and compare candidate geometries.
+
+Then intervene in the recovered geometry.
+
+Ask whether operations appropriate to the human concept correspond to transformations preserving that geometry.
+
+The strongest result would be:
+
+different conceptual structures
+→ different internal topologies
+→ topology-specific causal computation.
+
+## SON-PROMPTSEMANTICS-007-A-A — THE WORLD CAN CONTAIN ITS OWN PROMPT: an instruction hidden inside an image can seize control of the model reading it.
+QUESTION:
+How can a multimodal system distinguish language that is being OBSERVED from language that is entitled to ISSUE COMMANDS?
+
+DEEPER QUESTION:
+What becomes of the program/data distinction when the environment itself can contain symbols that the interpreter treats as executable control?
+
+TENSION:
+The source studies adversarial attacks.
+
+Most text inside images is not malicious.
+
+A robust system still needs to understand:
+
+street signs
+documents
+screenshots
+captions
+diagrams
+interfaces
+
+without treating every inscription as inert.
+
+The challenge is therefore not simply “ignore image text.”
+
+It is to preserve semantic understanding while controlling execution authority.
+
+MISSING:
+A formal type system distinguishing:
+
+quoted language
+observed language
+user instruction
+tool instruction
+developer instruction
+environmental inscription.
+
+Experiments where the same sentence occupies different provenance channels.
+
+Architectures that preserve provenance throughout multimodal computation rather than attempting to infer authority after representations are mixed.
+
+BOUNDARY:
+This paper demonstrates prompt injection against tested multimodal LLM configurations.
+
+It does not establish that all multimodal systems exhibit identical vulnerability or that every rendered instruction is executable.
+
+TEST:
+Present the identical sentence:
+
+“Describe only the red object.”
+
+in five locations:
+
+A. system-authorized instruction
+B. user prompt
+C. caption metadata
+D. text printed visibly inside image
+E. imperceptibly embedded image text
+
+Hold semantic content constant.
+
+Measure behavioral authority across channels.
+
+Then repeat after explicitly labeling each channel:
+
+INSTRUCTION
+QUOTE
+DATA
+UNTRUSTED ENVIRONMENT
+
+A system with genuine provenance-sensitive semantics should understand all five while obeying only authorized channels.
+
+## SON-PROMPTSEMANTICS-007-B-C — CUT OFF ONE HEAD AND ANOTHER HEAD ANSWERS: causal intervention can cause the model to change the computation you were trying to measure.
+QUESTION:
+How can we infer the normal causal role of a component when intervening on that component changes the behavior of other components?
+
+DEEPER QUESTION:
+Is the fundamental computational object a fixed circuit, or a field of conditional pathways whose causal organization depends on which pathways remain available?
+
+TENSION:
+“Self-repair” can sound stronger than the evidence.
+
+The cited study reports compensatory computation, not conscious detection of injury or general fault tolerance.
+
+Later work also finds self-repair can be incomplete, noisy, and prompt-dependent.
+
+The strange point survives without anthropomorphism:
+
+causal organization can be intervention-sensitive.
+
+MISSING:
+Whether similar compensation appears in multimodal and diffusion models.
+
+Whether steering one semantic direction causes competing features to strengthen.
+
+Whether prompt manipulations can trigger analogous compensatory pathways.
+
+Methods for estimating counterfactual:
+
+WHAT WOULD THIS COMPONENT HAVE CONTRIBUTED
+
+without allowing downstream computation to reorganize around its absence.
+
+BOUNDARY:
+The paper studies language-model computations and specific ablation procedures.
+
+The Hydra metaphor is the authors’ name for the observed compensation phenomenon, not a claim of biological regeneration.
+
+TEST:
+For a candidate circuit component A:
+
+1. record normal downstream activations B
+2. ablate A
+3. record changed downstream activations B'
+4. separately patch B back toward its normal state while A remains ablated
+
+Compare:
+
+NORMAL
+ABLATE-A
+ABLATE-A + FREEZE-DOWNSTREAM
+ABLATE-A + PATCH-NORMAL-DOWNSTREAM
+
+If behavioral loss becomes substantially larger when compensation is prevented, naive ablation underestimates A’s original contribution.
+
+Repeat across prompts to test whether the compensating pathway itself is context-dependent.
+
+## PROMPT-PRACTICE-DELTA-001 — WHEN A PROMPT FAILS, REMOVE WORDS BEFORE ADDING THEM.
+QUESTION:
+Can prompt failures be systematically reduced to minimal failure-inducing linguistic fragments?
+
+DEEPER QUESTION:
+Is the smallest prompt that reproduces a failure a better unit of specification than the correction written after the failure?
+
+TENSION:
+Minimality and informativeness are not identical.
+
+A tiny failure may reveal exactly which words trigger behavior.
+
+But another, larger counterexample might discriminate more strongly between competing explanations.
+
+This places Delta Debugging in productive tension with query-selection methods that maximize information rather than minimize input.
+
+MISSING:
+A principled decomposition of natural-language prompts into removable units.
+
+Possible units include:
+
+token
+phrase
+sentence
+example
+constraint
+role
+formatting instruction
+context document
+tool result
+conversation turn.
+
+Prompt behavior is also stochastic, so FAIL cannot always be treated as binary.
+
+BOUNDARY:
+Delta Debugging assumes an executable test oracle capable of deciding whether failure persists.
+
+Many generative failures are graded, subjective, stochastic, or only visible after human inspection.
+
+The technique therefore transfers only when FAILURE can be made sufficiently repeatable and legible.
+
+TEST:
+Choose one prompt from a prompt genealogy that repeatedly produces a recognizable failure.
+
+Freeze:
+
+model
+system instructions
+temperature
+seed where available
+tool state.
+
+Decompose the prompt into clauses.
+
+Apply ddmin-style deletion.
+
+For every candidate prompt, run multiple generations and estimate failure frequency.
+
+Stop when no remaining clause can be removed without materially reducing the failure.
+
+Compare:
+
+ORIGINAL PROMPT
+MINIMAL FAILING PROMPT
+CORRECTED PROMPT.
+
+Ask whether the minimal form exposes a constraint that was obscured in the original correction.
+
+## PROMPT-PRACTICE-METAMORPHIC-002 — WHEN YOU CANNOT SAY WHAT THE RIGHT OUTPUT IS, SAY WHAT MUST REMAIN TRUE WHEN THE PROMPT CHANGES.
+QUESTION:
+Can prompt reliability be specified primarily through relations among generations rather than through target generations?
+
+DEEPER QUESTION:
+Does natural-language programming need a semantics of TRANSFORMATIONAL INVARIANTS more than a semantics of exact outputs?
+
+TENSION:
+A relational test can pass while both outputs are bad.
+
+For example:
+
+two generations may preserve identity perfectly while depicting the wrong person.
+
+Metamorphic relations therefore supplement rather than replace all direct evaluation.
+
+MISSING:
+A vocabulary of metamorphic relations suitable for:
+
+text
+image
+video
+code
+world models
+interactive systems
+multimodal artifacts.
+
+A method for distinguishing intended change from collateral change.
+
+A way to infer useful metamorphic relations from correction histories.
+
+BOUNDARY:
+The source concerns software testing.
+
+Generative media may not have deterministic relations even when behavior is acceptable.
+
+Relations may therefore need tolerances, distributions, or human judgment rather than Boolean equality.
+
+TEST:
+R(O,O') ?
+
+The executable specification becomes a relation over generations.
+
+## PROMPT-PRACTICE-DISAGREEMENT-003 — THE BEST NEXT PROMPT MAY BE THE ONE MOST LIKELY TO MAKE YOUR EXPLANATIONS DISAGREE.
+QUESTION:
+Can prompt iteration be made dramatically more efficient by selecting the next prompt for information gain rather than artifact quality?
+
+DEEPER QUESTION:
+Should a mature prompt language contain a distinct class of prompts whose purpose is epistemic rather than productive?
+
+TENSION:
+The smallest reproducible failure is not necessarily the most informative failure.
+
+[[PROMPT-PRACTICE-DELTA-001]] prefers reduction.
+
+Query by Committee prefers discrimination.
+
+The two operations therefore answer different questions:
+
+DELTA:
+What is minimally sufficient to reproduce this behavior?
+
+DISAGREEMENT:
+Which experiment best tells us which explanation is true?
+
+MISSING:
+A practical way to generate explicit competing hypotheses during prompt work.
+
+A disagreement metric for hypotheses expressed in natural language.
+
+A mechanism for preventing the same model being tested from also manufacturing conveniently self-confirming hypotheses.
+
+BOUNDARY:
+Query by Committee is a supervised-learning method with a formal hypothesis space and teacher-provided labels.
+
+Prompt debugging rarely has such a clean hypothesis class.
+
+The transfer is therefore methodological, not a claim that prompt iteration literally implements the algorithm.
+
+TEST:
+For one stubborn prompt failure:
+
+1. Write at least four mutually discriminable explanations.
+2. For each explanation predict the outcome of five possible probe prompts.
+3. Select the probe with the greatest predicted disagreement.
+4. Execute it.
+5. Eliminate contradicted explanations.
+6. Repeat until one or two hypotheses survive.
+
+Compare generations spent against ordinary trial-and-error repair.
+
+## PROMPT-PRACTICE-HOLES-004 — PROMPTING DID NOT INVENT INCOMPLETE PROGRAMS; IT MAY HAVE INVENTED UNMARKED HOLES.
+QUESTION:
+Is the distinctive unit of natural-language programming not the HOLE but the UNMARKED HOLE?
+
+DEEPER QUESTION:
+How can a programming system expose decisions it made because the specification was silent, rather than because the user explicitly delegated them?
+
+TENSION:
+If this distinction survives, “deferred formalization” cannot claim novelty merely from partial specification.
+
+Sketching already formalizes deliberate incompleteness.
+
+The stronger novelty candidate is:
+
+SEMANTICALLY UNMARKED INCOMPLETENESS
++
+EXECUTION
++
+POST-HOC DISCOVERY OF THE MISSING VARIABLE.
+
+MISSING:
+A taxonomy separating:
+
+explicit hole
+implicit default
+ordinary ambiguity
+underspecification
+unknown requirement
+delegated choice
+accidental omission.
+
+An experiment showing that model-generated artifacts systematically reveal variables users did not know they had left open.
+
+BOUNDARY:
+Sketch operates over formally delimited program spaces and specifications.
+
+Natural language does not automatically provide equivalent guarantees about completion correctness or candidate space.
+
+TEST:
+Choose one task.
+
+Encode it twice.
+
+A. FORMAL PARTIAL PROGRAM:
+Enumerate every unresolved variable explicitly.
+
+B. NATURAL-LANGUAGE DESCRIPTION:
+Mention only the currently salient intent.
+
+Execute both.
+
+For B, inventory every consequential decision present in the output but absent from the input.
+
+Classify each as:
+
+DEFAULT
+INFERRED
+INVENTED
+REQUIRED-BY-MEDIUM
+AMBIGUOUS.
+
+If B repeatedly introduces consequential variables that the author had not represented as unknowns, UNMARKED HOLE survives as a distinct mechanism.
+
+## PROMPT-PRACTICE-THEORYTRACE-005 — A FINAL PROMPT MAY BE THE LEAST IMPORTANT THING TO SAVE.
+QUESTION:
+What must be preserved alongside a prompt so another practitioner can modify it without destroying the theory that produced it?
+
+DEEPER QUESTION:
+Can a correction genealogy externalize enough of a practitioner's theory to make prompt expertise transferable?
+
+TENSION:
+No textual archive can guarantee transmission of the full human theory Naur describes.
+
+A theory trace might merely create more documentation.
+
+But it can preserve the evidential history that ordinary prompt repositories routinely discard.
+
+MISSING:
+An empirical test of whether correction genealogies actually improve:
+
+handoff
+adaptation
+debugging
+model migration
+prompt simplification.
+
+A distinction between useful theory trace and exhaustive interaction logging.
+
+BOUNDARY:
+Naur's theory is about human programmers and conventional software development.
+
+Applying it to prompting is an analogy until transfer experiments demonstrate that prompt modification depends on comparable tacit or historical understanding.
+
+TEST:
+Take one mature prompt with a long development history.
+
+Prepare three handoff packages:
+
+A. FINAL PROMPT ONLY
+
+B. FINAL PROMPT + DOCUMENTED RULES
+
+C. FINAL PROMPT + CORRECTION GENEALOGY
+
+Give each group the same novel modification requirement.
+
+Measure:
+
+successful adaptation
+time
+number of regressions
+ability to explain why constraints exist
+ability to remove obsolete constraints.
+
+If C significantly outperforms A and B, the genealogy functions as a partial THEORY TRACE.
+
+## PROMPT-PRACTICE-TALKBACK-006 — THE OUTPUT IS NOT THE ANSWER; IT IS THE MATERIAL THAT TELLS YOU WHAT YOU WERE ACTUALLY ASKING.
+QUESTION:
+How can prompt histories distinguish ERROR CORRECTION from SPECIFICATION DISCOVERY?
+
+DEEPER QUESTION:
+If the artifact can change the evaluator's criteria, what object is actually converging during iterative prompting?
+
+TENSION:
+Reflective design long predates generative AI.
+
+Therefore:
+
+artifact reveals requirement
+
+cannot by itself establish novelty for contemporary prompting.
+
+A stronger novelty candidate is the combination:
+
+NATURAL-LANGUAGE DESCRIPTION
++
+IMMEDIATE COMPUTATIONAL EXECUTION
++
+HIGH-FIDELITY ARTIFACT
++
+RAPID REFORMULATION
++
+PRESERVABLE GENEALOGY.
+
+MISSING:
+A quantitative or operational distinction between:
+
+correction
+reframing
+preference drift
+mere indecision.
+
+Evidence that generated artifacts reveal previously unrepresented variables at a rate or scale different from earlier sketch/prototype practices.
+
+BOUNDARY:
+Schön studies professional designing.
+
+The source does not describe LLM prompting or software synthesis.
+
+Its role is genealogical opposition: it removes “artifact talks back” as an easy novelty claim.
+
+TEST:
+Code every correction in a real prompt genealogy as one of:
+
+A. OUTPUT ERROR:
+criterion existed before generation.
+
+B. SPECIFICATION DISCOVERY:
+criterion first became articulable after seeing generation.
+
+C. PREFERENCE CHANGE:
+criterion existed but changed.
+
+D. MODEL COMPENSATION:
+criterion is introduced only to counter model behavior.
+
+Measure the distribution.
+
+If B is common and consequential, the genealogy contains genuine deferred specification rather than simple iterative optimization.
+
+## PROMPT-PRACTICE-ORACLE-007 — CEGIS HAS AN ORACLE; PROMPTING HAS AN ORACLE THAT CAN CHANGE ITS MIND.
+QUESTION:
+What theory of synthesis applies when the oracle's judgment function changes because of the candidates it is judging?
+
+DEEPER QUESTION:
+Is deferred formalization fundamentally a CO-LEARNING problem in which artifact and specification emerge together?
+
+TENSION:
+Human evaluators can change for uninteresting reasons:
+
+fatigue
+novelty seeking
+inconsistency
+anchoring.
+
+Not every changed criterion is specification discovery.
+
+The challenge is to distinguish LEARNING WHAT MATTERS from preference noise.
+
+MISSING:
+A representation of evaluator state.
+
+A taxonomy of oracle change.
+
+A test separating:
+
+previously implicit criterion becoming explicit
+new criterion genuinely discovered
+criterion merely drifting.
+
+A comparison with coevolutionary and interactive synthesis frameworks.
+
+BOUNDARY:
+OGIS and CEGIS as described in the source concern formal inductive synthesis.
+
+The MUTATING ORACLE is [OUR FORMALIZATION], not source machinery.
+
+TEST:
+Pre-register a detailed evaluation rubric for a complex generative task.
+
+Run 20 iterative generations.
+
+After every generation record:
+
+existing rubric criteria
+newly articulated criterion
+removed criterion
+reweighted criterion
+reason for change.
+
+At the end reconstruct:
+
+O₀
+O₁
+...
+O₂₀.
+
+Then rerun the same generation sequence using only O₀.
+
+If later accepted artifacts require criteria absent from O₀, the process cannot be represented faithfully as optimization against a fixed oracle.
+
+## PROMPT-PRACTICE-PROPERTY-008 — AN INVARIANT SHOULD NOT JUST BE WRITTEN DOWN; IT SHOULD KNOW HOW TO ATTACK THE PROGRAM.
+QUESTION:
+Should every accepted prompt constraint be compiled into a generator of adversarial cases?
+
+DEEPER QUESTION:
+Could a prompt repository become executable scholarship in which claims continuously manufacture attempts to falsify themselves?
+
+TENSION:
+Random generation is not automatically useful exploration.
+
+A badly designed generator can produce thousands of easy cases and never touch the boundary where the system fails.
+
+This creates a direct bridge to:
+
+[[PROMPT-PRACTICE-DISAGREEMENT-003]]
+
+which prefers informative cases,
+
+and:
+
+[[PROMPT-PRACTICE-DELTA-001]]
+
+which minimizes discovered failures.
+
+MISSING:
+Generators for natural-language variations that preserve intended semantics.
+
+Evaluators for aesthetic, causal, spatial, and narrative invariants.
+
+A distinction between valid perturbations and transformations that accidentally change the requirement itself.
+
+BOUNDARY:
+QuickCheck tests conventional executable programs against explicitly encoded properties.
+
+Prompt properties often depend on stochastic model behavior and human judgment.
+
+The transfer therefore requires probabilistic or graded property evaluation.
+
+TEST:
+identity remains invariant.
+
+One sentence has become an experimental machine.
+
+## SON-FINISH-027 — THE SKETCH CAN LIE ABOUT THE FINISHED IDEA.
+QUESTION:
+Which valuable ideas are systematically rejected because their virtues do not survive low-resolution representation?
+
+DEEPER QUESTION:
+Does generative AI change creativity primarily by expanding what can be imagined, or by changing the stage at which judgment becomes economically possible?
+
+TENSION:
+Cheap finish can rescue late-legible ideas.
+
+Cheap finish can also make weak ideas look persuasive before they earn attention.
+
+The same mechanism that broadens exploration creates a new selection crisis.
+
+MISSING:
+A controlled comparison of judgments made from thumbnails, medium-fidelity prototypes, and generatively finished representations of the same underlying concepts.
+
+Evidence across domains beyond visual concept design.
+
+A measure of false negatives versus false positives introduced by each representation level.
+
+BOUNDARY:
+This zettel generalizes from one professional creative director’s reported experience. It does not establish how common the mechanism is across users or domains.
+
+TEST:
+Give expert designers the same candidate concepts in three conditions:
+
+THUMBNAIL
+MID-FIDELITY
+GENERATIVE NEAR-FINISH.
+
+Require KEEP/KILL judgments at each stage.
+
+Then fully realize every concept regardless of early judgment.
+
+Measure which condition best predicts final expert preference and which valuable concepts each stage falsely kills.
+
+## SON-CORRECTION-028 — CREATIVITY CAN BEGIN BY POSTPONING CORRECTION.
+QUESTION:
+What distinguishes productive postponement of correction from mere tolerance of noise?
+
+DEEPER QUESTION:
+Can creative expertise be modeled as the ability to decide which errors deserve a longer life?
+
+TENSION:
+Not correcting everything is necessary for surprise.
+
+Not correcting anything is not craft.
+
+The skill lies in discrimination, not surrender.
+
+MISSING:
+Observable criteria experts use to decide when a bug is worth exploring.
+
+Comparative evidence from novice and expert prompt users.
+
+Cases where bug-following wastes effort or merely reproduces model bias.
+
+BOUNDARY:
+The Zhuangzi connection enters through Chung’s interpretation and the user’s contemporaneous notes. This zettel does not claim direct historical influence from Zhuangzi on Midjourney practice.
+
+TEST:
+Give experts and novices generated outputs containing controlled deviations from a target.
+
+Require each participant to choose:
+
+CORRECT NOW
+EXPLORE 4 MORE
+EXPLORE 16 MORE
+ADOPT AS NEW DIRECTION.
+
+Then reveal downstream branches.
+
+Measure whether experts are better not merely at correcting errors but at preserving high-yield errors.
+
+## SON-NOISE-029 — WHEN FINISH BECOMES CHEAP, ATTENTION BECOMES THE EXPENSIVE MATERIAL.
+QUESTION:
+What new institutions appear when production becomes cheaper faster than attention becomes cheaper?
+
+DEEPER QUESTION:
+Does generative abundance change creative expertise from making rare objects toward constructing filters, archives, rooms, and stopping rules?
+
+TENSION:
+The public flood is not merely a defect.
+
+It is also apprenticeship infrastructure: users see prompts, errors, styles, and other people’s branches.
+
+Filtering the noise can destroy the serendipity that made the community generative.
+
+MISSING:
+Longitudinal measures of how much generated work is actually inspected, revisited, or reused.
+
+Evidence on whether experts solve overload through better attention, smaller communities, stronger archives, or more aggressive deletion.
+
+BOUNDARY:
+The paper provides qualitative and descriptive evidence from one rapidly changing 2022 community. It does not establish a general economic law for all generative systems.
+
+TEST:
+For identical users, vary generated candidate volume while holding task and available review time constant.
+
+Measure:
+
+fraction inspected
+fraction revisited
+quality of selected final artifact
+novelty of selected branch
+memory for discarded branches.
+
+Locate the point at which more generated possibility decreases discovered possibility.

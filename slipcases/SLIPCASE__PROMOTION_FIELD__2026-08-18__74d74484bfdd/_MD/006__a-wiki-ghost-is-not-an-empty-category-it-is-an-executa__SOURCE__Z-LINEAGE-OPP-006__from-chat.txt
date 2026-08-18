@@ -1,0 +1,90 @@
+ZETTEL
+
+ID:
+Z-LINEAGE-OPP-006
+
+TITLE:
+A wiki ghost is not an empty category; it is an executable absence
+
+SOURCE:
+WikiWikiWeb / C2 — “DanglingLink” — archival page.
+
+SOURCE URL:
+https://wiki.c2.com/?DanglingLink=
+
+PASSAGE:
+[PARAPHRASE] WikiWikiWeb calls a link to a page that does not yet exist a dangling link and marks the unresolved WikiName with a question-mark link through which the missing page can be created.
+
+RESEARCH OBJECT:
+The missing page is computationally legible before it exists. Its absence has an address, inbound relations, a visible state, and an operation available to resolve it.
+
+LOCAL MOVE:
+The wiki turns referential failure into an authoring interface.
+
+SOURCE TERMS:
+DanglingLink
+WikiName
+question mark
+page
+create
+
+WHAT BECAME STRANGE:
+A blank heading and a dangling wiki link are not the same kind of hole. The first preallocates a container. The second records that something elsewhere tried to refer to an absent object.
+
+QUESTION:
+When does absence become data?
+
+DEEPER QUESTION:
+Can the topology of unresolved references constitute a research agenda without anybody explicitly writing one?
+
+MECHANISM:
+A named reference is parsed; its target lookup fails; the interface preserves the name and renders that failure as a creation affordance.
+
+FORMAL SHIFT:
+<named reference>
+→ <resolvable address with absent target>
+→ [render unresolved state + creation action]
+→ <actionable missing node>
+
+SOURCE FORMALISM:
+Existing target → ordinary link.
+Absent target → visibly unresolved link / creation route.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+GHOST(address) =
+  target(address) = ∅
+  AND inbound(address) > 0
+
+TENSION:
+An empty commonplace heading means “a category exists but has no contents.” A dangling wiki link means “a relation demands an object that is absent.” Their research consequences are different.
+
+MISSING:
+A ranking rule for deciding which unresolved target deserves to become real.
+
+BOUNDARY:
+The wiki establishes actionable missingness. It does not establish that every empty heading, unanswered question, or omitted topic is the same data structure.
+
+CITATION TRAIL:
+C2 WikiWikiWeb pages on dangling links and automatic link generation.
+Early WikiWikiWeb implementations.
+Studies of red links and page creation in later wikis.
+
+TEST:
+Rank ghosts by inbound-link diversity, not merely count. Compare which missing pages become most consequential once written.
+
+PLATFORM:
+[[THE GAP IS PART OF THE RECORD]]
+
+LINKS:
+[[EXECUTABLE ABSENCE]]
+[[DANGLING REFERENCE]]
+[[INBOUND DEMAND WITHOUT AN OBJECT]]
+
+BIBTEX:
+@misc{c2danglinglink,
+  title = {DanglingLink},
+  howpublished = {WikiWikiWeb, C2},
+  url = {https://wiki.c2.com/?DanglingLink=},
+  note = {Archived WikiWikiWeb page; accessed 2026-08-18}
+}

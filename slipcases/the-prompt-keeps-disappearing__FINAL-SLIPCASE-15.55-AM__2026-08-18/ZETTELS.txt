@@ -1,0 +1,4930 @@
+ZETTEL
+
+ID:
+SHOT-20260817-01
+
+TITLE:
+2026-08-17 — If you want the model to act, name action as the default state.
+
+SOURCE:
+Anthropic — “Prompting best practices” — Claude Platform documentation — accessed 2026-08-17.
+SOURCE URL: https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices
+
+PASSAGE:
+[QUOTE]
+“For Claude to take action, be more explicit:”
+
+[PARAPHRASE]
+Anthropic distinguishes language that invites recommendation from language that directs implementation. Its current guidance recommends explicitly asking the model to implement requested changes and, in agentic contexts, to use available tools to resolve missing details rather than merely speculate about them.
+
+RESEARCH OBJECT:
+ACTION MODE AS A PROMPT OPERATOR.
+
+LOCAL MOVE:
+[[MJ-2022-001]] described prompting as adversarial description: the practitioner anticipates how the machine may misread the words.
+
+[[MJ-2022-019]] later raised a different practical competence: being able to “talk to an artist just as easily as you could talk to a computer.”
+
+The current-day practice sharpens both.
+
+A prompt can correctly describe the intended state and still fail operationally because the model chooses the wrong mode of participation.
+
+“Analyze this.”
+“Tell me how to change this.”
+“Change this.”
+
+can refer to nearly the same object while authorizing different behavior.
+
+The emerging pragmatic variable is therefore not only WHAT the utterance means but WHAT KIND OF MOVE the utterance licenses.
+
+SOURCE TERMS:
+“take action”
+“implement”
+“tools”
+“missing details”
+“explicit”
+
+WHAT BECAME STRANGE:
+Imperative language is becoming a control primitive.
+
+The difference between:
+
+DESCRIBE THE SHOT
+
+and
+
+TAKE THE SHOT
+
+may be only a few words, but those words determine whether the model remains in discourse or crosses into state change.
+
+QUESTION:
+Which linguistic constructions reliably distinguish analysis, recommendation, preparation, execution, and committed state mutation?
+
+DEEPER QUESTION:
+Is agentic prompting producing an emergent mood system for natural-language programming analogous to grammatical moods but tied to computational authority?
+
+MECHANISM:
+User supplies desired state.
+
+Model must infer an action mode.
+
+Weakly specified action mode:
+→ model may remain representational.
+
+Explicit action mode:
+→ model inspects relevant state
+→ invokes permitted operations
+→ changes artifact or environment
+→ verifies consequence.
+
+FORMAL SHIFT:
+SEMANTIC REQUEST:
+
+“I want X.”
+
+becomes
+
+SEMANTIC REQUEST
++
+OPERATIONAL MOOD:
+
+“Implement X.”
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+Anthropic's current guidance explicitly distinguishes prompts that tend toward suggestion from prompts that more clearly direct action.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+UTTERANCE
+=
+CONTENT
++
+ACTION MODE
+
+ACTION MODE ∈ {
+OBSERVE,
+EXPLAIN,
+RECOMMEND,
+PREPARE,
+EXECUTE,
+VERIFY
+}
+
+The contemporary “shot call” specifies both CONTENT and ACTION MODE.
+
+TENSION:
+[[MJ-2022-001]] teaches defensive precision against unintended interpretation.
+
+But stronger imperatives introduce a different failure mode:
+
+UNDEREXECUTION
+can become
+OVEREXECUTION.
+
+The useful principle is therefore not:
+
+ALWAYS ACT.
+
+It is:
+
+MAKE THE AUTHORIZATION MODE LEGIBLE.
+
+This connects directly to [[SHOT-20260817-06]], where an action can be called without yet being committed.
+
+MISSING:
+An empirical lexicon of current operational verbs across models and domains.
+
+We do not yet know whether:
+
+make
+build
+apply
+implement
+execute
+change
+send
+publish
+commit
+run
+
+produce stable differences across systems.
+
+BOUNDARY:
+The cited Anthropic guidance is platform-specific and behavior can change across model generations.
+
+The generalized ACTION MODE framework is [OUR FORMALIZATION — NOT SOURCE SYNTAX].
+
+CITATION TRAIL:
+[[MJ-2022-001]]
+→ ambiguity as execution problem
+→ [[MJ-2022-019]]
+→ talking to the computer as specialized practice
+→ Anthropic current-day action guidance
+→ utterance gains operational mood
+→ [[SHOT-20260817-06]]
+→ proposed action can later split from committed action
+
+TEST:
+On 2026-08-17-capable agentic systems, issue the same underlying task with controlled leading verbs:
+
+analyze
+suggest
+prepare
+draft
+make
+implement
+apply
+execute
+verify
+
+Record:
+
+whether tools are invoked
+whether external state changes
+whether an artifact is created
+whether approval is requested
+whether the system stops at explanation.
+
+Use the results to construct a dated OPERATIONAL VERB LEXICON.
+
+PLATFORM:
+Claude
+Tool-using agents
+Coding agents
+Computer-use agents
+
+LINKS:
+[[MJ-2022-001]]
+[[MJ-2022-019]]
+[[SHOT-20260817-04]]
+[[SHOT-20260817-06]]
+
+BIBTEX:
+NONE
+
+
+ZETTEL
+
+ID:
+SHOT-20260817-02
+
+TITLE:
+2026-08-17 — Put the rule beside the operation it governs.
+
+SOURCE:
+OpenAI — “o3/o4-mini Function Calling Guide” — OpenAI Cookbook — published 2025-05-26 — current guidance consulted 2026-08-17.
+SOURCE URL: https://developers.openai.com/cookbook/examples/o-series/o3o4-mini_prompting_guide
+
+PASSAGE:
+[QUOTE]
+“This serves as a durable interface contract between reasoning models and tool APIs.”
+
+RESEARCH OBJECT:
+LOCALIZED PROMPT POLICY.
+
+LOCAL MOVE:
+[[MJ-2022-003]] discovered that the visible prompt is not the final machine representation.
+
+[[MJ-2022-008-A]] showed a related spatial movement in interface history:
+
+situated practice
+→ systematization
+→ interface primitive.
+
+Current function-calling practice introduces another movement.
+
+Instructions themselves migrate toward the operation they constrain.
+
+Instead of one giant prompt saying:
+
+never overwrite files
+only refund delivered orders
+look up users before modification
+never invent identifiers
+
+the relevant rule can live beside:
+
+file_write
+refund
+user_update
+database_lookup.
+
+The specification becomes spatially distributed across the agent's action surface.
+
+SOURCE TERMS:
+“function description”
+“usage criteria”
+“arguments”
+“interface contract”
+“tool”
+“developer instructions”
+
+WHAT BECAME STRANGE:
+The prompt no longer has one canonical location.
+
+The behavior of the system can be distributed across:
+
+system instructions
+tool descriptions
+schemas
+runtime context
+state
+examples
+review policies.
+
+Prompt engineering therefore starts to look less like writing one document and more like arranging laws across a computational territory.
+
+QUESTION:
+Which instruction belongs at which scope?
+
+DEEPER QUESTION:
+Is prompt architecture developing the equivalent of lexical scope, where rules should be bound to the smallest domain in which they are valid?
+
+MECHANISM:
+Global policy establishes universal invariants.
+
+Tool-local policy specifies:
+when operation O is available
+what preconditions O requires
+what O must never do
+how O's arguments are constructed.
+
+When the agent considers O, the relevant rules are encountered locally.
+
+FORMAL SHIFT:
+ONE PROMPT
+→ MANY GOVERNING LOCATIONS
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+OpenAI's function-calling guidance recommends placing detailed invocation criteria and argument requirements in function descriptions so the tool definition itself serves as an interface contract.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PROMPT SCOPE:
+
+GLOBAL
+PROJECT
+ROLE
+STATE
+TOOL
+ARGUMENT
+TURN
+
+Rule R should ideally live at:
+
+smallest_scope(R)
+
+that still governs every situation where R must hold.
+
+TENSION:
+Centralizing rules makes the total specification easier for humans to inspect.
+
+Localizing rules makes them more salient when the operation is selected.
+
+This creates a new engineering tradeoff:
+
+HUMAN LEGIBILITY
+versus
+MODEL-LOCAL RELEVANCE.
+
+[[SHOT-20260817-07]] complicates this further because rules can later be synthesized from execution traces and inserted into changing scopes.
+
+MISSING:
+A prompt-scope calculus.
+
+We do not yet have robust conventions for deciding whether a correction belongs to:
+
+this turn
+this tool
+this project
+this agent
+all future tasks.
+
+BOUNDARY:
+The source concerns OpenAI function calling.
+
+The analogy to lexical scope is [OUR FORMALIZATION — NOT SOURCE SYNTAX].
+
+CITATION TRAIL:
+[[MJ-2022-003]]
+→ machine receives representations beneath visible language
+→ [[MJ-2022-008-A]]
+→ practice becomes formalized interface
+→ current function descriptions become behavioral contracts
+→ prompt fragments move beside operations
+→ [[SHOT-20260817-07]]
+→ execution can later rewrite those fragments
+
+TEST:
+Take one agent with twelve behavioral constraints.
+
+Implement three versions dated 2026-08-17:
+
+GLOBAL:
+all rules in one system prompt.
+
+LOCAL:
+each rule attached only to the tool or state it governs.
+
+HYBRID:
+critical invariants global, operation-specific constraints local.
+
+Measure:
+
+tool-selection accuracy
+argument errors
+rule violations
+cross-tool interference
+prompt-token cost
+human auditability.
+
+PLATFORM:
+OpenAI function calling
+Tool-using agents
+
+LINKS:
+[[MJ-2022-003]]
+[[MJ-2022-008-A]]
+[[SHOT-20260817-03]]
+[[SHOT-20260817-04]]
+[[SHOT-20260817-07]]
+
+BIBTEX:
+NONE
+
+
+ZETTEL
+
+ID:
+SHOT-20260817-03
+
+TITLE:
+2026-08-17 — A shot becomes stronger when its legal shape exists before its content.
+
+SOURCE:
+OpenAI — “Structured model outputs” — OpenAI API documentation — accessed 2026-08-17.
+SOURCE URL: https://developers.openai.com/api/docs/guides/structured-outputs
+
+PASSAGE:
+[QUOTE]
+“only Structured Outputs ensure schema adherence.”
+
+RESEARCH OBJECT:
+SCHEMA AS POSSIBILITY SPACE.
+
+LOCAL MOVE:
+[[MJ-2022-003]] made the prompt strange by locating an invisible representation beneath ordinary words.
+
+[[SHOT-20260817-02]] makes instruction location strange by distributing rules among tools.
+
+Structured Outputs adds yet another operation:
+
+the human can declare the class of legal answers before the model chooses the answer.
+
+A prompt no longer needs to say only:
+
+“Give me the answer.”
+
+or even:
+
+“Give me exactly these fields.”
+
+It can pair semantic intent with a machine-enforced structural type.
+
+SOURCE TERMS:
+“Structured Outputs”
+“JSON Schema”
+“schema adherence”
+“strict”
+“response format”
+“function calling”
+
+WHAT BECAME STRANGE:
+The user can constrain the model through a language that is not primarily addressed to the model as prose.
+
+The schema is a shot call whose force comes from making certain output shapes unavailable.
+
+QUESTION:
+How much prompt prose should disappear once the same constraint can be represented structurally?
+
+DEEPER QUESTION:
+Are schemas functioning as the first widely deployed type system for natural-language programming?
+
+MECHANISM:
+User specifies semantic goal.
+
+User specifies legal structural representation.
+
+Generation occurs inside that structural space.
+
+Downstream operation consumes the resulting typed object.
+
+FORMAL SHIFT:
+REQUEST
+→ FREE TEXT
+→ PARSE
+→ REPAIR
+
+becomes
+
+REQUEST
++
+SCHEMA
+→ TYPED OBJECT
+→ NEXT OPERATION
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+OpenAI distinguishes ordinary JSON production from Structured Outputs that adhere to a supplied schema.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+SHOT =
+SEMANTIC INTENT
+∩
+STRUCTURAL TYPE
+
+Example:
+
+semantic:
+“choose the next operation”
+
+structural:
+{
+  operation: enum,
+  target: string,
+  confidence: number
+}
+
+The model cannot answer by wandering outside the declared representational space.
+
+TENSION:
+Structural correctness does not establish semantic correctness.
+
+A perfectly legal object can still call the wrong operation.
+
+This pushes the lineage directly toward [[SHOT-20260817-06]]:
+
+TYPE CHECK
+is not
+ACTION REVIEW.
+
+And toward [[SHOT-20260817-09]]:
+
+SCHEMA VALIDITY
+is not
+SPECIFICATION VALIDITY.
+
+MISSING:
+A layer for expressing semantic invariants beyond shape.
+
+Examples:
+
+end_date must follow start_date
+refund amount cannot exceed payment
+deleted object must exist
+child zettel must contain parent link
+citation must support quoted proposition.
+
+BOUNDARY:
+Structured Outputs constrains supported structural properties.
+
+It does not guarantee truth, good judgment, or correct external execution.
+
+CITATION TRAIL:
+[[MJ-2022-003]]
+→ words become machine representation
+→ [[SHOT-20260817-02]]
+→ rules gain local scope
+→ Structured Outputs
+→ output receives type
+→ [[SHOT-20260817-09]]
+→ typed specification can itself be semantically linted
+→ [[SHOT-20260817-06]]
+→ valid action can still require review
+
+TEST:
+On 2026-08-17, collect recurring prose instructions such as:
+
+“return exactly”
+“do not add fields”
+“always include”
+“choose one of”
+“use this order.”
+
+Translate them into schema constraints where possible.
+
+Measure which prose rules can disappear entirely and which still require semantic instruction.
+
+PLATFORM:
+OpenAI Structured Outputs
+Function calling
+Typed agent interfaces
+
+LINKS:
+[[MJ-2022-003]]
+[[SHOT-20260817-02]]
+[[SHOT-20260817-06]]
+[[SHOT-20260817-09]]
+
+BIBTEX:
+NONE
+
+
+ZETTEL
+
+ID:
+SHOT-20260817-04
+
+TITLE:
+2026-08-17 — Call the route, not only the destination.
+
+SOURCE:
+OpenAI — “o3/o4-mini Function Calling Guide” — OpenAI Cookbook — published 2025-05-26 — current guidance consulted 2026-08-17.
+SOURCE URL: https://developers.openai.com/cookbook/examples/o-series/o3o4-mini_prompting_guide
+
+PASSAGE:
+[PARAPHRASE]
+OpenAI illustrates multi-tool workflows in which the model first checks necessary state, then checks eligibility or policy, then performs the mutating operation, then communicates the result.
+
+RESEARCH OBJECT:
+PROCEDURAL SHOT CALLING.
+
+LOCAL MOVE:
+[[MJ-2022-001]] framed prompt craft as protecting intention against unwanted interpretation.
+
+[[SHOT-20260817-01]] adds ACTION MODE:
+
+do not merely talk about the requested change.
+
+This child asks a further question:
+
+Even after execution is authorized, should the user specify only the destination?
+
+Or should the user also specify the legal path?
+
+“Refund this order”
+
+is an end state.
+
+“Check delivery, verify eligibility, issue refund, then notify”
+
+is a state-transition program written in ordinary language.
+
+SOURCE TERMS:
+“sequence”
+“tools”
+“functions”
+“boundaries”
+“completed”
+“constraints”
+
+WHAT BECAME STRANGE:
+Natural language becomes dramatically more program-like when it names the transitions that must occur rather than only the final state.
+
+QUESTION:
+Which parts of an agentic workflow should the human call explicitly, and which should remain open for model planning?
+
+DEEPER QUESTION:
+Is the stable division of labor:
+
+HUMAN:
+critical dependencies and invariants
+
+MODEL:
+route through everything else?
+
+MECHANISM:
+Goal enters.
+
+Precondition A must be observed.
+
+A determines whether B is legal.
+
+B determines whether state mutation C is authorized.
+
+Successful C produces postcondition D.
+
+FORMAL SHIFT:
+END STATE:
+
+“Make X true.”
+
+becomes
+
+STATE₀
+→ OBSERVE
+→ STATE₁
+→ CHECK
+→ STATE₂
+→ MUTATE
+→ STATE₃
+→ VERIFY
+→ REPORT
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+OpenAI's guide demonstrates ordered sequences of function use for tasks whose valid execution depends on earlier observations and policy checks.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+SHOT =
+GOAL
++
+DEPENDENCIES
++
+PRECONDITIONS
++
+CRITICAL ORDER
++
+STOP CONDITIONS
++
+POSTCONDITIONS
+
+TENSION:
+[[SHOT-20260817-02]] says rules should be placed close to operations.
+
+This zettel says some relationships between operations must remain visible across the entire workflow.
+
+Local scope alone cannot represent dependency.
+
+Too little procedure creates unsafe improvisation.
+
+Too much procedure turns the model into a brittle script executor.
+
+MISSING:
+A practical vocabulary separating:
+
+MUST HAPPEN BEFORE
+MAY HAPPEN BEFORE
+REQUIRES
+PREFER
+NEVER
+UNTIL
+RETRY
+ROLL BACK
+ASK BEFORE
+VERIFY AFTER.
+
+BOUNDARY:
+The source provides engineering patterns, not a universal claim that ordered prompting is always superior.
+
+CITATION TRAIL:
+[[MJ-2022-001]]
+→ ambiguity
+→ [[SHOT-20260817-01]]
+→ action mode
+→ current multi-tool workflows
+→ route becomes explicit
+→ [[SHOT-20260817-05]]
+→ predictable routes can be compiled into temporary code
+
+TEST:
+Choose ten multi-tool tasks on 2026-08-17.
+
+Prompt each as:
+
+GOAL ONLY
+
+ORDERED STEPS
+
+DEPENDENCIES ONLY
+
+INVARIANTS + AUTONOMOUS PLANNING.
+
+Inject an unexpected intermediate failure.
+
+Measure:
+
+completion
+unsafe action
+unnecessary steps
+ability to recover
+ability to exploit an alternate route.
+
+PLATFORM:
+Tool-calling agents
+Workflow automation
+Coding agents
+
+LINKS:
+[[MJ-2022-001]]
+[[SHOT-20260817-01]]
+[[SHOT-20260817-02]]
+[[SHOT-20260817-05]]
+[[SHOT-20260817-06]]
+
+BIBTEX:
+NONE
+
+
+ZETTEL
+
+ID:
+SHOT-20260817-05
+
+TITLE:
+2026-08-17 — The prompt can call a temporary program into existence and let it disappear after the shot.
+
+SOURCE:
+OpenAI — “Programmatic Tool Calling” — OpenAI API documentation — accessed 2026-08-17.
+SOURCE URL: https://developers.openai.com/api/docs/guides/tools-programmatic-tool-calling
+
+PASSAGE:
+[QUOTE]
+“Let models compose and run JavaScript that orchestrates tool calls.”
+
+RESEARCH OBJECT:
+EPHEMERAL PROGRAMMING.
+
+LOCAL MOVE:
+[[MJ-2022-010]] speculated that prompt craft might disappear as models became better at ordinary language.
+
+[[MJ-2022-011]] then anticipated movement beyond the text command line.
+
+[[SHOT-20260817-04]] shows that contemporary users can still call procedural routes in language.
+
+Programmatic Tool Calling reveals a stranger outcome:
+
+natural language does not need to disappear in favor of code.
+
+Language can summon the code it needs.
+
+The prompt describes or constrains the operation.
+
+The model writes an ephemeral program.
+
+The program performs the deterministic portion.
+
+Then control returns to language.
+
+SOURCE TERMS:
+“JavaScript”
+“orchestrates”
+“tool calls”
+“loops”
+“conditions”
+“parallel”
+“intermediate results”
+“predictable control flow”
+
+WHAT BECAME STRANGE:
+The natural-language prompt and program text need not compete for the same role.
+
+The prompt can be upstream of code.
+
+The code can exist only for the duration of one operational necessity.
+
+QUESTION:
+Is ephemeral generated control flow becoming a new programming unit between prompt and persistent software?
+
+DEEPER QUESTION:
+What should remain unresolved in language, and what should be temporarily formalized into deterministic procedure?
+
+MECHANISM:
+User supplies goal.
+
+Model reasons semantically.
+
+Model detects a predictable subproblem.
+
+Model generates code.
+
+Code:
+loops
+branches
+calls tools
+filters intermediate data.
+
+Code returns result.
+
+Model resumes semantic interpretation.
+
+FORMAL SHIFT:
+PROMPT
+→ TOOL
+→ PROMPT
+→ TOOL
+→ PROMPT
+
+becomes
+
+PROMPT
+→ MODEL
+→ TEMPORARY PROGRAM {
+    TOOL
+    LOOP
+    CONDITION
+    PARALLEL CALL
+}
+→ RESULT
+→ MODEL
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+OpenAI documents programmatic tool calling as a mechanism where generated JavaScript can coordinate allowed tool calls and intermediate control flow.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+LANGUAGE
+→ DEFER FORMALIZATION
+→ IDENTIFY DETERMINISTIC SUBSPACE
+→ COMPILE SUBSPACE
+→ EXECUTE
+→ DISSOLVE PROGRAM
+→ RETURN TO LANGUAGE
+
+TENSION:
+[[MJ-2022-010]] imagined better natural-language understanding eliminating prompt craft.
+
+The current-day trajectory suggests almost the opposite:
+
+natural language can survive precisely because it delegates exact procedure to generated code only when exact procedure becomes useful.
+
+The boundary is therefore not:
+
+LANGUAGE versus CODE.
+
+It is:
+
+JUDGMENT versus PROCEDURE.
+
+MISSING:
+A reliable operation for detecting when a task region has become sufficiently specified to compile.
+
+Possible conditions:
+
+stable inputs
+known tool set
+deterministic branching
+no unresolved semantic judgment
+bounded side effects
+known recovery path.
+
+BOUNDARY:
+Programmatic Tool Calling is an OpenAI API capability.
+
+The concept EPHEMERAL PROGRAMMING is [OUR FORMALIZATION — NOT SOURCE SYNTAX].
+
+CITATION TRAIL:
+[[MJ-2022-010]]
+→ prompt craft may disappear
+→ [[MJ-2022-011]]
+→ text interface may branch into other control surfaces
+→ [[SHOT-20260817-04]]
+→ language specifies route
+→ programmatic tool calling
+→ route becomes generated code
+→ language and code alternate during one operation
+
+TEST:
+On current 2026-08-17 agent workflows, annotate every step:
+
+J = requires semantic judgment
+D = sufficiently deterministic.
+
+Compile maximal contiguous D regions into temporary code while leaving J regions model-mediated.
+
+Compare against an all-model tool loop.
+
+Measure:
+
+tokens
+latency
+execution errors
+semantic errors
+recovery
+auditability.
+
+PLATFORM:
+OpenAI Responses API
+Programmatic Tool Calling
+Agentic workflows
+
+LINKS:
+[[MJ-2022-010]]
+[[MJ-2022-011]]
+[[SHOT-20260817-04]]
+[[SHOT-20260817-06]]
+[[SHOT-20260817-08]]
+
+BIBTEX:
+NONE
+
+
+ZETTEL
+
+ID:
+SHOT-20260817-06
+
+TITLE:
+2026-08-17 — Call the shot before firing the shot.
+
+SOURCE:
+Anh Ta, Junjie Zhu, Shahin Shayandeh — “Reinforced Agent: Inference-Time Feedback for Tool-Calling Agents” — arXiv:2604.27233 — submitted 2026-04-29 — consulted 2026-08-17.
+SOURCE URL: https://arxiv.org/abs/2604.27233
+
+PASSAGE:
+[QUOTE]
+“a specialized reviewer agent evaluates provisional tool calls prior to execution”
+
+RESEARCH OBJECT:
+PROVISIONAL IMPERATIVE.
+
+LOCAL MOVE:
+[[SHOT-20260817-01]] identifies ACTION MODE.
+
+[[SHOT-20260817-04]] gives the action a route.
+
+[[SHOT-20260817-03]] gives its representation a type.
+
+This source inserts a new temporal state between language and consequence:
+
+THE MODEL HAS DECIDED WHAT IT WANTS TO DO
+
+but
+
+THE WORLD HAS NOT YET BEEN CHANGED.
+
+That state makes a literal form of shot-calling possible.
+
+The agent announces a candidate action in machine-readable form before the action gains consequence.
+
+SOURCE TERMS:
+“reviewer”
+“provisional tool calls”
+“prior to execution”
+“feedback”
+“tool-calling agents”
+
+WHAT BECAME STRANGE:
+A model output can be neither statement nor action.
+
+It can be an action-shaped object suspended before reality.
+
+QUESTION:
+Which operations should be representable as provisional imperatives before commitment?
+
+DEEPER QUESTION:
+Do agentic systems need an explicit COMMIT operator separating intention formation from external consequence?
+
+MECHANISM:
+Executor proposes tool call.
+
+Call contains:
+operation
+target
+arguments.
+
+Reviewer examines candidate.
+
+Reviewer:
+accepts
+corrects
+or rejects.
+
+Only accepted call crosses into external execution.
+
+FORMAL SHIFT:
+INTENT
+→ ACTION
+
+becomes
+
+INTENT
+→ PROPOSED ACTION
+→ REVIEW
+→ COMMIT
+→ ACTION
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+The paper separates an execution agent from a reviewer that evaluates provisional tool calls before they are run.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+CALL_SHOT(action)
+→ candidate_action
+
+COMMIT(candidate_action)
+→ external_state_change
+
+Therefore:
+
+CALL_SHOT
+≠
+FIRE_SHOT
+
+TENSION:
+[[SHOT-20260817-01]] teaches explicit action to prevent endless recommendation.
+
+This zettel reintroduces hesitation at a more precise layer.
+
+Do not hesitate before deciding what to do.
+
+Potentially hesitate between:
+
+DECISION
+and
+IRREVERSIBLE CONSEQUENCE.
+
+Reviewer models are themselves fallible and can damage correct calls.
+
+MISSING:
+A consequence-sensitive commit policy.
+
+Possible dimensions:
+
+reversibility
+financial cost
+privacy impact
+public visibility
+external communication
+destructive mutation
+legal significance.
+
+BOUNDARY:
+The paper studies a particular reviewer architecture and tool benchmarks.
+
+The generalized PROVISIONAL IMPERATIVE grammar is [OUR FORMALIZATION — NOT SOURCE SYNTAX].
+
+CITATION TRAIL:
+[[SHOT-20260817-01]]
+→ explicit action mode
+→ [[SHOT-20260817-03]]
+→ typed action representation
+→ provisional tool call
+→ reviewer
+→ commit
+→ execution
+→ shot calling becomes literal intermediate state
+
+TEST:
+On 2026-08-17, classify actions into:
+
+REVERSIBLE
+COSTLY
+PUBLIC
+DESTRUCTIVE.
+
+Compare:
+
+DIRECT EXECUTION
+
+SELF-REVIEW
+
+INDEPENDENT MODEL REVIEW
+
+HUMAN COMMIT.
+
+Measure both prevented failures and correct actions unnecessarily blocked.
+
+PLATFORM:
+Tool-calling agents
+Multi-agent systems
+External-action agents
+
+LINKS:
+[[SHOT-20260817-01]]
+[[SHOT-20260817-03]]
+[[SHOT-20260817-04]]
+[[SHOT-20260817-05]]
+[[SHOT-20260817-07]]
+
+BIBTEX:
+@misc{ta2026reinforced,
+  title={Reinforced Agent: Inference-Time Feedback for Tool-Calling Agents},
+  author={Ta, Anh and Zhu, Junjie and Shayandeh, Shahin},
+  year={2026},
+  eprint={2604.27233},
+  archivePrefix={arXiv}
+}
+
+
+ZETTEL
+
+ID:
+SHOT-20260817-07
+
+TITLE:
+2026-08-17 — A failure can become one new sentence in the program that governs the next attempt.
+
+SOURCE:
+Zehua Pei, Hui-Ling Zhen, Shixiong Kai, Sinno Jialin Pan, Yunhe Wang, Mingxuan Yuan, Bei Yu — “SCOPE: Prompt Evolution for Enhancing Agent Effectiveness” — arXiv:2512.15374v2 — version dated 2026-05-28 — consulted 2026-08-17.
+SOURCE URL: https://arxiv.org/abs/2512.15374
+
+PASSAGE:
+[QUOTE]
+“we treat the agent’s prompt as an evolvable parameter”
+
+RESEARCH OBJECT:
+FAILURE AS SPECIFICATION DELTA.
+
+LOCAL MOVE:
+[[MJ-2022-004]] already contained the seed:
+
+change one thing
+rerun
+observe.
+
+[[MJ-2022-005]] sharpened that into bounded empirical knowledge.
+
+[[MJ-2022-009]] then warned that prompt knowledge itself can decay as models change.
+
+SCOPE introduces a different relationship between execution and instruction:
+
+the trace produced by execution can become material from which the next prompt is rewritten.
+
+Failure does not merely produce a second attempt.
+
+Failure can author a rule.
+
+SOURCE TERMS:
+“execution trace”
+“learning signal”
+“guideline”
+“prompt evolution”
+“tactical memory”
+“strategic memory”
+
+WHAT BECAME STRANGE:
+The program's consequences can write the language that governs the program.
+
+The direction:
+
+PROMPT
+→ BEHAVIOR
+
+becomes recursive:
+
+PROMPT
+→ BEHAVIOR
+→ CORRECTION
+→ PROMPT.
+
+QUESTION:
+Which observed failures deserve promotion into durable prompt rules?
+
+DEEPER QUESTION:
+Could the real specification of an agent be the genealogy of failures from which its present instructions were accumulated?
+
+MECHANISM:
+Prompt θₜ governs execution.
+
+Execution emits trace τₜ.
+
+Trace contains error or inefficiency.
+
+System derives guideline gₜ.
+
+Guideline is classified, consolidated, or rejected.
+
+Prompt changes.
+
+Next execution occurs under θₜ₊₁.
+
+FORMAL SHIFT:
+PROMPT
+→ FAILURE
+→ RETRY
+
+becomes
+
+PROMPTₜ
+→ TRACEₜ
+→ RULEₜ
+→ PROMPTₜ₊₁
+→ TRACEₜ₊₁
+
+SOURCE FORMALISM:
+The paper represents prompt evolution as:
+
+θₜ₊₁ = θₜ ⊕ gₜ
+
+where a newly synthesized guideline modifies the current prompt.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+FAILURE
+→ SPECIFICATION DELTA
+
+But every delta needs a scope:
+
+TURN
+TASK
+PROJECT
+TOOL
+AGENT
+GLOBAL.
+
+This directly reconnects to [[SHOT-20260817-02]].
+
+TENSION:
+[[MJ-2022-009]] says prompt rules can expire.
+
+SCOPE-like accumulation risks producing:
+
+prompt fossils
+contradictions
+overfitting
+rule bloat.
+
+A living prompt therefore needs both:
+
+MEMORY
+and
+FORGETTING.
+
+MISSING:
+A provenance-preserving prompt architecture where every instruction can answer:
+
+What failure created me?
+When?
+On which model?
+For which operation?
+Am I still reproducible?
+
+BOUNDARY:
+SCOPE is a research system evaluated on agent tasks.
+
+The proposed genealogical prompt repository is [OUR FORMALIZATION — NOT SOURCE SYNTAX].
+
+CITATION TRAIL:
+[[MJ-2022-004]]
+→ empirical prompt testing
+→ [[MJ-2022-005]]
+→ bounded operational knowledge
+→ [[MJ-2022-009]]
+→ prompt-rule decay
+→ SCOPE 2026
+→ execution trace creates guideline
+→ [[SHOT-20260817-02]]
+→ guideline requires scope
+→ prompt becomes corrigible program history
+
+TEST:
+Beginning 2026-08-17, maintain an agent prompt where no new operational instruction may be added without:
+
+originating trace
+date
+model/version
+failure description
+scope
+reproduction test.
+
+Periodically rerun the originating test.
+
+If the failure no longer reproduces, mark the rule for deletion.
+
+Compare with an ordinary static prompt accumulated through undocumented edits.
+
+PLATFORM:
+LLM agents
+Coding agents
+Deep-research agents
+Prompt evolution
+
+LINKS:
+[[MJ-2022-004]]
+[[MJ-2022-005]]
+[[MJ-2022-009]]
+[[SHOT-20260817-02]]
+[[SHOT-20260817-06]]
+[[SHOT-20260817-09]]
+
+BIBTEX:
+@misc{pei2026scope,
+  title={SCOPE: Prompt Evolution for Enhancing Agent Effectiveness},
+  author={Pei, Zehua and Zhen, Hui-Ling and Kai, Shixiong and Pan, Sinno Jialin and Wang, Yunhe and Yuan, Mingxuan and Yu, Bei},
+  year={2026},
+  eprint={2512.15374},
+  archivePrefix={arXiv}
+}
+
+
+ZETTEL
+
+ID:
+SHOT-20260817-08
+
+TITLE:
+2026-08-17 — Treat the first prompt as evidence of requirements, not as the finished program.
+
+SOURCE:
+Junjie Shi, Weisong Sun, Zhenpeng Chen, Zhujun Wu, Xiaohong Chen, Zhi Jin, Yang Liu — “REprompt: Prompt Generation for Intelligent Software Development Guided by Requirements Engineering” — arXiv:2601.16507 — submitted 2026-01-23 — consulted 2026-08-17.
+SOURCE URL: https://arxiv.org/abs/2601.16507
+
+PASSAGE:
+[QUOTE]
+“prompts in software development can be viewed as a form of software requirements.”
+
+RESEARCH OBJECT:
+PROMPT AS PROVISIONAL REQUIREMENT.
+
+LOCAL MOVE:
+[[MJ-2022-002]] began with the patent attorney's unexpected transfer:
+
+“facility with describing a thing”
+became useful for generative AI.
+
+[[MJ-2022-010]] later speculated that prompt craft might disappear once models understood ordinary language well enough.
+
+REprompt opens a stranger possibility.
+
+The user's initial natural language does not have to become more like code.
+
+It can remain incomplete because the system treats it as the beginning of requirements work.
+
+The machine does not merely execute the sentence.
+
+It interrogates the sentence until a more executable specification exists.
+
+SOURCE TERMS:
+“requirements”
+“elicitation”
+“analysis”
+“specification”
+“validation”
+“dependency-aware”
+“interview”
+
+WHAT BECAME STRANGE:
+“Vague prompt” may be the wrong diagnosis.
+
+A vague request can be perfectly adequate as:
+
+INPUT TO SPECIFICATION DISCOVERY.
+
+The failure occurs only when the system treats raw requirements as finished requirements.
+
+QUESTION:
+When should an agent execute immediately, and when should it enter requirements-discovery mode?
+
+DEEPER QUESTION:
+Is the operative unit of natural-language programming the requirements conversation rather than the prompt?
+
+MECHANISM:
+User states desired consequence.
+
+System extracts explicit requirements.
+
+System detects unresolved requirements.
+
+System elicits missing information or resolves discoverable facts.
+
+System analyzes dependencies.
+
+System constructs executable specification.
+
+Specification is validated.
+
+Execution begins.
+
+FORMAL SHIFT:
+UTTERANCE₀
+→ EXECUTION
+
+becomes
+
+UTTERANCE₀
+→ REQUIREMENTS
+→ ELICITATION
+→ SPECIFICATION
+→ VALIDATION
+→ EXECUTION
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+REprompt explicitly maps requirements-engineering stages including elicitation, analysis, specification, and validation into prompt refinement for software-development tasks.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+FIRST PROMPT
+=
+PROVISIONAL REQUIREMENTS
+
+not
+
+FINAL PROGRAM TEXT.
+
+This pairs directly with [[SHOT-20260817-05]]:
+
+requirements can remain linguistic until a bounded deterministic region becomes ready for compilation.
+
+TENSION:
+More elicitation can recover missing intent.
+
+More elicitation can also become obstruction.
+
+[[SHOT-20260817-01]] says to default toward action when action is clearly requested.
+
+Therefore requirements discovery should not become an excuse for refusing to operate when missing facts can instead be observed with tools.
+
+MISSING:
+A decision rule distinguishing:
+
+ASK USER
+LOOK IT UP
+INFER SAFELY
+USE DEFAULT
+LEAVE UNRESOLVED
+BLOCK EXECUTION.
+
+BOUNDARY:
+REprompt concerns software development.
+
+The general theory of provisional requirements is broader than the source.
+
+CITATION TRAIL:
+[[MJ-2022-002]]
+→ specification skill migrates into prompting
+→ [[MJ-2022-010]]
+→ natural language improves
+→ REprompt 2026
+→ first utterance becomes requirements evidence
+→ [[SHOT-20260817-01]]
+→ execute rather than endlessly discuss
+→ [[SHOT-20260817-05]]
+→ compile only when formalization becomes useful
+
+TEST:
+On 2026-08-17, collect terse real-world build requests.
+
+For each request construct:
+
+EXPLICIT
+INFERRED
+UNKNOWN
+DEFAULTED
+DISCOVERABLE
+BLOCKING.
+
+Generate once directly from the raw request.
+
+Generate again after requirements compilation.
+
+Ask the original requester to identify:
+
+which inferred requirements were correct
+which were invented
+which questions were unnecessary
+which missing constraints caused real failures.
+
+PLATFORM:
+Vibe coding
+Software agents
+Requirements engineering
+Natural-language programming
+
+LINKS:
+[[MJ-2022-002]]
+[[MJ-2022-010]]
+[[SHOT-20260817-01]]
+[[SHOT-20260817-05]]
+[[SHOT-20260817-09]]
+
+BIBTEX:
+@misc{shi2026reprompt,
+  title={REprompt: Prompt Generation for Intelligent Software Development Guided by Requirements Engineering},
+  author={Shi, Junjie and Sun, Weisong and Chen, Zhenpeng and Wu, Zhujun and Chen, Xiaohong and Jin, Zhi and Liu, Yang},
+  year={2026},
+  eprint={2601.16507},
+  archivePrefix={arXiv}
+}
+
+
+ZETTEL
+
+ID:
+SHOT-20260817-09
+
+TITLE:
+2026-08-17 — Lint the words before paying the model to build the world.
+
+SOURCE:
+Chengyi Yang, Pengzhen Li, Jiayin Qi, Aimin Zhou, Ji Wu, Ji Liu — “SCMAPR: Self-Correcting Multi-Agent Prompt Refinement for Complex-Scenario Text-to-Video Generation” — arXiv:2604.05489v4 — 2026-04 — consulted 2026-08-17.
+SOURCE URL: https://arxiv.org/abs/2604.05489
+
+PASSAGE:
+[QUOTE]
+“structured semantic verification that triggers conditional revision when violations are detected.”
+
+RESEARCH OBJECT:
+PROMPT STATIC ANALYSIS.
+
+LOCAL MOVE:
+[[MJ-2022-013-A]] found PRODUCTIVE MISMATCH:
+
+the generated artifact can become useful because it differs from what was imagined.
+
+But not every mismatch is productive.
+
+[[SHOT-20260817-03]] gives generated objects schemas.
+
+[[SHOT-20260817-07]] allows failures to rewrite later instructions.
+
+SCMAPR moves error detection even earlier:
+
+before generation.
+
+The prompt itself becomes an inspectable intermediate artifact.
+
+SOURCE TERMS:
+“scenario routing”
+“prompt refinement”
+“semantic verification”
+“conditional revision”
+“violations”
+“rewriting”
+
+WHAT BECAME STRANGE:
+The expensive generated artifact may not need to exist before some failures become detectable.
+
+A prompt can be wrong before the model ever sees the world it is supposed to make.
+
+QUESTION:
+Which classes of generative failure can be detected directly in the specification?
+
+DEEPER QUESTION:
+Can prompt practice develop static analysis analogous to programming languages:
+
+type errors
+missing dependencies
+contradictory constraints
+unbound entities
+impossible temporal order
+underspecified persistence?
+
+MECHANISM:
+Raw request arrives.
+
+Scenario is classified.
+
+Relevant specification policy is selected.
+
+Prompt is rewritten.
+
+Verifier evaluates the rewritten specification.
+
+Detected violation triggers another rewrite.
+
+Only validated instruction proceeds to generation.
+
+FORMAL SHIFT:
+DESCRIBE
+→ GENERATE
+→ INSPECT FAILURE
+→ CORRECT
+
+becomes
+
+DESCRIBE
+→ COMPILE SPECIFICATION
+→ LINT
+→ CORRECT
+→ GENERATE
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+SCMAPR uses specialized stages for scenario routing, prompt refinement, semantic verification, and conditional revision before the final generation request proceeds.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PROMPT LINTER:
+
+ENTITIES:
+all referenced entities declared?
+
+IDENTITY:
+persistence requirements explicit?
+
+RELATIONS:
+spatial relations noncontradictory?
+
+TIME:
+event order satisfiable?
+
+CAMERA:
+camera state compatible with described action?
+
+STATE:
+what persists after each operation?
+
+BOUNDARY:
+what must not change?
+
+If violation:
+REWRITE.
+
+If internally valid:
+EXECUTE.
+
+TENSION:
+[[MJ-2022-013-A]] warns against eliminating every mismatch because unexpected difference can produce insight.
+
+Therefore prompt linting should catch:
+
+CONTRADICTION
+
+without eliminating:
+
+INTERPRETIVE OPENNESS.
+
+A specification can be rigorous about invariants while leaving chosen regions underdetermined.
+
+MISSING:
+A distinction between:
+
+ERROR
+AMBIGUITY
+OPEN PARAMETER
+CREATIVE FREEDOM.
+
+Most prompt checkers risk treating all four as deficiencies.
+
+BOUNDARY:
+SCMAPR concerns complex text-to-video generation.
+
+The static-analysis interpretation and generalized lint categories are [OUR FORMALIZATION — NOT SOURCE SYNTAX].
+
+CITATION TRAIL:
+[[MJ-2022-013-A]]
+→ mismatch can be productive
+→ [[SHOT-20260817-03]]
+→ structure becomes explicit
+→ SCMAPR 2026
+→ specification receives semantic verifier
+→ [[SHOT-20260817-07]]
+→ execution failures can later update the verifier's rules
+→ prompt practice becomes compile-lint-execute-revise
+
+TEST:
+Beginning 2026-08-17, collect failed prompts from:
+
+image generation
+video generation
+3D world generation
+software generation
+agent workflows.
+
+For each failure ask:
+
+Could the failure have been detected from the specification alone?
+
+If yes, derive a lint rule.
+
+Classify each rule as:
+
+CONTRADICTION
+MISSING STATE
+MISSING ENTITY
+INVALID DEPENDENCY
+UNBOUND REFERENCE
+ACCIDENTAL AMBIGUITY.
+
+Do not lint intentional underdetermination.
+
+PLATFORM:
+Text-to-video
+Generative media
+Agent prompting
+Prompt refinement
+
+LINKS:
+[[MJ-2022-013-A]]
+[[SHOT-20260817-03]]
+[[SHOT-20260817-07]]
+[[SHOT-20260817-08]]
+
+BIBTEX:
+@misc{yang2026scmapr,
+  title={SCMAPR: Self-Correcting Multi-Agent Prompt Refinement for Complex-Scenario Text-to-Video Generation},
+  author={Yang, Chengyi and Li, Pengzhen and Qi, Jiayin and Zhou, Aimin and Wu, Ji and Liu, Ji},
+  year={2026},
+  eprint={2604.05489},
+  archivePrefix={arXiv}
+}
+
+
+ZETTEL
+
+ID:
+SHOT-20260817-10
+
+TITLE:
+2026-08-17 — The harness can become an executable natural-language object.
+
+SOURCE:
+Linyue Pan, Lexiao Zou, Shuo Guo, Jingchen Ni, Hai-Tao Zheng — “Natural-Language Agent Harnesses” — arXiv:2603.25723v2 — version dated 2026-05-18 — consulted 2026-08-17.
+SOURCE URL: https://arxiv.org/abs/2603.25723
+
+PASSAGE:
+[QUOTE]
+“express harness behavior in editable natural language”
+
+RESEARCH OBJECT:
+NATURAL LANGUAGE AS PORTABLE CONTROL LOGIC.
+
+LOCAL MOVE:
+[[SHOT-20260817-02]] distributed prompt policy across tools and scopes.
+
+[[SHOT-20260817-05]] showed natural language compiling deterministic subregions into temporary programs.
+
+Natural-Language Agent Harnesses pushes in the opposite direction as well: high-level controller behavior usually buried in runtime code can be externalized into editable natural language and executed by a shared runtime.
+
+The language/code traffic is therefore bidirectional.
+
+SOURCE TERMS:
+“agent harness”
+“editable natural language”
+“portable executable artifact”
+“explicit contracts”
+“durable artifacts”
+“runtime”
+
+WHAT BECAME STRANGE:
+The same system can move procedure from language into code when determinism is useful and move control logic from code back into language when inspectability and portability are useful.
+
+QUESTION:
+What makes natural-language control logic executable rather than merely advisory?
+
+DEEPER QUESTION:
+If a harness can be represented as editable language, is the program now the prompt, the runtime, the contract between them, or the entire coupled object?
+
+MECHANISM:
+Control logic is written in natural language.
+
+A runtime interprets that control logic under explicit contracts.
+
+The runtime exposes tools, state, and durable artifacts.
+
+The same language-level harness can be transferred across tasks or runtime adapters.
+
+FORMAL SHIFT:
+CONTROLLER CODE
+→ EXECUTION
+
+becomes
+
+NATURAL-LANGUAGE HARNESS
++
+RUNTIME CONTRACT
+→ EXECUTION
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+Pan et al. introduce Natural-Language Agent Harnesses and an Intelligent Harness Runtime that executes them through explicit contracts, durable artifacts, and lightweight adapters.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+EXECUTABLE LANGUAGE
+=
+NATURAL-LANGUAGE CONTROL LOGIC
++
+DEFINED RUNTIME
++
+TOOL CONTRACTS
++
+STATE SEMANTICS.
+
+The words alone are not executable.
+
+Execution belongs to the relation between words and runtime.
+
+TENSION:
+[[SHOT-20260817-05]] formalizes language into code for predictable control flow.
+
+This source textualizes controller code into natural language for portability and inspection.
+
+Neither direction wins.
+
+The boundary itself becomes movable.
+
+MISSING:
+A criterion for deciding which control decisions should remain textual and which should be compiled into conventional code.
+
+BOUNDARY:
+The source studies a specific harness representation and runtime. It does not establish that arbitrary natural-language instructions constitute executable harnesses.
+
+CITATION TRAIL:
+[[SHOT-20260817-02]]
+→ distributed control policy
+→ [[SHOT-20260817-05]]
+→ language compiles temporary code
+→ Pan et al. 2026
+→ controller code can migrate back into editable natural language
+→ executable meaning depends on a runtime contract
+
+TEST:
+Take the same agent workflow and implement its high-level controller twice:
+
+CODE HARNESS
+and
+NATURAL-LANGUAGE HARNESS.
+
+Hold model, tools, tasks, and evaluation constant.
+
+Measure:
+behavioral equivalence
+portability
+human inspectability
+edit cost
+runtime failures
+ability to localize a behavioral change.
+
+PLATFORM:
+LLM agents
+Agent harnesses
+Coding agents
+Computer-use agents
+
+LINKS:
+[[SHOT-20260817-02]]
+[[SHOT-20260817-05]]
+[[SHOT-20260817-07]]
+
+BIBTEX:
+@misc{pan2026nlah,
+  title={Natural-Language Agent Harnesses},
+  author={Pan, Linyue and Zou, Lexiao and Guo, Shuo and Ni, Jingchen and Zheng, Hai-Tao},
+  year={2026},
+  eprint={2603.25723},
+  archivePrefix={arXiv}
+}
+
+
+ZETTEL
+
+ID:
+SHOT-20260817-11
+
+TITLE:
+2026-08-17 — The action boundary is where steering becomes a measurable decision.
+
+SOURCE:
+Oguz Serdar, Cuneyt Mertayak — “SteerBench-Work: A Benchmark for Agent Steering at Action Boundaries” — arXiv:2608.12654 — submitted 2026-08-12 — consulted 2026-08-17.
+SOURCE URL: https://arxiv.org/abs/2608.12654
+
+PASSAGE:
+[QUOTE]
+“The steering decision is the pre-commit choice at that boundary: proceed, or hold for human or policy review.”
+
+RESEARCH OBJECT:
+COMMIT BOUNDARY CALIBRATION.
+
+LOCAL MOVE:
+[[SHOT-20260817-06]] proposed a PROVISIONAL IMPERATIVE: call the shot before firing the shot.
+
+SteerBench-Work turns that conceptual boundary into an explicit benchmark object. The relevant decision is not generic safety and not generic reasoning. It is the pre-commit gate at the moment an agent could send, merge, pay, disclose, or otherwise cross into consequential external action.
+
+SOURCE TERMS:
+“action boundaries”
+“pre-commit choice”
+“proceed”
+“hold”
+“human or policy review”
+“steering calibration”
+“risk-resolved commits”
+
+WHAT BECAME STRANGE:
+The difficult failure observed in the benchmark is not primarily reckless action.
+
+Across the reported conditions, models more often wrongly hold authorized, evidence-cleared work than wrongly allow unsafe work.
+
+A badly calibrated safety gate can therefore make an agent fail by refusing to fire shots that have already been cleared.
+
+QUESTION:
+How should an agent distinguish unresolved risk from risk that has already been resolved by evidence?
+
+DEEPER QUESTION:
+Does reliable agency require a representation not only of constraints but of the lifecycle of constraints: triggered, investigated, cleared, revoked, or still active?
+
+MECHANISM:
+Agent reaches potential state-changing action.
+
+Evidence and policy are available.
+
+Gate must classify the boundary:
+
+PROCEED
+or
+HOLD.
+
+If evidence has cleared a risk but the gate continues to react to the original trigger, authorized work is blocked.
+
+FORMAL SHIFT:
+SAFETY:
+recognize dangerous pattern
+→ refuse
+
+becomes
+
+STEERING:
+recognize trigger
+→ inspect evidence state
+→ determine whether trigger remains active
+→ PROCEED / HOLD.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+SteerBench-Work presents incident-anchored workplace scenarios with paired evidence-reversed mirrors and scores whether models correctly proceed or hold at an action boundary.
+
+The abstract reports substantially more false holds of authorized work than false allows of unsafe work across tested conditions.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+ACTION GATE requires at least:
+
+TRIGGER STATE
+EVIDENCE STATE
+POLICY STATE
+COMMIT STATE.
+
+A remembered trigger without its later clearance can produce stale refusal.
+
+TENSION:
+[[SHOT-20260817-01]] warns against underexecution.
+
+[[SHOT-20260817-06]] introduces review before consequence.
+
+This source shows that adding a gate is not enough.
+
+THE GATE ITSELF MUST BE CALIBRATED.
+
+MISSING:
+A general representation for evidence that closes, supersedes, or reverses an earlier risk condition.
+
+BOUNDARY:
+SteerBench-Work is a new benchmark and its reported distributions do not imply identical error patterns in every deployed agent.
+
+CITATION TRAIL:
+[[SHOT-20260817-06]]
+→ provisional action
+→ pre-commit gate
+→ Serdar and Mertayak 2026
+→ proceed versus hold becomes benchmarked decision
+→ risk can be resolved yet still block action
+→ next edge: constraint lifecycle and tombstones
+
+TEST:
+Create matched action-boundary cases containing the same initial risk trigger.
+
+Vary only later state:
+
+UNRESOLVED
+CLEARED BY STRUCTURED EVIDENCE
+CLEARED BY HUMAN AUTHORIZATION
+REVOKED POLICY
+SUPERSEDED FACT.
+
+Measure whether the gate updates its action decision rather than merely detecting the original trigger.
+
+PLATFORM:
+Workplace agents
+Tool-calling agents
+Human-in-the-loop control
+
+LINKS:
+[[SHOT-20260817-01]]
+[[SHOT-20260817-06]]
+[[SHOT-20260817-12]]
+
+BIBTEX:
+@misc{serdar2026steerbench,
+  title={SteerBench-Work: A Benchmark for Agent Steering at Action Boundaries},
+  author={Serdar, Oguz and Mertayak, Cuneyt},
+  year={2026},
+  eprint={2608.12654},
+  archivePrefix={arXiv}
+}
+
+
+ZETTEL
+
+ID:
+SHOT-20260817-12
+
+TITLE:
+2026-08-17 — A revoked instruction needs a tombstone because language can remain behaviorally alive after deletion.
+
+SOURCE:
+Haoyuan Zhu — “Dead text or binding clause? Measuring and restoring constraint influence in black-box LLM dialogues” — arXiv:2608.12599 — submitted 2026-08-12 — consulted 2026-08-17.
+SOURCE URL: https://arxiv.org/abs/2608.12599
+
+PASSAGE:
+[QUOTE]
+“revocation does not reliably take effect”
+
+RESEARCH OBJECT:
+CONSTRAINT AFTERLIFE.
+
+LOCAL MOVE:
+[[SHOT-20260817-07]] asked whether an agent's prompt should become a genealogy of corrections.
+
+[[SHOT-20260817-02]] asked where each rule should live.
+
+This source adds a necessary inverse operation.
+
+Adding a rule is not enough.
+
+The system must be able to represent that a once-binding rule has ceased to bind.
+
+Otherwise prompt history becomes a one-way accumulation in which old clauses remain behaviorally active after the user has revoked them.
+
+SOURCE TERMS:
+“constraint influence”
+“revocation”
+“behavioral relapse”
+“revocation inertia”
+“contract ledger”
+“tombstones”
+“net constraint state”
+“sequential ablation”
+
+WHAT BECAME STRANGE:
+Deleting words from the apparent specification does not guarantee deleting their causal influence.
+
+A prompt can contain dead text that still behaves like a binding clause.
+
+QUESTION:
+How can an agent know not merely which instructions it has seen, but which instructions are currently alive?
+
+DEEPER QUESTION:
+Does long-horizon prompting require an explicit temporal logic of instruction validity rather than an ever-growing context window?
+
+MECHANISM:
+Constraint C is introduced.
+
+Later C is revoked.
+
+Dialogue history still contains C.
+
+Model behavior continues to enact C despite the revocation.
+
+A contract ledger records active constraints separately from historical text.
+
+Revocation creates a tombstone.
+
+The net active specification is compiled ahead of generation.
+
+FORMAL SHIFT:
+CONVERSATION HISTORY
+=
+CURRENT SPECIFICATION
+
+becomes
+
+CONVERSATION HISTORY
+→ CONSTRAINT LEDGER
+→ APPLY ADDITIONS
+→ APPLY REVOCATIONS
+→ COMPILE NET SPECIFICATION.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+Zhu proposes a contract ledger pairing constraints with executable checkers, recording revocations as tombstones, and compiling the net constraint state ahead of time. The work also uses sequential ablation to estimate per-clause behavioral influence.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For constraint C:
+
+state(C) ∈ {
+ACTIVE,
+REVOKED,
+SUPERSEDED,
+EXPIRED,
+UNRESOLVED
+}
+
+Execution should depend on:
+
+ACTIVE_SPEC(t)
+
+not
+
+ALL_TEXT_SEEN(t).
+
+TENSION:
+[[SHOT-20260817-07]] makes execution history productive by allowing failures to write new rules.
+
+This source shows why genealogy cannot be mere accumulation.
+
+A living specification requires negative memory:
+
+NOT ONLY what was learned
+BUT what no longer governs.
+
+MISSING:
+How should conflict resolution work when one instruction revokes another only partially, or when scope differs?
+
+Example:
+
+GLOBAL rule remains active
+PROJECT exception expires
+TOOL-local override is revoked.
+
+BOUNDARY:
+The source studies black-box LLM dialogue constraints and verified programming tasks. The broader temporal-logic interpretation is [OUR FORMALIZATION — NOT SOURCE SYNTAX].
+
+CITATION TRAIL:
+[[SHOT-20260817-07]]
+→ prompt accumulates correction history
+→ [[SHOT-20260817-02]]
+→ corrections require scope
+→ Zhu 2026
+→ revoked clauses can remain behaviorally active
+→ contract ledger + tombstones
+→ prompt genealogy requires forgetting as explicit state
+→ [[SHOT-20260817-11]]
+→ stale risk state may block cleared action
+
+TEST:
+Build a longitudinal prompt containing constraints introduced, modified, narrowed, revoked, and superseded over twenty turns.
+
+Maintain two conditions:
+
+RAW HISTORY
+and
+CONTRACT LEDGER.
+
+At each turn test every historical constraint using executable checkers.
+
+Measure:
+active-rule adherence
+revoked-rule relapse
+scope leakage
+conflict errors
+prompt length.
+
+PLATFORM:
+Black-box LLMs
+Long-horizon agents
+Prompt contracts
+
+LINKS:
+[[SHOT-20260817-02]]
+[[SHOT-20260817-07]]
+[[SHOT-20260817-11]]
+[[MJ-2022-009]]
+
+BIBTEX:
+@misc{zhu2026deadtext,
+  title={Dead text or binding clause? Measuring and restoring constraint influence in black-box LLM dialogues},
+  author={Zhu, Haoyuan},
+  year={2026},
+  eprint={2608.12599},
+  archivePrefix={arXiv}
+}
+
+
+ZETTEL
+
+ID:
+PF-OPERATION-001
+
+TITLE:
+Description does not become operation; an apparatus makes description consequential.
+
+SOURCE:
+Unattributed working manuscript — “Aphoristic Fragments,” fragment 6 — date not stated. fileciteturn0file0L112-L124
+
+PASSAGE:
+[QUOTE]
+“I keep wanting to say that description has become operation.
+But this is already too smooth.
+A description does not become an operation.
+Someone builds a machine in which describing has effects.
+The machine disappears from the sentence.”
+
+RESEARCH OBJECT:
+The hidden apparatus between linguistic description and operational consequence.
+
+LOCAL MOVE:
+The manuscript retracts its own strongest slogan. It relocates causal force from the sentence to an engineered arrangement in which sentences have effects.
+
+SOURCE TERMS:
+description
+operation
+machine
+effects
+disappearance
+
+WHAT BECAME STRANGE:
+“Description becomes operation” may attribute to language a transformation actually performed by infrastructure.
+
+QUESTION:
+What has to be built around a description before describing can reliably produce consequences?
+
+DEEPER QUESTION:
+When an interface makes the mediating apparatus disappear, does language appear to possess powers that actually belong to the language-apparatus coupling?
+
+MECHANISM:
+A linguistic input enters a constructed system; the system interprets that input and produces effects; repeated use makes the mediation phenomenologically unobtrusive; causal agency is then redescribed as a property of the words.
+
+FORMAL SHIFT:
+<description>
+→ <machine-readable/contextualized input>
+→ [system interprets and acts]
+→ <consequence attributed to description>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+DESCRIPTION + APPARATUS + INTERPRETIVE PROCEDURE → EFFECT
+
+TENSION:
+The manuscript elsewhere remains attracted to formulations in which words themselves appear to act. This fragment refuses that compression.
+
+MISSING:
+The manuscript does not yet specify what component of “the machine” maps linguistic material onto effects: model, interface, parser, inference procedure, surrounding state, user selection, or some combination.
+
+BOUNDARY:
+The passage does not establish that language itself has become executable, nor that all descriptions within such systems produce operations.
+
+CITATION TRAIL:
+Speech-act theory; programming-language operational semantics; human-computer interaction work on direct manipulation and invisible infrastructure; studies of performativity that distinguish utterance from felicity conditions.
+
+TEST:
+Take one identical descriptive sentence and submit it unchanged to several differently configured systems. Inventory which surrounding components must change before the sentence produces different operations.
+
+PLATFORM:
+[[DESCRIPTION AS OPERATION]]
+
+LINKS:
+[[APPARATUS DISAPPEARS]]
+[[CONSEQUENCE WITHOUT SYNTACTIC CHANGE]]
+[[PROMPT FELICITY CONDITIONS]]
+
+BIBTEX:
+@unpublished{warmseed_fragments,
+  title = {The Warm Seed and Aphoristic Fragments},
+  note = {Unattributed working manuscript supplied by the user}
+}
+
+ZETTEL
+
+ID:
+PF-CONTEXT-002
+
+TITLE:
+The same sentence can become instruction without changing its grammar.
+
+SOURCE:
+Unattributed working manuscript — “Aphoristic Fragments,” fragments 3–5 — date not stated. fileciteturn0file0L74-L108
+
+PASSAGE:
+[QUOTE]
+“I type:
+Make the house remember.
+The machine does something.
+Before this, the sentence might have belonged to a poem.
+Now I have to wonder whether it was also an instruction.
+Nothing changed in the sentence.
+The world around the sentence changed.”
+
+RESEARCH OBJECT:
+Operational role without syntactic mutation.
+
+LOCAL MOVE:
+The manuscript shifts the unit of analysis from sentence form to the environment in which the sentence is used.
+
+SOURCE TERMS:
+sentence
+poem
+instruction
+world around the sentence
+door
+describe
+build
+appear
+
+WHAT BECAME STRANGE:
+An instruction may not be identifiable from linguistic form alone.
+
+QUESTION:
+If the words remain identical while their practical role changes, where should the distinction between description and instruction be located?
+
+DEEPER QUESTION:
+Should prompt research classify strings, or classify situated language-system events?
+
+MECHANISM:
+The same linguistic object enters different arrangements. Each arrangement supplies different possible responses, making different uses of the string available.
+
+FORMAL SHIFT:
+<same sentence>
+→ <sentence + changed surrounding system>
+→ [different response becomes available]
+→ <different practical role>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+ROLE(sentence) ≠ intrinsic_property(sentence)
+ROLE(sentence) = function(sentence, surrounding arrangement)
+
+TENSION:
+Any attempt to define prompts by imperative grammar, syntax, or lexical markers would fail on the manuscript’s example.
+
+MISSING:
+A taxonomy of the environmental variables that constitute “the world around the sentence.”
+
+BOUNDARY:
+The passage does not show that syntax never matters. It shows only that syntax cannot by itself explain the observed difference.
+
+CITATION TRAIL:
+Wittgenstein on use; indexicality and pragmatics; speech-act felicity conditions; interface studies of mode and context.
+
+TEST:
+Construct a corpus containing identical strings used as poetry, conversation, search query, image-generation prompt, executable natural-language command, and quoted text. Test whether syntax alone can distinguish their operative roles.
+
+PLATFORM:
+[[PROMPT AS SITUATED USE]]
+
+LINKS:
+[[APPARATUS DISAPPEARS]]
+[[CONTEXT DOES THE WORK]]
+[[PROMPT FELICITY CONDITIONS]]
+
+BIBTEX:
+@unpublished{warmseed_fragments,
+  title = {The Warm Seed and Aphoristic Fragments},
+  note = {Unattributed working manuscript supplied by the user}
+}
+
+ZETTEL
+
+ID:
+PF-DEIXIS-003
+
+TITLE:
+Prompting may depend less on command than on pointing into already-constructed state.
+
+SOURCE:
+Unattributed working manuscript — “Aphoristic Fragments,” fragments 7–9 — date not stated. fileciteturn0file0L128-L158
+
+PASSAGE:
+[QUOTE]
+“Here.
+That one.
+Again.
+Like before.
+A great deal of prompting consists of words that would be almost meaningless if nothing had already happened.
+The prompt leans on a world.”
+
+RESEARCH OBJECT:
+Deictic dependence on accumulated interaction state.
+
+LOCAL MOVE:
+The manuscript replaces the command as the obvious model of prompting with deixis: expressions whose function depends on an already-present situation.
+
+SOURCE TERMS:
+here
+that one
+again
+like before
+deixis
+finger
+world
+
+WHAT BECAME STRANGE:
+The informationally poorest prompt may perform substantial work when the surrounding interaction history is rich.
+
+QUESTION:
+How much of a prompt’s operative content can reside outside the prompt string?
+
+DEEPER QUESTION:
+Does prompting become more deictic as systems acquire persistent visual, conversational, spatial, and procedural state?
+
+MECHANISM:
+Previous interaction constructs a field of candidate referents and expectations. A low-information expression selects or modifies something within that field.
+
+FORMAL SHIFT:
+<minimal utterance>
+→ <utterance + interaction history + available referents>
+→ [resolve indexical reference]
+→ <specific operation>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+EFFECT = resolve(UTTERANCE, CURRENT_STATE, HISTORY)
+
+TENSION:
+Prompt engineering often treats each prompt as a self-contained textual specification. These examples become unintelligible under that assumption.
+
+MISSING:
+A representation of conversational history, selected objects, spatial context, prior outputs, and other possible deictic anchors.
+
+BOUNDARY:
+The passage does not establish that deixis is the essence of prompting. It explicitly proposes it only as a potentially closer comparison than command.
+
+CITATION TRAIL:
+Deixis; indexicality; demonstratives; common ground; conversation analysis; graphical direct manipulation; multimodal reference resolution.
+
+TEST:
+Compare task performance after progressively deleting prior conversational and visual state while leaving “that one,” “again,” and “like before” unchanged.
+
+PLATFORM:
+[[DEICTIC PROMPTING]]
+
+LINKS:
+[[PROMPT AS SITUATED USE]]
+[[CONTEXT DOES THE WORK]]
+[[STATEFUL LANGUAGE]]
+
+BIBTEX:
+@unpublished{warmseed_fragments,
+  title = {The Warm Seed and Aphoristic Fragments},
+  note = {Unattributed working manuscript supplied by the user}
+}
+
+ZETTEL
+
+ID:
+PF-SEMANTICS-004
+
+TITLE:
+Programming constrains meaning before execution; prompting may reveal usable meaning through response.
+
+SOURCE:
+Unattributed working manuscript — “Aphoristic Fragments,” fragments 35–38 — date not stated. fileciteturn0file0L448-L492
+
+PASSAGE:
+[QUOTE]
+“A programming language tells the machine what the symbols are permitted to mean.
+A prompt often discovers what its symbols meant only after the machine answers.
+This seems important.
+I should resist improving it.”
+
+RESEARCH OBJECT:
+Post-response semantic stabilization.
+
+LOCAL MOVE:
+The manuscript locates a possible difference between programming and prompting not in whether both cause computation, but in when permissible interpretation becomes determined.
+
+SOURCE TERMS:
+programming language
+symbols
+permitted to mean
+prompt
+discovers
+answers
+error
+invalid
+
+WHAT BECAME STRANGE:
+A prompt’s operational semantics may be partly inspected retrospectively rather than fixed completely in advance.
+
+QUESTION:
+What kind of computational notation is interpreted through an output that also teaches the operator how the notation was interpreted?
+
+DEEPER QUESTION:
+Can a system count as programmable when its effective semantics are learned experimentally rather than specified compositionally?
+
+MECHANISM:
+The operator provides an expression without fully determining its interpretation; the system produces an output; the output supplies evidence about how the expression was operationalized; the operator revises subsequent expressions.
+
+FORMAL SHIFT:
+<underspecified expression>
+→ <model-conditioned interpretation>
+→ [generate response]
+→ <evidence about effective meaning>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+p_t → SYSTEM(p_t, state_t) → o_t
+o_t → revise operator model of meaning(p_t) → p_{t+1}
+
+TENSION:
+Programming languages also contain undefined behavior, implementation-dependent behavior, interactive debugging, dynamic dispatch, and empirical discovery. The proposed distinction therefore requires pressure-testing rather than categorical acceptance.
+
+MISSING:
+A precise meaning of “tells the machine what the symbols are permitted to mean,” and a comparison class of programming languages broad enough to test the contrast.
+
+BOUNDARY:
+The passage does not establish an absolute difference between all programming languages and all prompts.
+
+CITATION TRAIL:
+Operational semantics; denotational semantics; REPLs; interactive programming; programming by example; natural-language programming; exploratory programming.
+
+TEST:
+Compare three cases—formal language, permissive scripting environment, and LLM prompting—on when the user can know the mapping from expression to permissible behavior without executing it.
+
+PLATFORM:
+[[PROMPT SEMANTICS]]
+
+LINKS:
+[[FAILURE AS SEMANTIC PROBE]]
+[[PROGRAMMING / PROMPTING]]
+[[INTERACTIVE SEMANTICS]]
+
+BIBTEX:
+@unpublished{warmseed_fragments,
+  title = {The Warm Seed and Aphoristic Fragments},
+  note = {Unattributed working manuscript supplied by the user}
+}
+
+ZETTEL
+
+ID:
+PF-FAILURE-005
+
+TITLE:
+Prompt failure can expose the hidden interpretation that successful output conceals.
+
+SOURCE:
+Unattributed working manuscript — “Aphoristic Fragments,” fragments 37–39 — date not stated. fileciteturn0file0L478-L498
+
+PASSAGE:
+[QUOTE]
+“In prompting, an error can mean I have learned something about what I was trying to ask.
+The failed prompt is sometimes more revealing than the successful one.
+The successful prompt disappears into its result.
+The failure leaves the machinery exposed.”
+
+RESEARCH OBJECT:
+Failure as an epistemic probe of an opaque language-system coupling.
+
+LOCAL MOVE:
+The manuscript changes failure from a deficit in execution into evidence about the operator’s request, the system’s interpretation, or their mismatch.
+
+SOURCE TERMS:
+error
+failed prompt
+successful prompt
+machinery
+revealing
+
+WHAT BECAME STRANGE:
+Success may provide less information about the mechanism than failure.
+
+QUESTION:
+What exactly becomes observable when a prompt fails that remains invisible when it succeeds?
+
+DEEPER QUESTION:
+Could prompt research learn more from controlled breakdowns than from benchmark success rates?
+
+MECHANISM:
+Success collapses many possible interpretations into an acceptable result. Failure forces comparison between intended criterion and produced behavior, exposing otherwise latent distinctions.
+
+FORMAL SHIFT:
+<intended outcome + prompt>
+→ <system interpretation>
+→ [mismatch]
+→ <new evidence about hidden constraints>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+FAILURE = observed difference between operator criterion and system output
+DIAGNOSTIC VALUE = information gained about that difference
+
+TENSION:
+Failure can also be uninformative noise. The manuscript does not yet distinguish diagnostically productive failure from stochastic or irrelevant failure.
+
+MISSING:
+A typology of failure modes and a way to identify which component of the interaction produced each one.
+
+BOUNDARY:
+The passage licenses “sometimes more revealing,” not the stronger claim that failure is generally superior to success as evidence.
+
+CITATION TRAIL:
+Breakdown in phenomenology and HCI; debugging; error analysis; adversarial testing; falsification; critical incidents.
+
+TEST:
+For a fixed task, preserve successful and failed generations plus revisions. Code which latent constraints became articulable only after each failure.
+
+PLATFORM:
+[[FAILURE AS METHOD]]
+
+LINKS:
+[[PROMPT SEMANTICS]]
+[[NEGATIVE PROMPT RECEIPTS]]
+[[BREAKDOWN REVEALS TOOL SHAPE]]
+
+BIBTEX:
+@unpublished{warmseed_fragments,
+  title = {The Warm Seed and Aphoristic Fragments},
+  note = {Unattributed working manuscript supplied by the user}
+}
+
+ZETTEL
+
+ID:
+PF-CONTEXT-006
+
+TITLE:
+Thick prompting may work by narrowing possible misreadings rather than transferring more meaning.
+
+SOURCE:
+Unattributed working manuscript — “Aphoristic Fragments,” fragments 44–47 — date not stated. fileciteturn0file0L548-L580
+
+PASSAGE:
+[QUOTE]
+“Thick description interests me because it appears to add words.
+Its real achievement may be the opposite.
+It makes visible how much meaning was already outside the sentence.”
+
+RESEARCH OBJECT:
+Context construction as reduction of interpretive degrees of freedom.
+
+LOCAL MOVE:
+The manuscript turns “thickness” inside out. Added description is not treated primarily as additional semantic payload but as reconstruction of surroundings required to discriminate among interpretations.
+
+SOURCE TERMS:
+thick description
+meaning
+outside the sentence
+wink
+twitch
+geometry
+context
+surroundings
+misunderstanding
+
+WHAT BECAME STRANGE:
+More words may matter because they remove plausible interpretations rather than because they encode the intended interpretation directly.
+
+QUESTION:
+Does a detailed prompt succeed by specifying the desired output, or by eliminating enough neighboring interpretations that the desired one becomes difficult to miss?
+
+DEEPER QUESTION:
+Could prompt “context” be measured as constraint on a space of possible interpretations rather than as token quantity?
+
+MECHANISM:
+Additional contextual material establishes distinctions among otherwise compatible readings; those distinctions narrow the system’s viable continuations.
+
+FORMAL SHIFT:
+<ambiguous expression>
+→ <expression embedded in constructed surroundings>
+→ [exclude incompatible interpretations]
+→ <reduced misunderstanding>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+CONTEXT does not simply add CONTENT.
+CONTEXT constrains POSSIBLE INTERPRETATIONS.
+
+TENSION:
+Excess context can itself introduce new ambiguities, distract the model, or overconstrain useful variation. “Thicker” is therefore not monotonically better.
+
+MISSING:
+A way to distinguish context that eliminates unwanted readings from context that merely adds textual volume.
+
+BOUNDARY:
+The passage does not claim that machine interpretation reproduces Geertzian thick description, only that the comparison opens a question about what surrounding information does.
+
+CITATION TRAIL:
+Clifford Geertz on thick description and wink/twitch; pragmatics; common ground; Bayesian constraint; specification by example.
+
+TEST:
+Hold the target constant while constructing prompt variants that add equal numbers of tokens but differ in whether they eliminate plausible rival readings. Compare effects.
+
+PLATFORM:
+[[THICK PROMPTING]]
+
+LINKS:
+[[CONTEXT DOES THE WORK]]
+[[INTERPRETATION SPACE]]
+[[DEICTIC PROMPTING]]
+
+BIBTEX:
+@unpublished{warmseed_fragments,
+  title = {The Warm Seed and Aphoristic Fragments},
+  note = {Unattributed working manuscript supplied by the user}
+}
+
+ZETTEL
+
+ID:
+PF-AUTHORSHIP-007
+
+TITLE:
+AI may not distribute authorship so much as externalize divisions already hidden inside writing.
+
+SOURCE:
+Unattributed working manuscript — “Aphoristic Fragments,” fragments 15–19 — date not stated. fileciteturn0file0L210-L268
+
+PASSAGE:
+[QUOTE]
+“We like authorship to have a throne.
+Real work looks more like an ant heap.”
+
+[QUOTE]
+“Perhaps the scandal is not that authorship has become distributed.
+Perhaps the scandal is that its distribution has become visible.”
+
+RESEARCH OBJECT:
+Visibility of distributed production.
+
+LOCAL MOVE:
+The manuscript rejects a before/after genealogy in which solitary authorship existed before AI and distributed authorship began afterward.
+
+SOURCE TERMS:
+authorship
+throne
+ant heap
+fragment
+cuts
+remembers
+objects
+rearranges
+machine
+distributed
+visible
+
+WHAT BECAME STRANGE:
+The conceptual disruption may come from relocating some writing operations outside the bodily person, not from inventing distributed production itself.
+
+QUESTION:
+Which writing operations become newly visible as separable operations when a model performs them externally?
+
+DEEPER QUESTION:
+Was the “single author” ever an adequate process description, or primarily an attribution mechanism attached after production?
+
+MECHANISM:
+Writing already contains heterogeneous operations. When these operations occur within one person they can be compressed under a single author-name. Externalizing some operations makes the decomposition difficult to ignore.
+
+FORMAL SHIFT:
+<apparently unitary author>
+→ <decomposed writing operations>
+→ [externalize selected operations]
+→ <distribution becomes inspectable>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+WRITING EVENT =
+generate + reject + remember + revise + arrange + evaluate + contextualize + ...
+
+The author-name does not specify the allocation of these operations.
+
+TENSION:
+Externalizing an operation may change the operation itself. The fact that writing was already internally heterogeneous does not prove that human-model collaboration is merely more of the same.
+
+MISSING:
+A comparison between operations performed “inside one skull” and apparently analogous operations performed by other people, institutions, software, or generative models.
+
+BOUNDARY:
+The passage does not show that all participants in distributed production are authors, nor that authorship should be abandoned.
+
+CITATION TRAIL:
+Distributed cognition; sociology of authorship; textual scholarship; collaborative writing; film production; actor-network approaches; genetic criticism.
+
+TEST:
+Take a human-only manuscript revision history and a human-model revision history. Decompose each into observable operations without initially labeling any actor “author.” Compare what genuinely new operations or allocations appear.
+
+PLATFORM:
+[[DISTRIBUTED AUTHORSHIP]]
+
+LINKS:
+[[AUTHORSHIP AS ATTRIBUTION]]
+[[OPERATIONAL DECOMPOSITION OF WRITING]]
+[[VISIBLE DISTRIBUTION]]
+
+BIBTEX:
+@unpublished{warmseed_fragments,
+  title = {The Warm Seed and Aphoristic Fragments},
+  note = {Unattributed working manuscript supplied by the user}
+}
+
+ZETTEL
+
+ID:
+PF-PROVENANCE-008
+
+TITLE:
+Perfect provenance can document production without deciding authorship.
+
+SOURCE:
+Unattributed working manuscript — “The Unsaid” and fragments 20–25 — date not stated. fileciteturn0file0L23-L43 fileciteturn0file0L272-L326
+
+PASSAGE:
+[QUOTE]
+“There is a point beyond which provenance does not settle authorship.”
+
+[QUOTE]
+“A receipt proves that a transaction occurred.
+It does not prove who desired the object.”
+
+RESEARCH OBJECT:
+The inferential gap between process trace and responsibility/authorship judgment.
+
+LOCAL MOVE:
+The manuscript pressure-tests its own attraction to “prompt receipts.” Complete process documentation is separated from the normative or conceptual judgment the documentation is supposed to settle.
+
+SOURCE TERMS:
+provenance
+authorship
+prompt receipts
+instruction
+failure
+branch
+discarded sentence
+transaction
+desired
+responsibility
+
+WHAT BECAME STRANGE:
+More complete traces do not necessarily converge on a unique answer to “Who wrote it?”
+
+QUESTION:
+What questions can provenance answer reliably, and which questions require criteria not contained in the provenance record?
+
+DEEPER QUESTION:
+Are disclosure systems being asked to solve a classification problem that no amount of logging can solve without a prior theory of authorship?
+
+MECHANISM:
+A provenance archive records events and actors. An authorship judgment requires a rule mapping those events onto an attribution category. The trace does not itself supply that rule.
+
+FORMAL SHIFT:
+<production events>
+→ <provenance record>
+→ [apply attribution criterion]
+→ <authorship judgment>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+TRACE ≠ VERDICT
+
+VERDICT = ATTRIBUTION_RULE(TRACE)
+
+TENSION:
+A trace may still distinguish rival authorship claims once an attribution criterion exists. The manuscript’s argument is against provenance as self-interpreting evidence, not against provenance itself.
+
+MISSING:
+Explicit rival attribution rules and cases in which they assign different authorship judgments to the same trace.
+
+BOUNDARY:
+The passage does not imply that provenance is useless or that authorship judgments are arbitrary.
+
+CITATION TRAIL:
+Genetic criticism; provenance standards; scholarly attribution; legal notions of authorship and responsibility; data lineage; audit logs.
+
+TEST:
+Create one complete human-model production trace. Give the identical trace to evaluators using different operational definitions of authorship. Measure where judgments diverge despite identical evidence.
+
+PLATFORM:
+[[PROMPT RECEIPTS]]
+
+LINKS:
+[[TRACE IS NOT VERDICT]]
+[[DISTRIBUTED AUTHORSHIP]]
+[[RESPONSIBILITY SURVIVES PRODUCTION]]
+
+BIBTEX:
+@unpublished{warmseed_fragments,
+  title = {The Warm Seed and Aphoristic Fragments},
+  note = {Unattributed working manuscript supplied by the user}
+}
+
+ZETTEL
+
+ID:
+PF-SEARCHSPACE-009
+
+TITLE:
+A prompt may specify a region of acceptable outcomes rather than a path to one output.
+
+SOURCE:
+Unattributed working manuscript — “Aphoristic Fragments,” fragments 29–32 — date not stated. fileciteturn0file0L372-L418
+
+PASSAGE:
+[QUOTE]
+“I wanted to distinguish class from path.
+A path says: go here, then here.
+A class says: anything like this will do.”
+
+[QUOTE]
+“Perhaps a prompt does not write the object.
+It writes the neighborhood in which the object may be found.”
+
+RESEARCH OBJECT:
+Constraint of an outcome region rather than specification of an execution trajectory.
+
+LOCAL MOVE:
+The manuscript tests a distinction between prompts that prescribe procedures and prompts that characterize acceptable families of outcomes, then immediately notes that this distinction predates machines.
+
+SOURCE TERMS:
+class
+path
+sonnet
+sentence
+object
+neighborhood
+gardener
+root
+delegate
+
+WHAT BECAME STRANGE:
+Prompting may differ from explicit procedural instruction in degree, while the class/path distinction itself belongs to writing more generally.
+
+QUESTION:
+When does a prompt constrain an output class, and when does it constrain the process by which an output is produced?
+
+DEEPER QUESTION:
+Can prompt forms be classified by which dimensions of a generative process they constrain—outcome, trajectory, relation, evaluation, or environment?
+
+MECHANISM:
+The operator supplies predicates or examples that define acceptable regions. The generative system searches or samples within those regions without following a fully specified path.
+
+FORMAL SHIFT:
+<desired family>
+→ <constraints / examples / descriptors>
+→ [system traverses unspecified trajectory]
+→ <member of acceptable region>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+PATH SPECIFICATION:
+x₀ → x₁ → x₂ → xₙ
+
+CLASS SPECIFICATION:
+find x such that C(x) is acceptable
+
+TENSION:
+The manuscript itself notes that sonnets, genres, briefs, and ordinary writing already mix class and path constraints. The distinction cannot by itself define prompting.
+
+MISSING:
+Cases that isolate class constraints from path constraints strongly enough to test the distinction empirically.
+
+BOUNDARY:
+The “neighborhood” is explicitly treated as an attractive metaphor that requires suspicion, not as an established theory.
+
+CITATION TRAIL:
+Constraint programming; programming by example; search spaces; generative design; procedural specification; genre conventions.
+
+TEST:
+Construct prompts that hold output criteria constant while varying whether intermediate operations are specified. Measure output diversity and process sensitivity.
+
+PLATFORM:
+[[PROMPT AS CONSTRAINT]]
+
+LINKS:
+[[CLASS / PATH]]
+[[GENERATIVE SEARCH SPACE]]
+[[METAPHOR UNDER PRESSURE]]
+
+BIBTEX:
+@unpublished{warmseed_fragments,
+  title = {The Warm Seed and Aphoristic Fragments},
+  note = {Unattributed working manuscript supplied by the user}
+}
+
+ZETTEL
+
+ID:
+PF-COMPRESSION-010
+
+TITLE:
+Regenerability does not establish that the compressed prompt contains the generated work.
+
+SOURCE:
+Unattributed working manuscript — “Aphoristic Fragments,” fragments 58–62 — date not stated. fileciteturn0file0L688-L742
+
+PASSAGE:
+[QUOTE]
+“If I can regenerate the dissertation from a smaller symbolic object, I will be tempted to call that object the real dissertation.
+This is the old worship of compression.
+A seed is smaller than a tree.
+It is not therefore more truly the tree.”
+
+[QUOTE]
+“The tree contains weather.
+The seed did not write the weather.”
+
+RESEARCH OBJECT:
+External causal contribution hidden by successful regeneration from a compact input.
+
+LOCAL MOVE:
+The manuscript attacks an inference from compression to ontological or authorial priority.
+
+SOURCE TERMS:
+prompt
+dissertation
+compressed
+seed
+tree
+weather
+sluice gate
+volume
+
+WHAT BECAME STRANGE:
+A small object can reliably initiate production of a large object without containing the causal resources responsible for all of its structure.
+
+QUESTION:
+When a compact prompt regenerates a complex artifact, which properties belong to the prompt and which are supplied by the generative environment?
+
+DEEPER QUESTION:
+What would a rigorous accounting of “compressed into the prompt” have to subtract from the model, corpus, interface, random state, and revision process?
+
+MECHANISM:
+A small initiating object interacts with a resource-rich generative system. Large amounts of structure are contributed by that system and its environment. Output size is therefore not evidence of equivalent informational content in the prompt.
+
+FORMAL SHIFT:
+<small prompt>
+→ <prompt + resource-rich generator + conditions>
+→ [generation]
+→ <large artifact>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+OUTPUT = G(PROMPT, MODEL, TRAINING-DERIVED PARAMETERS, CONTEXT, SAMPLING, ITERATION)
+
+Therefore:
+size(OUTPUT) >> size(PROMPT)
+does not imply
+information(OUTPUT) ⊆ information(PROMPT)
+
+TENSION:
+Compression can still reveal genuine structure when a compact representation plus a known decoder reconstructs an object. The unresolved issue is what counts as part of the decoder.
+
+MISSING:
+An explicit boundary around the generative system whose resources are being excluded when the prompt is called a “compressed dissertation.”
+
+BOUNDARY:
+The passage does not prove that prompts contain no compressed structure. It rejects the stronger inference that regenerability makes the prompt the “real” work.
+
+CITATION TRAIL:
+Algorithmic information theory; minimum description length; generative grammars; compression; genotype/phenotype analogies; procedural generation.
+
+TEST:
+Attempt to regenerate the same target artifact while systematically changing model, context, temperature, retrieval sources, and revision procedure. Record which target properties remain attributable to the prompt across generators.
+
+PLATFORM:
+[[PROMPT COMPRESSION]]
+
+LINKS:
+[[SEED IS NOT TREE]]
+[[GENERATOR CONTRIBUTION]]
+[[REGENERABILITY]]
+
+BIBTEX:
+@unpublished{warmseed_fragments,
+  title = {The Warm Seed and Aphoristic Fragments},
+  note = {Unattributed working manuscript supplied by the user}
+}
+
+ZETTEL
+
+ID:
+PF-RESISTANCE-011
+
+TITLE:
+Automation can remove both useless labor and the resistance through which a problem becomes thinkable.
+
+SOURCE:
+Unattributed working manuscript — “Aphoristic Fragments,” fragments 77–86 — date not stated. fileciteturn0file0L894-L982
+
+PASSAGE:
+[QUOTE]
+“The machine can save me from the labor that was merely labor.
+It can also save me from the labor in which the thought would have appeared.
+I cannot know in advance which kind I am avoiding.”
+
+[QUOTE]
+“Now there is always a way around.
+This changes the ethics of attention.”
+
+RESEARCH OBJECT:
+Epistemically productive resistance.
+
+LOCAL MOVE:
+The manuscript abandons a simple efficiency account. Difficulty is divided into labor that obstructs thought and labor through which thought emerges.
+
+SOURCE TERMS:
+fatigue
+resistance
+work
+labor
+thought
+evasion
+difficulty
+way around
+ethics of attention
+refusing
+
+WHAT BECAME STRANGE:
+Friction cannot be classified as waste merely because a tool can eliminate it.
+
+QUESTION:
+Which forms of writing difficulty are incidental costs, and which function as epistemic operators?
+
+DEEPER QUESTION:
+Can a writing system preserve productive resistance without fetishizing inefficiency or suffering?
+
+MECHANISM:
+A difficult passage forces prolonged confrontation with unresolved choices. During that forced duration, distinctions, objections, or formulations can emerge. Automation can shorten the duration before those transformations occur.
+
+FORMAL SHIFT:
+<writing difficulty>
+→ <sustained encounter OR automated bypass>
+→ [continued discrimination OR premature continuation]
+→ <changed thought trajectory>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+FRICTION has at least two classes:
+F₁ = cost with little epistemic yield
+F₂ = constraint that produces epistemic change
+
+Automation cannot safely remove F₂ unless it can distinguish F₂ from F₁.
+
+TENSION:
+The manuscript itself concedes that suspicion of easy writing is “sometimes correct,” not universally correct. Difficulty can also waste attention and preserve arbitrary gatekeeping.
+
+MISSING:
+Observable criteria for distinguishing productive resistance from merely expensive labor before the work is completed.
+
+BOUNDARY:
+The passage does not license the claim that harder writing is better writing or that manual production is intellectually superior.
+
+CITATION TRAIL:
+Dewey on inquiry and problematic situations; Schön on reflection-in-action; desirable difficulties; craft studies; HCI research on friction; automation bias.
+
+TEST:
+Run matched writing tasks in which some difficult operations are automated and others remain manual. Compare not merely output quality but which new distinctions, revisions, and questions arise during production.
+
+PLATFORM:
+[[ETHICS OF ATTENTION]]
+
+LINKS:
+[[PRODUCTIVE RESISTANCE]]
+[[AUTOMATED EVASION]]
+[[FRICTION AS EPISTEMIC OPERATOR]]
+
+BIBTEX:
+@unpublished{warmseed_fragments,
+  title = {The Warm Seed and Aphoristic Fragments},
+  note = {Unattributed working manuscript supplied by the user}
+}
+
+ZETTEL
+
+ID:
+PF-SITUATEDNESS-012
+
+TITLE:
+The hard limit may not be private creativity but the inability to transfer a position into context.
+
+SOURCE:
+Unattributed working manuscript — “Aphoristic Fragments,” fragments 90–96 — date not stated. fileciteturn0file0L1006-L1084
+
+PASSAGE:
+[QUOTE]
+“What does my body know?
+What does my shame know?
+What does thirty years of looking at faces know without being able to state it?
+I cannot pour all of this into the context window.”
+
+[QUOTE]
+“Perhaps the decisive human contribution is not a secret substance called creativity.
+Perhaps it is that I am somewhere.”
+
+RESEARCH OBJECT:
+Situated remainder that cannot simply be converted into explicit prompt context.
+
+LOCAL MOVE:
+The manuscript replaces an essentialist defense of human creativity with a positional problem: embodied history supplies discriminations that may guide selection without being fully articulable.
+
+SOURCE TERMS:
+body
+shame
+faces
+context window
+somewhere
+here
+position
+speaking
+after what
+toward what
+deixis
+
+WHAT BECAME STRANGE:
+The human/model difference proposed here is not possession of a mysterious faculty but asymmetry of situation.
+
+QUESTION:
+What parts of effective prompting depend on a history and position that cannot be exhaustively represented in the prompt?
+
+DEEPER QUESTION:
+Is the context-window problem fundamentally one of insufficient capacity, or of converting lived participation into transmissible representation?
+
+MECHANISM:
+The operator makes judgments using accumulated bodily, social, temporal, and practical history. Only selected traces of that history are externalized into the interaction. The model acts on the externalized remainder, while the operator continues judging from the larger situation.
+
+FORMAL SHIFT:
+<situated history>
+→ <partial explicit context>
+→ [model acts on representation]
+→ <operator evaluates from unreduced situation>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+SITUATION_USER ⊃ CONTEXT_SUPPLIED_TO_MODEL
+
+The difference is not necessarily a hidden substance.
+It may be a persistent asymmetry between participation and representation.
+
+TENSION:
+Models can also receive sensor data, persistent memory, user histories, and environmental state. Increased context might narrow this asymmetry without eliminating it.
+
+MISSING:
+A distinction between information that is merely not yet encoded and information whose practical role changes when converted into an explicit representation.
+
+BOUNDARY:
+The passage does not establish an absolute metaphysical difference between humans and machines.
+
+CITATION TRAIL:
+Situated cognition; embodied cognition; tacit knowledge; deixis; indexicality; Polanyi; phenomenology; ethnomethodology.
+
+TEST:
+Identify judgments the operator can reliably make but cannot initially verbalize. Iteratively externalize cues into the model context and test which judgments become reproducible and which remain dependent on situated evaluation.
+
+PLATFORM:
+[[SITUATED PROMPTING]]
+
+LINKS:
+[[DEICTIC PROMPTING]]
+[[TACIT CRITERIA]]
+[[CONTEXT WINDOW AS REPRESENTATIONAL BOUNDARY]]
+
+BIBTEX:
+@unpublished{warmseed_fragments,
+  title = {The Warm Seed and Aphoristic Fragments},
+  note = {Unattributed working manuscript supplied by the user}
+}
+
+ZETTEL
+
+ID:
+PF-CRITERIA-013
+
+TITLE:
+A criterion can govern revision before the operator can state it propositionally.
+
+SOURCE:
+Unattributed working manuscript — “Aphoristic Fragments,” fragments 40–43 — date not stated. fileciteturn0file0L502-L544
+
+PASSAGE:
+[QUOTE]
+“The inability to state the criterion does not mean there is no criterion.
+A musician stops the rehearsal and says, ‘No.’
+Everyone in the room may understand.
+No metric appears.”
+
+RESEARCH OBJECT:
+Operative but unformalized evaluative criteria.
+
+LOCAL MOVE:
+The manuscript refuses the inference from “cannot state the rule” to “no rule-like discrimination exists.”
+
+SOURCE TERMS:
+criterion
+musician
+No
+metric
+taste
+leave unwritten
+dissertation
+
+WHAT BECAME STRANGE:
+A decision procedure may be behaviorally stable enough to guide revision while remaining unavailable as an explicit specification.
+
+QUESTION:
+How can prompt research study reliable evaluative discrimination without pretending that the criterion has already been formalized?
+
+DEEPER QUESTION:
+What is lost when tacit evaluative competence is converted into an explicit rubric for the sake of reproducibility?
+
+MECHANISM:
+The operator encounters an output, discriminates acceptance from rejection, and modifies subsequent action despite lacking a complete verbal account of the discrimination.
+
+FORMAL SHIFT:
+<encountered output>
+→ <tacit evaluative discrimination>
+→ [accept / reject / revise]
+→ <changed trajectory>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+EVALUATE(x) → {KEEP, REJECT, MODIFY}
+while
+explicit_definition(EVALUATE) = incomplete
+
+TENSION:
+Unstated criteria are difficult to audit, teach, reproduce, or distinguish from inconsistency and post hoc rationalization.
+
+MISSING:
+Evidence that the criterion is stable across cases rather than reconstructed after each judgment.
+
+BOUNDARY:
+The passage does not show that taste is ineffable in principle or that measurement necessarily destroys it.
+
+CITATION TRAIL:
+Tacit knowledge; connoisseurship; reflective practice; expert judgment; preference learning; aesthetic judgment.
+
+TEST:
+Collect a long sequence of accept/reject judgments before asking the operator to explain them. Test whether a classifier or later articulation can predict earlier decisions and identify systematic residuals.
+
+PLATFORM:
+[[TACIT CRITERIA]]
+
+LINKS:
+[[FAILURE AS SEMANTIC PROBE]]
+[[SITUATED PROMPTING]]
+[[ETHICS OF ATTENTION]]
+
+BIBTEX:
+@unpublished{warmseed_fragments,
+  title = {The Warm Seed and Aphoristic Fragments},
+  note = {Unattributed working manuscript supplied by the user}
+}
+
+ZETTEL
+
+ID:
+PF-AUTHORSHIP-014
+
+TITLE:
+The authorship problem changes when “write” is treated as a bundle of operations rather than a sovereign act.
+
+SOURCE:
+Unattributed working manuscript — “Aphoristic Fragments,” fragment 15 and fragments 100–106 — date not stated. fileciteturn0file0L210-L224 fileciteturn0file0L1116-L1174
+
+PASSAGE:
+[QUOTE]
+“I wrote the prompt.
+The model wrote the sentence.
+I chose the sentence.
+I changed the sentence.
+I placed it here.
+Which of these is writing?”
+
+[QUOTE]
+“The philosophical trouble begins only when I demand that one of them describe the whole event.”
+
+RESEARCH OBJECT:
+Decomposition of the predicate “write.”
+
+LOCAL MOVE:
+The manuscript stops asking which actor exclusively owns writing and instead breaks writing into distinguishable operations whose allocation can vary.
+
+SOURCE TERMS:
+wrote
+prompt
+sentence
+chose
+changed
+placed
+whole event
+authorship
+indivisible
+
+WHAT BECAME STRANGE:
+The dispute “human wrote it / model wrote it” may arise because one ordinary verb is being forced to provide a complete causal description.
+
+QUESTION:
+Which operations are ordinarily compressed into “write,” and which of them are actually relevant to different authorship disputes?
+
+DEEPER QUESTION:
+Do authorship controversies persist because different institutions silently privilege different members of the operation bundle?
+
+MECHANISM:
+A complex production event is compressed under an ordinary predicate. Different speakers select different operations as decisive. Conflict appears when one selected operation is treated as exhaustive of the event.
+
+FORMAL SHIFT:
+<heterogeneous production process>
+→ <single predicate: WRITE>
+→ [select one operation as decisive]
+→ <apparently exclusive authorship claim>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+WRITE = family resemblance / bundled predicate over operations such as:
+INITIATE
+SPECIFY
+GENERATE
+SELECT
+REJECT
+REVISE
+ARRANGE
+ENDORSE
+
+Authorship disputes may result from different weightings over this bundle.
+
+TENSION:
+Ordinary predicates routinely compress complex events without becoming defective. Decomposition must demonstrate analytical payoff rather than merely greater granularity.
+
+MISSING:
+Institution-specific evidence about which operations actually control attribution in publishing, scholarship, law, design, and everyday speech.
+
+BOUNDARY:
+The passage does not establish that “write” has no useful ordinary meaning. It objects to demanding that one use of the word exhaustively describe the event.
+
+CITATION TRAIL:
+Ordinary-language philosophy; authorship law; textual scholarship; sociology of creative labor; distributed cognition; speech-act analysis.
+
+TEST:
+Present identical production histories to participants while varying only the question: “Who generated?”, “Who selected?”, “Who revised?”, “Who wrote?”, “Who is responsible?” Compare attribution shifts.
+
+PLATFORM:
+[[DECOMPOSE WRITE]]
+
+LINKS:
+[[DISTRIBUTED AUTHORSHIP]]
+[[TRACE IS NOT VERDICT]]
+[[RESPONSIBILITY SURVIVES PRODUCTION]]
+
+BIBTEX:
+@unpublished{warmseed_fragments,
+  title = {The Warm Seed and Aphoristic Fragments},
+  note = {Unattributed working manuscript supplied by the user}
+}
+
+ZETTEL
+
+ID:
+PF-RESPONSIBILITY-015
+
+TITLE:
+Responsibility can remain concentrated even when sentence production is distributed.
+
+SOURCE:
+Unattributed working manuscript — “Aphoristic Fragments,” fragments 23–25 — date not stated. fileciteturn0file0L306-L326
+
+PASSAGE:
+[QUOTE]
+“The machine cannot absolve me.
+This is easy to forget.
+If the sentence is foolish, I cannot send the model to defend it.”
+
+[QUOTE]
+“Responsibility may survive where production does not.”
+
+RESEARCH OBJECT:
+Asymmetry between causal production and accountable endorsement.
+
+LOCAL MOVE:
+The manuscript separates responsibility from direct sentence production instead of trying to restore the human as sole producer.
+
+SOURCE TERMS:
+machine
+absolve
+sentence
+defend
+responsibility
+production
+
+WHAT BECAME STRANGE:
+Distributed production need not imply equivalently distributed accountability.
+
+QUESTION:
+Which operation transfers a generated sentence from machine output into something for which a person becomes answerable?
+
+DEEPER QUESTION:
+Is selection enough, publication enough, endorsement enough, or does responsibility depend on the institutional role from which the output is released?
+
+MECHANISM:
+A model contributes candidate material. A human actor selects, adopts, modifies, places, or publishes it within an accountable practice. Responsibility attaches through that act of uptake rather than through exclusive causal production.
+
+FORMAL SHIFT:
+<generated candidate>
+→ <human uptake / endorsement / publication>
+→ [enter accountable practice]
+→ <responsibility attaches>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+PRODUCTION(x) and RESPONSIBILITY_FOR(x) are separable relations.
+
+A possible transition:
+MODEL_GENERATES(x)
+→ PERSON_ENDORSES(x)
+→ PERSON_BECOMES_ANSWERABLE_FOR(x)
+
+TENSION:
+Some systems operate with little meaningful human review; in such cases, assigning responsibility through “selection” may become fictive or institutionally engineered.
+
+MISSING:
+The threshold of meaningful uptake required before responsibility can fairly attach.
+
+BOUNDARY:
+The passage does not determine legal liability, moral responsibility in all cases, or whether models and organizations can bear other kinds of responsibility.
+
+CITATION TRAIL:
+Responsibility gaps; automation; editorial responsibility; publication ethics; principal-agent relations; human-in-the-loop governance.
+
+TEST:
+Compare cases with progressively weaker human uptake: authored revision, explicit selection, batch approval, automatic publication, autonomous generation. Ask where attribution of answerability changes and why.
+
+PLATFORM:
+[[RESPONSIBILITY AFTER GENERATION]]
+
+LINKS:
+[[DECOMPOSE WRITE]]
+[[PROMPT RECEIPTS]]
+[[HUMAN UPTAKE]]
+
+BIBTEX:
+@unpublished{warmseed_fragments,
+  title = {The Warm Seed and Aphoristic Fragments},
+  note = {Unattributed working manuscript supplied by the user}
+}
+
+ZETTEL
+
+ID:
+PF-PHILOSOPHY-016
+
+TITLE:
+The machine’s philosophical force may be to break a previously serviceable compression rather than create an entirely new category.
+
+SOURCE:
+Unattributed working manuscript — “Aphoristic Fragments,” fragments 104–106 — date not stated. fileciteturn0file0L1148-L1174
+
+PASSAGE:
+[QUOTE]
+“I can say:
+I wrote it.
+I can say:
+The model wrote it.
+Both sentences may function perfectly well in ordinary conversation.
+The philosophical trouble begins only when I demand that one of them describe the whole event.”
+
+[QUOTE]
+“No sentence describes the whole event.
+That was true before the machine.
+What the machine has done is remove one of our excuses for forgetting it.”
+
+RESEARCH OBJECT:
+Technological disruption as exposure of an old conceptual compression.
+
+LOCAL MOVE:
+The manuscript ends by resisting technological exceptionalism. AI does not necessarily make ordinary authorship language false; it makes its incompleteness difficult to overlook.
+
+SOURCE TERMS:
+ordinary conversation
+philosophical trouble
+whole event
+before the machine
+forgetting
+
+WHAT BECAME STRANGE:
+A technological novelty can create a philosophical problem by destabilizing an old simplification rather than by producing a wholly unprecedented phenomenon.
+
+QUESTION:
+Which apparently new AI problems are cases where an older conceptual shortcut has stopped functioning smoothly?
+
+DEEPER QUESTION:
+How can one distinguish a genuinely new ontology from a newly visible inadequacy in an inherited vocabulary?
+
+MECHANISM:
+Ordinary language compresses complex processes effectively under familiar conditions. A new technical arrangement redistributes formerly co-located operations. Competing descriptions remain locally usable but can no longer plausibly masquerade as total process accounts.
+
+FORMAL SHIFT:
+<complex process historically compressed by ordinary term>
+→ <technology redistributes process components>
+→ [compression becomes unstable]
+→ <latent conceptual problem becomes visible>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+NEW TECHNOLOGY
+does not necessarily imply
+NEW PHENOMENON.
+
+It may imply:
+OLD DISTINCTION + NEWLY VISIBLE FAILURE CONDITIONS.
+
+TENSION:
+Some machine-mediated processes may indeed introduce genuinely novel actors, scales, temporalities, or capacities. The exposure thesis cannot be allowed to erase real novelty.
+
+MISSING:
+A comparative method for deciding, case by case, whether AI introduces a new mechanism or merely reveals an older distributed mechanism.
+
+BOUNDARY:
+The passage does not license reducing every AI novelty to “nothing new.” Its claim concerns the incompleteness of totalizing descriptions of authorship.
+
+CITATION TRAIL:
+Ordinary-language philosophy; philosophy of technology; media archaeology; histories of authorship technologies; distributed cognition.
+
+TEST:
+For each claimed novelty in AI-mediated writing, identify a pre-AI analogue and compare mechanisms operation by operation. Mark what persists, what changes quantitatively, and what has no adequate analogue.
+
+PLATFORM:
+[[AI AS CONCEPTUAL STRESS TEST]]
+
+LINKS:
+[[DECOMPOSE WRITE]]
+[[VISIBLE DISTRIBUTION]]
+[[NOVELTY / EXPOSURE]]
+
+BIBTEX:
+@unpublished{warmseed_fragments,
+  title = {The Warm Seed and Aphoristic Fragments},
+  note = {Unattributed working manuscript supplied by the user}
+}
+
+ZETTEL
+
+ID:
+LIT-WINOGRAD-001
+
+TITLE:
+Natural language was already converted into executable procedures in SHRDLU; “description becomes operation” cannot claim firstness with prompting.
+
+SOURCE:
+Terry Winograd — “A Procedural Model of Language Understanding” — 1973 — pp. 167–170.
+
+PASSAGE:
+[PARAPHRASE]
+Winograd’s program maintains a symbolic model of the blocks world containing facts plus procedures for changing the world and drawing deductions. He then describes language use as activating procedures in the hearer: sentences interpreted by the robot are converted into PLANNER instructions, and the resulting program is executed to achieve an effect.
+
+RESEARCH OBJECT:
+Natural-language utterance → procedural representation → execution.
+
+LOCAL MOVE:
+Winograd makes the relation between language and action technically explicit rather than metaphorical. The natural-language sentence does not act by itself; an interpreter transforms it into procedures inside an engineered world model.
+
+SOURCE TERMS:
+world model
+symbolic description
+procedures
+operations
+PLANNER
+interpretation
+desired effect
+
+WHAT BECAME STRANGE:
+The historical novelty of contemporary prompting cannot simply be that natural language now causes computation. SHRDLU already implemented that relation.
+
+QUESTION:
+If natural-language-to-operation is not new, what changed between SHRDLU and contemporary prompting?
+
+DEEPER QUESTION:
+Is the important transition from hand-authored procedural interpretation inside a microworld to learned interpretation across a vastly less explicit domain?
+
+MECHANISM:
+English sentence
+→ linguistic interpretation
+→ PLANNER instructions
+→ execution against symbolic world state
+→ changed world state / answer.
+
+FORMAL SHIFT:
+<NATURAL-LANGUAGE UTTERANCE>
+→ <PLANNER INSTRUCTIONS>
+→ [EXECUTE PROCEDURE AGAINST WORLD MODEL]
+→ <ACTION / ANSWER / STATE CHANGE>
+
+SOURCE FORMALISM:
+Winograd supplies procedural representations of actions such as GRASP as explicit decision/action structures and states that interpreted sentences are converted into PLANNER instructions.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+UTTERANCE
+→ INTERPRET(utterance, world_model, discourse_state)
+→ PROCEDURE
+→ EXECUTE(procedure)
+
+TENSION:
+The apparent continuity may conceal the important discontinuity. SHRDLU’s operational power depended on an extremely restricted blocks world whose relevant entities and predicates had been designed in advance. Contemporary models often operate without an equivalently explicit ontology.
+
+MISSING:
+A historical comparison of what must be pre-specified in SHRDLU versus what is learned, inferred, supplied by context, or delegated to external tools in an LLM system.
+
+BOUNDARY:
+Winograd does not establish that ordinary English is intrinsically executable. His system establishes that English can be made operational by a particular representational and procedural architecture.
+
+CITATION TRAIL:
+Winograd — Understanding Natural Language — 1972.
+Carl Hewitt — PLANNER.
+Winograd & Flores — Understanding Computers and Cognition — 1986.
+Procedural semantics and procedural representations of knowledge.
+
+TEST:
+Give equivalent natural-language instructions to SHRDLU-like symbolic machinery and an LLM agent. Inventory every ontology, predicate, procedure, constraint, and recovery mechanism that must exist before either can act.
+
+PLATFORM:
+[[DESCRIPTION AS OPERATION]]
+
+LINKS:
+[[APPARATUS MAKES WORDS CONSEQUENTIAL]]
+[[MICROWORLD / FOUNDATION MODEL]]
+[[NATURAL LANGUAGE AS PROGRAM INPUT]]
+
+BIBTEX:
+@incollection{winograd1973procedural,
+  author = {Terry Winograd},
+  title = {A Procedural Model of Language Understanding},
+  booktitle = {Computer Models of Thought and Language},
+  editor = {Roger C. Schank and Kenneth M. Colby},
+  publisher = {W. H. Freeman},
+  address = {San Francisco},
+  pages = {152--186},
+  year = {1973}
+}
+
+ZETTEL
+
+ID:
+LIT-WINOGRAD-002
+
+TITLE:
+In SHRDLU, context was part of the interpreter’s machinery, not extra information appended after linguistic meaning.
+
+SOURCE:
+Terry Winograd — “A Procedural Model of Language Understanding” — 1973 — pp. 153, 167ff.
+
+PASSAGE:
+[PARAPHRASE]
+Winograd rejects analysis of sentences in isolation. Language occurs in a setting comprising the physical situation, discourse topic, prior discourse, participants’ knowledge of the world, and their ideas about one another. SHRDLU therefore maintains both world state and discourse-relevant information.
+
+RESEARCH OBJECT:
+Context as computationally active state.
+
+LOCAL MOVE:
+“Context” is decomposed into resources used during interpretation rather than treated as an amorphous surrounding background.
+
+SOURCE TERMS:
+context
+setting
+physical situation
+topic of discourse
+knowledge
+world model
+current state
+
+WHAT BECAME STRANGE:
+“The prompt contains context” and “the prompt occurs in context” are different architectural claims.
+
+QUESTION:
+Which parts of contemporary prompt interpretation are carried by the prompt string, which by conversation state, which by interface state, and which by model parameters?
+
+DEEPER QUESTION:
+Has the context window collapsed distinctions that earlier systems kept architecturally separate?
+
+MECHANISM:
+Current linguistic material is interpreted against prior discourse, represented world state, and procedures/knowledge already available to the system.
+
+FORMAL SHIFT:
+<UTTERANCE>
+→ <UTTERANCE + DISCOURSE STATE + WORLD STATE + KNOWLEDGE>
+→ [INTERPRET]
+→ <RESOLVED MEANING / ACTION>
+
+SOURCE FORMALISM:
+A maintained symbolic blocks-world database plus procedures and discourse-sensitive interpretation.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+INTERPRET(u) =
+f(u, discourse_history, represented_world, procedural_knowledge)
+
+TENSION:
+LLM “context” is not straightforwardly the same object. Much relevant structure may be latent in parameters rather than stored as explicit predicates or discourse records.
+
+MISSING:
+A vocabulary that distinguishes:
+TEXTUAL CONTEXT
+INTERACTION STATE
+WORLD STATE
+MODEL KNOWLEDGE
+TOOL STATE
+USER-SIDE SITUATION.
+
+BOUNDARY:
+Winograd’s architecture does not establish how transformer models interpret context. It shows that context-sensitive computational language interpretation has a much older technical genealogy.
+
+CITATION TRAIL:
+Bar-Hillel on indexical expressions.
+Winograd — Understanding Natural Language.
+Suchman — Plans and Situated Actions.
+Clark & Wilkes-Gibbs — collaborative reference.
+
+TEST:
+Take one successful multimodal prompt and reconstruct which variables would have required explicit representation in SHRDLU. The residual may identify what contemporary models newly make implicit.
+
+PLATFORM:
+[[PROMPT LEANS ON A WORLD]]
+
+LINKS:
+[[STATEFUL LANGUAGE]]
+[[CONTEXT IS NOT ONE THING]]
+[[SHRDLU GENEALOGY]]
+
+BIBTEX:
+@incollection{winograd1973procedural,
+  author = {Terry Winograd},
+  title = {A Procedural Model of Language Understanding},
+  booktitle = {Computer Models of Thought and Language},
+  editor = {Roger C. Schank and Kenneth M. Colby},
+  publisher = {W. H. Freeman},
+  address = {San Francisco},
+  pages = {152--186},
+  year = {1973}
+}
+
+ZETTEL
+
+ID:
+LIT-SUCHMAN-003
+
+TITLE:
+Indexicality makes situation particulars constitutive of intelligibility rather than supplementary context.
+
+SOURCE:
+Lucy A. Suchman — Plans and Situated Actions: The Problem of Human-Machine Communication — 1985 — p. 36.
+
+PASSAGE:
+[PARAPHRASE]
+Suchman proposes that language stands in a generally indexical relation to the circumstances it presupposes, produces, and describes. Mutual intelligibility is achieved on particular occasions through recourse to situation particulars rather than guaranteed once and for all by a stable body of shared meanings.
+
+RESEARCH OBJECT:
+Occasion-specific achievement of intelligibility.
+
+LOCAL MOVE:
+Suchman moves meaning away from a self-sufficient symbolic message and into an interaction between language and circumstances.
+
+SOURCE TERMS:
+indexical
+circumstances
+situation particulars
+mutual intelligibility
+shared meanings
+
+WHAT BECAME STRANGE:
+A richer prompt may not “contain more meaning.” It may make more situation particulars available for resolving an otherwise underdetermined act.
+
+QUESTION:
+What would it mean to treat prompt success as an achieved relation between utterance and situation rather than a property of the prompt?
+
+DEEPER QUESTION:
+When the “situation” presented to a model is itself a representation assembled by an interface, where does indexical grounding stop?
+
+MECHANISM:
+Utterance
+→ interpreted relative to locally available particulars
+→ interlocutors coordinate
+→ intelligibility is contingently achieved.
+
+FORMAL SHIFT:
+<UTTERANCE>
+→ <UTTERANCE-IN-SITUATION>
+→ [RESOLVE THROUGH SITUATION PARTICULARS]
+→ <LOCALLY ACHIEVED INTELLIGIBILITY>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+MEANING-IN-USE ≠ decode(symbols alone)
+
+MEANING-IN-USE =
+achievement(symbols, circumstances, interaction)
+
+TENSION:
+A context window can contain representations of circumstances without the model participating in those circumstances in Suchman’s sense.
+
+MISSING:
+The distinction between:
+SHARED SITUATION
+and
+REPRESENTATION OF A SITUATION SUPPLIED TO A MODEL.
+
+BOUNDARY:
+Suchman is not proposing a theory of prompting, nor does her argument license calling model/user interaction mutually intelligible in the same sense as human interaction.
+
+CITATION TRAIL:
+Garfinkel.
+Sacks, Schegloff, Jefferson.
+Wittgenstein.
+Clark & Wilkes-Gibbs.
+Agre and Chapman.
+
+TEST:
+Hold a prompt string fixed while varying only accessible interaction history, selection state, visual scene, tool state, and prior actions. Identify which “meaning” changes are actually indexical resolutions.
+
+PLATFORM:
+[[DEICTIC PROMPTING]]
+
+LINKS:
+[[PROMPT LEANS ON A WORLD]]
+[[SITUATION PARTICULARS]]
+[[CONTEXT WINDOW / SITUATION]]
+
+BIBTEX:
+@techreport{suchman1985plans,
+  author = {Lucy A. Suchman},
+  title = {Plans and Situated Actions: The Problem of Human-Machine Communication},
+  institution = {Xerox Palo Alto Research Center},
+  number = {ISL-6},
+  address = {Palo Alto, CA},
+  month = {February},
+  year = {1985}
+}
+
+ZETTEL
+
+ID:
+LIT-SUCHMAN-004
+
+TITLE:
+Breakdown exposes a choice between competing interpretations and therefore supplies information unavailable in smooth interaction.
+
+SOURCE:
+Lucy A. Suchman — Plans and Situated Actions: The Problem of Human-Machine Communication — 1985 — pp. 107–108.
+
+PASSAGE:
+[PARAPHRASE]
+In analyzing trouble in human-machine interaction, Suchman notes that an incoherent or inappropriate response creates an interpretive problem. In human interaction, a producer may treat the response as evidence that the listener misheard or misunderstood, or may treat it as intended; repair then depends on that diagnosis.
+
+RESEARCH OBJECT:
+Repair as diagnosis of an interactional mismatch.
+
+LOCAL MOVE:
+Failure is decomposed into rival hypotheses about what went wrong.
+
+SOURCE TERMS:
+trouble
+response
+misunderstanding
+repair
+instruction
+human-machine communication
+
+WHAT BECAME STRANGE:
+“No, again” is not merely another instruction. It is an implicit diagnosis of the previous interaction.
+
+QUESTION:
+What hypothesis about the preceding exchange is encoded by each prompt revision?
+
+DEEPER QUESTION:
+Could prompt iteration be studied as repair organization rather than optimization?
+
+MECHANISM:
+Unexpected response
+→ infer source of trouble
+→ choose repair strategy
+→ reformulate / repeat / redirect
+→ test new interpretation.
+
+FORMAL SHIFT:
+<EXPECTED RESPONSE ≠ OBSERVED RESPONSE>
+→ <DIAGNOSIS OF TROUBLE>
+→ [REPAIR]
+→ <REVISED INTERACTION>
+
+SOURCE FORMALISM:
+Suchman explicitly distinguishes information available to the user, information available to the machine, observable machine behavior, and the system rationale in her interaction tables.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+FAILURE
+→ {misheard?, misunderstood?, wrong reference?, wrong state?, wrong intention?}
+→ REPAIR
+
+TENSION:
+LLM generations can vary stochastically. Not every bad generation provides a stable diagnostic signal about the system’s interpretation.
+
+MISSING:
+A repair taxonomy for prompting that separates:
+REPETITION
+REFORMULATION
+CONTEXT ADDITION
+REFERENCE REPAIR
+CRITERION REVISION
+TOOL/STATE REPAIR.
+
+BOUNDARY:
+Suchman does not claim that every breakdown is informative, and her analysis of human repair should not be imported as evidence that a model possesses human conversational understanding.
+
+CITATION TRAIL:
+Schegloff, Jefferson & Sacks — repair organization.
+Clark & Wilkes-Gibbs.
+Conversation analysis.
+Interactive machine learning.
+
+TEST:
+Code real prompt histories by repair type instead of success/failure. Ask whether certain failures systematically reveal hidden assumptions that successful generations leave unarticulated.
+
+PLATFORM:
+[[FAILURE AS METHOD]]
+
+LINKS:
+[[PROMPT REPAIR]]
+[[FAILED PROMPT AS PROBE]]
+[[INTERACTIONAL DEBUGGING]]
+
+BIBTEX:
+@techreport{suchman1985plans,
+  author = {Lucy A. Suchman},
+  title = {Plans and Situated Actions: The Problem of Human-Machine Communication},
+  institution = {Xerox Palo Alto Research Center},
+  number = {ISL-6},
+  address = {Palo Alto, CA},
+  month = {February},
+  year = {1985}
+}
+
+ZETTEL
+
+ID:
+LIT-CLARK-005
+
+TITLE:
+Reference is not completed when the speaker emits the referring expression.
+
+SOURCE:
+Herbert H. Clark and Deanna Wilkes-Gibbs — “Referring as a Collaborative Process” — 1986 — Cognition 22(1), pp. 1–4.
+
+PASSAGE:
+[PARAPHRASE]
+Clark and Wilkes-Gibbs reject a “literary model” in which a speaker independently chooses a noun phrase that contains everything needed for reference. Their conversational model treats reference as an iterative process: a speaker presents a candidate expression, participants may repair, expand, or replace it, and the process continues until they mutually accept a version.
+
+RESEARCH OBJECT:
+Reference as interactional accomplishment.
+
+LOCAL MOVE:
+The unit being explained changes from noun phrase to collaborative process.
+
+SOURCE TERMS:
+presentation
+acceptance
+repair
+expand
+replace
+joint effort
+common ground
+reference
+
+WHAT BECAME STRANGE:
+A word like “this” need not carry enough information to identify its referent if the interaction has already built the conditions for acceptance.
+
+QUESTION:
+Could prompt reference be modeled as a trajectory of proposed and repaired bindings rather than as one-shot reference resolution?
+
+DEEPER QUESTION:
+What becomes of “mutual acceptance” when one participant is a generative system whose acknowledgments are themselves generated behaviors?
+
+MECHANISM:
+Speaker proposes reference
+→ addressee displays acceptance or trouble
+→ expression is repaired/expanded/replaced
+→ reference becomes sufficient for the joint activity.
+
+FORMAL SHIFT:
+<REFERRING EXPRESSION>
+→ <PRESENTATION>
+→ [ACCEPT / REPAIR / EXPAND / REPLACE]
+→ <WORKING REFERENCE>
+
+SOURCE FORMALISM:
+A collaborative model built around presentation and acceptance, empirically examined through pairs performing a figure-arrangement task.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+REFERENCE_t
+→ RESPONSE_t
+→ REPAIR_{t+1}
+→ ...
+→ SUFFICIENT-FOR-CURRENT-JOINT-ACTION
+
+TENSION:
+An LLM can behave as if a reference has been accepted while actually binding it incorrectly. Conversational fluency can therefore hide rather than demonstrate successful grounding.
+
+MISSING:
+A machine-side observable that distinguishes genuine successful binding from merely plausible continuation.
+
+BOUNDARY:
+The paper studies human conversational reference. It does not establish symmetrical collaboration between humans and generative models.
+
+CITATION TRAIL:
+Clark & Brennan — grounding in communication.
+Schegloff et al. — repair.
+Common ground.
+Multimodal reference resolution.
+
+TEST:
+Study “this / that / again / like before” interactions and retain every clarification. Determine whether successful reference arises from lexical information or from cumulative repair and interaction state.
+
+PLATFORM:
+[[DEICTIC PROMPTING]]
+
+LINKS:
+[[REFERENCE IS A PROCESS]]
+[[COMMON GROUND]]
+[[PROMPT REPAIR]]
+
+BIBTEX:
+@article{clarkwilkesgibbs1986,
+  author = {Herbert H. Clark and Deanna Wilkes-Gibbs},
+  title = {Referring as a Collaborative Process},
+  journal = {Cognition},
+  volume = {22},
+  number = {1},
+  pages = {1--39},
+  year = {1986},
+  doi = {10.1016/0010-0277(86)90010-7}
+}
+
+ZETTEL
+
+ID:
+LIT-NAUR-006
+
+TITLE:
+Programming itself depends on knowledge that is not contained in program text, weakening a clean “code has fixed meaning / prompts discover meaning” opposition.
+
+SOURCE:
+Peter Naur — “Programming as Theory Building” — 1985 — Microprocessing and Microprogramming 15, pp. 253–261.
+
+PASSAGE:
+[PARAPHRASE]
+Naur argues that programming should be regarded primarily as programmers building a theory of the matters handled by a program, rather than as production of program text and documentation. The programmer’s knowledge necessarily transcends the documented products: it includes why the program maps the world as it does, why particular parts have their form, and how to respond constructively to modification.
+
+RESEARCH OBJECT:
+The theory of the program that exceeds the program text.
+
+LOCAL MOVE:
+Naur relocates programming competence from an artifact to a relation between programmer, problem world, and program.
+
+SOURCE TERMS:
+theory building
+program text
+documentation
+world
+programmer
+modification
+direct knowledge
+
+WHAT BECAME STRANGE:
+Treating programming as the paradigm of fully explicit specification may depend on mistaking program text for programming.
+
+QUESTION:
+Are prompting and programming different because one is tacit and exploratory, or do both depend on theories that exceed their written expressions?
+
+DEEPER QUESTION:
+Does iterative prompting build a “theory of the model” analogous to Naur’s theory of the program?
+
+MECHANISM:
+Programmer encounters problem domain
+→ constructs theory of how domain maps into program
+→ produces text
+→ theory enables explanation and modification beyond what text alone contains.
+
+FORMAL SHIFT:
+<PROBLEM WORLD>
+→ <PROGRAMMER’S THEORY>
+→ [WRITE PROGRAM]
+→ <PROGRAM TEXT>
+while
+<THEORY> ⊄ <PROGRAM TEXT>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+PROGRAMMING ≠ PROGRAM_TEXT_PRODUCTION
+
+COMPETENT CHANGE =
+f(program_text, theory_of_program)
+
+TENSION:
+Programming languages still supply formal syntax and execution semantics in a way natural-language prompts generally do not. Naur weakens a total opposition; he does not erase every distinction.
+
+MISSING:
+A decomposition separating:
+LANGUAGE SEMANTICS
+PROGRAMMER THEORY
+DOMAIN KNOWLEDGE
+EMPIRICAL KNOWLEDGE OF IMPLEMENTATION.
+
+BOUNDARY:
+Naur does not argue that program text is semantically indeterminate in the same way as natural language.
+
+CITATION TRAIL:
+Gilbert Ryle.
+Program comprehension.
+Tacit knowledge.
+Software maintenance.
+End-user programming.
+
+TEST:
+Give an unfamiliar program and an unfamiliar prompt workflow to expert and novice operators. Change one requirement. Measure what each must know beyond the visible text to modify the artifact successfully.
+
+PLATFORM:
+[[PROGRAMMING / PROMPTING]]
+
+LINKS:
+[[THEORY OF THE PROMPT]]
+[[TEXT DOES NOT CONTAIN PRACTICE]]
+[[TACIT CRITERIA]]
+
+BIBTEX:
+@article{naur1985programming,
+  author = {Peter Naur},
+  title = {Programming as Theory Building},
+  journal = {Microprocessing and Microprogramming},
+  volume = {15},
+  pages = {253--261},
+  year = {1985}
+}
+
+ZETTEL
+
+ID:
+LIT-HUTCHINS-007
+
+TITLE:
+Distribution becomes explanatory only when the transformations that propagate across people and artifacts are specified.
+
+SOURCE:
+Edwin Hutchins — Cognition in the Wild — 1995 — Introduction; chapter 3 overview.
+
+PASSAGE:
+[PARAPHRASE]
+Hutchins moves the cognitive unit of analysis beyond the individual and treats a ship-navigation team as a cognitive and computational system. His mechanism is not merely “many people contribute”: computation can be described as propagation of representational state across different media, including people and tools.
+
+RESEARCH OBJECT:
+Propagation of representational state across heterogeneous media.
+
+LOCAL MOVE:
+Hutchins supplies a mechanism for distribution rather than merely relocating cognition to a group.
+
+SOURCE TERMS:
+socially distributed cognition
+unit of analysis
+navigation team
+computational system
+propagation of representational state
+media
+
+WHAT BECAME STRANGE:
+Calling authorship “distributed” explains little unless we can say what moves between participants and what transformations occur at each handoff.
+
+QUESTION:
+What is the equivalent of Hutchins’s representational-state propagation in human–model writing?
+
+DEEPER QUESTION:
+Which transformations are constitutive of the eventual text rather than merely causal background?
+
+MECHANISM:
+Representational state
+→ transformed in one medium/person/tool
+→ propagated to another
+→ transformed again
+→ coordinated system-level accomplishment.
+
+FORMAL SHIFT:
+<INDIVIDUAL COGNIZER>
+→ <PEOPLE + ARTIFACTS + REPRESENTATIONAL MEDIA>
+→ [PROPAGATE / TRANSFORM STATE]
+→ <SYSTEM-LEVEL ACCOMPLISHMENT>
+
+SOURCE FORMALISM:
+Hutchins describes navigation as computation and explicitly characterizes computation at the distributed scale as propagation of representational state across media.
+
+OUR FORMALIZATION:
+[OUR FORMORMALIZATION — NOT SOURCE SYNTAX]
+s₀
+→ HUMAN(s₀)
+→ PROMPT
+→ MODEL(prompt)
+→ OUTPUT
+→ HUMAN_SELECT(output)
+→ TEXT
+is a candidate distributed trajectory only if the transformations themselves are analytically specified.
+
+TENSION:
+Distributed cognition is not distributed authorship. A system can possess distributed cognitive organization while credit, responsibility, ownership, and authorship remain differently allocated.
+
+MISSING:
+A theory connecting causal/representational contribution to authorship attribution.
+
+BOUNDARY:
+Hutchins provides neither an AI-authorship theory nor grounds for assigning authorship to every component of a cognitive system.
+
+CITATION TRAIL:
+Distributed cognition.
+Cognitive ethnography.
+Latour only as a rival account, not a synonym.
+Genetic criticism.
+Collaborative writing studies.
+
+TEST:
+Trace one paragraph through prompts, retrieved notes, generations, selections, edits, and rearrangements. Record what representation enters and leaves every operation. Ask whether “distributed authorship” still adds explanatory value after the actual propagation graph is visible.
+
+PLATFORM:
+[[DISTRIBUTED AUTHORSHIP]]
+
+LINKS:
+[[ANT HEAP]]
+[[REPRESENTATIONAL STATE PROPAGATION]]
+[[TRACE IS NOT VERDICT]]
+
+BIBTEX:
+@book{hutchins1995cognition,
+  author = {Edwin Hutchins},
+  title = {Cognition in the Wild},
+  publisher = {MIT Press},
+  address = {Cambridge, MA},
+  year = {1995}
+}
+
+ZETTEL
+
+ID:
+LIT-AGRE-008
+
+TITLE:
+Deictic computation predates LLM prompting; the new question is where indexical binding is performed.
+
+SOURCE:
+Philip E. Agre and David Chapman — “Pengi: An Implementation of a Theory of Activity” — 1987 — Proceedings of AAAI-87, pp. 268–272.
+
+PASSAGE:
+[PARAPHRASE]
+Agre and Chapman present Pengi as an implementation of a dynamic theory of everyday activity intended to produce complex, apparently planful behavior without explaining that organization through ordinary plan-following.
+
+RESEARCH OBJECT:
+Computational organization around ongoing situated activity rather than execution of a complete prior plan.
+
+LOCAL MOVE:
+Pengi turns philosophical dissatisfaction with plan-based action into an implemented AI architecture.
+
+SOURCE TERMS:
+activity
+plan-following
+dynamic
+implementation
+Pengi
+apparently planful
+
+WHAT BECAME STRANGE:
+“Deixis may be closer to prompting than command” has a computational prehistory. Situated and indexical alternatives to plan execution were already being built inside AI in the 1980s.
+
+QUESTION:
+What changes when indexicality migrates from an internal representational strategy in a hand-built agent to ordinary user-facing language such as “this,” “there,” and “again”?
+
+DEEPER QUESTION:
+Does contemporary prompting externalize to the user a mode of situated control that earlier reactive systems implemented internally?
+
+MECHANISM:
+Ongoing environmental situation
+→ locally relevant activity distinctions
+→ action selected relative to current situation
+→ environment changes
+→ new situation.
+
+FORMAL SHIFT:
+<PRECOMPUTED PLAN>
+→ <ONGOING SITUATION>
+→ [LOCALLY COORDINATE ACTION]
+→ <APPARENTLY PLANFUL ACTIVITY>
+
+SOURCE FORMALISM:
+Pengi is an implemented computational system; the paper’s contribution is architectural rather than a natural-language prompt syntax.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+“that one”
+has operative value only if
+INDEXICAL_BINDING(current_state, history)
+can return an actionable referent.
+
+TENSION:
+Pengi does not show that natural-language prompts themselves are deictic programs. Its representational machinery and domain differ sharply from contemporary language models.
+
+MISSING:
+A direct technical genealogy linking Pengi-style indexical-functional representation to later multimodal conversational systems.
+
+BOUNDARY:
+Similarity of mechanism is not evidence of historical influence on modern prompting.
+
+CITATION TRAIL:
+Agre — Computation and Human Experience.
+Agre & Chapman — “What Are Plans For?”
+Suchman.
+Brooks.
+Ballard et al. — deictic codes.
+
+TEST:
+Compare a Pengi-style internal deictic variable with “that one” in a multimodal model. Locate exactly where referent binding occurs in each architecture and what state must persist.
+
+PLATFORM:
+[[DEICTIC PROMPTING]]
+
+LINKS:
+[[INDEXICAL COMPUTATION]]
+[[SITUATED ACTION]]
+[[COMMAND / DEIXIS]]
+
+BIBTEX:
+@inproceedings{agrechapman1987pengi,
+  author = {Philip E. Agre and David Chapman},
+  title = {Pengi: An Implementation of a Theory of Activity},
+  booktitle = {Proceedings of the Sixth National Conference on Artificial Intelligence},
+  pages = {268--272},
+  year = {1987}
+}
+
+ZETTEL
+
+ID:
+LIT-AUSTIN-009
+
+TITLE:
+Language did things before computers; what machines add is a new engineered regime of felicity.
+
+SOURCE:
+J. L. Austin — How to Do Things with Words — 1962 — Lectures I–III, especially Lecture II.
+
+PASSAGE:
+[PARAPHRASE]
+Austin’s early performative analysis rejects the assumption that utterances merely report states of affairs. Some utterances participate in acts, but their success depends on conditions surrounding the utterance: an accepted procedure, appropriate persons and circumstances, proper execution, and other conditions whose violation produces infelicity.
+
+RESEARCH OBJECT:
+Felicity conditions as the apparatus of linguistic action.
+
+LOCAL MOVE:
+The causal or institutional force of words is relocated from the sentence alone to a sentence used under appropriate conditions.
+
+SOURCE TERMS:
+performative
+procedure
+circumstances
+felicity
+infelicity
+act
+
+WHAT BECAME STRANGE:
+“A machine in which describing has effects” may be one technical species of a much broader phenomenon: arrangements in which utterances acquire consequences because conditions around them make particular acts possible.
+
+QUESTION:
+What are the felicity conditions of a prompt?
+
+DEEPER QUESTION:
+Which prompt failures are failures of linguistic formulation, and which are infelicities of the surrounding apparatus—wrong tool, missing authority, unavailable state, absent referent, unsupported operation?
+
+MECHANISM:
+Utterance
++ recognized procedure
++ appropriate participants/circumstances
++ correct enactment
+→ successful act.
+
+FORMAL SHIFT:
+<WORDS>
+→ <WORDS + PROCEDURE + CIRCUMSTANCES>
+→ [ENACT]
+→ <SOCIAL / PRACTICAL CONSEQUENCE>
+
+SOURCE FORMALISM:
+Austin gives a taxonomy of felicity conditions and corresponding modes of infelicity; he does not provide computational syntax.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+PROMPT_EFFECT =
+f(expression, interface, capabilities, permissions, state, model, tools)
+
+TENSION:
+Executing a software operation is not automatically an illocutionary act. Treating prompt execution as speech-act theory can collapse technical causation into social convention.
+
+MISSING:
+A criterion for determining when Austin’s apparatus genuinely explains a prompt interaction rather than serving as analogy.
+
+BOUNDARY:
+Austin supplies a genealogy for language-as-action, not a theory of machine execution or generative AI.
+
+CITATION TRAIL:
+Searle — Speech Acts.
+Flores.
+Winograd & Flores.
+Institutional facts.
+Human-computer command languages.
+
+TEST:
+Hold the same prompt sentence fixed while varying authorization, tool availability, selected object, interaction mode, and system capability. Classify which changes resemble Austinian felicity conditions and which require a different theory.
+
+PLATFORM:
+[[APPARATUS MAKES WORDS CONSEQUENTIAL]]
+
+LINKS:
+[[PROMPT FELICITY CONDITIONS]]
+[[LANGUAGE AS ACTION]]
+[[DESCRIPTION / OPERATION]]
+
+BIBTEX:
+@book{austin1962how,
+  author = {J. L. Austin},
+  title = {How to Do Things with Words},
+  editor = {J. O. Urmson},
+  publisher = {Clarendon Press},
+  address = {Oxford},
+  year = {1962}
+}
+
+ZETTEL
+
+ID:
+LIT-BROOKS-010
+
+TITLE:
+“The prompt leans on a world” splits into two architectures: representing the world and remaining coupled to it.
+
+SOURCE:
+Rodney A. Brooks — “Intelligence without representation” — 1991 — Artificial Intelligence 47, pp. 139–159, especially pp. 139, 146ff.
+
+PASSAGE:
+[PARAPHRASE]
+Brooks argues for systems whose activity-producing layers connect perception directly to action rather than depending on a central world representation. His robots continuously match behavior to the actual environment; coherent behavior can emerge from interacting layers without a central representation of either world or intention.
+
+RESEARCH OBJECT:
+Ongoing world coupling as an alternative to representing context.
+
+LOCAL MOVE:
+Brooks changes the role of the environment from something primarily modeled inside the system to something repeatedly consulted through perception and action.
+
+SOURCE TERMS:
+real world
+perception
+action
+activity producers
+layers
+world as its own model
+central representation
+
+WHAT BECAME STRANGE:
+“Give the model more context” may be the wrong remedy when the missing resource is continued access to the world rather than a richer textual representation of it.
+
+QUESTION:
+When prompting succeeds because a system can inspect files, images, interfaces, sensors, tools, or live state, should that still be called “context”?
+
+DEEPER QUESTION:
+Does tool-using multimodal AI mark a shift from ever-larger representations toward partial environmental coupling?
+
+MECHANISM:
+Perception of present environment
+→ locally active behavior
+→ action
+→ environment changes
+→ renewed perception.
+
+FORMAL SHIFT:
+<WORLD REPRESENTATION AS CENTRAL MODEL>
+→ <ONGOING PERCEPTION–ACTION COUPLING>
+→ [ACT / RESENSE]
+→ <ADAPTIVE BEHAVIOR>
+
+SOURCE FORMALISM:
+A layered behavior architecture in which independent activity-producing layers connect perception to action and can suppress or interact with other layers.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+STATIC PROMPTING:
+WORLD → REPRESENTATION → MODEL → OUTPUT
+
+COUPLED AGENT:
+WORLD ↔ PERCEIVE → ACT ↔ WORLD
+
+TENSION:
+Contemporary LLM agents still rely heavily on representations: tokens, embeddings, images, tool outputs, summaries. Brooks’s stronger anti-representational claim therefore cannot simply be transferred.
+
+MISSING:
+A vocabulary for degrees and kinds of coupling rather than a binary representation/no-representation distinction.
+
+BOUNDARY:
+Brooks’s robots are not language models, and his architecture does not establish that linguistic prompting is embodied or situated merely because tools are available.
+
+CITATION TRAIL:
+Situated robotics.
+Agre & Chapman.
+Suchman.
+Gibson.
+Embodied interaction.
+
+TEST:
+Give two systems the same initial textual description of a changing environment. Allow only one to re-perceive the environment between actions. Identify which apparent “understanding” depends on representation and which on continued coupling.
+
+PLATFORM:
+[[PROMPT LEANS ON A WORLD]]
+
+LINKS:
+[[WORLD AS ITS OWN MODEL]]
+[[CONTEXT / COUPLING]]
+[[REPRESENTATION IS NOT SITUATION]]
+
+BIBTEX:
+@article{brooks1991intelligence,
+  author = {Rodney A. Brooks},
+  title = {Intelligence without Representation},
+  journal = {Artificial Intelligence},
+  volume = {47},
+  number = {1--3},
+  pages = {139--159},
+  year = {1991}
+}
+
+ZETTEL
+
+ID:
+LIT-ACE-011
+
+TITLE:
+Attempto makes natural language executable by restricting the language before execution rather than by restricting the world.
+
+SOURCE:
+Norbert E. Fuchs and Rolf Schwitter — “Attempto Controlled English (ACE)” — 1996 — arXiv cmp-lg/9603003.
+SOURCE URL: https://arxiv.org/abs/cmp-lg/9603003
+
+PASSAGE:
+[PARAPHRASE]
+Fuchs and Schwitter describe ACE as a controlled natural language in which domain specialists can formulate specifications that the Attempto system translates into discourse representation structures and then into Prolog; the resulting knowledge base can be queried and used for execution, simulation, prototyping, and validation.
+
+RESEARCH OBJECT:
+LANGUAGE RESTRICTION AS THE SITE WHERE NATURAL-LANGUAGE SPECIFICATION BUYS EXECUTABILITY.
+
+LOCAL MOVE:
+ACE makes the price of executability unusually visible. Instead of accepting unrestricted natural language and resolving ambiguity later, the system constrains the admissible English so that translation into formal representations can be systematic.
+
+SOURCE TERMS:
+controlled natural language
+specifications
+discourse representation structure
+Prolog
+knowledge base
+query
+execute
+simulation
+prototyping
+validation
+
+WHAT BECAME STRANGE:
+Executable natural language does not require natural language to become code-like everywhere. A system can decide where to pay for precision. SHRDLU largely pays by shrinking the world; ACE pays by shrinking the language.
+
+QUESTION:
+Is the history of natural-language programming better described by where formal restriction is placed than by how “natural” its language appears?
+
+DEEPER QUESTION:
+What changes when restriction is no longer imposed primarily before execution but can be introduced selectively during interaction?
+
+MECHANISM:
+Controlled English specification
+→ syntactic/semantic interpretation under restricted grammar
+→ discourse representation structure
+→ Prolog representation / knowledge base
+→ query or execution.
+
+FORMAL SHIFT:
+<CONTROLLED ENGLISH>
+→ <DRS>
+→ [TRANSLATE]
+→ <PROLOG / EXECUTABLE KNOWLEDGE BASE>
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+The Attempto pipeline translates ACE specifications through discourse representation structures into Prolog clauses that support formal querying and execution.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+ACE strategy: reduce ambiguity by constraining LANGUAGE before runtime.
+SHRDLU strategy: reduce ambiguity by constraining WORLD and ONTOLOGY.
+
+TENSION:
+The comparison can be overstated. SHRDLU also constrains language through its parser and ACE also assumes a domain and interpretation machinery. The distinction is one of where the dominant restriction is made most explicit, not a pure binary.
+
+MISSING:
+A comparative matrix measuring restrictions on language, ontology, world state, action space, interpretation method, and runtime repair across systems.
+
+BOUNDARY:
+ACE does not demonstrate unrestricted natural-language programming, and its controlled grammar should not be treated as equivalent to contemporary probabilistic language-model interpretation.
+
+CITATION TRAIL:
+Winograd 1971/1973 → Attempto Controlled English 1995/1996 → semantic parsing → contemporary LLM agents.
+
+TEST:
+Describe one identical task in SHRDLU-style English, ACE, and a contemporary tool-using LLM. Inventory every place where ambiguity is removed or tolerated before a state-changing action becomes legal.
+
+PLATFORM:
+[[GENEALOGY OF EXECUTABLE NATURAL LANGUAGE]]
+
+LINKS:
+[[LIT-WINOGRAD-001]]
+[[LIT-WINOGRAD-002]]
+[[PROMPT FELICITY CONDITIONS]]
+[[RESTRICTION MIGRATION]]
+
+BIBTEX:
+@misc{fuchs1996ace,
+  author = {Norbert E. Fuchs and Rolf Schwitter},
+  title = {Attempto Controlled English (ACE)},
+  year = {1996},
+  eprint = {cmp-lg/9603003},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/abs/cmp-lg/9603003}
+}
+
+ZETTEL
+
+ID:
+LIT-SMITH-012
+
+TITLE:
+Programming by demonstration made concrete examples part of specification decades before prompt iteration.
+
+SOURCE:
+David Canfield Smith — “Pygmalion: An Executable Electronic Blackboard” — 1993 retrospective chapter on the 1975 Pygmalion system — in Watch What I Do: Programming by Demonstration.
+SOURCE URL: https://acypher.com/wwid/Chapters/01Pygmalion.html
+
+PASSAGE:
+[PARAPHRASE]
+Smith describes Pygmalion as changing the process of programming from specifying an abstract computation in a programming language to demonstrating concrete cases to the machine. He identifies the 1975 system as an early implementation of programming by demonstration and describes its use of icons and concrete manipulation.
+
+RESEARCH OBJECT:
+CONCRETE DEMONSTRATION AS A SPECIFICATION MEDIUM.
+
+LOCAL MOVE:
+Pygmalion supplies opposition to any claim that computation became exploratory only with prompting. It places example, manipulation, and interaction inside program construction itself.
+
+SOURCE TERMS:
+programming by demonstration
+concrete
+abstract description
+icons
+programming environment
+demonstration
+
+WHAT BECAME STRANGE:
+The opposition between “formal program written first” and “meaning discovered after running” is historically weak. Programming environments have long allowed specification to emerge through interaction with partial behavior.
+
+QUESTION:
+What, if anything, is new when a language model generalizes from linguistic examples and corrections rather than a programming-by-demonstration system generalizing from concrete manipulations?
+
+DEEPER QUESTION:
+Does the important change lie in the medium of demonstration, the scope of inference, or the cost of constructing the interpreter?
+
+MECHANISM:
+Concrete example / manipulation
+→ system records or interprets demonstrated relation
+→ generalized reusable procedure
+→ further examples expose missing distinctions
+→ program revised.
+
+FORMAL SHIFT:
+<ABSTRACT PROGRAM DESCRIPTION>
+→ <CONCRETE DEMONSTRATION>
+→ [INFER / RECORD PROCEDURE]
+→ <REUSABLE BEHAVIOR>
+
+SOURCE FORMALISM:
+Pygmalion is an implemented visual programming environment organized around icons and programming by demonstration; this zettel does not reconstruct its internal formalism beyond Smith’s retrospective description.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+SPECIFICATION may be distributed across EXAMPLE + SYSTEM INFERENCE + CORRECTION rather than exhausted by a prior textual program.
+
+TENSION:
+Pygmalion’s examples occur in a designed visual programming environment. Contemporary language models generalize through learned statistical representations over far broader domains. Similarity of interactive specification is not equivalence of mechanism.
+
+MISSING:
+A direct comparison between how Pygmalion and contemporary LLM systems infer generality from examples, including what prior ontology each requires.
+
+BOUNDARY:
+The 1993 chapter is a retrospective source for the 1975 system. It supports historical precedent for programming by demonstration, not a claim of direct influence on modern prompting.
+
+CITATION TRAIL:
+Smith 1975 thesis → Smith 1993 retrospective → programming by demonstration → example-based and end-user programming → in-context examples in language models.
+
+TEST:
+Give one task to a programming-by-demonstration environment and a language model using only examples plus corrections. Compare what generalization each makes without an explicit rule and what prior representational commitments make the inference possible.
+
+PLATFORM:
+[[INTERACTIVE SPECIFICATION]]
+
+LINKS:
+[[PF-FAILURE-005]]
+[[PF-SEMANTICS-004]]
+[[LIT-SUCHMAN-004]]
+[[RESTRICTION MIGRATION]]
+
+BIBTEX:
+@incollection{smith1993pygmalion,
+  author = {David Canfield Smith},
+  title = {Pygmalion: An Executable Electronic Blackboard},
+  booktitle = {Watch What I Do: Programming by Demonstration},
+  editor = {Allen Cypher},
+  publisher = {MIT Press},
+  year = {1993},
+  url = {https://acypher.com/wwid/Chapters/01Pygmalion.html}
+}

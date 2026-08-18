@@ -1,0 +1,33 @@
+SLIPCASE REPLICATION NOTE
+CHECKPOINT: CHK-20260817-07ca2300373f
+PACKAGE: 2026-08-17__slipcase__mycelium-sole-field__v15.55-AM.zip
+SCHEMA: 15.55-AM
+
+PURPOSE
+index.html is a standalone replication capsule. It is intended to survive separation from the ZIP.
+
+WHAT index.html EMBEDS
+- exact zettel TXT payloads and Markdown mirrors
+- ZETTELS JSON/JSONL
+- bibliography and named BibTeX
+- graph/machine records
+- prompts, including SLIPCASE v15.55-AM and the exact paper assembly prompt
+- the paper PDF/TEX/source map/making history
+- locally preserved source/resource files, including PDFs and prior checkpoint ZIPs
+- MARK.svg / MARK.png
+- RECREATE.py
+- checksums for every embedded file
+
+HOW TO RECREATE
+1. Save index.html.
+2. In index.html, open REPLICATE and download RECREATE.py.
+3. Run:
+     python RECREATE.py index.html ./recreated-slipcase
+4. RECREATE.py extracts the embedded data map, writes each file, copies the source index.html into the recreated root, and verifies SHA-256.
+
+BOUNDARY
+The reconstructed tree is integrity-equivalent to the files embedded in index.html. It cannot recover evidence that was never available to this checkpoint. Seven exact earlier Mycelium payloads remain missing.
+
+RETURN
+000__RETURN_PATH.txt
+REJOIN SLIPCASE CHK-20260817-07ca2300373f USING 000__RETURN_PATH.txt

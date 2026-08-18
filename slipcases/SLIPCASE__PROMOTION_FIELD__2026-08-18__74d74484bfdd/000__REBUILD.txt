@@ -1,0 +1,12 @@
+REBUILD
+
+1. Verify root zettel payload hashes against 000__INDEX.txt and _SLIPCASE/MANIFEST.json.
+2. Verify each root zettel TXT is byte-identical to its _MD mirror.
+3. Reparse PLATFORM, LINKS, and every [[ADDRESS]] to reconstruct nodes and relation records.
+4. Resolve only exact IDs/known platform labels; preserve unresolved names as GHOSTS unless a stronger typed state is justified.
+5. Rebuild bibliography from BIBTEX sections plus the two external paper comparison sources.
+6. Rebuild reader/network/cards as derived views; do not mutate root payloads.
+7. Recompile promotion-before-autonomy__2026-08-18.tex with pdflatex.
+8. Compare paper citekeys against the compiled bibliography and inspect the rendered PDF.
+9. Read 000__OPEN_EDGES.txt and the two MOCs before selecting a new research frontier.
+10. Rejoin with: REJOIN PROMOTION-FIELD-20260818 — INHERIT QUESTIONS, NOT CONCLUSIONS.

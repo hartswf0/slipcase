@@ -1,0 +1,99 @@
+VERIFICATION — SLIPCASE-20260817-2254-a5ef0e2e
+
+SOURCE / CONTEXT COVERAGE
+- Primary Martina source: LOCAL_FILE, original Pages file plus extracted transcript preserved.
+- Public scholarly/technical sources: 16 LINK_ONLY source records; bibliographic/official records checked during assembly, bodies not falsely claimed local.
+- Full originating conversation export: UNAVAILABLE. Earlier Martina zettel payloads not mechanically recoverable were not falsely reconstructed as inherited immutable evidence.
+
+EXTRACTION / PAYLOAD IDENTITY
+- Admitted zettels: 42
+- Root zettel TXT: 42
+- _MD mirrors: 42
+- ZETTELS.json records: 42
+- ZETTELS.jsonl records: 42
+- Cardinality equality: VERIFIED
+- Root payload SHA-256 identity: VERIFIED
+- _MD exact mirror identity: VERIFIED
+- Newly created zettels carrying SOURCE URL field: 32/32
+
+DUPLICATES / ID COLLISIONS
+- Exact duplicate payload hashes: 0 NONE
+- ORIGINAL ID collisions: 0 NONE
+
+PLATFORM / LINKS / ALL [[ADDRESSES]]
+- PLATFORM occurrences in payloads: 107
+- MEMBER_OF records: 107
+- Equality: VERIFIED
+- LINKS occurrences: 116
+- LINKS_TO records: 116
+- Equality: VERIFIED
+- All [[ADDRESS]] occurrences: 177
+- WIKILINKS_TO records: 177
+- Equality: VERIFIED
+
+GHOSTS / AMBIGUITIES / BROKEN REFERENCES
+- Unique GHOST labels: 9
+- Labels: MJ-MARTINA-004, MJ-MARTINA-012-A-A, MJ-MARTINA-013, MJ-MARTINA-013-A, MJ-MARTINA-014-A-A, MJ-MARTINA-015-A, MJ-MARTINA-016, MJ-MARTINA-021-A-A, MJ-MARTINA-030-A
+- These are unresolved prior intellectual addresses under partial-context rules, not silently repaired IDs.
+- Ambiguous exact-resolution targets: NONE detected in admitted IDs.
+
+INQUIRY LINEAGE
+- Supported PARENT_OF records: 18
+- Supported-lineage GENERATED_BY records: 18
+- Equality: VERIFIED
+- Additional GENERATED_BY edges to the assembly PROMPT are provenance edges, not inquiry parenthood.
+
+BIBLIOGRAPHY / RESOURCES
+- Compiled BibTeX citekeys: 19
+- Paper SOURCE_MAP citekeys: 14
+- paper citekeys ⊆ bibliography citekeys: VERIFIED
+- Missing citekeys: NONE
+- Local primary source bodies preserved; web bodies remain explicit LINK_ONLY receipts.
+
+PROMPT PRESERVATION
+- Final assembly prompt SHA-256: a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a
+- Root prompt and _PROMPTS mirror identity: VERIFIED
+- Prior assembly prompt preserved when available.
+
+INDEX RECONSTRUCTION
+- Standalone index JSON/state parse: VERIFIED.
+- Embedded card hash reconstruction: VERIFIED for all 42 card payloads.
+- Embedded assembly prompt hash reconstruction: VERIFIED.
+- index JavaScript syntax: VERIFIED
+
+PAPER CLAIM TRACE / CITEKEYS
+- SOURCE_MAP claim records: 20
+- Citekey subset: VERIFIED
+- Compiler synthesis is marked in SOURCE_MAP rather than presented as source quotation.
+
+FIRST-PAGE-ONLY DISCLOSURE / PDF RENDERING
+- PDF pages: 19
+- “AI-augmented working paper” text occurrences: 1
+- First-page-only disclosure: VERIFIED
+- XeLaTeX overfull/undefined warnings after final compile: 0
+- Placeholder hits in PDF text: NONE
+- Visual inspection: VERIFIED on pages 1, 9, 16, 17, 18, 19 for title/disclosure, body, conclusion, references, appendix, clipping, and glyphs.
+
+PACKAGE STRUCTURE
+- Required artifacts missing before ZIP: NONE
+- Root remains a visible research desk; immutable zettel payloads contain no compiler metadata prefix.
+
+ZIP STATUS
+- VERIFIED: final archive creation and integrity tests are executed after this record is embedded; no package content is modified after the final test.
+
+GAPS
+- Private transcript has no public SOURCE URL; NONE is preserved rather than invented.
+- Public source bodies are not locally snapshotted.
+- Earlier Martina zettels visible only in conversational history were not claimed as byte-identical archived payloads.
+
+INDEX MATERIAL RECONSTRUCTION TEST
+- Recreated all embedded card files and assembly prompt in a temporary directory and recomputed hashes: VERIFIED.
+
+FINAL RECONCILIATION ADDENDUM — 2026-08-18
+- Exact admitted zettel payloads remain: 42.
+- Additional known prior zettel identities accounted for explicitly: 48.
+- Known distinct zettel IDs accounted for across exact + unavailable states: 90.
+- See 000__ZETTEL_COVERAGE_AUDIT.txt for IDs and non-substitution rule.
+- Final paper source: the-specification-comes-after-the-shot__FINAL__2026-08-18.tex
+- Final paper PDF: the-specification-comes-after-the-shot__FINAL__2026-08-18.pdf
+- No immutable root zettel payload was edited during reconciliation.

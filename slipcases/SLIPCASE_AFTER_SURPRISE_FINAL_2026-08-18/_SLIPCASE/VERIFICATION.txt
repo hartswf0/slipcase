@@ -1,0 +1,86 @@
+SLIPCASE VERIFICATION
+
+CHECKPOINT
+SLIPCASE_AFTER_SURPRISE_FINAL_2026-08-18
+Schema: POML 15.55-AM
+
+SOURCE COVERAGE
+Distinct SOURCE strings: 127
+Source receipt files: 245
+Local/package resource files: 250
+Current revision source coverage: targeted verification of load-bearing sources only; inherited sources were not all re-opened.
+
+EXTRACTION / PAYLOAD INTEGRITY
+Admitted zettels: 151
+Root zettel TXT verified exact: 151
+_MD mirrors verified exact: 151
+JSON records: 151
+Payload hashes verified: 151
+Exact duplicate payload hashes: 0
+ID collisions: 0
+Ambiguous exact titles: 0
+
+PLATFORM RELATIONS
+PLATFORM occurrences: 151
+MEMBER_OF records: 151
+Equality: True
+
+LINKS RELATIONS
+LINKS occurrences: 683
+LINKS_TO records: 683
+Equality: True
+
+WIKILINK COVERAGE
+[[ADDRESS]] occurrences: 1046
+WIKILINKS_TO records: 1046
+Equality: True
+Distinct ghosts: 401
+Ghost occurrences: 956
+ID-shaped unresolved ghosts / possible broken explicit IDs: 0
+
+BIBLIOGRAPHY COVERAGE
+Compiled .bib entries: 49
+BIB-CONFLICT keys preserved from card payloads: 6
+NEEDS-CITATION cards: 90
+Paper SOURCE_MAP citekeys missing from compiled bibliography: 0 []
+Paper TeX citekeys missing from compiled bibliography: 0 []
+
+RESOURCE COVERAGE
+Resource files in _RESOURCES: 250
+Current local PDFs include USCO 2025 Part 2 and the 2026 U.S. Allen brief.
+Unavailable source bodies remain LINK_ONLY receipts.
+
+RECONSTRUCTION STATE
+index.html external framework/CDN dependency detected: False
+Index embeds exact zettel payload state: True
+Current assembly prompt byte-equal to provided attachment: True
+
+PAPER EVIDENCE COVERAGE
+SOURCE_MAP substantive claims: 12
+Paper PDF pages: 14
+Final LaTeX warnings/errors/overfull lines: 0
+Rendered pages inspected manually: 1, 7, 11, 13, 14.
+Paper status: current scholarly wager; not evidence.
+
+ASSEMBLY PROMPT STATUS
+Exact prompt preserved: True
+SHA-256: a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a
+
+MAKING HISTORY
+Recorded in 000__MAKING_HISTORY.txt and paper-specific making history.
+Inherited provenance scar preserved: earlier 134-object state was reconstructed from retained conversation context, not certified as a byte-for-byte platform transcript.
+
+PDF STATUS
+Compiled: YES
+Page count: 14
+Unresolved citations: 0
+Visual inspection: first page, middle argument, limitations/conclusion area, references, appendix inspected; no clipping or missing glyphs observed.
+
+ZIP STATUS
+The final ZIP will be created from this exact directory after this report, tested with unzip -t, and hashed externally. No claim is made that a ZIP can contain a stable hash of itself.
+
+STRUCTURE
+Required root publication artifacts are checked by final packaging script.
+
+OPEN STATES
+Ghosts, citation gaps, bibliography conflicts, source-version collision, and unverified inherited sources remain explicit.

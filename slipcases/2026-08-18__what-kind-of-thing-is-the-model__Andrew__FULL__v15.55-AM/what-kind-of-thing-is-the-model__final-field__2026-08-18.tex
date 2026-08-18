@@ -1,0 +1,153 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{colorlinks=false,pdfborder={0 0 0}}
+\setlength{\parindent}{1.15em}
+\setlength{\parskip}{0.18em}
+\titleformat{\section}{\large\bfseries}{\thesection}{0.6em}{}
+\pagestyle{fancy}\fancyhf{}\rhead{\small What Kind of Thing Is the Model?}\lhead{\small Working Paper}\cfoot{\thepage}
+\newcommand{\interview}[1]{\emph{#1}}
+\begin{document}
+\pagenumbering{gobble}
+\thispagestyle{empty}
+\begin{center}
+{\LARGE\bfseries What Kind of Thing Is the Model?\\[3pt]}
+{\large Epistemic Prompting, Folk Mechanics, and the Passage from Play to Control}\par
+\vspace{12pt}
+{\normalsize Watson Hartsoe}\par
+\vspace{4pt}
+{\small Working paper --- August 18, 2026}
+\end{center}
+\vspace{14pt}
+\noindent\textbf{Abstract.} Prompting is usually modeled as specification: a user states an intention and a generative system attempts to realize it. An early Midjourney interview reveals a different practice. The participant repeatedly describes prompts as probes—“I wonder if,” “what are the boundaries,” and, after a surprising result, “that’s not what I asked for… investigate that more.” This paper argues that such prompting is usefully understood as epistemic action: generation is performed to learn the behavior of the system before it is stabilized into production control. Public Discord channels made prompt-output relations observable and socially learnable; users developed informal experiments, superstitions, named defaults, and vernacular mechanics of “valleys,” “galaxies,” and “gravity wells.” Later diffusion-model interpretability research provides alternative mechanisms for some visible phenomena without validating those folk ontologies. The central wager is that generative-AI expertise emerges through a conversion process: surprise becomes a phenomenon, phenomena become working theories, and some theories become technical controls or reusable test objects. This helps explain the participant’s own distinction between Midjourney as a “game” and as a “tool.” Toolhood is not simply more capability. It is the stabilization of epistemic gains into reusable invariants.
+
+\medskip
+\noindent\textbf{Keywords:} generative AI; prompting; epistemic action; situated learning; experimentation; Midjourney; design practice; interpretability
+
+\vfill
+\begin{flushright}
+\includegraphics[width=.52in]{MARK.pdf}\\[-2pt]
+{\scriptsize AI-augmented working paper\\Research and assembly record: Appendix A · SOURCE\_MAP · 000\_\_RETURN\_PATH.txt}
+\end{flushright}
+\newpage
+\pagenumbering{arabic}
+
+\section{Prompting before specification}
+Accounts of prompting commonly begin with an intention already in hand: the user wants an image, answer, program, or action, and the prompt specifies what the system should produce. An interview conducted on October 23, 2022, with an early Midjourney practitioner suggests that this model begins too late. The interviewee identifies his real first name as Andrew; no surname is established in the transcript. I refer to him as Andrew. His account repeatedly describes prompts that are issued not because the desired artifact is already known, but because the user is trying to discover what kind of generative object Midjourney is.
+
+Andrew describes the beginning of use as asking, \interview{``I wonder if''}, then testing cities, people, dogs, and other boundaries. More strikingly, an output that violates intention can be successful: \interview{``that's not what I asked for at all. But like, it looks pretty weird. Let's Let's investigate that more.''} The immediate goal has changed. The image is no longer merely judged against the prior specification; it becomes evidence that motivates another intervention.
+
+Kirsh and Maglio's distinction between pragmatic and epistemic action offers a useful vocabulary for this behavior. In their study of Tetris, they distinguish actions that move an agent toward the external goal from actions whose value lies in revealing information or simplifying cognition \citep{kirsh1994epistemic}. The analogy should not be overextended: generating an image is not rotating a Tetris piece. But the functional distinction is precise. Some prompts are pragmatic: they seek an artifact. Others are epistemic: they are cheap interventions into a system whose response is easier to observe than to predict mentally. Many expert turns are both.
+
+This distinction changes how apparently inefficient prompting should be evaluated. A bizarre generation, repeated seed test, or deliberately absurd combination may contribute little to a final image while substantially updating the user's working model of the system. The relevant output is partly cognitive: what the user now expects the model to do. Prompting is therefore not always the execution of specification. It can be the procedure by which a specification becomes possible.
+
+\section{When the artifact talks back}
+The participant's language also places generative work close to Donald Schön's account of designing as a reflective conversation with the materials of a situation \citep{schon1992reflective}. Schön's point is not that material literally speaks. A designer makes a move; the situation changes; consequences become perceptible; those consequences reorganize the next move. Andrew describes exactly this recursive structure when he follows an unwanted image because it is interesting, or when Midjourney stages a Muppet in a framed portrait rather than in the interaction the users expected. Such outputs are useful not because they faithfully implement intention, but because they provide new material for intention.
+
+This clarifies a persistent ambiguity in talk of AI ``co-creation.'' Shared humanlike intention is not required for a system to participate materially in the development of an idea. A generative system can alter the designer's path by producing consequences that are interpretable enough to provoke reframing. The important question becomes discriminative: what makes a deviation legible as a possibility rather than disposable noise? Andrew's practice answers socially and aesthetically rather than formally. He notices when the result is weird in an interesting way; collaborators laugh, riff, or redirect; a generated configuration becomes the next prompt's premise.
+
+The loop also explains why strict control and creative usefulness can pull in opposite directions. A system that never departs from intention cannot surprise. A system that cannot preserve anything cannot support sustained work. The practical craft lies between these extremes: allowing enough deviation to produce new possibilities while stabilizing enough state to make those possibilities reusable. A small study of generative-AI-supported speculative work reports a related boundary: participants often gained lateral or implementation ideas from images that differed from what they had imagined, while outputs that became too abstract could cease to be useful \citep{epstein2022happy}. The useful deviation is therefore not maximum surprise, but discrepancy that remains interpretable enough to answer.
+
+\section{Discord as part of the cognitive apparatus}
+Andrew attributes a large share of early learning to Midjourney's public Discord channels. At first, generation occurred in shared channels where users could see one another's prompts and outputs. He calls Discord a ``brilliant move'' because it enabled rapid collaboration, remix, and what he later describes as ``random serendipitous collisions.'' He compares the interaction to jazz: participants share enough rules to recognize a move and answer it, yet each can vary the material without requiring a centrally planned composition.
+
+This environment matters because prompt knowledge is not simply a dictionary of powerful words. Brown, Collins, and Duguid argue that knowledge is situated in activity, context, and culture, and that authentic learning involves enculturation into practices rather than the transfer of decontextualized rules \citep{brown1989situated}. The interview provides an unusually direct instantiation. Andrew says the best way to learn is to look at how another person's prompt is written \emph{and what it turns out to be}. The pedagogical object is the prompt-output relation embedded in a live culture of comparison, joking, imitation, correction, and status.
+
+The social system therefore affects the technical skill. When generation becomes private, the model may be unchanged but the ambient curriculum disappears. Conversely, when channels grow from small groups into thousands of participants, Andrew reports that conversation becomes less useful and expert practice migrates into smaller clubs where ``Arcane knowledge'' circulates. Prompt expertise is not only learned from the model. It is learned from other people's encounters with the model.
+
+This is important for histories of prompt practice because it resists a text-centered archive. A list of successful prompts misses the social conditions that made the prompts interpretable: who could see them, which outputs accompanied them, what other users tried next, what was regarded as funny or impressive, and which claims experienced practitioners treated as nonsense. The early interface was also a learning institution.
+
+\section{From folk experiment to experimental system}
+The interview becomes especially revealing when Andrew turns from creativity to causality. He describes community claims about prompt carryover, seeds, render terms, and repeated visual effects. His language is strikingly methodological. He complains that users mistake anecdotes for proof, invokes scientific method and Type I/Type II errors, and proposes controlled experiments. Yet he also admits how difficult causal isolation is in a large stochastic system with many interacting variables. This is the ecological niche in which prompt superstition grows: a phrase appears to work, exact causes are difficult to isolate, and the cheapest strategy is often simply to keep the phrase.
+
+Rheinberger's work on experimental systems provides a productive, if deliberately limited, analogy. In his account, research centers on underdetermined epistemic things that can only be approached through technical objects and arrangements that bound what can be observed \citep{rheinberger2004experimental}. A later MPIWG project on experimental knowledge emphasizes explorative experimentation, concept revision, and the role of error in systems where objects, procedures, theories, and instruments are adjusted together \citep{mpiwgExperimentalKnowledge}. Early prompt practice has a similar structure at the level of inquiry. Users do not begin with a settled theory of the model plus a clean apparatus for testing it. The model version, seed behavior, prompt vocabulary, comparison practices, and criteria for what counts as the ``same'' output are all being worked out together.
+
+The analogy also rescues a distinction that the simple opposition between science and superstition obscures. An anecdote can be a legitimate exploratory observation without yet warranting a causal explanation. ``Fireflies appeared after I had previously prompted fireflies'' can generate a hypothesis. The epistemic inflation occurs when the observation is treated as proof of hidden memory without discriminating alternative causes. This suggests a graded account of practitioner knowledge: observation, candidate regularity, controlled comparison, replicated operational rule, and mechanistic explanation are different achievements.
+
+Version change makes the situation harder. Andrew says that what users learn can become outdated quickly and concludes that it is important to ``know how to learn.'' Expertise in such a system cannot consist only of storing prompt recipes. It must include the capacity to rebuild the relation between intervention and consequence after the apparatus itself changes.
+
+\section{Valleys, galaxies, and the usefulness of a wrong mechanics}
+The most remarkable part of the interview is Andrew's vernacular mechanics of latent space. Recurrent Midjourney faces become a ``local valley.'' Semantic regions become galaxies. Some words have large gravitational fields. ``Mona Lisa'' behaves like a black hole. Prompt craft becomes ``orbital mechanics'': expert users learn trajectories that combine or slingshot around dominant semantic regions.
+
+It is tempting either to literalize this language as an intuitive discovery of latent geometry or to dismiss it as technically naive. Both reactions are too quick. Later work on open diffusion models demonstrates that individual prompt words can have spatially differentiated effects and that their interactions are not compositionally neutral. Hertz et al. identify cross-attention as a key relation between words and spatial layout and show that interventions can preserve, replace, or reweight textual influence during generation \citep{hertz2022prompt}. Tang et al. aggregate cross-attention maps to study word attribution, syntax in pixel space, and feature entanglement; among their findings, related concepts can worsen compositional generation and descriptive adjectives can attend too broadly \citep{tang2023daam}.
+
+These studies do not validate Andrew's galaxies. They are not studies of the proprietary Midjourney model he used, and cross-attention is not semantic gravity. What they demonstrate is subtler: the phenomenology that motivates the metaphor—unequal word effects, spatial binding, compositional interference—can be real even when the user's causal ontology is wrong. A folk theory can therefore be operationally useful without being mechanistically faithful.
+
+This distinction deserves more attention in studies of AI literacy. Users rarely need a complete internal theory to act effectively. They need interface-level theories that generate testable expectations: this word tends to dominate; these concepts blend badly; this phrase pulls color strongly; this change preserves composition poorly. Such theories should be evaluated on two axes. One is predictive utility at the interface. The other is fidelity to internal mechanism. Conflating the two either overcredits folklore as explanation or undervalues it as practical knowledge.
+
+\section{When an output becomes an instrument}
+A second strange transformation appears when two apparently minor anecdotes are related. Andrew describes a recurring default white brunette face that users nicknamed ``Midge'' because ``her face would be everywhere.'' The repeated output becomes a named phenomenon and a clue in a user theory of latent valleys. Later, he describes an invented character—yellow Elmo/Yamo—as ``a great test subject'' that can be placed into many situations.
+
+These cases are not identical. Midge is a discovered regularity; Yamo is a cultivated character. But together they reveal a general pathway: output, recognition, naming, stabilization, reuse. A generated thing can cease to be merely the result of an experiment and become part of the apparatus for later experiments. Rheinberger explicitly notes that within experimental systems epistemic things can become technical things and technical elements can acquire epistemic status \citep{rheinberger2004experimental}. The comparison is again analytic rather than genealogical, but it helps name what the interview shows.
+
+This is an important reversal of the ordinary generative pipeline. Instead of model $\rightarrow$ artifact, the sequence becomes model $\rightarrow$ artifact $\rightarrow$ community instrument $\rightarrow$ test of model. A character, default face, prompt phrase, or repeated seed pattern can become a reference object against which model versions and contexts are compared. The model partly manufactures the future objects by which users learn to measure it.
+
+The same transformation is visible at the product level in Andrew's account of Remix. Users had ``hacked together remix before it existed''; an unintended use was recognized as powerful and later formalized as a feature. Here practice becomes interface infrastructure. The experimental relation that once required ingenuity becomes a reusable control.
+
+\section{The passage from game to tool}
+Andrew eventually supplies his own criterion for what is at stake. Midjourney can produce a ``beautiful garden of images,'' yet those images remain ``stuck'' if characters and structures cannot persist. He says the system still feels ``like a game and not a tool yet'' because there is ``not quite enough control there.'' The phrase is easy to read as a request for more precise prompting. The interview as a whole supports a deeper interpretation.
+
+The game phase is rich in epistemic value. Users probe boundaries, watch others, invent characters, chase surprising failures, construct folk mechanics, and learn how the system responds. Toolhood begins when some of those discoveries no longer have to be rediscovered. A stable character reference, localized edit, reusable seed behavior, explicit spatial condition, legal output grammar, or typed action schema converts a previously uncertain relation into an available control. In this sense, toolhood is not merely additional capability. It is the stabilization of selected epistemic gains into pragmatic invariants.
+
+This formulation clarifies why modern generative systems increasingly surround prose with non-prose controls. Structured decoding can make malformed continuations unreachable; tool schemas expose finite verbs; pose or depth conditions can state geometry directly; runtime grammars can restrict references to things that actually exist \citep{openai2024structured,openai2023functioncalling,zhang2023controlnet,zhang2026decodetime}. These mechanisms are not evidence of a direct historical lineage from early Midjourney practice, and they should not be narrated as product responses to Andrew. Conceptually, however, they solve the same class of problem he articulates: how to convert a possibility discovered in play into a relation dependable enough for consequential work.
+
+The conversion is never complete. Every hardening creates a remainder. A schema can guarantee form and still contain a false claim. A character reference can preserve identity while destroying surprise. A tool can expose an action without selecting it wisely. The productive question is therefore not how to eliminate uncertainty, but where to place it. Some dimensions are left open because variability is generative; others are stabilized because failure there prevents the work from meaning anything beyond the generation itself.
+
+\section{Discussion: expertise as conversion}
+The interview suggests a developmental sequence that differs from the standard image of prompt engineering. Expertise does not begin with increasingly ornate instructions. It begins with the ability to use outputs as evidence.
+
+First, the practitioner performs epistemic actions: ``I wonder if,'' boundary probes, absurd combinations, repeated seeds. Second, visible consequences become material for reflective reframing. Third, social environments distribute discoveries and teach users what counts as an interesting regularity, a bad inference, or a useful trick. Fourth, recurrent effects are compressed into vernacular theories—defaults, valleys, gravity, superstitions, benchmark characters. Fifth, some of those relations become stabilized as practices or features. The endpoint is not a perfect prompt. It is a larger repertoire of things that can be called reliably without having to reopen every underlying question.
+
+This sequence also offers a more charitable and more demanding account of folk prompt knowledge. It is charitable because imperfect metaphors can be genuinely useful at the interface. It is demanding because useful prediction should not be confused with causal explanation. A community can know how to get somewhere without knowing what the machine is made of. The research task is to preserve both facts.
+
+The strongest implication is methodological. Studies that compare prompts only as isolated strings will miss much of the practice that produces expertise. The unit of analysis should include sequences of intervention and observation, the social visibility of those sequences, versioned model conditions, locally stabilized terms and exemplars, and the moments when an exploratory relation becomes a reusable control. Prompt history matters because the user's theory of the system is itself changing.
+
+\section{Limitations}
+This paper rests heavily on one interview with an unusually reflective early user of Midjourney. It cannot establish prevalence across communities or model families. The interview occurred in October 2022, during rapid product change, and some claims about model internals were explicitly speculative. The manuscript therefore treats Andrew's language as evidence of practitioner reasoning and practice, not as authoritative description of Midjourney architecture.
+
+The theoretical sources are also analogical bridges. Kirsh and Maglio studied epistemic action in Tetris; Schön analyzed design practice; Brown, Collins, and Duguid theorized situated learning; Rheinberger studied scientific experimentation. None provides a genealogy of prompting. Their value is discriminative: they allow different functions of action, learning, experiment, and technical stabilization to be separated more carefully than the category ``prompt engineering'' usually permits.
+
+Finally, the technical diffusion literature cited here does not reveal the mechanism of the Midjourney models discussed in the interview. It serves as counterpressure against literal readings of vernacular mechanics. Similar observable behavior can arise from different architectures.
+
+\section{Conclusion}
+Andrew's deepest question is not how to phrase a request. It is how to learn what kind of thing the model is while making with it. Early prompting is therefore not well captured as specification alone. It is also epistemic action: an intervention that lets a partially opaque system externalize something the user could not confidently know in advance.
+
+From that starting point, several otherwise disconnected features of early generative practice cohere. Public channels become apprenticeship environments. Surprising failures become material for reframing. Seeds and modifiers become experimental probes. Superstitions appear where observed regularities outrun causal controls. Galaxies and gravity wells become interface theories. Named outputs can become test instruments. And the movement from ``game'' to ``tool'' becomes the stabilization of selected discoveries into controls durable enough to carry intention across generations.
+
+The prompt, on this account, is neither merely language nor yet a program. It is one move inside an evolving experimental relation between practitioner, community, model, and artifact. Expertise is the capacity to make that relation teach you something—and then to decide which of its discoveries should remain open to surprise and which should harden into a callable shot.
+
+\begin{thebibliography}{99}
+\bibitem[Brown et~al.(1989)]{brown1989situated} Brown, J. S., Collins, A., and Duguid, P. (1989). Situated cognition and the culture of learning. \emph{Educational Researcher}, 18(1), 32--42. doi:10.3102/0013189X018001032.
+\bibitem[Hertz et~al.(2022)]{hertz2022prompt} Hertz, A., Mokady, R., Tenenbaum, J., Aberman, K., Pritch, Y., and Cohen-Or, D. (2022). \emph{Prompt-to-Prompt Image Editing with Cross Attention Control}. arXiv:2208.01626.
+\bibitem[Kirsh and Maglio(1994)]{kirsh1994epistemic} Kirsh, D., and Maglio, P. (1994). On distinguishing epistemic from pragmatic action. \emph{Cognitive Science}, 18(4), 513--549. doi:10.1207/s15516709cog1804\_1.
+\bibitem[MPIWG(2004--2007)]{mpiwgExperimentalKnowledge} Max Planck Institute for the History of Science. (2004--2007). \emph{Generating Experimental Knowledge: Experimental Systems, Concept Formation and the Pivotal Role of Error}.
+\bibitem[Andrew(2022)]{andrew2022interview} Andrew. (2022). Interview on early Midjourney practice. Interview by Watson Hartsoe, October 23. Unpublished transcript.
+\bibitem[Rheinberger(2004)]{rheinberger2004experimental} Rheinberger, H.-J. (2004). Experimental Systems. \emph{The Virtual Laboratory}, Max Planck Institute for the History of Science.
+\bibitem[Schön(1992)]{schon1992reflective} Schön, D. A. (1992). Designing as reflective conversation with the materials of a design situation. \emph{Knowledge-Based Systems}, 5(1), 3--14. doi:10.1016/0950-7051(92)90020-G.
+\bibitem[Tang et~al.(2023)]{tang2023daam} Tang, R., Liu, L., Pandey, A., Jiang, Z., Yang, G., Kumar, K., Stenetorp, P., Lin, J., and Ture, F. (2023). What the DAAM: Interpreting Stable Diffusion Using Cross Attention. In \emph{Proceedings of ACL 2023}, 5644--5659. doi:10.18653/v1/2023.acl-long.310.
+\bibitem[Epstein et~al.(2022)]{epstein2022happy} Epstein, Z., Schroeder, H., and Newman, D. (2022). \emph{When Happy Accidents Spark Creativity: Bringing Collaborative Speculation to Life with Generative AI}. arXiv:2206.00533.
+\bibitem[OpenAI(2023)]{openai2023functioncalling} OpenAI. (2023). \emph{Function Calling and Other API Updates}. https://openai.com/index/function-calling-and-other-api-updates/.
+\bibitem[OpenAI(2024)]{openai2024structured} OpenAI. (2024). \emph{Introducing Structured Outputs in the API}. https://openai.com/index/introducing-structured-outputs-in-the-api/.
+\bibitem[Zhang et~al.(2023)]{zhang2023controlnet} Zhang, L., Rao, A., and Agrawala, M. (2023). \emph{Adding Conditional Control to Text-to-Image Diffusion Models}. arXiv:2302.05543.
+\bibitem[Zhang et~al.(2026)]{zhang2026decodetime} Zhang, S., Xu, R., Li, H., Yu, Q., Zhang, Y., Xia, C., Feng, X., Wang, C., Cui, H., and Zhao, J. (2026). \emph{Decode-Time Grammars: Constrained LLM Generation over a Refinement Order of Grammar Fragments}. arXiv:2607.18357.
+\end{thebibliography}
+
+\appendix
+\section*{Appendix A --- Assembly instrument}
+This manuscript was assembled with AI assistance from a preserved research corpus. The exact final assembly instrument is preserved as \texttt{SLIPCASE\_FINAL\_PROMPT.txt} and mirrored under the package's \texttt{\_PROMPTS} directory. Its SHA-256 is recorded in the package manifest and replication path. The claim-source map, bibliography, graph state, and payload hashes accompany the manuscript.
+
+\section*{Appendix B --- Making history}
+The primary empirical source is the uploaded October 23, 2022 interview transcript with Andrew; the original filename retains the historical ``GoldenCross'' label. The final field admits sixty-four zettels. Twenty are inherited byte-exact from the prior verified Andrew checkpoint. Forty-four are recovered from zettel payloads visible in the current conversation; their hashes are computed in the final package, but their byte identity cannot be independently compared against an external mounted copy of the originating chat messages. This limitation is recorded rather than silently upgraded to verification. Derived structures --- filenames, graph relations, MOCs, paper arrangement, connective prose, and visual interfaces --- remain revisable and do not modify root payload bodies.
+
+\section*{Appendix C --- Replication path}
+Open \texttt{index.html} for the sendable offline capsule. Exact zettel payloads are also present as root TXT files, mirrored byte-for-byte under \texttt{\_MD/}, and serialized in \texttt{ZETTELS.json}, \texttt{ZETTELS.jsonl}, and \texttt{ZETTELS.txt}. Verify payload identity against \texttt{\_SLIPCASE/MANIFEST.json}; rebuild relations from literal PLATFORM, LINKS, and \texttt{[[ADDRESS]]} occurrences; inspect \texttt{000\_\_RETURN\_PATH.txt} and \texttt{000\_\_REBUILD.txt}; then recompile this TeX source and compare the rendered PDF. The paper is a current scholarly wager, not an evidence object.
+\end{document}

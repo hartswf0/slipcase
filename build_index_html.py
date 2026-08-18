@@ -1,9 +1,95 @@
-import os, json
+import os, glob, json, re
 
-with open('/tmp/slipcase_data.json', 'r') as f:
-    cases_data = json.load(f)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+slipcases_dir = os.path.join(BASE_DIR, 'slipcases')
+folders = sorted([f for f in os.listdir(slipcases_dir) if os.path.isdir(os.path.join(slipcases_dir, f)) and not f.startswith('.')])
 
-# Import prompts from build_data
+cases_data = []
+all_pdfs = []
+all_cards_index = []
+
+for folder in folders:
+    w = os.path.join(slipcases_dir, folder)
+    clean_name = folder.replace('__', ' — ').replace('_', ' ').replace('-', ' ')
+    
+    # PDFs
+    pdfs = glob.glob(f'{w}/**/*.pdf', recursive=True) + glob.glob(f'{w}/*.pdf')
+    pdfs = sorted(list(set(pdfs)))
+    pdf_list = []
+    for p in pdfs:
+        rel = os.path.relpath(p, BASE_DIR)
+        p_obj = {
+            'name': os.path.basename(p),
+            'rel': rel,
+            'path': p,
+            'case_id': folder,
+            'case_name': clean_name,
+            'size': os.path.getsize(p),
+            'is_paper': not ('_RESOURCES' in p or 'scan' in p.lower())
+        }
+        pdf_list.append(p_obj)
+        all_pdfs.append(p_obj)
+    
+    # Text cards
+    txt_files = sorted([f for f in glob.glob(f'{w}/*.txt') if not os.path.basename(f).startswith('000__')])
+    cards = []
+    for c_idx, tf in enumerate(txt_files):
+        try:
+            with open(tf, 'r', errors='ignore') as f:
+                content = f.read()
+            title_m = re.search(r'TITLE:\s*(.*)', content)
+            title = title_m.group(1).strip() if title_m else os.path.basename(tf)
+            source_m = re.search(r'SOURCE:\s*(.*)', content)
+            source = source_m.group(1).strip() if source_m else ''
+            question_m = re.search(r'QUESTION:\s*(.*?)(?=\n[A-Z\s_]+:|\Z)', content, re.DOTALL)
+            question = question_m.group(1).strip() if question_m else ''
+            
+            c_obj = {
+                'id': os.path.basename(tf),
+                'num': c_idx + 1,
+                't': title,
+                's': source,
+                'q': question,
+                'c': content,
+                'case_id': folder,
+                'case_name': clean_name
+            }
+            cards.append(c_obj)
+            all_cards_index.append({
+                'id': c_obj['id'],
+                't': title,
+                's': source,
+                'case_id': folder,
+                'case_name': clean_name
+            })
+        except:
+            pass
+
+    # Special files
+    specials = {}
+    for sf in sorted(glob.glob(f'{w}/000__*.txt')):
+        sname = os.path.basename(sf)
+        try:
+            with open(sf, 'r', errors='ignore') as f:
+                specials[sname] = f.read()
+        except:
+            pass
+
+    cases_data.append({
+        'id': folder,
+        'name': clean_name,
+        'folder': folder,
+        'pdf_count': len(pdf_list),
+        'pdfs': pdf_list,
+        'card_count': len(cards),
+        'cards': cards,
+        'specials': specials
+    })
+
+# Save standalone JSON data
+with open(os.path.join(BASE_DIR, 'slipcases.json'), 'w') as f:
+    json.dump(cases_data, f, indent=2)
+
 from build_data import prompts_data
 
 html_template = """<!DOCTYPE html>
@@ -935,7 +1021,6 @@ function renderPdfLibrary() {
 
   grid.innerHTML = filtered.map(p => {
     const sizeMb = (p.size / (1024 * 1024)).toFixed(2);
-    // Relative path constructed to work from Downloads root or local subfolder
     const relUrl = p.rel;
     return `
       <div class="pdf-item-card">
@@ -1126,12 +1211,8 @@ renderCaseSpecials(0);
 </html>
 """
 
-# Write index.html to SLIPCASE workspace
-with open('/Users/gaia/SLIPCASE/index.html', 'w', encoding='utf-8') as f:
+# Write index.html to workspace
+with open(os.path.join(BASE_DIR, 'index.html'), 'w', encoding='utf-8') as f:
     f.write(html_template)
 
-# Also write to Downloads workspace
-with open('/Users/gaia/Downloads/index.html', 'w', encoding='utf-8') as f:
-    f.write(html_template)
-
-print('Successfully generated index.html in /Users/gaia/SLIPCASE/index.html and /Users/gaia/Downloads/index.html')
+print('Successfully re-indexed and wrote index.html and slipcases.json')

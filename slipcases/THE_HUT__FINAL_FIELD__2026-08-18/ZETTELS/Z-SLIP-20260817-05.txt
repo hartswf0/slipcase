@@ -1,0 +1,77 @@
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-05
+
+    TITLE:
+    THICKNESS IS INFORMATION GAIN, NOT PROMPT LENGTH
+
+    SOURCE:
+    Mikael Mayer et al. — “User Interaction Models for Disambiguation in Programming by Example” — 2015 — UIST.
+
+    SOURCE URL:
+    https://www.microsoft.com/en-us/research/publication/user-interaction-models-for-disambiguation-in-programming-by-example/
+
+    PASSAGE:
+    [PARAPHRASE] Examples are ambiguous specifications because many programs can remain consistent with them; the paper studies navigation and active-learning interactions for reducing that ambiguity.
+
+    RESEARCH OBJECT:
+    A specification becomes “thicker” when new evidence rules out consequential interpretations, not when it simply becomes longer.
+
+    LOCAL MOVE:
+    The authors treat ambiguity as a space of programs consistent with examples and design interactions to discriminate among them.
+
+    SOURCE TERMS:
+    Programming by Example; ambiguous specification; user intent; programs consistent with examples; active learning; disambiguation
+
+    WHAT BECAME STRANGE:
+    A six-word counterexample can carry more specification than five hundred words of description.
+
+    QUESTION:
+    Can thick prompting be measured by contraction of behavioral possibility rather than token count?
+
+    DEEPER QUESTION:
+    What observable proxy for hypothesis-space reduction works for generative models whose internal candidate set is not enumerable?
+
+    MECHANISM:
+    examples → many compatible programs → discriminating question/example → reduced candidate set.
+
+    FORMAL SHIFT:
+    <AMBIGUOUS EXAMPLES> → [DISAMBIGUATE] → <FEWER CONSISTENT PROGRAMS>
+
+    SOURCE FORMALISM:
+    Interaction models for navigation among consistent programs and active-learning questions.
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] specification gain can be approximated by reduced behavioral variance across generated candidates.
+
+    TENSION:
+    LLM output distributions are not classical version spaces, so the measurement is an analogy that must be operationalized cautiously.
+
+    MISSING:
+    A robust behavioral proxy for specification gain.
+
+    BOUNDARY:
+    The source does not establish that LLM latent distributions can be treated as enumerable hypothesis sets.
+
+    CITATION TRAIL:
+    Active learning; preference elicitation; prompt evaluation.
+
+    TEST:
+    Generate samples before and after each correction and estimate how many unwanted behaviors disappear relative to token count.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[THICK PROMPTING]]
+[[EXAMPLES AS CONSTRAINTS]]
+
+    BIBTEX:
+    @inproceedings{mayer2015disambiguation,
+  author={Mayer, Mikael and Soares, Gustavo and Grechkin, Maxim and Le, Vu and Marron, Mark and Polozov, Alex and Singh, Rishabh and Zorn, Ben and Gulwani, Sumit},
+  title={User Interaction Models for Disambiguation in Programming by Example},
+  booktitle={Proceedings of the 28th Annual ACM Symposium on User Interface Software and Technology},
+  year={2015},
+  doi={10.1145/2807442.2807459}
+}

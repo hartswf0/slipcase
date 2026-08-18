@@ -1,0 +1,3012 @@
+{
+  "checkpoint": "SLIPCASE_AFTER_SURPRISE_FINAL_2026-08-18",
+  "schema": "POML 15.55-AM",
+  "date": "2026-08-18",
+  "researcher": "Watson Hartsoe",
+  "coverage": {
+    "admitted_zettels": 151,
+    "new_zettels": 11,
+    "ghosts": 401,
+    "source_strings": 127,
+    "source_map_claims": 12
+  },
+  "prompt_sha256": "a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a",
+  "paper_pdf_sha256": "09a265cd12ed229bffaddb3a12c2b4d0a726f603cff3f4641337dd99e82079ca",
+  "files": [
+    {
+      "path": "000__BIBLIOGRAPHY.html",
+      "bytes": 27000,
+      "sha256": "085c3150aafa00ff9d741e420aecdfe6c3a46028a4c4ef1d37455b852d680cbf"
+    },
+    {
+      "path": "000__BIBLIOGRAPHY.txt",
+      "bytes": 26414,
+      "sha256": "ab04b472508c786379d5d9e2d33b01f9b65ee5ed5882022e7d4ea4d19f7cd953"
+    },
+    {
+      "path": "000__INDEX.txt",
+      "bytes": 42611,
+      "sha256": "7fa1d49fbd925bafb013290979e4ab274bd22d916899e489c6d6f46546b56db8"
+    },
+    {
+      "path": "000__MAKING_HISTORY.txt",
+      "bytes": 3502,
+      "sha256": "e62103c5604f93815b92a8b53cc38a184dd7c9e3586921a9a0a69c8e4280c9fd"
+    },
+    {
+      "path": "000__MAP.txt",
+      "bytes": 6994,
+      "sha256": "3596a294cee2686e862ed5a97998e9a6a25f79b89e313d25264fac760342520a"
+    },
+    {
+      "path": "000__OPEN_EDGES.txt",
+      "bytes": 1506,
+      "sha256": "3037399927ba5fbcec4766f2342939ccaa172bf727aba4c418cf18af79d9c586"
+    },
+    {
+      "path": "000__PROMPTS.txt",
+      "bytes": 388,
+      "sha256": "599e27eb73ee9fdab768d9d6e548f230d8e3971aa02135d1c93dbc9280018935"
+    },
+    {
+      "path": "000__REBUILD.txt",
+      "bytes": 806,
+      "sha256": "1ec1459497153c53f9c2e63c8505574eff328a8325eb4a83912b6fcb24ac5694"
+    },
+    {
+      "path": "000__RESOURCES.txt",
+      "bytes": 9609,
+      "sha256": "dcda7fdf6536613ca86e602df0cc72e51421d163631b7f72d1accc722787afb3"
+    },
+    {
+      "path": "000__RETURN_PATH.txt",
+      "bytes": 757,
+      "sha256": "a589b91bf6a7ee8636fc275593a2c45bb8846052496b2752c9ea4c624aa55c40"
+    },
+    {
+      "path": "000__START_HERE.txt",
+      "bytes": 779,
+      "sha256": "8d2c1f30285cee6697a9428119896efb4b4b16085d4f34f79d3c095d02f60412"
+    },
+    {
+      "path": "001__Precision-and-adequacy-are-independent-variables.__SELFSOURCE__ADEQUACY-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2004,
+      "sha256": "d7cd1394edd12909fb7d87566fff947829094d6aa06ff725fab1f57891564c75"
+    },
+    {
+      "path": "002__A-button-is-not-evidence-of-agency-if-the-causal-windo__SELFSOURCE__AGENCY-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 1951,
+      "sha256": "ca7f2115783a20bd7ab5f590c2c798927f563e97cf64c7805bd8b476b7051237"
+    },
+    {
+      "path": "003__Representational-loss-often-returns-as-correction-labo__SELFSOURCE__BURDEN-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2116,
+      "sha256": "157794259f19222af2bdbeab37529f6c07f5a7a936140d63bd9b51d3ed1f686c"
+    },
+    {
+      "path": "004__Geertz-s-shape-of-its-career-makes-provenance-only-hal__Geertz1976Art__CAREER-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3505,
+      "sha256": "9157bc8341ae002a607490f9d2061db1395831d7361a1f108fa8d49c0199f556"
+    },
+    {
+      "path": "005__A-category-becomes-infrastructure-when-it-is-compiled__SELFSOURCE__CATEGORY-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2225,
+      "sha256": "d87f985d38fd0bc76c25c5fdd0dadf29c94eceb0215dff1cf0aa1c2a5ce43d0e"
+    },
+    {
+      "path": "006__Circulation-is-a-sequence-of-transformations-not-neutr__SELFSOURCE__CIRCULATION-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2016,
+      "sha256": "141dd961f74cfa747d4363a58c2e2a43c8cba5f2a0cd0bf90f4055d13fb43c66"
+    },
+    {
+      "path": "007__Burrow-Giles-is-useful-because-the-Court-moves-from-th__BurrowGiles1884__CLASS-PATH-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3055,
+      "sha256": "5006098e37d9752cdc7d44ccc47e2612f503065f5fa4e75f380c9a88c47ea8cf"
+    },
+    {
+      "path": "008__Geertz-s-natural-history-of-signs-and-symbols-is-a-dir__Geertz1976Art__CLASS-PATH-002__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3530,
+      "sha256": "8191c8fb50f414483cbe62783a9501155ccf2ab08f178b702baf4c7ac2251be9"
+    },
+    {
+      "path": "009__Representation-can-help-make-reality-without-exhaustin__SELFSOURCE__CONSTITUTION-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2174,
+      "sha256": "768d8c365351a0b3f0676a8c9bbdf6e67b115e6f87163098d266e681d3701813"
+    },
+    {
+      "path": "010__Call-the-shot-converts-skill-from-retrospective-attrib__Sharpe1976Pinball__CONTROL-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3310,
+      "sha256": "9e9b483c89f361e4bbbd0e94f0566845fc668307cbf9e263ef759f067440630d"
+    },
+    {
+      "path": "011__The-Copyright-Office-recorded-624-iterations-but-treat__USCO2023Theatre__CONTROL-002__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3784,
+      "sha256": "2aa4c2019eff6cbc984d477e570185a7b4c5c451d6f5f25ce2c1f7916eb347de"
+    },
+    {
+      "path": "012__Correction-is-only-real-when-the-contested-difference__SELFSOURCE__CORRECTION-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2217,
+      "sha256": "b96fe13ad33b012818e0f86fcbe723bafb26a15e965f9e4090f59aa68586f815"
+    },
+    {
+      "path": "013__Compilation-can-be-obtained-by-freezing-the-source-pro__JonesGomardSestoft1993__FUTAMURA-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3889,
+      "sha256": "16400960b490c7ae9b92b4fc2ea82778caabb8818f136f491de8c696e20cfa87"
+    },
+    {
+      "path": "014__Self-application-turns-the-specializer-into-a-compiler__JonesGomardSestoft1993__FUTAMURA-002__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3485,
+      "sha256": "570edb64a4ff0ed7a76f848e409586c7b35c563d54b53a96b52497081a45a5e1"
+    },
+    {
+      "path": "015__Markov-did-not-build-a-model-of-Eugene-Onegin-s-poetry__Markov1913Onegin__MARKOV-ONEGIN-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3575,
+      "sha256": "57fd63ff4f3763b6e13f913c77aa3cdd81f3b6f99d5e5d5829d74f882deba3d7"
+    },
+    {
+      "path": "016__Eugene-Onegin-was-evidence-in-Markov-s-fight-about-ind__Markov1913Onegin__MARKOV-ONEGIN-002__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3785,
+      "sha256": "6196fcf49536c1df14031aee2d94285bb909e7d5785a59c8c86d460468d6883b"
+    },
+    {
+      "path": "017__Geertz-s-artistic-Markov-process-is-immediately-subord__Geertz1976Art__MARKOV-POET-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 4312,
+      "sha256": "fb4b6ce4c547e72eefcc87abd6cc7bc0c31eca5637e3532ce37adc43d7eef832"
+    },
+    {
+      "path": "018__The-audience-is-not-context-around-the-Moroccan-poem-i__Geertz1976Art__MARKOV-POET-002__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3819,
+      "sha256": "17703af4ec957fad9e3d431c5dccdaaf15eb40bef2b8f9b11031aba9c75f5242"
+    },
+    {
+      "path": "019__Geertz-s-1976-Markov-metaphor-and-the-HMM-turn-in-spee__Geertz1976Art__MARKOV-REVIVAL-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3809,
+      "sha256": "b43a1632644462908d83c7591a56044e90c3eaf799e6893ab0d27a14da2f6345"
+    },
+    {
+      "path": "020__Reflection-shifts-the-cultural-computational-boundary__KiczalesEtAl1991__METASTABLE-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 4632,
+      "sha256": "8b4f39c934266cbc70ff540e4444a5dc6db91d624369904aef9268fc887f5a60"
+    },
+    {
+      "path": "021__LLMs-did-not-create-the-first-machine-system-in-which__Winograd1971__MINIMUM-024__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3156,
+      "sha256": "38d3eb511dcb5cc5fa0e5ebdc00a4f16264bdffef08c46cfe87256b07f09367f"
+    },
+    {
+      "path": "022__The-culture-computer-boundary-cannot-rest-on-improvisa__Bourdieu1977__MINIMUM-025__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3470,
+      "sha256": "0d355e562150389013c20b5802ff2202cfa39754545bd3f5b330ceccf7e3dba3"
+    },
+    {
+      "path": "023__The-deeper-cultural-computational-difference-may-be-th__W3CSCXML2015__MINIMUM-026__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3672,
+      "sha256": "030992304f21d4cc16e27638cced07f2ed231dcb0660fff5354830c73c6d73d7"
+    },
+    {
+      "path": "024__The-surviving-scientific-boundary-is-not-culture-versu__Chomsky1959__MINIMUM-028__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 4983,
+      "sha256": "87fc98a6cbb4aa728df73827041134e2d4ae30bb6668ac2b4cf5a2b1e3ce947f"
+    },
+    {
+      "path": "025__Even-self-reference-and-recursion-theorem-construction__Jones2013PocketKnife__MINIMUM-029__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3350,
+      "sha256": "aca094a80430ed1fc65e8a9c1c116cafe91417af0296926ac73bd5341fc28589"
+    },
+    {
+      "path": "026__By-1980-researchers-were-not-merely-issuing-English-co__BiermannBallard1980__NLC-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3727,
+      "sha256": "2d1850e4a4ff4331ee42ea8d993e684b56d4bb012fd5a8cabbac59189184aa99"
+    },
+    {
+      "path": "027__Natural-language-ambiguity-was-made-executable-by-clos__BiermannBallard1980__NLC-002__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3893,
+      "sha256": "c8d53e797fbf9da18660998749a79326aca7982e1c3ae125d325ca6b1ac80162"
+    },
+    {
+      "path": "028__When-action-must-pass-through-representation-represent__SELFSOURCE__PASSAGE-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2173,
+      "sha256": "69a9193b8ed7c0a1d5f5f41925285f6190964096cbc04037ae772f8af9b21d00"
+    },
+    {
+      "path": "029__Reduction-is-necessary-for-action-but-omissions-differ__SELFSOURCE__PASSAGE-002__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2297,
+      "sha256": "d2bb0e5faa18e9e79f2c3e9b6d9d4d39e7ace0e1f220f0addd2e133c0284b9cc"
+    },
+    {
+      "path": "030__The-essay-s-strongest-invariant-is-not-human-control-b__USCO__PATH-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3856,
+      "sha256": "56e12991d99eed61f6dacee6b63c73b3df0dccd65697f977fde71c4aac29b5c5"
+    },
+    {
+      "path": "031__The-strongest-revision-of-call-the-shot-is-locate-the__USCO__PATH-002__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3784,
+      "sha256": "4d733543ac2b6a0228808bd33f0b447e1d08a777a64da13d0756da2b47839fe1"
+    },
+    {
+      "path": "032__Plural-coordination-requires-common-reductions-without__SELFSOURCE__PLURAL-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2076,
+      "sha256": "ae1d697261a1a1e4ba1fb48d25aba5addbecfd34e9de5bd794f95de31e26454f"
+    },
+    {
+      "path": "033__An-acceptable-programming-language-explicitly-places-p__Jones2013PocketKnife__PROGRAMROLE-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3322,
+      "sha256": "1bbed30b7351bcc5a339a345214f9e9e62e805ffc87251e207b2742175a5f2b2"
+    },
+    {
+      "path": "034__Kleene-s-recursion-theorem-permits-an-explicit-interch__Jones2013PocketKnife__PROGRAMROLE-002__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3517,
+      "sha256": "db35bbdaad8092fb4147e6f2a9d6e8a6831e5af543418f1a4c31157d39276b24"
+    },
+    {
+      "path": "035__Turing-s-universal-machine-makes-the-rules-portable-by__Turing1936__PROGRAMROLE-003__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3650,
+      "sha256": "360444dcbe4d5b1e97f006fb298f3ff913907fc43281737ec394c1e2330cd281"
+    },
+    {
+      "path": "036__TruthfulQA-generates-false-answers-under-greedy-decodi__LinHiltonEvans2021__PROMPT-010-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3685,
+      "sha256": "7ec329e30aa4fd30ef497128e535afc111ba1f6462d807fd0acee2287ae11bcd"
+    },
+    {
+      "path": "037__TruthfulQA-splits-falsehood-before-decoding-into-failu__LinHiltonEvans2021__PROMPT-010-B__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3839,
+      "sha256": "715b9af26510843dd8a6a0210ea106de5cff60de17a2b63d0c098a01052819a0"
+    },
+    {
+      "path": "038__Hallucination-is-not-logically-caused-by-stochastic-de__Schick2023Toolformer__PROMPT-010__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3349,
+      "sha256": "2fc9dd167e7ba23951184245c1b2060a15d5eff3065e85e6329421a3ea52d7ec"
+    },
+    {
+      "path": "039__Metaobject-protocols-invalidate-fixed-language-behavio__KiczalesEtAl1991__REFLECT-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3984,
+      "sha256": "56b0d6a2f5369369350e9437c49915ce5ecd0e60b95c444d7c04afd576b79a8d"
+    },
+    {
+      "path": "040__Maude-makes-the-transition-theory-itself-into-data-tha__DuranEtAl2019__REFLECT-002__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3837,
+      "sha256": "cf0226c5bc10356502400fe103c076d45d7bd59c7dcc0903ffe1e706b075acbb"
+    },
+    {
+      "path": "041__Self-reference-does-not-require-a-syntactic-reflection__Jones2013PocketKnife__REFLECT-003__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3828,
+      "sha256": "e654fce2410dbe82fe8687f921a0aecbe0051e120f7430d08248098d1eb1529c"
+    },
+    {
+      "path": "042__Cage-deliberately-relocates-artistic-responsibility-fr__Cage1990Autobiographical__RETENTION-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3184,
+      "sha256": "eac52bdaf98f4d11d909eda03de3b2806b451a5fd155a0686889f5d4e6a33167"
+    },
+    {
+      "path": "043__Generative-art-is-defined-by-ceding-subsequent-control__Galanter2003Generative__RETENTION-002__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3586,
+      "sha256": "b9c3c97587c693d8ac20339362f42f365b26acc4c8f0b300fa5427e5c2b86c7c"
+    },
+    {
+      "path": "044__Wall-Drawing-88-does-not-specify-one-final-image-it-sp__SOURCEUNKNOWN__RETENTION-003-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3382,
+      "sha256": "3480fd08a99856623e35804ca9304a61c0fc5e2950f9db0749795bad73d95ec6"
+    },
+    {
+      "path": "045__Wall-Drawing-274-stores-not-the-decision-but-the-autho__SOURCEUNKNOWN__RETENTION-003-B__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3135,
+      "sha256": "9bce7b0e2b5821b721a6dea50dad43053a68ae14c0fa718ed3977f69d72244b4"
+    },
+    {
+      "path": "046__Wall-Drawing-237-proves-that-even-a-highly-specific-in__SOURCEUNKNOWN__RETENTION-003-C__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3094,
+      "sha256": "7b0439b079bb682b224cdb19152b55ec80179149a074305280999defe4faa799"
+    },
+    {
+      "path": "047__Wall-Drawing-797-makes-unpredictable-execution-drift-t__SOURCEUNKNOWN__RETENTION-003-D__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3075,
+      "sha256": "7111d9834ea1fe258ecbed72ddf0777e5234a6ff7a0c82679f1bcff5416d8b42"
+    },
+    {
+      "path": "048__Wall-Drawing-65-specifies-randomness-itself-as-an-arti__SOURCEUNKNOWN__RETENTION-003-E__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2976,
+      "sha256": "6952bfcb4d2176285e2f2796824f80afd292baae629b802908451e60fdc39d00"
+    },
+    {
+      "path": "049__LeWitt-s-later-account-reopens-execution-after-his-196__LeWitt1967Paragraphs__RETENTION-003-F__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3220,
+      "sha256": "2a5936e6e139e43bb30426fc6437c2a2607d36ddeeb9d7ef08dd56ed87890b0f"
+    },
+    {
+      "path": "050__Wall-Drawing-289-separates-the-persistent-work-from-ev__SOURCEUNKNOWN__RETENTION-003-G__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3385,
+      "sha256": "ff6fd2d6ab4d038940632e1b32412a971e1aa5244c9ebcb5b95abd9c3b696f25"
+    },
+    {
+      "path": "051__LeWitt-s-wall-drawings-split-specification-precision-f__MULTISOURCE__RETENTION-003-H__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3727,
+      "sha256": "10bb3d1d9e4909d47ca68c5820459e72b387f9db05792c5a53cd90a07846773c"
+    },
+    {
+      "path": "052__LeWitt-moves-the-consequential-branches-almost-entirel__LeWitt1967Paragraphs__RETENTION-003__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3026,
+      "sha256": "84809c07a44e2e7eb38986be107f7aeff20a152b7b85d742fd765df777d92c1a"
+    },
+    {
+      "path": "053__Duchamp-makes-selection-itself-intentional-while-attem__Duchamp1961Readymades__RETENTION-004__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3339,
+      "sha256": "d91dcebf90e94153a45bb9a0d0fc5cb695074d119c43b6487bc8254a8835bc13"
+    },
+    {
+      "path": "054__A-prompt-can-itself-be-a-copyrighted-work-even-when-th__USCO2025Copyrightability__RETENTION-005-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3881,
+      "sha256": "c6098821bbc733c5112dae6b4509f180b9b37c93992455feabf8f9f03676fce7"
+    },
+    {
+      "path": "055__The-more-a-prompt-behaves-like-a-program-the-less-copy__USC17Section102__RETENTION-005-B__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3960,
+      "sha256": "03797117f361f5405164df2866789cca7c33f95f49d4a7879af528f285c494ca"
+    },
+    {
+      "path": "056__The-Allen-decision-could-not-inspect-the-artistic-obje__USCO2023Theatre__RETENTION-005-C__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3968,
+      "sha256": "cd84bb5e21daf7d1eff8b901e70b1ab4a9051411e69cec9837d31a0076c50505"
+    },
+    {
+      "path": "057__Re-rolling-the-dice-collapses-two-technically-differen__USCO2025Copyrightability__RETENTION-005-D__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3727,
+      "sha256": "d468d7dc2f8b4281956b09a4eda5e3ff97939facf66875a21d1aacfce09e3baa"
+    },
+    {
+      "path": "058__Prompt-to-Prompt-proves-that-prompt-control-is-not-a-p__HertzEtAl2022PromptToPrompt__RETENTION-005-E__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 4000,
+      "sha256": "45e0d0a2b81765575473998287d0dcb253b28d20c21b34f549a80747b1e967db"
+    },
+    {
+      "path": "059__Attend-and-Excite-separates-an-expressive-decision-wri__CheferEtAl2023Attend__RETENTION-005-F__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3150,
+      "sha256": "8fd6de4d468ab23f3908ee0c51019beefd9f46e36e5ef58a44d3c41db556f199"
+    },
+    {
+      "path": "060__ControlNet-makes-the-prompt-only-one-channel-in-a-vect__ZhangRaoAgrawala2023ControlNet__RETENTION-005-G__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2918,
+      "sha256": "3cdca94398963462bd75a111876732e38dbfa2dd07d6e91fb385068879bedb19"
+    },
+    {
+      "path": "061__Textual-Inversion-allows-an-artist-to-create-a-new-wor__GalEtAl2022TextualInversion__RETENTION-005-H__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2983,
+      "sha256": "74d33f003123031dd43a51a50fbe06fb75d20d4805bb21d510eae5950f22842e"
+    },
+    {
+      "path": "062__The-Beijing-Internet-Court-and-U.S.-Copyright-Office-d__USCO__RETENTION-005-I__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2490,
+      "sha256": "7dbdd63354c469a760aaff90b86feaf7cc35d8de35a7ea2ff34f18aa2fd5707d"
+    },
+    {
+      "path": "063__The-same-prompting-act-can-be-classified-as-insufficie__USCO__RETENTION-005-J__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2898,
+      "sha256": "aeefa206cd45c868521775ae90a2eff38d12fa939c1abc52123cbd0a4f797c30"
+    },
+    {
+      "path": "064__Alfred-Bell-makes-keep-that-legally-powerful-only-afte__USCO__RETENTION-005-K__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2502,
+      "sha256": "6cdd3ebcd326891e30724c005ed9324ee17983d549882d04bbc29decf0853227"
+    },
+    {
+      "path": "065__Thaler-closes-the-machine-as-author-theory-without-dec__SOURCEUNKNOWN__RETENTION-005-L__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2529,
+      "sha256": "84571144bcba3eaa78ad150031628174988039714c46311040c674c44e867f80"
+    },
+    {
+      "path": "066__Samuelson-Sprigman-and-Sag-reject-the-requirement-of-a__USCO__RETENTION-005-M-A-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2603,
+      "sha256": "cf8ee11353e49b9d71953117425b4d9711da92f81e632456188fd96a87587848"
+    },
+    {
+      "path": "067__The-strongest-U.S.-opposition-does-not-claim-that-deta__USCO__RETENTION-005-M-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2471,
+      "sha256": "a059ca8c656a54230fc2c79542b0364478155ca4e79d8296356e6a5427b41e6e"
+    },
+    {
+      "path": "068__Andrien-creates-an-expressive-surplus-problem-for-gene__SOURCEUNKNOWN__RETENTION-005-M-B-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2647,
+      "sha256": "b11cdeca046fcae544b94d2897e44a9f35dbbcc7a145e05b09182fbbe2198c06"
+    },
+    {
+      "path": "069__Andrien-makes-the-difficult-boundary-not-tool-versus-a__SOURCEUNKNOWN__RETENTION-005-M-B__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2421,
+      "sha256": "6ad7a386a4cee989f682bfe804db153f226b2f4a1a19eed060f8ee39d6682586"
+    },
+    {
+      "path": "070__The-prompt-dispute-contains-two-hidden-thresholds-how__USCO__RETENTION-005-M-C__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2192,
+      "sha256": "65b8742787b3903f2d7334ba4d2a53d19c811776eac80996a459b04840b20875"
+    },
+    {
+      "path": "071__There-is-no-judicial-dissent-from-the-Copyright-Office__USCO__RETENTION-005-M__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2653,
+      "sha256": "80aa5ae40e36314ea8bd1d7e1ad1b21a7a7c41f96263d471e2cd0eab6ef32876"
+    },
+    {
+      "path": "072__Prompt-expansion-turns-underspecification-into-a-machi__SOURCEUNKNOWN__RETENTION-005-N-A-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2338,
+      "sha256": "2a9266f62c0e6dae71afe79272b5fae3b3ee77d7ac9be25793eee995a182d2d9"
+    },
+    {
+      "path": "073__Prompt-expansion-is-not-a-compiler-in-the-ordinary-sem__SOURCEUNKNOWN__RETENTION-005-N-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2206,
+      "sha256": "a0bfe8a505a7139512eba1aee93de896a6d08cc67c46062c5fb9d2f57e1cdc4d"
+    },
+    {
+      "path": "074__Prompt-optimization-creates-an-invisible-normative-lay__SOURCEUNKNOWN__RETENTION-005-N-B-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2450,
+      "sha256": "9a33dac978e0bffa49b20ff7ce8e83c831934c217b22e360606fafc7212474e3"
+    },
+    {
+      "path": "075__Automatic-prompt-optimization-can-make-the-machine-tea__SOURCEUNKNOWN__RETENTION-005-N-B__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2395,
+      "sha256": "1485acfbf1e53cd4e7fe92df7bc385d600c777c01901896bdf0c83961524ffe7"
+    },
+    {
+      "path": "076__Approval-can-convert-machine-added-prompt-content-from__USCO__RETENTION-005-N-C__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2249,
+      "sha256": "9c1f6c9754e6347e1b8ae373b0642da4b718676f35b605871f41a8f96c33ba77"
+    },
+    {
+      "path": "077__In-systems-that-rewrite-prompts-internally-the-user-ma__USCO__RETENTION-005-N__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2413,
+      "sha256": "b35f3d2dc5ae8bf4883bfc9d66367885fbff3cf2e8624c34359dfd686da35ff6"
+    },
+    {
+      "path": "078__The-human-authorship-doctrine-moved-from-an-open-1966__SOURCEUNKNOWN__RETENTION-005-O-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2194,
+      "sha256": "4da70d5c665d85788d391b49189e2669c7985f8d9a2afc814309fabdfc4ac865"
+    },
+    {
+      "path": "079__CONTU-s-influential-computer-as-tool-model-depended-on__SOURCEUNKNOWN__RETENTION-005-O-B__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2284,
+      "sha256": "1706962eccf3c0d2b79dd11d77c46e25a298624059793f5767baa8fda5c0b520"
+    },
+    {
+      "path": "080__Generative-iteration-breaks-the-old-conception-executi__USCO__RETENTION-005-O-C__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2170,
+      "sha256": "3b400d713c1a8f6adcb3064ce7fb3bb75bf66130a2f1312ec8bb4cc62da8f703"
+    },
+    {
+      "path": "081__The-Copyright-Office-s-current-traditional-elements-of__USCO__RETENTION-005-O__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2630,
+      "sha256": "ba8fb149843b1fc296839a5cf2b822e9b022e5242eb40b2de041d8e1efc02b86"
+    },
+    {
+      "path": "082__The-Copyright-Office-makes-authorship-technologically__USCO__RETENTION-005-P__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2536,
+      "sha256": "6ce17a64b36b5ca158575e77ed9326a351af0113161e565c0939f1fa12bdbc1e"
+    },
+    {
+      "path": "083__Li-v.-Liu-did-not-hold-that-negative-prompts-independe__SOURCEUNKNOWN__RETENTION-005-Q-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2138,
+      "sha256": "51ff9d5caf125e190d1bac7e24b4f94e80a2a57dc169c7ff427f59a9d8d68e83"
+    },
+    {
+      "path": "084__A-negative-prompt-does-not-simply-subtract-a-forbidden__SOURCEUNKNOWN__RETENTION-005-Q-B__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2361,
+      "sha256": "9ae4e7a0f2d740de2ed2bfff08b809dae668c00e811cdf0eba9b2d836eb9d016"
+    },
+    {
+      "path": "085__An-exclusion-can-be-causally-decisive-while-leaving-no__USCO__RETENTION-005-Q-C__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2173,
+      "sha256": "4388f7583b51ab2c84e1669772cb436f0a1d5c7b3885233a6f4b9a980d92bb6b"
+    },
+    {
+      "path": "086__The-negative-prompt-is-an-authored-refusal-it-controls__SOURCEUNKNOWN__RETENTION-005-Q__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2377,
+      "sha256": "e3e730bb07eb3c9bdffb25e683d50fae81aeeaf63bf5e4cc404ff221929c0d74"
+    },
+    {
+      "path": "087__Original-intention-can-be-a-retrospective-fiction-beca__Schon__RETENTION-005-R-A-A-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2472,
+      "sha256": "d0b67faccdb1b92240b4401e8f068a5df0d4a4f6fb3fd9f541a245631900cfe4"
+    },
+    {
+      "path": "088__Iterative-prompting-creates-an-identification-problem__SOURCEUNKNOWN__RETENTION-005-R-A-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2436,
+      "sha256": "7df0a422c2282f50cefe29331999f5f39508f294a790362776c95a5e7345c318"
+    },
+    {
+      "path": "089__A-prompt-trajectory-records-not-only-the-artist-learni__SOURCEUNKNOWN__RETENTION-005-R-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2352,
+      "sha256": "4be1f6b3e7a19c6536994b1de1117fef6888240b8ff15adbadd42df20c2cc6c5"
+    },
+    {
+      "path": "090__If-prompt-and-image-constitute-one-practice-object-mod__SOURCEUNKNOWN__RETENTION-005-R-B-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2334,
+      "sha256": "102d8891b739432d530d90e3ad38bb9adb593a37138f63ab9083d70faa22dac7"
+    },
+    {
+      "path": "091__Prompt-artists-sometimes-treat-the-prompt-and-image-to__SOURCEUNKNOWN__RETENTION-005-R-B__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2263,
+      "sha256": "13f0cc9cd108488159ba4ee465bf1508c8e01dce2ba39e0a3ebb13a486db3f86"
+    },
+    {
+      "path": "092__A-raw-prompt-history-is-provenance-but-becomes-evidenc__USCO__RETENTION-005-R-C__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2109,
+      "sha256": "7346ffdc35030e0a3d0dfd435b970246e9b05ed5e6d6be134ee61df5071c369a"
+    },
+    {
+      "path": "093__The-prompt-history-may-be-the-most-informative-authore__USCO__RETENTION-005-R__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2695,
+      "sha256": "349caf1ea17b9cc22fef20dbf6a33f00d6a94dc3a293afbbf43679b9c5b8ebe0"
+    },
+    {
+      "path": "094__Midway-s-player-is-denied-authorship-not-because-the-p__SOURCEUNKNOWN__RETENTION-005-S-A-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2375,
+      "sha256": "c5eaac79b41d9f68b66be9c482b98e00265c6cfd0d45b337decdf30fc754104c"
+    },
+    {
+      "path": "095__Stern-Electronics-defeats-the-proposition-that-traject__SOURCEUNKNOWN__RETENTION-005-S-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2240,
+      "sha256": "85dc72642ab9214055a767a2cfaa13c8db0f188a00a65ded2c3ecbf79468779a"
+    },
+    {
+      "path": "096__Stern-Electronics-suggests-a-narrower-replacement-for__SOURCEUNKNOWN__RETENTION-005-S-B__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2467,
+      "sha256": "fa28a5f15a6ed38ca80d67c7f725f19cff4d5301aa86b69a1c132601f6a9c901"
+    },
+    {
+      "path": "097__Copyright-already-treats-the-generating-program-and-it__SOURCEUNKNOWN__RETENTION-005-S-C-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2374,
+      "sha256": "2d9088f05c81984c7e18d7cf24f2c5689b3a300cfe76b4152631da31504b7712"
+    },
+    {
+      "path": "098__Authorship-of-a-generator-does-not-automatically-imply__USCO__RETENTION-005-S-C__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2359,
+      "sha256": "c2b20431796b84944081a8a1f7b318839eefbff69b4858b3ff69ebcc69d7b454"
+    },
+    {
+      "path": "099__The-deepest-legal-disagreement-is-whether-authorship-r__USCO__RETENTION-005-S__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2749,
+      "sha256": "c8d646b7fa788bf60b0ee99bb88a53a0b63a65c04805a24fcbf75329709a7fff"
+    },
+    {
+      "path": "100__Prompt-vocabulary-is-only-the-shallowest-layer-of-AI-c__SOURCEUNKNOWN__RETENTION-005-T-A-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2404,
+      "sha256": "9390421fc0d0d9f3bd7cf82949ad194dd7d6f14c8d4c9f285757045670944381"
+    },
+    {
+      "path": "101__Prompt-craft-includes-learning-specialized-vocabulary__SOURCEUNKNOWN__RETENTION-005-T-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2259,
+      "sha256": "d3f5385a5a1a161ec49813b1b8d13da631e425fc9170a7c7efb05bc7d5c38bb1"
+    },
+    {
+      "path": "102__Model-accommodation-can-become-recursively-self-confir__SOURCEUNKNOWN__RETENTION-005-T-B-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2422,
+      "sha256": "ac33e4f315130a6c67c8b809972356331a57f71bafa108d370692d9f864f7b96"
+    },
+    {
+      "path": "103__Prompt-expertise-can-improve-by-adapting-to-a-model-wh__SOURCEUNKNOWN__RETENTION-005-T-B__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2328,
+      "sha256": "a01df230d6a8131d7c5f27ed9fcf30e7a699e51d56418bb221cb27c0f6542722"
+    },
+    {
+      "path": "104__Prompt-templates-can-function-simultaneously-as-artist__SOURCEUNKNOWN__RETENTION-005-T-C__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2342,
+      "sha256": "2f102076b24fabda80cb991f4803b534c73c1bbc197abfb1e767490fa672271f"
+    },
+    {
+      "path": "105__A-platform-can-improve-its-outputs-while-decreasing-th__Jung-Polani-Stone__RETENTION-005-T-D-A-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2430,
+      "sha256": "9ed3914464885f73ab96b601f12024fc1c508f083ae89558743447536a99a292"
+    },
+    {
+      "path": "106__Platformization-can-destroy-artistic-agency-without-de__SOURCEUNKNOWN__RETENTION-005-T-D-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2765,
+      "sha256": "81beac86c98bd7ddd28ccb3caedd250e96ff40d62b31d0d74a97390b305850f0"
+    },
+    {
+      "path": "107__A-model-glitch-can-become-craft-knowledge-making-techn__SOURCEUNKNOWN__RETENTION-005-T-D__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2043,
+      "sha256": "04603ea06d354a1707e9076f44fa8ec80286c6f1925fd7f0a77bc1bd7cf5ffa3"
+    },
+    {
+      "path": "108__Prompting-may-be-legally-weakest-exactly-where-it-is-a__USCO__RETENTION-005-T__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2758,
+      "sha256": "3a2d4e5f4213203883b07d4a458920042d31bfc9ea9bfbfe59e865649c4f6fd9"
+    },
+    {
+      "path": "109__The-deepest-split-across-the-seven-parents-is-not-huma__MULTISOURCE__RETENTION-005-X__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2426,
+      "sha256": "0f4bec7f154a42d2575648c74dc47d2197eb74d2a810c5bf7aaa0724d9381337"
+    },
+    {
+      "path": "110__The-expressive-variable-may-not-exist-before-the-act-t__Schon__RETENTION-005-Y-A__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2528,
+      "sha256": "e6eb132bfc453a8666dff3adf36bd3005a095cb61cacda5da3a195591fb48a69"
+    },
+    {
+      "path": "111__Control-can-be-measured-as-how-many-distinguishable-fu__Jung-Polani-Stone__RETENTION-005-Y-B__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2496,
+      "sha256": "9fba076daf88bdbcfd468f3926d955f11f06e0de02401c5a55ea7c20a18230c4"
+    },
+    {
+      "path": "112__Unseen-control-is-weaker-than-craft-because-empowermen__Jung-Polani-Stone__RETENTION-005-Y-C__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2255,
+      "sha256": "4754769d5e73402ec730a2acdbee0d39d0a9d6d32874be151aa2c59aa9e4dd70"
+    },
+    {
+      "path": "113__Agency-in-a-co-creative-system-has-two-opposite-direct__SOURCEUNKNOWN__RETENTION-005-Y-D__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2280,
+      "sha256": "02a3c4e32182e9fae72047e1c5ac66ac54f5dda9ee7a35b101c1f2c04dd59712"
+    },
+    {
+      "path": "114__A-creative-assistant-need-not-infer-what-the-artist-wa__SOURCEUNKNOWN__RETENTION-005-Y-E__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2606,
+      "sha256": "e7eb650ca1745a5022e0f11006f1bf8ee7d6c96252b60919ef1d808be91a3d8b"
+    },
+    {
+      "path": "115__A-creative-interface-cannot-preserve-distinctions-it-l__SOURCEUNKNOWN__RETENTION-005-Y-F__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2493,
+      "sha256": "2849920de7f70a6b7331da96afa7176ec11e8d15ead357b496e9f7d3f9f7cd7c"
+    },
+    {
+      "path": "116__The-children-converge-on-a-new-distinction-expressive__MULTISOURCE__RETENTION-005-Y__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2787,
+      "sha256": "37f166c14ffec3de4b188e13bef480ca54e66df71fac75bd0a73b8da713fceaf"
+    },
+    {
+      "path": "117__Current-U.S.-copyright-analysis-permits-human-authorsh__USCO2025Copyrightability__RETENTION-005__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3669,
+      "sha256": "4bc470fb20aa95ad13ea0f4d4adec2098459791be453c31b1e820b59662afb43"
+    },
+    {
+      "path": "118__Keep-that-is-not-one-operation-it-contains-at-least-fo__USCO__RETENTION-006__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3330,
+      "sha256": "c81b3e0976138746efe370739744cb69617ecadef5dd63ca0aa9e711106ab246"
+    },
+    {
+      "path": "119__Representations-can-manufacture-the-magnitude-they-lat__SELFSOURCE__SCALE-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2084,
+      "sha256": "f431a82cf848e4973c61f86397ef8d2df3fe707d29e1ea90d0075afc26b4e64a"
+    },
+    {
+      "path": "120__Partial-evaluation-turns-input-data-into-program-struc__JonesGomardSestoft1993__STAGING-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3710,
+      "sha256": "2f2fb670b874998a123bc4dfd76f96c1cded1419a27972f67e00026c17645f9f"
+    },
+    {
+      "path": "121__A-configuration-file-can-become-code-merely-because-it__JonesGomardSestoft1993__STAGING-002__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3442,
+      "sha256": "73eb5f862d4580da9fe46db36f44338ac4b0c21bd34f84a697215cbeb508c95e"
+    },
+    {
+      "path": "122__Partial-evaluation-introduces-a-second-control-problem__JonesGomardSestoft1993__STRATEGY-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3521,
+      "sha256": "f8c763279cad5b09bc0fb76fe4797aedd342823940a325b9b7f331c9f80ba19e"
+    },
+    {
+      "path": "123__The-simulation-s-dominant-transformation-was-condition__SELFSOURCE__SYNTEGRITY-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2080,
+      "sha256": "77d8228157343ea72811ab80ec4f3f685b434ac7e1f3d09f8fd8d3f49465733c"
+    },
+    {
+      "path": "124__Availability-was-repeatedly-weaker-than-intervention-a__SELFSOURCE__SYNTEGRITY-002__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2089,
+      "sha256": "0f20f186065a51d70de00431769901648827c7fb7a847e90c3ba7a384f72cda8"
+    },
+    {
+      "path": "125__The-observer-network-functioned-as-a-lateral-nervous-s__SELFSOURCE__SYNTEGRITY-003__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2296,
+      "sha256": "216db8d9bded42c0c76c7ec304e9c5193e0bf64ed2aa442c5b6b08e45f9aae2e"
+    },
+    {
+      "path": "126__Distributed-discourse-was-achieved-without-distributed__SELFSOURCE__SYNTEGRITY-004__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2123,
+      "sha256": "69513829b4a66be9d9c256de4097b55f2d8c896eb64783bf45158f193412b4f9"
+    },
+    {
+      "path": "127__An-omniscient-analyst-can-reconstruct-collective-intel__SELFSOURCE__SYNTEGRITY-005__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2239,
+      "sha256": "e769d39fff82df9d24695f54d6003ed31fc3ab0bc58da152ea71e1d61aed284e"
+    },
+    {
+      "path": "128__The-network-s-most-productive-claims-changed-function__SELFSOURCE__SYNTEGRITY-006__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2169,
+      "sha256": "52a05912f9899ac785d8d72327c6c31a0f567dced81fcebd7622590da30a4aa7"
+    },
+    {
+      "path": "129__Representations-do-not-merely-operate-in-time-they-all__SELFSOURCE__TIME-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 1961,
+      "sha256": "8b2111be632ed980c764fedd71f3e47ad0120e6d45fb49a92333ab3bf72db81a"
+    },
+    {
+      "path": "130__Maude-states-explicitly-that-executability-is-relative__ClavelEtAl2003__UPTAKE-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3932,
+      "sha256": "d17ed8c4a8fc5cbbc2c2c3c36607c0c5d9b0c311dfc36c114509b30cbf488c82"
+    },
+    {
+      "path": "131__A-transition-relation-can-be-fully-specified-while-the__DuranEtAl2019__UPTAKE-002__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 3685,
+      "sha256": "0975b466dc93f51722ed3aece4fb17eb3956c6d7236cbe56176ec585fe697bfd"
+    },
+    {
+      "path": "132__The-strongest-surviving-invariant-may-be-not-specified__BiermannBallard1980__UPTAKE-003__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 5084,
+      "sha256": "7370b52329d10e7929dbad0974b265343b28f703a9619644badd3220f5bd2578"
+    },
+    {
+      "path": "133__The-target-is-not-complete-representation-but-warrante__SELFSOURCE__WARRANT-001__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2220,
+      "sha256": "2e9d55cbda2f1f965f4787e35bb74dd689fa704b0e27439aef447223059f0637"
+    },
+    {
+      "path": "134__The-simulation-s-substantive-and-methodological-output__SELFSOURCE__WARRANT-002__from-PRESERVED_BASELINE_RESEARCH_.txt",
+      "bytes": 2244,
+      "sha256": "7dfbf6be356b0d2448616841bee495150a4085473a72e63d747c596be0be2e50"
+    },
+    {
+      "path": "135__The-choice-space-of-a-creative-act-can-be-produced-by__schon1992reflective__DISCOVERY-001__from-DERIVED_NEW_ZETTEL_VERIFIED_.txt",
+      "bytes": 3428,
+      "sha256": "fe0efa0a884cd78088b154be6a414bb96a04c5f3fb9937445a3cf8c5fd830457"
+    },
+    {
+      "path": "136__The-strongest-challenge-to-the-re-roll-account-is-not__samuelson2023comments__EXPLORATORY-001__from-DERIVED_NEW_ZETTEL_VERIFIED_.txt",
+      "bytes": 3976,
+      "sha256": "bcbeafc2736f441fbfc8acad6e7b4bd86450a08215e1de187c1882a156bc50b6"
+    },
+    {
+      "path": "137__High-causal-influence-over-a-realized-path-can-remain__midway1983__PLAYER-001__from-DERIVED_NEW_ZETTEL_VERIFIED_.txt",
+      "bytes": 3003,
+      "sha256": "36f4a468291b57d4743fa587a1e9cdfafdbb94d0d752a7a5f47047651a74c4d7"
+    },
+    {
+      "path": "138__Variable-realizations-do-not-erase-authorship-when-rec__stern1982__INVARIANT-001__from-DERIVED_NEW_ZETTEL_VERIFIED_.txt",
+      "bytes": 3106,
+      "sha256": "b2e363593bfaaaa066f9a5479d217e75c3f6062a495f1e5f5129a8ee3df45de3"
+    },
+    {
+      "path": "139__Nominal-interface-choice-is-weaker-than-an-action-chan__jung2011empowerment__EMPOWERMENT-001__from-DERIVED_NEW_ZETTEL_VERIFIED_.txt",
+      "bytes": 3112,
+      "sha256": "feed8b68f613871f22476064fcc3b4af97e1f659a0420141c1bb00f1af7ebd3f"
+    },
+    {
+      "path": "140__The-strongest-evidence-of-exploratory-authorship-may-b__USCO__NEXTSHOT-001__from-DERIVED_NEW_ZETTEL_VERIFIED_.txt",
+      "bytes": 4127,
+      "sha256": "00b21dfe98028c0814ff84af05f45ea92be0d8bef03437dbbdf10501d469ab3a"
+    },
+    {
+      "path": "141__Some-generations-are-epistemic-actions-rather-than-can__KirshMaglio1994Epistemic__EPISTEMIC-001__from-DERIVED_CURRENT_INQUIRY_2026.txt",
+      "bytes": 3119,
+      "sha256": "67949f94790447d73a4950e6679fbf1e4b35c3d0054d96857ed86c01fa58833c"
+    },
+    {
+      "path": "142__The-expressive-variable-may-be-born-during-making-rath__Schon1992Reflective__DISCOVERY-002__from-DERIVED_CURRENT_INQUIRY_2026.txt",
+      "bytes": 3217,
+      "sha256": "83c0f4bdc3924ab5a7f6e40e3b0245fa93d80dd11352b818c5ad608ccf06b256"
+    },
+    {
+      "path": "143__Later-stabilization-of-a-surprise-does-not-travel-back__USCO2025Copyrightability__FRONTIER-001__from-DERIVED_CURRENT_INQUIRY_2026.txt",
+      "bytes": 3754,
+      "sha256": "241ec20afbfecc24a62115cd4297f458b674eef916511ce27254b22b753ab66c"
+    },
+    {
+      "path": "144__The-authored-object-after-surprise-may-be-an-invariant__MULTISOURCE__INVARIANT-002__from-DERIVED_CURRENT_INQUIRY_2026.txt",
+      "bytes": 2941,
+      "sha256": "47a20d25e4a8c795c2c17daa20cc5357e6d1f65cae96bdb3924bca329ea123fe"
+    },
+    {
+      "path": "145__Exploration-differs-from-shopping-when-an-intermediate__USCO__SEARCH-001__from-DERIVED_CURRENT_INQUIRY_2026.txt",
+      "bytes": 2951,
+      "sha256": "53a84cc166cf5bbdccd98da855b996ec65344074cc0ea2b527343904cc96b758"
+    },
+    {
+      "path": "146__Prompt-craft-may-chiefly-produce-a-local-causal-model__SOURCEUNKNOWN__CRAFT-002__from-DERIVED_CURRENT_INQUIRY_2026.txt",
+      "bytes": 2909,
+      "sha256": "a2bd0d4be5e9471fa3fd7b6b52575ba6fcfaf5e1fbc58927a47441752d3b41a2"
+    },
+    {
+      "path": "147__A-generative-system-can-shape-not-only-answers-but-whi__DonYehiyaEtAl2023__QUESTIONSPACE-001__from-DERIVED_CURRENT_INQUIRY_2026.txt",
+      "bytes": 3333,
+      "sha256": "2fdf43a443916fe2d389b9f691f950dd75c9c90c25004ab2588a885d691796cc"
+    },
+    {
+      "path": "148__Creative-control-is-a-perceptible-action-to-future-cha__JungPolaniStone2011__CHANNEL-001__from-DERIVED_CURRENT_INQUIRY_2026.txt",
+      "bytes": 3237,
+      "sha256": "abc161c5b50169b4704a6561658cee3c0a35a65638d5204b3821bdcfcdfca220"
+    },
+    {
+      "path": "149__Control-decomposes-into-discovery-commitment-constrain__SternElectronics1982__ATTRIBUTION-001__from-DERIVED_CURRENT_INQUIRY_2026.txt",
+      "bytes": 3284,
+      "sha256": "5544737ca04c2b4bda281b9d93dc7fe5999ef67e09d582226b29c1cc3561c673"
+    },
+    {
+      "path": "150__Authorship-after-surprise-begins-when-an-unforeseen-di__USCO__AFTERSURPRISE-001__from-DERIVED_CURRENT_INQUIRY_2026.txt",
+      "bytes": 3462,
+      "sha256": "f8be08967067d5720b6fef1988737286710b195b0e9330e34347a916531c4077"
+    },
+    {
+      "path": "151__Sch-n-s-1992-Designing-as-Reflective-Conversation-exis__Schon1992Reflective__SOURCE-COLLISION-001__from-DERIVED_CURRENT_INQUIRY_2026.txt",
+      "bytes": 3267,
+      "sha256": "196738d2cee6abdfc32de371e58bfbb3768c546b88d13f776b96ffeffa77ab78"
+    },
+    {
+      "path": "CARDS.html",
+      "bytes": 93234,
+      "sha256": "d360cf32ee4d424738c845ca2cfaedea0f23932154aa5044b1f4f24bfb0a58d8"
+    },
+    {
+      "path": "MARK.svg",
+      "bytes": 254,
+      "sha256": "ae3a382ea496db1350cbc21dfbcb34f4c347e9975e97867699c178d435f04aa0"
+    },
+    {
+      "path": "NETWORK.html",
+      "bytes": 642139,
+      "sha256": "6c4bfa369cf494f3f242bfad4c1600067b440f8d5804e6155267e3423d27fad8"
+    },
+    {
+      "path": "NETWORK.svg",
+      "bytes": 46348,
+      "sha256": "8c0b309d8f7814d91ea761912d109b7d948de10030ea4d66a11f630b06756b4d"
+    },
+    {
+      "path": "READER.html",
+      "bytes": 1660335,
+      "sha256": "2bd893b4a739fd5fd963baa259606c6497ef6964c32f0c2cae2fdfd1587bd09d"
+    },
+    {
+      "path": "SLIPCASE_AFTER_SURPRISE_FINAL_2026-08-18__references.bib",
+      "bytes": 12397,
+      "sha256": "3d8c8ab3bec27eb99912727db9c5944533222bcbbb35457ff98ec79cead6e63e"
+    },
+    {
+      "path": "SLIPCASE_FINAL_PROMPT.txt",
+      "bytes": 20086,
+      "sha256": "a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a"
+    },
+    {
+      "path": "ZETTELS.json",
+      "bytes": 1002550,
+      "sha256": "52c777da43336303cbf036681024a5acf2d38ede4befcbf0abfd4035250004c4"
+    },
+    {
+      "path": "ZETTELS.jsonl",
+      "bytes": 976323,
+      "sha256": "901126241301e2d2cda468b6245e8782fbd8e40dda4808b1be3d2d7c8e6c0283"
+    },
+    {
+      "path": "ZETTELS.txt",
+      "bytes": 460631,
+      "sha256": "af3108dc8f3ebef259dc6e1f74f64a1e9b23cacd3385f4db5d3fbcd4a8d88878"
+    },
+    {
+      "path": "_ARRANGEMENTS/after-surprise-trail.txt",
+      "bytes": 251,
+      "sha256": "92913c5d4fe4e3021ab6e353a6be5f201583a26ff47edf4657b658d0840d29d1"
+    },
+    {
+      "path": "_MD/001__Precision-and-adequacy-are-independent-variables.__SELFSOURCE__ADEQUACY-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2004,
+      "sha256": "d7cd1394edd12909fb7d87566fff947829094d6aa06ff725fab1f57891564c75"
+    },
+    {
+      "path": "_MD/002__A-button-is-not-evidence-of-agency-if-the-causal-windo__SELFSOURCE__AGENCY-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 1951,
+      "sha256": "ca7f2115783a20bd7ab5f590c2c798927f563e97cf64c7805bd8b476b7051237"
+    },
+    {
+      "path": "_MD/003__Representational-loss-often-returns-as-correction-labo__SELFSOURCE__BURDEN-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2116,
+      "sha256": "157794259f19222af2bdbeab37529f6c07f5a7a936140d63bd9b51d3ed1f686c"
+    },
+    {
+      "path": "_MD/004__Geertz-s-shape-of-its-career-makes-provenance-only-hal__Geertz1976Art__CAREER-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3505,
+      "sha256": "9157bc8341ae002a607490f9d2061db1395831d7361a1f108fa8d49c0199f556"
+    },
+    {
+      "path": "_MD/005__A-category-becomes-infrastructure-when-it-is-compiled__SELFSOURCE__CATEGORY-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2225,
+      "sha256": "d87f985d38fd0bc76c25c5fdd0dadf29c94eceb0215dff1cf0aa1c2a5ce43d0e"
+    },
+    {
+      "path": "_MD/006__Circulation-is-a-sequence-of-transformations-not-neutr__SELFSOURCE__CIRCULATION-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2016,
+      "sha256": "141dd961f74cfa747d4363a58c2e2a43c8cba5f2a0cd0bf90f4055d13fb43c66"
+    },
+    {
+      "path": "_MD/007__Burrow-Giles-is-useful-because-the-Court-moves-from-th__BurrowGiles1884__CLASS-PATH-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3055,
+      "sha256": "5006098e37d9752cdc7d44ccc47e2612f503065f5fa4e75f380c9a88c47ea8cf"
+    },
+    {
+      "path": "_MD/008__Geertz-s-natural-history-of-signs-and-symbols-is-a-dir__Geertz1976Art__CLASS-PATH-002__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3530,
+      "sha256": "8191c8fb50f414483cbe62783a9501155ccf2ab08f178b702baf4c7ac2251be9"
+    },
+    {
+      "path": "_MD/009__Representation-can-help-make-reality-without-exhaustin__SELFSOURCE__CONSTITUTION-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2174,
+      "sha256": "768d8c365351a0b3f0676a8c9bbdf6e67b115e6f87163098d266e681d3701813"
+    },
+    {
+      "path": "_MD/010__Call-the-shot-converts-skill-from-retrospective-attrib__Sharpe1976Pinball__CONTROL-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3310,
+      "sha256": "9e9b483c89f361e4bbbd0e94f0566845fc668307cbf9e263ef759f067440630d"
+    },
+    {
+      "path": "_MD/011__The-Copyright-Office-recorded-624-iterations-but-treat__USCO2023Theatre__CONTROL-002__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3784,
+      "sha256": "2aa4c2019eff6cbc984d477e570185a7b4c5c451d6f5f25ce2c1f7916eb347de"
+    },
+    {
+      "path": "_MD/012__Correction-is-only-real-when-the-contested-difference__SELFSOURCE__CORRECTION-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2217,
+      "sha256": "b96fe13ad33b012818e0f86fcbe723bafb26a15e965f9e4090f59aa68586f815"
+    },
+    {
+      "path": "_MD/013__Compilation-can-be-obtained-by-freezing-the-source-pro__JonesGomardSestoft1993__FUTAMURA-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3889,
+      "sha256": "16400960b490c7ae9b92b4fc2ea82778caabb8818f136f491de8c696e20cfa87"
+    },
+    {
+      "path": "_MD/014__Self-application-turns-the-specializer-into-a-compiler__JonesGomardSestoft1993__FUTAMURA-002__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3485,
+      "sha256": "570edb64a4ff0ed7a76f848e409586c7b35c563d54b53a96b52497081a45a5e1"
+    },
+    {
+      "path": "_MD/015__Markov-did-not-build-a-model-of-Eugene-Onegin-s-poetry__Markov1913Onegin__MARKOV-ONEGIN-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3575,
+      "sha256": "57fd63ff4f3763b6e13f913c77aa3cdd81f3b6f99d5e5d5829d74f882deba3d7"
+    },
+    {
+      "path": "_MD/016__Eugene-Onegin-was-evidence-in-Markov-s-fight-about-ind__Markov1913Onegin__MARKOV-ONEGIN-002__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3785,
+      "sha256": "6196fcf49536c1df14031aee2d94285bb909e7d5785a59c8c86d460468d6883b"
+    },
+    {
+      "path": "_MD/017__Geertz-s-artistic-Markov-process-is-immediately-subord__Geertz1976Art__MARKOV-POET-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 4312,
+      "sha256": "fb4b6ce4c547e72eefcc87abd6cc7bc0c31eca5637e3532ce37adc43d7eef832"
+    },
+    {
+      "path": "_MD/018__The-audience-is-not-context-around-the-Moroccan-poem-i__Geertz1976Art__MARKOV-POET-002__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3819,
+      "sha256": "17703af4ec957fad9e3d431c5dccdaaf15eb40bef2b8f9b11031aba9c75f5242"
+    },
+    {
+      "path": "_MD/019__Geertz-s-1976-Markov-metaphor-and-the-HMM-turn-in-spee__Geertz1976Art__MARKOV-REVIVAL-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3809,
+      "sha256": "b43a1632644462908d83c7591a56044e90c3eaf799e6893ab0d27a14da2f6345"
+    },
+    {
+      "path": "_MD/020__Reflection-shifts-the-cultural-computational-boundary__KiczalesEtAl1991__METASTABLE-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 4632,
+      "sha256": "8b4f39c934266cbc70ff540e4444a5dc6db91d624369904aef9268fc887f5a60"
+    },
+    {
+      "path": "_MD/021__LLMs-did-not-create-the-first-machine-system-in-which__Winograd1971__MINIMUM-024__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3156,
+      "sha256": "38d3eb511dcb5cc5fa0e5ebdc00a4f16264bdffef08c46cfe87256b07f09367f"
+    },
+    {
+      "path": "_MD/022__The-culture-computer-boundary-cannot-rest-on-improvisa__Bourdieu1977__MINIMUM-025__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3470,
+      "sha256": "0d355e562150389013c20b5802ff2202cfa39754545bd3f5b330ceccf7e3dba3"
+    },
+    {
+      "path": "_MD/023__The-deeper-cultural-computational-difference-may-be-th__W3CSCXML2015__MINIMUM-026__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3672,
+      "sha256": "030992304f21d4cc16e27638cced07f2ed231dcb0660fff5354830c73c6d73d7"
+    },
+    {
+      "path": "_MD/024__The-surviving-scientific-boundary-is-not-culture-versu__Chomsky1959__MINIMUM-028__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 4983,
+      "sha256": "87fc98a6cbb4aa728df73827041134e2d4ae30bb6668ac2b4cf5a2b1e3ce947f"
+    },
+    {
+      "path": "_MD/025__Even-self-reference-and-recursion-theorem-construction__Jones2013PocketKnife__MINIMUM-029__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3350,
+      "sha256": "aca094a80430ed1fc65e8a9c1c116cafe91417af0296926ac73bd5341fc28589"
+    },
+    {
+      "path": "_MD/026__By-1980-researchers-were-not-merely-issuing-English-co__BiermannBallard1980__NLC-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3727,
+      "sha256": "2d1850e4a4ff4331ee42ea8d993e684b56d4bb012fd5a8cabbac59189184aa99"
+    },
+    {
+      "path": "_MD/027__Natural-language-ambiguity-was-made-executable-by-clos__BiermannBallard1980__NLC-002__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3893,
+      "sha256": "c8d53e797fbf9da18660998749a79326aca7982e1c3ae125d325ca6b1ac80162"
+    },
+    {
+      "path": "_MD/028__When-action-must-pass-through-representation-represent__SELFSOURCE__PASSAGE-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2173,
+      "sha256": "69a9193b8ed7c0a1d5f5f41925285f6190964096cbc04037ae772f8af9b21d00"
+    },
+    {
+      "path": "_MD/029__Reduction-is-necessary-for-action-but-omissions-differ__SELFSOURCE__PASSAGE-002__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2297,
+      "sha256": "d2bb0e5faa18e9e79f2c3e9b6d9d4d39e7ace0e1f220f0addd2e133c0284b9cc"
+    },
+    {
+      "path": "_MD/030__The-essay-s-strongest-invariant-is-not-human-control-b__USCO__PATH-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3856,
+      "sha256": "56e12991d99eed61f6dacee6b63c73b3df0dccd65697f977fde71c4aac29b5c5"
+    },
+    {
+      "path": "_MD/031__The-strongest-revision-of-call-the-shot-is-locate-the__USCO__PATH-002__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3784,
+      "sha256": "4d733543ac2b6a0228808bd33f0b447e1d08a777a64da13d0756da2b47839fe1"
+    },
+    {
+      "path": "_MD/032__Plural-coordination-requires-common-reductions-without__SELFSOURCE__PLURAL-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2076,
+      "sha256": "ae1d697261a1a1e4ba1fb48d25aba5addbecfd34e9de5bd794f95de31e26454f"
+    },
+    {
+      "path": "_MD/033__An-acceptable-programming-language-explicitly-places-p__Jones2013PocketKnife__PROGRAMROLE-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3322,
+      "sha256": "1bbed30b7351bcc5a339a345214f9e9e62e805ffc87251e207b2742175a5f2b2"
+    },
+    {
+      "path": "_MD/034__Kleene-s-recursion-theorem-permits-an-explicit-interch__Jones2013PocketKnife__PROGRAMROLE-002__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3517,
+      "sha256": "db35bbdaad8092fb4147e6f2a9d6e8a6831e5af543418f1a4c31157d39276b24"
+    },
+    {
+      "path": "_MD/035__Turing-s-universal-machine-makes-the-rules-portable-by__Turing1936__PROGRAMROLE-003__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3650,
+      "sha256": "360444dcbe4d5b1e97f006fb298f3ff913907fc43281737ec394c1e2330cd281"
+    },
+    {
+      "path": "_MD/036__TruthfulQA-generates-false-answers-under-greedy-decodi__LinHiltonEvans2021__PROMPT-010-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3685,
+      "sha256": "7ec329e30aa4fd30ef497128e535afc111ba1f6462d807fd0acee2287ae11bcd"
+    },
+    {
+      "path": "_MD/037__TruthfulQA-splits-falsehood-before-decoding-into-failu__LinHiltonEvans2021__PROMPT-010-B__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3839,
+      "sha256": "715b9af26510843dd8a6a0210ea106de5cff60de17a2b63d0c098a01052819a0"
+    },
+    {
+      "path": "_MD/038__Hallucination-is-not-logically-caused-by-stochastic-de__Schick2023Toolformer__PROMPT-010__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3349,
+      "sha256": "2fc9dd167e7ba23951184245c1b2060a15d5eff3065e85e6329421a3ea52d7ec"
+    },
+    {
+      "path": "_MD/039__Metaobject-protocols-invalidate-fixed-language-behavio__KiczalesEtAl1991__REFLECT-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3984,
+      "sha256": "56b0d6a2f5369369350e9437c49915ce5ecd0e60b95c444d7c04afd576b79a8d"
+    },
+    {
+      "path": "_MD/040__Maude-makes-the-transition-theory-itself-into-data-tha__DuranEtAl2019__REFLECT-002__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3837,
+      "sha256": "cf0226c5bc10356502400fe103c076d45d7bd59c7dcc0903ffe1e706b075acbb"
+    },
+    {
+      "path": "_MD/041__Self-reference-does-not-require-a-syntactic-reflection__Jones2013PocketKnife__REFLECT-003__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3828,
+      "sha256": "e654fce2410dbe82fe8687f921a0aecbe0051e120f7430d08248098d1eb1529c"
+    },
+    {
+      "path": "_MD/042__Cage-deliberately-relocates-artistic-responsibility-fr__Cage1990Autobiographical__RETENTION-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3184,
+      "sha256": "eac52bdaf98f4d11d909eda03de3b2806b451a5fd155a0686889f5d4e6a33167"
+    },
+    {
+      "path": "_MD/043__Generative-art-is-defined-by-ceding-subsequent-control__Galanter2003Generative__RETENTION-002__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3586,
+      "sha256": "b9c3c97587c693d8ac20339362f42f365b26acc4c8f0b300fa5427e5c2b86c7c"
+    },
+    {
+      "path": "_MD/044__Wall-Drawing-88-does-not-specify-one-final-image-it-sp__SOURCEUNKNOWN__RETENTION-003-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3382,
+      "sha256": "3480fd08a99856623e35804ca9304a61c0fc5e2950f9db0749795bad73d95ec6"
+    },
+    {
+      "path": "_MD/045__Wall-Drawing-274-stores-not-the-decision-but-the-autho__SOURCEUNKNOWN__RETENTION-003-B__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3135,
+      "sha256": "9bce7b0e2b5821b721a6dea50dad43053a68ae14c0fa718ed3977f69d72244b4"
+    },
+    {
+      "path": "_MD/046__Wall-Drawing-237-proves-that-even-a-highly-specific-in__SOURCEUNKNOWN__RETENTION-003-C__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3094,
+      "sha256": "7b0439b079bb682b224cdb19152b55ec80179149a074305280999defe4faa799"
+    },
+    {
+      "path": "_MD/047__Wall-Drawing-797-makes-unpredictable-execution-drift-t__SOURCEUNKNOWN__RETENTION-003-D__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3075,
+      "sha256": "7111d9834ea1fe258ecbed72ddf0777e5234a6ff7a0c82679f1bcff5416d8b42"
+    },
+    {
+      "path": "_MD/048__Wall-Drawing-65-specifies-randomness-itself-as-an-arti__SOURCEUNKNOWN__RETENTION-003-E__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2976,
+      "sha256": "6952bfcb4d2176285e2f2796824f80afd292baae629b802908451e60fdc39d00"
+    },
+    {
+      "path": "_MD/049__LeWitt-s-later-account-reopens-execution-after-his-196__LeWitt1967Paragraphs__RETENTION-003-F__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3220,
+      "sha256": "2a5936e6e139e43bb30426fc6437c2a2607d36ddeeb9d7ef08dd56ed87890b0f"
+    },
+    {
+      "path": "_MD/050__Wall-Drawing-289-separates-the-persistent-work-from-ev__SOURCEUNKNOWN__RETENTION-003-G__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3385,
+      "sha256": "ff6fd2d6ab4d038940632e1b32412a971e1aa5244c9ebcb5b95abd9c3b696f25"
+    },
+    {
+      "path": "_MD/051__LeWitt-s-wall-drawings-split-specification-precision-f__MULTISOURCE__RETENTION-003-H__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3727,
+      "sha256": "10bb3d1d9e4909d47ca68c5820459e72b387f9db05792c5a53cd90a07846773c"
+    },
+    {
+      "path": "_MD/052__LeWitt-moves-the-consequential-branches-almost-entirel__LeWitt1967Paragraphs__RETENTION-003__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3026,
+      "sha256": "84809c07a44e2e7eb38986be107f7aeff20a152b7b85d742fd765df777d92c1a"
+    },
+    {
+      "path": "_MD/053__Duchamp-makes-selection-itself-intentional-while-attem__Duchamp1961Readymades__RETENTION-004__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3339,
+      "sha256": "d91dcebf90e94153a45bb9a0d0fc5cb695074d119c43b6487bc8254a8835bc13"
+    },
+    {
+      "path": "_MD/054__A-prompt-can-itself-be-a-copyrighted-work-even-when-th__USCO2025Copyrightability__RETENTION-005-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3881,
+      "sha256": "c6098821bbc733c5112dae6b4509f180b9b37c93992455feabf8f9f03676fce7"
+    },
+    {
+      "path": "_MD/055__The-more-a-prompt-behaves-like-a-program-the-less-copy__USC17Section102__RETENTION-005-B__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3960,
+      "sha256": "03797117f361f5405164df2866789cca7c33f95f49d4a7879af528f285c494ca"
+    },
+    {
+      "path": "_MD/056__The-Allen-decision-could-not-inspect-the-artistic-obje__USCO2023Theatre__RETENTION-005-C__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3968,
+      "sha256": "cd84bb5e21daf7d1eff8b901e70b1ab4a9051411e69cec9837d31a0076c50505"
+    },
+    {
+      "path": "_MD/057__Re-rolling-the-dice-collapses-two-technically-differen__USCO2025Copyrightability__RETENTION-005-D__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3727,
+      "sha256": "d468d7dc2f8b4281956b09a4eda5e3ff97939facf66875a21d1aacfce09e3baa"
+    },
+    {
+      "path": "_MD/058__Prompt-to-Prompt-proves-that-prompt-control-is-not-a-p__HertzEtAl2022PromptToPrompt__RETENTION-005-E__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 4000,
+      "sha256": "45e0d0a2b81765575473998287d0dcb253b28d20c21b34f549a80747b1e967db"
+    },
+    {
+      "path": "_MD/059__Attend-and-Excite-separates-an-expressive-decision-wri__CheferEtAl2023Attend__RETENTION-005-F__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3150,
+      "sha256": "8fd6de4d468ab23f3908ee0c51019beefd9f46e36e5ef58a44d3c41db556f199"
+    },
+    {
+      "path": "_MD/060__ControlNet-makes-the-prompt-only-one-channel-in-a-vect__ZhangRaoAgrawala2023ControlNet__RETENTION-005-G__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2918,
+      "sha256": "3cdca94398963462bd75a111876732e38dbfa2dd07d6e91fb385068879bedb19"
+    },
+    {
+      "path": "_MD/061__Textual-Inversion-allows-an-artist-to-create-a-new-wor__GalEtAl2022TextualInversion__RETENTION-005-H__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2983,
+      "sha256": "74d33f003123031dd43a51a50fbe06fb75d20d4805bb21d510eae5950f22842e"
+    },
+    {
+      "path": "_MD/062__The-Beijing-Internet-Court-and-U.S.-Copyright-Office-d__USCO__RETENTION-005-I__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2490,
+      "sha256": "7dbdd63354c469a760aaff90b86feaf7cc35d8de35a7ea2ff34f18aa2fd5707d"
+    },
+    {
+      "path": "_MD/063__The-same-prompting-act-can-be-classified-as-insufficie__USCO__RETENTION-005-J__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2898,
+      "sha256": "aeefa206cd45c868521775ae90a2eff38d12fa939c1abc52123cbd0a4f797c30"
+    },
+    {
+      "path": "_MD/064__Alfred-Bell-makes-keep-that-legally-powerful-only-afte__USCO__RETENTION-005-K__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2502,
+      "sha256": "6cdd3ebcd326891e30724c005ed9324ee17983d549882d04bbc29decf0853227"
+    },
+    {
+      "path": "_MD/065__Thaler-closes-the-machine-as-author-theory-without-dec__SOURCEUNKNOWN__RETENTION-005-L__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2529,
+      "sha256": "84571144bcba3eaa78ad150031628174988039714c46311040c674c44e867f80"
+    },
+    {
+      "path": "_MD/066__Samuelson-Sprigman-and-Sag-reject-the-requirement-of-a__USCO__RETENTION-005-M-A-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2603,
+      "sha256": "cf8ee11353e49b9d71953117425b4d9711da92f81e632456188fd96a87587848"
+    },
+    {
+      "path": "_MD/067__The-strongest-U.S.-opposition-does-not-claim-that-deta__USCO__RETENTION-005-M-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2471,
+      "sha256": "a059ca8c656a54230fc2c79542b0364478155ca4e79d8296356e6a5427b41e6e"
+    },
+    {
+      "path": "_MD/068__Andrien-creates-an-expressive-surplus-problem-for-gene__SOURCEUNKNOWN__RETENTION-005-M-B-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2647,
+      "sha256": "b11cdeca046fcae544b94d2897e44a9f35dbbcc7a145e05b09182fbbe2198c06"
+    },
+    {
+      "path": "_MD/069__Andrien-makes-the-difficult-boundary-not-tool-versus-a__SOURCEUNKNOWN__RETENTION-005-M-B__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2421,
+      "sha256": "6ad7a386a4cee989f682bfe804db153f226b2f4a1a19eed060f8ee39d6682586"
+    },
+    {
+      "path": "_MD/070__The-prompt-dispute-contains-two-hidden-thresholds-how__USCO__RETENTION-005-M-C__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2192,
+      "sha256": "65b8742787b3903f2d7334ba4d2a53d19c811776eac80996a459b04840b20875"
+    },
+    {
+      "path": "_MD/071__There-is-no-judicial-dissent-from-the-Copyright-Office__USCO__RETENTION-005-M__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2653,
+      "sha256": "80aa5ae40e36314ea8bd1d7e1ad1b21a7a7c41f96263d471e2cd0eab6ef32876"
+    },
+    {
+      "path": "_MD/072__Prompt-expansion-turns-underspecification-into-a-machi__SOURCEUNKNOWN__RETENTION-005-N-A-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2338,
+      "sha256": "2a9266f62c0e6dae71afe79272b5fae3b3ee77d7ac9be25793eee995a182d2d9"
+    },
+    {
+      "path": "_MD/073__Prompt-expansion-is-not-a-compiler-in-the-ordinary-sem__SOURCEUNKNOWN__RETENTION-005-N-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2206,
+      "sha256": "a0bfe8a505a7139512eba1aee93de896a6d08cc67c46062c5fb9d2f57e1cdc4d"
+    },
+    {
+      "path": "_MD/074__Prompt-optimization-creates-an-invisible-normative-lay__SOURCEUNKNOWN__RETENTION-005-N-B-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2450,
+      "sha256": "9a33dac978e0bffa49b20ff7ce8e83c831934c217b22e360606fafc7212474e3"
+    },
+    {
+      "path": "_MD/075__Automatic-prompt-optimization-can-make-the-machine-tea__SOURCEUNKNOWN__RETENTION-005-N-B__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2395,
+      "sha256": "1485acfbf1e53cd4e7fe92df7bc385d600c777c01901896bdf0c83961524ffe7"
+    },
+    {
+      "path": "_MD/076__Approval-can-convert-machine-added-prompt-content-from__USCO__RETENTION-005-N-C__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2249,
+      "sha256": "9c1f6c9754e6347e1b8ae373b0642da4b718676f35b605871f41a8f96c33ba77"
+    },
+    {
+      "path": "_MD/077__In-systems-that-rewrite-prompts-internally-the-user-ma__USCO__RETENTION-005-N__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2413,
+      "sha256": "b35f3d2dc5ae8bf4883bfc9d66367885fbff3cf2e8624c34359dfd686da35ff6"
+    },
+    {
+      "path": "_MD/078__The-human-authorship-doctrine-moved-from-an-open-1966__SOURCEUNKNOWN__RETENTION-005-O-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2194,
+      "sha256": "4da70d5c665d85788d391b49189e2669c7985f8d9a2afc814309fabdfc4ac865"
+    },
+    {
+      "path": "_MD/079__CONTU-s-influential-computer-as-tool-model-depended-on__SOURCEUNKNOWN__RETENTION-005-O-B__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2284,
+      "sha256": "1706962eccf3c0d2b79dd11d77c46e25a298624059793f5767baa8fda5c0b520"
+    },
+    {
+      "path": "_MD/080__Generative-iteration-breaks-the-old-conception-executi__USCO__RETENTION-005-O-C__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2170,
+      "sha256": "3b400d713c1a8f6adcb3064ce7fb3bb75bf66130a2f1312ec8bb4cc62da8f703"
+    },
+    {
+      "path": "_MD/081__The-Copyright-Office-s-current-traditional-elements-of__USCO__RETENTION-005-O__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2630,
+      "sha256": "ba8fb149843b1fc296839a5cf2b822e9b022e5242eb40b2de041d8e1efc02b86"
+    },
+    {
+      "path": "_MD/082__The-Copyright-Office-makes-authorship-technologically__USCO__RETENTION-005-P__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2536,
+      "sha256": "6ce17a64b36b5ca158575e77ed9326a351af0113161e565c0939f1fa12bdbc1e"
+    },
+    {
+      "path": "_MD/083__Li-v.-Liu-did-not-hold-that-negative-prompts-independe__SOURCEUNKNOWN__RETENTION-005-Q-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2138,
+      "sha256": "51ff9d5caf125e190d1bac7e24b4f94e80a2a57dc169c7ff427f59a9d8d68e83"
+    },
+    {
+      "path": "_MD/084__A-negative-prompt-does-not-simply-subtract-a-forbidden__SOURCEUNKNOWN__RETENTION-005-Q-B__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2361,
+      "sha256": "9ae4e7a0f2d740de2ed2bfff08b809dae668c00e811cdf0eba9b2d836eb9d016"
+    },
+    {
+      "path": "_MD/085__An-exclusion-can-be-causally-decisive-while-leaving-no__USCO__RETENTION-005-Q-C__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2173,
+      "sha256": "4388f7583b51ab2c84e1669772cb436f0a1d5c7b3885233a6f4b9a980d92bb6b"
+    },
+    {
+      "path": "_MD/086__The-negative-prompt-is-an-authored-refusal-it-controls__SOURCEUNKNOWN__RETENTION-005-Q__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2377,
+      "sha256": "e3e730bb07eb3c9bdffb25e683d50fae81aeeaf63bf5e4cc404ff221929c0d74"
+    },
+    {
+      "path": "_MD/087__Original-intention-can-be-a-retrospective-fiction-beca__Schon__RETENTION-005-R-A-A-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2472,
+      "sha256": "d0b67faccdb1b92240b4401e8f068a5df0d4a4f6fb3fd9f541a245631900cfe4"
+    },
+    {
+      "path": "_MD/088__Iterative-prompting-creates-an-identification-problem__SOURCEUNKNOWN__RETENTION-005-R-A-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2436,
+      "sha256": "7df0a422c2282f50cefe29331999f5f39508f294a790362776c95a5e7345c318"
+    },
+    {
+      "path": "_MD/089__A-prompt-trajectory-records-not-only-the-artist-learni__SOURCEUNKNOWN__RETENTION-005-R-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2352,
+      "sha256": "4be1f6b3e7a19c6536994b1de1117fef6888240b8ff15adbadd42df20c2cc6c5"
+    },
+    {
+      "path": "_MD/090__If-prompt-and-image-constitute-one-practice-object-mod__SOURCEUNKNOWN__RETENTION-005-R-B-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2334,
+      "sha256": "102d8891b739432d530d90e3ad38bb9adb593a37138f63ab9083d70faa22dac7"
+    },
+    {
+      "path": "_MD/091__Prompt-artists-sometimes-treat-the-prompt-and-image-to__SOURCEUNKNOWN__RETENTION-005-R-B__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2263,
+      "sha256": "13f0cc9cd108488159ba4ee465bf1508c8e01dce2ba39e0a3ebb13a486db3f86"
+    },
+    {
+      "path": "_MD/092__A-raw-prompt-history-is-provenance-but-becomes-evidenc__USCO__RETENTION-005-R-C__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2109,
+      "sha256": "7346ffdc35030e0a3d0dfd435b970246e9b05ed5e6d6be134ee61df5071c369a"
+    },
+    {
+      "path": "_MD/093__The-prompt-history-may-be-the-most-informative-authore__USCO__RETENTION-005-R__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2695,
+      "sha256": "349caf1ea17b9cc22fef20dbf6a33f00d6a94dc3a293afbbf43679b9c5b8ebe0"
+    },
+    {
+      "path": "_MD/094__Midway-s-player-is-denied-authorship-not-because-the-p__SOURCEUNKNOWN__RETENTION-005-S-A-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2375,
+      "sha256": "c5eaac79b41d9f68b66be9c482b98e00265c6cfd0d45b337decdf30fc754104c"
+    },
+    {
+      "path": "_MD/095__Stern-Electronics-defeats-the-proposition-that-traject__SOURCEUNKNOWN__RETENTION-005-S-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2240,
+      "sha256": "85dc72642ab9214055a767a2cfaa13c8db0f188a00a65ded2c3ecbf79468779a"
+    },
+    {
+      "path": "_MD/096__Stern-Electronics-suggests-a-narrower-replacement-for__SOURCEUNKNOWN__RETENTION-005-S-B__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2467,
+      "sha256": "fa28a5f15a6ed38ca80d67c7f725f19cff4d5301aa86b69a1c132601f6a9c901"
+    },
+    {
+      "path": "_MD/097__Copyright-already-treats-the-generating-program-and-it__SOURCEUNKNOWN__RETENTION-005-S-C-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2374,
+      "sha256": "2d9088f05c81984c7e18d7cf24f2c5689b3a300cfe76b4152631da31504b7712"
+    },
+    {
+      "path": "_MD/098__Authorship-of-a-generator-does-not-automatically-imply__USCO__RETENTION-005-S-C__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2359,
+      "sha256": "c2b20431796b84944081a8a1f7b318839eefbff69b4858b3ff69ebcc69d7b454"
+    },
+    {
+      "path": "_MD/099__The-deepest-legal-disagreement-is-whether-authorship-r__USCO__RETENTION-005-S__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2749,
+      "sha256": "c8d646b7fa788bf60b0ee99bb88a53a0b63a65c04805a24fcbf75329709a7fff"
+    },
+    {
+      "path": "_MD/100__Prompt-vocabulary-is-only-the-shallowest-layer-of-AI-c__SOURCEUNKNOWN__RETENTION-005-T-A-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2404,
+      "sha256": "9390421fc0d0d9f3bd7cf82949ad194dd7d6f14c8d4c9f285757045670944381"
+    },
+    {
+      "path": "_MD/101__Prompt-craft-includes-learning-specialized-vocabulary__SOURCEUNKNOWN__RETENTION-005-T-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2259,
+      "sha256": "d3f5385a5a1a161ec49813b1b8d13da631e425fc9170a7c7efb05bc7d5c38bb1"
+    },
+    {
+      "path": "_MD/102__Model-accommodation-can-become-recursively-self-confir__SOURCEUNKNOWN__RETENTION-005-T-B-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2422,
+      "sha256": "ac33e4f315130a6c67c8b809972356331a57f71bafa108d370692d9f864f7b96"
+    },
+    {
+      "path": "_MD/103__Prompt-expertise-can-improve-by-adapting-to-a-model-wh__SOURCEUNKNOWN__RETENTION-005-T-B__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2328,
+      "sha256": "a01df230d6a8131d7c5f27ed9fcf30e7a699e51d56418bb221cb27c0f6542722"
+    },
+    {
+      "path": "_MD/104__Prompt-templates-can-function-simultaneously-as-artist__SOURCEUNKNOWN__RETENTION-005-T-C__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2342,
+      "sha256": "2f102076b24fabda80cb991f4803b534c73c1bbc197abfb1e767490fa672271f"
+    },
+    {
+      "path": "_MD/105__A-platform-can-improve-its-outputs-while-decreasing-th__Jung-Polani-Stone__RETENTION-005-T-D-A-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2430,
+      "sha256": "9ed3914464885f73ab96b601f12024fc1c508f083ae89558743447536a99a292"
+    },
+    {
+      "path": "_MD/106__Platformization-can-destroy-artistic-agency-without-de__SOURCEUNKNOWN__RETENTION-005-T-D-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2765,
+      "sha256": "81beac86c98bd7ddd28ccb3caedd250e96ff40d62b31d0d74a97390b305850f0"
+    },
+    {
+      "path": "_MD/107__A-model-glitch-can-become-craft-knowledge-making-techn__SOURCEUNKNOWN__RETENTION-005-T-D__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2043,
+      "sha256": "04603ea06d354a1707e9076f44fa8ec80286c6f1925fd7f0a77bc1bd7cf5ffa3"
+    },
+    {
+      "path": "_MD/108__Prompting-may-be-legally-weakest-exactly-where-it-is-a__USCO__RETENTION-005-T__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2758,
+      "sha256": "3a2d4e5f4213203883b07d4a458920042d31bfc9ea9bfbfe59e865649c4f6fd9"
+    },
+    {
+      "path": "_MD/109__The-deepest-split-across-the-seven-parents-is-not-huma__MULTISOURCE__RETENTION-005-X__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2426,
+      "sha256": "0f4bec7f154a42d2575648c74dc47d2197eb74d2a810c5bf7aaa0724d9381337"
+    },
+    {
+      "path": "_MD/110__The-expressive-variable-may-not-exist-before-the-act-t__Schon__RETENTION-005-Y-A__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2528,
+      "sha256": "e6eb132bfc453a8666dff3adf36bd3005a095cb61cacda5da3a195591fb48a69"
+    },
+    {
+      "path": "_MD/111__Control-can-be-measured-as-how-many-distinguishable-fu__Jung-Polani-Stone__RETENTION-005-Y-B__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2496,
+      "sha256": "9fba076daf88bdbcfd468f3926d955f11f06e0de02401c5a55ea7c20a18230c4"
+    },
+    {
+      "path": "_MD/112__Unseen-control-is-weaker-than-craft-because-empowermen__Jung-Polani-Stone__RETENTION-005-Y-C__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2255,
+      "sha256": "4754769d5e73402ec730a2acdbee0d39d0a9d6d32874be151aa2c59aa9e4dd70"
+    },
+    {
+      "path": "_MD/113__Agency-in-a-co-creative-system-has-two-opposite-direct__SOURCEUNKNOWN__RETENTION-005-Y-D__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2280,
+      "sha256": "02a3c4e32182e9fae72047e1c5ac66ac54f5dda9ee7a35b101c1f2c04dd59712"
+    },
+    {
+      "path": "_MD/114__A-creative-assistant-need-not-infer-what-the-artist-wa__SOURCEUNKNOWN__RETENTION-005-Y-E__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2606,
+      "sha256": "e7eb650ca1745a5022e0f11006f1bf8ee7d6c96252b60919ef1d808be91a3d8b"
+    },
+    {
+      "path": "_MD/115__A-creative-interface-cannot-preserve-distinctions-it-l__SOURCEUNKNOWN__RETENTION-005-Y-F__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2493,
+      "sha256": "2849920de7f70a6b7331da96afa7176ec11e8d15ead357b496e9f7d3f9f7cd7c"
+    },
+    {
+      "path": "_MD/116__The-children-converge-on-a-new-distinction-expressive__MULTISOURCE__RETENTION-005-Y__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2787,
+      "sha256": "37f166c14ffec3de4b188e13bef480ca54e66df71fac75bd0a73b8da713fceaf"
+    },
+    {
+      "path": "_MD/117__Current-U.S.-copyright-analysis-permits-human-authorsh__USCO2025Copyrightability__RETENTION-005__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3669,
+      "sha256": "4bc470fb20aa95ad13ea0f4d4adec2098459791be453c31b1e820b59662afb43"
+    },
+    {
+      "path": "_MD/118__Keep-that-is-not-one-operation-it-contains-at-least-fo__USCO__RETENTION-006__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3330,
+      "sha256": "c81b3e0976138746efe370739744cb69617ecadef5dd63ca0aa9e711106ab246"
+    },
+    {
+      "path": "_MD/119__Representations-can-manufacture-the-magnitude-they-lat__SELFSOURCE__SCALE-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2084,
+      "sha256": "f431a82cf848e4973c61f86397ef8d2df3fe707d29e1ea90d0075afc26b4e64a"
+    },
+    {
+      "path": "_MD/120__Partial-evaluation-turns-input-data-into-program-struc__JonesGomardSestoft1993__STAGING-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3710,
+      "sha256": "2f2fb670b874998a123bc4dfd76f96c1cded1419a27972f67e00026c17645f9f"
+    },
+    {
+      "path": "_MD/121__A-configuration-file-can-become-code-merely-because-it__JonesGomardSestoft1993__STAGING-002__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3442,
+      "sha256": "73eb5f862d4580da9fe46db36f44338ac4b0c21bd34f84a697215cbeb508c95e"
+    },
+    {
+      "path": "_MD/122__Partial-evaluation-introduces-a-second-control-problem__JonesGomardSestoft1993__STRATEGY-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3521,
+      "sha256": "f8c763279cad5b09bc0fb76fe4797aedd342823940a325b9b7f331c9f80ba19e"
+    },
+    {
+      "path": "_MD/123__The-simulation-s-dominant-transformation-was-condition__SELFSOURCE__SYNTEGRITY-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2080,
+      "sha256": "77d8228157343ea72811ab80ec4f3f685b434ac7e1f3d09f8fd8d3f49465733c"
+    },
+    {
+      "path": "_MD/124__Availability-was-repeatedly-weaker-than-intervention-a__SELFSOURCE__SYNTEGRITY-002__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2089,
+      "sha256": "0f20f186065a51d70de00431769901648827c7fb7a847e90c3ba7a384f72cda8"
+    },
+    {
+      "path": "_MD/125__The-observer-network-functioned-as-a-lateral-nervous-s__SELFSOURCE__SYNTEGRITY-003__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2296,
+      "sha256": "216db8d9bded42c0c76c7ec304e9c5193e0bf64ed2aa442c5b6b08e45f9aae2e"
+    },
+    {
+      "path": "_MD/126__Distributed-discourse-was-achieved-without-distributed__SELFSOURCE__SYNTEGRITY-004__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2123,
+      "sha256": "69513829b4a66be9d9c256de4097b55f2d8c896eb64783bf45158f193412b4f9"
+    },
+    {
+      "path": "_MD/127__An-omniscient-analyst-can-reconstruct-collective-intel__SELFSOURCE__SYNTEGRITY-005__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2239,
+      "sha256": "e769d39fff82df9d24695f54d6003ed31fc3ab0bc58da152ea71e1d61aed284e"
+    },
+    {
+      "path": "_MD/128__The-network-s-most-productive-claims-changed-function__SELFSOURCE__SYNTEGRITY-006__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2169,
+      "sha256": "52a05912f9899ac785d8d72327c6c31a0f567dced81fcebd7622590da30a4aa7"
+    },
+    {
+      "path": "_MD/129__Representations-do-not-merely-operate-in-time-they-all__SELFSOURCE__TIME-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 1961,
+      "sha256": "8b2111be632ed980c764fedd71f3e47ad0120e6d45fb49a92333ab3bf72db81a"
+    },
+    {
+      "path": "_MD/130__Maude-states-explicitly-that-executability-is-relative__ClavelEtAl2003__UPTAKE-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3932,
+      "sha256": "d17ed8c4a8fc5cbbc2c2c3c36607c0c5d9b0c311dfc36c114509b30cbf488c82"
+    },
+    {
+      "path": "_MD/131__A-transition-relation-can-be-fully-specified-while-the__DuranEtAl2019__UPTAKE-002__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 3685,
+      "sha256": "0975b466dc93f51722ed3aece4fb17eb3956c6d7236cbe56176ec585fe697bfd"
+    },
+    {
+      "path": "_MD/132__The-strongest-surviving-invariant-may-be-not-specified__BiermannBallard1980__UPTAKE-003__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 5084,
+      "sha256": "7370b52329d10e7929dbad0974b265343b28f703a9619644badd3220f5bd2578"
+    },
+    {
+      "path": "_MD/133__The-target-is-not-complete-representation-but-warrante__SELFSOURCE__WARRANT-001__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2220,
+      "sha256": "2e9d55cbda2f1f965f4787e35bb74dd689fa704b0e27439aef447223059f0637"
+    },
+    {
+      "path": "_MD/134__The-simulation-s-substantive-and-methodological-output__SELFSOURCE__WARRANT-002__from-PRESERVED_BASELINE_RESEARCH_.md",
+      "bytes": 2244,
+      "sha256": "7dfbf6be356b0d2448616841bee495150a4085473a72e63d747c596be0be2e50"
+    },
+    {
+      "path": "_MD/135__The-choice-space-of-a-creative-act-can-be-produced-by__schon1992reflective__DISCOVERY-001__from-DERIVED_NEW_ZETTEL_VERIFIED_.md",
+      "bytes": 3428,
+      "sha256": "fe0efa0a884cd78088b154be6a414bb96a04c5f3fb9937445a3cf8c5fd830457"
+    },
+    {
+      "path": "_MD/136__The-strongest-challenge-to-the-re-roll-account-is-not__samuelson2023comments__EXPLORATORY-001__from-DERIVED_NEW_ZETTEL_VERIFIED_.md",
+      "bytes": 3976,
+      "sha256": "bcbeafc2736f441fbfc8acad6e7b4bd86450a08215e1de187c1882a156bc50b6"
+    },
+    {
+      "path": "_MD/137__High-causal-influence-over-a-realized-path-can-remain__midway1983__PLAYER-001__from-DERIVED_NEW_ZETTEL_VERIFIED_.md",
+      "bytes": 3003,
+      "sha256": "36f4a468291b57d4743fa587a1e9cdfafdbb94d0d752a7a5f47047651a74c4d7"
+    },
+    {
+      "path": "_MD/138__Variable-realizations-do-not-erase-authorship-when-rec__stern1982__INVARIANT-001__from-DERIVED_NEW_ZETTEL_VERIFIED_.md",
+      "bytes": 3106,
+      "sha256": "b2e363593bfaaaa066f9a5479d217e75c3f6062a495f1e5f5129a8ee3df45de3"
+    },
+    {
+      "path": "_MD/139__Nominal-interface-choice-is-weaker-than-an-action-chan__jung2011empowerment__EMPOWERMENT-001__from-DERIVED_NEW_ZETTEL_VERIFIED_.md",
+      "bytes": 3112,
+      "sha256": "feed8b68f613871f22476064fcc3b4af97e1f659a0420141c1bb00f1af7ebd3f"
+    },
+    {
+      "path": "_MD/140__The-strongest-evidence-of-exploratory-authorship-may-b__USCO__NEXTSHOT-001__from-DERIVED_NEW_ZETTEL_VERIFIED_.md",
+      "bytes": 4127,
+      "sha256": "00b21dfe98028c0814ff84af05f45ea92be0d8bef03437dbbdf10501d469ab3a"
+    },
+    {
+      "path": "_MD/141__Some-generations-are-epistemic-actions-rather-than-can__KirshMaglio1994Epistemic__EPISTEMIC-001__from-DERIVED_CURRENT_INQUIRY_2026.md",
+      "bytes": 3119,
+      "sha256": "67949f94790447d73a4950e6679fbf1e4b35c3d0054d96857ed86c01fa58833c"
+    },
+    {
+      "path": "_MD/142__The-expressive-variable-may-be-born-during-making-rath__Schon1992Reflective__DISCOVERY-002__from-DERIVED_CURRENT_INQUIRY_2026.md",
+      "bytes": 3217,
+      "sha256": "83c0f4bdc3924ab5a7f6e40e3b0245fa93d80dd11352b818c5ad608ccf06b256"
+    },
+    {
+      "path": "_MD/143__Later-stabilization-of-a-surprise-does-not-travel-back__USCO2025Copyrightability__FRONTIER-001__from-DERIVED_CURRENT_INQUIRY_2026.md",
+      "bytes": 3754,
+      "sha256": "241ec20afbfecc24a62115cd4297f458b674eef916511ce27254b22b753ab66c"
+    },
+    {
+      "path": "_MD/144__The-authored-object-after-surprise-may-be-an-invariant__MULTISOURCE__INVARIANT-002__from-DERIVED_CURRENT_INQUIRY_2026.md",
+      "bytes": 2941,
+      "sha256": "47a20d25e4a8c795c2c17daa20cc5357e6d1f65cae96bdb3924bca329ea123fe"
+    },
+    {
+      "path": "_MD/145__Exploration-differs-from-shopping-when-an-intermediate__USCO__SEARCH-001__from-DERIVED_CURRENT_INQUIRY_2026.md",
+      "bytes": 2951,
+      "sha256": "53a84cc166cf5bbdccd98da855b996ec65344074cc0ea2b527343904cc96b758"
+    },
+    {
+      "path": "_MD/146__Prompt-craft-may-chiefly-produce-a-local-causal-model__SOURCEUNKNOWN__CRAFT-002__from-DERIVED_CURRENT_INQUIRY_2026.md",
+      "bytes": 2909,
+      "sha256": "a2bd0d4be5e9471fa3fd7b6b52575ba6fcfaf5e1fbc58927a47441752d3b41a2"
+    },
+    {
+      "path": "_MD/147__A-generative-system-can-shape-not-only-answers-but-whi__DonYehiyaEtAl2023__QUESTIONSPACE-001__from-DERIVED_CURRENT_INQUIRY_2026.md",
+      "bytes": 3333,
+      "sha256": "2fdf43a443916fe2d389b9f691f950dd75c9c90c25004ab2588a885d691796cc"
+    },
+    {
+      "path": "_MD/148__Creative-control-is-a-perceptible-action-to-future-cha__JungPolaniStone2011__CHANNEL-001__from-DERIVED_CURRENT_INQUIRY_2026.md",
+      "bytes": 3237,
+      "sha256": "abc161c5b50169b4704a6561658cee3c0a35a65638d5204b3821bdcfcdfca220"
+    },
+    {
+      "path": "_MD/149__Control-decomposes-into-discovery-commitment-constrain__SternElectronics1982__ATTRIBUTION-001__from-DERIVED_CURRENT_INQUIRY_2026.md",
+      "bytes": 3284,
+      "sha256": "5544737ca04c2b4bda281b9d93dc7fe5999ef67e09d582226b29c1cc3561c673"
+    },
+    {
+      "path": "_MD/150__Authorship-after-surprise-begins-when-an-unforeseen-di__USCO__AFTERSURPRISE-001__from-DERIVED_CURRENT_INQUIRY_2026.md",
+      "bytes": 3462,
+      "sha256": "f8be08967067d5720b6fef1988737286710b195b0e9330e34347a916531c4077"
+    },
+    {
+      "path": "_MD/151__Sch-n-s-1992-Designing-as-Reflective-Conversation-exis__Schon1992Reflective__SOURCE-COLLISION-001__from-DERIVED_CURRENT_INQUIRY_2026.md",
+      "bytes": 3267,
+      "sha256": "196738d2cee6abdfc32de371e58bfbb3768c546b88d13f776b96ffeffa77ab78"
+    },
+    {
+      "path": "_MOCS/After-Surprise.txt",
+      "bytes": 160,
+      "sha256": "cb7f37cc7e486f7184ba2ca91501d37c0415dc9c88630173c70c75e85b2cb791"
+    },
+    {
+      "path": "_MOCS/Control-Is-Not-Authorship.txt",
+      "bytes": 122,
+      "sha256": "7012c708b3cac3ec1b332963bcef2ec393063bc205fdd4ff6fc8459be133ed22"
+    },
+    {
+      "path": "_MOCS/Prompt-Craft-and-Co-adaptation.txt",
+      "bytes": 132,
+      "sha256": "1a955ff8f684556934709c4a2c8b6e31c66dc68ca06d191d5afdfbe3fcd0047c"
+    },
+    {
+      "path": "_MOCS/Warranted-Passage.txt",
+      "bytes": 131,
+      "sha256": "8e4ad5e1ad42c35447dfcbb438e134b7bc9e08be0a466fa82bc943aa4e0457a3"
+    },
+    {
+      "path": "_PROMPTS/PRIOR_SLIPCASE_FINAL_PROMPT.txt",
+      "bytes": 17711,
+      "sha256": "b7785bb26dc9ad88e87c04932018677f4f39730bb3036b34c1fb76abbd21d91c"
+    },
+    {
+      "path": "_PROMPTS/SLIPCASE_v15.55-AM_provided.txt",
+      "bytes": 20086,
+      "sha256": "a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a"
+    },
+    {
+      "path": "_RESOURCES/Allen_v_Perlmutter_US_Government_Brief_2026.pdf",
+      "bytes": 616645,
+      "sha256": "0b334a8842bd2060af713b6f571e990772a1a33cd831505ff4be3350a1553b63"
+    },
+    {
+      "path": "_RESOURCES/PRIOR_PUBLICATION_2026-08-18/SLIPCASE_2026-08-18.zip",
+      "bytes": 6696189,
+      "sha256": "0461a7621e7d60d61b33aa4ccf5a787b1b5d0139cd4121a7e6ccb199cf72e3c3"
+    },
+    {
+      "path": "_RESOURCES/PRIOR_PUBLICATION_2026-08-18/after-surprise__2026-08-18.pdf",
+      "bytes": 246882,
+      "sha256": "c997ecab865d3174f447c4285681a32c06b7260a0fe0014562f48e87f14a1f2c"
+    },
+    {
+      "path": "_RESOURCES/PRIOR_PUBLICATION_2026-08-18/after-surprise__2026-08-18.tex",
+      "bytes": 26084,
+      "sha256": "4709512f21a72fce357e35d215f473abc8c21ae62e951924e96ab78bf7266143"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-017fbdb57338.txt",
+      "bytes": 286,
+      "sha256": "7e8e5c9efdb3cc88cc5a019f977862510012068c493d033e998a801330c2e66a"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-0260b5923920.txt",
+      "bytes": 332,
+      "sha256": "50156162c4ace3595f250a615490d10ed098e03867b169c700f9e9a1a74ffe5d"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-02c13a5a02a5.txt",
+      "bytes": 478,
+      "sha256": "97d1e2bf66603884215b5a116657b5acf2bfd4cb2a4e214cdd5b1e34fc343b0d"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-034d617d124a.txt",
+      "bytes": 321,
+      "sha256": "54e61c39069297f15d4c8ab34c3efcf1d68081801898bf8a1621150f9aec815a"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-0426081e41e7.txt",
+      "bytes": 278,
+      "sha256": "14f50fcc5eb320e7e4a36513a6dda562cf709d9fcf4f1bae67bb0261f35e0919"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-090cbdbb12d3.txt",
+      "bytes": 402,
+      "sha256": "dd4f97865af0d776b1266bd029bfbe2d413972ee95d688380c55dcee7334e774"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-0abb722f8c23.txt",
+      "bytes": 342,
+      "sha256": "b667e2bb5f104040be6ebf41223b03f71499ce704fc67513b7fcac4eb87204b6"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-0b1ac5436894.txt",
+      "bytes": 294,
+      "sha256": "b2851e128dc39cbf115ddb83718780f70ea4dd0551b470d4def7a3aa393159f2"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-0c89cf717f53.txt",
+      "bytes": 313,
+      "sha256": "1c0b6bb3f59553284145cb5474b5400d65b1640e8deb9afe29d1e8c3a1a55bfa"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-0ceb9d50b702.txt",
+      "bytes": 314,
+      "sha256": "d9c93841d7d172d5fb6340901772ccdf1ddb7a445a3908ad379c0e5b2a039664"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-0d40b7508b2e.txt",
+      "bytes": 728,
+      "sha256": "c2ed025fc0685a33a3fc1f25d62c9481264491db365e96c76e1cf546d93aa7fc"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-0e756c84c052.txt",
+      "bytes": 484,
+      "sha256": "dec735afba31d817fe69f9ccc2f282dc71d71035754075224ae107f75dba62d5"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-0ed5878bde46.txt",
+      "bytes": 427,
+      "sha256": "65458b430ce22b87d409776402ae51ce90e8807922b771ae837b4e06664be31c"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-0f49acca399b.txt",
+      "bytes": 356,
+      "sha256": "87380a91091cb99aa92fcd73ca0297a1d1680c88501656d8cadb2330e36bed92"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-0f653356980f.txt",
+      "bytes": 443,
+      "sha256": "3965bd5ee98692967646d3c0abb4924273b214b86d59588a8ca64ccfe23e09ab"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-1036717598ec.txt",
+      "bytes": 376,
+      "sha256": "2dfc8fe48824bc810bcb02e2e9411155bd031ae1a9bc5d1c201bbecda6096f1a"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-10a7319310d5.txt",
+      "bytes": 440,
+      "sha256": "d09709223aa8eb1098428ca8a60c6362f86b09f509912ec28d20be7ed7764215"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-137ccc4e16af.txt",
+      "bytes": 482,
+      "sha256": "7028f8551e94d37dfa16f2158fcd6cd99922041d0d8cb551c17231923947f772"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-154c4a4d927c.txt",
+      "bytes": 311,
+      "sha256": "2c99e782e7c741357b1078a2dc33d1c539af2c2e0691e5ad35e958ee56eb8bdf"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-1585f609a4eb.txt",
+      "bytes": 271,
+      "sha256": "7a2e1cfda71e6b86315273f1a0e7a050f4ce4f2098bf582c0d9d3e5279bb279b"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-1589f7c21b7a.txt",
+      "bytes": 390,
+      "sha256": "6fd24910df5195ac2e986899ab1d1d5d854176755a56537993a411e209b3c351"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-15ad0a43f591.txt",
+      "bytes": 329,
+      "sha256": "44da8e8e0a73626ff59b10d92cae4070c56373987edfde535443e21f49c629a0"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-15c6c1361534.txt",
+      "bytes": 457,
+      "sha256": "2bb2b200eb099b5208fc665c38bf70c56ec189f39692ab04361d4dafd1c6241f"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-1654672601d1.txt",
+      "bytes": 293,
+      "sha256": "8f0dedbbacb63a18144176a95cd825b2b82eaa4480d1a940f60205adb82599be"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-16f5f211b6f0.txt",
+      "bytes": 321,
+      "sha256": "9eef2df9aaad676d42522b44f02d8e1ae6d4aac0cb04c0c0311d4c4031ef963c"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-1804315bec38.txt",
+      "bytes": 338,
+      "sha256": "4ee182cddc0e273f0cebdfba417f9af53ecc7ff20b5a64a2debc87e8a9d2aa67"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-1967d1dd7534.txt",
+      "bytes": 317,
+      "sha256": "0fe20f710da13227e3f254ce53bbbbebc8293ef3a5c88d0a0cab1caef870c2a5"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-19c071feeda3.txt",
+      "bytes": 426,
+      "sha256": "3db780c676c1316a76426425d249f8ebc9566bbe8c1a38439ab92db5f298eeb1"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-1cfdd306fc84.txt",
+      "bytes": 361,
+      "sha256": "e79dfa438af64d1806bd0f4454b9519af058842b0b6ca1c06a1e1bbf18473e47"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-1f02674aa3b1.txt",
+      "bytes": 285,
+      "sha256": "700b632ac5e598d8f5f8f2f243fc91b49322e5b4283d6d6ff2607ccaf4167c01"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-209dd290fada.txt",
+      "bytes": 362,
+      "sha256": "92c6ccf891f8f322e93f58e038cd604441a71ffe7b485a604d587107e6473c3a"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-21465511866e.txt",
+      "bytes": 284,
+      "sha256": "58507021810f8358335174b1024d79ec98fa65288f49c49e703e4a1cf7e98b74"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-21c5e9ed1fc2.txt",
+      "bytes": 780,
+      "sha256": "b010402f26aabe8d587043a32f42ca9307416c18d1febf7992bf183f31c86da2"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-231074f2abe6.txt",
+      "bytes": 342,
+      "sha256": "d78f9b8f4e0c9bda3526a92de69daccbd2b8f00a0cfc0d5b26dc6c542eefc8e0"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-2458df3bcd15.txt",
+      "bytes": 332,
+      "sha256": "e065f69c41d9b9435daa28089171fc0ad9c0c3980991cf32d7b2efb0e3a0c8d8"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-254b51f651cb.txt",
+      "bytes": 308,
+      "sha256": "4edd39b02cc4e12489297db43fdbbd8d99f01c3fde3aea55daea964471582c21"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-257397195a4c.txt",
+      "bytes": 342,
+      "sha256": "5badbf499ffe0b7ca96f607717b0ef4f66c9735b2aed9bd8c2ff103d3423ba71"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-259332af16bc.txt",
+      "bytes": 342,
+      "sha256": "f0923ef9d2719d121d4f127e6c0fbc8903a26b31c978fd2d3129286566098f20"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-25ac2e114a21.txt",
+      "bytes": 348,
+      "sha256": "f16f74a5e0d4736668e7ba0a4029433bde13e513956df6f3c18b689f7353cd58"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-2a5b6fa591ba.txt",
+      "bytes": 291,
+      "sha256": "5a626a08cf08c5c8098df0a2446628f1c84d1e5821fed25b479ac7772ab875fb"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-2a5e81156d37.txt",
+      "bytes": 251,
+      "sha256": "f4c3e804c7253504e61df47a755ca48754b998b52ac4bdd177e4e62c36cc4ce8"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-2a7303cd427b.txt",
+      "bytes": 504,
+      "sha256": "034fac3c198419ec31cae5389d4a1772668802b0878bc79ead3a19a87d06aef3"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-2a7d4f4beefc.txt",
+      "bytes": 367,
+      "sha256": "1eec324279c3cdb03f7933028845c6f5ff4b3de8173b8e63b9e841ddb97f8c1d"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-2bc367299b74.txt",
+      "bytes": 476,
+      "sha256": "72539b2363105d761528800eccf1cd0ea257c9ec7c7deccc0fe23bb78db8f83a"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-2cf7c6da5e0f.txt",
+      "bytes": 345,
+      "sha256": "14038b24116c1ffacc6f6c5fb98e6108484855cbb4e06393e43903aaab45fb95"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-2e843d3eb5b5.txt",
+      "bytes": 424,
+      "sha256": "a7e50df2a5dc721de4ca638eccb3a5512d1b138b65c0f00a2d69bdb7af020ab4"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-2ebd0e5c6174.txt",
+      "bytes": 317,
+      "sha256": "acf3a4039492313f4ada48b0c90f8b9c12fc54650dc5beb9e233c0d708c8c515"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-3154437f6738.txt",
+      "bytes": 359,
+      "sha256": "e898d61e6a89937b986776b23b833abd685641b2bde78ccac12a3eec2dc8f9d1"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-31d863b9ebb1.txt",
+      "bytes": 362,
+      "sha256": "5fbdfa2372b9dac03f24c2fe0585a486a098a04996839d609934e0b5f196a542"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-349cec9653d4.txt",
+      "bytes": 248,
+      "sha256": "a23d80affbf1d3046c7b4ca44032122bf24fb0e9579ff8de9df5d6115a863477"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-35aaf882b772.txt",
+      "bytes": 434,
+      "sha256": "3d485d25d7ca899ce6a688e0433c784794b6fb193ce18cffb525f1e7437d123d"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-369a2327c4e7.txt",
+      "bytes": 397,
+      "sha256": "83991d84f124094e0b864ccdc2a8dde41bc5560992470cbfe9fd217e16cd9158"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-37e57a8d125d.txt",
+      "bytes": 409,
+      "sha256": "07a27d266f85394bbb5d0212a10aadc590047b40dd0dc543ea3011861d184ba9"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-380d10919a6d.txt",
+      "bytes": 365,
+      "sha256": "ebf25a9c3ea26850610edac0154c99efeef0e23c139aaa2242d5ddfa6c2c0a07"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-387c3350a46e.txt",
+      "bytes": 304,
+      "sha256": "e7411f67be4428827d292d84eba6765dc8505f8e46b7b6172bc531ca19d0033d"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-38a75bc6a307.txt",
+      "bytes": 326,
+      "sha256": "e315c718d23d284de7f9f91cd733af01fca99d52a6f138794521fe4436f1e405"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-390c904533d5.txt",
+      "bytes": 259,
+      "sha256": "3220584ae9880f35b6cf099f4fd90585a749749ba67a59d2835120aecec656c0"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-3a0fb086c38a.txt",
+      "bytes": 292,
+      "sha256": "3481a350cee4bf7d8218f9caa01dbbd8e69ad41abf01fdd0780a8b66b332d46b"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-3b71560b7b28.txt",
+      "bytes": 413,
+      "sha256": "4f061ceded158a71bd936ed1579713c42efa00603a96f3254950a5106c005af1"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-3b7adc2cfdcf.txt",
+      "bytes": 322,
+      "sha256": "eede138e5f890a1cf68378d358fd7a5b3f1186a7a3d7504bdab7b70cca357bc6"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-3c092d67566c.txt",
+      "bytes": 309,
+      "sha256": "52d1a1fd9eac2b9a0f9ea70b7e8172d53b65a8038cd75a6d524786f0cde8e029"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-3cc2af7d84df.txt",
+      "bytes": 354,
+      "sha256": "67ef976f22b1fee74233b572f2f4d551bea1c1087e8b3d857c6d018ec77ebd98"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-3d6f16db84e6.txt",
+      "bytes": 325,
+      "sha256": "1e781f687c87bfadfa16b3d71e3b4bcf06d308a5174a3c5017b00a10f14e34e8"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-3ed97b79ed7e.txt",
+      "bytes": 410,
+      "sha256": "ff044a1e053efcc12d6fddf148abfecda08c33f43d68f8ba7ba8cc50ce42e950"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-3fd2409b031c.txt",
+      "bytes": 413,
+      "sha256": "bc23c48a739f4e6806fdc7116e31777d6b1082047a55fafead535c8728cfdb78"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-40bc5d3ea870.txt",
+      "bytes": 361,
+      "sha256": "88386ab893c544bbb4cb2c7968af8b1c6d44ecc733dc7fbf2871e74aafe74e86"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-41c1351c924f.txt",
+      "bytes": 375,
+      "sha256": "9d9357ad061916662e30b0168d85131b98f1543482f0344194be2d8b2da27264"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-42353edd2cd6.txt",
+      "bytes": 935,
+      "sha256": "f3c89e2021cceb9ede2afdab438eb9b8b5235f22eee4e8ae1d8cd88f2933c8d1"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-4345c86a4469.txt",
+      "bytes": 321,
+      "sha256": "0de875a57709443293b48fa96692db6ad9a72eff0d99e0c6a48c8827641c0317"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-44731292db8f.txt",
+      "bytes": 322,
+      "sha256": "c7d8c7b4e19bfb61ffb6645ebc5c2ca2ef9e8e5cd394cd27cb10352709040b84"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-46109e8adf7d.txt",
+      "bytes": 499,
+      "sha256": "f25c342ee6344857a26bf4b305cd2de5151335cacb24c266b91c95597de1e47b"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-46722d3f9b1e.txt",
+      "bytes": 388,
+      "sha256": "27a70ce46e9a0928093f401eeea01149dd170467164e81640afd770433758736"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-48906d82da21.txt",
+      "bytes": 395,
+      "sha256": "79386868abe133681dc368bc016c2e454c10c616e0db2353d5dde2485139bfad"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-4958c0b73f14.txt",
+      "bytes": 407,
+      "sha256": "e2204657648c63a9b2c14ff1b4400d3a9d76a83b63463a8253f66302090fd60c"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-49c694961544.txt",
+      "bytes": 360,
+      "sha256": "263fdcdf8a9c2e2a291d7e18dde4bec2443169ae9e86b519128562a31232b6a9"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-4d3633d28941.txt",
+      "bytes": 441,
+      "sha256": "5175033a12236ddbfea9a93683032eacca66a068c429c16512e34cd59e155485"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-4ecc7a232d89.txt",
+      "bytes": 407,
+      "sha256": "ab7b66fcd4d04b4aa84056605974e8172a2deadbe9ee201fca60e5158d7270f3"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-4ef2a36a4fdc.txt",
+      "bytes": 425,
+      "sha256": "3217ace963a5e4c02783ad68727fd5fe8fd67e51a0f7bb322d5d96c81db3c7f5"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-50a15ffb7a52.txt",
+      "bytes": 585,
+      "sha256": "b3fb73398413e63ad76eec3ce5230ab524c939b93b55fd7fcefb889d141bb875"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-50dfb9c9ab89.txt",
+      "bytes": 284,
+      "sha256": "67b0ec4475b527da77fd40fee11b90c932dc0f54a055327133ddb7fe4c4fc68b"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-5131ef276301.txt",
+      "bytes": 369,
+      "sha256": "afbba2eb224159c4239582ae969b4736c4a7947e3b06e054f3d983b52587b68d"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-517ecc89338a.txt",
+      "bytes": 345,
+      "sha256": "369dc145e14ba7d466762685e7b139d60a69a96a6aac55b2e20edc470703e0bc"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-525038631952.txt",
+      "bytes": 439,
+      "sha256": "ab5f50c5c92df464dde38f780a004ac41dbff4f99b6fa1a8ccdf283b9c8a8863"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-54d577a9da35.txt",
+      "bytes": 264,
+      "sha256": "9f8255e08b455461527d6a1750a4ce4c607c3c268405bcf7abd1c8d4af27be1a"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-55155ca91fc7.txt",
+      "bytes": 301,
+      "sha256": "8f9fc91594b30227191ca9c4be339bfe45b9a33ea635b5592740c45a59ce6f11"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-55b2756ba813.txt",
+      "bytes": 315,
+      "sha256": "7f184fecc8426d824956eced6dd017ce515816527c323a6f54e5d5ed2bf84204"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-581ee6e52000.txt",
+      "bytes": 305,
+      "sha256": "96b663fe518fd9bb41c22877ebc292d8bc403bf8a3eb16bc68b8ee6f447fa8e5"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-599ecd7c61bd.txt",
+      "bytes": 295,
+      "sha256": "3e48c4f6d9838388298c0af5fc0ac429dd1cf920bdd1d179dfb40a746cac5f87"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-5a0d03b8aa20.txt",
+      "bytes": 323,
+      "sha256": "dbc05c9df6e0c2f7b9dbd956e7543e81c35dc53a340fb3cd84223cfe8a02efc0"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-5cc08712d32c.txt",
+      "bytes": 329,
+      "sha256": "a61574cd64c0a7209906b2f2d47826bb7efaaf58cb98162aaaf0d82ba38d3f75"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-5d1898c26f3d.txt",
+      "bytes": 304,
+      "sha256": "3443d0b045956c95a52eb64e4679df861160e45e275a5802d8d9212abf99342a"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-5fd3e3ce5dfe.txt",
+      "bytes": 317,
+      "sha256": "ed5281194ade7708fad0a398ad198371bbfad3f051c0ee7f6a4b17b4a617c743"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-5ff83f038ff8.txt",
+      "bytes": 306,
+      "sha256": "4d9086a72036b2c9cc85e8b9c044ba077537adcedf44f33c50ccdce798c0dd11"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-601ab587c8b7.txt",
+      "bytes": 322,
+      "sha256": "be7d5207ee4e7da39a628b657916352454e681b1769cbf202858493f219e1161"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-611b95e6d1ad.txt",
+      "bytes": 322,
+      "sha256": "77464022305850b2b2fde253be1a40fcb39b788c70b4b59b53b12773784bd300"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-63189fd53a2d.txt",
+      "bytes": 308,
+      "sha256": "fba510b997aaace701c5f5a56dee9bcd9c901803c5bed490e09e31516869c121"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-648eee93c220.txt",
+      "bytes": 388,
+      "sha256": "36c7a4b1a18617c524752747eb1ca52ce8d8a053848386568a71a1cee033d18b"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-65116a074af6.txt",
+      "bytes": 398,
+      "sha256": "9263db42b5409af8066a33c87360920c8153083e539530a5f4a51a5fc8be66d4"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-67cc6c06d1c8.txt",
+      "bytes": 356,
+      "sha256": "c97395e3db6e3381073ee332652715dd1c0236469d8179b06305574cd429375d"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-69f40e18ef1e.txt",
+      "bytes": 373,
+      "sha256": "e6526d2f2566cd5c7a5b3ba58b4b6a831e568434cf089db2b491e79157b8cd1c"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-6e458eb6db06.txt",
+      "bytes": 395,
+      "sha256": "f8c2f549a33b0bd4a09a8d01e14d8ca6e8879e071a5ca5383f96a43a1563ad7e"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-6f3e63ca0c32.txt",
+      "bytes": 328,
+      "sha256": "e5767305cfe9574df668e5fc828b749d25b0a9fac339a5e61704c5ff3706fbd4"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-6fc9a8d35c39.txt",
+      "bytes": 308,
+      "sha256": "39a4767fbea7675f2d39f8df2c5c52de567f46aaa8d4fc4b54afaad95353f719"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-70d875805f8f.txt",
+      "bytes": 405,
+      "sha256": "c4301f89741d30bc5d746d513f9a6ecf82764b537662727cfe345ff516ae4c87"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-71898966fab7.txt",
+      "bytes": 271,
+      "sha256": "e806ec84c89f5a6691da6a6bf81f7f94adf8bff19c77498df29a89a1e570024b"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-71f65efc21f4.txt",
+      "bytes": 608,
+      "sha256": "8b606ed1029f92d2c3b0dac37ee8dbbdb58059ec26c9b7e1ff3e091eb22aacad"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-71f9d3a18aaa.txt",
+      "bytes": 345,
+      "sha256": "d8f4144561a70a10bb76a5362788ccaf50cb7cc4f4b37d866173fcbb5247e536"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-7225b4a11f66.txt",
+      "bytes": 400,
+      "sha256": "c40f378d6583fcfeb6f483c9601c5541a8d7143c1a6b078f640d8c5b1c94f0d4"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-7353e4935a9e.txt",
+      "bytes": 485,
+      "sha256": "f049d7eb679127f2d02c1991e8284818b650b674fc8d0b2e0ed06638ffa5f1f4"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-746146b80894.txt",
+      "bytes": 450,
+      "sha256": "6992368bb9ecc9aae3aba6b96554e510dbbc723864c857506583ac91ba6a70ab"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-7535c80cff80.txt",
+      "bytes": 361,
+      "sha256": "93c8d26b736cd023262c2b223595ba7d69ee45cc509773d7a4d0c8541a499175"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-76bcf6694026.txt",
+      "bytes": 380,
+      "sha256": "0182a53ed6cca429cdc06b54f90e622882251db6bff4ec04e07dfb3490bb459d"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-77cef8c01a45.txt",
+      "bytes": 330,
+      "sha256": "473b87a3482b4b5fc979a6ff8a5d6f70a2ea5a58f2e61c8940fb64409945e10f"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-79c9cd6cfb80.txt",
+      "bytes": 359,
+      "sha256": "5d9f9ff714fec473a854ededb6726e8d153b115018e02f5991af0ec08295ac0e"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-7a650a2a552c.txt",
+      "bytes": 455,
+      "sha256": "e405f70f643364e4386aca33d5bbb0503833a9401358e58b3dd1184cde742c26"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-7a88eea54171.txt",
+      "bytes": 406,
+      "sha256": "beeaf3d71272da9685c9921cd914df0e3e29b50705bdfc0bcadc2f1b3d8f8bdb"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-7c491a12909c.txt",
+      "bytes": 275,
+      "sha256": "80280240fe4da6f783f5a900edfe8d0bd8b2f406daa665349db5ba62c090e967"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-7cacd230d431.txt",
+      "bytes": 425,
+      "sha256": "7e52aeebd38158822a3a96f236b9bfe413d0f2547ad317f11d47c500aeb323dd"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-7d417be1dbb9.txt",
+      "bytes": 641,
+      "sha256": "9c47707caa4dad78c204f56f2cc1d5e3007739903fcf985173186880bc687a4f"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-7d80090cd9b6.txt",
+      "bytes": 433,
+      "sha256": "5498760c887bddfe30dace734a795c37e9320be4d80675401ed95f53064745e6"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-7e953def07a5.txt",
+      "bytes": 289,
+      "sha256": "97bcb6d879cd70a9dda76a6eacf0f805215bb4e6209d39af37f16be1a93448d9"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-7f0759efc7da.txt",
+      "bytes": 330,
+      "sha256": "b0c79c843743093243d09c70f45b98bc747d1c6a5c84607271005c755f887953"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-82c6a611a7aa.txt",
+      "bytes": 258,
+      "sha256": "e94dc7531625a8a1c47470893aded12f766a528e8bdc2b731536a76de617b925"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-845afdb4d9e1.txt",
+      "bytes": 427,
+      "sha256": "3b1ee9f0d7315402bbcaae882d6f04ac5514386c9ab5855c1c9b514f9945225f"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-84da5aaee108.txt",
+      "bytes": 312,
+      "sha256": "214078326378fbf9c76474d62a2d5d5ef43dc2ea1517a1e30f585a5c3c2abbf3"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-8549b6518782.txt",
+      "bytes": 349,
+      "sha256": "c033b85235ba80cbdeceec31295801031f4d0cb6eb1ac46730a78fe16b2062a6"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-85a1d20e8a9f.txt",
+      "bytes": 358,
+      "sha256": "e7675462fd4714e4e2aed04d189402bc4dcb0e7a68052b50b7f509b001364f68"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-87fd29d78abf.txt",
+      "bytes": 373,
+      "sha256": "305299d5b51efb1d6264b7340ba23e0d0fd3bc2192e1af52b2dc98d3a657216e"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-8c8eff27c59e.txt",
+      "bytes": 395,
+      "sha256": "4b4ca0df295113ba492387613ad3ba401e848590377791f5e479255213e6befa"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-8ee4baab28e9.txt",
+      "bytes": 320,
+      "sha256": "ea37f7a0711cafa0536a99e6032ff1af344910fb0141d5dfabf9279f186fa4da"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-9128d2f8dea0.txt",
+      "bytes": 378,
+      "sha256": "32fd28d72b6d6a18cd5bcea0e39125478f063050cd90fdc6358b03cce63d01f8"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-91556665f0b0.txt",
+      "bytes": 303,
+      "sha256": "824e5b6a644ea9bfd31652bb50200105b1d54a775118e5d4b299bcc3b8b57a11"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-9224d965cccd.txt",
+      "bytes": 337,
+      "sha256": "f60862fa197f37262e400010b751476c7e2b4bda5531661ce96b6a0011971d39"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-9307b0716d6b.txt",
+      "bytes": 312,
+      "sha256": "da9da032dce9182f92613a351f2d81c2d1df7bb86da7eca8c83f5362d7187ef8"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-945a22cbc3ef.txt",
+      "bytes": 279,
+      "sha256": "4b88c20762a33562a4fea08acf465d0c8fe6b2912c9f8eed85565ab302647585"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-94895e59bf97.txt",
+      "bytes": 288,
+      "sha256": "547f8044f554717e18c445be46273aaee2f298650d07c1819c17c16bce057320"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-94dfaf5d5100.txt",
+      "bytes": 483,
+      "sha256": "fe06824defe290f6664d71d43580fb0341cc54bfac0a253f3083c0e8e9a1325f"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-9521470998f9.txt",
+      "bytes": 320,
+      "sha256": "ee4094d854c6e042b00b0e9aadb376ff11d0f1fa3b5c718fb90dcd3c264e30fe"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-96aaa080f3f7.txt",
+      "bytes": 420,
+      "sha256": "e547b05d39716a2680a3fb452d661a5fc3ffe076bcfe5a2b217cb64b6066409d"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-985f9fbc9fa9.txt",
+      "bytes": 337,
+      "sha256": "a7a127cbc6610ee5c72125230992b2abf9dcc5e45cc62be70e4a48b8d4f91370"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-99ff647cf6fe.txt",
+      "bytes": 345,
+      "sha256": "e6c2850141faa5c342c811b3f53509082e08754e219ba6da179ad253314e42f2"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-9a801a87bc3b.txt",
+      "bytes": 883,
+      "sha256": "176f0d73c64c375ef2e0b4795244db7bdde5dd6c3904ecf1bb4c1041de28df40"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-9bba5de5193b.txt",
+      "bytes": 403,
+      "sha256": "8882c1c971fb834cbceeee36a8462e89f2c2128c8f0bebf9cc574eb54b7d41d0"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-9d91f387f311.txt",
+      "bytes": 454,
+      "sha256": "9f2235b2fab0db89a0d6eb5bef41e40ff7ade2988eb5756a56d210c1c45dc9c7"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-9f7967282ff9.txt",
+      "bytes": 323,
+      "sha256": "bc90b7ffc4f11843c66ea6fae3e6e036f398048acf0ca382d6bd7407d1691256"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-a05d812af91d.txt",
+      "bytes": 302,
+      "sha256": "4823f05beaf7e29891b3c6323eb8e8bdd3e58c60fee643a647ead2b70b26563d"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-a0be8e41730f.txt",
+      "bytes": 288,
+      "sha256": "d69f79327c23d5a8600fc08fac3023b8c5b295c9ef8e79b23926008b41d2dd4e"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-a2412093d8a0.txt",
+      "bytes": 343,
+      "sha256": "c02f903a7e152e4b89cf1376845289213b6cbaa3bb5b41fb50936c758c2c2480"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-a3dd77eb4b91.txt",
+      "bytes": 327,
+      "sha256": "1a1477888680d3c905eb129b270441d5f2f810f2ce47b05313a84a3aa8ce6576"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-a60c27d0bd3d.txt",
+      "bytes": 361,
+      "sha256": "58303c8b6071049bbfcb5cd12657ed0c7808013f642939675a895ca597797262"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-a653c4b7e8a4.txt",
+      "bytes": 261,
+      "sha256": "105762fc72fdf85a4a2e65b70f6b20543843b8b98bd39b4be582a633aff07085"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-a65adc5ade13.txt",
+      "bytes": 241,
+      "sha256": "8b63c832665782d05babeae9f959c5703a47e6bcdbe2f2a50bcd5554f31f28fd"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-a751af6fe62b.txt",
+      "bytes": 274,
+      "sha256": "7b34795c814db444efb966bb68d50a74d552da0d6aa9a156d995edb60983fe65"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-a8907b6ae671.txt",
+      "bytes": 577,
+      "sha256": "ab5a308ac8476b492b0c05069ae384cbb4bd9e6aa972db2d0c94a38b781a1139"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-a9356bb8c6a3.txt",
+      "bytes": 449,
+      "sha256": "5089079a8035e007081941bd19250aee760fd9e8307c1107e424c3268d253e9d"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-a9f450e8145b.txt",
+      "bytes": 392,
+      "sha256": "40405971af29550aa8d2e180e576f792d714d16064d518b3e5d86364ca9f6455"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-aa4aaa6b8929.txt",
+      "bytes": 355,
+      "sha256": "5413fa0b67b820e6e9ef1d4db159314bd1609509530b0fa73ec2cbf932bf330d"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-aa8811a4cd87.txt",
+      "bytes": 231,
+      "sha256": "57df4a0604871969fd76244bf9df8311cff1a8fd1248900dea42dc36cda6adaf"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-ada343762c2f.txt",
+      "bytes": 454,
+      "sha256": "449dda4540fdf755cd9289adae0f95d0ceec54df696f46ef28219239a533e78b"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-ae5e37a81f01.txt",
+      "bytes": 421,
+      "sha256": "4f3b4ec34b9f95941eb3397e2bf6ddfe8d0dc9c23949a01b82ad9f5d67f62b73"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-af86a823c940.txt",
+      "bytes": 436,
+      "sha256": "16a4f6718d1e8dff98a7b0eaf37294a162767cde41f4cbbcd4e7c9a071d9585b"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-b029d998ae7a.txt",
+      "bytes": 304,
+      "sha256": "eb40473753a1c283cb49f1a15c64b4e1cb2325ea30dbb4f921200f0e0aa92959"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-b1200d62a7e5.txt",
+      "bytes": 393,
+      "sha256": "9e3c30add053236697433de023879fb7099b2fba5f4b1b9e84e87f7d38aeef02"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-b18ee536c6e5.txt",
+      "bytes": 320,
+      "sha256": "70159c4698fdf72f65adeea0cc8d7755a466656c3d66c59b9a53fe6d21f627ea"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-b1b38dfc5ca1.txt",
+      "bytes": 610,
+      "sha256": "863a63a800caf8f7c72932ca9352b8aae6dd9de6c6fae496fd6e2690dd67baa5"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-b1c0cd289c6a.txt",
+      "bytes": 366,
+      "sha256": "af8c6e78ba65938c2d0b06bced5d0c5d96ae7d5dd8ed7ea945d53b54a0556479"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-b216cc36d5f3.txt",
+      "bytes": 363,
+      "sha256": "8a50d337085f1ad541c9f773b2c36e44d26dde012145d58564ca06478196dc3a"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-b22cecf93d13.txt",
+      "bytes": 430,
+      "sha256": "23b0676f5c35f7038a1b129ca692eb70c44c4d300bbe99823405ede5b48a6978"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-b2e4b17156cb.txt",
+      "bytes": 391,
+      "sha256": "80284b753f9621a48e2560680b31818f6343a888dc95f0db0d883457b0b21009"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-b33a2d99a0a6.txt",
+      "bytes": 640,
+      "sha256": "7ce89c9ef72f0ccb380bec9bfea1fe4558d264766ef3f9cf1bf4028565b9c727"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-b423ad933a8d.txt",
+      "bytes": 327,
+      "sha256": "762fb4b9471b853b915aaf238b8aa5153a8f0bde532cae2f0e1d71e7b19282c9"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-b4730976da37.txt",
+      "bytes": 389,
+      "sha256": "7c8b4fbd3e2dd2956dd1b4f98b944410124c42bed219bc4779f9d4e0e36677cb"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-b4e2021808d0.txt",
+      "bytes": 460,
+      "sha256": "10ceb7ee69f6084024f70813e90c36d59ac023d7ca1bb449f17da423c7e5a715"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-b52ca299f8dc.txt",
+      "bytes": 355,
+      "sha256": "24f8f3a696d391f529fa274c3dad148c4366f4f732e5f1274a4e49cea2972739"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-babc1deca79e.txt",
+      "bytes": 309,
+      "sha256": "1258a9768470a299943c62b61ecbb37f79ee0de2d300b1d71e39270d4488bf9d"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-bbfc41de3011.txt",
+      "bytes": 260,
+      "sha256": "6b728294a1b8b6f3ca7536fdda02f6595011d6ddb56f0c8b7907c00d2713fd47"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-bc5076677511.txt",
+      "bytes": 416,
+      "sha256": "1ff72e48006b1b4eb6bf7110b3057ec79eee7da21019ddacb0e537ad993f34a1"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-be42d9e1a2b2.txt",
+      "bytes": 376,
+      "sha256": "6bcb7ae0abccb6b1534cd2b4f9e0f3bdeee7c670ac8841d2a8a3b7c3ecc3d2a2"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-bffd1454fa85.txt",
+      "bytes": 299,
+      "sha256": "9ba8bb8c05682573819cff3082bca0c09778264d77023ae771473cb4e6481299"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-c11939da8238.txt",
+      "bytes": 311,
+      "sha256": "eb468be6609236914049825f2a447c1088d6b4c26c39b63fb39870fc7fdbc30b"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-c121bc7ae414.txt",
+      "bytes": 443,
+      "sha256": "e5424c475ac7cea73f1abd6f0de3970e6fd6f95b3618e4d032815986a7f145b2"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-c26531b6e22f.txt",
+      "bytes": 331,
+      "sha256": "3bfc1d00da50c50130a88142c9485dcbdd5a7ca140c6301f958fbbd6d965adcb"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-c31806325d86.txt",
+      "bytes": 335,
+      "sha256": "601010d4197e1b85e2680eed2961d8fc04545d03393863bf2782941eed3caa1f"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-c3866e29ec83.txt",
+      "bytes": 297,
+      "sha256": "14e98f31abc888482cb1b3094c6089921bdf1a832718e6d32718e4bf117bdc1d"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-c475ebc2ec8c.txt",
+      "bytes": 321,
+      "sha256": "9594e06078fa38edd0426d0577b8bf863999161a314a924db9bcfa1326ccf193"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-c4ff1ebd7b85.txt",
+      "bytes": 336,
+      "sha256": "83ad5d1a8b4302bd404a96969e03c4c2eff8b93cc5eb5f4cb0f86503498d1240"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-c61d66ad51e8.txt",
+      "bytes": 363,
+      "sha256": "71daa4cf494240f6bb44e270f1da1f802f0578e7f695599c462a7e6e43dfbb2d"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-c78aec0b4ed3.txt",
+      "bytes": 391,
+      "sha256": "53d3fff716112c66298008f9e3aa4967e1211835a9c93397bd5855b3764158ff"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-c8da951b9d94.txt",
+      "bytes": 386,
+      "sha256": "57126d1d95c5953dcec57932d098085a232e226c892262569c59f4a68a14f329"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-ca29a9ae6679.txt",
+      "bytes": 350,
+      "sha256": "1619d06377095b067f202b455e91e832fcead4fd5c9da8d4274c5faeb6c8314d"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-ca6b7d4c22da.txt",
+      "bytes": 478,
+      "sha256": "1e96c61f36fe731da75008e3173f7fa5e9425c1e4af5ca56ef41b0c782297819"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-ca7f0ce4c0b1.txt",
+      "bytes": 283,
+      "sha256": "5b8923e99cf950a657f60648ef74663ba7f4c8f90d4ec6104f8ee33b4a28dc36"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-cb4d3e07997c.txt",
+      "bytes": 330,
+      "sha256": "3861238e3144f553e51bd61ec104968d48c3583e264fbe8c62cfad0531953043"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-ccae47e37621.txt",
+      "bytes": 347,
+      "sha256": "e3c5651f84594443347fa7b5b8b40275d04c3e1941dd8c06de3f32f72a7952ba"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-ccc5ef577f52.txt",
+      "bytes": 326,
+      "sha256": "5c386613f9837345fac72320490d65860791d82cd84d961d407f829a25778de7"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-cdec323359c5.txt",
+      "bytes": 393,
+      "sha256": "7edcc66a3a43432eb2167145bb346e2e70b2a3d5cea580bb26c2276cf94839c5"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-ce0032d07d4e.txt",
+      "bytes": 387,
+      "sha256": "39021cc42c932a2b1a7564b7fa31d2b4975e49333ac59a6adb5ad0931caf11ca"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-d1e4fc3e0984.txt",
+      "bytes": 268,
+      "sha256": "c93a50c6d0eefcb8f2958b724e94235c02033bc6e811f728c900bc44bca2d15c"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-d2185424bb39.txt",
+      "bytes": 380,
+      "sha256": "82087c16debf3034fa2219611352b553eb5661718bab16f778e51f20fb9eab36"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-d2f54017b91e.txt",
+      "bytes": 361,
+      "sha256": "771fd8f934f4b5eb36db1618e068db19315e2db9112e2c2db18f8bd89b7ea58c"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-d2f7746efa5b.txt",
+      "bytes": 362,
+      "sha256": "ea9aaf2d13620ac6431a82ff98c86890401fade666b9f22cbfc80c61c21b87a6"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-d34178e17c98.txt",
+      "bytes": 352,
+      "sha256": "c8f77d5ef221327e1550dd00a1ffbf6bea99d2f03b38d550e34a79805e863407"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-d3b082037637.txt",
+      "bytes": 269,
+      "sha256": "9d0b32df81daa2d6d1334bd3e9c126e46285d4e44a9a033f9f9e3e109cd30ee0"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-d45095a6595b.txt",
+      "bytes": 380,
+      "sha256": "3dbc1d7e68e5aaa2888ed13098f789424a2d3e39e6503a6583ba49733f0814b2"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-d5873f8e9b1f.txt",
+      "bytes": 347,
+      "sha256": "a64bb557c723f28811758ed88e8fd9705cd6b0913b88ef3a95e3f9acb3947dc1"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-d609db273f9b.txt",
+      "bytes": 354,
+      "sha256": "ac9e5334faf03e925cd99d357a3615ab114cda06f80cc18f9b3fd7f98c589428"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-d919ca921ec9.txt",
+      "bytes": 292,
+      "sha256": "d864a0ab88246237540740be63e37da6af7ca78e2253c6abb97cdea9bc699219"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-d9beef1a93ba.txt",
+      "bytes": 340,
+      "sha256": "ae3d6ae2369b52d6607b551afe4d979bf84135f69f2d838960d20a88e6bb46c0"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-dac2a63f0744.txt",
+      "bytes": 308,
+      "sha256": "5a5215b07880b1e29145972193b73f713b5d2f090d5a067855395402dcc2044d"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-dce251fef027.txt",
+      "bytes": 450,
+      "sha256": "5b27a5e9edc5e2fbb83a029f7440395b32b50aaa7440944db106b2310cf5e88b"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-dd98bfbbfda0.txt",
+      "bytes": 320,
+      "sha256": "dabbe56bd374d226c9bdc0d235c143ad51d7725631b97b8bf8ed25efa29df83c"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-ddc731fca2c5.txt",
+      "bytes": 309,
+      "sha256": "e9a07fd4d415d6c849fd0c9182bd361c22f3b13647faca692228b43d96dd21ab"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-de053488156e.txt",
+      "bytes": 359,
+      "sha256": "086fae4daa4f97879d384f0412f4a0ae546739078516b0c7ada15328f2cdc162"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-df492a4cf6c2.txt",
+      "bytes": 394,
+      "sha256": "b4d447f8f7d1a47160c6e9c75593369146a6a820ec371f02c41798e6197feb0c"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-dfa3b9a8c614.txt",
+      "bytes": 338,
+      "sha256": "c2948b894a30d317e2a5bce5d44cdc7999fd4d685ff912c04b5d3c2ea584f4ea"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-e0b0c1745984.txt",
+      "bytes": 365,
+      "sha256": "6a142bd5636ec3d484d773d2feeec30fc522912545d84abafbdc2555acff18fd"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-e0b5c6f90d2f.txt",
+      "bytes": 476,
+      "sha256": "754388117705b56b295548d5ef13dfca65839bffbe0db30b5e17d8886cf5c349"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-e0bd779b66e7.txt",
+      "bytes": 355,
+      "sha256": "c6ead26e60524cb28facd248aa2e1da9e94d089f0d921cad3a6e5878246f4fbf"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-e4aac2c46450.txt",
+      "bytes": 344,
+      "sha256": "75b26f103052c2234b4258a0d74542c98d9d1d21745cf39b1b0fa79df4ba5106"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-e58bc7b99cc2.txt",
+      "bytes": 270,
+      "sha256": "5ef0c421041a8e78f41f8e2264737049da6d062772fb4e490c093a3edf2f2619"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-e5c40208619e.txt",
+      "bytes": 350,
+      "sha256": "859e43cd4637905bc78c434534384f7be2b2e6722b36bf1761e0eacfa07aa157"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-e7014a86bdef.txt",
+      "bytes": 341,
+      "sha256": "3ce71f298ccc07004bd13555e8ff863251ad0e11c02ce7b63b5dd7aebc0af2d9"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-e9c4607583b6.txt",
+      "bytes": 328,
+      "sha256": "25f44bf46fbf45560f966783bb809985a5e7171847b121f2d272a28568eec88a"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-e9ff7fc3f7b0.txt",
+      "bytes": 364,
+      "sha256": "20b678867cbe0128e2618befbf7bc147dfed63564728ef407ef09829cb0fec01"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-ea4223ad997f.txt",
+      "bytes": 326,
+      "sha256": "09335847f99cda80dd14b4aa7e72db6609b5461890c2d2994574e8ab19ab9572"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-ecf51a4dec89.txt",
+      "bytes": 346,
+      "sha256": "539fe88d69f6f5e74dc994fe1fcafb408c59752775d989c7d418edf4ac2eb65c"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-ed0c7b86bf9d.txt",
+      "bytes": 321,
+      "sha256": "1f9686abe86a3952cb3591eab125edc793abddb2ae503835615a375bb4af8f37"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-ed36909f2ebc.txt",
+      "bytes": 381,
+      "sha256": "be47c9c1ca7e762b123fac7ac544b0a0ec084d1ec097a2b34b83ef24991a3977"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-ee4f5f79e4d2.txt",
+      "bytes": 537,
+      "sha256": "c5bd8ff0c886e18e3465899dd478f9361602c1720bd8773d8c5f6770cef77fc6"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-ee5900a08088.txt",
+      "bytes": 348,
+      "sha256": "33085c9bbedf2abc378368eb584e778b41d051bc737637aa4c69a10919b34ba8"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-ef71f332c01e.txt",
+      "bytes": 322,
+      "sha256": "b6ef6522a247a5fe0c5da8031f6f6642d0b171210deba827d422bbcc384b0e68"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-f2960bec7872.txt",
+      "bytes": 304,
+      "sha256": "ec1af523b554b83cde5f6003c97581512363ec055fd4c75564a0fb8d6fdcfe2c"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-f2a315bb3c54.txt",
+      "bytes": 312,
+      "sha256": "0d3fd0832a1e42674143f523684adb7647c1a44cde3b35b2e35f8649ad0557dc"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-f586828baf35.txt",
+      "bytes": 293,
+      "sha256": "66607e1cfbc3961cbc3ade7bad0f67f6fb0c6b814d1bd3d6e80f5dd20a3c665f"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-f59b20e54164.txt",
+      "bytes": 400,
+      "sha256": "32eae5c1b96007618ea92a9a403252953e89882b3dc8e908d7512009fc3a2f50"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-f7df21cc2e11.txt",
+      "bytes": 387,
+      "sha256": "1bb22c43e8269fd3a41e36644b31492a87c9be698ac63151ae82767ee5ee597f"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-f7e7a8ed988b.txt",
+      "bytes": 360,
+      "sha256": "657117b6bd8fa98081db3e47a0e77edce13f65a2ac1165094d3ff748d9a5d2fa"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-f854396f809c.txt",
+      "bytes": 554,
+      "sha256": "68971c5da4d2290c2637c55231d2b87d046a53697c3d5730456752c9722f8a06"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-f9952e2138a5.txt",
+      "bytes": 358,
+      "sha256": "1e7d9798b0b65ba9ea7322696ba7b2937a1a61be5aee14adb84b658f0fe630bb"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-f9ae94fafb8b.txt",
+      "bytes": 451,
+      "sha256": "e38ab60bf9da2fe04ac7d6bd3ce7b98e62e4d3255b21278172ea3b2fd2893d96"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-f9c721ed25aa.txt",
+      "bytes": 289,
+      "sha256": "c93c0035b6bf211e120ee41a990c2dfb2644cc516cfc4771b13816b193d59b12"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-fa4fb436805e.txt",
+      "bytes": 356,
+      "sha256": "90d2c6ef0211dc0293faa5a126a312a18e3a656d86928bcbf921a8e664c5d31f"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-ff07073d3334.txt",
+      "bytes": 342,
+      "sha256": "7fd6058d0448c1629283d33c4ea92f110b3b848d835fa79a98e6566589a8c520"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-ffd87fd2705e.txt",
+      "bytes": 362,
+      "sha256": "f776a83899b1a9ef6a092c9e83e3710d6fc43eb96a543936ea40e453c5239108"
+    },
+    {
+      "path": "_RESOURCES/SOURCE-fff5437c31e2.txt",
+      "bytes": 361,
+      "sha256": "1ffcba5cd34637e16c9859218462f07c915770db989dd69a47c13f0d9797c694"
+    },
+    {
+      "path": "_RESOURCES/USCO_2025_Part2_Copyrightability.pdf",
+      "bytes": 1471826,
+      "sha256": "30889d027cb7ec5b1e29919f26b1603ae691db6e77472acb270a2f8b8e540947"
+    },
+    {
+      "path": "_SLIPCASE/ALIASES.json",
+      "bytes": 24583,
+      "sha256": "ebca77dc3c6fb149a6822030fb213ed158bd780c3bd21c0ae2777dfc01340db7"
+    },
+    {
+      "path": "_SLIPCASE/APPEARANCES.jsonl",
+      "bytes": 26058,
+      "sha256": "99cbd246e09406276df4839d5d42d8ade7c7fb1e153c7263a6e0b93553948731"
+    },
+    {
+      "path": "_SLIPCASE/COUNTS.json",
+      "bytes": 196,
+      "sha256": "05cc41644add757cf4ac4dcb3d04749f7de983f88a0fa08ccc3d47902e5953a4"
+    },
+    {
+      "path": "_SLIPCASE/GHOSTS.json",
+      "bytes": 114653,
+      "sha256": "80a8a3b2b48ea744ccdf05e446f21bcc5b2df701881a600f8c2ec04bc7510326"
+    },
+    {
+      "path": "_SLIPCASE/MARK.pdf",
+      "bytes": 1449,
+      "sha256": "0cc6884bd4c802c10d3c9b5490ed8b78f8f7a86117b3af5ff4d22684bc34b246"
+    },
+    {
+      "path": "_SLIPCASE/NODES.jsonl",
+      "bytes": 127469,
+      "sha256": "2403ea29caa59464f35c7b2a5154f57e3b915b9a9706d233f49e435367aadc02"
+    },
+    {
+      "path": "_SLIPCASE/PAPER_LATEX_FINAL.log",
+      "bytes": 23874,
+      "sha256": "fb29c945e371990cfa7c91b5ad9602b537374b52491a1003b1bd02a853cc3705"
+    },
+    {
+      "path": "_SLIPCASE/RELATIONS.jsonl",
+      "bytes": 509788,
+      "sha256": "56142808480d52151bbbe79628060f2ad9c738ec4e198f7620986d4fa912e19a"
+    },
+    {
+      "path": "_SLIPCASE/RESOURCES.jsonl",
+      "bytes": 5185,
+      "sha256": "59ecf3740bf5ca7ddd44f361accdaeb20ba4dfc3b9b4d1cd2c9979e4dd00c24f"
+    },
+    {
+      "path": "_SLIPCASE/VERIFICATION.txt",
+      "bytes": 2808,
+      "sha256": "39297db38fbfa6e6044beee98e53a84c85bd15fa25ab112b469921ac52bb9f62"
+    },
+    {
+      "path": "_SLIPCASE/ZETTEL_MANIFEST.csv",
+      "bytes": 55313,
+      "sha256": "0717383dc6b5293c0a68ca0cdf99498e356144752e4dce7fc5f72179954370cc"
+    },
+    {
+      "path": "_SLIPCASE/verification_final.txt",
+      "bytes": 2808,
+      "sha256": "39297db38fbfa6e6044beee98e53a84c85bd15fa25ab112b469921ac52bb9f62"
+    },
+    {
+      "path": "_SLIPCASE/verify_package.py",
+      "bytes": 2222,
+      "sha256": "4a2e6bbd6d9ade2832c5ac0ed1e4bde03720e2050293674f27275140f11e2c49"
+    },
+    {
+      "path": "after-surprise-temporal-frontier__2026-08-18.pdf",
+      "bytes": 284962,
+      "sha256": "09a265cd12ed229bffaddb3a12c2b4d0a726f603cff3f4641337dd99e82079ca"
+    },
+    {
+      "path": "after-surprise-temporal-frontier__2026-08-18.tex",
+      "bytes": 44836,
+      "sha256": "a90cbb03daa1d5abfeb78a211f1a9d0583109407cd0d6939239df330ce6bec93"
+    },
+    {
+      "path": "after-surprise-temporal-frontier__2026-08-18__ASSEMBLY_APPENDIX.txt",
+      "bytes": 372,
+      "sha256": "3ec9244c5c56a97c20b01f0e989b3ea4babb8dcdeb8b90450e982a04bba85e06"
+    },
+    {
+      "path": "after-surprise-temporal-frontier__2026-08-18__MAKING_HISTORY.txt",
+      "bytes": 3502,
+      "sha256": "e62103c5604f93815b92a8b53cc38a184dd7c9e3586921a9a0a69c8e4280c9fd"
+    },
+    {
+      "path": "after-surprise-temporal-frontier__2026-08-18__SOURCE_MAP.txt",
+      "bytes": 5615,
+      "sha256": "3e3441da72857d3a4430ede4de92d20286e93c0a7c08a3c93f05d0fcb4f2df6a"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1660352,
+      "sha256": "cbb9b80c6282e072f9fc6ba0d8847d0fde0a0ed11ce29855af135f67961069a6"
+    }
+  ]
+}

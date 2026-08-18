@@ -1,0 +1,49 @@
+SOURCE MAP — the-prompt-does-not-contain-its-own-semantics — 2026-08-17
+CHECKPOINT: SES-20260817-234319-a5ef0e2e
+STATUS: Derived interpretation map. Zettels remain evidence objects; compiler connective claims are marked COMPILER.
+
+PAPER CLAIM → ZETTEL → SOURCE → CITEKEY
+
+1. A dialogue prompt can be extended or overwritten by later conversational context.
+   → FORAGE-SHANAHAN-001
+   → Shanahan, McDonell, Reynolds — Role-Play with Large Language Models
+   → shanahan2023roleplay
+
+2. An instruction hierarchy is more robust when learned through training examples than when only described in a system prompt.
+   → FORAGE-WALLACE-001
+   → Wallace et al. — The Instruction Hierarchy
+   → wallace2024instruction
+
+3. Stylistic cues can compete with architectural role markers in probed role representations in the examined models.
+   → FORAGE-YE-CUI-HADFIELD-001
+   → Ye, Cui, Hadfield-Menell — Prompt Injection as Role Confusion
+   → ye2026roleconfusion
+   NOTE: 2026 preprint; interpretation remains provisional.
+
+4. A narrated counterfactual becomes runnable for another Storybot through compatible internal simulation machinery.
+   → FORAGE-WINFIELD-BLACKMORE-003
+   → Winfield, Blackmore — Experiments in Artificial Culture
+   → winfield2022artificialculture
+
+5. Language can act as evidence for a latent environment model rather than requiring a fully known map before grounding.
+   → FORAGE-WALTER-001
+   → Walter et al. — Language Understanding for Field and Service Robots in a Priori Unknown Environments
+   → walter2021language
+
+COMPILER CONNECTIVE CLAIMS
+A. “The prompt does not contain its own semantics.”
+   → synthesis across 1–5; not source language.
+B. “Interpreter ecology” and its six layers.
+   → COMPILER formalization; not source syntax.
+C. Prompt injection as a provenance-preservation problem.
+   → synthesis primarily from FORAGE-WALLACE-001 + FORAGE-YE-CUI-HADFIELD-001.
+D. “Distributed formalization” as correction/extension of deferred formalization.
+   → COMPILER inference grounded in conversational accumulation + grounding evidence; not source terminology.
+E. The house metaphor in the conclusion.
+   → COMPILER rhetorical synthesis; not evidence.
+
+BOUNDARIES PRESERVED
+- No claim that all cited systems share one implementation.
+- No claim that role-confusion probes establish a universal mechanism.
+- No claim that arbitrary natural-language descriptions can create new ontologies from nothing.
+- No claim that the present field is a comprehensive literature review.

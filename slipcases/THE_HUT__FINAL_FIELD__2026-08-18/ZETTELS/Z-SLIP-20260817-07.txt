@@ -1,0 +1,80 @@
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-07
+
+    TITLE:
+    A GENEALOGY OF CONSTRAINTS SHOULD BE A DEPENDENCY GRAPH, NOT A DIARY
+
+    SOURCE:
+    Johan de Kleer — “Problem Solving with the ATMS” — 1986 — Artificial Intelligence 28(2), pp. 197–224.
+
+    SOURCE URL:
+    https://doi.org/10.1016/0004-3702(86)90082-2
+
+    PASSAGE:
+    [PARAPHRASE] In the ATMS, hypotheses are assumptions, inferences are recorded as justifications, sets of assumptions form environments, and inconsistent environments are retained as nogoods rather than forgotten.
+
+    RESEARCH OBJECT:
+    A chronological transcript says what happened next; a dependency system says what survives because of what and which combinations are inconsistent.
+
+    LOCAL MOVE:
+    de Kleer provides a machinery for maintaining multiple assumption environments, justifications, labels, and contradictions.
+
+    SOURCE TERMS:
+    assumption; justification; environment; context; label; inconsistent; nogood
+
+    WHAT BECAME STRANGE:
+    Rejected generations may be valuable not as archived clutter but as reusable nogoods tied to the assumptions that caused failure.
+
+    QUESTION:
+    Should iterative generative systems maintain explicit nogoods and justifications for their constraints?
+
+    DEEPER QUESTION:
+    Can dependency be preserved while some nodes remain metaphors, examples, or unresolved judgments rather than formal propositions?
+
+    MECHANISM:
+    assumption → inference/justification → dependency label; inconsistent assumption set → nogood.
+
+    FORMAL SHIFT:
+    <CHAT SEQUENCE> → <ASSUMPTIONS + JUSTIFICATIONS + NOGOODS> → [DEPENDENCY MAINTENANCE] → <VIABLE CONTEXTS>
+
+    SOURCE FORMALISM:
+    ATMS assumptions, justifications, environments, labels, contexts, and nogoods.
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] Prompt memory should preserve constraint, rationale, supporting evidence, conflicting assumptions, and known failure combinations.
+
+    TENSION:
+    Formalizing fuzzy judgments too early can destroy precisely the ambiguity deferred formalization is meant to preserve.
+
+    MISSING:
+    A mixed graph where some nodes remain non-formal evidence while relations and provenance remain explicit.
+
+    BOUNDARY:
+    ATMS is not a prompt-memory architecture; the connection is architectural inference.
+
+    CITATION TRAIL:
+    Naur; design rationale; CEGIS; provenance.
+
+    TEST:
+    Compare raw chat memory with dependency-graph memory after fifty revisions and a late conflicting requirement.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[GENEALOGY OF CONSTRAINTS]]
+[[NOGOODS AS DESIGN MEMORY]]
+
+    BIBTEX:
+    @article{dekleer1986atms,
+  author={de Kleer, Johan},
+  title={Problem Solving with the ATMS},
+  journal={Artificial Intelligence},
+  volume={28},
+  number={2},
+  pages={197--224},
+  year={1986},
+  doi={10.1016/0004-3702(86)90082-2}
+}

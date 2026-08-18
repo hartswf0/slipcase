@@ -1,0 +1,9 @@
+REBUILD
+
+1. Open index.html from file://. It embeds the cards, prompts, paper text, source registry, graph relations, manifest summary, and open edges.
+2. For exact payload identity, use root zettel .txt files and compare SHA-256 values in _SLIPCASE/MANIFEST.json.
+3. Recompute graph from ZETTELS.jsonl: parse PLATFORM, LINKS, and all [[ADDRESSES]]. Resolve only exact IDs/platforms; preserve unresolved addresses as GHOSTS.
+4. Rebuild bibliography from BIBTEX fields; do not invent missing metadata. Public source URLs are receipts in 000__RESOURCES.txt.
+5. Rebuild paper from what-can-you-still-reopen__2026-08-18.md with pandoc --citeproc using SES-20260817-CENTAUR-PREF-01__references.bib, then compile the generated TeX with pdflatex.
+6. Re-run verification: card count = mirror count = JSON count; relation occurrence counts; citekeys subset bibliography; PDF render; ZIP integrity.
+7. Rejoin research with phrase: REJOIN SES-20260817-CENTAUR-PREF-01 — continue from CONTESTABILITY AFTER PERSUASION.

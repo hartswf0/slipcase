@@ -1,0 +1,43 @@
+SLIPCASE RETURN PATH
+
+CHECKPOINT: The Prompt Keeps Disappearing
+CHECKPOINT ID: SLIPCASE-20260818-MELT-FINAL-01
+SCHEMA: 15.55-AM
+RESEARCHER: Watson Hartsoe
+DATE: 2026-08-18
+PACKAGE: the-prompt-keeps-disappearing__FINAL-SLIPCASE-15.55-AM__2026-08-18.zip
+REJOIN: SLIPCASE REJOIN: The Prompt Keeps Disappearing / SLIPCASE-20260818-MELT-FINAL-01 / schema 15.55-AM
+
+CONSEQUENTIAL FILES
+  index.html
+  the-prompt-keeps-disappearing__FINAL.pdf
+  the-prompt-keeps-disappearing__FINAL.tex
+  the-prompt-keeps-disappearing__SOURCE_MAP.txt
+  000__OPEN_EDGES.txt
+  000__MAKING_HISTORY.txt
+  000__BIBLIOGRAPHY.txt
+  SLIPCASE-20260818-UNIT-01__references.bib
+  READER.html
+  NETWORK.html
+  CARDS.html
+  _SLIPCASE/VERIFICATION.txt
+  _SLIPCASE/MANIFEST.json
+
+IMMUTABLE EVIDENCE
+  Root cards 001..040 and exact _MD mirrors.
+  Their payload bytes were not rewritten for this final-paper compile.
+
+INTERPRETIVE HISTORY
+  Superseded public papers are preserved under _RESOURCES/.
+
+ASSEMBLY INSTRUMENT
+  _PROMPTS/11__slipcase-v15.55-AM__final-package-assembly.poml
+  SHA-256: a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a
+
+REBUILD
+  Verify root card SHA-256 against _MD mirrors.
+  Inspect ZETTELS.json/jsonl and bibliography.
+  Render and inspect the final PDF.
+  Recompute _SLIPCASE/MANIFEST.json.
+  Rebuild index.html from exact payloads and final paper.
+  Create ZIP and test with unzip -t.

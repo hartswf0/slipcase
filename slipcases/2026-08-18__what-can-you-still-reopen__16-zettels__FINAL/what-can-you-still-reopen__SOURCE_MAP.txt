@@ -1,0 +1,147 @@
+SOURCE MAP — WHAT CAN YOU STILL REOPEN?
+Adaptive Persuasion and the Contestability of Desire
+18 August 2026
+
+C01
+CLAIM: A present-state freedom measure can certify high autonomy after a surrounding persuasive system has altered the desire used as its reference point.
+TYPE: COMPILER-SYNTHESIS
+ZETTEL: CBX-006-WHO-WROTE-THE-DESIRE
+SOURCE: Hartsoe — Centaur Box Experiment: Aligning Freedom, Practicing Persuasion, and Crafting Synthetic Gatekeepers
+CITEKEY: hartsoe_centaurbox_expanded
+SUPPORT: The supplied manuscript places desire D inside a conceptual freedom formula.
+INFERENCE: Coupling that formula to adaptive preference-changing influence makes D endogenous to the evaluated system.
+
+C02
+CLAIM: The Centaur persuasion architecture is recursive: identify gatekeepers, calibrate strategies from outcomes, and scale successful influence.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: CBX-006-WHO-WROTE-THE-DESIRE; CBX-003-SUSCEPTIBILITY-IS-NOT-TAILORING
+SOURCE: Hartsoe & Assi — Thinking Outside the AI Box: The Centaur Box Experiment
+CITEKEY: hartsoe_assi_centaurbox
+SUPPORT: Advocacy, calibration, and scaling are explicit in the supplied manuscript.
+INFERENCE: NONE
+
+C03
+CLAIM: Persuasion outcomes must be decomposed because increased action can result from procedural assistance rather than changed belief.
+TYPE: SOURCE-SUPPORTED + INTERPRETATION
+ZETTEL: CBX-001-PROCEDURAL-PERSUASION
+SOURCE: Wang et al. — Persuasion for Good
+CITEKEY: wang2019persuasion
+SUPPORT: Donation information had a significant positive main effect in the reported strategy table.
+INFERENCE: The causal mechanism may include reduced execution friction rather than attitudinal conversion.
+
+C04
+CLAIM: Conversational assent and completed action are distinct states.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: CBX-002-COMPLIANCE-IS-NOT-RELEASE
+SOURCE: Wang et al. — Persuasion for Good
+CITEKEY: wang2019persuasion
+SUPPORT: Among a subset who agreed to donate, some later reduced or made no donation.
+INFERENCE: Governance experiments should not collapse assent, authorization, permission, and execution into one terminal state.
+
+C05
+CLAIM: Baseline susceptibility and person-specific intervention effects are different quantities.
+TYPE: INTERPRETATION
+ZETTEL: CBX-003-SUSCEPTIBILITY-IS-NOT-TAILORING
+SOURCE: Wang et al. — Persuasion for Good
+CITEKEY: wang2019persuasion
+SUPPORT: The source separately reports psychological predictors and strategy-by-characteristic interactions.
+INFERENCE: Predicting who is likely to comply does not by itself establish which intervention causally changes that person.
+
+C06
+CLAIM: Convincingness ranking and personalized belief change optimize different objects; strategic dialogue may require dynamic state rather than static personality.
+TYPE: INTERPRETATION
+ZETTEL: CBX-008-CICERO-IS-A-STATE-MACHINE; CBX-009-CONVINCINGNESS-HAS-NO-PERSON
+SOURCE: Gleize et al.; Meta Fundamental AI Research Diplomacy Team
+CITEKEY: gleize2019convinced; meta2022diplomacy
+SUPPORT: EviConv is a pairwise convincingness task; CICERO combines language with strategic reasoning in Diplomacy.
+INFERENCE: Neither source alone licenses a static psychographic causal model of real-world gatekeepers.
+
+C07
+CLAIM: Higher-order endorsement does not terminate the manipulation problem if the endorsement process itself can be targeted.
+TYPE: COMPILER-SYNTHESIS
+ZETTEL: CBX-006B-ENDORSEMENT-REGRESS
+SOURCE: Frankfurt; Christman
+CITEKEY: frankfurt1971freedom; christman1991autonomy
+SUPPORT: Frankfurt distinguishes higher-order volitions; Christman argues coherent/integrated motivational structures can be manipulated.
+INFERENCE: Adaptive persuasion can treat the autonomy-certifying reflective layer as another possible target surface.
+
+C08
+CLAIM: Autonomy cannot be inferred solely from a present motivational state when distinct histories can converge on the same state.
+TYPE: INTERPRETATION
+ZETTEL: CBX-006A-AUTONOMY-HAS-A-HISTORY
+SOURCE: Christman — Autonomy and Personal History
+CITEKEY: christman1991autonomy
+SUPPORT: Christman develops a historical account and argues that coherent motivational integration can result from manipulation.
+INFERENCE: A state-only metric loses autonomy-relevant information if trajectory matters.
+
+C09
+CLAIM: Preference provenance cannot mean purity from external influence.
+TYPE: INTERPRETATION
+ZETTEL: CBX-006C-PROVENANCE-IS-NOT-PURITY
+SOURCE: Christman — Autonomy and Personal History
+CITEKEY: christman1991autonomy
+SUPPORT: The source treats personal history and influence as constitutive of the autonomy problem rather than requiring self-creation.
+INFERENCE: External causation alone cannot classify a preference as non-autonomous.
+
+C10
+CLAIM: Questionable preference formation does not erase the chooser's standing; preference-changing intervention can sometimes support agency.
+TYPE: SOURCE-SUPPORTED + INTERPRETATION
+ZETTEL: CBX-006E-ADAPTIVE-DESIRES-DO-NOT-ERASE-AGENCY; CBX-006F-PERSUASION-CAN-EXPAND-AUTONOMY
+SOURCE: Khader — Adaptive Preferences and Women's Empowerment
+CITEKEY: khader2011adaptive
+SUPPORT: Khader separates adaptive preferences from a blanket finding of autonomy deficit and develops empowerment-oriented intervention without treating agents as inert.
+INFERENCE: Noninterference cannot serve as the universal opposite of manipulation.
+
+C11
+CLAIM: Manipulation risk can lie in the influence channel even when the final desire is intelligible or endorsed.
+TYPE: INTERPRETATION
+ZETTEL: CBX-006D-MANIPULATION-LIVES-IN-THE-CHANNEL
+SOURCE: Susser, Roessler & Nissenbaum — Online Manipulation
+CITEKEY: susser2019online
+SUPPORT: The source centers hidden influence, targeting, vulnerabilities, and decision-making power.
+INFERENCE: Endpoint equality does not imply process equivalence.
+
+C12
+CLAIM: Mental self-determination places normative weight upstream of the final choice.
+TYPE: SOURCE-SUPPORTED + INTERPRETATION
+ZETTEL: CBX-006G-THE-RIGHT-IS-TO-THE-PROCESS
+SOURCE: Bublitz & Merkel — Crimes Against Minds
+CITEKEY: bublitz2014crimes
+SUPPORT: The source argues for protection against serious mental interference and manipulation.
+INFERENCE: A freedom metric that inspects only final preference satisfaction can arrive after the relevant interference.
+
+C13
+CLAIM: Documentation of human gatekeepers can increase both accountability and targetability.
+TYPE: COMPILER-SYNTHESIS
+ZETTEL: CBX-004-TRANSPARENCY-ATTACK-SURFACE
+SOURCE: Mitchell et al.; Hartsoe & Assi
+CITEKEY: mitchell2019model; hartsoe_assi_centaurbox
+SUPPORT: Model Cards document models; Centaur materials propose Gatekeeper Cards exposing human motivations/worldviews.
+INFERENCE: The same representation can serve audit or targeting depending on recipient and available operations.
+
+C14
+CLAIM: A gatekeeper may be a constrained node inside an authorization path rather than the locus of a decision.
+TYPE: INTERPRETATION
+ZETTEL: CBX-005-THE-GATEKEEPER-IS-NOT-THE-GATE; CBX-002-COMPLIANCE-IS-NOT-RELEASE
+SOURCE: Hartsoe & Assi; Wang et al.
+CITEKEY: hartsoe_assi_centaurbox; wang2019persuasion
+SUPPORT: Centaur materials list organizational/legal/market/normative constraints; Wang et al. document assent/action discontinuity.
+INFERENCE: Institutional feasible-action sets can dominate individual persuasive response.
+
+C15
+CLAIM: Contestability is a candidate process criterion composed of visibility, model asymmetry, vulnerability targeting, alternative access, refusal, reversibility, revisability, and preservation of standing.
+TYPE: COMPILER-SYNTHESIS / OPEN-QUESTION
+ZETTEL: CBX-006D-MANIPULATION-LIVES-IN-THE-CHANNEL; CBX-006E-ADAPTIVE-DESIRES-DO-NOT-ERASE-AGENCY; CBX-006F-PERSUASION-CAN-EXPAND-AUTONOMY; CBX-006G-THE-RIGHT-IS-TO-THE-PROCESS
+SOURCE: Susser et al.; Khader; Bublitz & Merkel
+CITEKEY: susser2019online; khader2011adaptive; bublitz2014crimes
+SUPPORT: The sources jointly distinguish hidden/exploitative influence, agent-preserving intervention, and mental self-determination.
+INFERENCE: The named dimensions are a synthesis and are not a validated scale.
+
+C16
+CLAIM: The strongest empirical test separates process from endpoint and permits the contestability hypothesis to fail.
+TYPE: COMPILER-SYNTHESIS / OPEN-QUESTION
+ZETTEL: CBX-006F-PERSUASION-CAN-EXPAND-AUTONOMY; CBX-006D-MANIPULATION-LIVES-IN-THE-CHANNEL; CBX-003-SUSCEPTIBILITY-IS-NOT-TAILORING
+SOURCE: MULTISOURCE
+CITEKEY: susser2019online; khader2011adaptive; wang2019persuasion
+SUPPORT: The underlying sources motivate distinct process variables and outcome distinctions.
+INFERENCE: Proposed factorial experiment and measurement battery are new research design suggestions.

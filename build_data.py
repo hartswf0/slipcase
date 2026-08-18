@@ -1,10 +1,6 @@
 import os, glob, json, re
 
-# Load slipcase data
-with open('/tmp/slipcase_data.json', 'r') as f:
-    cases_data = json.load(f)
-
-# Prompts from user request
+# Prompts from Cool Radio suite
 prompts_data = [
     {
         "title": "FORAGE",
@@ -3856,4 +3852,5 @@ REQUIRE: "Operating with Signs." The output must read like a manual for playing 
     }
 ]
 
-print(f'Prepared {len(prompts_data)} prompts and {len(cases_data)} cases.')
+if __name__ == '__main__':
+    print(f'Prepared {len(prompts_data)} POML prompts.')

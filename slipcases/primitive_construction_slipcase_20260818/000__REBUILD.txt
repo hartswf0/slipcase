@@ -1,0 +1,13 @@
+REBUILD
+
+1. Keep every root YPC-*.txt immutable.
+2. Verify each root zettel SHA-256 against ZETTELS.json.
+3. _MD mirrors must byte-match root payloads.
+4. Rebuild ZETTELS.json/jsonl from root files.
+5. Recompute MEMBER_OF from PLATFORM and LINKS_TO from LINKS.
+6. Preserve unresolved [[...]] targets as ghosts unless exact IDs/titles exist.
+7. Bibliography citekeys used by the paper must exist in primitive-construction__references.bib.
+8. Compile the-fill-point__2026-08-18.tex with pdflatex twice.
+9. Render and inspect the PDF.
+10. Rebuild index/reader/network if the evidence set changes.
+11. Zip the root directory and test archive integrity.

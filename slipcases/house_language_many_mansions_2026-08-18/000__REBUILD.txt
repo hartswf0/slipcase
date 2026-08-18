@@ -1,0 +1,8 @@
+REBUILD
+
+1. Root *.txt cards are immutable zettel payloads. _MD mirrors are byte-identical.
+2. ZETTELS.json/jsonl contain parsed fields, payload, hashes, and provenance.
+3. Compile the paper with pdflatex, bibtex, pdflatex, pdflatex using HOUSE-LANGUAGE-MANY-MANSIONS__references.bib.
+4. index.html, READER.html, NETWORK.html, and CARDS.html are framework-free and work from file://.
+5. _SLIPCASE/VERIFICATION.txt records computed counts and artifact checks.
+6. SLIPCASE_FINAL_PROMPT.txt is the exact provided assembly prompt.

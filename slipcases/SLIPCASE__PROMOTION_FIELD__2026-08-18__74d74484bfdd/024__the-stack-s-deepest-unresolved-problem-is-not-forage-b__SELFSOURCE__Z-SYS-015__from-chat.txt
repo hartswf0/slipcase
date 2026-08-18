@@ -1,0 +1,129 @@
+ZETTEL
+
+ID:
+Z-SYS-015
+
+TITLE:
+The stack's deepest unresolved problem is not forage but promotion
+
+SOURCE:
+User-provided prompt system — PRIME ZETTEL FORAGE / AUTONOMOUS GRAPH INQUIRY / SLIPCASE Ancient Master family — supplied 2026-08-18.
+
+PASSAGE:
+[PARAPHRASE] The stack specifies how sources become zettels, zettels generate children, unresolved edges compete for attention, interpretations are revised, and publication artifacts are built. Across those stages it repeatedly insists that evidence, inference, graph structure, and provenance remain distinct.
+
+RESEARCH OBJECT:
+The major unsolved operation is deciding when an object may change epistemic status.
+
+LOCAL MOVE:
+Moves attention from generation quantity toward transitions between states.
+
+SOURCE TERMS:
+admission
+emit
+derived
+verified
+unverified
+evidence
+field
+interpretation
+MELT
+BECOME NEW
+
+WHAT BECAME STRANGE:
+Nearly every difficult collision in the stack is a promotion question:
+
+When does an unresolved token become a GHOST?
+When does resemblance become an edge?
+When does an edge become supported?
+When does a paper inference become a hypothesis?
+When does a generated child become admitted research state?
+When does a retrieved claim become evidence rather than an unverified receipt?
+
+QUESTION:
+What are the legal epistemic state transitions of the research system?
+
+DEEPER QUESTION:
+Could a single explicit promotion algebra simplify the forager, daemon, graph compiler, verification system, and paper source map at once?
+
+MECHANISM:
+Objects enter provisionally.
+Tests or mechanical checks act on them.
+Some are admitted, typed, promoted, rejected, or preserved as unresolved.
+Downstream layers are allowed different operations depending on state.
+
+FORMAL SHIFT:
+<candidate object>
+→ <typed epistemic state>
+→ [test / verify / discriminate / resolve]
+→ <promoted, retained-open, or rejected object>
+
+SOURCE FORMALISM:
+The prompts supply many local transition vocabularies but no single shared state machine.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+CANDIDATE
+  → UNVERIFIED
+  → VERIFIED
+
+CANDIDATE_RELATION
+  → HYPOTHESIS
+  → SUPPORTED_RELATION | REJECTED
+
+UNRESOLVED_ADDRESS
+  → GHOST | AMBIGUOUS | BROKEN | RESOLVED
+
+PAPER_INFERENCE
+  → HYPOTHESIS_ZETTEL
+  → TESTED_CLAIM
+
+At no point does:
+INTERPRETATION → EVIDENCE
+occur without new external evidence.
+
+TENSION:
+The existing prompts wisely avoid one universal confidence score because different objects require different tests. A universal promotion system could flatten those distinctions if designed poorly.
+
+MISSING:
+A typed transition registry specifying:
+object type,
+current state,
+allowed next states,
+required receipt,
+reversibility,
+and whether the transition mutates evidence or only derived state.
+
+BOUNDARY:
+Not every part of research judgment can or should become an executable finite-state machine. The candidate is a provenance discipline, not a replacement for interpretation.
+
+CITATION TRAIL:
+[[Z-SYS-003]]
+[[Z-SYS-008]]
+[[Z-SYS-010]]
+[[Z-SYS-011]]
+[[Z-SYS-013]]
+→ shared state-transition problem
+→ epistemic promotion algebra
+
+TEST:
+Audit every imperative verb in the four prompt layers. For each operation, record INPUT STATE → OPERATION → OUTPUT STATE → REQUIRED RECEIPT. If the same transition recurs across three or more layers, factor it into a shared promotion rule.
+
+PLATFORM:
+[[EPISTEMIC STATE MACHINE]]
+
+LINKS:
+[[Z-SYS-003]]
+[[Z-SYS-008]]
+[[Z-SYS-010]]
+[[Z-SYS-011]]
+[[Z-SYS-013]]
+
+BIBTEX:
+@misc{prompt_stack_promotion_2026,
+  title = {Epistemic Promotion Problem in the Prime Zettel Forage / Slipcase Prompt Stack},
+  howpublished = {Derived from user-provided research-system prompts},
+  year = {2026},
+  note = {Supplied and analyzed 2026-08-18}
+}

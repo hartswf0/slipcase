@@ -1,0 +1,41 @@
+VERIFICATION — FINAL FIELD SEAL
+CHECKPOINT: SLIPCASE-20260818-MELT-FINAL-01
+SCHEMA: 15.55-AM
+DATE: 2026-08-18
+
+SOURCE / CONTEXT COVERAGE
+  Final packaging uses the preserved 40-zettel checkpoint plus the already-compiled MELT-v2 paper and the supplied final assembly instrument.
+  No external sources were re-fetched in this packaging pass.
+
+EXTRACTION / PAYLOAD IDENTITY
+  Root immutable zettels (001..040): 40
+  _MD mirrors: 40
+  Root ↔ _MD SHA-256 equality: PASS
+  ZETTELS.json records: 40
+  ZETTELS.jsonl records: 40
+
+FINAL PAPER
+  File: the-prompt-keeps-disappearing__FINAL.pdf
+  SHA-256: d2886905270e8eff41b499bd8e1898d9f6dc36fc8172dd9641cfbc1721cd51de
+  Render inspection: 9 pages rendered and visually inspected in this run; no clipping/black boxes/broken layout observed.
+  Earlier papers preserved under _RESOURCES/ as superseded derived interpretations.
+
+ASSEMBLY PROMPT
+  Exact final instrument: _PROMPTS/11__slipcase-v15.55-AM__final-package-assembly.poml
+  SHA-256: a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a
+
+INDEX RECONSTRUCTION
+  index.html embeds all 40 exact zettel payloads and SHA-256 identities, final PDF bytes, bibliography, open edges, source map, graph state, ghosts, making history, return path, and assembly prompt.
+
+MANIFEST
+  Entries hashed: 172
+  MANIFEST generated from current final directory state.
+
+ZIP STATUS
+  PASS — staging archive containing the final directory contents passed unzip -t before the final archive was emitted.
+  See _SLIPCASE/final_staging_zip_test.log.
+  The emitted final archive is independently tested outside this internal record.
+
+UNVERIFIED
+  Human peer review.
+  Fresh verification of external source bodies.

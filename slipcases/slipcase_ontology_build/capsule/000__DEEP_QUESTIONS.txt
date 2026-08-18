@@ -1,0 +1,513 @@
+DEEP QUESTIONS
+SLIPCASE v15.6-TENSION-FIRST
+Derived from the tension field. These are research frontiers, not findings.
+
+DQ-01 — WHEN DID THE WORDS STOP BEING THE CAUSE?
+Priority: 10/10 field disruption · 10/10 mechanistic consequence · 9/10 tractability
+
+QUESTION:
+Under what conditions is the language visible to the user actually the causal locus of a generative system's behavior?
+
+WHY IS THIS STILL A QUESTION? 1 — OBJECT:
+“The prompt” is not one object. User text, rewritten text, token sequence, embedding state, compiled demonstrations, and soft vectors can all occupy the role.
+
+WHY IS THIS STILL A QUESTION? 2 — PIPELINE:
+A visible prompt can be transformed before generation. Surface-level prompt/output correlation therefore cannot localize the effect.
+
+WHY IS THIS STILL A QUESTION? 3 — DYNAMICS:
+Even if a concept enters the conditioning process, it can lose influence during denoising. Initial interpretation and final control are separable.
+
+WHY IS THIS STILL A QUESTION? 4 — STATE:
+Seed and initial latent conditions can influence content, especially when semantic guidance is weak.
+
+WHY IS THIS STILL A QUESTION? 5 — SELECTION:
+Generated artifacts may be shaped more strongly by which candidate survives than by which sentence began the process.
+
+WHAT ARE WE ASSUMING IS ONE THING?
+“Prompt causality.”
+
+SPLIT IT INTO:
+surface-text effect
+rewrite effect
+representation effect
+generation-dynamics effect
+random-state effect
+selection/evaluator effect.
+
+WHAT IF CAUSAL DIRECTION IS REVERSED?
+Prompt wording may sometimes be a retrospective explanation of a successful output rather than its dominant cause: users keep, rewrite, and narrate the prompt after seeing what worked.
+
+WHAT WOULD MAKE BOTH CURRENT SIDES WRONG?
+If no single stage has stable causal primacy and control is inherently interactional: the same sentence has different effects only because other stages configure what it can do.
+
+ZETTELS DESTABILIZED:
+DEFAULT-IMAGES-CHI26-ROOT
+DEFAULT-IMAGES-CHI26-B
+DEFAULT-IMAGES-CHI26-B-1
+WORKWORDS-PROMPT-001
+WORKWORDS-PROMPT-002
+WORKWORDS-PROMPT-004
+DEFAULT-IMAGES-CHI26-A-1
+DEFAULT-IMAGES-CHI26-C-1
+WORKWORDS-PROMPT-006
+WORKWORDS-PROMPT-008
+
+DECISIVE NEXT STUDY:
+An instrumented causal-ablation benchmark that intervenes independently on user text, rewrite, token/embedding representation, seed, denoising state, and evaluator while holding the remaining stages fixed.
+
+IF ANSWERED:
+The result would reorganize prompt engineering, authorship, reproducibility, and the claim that description itself operates.
+
+
+DQ-02 — CAN A SPECIFICATION BECOME LESS CONTROLLING AS IT BECOMES MORE EXPLICIT?
+Priority: 9/10 disruption · 9/10 consequence · 10/10 tractability
+
+QUESTION:
+What does “specify the behavior” mean in a system where adding a requirement can make that requirement—or another one—less likely to be obeyed?
+
+WHY 1:
+Natural-language requirements compete for model attention and instruction-following capacity.
+
+WHY 2:
+Some omitted requirements are supplied by defaults, making explicit text redundant.
+
+WHY 3:
+A requirement can be enforced through prose, examples, decoding constraints, external checks, or evaluators; these are not equivalent.
+
+WHY 4:
+A longer prompt changes the context in which every earlier clause is interpreted.
+
+WHY 5:
+The optimal amount of specification can be model- and task-relative rather than intrinsic to the task.
+
+ASSUMED ONE THING:
+Specification.
+
+SPLIT:
+stated requirement
+effective requirement
+defaulted behavior
+formally enforced constraint
+externally tested criterion.
+
+REVERSED CAUSAL DIRECTION:
+Rather than requirements controlling model behavior, model behavior may determine which requirements practitioners learn to state explicitly.
+
+BOTH WRONG IF:
+The relevant object is not amount of specification but allocation of requirements among different control channels.
+
+ZETTELS DESTABILIZED:
+WORKWORDS-PROMPT-001
+WORKWORDS-PROMPT-003
+WORKWORDS-PROMPT-007
+DEFAULT-IMAGES-CHI26-A
+DEFAULT-IMAGES-CHI26-A-1
+
+DECISIVE NEXT STUDY:
+A requirements matrix that systematically moves each requirement between prose, demonstration, formal constraint, and external evaluation while measuring individual compliance and cross-requirement interference.
+
+IF ANSWERED:
+It would replace “prompt completeness” with a theory of control allocation.
+
+
+DQ-03 — WHAT LANGUAGE DOES THE MODEL HAVE?
+Priority: 9/10 disruption · 9/10 conceptual consequence · 8/10 tractability
+
+QUESTION:
+If a human nonword can be model-significant, a valid word can be nearly inert, a Unicode character can carry a cultural direction, and continuous vectors can outperform prose, what exactly is the model's operative language?
+
+WHY 1:
+Human lexical categories do not align cleanly with tokenization.
+
+WHY 2:
+Tokenization does not by itself determine embedding geometry.
+
+WHY 3:
+Embedding geometry does not guarantee downstream causal influence.
+
+WHY 4:
+The same visible string can acquire different meanings across model families and versions.
+
+WHY 5:
+Soft prompts show that control can persist without human-readable linguistic units.
+
+ASSUMED ONE THING:
+Vocabulary.
+
+SPLIT:
+human lexicon
+token vocabulary
+embedding neighborhood
+learned cross-modal association
+effective control direction.
+
+REVERSED CAUSAL DIRECTION:
+Instead of words carrying meanings into the model, model behavior may teach users which arbitrary textual forms count as meaningful instructions in practice.
+
+BOTH WRONG IF:
+Prompting is best understood as navigation in a control manifold for which natural language supplies only an approximate coordinate system.
+
+ZETTELS DESTABILIZED:
+DEFAULT-IMAGES-CHI26-F
+DEFAULT-IMAGES-CHI26-F-1
+DEFAULT-IMAGES-CHI26-F-2
+WORKWORDS-PROMPT-002
+DEFAULT-IMAGES-CHI26-D
+
+DECISIVE NEXT STUDY:
+Cross human lexicality with model-measured conditioning strength and transfer across model versions, including soft-vector controls.
+
+IF ANSWERED:
+It would determine whether “prompt language” is literal language, interface convention, or model-relative control geometry.
+
+
+DQ-04 — IS FAILURE AN ABSENCE OR A HISTORY OF LOST CONTROL?
+Priority: 8/10 disruption · 10/10 mechanism · 9/10 tractability
+
+QUESTION:
+When a requested concept is absent from a final image, was it never represented, represented weakly, represented and overwritten, or represented but prevented from affecting the final output?
+
+WHY 1:
+Final outputs erase the temporal history of generation.
+
+WHY 2:
+Cross-attention can show early concept capture followed by loss.
+
+WHY 3:
+Competing concepts can occupy overlapping spatial regions.
+
+WHY 4:
+Known terms can hide failure of unknown terms in larger prompts.
+
+WHY 5:
+Default motifs may emerge late rather than exist as fixed fallback states.
+
+ASSUMED ONE THING:
+Understanding.
+
+SPLIT:
+recognition
+representation
+localization
+retention
+causal efficacy
+visible realization.
+
+REVERSED CAUSAL DIRECTION:
+What looks like “failure to understand” may be caused by downstream competition rather than upstream semantic absence.
+
+BOTH WRONG IF:
+Representation and generation are not serial stages but mutually changing processes.
+
+ZETTELS DESTABILIZED:
+DEFAULT-IMAGES-CHI26-ROOT
+DEFAULT-IMAGES-CHI26-A
+DEFAULT-IMAGES-CHI26-A-1
+DEFAULT-IMAGES-CHI26-C
+
+DECISIVE NEXT STUDY:
+Time-resolved concept intervention on default-like prompts in an inspectable diffusion system.
+
+IF ANSWERED:
+It would create a temporal taxonomy of prompt failure rather than one binary adherence score.
+
+
+DQ-05 — WHEN DOES RANDOMNESS BECOME A SEMANTIC ACTOR?
+Priority: 8/10 disruption · 9/10 mechanism · 9/10 tractability
+
+QUESTION:
+Does weakening prompt guidance merely increase output variance, or does it transfer control to structured affordances of the initial random state?
+
+WHY 1:
+Seed choice changes recurring default motifs.
+
+WHY 2:
+Initial latent blocks can have reproducible content preferences relative to a trained generator.
+
+WHY 3:
+“Random” describes how a state is sampled, not how the trained model will respond to it.
+
+WHY 4:
+Prompt strength may modulate the marginal causal effect of initial state.
+
+WHY 5:
+Default images may therefore be interactions between semantic weakness and particular latent basins.
+
+ASSUMED ONE THING:
+Noise.
+
+SPLIT:
+sampling randomness
+initial state
+model-relative affordance
+semantic output effect.
+
+REVERSED CAUSAL DIRECTION:
+Instead of the prompt determining an image and the seed adding variation, the seed may propose latent trajectories that the prompt only accepts, rejects, or weakly redirects.
+
+BOTH WRONG IF:
+Neither prompt nor seed has stable independent effects; only their interaction is meaningful.
+
+ZETTELS DESTABILIZED:
+DEFAULT-IMAGES-CHI26-C
+DEFAULT-IMAGES-CHI26-C-1
+DEFAULT-IMAGES-CHI26-ROOT
+
+DECISIVE NEXT STUDY:
+Estimate prompt-by-seed interaction effects across graded semantic familiarity and perform latent-block transplantation.
+
+IF ANSWERED:
+It would force prompt research to treat stochastic state as part of the semantics of execution.
+
+
+DQ-06 — CAN A MEASUREMENT SYSTEM HAVE THE SAME PATHOLOGY AS THE SYSTEM IT MEASURES?
+Priority: 8/10 disruption · 8/10 epistemic consequence · 8/10 tractability
+
+QUESTION:
+When a detector identifies outputs that are unusually similar across unrelated prompts, how do we know the convergence belongs to the generator rather than to the representation used to measure similarity?
+
+WHY 1:
+CLIP embeddings are learned, not neutral perceptual coordinates.
+
+WHY 2:
+Contrastive spaces can contain hubs.
+
+WHY 3:
+Clustering thresholds create boundaries.
+
+WHY 4:
+Human and embedding notions of similarity need not agree.
+
+WHY 5:
+The source phenomenon is itself defined relationally, so measurement geometry is constitutive of detection.
+
+ASSUMED ONE THING:
+Similarity.
+
+SPLIT:
+human visual similarity
+task-semantic similarity
+embedding proximity
+hubness
+cluster membership.
+
+REVERSED CAUSAL DIRECTION:
+A detector may make a family of images look like a natural category because its geometry preferentially brings them together.
+
+BOTH WRONG IF:
+Default-image recurrence is real but has no representation-independent boundary.
+
+ZETTELS DESTABILIZED:
+DEFAULT-IMAGES-CHI26-E
+DEFAULT-IMAGES-CHI26-E-1
+DEFAULT-IMAGES-CHI26-ROOT
+
+DECISIVE NEXT STUDY:
+Multi-representation and human-judgment replication with hub-normalized metrics.
+
+IF ANSWERED:
+It would establish whether default-image categories are generator properties, measurement conventions, or both.
+
+
+DQ-07 — WHAT FILLS THE PLACE OF A MISSING CULTURE?
+Priority: 8/10 disruption · 10/10 social consequence · 7/10 tractability
+
+QUESTION:
+When a culturally specific or low-resource term loses control over generation, what visual priors occupy the resulting output space?
+
+WHY 1:
+A system compelled to output cannot express absence by leaving the image blank.
+
+WHY 2:
+Fallback motifs are recurrent rather than neutral.
+
+WHY 3:
+Script-level features can activate cultural stereotypes independently of intended lexical meaning.
+
+WHY 4:
+Training coverage is unknown in proprietary systems.
+
+WHY 5:
+“Bias” can enter not only through wrong depictions of a requested group but through substitution when the requested concept fails.
+
+ASSUMED ONE THING:
+Underrepresentation.
+
+SPLIT:
+missing association
+weak conditioning
+substitute prior
+demographic substitution
+aesthetic substitution
+script-driven bias.
+
+REVERSED CAUSAL DIRECTION:
+What appears as a default aesthetic may be partly produced by which languages and concepts fail to exert control.
+
+BOTH WRONG IF:
+The relevant causal variable is not language-resource status but local embedding geometry and model-specific tokenization.
+
+ZETTELS DESTABILIZED:
+DEFAULT-IMAGES-CHI26-F
+DEFAULT-IMAGES-CHI26-F-1
+DEFAULT-IMAGES-CHI26-F-2
+DEFAULT-IMAGES-CHI26-ROOT
+
+DECISIVE NEXT STUDY:
+Concept-matched multilingual prompts, transliterations, paraphrases, and native scripts with fallback-motif analysis.
+
+IF ANSWERED:
+It would connect prompt failure to representational politics without assuming that every low-resource error has the same mechanism.
+
+
+DQ-08 — WHO AUTHORS AN INSTRUCTION THAT NO HUMAN WROTE?
+Priority: 7/10 disruption · 9/10 cultural consequence · 9/10 tractability
+
+QUESTION:
+If a human chooses the metric, an LLM writes mutations, another compiler assembles demonstrations, and selection determines which instruction survives, where does authorship reside?
+
+WHY 1:
+Prompt wording can be compiled.
+
+WHY 2:
+Textual gradients can automate revision.
+
+WHY 3:
+Mutation prompts can themselves evolve.
+
+WHY 4:
+The evaluation metric can dominate what linguistic forms survive.
+
+WHY 5:
+The final prompt can have no privileged relation to the human's original wording.
+
+ASSUMED ONE THING:
+Writing.
+
+SPLIT:
+wording
+task formulation
+search operator
+fitness function
+candidate production
+selection
+acceptance.
+
+REVERSED CAUSAL DIRECTION:
+The “author” of the final prompt may be less important than the environment that selected it.
+
+BOTH WRONG IF:
+Authorship is not located in production or selection alone but distributed across the lineage.
+
+ZETTELS DESTABILIZED:
+WORKWORDS-PROMPT-001
+WORKWORDS-PROMPT-004
+WORKWORDS-PROMPT-005
+WORKWORDS-PROMPT-006
+WORKWORDS-PROMPT-008
+
+DECISIVE NEXT STUDY:
+Controlled comparison of human-written, machine-optimized, and human-selected prompt systems while separately manipulating objective, search process, and final wording.
+
+IF ANSWERED:
+It would give prompt authorship a mechanistic rather than merely attributional basis.
+
+
+DQ-09 — WHAT KIND OF PROGRAM CONTAINS AN INTERPRETER INSIDE ITS SEMANTICS?
+Priority: 7/10 disruption · 9/10 theoretical consequence · 6/10 tractability
+
+QUESTION:
+How should a program be described when some transitions are formally defined but another transition means “ask a learned model to interpret this natural-language instruction”?
+
+WHY 1:
+LMQL provides formal control around model calls.
+
+WHY 2:
+The model-mediated transition remains probabilistic and model-relative.
+
+WHY 3:
+Changing model versions can change the meaning of the same prose fragment.
+
+WHY 4:
+Soft prompts show that linguistic interpretation is not necessary for control.
+
+WHY 5:
+Constraint satisfaction after generation is different from semantics before generation.
+
+ASSUMED ONE THING:
+Program semantics.
+
+SPLIT:
+defined transition
+sampled transition
+learned interpretation
+constraint
+test
+delegation.
+
+REVERSED CAUSAL DIRECTION:
+Formal code may not be controlling language-model behavior so much as constructing a boundary inside which interpretive behavior is allowed to vary.
+
+BOTH WRONG IF:
+Prompted systems require an effect-like semantics that treats interpretation itself as a computational effect.
+
+ZETTELS DESTABILIZED:
+WORKWORDS-PROMPT-007
+WORKWORDS-PROMPT-002
+WORKWORDS-PROMPT-001
+
+DECISIVE NEXT STUDY:
+Specify operational invariants for a hybrid LMQL program and test them across models and paraphrases.
+
+IF ANSWERED:
+It would clarify whether “prompting is programming” is a formal claim, an engineering practice, or both.
+
+
+DQ-10 — CAN CREATIVE PROMPTING BE AN EXPERIMENT IF THE GOAL CHANGES WHEN THE RESULT APPEARS?
+Priority: 7/10 disruption · 8/10 methodological consequence · 8/10 tractability
+
+QUESTION:
+How can prompt effects be studied causally when observing an output changes the criterion by which the next output will be judged?
+
+WHY 1:
+Creative goals are often discovered through outputs.
+
+WHY 2:
+ChainForge-style comparison assumes a question or criterion stable enough to compare variants.
+
+WHY 3:
+Selection and revision create path dependence.
+
+WHY 4:
+Serendipitous outputs can redefine success.
+
+WHY 5:
+Retrospective narratives may falsely stabilize what was wanted all along.
+
+ASSUMED ONE THING:
+Evaluation criterion.
+
+SPLIT:
+initial goal
+current criterion
+newly discovered possibility
+selection rule
+retrospective justification.
+
+REVERSED CAUSAL DIRECTION:
+The output can cause the prompt goal.
+
+BOTH WRONG IF:
+Creative prompt practice is a coupled preference-and-artifact dynamics rather than optimization toward a fixed target.
+
+ZETTELS DESTABILIZED:
+WORKWORDS-PROMPT-008
+WORKWORDS-PROMPT-005
+WORKWORDS-PROMPT-006
+WORKWORDS-PROMPT-003
+
+DECISIVE NEXT STUDY:
+Version the evaluator and stated goal alongside each prompt revision in longitudinal creative sessions.
+
+IF ANSWERED:
+It would distinguish prompt experimentation from prompt-driven discovery.

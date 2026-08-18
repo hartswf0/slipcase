@@ -1,0 +1,1673 @@
+[
+  {
+    "display_order": 1,
+    "creation_order": 1,
+    "accession": "ZTL-S01-001",
+    "name": "Market Minimum",
+    "original_id": "Z-EDUPM-001",
+    "source_signature": "Wolfers-Zitzewitz2004",
+    "origin": "20260817-s01-o001",
+    "appearance": "SES-20260817-01",
+    "payload": "ZETTEL\n\nID:\nZ-EDUPM-001\n\nTITLE:\nA GRADE FAILS THE MINIMUM TEST FOR A PREDICTION MARKET: IT IS A SIGNAL WITHOUT TRADING, PRICE DISCOVERY, OR CONTINGENT SETTLEMENT.\n\nSOURCE:\nJustin Wolfers and Eric Zitzewitz — “Prediction Markets” — 2004 — Journal of Economic Perspectives 18(2), 107–126.\n\nSOURCE URL:\nhttps://www.aeaweb.org/articles?id=10.1257%2F0895330041371321\n\nPASSAGE:\n[PARAPHRASE] Wolfers and Zitzewitz define the operative achievement of prediction markets as using markets to aggregate dispersed information into forecasts of uncertain future events. Carefully designed contracts allow market prices to express expectations about probabilities and other quantities.\n\nRESEARCH OBJECT:\nA minimal diagnostic for deciding when “prediction market” is literal and when it is metaphor.\n\nLOCAL MOVE:\nThe paper locates prediction in a specific mechanism: participants trade contracts whose values depend on uncertain events, and the resulting market prices aggregate their information.\n\nSOURCE TERMS:\nprediction markets\ndispersed information\nmarket-generated forecasts\ncontracts\nprobabilities\nuncertain future events\nmarket design\n\nWHAT BECAME STRANGE:\nThe university may be saturated with prediction while containing very few actual prediction markets.\n\nA GPA predicts.\nAn admissions score predicts.\nA student evaluation predicts.\nA recommender predicts.\nA credential signals.\n\nNone becomes a prediction market merely by being predictive.\n\nQUESTION:\nWhat additional machinery must an educational prediction acquire before “prediction market” becomes a literal rather than analogical description?\n\nDEEPER QUESTION:\nDoes the more interesting object turn out to be not “education as prediction market” but an ecology of heterogeneous predictive instruments that allocate futures without allowing reciprocal bets?\n\nMECHANISM:\n<dispersed private beliefs>\n→ <contingent contracts>\n→ [TRADING]\n→ <market price>\n→ [EVENT OCCURS]\n→ <settlement>\n\nFORMAL SHIFT:\n<UNCERTAIN EVENT>\n→ <TRADEABLE CONTINGENT CLAIM>\n→ [AGGREGATE INFORMATION THROUGH EXCHANGE]\n→ <MARKET-GENERATED FORECAST>\n\nSOURCE FORMALISM:\nThe source distinguishes contracts designed to reveal probabilities, means, medians, uncertainty, and conditional expectations. The market price is produced through exchange rather than assigned administratively.\n\nOUR FORMALIZATION:\n[OUR FORMALIZATION — NOT SOURCE SYNTAX]\n\nPREDICTION_MARKET(x) :=\n    TRADEABLE(x)\n    ∧ CONTINGENT_ON_FUTURE_EVENT(x)\n    ∧ MULTIPLE_POSITION_TAKERS(x)\n    ∧ PRICE_EMERGES_FROM_EXCHANGE(x)\n    ∧ SETTLEMENT_RULE(x)\n\nA grade fails several clauses.\n\nTENSION:\nThe initial hypothesis gains rhetorical power by calling grades “prices,” degrees “contracts,” and universities “markets,” but doing so can erase the machinery that makes prediction markets epistemically distinctive.\n\nMISSING:\nA buyer.\nA seller.\nA trade.\nA market-clearing mechanism.\nA payoff.\nA settlement rule.\n\nBOUNDARY:\nThis does not show that grades or credentials lack predictive functions. It shows only that predictive function is insufficient to establish market structure.\n\nCITATION TRAIL:\nWolfers & Zitzewitz — “Interpreting Prediction Market Prices as Probabilities.”\nRobin Hanson — information markets / idea futures.\nMechanism-design literature on scoring rules and market makers.\nEducational signaling literature distinguishing signals from markets.\n\nTEST:\nTake each proposed educational “prediction market” object and fill five columns:\n\nTRADE?\nCONTINGENT CONTRACT?\nPRICE?\nCOUNTERPARTY?\nSETTLEMENT?\n\nReject the literal market classification when the mechanism cannot populate them.\n\nPLATFORM:\n[[EDUCATION AS PREDICTIVE INFRASTRUCTURE]]\n\nLINKS:\n[[Prediction Market Minimum Test]]\n[[Grades as Signals]]\n[[Prediction Without Markets]]\n\nBIBTEX:\n@article{wolfers2004prediction,\n  author  = {Wolfers, Justin and Zitzewitz, Eric},\n  title   = {Prediction Markets},\n  journal = {Journal of Economic Perspectives},\n  year    = {2004},\n  volume  = {18},\n  number  = {2},\n  pages   = {107--126},\n  doi     = {10.1257/0895330041371321}\n}",
+    "parents": [],
+    "parent_candidates": [],
+    "lineage_evidence": null,
+    "flags": [],
+    "title": "A GRADE FAILS THE MINIMUM TEST FOR A PREDICTION MARKET: IT IS A SIGNAL WITHOUT TRADING, PRICE DISCOVERY, OR CONTINGENT SETTLEMENT.",
+    "source": "Justin Wolfers and Eric Zitzewitz — “Prediction Markets” — 2004 — Journal of Economic Perspectives 18(2), 107–126.",
+    "source_url": "https://www.aeaweb.org/articles?id=10.1257%2F0895330041371321",
+    "platform_raw": "[[EDUCATION AS PREDICTIVE INFRASTRUCTURE]]",
+    "platforms": [
+      "EDUCATION AS PREDICTIVE INFRASTRUCTURE"
+    ],
+    "links_raw": "[[Prediction Market Minimum Test]]\n[[Grades as Signals]]\n[[Prediction Without Markets]]",
+    "links": [
+      "Prediction Market Minimum Test",
+      "Grades as Signals",
+      "Prediction Without Markets"
+    ],
+    "all_wikilinks": [
+      "EDUCATION AS PREDICTIVE INFRASTRUCTURE",
+      "Prediction Market Minimum Test",
+      "Grades as Signals",
+      "Prediction Without Markets"
+    ],
+    "bibtex": "@article{wolfers2004prediction,\n  author  = {Wolfers, Justin and Zitzewitz, Eric},\n  title   = {Prediction Markets},\n  journal = {Journal of Economic Perspectives},\n  year    = {2004},\n  volume  = {18},\n  number  = {2},\n  pages   = {107--126},\n  doi     = {10.1257/0895330041371321}\n}",
+    "content_sha256": "73aefb58daa3ccae5564c456727435d9b23a5b18a42f2f241495e3298450809a",
+    "children": [
+      "Z-EDUPM-011"
+    ],
+    "backlinks": [
+      "Z-EDUPM-011"
+    ],
+    "ancestors": [],
+    "descendants": [
+      "Z-EDUPM-011"
+    ],
+    "lineage_flags": [],
+    "root_filename": "001__market-minimum__Wolfers-Zitzewitz2004__Z-EDUPM-001__from-20260817-s01-o001.txt",
+    "markdown_mirror": "_MD/001__market-minimum__Wolfers-Zitzewitz2004__Z-EDUPM-001__from-20260817-s01-o001.md",
+    "generation": 0,
+    "lineage": {
+      "parents": [],
+      "kids": [
+        "Z-EDUPM-011"
+      ],
+      "ancestors": [],
+      "descendants": [
+        "Z-EDUPM-011"
+      ],
+      "generation": 0,
+      "evidence_state": null
+    },
+    "native_graph": {
+      "platform_memberships": [
+        "EDUCATION AS PREDICTIVE INFRASTRUCTURE"
+      ],
+      "links_out": [
+        "Prediction Market Minimum Test",
+        "Grades as Signals",
+        "Prediction Without Markets"
+      ],
+      "links_in": [
+        "Z-EDUPM-011"
+      ]
+    }
+  },
+  {
+    "display_order": 2,
+    "creation_order": 2,
+    "accession": "ZTL-S01-002",
+    "name": "Compass Before Grade",
+    "original_id": "Z-EDUPM-002",
+    "source_signature": "Denley2013",
+    "origin": "20260817-s01-o002",
+    "appearance": "SES-20260817-01",
+    "payload": "ZETTEL\n\nID:\nZ-EDUPM-002\n\nTITLE:\nTHE UNIVERSITY’S LITERAL PREDICTION ENGINE MAY SIT BEFORE THE GRADE: DEGREE COMPASS FORECASTS THE GRADE IN ORDER TO CHANGE THE COURSE A STUDENT TAKES.\n\nSOURCE:\nTristan Denley — “Degree Compass: A Course Recommendation System” — 2013 — EDUCAUSE Review.\n\nSOURCE URL:\nhttps://er.educause.edu/articles/2013/9/degree-compass-a-course-recommendation-system\n\nPASSAGE:\n[PARAPHRASE] Degree Compass combines a student’s prior grades with grade histories from many other students, curricular requirements, sequencing, and course centrality. It ranks courses partly according to the grade the student is predicted to earn.\n\nRESEARCH OBJECT:\nA university can transform accumulated grades from retrospective evaluations into inputs for an individualized forecast that actively changes the student’s future trajectory.\n\nLOCAL MOVE:\nDenley turns transcript history into choice architecture.\n\nThe system does not merely say:\n“You did well.”\n\nIt says:\n“Given what people like you did before, this is where you should go next.”\n\nSOURCE TERMS:\ncourse recommendation system\npredictive analytics\ngrade prediction model\nindividualized recommendations\ndegree requirements\ncourse sequencing\nstudent success\nchoice architecture\n\nWHAT BECAME STRANGE:\nThe grade is not primarily the prediction.\n\nThe grade becomes training data for another machine that predicts the next grade.\n\nA student therefore inhabits a recursive predictive loop:\n\nPAST GRADES\n→ PREDICTED FUTURE GRADE\n→ COURSE RECOMMENDATION\n→ COURSE TAKEN\n→ NEW GRADE\n→ FUTURE MODEL INPUT\n\nQUESTION:\nWhen a university predicts where a student will succeed and then routes the student toward that location, what exactly is being measured afterward: student aptitude, model accuracy, or the consequence of having followed the model?\n\nDEEPER QUESTION:\nAt what point does predicting student success become producing the population distribution that later appears to validate the prediction?\n\nMECHANISM:\nHistoric student-course outcomes are combined with an individual transcript.\n\nCourses are ranked.\n\nPredicted academic success contributes to the recommendation.\n\nThe recommendation enters advising and choice.\n\nThe resulting enrollment generates the next observation.\n\nFORMAL SHIFT:\n<PAST PERFORMANCE>\n→ <PREDICTED COURSE PERFORMANCE>\n→ [RANK / RECOMMEND]\n→ <ALTERED COURSE CHOICE>\n→ <NEW PERFORMANCE DATA>\n\nSOURCE FORMALISM:\nDegree Compass combines:\n- transcript data,\n- historical grade data,\n- degree applicability,\n- course sequencing,\n- curricular centrality,\n- predicted academic success.\n\nThe source describes a collaborative-filtering/predictive-modeling architecture but does not supply a complete executable specification in the article.\n\nOUR FORMALIZATION:\n[OUR FORMALIZATION — NOT SOURCE SYNTAX]\n\nRANK(student, course) =\n    f(\n      degree_requirement,\n      curricular_centrality,\n      sequence_fit,\n      predicted_grade\n    )\n\nThen:\n\nRANK\n→ CHOICE\n→ OUTCOME\n→ TRAINING DATA\n\nTENSION:\nA prediction market ordinarily waits for an uncertain external event to settle.\n\nDegree Compass inserts the prediction into the causal path leading to the event.\n\nThe prediction is therefore not merely epistemic. It is advisory and potentially performative.\n\nMISSING:\nA counterfactual record of what the same student would have achieved had the recommendation not been shown.\n\nBOUNDARY:\nThe source establishes a predictive recommendation system, not evidence that Degree Compass inevitably creates self-fulfilling predictions or unjustly restricts students.\n\nCITATION TRAIL:\nAustin Peay / EDUCAUSE Degree Compass case study, 2012.\nEkowo & Palmer — predictive analytics in higher education.\nLiterature on recommender-system feedback loops.\nPerformative prediction / performative prediction models.\nAlgorithmic confounding caused by interventions.\n\nTEST:\nFor students with two courses receiving similar predicted-success scores, randomly vary whether the recommendation is shown.\n\nCompare:\nchoice,\ngrade,\npersistence,\nmajor trajectory,\nand subsequent model predictions.\n\nAsk whether the act of prediction changes the object predicted.\n\nPLATFORM:\n[[EDUCATION AS PREDICTIVE INFRASTRUCTURE]]\n\nLINKS:\n[[Performative Prediction]]\n[[Algorithmic Advising]]\n[[Grades Become Training Data]]\n\nBIBTEX:\n@misc{denley2013degreecompass,\n  author       = {Denley, Tristan},\n  title        = {Degree Compass: A Course Recommendation System},\n  year         = {2013},\n  month        = sep,\n  publisher    = {EDUCAUSE Review},\n  url          = {https://er.educause.edu/articles/2013/9/degree-compass-a-course-recommendation-system}\n}",
+    "parents": [],
+    "parent_candidates": [],
+    "lineage_evidence": null,
+    "flags": [],
+    "title": "THE UNIVERSITY’S LITERAL PREDICTION ENGINE MAY SIT BEFORE THE GRADE: DEGREE COMPASS FORECASTS THE GRADE IN ORDER TO CHANGE THE COURSE A STUDENT TAKES.",
+    "source": "Tristan Denley — “Degree Compass: A Course Recommendation System” — 2013 — EDUCAUSE Review.",
+    "source_url": "https://er.educause.edu/articles/2013/9/degree-compass-a-course-recommendation-system",
+    "platform_raw": "[[EDUCATION AS PREDICTIVE INFRASTRUCTURE]]",
+    "platforms": [
+      "EDUCATION AS PREDICTIVE INFRASTRUCTURE"
+    ],
+    "links_raw": "[[Performative Prediction]]\n[[Algorithmic Advising]]\n[[Grades Become Training Data]]",
+    "links": [
+      "Performative Prediction",
+      "Algorithmic Advising",
+      "Grades Become Training Data"
+    ],
+    "all_wikilinks": [
+      "EDUCATION AS PREDICTIVE INFRASTRUCTURE",
+      "Performative Prediction",
+      "Algorithmic Advising",
+      "Grades Become Training Data"
+    ],
+    "bibtex": "@misc{denley2013degreecompass,\n  author       = {Denley, Tristan},\n  title        = {Degree Compass: A Course Recommendation System},\n  year         = {2013},\n  month        = sep,\n  publisher    = {EDUCAUSE Review},\n  url          = {https://er.educause.edu/articles/2013/9/degree-compass-a-course-recommendation-system}\n}",
+    "content_sha256": "34ff6a1bdcfaa8e30a4e267287473ba9348ef79ad66ad1539e7d4db85bf058e4",
+    "children": [
+      "Z-EDUPM-010",
+      "Z-EDUPM-013",
+      "Z-EDUPM-018"
+    ],
+    "backlinks": [
+      "Z-EDUPM-010",
+      "Z-EDUPM-013",
+      "Z-EDUPM-018"
+    ],
+    "ancestors": [],
+    "descendants": [
+      "Z-EDUPM-010",
+      "Z-EDUPM-013",
+      "Z-EDUPM-018",
+      "Z-EDUPM-019"
+    ],
+    "lineage_flags": [],
+    "root_filename": "002__compass-before-grade__Denley2013__Z-EDUPM-002__from-20260817-s01-o002.txt",
+    "markdown_mirror": "_MD/002__compass-before-grade__Denley2013__Z-EDUPM-002__from-20260817-s01-o002.md",
+    "generation": 0,
+    "lineage": {
+      "parents": [],
+      "kids": [
+        "Z-EDUPM-010",
+        "Z-EDUPM-013",
+        "Z-EDUPM-018"
+      ],
+      "ancestors": [],
+      "descendants": [
+        "Z-EDUPM-010",
+        "Z-EDUPM-013",
+        "Z-EDUPM-018",
+        "Z-EDUPM-019"
+      ],
+      "generation": 0,
+      "evidence_state": null
+    },
+    "native_graph": {
+      "platform_memberships": [
+        "EDUCATION AS PREDICTIVE INFRASTRUCTURE"
+      ],
+      "links_out": [
+        "Performative Prediction",
+        "Algorithmic Advising",
+        "Grades Become Training Data"
+      ],
+      "links_in": [
+        "Z-EDUPM-010",
+        "Z-EDUPM-013",
+        "Z-EDUPM-018"
+      ]
+    }
+  },
+  {
+    "display_order": 3,
+    "creation_order": 3,
+    "accession": "ZTL-S01-003",
+    "name": "Anti-Settlement Alarm",
+    "original_id": "Z-EDUPM-003",
+    "source_signature": "Ekowo-Palmer2016",
+    "origin": "20260817-s01-o003",
+    "appearance": "SES-20260817-01",
+    "payload": "ZETTEL\n\nID:\nZ-EDUPM-003\n\nTITLE:\nAN EARLY-WARNING SYSTEM SUCCEEDS WHEN ITS PREDICTION FAILS: EDUCATIONAL FORECASTING CAN BE AN ANTI-SETTLEMENT MACHINE.\n\nSOURCE:\nManuela Ekowo and Iris Palmer — The Promise and Peril of Predictive Analytics in Higher Education: A Landscape Analysis — 2016 — New America.\n\nSOURCE URL:\nhttps://www.newamerica.org/insights/promise-and-peril-predictive-analytics-higher-education/\n\nPASSAGE:\n[PARAPHRASE] Colleges use predictive analytics to identify students needing additional support, steer students toward courses, and intervene with students predicted to be at risk of dropping out. The report also warns that profiling may discourage capable students from pursuing particular opportunities.\n\nRESEARCH OBJECT:\nA peculiar prediction whose purpose is to cause the predicted event not to happen.\n\nLOCAL MOVE:\nEkowo and Palmer shift prediction from observation to intervention.\n\nThe forecast:\n“this student may drop out”\n\nis useful precisely because the institution can respond:\n“then intervene so that they do not.”\n\nSOURCE TERMS:\npredictive analytics\nearly-alert tool\nidentify students\nextra support\nstudent success\nprofiling\nsteer\npredictions\ndrop out\n\nWHAT BECAME STRANGE:\nCalibration becomes philosophically unstable when prediction triggers treatment.\n\nIf the model says:\nP(dropout) = .80\n\nand advising works,\n\nthe student stays.\n\nWas the .80 prediction wrong?\n\nOr was it correct enough to trigger the intervention that made itself false?\n\nQUESTION:\nHow should an educational predictive system be evaluated when successful use destroys the observable event against which accuracy would normally be judged?\n\nDEEPER QUESTION:\nIs the university constructing predictions or counterfactual action triggers?\n\nMECHANISM:\nstudent data\n→ risk estimate\n→ risk classification\n→ institutional intervention\n→ changed conditions\n→ changed outcome\n\nThe prediction enters the system it predicts.\n\nFORMAL SHIFT:\n<STUDENT TRAJECTORY>\n→ <RISK SCORE>\n→ [TRIGGER INTERVENTION]\n→ <ALTERED TRAJECTORY>\n\nSOURCE FORMALISM:\nNONE.\nThe source describes applications and institutional examples rather than a formal causal model.\n\nOUR FORMALIZATION:\n[OUR FORMALIZATION — NOT SOURCE SYNTAX]\n\nWithout intervention:\n\nX → P(Y = dropout | X)\n\nWith deployed prediction:\n\nX\n→ P(Y = dropout | X)\n→ ACTION\n→ X'\n→ Y'\n\nTherefore:\n\nY' ≠ outcome under no prediction.\n\nTENSION:\nPrediction markets generally reward forecasts that correctly settle against realized outcomes.\n\nEarly-warning systems may be most valuable when their forecasts provoke actions that prevent those outcomes from ever settling as predicted.\n\nMISSING:\nThe untreated counterfactual:\nWhat would have happened had the prediction not triggered intervention?\n\nBOUNDARY:\nEkowo and Palmer do not themselves describe early-warning analytics as an “anti-settlement machine.” That is our inference from the intervention structure they document.\n\nCITATION TRAIL:\nCausal inference under treatment assignment.\nSelective labels.\nPerformative prediction.\nAlgorithmic decision-making under feedback.\nEarly-warning intervention evaluations.\nSelf-fulfilling and self-defeating prophecy.\n\nTEST:\nSeparate students around a risk-score threshold and measure:\n\npredicted risk,\nwhether intervention occurred,\nactual outcome,\nand estimated untreated outcome.\n\nAsk whether apparently “false positive” predictions are concentrated among successfully treated students.\n\nPLATFORM:\n[[EDUCATION AS PREDICTIVE INFRASTRUCTURE]]\n\nLINKS:\n[[Predictions That Want To Be Wrong]]\n[[Intervention Destroys Settlement]]\n[[Risk Scores Change Their Objects]]\n\nBIBTEX:\n@report{ekowo2016promise,\n  author      = {Ekowo, Manuela and Palmer, Iris},\n  title       = {The Promise and Peril of Predictive Analytics in Higher Education: A Landscape Analysis},\n  institution = {New America},\n  year        = {2016},\n  month       = oct,\n  url         = {https://www.newamerica.org/insights/promise-and-peril-predictive-analytics-higher-education/}\n}",
+    "parents": [],
+    "parent_candidates": [],
+    "lineage_evidence": null,
+    "flags": [],
+    "title": "AN EARLY-WARNING SYSTEM SUCCEEDS WHEN ITS PREDICTION FAILS: EDUCATIONAL FORECASTING CAN BE AN ANTI-SETTLEMENT MACHINE.",
+    "source": "Manuela Ekowo and Iris Palmer — The Promise and Peril of Predictive Analytics in Higher Education: A Landscape Analysis — 2016 — New America.",
+    "source_url": "https://www.newamerica.org/insights/promise-and-peril-predictive-analytics-higher-education/",
+    "platform_raw": "[[EDUCATION AS PREDICTIVE INFRASTRUCTURE]]",
+    "platforms": [
+      "EDUCATION AS PREDICTIVE INFRASTRUCTURE"
+    ],
+    "links_raw": "[[Predictions That Want To Be Wrong]]\n[[Intervention Destroys Settlement]]\n[[Risk Scores Change Their Objects]]",
+    "links": [
+      "Predictions That Want To Be Wrong",
+      "Intervention Destroys Settlement",
+      "Risk Scores Change Their Objects"
+    ],
+    "all_wikilinks": [
+      "EDUCATION AS PREDICTIVE INFRASTRUCTURE",
+      "Predictions That Want To Be Wrong",
+      "Intervention Destroys Settlement",
+      "Risk Scores Change Their Objects"
+    ],
+    "bibtex": "@report{ekowo2016promise,\n  author      = {Ekowo, Manuela and Palmer, Iris},\n  title       = {The Promise and Peril of Predictive Analytics in Higher Education: A Landscape Analysis},\n  institution = {New America},\n  year        = {2016},\n  month       = oct,\n  url         = {https://www.newamerica.org/insights/promise-and-peril-predictive-analytics-higher-education/}\n}",
+    "content_sha256": "a52b1aba343482fd60eae05678aab2c25257feeff8ea7cd4eff5303f9b3f99f2",
+    "children": [
+      "Z-EDUPM-009",
+      "Z-EDUPM-012",
+      "Z-EDUPM-016",
+      "Z-EDUPM-017",
+      "Z-EDUPM-020"
+    ],
+    "backlinks": [
+      "Z-EDUPM-009",
+      "Z-EDUPM-012",
+      "Z-EDUPM-016",
+      "Z-EDUPM-017",
+      "Z-EDUPM-020"
+    ],
+    "ancestors": [],
+    "descendants": [
+      "Z-EDUPM-009",
+      "Z-EDUPM-012",
+      "Z-EDUPM-016",
+      "Z-EDUPM-017",
+      "Z-EDUPM-018",
+      "Z-EDUPM-020"
+    ],
+    "lineage_flags": [],
+    "root_filename": "003__anti-settlement-alarm__Ekowo-Palmer2016__Z-EDUPM-003__from-20260817-s01-o003.txt",
+    "markdown_mirror": "_MD/003__anti-settlement-alarm__Ekowo-Palmer2016__Z-EDUPM-003__from-20260817-s01-o003.md",
+    "generation": 0,
+    "lineage": {
+      "parents": [],
+      "kids": [
+        "Z-EDUPM-009",
+        "Z-EDUPM-012",
+        "Z-EDUPM-016",
+        "Z-EDUPM-017",
+        "Z-EDUPM-020"
+      ],
+      "ancestors": [],
+      "descendants": [
+        "Z-EDUPM-009",
+        "Z-EDUPM-012",
+        "Z-EDUPM-016",
+        "Z-EDUPM-017",
+        "Z-EDUPM-018",
+        "Z-EDUPM-020"
+      ],
+      "generation": 0,
+      "evidence_state": null
+    },
+    "native_graph": {
+      "platform_memberships": [
+        "EDUCATION AS PREDICTIVE INFRASTRUCTURE"
+      ],
+      "links_out": [
+        "Predictions That Want To Be Wrong",
+        "Intervention Destroys Settlement",
+        "Risk Scores Change Their Objects"
+      ],
+      "links_in": [
+        "Z-EDUPM-009",
+        "Z-EDUPM-012",
+        "Z-EDUPM-016",
+        "Z-EDUPM-017",
+        "Z-EDUPM-020"
+      ]
+    }
+  },
+  {
+    "display_order": 4,
+    "creation_order": 4,
+    "accession": "ZTL-S01-004",
+    "name": "Replication Contract",
+    "original_id": "Z-EDUPM-004",
+    "source_signature": "DreberEtAl2015",
+    "origin": "20260817-s01-o004",
+    "appearance": "SES-20260817-01",
+    "payload": "ZETTEL\n\nID:\nZ-EDUPM-004\n\nTITLE:\nSCHOLARSHIP BECOMES A LITERAL PREDICTION MARKET ONLY AFTER A CLAIM IS CONVERTED INTO A SETTLEABLE EVENT: “WILL THIS RESULT REPLICATE?”\n\nSOURCE:\nAnna Dreber et al. — “Using Prediction Markets to Estimate the Reproducibility of Scientific Research” — 2015 — Proceedings of the National Academy of Sciences 112(50), 15343–15347.\n\nSOURCE URL:\nhttps://www.pnas.org/doi/10.1073/pnas.1516179112\n\nPASSAGE:\n[PARAPHRASE] The researchers created prediction markets concerning the replication outcomes of psychology studies. Market participants traded on whether results would replicate; for the studies with observed replication outcomes, the markets correctly classified 29 of 41, approximately 71 percent.\n\nRESEARCH OBJECT:\nA real case in which scientific judgment is converted into a tradeable forecast with explicit settlement.\n\nLOCAL MOVE:\nThe experiment does not treat citations, publication counts, or peer-review scores as markets.\n\nIt constructs an actual market around a newly specified future event:\nreplication success.\n\nSOURCE TERMS:\nprediction markets\nreproducibility\nreplication\nmarket beliefs\nsurvey beliefs\nreplication outcomes\nscientific research\n\nWHAT BECAME STRANGE:\n“The scientific literature is a prediction market” is too loose.\n\nBut researchers can build a prediction market on top of the literature by transforming papers into contracts concerning future tests.\n\nThat transformation requires something intellectually violent and productive:\n\na scientific claim must become settleable.\n\nQUESTION:\nWhat must be removed from a scientific result before researchers can trade a binary contract on whether it “replicates”?\n\nDEEPER QUESTION:\nDoes making science market-compatible require turning an open-ended claim about the world into an institutionally defined settlement event?\n\nMECHANISM:\npublished study\n→ specified replication protocol\n→ binary replication proposition\n→ market contract\n→ expert trading\n→ market probability\n→ replication\n→ settlement\n\nFORMAL SHIFT:\n<SCIENTIFIC CLAIM>\n→ <REPLICATION EVENT>\n→ [CONTRACTUALIZE]\n→ <TRADEABLE BELIEF>\n→ [REPLICATE]\n→ <SETTLED CONTRACT>\n\nSOURCE FORMALISM:\nPrediction markets were constructed around replication outcomes and compared with survey forecasts.\n\nThe experiment provides:\n- contracts,\n- traders,\n- prices,\n- future events,\n- realized outcomes.\n\nThese are precisely the elements missing from metaphorical descriptions of citations or grades as prediction markets.\n\nOUR FORMALIZATION:\n[OUR FORMALIZATION — NOT SOURCE SYNTAX]\n\nPAPER\n≠ MARKET\n\nPAPER\n→ SETTLEMENT QUESTION\n→ CONTRACT\n→ MARKET\n\nTENSION:\nA replication result is not equivalent to the truth of a scientific theory.\n\nBinary settlement may aggregate beliefs effectively while compressing context, effect sizes, protocol dependence, and degrees of evidential support.\n\nMISSING:\nA theory of what scientific information cannot survive conversion into a binary replication contract.\n\nBOUNDARY:\nThe study demonstrates prediction-market forecasting of replication outcomes. It does not establish that prediction markets determine scientific truth or should replace peer review.\n\nCITATION TRAIL:\nCamerer et al. — replication forecasting in experimental economics / social science.\nVan Bavel et al. — contextual sensitivity in replication.\nYang et al. — estimating deep replicability.\nRobin Hanson — idea futures.\n\nTEST:\nTake one disputed result and construct three settlement contracts:\n\nA. exact replication success\nB. effect direction preserved\nC. effect size remains within a specified interval\n\nCompare market prices.\n\nThe divergence measures how much “will it replicate?” hides.\n\nPLATFORM:\n[[SCHOLARSHIP AS FORECASTING INFRASTRUCTURE]]\n\nLINKS:\n[[Replication Markets]]\n[[Contractualizing Scientific Claims]]\n[[Settlement Is Not Truth]]\n\nBIBTEX:\n@article{dreber2015prediction,\n  author  = {Dreber, Anna and Pfeiffer, Thomas and Almenberg, Johan and Isaksson, Siri and Wilson, Brad and Chen, Yiling and Nosek, Brian A. and Johannesson, Magnus},\n  title   = {Using Prediction Markets to Estimate the Reproducibility of Scientific Research},\n  journal = {Proceedings of the National Academy of Sciences},\n  year    = {2015},\n  volume  = {112},\n  number  = {50},\n  pages   = {15343--15347},\n  doi     = {10.1073/pnas.1516179112}\n}",
+    "parents": [],
+    "parent_candidates": [],
+    "lineage_evidence": null,
+    "flags": [],
+    "title": "SCHOLARSHIP BECOMES A LITERAL PREDICTION MARKET ONLY AFTER A CLAIM IS CONVERTED INTO A SETTLEABLE EVENT: “WILL THIS RESULT REPLICATE?”",
+    "source": "Anna Dreber et al. — “Using Prediction Markets to Estimate the Reproducibility of Scientific Research” — 2015 — Proceedings of the National Academy of Sciences 112(50), 15343–15347.",
+    "source_url": "https://www.pnas.org/doi/10.1073/pnas.1516179112",
+    "platform_raw": "[[SCHOLARSHIP AS FORECASTING INFRASTRUCTURE]]",
+    "platforms": [
+      "SCHOLARSHIP AS FORECASTING INFRASTRUCTURE"
+    ],
+    "links_raw": "[[Replication Markets]]\n[[Contractualizing Scientific Claims]]\n[[Settlement Is Not Truth]]",
+    "links": [
+      "Replication Markets",
+      "Contractualizing Scientific Claims",
+      "Settlement Is Not Truth"
+    ],
+    "all_wikilinks": [
+      "SCHOLARSHIP AS FORECASTING INFRASTRUCTURE",
+      "Replication Markets",
+      "Contractualizing Scientific Claims",
+      "Settlement Is Not Truth"
+    ],
+    "bibtex": "@article{dreber2015prediction,\n  author  = {Dreber, Anna and Pfeiffer, Thomas and Almenberg, Johan and Isaksson, Siri and Wilson, Brad and Chen, Yiling and Nosek, Brian A. and Johannesson, Magnus},\n  title   = {Using Prediction Markets to Estimate the Reproducibility of Scientific Research},\n  journal = {Proceedings of the National Academy of Sciences},\n  year    = {2015},\n  volume  = {112},\n  number  = {50},\n  pages   = {15343--15347},\n  doi     = {10.1073/pnas.1516179112}\n}",
+    "content_sha256": "d8929b0e74bb78a7f7151033ba61f566bdcc7d2128be2bf9d8cef764a054caff",
+    "children": [
+      "Z-EDUPM-011",
+      "Z-EDUPM-012"
+    ],
+    "backlinks": [
+      "Z-EDUPM-011",
+      "Z-EDUPM-012"
+    ],
+    "ancestors": [],
+    "descendants": [
+      "Z-EDUPM-011",
+      "Z-EDUPM-012"
+    ],
+    "lineage_flags": [],
+    "root_filename": "004__replication-contract__DreberEtAl2015__Z-EDUPM-004__from-20260817-s01-o004.txt",
+    "markdown_mirror": "_MD/004__replication-contract__DreberEtAl2015__Z-EDUPM-004__from-20260817-s01-o004.md",
+    "generation": 0,
+    "lineage": {
+      "parents": [],
+      "kids": [
+        "Z-EDUPM-011",
+        "Z-EDUPM-012"
+      ],
+      "ancestors": [],
+      "descendants": [
+        "Z-EDUPM-011",
+        "Z-EDUPM-012"
+      ],
+      "generation": 0,
+      "evidence_state": null
+    },
+    "native_graph": {
+      "platform_memberships": [
+        "SCHOLARSHIP AS FORECASTING INFRASTRUCTURE"
+      ],
+      "links_out": [
+        "Replication Markets",
+        "Contractualizing Scientific Claims",
+        "Settlement Is Not Truth"
+      ],
+      "links_in": [
+        "Z-EDUPM-011",
+        "Z-EDUPM-012"
+      ]
+    }
+  },
+  {
+    "display_order": 5,
+    "creation_order": 5,
+    "accession": "ZTL-S01-005",
+    "name": "Evaluation Loop",
+    "original_id": "Z-EDUPM-005",
+    "source_signature": "Love-Kotchen2010",
+    "origin": "20260817-s01-o005",
+    "appearance": "SES-20260817-01",
+    "payload": "ZETTEL\n\nID:\nZ-EDUPM-005\n\nTITLE:\nSTUDENTS DO NOT “SHORT” PROFESSORS THROUGH EVALUATIONS; THE STRONGER MECHANISM IS A CLOSED FEEDBACK LOOP IN WHICH FACULTY CAN RAISE THE METRIC THAT LATER JUDGES THEM.\n\nSOURCE:\nDavid A. Love and Matthew J. Kotchen — “Grades, Course Evaluations, and Academic Incentives” — 2010 — Eastern Economic Journal 36, 151–163.\n\nSOURCE URL:\nhttps://environment.yale.edu/kotchen/pubs/gradeval.pdf\n\nPASSAGE:\n[PARAPHRASE] Love and Kotchen model faculty who care about teaching but are evaluated partly through research output and course evaluations. In their model, placing more institutional weight on evaluations can induce professors to relax grading standards; under some conditions it can even reduce teaching effort.\n\nRESEARCH OBJECT:\nThe relevant financial analogy is not short-selling.\n\nIt is Goodhart-like metric endogeneity:\nthe evaluated actor controls an input that affects the evaluator.\n\nLOCAL MOVE:\nThe paper links institutional promotion criteria, professor grading decisions, student effort, and student evaluations in one incentive model.\n\nSOURCE TERMS:\ngrade inflation\ncourse evaluations\nacademic incentives\nteaching effort\nresearch productivity\ngrading standards\nstudent effort\npromotion\ntenure\n\nWHAT BECAME STRANGE:\nThe professor and student do not occupy opposite sides of a wager.\n\nThey occupy opposite ends of a circular control system.\n\nThe institution says:\n“student evaluation measures teaching.”\n\nThe professor can partly alter that evaluation through grading.\n\nThe measurement channel therefore enters the behavior it supposedly measures.\n\nQUESTION:\nWhen the target of an evaluation can alter the conditions producing that evaluation, is the resulting number still an observation—or has it become a negotiated equilibrium?\n\nDEEPER QUESTION:\nCould grade inflation be produced not by students purchasing grades but by institutions coupling two otherwise distinct signals: student satisfaction and faculty career evaluation?\n\nMECHANISM:\ninstitution weights evaluations\n→ professor anticipates evaluation consequences\n→ grading standard changes\n→ student welfare / effort changes\n→ evaluation changes\n→ promotion signal changes\n\nFORMAL SHIFT:\n<TEACHING QUALITY GOAL>\n→ <STUDENT EVALUATION METRIC>\n→ [ATTACH CAREER CONSEQUENCES]\n→ <FACULTY RESPONSE>\n→ [ALTER GRADING / EFFORT]\n→ <METRIC CHANGES>\n\nSOURCE FORMALISM:\nThe source supplies a theoretical model containing:\n- professor grading choice,\n- professor teaching effort,\n- student study time,\n- institutional weight on teaching evaluations,\n- institutional weight on research.\n\nComparative statics show conditions under which greater weight on course evaluations increases grading leniency and can reduce teaching effort.\n\nOUR FORMALIZATION:\n[OUR FORMALIZATION — NOT SOURCE SYNTAX]\n\nINSTITUTION\n  │\n  ▼\nweight on SET\n  │\n  ▼\nPROFESSOR ── chooses grading standard\n  │                    │\n  │                    ▼\n  │                 STUDENT\n  │                    │\n  └──────── SET ◄──────┘\n\nThe evaluator is inside the evaluated system.\n\nTENSION:\nCalling evaluations “options contracts” suggests students incur market-like positions and payoffs.\n\nLove and Kotchen require no such mechanism.\n\nThe perverse effect arises simply because incentives become coupled.\n\nMISSING:\nStrong causal evidence establishing the magnitude of this mechanism across contemporary institutions and employment categories.\n\nBOUNDARY:\nThis is a theoretical model. It identifies possible equilibrium responses; it does not prove that every professor inflates grades in response to evaluations or that student evaluations are the primary cause of grade inflation.\n\nCITATION TRAIL:\nUttl, White & Gonzalez — student evaluations and learning.\nStroebe — evaluations and grading leniency.\nGoodhart / Campbell on reactive indicators.\nResearch on contingent faculty and SET consequences.\n\nTEST:\nWithin an institution, exploit a policy change that sharply increases or decreases the weight of SETs in promotion.\n\nMeasure subsequent changes in:\ngrade distributions,\ncourse workload,\nteaching effort,\nstudent learning,\nand evaluations.\n\nPLATFORM:\n[[THE UNIVERSITY AS FEEDBACK SYSTEM]]\n\nLINKS:\n[[Student Evaluations as Control Signals]]\n[[Metric Endogeneity]]\n[[Grade Inflation Feedback Loop]]\n\nBIBTEX:\n@article{love2010grades,\n  author  = {Love, David A. and Kotchen, Matthew J.},\n  title   = {Grades, Course Evaluations, and Academic Incentives},\n  journal = {Eastern Economic Journal},\n  year    = {2010},\n  volume  = {36},\n  pages   = {151--163},\n  doi     = {10.1057/eej.2009.6}\n}",
+    "parents": [],
+    "parent_candidates": [],
+    "lineage_evidence": null,
+    "flags": [],
+    "title": "STUDENTS DO NOT “SHORT” PROFESSORS THROUGH EVALUATIONS; THE STRONGER MECHANISM IS A CLOSED FEEDBACK LOOP IN WHICH FACULTY CAN RAISE THE METRIC THAT LATER JUDGES THEM.",
+    "source": "David A. Love and Matthew J. Kotchen — “Grades, Course Evaluations, and Academic Incentives” — 2010 — Eastern Economic Journal 36, 151–163.",
+    "source_url": "https://environment.yale.edu/kotchen/pubs/gradeval.pdf",
+    "platform_raw": "[[THE UNIVERSITY AS FEEDBACK SYSTEM]]",
+    "platforms": [
+      "THE UNIVERSITY AS FEEDBACK SYSTEM"
+    ],
+    "links_raw": "[[Student Evaluations as Control Signals]]\n[[Metric Endogeneity]]\n[[Grade Inflation Feedback Loop]]",
+    "links": [
+      "Student Evaluations as Control Signals",
+      "Metric Endogeneity",
+      "Grade Inflation Feedback Loop"
+    ],
+    "all_wikilinks": [
+      "THE UNIVERSITY AS FEEDBACK SYSTEM",
+      "Student Evaluations as Control Signals",
+      "Metric Endogeneity",
+      "Grade Inflation Feedback Loop"
+    ],
+    "bibtex": "@article{love2010grades,\n  author  = {Love, David A. and Kotchen, Matthew J.},\n  title   = {Grades, Course Evaluations, and Academic Incentives},\n  journal = {Eastern Economic Journal},\n  year    = {2010},\n  volume  = {36},\n  pages   = {151--163},\n  doi     = {10.1057/eej.2009.6}\n}",
+    "content_sha256": "4f3f8a7080c652cd08c88c038018e77d40eea2ab7efe481b0ed7afdeba3daa47",
+    "children": [],
+    "backlinks": [],
+    "ancestors": [],
+    "descendants": [],
+    "lineage_flags": [],
+    "root_filename": "005__evaluation-loop__Love-Kotchen2010__Z-EDUPM-005__from-20260817-s01-o005.txt",
+    "markdown_mirror": "_MD/005__evaluation-loop__Love-Kotchen2010__Z-EDUPM-005__from-20260817-s01-o005.md",
+    "generation": 0,
+    "lineage": {
+      "parents": [],
+      "kids": [],
+      "ancestors": [],
+      "descendants": [],
+      "generation": 0,
+      "evidence_state": null
+    },
+    "native_graph": {
+      "platform_memberships": [
+        "THE UNIVERSITY AS FEEDBACK SYSTEM"
+      ],
+      "links_out": [
+        "Student Evaluations as Control Signals",
+        "Metric Endogeneity",
+        "Grade Inflation Feedback Loop"
+      ],
+      "links_in": []
+    }
+  },
+  {
+    "display_order": 6,
+    "creation_order": 6,
+    "accession": "ZTL-S01-006",
+    "name": "Two Inflations",
+    "original_id": "Z-EDUPM-006",
+    "source_signature": "DenningEtAl2026",
+    "origin": "20260817-s01-o006",
+    "appearance": "SES-20260817-01",
+    "payload": "ZETTEL\n\nID:\nZ-EDUPM-006\n\nTITLE:\n“GRADE INFLATION” IS NOT ONE OPERATION: RAISING EVERYONE’S GRADES AND MOVING STUDENTS ACROSS THE FAILING THRESHOLD CAN HAVE OPPOSITE LONG-RUN EFFECTS.\n\nSOURCE:\nJeffrey T. Denning, Rachel L. Nesbit, Nolan G. Pope, and Merrill Warnick — Easy A’s, Less Pay: The Long-Term Effects of Grade Inflation — 2026 — NBER Working Paper 34952.\n\nSOURCE URL:\nhttps://www.nber.org/papers/w34952\n\nPASSAGE:\n[PARAPHRASE] The authors construct two distinct teacher-level measures: average-grade inflation and a propensity to award passing grades. Higher average-grade inflation is associated with worse later test scores, graduation, postsecondary enrollment, and earnings; greater passing-grade inflation reduces retention in grade and increases high-school graduation, with limited long-run effects.\n\nRESEARCH OBJECT:\n“Grade inflation” decomposes into at least two mechanisms whose consequences need not point in the same direction.\n\nLOCAL MOVE:\nThe paper refuses a single scalar notion of leniency.\n\nIt separates:\nraising the overall grade distribution\nfrom\nchanging outcomes near the pass/fail threshold.\n\nSOURCE TERMS:\naverage grade inflation\npassing grade inflation\nteacher value-added\ntest scores\nhigh school graduation\ncollege enrollment\nearnings\ngrading practices\n\nWHAT BECAME STRANGE:\nA blanket claim that grade inflation “corrupts the price signal” loses the exact place where grading policy acts.\n\nAn extra five points everywhere and converting an F into a D are both “leniency,” but they perform different institutional operations.\n\nQUESTION:\nWhich part of the grade distribution is actually changing when a university says its standards have weakened?\n\nDEEPER QUESTION:\nCould attempts to “restore rigor” accidentally destroy beneficial threshold leniency while doing little about broad compression at the top?\n\nMECHANISM:\nMEAN INFLATION:\neasier grades across distribution\n→ changed effort/information\n→ later outcomes\n\nPASSING INFLATION:\nthreshold crossing near failure\n→ avoids retention / earns credit\n→ changed persistence\n→ later outcomes\n\nFORMAL SHIFT:\n<GRADE LENIENCY>\n→ [DECOMPOSE]\n→ <DISTRIBUTIONAL SHIFT>\n   OR\n   <THRESHOLD SHIFT>\n→ <DIFFERENT BEHAVIORAL CONSEQUENCES>\n\nSOURCE FORMALISM:\nThe authors construct and validate two teacher-level measures:\n1. average grade inflation;\n2. propensity to give a passing grade.\n\nThey distinguish both from teacher value-added and estimate their associations/effects on later outcomes using linked administrative records.\n\nOUR FORMALIZATION:\n[OUR FORMALIZATION — NOT SOURCE SYNTAX]\n\nGRADE_INFLATION ≠ scalar\n\nGRADE_INFLATION :=\n{\n  SHIFT_MEAN,\n  CROSS_THRESHOLD,\n  COMPRESS_TOP,\n  ALTER_VARIANCE,\n  ...\n}\n\nDifferent operators should not inherit one moral or causal interpretation.\n\nTENSION:\nThe initial “market manipulation” analogy implies that increasing grades uniformly corrupts information.\n\nThis source suggests the consequences depend on exactly how the grading function changes.\n\nMISSING:\nDirect evidence that the same decomposition produces the same effects in universities.\n\nBOUNDARY:\nThe study analyzes high-school teachers and explicitly leaves open whether the findings generalize to college grading.\n\nIt therefore cannot be used as direct evidence about university grade inflation.\n\nCITATION TRAIL:\nGans & Kominers — informativeness and strategic manipulation of grading systems.\nButcher et al. — anti-grade-inflation policy at Wellesley.\nBoleslavsky & Cotton — grading standards and education quality.\nCollege-level studies of transcript informativeness.\n\nTEST:\nFor university transcript data, decompose historical grade changes into:\n\nmean shift,\npass/fail threshold shift,\nupper-tail compression,\nvariance change.\n\nTest each separately against:\nsubsequent-course performance,\nmajor persistence,\ngraduate admissions,\nand labor-market outcomes.\n\nPLATFORM:\n[[THE UNIVERSITY AS SIGNALING SYSTEM]]\n\nLINKS:\n[[Grade Inflation Is Not One Operation]]\n[[Threshold Mercy Versus Signal Compression]]\n[[Distributional Grading Mechanics]]\n\nBIBTEX:\n@techreport{denning2026easya,\n  author      = {Denning, Jeffrey T. and Nesbit, Rachel L. and Pope, Nolan G. and Warnick, Merrill},\n  title       = {Easy A's, Less Pay: The Long-Term Effects of Grade Inflation},\n  institution = {National Bureau of Economic Research},\n  type        = {Working Paper},\n  number      = {34952},\n  year        = {2026},\n  doi         = {10.3386/w34952},\n  url         = {https://www.nber.org/papers/w34952}\n}",
+    "parents": [],
+    "parent_candidates": [],
+    "lineage_evidence": null,
+    "flags": [],
+    "title": "“GRADE INFLATION” IS NOT ONE OPERATION: RAISING EVERYONE’S GRADES AND MOVING STUDENTS ACROSS THE FAILING THRESHOLD CAN HAVE OPPOSITE LONG-RUN EFFECTS.",
+    "source": "Jeffrey T. Denning, Rachel L. Nesbit, Nolan G. Pope, and Merrill Warnick — Easy A’s, Less Pay: The Long-Term Effects of Grade Inflation — 2026 — NBER Working Paper 34952.",
+    "source_url": "https://www.nber.org/papers/w34952",
+    "platform_raw": "[[THE UNIVERSITY AS SIGNALING SYSTEM]]",
+    "platforms": [
+      "THE UNIVERSITY AS SIGNALING SYSTEM"
+    ],
+    "links_raw": "[[Grade Inflation Is Not One Operation]]\n[[Threshold Mercy Versus Signal Compression]]\n[[Distributional Grading Mechanics]]",
+    "links": [
+      "Grade Inflation Is Not One Operation",
+      "Threshold Mercy Versus Signal Compression",
+      "Distributional Grading Mechanics"
+    ],
+    "all_wikilinks": [
+      "THE UNIVERSITY AS SIGNALING SYSTEM",
+      "Grade Inflation Is Not One Operation",
+      "Threshold Mercy Versus Signal Compression",
+      "Distributional Grading Mechanics"
+    ],
+    "bibtex": "@techreport{denning2026easya,\n  author      = {Denning, Jeffrey T. and Nesbit, Rachel L. and Pope, Nolan G. and Warnick, Merrill},\n  title       = {Easy A's, Less Pay: The Long-Term Effects of Grade Inflation},\n  institution = {National Bureau of Economic Research},\n  type        = {Working Paper},\n  number      = {34952},\n  year        = {2026},\n  doi         = {10.3386/w34952},\n  url         = {https://www.nber.org/papers/w34952}\n}",
+    "content_sha256": "54b1888db89fc3b32e65458edb86b114adcd7830ac96e3a347009fe74d8b299d",
+    "children": [],
+    "backlinks": [],
+    "ancestors": [],
+    "descendants": [],
+    "lineage_flags": [],
+    "root_filename": "006__two-inflations__DenningEtAl2026__Z-EDUPM-006__from-20260817-s01-o006.txt",
+    "markdown_mirror": "_MD/006__two-inflations__DenningEtAl2026__Z-EDUPM-006__from-20260817-s01-o006.md",
+    "generation": 0,
+    "lineage": {
+      "parents": [],
+      "kids": [],
+      "ancestors": [],
+      "descendants": [],
+      "generation": 0,
+      "evidence_state": null
+    },
+    "native_graph": {
+      "platform_memberships": [
+        "THE UNIVERSITY AS SIGNALING SYSTEM"
+      ],
+      "links_out": [
+        "Grade Inflation Is Not One Operation",
+        "Threshold Mercy Versus Signal Compression",
+        "Distributional Grading Mechanics"
+      ],
+      "links_in": []
+    }
+  },
+  {
+    "display_order": 7,
+    "creation_order": 7,
+    "accession": "ZTL-S01-007",
+    "name": "Purchased Learning Paradox",
+    "original_id": "Z-EDUPM-007",
+    "source_signature": "BunceEtAl2017",
+    "origin": "20260817-s01-o007",
+    "appearance": "SES-20260817-01",
+    "payload": "ZETTEL\n\nID:\nZ-EDUPM-007\n\nTITLE:\n“STUDENT AS CONSUMER” IS NOT YET “STUDENT BUYS AN A”: CONSUMER ORIENTATION MAY INSTEAD WEAKEN THE LEARNER IDENTITY REQUIRED TO PRODUCE THE PERFORMANCE BEING PURCHASED.\n\nSOURCE:\nLouise Bunce, Amy Baird, and Siân E. Jones — “The Student-as-Consumer Approach in Higher Education and Its Effects on Academic Performance” — 2017 — Studies in Higher Education 42(11), 1958–1978.\n\nSOURCE URL:\nhttps://doi.org/10.1080/03075079.2015.1127908\n\nPASSAGE:\n[PARAPHRASE] In a survey of 608 undergraduates in England, greater consumer orientation was associated with lower academic performance and mediated relationships among learner identity, grade goals, and performance.\n\nRESEARCH OBJECT:\nConsumerization may alter the subjectivity with which the student approaches learning before it alters professors’ willingness to award grades.\n\nLOCAL MOVE:\nThe study operationalizes “student as consumer” as a measurable orientation rather than assuming that paying tuition automatically produces entitlement.\n\nSOURCE TERMS:\nstudent-as-consumer\nconsumer orientation\nlearner identity\ngrade goal\nacademic performance\ntuition fees\n\nWHAT BECAME STRANGE:\nThe commodity relation may not simply mean:\n\nI PAID\n→ GIVE ME THE CREDENTIAL.\n\nIt may also mean:\n\nI PAID\n→ EDUCATION IS SOMETHING DELIVERED TO ME\n→ MY ROLE AS PRODUCER OF MY OWN LEARNING WEAKENS.\n\nThe consumer model can therefore damage the very asset the consumer believes they are purchasing.\n\nQUESTION:\nDoes marketization primarily corrupt grading standards, or does it first change the student’s theory of where learning comes from?\n\nDEEPER QUESTION:\nWhat happens when an institution sells an outcome whose production still requires uncompensated participation by the buyer?\n\nMECHANISM:\nfee responsibility / marketized environment\n→ consumer orientation\n↔ learner identity\n→ engagement / academic behavior\n→ performance\n\nFORMAL SHIFT:\n<STUDENT>\n→ <CUSTOMER SUBJECT POSITION>\n→ [REINTERPRET EDUCATIONAL RELATION]\n→ <CHANGED LEARNER ORIENTATION>\n→ <CHANGED PERFORMANCE>\n\nSOURCE FORMALISM:\nThe source uses survey measures and mediation analysis connecting:\nconsumer orientation,\nlearner identity,\ngrade goal,\nand self-reported academic performance.\n\nOUR FORMALIZATION:\n[OUR FORMALIZATION — NOT SOURCE SYNTAX]\n\nEDUCATION is an unusual commodity because:\n\nPURCHASE(ACCESS)\ndoes not imply\nPURCHASE(LEARNING).\n\nProduction remains partly co-produced by the purchaser.\n\nTENSION:\nThe source supports concern about consumer orientation but pressures the stronger story that students simply “pay and receive an A.”\n\nIts empirical pattern instead associates stronger consumer orientation with poorer performance.\n\nMISSING:\nDirect causal identification.\nEvidence from U.S. universities.\nDirect measures of grading pressure on faculty.\nAdministrative rather than self-reported performance.\n\nBOUNDARY:\nThe study is observational, based on students in England, and uses self-reported academic performance. It cannot establish that consumer orientation causes lower grades or that tuition policy causes faculty grade inflation.\n\nCITATION TRAIL:\nNaidoo & Jamieson — student consumerism.\nMolesworth, Nixon & Scullion — marketisation and student subjectivity.\nResearch on academic entitlement.\nLove & Kotchen — grade/evaluation incentive coupling.\n\nTEST:\nMeasure separately:\n\nA. consumer orientation,\nB. academic entitlement,\nC. learner identity,\nD. willingness to complain about grades,\nE. actual grade appeals,\nF. faculty grading response.\n\nDetermine whether “consumerism” reaches grades through student disengagement, complaint pressure, faculty incentives, or distinct pathways.\n\nPLATFORM:\n[[MARKETIZED UNIVERSITY SUBJECTS]]\n\nLINKS:\n[[Student as Consumer]]\n[[Learning Cannot Be Delivered Like a Product]]\n[[Co-Production Problem of Education]]\n\nBIBTEX:\n@article{bunce2017student,\n  author  = {Bunce, Louise and Baird, Amy and Jones, Si{\\^a}n E.},\n  title   = {The Student-as-Consumer Approach in Higher Education and Its Effects on Academic Performance},\n  journal = {Studies in Higher Education},\n  year    = {2017},\n  volume  = {42},\n  number  = {11},\n  pages   = {1958--1978},\n  doi     = {10.1080/03075079.2015.1127908}\n}",
+    "parents": [],
+    "parent_candidates": [],
+    "lineage_evidence": null,
+    "flags": [],
+    "title": "“STUDENT AS CONSUMER” IS NOT YET “STUDENT BUYS AN A”: CONSUMER ORIENTATION MAY INSTEAD WEAKEN THE LEARNER IDENTITY REQUIRED TO PRODUCE THE PERFORMANCE BEING PURCHASED.",
+    "source": "Louise Bunce, Amy Baird, and Siân E. Jones — “The Student-as-Consumer Approach in Higher Education and Its Effects on Academic Performance” — 2017 — Studies in Higher Education 42(11), 1958–1978.",
+    "source_url": "https://doi.org/10.1080/03075079.2015.1127908",
+    "platform_raw": "[[MARKETIZED UNIVERSITY SUBJECTS]]",
+    "platforms": [
+      "MARKETIZED UNIVERSITY SUBJECTS"
+    ],
+    "links_raw": "[[Student as Consumer]]\n[[Learning Cannot Be Delivered Like a Product]]\n[[Co-Production Problem of Education]]",
+    "links": [
+      "Student as Consumer",
+      "Learning Cannot Be Delivered Like a Product",
+      "Co-Production Problem of Education"
+    ],
+    "all_wikilinks": [
+      "MARKETIZED UNIVERSITY SUBJECTS",
+      "Student as Consumer",
+      "Learning Cannot Be Delivered Like a Product",
+      "Co-Production Problem of Education"
+    ],
+    "bibtex": "@article{bunce2017student,\n  author  = {Bunce, Louise and Baird, Amy and Jones, Si{\\^a}n E.},\n  title   = {The Student-as-Consumer Approach in Higher Education and Its Effects on Academic Performance},\n  journal = {Studies in Higher Education},\n  year    = {2017},\n  volume  = {42},\n  number  = {11},\n  pages   = {1958--1978},\n  doi     = {10.1080/03075079.2015.1127908}\n}",
+    "content_sha256": "1ce02e0d79f78622cf8e7d2abc148e6e1a4e2d58b0ad514cef38be0b6efa9033",
+    "children": [],
+    "backlinks": [],
+    "ancestors": [],
+    "descendants": [],
+    "lineage_flags": [],
+    "root_filename": "007__purchased-learning-paradox__BunceEtAl2017__Z-EDUPM-007__from-20260817-s01-o007.txt",
+    "markdown_mirror": "_MD/007__purchased-learning-paradox__BunceEtAl2017__Z-EDUPM-007__from-20260817-s01-o007.md",
+    "generation": 0,
+    "lineage": {
+      "parents": [],
+      "kids": [],
+      "ancestors": [],
+      "descendants": [],
+      "generation": 0,
+      "evidence_state": null
+    },
+    "native_graph": {
+      "platform_memberships": [
+        "MARKETIZED UNIVERSITY SUBJECTS"
+      ],
+      "links_out": [
+        "Student as Consumer",
+        "Learning Cannot Be Delivered Like a Product",
+        "Co-Production Problem of Education"
+      ],
+      "links_in": []
+    }
+  },
+  {
+    "display_order": 8,
+    "creation_order": 8,
+    "accession": "ZTL-S01-008",
+    "name": "Credential Fragments",
+    "original_id": "Z-EDUPM-008",
+    "source_signature": "Oliver2022",
+    "origin": "20260817-s01-o008",
+    "appearance": "SES-20260817-01",
+    "payload": "ZETTEL\n\nID:\nZ-EDUPM-008\n\nTITLE:\nMICRO-CREDENTIALS DO NOT PROVE THE OLD CREDENTIAL HAS FAILED; THEY DECOMPOSE ONE LONG-HORIZON CLAIM OF FITNESS INTO SMALLER CLAIMS WITH THEIR OWN ASSESSMENT AND VERIFICATION EVENTS.\n\nSOURCE:\nBeverley Oliver — Towards a Common Definition of Micro-credentials — 2022 — UNESCO.\n\nSOURCE URL:\nhttps://unesdoc.unesco.org/ark:/48223/pf0000381668\n\nPASSAGE:\n[PARAPHRASE] UNESCO’s proposed definition treats a micro-credential as a record of focused learning achievement that verifies what a learner knows, understands, or can do; it includes assessment against defined standards, is awarded by a trusted provider, has standalone value, and may contribute to larger credentials.\n\nRESEARCH OBJECT:\nCredential proliferation can be read as temporal and epistemic unbundling rather than simply credential inflation.\n\nLOCAL MOVE:\nThe definition makes the credential smaller while demanding explicit assessment, standards, provider trust, and a specified learning achievement.\n\nSOURCE TERMS:\nmicro-credential\nfocused learning achievement\nassessment\nclearly defined standards\ntrusted provider\nstandalone value\nquality assurance\nlearning outcomes\n\nWHAT BECAME STRANGE:\nThe bachelor’s degree bundles thousands of claims into one delayed settlement:\n\nTHIS PERSON IS EDUCATED.\n\nA micro-credential attempts a much smaller claim:\n\nTHIS PERSON CAN DO X,\ntested under Y standard,\nissued by Z provider.\n\nThe proliferation of credentials may therefore indicate a demand for more frequent and granular settlement of competence claims.\n\nQUESTION:\nIs hyper-credentialism an inflation of signals—or a response to the inability of large credentials to expose which particular claim is being certified?\n\nDEEPER QUESTION:\nWhat happens to education when every competence must become small enough to be separately assessed, verified, transported, and recombined?\n\nMECHANISM:\nlarge bundled qualification\n→ decompose learning outcomes\n→ define smaller achievement\n→ assess against standard\n→ issue portable record\n→ optionally stack into larger credential\n\nFORMAL SHIFT:\n<BUNDLED CLAIM OF FITNESS>\n→ <FOCUSED LEARNING OUTCOME>\n→ [ASSESS]\n→ <MICRO-CREDENTIAL>\n→ [STACK / TRANSPORT / VERIFY]\n→ <CREDENTIAL ECOLOGY>\n\nSOURCE FORMALISM:\nUNESCO’s definition supplies constitutive criteria:\n- focused learning achievement,\n- verification,\n- assessment,\n- standards,\n- trusted provider,\n- standalone or combinable value,\n- quality assurance.\n\nOUR FORMALIZATION:\n[OUR FORMALIZATION — NOT SOURCE SYNTAX]\n\nDEGREE:\n  one large signal\n  / long horizon\n  / many latent competencies\n\nMICRO-CREDENTIALS:\n  C1(skill_a, issuer_x, standard_q, date_t1)\n  C2(skill_b, issuer_y, standard_r, date_t2)\n  C3(skill_c, issuer_z, standard_s, date_t3)\n\nThe credential ecology gains resolution while multiplying verification events.\n\nTENSION:\nThe initial hypothesis reads endless micro-credentials as evidence that the old degree has lost predictive value.\n\nUNESCO gives another surviving interpretation:\nsmaller credentials may be designed for flexibility, portability, focused learning, and lifelong education even where conventional degrees retain value.\n\nMISSING:\nEvidence establishing why a particular labor market adopts micro-credentials:\nsignal failure,\nskills change,\ninstitutional marketing,\nregulation,\nlearner flexibility,\nor employer demand.\n\nBOUNDARY:\nThe UNESCO definition does not claim that micro-credentials emerged because degrees stopped predicting worker quality. That genealogy remains unverified.\n\nCITATION TRAIL:\nEuropean Council definition of micro-credentials.\nOECD alternative credentials.\nCredential ecology / stackability research.\nLabor-market studies comparing employer interpretation of degrees versus granular credentials.\nRandall Collins on credentialism — but only after separating his sociological mechanism from contemporary micro-credential architecture.\n\nTEST:\nShow employers equivalent candidate profiles containing:\n\nA. degree only;\nB. micro-credentials only;\nC. degree + micro-credentials;\nD. direct work sample.\n\nMeasure predicted competence, interview selection, wage offer, and confidence.\n\nThen test whether micro-credentials substitute for, complement, or merely decorate the degree signal.\n\nPLATFORM:\n[[CREDENTIAL ECOLOGIES]]\n\nLINKS:\n[[Granular Settlement of Competence]]\n[[Hyper-Credentialism]]\n[[Unbundling the Degree Signal]]\n\nBIBTEX:\n@report{oliver2022microcredentials,\n  author      = {Oliver, Beverley},\n  title       = {Towards a Common Definition of Micro-credentials},\n  institution = {UNESCO},\n  year        = {2022},\n  url         = {https://unesdoc.unesco.org/ark:/48223/pf0000381668}\n}",
+    "parents": [],
+    "parent_candidates": [],
+    "lineage_evidence": null,
+    "flags": [],
+    "title": "MICRO-CREDENTIALS DO NOT PROVE THE OLD CREDENTIAL HAS FAILED; THEY DECOMPOSE ONE LONG-HORIZON CLAIM OF FITNESS INTO SMALLER CLAIMS WITH THEIR OWN ASSESSMENT AND VERIFICATION EVENTS.",
+    "source": "Beverley Oliver — Towards a Common Definition of Micro-credentials — 2022 — UNESCO.",
+    "source_url": "https://unesdoc.unesco.org/ark:/48223/pf0000381668",
+    "platform_raw": "[[CREDENTIAL ECOLOGIES]]",
+    "platforms": [
+      "CREDENTIAL ECOLOGIES"
+    ],
+    "links_raw": "[[Granular Settlement of Competence]]\n[[Hyper-Credentialism]]\n[[Unbundling the Degree Signal]]",
+    "links": [
+      "Granular Settlement of Competence",
+      "Hyper-Credentialism",
+      "Unbundling the Degree Signal"
+    ],
+    "all_wikilinks": [
+      "CREDENTIAL ECOLOGIES",
+      "Granular Settlement of Competence",
+      "Hyper-Credentialism",
+      "Unbundling the Degree Signal"
+    ],
+    "bibtex": "@report{oliver2022microcredentials,\n  author      = {Oliver, Beverley},\n  title       = {Towards a Common Definition of Micro-credentials},\n  institution = {UNESCO},\n  year        = {2022},\n  url         = {https://unesdoc.unesco.org/ark:/48223/pf0000381668}\n}",
+    "content_sha256": "fa67f00eb80cace19b3fcce066b9b164cc3fe32301add93b7d77c668eb1f858b",
+    "children": [
+      "Z-EDUPM-014",
+      "Z-EDUPM-015"
+    ],
+    "backlinks": [
+      "Z-EDUPM-014",
+      "Z-EDUPM-015"
+    ],
+    "ancestors": [],
+    "descendants": [
+      "Z-EDUPM-014",
+      "Z-EDUPM-015"
+    ],
+    "lineage_flags": [],
+    "root_filename": "008__credential-fragments__Oliver2022__Z-EDUPM-008__from-20260817-s01-o008.txt",
+    "markdown_mirror": "_MD/008__credential-fragments__Oliver2022__Z-EDUPM-008__from-20260817-s01-o008.md",
+    "generation": 0,
+    "lineage": {
+      "parents": [],
+      "kids": [
+        "Z-EDUPM-014",
+        "Z-EDUPM-015"
+      ],
+      "ancestors": [],
+      "descendants": [
+        "Z-EDUPM-014",
+        "Z-EDUPM-015"
+      ],
+      "generation": 0,
+      "evidence_state": null
+    },
+    "native_graph": {
+      "platform_memberships": [
+        "CREDENTIAL ECOLOGIES"
+      ],
+      "links_out": [
+        "Granular Settlement of Competence",
+        "Hyper-Credentialism",
+        "Unbundling the Degree Signal"
+      ],
+      "links_in": [
+        "Z-EDUPM-014",
+        "Z-EDUPM-015"
+      ]
+    }
+  },
+  {
+    "display_order": 9,
+    "creation_order": 9,
+    "accession": "ZTL-S01-009",
+    "name": "World It Causes",
+    "original_id": "Z-EDUPM-009",
+    "source_signature": "PerdomoEtAl2020",
+    "origin": "20260817-s01-o009",
+    "appearance": "SES-20260817-01",
+    "payload": "ZETTEL\n\nID:\nZ-EDUPM-009\n\nTITLE:\nA MODEL CAN BECOME CALIBRATED TO THE WORLD IT CAUSES RATHER THAN THE WORLD IT CLAIMS TO DESCRIBE.\n\nSOURCE:\nJuan Perdomo, Tijana Zrnic, Celestine Mendler-Dünner, and Moritz Hardt — “Performative Prediction” — 2020 — Proceedings of the 37th International Conference on Machine Learning, pp. 7599–7609.\n\nPASSAGE:\n[QUOTE] “When predictions support decisions they may influence the outcome they aim to predict.”\n\nRESEARCH OBJECT:\nPerformative stability: prediction can reach an equilibrium with the distribution produced by deploying the prediction itself.\n\nLOCAL MOVE:\nPerdomo et al. replace the ordinary assumption that predictions encounter a fixed target distribution with a setting in which deployment changes that distribution.\n\nThe strange object is not merely biased prediction.\n\nIt is a predictor whose apparent empirical world is partly downstream of itself.\n\nSOURCE TERMS:\nperformative prediction\ndistribution shift\nperformative stability\nretraining\nstrategic classification\nrisk minimization\nfuture outcomes\n\nWHAT BECAME STRANGE:\nAn educational risk system could become increasingly well calibrated while becoming decreasingly informative about the world that would exist without the system.\n\nSuppose:\n\nMODEL predicts student is unlikely to succeed in course X\n→ advisor redirects student away from X\n→ student never takes X\n→ future population taking X contains fewer predicted low-success students\n→ observed outcomes increasingly resemble model expectations.\n\nThe model can become stable by reorganizing its environment.\n\nQUESTION:\nWhen educational predictions become performatively stable, what exactly has stabilized: knowledge about students, institutional routing behavior, or a new student population produced by the predictions?\n\nDEEPER QUESTION:\nCould “model improvement” sometimes mean increasing agreement between an institution and the world the institution has successfully forced into existence?\n\nMECHANISM:\nhistorical population\n→ prediction\n→ decision\n→ changed behavior / allocation\n→ changed population\n→ retraining\n→ new prediction\n\nFORMAL SHIFT:\n<PREDICTION ABOUT DISTRIBUTION D>\n→ [DEPLOY]\n→ <D BECOMES D(θ)>\n→ [RETRAIN]\n→ <PREDICTOR STABILIZES AGAINST ITS INDUCED DISTRIBUTION>\n\nSOURCE FORMALISM:\nThe paper introduces a performative prediction framework in which deploying model parameters can induce a new data distribution.\n\nIt introduces the equilibrium notion of performative stability and studies conditions under which repeated retraining converges toward such a point.\n\nOUR FORMALIZATION:\n[OUR FORMALIZATION — NOT SOURCE SYNTAX]\n\nOrdinary prediction:\n\nθ_t\n→ predict Y under D\n\nPerformative prediction:\n\nθ_t\n→ ACTION(θ_t)\n→ D(θ_t)\n→ DATA_t+1\n→ θ_t+1\n\nA stable θ* need not recover an intervention-free D₀.\n\nIt can instead satisfy:\n\nθ*\n→ D(θ*)\n→ θ*\n\nTENSION:\n[[Z-EDUPM-003]] framed educational intervention as potentially making a correct prediction appear false.\n\nPerformative stability exposes the mirror-image danger:\n\nintervention can also make a model appear increasingly correct because the deployment changes the target toward the model.\n\nMISSING:\nThe distribution of educational trajectories that would have existed without predictive intervention.\n\nBOUNDARY:\nPerdomo et al. develop a general machine-learning framework, not an empirical study of university advising.\n\nApplying performative stability to educational recommendation remains an inference requiring direct evidence.\n\nCITATION TRAIL:\n[[Z-EDUPM-003]]\n→ Perdomo et al., performative prediction\n→ performative stability\n→ educational routing as distribution-producing intervention\n\nFollow:\nstrategic classification\nperformative power\ncausal prediction under intervention\ndynamic algorithmic decision systems\n\nTEST:\nTake a deployed student-risk or course-recommendation system with repeated retraining.\n\nFor successive model generations record:\n\nprediction distributions,\ninterventions,\ncourse choices,\nstudent outcomes,\npopulation composition.\n\nThen compare observed calibration with an experimentally maintained non-intervention or randomized-exploration population.\n\nAsk whether apparent improvement disappears when deployment effects are removed.\n\nPLATFORM:\n[[EDUCATION AS PERFORMATIVE PREDICTION]]\n\nLINKS:\n[[Z-EDUPM-003]]\n[[Performative Stability]]\n[[Predictions That Manufacture Their Evidence]]\n\nBIBTEX:\n@inproceedings{perdomo2020performative,\n  title     = {Performative Prediction},\n  author    = {Perdomo, Juan and Zrnic, Tijana and Mendler-D{\"u}nner, Celestine and Hardt, Moritz},\n  booktitle = {Proceedings of the 37th International Conference on Machine Learning},\n  pages     = {7599--7609},\n  year      = {2020},\n  volume    = {119},\n  series    = {Proceedings of Machine Learning Research},\n  publisher = {PMLR}\n}",
+    "parents": [
+      "Z-EDUPM-003"
+    ],
+    "parent_candidates": [],
+    "lineage_evidence": "EXPLICIT_CONTEXT",
+    "flags": [],
+    "title": "A MODEL CAN BECOME CALIBRATED TO THE WORLD IT CAUSES RATHER THAN THE WORLD IT CLAIMS TO DESCRIBE.",
+    "source": "Juan Perdomo, Tijana Zrnic, Celestine Mendler-Dünner, and Moritz Hardt — “Performative Prediction” — 2020 — Proceedings of the 37th International Conference on Machine Learning, pp. 7599–7609.",
+    "source_url": null,
+    "platform_raw": "[[EDUCATION AS PERFORMATIVE PREDICTION]]",
+    "platforms": [
+      "EDUCATION AS PERFORMATIVE PREDICTION"
+    ],
+    "links_raw": "[[Z-EDUPM-003]]\n[[Performative Stability]]\n[[Predictions That Manufacture Their Evidence]]",
+    "links": [
+      "Z-EDUPM-003",
+      "Performative Stability",
+      "Predictions That Manufacture Their Evidence"
+    ],
+    "all_wikilinks": [
+      "Z-EDUPM-003",
+      "Z-EDUPM-003",
+      "EDUCATION AS PERFORMATIVE PREDICTION",
+      "Z-EDUPM-003",
+      "Performative Stability",
+      "Predictions That Manufacture Their Evidence"
+    ],
+    "bibtex": "@inproceedings{perdomo2020performative,\n  title     = {Performative Prediction},\n  author    = {Perdomo, Juan and Zrnic, Tijana and Mendler-D{\"u}nner, Celestine and Hardt, Moritz},\n  booktitle = {Proceedings of the 37th International Conference on Machine Learning},\n  pages     = {7599--7609},\n  year      = {2020},\n  volume    = {119},\n  series    = {Proceedings of Machine Learning Research},\n  publisher = {PMLR}\n}",
+    "content_sha256": "131d2c32b08d6a8fd60e376483d994daabb806e160fd082d6d07de4c9c8a519c",
+    "children": [
+      "Z-EDUPM-016"
+    ],
+    "backlinks": [
+      "Z-EDUPM-016"
+    ],
+    "ancestors": [
+      "Z-EDUPM-003"
+    ],
+    "descendants": [
+      "Z-EDUPM-016",
+      "Z-EDUPM-017",
+      "Z-EDUPM-018",
+      "Z-EDUPM-020"
+    ],
+    "lineage_flags": [],
+    "root_filename": "009__world-it-causes__PerdomoEtAl2020__Z-EDUPM-009__from-20260817-s01-o009.txt",
+    "markdown_mirror": "_MD/009__world-it-causes__PerdomoEtAl2020__Z-EDUPM-009__from-20260817-s01-o009.md",
+    "generation": 1,
+    "lineage": {
+      "parents": [
+        "Z-EDUPM-003"
+      ],
+      "kids": [
+        "Z-EDUPM-016"
+      ],
+      "ancestors": [
+        "Z-EDUPM-003"
+      ],
+      "descendants": [
+        "Z-EDUPM-016",
+        "Z-EDUPM-017",
+        "Z-EDUPM-018",
+        "Z-EDUPM-020"
+      ],
+      "generation": 1,
+      "evidence_state": "EXPLICIT_CONTEXT"
+    },
+    "native_graph": {
+      "platform_memberships": [
+        "EDUCATION AS PERFORMATIVE PREDICTION"
+      ],
+      "links_out": [
+        "Z-EDUPM-003",
+        "Performative Stability",
+        "Predictions That Manufacture Their Evidence"
+      ],
+      "links_in": [
+        "Z-EDUPM-016"
+      ]
+    }
+  },
+  {
+    "display_order": 10,
+    "creation_order": 10,
+    "accession": "ZTL-S01-010",
+    "name": "Unlived Curriculum",
+    "original_id": "Z-EDUPM-010",
+    "source_signature": "KleinbergEtAl2018",
+    "origin": "20260817-s01-o010",
+    "appearance": "SES-20260817-01",
+    "payload": "ZETTEL\n\nID:\nZ-EDUPM-010\n\nTITLE:\nTHE UNLIVED CURRICULUM HAS NO LABELS: A RECOMMENDER CANNOT OBSERVE THE GRADES STUDENTS WOULD HAVE RECEIVED IN COURSES THEY NEVER TOOK.\n\nSOURCE:\nJon Kleinberg, Himabindu Lakkaraju, Jure Leskovec, Jens Ludwig, and Sendhil Mullainathan — “Human Decisions and Machine Predictions” — 2018 — Quarterly Journal of Economics 133(1), pp. 237–293.\n\nPASSAGE:\n[PARAPHRASE] In the bail setting, outcomes are observable for defendants judges release but not for those they detain; prior decisions therefore determine where labels exist.\n\nRESEARCH OBJECT:\nSelective labels: a prediction system is trained and evaluated on outcomes that earlier decisions permitted the world to reveal.\n\nLOCAL MOVE:\nKleinberg et al. show that the missing-data problem is not random.\n\nA prior decision determines whether the outcome that would evaluate the decision can ever become observable.\n\nSOURCE TERMS:\nhuman decisions\nmachine predictions\nselective labels\ncounterfactual decision rules\nprior judge decisions\nobserved outcomes\nquasi-random assignment\n\nWHAT BECAME STRANGE:\nA transcript contains an enormous invisible negative space.\n\nIt records:\n\nCOURSES TAKEN\n→ GRADES OBSERVED.\n\nIt does not record:\n\nCOURSES NOT TAKEN\n→ GRADES THAT WOULD HAVE OCCURRED.\n\nA recommender claiming to know which course a student should take therefore learns from a world in which almost every alternative educational trajectory is permanently unlabeled.\n\nThe missing object is the student's unlived curriculum.\n\nQUESTION:\nHow can a course-recommendation model learn whether its rejected alternatives were actually worse when rejection prevents their outcomes from ever becoming data?\n\nDEEPER QUESTION:\nDoes personalized education gradually destroy the counterfactual diversity required to know whether personalization works?\n\nMECHANISM:\nprior decision\n→ one option selected\n→ selected outcome becomes observable\n→ rejected outcomes remain hidden\n→ model trains on selectively revealed labels\n→ future decisions repeat the selection structure\n\nFORMAL SHIFT:\n<POSSIBLE FUTURES {A,B,C,D}>\n→ [CHOOSE B]\n→ <OBSERVE Y_B>\n→ <Y_A,Y_C,Y_D REMAIN UNOBSERVED>\n→ [TRAIN]\n→ <NEW CHOICE POLICY>\n\nSOURCE FORMALISM:\nThe paper treats bail as a prediction-and-decision problem complicated because outcomes are observed only for defendants who are released.\n\nIt uses econometric strategies including quasi-random assignment to judges to construct decision counterfactuals.\n\nOUR FORMALIZATION:\n[OUR FORMALIZATION — NOT SOURCE SYNTAX]\n\nFor student s:\n\nPotential grades:\nG_s = {\n  g(s,c₁),\n  g(s,c₂),\n  ...\n  g(s,cₙ)\n}\n\nObserved transcript:\n\nT_s = {g(s,c*) : c* actually taken}\n\nFor almost every c ≠ c*:\n\ng(s,c) = UNOBSERVED\n\nThe recommendation system is therefore asked to rank precisely the values the institution usually prevents itself from observing.\n\nTENSION:\n[[Z-EDUPM-002]] asked whether recommendation produces the distribution that later validates it.\n\nSelective labels sharpen the issue:\n\nsometimes there is not even contrary evidence available to falsify the recommendation, because the alternative trajectory was never lived.\n\nMISSING:\nCounterfactual performance in courses not taken.\n\nBOUNDARY:\nKleinberg et al. study judicial bail decisions, not course recommendation.\n\nThe selective-label structure transfers formally only if course choice actually determines whether the outcome needed to evaluate alternative recommendations is observed.\n\nCITATION TRAIL:\n[[Z-EDUPM-002]]\n→ Kleinberg et al.\n→ selectively observed outcomes\n→ missing counterfactual labels\n→ educational recommendation\n\nFollow:\nLakkaraju et al. — The Selective Labels Problem\noff-policy evaluation\ncontextual bandits\nexploration versus exploitation\ncausal recommender systems\n\nTEST:\nWithin a set of academically acceptable electives, randomly perturb which eligible course appears first in the recommendation interface.\n\nUse that randomized exploration to estimate outcomes for trajectories the ordinary recommender would rarely expose.\n\nCompare those results with the model's counterfactual grade predictions.\n\nPLATFORM:\n[[THE UNLIVED CURRICULUM]]\n\nLINKS:\n[[Z-EDUPM-002]]\n[[Selective Labels]]\n[[Counterfactual Education]]\n[[Unlived Curriculum]]\n\nBIBTEX:\n@article{kleinberg2018human,\n  author  = {Kleinberg, Jon and Lakkaraju, Himabindu and Leskovec, Jure and Ludwig, Jens and Mullainathan, Sendhil},\n  title   = {Human Decisions and Machine Predictions},\n  journal = {The Quarterly Journal of Economics},\n  year    = {2018},\n  volume  = {133},\n  number  = {1},\n  pages   = {237--293},\n  doi     = {10.1093/qje/qjx032}\n}",
+    "parents": [
+      "Z-EDUPM-002"
+    ],
+    "parent_candidates": [],
+    "lineage_evidence": "EXPLICIT_CONTEXT",
+    "flags": [],
+    "title": "THE UNLIVED CURRICULUM HAS NO LABELS: A RECOMMENDER CANNOT OBSERVE THE GRADES STUDENTS WOULD HAVE RECEIVED IN COURSES THEY NEVER TOOK.",
+    "source": "Jon Kleinberg, Himabindu Lakkaraju, Jure Leskovec, Jens Ludwig, and Sendhil Mullainathan — “Human Decisions and Machine Predictions” — 2018 — Quarterly Journal of Economics 133(1), pp. 237–293.",
+    "source_url": null,
+    "platform_raw": "[[THE UNLIVED CURRICULUM]]",
+    "platforms": [
+      "THE UNLIVED CURRICULUM"
+    ],
+    "links_raw": "[[Z-EDUPM-002]]\n[[Selective Labels]]\n[[Counterfactual Education]]\n[[Unlived Curriculum]]",
+    "links": [
+      "Z-EDUPM-002",
+      "Selective Labels",
+      "Counterfactual Education",
+      "Unlived Curriculum"
+    ],
+    "all_wikilinks": [
+      "Z-EDUPM-002",
+      "Z-EDUPM-002",
+      "THE UNLIVED CURRICULUM",
+      "Z-EDUPM-002",
+      "Selective Labels",
+      "Counterfactual Education",
+      "Unlived Curriculum"
+    ],
+    "bibtex": "@article{kleinberg2018human,\n  author  = {Kleinberg, Jon and Lakkaraju, Himabindu and Leskovec, Jure and Ludwig, Jens and Mullainathan, Sendhil},\n  title   = {Human Decisions and Machine Predictions},\n  journal = {The Quarterly Journal of Economics},\n  year    = {2018},\n  volume  = {133},\n  number  = {1},\n  pages   = {237--293},\n  doi     = {10.1093/qje/qjx032}\n}",
+    "content_sha256": "c864667084da60a04fb0a82a45c92ed99b2c9ec64efef39f37f490f8e6e5fa1e",
+    "children": [
+      "Z-EDUPM-019"
+    ],
+    "backlinks": [
+      "Z-EDUPM-019"
+    ],
+    "ancestors": [
+      "Z-EDUPM-002"
+    ],
+    "descendants": [
+      "Z-EDUPM-019"
+    ],
+    "lineage_flags": [],
+    "root_filename": "010__unlived-curriculum__KleinbergEtAl2018__Z-EDUPM-010__from-20260817-s01-o010.txt",
+    "markdown_mirror": "_MD/010__unlived-curriculum__KleinbergEtAl2018__Z-EDUPM-010__from-20260817-s01-o010.md",
+    "generation": 1,
+    "lineage": {
+      "parents": [
+        "Z-EDUPM-002"
+      ],
+      "kids": [
+        "Z-EDUPM-019"
+      ],
+      "ancestors": [
+        "Z-EDUPM-002"
+      ],
+      "descendants": [
+        "Z-EDUPM-019"
+      ],
+      "generation": 1,
+      "evidence_state": "EXPLICIT_CONTEXT"
+    },
+    "native_graph": {
+      "platform_memberships": [
+        "THE UNLIVED CURRICULUM"
+      ],
+      "links_out": [
+        "Z-EDUPM-002",
+        "Selective Labels",
+        "Counterfactual Education",
+        "Unlived Curriculum"
+      ],
+      "links_in": [
+        "Z-EDUPM-019"
+      ]
+    }
+  },
+  {
+    "display_order": 11,
+    "creation_order": 11,
+    "accession": "ZTL-S01-011",
+    "name": "Oracle’s Spirit",
+    "original_id": "Z-EDUPM-011",
+    "source_signature": "PetersonEtAl2026",
+    "origin": "20260817-s01-o011",
+    "appearance": "SES-20260817-01",
+    "payload": "ZETTEL\n\nID:\nZ-EDUPM-011\n\nTITLE:\nA PREDICTION MARKET CAN CORRECTLY PREDICT REALITY AND STILL LOSE BECAUSE SETTLEMENT FOLLOWS THE ORACLE SPECIFICATION RATHER THAN THE EVENT'S “SPIRIT.”\n\nSOURCE:\nJack Peterson, Joseph Krug, Micah Zoltu, Austin K. Williams, and Stephanie Alexander — Augur: a Decentralized Oracle and Prediction Market Platform (v2.0) — 2026 — Sections I.1 and III.7.\n\nPASSAGE:\n[PARAPHRASE] Augur requires market creators to specify a resolution source. Its discussion of ambiguous markets recounts a TradeSports contract concerning a North Korean missile: the launch occurred, but the contract required U.S. Department of Defense confirmation, so the market's contractual condition was not satisfied.\n\nRESEARCH OBJECT:\nOutcome settlement is not direct contact with reality.\n\nA prediction market needs a second representational machine that decides what event counts as having happened.\n\nLOCAL MOVE:\nAugur separates:\n\nEVENT\nfrom\nRESOLUTION SOURCE\nfrom\nREPORTED OUTCOME\nfrom\nSETTLEMENT.\n\nThe market cannot simply ask reality.\n\nIt must specify who or what is authorized to answer for reality.\n\nSOURCE TERMS:\nresolution source\ndesignated reporter\nobjective reality\ninvalid market\nambiguous\nsubjective\noracle\nreporting\nsettlement\nmarket outcome\n\nWHAT BECAME STRANGE:\nThe alleged epistemic purity of the prediction market bottoms out in a bureaucratic sentence.\n\nThe bettor does not ultimately bet:\n\nDID X HAPPEN?\n\nThe bettor bets:\n\nWILL X COUNT AS HAVING HAPPENED UNDER THIS RESOLUTION PROCEDURE?\n\nThat opens a much stranger educational analogy.\n\nA university does not merely predict:\n\nIS THIS PERSON CAPABLE?\n\nIt repeatedly constructs oracles that settle narrower propositions:\n\nDid the rubric count this response?\nDid the registrar award the credit?\nDid the committee count this publication?\nDid the credential satisfy this employer?\nDid the accreditor recognize this program?\n\nQUESTION:\nIf educational institutions are predictive infrastructures, where are their resolution sources—the procedures authorized to convert messy human capability into settleable institutional facts?\n\nDEEPER QUESTION:\nHow often does the “spirit” of educational success diverge from the literal event that the institutional oracle is authorized to recognize?\n\nMECHANISM:\nreal-world event\n→ resolution specification\n→ authorized evidence source\n→ reporting\n→ dispute\n→ finalized outcome\n→ payout\n\nFORMAL SHIFT:\n<WORLD>\n→ <RESOLUTION RULE>\n→ [OBSERVE THROUGH AUTHORIZED SOURCE]\n→ <SETTLED EVENT>\n\nSOURCE FORMALISM:\nAugur specifies four market stages:\n\ncreation\n→ trading\n→ reporting\n→ settlement.\n\nAt market creation, a resolution source is selected.\n\nAmbiguous or subjective markets may resolve as Invalid.\n\nSOURCE REALITY and CONTRACT RESOLUTION are therefore explicitly distinct parts of the architecture.\n\nOUR FORMALIZATION:\n[OUR FORMALIZATION — NOT SOURCE SYNTAX]\n\nReality:\nR\n\nResolution function:\nO(R, rule, source) → settled outcome S\n\nPossible condition:\n\nR = TRUE\nbut\nS = FALSE\n\nwhen the contract settles:\n\n“authorized source confirms R”\n\nrather than merely:\n\n“R occurred.”\n\nTENSION:\n[[Z-EDUPM-004]] treated replication markets as a process of converting open scientific claims into settleable events.\n\nAugur makes the hidden consequence visible:\n\nsettleability introduces an oracle, and the oracle can become the thing actually being predicted.\n\nMISSING:\nA systematic inventory of educational resolution sources and disputes where institutional settlement diverges from later assessments of capability.\n\nBOUNDARY:\nAugur is a prediction-market protocol.\n\nCalling grading committees, registrars, accreditors, or employers “oracles” is our formal analogy, not terminology used by the source.\n\nCITATION TRAIL:\n[[Z-EDUPM-001]]\n[[Z-EDUPM-004]]\n→ Augur resolution source\n→ ambiguous markets\n→ letter / spirit divergence\n→ institutional settlement\n\nFollow:\ndecentralized common-knowledge oracles\ncontract specification\nmeasurement theory\nassessment validity\nboundary objects\nclassification infrastructures\n\nTEST:\nChoose one educational proposition:\n\n“Student X is competent at Y.”\n\nConstruct four possible resolution sources:\n\nexam score,\nprofessor judgment,\nportfolio review,\nemployer task performance.\n\nAsk independent evaluators to settle the identical proposition under each rule.\n\nMeasure disagreement.\n\nThe disagreement is the oracle-dependence hidden by the apparently singular credential.\n\nPLATFORM:\n[[EDUCATIONAL ORACLES]]\n\nLINKS:\n[[Z-EDUPM-001]]\n[[Z-EDUPM-004]]\n[[Settlement Is Not Reality]]\n[[Educational Oracles]]\n\nBIBTEX:\n@misc{peterson2026augur,\n  author = {Peterson, Jack and Krug, Joseph and Zoltu, Micah and Williams, Austin K. and Alexander, Stephanie},\n  title  = {Augur: a Decentralized Oracle and Prediction Market Platform (v2.0)},\n  year   = {2026},\n  note   = {arXiv:1501.01042}\n}",
+    "parents": [
+      "Z-EDUPM-001",
+      "Z-EDUPM-004"
+    ],
+    "parent_candidates": [],
+    "lineage_evidence": "EXPLICIT_CONTEXT",
+    "flags": [],
+    "title": "A PREDICTION MARKET CAN CORRECTLY PREDICT REALITY AND STILL LOSE BECAUSE SETTLEMENT FOLLOWS THE ORACLE SPECIFICATION RATHER THAN THE EVENT'S “SPIRIT.”",
+    "source": "Jack Peterson, Joseph Krug, Micah Zoltu, Austin K. Williams, and Stephanie Alexander — Augur: a Decentralized Oracle and Prediction Market Platform (v2.0) — 2026 — Sections I.1 and III.7.",
+    "source_url": null,
+    "platform_raw": "[[EDUCATIONAL ORACLES]]",
+    "platforms": [
+      "EDUCATIONAL ORACLES"
+    ],
+    "links_raw": "[[Z-EDUPM-001]]\n[[Z-EDUPM-004]]\n[[Settlement Is Not Reality]]\n[[Educational Oracles]]",
+    "links": [
+      "Z-EDUPM-001",
+      "Z-EDUPM-004",
+      "Settlement Is Not Reality",
+      "Educational Oracles"
+    ],
+    "all_wikilinks": [
+      "Z-EDUPM-004",
+      "Z-EDUPM-001",
+      "Z-EDUPM-004",
+      "EDUCATIONAL ORACLES",
+      "Z-EDUPM-001",
+      "Z-EDUPM-004",
+      "Settlement Is Not Reality",
+      "Educational Oracles"
+    ],
+    "bibtex": "@misc{peterson2026augur,\n  author = {Peterson, Jack and Krug, Joseph and Zoltu, Micah and Williams, Austin K. and Alexander, Stephanie},\n  title  = {Augur: a Decentralized Oracle and Prediction Market Platform (v2.0)},\n  year   = {2026},\n  note   = {arXiv:1501.01042}\n}",
+    "content_sha256": "38cb0467ed27a94f0c9e5ca09c907d07864f4e5a59cf0a26de801503bd1a09ab",
+    "children": [],
+    "backlinks": [],
+    "ancestors": [
+      "Z-EDUPM-001",
+      "Z-EDUPM-004"
+    ],
+    "descendants": [],
+    "lineage_flags": [],
+    "root_filename": "011__oracle-s-spirit__PetersonEtAl2026__Z-EDUPM-011__from-20260817-s01-o011.txt",
+    "markdown_mirror": "_MD/011__oracle-s-spirit__PetersonEtAl2026__Z-EDUPM-011__from-20260817-s01-o011.md",
+    "generation": 1,
+    "lineage": {
+      "parents": [
+        "Z-EDUPM-001",
+        "Z-EDUPM-004"
+      ],
+      "kids": [],
+      "ancestors": [
+        "Z-EDUPM-001",
+        "Z-EDUPM-004"
+      ],
+      "descendants": [],
+      "generation": 1,
+      "evidence_state": "EXPLICIT_CONTEXT"
+    },
+    "native_graph": {
+      "platform_memberships": [
+        "EDUCATIONAL ORACLES"
+      ],
+      "links_out": [
+        "Z-EDUPM-001",
+        "Z-EDUPM-004",
+        "Settlement Is Not Reality",
+        "Educational Oracles"
+      ],
+      "links_in": []
+    }
+  },
+  {
+    "display_order": 12,
+    "creation_order": 12,
+    "accession": "ZTL-S01-012",
+    "name": "Betting on the Actuator",
+    "original_id": "Z-EDUPM-012",
+    "source_signature": "PetersonEtAl2026",
+    "origin": "20260817-s01-o012",
+    "appearance": "SES-20260817-01",
+    "payload": "ZETTEL\n\nID:\nZ-EDUPM-012\n\nTITLE:\nA MARKET CAN CREATE THE EVENT IT BETS ON WHEN THE PERSON WHO CAN MAKE THE EVENT TRUE IS ALSO ALLOWED TO TRADE ON IT.\n\nSOURCE:\nJack Peterson, Joseph Krug, Micah Zoltu, Austin K. Williams, and Stephanie Alexander — Augur: a Decentralized Oracle and Prediction Market Platform (v2.0) — 2026 — Section III.4, “Self-Referential Oracle Queries.”\n\nPASSAGE:\n[QUOTE] “Markets that trade on the future behavior of Augur’s oracle may have undesirable effects on the behavior of the oracle itself.”\n\nRESEARCH OBJECT:\nThe self-referential prediction market: a forecast becomes an incentive attached to an actor capable of making the forecast come true.\n\nLOCAL MOVE:\nAugur considers markets about future behavior of its own reporters.\n\nIf a designated reporter can profit sufficiently from a particular market outcome, the market itself can alter the reporter's incentive to produce that outcome.\n\nSOURCE TERMS:\nself-referential oracle queries\ndesignated reporter\nperverse incentive\noracle\nmarket\nshares\nbehavior\nfinalization\n\nWHAT BECAME STRANGE:\nPrediction-market epistemology contains its own sabotage mechanism.\n\nA wager does not merely aggregate beliefs when a bettor is also an actuator inside the event.\n\nThe information instrument becomes a control instrument.\n\nThis produces a new question for education.\n\nStudent evaluations,\npublic grade distributions,\nacceptance-rate predictions,\ndepartment rankings,\njob-placement dashboards,\nand faculty performance forecasts\n\nmay cease to be passive descriptions whenever the people being measured can see them and act to change the settlement condition.\n\nQUESTION:\nWhich educational forecasts accidentally create financial, reputational, or administrative incentives for the predicted actors to manufacture the predicted outcome?\n\nDEEPER QUESTION:\nAt what point does a forecast stop being a sensor and become an actuator?\n\nMECHANISM:\nprediction instrument becomes visible\n→ actor inside predicted event observes incentive\n→ actor changes behavior\n→ event probability changes\n→ market / metric settles\n→ produced outcome appears as evidence\n\nFORMAL SHIFT:\n<FORECAST OF ACTOR A>\n→ [A OBSERVES / TRADES / IS REWARDED BY FORECAST]\n→ <A CHANGES BEHAVIOR>\n→ <FORECAST CHANGES ITS OWN SETTLEMENT EVENT>\n\nSOURCE FORMALISM:\nAugur provides the concrete example of a market concerning whether a designated reporter will fail to report.\n\nA reporter could potentially purchase shares that make intentional non-reporting profitable enough to compensate for other losses.\n\nOUR FORMALIZATION:\n[OUR FORMALIZATION — NOT SOURCE SYNTAX]\n\nOrdinary:\n\nbeliefs\n→ price\n→ event\n→ settlement\n\nSelf-referential:\n\nbeliefs\n→ price\n→ INCENTIVE(actor)\n→ actor changes event\n→ settlement\n\nThe market has crossed from:\n\nSENSOR\n\nto:\n\nSENSOR + ACTUATOR.\n\nTENSION:\n[[Z-EDUPM-003]] describes prediction changing its target through decision deployment.\n\n[[Z-EDUPM-004]] describes markets settling externally specified future events.\n\nSelf-referential markets collapse these:\n\nthe prediction mechanism becomes one of the causal variables determining what it will later claim to have predicted.\n\nMISSING:\nAn educational case where exposing a forecast can be experimentally shown to change behavior strongly enough to alter its own measured outcome.\n\nBOUNDARY:\nAugur demonstrates the possibility within its oracle architecture.\n\nIt does not establish that student evaluations, rankings, or educational dashboards exhibit the same incentive structure.\n\nCITATION TRAIL:\n[[Z-EDUPM-003]]\n[[Z-EDUPM-004]]\n→ Augur III.4\n→ self-referential oracle query\n→ prediction as incentive\n→ prediction as actuator\n\nFollow:\ndecision markets\nGoodhart effects\nLucas critique\nperformative prediction\nreflexivity\nself-fulfilling prophecy\n\nTEST:\nConstruct an educational forecast about an outcome controlled partly by the predicted actor.\n\nRandomize whether the actor sees the forecast.\n\nCompare:\n\nbehavior,\noutcome,\nforecast calibration.\n\nIf visibility changes the outcome distribution, the forecast is partly an actuator.\n\nPLATFORM:\n[[PREDICTION AS ACTUATION]]\n\nLINKS:\n[[Z-EDUPM-003]]\n[[Z-EDUPM-004]]\n[[Self-Referential Markets]]\n[[Forecasts That Cause Their Settlement]]\n\nBIBTEX:\n@misc{peterson2026augur,\n  author = {Peterson, Jack and Krug, Joseph and Zoltu, Micah and Williams, Austin K. and Alexander, Stephanie},\n  title  = {Augur: a Decentralized Oracle and Prediction Market Platform (v2.0)},\n  year   = {2026},\n  note   = {arXiv:1501.01042}\n}",
+    "parents": [
+      "Z-EDUPM-003",
+      "Z-EDUPM-004"
+    ],
+    "parent_candidates": [],
+    "lineage_evidence": "EXPLICIT_CONTEXT",
+    "flags": [],
+    "title": "A MARKET CAN CREATE THE EVENT IT BETS ON WHEN THE PERSON WHO CAN MAKE THE EVENT TRUE IS ALSO ALLOWED TO TRADE ON IT.",
+    "source": "Jack Peterson, Joseph Krug, Micah Zoltu, Austin K. Williams, and Stephanie Alexander — Augur: a Decentralized Oracle and Prediction Market Platform (v2.0) — 2026 — Section III.4, “Self-Referential Oracle Queries.”",
+    "source_url": null,
+    "platform_raw": "[[PREDICTION AS ACTUATION]]",
+    "platforms": [
+      "PREDICTION AS ACTUATION"
+    ],
+    "links_raw": "[[Z-EDUPM-003]]\n[[Z-EDUPM-004]]\n[[Self-Referential Markets]]\n[[Forecasts That Cause Their Settlement]]",
+    "links": [
+      "Z-EDUPM-003",
+      "Z-EDUPM-004",
+      "Self-Referential Markets",
+      "Forecasts That Cause Their Settlement"
+    ],
+    "all_wikilinks": [
+      "Z-EDUPM-003",
+      "Z-EDUPM-004",
+      "Z-EDUPM-003",
+      "Z-EDUPM-004",
+      "PREDICTION AS ACTUATION",
+      "Z-EDUPM-003",
+      "Z-EDUPM-004",
+      "Self-Referential Markets",
+      "Forecasts That Cause Their Settlement"
+    ],
+    "bibtex": "@misc{peterson2026augur,\n  author = {Peterson, Jack and Krug, Joseph and Zoltu, Micah and Williams, Austin K. and Alexander, Stephanie},\n  title  = {Augur: a Decentralized Oracle and Prediction Market Platform (v2.0)},\n  year   = {2026},\n  note   = {arXiv:1501.01042}\n}",
+    "content_sha256": "ed1ff3a0c6edf4e648e652d87f504e129868b1a8a4992f3c5a6b2c285f3b5d1c",
+    "children": [],
+    "backlinks": [],
+    "ancestors": [
+      "Z-EDUPM-003",
+      "Z-EDUPM-004"
+    ],
+    "descendants": [],
+    "lineage_flags": [],
+    "root_filename": "012__betting-on-the-actuator__PetersonEtAl2026__Z-EDUPM-012__from-20260817-s01-o012.txt",
+    "markdown_mirror": "_MD/012__betting-on-the-actuator__PetersonEtAl2026__Z-EDUPM-012__from-20260817-s01-o012.md",
+    "generation": 1,
+    "lineage": {
+      "parents": [
+        "Z-EDUPM-003",
+        "Z-EDUPM-004"
+      ],
+      "kids": [],
+      "ancestors": [
+        "Z-EDUPM-003",
+        "Z-EDUPM-004"
+      ],
+      "descendants": [],
+      "generation": 1,
+      "evidence_state": "EXPLICIT_CONTEXT"
+    },
+    "native_graph": {
+      "platform_memberships": [
+        "PREDICTION AS ACTUATION"
+      ],
+      "links_out": [
+        "Z-EDUPM-003",
+        "Z-EDUPM-004",
+        "Self-Referential Markets",
+        "Forecasts That Cause Their Settlement"
+      ],
+      "links_in": []
+    }
+  },
+  {
+    "display_order": 13,
+    "creation_order": 13,
+    "accession": "ZTL-S01-013",
+    "name": "Curricular Dark Matter",
+    "original_id": "Z-EDUPM-013",
+    "source_signature": "EnsignEtAl2018",
+    "origin": "20260817-s01-o013",
+    "appearance": "SES-20260817-01",
+    "payload": "ZETTEL\n\nID:\nZ-EDUPM-013\n\nTITLE:\nA PREDICTIVE SYSTEM CAN MISTAKE WHERE IT LOOKS FOR WHAT EXISTS: DEPLOYMENT CREATES “DISCOVERED” DATA THAT THEN JUSTIFY MORE DEPLOYMENT.\n\nSOURCE:\nDanielle Ensign, Sorelle A. Friedler, Scott Neville, Carlos Scheidegger, and Suresh Venkatasubramanian — “Runaway Feedback Loops in Predictive Policing” — 2018 — Proceedings of the 1st Conference on Fairness, Accountability and Transparency, pp. 160–171.\n\nPASSAGE:\n[PARAPHRASE] Predictive policing repeatedly uses discovered crime data to update deployment; the authors show how this can repeatedly redirect police toward the same locations regardless of underlying crime rates.\n\nRESEARCH OBJECT:\nObservation is exposure-dependent.\n\nThe system sees more evidence where its previous prediction sent observers.\n\nLOCAL MOVE:\nEnsign et al. distinguish incidents that are independently reported from incidents discovered through police deployment.\n\nThat distinction makes the observational machinery itself a causal variable in the dataset.\n\nSOURCE TERMS:\nrunaway feedback loops\npredictive policing\ndiscovered incidents\nreported incidents\nallocation\ntrue crime rate\nfeedback\ninputs\n\nWHAT BECAME STRANGE:\nA recommender may not merely have selective labels.\n\nIt may actively manufacture unequal quantities of evidence.\n\nIf course A is recommended repeatedly:\n\nmore students enter A\n→ more outcomes from A exist\n→ more data describe A\n→ model knows A better\n→ uncertainty around A falls\n→ A can become safer to recommend.\n\nMeanwhile course B becomes statistically dark.\n\nThe recommendation system could gradually confuse:\n\nWE HAVE MORE EVIDENCE ABOUT THIS PATH\n\nwith:\n\nTHIS PATH IS BETTER.\n\nQUESTION:\nCan educational personalization create epistemic rich-get-richer effects in which frequently recommended pathways become increasingly data-rich while neglected pathways disappear from the model's knowable world?\n\nDEEPER QUESTION:\nDoes algorithmic advising eventually construct “main roads” through a curriculum simply because prior recommendations made those roads easiest to observe?\n\nMECHANISM:\ninitial prediction\n→ allocation of attention / people\n→ increased observation at selected location\n→ selected-location data dominate update\n→ prediction strengthens\n→ increased allocation\n\nFORMAL SHIFT:\n<PREDICTED HIGH-VALUE REGION>\n→ [DEPLOY OBSERVATION THERE]\n→ <MORE DISCOVERED EVENTS THERE>\n→ [UPDATE MODEL]\n→ <REGION APPEARS EVEN MORE IMPORTANT>\n\nSOURCE FORMALISM:\nEnsign et al. mathematically model a repeated allocation-and-update process.\n\nThey distinguish:\n\nreported incidents\n\nfrom:\n\ndiscovered incidents generated through deployment.\n\nThey show that reported incidents can attenuate runaway feedback but need not eliminate it.\n\nOUR FORMALIZATION:\n[OUR FORMALIZATION — NOT SOURCE SYNTAX]\n\nFor course c:\n\nObservedData(c,t+1)\n=\nNaturallyObserved(c)\n+\nExposure(c,t) × DiscoverableOutcome(c)\n\nRecommendation(c,t)\n→ Exposure(c,t+1)\n\nTherefore:\n\nrecommendation\n→ exposure\n→ observations\n→ recommendation.\n\nTENSION:\n[[Z-EDUPM-002]] focused on recommendations changing student trajectories.\n\nThis source forces a more technical distinction:\n\nthe model may change not only outcomes but the LOCATION AND DENSITY OF OBSERVATION.\n\nMISSING:\nEvidence about whether educational recommender systems normalize, explore, or otherwise correct for recommendation-dependent exposure.\n\nBOUNDARY:\nPredictive policing is not educational advising.\n\nCrime discovery and course performance differ substantively.\n\nOnly the feedback architecture is being transferred as a hypothesis.\n\nCITATION TRAIL:\n[[Z-EDUPM-002]]\n→ Ensign et al.\n→ discovered versus independently reported events\n→ allocation-generated data\n→ recommendation-generated curriculum visibility\n\nFollow:\nexposure bias in recommender systems\nbandit exploration\npositivity violations\nfeedback loops in ranking systems\n\nTEST:\nFor every course in a recommender system, estimate:\n\nrecommendation exposure,\nenrollment following exposure,\nnumber of observed outcomes,\nprediction confidence,\nfuture recommendation frequency.\n\nTest whether early exposure predicts later recommendation after controlling for measured student-course fit.\n\nPLATFORM:\n[[CURRICULAR FEEDBACK ECOLOGY]]\n\nLINKS:\n[[Z-EDUPM-002]]\n[[Runaway Feedback]]\n[[Curricular Dark Matter]]\n[[Recommendation Produces Observation]]\n\nBIBTEX:\n@inproceedings{ensign2018runaway,\n  title     = {Runaway Feedback Loops in Predictive Policing},\n  author    = {Ensign, Danielle and Friedler, Sorelle A. and Neville, Scott and Scheidegger, Carlos and Venkatasubramanian, Suresh},\n  booktitle = {Proceedings of the 1st Conference on Fairness, Accountability and Transparency},\n  pages     = {160--171},\n  year      = {2018},\n  volume    = {81},\n  series    = {Proceedings of Machine Learning Research},\n  publisher = {PMLR}\n}",
+    "parents": [
+      "Z-EDUPM-002"
+    ],
+    "parent_candidates": [],
+    "lineage_evidence": "EXPLICIT_CONTEXT",
+    "flags": [],
+    "title": "A PREDICTIVE SYSTEM CAN MISTAKE WHERE IT LOOKS FOR WHAT EXISTS: DEPLOYMENT CREATES “DISCOVERED” DATA THAT THEN JUSTIFY MORE DEPLOYMENT.",
+    "source": "Danielle Ensign, Sorelle A. Friedler, Scott Neville, Carlos Scheidegger, and Suresh Venkatasubramanian — “Runaway Feedback Loops in Predictive Policing” — 2018 — Proceedings of the 1st Conference on Fairness, Accountability and Transparency, pp. 160–171.",
+    "source_url": null,
+    "platform_raw": "[[CURRICULAR FEEDBACK ECOLOGY]]",
+    "platforms": [
+      "CURRICULAR FEEDBACK ECOLOGY"
+    ],
+    "links_raw": "[[Z-EDUPM-002]]\n[[Runaway Feedback]]\n[[Curricular Dark Matter]]\n[[Recommendation Produces Observation]]",
+    "links": [
+      "Z-EDUPM-002",
+      "Runaway Feedback",
+      "Curricular Dark Matter",
+      "Recommendation Produces Observation"
+    ],
+    "all_wikilinks": [
+      "Z-EDUPM-002",
+      "Z-EDUPM-002",
+      "CURRICULAR FEEDBACK ECOLOGY",
+      "Z-EDUPM-002",
+      "Runaway Feedback",
+      "Curricular Dark Matter",
+      "Recommendation Produces Observation"
+    ],
+    "bibtex": "@inproceedings{ensign2018runaway,\n  title     = {Runaway Feedback Loops in Predictive Policing},\n  author    = {Ensign, Danielle and Friedler, Sorelle A. and Neville, Scott and Scheidegger, Carlos and Venkatasubramanian, Suresh},\n  booktitle = {Proceedings of the 1st Conference on Fairness, Accountability and Transparency},\n  pages     = {160--171},\n  year      = {2018},\n  volume    = {81},\n  series    = {Proceedings of Machine Learning Research},\n  publisher = {PMLR}\n}",
+    "content_sha256": "76e567ff12e311b57aed66544efe4f4f5defa73042736aea9bd707eac8c54b3f",
+    "children": [
+      "Z-EDUPM-019"
+    ],
+    "backlinks": [
+      "Z-EDUPM-019"
+    ],
+    "ancestors": [
+      "Z-EDUPM-002"
+    ],
+    "descendants": [
+      "Z-EDUPM-019"
+    ],
+    "lineage_flags": [],
+    "root_filename": "013__curricular-dark-matter__EnsignEtAl2018__Z-EDUPM-013__from-20260817-s01-o013.txt",
+    "markdown_mirror": "_MD/013__curricular-dark-matter__EnsignEtAl2018__Z-EDUPM-013__from-20260817-s01-o013.md",
+    "generation": 1,
+    "lineage": {
+      "parents": [
+        "Z-EDUPM-002"
+      ],
+      "kids": [
+        "Z-EDUPM-019"
+      ],
+      "ancestors": [
+        "Z-EDUPM-002"
+      ],
+      "descendants": [
+        "Z-EDUPM-019"
+      ],
+      "generation": 1,
+      "evidence_state": "EXPLICIT_CONTEXT"
+    },
+    "native_graph": {
+      "platform_memberships": [
+        "CURRICULAR FEEDBACK ECOLOGY"
+      ],
+      "links_out": [
+        "Z-EDUPM-002",
+        "Runaway Feedback",
+        "Curricular Dark Matter",
+        "Recommendation Produces Observation"
+      ],
+      "links_in": [
+        "Z-EDUPM-019"
+      ]
+    }
+  },
+  {
+    "display_order": 14,
+    "creation_order": 14,
+    "accession": "ZTL-S01-014",
+    "name": "Living Credential",
+    "original_id": "Z-EDUPM-014",
+    "source_signature": "W3C2025",
+    "origin": "20260817-s01-o014",
+    "appearance": "SES-20260817-01",
+    "payload": "ZETTEL\n\nID:\nZ-EDUPM-014\n\nTITLE:\nA DIGITAL CREDENTIAL CAN CEASE TO BE TRUE FOR OPERATIONAL PURPOSES WITHOUT ERASING THE HISTORICAL EVENT THAT PRODUCED IT.\n\nSOURCE:\nManu Sporny, Dave Longley, David Chadwick, and Ivan Herman — Verifiable Credentials Data Model v2.0 — 2025 — W3C Recommendation — Sections 4.9–4.10.\n\nPASSAGE:\n[PARAPHRASE] The W3C model allows credentials to specify `validFrom`, `validUntil`, and `credentialStatus`; status can communicate conditions such as suspension or revocation.\n\nRESEARCH OBJECT:\nCredentialing can move from an immutable historical certificate toward a stateful claim whose present operational validity is machine-checkable.\n\nLOCAL MOVE:\nThe specification separates several things ordinarily compressed into “the credential”:\n\nthe claim,\nits issuer,\nits cryptographic proof,\nits validity interval,\nand its current status.\n\nSOURCE TERMS:\nverifiable credential\nissuer\nholder\nverifier\nvalidFrom\nvalidUntil\ncredentialStatus\nrevoked\nsuspended\nclaims\n\nWHAT BECAME STRANGE:\n“I graduated in 2020” appears grammatically permanent.\n\nBut a digital credential architecture can represent:\n\nCLAIM EXISTS\n+\nCLAIM WAS VALID\n+\nCLAIM IS CURRENTLY VALID / EXPIRED / SUSPENDED / REVOKED.\n\nThat creates the technical possibility of credentials that behave less like archival diplomas and more like state variables.\n\nHuman qualification can become queryable in the present tense.\n\nQUESTION:\nWhat happens to education when credentials cease to be durable records of completed events and become continuously inspectable states with validity windows and status transitions?\n\nDEEPER QUESTION:\nCould hyper-credentialism mutate into a system in which competence must not merely be earned repeatedly but remain technically “alive”?\n\nMECHANISM:\nissuer makes claim\n→ cryptographically secures credential\n→ validity interval attached\n→ status endpoint / status structure attached\n→ verifier checks current condition\n→ credential accepted or rejected for present use\n\nFORMAL SHIFT:\n<PAST ACHIEVEMENT>\n→ <SIGNED CLAIM>\n→ [ATTACH TIME + STATUS]\n→ <PRESENT-TENSE CREDENTIAL STATE>\n\nSOURCE FORMALISM:\nThe W3C data model explicitly provides:\n\n`issuer`\n`credentialSubject`\n`validFrom`\n`validUntil`\n`credentialStatus`\n\nand models an issuer-holder-verifier ecosystem.\n\n`validUntil` can identify when credential information ceases to be valid.\n\n`credentialStatus` can expose status such as revocation or suspension.\n\nOUR FORMALIZATION:\n[OUR FORMALIZATION — NOT SOURCE SYNTAX]\n\nTraditional diploma:\n\nACHIEVEMENT(t₀)\n→ CREDENTIAL\n→ persists as historical record\n\nStateful credential:\n\nC(t) =\n{\n issuer,\n subject,\n claim,\n validFrom,\n validUntil,\n status\n}\n\nPossible transitions:\n\nVALID\n→ EXPIRED\n\nVALID\n→ SUSPENDED\n→ VALID\n\nVALID\n→ REVOKED\n\nTENSION:\n[[Z-EDUPM-008]] proposed that micro-credentials decompose one large signal into smaller settlement events.\n\nThe W3C architecture introduces another axis:\n\nthose smaller claims can also acquire TIME and STATE.\n\nGranularity need not merely multiply credentials.\n\nIt can make credentials dynamically revisable.\n\nMISSING:\nEvidence about which educational and workforce credentials actually use expiration, suspension, or revocation rather than merely supporting those fields technically.\n\nBOUNDARY:\nThe W3C standard permits validity periods and credential status.\n\nIt does not require educational credentials to expire or claim that degrees should become revocable competence subscriptions.\n\nCITATION TRAIL:\n[[Z-EDUPM-008]]\n→ W3C Verifiable Credentials Data Model 2.0\n→ validity period\n→ credential status\n→ qualification as temporal state\n\nFollow:\nOpen Badges 3.0\nprofessional license renewal\nexpiring technical certifications\ncontinuing education requirements\ncredential-status privacy architectures\n\nTEST:\nCollect 1,000 machine-verifiable educational and workforce credentials.\n\nRecord whether each implements:\n\nvalidUntil,\ncredentialStatus,\nrevocation,\nsuspension,\nrefresh,\nrecertification.\n\nThen classify what kinds of knowledge institutions choose to make permanent versus perishable.\n\nPLATFORM:\n[[CREDENTIALS AS STATE MACHINES]]\n\nLINKS:\n[[Z-EDUPM-008]]\n[[Credential Expiration]]\n[[Qualification as State]]\n[[Human Capital Marked to Time]]\n\nBIBTEX:\n@techreport{sporny2025vc,\n  author      = {Sporny, Manu and Longley, Dave and Chadwick, David and Herman, Ivan},\n  title       = {Verifiable Credentials Data Model v2.0},\n  institution = {World Wide Web Consortium},\n  type        = {W3C Recommendation},\n  year        = {2025},\n  month       = may\n}",
+    "parents": [
+      "Z-EDUPM-008"
+    ],
+    "parent_candidates": [],
+    "lineage_evidence": "EXPLICIT_CONTEXT",
+    "flags": [],
+    "title": "A DIGITAL CREDENTIAL CAN CEASE TO BE TRUE FOR OPERATIONAL PURPOSES WITHOUT ERASING THE HISTORICAL EVENT THAT PRODUCED IT.",
+    "source": "Manu Sporny, Dave Longley, David Chadwick, and Ivan Herman — Verifiable Credentials Data Model v2.0 — 2025 — W3C Recommendation — Sections 4.9–4.10.",
+    "source_url": null,
+    "platform_raw": "[[CREDENTIALS AS STATE MACHINES]]",
+    "platforms": [
+      "CREDENTIALS AS STATE MACHINES"
+    ],
+    "links_raw": "[[Z-EDUPM-008]]\n[[Credential Expiration]]\n[[Qualification as State]]\n[[Human Capital Marked to Time]]",
+    "links": [
+      "Z-EDUPM-008",
+      "Credential Expiration",
+      "Qualification as State",
+      "Human Capital Marked to Time"
+    ],
+    "all_wikilinks": [
+      "Z-EDUPM-008",
+      "Z-EDUPM-008",
+      "CREDENTIALS AS STATE MACHINES",
+      "Z-EDUPM-008",
+      "Credential Expiration",
+      "Qualification as State",
+      "Human Capital Marked to Time"
+    ],
+    "bibtex": "@techreport{sporny2025vc,\n  author      = {Sporny, Manu and Longley, Dave and Chadwick, David and Herman, Ivan},\n  title       = {Verifiable Credentials Data Model v2.0},\n  institution = {World Wide Web Consortium},\n  type        = {W3C Recommendation},\n  year        = {2025},\n  month       = may\n}",
+    "content_sha256": "69c3152a12549bdd65883b757f5e2f27c42b6a479ea76ee76083136a9d833b2b",
+    "children": [],
+    "backlinks": [],
+    "ancestors": [
+      "Z-EDUPM-008"
+    ],
+    "descendants": [],
+    "lineage_flags": [],
+    "root_filename": "014__living-credential__W3C2025__Z-EDUPM-014__from-20260817-s01-o014.txt",
+    "markdown_mirror": "_MD/014__living-credential__W3C2025__Z-EDUPM-014__from-20260817-s01-o014.md",
+    "generation": 1,
+    "lineage": {
+      "parents": [
+        "Z-EDUPM-008"
+      ],
+      "kids": [],
+      "ancestors": [
+        "Z-EDUPM-008"
+      ],
+      "descendants": [],
+      "generation": 1,
+      "evidence_state": "EXPLICIT_CONTEXT"
+    },
+    "native_graph": {
+      "platform_memberships": [
+        "CREDENTIALS AS STATE MACHINES"
+      ],
+      "links_out": [
+        "Z-EDUPM-008",
+        "Credential Expiration",
+        "Qualification as State",
+        "Human Capital Marked to Time"
+      ],
+      "links_in": []
+    }
+  },
+  {
+    "display_order": 15,
+    "creation_order": 15,
+    "accession": "ZTL-S01-015",
+    "name": "Semantic Last Mile",
+    "original_id": "Z-EDUPM-015",
+    "source_signature": "W3C2025",
+    "origin": "20260817-s01-o015",
+    "appearance": "SES-20260817-01",
+    "payload": "ZETTEL\n\nID:\nZ-EDUPM-015\n\nTITLE:\nCRYPTOGRAPHICALLY VERIFIED IS NOT THE SAME AS EDUCATIONALLY VALID: THE VERIFIER REINTRODUCES JUDGMENT AFTER THE MACHINE SAYS THE CREDENTIAL IS AUTHENTIC.\n\nSOURCE:\nManu Sporny, Dave Longley, David Chadwick, and Ivan Herman — Verifiable Credentials Data Model v2.0 — 2025 — W3C Recommendation — Appendix A, Validation.\n\nPASSAGE:\n[PARAPHRASE] The W3C specification separates cryptographic verification from later validation questions such as validity period, status, schema, trust in the issuer, and fitness for the verifier's purpose.\n\nRESEARCH OBJECT:\nMachine-verifiable credentials do not eliminate judgment.\n\nThey relocate judgment from “is this document authentic?” to “what should this authentic claim count for here?”\n\nLOCAL MOVE:\nThe specification explicitly refuses to collapse technical proof into fitness for purpose.\n\nA credential can be cryptographically intact yet still fail the verifier's application-specific requirements.\n\nSOURCE TERMS:\nverification\nvalidation\nfitness for purpose\nverifier\nissuer\nclaims\ncryptographic proof\nstatus\nvalidity period\ntrust\n\nWHAT BECAME STRANGE:\nThe dream of an “un-gameable credential” contains a category error.\n\nCryptography can answer questions like:\n\nWas this claim altered?\nWho signed it?\nIs the proof valid?\n\nIt cannot automatically answer:\n\nDoes this qualification make this person good at this job?\nShould this badge count as equivalent to that degree?\nDoes this old achievement still matter?\nDo we trust this issuer?\nIs this the kind of evidence we care about?\n\nThe supposedly objective credential ends by returning authority to interpretation.\n\nQUESTION:\nIf machine verification cannot establish fitness for purpose, does finer-grained credentialization actually eliminate institutional gatekeepers—or multiply the number of moments at which gatekeepers must interpret claims?\n\nDEEPER QUESTION:\nCould the future credential economy automate authenticity while making meaning more contested?\n\nMECHANISM:\ncredential presented\n→ cryptographic verification\n→ status / validity checks\n→ issuer trust judgment\n→ fitness-for-purpose judgment\n→ application-specific acceptance\n\nFORMAL SHIFT:\n<CLAIM>\n→ [CRYPTOGRAPHICALLY VERIFY]\n→ <AUTHENTIC CLAIM>\n→ [VALIDATE FOR LOCAL PURPOSE]\n→ <ACCEPT / REJECT / INTERPRET>\n\nSOURCE FORMALISM:\nThe W3C model distinguishes verification from validation.\n\nIts validation discussion separately addresses:\n\nvalidity periods,\ncredential status,\nschema,\nfitness for purpose,\nand whether the verifier trusts the issuer to make the relevant claim.\n\nOUR FORMALIZATION:\n[OUR FORMALIZATION — NOT SOURCE SYNTAX]\n\nVERIFY(C) = TRUE\n\ndoes not imply:\n\nFIT(C, purpose) = TRUE\n\nnor:\n\nTRUST(issuer(C), claim(C)) = TRUE\n\nnor:\n\nPREDICTS_SUCCESS(C, context) = TRUE.\n\nTherefore:\n\nAUTHENTICITY\n≠\nVALIDITY\n≠\nRELEVANCE\n≠\nPREDICTIVE FITNESS.\n\nTENSION:\n[[Z-EDUPM-008]] asked whether smaller credentials might restore signal resolution.\n\nThis source reveals that technical resolution does not remove semantic ambiguity.\n\nThe credential can become perfectly machine-readable while the question “what does this mean about this person?” remains institutionally undecided.\n\nMISSING:\nEmpirical evidence about how employers construct fitness-for-purpose rules when consuming machine-verifiable skill credentials at scale.\n\nBOUNDARY:\nThe W3C standard specifies credential architecture, not labor-market hiring policy.\n\nIt does not conclude that verifiable credentials increase or decrease credentialism.\n\nCITATION TRAIL:\n[[Z-EDUPM-008]]\n→ W3C validation\n→ verification versus fitness for purpose\n→ local verifier judgment\n→ persistence of interpretation\n\nFollow:\ncredential trust frameworks\nassessment validity\nconstruct validity\nemployer skill inference\nqualification equivalence\nautomated hiring\n\nTEST:\nCreate one cryptographically valid skill credential.\n\nPresent the identical credential to:\n\na university,\na regulated profession,\na startup,\na federal employer,\na freelance marketplace.\n\nRecord each verifier's acceptance rules and rationale.\n\nIf decisions diverge while cryptographic verification remains constant, map precisely where interpretive authority re-enters.\n\nPLATFORM:\n[[THE SEMANTIC LAST MILE OF CREDENTIALS]]\n\nLINKS:\n[[Z-EDUPM-008]]\n[[Verification Is Not Validation]]\n[[Fitness for Purpose]]\n[[Authenticity Without Meaning]]\n\nBIBTEX:\n@techreport{sporny2025vc,\n  author      = {Sporny, Manu and Longley, Dave and Chadwick, David and Herman, Ivan},\n  title       = {Verifiable Credentials Data Model v2.0},\n  institution = {World Wide Web Consortium},\n  type        = {W3C Recommendation},\n  year        = {2025},\n  month       = may\n}",
+    "parents": [
+      "Z-EDUPM-008"
+    ],
+    "parent_candidates": [],
+    "lineage_evidence": "EXPLICIT_CONTEXT",
+    "flags": [],
+    "title": "CRYPTOGRAPHICALLY VERIFIED IS NOT THE SAME AS EDUCATIONALLY VALID: THE VERIFIER REINTRODUCES JUDGMENT AFTER THE MACHINE SAYS THE CREDENTIAL IS AUTHENTIC.",
+    "source": "Manu Sporny, Dave Longley, David Chadwick, and Ivan Herman — Verifiable Credentials Data Model v2.0 — 2025 — W3C Recommendation — Appendix A, Validation.",
+    "source_url": null,
+    "platform_raw": "[[THE SEMANTIC LAST MILE OF CREDENTIALS]]",
+    "platforms": [
+      "THE SEMANTIC LAST MILE OF CREDENTIALS"
+    ],
+    "links_raw": "[[Z-EDUPM-008]]\n[[Verification Is Not Validation]]\n[[Fitness for Purpose]]\n[[Authenticity Without Meaning]]",
+    "links": [
+      "Z-EDUPM-008",
+      "Verification Is Not Validation",
+      "Fitness for Purpose",
+      "Authenticity Without Meaning"
+    ],
+    "all_wikilinks": [
+      "Z-EDUPM-008",
+      "Z-EDUPM-008",
+      "THE SEMANTIC LAST MILE OF CREDENTIALS",
+      "Z-EDUPM-008",
+      "Verification Is Not Validation",
+      "Fitness for Purpose",
+      "Authenticity Without Meaning"
+    ],
+    "bibtex": "@techreport{sporny2025vc,\n  author      = {Sporny, Manu and Longley, Dave and Chadwick, David and Herman, Ivan},\n  title       = {Verifiable Credentials Data Model v2.0},\n  institution = {World Wide Web Consortium},\n  type        = {W3C Recommendation},\n  year        = {2025},\n  month       = may\n}",
+    "content_sha256": "1a84a63b3e48e67bb0f89ae8b90464475d9c0746b8b06853eeaa52b55fee3d90",
+    "children": [],
+    "backlinks": [],
+    "ancestors": [
+      "Z-EDUPM-008"
+    ],
+    "descendants": [],
+    "lineage_flags": [],
+    "root_filename": "015__semantic-last-mile__W3C2025__Z-EDUPM-015__from-20260817-s01-o015.txt",
+    "markdown_mirror": "_MD/015__semantic-last-mile__W3C2025__Z-EDUPM-015__from-20260817-s01-o015.md",
+    "generation": 1,
+    "lineage": {
+      "parents": [
+        "Z-EDUPM-008"
+      ],
+      "kids": [],
+      "ancestors": [
+        "Z-EDUPM-008"
+      ],
+      "descendants": [],
+      "generation": 1,
+      "evidence_state": "EXPLICIT_CONTEXT"
+    },
+    "native_graph": {
+      "platform_memberships": [
+        "THE SEMANTIC LAST MILE OF CREDENTIALS"
+      ],
+      "links_out": [
+        "Z-EDUPM-008",
+        "Verification Is Not Validation",
+        "Fitness for Purpose",
+        "Authenticity Without Meaning"
+      ],
+      "links_in": []
+    }
+  },
+  {
+    "display_order": 16,
+    "creation_order": 16,
+    "accession": "ZTL-S02-016",
+    "name": "Predictions That Want To Be Wrong",
+    "original_id": "Z-EDUPM-016",
+    "source_signature": "LileyEtAl2021",
+    "origin": "20260817-s02-o016",
+    "appearance": "SES-20260817-02",
+    "payload": "ZETTEL\n\nID:\nZ-EDUPM-016\n\nTITLE:\nA SUCCESSFUL INTERVENTION CAN MAKE ITS OWN RISK MODEL LOOK WRONG: POST-INTERVENTION LABELS ARE GENERATED UNDER THE POLICY THE MODEL CAUSED.\n\nSOURCE:\nJames Liley, Samuel Emerson, Bilal Mateen, Catalina Vallejos, Louis Aslett, and Sebastian Vollmer — Model updating after interventions paradoxically introduces bias — 2021 — AISTATS, PMLR 130, 3916–3924.\n\nSOURCE URL:\nhttps://proceedings.mlr.press/v130/liley21a.html\n\nPASSAGE:\n[PARAPHRASE] When a predictive score guides interventions before an outcome is observed, successful intervention changes the data available for later model updating. A replacement model trained naively on those observations may learn the effect of the previous score rather than untreated risk.\n\nRESEARCH OBJECT:\nA prediction can be a victim of its own success: the more effectively it triggers prevention, the less its future training data resemble the untreated world in which the warning mattered.\n\nLOCAL MOVE:\nLiley et al. turn feedback into a model-updating problem. The old score becomes part of the data-generating process for the next score.\n\nSOURCE TERMS:\nprediction score\nintervention\nmodel updating\nnaive model replacement\ncounterfactual\nbias\nhold-out set\ncontrolled interventions\n\nWHAT BECAME STRANGE:\nThe label “nothing bad happened” can mean either there was little risk or that risk was real and intervention worked. Those observations look alike but imply opposite institutional lessons.\n\nQUESTION:\nCan a successful educational early-warning system erase from its retraining data the evidence that its intervention was necessary?\n\nDEEPER QUESTION:\nWhat institutional memory must survive so that prevention does not become indistinguishable from absence of risk?\n\nMECHANISM:\nfeatures → risk score → intervention → changed outcome → post-intervention training set → replacement model\n\nFORMAL SHIFT:\n<UNTREATED RISK>\n→ <DEPLOYED SCORE>\n→ [TRIGGER INTERVENTION]\n→ <POST-INTERVENTION OUTCOME>\n→ [NAIVE RETRAINING]\n→ <BIASED REPLACEMENT>\n\nSOURCE FORMALISM:\nThe paper distinguishes the untreated outcome relation from the outcome distribution generated after a deployed score drives interventions; the untreated baseline can become counterfactual.\n\nOUR FORMALIZATION:\n[OUR FORMALIZATION — NOT SOURCE SYNTAX]\nY(0) = untreated outcome.\nY(A(R0(X))) = observed outcome after score-triggered action.\nTraining R1 on observed Y estimates a policy-conditioned outcome relation rather than simply Y(0).\n\nTENSION:\nThis does not license treating every false positive as a successful rescue. The untreated counterfactual still has to be identified.\n\nMISSING:\nA recoverable untreated-risk estimate or design separating baseline risk from the effects of prior interventions.\n\nBOUNDARY:\nThe source analyzes intervention-driven updating generally, not higher education specifically. The educational application is our inference.\n\nCITATION TRAIL:\n[[Z-EDUPM-003]] → self-defeating warning → Liley et al. 2021 → naive model replacement\n[[Z-EDUPM-009]] → prediction changes its data-generating world → updating under intervention\n\nTEST:\nCompare naive post-intervention retraining with a holdout or explicit intervention model. Test whether apparent risk declines concentrate where intervention was effective.\n\nPLATFORM:\n[[EDUCATION AS PERFORMATIVE PREDICTION]]\n\nLINKS:\n[[Z-EDUPM-003]]\n[[Z-EDUPM-009]]\n[[Naive Model Replacement]]\n[[Institutional Forgetting]]\n[[Untreated Baseline]]\n\nBIBTEX:\n@InProceedings{pmlr-v130-liley21a,\n  title={Model updating after interventions paradoxically introduces bias},\n  author={Liley, James and Emerson, Samuel and Mateen, Bilal and Vallejos, Catalina and Aslett, Louis and Vollmer, Sebastian},\n  booktitle={Proceedings of The 24th International Conference on Artificial Intelligence and Statistics},\n  pages={3916--3924}, year={2021}, volume={130},\n  series={Proceedings of Machine Learning Research}, publisher={PMLR},\n  url={https://proceedings.mlr.press/v130/liley21a.html}\n}",
+    "parents": [
+      "Z-EDUPM-003",
+      "Z-EDUPM-009"
+    ],
+    "parent_candidates": [],
+    "lineage_evidence": "PROMPT_INPUT_OUTPUT",
+    "flags": [
+      "NEW_IN_SLIPCASE_13_1"
+    ],
+    "title": "A SUCCESSFUL INTERVENTION CAN MAKE ITS OWN RISK MODEL LOOK WRONG: POST-INTERVENTION LABELS ARE GENERATED UNDER THE POLICY THE MODEL CAUSED.",
+    "source": "James Liley, Samuel Emerson, Bilal Mateen, Catalina Vallejos, Louis Aslett, and Sebastian Vollmer — Model updating after interventions paradoxically introduces bias — 2021 — AISTATS, PMLR 130, 3916–3924.",
+    "source_url": "https://proceedings.mlr.press/v130/liley21a.html",
+    "platform_raw": "[[EDUCATION AS PERFORMATIVE PREDICTION]]",
+    "platforms": [
+      "EDUCATION AS PERFORMATIVE PREDICTION"
+    ],
+    "links_raw": "[[Z-EDUPM-003]]\n[[Z-EDUPM-009]]\n[[Naive Model Replacement]]\n[[Institutional Forgetting]]\n[[Untreated Baseline]]",
+    "links": [
+      "Z-EDUPM-003",
+      "Z-EDUPM-009",
+      "Naive Model Replacement",
+      "Institutional Forgetting",
+      "Untreated Baseline"
+    ],
+    "all_wikilinks": [
+      "Z-EDUPM-003",
+      "Z-EDUPM-009",
+      "EDUCATION AS PERFORMATIVE PREDICTION",
+      "Z-EDUPM-003",
+      "Z-EDUPM-009",
+      "Naive Model Replacement",
+      "Institutional Forgetting",
+      "Untreated Baseline"
+    ],
+    "bibtex": "@InProceedings{pmlr-v130-liley21a,\n  title={Model updating after interventions paradoxically introduces bias},\n  author={Liley, James and Emerson, Samuel and Mateen, Bilal and Vallejos, Catalina and Aslett, Louis and Vollmer, Sebastian},\n  booktitle={Proceedings of The 24th International Conference on Artificial Intelligence and Statistics},\n  pages={3916--3924}, year={2021}, volume={130},\n  series={Proceedings of Machine Learning Research}, publisher={PMLR},\n  url={https://proceedings.mlr.press/v130/liley21a.html}\n}",
+    "content_sha256": "586f22e5a69b406fca0ba74c28e42cc32c5cc34be78d0b7016446441199e6432",
+    "children": [
+      "Z-EDUPM-017",
+      "Z-EDUPM-020"
+    ],
+    "backlinks": [
+      "Z-EDUPM-003",
+      "Z-EDUPM-017",
+      "Z-EDUPM-020"
+    ],
+    "ancestors": [
+      "Z-EDUPM-003",
+      "Z-EDUPM-009"
+    ],
+    "descendants": [
+      "Z-EDUPM-017",
+      "Z-EDUPM-018",
+      "Z-EDUPM-020"
+    ],
+    "lineage_flags": [],
+    "root_filename": "016__predictions-that-want-to-be-wrong__LileyEtAl2021__Z-EDUPM-016__from-20260817-s02-o016.txt",
+    "markdown_mirror": "_MD/016__predictions-that-want-to-be-wrong__LileyEtAl2021__Z-EDUPM-016__from-20260817-s02-o016.md",
+    "generation": 2,
+    "lineage": {
+      "parents": [
+        "Z-EDUPM-003",
+        "Z-EDUPM-009"
+      ],
+      "kids": [
+        "Z-EDUPM-017",
+        "Z-EDUPM-020"
+      ],
+      "ancestors": [
+        "Z-EDUPM-003",
+        "Z-EDUPM-009"
+      ],
+      "descendants": [
+        "Z-EDUPM-017",
+        "Z-EDUPM-018",
+        "Z-EDUPM-020"
+      ],
+      "generation": 2,
+      "evidence_state": "PROMPT_INPUT_OUTPUT"
+    },
+    "native_graph": {
+      "platform_memberships": [
+        "EDUCATION AS PERFORMATIVE PREDICTION"
+      ],
+      "links_out": [
+        "Z-EDUPM-003",
+        "Z-EDUPM-009",
+        "Naive Model Replacement",
+        "Institutional Forgetting",
+        "Untreated Baseline"
+      ],
+      "links_in": [
+        "Z-EDUPM-003",
+        "Z-EDUPM-017",
+        "Z-EDUPM-020"
+      ]
+    }
+  },
+  {
+    "display_order": 17,
+    "creation_order": 17,
+    "accession": "ZTL-S02-017",
+    "name": "Intervention Destroys Settlement",
+    "original_id": "Z-EDUPM-017",
+    "source_signature": "BoekenEtAl2024",
+    "origin": "20260817-s02-o017",
+    "appearance": "SES-20260817-02",
+    "payload": "ZETTEL\n\nID:\nZ-EDUPM-017\n\nTITLE:\nAFTER AN ALARM CHANGES ACTION, OBSERVED OUTCOMES NO LONGER ESTIMATE BASELINE RISK: RETRAINING MUST CROSS A CAUSAL DOMAIN SHIFT.\n\nSOURCE:\nPhilip Boeken, Onno Zoeter, and Joris M. Mooij — Evaluating and Correcting Performative Effects of Decision Support Systems via Causal Domain Shift — 2024 — CLeaR, PMLR 236, 551–569.\n\nSOURCE URL:\nhttps://proceedings.mlr.press/v236/boeken24a.html\n\nPASSAGE:\n[PARAPHRASE] In an alarm-type decision support system, effective action induced by an earlier model changes later outcomes. Naively retraining on those data can underestimate risk. The authors model deployment as causal domain shift and target performance under a baseline policy.\n\nRESEARCH OBJECT:\nThe relevant settlement condition after deployment is policy-indexed: outcome under the deployed intervention is not the same object as baseline risk.\n\nLOCAL MOVE:\nBoeken et al. replace the vague idea of feedback with an explicit causal cross-domain problem.\n\nSOURCE TERMS:\ndecision support system\nperformative effects\ncausal domain shift\nalarm\nbaseline policy\nrisk\nsample selection\n\nWHAT BECAME STRANGE:\n“Accuracy after deployment” can compare quantities produced under different policies as if they came from one unchanged world.\n\nQUESTION:\nWhat should count as settlement for an educational warning once the warning has altered the policy under which the outcome is generated?\n\nDEEPER QUESTION:\nShould intervention-coupled predictors be evaluated as policies rather than isolated estimators?\n\nMECHANISM:\nmodel → alarm → intervention policy → shifted outcome distribution → retraining under old policy → underestimated baseline risk\n\nFORMAL SHIFT:\n<BASELINE DOMAIN>\n→ <DEPLOYED DECISION SUPPORT>\n→ [CHANGE ACTION]\n→ <SHIFTED DOMAIN>\n→ [RETRAIN]\n→ <POLICY-CONDITIONED ESTIMATE>\n\nSOURCE FORMALISM:\nThe paper represents deployment as causal domain shift and distinguishes a target under a baseline policy from observations under the deployed policy.\n\nOUR FORMALIZATION:\n[OUR FORMALIZATION — NOT SOURCE SYNTAX]\nEvaluation needs Risk(M | policy), not only Risk(M), because policy changes which outcomes become observable.\n\nTENSION:\nRecovering a baseline requires identification assumptions. “Correct the feedback” can overstate what the available data permit.\n\nMISSING:\nIn educational deployments: explicit mappings from scores to interventions and a defensible baseline policy.\n\nBOUNDARY:\nThe source studies decision support systems generally; it does not prove that a particular university system satisfies its assumptions.\n\nCITATION TRAIL:\n[[Z-EDUPM-003]] → anti-settlement problem → [[Z-EDUPM-016]] → intervention-conditioned labels → Boeken et al. 2024\n\nTEST:\nWrite the actual intervention policy triggered by each risk state, then test whether post-deployment retraining changes when evaluation targets a no-alert or baseline policy.\n\nPLATFORM:\n[[PREDICTION AS INTERVENTION POLICY]]\n\nLINKS:\n[[Z-EDUPM-003]]\n[[Z-EDUPM-016]]\n[[Baseline Policy]]\n[[Performative Bias]]\n[[Causal Domain Shift]]\n\nBIBTEX:\n@InProceedings{pmlr-v236-boeken24a,\n  title={Evaluating and Correcting Performative Effects of Decision Support Systems via Causal Domain Shift},\n  author={Boeken, Philip and Zoeter, Onno and Mooij, Joris},\n  booktitle={Proceedings of the Third Conference on Causal Learning and Reasoning},\n  pages={551--569}, year={2024}, volume={236},\n  series={Proceedings of Machine Learning Research}, publisher={PMLR},\n  url={https://proceedings.mlr.press/v236/boeken24a.html}\n}",
+    "parents": [
+      "Z-EDUPM-003",
+      "Z-EDUPM-016"
+    ],
+    "parent_candidates": [],
+    "lineage_evidence": "PROMPT_INPUT_OUTPUT",
+    "flags": [
+      "NEW_IN_SLIPCASE_13_1"
+    ],
+    "title": "AFTER AN ALARM CHANGES ACTION, OBSERVED OUTCOMES NO LONGER ESTIMATE BASELINE RISK: RETRAINING MUST CROSS A CAUSAL DOMAIN SHIFT.",
+    "source": "Philip Boeken, Onno Zoeter, and Joris M. Mooij — Evaluating and Correcting Performative Effects of Decision Support Systems via Causal Domain Shift — 2024 — CLeaR, PMLR 236, 551–569.",
+    "source_url": "https://proceedings.mlr.press/v236/boeken24a.html",
+    "platform_raw": "[[PREDICTION AS INTERVENTION POLICY]]",
+    "platforms": [
+      "PREDICTION AS INTERVENTION POLICY"
+    ],
+    "links_raw": "[[Z-EDUPM-003]]\n[[Z-EDUPM-016]]\n[[Baseline Policy]]\n[[Performative Bias]]\n[[Causal Domain Shift]]",
+    "links": [
+      "Z-EDUPM-003",
+      "Z-EDUPM-016",
+      "Baseline Policy",
+      "Performative Bias",
+      "Causal Domain Shift"
+    ],
+    "all_wikilinks": [
+      "Z-EDUPM-003",
+      "Z-EDUPM-016",
+      "PREDICTION AS INTERVENTION POLICY",
+      "Z-EDUPM-003",
+      "Z-EDUPM-016",
+      "Baseline Policy",
+      "Performative Bias",
+      "Causal Domain Shift"
+    ],
+    "bibtex": "@InProceedings{pmlr-v236-boeken24a,\n  title={Evaluating and Correcting Performative Effects of Decision Support Systems via Causal Domain Shift},\n  author={Boeken, Philip and Zoeter, Onno and Mooij, Joris},\n  booktitle={Proceedings of the Third Conference on Causal Learning and Reasoning},\n  pages={551--569}, year={2024}, volume={236},\n  series={Proceedings of Machine Learning Research}, publisher={PMLR},\n  url={https://proceedings.mlr.press/v236/boeken24a.html}\n}",
+    "content_sha256": "47f4541f3ad858a350b43a407f448420f948d86a9ce3890c738f6251b99fd77b",
+    "children": [
+      "Z-EDUPM-018"
+    ],
+    "backlinks": [
+      "Z-EDUPM-003",
+      "Z-EDUPM-018"
+    ],
+    "ancestors": [
+      "Z-EDUPM-003",
+      "Z-EDUPM-009",
+      "Z-EDUPM-016"
+    ],
+    "descendants": [
+      "Z-EDUPM-018"
+    ],
+    "lineage_flags": [],
+    "root_filename": "017__intervention-destroys-settlement__BoekenEtAl2024__Z-EDUPM-017__from-20260817-s02-o017.txt",
+    "markdown_mirror": "_MD/017__intervention-destroys-settlement__BoekenEtAl2024__Z-EDUPM-017__from-20260817-s02-o017.md",
+    "generation": 3,
+    "lineage": {
+      "parents": [
+        "Z-EDUPM-003",
+        "Z-EDUPM-016"
+      ],
+      "kids": [
+        "Z-EDUPM-018"
+      ],
+      "ancestors": [
+        "Z-EDUPM-003",
+        "Z-EDUPM-009",
+        "Z-EDUPM-016"
+      ],
+      "descendants": [
+        "Z-EDUPM-018"
+      ],
+      "generation": 3,
+      "evidence_state": "PROMPT_INPUT_OUTPUT"
+    },
+    "native_graph": {
+      "platform_memberships": [
+        "PREDICTION AS INTERVENTION POLICY"
+      ],
+      "links_out": [
+        "Z-EDUPM-003",
+        "Z-EDUPM-016",
+        "Baseline Policy",
+        "Performative Bias",
+        "Causal Domain Shift"
+      ],
+      "links_in": [
+        "Z-EDUPM-003",
+        "Z-EDUPM-018"
+      ]
+    }
+  },
+  {
+    "display_order": 18,
+    "creation_order": 18,
+    "accession": "ZTL-S02-018",
+    "name": "Prediction Must Leave a Receipt",
+    "original_id": "Z-EDUPM-018",
+    "source_signature": "MendlerDunnerEtAl2022",
+    "origin": "20260817-s02-o018",
+    "appearance": "SES-20260817-02",
+    "payload": "ZETTEL\n\nID:\nZ-EDUPM-018\n\nTITLE:\nA PREDICTION THAT CHANGES OUTCOMES MUST BE RECORDED AS PART OF THE CAUSAL HISTORY: OTHERWISE ITS EFFECT MAY BE UNIDENTIFIABLE.\n\nSOURCE:\nCelestine Mendler-Dünner, Frances Ding, and Yixin Wang — Anticipating Performativity by Predicting from Predictions — 2022 — Advances in Neural Information Processing Systems 35.\n\nSOURCE URL:\nhttps://proceedings.neurips.cc/paper_files/paper/2022/hash/ca09b375e8e2b2c789698c079a9fc51c-Abstract-Conference.html\n\nPASSAGE:\n[PARAPHRASE] When predictions affect outcomes, their causal effect may not be identifiable from ordinary feature-and-outcome data because the prediction is a deterministic function of features. The paper identifies conditions that restore identification and emphasizes recording deployed predictions.\n\nRESEARCH OBJECT:\nA consequential prediction becomes a treatment variable whose value must survive in the record if later analysis is to reconstruct its effect.\n\nLOCAL MOVE:\nMendler-Dünner et al. make the deployed prediction itself part of the causal object.\n\nSOURCE TERMS:\nperformativity\nprediction\ncausal effect\nidentification\nintervention\ndata collection\nrandomization\noverparameterization\n\nWHAT BECAME STRANGE:\nLogging a score is not merely telemetry when the score changes advising or opportunity; forgetting it can erase the causal history that produced the outcome.\n\nQUESTION:\nShould institutions treat consequential predictions as intervention receipts linked to the outcomes they helped produce?\n\nDEEPER QUESTION:\nWhat is the minimum prediction/action provenance necessary for later causal audit without creating indefinite surveillance?\n\nMECHANISM:\nfeatures → prediction → response/intervention → outcome; if prediction is not separately recorded, part of the pathway can be unidentified\n\nFORMAL SHIFT:\n<FEATURE RECORD>\n→ <PREDICTION>\n→ [DEPLOY]\n→ <PERFORMATIVE RESPONSE>\n→ <OUTCOME + PREDICTION RECEIPT>\n\nSOURCE FORMALISM:\nThe paper treats deployed predictions as causal intervention variables and studies identification from data including features, outcomes, and predictions under specified conditions.\n\nOUR FORMALIZATION:\n[OUR FORMALIZATION — NOT SOURCE SYNTAX]\nEvent record: (features, model version, score, displayed category, action, outcome), rather than only (features, outcome).\n\nTENSION:\nMore logging can improve auditability while increasing surveillance and governance burdens.\n\nMISSING:\nA principled minimum-retention rule for causal evaluation.\n\nBOUNDARY:\nThe source provides identification results, not an educational data-retention policy.\n\nCITATION TRAIL:\n[[Z-EDUPM-002]] → recommendation changes choice → [[Z-EDUPM-017]] → baseline depends on policy → predictions must remain observable\n\nTEST:\nAttempt the same causal evaluation with and without historic model version, score, recipient, and action fields. Record what becomes unidentified.\n\nPLATFORM:\n[[PREDICTION AS INTERVENTION POLICY]]\n\nLINKS:\n[[Z-EDUPM-002]]\n[[Z-EDUPM-017]]\n[[Prediction as Treatment]]\n[[Logged Predictions as Causal Infrastructure]]\n[[Data Collection for Performativity]]\n\nBIBTEX:\n@inproceedings{mendlerdunner2022anticipating,\n  title={Anticipating Performativity by Predicting from Predictions},\n  author={Mendler-D{\"u}nner, Celestine and Ding, Frances and Wang, Yixin},\n  booktitle={Advances in Neural Information Processing Systems},\n  volume={35}, year={2022},\n  url={https://proceedings.neurips.cc/paper_files/paper/2022/hash/ca09b375e8e2b2c789698c079a9fc51c-Abstract-Conference.html}\n}",
+    "parents": [
+      "Z-EDUPM-002",
+      "Z-EDUPM-017"
+    ],
+    "parent_candidates": [],
+    "lineage_evidence": "PROMPT_INPUT_OUTPUT",
+    "flags": [
+      "NEW_IN_SLIPCASE_13_1"
+    ],
+    "title": "A PREDICTION THAT CHANGES OUTCOMES MUST BE RECORDED AS PART OF THE CAUSAL HISTORY: OTHERWISE ITS EFFECT MAY BE UNIDENTIFIABLE.",
+    "source": "Celestine Mendler-Dünner, Frances Ding, and Yixin Wang — Anticipating Performativity by Predicting from Predictions — 2022 — Advances in Neural Information Processing Systems 35.",
+    "source_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/ca09b375e8e2b2c789698c079a9fc51c-Abstract-Conference.html",
+    "platform_raw": "[[PREDICTION AS INTERVENTION POLICY]]",
+    "platforms": [
+      "PREDICTION AS INTERVENTION POLICY"
+    ],
+    "links_raw": "[[Z-EDUPM-002]]\n[[Z-EDUPM-017]]\n[[Prediction as Treatment]]\n[[Logged Predictions as Causal Infrastructure]]\n[[Data Collection for Performativity]]",
+    "links": [
+      "Z-EDUPM-002",
+      "Z-EDUPM-017",
+      "Prediction as Treatment",
+      "Logged Predictions as Causal Infrastructure",
+      "Data Collection for Performativity"
+    ],
+    "all_wikilinks": [
+      "Z-EDUPM-002",
+      "Z-EDUPM-017",
+      "PREDICTION AS INTERVENTION POLICY",
+      "Z-EDUPM-002",
+      "Z-EDUPM-017",
+      "Prediction as Treatment",
+      "Logged Predictions as Causal Infrastructure",
+      "Data Collection for Performativity"
+    ],
+    "bibtex": "@inproceedings{mendlerdunner2022anticipating,\n  title={Anticipating Performativity by Predicting from Predictions},\n  author={Mendler-D{\"u}nner, Celestine and Ding, Frances and Wang, Yixin},\n  booktitle={Advances in Neural Information Processing Systems},\n  volume={35}, year={2022},\n  url={https://proceedings.neurips.cc/paper_files/paper/2022/hash/ca09b375e8e2b2c789698c079a9fc51c-Abstract-Conference.html}\n}",
+    "content_sha256": "c49320193db5705551cfc55d9b5be0abfee714fab2163718116acbfaaa0edea5",
+    "children": [],
+    "backlinks": [],
+    "ancestors": [
+      "Z-EDUPM-002",
+      "Z-EDUPM-003",
+      "Z-EDUPM-009",
+      "Z-EDUPM-016",
+      "Z-EDUPM-017"
+    ],
+    "descendants": [],
+    "lineage_flags": [],
+    "root_filename": "018__prediction-must-leave-a-receipt__MendlerDunnerEtAl2022__Z-EDUPM-018__from-20260817-s02-o018.txt",
+    "markdown_mirror": "_MD/018__prediction-must-leave-a-receipt__MendlerDunnerEtAl2022__Z-EDUPM-018__from-20260817-s02-o018.md",
+    "generation": 4,
+    "lineage": {
+      "parents": [
+        "Z-EDUPM-002",
+        "Z-EDUPM-017"
+      ],
+      "kids": [],
+      "ancestors": [
+        "Z-EDUPM-002",
+        "Z-EDUPM-003",
+        "Z-EDUPM-009",
+        "Z-EDUPM-016",
+        "Z-EDUPM-017"
+      ],
+      "descendants": [],
+      "generation": 4,
+      "evidence_state": "PROMPT_INPUT_OUTPUT"
+    },
+    "native_graph": {
+      "platform_memberships": [
+        "PREDICTION AS INTERVENTION POLICY"
+      ],
+      "links_out": [
+        "Z-EDUPM-002",
+        "Z-EDUPM-017",
+        "Prediction as Treatment",
+        "Logged Predictions as Causal Infrastructure",
+        "Data Collection for Performativity"
+      ],
+      "links_in": []
+    }
+  },
+  {
+    "display_order": 19,
+    "creation_order": 19,
+    "accession": "ZTL-S02-019",
+    "name": "Learning to Decide",
+    "original_id": "Z-EDUPM-019",
+    "source_signature": "KilbertusEtAl2020",
+    "origin": "20260817-s02-o019",
+    "appearance": "SES-20260817-02",
+    "payload": "ZETTEL\n\nID:\nZ-EDUPM-019\n\nTITLE:\nWITH SELECTIVE LABELS, THE LEARNING PROBLEM MOVES FROM PREDICTION TO POLICY: SOME KNOWLEDGE REQUIRES DELIBERATE EXPLORATION.\n\nSOURCE:\nNiki Kilbertus, Manuel Gomez Rodriguez, Bernhard Schölkopf, Krikamol Muandet, and Isabel Valera — Fair Decisions Despite Imperfect Predictions — 2020 — AISTATS, PMLR 108, 277–287.\n\nSOURCE URL:\nhttps://proceedings.mlr.press/v108/kilbertus20a.html\n\nPASSAGE:\n[PARAPHRASE] With selective labels, optimizing a predictive model and applying a deterministic rule can be inferior to directly learning a stochastic decision policy. Exploring policies can reveal outcomes a deterministic policy never observes.\n\nRESEARCH OBJECT:\nSome missing counterfactuals cannot be recovered by a better predictor; the institution must change what it does in order to learn what its current policy prevents it from seeing.\n\nLOCAL MOVE:\nKilbertus et al. shift the learning target from prediction to decision.\n\nSOURCE TERMS:\nselective labels\nlearning to predict\nlearning to decide\nstochastic policy\nexploration\nutility\nfairness\n\nWHAT BECAME STRANGE:\nKnowledge may require deliberately non-greedy action. A recommender that always chooses the apparent safest path can prevent itself from learning about excluded paths.\n\nQUESTION:\nWhat forms of educational exploration are necessary to learn about trajectories a recommender would otherwise suppress?\n\nDEEPER QUESTION:\nWho bears the cost of experiments required to make a decision system epistemically corrigible?\n\nMECHANISM:\nhistorical policy → selective observation → deterministic decision → same blind spot; exploring policy → varied decisions → new outcomes → policy learning\n\nFORMAL SHIFT:\n<SELECTIVELY LABELED HISTORY>\n→ <DECISION POLICY>\n→ [EXPLORE]\n→ <NEW OUTCOMES>\n→ <LEARN TO DECIDE>\n\nSOURCE FORMALISM:\nThe paper optimizes stochastic decision policies under selective labels and fairness constraints, contrasting direct policy learning with prediction plus thresholding.\n\nOUR FORMALIZATION:\n[OUR FORMALIZATION — NOT SOURCE SYNTAX]\nIf a policy gives an action zero probability for a population region, it may create no labels for that counterfactual action there. Exploration opens an observational channel but is not ethically free.\n\nTENSION:\nExploration can improve learning while exposing people to actions not selected as the current estimated optimum.\n\nMISSING:\nA theory of legitimate educational exploration: consent, reversibility, risk limits, and distribution of burden.\n\nBOUNDARY:\nThe source is not specifically about course recommendation; the application follows from the selective-label structure.\n\nCITATION TRAIL:\n[[Z-EDUPM-010]] → unlived outcomes → [[Z-EDUPM-013]] → recommendation produces observation → learning to decide\n\nTEST:\nCompare deterministic recommendation, bounded exploration, and direct policy learning; measure both knowledge gain and who bears exploratory cost.\n\nPLATFORM:\n[[THE UNLIVED CURRICULUM]]\n\nLINKS:\n[[Z-EDUPM-010]]\n[[Z-EDUPM-013]]\n[[Selective Labels]]\n[[Ethical Exploration]]\n[[Policy Learning]]\n\nBIBTEX:\n@InProceedings{pmlr-v108-kilbertus20a,\n  title={Fair Decisions Despite Imperfect Predictions},\n  author={Kilbertus, Niki and Rodriguez, Manuel Gomez and Sch{\"o}lkopf, Bernhard and Muandet, Krikamol and Valera, Isabel},\n  booktitle={Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics},\n  pages={277--287}, year={2020}, volume={108},\n  series={Proceedings of Machine Learning Research}, publisher={PMLR},\n  url={https://proceedings.mlr.press/v108/kilbertus20a.html}\n}",
+    "parents": [
+      "Z-EDUPM-010",
+      "Z-EDUPM-013"
+    ],
+    "parent_candidates": [],
+    "lineage_evidence": "PROMPT_INPUT_OUTPUT",
+    "flags": [
+      "NEW_IN_SLIPCASE_13_1"
+    ],
+    "title": "WITH SELECTIVE LABELS, THE LEARNING PROBLEM MOVES FROM PREDICTION TO POLICY: SOME KNOWLEDGE REQUIRES DELIBERATE EXPLORATION.",
+    "source": "Niki Kilbertus, Manuel Gomez Rodriguez, Bernhard Schölkopf, Krikamol Muandet, and Isabel Valera — Fair Decisions Despite Imperfect Predictions — 2020 — AISTATS, PMLR 108, 277–287.",
+    "source_url": "https://proceedings.mlr.press/v108/kilbertus20a.html",
+    "platform_raw": "[[THE UNLIVED CURRICULUM]]",
+    "platforms": [
+      "THE UNLIVED CURRICULUM"
+    ],
+    "links_raw": "[[Z-EDUPM-010]]\n[[Z-EDUPM-013]]\n[[Selective Labels]]\n[[Ethical Exploration]]\n[[Policy Learning]]",
+    "links": [
+      "Z-EDUPM-010",
+      "Z-EDUPM-013",
+      "Selective Labels",
+      "Ethical Exploration",
+      "Policy Learning"
+    ],
+    "all_wikilinks": [
+      "Z-EDUPM-010",
+      "Z-EDUPM-013",
+      "THE UNLIVED CURRICULUM",
+      "Z-EDUPM-010",
+      "Z-EDUPM-013",
+      "Selective Labels",
+      "Ethical Exploration",
+      "Policy Learning"
+    ],
+    "bibtex": "@InProceedings{pmlr-v108-kilbertus20a,\n  title={Fair Decisions Despite Imperfect Predictions},\n  author={Kilbertus, Niki and Rodriguez, Manuel Gomez and Sch{\"o}lkopf, Bernhard and Muandet, Krikamol and Valera, Isabel},\n  booktitle={Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics},\n  pages={277--287}, year={2020}, volume={108},\n  series={Proceedings of Machine Learning Research}, publisher={PMLR},\n  url={https://proceedings.mlr.press/v108/kilbertus20a.html}\n}",
+    "content_sha256": "36934b35bde1b55011a48295420e5f9964319c28bc584521022a45f2f7926ec7",
+    "children": [],
+    "backlinks": [],
+    "ancestors": [
+      "Z-EDUPM-002",
+      "Z-EDUPM-010",
+      "Z-EDUPM-013"
+    ],
+    "descendants": [],
+    "lineage_flags": [],
+    "root_filename": "019__learning-to-decide__KilbertusEtAl2020__Z-EDUPM-019__from-20260817-s02-o019.txt",
+    "markdown_mirror": "_MD/019__learning-to-decide__KilbertusEtAl2020__Z-EDUPM-019__from-20260817-s02-o019.md",
+    "generation": 2,
+    "lineage": {
+      "parents": [
+        "Z-EDUPM-010",
+        "Z-EDUPM-013"
+      ],
+      "kids": [],
+      "ancestors": [
+        "Z-EDUPM-002",
+        "Z-EDUPM-010",
+        "Z-EDUPM-013"
+      ],
+      "descendants": [],
+      "generation": 2,
+      "evidence_state": "PROMPT_INPUT_OUTPUT"
+    },
+    "native_graph": {
+      "platform_memberships": [
+        "THE UNLIVED CURRICULUM"
+      ],
+      "links_out": [
+        "Z-EDUPM-010",
+        "Z-EDUPM-013",
+        "Selective Labels",
+        "Ethical Exploration",
+        "Policy Learning"
+      ],
+      "links_in": []
+    }
+  },
+  {
+    "display_order": 20,
+    "creation_order": 20,
+    "accession": "ZTL-S02-020",
+    "name": "The Alert Is the Treatment",
+    "original_id": "Z-EDUPM-020",
+    "source_signature": "JayaprakashEtAl2014",
+    "origin": "20260817-s02-o020",
+    "appearance": "SES-20260817-02",
+    "payload": "ZETTEL\n\nID:\nZ-EDUPM-020\n\nTITLE:\nTHE EARLY-ALERT SCORE BECOMES A TREATMENT WHEN IT TRIGGERS ACTION: THE SYSTEM CHANGES BOTH GRADES AND THE BEHAVIOR THAT PRODUCES THEM.\n\nSOURCE:\nSandeep M. Jayaprakash, Erik W. Moody, Eitel J. M. Lauría, James R. Regan, and Joshua D. Baron — Early Alert of Academically At-Risk Students: An Open Source Analytics Initiative — 2014 — Journal of Learning Analytics 1(1), 6–47.\n\nSOURCE URL:\nhttps://files.eric.ed.gov/fulltext/EJ1127037.pdf\n\nPASSAGE:\n[PARAPHRASE] The Open Academic Analytics Initiative used predictive models to identify at-risk students and evaluated intervention strategies. It reports improved course outcomes associated with intervention and also unintended behavior, including warnings contributing to some early withdrawals.\n\nRESEARCH OBJECT:\nAn early-alert model becomes part of a treatment once its classification is coupled to a notification or support protocol.\n\nLOCAL MOVE:\nJayaprakash et al. supply an educational implementation in which prediction, intervention, and outcome are operationally connected.\n\nSOURCE TERMS:\nearly alert\nat-risk students\npredictive model\nintervention\ncontrol group\nstudent performance\nwithdrawal\n\nWHAT BECAME STRANGE:\nThe same alert can improve outcomes for some students and alter exit behavior for others. The score enters the trajectory it is later used to evaluate.\n\nQUESTION:\nWhat is the object being evaluated: the risk model, the message, the support protocol, or the coupled prediction-intervention system?\n\nDEEPER QUESTION:\nCan model accuracy remain primary when deployment changes both the outcome and its meaning?\n\nMECHANISM:\nlearning-system data → risk model → classification → notification/intervention → changed behavior → changed course outcome\n\nFORMAL SHIFT:\n<ACADEMIC RISK ESTIMATE>\n→ <ALERT>\n→ [INTERVENTION / RESPONSE]\n→ <CHANGED BEHAVIOR>\n→ <CHANGED OUTCOME>\n\nSOURCE FORMALISM:\nThe article evaluates predictive-model portability and intervention effectiveness in a multi-institutional early-alert initiative; it does not supply a formal performativity model.\n\nOUR FORMALIZATION:\n[OUR FORMALIZATION — NOT SOURCE SYNTAX]\nObserved outcome after an alert is a function of score, message, recipient, response, and institutional policy, not only pre-alert features.\n\nTENSION:\nPositive average effects do not imply uniform benefit. Alerts can change help-seeking, withdrawal, anxiety, or disengagement in different directions.\n\nMISSING:\nAn event-level record linking model version and score to exact intervention, recipient response, timing, and outcome.\n\nBOUNDARY:\nThe article supports prediction-intervention coupling and reports intervention effects; it does not itself use the language of performative prediction.\n\nCITATION TRAIL:\n[[Z-EDUPM-003]] → early warning as intervention → [[Z-EDUPM-016]] → intervention changes later labels → Jayaprakash et al. 2014\n\nTEST:\nReanalyze early alerts at event level, distinguishing score, message, intervention, student response, withdrawal timing, and final outcome.\n\nPLATFORM:\n[[EDUCATION AS PREDICTIVE INFRASTRUCTURE]]\n\nLINKS:\n[[Z-EDUPM-003]]\n[[Z-EDUPM-016]]\n[[Early Alert as Intervention]]\n[[Unintended Withdrawal]]\n[[Prediction-Intervention Coupling]]\n\nBIBTEX:\n@article{jayaprakash2014earlyalert,\n  author={Jayaprakash, Sandeep M. and Moody, Erik W. and Lauria, Eitel J. M. and Regan, James R. and Baron, Joshua D.},\n  title={Early Alert of Academically At-Risk Students: An Open Source Analytics Initiative},\n  journal={Journal of Learning Analytics}, year={2014}, volume={1}, number={1}, pages={6--47},\n  url={https://files.eric.ed.gov/fulltext/EJ1127037.pdf}\n}",
+    "parents": [
+      "Z-EDUPM-003",
+      "Z-EDUPM-016"
+    ],
+    "parent_candidates": [],
+    "lineage_evidence": "PROMPT_INPUT_OUTPUT",
+    "flags": [
+      "NEW_IN_SLIPCASE_13_1"
+    ],
+    "title": "THE EARLY-ALERT SCORE BECOMES A TREATMENT WHEN IT TRIGGERS ACTION: THE SYSTEM CHANGES BOTH GRADES AND THE BEHAVIOR THAT PRODUCES THEM.",
+    "source": "Sandeep M. Jayaprakash, Erik W. Moody, Eitel J. M. Lauría, James R. Regan, and Joshua D. Baron — Early Alert of Academically At-Risk Students: An Open Source Analytics Initiative — 2014 — Journal of Learning Analytics 1(1), 6–47.",
+    "source_url": "https://files.eric.ed.gov/fulltext/EJ1127037.pdf",
+    "platform_raw": "[[EDUCATION AS PREDICTIVE INFRASTRUCTURE]]",
+    "platforms": [
+      "EDUCATION AS PREDICTIVE INFRASTRUCTURE"
+    ],
+    "links_raw": "[[Z-EDUPM-003]]\n[[Z-EDUPM-016]]\n[[Early Alert as Intervention]]\n[[Unintended Withdrawal]]\n[[Prediction-Intervention Coupling]]",
+    "links": [
+      "Z-EDUPM-003",
+      "Z-EDUPM-016",
+      "Early Alert as Intervention",
+      "Unintended Withdrawal",
+      "Prediction-Intervention Coupling"
+    ],
+    "all_wikilinks": [
+      "Z-EDUPM-003",
+      "Z-EDUPM-016",
+      "EDUCATION AS PREDICTIVE INFRASTRUCTURE",
+      "Z-EDUPM-003",
+      "Z-EDUPM-016",
+      "Early Alert as Intervention",
+      "Unintended Withdrawal",
+      "Prediction-Intervention Coupling"
+    ],
+    "bibtex": "@article{jayaprakash2014earlyalert,\n  author={Jayaprakash, Sandeep M. and Moody, Erik W. and Lauria, Eitel J. M. and Regan, James R. and Baron, Joshua D.},\n  title={Early Alert of Academically At-Risk Students: An Open Source Analytics Initiative},\n  journal={Journal of Learning Analytics}, year={2014}, volume={1}, number={1}, pages={6--47},\n  url={https://files.eric.ed.gov/fulltext/EJ1127037.pdf}\n}",
+    "content_sha256": "900ca83572e7e7c77b3a76b7574e964086131bd80e575e2628be2f9a007d47b2",
+    "children": [],
+    "backlinks": [],
+    "ancestors": [
+      "Z-EDUPM-003",
+      "Z-EDUPM-009",
+      "Z-EDUPM-016"
+    ],
+    "descendants": [],
+    "lineage_flags": [],
+    "root_filename": "020__the-alert-is-the-treatment__JayaprakashEtAl2014__Z-EDUPM-020__from-20260817-s02-o020.txt",
+    "markdown_mirror": "_MD/020__the-alert-is-the-treatment__JayaprakashEtAl2014__Z-EDUPM-020__from-20260817-s02-o020.md",
+    "generation": 3,
+    "lineage": {
+      "parents": [
+        "Z-EDUPM-003",
+        "Z-EDUPM-016"
+      ],
+      "kids": [],
+      "ancestors": [
+        "Z-EDUPM-003",
+        "Z-EDUPM-009",
+        "Z-EDUPM-016"
+      ],
+      "descendants": [],
+      "generation": 3,
+      "evidence_state": "PROMPT_INPUT_OUTPUT"
+    },
+    "native_graph": {
+      "platform_memberships": [
+        "EDUCATION AS PREDICTIVE INFRASTRUCTURE"
+      ],
+      "links_out": [
+        "Z-EDUPM-003",
+        "Z-EDUPM-016",
+        "Early Alert as Intervention",
+        "Unintended Withdrawal",
+        "Prediction-Intervention Coupling"
+      ],
+      "links_in": []
+    }
+  }
+]

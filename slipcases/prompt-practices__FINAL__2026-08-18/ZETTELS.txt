@@ -1,0 +1,1965 @@
+ZETTEL
+
+ID:
+SCGAI-001
+
+TITLE:
+A prompt is not merely written; it is socially constructed.
+
+SOURCE:
+Atefeh Mahdavi Goloujeh, Anne Sullivan, and Brian Magerko — “The Social Construction of Generative AI Prompts” — CHI EA ’24 — 2024 — https://doi.org/10.1145/3613905.3650947
+
+PASSAGE:
+[QUOTE] “prompts are socially constructed and shaped by the interests and values of diverse groups [13], rather than happening in a social vacuum.”
+
+RESEARCH OBJECT:
+The paper relocates the prompt from the individual-model interface into a social field. Prompt wording is partly produced by communities that circulate examples, establish norms, attach values to reuse, and teach what counts as effective or legitimate prompting.
+
+LOCAL MOVE:
+Replace PROMPT-AS-INSTRUCTION with PROMPT-AS-SOCIOTECHNICAL-OBJECT.
+
+SOURCE TERMS:
+socially constructed; interests; values; social vacuum; prompt adaptation; sharing; peer learning; collective knowledge building
+
+WHAT BECAME STRANGE:
+The apparently private act of typing a sentence may contain an invisible population of prior prompt writers, tutorials, platform conventions, copied modifiers, aesthetic trends, and prohibitions.
+
+QUESTION:
+Where does the boundary of a prompt end: at the typed string, the user’s accumulated repertoire, or the community that made that repertoire available?
+
+DEEPER QUESTION:
+Could prompt execution be modeled as an act performed by a distributed social system rather than an isolated human user?
+
+MECHANISM:
+Community examples circulate → users observe reusable forms → forms enter individual repertoires → prompts generate outputs → outputs/prompts recirculate → subsequent prompting changes.
+
+FORMAL SHIFT:
+INDIVIDUAL USER → PROMPT → MODEL becomes COMMUNITY → USER REPERTOIRE → PROMPT → MODEL → SHARED OUTPUT → COMMUNITY.
+
+SOURCE FORMALISM:
+The paper organizes prompting through Prompt Sharing and Prompt Reuse, producing four orientations: Proprietary/Solitary, Derivative, Collaborative, and Provocative.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+COMMUNITY(t) → available_prompt_forms(t) → USER_REPERTOIRE(t) → PROMPT(t) → OUTPUT(t) → COMMUNITY(t+1)
+
+TENSION:
+“Social construction” can mean that people learn prompting socially, or the stronger claim that the prompt itself is constituted by collective practices. The paper directly establishes the former more strongly than the latter.
+
+MISSING:
+A traceable genealogy showing how a specific prompt fragment moves through multiple users and changes along the way.
+
+BOUNDARY:
+The study concerns 19 US-based MidJourney users and English-language prompting; it does not establish identical mechanisms across models, languages, or communities.
+
+CITATION TRAIL:
+[[SCGAI-2024]] → social-construction claim → Social Construction of Technology [13] → ask how relevant social groups constitute the artifact.
+
+TEST:
+Take one widely circulated prompt formula and reconstruct earliest observable appearances, modifications, communities of circulation, and ownership claims.
+
+PLATFORM:
+MidJourney / Discord / Facebook prompt communities
+
+LINKS:
+[[SCGAI-2024]]
+
+BIBTEX:
+@inproceedings{mahdavigoloujeh2024social,
+  author = {Mahdavi Goloujeh, Atefeh and Sullivan, Anne and Magerko, Brian},
+  title = {The Social Construction of Generative AI Prompts},
+  booktitle = {Extended Abstracts of the CHI Conference on Human Factors in Computing Systems},
+  year = {2024},
+  publisher = {Association for Computing Machinery},
+  doi = {10.1145/3613905.3650947},
+  url = {https://doi.org/10.1145/3613905.3650947}
+}
+
+ZETTEL
+
+ID:
+SCGAI-002
+
+TITLE:
+Prompt ownership can turn into collaboration after the copied prompt produces a difference.
+
+SOURCE:
+Atefeh Mahdavi Goloujeh, Anne Sullivan, and Brian Magerko — “The Social Construction of Generative AI Prompts” — CHI EA ’24 — 2024 — https://doi.org/10.1145/3613905.3650947
+
+PASSAGE:
+[QUOTE] “it almost becomes a collaboration because I’m learning from this person and it’s not adversarial.” — P8
+
+RESEARCH OBJECT:
+A participant describes a reversal in the meaning of copying: another person takes their prompt, changes it slightly, and obtains a better result. The act initially interpreted as appropriation becomes evidence that teaches the original author something.
+
+LOCAL MOVE:
+Treat reuse not simply as COPY but as an experiment performed on another person’s contribution.
+
+SOURCE TERMS:
+copy; add one word; better image; collaboration; learning; adversarial; credit
+
+WHAT BECAME STRANGE:
+A copied prompt can return information to its supposed owner. Appropriation becomes an epistemic loop when the derivative version reveals something about the prompt-model relation.
+
+QUESTION:
+Under what conditions does prompt copying become reciprocal experimentation rather than extraction?
+
+DEEPER QUESTION:
+Can another person experimentally probe your linguistic artifact and return discoveries without ever coordinating with you?
+
+MECHANISM:
+PROMPT_A → copied by B → small modification → OUTPUT_B differs → A observes difference → A learns → interpretation shifts from theft toward collaboration.
+
+FORMAL SHIFT:
+COPYING AS TRANSFER becomes COPYING AS DISTRIBUTED EXPERIMENTATION.
+
+SOURCE FORMALISM:
+The source locates Proprietary/Solitary and Collaborative prompting at different positions within Prompt Sharing × Prompt Reuse and states orientations are temporary/context-dependent rather than permanent types.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+A: p → M → y1
+B: mutate(p, Δ) → M → y2
+A observes (Δ, y2-y1) → KNOWLEDGE_A increases
+
+TENSION:
+The same operation—copying and modifying—can be interpreted as theft, derivation, experimentation, or collaboration; technical transformation alone does not determine social meaning.
+
+MISSING:
+Variables causing the interpretive transition: attribution, modification magnitude, reciprocity, public visibility, prior relationship, usefulness of returned result.
+
+BOUNDARY:
+One participant’s retrospective reinterpretation demonstrates a possible transition, not a general law.
+
+CITATION TRAIL:
+[[SCGAI-2024]] → P8’s change from “copy” to “collaboration” → distributed creativity → ask whether collaboration requires intentional coordination.
+
+TEST:
+Vary attribution, permission, modification size, reciprocity, and visibility while holding the copied prompt constant; ask where cases change category.
+
+PLATFORM:
+MidJourney
+
+LINKS:
+[[SCGAI-2024]]
+
+BIBTEX:
+@inproceedings{mahdavigoloujeh2024social,
+  author = {Mahdavi Goloujeh, Atefeh and Sullivan, Anne and Magerko, Brian},
+  title = {The Social Construction of Generative AI Prompts},
+  booktitle = {Extended Abstracts of the CHI Conference on Human Factors in Computing Systems},
+  year = {2024},
+  publisher = {Association for Computing Machinery},
+  doi = {10.1145/3613905.3650947},
+  url = {https://doi.org/10.1145/3613905.3650947}
+}
+
+ZETTEL
+
+ID:
+SCGAI-003
+
+TITLE:
+Collaborative prompting makes the history of modification part of the creative object.
+
+SOURCE:
+Atefeh Mahdavi Goloujeh, Anne Sullivan, and Brian Magerko — “The Social Construction of Generative AI Prompts” — CHI EA ’24 — 2024 — https://doi.org/10.1145/3613905.3650947
+
+PASSAGE:
+[QUOTE] “Set a goal and then try and work through the journey of getting there collectively and letting people see like how prompts modify over time.” — P7
+
+RESEARCH OBJECT:
+Collaboration includes exposing the temporal sequence through which a prompt changes. The trajectory of revisions becomes visible and socially useful.
+
+LOCAL MOVE:
+Move the unit of analysis from PROMPT to PROMPT-HISTORY.
+
+SOURCE TERMS:
+goal; collectively; journey; prompts modify over time; collaborative effort; tips and tricks
+
+WHAT BECAME STRANGE:
+The final prompt may be less informative than the sequence of failed and successful transformations that produced it.
+
+QUESTION:
+What becomes visible if prompt research records lineage rather than final strings?
+
+DEEPER QUESTION:
+Is a mature prompt better represented as a version-controlled process than as a piece of natural-language text?
+
+MECHANISM:
+Shared goal → prompt version → execution → output evaluation → collective modification → next version → accumulated visible history.
+
+FORMAL SHIFT:
+PROMPT = STRING becomes PROMPT = VERSIONED TRAJECTORY.
+
+SOURCE FORMALISM:
+The paper describes collaborative experiments in which groups iteratively build on prompts, share discoveries, and observe how prompts change over time.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+P0 →[Δ1/result1] P1 →[Δ2/result2] P2 → … → Pn; research object H(P)={(Pi,Δi,resulti)}.
+
+TENSION:
+Prompt-sharing interfaces privilege the current prompt, while the participant’s account suggests the pedagogically valuable object is the lineage.
+
+MISSING:
+Whether participants preserve complete histories or reconstruct them retrospectively from memory and platform traces.
+
+BOUNDARY:
+The passage describes collaborative practice but does not claim version history is necessary for all prompting.
+
+CITATION TRAIL:
+[[SCGAI-2024]] → P7 on prompts modifying over time → version histories/provenance systems → test whether commits/forks/diffs/merges fit prompt evolution.
+
+TEST:
+Record every prompt revision and output in a collaborative session; compare learning from final-only versus full revision history.
+
+PLATFORM:
+MidJourney / Discord
+
+LINKS:
+[[SCGAI-2024]]
+
+BIBTEX:
+@inproceedings{mahdavigoloujeh2024social,
+  author = {Mahdavi Goloujeh, Atefeh and Sullivan, Anne and Magerko, Brian},
+  title = {The Social Construction of Generative AI Prompts},
+  booktitle = {Extended Abstracts of the CHI Conference on Human Factors in Computing Systems},
+  year = {2024},
+  publisher = {Association for Computing Machinery},
+  doi = {10.1145/3613905.3650947},
+  url = {https://doi.org/10.1145/3613905.3650947}
+}
+
+ZETTEL
+
+ID:
+SCGAI-004
+
+TITLE:
+Prompt communities conduct experiments where the literature has not yet stabilized.
+
+SOURCE:
+Atefeh Mahdavi Goloujeh, Anne Sullivan, and Brian Magerko — “The Social Construction of Generative AI Prompts” — CHI EA ’24 — 2024 — https://doi.org/10.1145/3613905.3650947
+
+PASSAGE:
+[QUOTE] “We have a group of people and we are trying to experiment with pushing image prompts as far as they can go because there’s been no defining literature...” — P6
+
+RESEARCH OBJECT:
+The community acts as an informal experimental laboratory. Lack of settled documentation does not stop inquiry; it creates the reason for coordinated experimentation.
+
+LOCAL MOVE:
+Reclassify some prompt communities from KNOWLEDGE-SHARING GROUPS to DISTRIBUTED EXPERIMENTAL SYSTEMS.
+
+SOURCE TERMS:
+group; experiment; pushing image prompts; defining literature; references; collaborative effort
+
+WHAT BECAME STRANGE:
+Prompt knowledge may originate outside formal research through coordinated folk experiments conducted directly against proprietary systems.
+
+QUESTION:
+What methodological structure do prompt communities invent when official documentation and academic literature are absent?
+
+DEEPER QUESTION:
+Can a Discord server function as an experimental institution—and how does its knowledge differ from laboratory knowledge?
+
+MECHANISM:
+Undocumented behavior → community question → distributed trials → comparison → provisional rule → circulation → further testing.
+
+FORMAL SHIFT:
+COMMUNITY AS AUDIENCE becomes COMMUNITY AS EXPERIMENTAL APPARATUS.
+
+SOURCE FORMALISM:
+The authors classify this under Collaborative Prompting and describe groups undertaking organized experiments around prompt capabilities.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+UNKNOWN MODEL PROPERTY q → {user_i test_i} → shared observations → provisional heuristic h(q) → redistributed tests.
+
+TENSION:
+Distributed experimentation can discover behavior quickly, but without controlled variables, stable model versions, records, or internal access, heuristics may mix effects with superstition.
+
+MISSING:
+Actual experimental records: hypotheses, variables, failed trials, model versions, and criteria for deciding an effect was real.
+
+BOUNDARY:
+The interview establishes that participants describe activity as experimentation; it does not establish validity or reproducibility of resulting knowledge.
+
+CITATION TRAIL:
+[[SCGAI-2024]] → P6’s community experiments → missing defining literature → compare folk experimentation with controlled prompt-engineering studies.
+
+TEST:
+Take one community-generated prompting rule and reconstruct/re-run the experiments across controlled seeds, variants, and model versions.
+
+PLATFORM:
+MidJourney / Discord
+
+LINKS:
+[[SCGAI-2024]]
+
+BIBTEX:
+@inproceedings{mahdavigoloujeh2024social,
+  author = {Mahdavi Goloujeh, Atefeh and Sullivan, Anne and Magerko, Brian},
+  title = {The Social Construction of Generative AI Prompts},
+  booktitle = {Extended Abstracts of the CHI Conference on Human Factors in Computing Systems},
+  year = {2024},
+  publisher = {Association for Computing Machinery},
+  doi = {10.1145/3613905.3650947},
+  url = {https://doi.org/10.1145/3613905.3650947}
+}
+
+ZETTEL
+
+ID:
+SCGAI-005
+
+TITLE:
+A prompt can be published not to generate an image but to generate behavior in other people.
+
+SOURCE:
+Atefeh Mahdavi Goloujeh, Anne Sullivan, and Brian Magerko — “The Social Construction of Generative AI Prompts” — CHI EA ’24 — 2024 — https://doi.org/10.1145/3613905.3650947
+
+PASSAGE:
+[QUOTE] “I strategically showcase my prompts when I want other users to encourage that.” — P2
+
+RESEARCH OBJECT:
+In Provocative Prompting, a prompt has two potential targets: it conditions the model, while public display can condition a community by encouraging imitation, variation, and trend formation.
+
+LOCAL MOVE:
+Split PROMPT EFFECT into MODEL EFFECT and SOCIAL EFFECT.
+
+SOURCE TERMS:
+provocative prompting; influence; strategically; showcase; prompts; styles; community trends; recognition
+
+WHAT BECAME STRANGE:
+The same string can operate simultaneously as an instruction to a machine and as an intervention into human culture.
+
+QUESTION:
+When someone publicly posts a prompt, which output matters more: the generated artifact or downstream prompts produced by observers?
+
+DEEPER QUESTION:
+Could prompts be cultural operators whose execution environment includes both generative models and human imitators?
+
+MECHANISM:
+Author publishes prompt/output → community observes → vocabulary/style becomes salient → others reproduce/mutate → aggregate outputs alter visible norms → future choices shift.
+
+FORMAL SHIFT:
+PROMPT → MODEL → IMAGE splits into PROMPT → MODEL → IMAGE and PROMPT → COMMUNITY → NEW PROMPTS.
+
+SOURCE FORMALISM:
+Provocative Prompting occupies high-sharing/low-reuse in the paper’s two-dimensional engagement space.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+p → M → y; p+y → COMMUNITY_t → imitation/mutation/rejection → {p1…pn} → COMMUNITY_(t+1)
+
+TENSION:
+“Provocative” can also be described as diffusion, signaling, agenda-setting, fashion formation, or cultural selection, each implying a different causal account.
+
+MISSING:
+Longitudinal evidence that strategically displayed prompts change frequencies of forms or aesthetics.
+
+BOUNDARY:
+Participants report intentions and perceived influence; the study does not measure causal influence on community-wide prompt distributions.
+
+CITATION TRAIL:
+[[SCGAI-2024]] → Provocative Prompting → strategic display → social influence/trend formation → seek longitudinal prompt corpora.
+
+TEST:
+Track a distinctive prompt token before and after a known public introduction and distinguish propagation from independent origins.
+
+PLATFORM:
+MidJourney / Discord / Facebook / Instagram
+
+LINKS:
+[[SCGAI-2024]]
+
+BIBTEX:
+@inproceedings{mahdavigoloujeh2024social,
+  author = {Mahdavi Goloujeh, Atefeh and Sullivan, Anne and Magerko, Brian},
+  title = {The Social Construction of Generative AI Prompts},
+  booktitle = {Extended Abstracts of the CHI Conference on Human Factors in Computing Systems},
+  year = {2024},
+  publisher = {Association for Computing Machinery},
+  doi = {10.1145/3613905.3650947},
+  url = {https://doi.org/10.1145/3613905.3650947}
+}
+
+ZETTEL
+
+ID:
+SCGAI-006
+
+TITLE:
+Prompt sharing is described as feeding an ecosystem that feeds the prompter.
+
+SOURCE:
+Atefeh Mahdavi Goloujeh, Anne Sullivan, and Brian Magerko — “The Social Construction of Generative AI Prompts” — CHI EA ’24 — 2024 — https://doi.org/10.1145/3613905.3650947
+
+PASSAGE:
+[QUOTE] “I try to share some of my prompts every now and again because I feel like I’ve got to feed back into the ecosystem that’s providing for me.” — P4
+
+RESEARCH OBJECT:
+P4 describes prompt knowledge as a reciprocal commons: the individual receives techniques and inspiration and feels an obligation to return prompts.
+
+LOCAL MOVE:
+Replace PROMPT SHARING AS DISCLOSURE with PROMPT SHARING AS RECIPROCAL MAINTENANCE.
+
+SOURCE TERMS:
+share; feed back; ecosystem; community; contributing
+
+WHAT BECAME STRANGE:
+The “ecosystem” metaphor makes prompting sound like metabolism: practitioners consume collectively produced resources and return resources that maintain the system.
+
+QUESTION:
+What is replenished when someone “feeds back” a prompt—information, variation, prestige, examples, techniques, or obligation?
+
+DEEPER QUESTION:
+Can prompt communities sustain a commons when circulated resources also produce private outputs, reputation, and commercial value?
+
+MECHANISM:
+Community provides knowledge → individual gains capability → individual produces prompt/artifact → contribution returned → others gain capability → repertoire expands.
+
+FORMAL SHIFT:
+SHARING = TRANSFER FROM OWNER TO RECIPIENT becomes SHARING = REPRODUCTION OF A COMMON RESOURCE SYSTEM.
+
+SOURCE FORMALISM:
+The paper distinguishes orientations by willingness to share and reuse; collaborative and provocative orientations involve relatively high sharing.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+COMMONS_t → uptake by user i → transformation → contribution_i → COMMONS_(t+1).
+
+TENSION:
+The ecosystem metaphor implies reciprocal dependence while proprietary prompting asserts individual ownership over prompt compositions generated within the same environment.
+
+MISSING:
+Whether reciprocity is normatively enforced, personally felt, reputationally rewarded, or structurally necessary.
+
+BOUNDARY:
+P4’s statement establishes one participant’s reciprocal orientation, not a universal norm.
+
+CITATION TRAIL:
+[[SCGAI-2024]] → P4’s “feed back into the ecosystem” → commons/reciprocity literature → distinguish gift exchange, open source, reputation economies, and commons maintenance.
+
+TEST:
+Compare communities with different visibility/attribution systems and test whether receiving reusable prompt knowledge predicts later contribution.
+
+PLATFORM:
+MidJourney community
+
+LINKS:
+[[SCGAI-2024]]
+
+BIBTEX:
+@inproceedings{mahdavigoloujeh2024social,
+  author = {Mahdavi Goloujeh, Atefeh and Sullivan, Anne and Magerko, Brian},
+  title = {The Social Construction of Generative AI Prompts},
+  booktitle = {Extended Abstracts of the CHI Conference on Human Factors in Computing Systems},
+  year = {2024},
+  publisher = {Association for Computing Machinery},
+  doi = {10.1145/3613905.3650947},
+  url = {https://doi.org/10.1145/3613905.3650947}
+}
+
+ZETTEL
+
+ID:
+SCGAI-007
+
+TITLE:
+The paper demotes prompt engineering from an individual technical skill to a socio-technical practice.
+
+SOURCE:
+Atefeh Mahdavi Goloujeh, Anne Sullivan, and Brian Magerko — “The Social Construction of Generative AI Prompts” — CHI EA ’24 — 2024 — https://doi.org/10.1145/3613905.3650947
+
+PASSAGE:
+[QUOTE] The authors argue for “repositioning prompt engineering not merely as a technical skill defined by efficacy standards in an individual’s mind, but rather as a socio-technical practice.”
+
+RESEARCH OBJECT:
+Effectiveness against a model becomes only one dimension of a practice also organized by ownership, learning, collaboration, originality, circulation, and influence.
+
+LOCAL MOVE:
+Expand evaluation beyond OUTPUT EFFICACY.
+
+SOURCE TERMS:
+technical skill; efficacy standards; socio-technical practice; distributed cognition; distributed creativity; social practice; originality; collaboration
+
+WHAT BECAME STRANGE:
+A prompt can be technically effective while socially illegitimate, derivative, unshareable, pedagogically useless, or corrosive to the community that produced its knowledge.
+
+QUESTION:
+What counts as prompt quality once technical efficacy is no longer the sole criterion?
+
+DEEPER QUESTION:
+Does “prompt engineering” remain coherent if competence includes social learning, attribution, community participation, norm navigation, and collective experimentation?
+
+MECHANISM:
+Prompt practice is shaped by model-facing efficacy constraints and community-facing norms, motivations, knowledge flows, and ownership judgments.
+
+FORMAL SHIFT:
+QUALITY(prompt)=MODEL PERFORMANCE becomes QUALITY(prompt practice)=MODEL PERFORMANCE + SOCIAL RELATIONS + KNOWLEDGE EFFECTS + NORMATIVE CONSEQUENCES.
+
+SOURCE FORMALISM:
+The authors connect findings to distributed cognition, distributed creativity, and technologies-as-social-practice, organizing participation through four context-dependent orientations.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Q(p)={efficacy, learnability, provenance, shareability, adaptability, originality, contribution_to_collective_knowledge}
+
+TENSION:
+Calling prompting socio-technical may deepen analysis but can stretch the object until nearly every surrounding cultural activity is included.
+
+MISSING:
+A criterion for deciding which social relations belong inside prompting and which merely constitute context.
+
+BOUNDARY:
+The paper argues for reframing prompt engineering but does not provide a complete ontological boundary.
+
+CITATION TRAIL:
+[[SCGAI-2024]] → socio-technical practice → Hutchins distributed cognition → Glăveanu distributed creativity → Suchman social practice → compare units of analysis.
+
+TEST:
+Forage Hutchins, Glăveanu, and Suchman separately and identify the unit that performs cognition, creativity, or practice.
+
+PLATFORM:
+MidJourney / generative AI prompting
+
+LINKS:
+[[SCGAI-2024]]
+
+BIBTEX:
+@inproceedings{mahdavigoloujeh2024social,
+  author = {Mahdavi Goloujeh, Atefeh and Sullivan, Anne and Magerko, Brian},
+  title = {The Social Construction of Generative AI Prompts},
+  booktitle = {Extended Abstracts of the CHI Conference on Human Factors in Computing Systems},
+  year = {2024},
+  publisher = {Association for Computing Machinery},
+  doi = {10.1145/3613905.3650947},
+  url = {https://doi.org/10.1145/3613905.3650947}
+}
+
+ZETTEL
+
+ID:
+SCGAI-008
+
+TITLE:
+Prompt provenance may change whether users are willing to enter collaboration at all.
+
+SOURCE:
+Atefeh Mahdavi Goloujeh, Anne Sullivan, and Brian Magerko — “The Social Construction of Generative AI Prompts” — CHI EA ’24 — 2024 — https://doi.org/10.1145/3613905.3650947
+
+PASSAGE:
+[QUOTE] “Clear mechanisms for tracking and crediting contributions can encourage users to transition between orientations.”
+
+RESEARCH OBJECT:
+The authors propose provenance infrastructure not merely as record keeping but as a mechanism capable of changing participation.
+
+LOCAL MOVE:
+Treat PROVENANCE as an operational variable affecting social behavior rather than passive metadata.
+
+SOURCE TERMS:
+tracking; crediting; contributions; transition; orientations; confidence; assurance; sharing; collaboration
+
+WHAT BECAME STRANGE:
+A metadata system can alter the social topology of prompting. Recording who changed what may determine whether knowledge remains private or enters circulation.
+
+QUESTION:
+Can provenance infrastructure causally increase prompt sharing and reuse?
+
+DEEPER QUESTION:
+When provenance becomes machine-readable, does it protect authorship or create a programmable social layer governing forks, credit, reward, and recombination?
+
+MECHANISM:
+Fear of losing credit → withholding → provenance/credit mechanism → perceived risk decreases → sharing/reuse increases → more collaborative knowledge production.
+
+FORMAL SHIFT:
+PROVENANCE = DESCRIPTION OF PAST ACTION becomes PROVENANCE = CONDITION ON FUTURE ACTION.
+
+SOURCE FORMALISM:
+The authors explicitly suggest tracking/crediting contributions as a design intervention that may encourage transitions between engagement orientations.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Test whether P(share | visible attribution + modification history) > P(share | no provenance).
+
+TENSION:
+Attribution could encourage sharing by protecting recognition but also intensify proprietary thinking by making every borrowed modifier look owned.
+
+MISSING:
+Experimental evidence testing whether provenance increases collaboration, ownership disputes, or both for different users.
+
+BOUNDARY:
+Tracking and crediting are proposed design implications; the study does not empirically demonstrate the behavioral transition.
+
+CITATION TRAIL:
+[[SCGAI-2024]] → tracking and crediting → copying/control concerns → provenance-system research → test circulation under attribution.
+
+TEST:
+Build interfaces with no provenance, author attribution, and complete fork/diff lineage; measure sharing, reuse, modification, ownership, and conflict.
+
+PLATFORM:
+Text-to-image generative AI platforms
+
+LINKS:
+[[SCGAI-2024]]
+
+BIBTEX:
+@inproceedings{mahdavigoloujeh2024social,
+  author = {Mahdavi Goloujeh, Atefeh and Sullivan, Anne and Magerko, Brian},
+  title = {The Social Construction of Generative AI Prompts},
+  booktitle = {Extended Abstracts of the CHI Conference on Human Factors in Computing Systems},
+  year = {2024},
+  publisher = {Association for Computing Machinery},
+  doi = {10.1145/3613905.3650947},
+  url = {https://doi.org/10.1145/3613905.3650947}
+}
+
+ZETTEL
+
+ID:
+SCGAI-005-A
+
+TITLE:
+The prompt feed may be a stigmergic field: strangers can coordinate through traces without ever collaborating directly.
+
+SOURCE:
+Francis Heylighen — “Stigmergy as a Universal Coordination Mechanism I: Definition and Components” — Cognitive Systems Research 38 — 2016 — pp. 4–13 — https://doi.org/10.1016/j.cogsys.2015.12.002
+
+PASSAGE:
+[QUOTE] “the trace left by an action in a medium stimulates subsequent actions.” (p. 4)
+
+RESEARCH OBJECT:
+[OUR INFERENCE] Public prompt-plus-image artifacts can be investigated as environmental modifications: traces in a medium that stimulate later action without requiring direct communication, shared plans, or mutual awareness.
+
+LOCAL MOVE:
+Replace PROMPT SHARING AS HUMAN-TO-HUMAN COMMUNICATION with PROMPT POSTING AS ENVIRONMENTAL TRACE-MAKING.
+
+SOURCE TERMS:
+stigmergy; action; medium; trace; coordination; subsequent action; feedback; self-organization
+
+WHAT BECAME STRANGE:
+A prompt feed may not merely display a community; it may be part of the mechanism that produces one. Prompt culture can organize more like a trail system than a conversation.
+
+QUESTION:
+Can observable prompt convergence arise through environmental traces even when direct interpersonal communication is absent?
+
+DEEPER QUESTION:
+Is the relevant unit people + traces + feed architecture + model outputs rather than “community” alone?
+
+MECHANISM:
+ACTION → TRACE IN MEDIUM → TRACE STIMULATES SUBSEQUENT ACTION → NEW TRACE → FEEDBACK → COORDINATED PATTERN.
+
+FORMAL SHIFT:
+SOCIAL INFLUENCE USER_A → USER_B becomes STIGMERGIC INFLUENCE USER_A → ENVIRONMENTAL TRACE → USER_B → NEW TRACE → USER_C.
+
+SOURCE FORMALISM:
+Heylighen defines action, agent, medium, trace, and coordination; stigmergic feedback can coordinate without central control or direct communication.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+POST → visible trace → encounter → local salience → reuse/mutation → new post → amplification/suppression → emergent convention.
+
+TENSION:
+Mahdavi Goloujeh et al. foreground motivations and orientations; stigmergy makes intention less causally central. Prompt culture may be intentional exchange or partially self-organizing trace ecology.
+
+MISSING:
+Longitudinal exposure data distinguishing interpersonal transmission from indirect trace-mediated propagation and identifying which feed affordances matter.
+
+BOUNDARY:
+Heylighen does not study generative-AI prompting. The analogy is [OUR INFERENCE] unless action → persistent trace → stimulated action is demonstrated.
+
+CITATION TRAIL:
+[[SCGAI-005]] → public prompts producing behavior → [[SCGAI-006]] → ecosystem → Heylighen 2016 → stigmergy → Grassé → test feed-mediated feedback.
+
+TEST:
+Track distinctive fragments with author IDs, replies, follows, and exposure; test whether trace exposure predicts reuse after controlling direct social ties.
+
+PLATFORM:
+MidJourney / Discord / public generative-AI prompt feeds
+
+LINKS:
+[[SCGAI-005]]
+[[SCGAI-006]]
+
+BIBTEX:
+@article{heylighen2016stigmergy,
+ author={Heylighen, Francis}, title={Stigmergy as a Universal Coordination Mechanism I: Definition and Components}, journal={Cognitive Systems Research}, volume={38}, pages={4--13}, year={2016}, doi={10.1016/j.cogsys.2015.12.002}, url={https://doi.org/10.1016/j.cogsys.2015.12.002}
+}
+
+ZETTEL
+
+ID:
+SCGAI-004-A
+
+TITLE:
+Some prompts may be epistemic actions: their real output is knowledge about the machine.
+
+SOURCE:
+David Kirsh and Paul Maglio — “On Distinguishing Epistemic from Pragmatic Action” — Cognitive Science 18(4) — 1994 — pp. 513–549 — https://doi.org/10.1207/s15516709cog1804_1
+
+PASSAGE:
+[QUOTE] Kirsh and Maglio distinguish “epistemic actions—actions performed to uncover information that is hidden or hard to compute mentally.” (p. 513)
+
+RESEARCH OBJECT:
+[OUR INFERENCE] A generation can be instrumentally poor yet epistemically successful if its observable consequence teaches the user which variable matters. Some prompts seek knowledge about the model rather than an artifact.
+
+LOCAL MOVE:
+Split PROMPTING into PRAGMATIC PROMPTING and EPISTEMIC PROMPTING.
+
+SOURCE TERMS:
+pragmatic action; epistemic action; hidden information; external action; computational state
+
+WHAT BECAME STRANGE:
+A visibly failed generation can be a completely successful prompt. Artifact quality and prompt success can diverge.
+
+QUESTION:
+How much prompt practice seeks artifacts, and how much seeks information about the model?
+
+DEEPER QUESTION:
+Is the generative model partly an epistemic instrument through which users think by perturbing a hidden system and inspecting returns?
+
+MECHANISM:
+uncertainty → external action → perceptible consequence → newly available information; in prompting: hypothesis → prompt perturbation → generation → observation → belief update.
+
+FORMAL SHIFT:
+PROMPT: INSTRUCTION → OUTPUT splits into PRAGMATIC: INSTRUCTION → DESIRED OUTPUT and EPISTEMIC: HYPOTHESIS → INTERVENTION → OUTPUT-AS-EVIDENCE → UPDATED BELIEF.
+
+SOURCE FORMALISM:
+Kirsh and Maglio distinguish pragmatic actions that advance an external task and epistemic actions that transform the environment to expose information or reduce computation.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+p+Δ → M → y; B_t → observe(y|p+Δ) → B_(t+1); utility may include information gain, not only output quality.
+
+TENSION:
+Tetris exposes a comparatively stable environment; generative systems may be stochastic, hidden, versioned, personalized, moderated, or silently updated, making evidence unstable.
+
+MISSING:
+Behavioral evidence distinguishing artifact-seeking executions from information-seeking executions in real prompt logs.
+
+BOUNDARY:
+Kirsh and Maglio do not discuss AI prompting; epistemic prompting is [OUR INFERENCE].
+
+CITATION TRAIL:
+[[SCGAI-004]] → community “experiments” → what is an experimental prompt doing? → Kirsh & Maglio 1994 → epistemic/pragmatic action.
+
+TEST:
+Record expert sessions with think-aloud; identify executions users keep because they learned something despite disliking the artifact.
+
+PLATFORM:
+Generative AI prompting / MidJourney / LLMs / image models
+
+LINKS:
+[[SCGAI-004]]
+[[SCGAI-002]]
+
+BIBTEX:
+@article{kirsh1994distinguishing, author={Kirsh, David and Maglio, Paul}, title={On Distinguishing Epistemic from Pragmatic Action}, journal={Cognitive Science}, volume={18}, number={4}, pages={513--549}, year={1994}, doi={10.1207/s15516709cog1804_1}, url={https://doi.org/10.1207/s15516709cog1804_1}}
+
+ZETTEL
+
+ID:
+SCGAI-004-B
+
+TITLE:
+Prompt engineering may be adaptive folk theorization: a successful rule can become false while its words remain unchanged.
+
+SOURCE:
+Michael Ann DeVito — “Adaptive Folk Theorization as a Path to Algorithmic Literacy on Changing Platforms” — Proceedings of the ACM on Human-Computer Interaction 5(CSCW2), Article 339 — 2021 — https://doi.org/10.1145/3476080
+
+PASSAGE:
+[QUOTE] “Because platforms constantly change, users must constantly re-evaluate their folk theories.”
+
+RESEARCH OBJECT:
+[OUR INFERENCE] Prompt communities can be understood as adaptive folk theorists of opaque changing systems. Their product is a provisional causal belief: X seems to make the machine do Y—here, now, under these conditions.
+
+LOCAL MOVE:
+Replace PROMPT TIP AS STABLE TECHNIQUE with PROMPT RULE AS VERSION-DEPENDENT FOLK THEORY.
+
+SOURCE TERMS:
+folk theories; folk theorization; algorithmic literacy; platform change; causal powers; mechanistic fragments; experimentation
+
+WHAT BECAME STRANGE:
+A prompt rule can die without changing a character. Yesterday’s technique becomes today’s superstition when the platform changes beneath preserved words; prompt folklore can contain fossils of systems that no longer exist.
+
+QUESTION:
+How much contemporary prompt advice describes current behavior, and how much is fossilized knowledge from earlier model versions?
+
+DEEPER QUESTION:
+Can there be stable prompt expertise when the object is opaque and repeatedly altered without preserving the conditions under which knowledge was learned?
+
+MECHANISM:
+system behavior/change → observation/foraging → folk theorization → adaptation → further observation → theory revision; for models: M_t → heuristic H_t → update M_(t+1) → anomaly → H_(t+1).
+
+FORMAL SHIFT:
+RULE X→Y becomes temporally indexed hypothesis P(Y|X,M_t,C_t) appears elevated.
+
+SOURCE FORMALISM:
+DeVito describes complexity from basic awareness to causal powers, mechanistic fragments, and mechanistic ordering, and discusses endogenous testing versus exogenous information.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+PROMPT-FOSSIL = a circulating prompting rule whose originating system conditions no longer obtain but whose linguistic form continues to circulate.
+
+TENSION:
+DeVito studies algorithmically driven social platforms, not generative models; the transfer must be tested rather than assumed.
+
+MISSING:
+Version-aware histories of prompt advice linking a rule to the exact model/configuration under which it was learned.
+
+BOUNDARY:
+“Prompt fossil” and application to generative AI are [OUR INFERENCE], not DeVito’s terminology.
+
+CITATION TRAIL:
+[[SCGAI-004]] → community experiments without defining literature → DeVito 2021 → folk theories under platform change → distinguish experimental knowledge from ritual.
+
+TEST:
+Re-run falsifiable old prompt rules across archived/current versions and classify persistent, version-bound, reversed, absent, or untestable effects.
+
+PLATFORM:
+Opaque and changing algorithmic platforms / generative AI systems
+
+LINKS:
+[[SCGAI-004]]
+[[SCGAI-007]]
+
+BIBTEX:
+@article{devito2021adaptive, author={DeVito, Michael Ann}, title={Adaptive Folk Theorization as a Path to Algorithmic Literacy on Changing Platforms}, journal={Proceedings of the ACM on Human-Computer Interaction}, volume={5}, number={CSCW2}, articleno={339}, year={2021}, doi={10.1145/3476080}, url={https://doi.org/10.1145/3476080}}
+
+ZETTEL
+
+ID:
+SCGAI-003-A
+
+TITLE:
+Prompt history may not record the cognition; it may be part of the cognition.
+
+SOURCE:
+James Hollan, Edwin Hutchins, and David Kirsh — “Distributed Cognition: Toward a New Foundation for Human-Computer Interaction Research” — ACM TOCHI 7(2) — 2000 — pp. 174–196 — https://doi.org/10.1145/353485.353487
+
+PASSAGE:
+[QUOTE] “Processes may be distributed through time in such a way that the products of earlier events can transform the nature of later events.” (p. 176)
+
+RESEARCH OBJECT:
+Distributed cognition strengthens the move from final prompt to trajectory: earlier external products can participate in later cognition by changing the environment in which the next prompt is conceived.
+
+LOCAL MOVE:
+Replace PROMPT HISTORY AS PROVENANCE RECORD with PROMPT HISTORY AS ACTIVE COGNITIVE SUBSTRATE.
+
+SOURCE TERMS:
+distributed cognition; unit of analysis; external structure; distributed through time; products of earlier events; information trajectories
+
+WHAT BECAME STRANGE:
+Deleting history may remove part of the machinery by which the thinking was possible. The same final prompt accompanied by a different history can be a cognitively different object.
+
+QUESTION:
+Does access to prompt lineage change what users can infer, modify, or create even when the final prompt is identical?
+
+DEEPER QUESTION:
+Where should the prompting cognitive system end: user, user+model, user+model+history, or a temporally extended network of prior artifacts?
+
+MECHANISM:
+P0 → Y0 → interpretation0 → P1 → Y1 → …; each output alters the environment in which the next prompt is formulated.
+
+FORMAL SHIFT:
+HISTORY AS LOG(PAST) becomes HISTORY AS STATE(NOW).
+
+SOURCE FORMALISM:
+Distributed cognition examines processes across social members, between internal/external structures, and through time, where products of earlier events transform later events.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+GenerateNext=f(user_state,H_t,current_goal); removing H_t while preserving P_t can change the available computation.
+
+TENSION:
+History could genuinely support cognition or merely contain information experts have internalized; functional contribution must be demonstrated.
+
+MISSING:
+Controlled evidence separating usefulness of the final prompt from usefulness of its trajectory, including branching rather than flattened chronology.
+
+BOUNDARY:
+Distributed cognition does not imply every artifact is cognitive; inclusion requires a demonstrated functional relationship.
+
+CITATION TRAIL:
+[[SCGAI-003]] → prompts modify over time → [[SCGAI-007]] → distributed cognition → Hollan/Hutchins/Kirsh 2000 → test documentary versus constitutive lineage.
+
+TEST:
+Give matched groups the same final prompt, with or without full failed/branching history, then test transfer to a related task.
+
+PLATFORM:
+Iterative generative-AI interfaces / prompt history systems
+
+LINKS:
+[[SCGAI-003]]
+[[SCGAI-007]]
+
+BIBTEX:
+@article{hollan2000distributed, author={Hollan, James and Hutchins, Edwin and Kirsh, David}, title={Distributed Cognition: Toward a New Foundation for Human-Computer Interaction Research}, journal={ACM Transactions on Computer-Human Interaction}, volume={7}, number={2}, pages={174--196}, year={2000}, doi={10.1145/353485.353487}, url={https://doi.org/10.1145/353485.353487}}
+
+ZETTEL
+
+ID:
+SCGAI-008-A
+
+TITLE:
+Prompts could acquire patina: provenance can be made to look like wear on a tool.
+
+SOURCE:
+William C. Hill, James D. Hollan, Dave Wroblewski, and Tim McCandless — “Edit Wear and Read Wear” — CHI ’92 — 1992 — pp. 3–9 — https://doi.org/10.1145/142750.142751
+
+PASSAGE:
+[QUOTE] “We meant the displays of wear to foster sense-making out of otherwise unavailable data.” (p. 6)
+
+RESEARCH OBJECT:
+Hill et al. suggest a stranger provenance interface: do not put history somewhere else; put history on the object. [OUR INFERENCE] A prompt could acquire computational patina where copying, mutation, survival, and abandonment become perceptible at exact linguistic locations.
+
+LOCAL MOVE:
+Replace PROVENANCE AS METADATA with PROVENANCE AS MATERIAL PROPERTY OF THE PROMPT.
+
+SOURCE TERMS:
+wear; Edit Wear; Read Wear; authorship history; readership history; computational wear; shared artifact
+
+WHAT BECAME STRANGE:
+Digital text usually looks unworn no matter how many people have used it. Prompt wear could restore a forensic quality that physical tools acquire automatically.
+
+QUESTION:
+What would users learn if a prompt visibly showed where previous users copied, altered, executed, abandoned, or preserved it?
+
+DEEPER QUESTION:
+Does the frictionless visual cleanliness of digital text conceal socially important structure that physical wear would normally reveal?
+
+MECHANISM:
+ordinary use → interaction events → accumulated activity by location → visible wear → users interpret patterns → subsequent activity changes.
+
+FORMAL SHIFT:
+PROMPT: TEXT + EXTERNAL PROVENANCE LOG becomes HISTORY-ENRICHED PROMPT whose visible state expresses previous interaction.
+
+SOURCE FORMALISM:
+Edit Wear portrays authorship history; Read Wear portrays readership history; the systems map accumulated activity onto document positions.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+W(span)={executions,copies,insertions,deletions,mutations,descendants,authors,survival}; derive POLISH, ABRASION, SCAR, FOSSIL, FORK.
+
+TENSION:
+Visible history can enable learning and credit while intensifying surveillance, territorializing phrases, and making experimentation feel observed.
+
+MISSING:
+Which wear encodings inform rather than distract, what users consent to expose, and what granularity—prompt/line/phrase/word/token/operation—is addressable.
+
+BOUNDARY:
+Hill et al. study document interaction, not prompts. Prompt Wear is [OUR INFERENCE].
+
+CITATION TRAIL:
+[[SCGAI-008]] → contribution tracking → [[SCGAI-003]] → lineage → Hill et al. 1992 → Edit/Read Wear → prompt wear interface.
+
+TEST:
+Compare ledger provenance to wear-on-text provenance for identifying stable techniques, productive mutation points, disputed contributions, and privacy discomfort.
+
+PLATFORM:
+Prompt editors / collaborative generative-AI systems / lineage interfaces
+
+LINKS:
+[[SCGAI-008]]
+[[SCGAI-003]]
+
+BIBTEX:
+@inproceedings{hill1992editwear, author={Hill, William C. and Hollan, James D. and Wroblewski, Dave and McCandless, Tim}, title={Edit Wear and Read Wear}, booktitle={Proceedings of the SIGCHI Conference on Human Factors in Computing Systems}, pages={3--9}, year={1992}, publisher={Association for Computing Machinery}, doi={10.1145/142750.142751}, url={https://doi.org/10.1145/142750.142751}}
+
+ZETTEL
+
+ID:
+SCGAI-006-A
+
+TITLE:
+The prompt commons may not oppose private ownership; private benefit and collective revelation can be the same innovation process.
+
+SOURCE:
+Eric von Hippel and Georg von Krogh — “Open Source Software and the ‘Private-Collective’ Innovation Model: Issues for Organization Science” — Organization Science 14(2) — 2003 — pp. 209–223 — https://doi.org/10.1287/orsc.14.2.209.14992
+
+PASSAGE:
+[QUOTE] Open-source users “program to solve their own as well as shared technical problems, and freely reveal their innovations.”
+
+RESEARCH OBJECT:
+Private production and collective provision need not be opposites. [OUR INFERENCE] A user can solve a personal prompt problem, receive immediate private benefit, and still enlarge a shared repertoire by revealing the technique.
+
+LOCAL MOVE:
+Replace PRIVATE VERSUS COMMONS with PRIVATE-COLLECTIVE PRODUCTION.
+
+SOURCE TERMS:
+private investment; collective action; private-collective; innovation; users; freely reveal; public good
+
+WHAT BECAME STRANGE:
+Discovery may already have paid the contributor through use, learning, reputation, or problem-solving; disclosure does not necessarily surrender all private return.
+
+QUESTION:
+What private returns make voluntary prompt revelation rational even when anyone can copy the technique?
+
+DEEPER QUESTION:
+Are Mahdavi Goloujeh et al.’s orientations partly consequences of different appropriation structures rather than only different social values?
+
+MECHANISM:
+user problem → prompt experiment → privately useful discovery → immediate benefit → reveal → others reuse/modify → shared repertoire grows → descendants may return knowledge.
+
+FORMAL SHIFT:
+SHARING: PRIVATE VALUE → GIVE AWAY VALUE → COLLECTIVE VALUE becomes PRIVATE VALUE + PUBLIC DISCLOSURE + POSSIBLE RETURN FLOWS.
+
+SOURCE FORMALISM:
+von Hippel and von Krogh contrast private investment and collective action models and propose a private-collective model combining private investment with free revealing.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+R_i=private_use+learning+reputation+reciprocal_improvement+community_access−experiment_cost−disclosure_cost−lost_exclusivity.
+
+TENSION:
+Prompt commons operate atop proprietary models/platforms, so user/community value creation can simultaneously increase platform value capture.
+
+MISSING:
+An accounting separating creator, reuser, community, model-provider, platform benefits, and losses from surrendered exclusivity.
+
+BOUNDARY:
+Open-source software differs from prompts in inspectability, licensing, stability, governance, and control. Private-collective prompting is [OUR INFERENCE].
+
+CITATION TRAIL:
+[[SCGAI-006]] → “feed back into the ecosystem” → private-collective innovation → free revealing / user innovation literature.
+
+TEST:
+Compare withholding, anonymous sharing, attributed sharing, and lineage-tracked sharing for reuse, learning, reputation, exclusivity loss, and reciprocal improvement.
+
+PLATFORM:
+Generative-AI prompt communities / MidJourney / collaborative prompting systems
+
+LINKS:
+[[SCGAI-006]]
+[[SCGAI-008]]
+[[SCGAI-002]]
+
+BIBTEX:
+@article{vonhippel2003privatecollective, author={von Hippel, Eric and von Krogh, Georg}, title={Open Source Software and the ``Private-Collective'' Innovation Model: Issues for Organization Science}, journal={Organization Science}, volume={14}, number={2}, pages={209--223}, year={2003}, doi={10.1287/orsc.14.2.209.14992}, url={https://doi.org/10.1287/orsc.14.2.209.14992}}
+
+ZETTEL
+
+ID:
+WWP-20260817-01
+
+TITLE:
+The user no longer writes the prompt that actually runs.
+
+SOURCE:
+Michael Bolin — “Unrolling the Codex agent loop” — OpenAI — January 23, 2026 — https://openai.com/index/unrolling-the-codex-agent-loop/
+
+PASSAGE:
+[QUOTE] “As an end user, you don’t specify the prompt used to sample the model verbatim.”
+
+RESEARCH OBJECT:
+Current agent systems split USER UTTERANCE from EXECUTED PROMPT. The harness assembles a larger object containing instructions, tool definitions, environment constraints, conversation history, files/images, prior tool calls, and other state.
+
+LOCAL MOVE:
+Replace PROMPT = WHAT THE USER WROTE with PROMPT = ASSEMBLED EXECUTION CONTEXT.
+
+SOURCE TERMS:
+agent loop; prompt; instructions; tools; input; conversation history; context window; harness
+
+WHAT BECAME STRANGE:
+Natural-language programming appears immediate, yet the visible sentence is only one ingredient in an increasingly elaborate hidden compilation process.
+
+QUESTION:
+What transformations occur between the user’s visible utterance and the actual context sampled by the model?
+
+DEEPER QUESTION:
+If users cannot inspect the effective prompt, where should authorship and debugging attach: sentence, harness, tools, history, or composition?
+
+MECHANISM:
+USER INPUT → instructions + tools + environment + history + multimodal state → assembled context → model inference → tool/response → enlarged context → inference repeats.
+
+FORMAL SHIFT:
+PROMPT: USER_TEXT becomes EFFECTIVE_PROMPT: ASSEMBLE(USER_TEXT, INSTRUCTIONS, TOOLS, HISTORY, ENVIRONMENT, STATE).
+
+SOURCE FORMALISM:
+OpenAI describes the Codex agent loop as orchestration among user, model, and tools; the sampled input is assembled from multiple items rather than identical to the end-user message.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+VISIBLE_WORDS=U; EXECUTED_CONTEXT=C(U,H,T,I,E,S); U1=U2 does not imply C1=C2.
+
+TENSION:
+Prompt scholarship often analyzes visible strings while agent architectures locate causal power outside those strings.
+
+MISSING:
+A secure method for capturing the effective context actually presented during an agent execution.
+
+BOUNDARY:
+This architecture describes Codex/Responses-style agent loops and does not prove every generative system assembles context identically.
+
+CITATION TRAIL:
+[[SCGAI-007]] → prompting as socio-technical practice → current agent harnesses → visible prompt versus assembled model context.
+
+TEST:
+Hold the user utterance constant while varying tools, history, system instructions, files, environment, and memory one at a time; compare divergence with wording changes.
+
+PLATFORM:
+OpenAI Codex / Responses API / agent harnesses
+
+LINKS:
+[[SCGAI-007]]
+[[SCGAI-003]]
+
+BIBTEX:
+@misc{bolin2026codexloop, author={Bolin, Michael}, title={Unrolling the Codex Agent Loop}, organization={OpenAI}, year={2026}, url={https://openai.com/index/unrolling-the-codex-agent-loop/}}
+
+ZETTEL
+
+ID:
+WWP-20260817-02
+
+TITLE:
+The prompt has crossed the line from prose artifact to versioned software artifact.
+
+SOURCE:
+OpenAI — “Prompting” — OpenAI API Documentation — https://developers.openai.com/api/docs/guides/prompting — accessed 2026-08-17
+
+PASSAGE:
+[QUOTE] “Treat prompts as application code.”
+
+RESEARCH OBJECT:
+Production guidance makes a category move: prompts can live in named modules, receive typed inputs, accumulate tests/evaluations, retain git histories, pass review, receive release tags, and support rollback.
+
+LOCAL MOVE:
+Replace PROMPT DOCUMENT with PROMPT SOFTWARE OBJECT.
+
+SOURCE TERMS:
+application code; named modules; typed arguments; tests; fixtures; evaluation checks; git history; PR review; release tags; feature flags; rollback
+
+WHAT BECAME STRANGE:
+A prompt without its tests can resemble source code without its test suite; a prompt without its version may no longer identify a reproducible object.
+
+QUESTION:
+What is the minimum reproducible unit of a contemporary prompt practice?
+
+DEEPER QUESTION:
+If prompt changes are reviewed, tested, versioned, compared, and rolled back like program changes, what remains of the distinction between prompt text and program text?
+
+MECHANISM:
+PROMPT → named module → typed variables → fixtures/evals → revision → diff → review → deployment → observed behavior → rollback/next revision.
+
+FORMAL SHIFT:
+PROMPT=STRING becomes PROMPT_OBJECT={TEXT, INPUT_SCHEMA, TESTS, EVALS, VERSION, CHANGE_HISTORY, DEPLOYMENT_CONTEXT}.
+
+SOURCE FORMALISM:
+OpenAI recommends code-managed production prompts, typed/validated inputs, test/evaluation coverage, git history, review, release tags, and deployment controls.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+PROMPT_IDENTITY = CONTENT_HASH + TEST_SET + MODEL_TARGET + VERSION + DEPENDENCIES.
+
+TENSION:
+Version control captures textual ancestry more easily than conceptual ancestry: why a phrase entered, what failure it solved, or whose practice it borrowed.
+
+MISSING:
+A provenance representation for failure observed, source borrowed, model migration, user preference, evaluation regression, community discovery, and theoretical commitment.
+
+BOUNDARY:
+Production engineering guidance does not imply every casual or creative prompt needs software-development infrastructure.
+
+CITATION TRAIL:
+[[SCGAI-003]] → modification over time → [[SCGAI-008]] → contribution tracking → prompt-as-code guidance → prompt repositories as executable genealogies.
+
+TEST:
+Compare final-prompt-only versus prompt+commits+failed outputs+tests+rationales when a new practitioner must safely modify a mature prompt.
+
+PLATFORM:
+Production LLM applications / prompt repositories
+
+LINKS:
+[[SCGAI-003]]
+[[SCGAI-008]]
+
+BIBTEX:
+@misc{openai_prompting, author={{OpenAI}}, title={Prompting}, howpublished={OpenAI API Documentation}, url={https://developers.openai.com/api/docs/guides/prompting}, note={Accessed 2026-08-17}}
+
+ZETTEL
+
+ID:
+WWP-20260817-03
+
+TITLE:
+A sufficiently comprehensive prompt becomes an attractive nuisance.
+
+SOURCE:
+OpenAI — “Harness engineering: leveraging Codex in an agent-first world” — February 11, 2026 — https://openai.com/index/harness-engineering/
+
+PASSAGE:
+[QUOTE] “give Codex a map, not a 1,000-page instruction manual.”
+
+RESEARCH OBJECT:
+Current agent engineering challenges maximal prompt constitutions: giant instruction files consume scarce context, flatten priorities, become stale, and are hard to verify. A smaller navigational layer can route the system to maintained sources of truth.
+
+LOCAL MOVE:
+Replace PROMPT AS COMPLETE LAWBOOK with PROMPT AS ROUTING SURFACE.
+
+SOURCE TERMS:
+context; map; instruction manual; system of record; structured docs; stale rules; cross-links; freshness; verification
+
+WHAT BECAME STRANGE:
+Every successful correction creates pressure to append another invariant. Without subtraction, recursive prompt development can produce constitutional obesity: more knowledge, less guidance.
+
+QUESTION:
+When should a learned constraint remain in the active prompt, and when should it become an addressable external source?
+
+DEEPER QUESTION:
+Could prompt architecture be treated as an information-routing problem rather than a prose-writing problem?
+
+MECHANISM:
+failure → rule appended → context grows → priorities flatten → stale rules accumulate → retrieval precision falls → compensatory rules added; alternative: small control surface → retrieve relevant source → execute → validate.
+
+FORMAL SHIFT:
+MASTER PROMPT=Σ ALL KNOWN INSTRUCTIONS becomes CONTROL PROMPT=ROUTER(PURPOSE, INVARIANTS, SOURCE INDEX, RETRIEVAL RULES).
+
+SOURCE FORMALISM:
+OpenAI describes replacing a large AGENTS.md manual with a short map into a structured repository knowledge base/system of record.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+PROMPT SEDIMENTATION = accumulation of historically reasonable instructions until their coexistence reduces present intelligibility.
+
+TENSION:
+Genealogy requires remembering more than execution should necessarily read. ARCHIVE and ACTIVE PROMPT must separate without severing lineage.
+
+MISSING:
+A promotion/demotion rule deciding whether a correction becomes core invariant, conditional module, retrievable documentation, test, historical note, or obsolete fossil.
+
+BOUNDARY:
+The source concerns software-engineering agents; generalized prompt sedimentation is [OUR INFERENCE].
+
+CITATION TRAIL:
+[[SCGAI-003]] → prompt histories → [[SCGAI-004-B]] → stale folk rules → harness engineering → investigate dynamically loaded prompt constitutions.
+
+TEST:
+Compare a complete accumulated prompt, an aggressively shortened core, and a routed core+modules across a diverse evaluation suite.
+
+PLATFORM:
+Long-running agent systems / recursive prompt frameworks / repository agents
+
+LINKS:
+[[SCGAI-003]]
+[[SCGAI-004-B]]
+
+BIBTEX:
+@misc{openai2026harness, author={{OpenAI}}, title={Harness Engineering: Leveraging Codex in an Agent-First World}, year={2026}, url={https://openai.com/index/harness-engineering/}}
+
+ZETTEL
+
+ID:
+WWP-20260817-04
+
+TITLE:
+Long prompt work survives by leaving spoor outside the conversation.
+
+SOURCE:
+Anthropic — “Prompting best practices” — Claude Platform Documentation — https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices — accessed 2026-08-17
+
+PASSAGE:
+[QUOTE] “Review progress.txt, tests.json, and the git logs.”
+
+RESEARCH OBJECT:
+Work spanning context windows can externalize state into files, tests, scripts, and repository history so a fresh context reconstructs where the task stands. Continuity moves from retained conversation to recoverable environment.
+
+LOCAL MOVE:
+Replace MAKE THE MODEL REMEMBER with MAKE THE WORK REDISCOVERABLE.
+
+SOURCE TERMS:
+multiple context windows; tests.json; progress.txt; git logs; setup scripts; verification tools; filesystem; fresh context
+
+WHAT BECAME STRANGE:
+A fresh model context can possess continuity without possessing memory of the previous conversation. The agent forgets; the workspace remembers.
+
+QUESTION:
+What traces must work leave behind so a fresh agent can reconstruct operative state without inheriting the prior conversation?
+
+DEEPER QUESTION:
+Could prompt practice become deliberately amnesiac—periodically discarding conversation while preserving externally testable state?
+
+MECHANISM:
+CONTEXT1 performs work → commits artifacts/state/tests → context disappears → CONTEXT2 inspects workspace → reconstructs state → verifies → continues.
+
+FORMAL SHIFT:
+MEMORY=CONVERSATION HISTORY becomes MEMORY=RECONSTRUCT(ARTIFACTS, TESTS, LOGS, STATE_FILES, VERSION_HISTORY).
+
+SOURCE FORMALISM:
+Anthropic recommends structured tests, setup scripts, progress artifacts, git logs, verification tools, and explicit restart procedures for long-horizon work.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+ABIDING STATE = state preserved in the world rather than in the conversational subject.
+
+TENSION:
+External state improves robustness but can omit intention, uncertainty, tacit rationale, and rejected branches—precisely the genealogy from which later insight may arise.
+
+MISSING:
+Which state categories must survive: facts, goals, tests, failures, rationales, uncertainties, rejected branches, source provenance, social lineage?
+
+BOUNDARY:
+The source addresses agentic technical work; extension to research notebooks/zettel systems is [OUR INFERENCE].
+
+CITATION TRAIL:
+[[SCGAI-003]] → history modifies later prompting → long-running agent workflows → filesystem reconstruction → environmental memory.
+
+TEST:
+Run a multi-day task under full chat history, summary-only, and fresh-context+structured-workspace continuation; compare recovery and recurrent error.
+
+PLATFORM:
+Claude Code / agent workspaces / long-running research workflows
+
+LINKS:
+[[SCGAI-003]]
+[[SCGAI-004-A]]
+
+BIBTEX:
+@misc{anthropic_prompting_best_practices, author={{Anthropic}}, title={Prompting Best Practices}, howpublished={Claude Platform Documentation}, url={https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices}, note={Accessed 2026-08-17}}
+
+ZETTEL
+
+ID:
+WWP-20260817-05
+
+TITLE:
+Prompting can occur without words: preference itself is becoming executable.
+
+SOURCE:
+Midjourney — “Style Creator” — Official Documentation — https://docs.midjourney.com/hc/en-us/articles/41308374558221-Style-Creator — accessed 2026-08-17
+
+PASSAGE:
+[QUOTE] The text prompt used for previews “doesn’t guide the Style Creator itself.”
+
+RESEARCH OBJECT:
+Style Creator separates language from control: users repeatedly select preferred images, and selected/unselected examples refine a reusable style code. The text prompt can function as a probe for seeing the emerging style rather than the specification of that style.
+
+LOCAL MOVE:
+Replace PROMPTING = SAYING WHAT YOU WANT with PROMPTING = DIFFERENTIAL SELECTION AMONG POSSIBILITIES.
+
+SOURCE TERMS:
+Style Creator; Style Reference Code; sample styles; selection; refinement rounds; preview; prompt; style
+
+WHAT BECAME STRANGE:
+Words can become diagnostic rather than directive. The operative specification emerges from repeated acts of recognition that may never be linguistically articulated.
+
+QUESTION:
+What kinds of knowledge are easier to specify through repeated selection than through language?
+
+DEEPER QUESTION:
+Does natural-language programming represent only one species of a broader exemplar-programming phenomenon?
+
+MECHANISM:
+latent desired quality → candidates → human recognizes preferred instances → select/reject → system updates style representation → new candidates → repeated discrimination → reusable style code.
+
+FORMAL SHIFT:
+DESCRIPTION: WORDS → REPRESENTATION becomes OSTENSION: EXAMPLES → HUMAN DISCRIMINATION → LATENT REPRESENTATION.
+
+SOURCE FORMALISM:
+Midjourney presents sample images over refinement rounds and constructs a reusable --sref code; documentation distinguishes the preview prompt from the mechanism shaping the style.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+C_t → {LIKE_t, NOT_LIKE_t}; STYLE_t → UPDATE(LIKE_t,NOT_LIKE_t) → STYLE_(t+1).
+
+TENSION:
+Social-construction accounts foreground circulating prompt words; preference-trained style codes can make the socially legible linguistic artifact disappear.
+
+MISSING:
+Whether users can converge on similar executable styles while using radically different—or no stable—descriptive vocabulary.
+
+BOUNDARY:
+The source describes Midjourney Style Creator. “Exemplar programming” is [OUR FORMALIZATION — NOT SOURCE TERMINOLOGY].
+
+CITATION TRAIL:
+[[SCGAI-005]] → prompt as cultural operator → [[SCGAI-007]] → socio-technical practice → Style Creator → preference becomes executable → programming-by-example/tacit knowledge.
+
+TEST:
+Compare word-only, selection-only, and combined specification of an aesthetic target, then test transfer to unfamiliar subjects and verbalizability of the learned rule.
+
+PLATFORM:
+Midjourney Style Creator / generative image systems
+
+LINKS:
+[[SCGAI-005]]
+[[SCGAI-007]]
+
+BIBTEX:
+@misc{midjourney_style_creator, author={{Midjourney}}, title={Style Creator}, howpublished={Midjourney Documentation}, url={https://docs.midjourney.com/hc/en-us/articles/41308374558221-Style-Creator}, note={Accessed 2026-08-17}}
+
+ZETTEL
+
+ID:
+WWP-20260817-06
+
+TITLE:
+The prompt writer can disappear one level upward and write only the conditions from which prompts are generated.
+
+SOURCE:
+OpenAI — “Prompt generation” — OpenAI API Documentation — https://developers.openai.com/api/docs/guides/prompt-generation — accessed 2026-08-17
+
+PASSAGE:
+[PARAPHRASE] OpenAI’s Playground can generate prompts, functions, and schemas from a task description using meta-prompts and meta-schemas.
+
+RESEARCH OBJECT:
+Prompt engineering recursively consumes itself. HUMAN → TASK DESCRIPTION → META-PROMPT → GENERATED PROMPT → MODEL relocates durable work from operative wording toward goals, failure criteria, examples, evaluations, and invariants.
+
+LOCAL MOVE:
+Replace PROMPT AUTHORING with PROMPT COMPILATION.
+
+SOURCE TERMS:
+meta-prompt; prompt generation; schema generation; task description; best practices; optimization
+
+WHAT BECAME STRANGE:
+As systems improve at writing instructions, human expertise can migrate toward deciding what the instructions must accomplish rather than possessing special incantations.
+
+QUESTION:
+What remains irreducibly human in prompt engineering after the operative prompt itself is generated automatically?
+
+DEEPER QUESTION:
+Is the mature prompt engineer becoming more like a language designer who specifies conditions under which useful instructions can be synthesized?
+
+MECHANISM:
+TASK DESCRIPTION → META-PROMPT → CANDIDATE PROMPT → EVALUATION → revision/regeneration → production prompt.
+
+FORMAL SHIFT:
+AUTHOR: HUMAN→PROMPT becomes HUMAN→SPECIFICATION; COMPILER: MODEL→PROMPT.
+
+SOURCE FORMALISM:
+OpenAI documents meta-prompts for generating/improving prompts and meta-schemas for generating schemas from task descriptions.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+S → COMPILE(S) → {P1…Pn} → EVAL(Pi) → SELECT/MUTATE → P*; P* is disposable while S+EVAL may be durable.
+
+TENSION:
+Automatic generation can relocate rather than eliminate prompt engineering because the meta-prompt itself may need optimization.
+
+MISSING:
+The stopping condition: at what layer does specification become explicit enough that another meta-layer stops helping?
+
+BOUNDARY:
+The source documents tooling; the claim that specification+evaluation become the durable program is [OUR INFERENCE].
+
+CITATION TRAIL:
+[[SCGAI-004-A]] → epistemic intervention → automated prompt generation → meta-prompts → test examples+evals versus hand-authored strings.
+
+TEST:
+Compare hand-authored prompt, compiled task description, and task description+examples+evals under model migration; measure repair cost.
+
+PLATFORM:
+OpenAI Playground / automated prompt optimization systems
+
+LINKS:
+[[SCGAI-004-A]]
+[[SCGAI-003]]
+
+BIBTEX:
+@misc{openai_prompt_generation, author={{OpenAI}}, title={Prompt Generation}, howpublished={OpenAI API Documentation}, url={https://developers.openai.com/api/docs/guides/prompt-generation}, note={Accessed 2026-08-17}}
+
+ZETTEL
+
+ID:
+WWP-20260817-07
+
+TITLE:
+Memory becomes more controllable when it is given a name the model must carry.
+
+SOURCE:
+David Soria Parra and Den Delimarsky — “The 2026-07-28 Specification” — Model Context Protocol Blog — July 28, 2026 — https://blog.modelcontextprotocol.io/posts/2026-07-28/
+
+PASSAGE:
+[QUOTE] “the model can see the handle and thread it between tools.”
+
+RESEARCH OBJECT:
+The MCP design makes application state addressable through explicit handles passed as tool arguments. State can become more controllable when it ceases being invisible continuity and becomes an explicit object in the model’s manipulable world.
+
+LOCAL MOVE:
+Replace IMPLICIT SESSION MEMORY with ADDRESSABLE STATE OBJECTS.
+
+SOURCE TERMS:
+stateless protocol; handle; tool argument; request; state; multi round-trip requests; input_required; self-describing
+
+WHAT BECAME STRANGE:
+A tiny identifier can carry more durable continuity than thousands of remembered words. Language gains an operation of REFERENCE: words can point into persistent computational memory.
+
+QUESTION:
+When should a prompt carry state itself, and when should it carry stable references to state stored elsewhere?
+
+DEEPER QUESTION:
+Could future prompting increasingly consist of handles, IDs, links, schemas, selectors, and references rather than descriptive prose?
+
+MECHANISM:
+REQUEST1 → operation creates state → HANDLE h → later request contains h → server resolves h → state recovered/transformed.
+
+FORMAL SHIFT:
+STATE=hidden session continuity becomes STATE=EXPLICIT REFERENCE → RESOLVABLE OBJECT.
+
+SOURCE FORMALISM:
+The MCP specification update uses a stateless protocol core while allowing applications to mint explicit handles and pass them as later tool arguments.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+HANDLE h := ADDRESS(S); prompts can preserve h rather than serialize S; ZETTEL_ID/SOURCE_ID/TEST_ID can become computational handles.
+
+TENSION:
+Explicit IDs make lineage addressable and machine-operable, but the more meaning is dereferenced elsewhere, the less self-contained the linguistic artifact becomes.
+
+MISSING:
+A grammar for reference integrity when handles point to changed, deleted, forked, unauthorized, or obsolete state.
+
+BOUNDARY:
+MCP handles are an application-state mechanism; applying them to zettel lineage is [OUR FORMALIZATION — NOT SOURCE SYNTAX].
+
+CITATION TRAIL:
+[[SCGAI-008]] → provenance → [[SCGAI-003]] → histories → MCP explicit handles → identifiers as operational words.
+
+TEST:
+Implement a recursive research workflow with inline serialized state versus immutable external IDs; compare context size, lineage errors, recovery, branching, and auditability.
+
+PLATFORM:
+Model Context Protocol / agent architectures / recursive research systems
+
+LINKS:
+[[SCGAI-008]]
+[[SCGAI-003]]
+
+BIBTEX:
+@misc{soriaparra2026mcp, author={Soria Parra, David and Delimarsky, Den}, title={The 2026-07-28 Specification}, organization={Model Context Protocol}, year={2026}, url={https://blog.modelcontextprotocol.io/posts/2026-07-28/}}
+
+ZETTEL
+
+ID:
+WWP-20260817-08
+
+TITLE:
+The position of words now has an economic physics.
+
+SOURCE:
+OpenAI — “Prompt caching” — OpenAI API Documentation — https://developers.openai.com/api/docs/guides/prompt-caching — accessed 2026-08-17
+
+PASSAGE:
+[QUOTE] “Cache hits are only possible for exact prefix matches within a prompt.”
+
+RESEARCH OBJECT:
+Prompt order has infrastructural consequences independent of semantics. Stable material at the beginning and variable material later can change latency and cost even if intended meaning is unchanged.
+
+LOCAL MOVE:
+Replace PROMPT AS SEMANTIC SEQUENCE with PROMPT AS SEMANTIC + ECONOMIC TOPOLOGY.
+
+SOURCE TERMS:
+prompt caching; exact prefix; static content; variable content; cache breakpoint; cached tokens; tool definitions; schemas
+
+WHAT BECAME STRANGE:
+Moving a timestamp can alter computational reuse even if interpretation stays constant. The textual surface contains invisible zones of different infrastructural value.
+
+QUESTION:
+How should prompt architecture change when semantic organization and cache-efficient organization disagree?
+
+DEEPER QUESTION:
+Will economic pressure create prompt literary forms—stable constitutional preambles followed by volatile local material?
+
+MECHANISM:
+repeated prefix P → cached; next request exact prefix P → reuse; early difference → shared prefix shrinks → more computation repeated.
+
+FORMAL SHIFT:
+PROMPT ORDER evaluated by MEANING becomes MEANING + ATTENTION + CACHEABILITY + LATENCY + COST.
+
+SOURCE FORMALISM:
+OpenAI states cache reuse depends on exact repeated prefixes and recommends stable instructions/examples/reference/tool schemas before variable content.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+PROMPT=[BEDROCK|SEDIMENT|WEATHER], ordered from rarely changing invariants to ephemeral request state.
+
+TENSION:
+Caching rewards foundational stability while recursive research may need to revise foundational assumptions. Cheap prompts may become epistemically conservative.
+
+MISSING:
+Whether caching economics measurably shapes real production prompt prose and discourages revision of early assumptions.
+
+BOUNDARY:
+Caching behavior is implementation-specific; prompt geology and epistemic conservatism are [OUR INFERENCE].
+
+CITATION TRAIL:
+[[SCGAI-003]] → history → prompt-as-code → exact-prefix caching → prompt architecture acquires computational economics.
+
+TEST:
+Compare semantically equivalent frequently-edited-prefix, stable-prefix+mutable-suffix, and modular-retrieved architectures at scale.
+
+PLATFORM:
+OpenAI API / cached LLM inference systems
+
+LINKS:
+[[SCGAI-003]]
+[[SCGAI-008]]
+
+BIBTEX:
+@misc{openai_prompt_caching, author={{OpenAI}}, title={Prompt Caching}, howpublished={OpenAI API Documentation}, url={https://developers.openai.com/api/docs/guides/prompt-caching}, note={Accessed 2026-08-17}}
+
+ZETTEL
+
+ID:
+WWP-20260817-09
+
+TITLE:
+A prompt can become obsolete while remaining perfectly preserved.
+
+SOURCE:
+Midjourney — “Version” — Official Documentation — https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version — accessed 2026-08-17
+
+PASSAGE:
+[QUOTE] “V8.2 released as the default version on July 24, 2026.”
+
+RESEARCH OBJECT:
+The same text can be executed against materially different generative systems across short spans of time. Preserved words do not preserve the operative environment.
+
+LOCAL MOVE:
+Replace PROMPT ARCHIVING with PROMPT + EXECUTION ENVIRONMENT ARCHIVING.
+
+SOURCE TERMS:
+Version; V8.1; V8.2; default version; prompt adherence; Personalization; parameters; compatibility
+
+WHAT BECAME STRANGE:
+A perfect textual archive can fail to preserve the work. The linguistic artifact remains stable while its execution semantics drift beneath it.
+
+QUESTION:
+What metadata is required before an archived prompt can legitimately be called reproducible?
+
+DEEPER QUESTION:
+Are prompts more like recipes or like specimens whose behavior depends on an environment that must also be preserved?
+
+MECHANISM:
+PROMPT P + MODEL M1 + SETTINGS S1 → distribution D1; later same P + M2 + S2 → D2.
+
+FORMAL SHIFT:
+PROMPT IDENTITY=TEXT becomes EXECUTION IDENTITY={TEXT, MODEL_VERSION, PARAMETERS, PERSONALIZATION, REFERENCES, DATE, TOOLCHAIN}.
+
+SOURCE FORMALISM:
+Midjourney exposes explicit model-version selection and documents changing defaults/compatibility across versions.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+PROMPT FOSSIL=P preserved while ENV(P)_original no longer exists; resurrection requires P + sufficiently reconstructed ENV(P).
+
+TENSION:
+Declared version labels may not capture hidden changes in infrastructure, moderation, personalization, preprocessing, or sampling.
+
+MISSING:
+The smallest “execution capsule” sufficient to rerun an old prompt practice with meaningful fidelity.
+
+BOUNDARY:
+Midjourney explicitly exposes model versions; other platforms may version/update differently.
+
+CITATION TRAIL:
+[[SCGAI-004-B]] → adaptive folk theorization → prompt fossils → current version turnover → execution-environment preservation.
+
+TEST:
+Run prompts documented under an earlier version across that and later versions while holding exposed parameters constant; measure technique survival.
+
+PLATFORM:
+Midjourney / versioned generative models
+
+LINKS:
+[[SCGAI-004-B]]
+
+BIBTEX:
+@misc{midjourney_version, author={{Midjourney}}, title={Version}, howpublished={Midjourney Documentation}, url={https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version}, note={Accessed 2026-08-17}}
+
+ZETTEL
+
+ID:
+FIELD-20260817-01
+
+TITLE:
+The minimal reproducible prompt is a receipt for an execution event, not a string.
+
+SOURCE:
+MULTISOURCE — Mahdavi Goloujeh, Sullivan & Magerko 2024; Bolin/OpenAI 2026; Midjourney Version docs 2026. SOURCE URLs: https://doi.org/10.1145/3613905.3650947 ; https://openai.com/index/unrolling-the-codex-agent-loop/ ; https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version
+
+PASSAGE:
+[OUR INFERENCE] The string is one field in a larger execution event. Social ancestry, assembled runtime context, model/version, parameters, and lineage can change while the visible words remain identical.
+
+RESEARCH OBJECT:
+The field converges on a new reproducibility unit: a PROMPT RECEIPT. It is not a transcript of everything. It is an addressable record of enough execution conditions and lineage to say what ran, where it ran, what it could see, what it produced, and what evidence motivated the next change.
+
+LOCAL MOVE:
+Replace PROMPT PRESERVATION with EXECUTION-RECEIPT PRESERVATION.
+
+SOURCE TERMS:
+social construction; prompt history; effective prompt; version; execution environment; provenance; reproducibility
+
+WHAT BECAME STRANGE:
+Two identical prompt strings can be different research objects because they inherit different social histories, hidden context assemblies, model versions, tools, and tests. Conversely, two different strings can be instances of the same higher-level specification.
+
+QUESTION:
+What is the smallest receipt that lets another researcher materially reconstruct a prompt execution without pretending inaccessible hidden state is known?
+
+DEEPER QUESTION:
+Should prompt scholarship cite execution events rather than strings, in the way experimental work cites apparatus and conditions rather than only instructions?
+
+MECHANISM:
+VISIBLE INPUT + INSTRUCTION REFERENCES + HISTORY REFERENCES + TOOL SCHEMAS + MODEL/VERSION + EXPOSED PARAMETERS + TIMESTAMP + OUTPUT + LINEAGE + EVALUATION → reconstructable execution event.
+
+FORMAL SHIFT:
+PROMPT_IDENTITY=TEXT becomes EXECUTION_EVENT_IDENTITY=RECEIPT(TEXT, CONTEXT_REFS, ENVIRONMENT, MODEL, PARAMETERS, OUTPUT, LINEAGE, EVALUATION).
+
+SOURCE FORMALISM:
+Mahdavi et al. provide social circulation/lineage; Bolin describes assembled agent context beyond verbatim user input; Midjourney documents version-dependent execution. “Prompt receipt” is not source terminology.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+RECEIPT r={visible_input, instruction_set_ref, history_ref, tool_schema_ref, environment_ref, model_version, exposed_params, platform, timestamp, output_ref, lineage_refs, evaluation}. Sufficiency is relative to a reconstruction goal.
+
+TENSION:
+Richer receipts increase reproducibility and provenance while also increasing privacy, security, and proprietary-context exposure. A complete receipt may be neither possible nor desirable.
+
+MISSING:
+Empirical ablation determining which receipt fields materially change reconstruction accuracy for different prompt tasks.
+
+BOUNDARY:
+PROMPT RECEIPT is compiler synthesis. It should not be attributed to any source and must remain explicitly provisional.
+
+CITATION TRAIL:
+[[WWP-20260817-01]] → effective prompt exceeds visible words → [[WWP-20260817-09]] → preserved text can drift across versions → [[SCGAI-003]] / [[SCGAI-008]] → lineage and provenance → prompt receipt.
+
+TEST:
+Reconstruction ablation: give independent agents progressively richer bundles—string only; string+model; +params; +history; +tools; +lineage; +tests—and measure ability to reproduce behavior and explain changes.
+
+PLATFORM:
+Cross-platform generative AI / prompt archives / agent systems
+
+LINKS:
+[[WWP-20260817-01]]
+[[WWP-20260817-09]]
+[[SCGAI-003]]
+[[SCGAI-008]]
+
+BIBTEX:
+@inproceedings{mahdavigoloujeh2024social, author={Mahdavi Goloujeh, Atefeh and Sullivan, Anne and Magerko, Brian}, title={The Social Construction of Generative AI Prompts}, year={2024}, doi={10.1145/3613905.3650947}}
+@misc{bolin2026codexloop, author={Bolin, Michael}, title={Unrolling the Codex Agent Loop}, organization={OpenAI}, year={2026}, url={https://openai.com/index/unrolling-the-codex-agent-loop/}}
+@misc{midjourney_version, author={{Midjourney}}, title={Version}, year={2026}, url={https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version}}
+
+ZETTEL
+
+ID:
+FIELD-20260817-02
+
+TITLE:
+Prompt expertise is migrating from phrasing toward environment design, tests, and evaluative judgment.
+
+SOURCE:
+MULTISOURCE — OpenAI Prompting; OpenAI Prompt Generation; OpenAI Harness Engineering; Kirsh & Maglio 1994. SOURCE URLs: https://developers.openai.com/api/docs/guides/prompting ; https://developers.openai.com/api/docs/guides/prompt-generation ; https://openai.com/index/harness-engineering/ ; https://doi.org/10.1207/s15516709cog1804_1
+
+PASSAGE:
+[OUR INFERENCE] When systems can generate operative prompts, route to external instructions, and be judged by evaluations, durable expertise moves toward specifying goals, constructing tests, shaping environments, and interpreting failures.
+
+RESEARCH OBJECT:
+The field suggests a role transition. “Prompt engineer” becomes less a specialist in phrasing and more an engineer of conditions under which useful language is generated, executed, inspected, and revised.
+
+LOCAL MOVE:
+Replace PROMPT CRAFT with SPECIFICATION + HARNESS + EVALUATION DESIGN.
+
+SOURCE TERMS:
+application code; meta-prompt; harness; tests; evaluations; epistemic action; routing
+
+WHAT BECAME STRANGE:
+The more competent models become at writing prompts, the less special the final wording may be. Expertise can survive automation by moving one level upward into what counts as success and what evidence changes the specification.
+
+QUESTION:
+Which prompt-expertise skills remain predictive of performance after candidate prompt text is machine-generated?
+
+DEEPER QUESTION:
+Is the new programming unit a loop of specification, generation, inspection, correction, and evaluation rather than a linguistic instruction?
+
+MECHANISM:
+GOAL → SPECIFICATION → generated/routed instruction → execution → output-as-artifact/evidence → evaluation → failure classification → specification update.
+
+FORMAL SHIFT:
+HUMAN WRITES PROMPT becomes HUMAN DESIGNS THE SEARCH/EVALUATION SPACE IN WHICH PROMPTS ARE PRODUCED.
+
+SOURCE FORMALISM:
+The sources separately support prompt-as-code, prompt generation, routed repository guidance, and epistemic actions. Their combination is compiler synthesis.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+PROGRAM = (SPEC, HARNESS, EVAL, UPDATE_RULE); PROMPT_t = COMPILE(PROGRAM, STATE_t).
+
+TENSION:
+If higher-level specifications are themselves natural-language prompts, recursion can merely relocate fragility rather than eliminate it.
+
+MISSING:
+Comparative studies separating benefits from better phrasing, better examples, better tests, better tools, and better failure diagnosis.
+
+BOUNDARY:
+This is a cross-source synthesis, not a consensus claim from the cited works.
+
+CITATION TRAIL:
+[[WWP-20260817-06]] → generated prompts → [[WWP-20260817-02]] → prompt-as-code → [[WWP-20260817-03]] → routing → [[SCGAI-004-A]] → outputs as evidence.
+
+TEST:
+Hold a task constant and independently vary human phrase-craft, machine-generated prompts, evaluation quality, and harness quality; measure which interventions survive model migration.
+
+PLATFORM:
+LLM applications / agent harnesses / prompt optimization
+
+LINKS:
+[[WWP-20260817-06]]
+[[WWP-20260817-02]]
+[[WWP-20260817-03]]
+[[SCGAI-004-A]]
+
+BIBTEX:
+@misc{openai_prompting, author={{OpenAI}}, title={Prompting}, url={https://developers.openai.com/api/docs/guides/prompting}}
+@misc{openai_prompt_generation, author={{OpenAI}}, title={Prompt Generation}, url={https://developers.openai.com/api/docs/guides/prompt-generation}}
+@misc{openai2026harness, author={{OpenAI}}, title={Harness Engineering: Leveraging Codex in an Agent-First World}, year={2026}, url={https://openai.com/index/harness-engineering/}}
+@article{kirsh1994distinguishing, author={Kirsh, David and Maglio, Paul}, title={On Distinguishing Epistemic from Pragmatic Action}, year={1994}, doi={10.1207/s15516709cog1804_1}}
+
+ZETTEL
+
+ID:
+FIELD-20260817-03
+
+TITLE:
+The archive and the active prompt must diverge: remember everything, load selectively.
+
+SOURCE:
+MULTISOURCE — OpenAI Harness Engineering; Anthropic Prompting Best Practices; OpenAI Prompt Caching. SOURCE URLs: https://openai.com/index/harness-engineering/ ; https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices ; https://developers.openai.com/api/docs/guides/prompt-caching
+
+PASSAGE:
+[OUR INFERENCE] Durable prompt practice needs two different stores: a rich archive that preserves genealogy and an active context that retrieves only the evidence and constraints relevant to the current execution.
+
+RESEARCH OBJECT:
+Recursive prompt work has an information-architecture problem. If every correction remains inline, the prompt sediments. If corrections are discarded, genealogy vanishes. The solution is not a perfect master prompt but a separation between preserved field state and selectively hydrated execution state.
+
+LOCAL MOVE:
+Split PROMPT MEMORY into ARCHIVAL MEMORY and ACTIVE CONTEXT.
+
+SOURCE TERMS:
+map; source of truth; fresh context; progress files; git logs; exact prefix; stable content; retrieval
+
+WHAT BECAME STRANGE:
+Faithful preservation and efficient execution have opposite appetites. The archive wants surplus; the active prompt wants discrimination.
+
+QUESTION:
+What retrieval rule selects enough archived knowledge to prevent repeated mistakes without reintroducing prompt sedimentation?
+
+DEEPER QUESTION:
+Can forgetting be made a controlled operation rather than an accidental loss of context?
+
+MECHANISM:
+ARCHIVE A_t preserves evidence/history → task q arrives → RETRIEVE(A_t,q) → ACTIVE CONTEXT C_t ⊂ A_t → execution → result/evaluation → archive update.
+
+FORMAL SHIFT:
+ONE EVER-GROWING PROMPT becomes TWO-LAYER MEMORY: IMMUTABLE/RICH ARCHIVE + TASK-SPECIFIC HYDRATED CONTEXT.
+
+SOURCE FORMALISM:
+OpenAI recommends a map into maintained repository knowledge; Anthropic recommends external artifacts for reconstruction across fresh contexts; prompt caching rewards stable prefixes. The two-layer architecture is compiler synthesis.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+A_t = all preserved evidence; C_t = RETRIEVE(A_t, goal_t, risk_t, budget_t), C_t ⊂ A_t. CONTEXT RECALL DEBT = archived evidence omitted from C_t that would have changed the execution materially.
+
+TENSION:
+Selective retrieval creates a new failure: the archive can preserve the right correction while the active context fails to recall it. Preservation alone does not produce continuity.
+
+MISSING:
+A measurable criterion for context recall debt and a retrieval policy for contradictions, old failures, and model-version-specific rules.
+
+BOUNDARY:
+The two-layer architecture and “context recall debt” are [OUR FORMALIZATION], not source terminology.
+
+CITATION TRAIL:
+[[WWP-20260817-03]] → map not manual → [[WWP-20260817-04]] → externalized state → [[WWP-20260817-08]] → stable/variable topology → archive/active-context split.
+
+TEST:
+Seed an archive with known critical corrections, then vary retrieval policies. Measure repeated-error rate and identify cases where omitted archived evidence would have prevented failure.
+
+PLATFORM:
+Long-running research agents / prompt repositories / recursive zettel systems
+
+LINKS:
+[[WWP-20260817-03]]
+[[WWP-20260817-04]]
+[[WWP-20260817-08]]
+
+BIBTEX:
+@misc{openai2026harness, author={{OpenAI}}, title={Harness Engineering: Leveraging Codex in an Agent-First World}, year={2026}, url={https://openai.com/index/harness-engineering/}}
+@misc{anthropic_prompting_best_practices, author={{Anthropic}}, title={Prompting Best Practices}, url={https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices}}
+@misc{openai_prompt_caching, author={{OpenAI}}, title={Prompt Caching}, url={https://developers.openai.com/api/docs/guides/prompt-caching}}
+
+ZETTEL
+
+ID:
+FIELD-20260817-04
+
+TITLE:
+Prompt lineage is an epistemic apparatus, not merely an authorship ledger.
+
+SOURCE:
+MULTISOURCE — Mahdavi Goloujeh, Sullivan & Magerko 2024; Hollan, Hutchins & Kirsh 2000; Hill et al. 1992. SOURCE URLs: https://doi.org/10.1145/3613905.3650947 ; https://doi.org/10.1145/353485.353487 ; https://doi.org/10.1145/142750.142751
+
+PASSAGE:
+[OUR INFERENCE] A lineage becomes epistemic when its diffs, failures, reasons, and results alter what a later user can infer—not merely when it tells who contributed what.
+
+RESEARCH OBJECT:
+The field separates two provenance functions that are often collapsed. CREDIT PROVENANCE answers who contributed. EPISTEMIC PROVENANCE answers what changed, why it changed, what evidence motivated the change, and what happened afterward.
+
+LOCAL MOVE:
+Replace LINEAGE AS AUTHORSHIP LEDGER with LINEAGE AS EXPERIMENTAL APPARATUS.
+
+SOURCE TERMS:
+prompt modification; distributed through time; edit wear; provenance; contribution; history; evidence
+
+WHAT BECAME STRANGE:
+A version edge can carry more knowledge than either endpoint. “Added this phrase because output X failed test Y under model Z” is an experimental observation compressed into a transition.
+
+QUESTION:
+What information must a prompt diff preserve before it can teach rather than merely attribute?
+
+DEEPER QUESTION:
+Could a prompt repository become a cumulative experimental science if every mutation preserved reason, evidence, result, and uncertainty?
+
+MECHANISM:
+VERSION_i + observed failure/evidence → motivated diff Δ_i → VERSION_i+1 → execution → result/evaluation; future users inspect transition rather than only endpoint.
+
+FORMAL SHIFT:
+EDGE=(author,time,diff) becomes EPISTEMIC_EDGE=(reason,evidence,diff,result,confidence,environment).
+
+SOURCE FORMALISM:
+Mahdavi et al. show modification/credit are socially consequential; Hollan et al. show earlier products can transform later cognition; Hill et al. make interaction histories perceptible on artifacts. Epistemic provenance is compiler synthesis.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+EDGE_i={from,to,actor,reason,evidence_ref,diff,result_ref,test_ref,environment_ref,confidence}; a lineage is a graph of hypotheses and interventions, not only versions.
+
+TENSION:
+More detailed provenance can improve learning while increasing surveillance, ownership claims, burden of annotation, and privacy risk.
+
+MISSING:
+Evidence that reason/evidence/result-enriched diffs improve transfer enough to justify their capture cost.
+
+BOUNDARY:
+The cited sources support components of the mechanism, not the proposed schema as a whole.
+
+CITATION TRAIL:
+[[SCGAI-003]] → prompts modify over time → [[SCGAI-003-A]] → temporal products transform later cognition → [[SCGAI-008-A]] → visible interaction history → epistemic provenance.
+
+TEST:
+Give users identical final prompts with (A) attribution-only history, (B) raw diffs, or (C) reason+evidence+result enriched diffs; test prediction, debugging, and transfer.
+
+PLATFORM:
+Prompt repositories / collaborative AI workspaces / research archives
+
+LINKS:
+[[SCGAI-003]]
+[[SCGAI-003-A]]
+[[SCGAI-008-A]]
+[[SCGAI-008]]
+
+BIBTEX:
+@inproceedings{mahdavigoloujeh2024social, author={Mahdavi Goloujeh, Atefeh and Sullivan, Anne and Magerko, Brian}, title={The Social Construction of Generative AI Prompts}, year={2024}, doi={10.1145/3613905.3650947}}
+@article{hollan2000distributed, author={Hollan, James and Hutchins, Edwin and Kirsh, David}, title={Distributed Cognition: Toward a New Foundation for Human-Computer Interaction Research}, year={2000}, doi={10.1145/353485.353487}}
+@inproceedings{hill1992editwear, author={Hill, William C. and Hollan, James D. and Wroblewski, Dave and McCandless, Tim}, title={Edit Wear and Read Wear}, year={1992}, doi={10.1145/142750.142751}}

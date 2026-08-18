@@ -1,0 +1,66 @@
+VERIFICATION — JOSHUA ATTUNEMENT 20260817-2254ET
+
+SOURCE / CONTEXT COVERAGE
+Current checkpoint preserves the inherited Joshua field plus the newly supplied Office Hours and bugs/quirks screenshots and current assembly prompt. It does not contain a complete chat export.
+
+EXTRACTION / PAYLOAD IDENTITY
+Root zettels: 31
+_MD mirrors: 31
+JSON records: 31
+Mirror mismatches: 0 []
+
+DUPLICATES / ID COLLISIONS
+Exact payload duplicates: 0 []
+Original ID collisions: 0 {}
+
+PLATFORM / LINKS / ADDRESSES
+MEMBER_OF records: 104
+LINKS_TO records: 100
+WIKILINKS_TO records: 58
+All [[ADDRESS]] occurrences: 158
+Classified address relations: 158
+Address reconciliation: PASS
+
+GHOSTS / AMBIGUITIES / BROKEN REFERENCES
+Ghost count: 17
+Ghosts: CALLSHOT-20260817-01, CALLSHOT-20260817-02, CALLSHOT-20260817-03, CALLSHOT-20260817-04, CALLSHOT-20260817-05, CALLSHOT-20260817-06, CALLSHOT-20260817-07, CALLSHOT-20260817-08, CALLSHOT-20260817-09, MJ-JOSHUA-001, MJ-JOSHUA-001-A, MJ-JOSHUA-002-A, MJ-JOSHUA-006, MJ-JOSHUA-007-A, MJ-JOSHUA-009, MJ-JOSHUA-013, MJ-JOSHUA-018
+Office Hours audio/transcript: MISSING. David Holz answer: UNKNOWN.
+
+INQUIRY LINEAGE
+New explicit lineages are documented in 000__LINEAGE.txt and carried in LINKS/CITATION TRAIL. No parenthood was inferred solely from similarity.
+
+BIBLIOGRAPHY / RESOURCES
+BibTeX keys: 14
+Paper citekeys: ['ChangEtAl2023PromptArtists', 'Chung2020Originality', 'DonYehiyaChoshenAbend2023', 'Fraser2024Forget', 'KirshMaglio1994', 'Larson2022', 'Legge1891Taoism', 'PirolliCard1999']
+Paper citekeys subset of BibTeX: PASS
+New web sources are LINK_ONLY receipts; webpage bodies are not falsely claimed as local.
+
+PROMPT PRESERVATION
+SLIPCASE_FINAL_PROMPT.txt SHA-256: a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a
+Prompt mirror under _PROMPTS: PRESENT.
+
+INDEX RECONSTRUCTION
+index.html embeds all 31 parsed zettel records plus relation/resource state and uses no external JS/CSS dependencies. Browser interaction was not mechanically executed.
+
+PAPER EVIDENCE COVERAGE
+Source map: PRESENT
+PDF: mastery-without-sovereignty__WIP-v15.55-a5ef0e2e__2026-08-17__2254ET.pdf
+Pages: 7
+Compile: pdflatex x2 PASS
+Render inspection: pages 1, 4, 7 checked at 160 dpi; no clipping, black squares, broken glyphs, or repeated disclosure observed.
+First-page-only disclosure: PASS.
+
+PACKAGE STRUCTURE
+Active scholarly paper at root: 1 (mastery-without-sovereignty__WIP-v15.55-a5ef0e2e__2026-08-17__2254ET.pdf)
+Prior paper artifacts preserved under _RESOURCES/PREVIOUS_*.
+Manifest and ZIP integrity reported after final packaging.
+
+KNOWN GAPS
+- Exact Office Hours wording/audio and David Holz response unavailable.
+- Screenshot date for Joshua bugs/quirks reply unresolved.
+- “Bug” is Joshua's practitioner term; engineering classification unverified.
+- No claim of Zhuangzi → Midjourney historical influence is verified.
+
+ZIP INTEGRITY
+Final archive tested with unzip -t: PASS (no compressed-data errors).
+ZIP SHA-256 is stored beside the archive as slipcase_joshua_attunement_20260817_2254.zip.sha256 so the archive does not recursively contain its own digest.

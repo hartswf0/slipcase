@@ -1,0 +1,449 @@
+\thispagestyle{empty}
+
+\begin{center}
+{\LARGE\bfseries The Specification Comes After the Shot\par}
+\vspace{0.4em}
+{\large Partial Intention, Deferred Specification, and Direction Under Generative Uncertainty\par}
+\vspace{1.2em}
+{\normalsize Watson Hartsoe\par}
+\vspace{0.25em}
+{\small Working Paper · August 18, 2026\par}
+\end{center}
+
+\vspace{1.2em}
+
+\noindent\textbf{Abstract.}
+Accounts of generative AI often begin with an intention already sufficiently formed to be expressed: a user knows what she wants, translates that intention into a prompt, and evaluates whether a model has executed the description faithfully. An October 2022 interview with the designer and early Midjourney practitioner Martina describes a harder order. Martina repeatedly distinguishes having an idea from having a scene in mind. She can begin while important properties of the intended artifact remain unavailable as explicit criteria. Generation then does more than realize a prior specification. It can expose an omitted variable, instantiate an unwanted default, introduce an unanticipated feature worth retaining, or make a previously unavailable distinction consequential. This paper calls that process \emph{deferred specification}: execution begins before the conditions of successful execution are fully articulated, and attempted realizations participate in producing those conditions. Martina's evolving prompt template makes this history unusually visible. Built from public examples, trial and error, remembered failures, model-specific vocabulary, and repeated discoveries about what must be made explicit, the template becomes an external memory of distinctions that earlier encounters taught her to preserve. The argument is deliberately narrower than the claim that generative AI creates a wholly new form of design. Work on sketching, reflective practice, situated action, epistemic action, and distributed cognition shows that purposive action has long exceeded prior plans and that external representations can participate in thought. What generative systems may intensify is the production of richly determined candidate states from comparatively thin descriptions, at a speed that shifts practical scarcity toward judgment. This yields a more precise account of direction: not exhaustive foreknowledge of a destination, but accountable continuity in deciding which differences should govern the next state. The resulting leadership question is not whether leaders can write better prompts. It is how an intention can remain answerable for a trajectory whose representation, specification, and even some criteria of success become more determinate through the trajectory itself.
+
+\vspace{0.7em}
+\noindent\textbf{Keywords:} generative AI; design cognition; intention; specification; prompting; epistemic action; judgment; human--AI interaction
+
+\vfill
+\begin{flushright}
+\includegraphics[width=0.42in]{MARK.pdf}\\[-0.15em]
+{\scriptsize AI-augmented working paper}\\[-0.2em]
+{\scriptsize Research and assembly record: Appendix A · SOURCE\_MAP · 000\_\_RETURN\_PATH.txt}
+\end{flushright}
+\newpage
+
+# 1. The problem begins before the prompt
+
+There is a sentence in Martina's 2022 interview that should not be repaired too quickly. Asked about what she contributed to an image generated with Midjourney, she says: “I just had the idea. I just imagined how it would be but I don't even imagine it.” She then sharpens the distinction: “I have like this thought of this, but I don't have like this scenario built on my mind” (Martina 2022, 17:56). Elsewhere she puts the problem more starkly: “I'm very conceptual, but there's nothing there. It's just thoughts. And my journey actually makes the images and it constructs this environment and this whole thing” (33:34).
+
+The difficulty of these sentences is analytically useful. Martina is not saying that she approaches the system without intention. Across the interview she has projects, stories, aesthetic preferences, judgments, and reasons for rejecting results. She can distinguish a “proper result” from something “super messy.” She can dislike an image even when she could not have drawn the alternative herself. She can become bored by a recurring Midjourney aesthetic even when she did not specify an alternative style. What she denies is narrower and stranger: possession of a complete scene before action begins.
+
+That distinction matters because a common picture of prompting quietly assumes more determinacy upstream. The user first has a sufficiently complete intention, then describes it, then receives an output, then judges fidelity. On that picture, failures are failures of translation or execution: the user knew what she meant but said it poorly, or the system failed to follow what she said. Martina's account requires another possibility. She can know enough to begin before she knows enough to provide a complete representation of success.
+
+The relevant opposition is therefore not intention versus no intention. It is \emph{direction versus complete representation}. A person may know toward what without yet knowing exactly what. That condition is common enough in design, writing, research, and organizational action that it should not be made mysterious. The unusual feature of generative systems is that this incomplete state can nevertheless be made computationally productive: a partial linguistic intervention can solicit a concrete candidate richer than the representation that initiated it.
+
+Goldschmidt's work on architectural sketching helps guard against the assumption that an external image must copy an internal one. Her account of sketching emphasizes that designers can create visual displays that help induce images of what is being designed rather than merely externalize images already held in mind (Goldschmidt 1991). Schön's reflective account of design similarly treats intentions as capable of evolving during interaction with the consequences of design moves (Schön 1992). These precedents matter because they prevent an inflated novelty claim. Designers have long acted without exhaustive foreknowledge, and representations have long participated in the formation of design thought.
+
+Martina nevertheless introduces a specific variant of that older problem. The first external image may be materially richer than the description she supplied because a learned generative system resolves relations she has not specified. The artifact can therefore contain visually consequential properties that are not motorically or explicitly produced by the practitioner. That makes the relation between prior intention and later judgment unusually difficult to reconstruct.
+
+The first proposition of this paper is thus modest but consequential: **an intention can be sufficient for action while insufficient for complete representation**. The prompt does not necessarily encode a hidden finished image. It may be the first actionable cut into an underdetermined direction.
+
+# 2. Knowing enough to reject is not knowing enough to specify
+
+An early episode involving Martina and her cat makes the asymmetry visible. She explains that her first attempt was unsuccessful because she “wasn't very specific.” Midjourney returned “multiple styles and something very weird.” She then added more determinate properties: manga, the particular kind of cat, clothing. After those changes, she says, “I got the proper result” (Martina 2022, 02:24).
+
+The obvious lesson is that specificity improves control. Martina herself draws it. But the episode contains a second lesson that becomes visible only if we ask where each new requirement came from. Before the first generation, “cat” was sufficient for the prompt she chose to write. After the first generation, “tuxedo cat” became worth specifying. What changed?
+
+At least six states can produce the same surface fact—silence in the first prompt—while implying different accounts of intention. A property may have been **omitted** although consciously intended; **tacit**, so obvious within Martina's own frame that it did not appear to require expression; **unnoticed**, present as a disposition but not separated into an explicit variable; **undecided**, genuinely open at the time of prompting; **delegated**, intentionally left for the system to resolve; or **indeterminate**, such that no stable preference yet existed. These categories should not be collapsed into “underspecified.” They differ in what evidence would be required to reconstruct intention.
+
+The generative image collapses them operationally. A visible cat cannot remain indefinitely “unspecified” in the way a linguistic placeholder can. The system must instantiate some appearance. A scene must have some composition, some lighting, some degree of detail, some relation among visible objects. Model generation therefore converts heterogeneous kinds of human silence into concrete candidate values.
+
+That conversion gives generation diagnostic force. The practitioner can discover that one of the previously silent dimensions matters. She can say, in effect: not that cat; not that clothing; not that style. Crucially, **negative discrimination can be available before positive specification**. A person may be unable to state the correct value while being highly capable of rejecting an instantiated wrong one.
+
+This is more than a psychological curiosity. It changes the temporal order of specification. In a conventional test, a requirement is defined and an execution is checked against it. Here, an execution can make a requirement available for definition. A failure may therefore be productive not because failure is inherently creative but because it materially instantiates an otherwise unarticulated difference.
+
+The distinction can be stated sharply: **knowing enough to reject is not the same as knowing enough to specify**. A generative process can operate inside that gap.
+
+# 3. Generation can be an inquiry, not only a deliverable
+
+Kirsh and Maglio's distinction between pragmatic and epistemic action provides a useful vocabulary for what happens next. In their work, an action can be performed not because it directly advances the final physical task but because it uncovers information or reduces cognitive difficulty (Kirsh and Maglio 1994). The distinction was developed through Tetris rather than generative images, so the mechanism cannot simply be imported. But the functional question transfers cleanly: what was the action for?
+
+Not every generation is an attempted final artifact. Some are probes. A practitioner may generate to discover whether a word behaves as expected, whether an omitted property will be resolved in an acceptable way, whether two aesthetic directions feel meaningfully different once visible, or whether a seemingly minor detail actually determines the scene. The output can therefore fail pragmatically and succeed epistemically.
+
+This makes the familiar phrase “prompt iteration” too weak. Iteration names recurrence but does not identify what changed. A more diagnostic sequence is:
+
+\begin{center}
+UNCERTAINTY $\rightarrow$ GENERATION $\rightarrow$ PERCEIVABLE DIFFERENCE $\rightarrow$ NEW INFORMATION $\rightarrow$ NEW CONSTRAINT
+\end{center}
+
+In Martina's cat example, the first image does not only fail to satisfy the next prompt. It contributes evidence from which the next prompt can be made. The user learns which properties must now be named.
+
+A harder problem follows. Suppose a generated image contains an architectural feature that Martina did not specify. She likes it and deliberately preserves it in the next attempt. What happened to the intention? Three different mechanisms can produce the same later statement—“yes, that is what I want.”
+
+The first is **recognition**: the feature corresponds to a stable but previously unarticulated preference. The second is **discovery**: the encounter makes an existing disposition cognitively available as a criterion for the first time. The third is **formation**: the output changes what the practitioner wants. Schön's account of evolving design intentions keeps the third mechanism open; Goldschmidt's account of sketching keeps open the possibility that an external representation can participate causally in forming later internal imagery.
+
+These mechanisms are easy to confuse retrospectively. Once an unexpected feature has been incorporated into a project, it can feel continuous with the original idea. Fidelity to the later intention cannot by itself demonstrate identity with the earlier intention. A serious empirical program would therefore need pre-generation records detailed enough to discriminate among latent preference, newly salient preference, and newly formed preference. It would also need immediate and delayed reports, because memory of “what I meant” may itself drift toward what was eventually retained.
+
+This is the first place where the paper's central claim appears in its strongest form: **execution can participate in producing the specification against which later executions are judged**. That claim is deliberately weaker than saying the machine “creates the user's intention.” The interview does not establish that. It establishes a research problem: the criteria governing later iterations cannot safely be assumed to have been fully available before the earlier ones.
+
+# 4. The better prompt can be the worse question
+
+Martina's response to uncertainty is not to celebrate vagueness. She becomes more methodical. She explicitly says that if she is specific she gets something “quite accurate to what you have in mind,” and she describes using her template to “force myself to write a longer prompt and really tell it what to do” (40:25).
+
+Specificity is therefore a real achievement. Yet another part of her practice prevents specificity from becoming a universal measure of prompt quality. She values the same template because it can show her “another perspective or style” and provoke the thought “maybe this works” (14:30). The artifact that helps close ambiguity can also reopen possibility.
+
+These functions should be separated. A prompt has **control value** when it reliably produces an already articulated requirement. It has **discovery value** when it helps expose a consequential possibility or distinction that the practitioner had not yet articulated. The two values can move together, but they can also conflict.
+
+Goel's work on ill-structured design representations supplies a useful loyal opposition to the cult of precision. His argument is that open-ended design problems may require correspondingly ill-structured representations during early phases, because premature precision can foreclose productive transformations (Goel 1992). The analogy to prompting must be handled carefully. A vague sketch can preserve ambiguity for the designer; a vague prompt can cause a model to silently resolve ambiguity. The same absence of explicit constraint can therefore preserve openness in one medium and eliminate it in another.
+
+Martina notices precisely this danger in practice. She likes Midjourney's style, but she also becomes bored because very different prompts often return what feels like a similar visual language. Later she says that if she does not specify style she repeatedly gets a “dreamy” default and notices the same common theme in other users' work (12:18; 23:26). Her account does not identify the technical cause; it could reflect model priors, interface defaults, recurring prompt language, selective memory, or some combination. But it defeats a simple equation between omission and openness. **What the user leaves open does not remain open.** The system resolves it somewhere.
+
+This gives specificity a temporal rather than absolute norm. The important question is not “how specific should a prompt be?” but **what has earned the right to become fixed now?** Early in inquiry, fixing a variable may destroy a useful branch. Later, after repeated encounters establish its importance, failing to fix the same variable may simply reintroduce noise.
+
+The best prompt for executing an answer may therefore be the worse prompt for discovering the question. A generative practice needs both convergence and exposure. Expertise includes knowing when to move between them.
+
+# 5. The template is a memory of differences that practice taught Martina to care about
+
+Martina's most consequential artifact in the interview may not be an image. It is the Notion template she builds after watching other people work. In the early Midjourney community she can see both outputs and prompts. Her own prompts “don't look at all like what these people are doing.” So she makes a template. The important detail is how it grows: “every time that I was discovering a new way to make a prompt, I would just like adding it to the template.” She describes the process explicitly as “a lot of trial and error” (03:04).
+
+The template is therefore downstream of execution before it becomes upstream of execution.
+
+\begin{center}
+EXECUTION$_t$ $\rightarrow$ DISCOVERY$_t$ $\rightarrow$ INSCRIPTION$_{t+1}$ $\rightarrow$ EXECUTION$_{t+1}$
+\end{center}
+
+A difference becomes consequential in practice. It is named. The name is given a durable place. Later work begins with that distinction already available. The template is not merely a list of good phrases. It is a **memory of differences that prior encounters taught Martina to care about**.
+
+This history changes how we should understand a mature prompt. The final instruction can look as though the user knew from the beginning that perspective, atmosphere, clothing, art movement, medium, and subject specificity were all required. The template hides the genealogy by making all of these categories simultaneously available in the present. But they may have entered the practice at different times and for different reasons. Some came from other people's public prompts. Some came from failed outputs. Some came from aesthetic vocabulary. Some came from Martina's own attempts to make model behavior more predictable.
+
+The mature prompt is therefore not simply a better sentence. It can be a compressed residue of earlier executions.
+
+This is what it means to say **specification has a history**. The specification that eventually appears to precede execution may itself have been produced through previous executions. Looking only at the current prompt reverses that causal history.
+
+The template also remembers more than Martina can. Discussing its art-historical and aesthetic vocabulary, she says, “I cannot really remember all of them” (42:55). Hutchins's work on distributed cognition is useful at exactly this level. His cockpit studies argue that relevant cognitive outcomes cannot always be explained from the information-processing properties of individuals in isolation; coordinated artifacts can carry task-relevant information and operations (Hutchins 1995). Clark and Chalmers make a stronger philosophical argument for active externalism, but the stronger ontological thesis is not needed here. The defensible empirical claim is simpler: Martina's functional prompt competence can exceed her unaided recall because the guide keeps distinctions available at the moment of action.
+
+That introduces a temporal oddity. Martina at one moment records a category. Months later she may no longer be able to produce it from memory. The inscription survives. When she encounters it again, her past practice can offer her present practice a possibility she would not otherwise have generated. A self-authored artifact can therefore become a limited source of alterity to its author. The guide does not merely store what she once knew. It can alter what her future self is able to consider.
+
+This makes the template more than memory. It is **possibility infrastructure**.
+
+# 6. The tool used to control the model also acts on the user
+
+The phrase “force myself” should not be softened. Martina constructs the template because successful prompting demands forms of explicitness that do not arise automatically in her ordinary way of thinking about the image. Before the template controls Midjourney, it disciplines Martina's own description.
+
+The apparent direction of action is:
+
+\begin{center}
+MARTINA $\rightarrow$ PROMPT $\rightarrow$ MODEL.
+\end{center}
+
+The template inserts an upstream operation:
+
+\begin{center}
+TEMPLATE $\rightarrow$ MARTINA $\rightarrow$ PROMPT $\rightarrow$ MODEL.
+\end{center}
+
+It asks her to consider dimensions that might otherwise remain unarticulated: medium, perspective, atmosphere, aesthetic, movement, subject details, style. In repeated use, these categories can become not merely words to add but differences to notice.
+
+That yields a testable hypothesis. Experienced prompt practitioners may begin to describe ordinary scenes in model-addressable dimensions even when no generative system is present. If so, a vocabulary initially acquired for controlling a machine has begun to reorganize ordinary descriptive attention. The template would then function as a curriculum for perception as well as an aid to instruction.
+
+The claim should not be assumed from the interview. External storage does not automatically imply strong cognitive extension, and a checklist can remain a checklist. But Martina's practice makes the mechanism available for study because she authored the artifact that later acts back on her. The designer and the designed-for user are partly the same person across time.
+
+This recursive structure is consequential for accounts of prompt expertise. Expertise cannot be located only in the user's unaided mind, nor only in the model, nor only in the final string. It may reside in the organized relation among remembered judgment, external vocabulary, public examples, a template, and repeated encounters with model behavior.
+
+That is why “prompt engineering” can be a misleadingly narrow label. What is being engineered is not only the instruction. The practice also engineers the conditions under which the practitioner can formulate the instruction.
+
+# 7. “I didn't know what the AI knows”: practical theories of an opaque addressee
+
+Martina names a second incompleteness directly: “I didn't know what the AI knows. So I can make the most of this” (25:12). The anthropomorphic verb “knows” should not be converted into a claim about machine understanding. Its importance is practical. To address the model effectively, Martina needs some predictive theory of what distinctions it can respond to.
+
+Prompting is therefore not only articulation of self. It is inquiry into the addressee.
+
+Does the system respond to the name of an art movement? To a camera vocabulary? To a specific animal breed? To “manga”? To an artist's name? What happens when a style is omitted? How much information can be included before important parts are ignored or transformed? Martina's guide is partly a record of provisional answers to such questions.
+
+The early public Midjourney environment makes this inquiry collective. Martina emphasizes that users could see both generations and prompts, and she describes that openness as central to the community. Public prompts become inspectable experiments. The community can compare linguistic operations with visible consequences. Conventions accumulate faster than solitary trial and error.
+
+But the same public field is not epistemically innocent. Martina later describes the “newbies” channel as stressful. Seeing other people's work makes her doubt what she had liked and wonder whether she should imitate what looked “cooler.” Moving into her own private chat allows her to “refine things” without the same competitive pressure (59:29). The public stream therefore has a dual role: it teaches the model's apparent affordances while also perturbing the user's criteria.
+
+This prevents a romantic story of collective intelligence. Open examples can expand descriptive competence and simultaneously narrow taste through convergence and comparison. The same social visibility that helps Martina learn how to call the system can change what she thinks is worth calling.
+
+Prompt communities can thus be treated as a kind of **vernacular empirical science of a changing machine**, but one in which observation and preference formation are entangled. Practitioners are not only learning what the model does. They are learning what other people value, which outputs attract attention, and which vocabulary circulates. The “theory of the model” is social as well as technical.
+
+# 8. Omission is not empty, and defaults are decisions with obscure provenance
+
+Martina's boredom with Midjourney's recurring style makes a central governance problem visible. When she does not specify a dimension, something else resolves it. The absence of a user decision is not the absence of a resulting decision.
+
+This matters because “leave it open” can describe radically different operations. A practitioner may deliberately refuse to choose because surprise is desirable. Or she may fail to realize that the variable matters. Or she may be indifferent. In all cases the generated image eventually contains a concrete value.
+
+The source of that value can be difficult to identify. It may reflect learned model regularities, the wording of the rest of the prompt, interface parameters, sampling, data distributions, or model-version behavior. Martina does not have access to that causal decomposition. She sees the practical symptom: many different prompts return a recognizably similar aesthetic.
+
+The design consequence is important. A model default can silently become a project property. If the user accepts the first plausible resolution of an unspecified dimension, a regularity originating elsewhere in the system can enter the artifact without ever being explicitly chosen.
+
+This is why omission should be analyzed as **decision allocation**, not merely missing information. The question is not only what the user failed to say. It is where the resulting property was resolved and how it later acquired authority.
+
+That authority can be retrospective. A feature can be model-proposed at one moment and user-retained at the next. What enters contingently can become intentional through selection.
+
+The operative transition is:
+
+\begin{center}
+EMERGENCE $\rightarrow$ JUDGMENT $\rightarrow$ RETENTION $\rightarrow$ CONSTRAINT.
+\end{center}
+
+Retention turns contingency into trajectory.
+
+# 9. Authorship is easier to understand as decision provenance
+
+Martina feels the asymmetry sharply. When discussing markets for prompts and images, she says that selling an image means selling “something that the AI did,” whereas selling the prompt means selling “something that you did” because “it's only your text” (22:05). Elsewhere she repeatedly says the image does not feel fully hers because she did not draw it or spend a month making it (56:53). Contractual ownership and felt authorship diverge.
+
+The interview also complicates the privileged status of the prompt. Martina learns prompt structures from other users, inherits art-historical vocabulary, adds distinctions suggested by previous failures, and stores operations in a template that subsequently tells her what to consider. The final instruction is indeed text she writes, but its practical genealogy is collective, technical, and historical.
+
+Goodman's distinction among score, sketch, and script is helpful here because it separates executability from determinacy. A natural-language description can be actionable without defining a single determinate class of correct realizations (Goodman 1976). “Make it haunting” can be executed in the everyday computational sense without functioning like a notation whose compliant instances are exhaustively specified. Modern schemas can add determinacy to some dimensions, but the prompt as a whole often remains open to plural realizations.
+
+The question “who made the image?” therefore compresses too much. A more precise object is **decision provenance**: where did each consequential property become fixed?
+
+For a final artifact, a property might have been:
+
+- explicitly specified by Martina;
+- prompted by the template;
+- introduced through a phrase learned from another practitioner;
+- strongly favored by the model under an underspecified instruction;
+- produced contingently in one generation;
+- accepted by Martina only after seeing it;
+- stabilized through repetition in later prompts;
+- modified downstream by another tool or collaborator.
+
+No single category settles legal authorship or moral credit. That is not the purpose of the distinction. Decision provenance makes the production history analytically visible.
+
+It also clarifies an underappreciated operation: **selection after emergence**. Martina need not have caused a property to appear for her later decision to preserve it to become consequential. “Keep that” is not equivalent to “I originally specified that.” Yet it is also not equivalent to passive receipt. It is a governance act over continuation.
+
+This is the point at which authorship begins to look less like sole origination and more like authority over which contingencies become binding.
+
+# 10. When making gets cheaper, judgment becomes more expensive
+
+Martina repeatedly describes generative images as first ideas or sketches rather than final works. She values the ability to produce several alternatives “in a couple of hours instead of just spending days” (38:13). The obvious economic change is lower candidate-production cost.
+
+The interview also supplies the counterweight. She can spend an hour or more being “very picky with results” (56:53). Faster production does not eliminate effort; it can relocate effort into comparison, rejection, and retention.
+
+This suggests a shift in scarcity. When candidate artifacts are expensive, production dominates the workflow. When plausible candidates become abundant, the limited resource may become the capacity to discriminate among them without losing the project.
+
+The claim should not be exaggerated. More candidates can produce shallow browsing rather than better judgment. Choice overload can degrade attention. Automated evaluation may absorb some selection work. But Martina's practice makes clear that generative abundance does not simply replace expertise. It can make evaluative expertise more visible.
+
+Her “pickiness” is therefore not secondary friction after the creative act. It is part of the productive mechanism. A practitioner with weak criteria can generate more without directing more.
+
+The important sequence is not merely GENERATE. It is:
+
+\begin{center}
+GENERATE $\rightarrow$ DISTINGUISH $\rightarrow$ RETAIN/REJECT $\rightarrow$ REVISE.
+\end{center}
+
+The bottleneck can move from making possibilities to deciding which possibilities deserve a future.
+
+# 11. “Back in the game”: capability recomposition without craft erasure
+
+Martina's account of 3D work makes the practical stakes explicit. She wants to return to artistic AR and VR projects but has stopped partly because she relies on assets created by other people and has “zero interest” in learning 3D modeling. If she could make her own assets with AI, she says, “then I'm back in the game for sure” (1:09:03).
+
+The phrase is more precise than the generic rhetoric of democratization. Martina does not claim that the underlying craft disappears or that she has become a 3D modeler. A capability that previously had to be personally mastered or acquired through external assets might become callable through another system. The prerequisite moves.
+
+This is **capability recomposition**. The project can become accessible without transferring every displaced craft into the director's body. But new dependencies appear. Generated 3D assets may be technically unusable, difficult to edit, unsuitable for performance constraints, or hard to evaluate without domain knowledge. Representation access is not the same as production readiness.
+
+The relevant question is therefore not whether AI “removes skill.” It is which capabilities cease to be mandatory at which layer, which reappear as evaluation or integration requirements, and which new competencies become necessary to direct the composite system.
+
+This matters for the later argument about leadership because it separates direction from personal execution without pretending they are independent. Martina can potentially direct projects whose intermediate craft she does not personally perform, but her authority remains meaningful only if she can maintain adequate judgment over the resulting trajectory or enlist others who can.
+
+# 12. Loyal opposition: perhaps this is ordinary design
+
+At this point the temptation is to declare a new logic of generative action. That claim does not survive contact with the older literature in its broad form.
+
+Schön's reflective practice already makes design intention dynamic. Goldschmidt already shows external representation participating in image formation. Suchman argues that the prescriptive significance of intentions for situated action is inherently vague and resists the fantasy that plans exhaustively determine action (Suchman 2007). Goel shows that early design benefits from representations that remain ill structured. Kirsh and Maglio show that action can be epistemic rather than merely instrumental.
+
+If the argument were simply “people discover what they mean by making things,” generative AI would add little conceptually.
+
+The stronger question is comparative: **what, if anything, changes when a learned generative system contributes richly determined candidate content from a comparatively thin instruction?**
+
+In sketching, ambiguity can remain visibly unresolved in the representation. In generative imaging, many ambiguities are resolved into concrete visual decisions before the user sees the result. In conventional delegation, a human recipient participates in a situated social world and can negotiate, ask questions, refuse, or reinterpret a brief. A generative system resolves the prompt through learned statistical machinery, interface constraints, and sampling rather than the same practical reasoning. In ordinary prototyping, the material system also produces surprises, but the amount, provenance, and speed of unrequested representational content may differ.
+
+These differences are hypotheses, not conclusions. A matched empirical study should compare generative prompting, hand sketching, conventional prototyping, and human delegation. It should measure how much consequential content enters during execution, where that content originates, when criteria become explicit, and how accountability for retained decisions is assigned.
+
+The loyal opposition therefore narrows rather than kills the paper. Purposive action under underdetermination is old. **Generative systems may alter the scale, speed, and provenance of the determinations supplied between an incomplete description and a concrete candidate.** That narrower claim is testable.
+
+# 13. Not every important distinction should remain a sentence forever
+
+Contemporary AI systems provide a useful retrospective contrast because they increasingly move some requirements out of prose and into stronger technical structures. The point is not that Martina predicted these architectures. There is no evidence of such genealogy. The comparison clarifies a recurrent practical problem: once a difference has proven consequential, what form should preserve it?
+
+Consider structured output. A developer can tell a model in prose to return a JSON object with required fields, but the request remains vulnerable to failure. OpenAI's Structured Outputs instead combines schema specification with constrained decoding so structurally invalid continuations can be excluded (OpenAI 2024). The requirement moves from a sentence the model should obey into a restriction on the representational space it can produce. Semantic correctness remains open, but structural compliance becomes stronger.
+
+A similar migration appears in agent tool configuration. Current OpenAI Agents SDK documentation distinguishes simply providing tools from requiring or selecting a tool through `tool_choice`; guardrails can run before a function tool executes and can block the operation (OpenAI 2026a; 2026b). MCP tool descriptions expose another layer: an executable capability is represented to a model through a name, description, and input schema, while annotations can state expected effect properties such as whether an operation is destructive or read-only (Model Context Protocol 2025).
+
+These mechanisms are not “better prompts.” They are evidence that some distinctions are too consequential to leave as ordinary persuasive prose.
+
+The practical history can be written as:
+
+\begin{center}
+PREFERENCE $\rightarrow$ REPEATED CONSEQUENCE $\rightarrow$ EXPLICIT RULE $\rightarrow$ DURABLE CONTROL FORM.
+\end{center}
+
+The control form may be a template field, schema, validator, permission boundary, test, tool surface, or runtime gate. Other distinctions resist such migration because their meaning remains contextual and evaluative: whether an image feels conceptually dead, whether a surprise belongs to the project, whether satisfying the letter has violated the point.
+
+This yields a stronger principle than “natural language becomes programming”: **not every important distinction should remain a sentence forever, and not every important distinction can safely stop being one.**
+
+The work of direction includes deciding which is which.
+
+# 14. Direction without a blueprint
+
+The paper can now return to Martina's phrase “back in the game” with a sharper account of what she is doing when she directs generative capacity.
+
+She does not necessarily possess the ending in advance. She does not personally execute every intermediate craft. She does not know everything the model can produce. Some criteria become clearer only after candidate states exist. Yet the project does not therefore become ownerless.
+
+What remains continuous?
+
+Not necessarily the image. The complete image is absent at the beginning.
+
+Not necessarily the specification. The specification changes.
+
+Not every criterion. Some criteria are discovered or formed.
+
+Not every visible property. Some are proposed by the system and retained only afterward.
+
+A stronger candidate for continuity is **accountable consequential judgment**: the authority and responsibility to decide which differences should govern the next state.
+
+That judgment appears in a series of small operations:
+
+This matters.
+
+That does not.
+
+Keep this.
+
+Not that.
+
+This failure reveals a requirement.
+
+This surprise belongs.
+
+This surprise is merely seductive.
+
+This decision can remain open.
+
+This one must now become invariant.
+
+This capability can be delegated.
+
+This consequence cannot be delegated without losing responsibility for the project.
+
+The competence here is not reducible to “vision,” a word that too easily smuggles the completed future back into the leader's head. It is closer to **direction without blueprint**: maintaining an answerable trajectory while the representational form of the destination becomes more determinate through action.
+
+This is a leadership problem only in a precise sense. Leadership here does not mean status, charisma, or managerial office. It names the governance of productive capacity under conditions in which neither the trajectory nor its successful endpoint can be exhaustively specified in advance.
+
+The resulting proposition is intentionally narrower than “AI changes leadership”:
+
+> **Direction can remain attributable without complete foreknowledge when someone remains accountable for the sequence by which consequences are judged, retained, rejected, and converted into the constraints governing what happens next.**
+
+That proposition is not proven by the interview. It is the paper's wager, generated by bringing several pieces of evidence into relation: Martina's incomplete scene, her diagnostic use of failed generations, her cumulative template, her intensive selection, and her desire to direct projects whose executional skills she does not personally possess.
+
+# 15. The hidden unit is the trajectory
+
+Prompt discourse makes the individual instruction unusually visible. Prompts can be copied, sold, compared, posted, and versioned. But Martina's practice repeatedly points toward a larger unit.
+
+The later prompt contains traces of earlier outputs. The template contains traces of earlier prompts and public examples. The user's practical theory of the model contains traces of community experimentation. The final artifact contains features that entered at different points in the history. If we isolate the final prompt, we hide the genealogy that made the prompt possible.
+
+The relevant object is therefore the **trajectory**:
+
+\begin{center}
+DIRECTION $\rightarrow$ CALL $\rightarrow$ CANDIDATE $\rightarrow$ ENCOUNTER $\rightarrow$ JUDGMENT $\rightarrow$ INSCRIPTION $\rightarrow$ NEXT CALL.
+\end{center}
+
+This trajectory carries more explanatory weight than the single prompt because it records where distinctions became consequential. It also makes accountability inspectable. One can ask not merely what the final instruction says but why a rule exists, which failure caused it, whether a model-proposed feature became a deliberate invariant, and which decisions remain unresolved.
+
+This is the paper's deepest methodological implication. Research on generative practice should preserve the lineage of specification rather than treating each prompt as an independent input. Without that lineage, the final artifact and final prompt both appear more intentional, self-contained, and upstream-determined than the practice that produced them actually was.
+
+The lineage also allows the central empirical questions to be tested rather than celebrated rhetorically. Did a criterion exist before generation? Did a feature become desirable only after it appeared? Did higher specificity improve control while reducing later conceptual branching? Did a template entry preserve a distinction the author could no longer recall? Did a default aesthetic enter the project through omission? Which candidate features became human-authorized only through retention? Which skill requirements disappeared, and which returned as evaluation problems?
+
+These are questions about histories, not snapshots.
+
+# 16. A research program for deferred specification
+
+The argument developed here is intentionally provisional because the interview exposes mechanisms that require stronger methods than retrospective self-report. A useful research program would treat the following distinctions as empirical variables.
+
+**Pre-representation.** Before generation, ask practitioners to record objects, relations, qualities, confidence levels, and rejection criteria without showing candidate images. This can establish what was available before execution without assuming that verbal report exhausts intention.
+
+**Recognition, discovery, formation.** After each generation, classify retained properties as expected, previously desired but unarticulated, newly noticed as important, or newly desired because of the result. Repeat the classification after a delay to test whether memory of the prior intention shifts toward accepted generated features.
+
+**Six kinds of the unsaid.** For deliberately selected visual dimensions, require the practitioner to state whether each is omitted, tacit, unnoticed, undecided, delegated, or indeterminate before the model resolves it. Compare those states with the generated value and later retention.
+
+**Control value and discovery value.** Randomize early- and late-stage tasks across low-, medium-, and high-specificity prompting. Measure fidelity to stated constraints, number of conceptual branches, and how many unanticipated features are eventually retained.
+
+**Template as curriculum.** Compare experienced template users with matched controls in an ordinary scene-description task where no AI is mentioned. Test whether prompt-trained categories transfer into spontaneous perception and description.
+
+**Decision provenance.** For a final artifact, trace a fixed set of visible properties backward through the entire trajectory. Record where each property first appeared and where it became binding: explicit prompt, template reminder, community phrase, model proposal, user retention, external edit, or other source.
+
+**Abundance and judgment.** Hold project time constant while varying candidate-generation cost and rate. Measure candidate count, evaluation time, rejection rationale, retention stability, and downstream quality.
+
+**Ordinary design opposition.** Run matched generative, sketching, prototyping, and human-delegation tasks. Compare when criteria become explicit and how much consequential content is introduced during execution rather than before it.
+
+**Constraint migration.** In production systems, version-control prompts, templates, schemas, validators, and tests. For every new invariant, preserve the failure, disagreement, or repeated consequence that caused it to be formalized. This makes the genealogy of specification empirically inspectable.
+
+The point of these studies would not be to prove that generative systems make intention “more distributed” or leadership “more emergent.” It would be to identify exactly when specification follows execution, when it does not, and what forms of judgment keep a changing trajectory directed.
+
+# Conclusion: the specification comes after the shot
+
+Martina's interview identifies a practical problem that theories of prompting often hide by starting with the prompt itself. She can have an idea without having the scene. She can begin anyway.
+
+The first generation gives that underdetermined direction a concrete external consequence. Because the consequence contains more determinations than the instruction explicitly supplied, it can expose what had been omitted, instantiate what had been left open, or introduce a possibility that did not previously belong to the project. Martina judges. Some differences become consequential. Those differences are named, retained, and eventually preserved in the next prompt or in the template that governs later prompts.
+
+The process is therefore not adequately described as intention followed by specification followed by execution. In some episodes the order is closer to:
+
+\begin{center}
+UNDERDETERMINED DIRECTION
+$\rightarrow$ EXECUTION
+$\rightarrow$ ENCOUNTER
+$\rightarrow$ JUDGMENT
+$\rightarrow$ DISCOVERED CONSTRAINT
+$\rightarrow$ REVISED SPECIFICATION.
+\end{center}
+
+The claim is not that specification always comes late. Much of effective prompting consists precisely in moving important requirements upstream. The claim is that **some requirements can be known as requirements only after an attempted realization makes their consequences inspectable**. Specification can therefore be an output of inquiry as well as an input to execution.
+
+Martina's template is the durable trace of that process. It remembers what earlier encounters taught her to make explicit. It preserves vocabulary she cannot always recall. It imports lessons from public practice. It proposes alternatives. It can discipline her own description. It makes future executions answer to distinctions discovered in past ones.
+
+Seen this way, the deepest operation in generative practice is not the prompt. It is the decision by which a difference becomes consequential enough to govern what happens next.
+
+That reframes authorship, expertise, and direction. A feature can originate in a model and become intentional through retention. A craft can be externally supplied without disappearing as a capability. Candidate production can become cheap while judgment becomes scarce. A project can remain directed even though its final form was unavailable at the beginning.
+
+The resulting leadership proposition is not that the leader knows the ending. It is that someone remains answerable for the path by which the ending becomes knowable.
+
+Martina calls a shot before she can completely see it. The system answers with more than she said. The intellectually decisive event occurs next: she decides what the answer has made necessary.
+
+Then she calls the next shot.
+
+\newpage
+# References
+
+Clark, Andy, and David J. Chalmers. 1998. “The Extended Mind.” *Analysis* 58: 10–23. <https://www.consc.net/papers/extended.html>.
+
+Goel, Vinod. 1992. “‘Ill-Structured Representations’ for Ill-Structured Problems.” In *Proceedings of the Fourteenth Annual Conference of the Cognitive Science Society*. <https://escholarship.org/uc/item/3wz7c4nd>.
+
+Goldschmidt, Gabriela. 1991. “The Dialectics of Sketching.” *Creativity Research Journal* 4 (2): 123–143. <https://doi.org/10.1080/10400419109534381>.
+
+Goodman, Nelson. 1976. *Languages of Art: An Approach to a Theory of Symbols*. Indianapolis: Hackett Publishing.
+
+Hutchins, Edwin. 1995. “How a Cockpit Remembers Its Speeds.” *Cognitive Science* 19 (3): 265–288. <https://doi.org/10.1207/s15516709cog1903_1>.
+
+Kirsh, David, and Paul Maglio. 1994. “On Distinguishing Epistemic from Pragmatic Action.” *Cognitive Science* 18 (4): 513–549. <https://doi.org/10.1207/s15516709cog1804_1>.
+
+Martina. 2022. Interview by Watson Hartsoe, October 10. Unpublished transcript.
+
+Model Context Protocol. 2025. “Schema Reference” and “Tools.” Specification revision 2025-06-18. <https://modelcontextprotocol.io/specification/2025-06-18/schema>.
+
+OpenAI. 2024. “Introducing Structured Outputs in the API.” August 6. <https://openai.com/index/introducing-structured-outputs-in-the-api/>.
+
+OpenAI. 2026a. “Agents.” *OpenAI Agents SDK Documentation*. Accessed August 17, 2026. <https://openai.github.io/openai-agents-python/agents/>.
+
+OpenAI. 2026b. “Guardrails.” *OpenAI Agents SDK Documentation*. Accessed August 17, 2026. <https://openai.github.io/openai-agents-python/guardrails/>.
+
+Schön, Donald A. 1992. “Designing as Reflective Conversation with the Materials of a Design Situation.” *Knowledge-Based Systems* 5 (1): 3–14. <https://doi.org/10.1016/0950-7051(92)90020-G>.
+
+Suchman, Lucy. 2007. *Human-Machine Reconfigurations: Plans and Situated Actions*. 2nd ed. Cambridge: Cambridge University Press.
+
+\newpage
+# Appendix A. Assembly and provenance
+
+This manuscript is a working paper assembled from a preserved research field centered on Martina's October 10, 2022 interview and source-led research objects derived from it. The complete assembly instrument is preserved verbatim as \path{SLIPCASE_FINAL_PROMPT.txt} and \path{_PROMPTS/assembly_prompt__v15.55-AM.txt} in the accompanying package and is embedded in \path{index.html} for offline inspection.
+
+Assembly prompt SHA-256: \seqsplit{a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a}.
+
+The claim-level evidence path is preserved in \path{the-specification-comes-after-the-shot__SOURCE_MAP.txt}. Package identity, source boundary, verification state, and rejoin instructions are recorded in \path{000__RETURN_PATH.txt} and \path{_SLIPCASE/VERIFICATION.txt}.
+
+The Martina quotations retain the wording of the available automatic transcript, including disfluencies. Interpretive reconstructions are separated from source quotations in the research objects and source map.

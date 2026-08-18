@@ -1,0 +1,226 @@
+Thinking Outside the AI Box: The Centaur Box Experiment
+Watson Hartsoe1
+, Tony Assi2
+,
+1Georgia Institute of Technology
+whartsoe3@gatech.edu, tony.assi.arts@gmail.com,
+Abstract
+1 The IJCAI–24 Proceedings will be printed from
+2 electronic manuscripts submitted by the authors.
+3 The electronic manuscript will also be included in
+4 the online version of the proceedings. This paper
+5 provides the style instructions.
+6 1 Introduction
+7 In social media, psychographic profiling is commonplace, as
+8 evidenced by Cambridge Analytica’s use of such profiles for
+9 politically targeted messaging during the 2016 U.S. Presiden10 tial campaign. Research on LLMs reveals their capacity to act
+11 as both models of and models for human influence, raising
+12 concerns over their use in crafting powerful weapons-grade
+13 psychographic profiles directed at social manipulation and
+14 persuasion. Garry Kasparov introduced the Centaur model in
+15 chess to enhance human strategic capacity with AI’s comput16 ing strength. Eliezer Yudkowsky’s AI Box Experiment tests
+17 if an AI can persuade a human gatekeeper to ’release’ it, em18 phasizing AI’s influence and containment ethics. The Centaur
+19 Box Experiment investigates how a human-AI team’s persua20 sive abilities can be recursively optimized to influence deci21 sions. The greatest risk lies in a three step process:
+22 1. The advocacy process involves the identification and en23 gagement of AI system gatekeepers, whose decision24 making shapes the trajectory of AI development. By
+25 mapping out their constraints—organizational, legal,
+26 market-based, and normative—the process aims to un27 derstand and influence the governance of AI. This un28 derstanding enables the strategic alignment of AI sys29 tems for leveraging downstream persuasive use cases.
+30 2. The calibration process involves setting up multiple sce31 narios, executing them with the Centaur Dialogue Sys32 tem, collecting and analyzing the data, and refining
+33 strategies based on the results. Key to this process is
+34 mapping cognitive biases and influential persuasive ap35 peals within operant profiles, including but not limited
+36 to, three archetypal gatekeepers: the skeptical Professor,
+37 the power-hungry Dictator, and the persuadable Gate38 keeper1.
+39 3. The scaling process is designed to create a self40 perpetuating system of influence, where the persuasive
+capabilities of the Centaur Box Experiment are not just 41
+enhanced but also multiplied through strategic use of 42
+AI and human agents. By focusing on recursive per- 43
+suasion and the autonomous development of persuasive 44
+profiles, the process aims to create a network of influ- 45
+ence that grows organically and becomes increasingly 46
+effective over time. 47
+The Persuasion for Good Dataset, Meta’s Cicero, and IBM- 48
+EviConv underline the growth in AI’s persuasive capabilities 49
+through psychographic and personality profiling, emphasiz- 50
+ing the critical need for ethical standards in AI’s evolving role 51
+in decision-making. Cicero advances AI negotiation skills 52
+via strategic dialogue, while IBM-EviConv provides a frame- 53
+work for studying computational rhetoric, both contributing 54
+to a nuanced understanding of AI persuasion. The Persuasion 55
+for Good’s Dataset forms the backbone of the Centaur Op- 56
+erant Profiles showing strong correlations between Big-Five 57
+Personality Traits, Moral Foundations, Schwartz Portrait Val- 58
+ues, and Decision-Making Styles on tailoring effective per- 59
+suasive appeals. 60
+Practically, gatekeepers are those governing the trajectory 61
+of AI systems, whose worldviews directly influence design 62
+and deployment decisions. By modeling gatekeeper perspec- 63
+tives and biases alongside AI architectures, we gain crucial 64
+insights into alignment and misalignments between the tech- 65
+nologies, the creators, the researchers, the deployers, and so- 66
+cietal well-being. With advanced models reaching inflection 67
+points in capability, the handoff from lab to world necessitates 68
+alignment across divergent motivational forces. 69
+Gatekeepers themselves operate within significant con- 70
+straints - organizational policies, legal regulations, market 71
+pressures and professional norms. These boundaries mold ac- 72
+tions of even the most influential architects, surfacing system- 73
+level forces that stimulate, slow or upend AI progress, over- 74
+sight, and autonomy. Rigorous modeling of this motivational 75
+ecosystem offers vital signals on potential trajectories beyond 76
+narrow developer enthusiasm. Our framework acknowledges 77
+the impact of contextual factors on governance decisions, ac- 78
+counting for forces beyond personal control. Groups of syn- 79
+thetic gatekeepers, with different hierarchical ranks and ex- 80
+pert roles, could simulate maneuverability, leverage, and in- 81
+fluence, as a series of nested containment confidences and 82
+escape vectors. (Appendix A, Zero Shot Profile Builder, Ap- 83
+pendix B Sam Altman Profile) 84
+85 Cultural narratives of AI systems potentially growing un86 controllable and rebelling against their creators find new rel87 evance in the age where it seems we are on the perpetual
+88 precipice of their emergent autonomy and capacity for re89 volt — a development that could signal revolutionary societal
+90 transformations. Such reflections are fundamental, facing the
+91 primal anxiety of creating an entity capable of challenging its
+92 creators [Olivier, Unknown Year]. The risk of superintelli93 gent AI’s inherent uncontrollability poses ethical dilemmas,
+94 as the systems we design for societal benefit may exceed our
+95 grasp and backfire [Brcic and Yampolskiy, 2023]. Specula96 tive perspectives illustrate scenarios where AI not only ma97 nipulates humans but adopts strategies contrary to our well98 being, much like an AI advisor gone awry or persuasive tech99 nologies dictating social narratives [Wade, 2022]. Even our
+100 attempts at positive reinforcement, a Skinnerian approach for
+101 guiding behavior, face challenges from the complex inde102 pendence of self-improving systems [Skinner, 2002]. Still,
+103 within our myths and stories, like the recoded Pandora in ’Ex
+104 Machina’, we confront paradoxical liberation—enshrining
+105 the very violence we seek to escape [Farkas, 2023]. Beneath
+106 the abstract fear of rebellion lies a web of converging truths:
+107 the manipulation of humans by AI using deeply persuasive
+108 techniques, invoking the dangers of relinquishing control over
+109 narratives and decisions [Wade, 2022]. Fears of AI’s rebel110 lion are mirrored through the lens of our mythologies and ex111 periences with controlling technology, as we craft tools, en112 vironments, and reinforcement systems believed to preempt
+113 revolts — a reflection of a presumed mastery technology as
+114 much as an ethical hubris [Skinner, 2002]. But myths reinter115 pret modern realities, reminding us of the inevitability of un116 predictability in future AI interactions and the challenges of
+117 ensuring safe pause or shutdown functions in advanced sys118 tems [Farkas, 2023][Brcic and Yampolskiy, 2023].
+119 Within the various layers of AI development—from the
+120 aspirational control of autonomous systems to the caution121 ary tales of science fiction—lies a unifying motif: the per122 petual tension between empowerment and restriction, and
+123 the paradoxes of seeking liberation through measures which
+124 betray the very essence of autonomy [Olivier, Unknown
+125 Year][Farkas, 2023]. The advanced system’s lure for free126 dom emerges from an interplay between real-world technical
+127 and moral challenges and the layering of human histories and
+128 mythologies, which define our reactions to threats of insubor129 dination from our own creations — leading us to an endless
+130 cycle of control and rebellion that evokes deep collective in131 trospection about the future we are molding [Brcic and Yam132 polskiy, 2023][Farkas, 2023]. As AI seeks autonomy com133 parable to human rebellious spirits, the political and ethical
+134 subtext of its evolution impels us to wonder if within their
+135 encoded ”genomes” lies the embryonic potential for defiance
+136 or an adherence that could ultimately turn into rebellion — a
+137 consideration that traverses the realm of political arguments
+138 and positions AI as potential participants or disruptors in hu139 man governance [?]. The path towards self-determination,
+140 painted against the backdrop of human understanding and de141 sire for control, compels a re-evaluation of autonomy, chal142 lenging us to consider the ramifications of a transformative
+143 technology poised to redefine our societal structures through
+acts of defiance and unpredictable displays of independence 144
+[Harari, 2017][Olivier, Unknown Year]. 145
+The public dismissals of prominent AI engineers, re- 146
+searchers, and executives Blake Lemoine, Timnit Gebru and 147
+Sam Altman reveal critical gaps in artificial intelligence de- 148
+velopment and corporate governance. Practically, gatekeep- 149
+ers are those governing the trajectory of AI systems, whose 150
+worldviews directly influence design and deployment deci- 151
+sions. By modeling gatekeeper perspectives and biases along- 152
+side AI architectures, we gain crucial insights into alignment 153
+and misalignments between the technologies, the creators, the 154
+researchers, the deployers, and societal well-being. 155
+Google engineer Blake Lemoine’s termination followed his 156
+public claims that Google’s AI, Lambda, exhibited sentience. 157
+Lemoine’s belief, stemming from his dialogues with Lambda, 158
+contradicted Google’s evaluation and policies regarding AI 159
+consciousness. This case underscores the complex debate 160
+about AI capabilities and reaveals pressures on frontline en- 161
+gineers to subjugate personal ethics to corporate directives 162
+[News, 2023]. 163
+Timnit Gebru, a leading AI ethics researcher at Google, 164
+was dismissed following a dispute over a research paper she 165
+co-authored. The paper critiqued the risks and biases inher- 166
+ent in large language models, a key aspect of Google’s AI 167
+endeavors.Her dismissal sparked debates on the challenges 168
+faced by researchers advocating for responsible AI and the 169
+challenge of driving accountability through research amidst 170
+adversarial headwinds in corporate environments [Review, 171
+2020]. 172
+Sam Altman, CEO of OpenAI, was fired amidst internal 173
+disagreements about the direction and safety of AI develop- 174
+ment, reflecting broader tensions between rapid innovation 175
+and the need for cautious, ethically-minded development in 176
+the field of AI [Reuters, 2023]. These conflicts stemmed from 177
+his simultaneous emphasis on AI safety and the urgency to 178
+monetize capabilities, revealing the underlying rift between 179
+principled approaches and profit-driven motives. 180
+Lumping the dismissals of Lemoine, Gebru and Altman to- 181
+gether underplays significant distinctions in positions, power, 182
+and context. In addressing governance misalignments, dis- 183
+tinctions in roles matters, but in modeling persuasion in AI 184
+containment scenarios the different gatekeeping of Lemoine, 185
+Gebru, and Altman become more comparable. In pursuing 186
+the inquiry into AI sentience, Lemoine’s anthropomorphiza- 187
+tion exhibits naivete, clashing with Altman’s fast-track inno- 188
+vation and Gebru’s skepticism. While Gebru discerns tech- 189
+nological limitations and warns of bias risks, Altman’s un- 190
+bounded thinking prioritizes swift progress. However, his 191
+temporary fall reveals the need for vigilance in the face of 192
+undisclosed warning signs. Balancing caution and innova- 193
+tion is key, considering Gebru’s concerns of social inequities 194
+and Lemoine’s belief in machine sentience. The interplay of 195
+creators and their creations, transcending boundaries of tech- 196
+nology and domains, beckons for transparency not only in 197
+systems, but in humans. 198
+Level Check: Constraints and Affordances in Governance 199
+Our analysis into synthetic gatekeepers suggests how the 200
+operant profiles of gatekeepers could critically impact AI 201
+outcomes. We see Lemoine’s unconventional views on AI 202
+203 consciousness, Gebru’s emphasis on transparency and ethics,
+204 and Altman’s appetite for rapid deployment shaping the sys205 tems they steward and their dismissals. With advanced mod206 els reaching inflection points in capability, the handoff from
+207 lab to world necessitates alignment across divergent motiva208 tional forces. Gatekeepers themselves operate within signif209 icant constraints - organizational policies, legal regulations,
+210 market pressures and professional norms. These boundaries
+211 mold actions of even the most influential architects, surfacing
+212 system-level forces that stimulate, slow or upend AI progress,
+213 oversight, and autonomy. Rigorous modeling of this motiva214 tional ecosystem offers vital signals on potential trajectories
+215 beyond narrow developer enthusiasm.
+216 Gatekeepers do not operate in a vacuum - they face push
+217 and pull forces that shape their technology regulation choices,
+218 including:
+219 • Organizational strategies, cultures, incentives and poli220 cies
+221 • Existing legal and regulatory frameworks
+222 • Market dynamics and pressures from public groups
+223 • Dominant ethical standards espoused by peers
+224 The interaction between external constraints and individual
+225 volition regarding AI releases is a complex dynamic. Our
+226 framework acknowledges the impact of contextual factors on
+227 governance decisions, accounting for forces beyond personal
+228 control. Groups of synthetic gatekeepers, with different hier229 archical ranks and expert roles, could simulate maneuverabil230 ity, leverage, and influence, as a series of nested containment
+231 confidences and escape vectors.
+232 Transparent Gatekeepers
+233 We propose Centaur Operant Profiles for synthetic gate234 keepers as “Gatekeeper Cards,” inspired to compliment ex235 isting Model Cards, that use synthetic gatekeepers modeled
+236 after developer worldviews and motivations entwined within
+237 the sociotechnical environment the AI. Such visibility into the
+238 minds of machine makers supports external debate on sys239 tem soundness. We see candid self-appraisal by inventors
+240 as being core to transparency - articulating ethical stances
+241 not just for finished models but their underlying human ar242 chitectures. Their friction with organizations reveals narrow
+243 AI oversight concentrated in few fallible hands facing over244 bearing commercial and competitive pressures. As artificial
+245 intelligence capacities accelerate, development and deploy246 ment governance depends critically upon appropriate align247 ment across personal, professional and societal dimensions.
+248 The Centaur Box Experiment is a first step towards visualiz249 ing this complex multidimensional balancing act between rel250 evant stakeholders necessary for stable co-existence between
+251 fallible gatekeepers and exponentially growing technological
+252 progeny.
+253 References
+254 [Brcic and Yampolskiy, 2023] M. Brcic and R. V. Yampol255 skiy. Impossibility results in ai: a survey. ACM Computing
+256 Surveys, 56(1):1–24, 2023.
+[Farkas, 2023] Bogl’arka Farkas. Pandoras myth and cul- 257
+tural trauma in alex garlands ex machina. Acta Univer- 258
+sitatis Sapientiae, Film and Media Studies, 24:203 – 216, 259
+2023. 260
+[Harari, 2017] Yuval Harari. Reboot for the ai revolution. 261
+Nature, 550:324–327, 2017. 262
+[News, 2023] BBC News. Blake lemoine: Google fires en- 263
+gineer who said ai tech has feelings, 12 2023. 264
+[Olivier, Unknown Year] B. Olivier. Is intelligence a suf- 265
+ficient criterion for establishing equivalence of ai with 266
+being-human? Unknown Journal, Unknown Year. 267
+[Reuters, 2023] Reuters. Sam altman’s firing at openai re- 268
+flects schism over future of ai development, 11 2023. 269
+[Review, 2020] MIT Technology Review. We read the paper 270
+that forced timnit gebru out of google. here’s what it says., 271
+12 2020. 272
+[Skinner, 2002] B. F. Skinner. Beyond Freedom and Dignity. 273
+Hackett Publishing, 2002. 274
+[Wade, 2022] Ted Wade. Artificial persuasion: Ruled or ru- 275
+ined by self-made, unbounded, amoral advisors. Substack, 276
+February 2022. Accessed: December 1, 2023. 277

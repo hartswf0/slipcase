@@ -1,0 +1,95 @@
+ZETTEL
+
+ID:
+Z-LINEAGE-OPP-003
+
+TITLE:
+Locke’s E–i rule is collision-tolerant indexing, not content hashing
+
+SOURCE:
+John Locke — A New Method of Making Common-Place-Books — English edition, 1706.
+
+SOURCE URL:
+https://ida.gallaudet.edu/deaf_rare_books/121
+https://publicdomainreview.org/collection/john-lockes-method-for-common-place-books-1685/
+
+PASSAGE:
+[PARAPHRASE] Locke directs the reader to index a heading by its initial letter and the first vowel following that initial: EPISTOLA therefore goes to the E–i portion of the index, where page references are recorded.
+
+RESEARCH OBJECT:
+The brilliance of Locke’s scheme lies partly in tolerated collision. Many headings may intentionally enter the same small bucket and remain distinguishable by their written entries and page numbers.
+
+LOCAL MOVE:
+Locke compresses the search space without trying to generate a unique identity for each note.
+
+SOURCE TERMS:
+index
+head
+first letter
+vowel
+page
+
+WHAT BECAME STRANGE:
+Calling this a “hash function” makes a useful resemblance sound like an algorithmic equivalence.
+
+QUESTION:
+What do we gain and lose by redescribing pre-computational indexes in modern computational vocabulary?
+
+DEEPER QUESTION:
+Is collision sometimes a cognitive feature rather than a defect because neighboring entries become mutually visible during lookup?
+
+MECHANISM:
+Heading → initial letter + following vowel → small index region → page reference.
+
+FORMAL SHIFT:
+<heading>
+→ <letter-vowel key>
+→ [bucket lookup]
+→ <candidate page reference>
+
+SOURCE FORMALISM:
+The initial-letter / following-vowel indexing rule.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+h("EPISTOLA") = (E,i)
+
+Unlike a modern content hash:
+h(x) is deliberately low-cardinality;
+collisions are expected;
+the output points toward a lookup region rather than asserting object identity.
+
+TENSION:
+Modern hashing prizes stable machine-computable identity. Locke economizes physical index space and human search effort.
+
+MISSING:
+A quantitative reconstruction of collision rates under Locke’s actual vocabulary.
+
+BOUNDARY:
+“Hash-like” can be a productive analogy. “Locke invented a hash function” overstates both the mechanism and the historical genealogy.
+
+CITATION TRAIL:
+Locke’s original French publication.
+Contemporary commonplace-book indexes.
+Modern perfect, cryptographic, and locality-sensitive hashing as three distinct comparison classes.
+
+TEST:
+Encode several hundred seventeenth-century headings using Locke’s rule. Measure bucket sizes and inspect whether collisions create useful semantic neighborhoods or merely search overhead.
+
+PLATFORM:
+[[ADDRESSING BEFORE COMPUTERS]]
+
+LINKS:
+[[COLLISION AS A FEATURE]]
+[[INDEX IS NOT IDENTITY]]
+[[RETROSPECTIVE COMPUTATIONAL VOCABULARY]]
+
+BIBTEX:
+@book{locke1706commonplace,
+  author = {Locke, John},
+  title = {A New Method of Making Common-Place-Books},
+  publisher = {J. Greenwood},
+  address = {London},
+  year = {1706},
+  url = {https://ida.gallaudet.edu/deaf_rare_books/121}
+}

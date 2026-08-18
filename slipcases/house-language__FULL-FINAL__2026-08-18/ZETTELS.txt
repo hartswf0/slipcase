@@ -1,0 +1,2750 @@
+ZETTEL
+
+ID:
+HOUSE-COMP-000
+
+TITLE:
+THE HOUSE THAT WORDS BUILT IS NOT A CLAIM ABOUT MAGIC WORDS; IT IS A QUESTION ABOUT WHETHER THE CHAIN FROM SENTENCE TO MATTER CAN BE COMPUTATIONALLY CLOSED.
+
+SOURCE:
+Terry Winograd — Procedures as a Representation for Data in a Computer Program for Understanding Natural Language — 1971; Charles Eastman et al. — An Outline of the Building Description System — 1974; Charles Eastman and Max Henrion — “GLIDE: A Language for Design Information Systems” — 1977; APT documentation.
+
+PASSAGE:
+NONE
+
+RESEARCH OBJECT:
+THE COMPILATION CHAIN FROM SENTENCE TO WALL.
+
+LOCAL MOVE:
+Across these systems, different portions of a formerly human interpretive chain become explicit computational objects: natural-language command, computable building description, design language, and machine-control language.
+
+SOURCE TERMS:
+normal English dialog; commands; building description; design information system; APT; language statement; machining function; postprocessor
+
+WHAT BECAME STRANGE:
+“Words build houses” is too compressed. The technical object is WORD → INTERPRETATION → REPRESENTATION → OPERATION → MACHINE/HUMAN ACTION → MATERIAL CHANGE.
+
+QUESTION:
+At what point does a verbal description cease to be merely upstream of construction and become part of an executable construction system?
+
+DEEPER QUESTION:
+How many human acts of interpretation can be removed, formalized, or delegated between the sentence and the wall before DESCRIPTION becomes PROGRAM?
+
+MECHANISM:
+Successive representational layers constrain the next available operation; linguistic instructions become consequential through parsing, representation, validation, transformation, compilation, control, and action.
+
+FORMAL SHIFT:
+<DESIRED PHYSICAL CHANGE>
+→ <LINGUISTIC / COMPUTATIONAL REPRESENTATION>
+→ [COMPILE THROUGH OPERATIVE REPRESENTATIONS]
+→ <MATERIAL CHANGE>
+
+SOURCE FORMALISM:
+No single source supplies the complete pipeline; the chain is reconstructed across heterogeneous systems.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+SENTENCE → SEMANTIC REPRESENTATION → DESIGN OBJECT → GEOMETRY → BUILDING MODEL → FABRICATION DESCRIPTION → MACHINE INSTRUCTION → TOOL MOTION → MATERIAL STATE. At every arrow ask: WHO INTERPRETS? WHAT IS LOST? WHAT MUST BECOME EXPLICIT? WHAT CAN FAIL?
+
+TENSION:
+Austinian performativity explains social action through convention; programming execution explains action through formal semantics and machinery; construction can contain both.
+
+MISSING:
+Building codes; structural reasoning; tolerance; procurement; construction sequencing; site uncertainty; robotics; human labor; liability; material resistance; inspection.
+
+BOUNDARY:
+The historical systems do not establish an uninterrupted natural-language-to-building pipeline. “The compilation chain from sentence to wall” is OUR synthesis.
+
+CITATION TRAIL:
+Ivan Sutherland — Sketchpad; Nicholas Negroponte — The Architecture Machine; Christopher Alexander et al. — A Pattern Language; Stiny and Gips; Mitchell; CAD/CAM; BIM; numerical control; robotics.
+
+TEST:
+Take one actually fabricated architectural component; recover every representational state between initiating request and final material object; record INPUT, INTERPRETER, REPRESENTATION, OPERATION, OUTPUT, HUMAN INTERVENTION, UNRESOLVED AMBIGUITY.
+
+PLATFORM:
+[[THE HOUSE THAT WORDS BUILT]]
+
+LINKS:
+[[THE COMPILATION CHAIN FROM SENTENCE TO WALL]]
+[[OPERATIVE DESCRIPTION]]
+[[LANGUAGE TO MATTER]]
+
+BIBTEX:
+@phdthesis{winograd1971procedures, author={Winograd, Terry}, title={Procedures as a Representation for Data in a Computer Program for Understanding Natural Language}, school={Massachusetts Institute of Technology}, year={1971}}
+
+@techreport{eastman1974bds, author={Eastman, Charles and Fisher, David and Lafue, Gilles and Lividini, Joseph and Stoker, Douglas and Yessios, Christos}, title={An Outline of the Building Description System}, institution={Institute of Physical Planning, Carnegie-Mellon University}, number={Research Report 50}, year={1974}}
+
+@inproceedings{eastman1977glide, author={Eastman, Charles M. and Henrion, Max}, title={GLIDE: A Language for Design Information Systems}, booktitle={Proceedings of SIGGRAPH '77}, pages={24--33}, year={1977}, publisher={ACM}}
+
+ZETTEL
+
+ID:
+HOUSE-COMP-001
+
+TITLE:
+SHRDLU MAKES AN ORDINARY ENGLISH SENTENCE CAUSALLY UPSTREAM OF A CHANGED WORLD-STATE.
+
+SOURCE:
+Terry Winograd — Procedures as a Representation for Data in a Computer Program for Understanding Natural Language — 1971 — abstract and system description.
+
+PASSAGE:
+[QUOTE]
+“The system answers questions, executes commands, and accepts information in normal English dialog.”
+
+RESEARCH OBJECT:
+NATURAL LANGUAGE AS AN EXECUTABLE INTERFACE TO A WORLD.
+
+LOCAL MOVE:
+Winograd does not merely classify or paraphrase English. SHRDLU interprets commands concerning objects in a constrained blocks world and executes actions that alter that represented environment.
+
+SOURCE TERMS:
+normal English; dialog; command; procedure; semantic information; context; discourse; blocks world
+
+WHAT BECAME STRANGE:
+A sentence can occupy the causal position normally associated with a programming command without itself looking like conventional program code. The system supplies intermediate interpretation.
+
+QUESTION:
+Is SHRDLU an early prototype of the architecture required by “The House That Words Built”—not because it builds houses, but because it demonstrates ordinary sentence → interpreted intention → procedure → altered world?
+
+DEEPER QUESTION:
+What additional representational layers become necessary when the “world” stops being a closed blocks simulation and becomes a materially resistant construction site?
+
+MECHANISM:
+Natural-language input is interpreted using grammar, semantic knowledge, discourse context, and knowledge of the modeled environment; interpretation can trigger procedures that alter blocks-world state.
+
+FORMAL SHIFT:
+<DESIRED CHANGE IN OBJECT RELATIONS>
+→ <NORMAL ENGLISH COMMAND>
+→ [INTERPRET + EXECUTE]
+→ <CHANGED BLOCKS-WORLD STATE>
+
+SOURCE FORMALISM:
+A procedural AI architecture coupling linguistic analysis with a restricted representation of objects, relations, actions, and discourse state.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+UTTERANCE → PARSE → REFERENT RESOLUTION → WORLD MODEL → ACTION PLAN → EXECUTION → NEW WORLD STATE
+
+TENSION:
+The apparent flexibility of ordinary language depends on severe closure: objects, predicates, actions, and permissible relations are represented in advance.
+
+MISSING:
+Open-ended objects; unknown affordances; material tolerances; unmodeled consequences; multiple agents; conflicting goals; physical uncertainty; legal authority; irreversible failure.
+
+BOUNDARY:
+SHRDLU demonstrates natural-language control of a simulated microworld, not unrestricted NL understanding, physical fabrication, architectural design, or direct control of matter.
+
+CITATION TRAIL:
+Winograd — Understanding Natural Language — 1972; blocks-world AI; planning; grounded language; natural-language robot control.
+
+TEST:
+Hold a command constant while progressively expanding the world ontology; measure which categories, assumptions, procedures, and repair mechanisms must be added before the same sentence remains executable.
+
+PLATFORM:
+[[THE HOUSE THAT WORDS BUILT]]
+
+LINKS:
+[[HOUSE-COMP-000]]
+[[MICROWORLD AS PRECONDITION]]
+[[NATURAL LANGUAGE AS CONTROL SURFACE]]
+
+BIBTEX:
+@phdthesis{winograd1971procedures, author={Winograd, Terry}, title={Procedures as a Representation for Data in a Computer Program for Understanding Natural Language}, school={Massachusetts Institute of Technology}, year={1971}}
+
+ZETTEL
+
+ID:
+HOUSE-COMP-002
+
+TITLE:
+WINOGRAD’S LATER LANGUAGE/ACTION WORK MOVES OPERATIVITY FROM COMMAND EXECUTION TO THE SOCIAL ORGANIZATION OF COMMITMENT.
+
+SOURCE:
+Terry Winograd and Fernando Flores — Understanding Computers and Cognition: A New Foundation for Design — 1986; Terry Winograd — “A Language/Action Perspective on the Design of Cooperative Work” — 1986.
+
+PASSAGE:
+[QUOTE]
+“This paper introduces a perspective based on language as action, and explores its consequences for practical system design.”
+
+RESEARCH OBJECT:
+THE DIFFERENCE BETWEEN EXECUTABLE COMMAND AND SOCIALLY OPERATIVE UTTERANCE.
+
+LOCAL MOVE:
+The later Winograd/Flores trajectory changes the theoretical object: language matters because people accomplish coordinated activity through communicative acts, commitments, requests, responses, and breakdowns.
+
+SOURCE TERMS:
+language; action; conversation; commitment; cooperative work; design; breakdown
+
+WHAT BECAME STRANGE:
+There are at least two ways for words to do something computationally: SHRDLU gives WORDS → MACHINE INTERPRETATION → EXECUTION; language/action gives WORDS → HUMAN COMMITMENTS → COORDINATED ACTIVITY.
+
+QUESTION:
+Does “The House That Words Built” concern words that machines execute or words through which people become obligated to act?
+
+DEEPER QUESTION:
+What happens when both mechanisms coexist in one construction stack?
+
+MECHANISM:
+Communicative acts reorganize relations among actors; designed computer systems can make commitments explicit, persistent, and actionable within cooperative work.
+
+FORMAL SHIFT:
+<COORDINATION PROBLEM>
+→ <LANGUAGE ACT>
+→ [CREATE / MODIFY COMMITMENT]
+→ <COORDINATED HUMAN ACTION>
+
+SOURCE FORMALISM:
+The language/action perspective structures cooperative work around recognizable communicative actions and consequences; it is not a machine-control language.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+REQUEST → COMMITMENT → AUTHORIZED TASK → WORK → DECLARATION OF COMPLETION → ACCEPTANCE. Compare COMMAND → PARSE → EXECUTE with REQUEST → PROMISE → COORDINATE → ACT.
+
+TENSION:
+A theory of executable description can erase people, institutions, contracts, permissions, and promises that make construction happen.
+
+MISSING:
+The connection between commitment structures and physical representations: who translates promise into schedule, drawing, procurement, machine command, inspection?
+
+BOUNDARY:
+The language/action perspective does not imply utterances directly produce material changes; its primary object is cooperative human activity mediated by language and technology.
+
+CITATION TRAIL:
+J. L. Austin; John Searle; Fernando Flores; Lucy Suchman; CSCW critiques; construction contracts and change orders.
+
+TEST:
+Trace one architectural change request through REQUEST → ACCEPTANCE → MODEL REVISION → DRAWING → PROCUREMENT → SITE WORK → INSPECTION; locate where social performativity ends and computational execution begins.
+
+PLATFORM:
+[[THE HOUSE THAT WORDS BUILT]]
+
+LINKS:
+[[HOUSE-COMP-001]]
+[[LANGUAGE ACTION]]
+[[SOCIAL COMPILATION]]
+
+BIBTEX:
+@book{winogradflores1986understanding, author={Winograd, Terry and Flores, Fernando}, title={Understanding Computers and Cognition: A New Foundation for Design}, publisher={Ablex}, year={1986}}
+
+@inproceedings{winograd1986languageaction, author={Winograd, Terry}, title={A Language/Action Perspective on the Design of Cooperative Work}, booktitle={Proceedings of the 1986 ACM Conference on Computer-Supported Cooperative Work}, pages={203--220}, publisher={ACM}, year={1986}}
+
+ZETTEL
+
+ID:
+HOUSE-COMP-003
+
+TITLE:
+EASTMAN’S BUILDING DESCRIPTION SYSTEM MOVES THE BUILDING FROM A SET OF DRAWINGS INTO A COMPUTABLE DATA STRUCTURE.
+
+SOURCE:
+Charles Eastman, David Fisher, Gilles Lafue, Joseph Lividini, Douglas Stoker, and Christos Yessios — An Outline of the Building Description System — 1974 — Research Report 50.
+
+PASSAGE:
+[QUOTE]
+“A building is considered as the spatial composition of a set of parts.”
+
+RESEARCH OBJECT:
+THE BUILDING AS A COMPUTATIONAL OBJECT.
+
+LOCAL MOVE:
+Eastman begins from the problem that drawings are the description of record yet are redundant, inconsistent, and separated from numerical analysis. BDS proposes a computer-based description detailed enough for design, construction, and operation.
+
+SOURCE TERMS:
+description of record; building description; parts; spaces; database; attributes; interactive graphic language; design; construction; operation
+
+WHAT BECAME STRANGE:
+Before a computer can “build” anything, the building must first become something the computer can represent: HOUSE → DATA STRUCTURE.
+
+QUESTION:
+Was the decisive computational transformation of architecture not automation of drawing but invention of the BUILDING AS DATABASE?
+
+DEEPER QUESTION:
+Which properties of a building had to become explicit entities, relations, and attributes before architectural operations could become programmable?
+
+MECHANISM:
+A building is decomposed into elements and spaces; geometry, relationships, properties, and connections are stored in a common representation on which operations can query, edit, compose, analyze, and regenerate views.
+
+FORMAL SHIFT:
+<BUILDING>
+→ <DATABASE OF PARTS + SPACES + RELATIONS + PROPERTIES>
+→ [EDIT / SORT / ANALYZE / COMPOSE]
+→ <UPDATED BUILDING DESCRIPTION / DERIVED REPRESENTATIONS>
+
+SOURCE FORMALISM:
+BDS includes a building database, element descriptions, spaces, attributes, component libraries, an interactive graphic language, and operations over arrangements.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+BUILDING = {ELEMENTS, SPACES, GEOMETRY, RELATIONS, PROPERTIES}; UPDATE(MODEL) → propagate consequences.
+
+TENSION:
+The House That Words Built foregrounds linguistic input; Eastman suggests decisive infrastructure lies one layer later: BUILDING must become computationally addressable.
+
+MISSING:
+Construction sequence; craft knowledge; material tolerances; site improvisation; labor; supply chains; code interpretation; ownership; responsibility.
+
+BOUNDARY:
+BDS does not eliminate drawings, automatically fabricate buildings, or accept unrestricted natural-language specifications.
+
+CITATION TRAIL:
+Eastman 1976; Eastman/Henrion GLIDE; BIM histories; product modeling; STEP; IFC; parametric building models.
+
+TEST:
+Compare the ontology of BDS with a contemporary BIM schema; identify which categories were added before increasingly downstream construction operations became computable.
+
+PLATFORM:
+[[THE HOUSE THAT WORDS BUILT]]
+
+LINKS:
+[[HOUSE-COMP-000]]
+[[BUILDING AS DATA STRUCTURE]]
+[[COMPUTABLE HOUSE]]
+
+BIBTEX:
+@techreport{eastman1974bds, author={Eastman, Charles and Fisher, David and Lafue, Gilles and Lividini, Joseph and Stoker, Douglas and Yessios, Christos}, title={An Outline of the Building Description System}, institution={Institute of Physical Planning, Carnegie-Mellon University}, number={Research Report 50}, year={1974}}
+
+ZETTEL
+
+ID:
+HOUSE-COMP-004
+
+TITLE:
+GLIDE MAKES “LANGUAGE FOR BUILDING” LITERAL BY DEFINING A PROGRAMMING ENVIRONMENT FOR REPRESENTING PHYSICAL SYSTEMS IN DESIGN-AND-CONSTRUCTION DETAIL.
+
+SOURCE:
+Charles M. Eastman and Max Henrion — “GLIDE: A Language for Design Information Systems” — SIGGRAPH — 1977 — pp. 24–33.
+
+PASSAGE:
+[QUOTE]
+“GLIDE is intended to provide an efficient computer representation for physical systems in sufficient detail for their design and construction.”
+
+RESEARCH OBJECT:
+A DOMAIN-SPECIFIC PROGRAMMING LANGUAGE FOR PHYSICAL DESIGN INFORMATION.
+
+LOCAL MOVE:
+Eastman and Henrion move beyond storing a building description: the design-information environment becomes a LANGUAGE through which representations and operations over physical systems can be defined and manipulated.
+
+SOURCE TERMS:
+GLIDE; language; design information systems; computer representation; physical systems; design; construction; database; operations
+
+WHAT BECAME STRANGE:
+“The house built in language” can be literal: a building can exist as objects and operations inside a formal programming language before construction.
+
+QUESTION:
+Is GLIDE a better historical ancestor for prompt-to-building systems than philosophical accounts of language because it makes the representational transition operational?
+
+DEEPER QUESTION:
+What is gained when architectural description becomes programmable rather than merely machine-readable?
+
+MECHANISM:
+A language supplies abstractions for defining and manipulating structured representations of physical systems; representations support design operations and construction information.
+
+FORMAL SHIFT:
+<PHYSICAL SYSTEM>
+→ <GLIDE REPRESENTATION>
+→ [PROGRAMMATIC OPERATION]
+→ <MODIFIED DESIGN INFORMATION>
+
+SOURCE FORMALISM:
+GLIDE is a programming-language environment for design information systems with structured representations and operations.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+BUILDING_MODEL + PROGRAM → TRANSFORMED_BUILDING_MODEL.
+
+TENSION:
+GLIDE makes architectural information programmable but does not abolish the gap between information and construction: a wall object has not moved a physical wall.
+
+MISSING:
+Compilation from design object to fabrication instruction; machine control; physical feedback; construction sequencing; error correction; site sensing.
+
+BOUNDARY:
+GLIDE is not natural language, autonomous architecture, or a complete design-to-fabrication system.
+
+CITATION TRAIL:
+Eastman BDS; geometric modeling; solid modeling; CAD databases; BIM; parametric CAD; STEP; IFC; DesignScript; Grasshopper; building DSLs.
+
+TEST:
+Reconstruct one GLIDE operation and compare it with contemporary BIM/parametric CAD; identify what architectural knowledge migrated from HUMAN USER into LANGUAGE.
+
+PLATFORM:
+[[THE HOUSE THAT WORDS BUILT]]
+
+LINKS:
+[[HOUSE-COMP-003]]
+[[BUILDING AS PROGRAM]]
+[[DOMAIN SPECIFIC LANGUAGE]]
+
+BIBTEX:
+@inproceedings{eastman1977glide, author={Eastman, Charles M. and Henrion, Max}, title={GLIDE: A Language for Design Information Systems}, booktitle={Proceedings of the 4th Annual Conference on Computer Graphics and Interactive Techniques}, pages={24--33}, publisher={ACM}, year={1977}, doi={10.1145/563858.563863}}
+
+ZETTEL
+
+ID:
+HOUSE-COMP-005
+
+TITLE:
+SHAPE GRAMMAR MAKES GRAMMAR GENERATE SPACE DIRECTLY: THE PRIMITIVES ARE SHAPES, NOT WORDS.
+
+SOURCE:
+George Stiny and James Gips — “Shape Grammars and the Generative Specification of Painting and Sculpture” — 1972 — Information Processing 71 — pp. 1460–1465.
+
+PASSAGE:
+[QUOTE]
+“A method of shape generation using shape grammars which take shape as primitive and have shape specific rules is presented.”
+
+RESEARCH OBJECT:
+GRAMMAR WHOSE SYMBOLIC OPERATIONS ARE SPATIAL TRANSFORMATIONS.
+
+LOCAL MOVE:
+Stiny and Gips take the generative idea of formal grammar and alter the primitive: the basic object is not a character string but SHAPE.
+
+SOURCE TERMS:
+shape; grammar; generation; rules; generative specification; painting; sculpture; language
+
+WHAT BECAME STRANGE:
+The phrase “architectural language” can cease to be metaphorical without becoming verbal: a grammar can literally produce spatial forms.
+
+QUESTION:
+Does the genealogy of “The House That Words Built” need to split LANGUAGE into NATURAL LANGUAGE, PROGRAMMING LANGUAGE, FORMAL GRAMMAR, SHAPE LANGUAGE?
+
+DEEPER QUESTION:
+What happens when a natural-language system proposes or modifies the rules of a shape grammar rather than directly predicting finished geometry?
+
+MECHANISM:
+An initial shape is transformed through applicable shape rules; repeated rule application generates further shapes.
+
+FORMAL SHIFT:
+<INITIAL SHAPE>
+→ <SHAPE REPRESENTATION>
+→ [MATCH + APPLY SHAPE RULE]
+→ <GENERATED SHAPE>
+
+SOURCE FORMALISM:
+SHAPE GRAMMAR: shapes are primitives and production rules operate over shapes.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+S₀ → r₁(S₀) → r₂(...) → ... → Sₙ. The crucial difference from string grammar: rule matching is spatial.
+
+TENSION:
+The House That Words Built privileges words; shape grammar suggests operativity may increase when the system leaves words behind.
+
+MISSING:
+Material properties; structure; construction sequence; cost; site; use; fabrication; semantics of inhabitation.
+
+BOUNDARY:
+The 1972 paper demonstrates generative specification of paintings and sculptures; later architectural applications require separate evidence.
+
+CITATION TRAIL:
+George Stiny; James Gips; Stiny and William J. Mitchell — Palladian villa grammar; procedural modeling; parametric design.
+
+TEST:
+Describe one house as natural-language instructions and as a shape grammar; compare what must become explicit and what kinds of ambiguity each permits.
+
+PLATFORM:
+[[THE HOUSE THAT WORDS BUILT]]
+
+LINKS:
+[[HOUSE-COMP-000]]
+[[GRAMMAR GENERATES SPACE]]
+[[WORDS TO GEOMETRY]]
+
+BIBTEX:
+@inproceedings{stinygips1972shape, author={Stiny, George and Gips, James}, title={Shape Grammars and the Generative Specification of Painting and Sculpture}, booktitle={Information Processing 71}, editor={Freiman, C. V.}, pages={1460--1465}, publisher={North-Holland}, year={1972}}
+
+ZETTEL
+
+ID:
+HOUSE-COMP-006
+
+TITLE:
+APT GIVES LANGUAGE STATEMENTS MACHINING SEMANTICS: PROGRAM TEXT CAN TERMINATE IN PHYSICAL TOOL MOTION.
+
+SOURCE:
+Bradford M. Smith — Guidelines for Exchangeable APT Data Packages: APT Part Programmer’s Manual — National Bureau of Standards — 1980.
+
+PASSAGE:
+[QUOTE]
+“It defines the machining function which will result from the use of each statement.”
+
+RESEARCH OBJECT:
+A FORMAL SEMANTICS WHOSE OUTPUT IS MACHINE ACTION.
+
+LOCAL MOVE:
+APT documentation treats a programming statement as having defined machining consequences; processors and postprocessors translate the language into machine-specific control.
+
+SOURCE TERMS:
+APT; part program; language statement; syntax; semantics; machining function; postprocessor; machine tool
+
+WHAT BECAME STRANGE:
+Here “language changes matter” requires almost no metaphor. The statement does not cut metal, but its defined semantics enter a technical chain that produces machine motion.
+
+QUESTION:
+Is numerical-control programming the historical point at which “description becomes construction” becomes an engineering fact rather than a philosophical metaphor?
+
+DEEPER QUESTION:
+What distinguishes an architectural specification interpreted by a builder from an APT statement interpreted by a postprocessor?
+
+MECHANISM:
+APT statements specify machining intentions; processor and postprocessor translate them into instructions usable by numerical-control equipment; the controller produces machine actions.
+
+FORMAL SHIFT:
+<DESIRED MACHINED FORM>
+→ <APT STATEMENTS>
+→ [PROCESS + POSTPROCESS]
+→ <MACHINE FUNCTION / TOOL MOTION>
+
+SOURCE FORMALISM:
+APT language syntax; modifiers; scalar values; defined machining functions; postprocessor semantics.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+SOURCE CODE → PROCESSOR → MACHINE-SPECIFIC CODE → ACTUATOR MOTION → MATERIAL REMOVAL → PART.
+
+TENSION:
+APT makes language materially operative by radically constraining what can be said: natural language gains flexibility by tolerating ambiguity; machine language gains reliability by excluding it.
+
+MISSING:
+Assembly; whole-building sequencing; material handling; joining; site variation; perception; recovery from unexpected conditions.
+
+BOUNDARY:
+APT controls numerical machine tools; it does not design architectural objects, understand ordinary language, or construct complete buildings.
+
+CITATION TRAIL:
+APT history; numerical control; G-code / RS-274; CAD/CAM; STEP-NC; robotic fabrication; additive manufacturing; construction robotics.
+
+TEST:
+Encode one fabrication instruction as ordinary English, architectural specification, APT/G-code, and robot control; compare allowable ambiguity at each layer.
+
+PLATFORM:
+[[THE HOUSE THAT WORDS BUILT]]
+
+LINKS:
+[[HOUSE-COMP-000]]
+[[LANGUAGE TO MATTER]]
+[[THE LAST INTERPRETER BEFORE MATTER]]
+
+BIBTEX:
+@techreport{smith1980apt, author={Smith, Bradford M.}, title={Guidelines for Exchangeable APT Data Packages: APT Part Programmer's Manual}, institution={National Bureau of Standards}, number={NBSIR 80-2073.2}, year={1980}}
+
+ZETTEL
+
+ID:
+HOUSE-COMP-007
+
+TITLE:
+ALEXANDER’S PATTERN LANGUAGE GENERATES BUILDING DESIGNS WITHOUT BEING AN EXECUTABLE PROGRAMMING LANGUAGE.
+
+SOURCE:
+Christopher Alexander, Sara Ishikawa, Murray Silverstein, Max Jacobson, Ingrid Fiksdahl-King, and Shlomo Angel — A Pattern Language: Towns, Buildings, Construction — 1977.
+
+PASSAGE:
+[PARAPHRASE]
+The authors present interconnected patterns as a language people can use to generate coherent designs for towns, buildings, rooms, and construction.
+
+RESEARCH OBJECT:
+GENERATIVITY WITHOUT AUTOMATIC EXECUTION.
+
+LOCAL MOVE:
+Alexander and collaborators make LANGUAGE a practical design mechanism. Patterns can be selected, combined, and sequenced to generate environments, while operative intelligence remains distributed across patterns and people interpreting situations.
+
+SOURCE TERMS:
+pattern; language; sequence; building; construction; environment; design
+
+WHAT BECAME STRANGE:
+A language can be genuinely generative without being formally executable. This creates a middle category between METAPHORICAL LANGUAGE and PROGRAMMING LANGUAGE.
+
+QUESTION:
+What exactly is the difference between a LANGUAGE THAT GUIDES GENERATION and a LANGUAGE THAT COMPUTES GENERATION?
+
+DEEPER QUESTION:
+Could large language models collapse this distinction by becoming the missing interpreter that turns heuristic pattern language into executable design operations?
+
+MECHANISM:
+Patterns capture recurrent relationships among problems, contexts, and spatial responses; users combine them in relation to specific situations.
+
+FORMAL SHIFT:
+<DESIGN SITUATION>
+→ <PATTERN LANGUAGE>
+→ [SELECT + INTERPRET + COMBINE]
+→ <BUILDING DESIGN>
+
+SOURCE FORMALISM:
+Named patterns; pattern relations; movement across scales; generative use by designers and inhabitants. Not executable formal grammar in programming-language sense.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+CONTEXT + PATTERNS + HUMAN JUDGMENT → DESIGN. Not SOURCE → COMPILER → BUILDING.
+
+TENSION:
+Calling Alexander a precursor to programming languages can overstate equivalence; the interesting resemblance is where interpretation remains necessary.
+
+MISSING:
+A compiler; formal semantics; conflict resolution; constraint solving; automatic verification; fabrication machinery.
+
+BOUNDARY:
+A Pattern Language does not establish executable syntax for automatically producing buildings.
+
+CITATION TRAIL:
+Alexander — The Timeless Way of Building; Beck and Cunningham 1987; Gamma et al.; shape grammars; generative design.
+
+TEST:
+Implement five linked Alexander patterns as executable constraints and record every point where the programmer invents semantics not supplied by the source.
+
+PLATFORM:
+[[THE HOUSE THAT WORDS BUILT]]
+
+LINKS:
+[[HOUSE-COMP-000]]
+[[GENERATIVE LANGUAGE]]
+[[PATTERN IS NOT PROGRAM]]
+
+BIBTEX:
+@book{alexander1977pattern, author={Alexander, Christopher and Ishikawa, Sara and Silverstein, Murray and Jacobson, Max and Fiksdahl-King, Ingrid and Angel, Shlomo}, title={A Pattern Language: Towns, Buildings, Construction}, publisher={Oxford University Press}, year={1977}}
+
+ZETTEL
+
+ID:
+HOUSE-COMP-008
+
+TITLE:
+THE “PATTERN LANGUAGE” TRAVELS FROM ARCHITECTURE INTO SOFTWARE, BUT WHAT TRAVELS IS REUSABLE DESIGN KNOWLEDGE RATHER THAN EXECUTABLE SYNTAX.
+
+SOURCE:
+Kent Beck and Ward Cunningham — “Using Pattern Languages for Object-Oriented Programs” — 1987 — OOPSLA-87 Workshop on Specification and Design for Object-Oriented Programming.
+
+PASSAGE:
+[QUOTE]
+“We outline our adaptation of Pattern Language to object-oriented programming.”
+
+RESEARCH OBJECT:
+THE ARCHITECTURE → SOFTWARE MIGRATION OF “LANGUAGE.”
+
+LOCAL MOVE:
+Beck and Cunningham explicitly adapt Alexander’s pattern-language idea to object-oriented program design; patterns become a way of recording and communicating recurrent structures.
+
+SOURCE TERMS:
+pattern language; object-oriented programming; design; patterns; adaptation
+
+WHAT BECAME STRANGE:
+The traffic does not run only COMPUTING → ARCHITECTURE. Architecture supplies a design vocabulary that becomes important in software engineering.
+
+QUESTION:
+What exactly crossed disciplines when Alexander’s architectural language became a software pattern language?
+
+DEEPER QUESTION:
+Did software inherit Alexander’s generativity, communication of tacit practice, decomposition of design problems, or merely the word PATTERN?
+
+MECHANISM:
+Recurring design experience is abstracted into named reusable patterns that help practitioners recognize and resolve recurring situations.
+
+FORMAL SHIFT:
+<ARCHITECTURAL DESIGN KNOWLEDGE>
+→ <PATTERN>
+→ [ADAPT DOMAIN]
+→ <SOFTWARE DESIGN KNOWLEDGE>
+
+SOURCE FORMALISM:
+A collection of interconnected design patterns, not programming-language syntax and not automatically executable code.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+ARCHITECTURE → DESIGN PATTERNS → SOFTWARE DESIGN → SOFTWARE INFRASTRUCTURE → COMPUTATIONAL ARCHITECTURE. This is conceptual circulation, not a demonstrated causal lineage for every later system.
+
+TENSION:
+The migration can be narrated too neatly; shared vocabulary is not proof of downstream influence.
+
+MISSING:
+Which later CAD, BIM, generative-design, or architectural-software systems explicitly cite software patterns?
+
+BOUNDARY:
+Beck and Cunningham explicitly adapt pattern-language ideas to object-oriented software; they do not turn patterns into formal semantics.
+
+CITATION TRAIL:
+Christopher Alexander; Beck/Cunningham; Gamma et al.; Pattern Languages of Programs; architectural software influenced by patterns.
+
+TEST:
+Trace ALEXANDER 1977 → BECK/CUNNINGHAM 1987 → SOFTWARE PATTERN LITERATURE → ARCHITECTURAL COMPUTATION and require an explicit receipt at every edge.
+
+PLATFORM:
+[[THE HOUSE THAT WORDS BUILT]]
+
+LINKS:
+[[HOUSE-COMP-007]]
+[[ARCHITECTURE ENTERS SOFTWARE]]
+[[CONCEPTUAL MIGRATION]]
+
+BIBTEX:
+@techreport{beckcunningham1987patterns, author={Beck, Kent and Cunningham, Ward}, title={Using Pattern Languages for Object-Oriented Programs}, institution={Tektronix, Inc.}, number={CR-87-43}, year={1987}, note={Presented at the OOPSLA-87 Workshop on Specification and Design for Object-Oriented Programming}}
+
+ZETTEL
+
+ID:
+HOUSE-COMP-009
+
+TITLE:
+NEGROPONTE MAKES CONVERSATION ITSELF AN ARCHITECTURAL INTERFACE: THE COMPUTER IS IMAGINED AS A DESIGN PARTNER RATHER THAN A PASSIVE DRAFTING DEVICE.
+
+SOURCE:
+Nicholas Negroponte — The Architecture Machine: Toward a More Human Environment — 1970.
+
+PASSAGE:
+[PARAPHRASE]
+Negroponte develops the architecture machine around human-machine dialogue and distinguishes this interactive relation from merely using computers to automate drawing.
+
+RESEARCH OBJECT:
+CONVERSATIONAL ARCHITECTURAL COMPUTATION.
+
+LOCAL MOVE:
+Negroponte places computation inside architectural design as an interacting participant, developing architect-machine dialogue, generation, simulation, and design information.
+
+SOURCE TERMS:
+architecture machine; dialogue; symbiosis; computer graphics; generation; simulation; design information; machine
+
+WHAT BECAME STRANGE:
+Prompt-based architectural generation did not invent the desire to CONVERSE WITH THE MACHINE ABOUT THE BUILDING.
+
+QUESTION:
+Is contemporary natural-language architectural AI better understood as fulfilling an old Architecture Machine interface ambition while replacing the underlying symbolic machinery?
+
+DEEPER QUESTION:
+What changed between Negroponte’s dialogue and an LLM prompt interface: vocabulary, representation, intelligence, generative machinery, or location of interpretation?
+
+MECHANISM:
+Designer and machine exchange representations through an interactive computational environment; the machine contributes to design rather than merely reproducing decisions made elsewhere.
+
+FORMAL SHIFT:
+<ARCHITECTURAL INTENTION>
+→ <HUMAN–MACHINE DIALOGUE>
+→ [GENERATE / SIMULATE / RESPOND]
+→ <DESIGN DEVELOPMENT>
+
+SOURCE FORMALISM:
+Interactive computer graphics; human-machine dialogue; generation and simulation procedures. No general NL-to-fabrication compiler.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+DESIGNER ⇄ MACHINE → DESIGN. Contemporary possibility: DESIGNER ⇄ LANGUAGE MODEL ⇄ GEOMETRIC / BUILDING MODEL ⇄ FABRICATION SYSTEM → MATERIAL ENVIRONMENT.
+
+TENSION:
+The genealogy can look deceptively continuous: Negroponte’s “dialogue” is not contemporary natural-language model interaction.
+
+MISSING:
+Precise comparison of input modalities; NL understanding; building ontologies; fabrication linkage; feedback from matter; autonomy.
+
+BOUNDARY:
+The Architecture Machine establishes an early program for interactive architectural computation, not a modern prompt-based or autonomous construction system.
+
+CITATION TRAIL:
+Architecture Machine Group; URBAN5; SEEK; Soft Architecture Machines; Sutherland; Licklider; CAAD; HCI.
+
+TEST:
+Compare one Architecture Machine interaction sequence with one contemporary prompt-to-CAD interaction as HUMAN INPUT → MACHINE REPRESENTATION → OPERATION → RESPONSE → HUMAN REVISION; locate moved interpretation.
+
+PLATFORM:
+[[THE HOUSE THAT WORDS BUILT]]
+
+LINKS:
+[[HOUSE-COMP-000]]
+[[CONVERSATIONAL ARCHITECTURE]]
+[[PROMPT AS DESIGN INTERFACE]]
+
+BIBTEX:
+@book{negroponte1970architecture, author={Negroponte, Nicholas}, title={The Architecture Machine: Toward a More Human Environment}, publisher={MIT Press}, year={1970}}
+
+ZETTEL
+
+ID:
+HOUSE-LANG-001
+
+TITLE:
+HEIDEGGER’S “HOUSE OF BEING” MAKES HUMANS GUARDIANS OF LANGUAGE, NOT BUILDERS THROUGH LANGUAGE.
+
+SOURCE:
+Martin Heidegger — “Letter on ‘Humanism’” — 1946; English in Pathmarks, 1998 — p. 239.
+
+PASSAGE:
+[QUOTE]
+“Language is the house of being.”
+
+RESEARCH OBJECT:
+The direction of agency in the house/language metaphor.
+
+LOCAL MOVE:
+Heidegger places language between being and human dwelling: being comes to language; humans dwell in that house; thinkers and poets guard its manifestation rather than manufacture the house themselves.
+
+SOURCE TERMS:
+language; house of being; home; dwell; guardians; manifestation; accomplishment
+
+WHAT BECAME STRANGE:
+“The House That Words Built” sounds Heideggerian while reversing Heidegger’s allocation of agency. The source gives something closer to BEING → LANGUAGE-AS-HOUSE → HUMAN DWELLING / GUARDIANSHIP.
+
+QUESTION:
+Would “The House That Words Built” be more interesting if treated as a deliberate inversion of Heidegger rather than an extension of him?
+
+DEEPER QUESTION:
+What historical or technical transformation would have to occur for language to move from the place in which humans dwell to an instrument that specifies, coordinates, or causes what they dwell in?
+
+MECHANISM:
+Being comes to language; thinkers and word-creators bring its manifestation to language and preserve it there.
+
+FORMAL SHIFT:
+<BEING>
+→ <LANGUAGE AS HOUSE>
+→ [BRING TO / PRESERVE IN LANGUAGE]
+→ <HUMAN DWELLING>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Heidegger: BEING → LANGUAGE → DWELLING
+Provisional inversion: LANGUAGE → SPECIFICATION → BUILDING → DWELLING
+Question: what makes the arrow reverse?
+
+TENSION:
+The “language becomes construction” thesis presses against Heidegger’s refusal to treat thinking simply as causal making.
+
+MISSING:
+A mechanism that moves from linguistic disclosure or preservation to physical production.
+
+BOUNDARY:
+Heidegger’s “house of being” does not establish that words physically construct houses, descriptions are executable specifications, or language has causal priority over building.
+
+CITATION TRAIL:
+Heidegger — “Building Dwelling Thinking”; Heidegger — “Language”; J. L. Austin — How to Do Things with Words; Robin Evans — “Translations from Drawing to Building”.
+
+TEST:
+Compare the operative verbs attached to language across Heidegger’s “Letter on Humanism,” “Language,” and “Building Dwelling Thinking”; code them as DISCLOSE, PRESERVE, DWELL, COMMAND, SPECIFY, CAUSE, CONSTRUCT.
+
+PLATFORM:
+[[HOUSE AND LANGUAGE]]
+
+LINKS:
+[[THE HOUSE THAT WORDS BUILT]]
+[[LANGUAGE AS DWELLING]]
+[[OPERATIVE DESCRIPTION]]
+
+BIBTEX:
+@incollection{heidegger1998letter,
+  author={Heidegger, Martin},
+  title={Letter on ``Humanism''},
+  booktitle={Pathmarks},
+  editor={McNeill, William},
+  publisher={Cambridge University Press},
+  year={1998},
+  pages={239--276}
+}
+
+ZETTEL
+
+ID:
+HOUSE-LANG-002
+
+TITLE:
+FOR HEIDEGGER, BUILDING DOES NOT LEAD TO DWELLING; BUILDING IS ALREADY A MODE OF DWELLING.
+
+SOURCE:
+Martin Heidegger — “Building Dwelling Thinking” — 1951; English in Poetry, Language, Thought, 1971 — p. 146.
+
+PASSAGE:
+[QUOTE]
+“To build is in itself already to dwell.”
+
+RESEARCH OBJECT:
+The presumed sequence BUILD → HOUSE → DWELL.
+
+LOCAL MOVE:
+Heidegger attacks the ordinary means–end picture in which one first builds and then, as a consequence, dwells; he follows bauen toward dwelling and distinguishes building that cultivates from building that erects structures.
+
+SOURCE TERMS:
+bauen; building; dwelling; cultivation; construction; mortals; earth
+
+WHAT BECAME STRANGE:
+“The House That Words Built” presumes BUILD is an uncomplicated production verb, but in the most obvious philosophical source for HOUSE + LANGUAGE + BUILDING, building itself is unstable.
+
+QUESTION:
+Before asking whether words can build a house, do we first need to ask what kind of activity “building” names?
+
+DEEPER QUESTION:
+Does operative description merely cause an artifact to be erected, or can it participate in the practices through which a place becomes inhabitable, cared for, maintained, and lived?
+
+MECHANISM:
+Heidegger retrieves an older semantic relation in which building is not merely a means to dwelling but a mode in which dwelling unfolds.
+
+FORMAL SHIFT:
+<BUILDING AS PRODUCTION>
+→ <BAUEN>
+→ [ETYMOLOGICAL RETRIEVAL]
+→ <BUILDING AS DWELLING / CULTIVATING / ERECTING>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Ordinary: DESCRIPTION → BUILD → HOUSE → DWELL
+Heideggerian pressure: DWELL → BUILD rather than BUILD → DWELL.
+
+TENSION:
+The title-space makes “built” look causal; Heidegger destabilizes the final predicate itself.
+
+MISSING:
+The difference between ERECTING, DESIGNING, SPECIFYING, COORDINATING, MAINTAINING, INHABITING, CULTIVATING.
+
+BOUNDARY:
+The etymological argument does not establish that every constructed building constitutes dwelling, nor that language automatically participates in dwelling.
+
+CITATION TRAIL:
+Heidegger — “Letter on ‘Humanism’”; “…Poetically Man Dwells…”; Tim Ingold — dwelling perspective; architectural critiques of Heideggerian dwelling.
+
+TEST:
+Take one actual house project and classify events under DESIGN, SPECIFY, PROCURE, ERECT, ADAPT, MAINTAIN, INHABIT, CARE; ask which operations can actually be performed or reorganized by language.
+
+PLATFORM:
+[[HOUSE AND LANGUAGE]]
+
+LINKS:
+[[THE HOUSE THAT WORDS BUILT]]
+[[LANGUAGE AS DWELLING]]
+[[BUILDING IS NOT ONE OPERATION]]
+
+BIBTEX:
+@incollection{heidegger1971building,
+  author={Heidegger, Martin},
+  title={Building Dwelling Thinking},
+  booktitle={Poetry, Language, Thought},
+  translator={Hofstadter, Albert},
+  publisher={Harper & Row},
+  year={1971},
+  pages={145--161}
+}
+
+ZETTEL
+
+ID:
+HOUSE-LANG-003
+
+TITLE:
+WITTGENSTEIN PUTS THE HOUSES INSIDE LANGUAGE: LANGUAGE IS AN ACCRETED CITY, NOT A SINGLE HOUSE.
+
+SOURCE:
+Ludwig Wittgenstein — Philosophical Investigations — 1953; 4th ed. 2009 — §18.
+
+PASSAGE:
+[QUOTE]
+“Our language can be regarded as an ancient city: a maze of little streets and squares, of old and new houses.”
+
+RESEARCH OBJECT:
+The scale of the architectural metaphor for language.
+
+LOCAL MOVE:
+Wittgenstein answers a question about whether a language must be complete by comparing language to a historically layered city containing old houses, additions, and new regular suburbs.
+
+SOURCE TERMS:
+language; ancient city; streets; squares; old houses; new houses; extensions; suburbs
+
+WHAT BECAME STRANGE:
+“House of Language” may be too architecturally singular. Wittgenstein’s image is LANGUAGE = CITY CONTAINING HOUSES OF DIFFERENT AGES AND FORMS.
+
+QUESTION:
+What changes if the fundamental object is not the house of language but the city of language through which houses are added, inherited, renovated, standardized, and abandoned?
+
+DEEPER QUESTION:
+Could a house produced through contemporary prompt systems be understood as a new “suburb” attached to older linguistic and architectural districts rather than something language created ex nihilo?
+
+MECHANISM:
+Accumulation without total replacement: new forms appear beside inherited forms and historical heterogeneity remains materially present.
+
+FORMAL SHIFT:
+<LANGUAGE AS UNITARY CONTAINER>
+→ <LANGUAGE AS HISTORICAL CITY>
+→ [ADDITION / EXTENSION / OBSOLESCENCE]
+→ <HETEROGENEOUS PRESENT>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+LANGUAGE(t+1) = LANGUAGE(t) + additions + new districts - obsolete uses, without requiring complete replacement.
+
+TENSION:
+“The House That Words Built” gives words compact collective agency; Wittgenstein’s city suggests a layered inheritance.
+
+MISSING:
+Who modifies the city? What persists when a practice becomes obsolete? What corresponds architecturally to a new suburb of language?
+
+BOUNDARY:
+§18 is a comparison in an inquiry into language; it does not claim literal cities are linguistic systems or that architectural and linguistic change are mechanically equivalent.
+
+CITATION TRAIL:
+Philosophical Investigations §§18–23; Descartes on planned vs inherited towns; language-games; forms of life.
+
+TEST:
+Trace the historical entry of vocabulary required to describe one contemporary house and ask whether the resulting house is produced by one language or by historically incompatible linguistic districts.
+
+PLATFORM:
+[[HOUSE AND LANGUAGE]]
+
+LINKS:
+[[LANGUAGE AS BUILT ENVIRONMENT]]
+[[THE CITY THAT WORDS INHERITED]]
+[[HISTORICAL LAYERS OF DESCRIPTION]]
+
+BIBTEX:
+@book{wittgenstein2009investigations,
+  author={Wittgenstein, Ludwig},
+  title={Philosophical Investigations},
+  edition={4},
+  publisher={Wiley-Blackwell},
+  year={2009}
+}
+
+ZETTEL
+
+ID:
+HOUSE-LANG-004
+
+TITLE:
+ALBERTI SPLITS BUILDING BETWEEN LINEAMENTS AND STRUCTURE: THE REPRESENTATION CAN PRESCRIBE FORM WITHOUT BEING THE BUILDING.
+
+SOURCE:
+Leon Battista Alberti — On the Art of Building in Ten Books — c. 1452; English trans. 1988 — Book I.
+
+PASSAGE:
+[QUOTE]
+“The whole matter of building is composed of lineaments and structure.”
+
+RESEARCH OBJECT:
+The representational/material split internal to architectural production.
+
+LOCAL MOVE:
+Alberti separates lineaments from structure, permitting architectural form to be conceived separately from material realization.
+
+SOURCE TERMS:
+lineaments; structure; lines; angles; surfaces; place; number; scale; order
+
+WHAT BECAME STRANGE:
+A house can precede its construction representationally without the representation itself becoming lumber, stone, labor, fastening, weatherproofing, or ground.
+
+QUESTION:
+Is “The House That Words Built” actually about language becoming material—or about language gaining control over the lineament layer from which material work is subsequently organized?
+
+DEEPER QUESTION:
+What is the minimum representational object from which a sufficiently organized building process can proceed?
+
+MECHANISM:
+Lineaments determine relational form; structure realizes a building materially. The architectural object crosses a discontinuity between immaterial ordering and material execution.
+
+FORMAL SHIFT:
+<INTENDED BUILDING>
+→ <LINEAMENTS>
+→ [PRESCRIBE RELATIONS]
+→ <STRUCTURED MATERIAL BUILDING>
+
+SOURCE FORMALISM:
+Alberti explicitly distinguishes LINEAMENTS from STRUCTURE.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+DESIGN INTENTION → LINEAMENTS → MATERIAL OPERATIONS → BUILDING. The research problem is the middle arrow: what makes a representation actionable?
+
+TENSION:
+If words produce lineaments but labor produces structure, “words built it” may suppress a translation chain.
+
+MISSING:
+Who converts lineaments into operations? What tolerances are added? What happens when matter resists? Which decisions cannot be fixed at the lineament stage?
+
+BOUNDARY:
+Alberti’s lineaments are not equivalent to natural-language descriptions, prompts, source code, BIM files, or construction documents without further evidence.
+
+CITATION TRAIL:
+Alberti Book I; Mario Carpo; Robin Evans; studies of lineamenta / materia.
+
+TEST:
+Compare verbal description → sketch → measured drawing → BIM object → shop drawing → layout marks → constructed element for one stair, roof edge, window, or wall.
+
+PLATFORM:
+[[HOUSE AND LANGUAGE]]
+
+LINKS:
+[[LINEAMENTS]]
+[[ACTIONABLE REPRESENTATION]]
+[[THE HOUSE THAT WORDS BUILT]]
+
+BIBTEX:
+@book{alberti1988building,
+  author={Alberti, Leon Battista},
+  title={On the Art of Building in Ten Books},
+  translator={Rykwert, Joseph and Leach, Neil and Tavernor, Robert},
+  publisher={MIT Press},
+  year={1988}
+}
+
+ZETTEL
+
+ID:
+HOUSE-LANG-005
+
+TITLE:
+AUSTIN MAKES WORDS OPERATIVE ONLY INSIDE FELICITOUS ARRANGEMENTS OF PEOPLE, PROCEDURES, CIRCUMSTANCES, AND OTHER ACTIONS.
+
+SOURCE:
+J. L. Austin — How to Do Things with Words — lectures 1955; published 1962 — pp. 5–9.
+
+PASSAGE:
+[QUOTE]
+“The uttering of the sentence is, or is a part of, the doing of an action.”
+
+RESEARCH OBJECT:
+Distributed conditions of linguistic efficacy.
+
+LOCAL MOVE:
+Austin isolates utterances whose issuance performs rather than reports an action, then refuses a magical interpretation: words work in appropriate circumstances and often require additional actions by the speaker or others.
+
+SOURCE TERMS:
+performative; utterance; action; appropriate circumstances; operative; procedure; speaker; other actions; infelicity
+
+WHAT BECAME STRANGE:
+“Words do things” is not yet an explanation of how words do things. The difficult object is the arrangement that lets an utterance count as an action.
+
+QUESTION:
+What are the architectural felicity conditions under which a description can cease to be merely descriptive and become an instruction with consequences for a building?
+
+DEEPER QUESTION:
+When a prompt changes a model, a model changes a drawing, a drawing releases fabrication, and fabrication changes matter, where exactly is the operative force located?
+
+MECHANISM:
+UTTERANCE + recognized procedure + authorized participants + appropriate circumstances + required accompanying actions → successful act.
+
+FORMAL SHIFT:
+<WORDS>
+→ <CONVENTIONALLY RECOGNIZED ACT>
+→ [SATISFY CONDITIONS / COMPLETE PROCEDURE]
+→ <SOCIAL OR INSTITUTIONAL CHANGE>
+
+SOURCE FORMALISM:
+Austin supplies classes of performative success and failure across the lectures, but no executable syntax for architectural action.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+DESCRIPTION D becomes operative for building only if D + AUTHORITY + INTERPRETER + PROCEDURE + MATERIAL CAPACITY + FOLLOW-THROUGH → BUILDING CONSEQUENCE.
+
+TENSION:
+The thesis “language becomes construction” is sharpened: language does not acquire efficacy alone; an arrangement makes linguistic acts efficacious.
+
+MISSING:
+Who recognizes the instruction? Who has authority? What representation receives it? What tolerance governs interpretation? Who bears responsibility?
+
+BOUNDARY:
+Austin does not argue that linguistic acts directly produce arbitrary physical effects; his paradigm cases depend on conventional procedures and surrounding action.
+
+CITATION TRAIL:
+Austin Lectures II–IV and VIII–X; Searle; construction contracts, specifications, RFIs, change orders.
+
+TEST:
+Keep “Move this wall 300 mm east” constant across casual conversation, sketch note, signed change order, BIM revision, and robotic command; observe which surrounding conditions determine whether anything happens.
+
+PLATFORM:
+[[HOUSE AND LANGUAGE]]
+
+LINKS:
+[[FELICITY CONDITIONS OF CONSTRUCTION]]
+[[OPERATIVE DESCRIPTION]]
+[[WORDS DO NOT ACT ALONE]]
+
+BIBTEX:
+@book{austin1962things,
+  author={Austin, J. L.},
+  title={How to Do Things with Words},
+  editor={Urmson, J. O.},
+  publisher={Clarendon Press},
+  address={Oxford},
+  year={1962}
+}
+
+ZETTEL
+
+ID:
+HOUSE-LANG-006
+
+TITLE:
+EVANS LOCATES ARCHITECTURAL POWER IN THE GAP BETWEEN REPRESENTATION AND BUILDING, NOT IN THEIR IDENTITY.
+
+SOURCE:
+Robin Evans — “Translations from Drawing to Building” — in Translations from Drawing to Building and Other Essays — 1997 — pp. 154–155.
+
+PASSAGE:
+[QUOTE]
+“Recognition of the drawing’s power as a medium turns out…to be recognition of the drawing’s distinctness from…what is represented.”
+
+RESEARCH OBJECT:
+Representation-to-building difference as productive rather than defective.
+
+LOCAL MOVE:
+Evans compares linguistic translation with the architectural passage from drawing to building but rejects the fantasy of a neutral medium through which meaning travels unchanged.
+
+SOURCE TERMS:
+translation; drawing; building; medium; distinctness; likeness; architecture; language; communication
+
+WHAT BECAME STRANGE:
+The interesting fact may be not that a house can pass through words but that the house cannot pass unchanged through any representation.
+
+QUESTION:
+What if “The House That Words Built” should become “The House Translation Built”?
+
+DEEPER QUESTION:
+Which deviations between prompt, model, drawing, fabrication instruction, construction, and inhabited building are noise—and which are where architectural invention occurs?
+
+MECHANISM:
+A representational medium transforms what can be conceived, communicated, measured, and built.
+
+FORMAL SHIFT:
+<INTENDED BUILDING>
+→ <DRAWING>
+→ [TRANSLATION ACROSS DIFFERENCE]
+→ <BUILDING>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+WORDS → MODEL → DRAWING → DETAIL → FABRICATION → ASSEMBLY → HOUSE
+At every arrow: Δ ≠ 0. Research object: patterned Δ.
+
+TENSION:
+“The House That Words Built” makes the first medium sovereign; Evans makes intermediate media unavoidable.
+
+MISSING:
+Transformations introduced by projection, scale, notation, software, file format, convention, contract, tolerance, builder interpretation, site.
+
+BOUNDARY:
+Evans concerns drawing and building; he does not establish that natural-language prompting behaves like architectural drawing.
+
+CITATION TRAIL:
+Robin Evans; Mario Carpo; Alberti; architectural specification studies; BIM/CAD interoperability.
+
+TEST:
+Recover every representation of one completed component and ask which representation most strongly determined the final thing.
+
+PLATFORM:
+[[HOUSE AND LANGUAGE]]
+
+LINKS:
+[[TRANSLATION FROM WORDS TO BUILDING]]
+[[REPRESENTATIONAL DIFFERENCE]]
+[[THE HOUSE TRANSLATION BUILT]]
+
+BIBTEX:
+@book{evans1997translations,
+  author={Evans, Robin},
+  title={Translations from Drawing to Building and Other Essays},
+  publisher={MIT Press},
+  year={1997}
+}
+
+ZETTEL
+
+ID:
+HOUSE-LANG-007
+
+TITLE:
+GOODMAN’S WORLDS ARE NOT MADE FROM NOTHING: WORLDMAKING BEGINS WITH OTHER WORLDS AND OPERATES AS REMAKING.
+
+SOURCE:
+Nelson Goodman — Ways of Worldmaking — 1978 — “Words, Works, Worlds,” p. 6.
+
+PASSAGE:
+[QUOTE]
+“Worldmaking as we know it always starts from worlds already on hand.”
+
+RESEARCH OBJECT:
+Prior worlds as the input to making.
+
+LOCAL MOVE:
+Goodman refuses a foundational raw material beneath world versions and asks how worlds are made from other worlds, characterizing making as remaking.
+
+SOURCE TERMS:
+worlds; worldmaking; worlds already on hand; remaking; versions; composition; decomposition; labels
+
+WHAT BECAME STRANGE:
+“The House That Worlds Built” becomes mechanically interesting: a made thing may begin not with isolated words but with already-organized worlds.
+
+QUESTION:
+What pre-existing worlds must be present before a particular house can become thinkable, specifiable, legal, financeable, constructible, and recognizable as a house?
+
+DEEPER QUESTION:
+Can the causal history of a building be reconstructed as collisions among world-versions rather than the intention of a single designer expressed through representations?
+
+MECHANISM:
+Worldmaking proceeds by operations on worlds already available, including composition/decomposition, weighting, ordering, deletion/supplementation, and deformation.
+
+FORMAL SHIFT:
+<EXISTING WORLDS / VERSIONS>
+→ <SYMBOLIC ORGANIZATION>
+→ [REMAKE]
+→ <NEW WORLD / VERSION>
+
+SOURCE FORMALISM:
+Goodman explicitly discusses processes of worldmaking including composition and decomposition.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+{BUILDING CODE WORLD, DOMESTIC WORLD, STRUCTURAL WORLD, REAL-ESTATE WORLD, FAMILY WORLD, CLIMATE WORLD, SOFTWARE WORLD, CRAFT WORLD} → [COMPOSE / DELETE / WEIGHT / REORDER / DEFORM] → HOUSE.
+
+TENSION:
+“Words built it” foregrounds a medium; “worlds built it” foregrounds inherited organizations but risks explaining everything and therefore nothing.
+
+MISSING:
+A criterion for identifying when something counts as a distinct world rather than a constraint, practice, representation, institution, or vocabulary.
+
+BOUNDARY:
+Goodman analyzes symbolic worldmaking, not a causal theory of architectural construction.
+
+CITATION TRAIL:
+Goodman — “Words, Works, Worlds”; Languages of Art; Cassirer; architectural applications of worldmaking.
+
+TEST:
+Attempt two genealogies for one house: WORDS → HOUSE and WORLDS ALREADY ON HAND → REMAKING → HOUSE; require documentary receipts for every node.
+
+PLATFORM:
+[[HOUSE AND LANGUAGE]]
+
+LINKS:
+[[THE HOUSE THAT WORLDS BUILT]]
+[[WORLDMAKING AS REMAKING]]
+[[DISTRIBUTED ARCHITECTURAL CAUSATION]]
+
+BIBTEX:
+@book{goodman1978ways,
+  author={Goodman, Nelson},
+  title={Ways of Worldmaking},
+  publisher={Hackett Publishing Company},
+  address={Indianapolis},
+  year={1978}
+}
+
+ZETTEL
+
+ID:
+HOUSE-LANG-008
+
+TITLE:
+GOODMAN’S FORMULA DOES NOT PRIVILEGE WORDS: WORLDS REQUIRE “WORDS OR OTHER SYMBOLS.”
+
+SOURCE:
+Nelson Goodman — Ways of Worldmaking — 1978 — “Words, Works, Worlds,” p. 6.
+
+PASSAGE:
+[QUOTE]
+“No world without words or other symbols.”
+
+RESEARCH OBJECT:
+Whether language should be the privileged representational cause in the house argument.
+
+LOCAL MOVE:
+Goodman’s argument culminates not in linguistic exclusivity but symbolic plurality: words appear alongside other symbols.
+
+SOURCE TERMS:
+words; other symbols; world; schemata; labels; pictures; predicates
+
+WHAT BECAME STRANGE:
+The title “The House That Words Built” may narrow the research object just when the machinery becomes multimodal: sentences, plans, sections, diagrams, numbers, renders, coordinates, models, codes, gestures, samples, marks.
+
+QUESTION:
+Is LANGUAGE actually the research object, or is the more precise object SYMBOLIC OPERABILITY ACROSS HETEROGENEOUS REPRESENTATIONS?
+
+DEEPER QUESTION:
+When a project passes from words into geometry, images, numerical constraints, code, and machine instructions, what warrants continuing to call the process linguistic?
+
+MECHANISM:
+Different symbolic forms organize, select, classify, and relate what can count as a world.
+
+FORMAL SHIFT:
+<WORLD>
+→ <WORDS OR OTHER SYMBOLS>
+→ [ORGANIZE / LABEL / DISTINGUISH]
+→ <WORLD-VERSION>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+HOUSE-MAKING REPRESENTATIONS = TEXT ∪ DRAWING ∪ NUMBER ∪ IMAGE ∪ MODEL ∪ CODE ∪ GESTURE ∪ MATERIAL SAMPLE ∪ MACHINE INSTRUCTION. Question: which transformations preserve operability?
+
+TENSION:
+HOUSE AND LANGUAGE is elegant, but the actual technical pipeline repeatedly leaves natural language.
+
+MISSING:
+A criterion distinguishing LANGUAGE, NOTATION, DIAGRAM, MODEL, CODE, SYMBOL SYSTEM, MATERIAL INDEX, COMMAND.
+
+BOUNDARY:
+Goodman does not make every symbol a language, nor establish equivalence among verbal, pictorial, diagrammatic, and computational representation.
+
+CITATION TRAIL:
+Goodman — Languages of Art; Ways of Worldmaking; Robin Evans; research on multimodal architectural representation.
+
+TEST:
+For every artifact in a house-making chain ask: language? symbol? executable? true/false? valid/invalid? directs action? what interprets it?
+
+PLATFORM:
+[[HOUSE AND LANGUAGE]]
+
+LINKS:
+[[WORDS OR OTHER SYMBOLS]]
+[[MULTIMODAL OPERATIVE DESCRIPTION]]
+[[THE HOUSE THAT REPRESENTATIONS BUILT]]
+
+BIBTEX:
+@book{goodman1978ways_symbols,
+  author={Goodman, Nelson},
+  title={Ways of Worldmaking},
+  publisher={Hackett Publishing Company},
+  address={Indianapolis},
+  year={1978}
+}
+
+ZETTEL
+
+ID:
+INGOLD-COMP-001
+
+TITLE:
+THE SENTENCE-TO-WALL PIPELINE BECOMES HYLOMORPHIC WHEN IT TREATS SOURCE DESCRIPTION AND FINISHED MATTER AS THE ONLY STATES THAT MATTER.
+
+SOURCE:
+Tim Ingold — Making: Anthropology, Archaeology, Art and Architecture — 2013 — Chapter 2, “The Materials of Life,” pp. 25–26.
+
+PASSAGE:
+[PARAPHRASE]
+Following Simondon, Ingold argues that brick-making cannot be understood as a ready-made form imposed upon raw clay. The mould itself must be built, the clay prepared, and the two transformational histories brought into compatibility; a view that sees only what enters and emerges misses formative work occurring between them.
+
+RESEARCH OBJECT:
+THE MISSING MIDDLE OF COMPILATION.
+
+LOCAL MOVE:
+Ingold uses Simondon’s critique of hylomorphism to replace FORM + MATTER with multiple transformations converging in an encounter. This pressures both SENTENCE → HOUSE and longer source-to-machine chains.
+
+SOURCE TERMS:
+hylomorphism; transformational half-chains; compatibility; form-taking activity; morphogenesis; continuous modulation; becoming
+
+WHAT BECAME STRANGE:
+A compiler metaphor encourages attention to INPUT → OUTPUT and whether output realizes input. Ingold redirects attention to what has to happen in the middle before endpoints can meet.
+
+QUESTION:
+When a linguistic description becomes a building, should we model the process as compilation or as the temporary coupling of several independently transforming chains?
+
+DEEPER QUESTION:
+What happens if MATERIAL, TOOL, MODEL, SITE, MACHINE, and LANGUAGE each have trajectories that must be brought into compatibility rather than subordinated to an originating representation?
+
+MECHANISM:
+Multiple prior transformations converge: mould is prepared, clay is prepared, forces encounter one another, form emerges. The operative event is COMPATIBILITY rather than transfer.
+
+FORMAL SHIFT:
+<FORM + PASSIVE MATTER>
+→ <MULTIPLE TRANSFORMING TRAJECTORIES>
+→ [BRING INTO COMPATIBILITY]
+→ <EMERGENT FORM>
+
+SOURCE FORMALISM:
+Ingold, following Simondon, explicitly describes mould and clay as transformational half-chains brought to a point of compatibility.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+LANGUAGE TRAJECTORY ─┐
+MODEL TRAJECTORY ────┤
+MATERIAL TRAJECTORY ┤
+TOOL TRAJECTORY ────┼→ [COMPATIBILITY EVENT] → LOCAL FORM
+SITE TRAJECTORY ────┤
+LABOR TRAJECTORY ───┘
+Then repeat.
+
+TENSION:
+[[HOUSE-COMP-000]] treats disappearing interpreters as a historical variable; Ingold suggests what matters may instead be the coordination of heterogeneous transformations.
+
+MISSING:
+A technical account of open-loop vs recursively adaptive fabrication with sensing, tolerance, tool wear, deformation, and material state.
+
+BOUNDARY:
+Ingold is not discussing compilers, programming languages, LLMs, CAD/CAM, or robotic construction here; mapping compiler architecture to hylomorphism is OUR extension.
+
+CITATION TRAIL:
+[[HOUSE-COMP-000]] → Ingold → Simondon → adaptive fabrication / closed-loop manufacturing; Deleuze and Guattari; robotic fabrication with sensor feedback.
+
+TEST:
+For one sentence-to-fabrication system record what is already in motion, what must be prepared, what resists, what is sensed, what representation changes, and what must become compatible.
+
+PLATFORM:
+[[THE HOUSE THAT WORDS BUILT]]
+
+LINKS:
+[[HOUSE-COMP-000]]
+[[HOUSE-COMP-006]]
+[[THE MISSING MIDDLE OF COMPILATION]]
+
+BIBTEX:
+@book{ingold2013making,
+  author = {Ingold, Tim},
+  title = {Making: Anthropology, Archaeology, Art and Architecture},
+  publisher = {Routledge},
+  year = {2013},
+  doi = {10.4324/9780203559055}
+}
+
+ZETTEL
+
+ID:
+INGOLD-COMP-002
+
+TITLE:
+INGOLD TURNS MATERIAL EXECUTION INTO A QUESTION-AND-RESPONSE LOOP RATHER THAN THE TERMINAL STAGE OF A PROGRAM.
+
+SOURCE:
+Tim Ingold — Making: Anthropology, Archaeology, Art and Architecture — 2013 — Chapter 2, “The Materials of Life,” p. 31.
+
+PASSAGE:
+[QUOTE]
+“making is a process of correspondence”
+
+RESEARCH OBJECT:
+MATERIAL RESPONSE AS PART OF EXECUTION.
+
+LOCAL MOVE:
+Ingold says practitioners learn materials by following what happens to them; a technical gesture functions as a probe and material response matters for what comes next.
+
+SOURCE TERMS:
+follow; technical gesture; responds; correspond; bringing forth; potentials; becoming; forces; flows
+
+WHAT BECAME STRANGE:
+The lineage treats LANGUAGE as the new source of action. Ingold makes RESPONSE the more fundamental unit: if a sentence issues an instruction but nothing downstream can answer back, it may be executable but unable to make competently.
+
+QUESTION:
+Does a language truly participate in making when it can only command, or must an operative language also be capable of receiving answers from matter?
+
+DEEPER QUESTION:
+Could the decisive transition after “language becomes executable” be LANGUAGE BECOMES CORRESPONDENT: WORDS ⇄ WORLD?
+
+MECHANISM:
+Practitioner acts; material variation becomes perceptible; variation changes next gesture; making continues through coupled history.
+
+FORMAL SHIFT:
+<PRECONCEIVED FORM>
+→ <ATTENTIVE PRACTITIONER + ACTIVE MATERIAL>
+→ [GESTURE / RESPONSE / ADJUSTMENT]
+→ <FORM EMERGING THROUGH CORRESPONDENCE>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+OPEN LOOP: PROMPT → MODEL → TOOLPATH → MACHINE → MATTER.
+PRESSURE: PROMPT → MODEL → ACTION → MATERIAL STATE → SENSE → REVISE REPRESENTATION → NEXT ACTION → NEW MATERIAL STATE ↺.
+
+TENSION:
+[[HOUSE-COMP-006]] makes NC language important because statements have machining consequences; Ingold asks whether operations can alter themselves in response to what material actually does.
+
+MISSING:
+The boundary between feedback control, adaptive control, error correction, machine vision, material sensing, and craft correspondence.
+
+BOUNDARY:
+Ingold does not claim sensor feedback or cybernetic loops constitute correspondence; equivalence requires evidence.
+
+CITATION TRAIL:
+[[HOUSE-COMP-000]] → Ingold on correspondence → Deleuze/Guattari → cybernetics → adaptive machining → construction robotics.
+
+TEST:
+Fabricate the same irregular material with fixed toolpath and with sensing/replanning; ask whether the adaptive system merely corrects deviation from a fixed target or allows the target itself to change.
+
+PLATFORM:
+[[THE HOUSE THAT WORDS BUILT]]
+
+LINKS:
+[[HOUSE-COMP-000]]
+[[HOUSE-COMP-006]]
+[[MATERIAL RESPONSE]]
+[[LANGUAGE THAT CAN LISTEN]]
+
+BIBTEX:
+@book{ingold2013making_correspondence,
+  author = {Ingold, Tim},
+  title = {Making: Anthropology, Archaeology, Art and Architecture},
+  publisher = {Routledge},
+  year = {2013},
+  doi = {10.4324/9780203559055}
+}
+
+ZETTEL
+
+ID:
+INGOLD-COMP-003
+
+TITLE:
+THE BUILDER OCCUPIES THE GAP BETWEEN THE COMPUTABLE BUILDING AND THE BUILDING THAT WEATHER, MATERIALS, AND USE KEEP CHANGING.
+
+SOURCE:
+Tim Ingold — Making: Anthropology, Archaeology, Art and Architecture — 2013 — Chapter 4, “On Building a House,” pp. 47–48.
+
+PASSAGE:
+[PARAPHRASE]
+Ingold contrasts the architect’s expectation of a completed stable realization with builders who repeatedly encounter unanticipated conditions, recalcitrant materials, and necessary improvisations; completion is at best a legal fiction.
+
+RESEARCH OBJECT:
+THE RUNTIME ENVIRONMENT OF A BUILDING.
+
+LOCAL MOVE:
+Ingold shifts from DESIGN → CORRECT REALIZATION to practical negotiation of discrepancies between intended form and unfolding circumstances.
+
+SOURCE TERMS:
+design; construction; process; plan; improvise; materials; completion; growth; decay; regeneration
+
+WHAT BECAME STRANGE:
+Programming offers a rival vocabulary: a building has something resembling a RUNTIME. A representation may compile while the actual environment introduces states it did not anticipate.
+
+QUESTION:
+What is the architectural equivalent of a runtime exception?
+
+DEEPER QUESTION:
+Could a sentence-to-wall language ever be sufficiently expressive to handle conditions that do not exist until execution has begun?
+
+MECHANISM:
+Prior representation constrains intended form; construction exposes it to variable materials, changing environment, unanticipated events, and local judgement; builders revise action to continue.
+
+FORMAL SHIFT:
+<PRE-EXISTENT DESIGN>
+→ <CONSTRUCTION SITUATION>
+→ [IMPROVISE UNDER UNANTICIPATED CONDITIONS]
+→ <NEVER-QUITE-FINAL BUILDING>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+DESIGN = SOURCE; CONSTRUCTION SITE = RUNTIME; UNMODELED CONDITION = EXCEPTION; CRAFT JUDGEMENT = RUNTIME HANDLER; MODIFICATION = PATCH; MAINTENANCE = CONTINUED EXECUTION.
+
+TENSION:
+[[HOUSE-COMP-003]] and [[HOUSE-COMP-004]] follow increasingly complete building descriptions; Ingold asks whether representational completeness reduces contingency or reclassifies more events as deviations.
+
+MISSING:
+Empirical evidence from BIM-to-field workflows: what is automatic, what generates RFIs, what is improvised, what returns to the model.
+
+BOUNDARY:
+A construction site is not literally a software runtime; the analogy matters only if it identifies concrete represented/material state differences.
+
+CITATION TRAIL:
+[[HOUSE-COMP-003]] → Ingold → Stewart Brand → Lucy Suchman → BIM field coordination → digital twins → construction robotics.
+
+TEST:
+Recover every deviation between MODEL STATE and AS-BUILT STATE for one wall; identify detector, decider, representation, correction, and whether change propagated back to model.
+
+PLATFORM:
+[[THE HOUSE THAT WORDS BUILT]]
+
+LINKS:
+[[HOUSE-COMP-000]]
+[[HOUSE-COMP-003]]
+[[HOUSE-COMP-004]]
+[[ARCHITECTURAL RUNTIME]]
+
+BIBTEX:
+@book{ingold2013making_runtime,
+  author = {Ingold, Tim},
+  title = {Making: Anthropology, Archaeology, Art and Architecture},
+  publisher = {Routledge},
+  year = {2013},
+  doi = {10.4324/9780203559055}
+}
+
+ZETTEL
+
+ID:
+INGOLD-COMP-004
+
+TITLE:
+MEDIEVAL BUILDING MAKES DESIGN AN OPERATION WITHIN CONSTRUCTION RATHER THAN A COMPLETE REPRESENTATION BEFORE IT.
+
+SOURCE:
+Tim Ingold — Making: Anthropology, Archaeology, Art and Architecture — 2013 — Chapter 4, “On Building a House,” pp. 55–56.
+
+PASSAGE:
+[QUOTE]
+“designed as they drew, and drew as they designed”
+
+RESEARCH OBJECT:
+DESIGN DURING EXECUTION.
+
+LOCAL MOVE:
+Ingold reviews evidence that medieval drawings often functioned at full scale and for local problems rather than as complete prespecifications; drawing and building were integral to the craft.
+
+SOURCE TERMS:
+drawing; design; craft; work; tracing; stonemason; lineaments; building; taking care
+
+WHAT BECAME STRANGE:
+Our computational genealogy may have mistaken DESIGN FIRST / EXECUTION SECOND for the natural structure of making. A cathedral suggests DESIGN INSIDE BUILDING.
+
+QUESTION:
+What would a programming language for architecture look like if program writing continued during physical execution rather than terminating before it?
+
+DEEPER QUESTION:
+Could construction itself become a programming environment?
+
+MECHANISM:
+Local geometric problems appear; builders draw at the needed scale/location; drawing assists operation; operation generates conditions for further drawing; design develops through work.
+
+FORMAL SHIFT:
+<COMPLETE PRIOR REPRESENTATION>
+→ <LOCAL DRAWING WITHIN BUILDING>
+→ [DRAW / CUT / FIT / REDRAW]
+→ <FORM DEVELOPING DURING CONSTRUCTION>
+
+SOURCE FORMALISM:
+Full-scale tracing, templates, strings, stakes, practical geometry, local fitting, iterative work; not a formal programming system.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+WRITE₁ → EXECUTE₁ → OBSERVE₁ → WRITE₂ → EXECUTE₂ → OBSERVE₂ → ... ; DESIGN and EXECUTION interleave.
+
+TENSION:
+[[HOUSE-COMP-000]] asks how many interpreters can disappear; this evidence suggests the crucial intermediary may be the capacity to redesign while the wall is becoming.
+
+MISSING:
+Whether contemporary construction environments permit genuine modification of architectural intent during fabrication rather than parameter adjustment toward a fixed target.
+
+BOUNDARY:
+The evidence does not establish medieval cathedrals lacked all prior plans; Ingold explicitly preserves the historical disagreement.
+
+CITATION TRAIL:
+[[HOUSE-COMP-000]] → Ingold → David Turnbull → Lon Shelby → Villard de Honnecourt → Lucy Suchman → live coding → adaptive robotic construction.
+
+TEST:
+Build one component with a frozen complete model and another where rules/geometry may be rewritten after each material operation; record whether the second creates genuinely new design information.
+
+PLATFORM:
+[[THE HOUSE THAT WORDS BUILT]]
+
+LINKS:
+[[HOUSE-COMP-000]]
+[[HOUSE-COMP-007]]
+[[DESIGN DURING EXECUTION]]
+[[CONSTRUCTION AS PROGRAMMING ENVIRONMENT]]
+
+BIBTEX:
+@book{ingold2013making_medieval,
+  author = {Ingold, Tim},
+  title = {Making: Anthropology, Archaeology, Art and Architecture},
+  publisher = {Routledge},
+  year = {2013},
+  doi = {10.4324/9780203559055}
+}
+
+ZETTEL
+
+ID:
+INGOLD-COMP-005
+
+TITLE:
+INGOLD’S CHARTRES CASE ATTACKS THE ASSUMPTION THAT SUFFICIENTLY COMPLETE RULES CAN SUBSTITUTE FOR WORKMANSHIP.
+
+SOURCE:
+Tim Ingold — Making: Anthropology, Archaeology, Art and Architecture — 2013 — Chapter 4, “On Building a House,” pp. 56–57.
+
+PASSAGE:
+[QUOTE]
+“designs do not magically transmute into the forms they specify”
+
+RESEARCH OBJECT:
+THE NON-CODIFIABLE RESIDUE BETWEEN RULE AND RESULT.
+
+LOCAL MOVE:
+Through David Turnbull’s Chartres case, Ingold preserves two failures of prior-design explanation: design does not explain workmanship; replacing workmanship with exhaustive rules attributes too much causal power to codification.
+
+SOURCE TERMS:
+design specification; workmanship; rules; algorithms; skilled practice; situation; fine-tuned action
+
+WHAT BECAME STRANGE:
+Programming languages appear powerful because formal semantics allow rules to determine operations. Construction asks what happens when necessary actions cannot be pre-specified at required granularity.
+
+QUESTION:
+Can a sufficiently expressive architectural programming language eliminate workmanship, or does workmanship name precisely what remains when rule specification ends?
+
+DEEPER QUESTION:
+When an AI system fills gaps not explicitly represented in a construction program, has workmanship been codified—or relocated into a statistical model whose inherited judgements are harder to inspect?
+
+MECHANISM:
+Rules constrain action; situations introduce particulars not exhausted by rules; skilled practitioners discriminate among possibilities and fine-tune action.
+
+FORMAL SHIFT:
+<PRIOR DESIGN SPECIFICATION>
+→ <RULE-GOVERNED PRACTICE>
+→ [SITUATED FINE-TUNING]
+→ <BUILT FORM>
+
+SOURCE FORMALISM:
+No executable formalism; the source distinguishes codified rules from situated practice necessary to complete a cathedral.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Let R = explicit rules, S = situation, J = situated judgement, A = action. Strong-program thesis: A = R(S). Ingold/Turnbull pressure: R constrains A, but J(S, history, material variation, skill) is required.
+
+TENSION:
+[[HOUSE-COMP-005]] and [[HOUSE-COMP-006]] show formal rules can generate form or machine operations; neither proves formal rules are sufficient for situated building practice.
+
+MISSING:
+Inventory of decisions in contemporary fabrication that are explicitly programmed, algorithmically derived, statistically learned, sensor-resolved, operator-resolved, or improvised.
+
+BOUNDARY:
+Ingold does not prove skilled practice is in principle non-computable; he attacks unwarranted explanatory substitution of rules for workmanship.
+
+CITATION TRAIL:
+[[HOUSE-COMP-005]] → Ingold → David Turnbull → Michael Polanyi → Lucy Suchman → Hubert Dreyfus → tacit knowledge in automation → robotic skill learning.
+
+TEST:
+Take a rule-produced assembly, alter one material/tool/site/tolerance variable, rerun, and inventory residual adjustments that become candidates for WORKMANSHIP.
+
+PLATFORM:
+[[THE HOUSE THAT WORDS BUILT]]
+
+LINKS:
+[[HOUSE-COMP-000]]
+[[HOUSE-COMP-005]]
+[[HOUSE-COMP-006]]
+[[RULES AND WORKMANSHIP]]
+
+BIBTEX:
+@book{ingold2013making_workmanship,
+  author = {Ingold, Tim},
+  title = {Making: Anthropology, Archaeology, Art and Architecture},
+  publisher = {Routledge},
+  year = {2013},
+  doi = {10.4324/9780203559055}
+}
+
+ZETTEL
+
+ID:
+INGOLD-COMP-006
+
+TITLE:
+THE TECHNICAL DRAWING CAN STORE AN INSTRUCTION WITHOUT CONTAINING THE MOVEMENT REQUIRED TO EXECUTE IT.
+
+SOURCE:
+Tim Ingold — Making: Anthropology, Archaeology, Art and Architecture — 2013 — Chapter 9, “Drawing the Line,” p. 126.
+
+PASSAGE:
+[PARAPHRASE]
+Ingold distinguishes gestural drawing from drawings whose primary purpose is specification. Technical drawings can encode directions for action, but bodily movement required for realizing those directions is absent from the marks themselves.
+
+RESEARCH OBJECT:
+INSTRUCTION IS NOT MOTION.
+
+LOCAL MOVE:
+Ingold separates TRACE OF AN ACT from PROPOSITION ABOUT AN ACT. Technical drawing specifies what should be made or how to proceed; actual movement must be supplied elsewhere.
+
+SOURCE TERMS:
+gesture; specification; proposition; technical drawing; instructions; movement; sketch; haptic; optical
+
+WHAT BECAME STRANGE:
+This is almost exactly the unresolved arrow in CODE → MATTER. A representation can encode motion without moving; something must reanimate the inscription.
+
+QUESTION:
+What is the last representation before movement?
+
+DEEPER QUESTION:
+Does machine execution eliminate interpretation—or replace embodied interpretation with a formally engineered mechanism for converting propositions into motion?
+
+MECHANISM:
+Representation specifies relations/operations; practitioner or machine reads according to conventions; reader supplies physical movement; movement changes matter.
+
+FORMAL SHIFT:
+<SPECIFICATION>
+→ <INSTRUCTION-BEARING INSCRIPTION>
+→ [REANIMATE AS MOVEMENT]
+→ <PHYSICAL OPERATION>
+
+SOURCE FORMALISM:
+Ingold distinguishes GESTURAL LINES from NON-GESTURAL / SPECIFICATORY LINES; technical drawings lie toward the propositional/specifying side.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+PROMPT → CAD → TOOLPATH → CONTROL SIGNAL → ACTUATOR MOTION → MATERIAL CHANGE. At each state ask: DOES THIS REPRESENT MOVEMENT OR IS THIS MOVEMENT?
+
+TENSION:
+[[HOUSE-COMP-006]] makes APT important because statements have defined machining consequences; Ingold forces a distinction between defined consequence and machining motion.
+
+MISSING:
+A precise account of symbolic instruction → electrical control → motor torque → tool displacement → force at material interface.
+
+BOUNDARY:
+Ingold is discussing drawing, not numerical control or programming-language semantics; extension is OUR inference.
+
+CITATION TRAIL:
+[[HOUSE-COMP-006]] → Ingold → Patrick Maynard → CAD/CAM → APT → G-code → machine controllers → actuator theory → robotics.
+
+TEST:
+Walk backward from a robot/CNC tool touching material and classify the last five states as INSCRIPTION, REPRESENTATION, SIGNAL, MOTION, FORCE; locate the exact transition.
+
+PLATFORM:
+[[THE HOUSE THAT WORDS BUILT]]
+
+LINKS:
+[[HOUSE-COMP-003]]
+[[HOUSE-COMP-004]]
+[[HOUSE-COMP-006]]
+[[THE LAST REPRESENTATION BEFORE MOTION]]
+
+BIBTEX:
+@book{ingold2013making_drawing,
+  author = {Ingold, Tim},
+  title = {Making: Anthropology, Archaeology, Art and Architecture},
+  publisher = {Routledge},
+  year = {2013},
+  doi = {10.4324/9780203559055}
+}
+
+ZETTEL
+
+ID:
+INGOLD-COMP-007
+
+TITLE:
+INGOLD SPLITS LANGUAGE INTO TWO OPERATIVE MODES: SPECIFICATIONS DEFINE PROJECTS; STORIES ORIENT PRACTITIONERS THROUGH UNFINISHED SITUATIONS.
+
+SOURCE:
+Tim Ingold — Making: Anthropology, Archaeology, Art and Architecture — 2013 — Chapter 8, “Telling by Hand,” pp. 110–111.
+
+PASSAGE:
+[PARAPHRASE]
+Ingold distinguishes complete specification from telling that directs attention. Specifications state materials, dimensions, and movements and establish a project; stories help practitioners perceive where to go and what to attend to while proceeding.
+
+RESEARCH OBJECT:
+LANGUAGE CAN GUIDE ACTION WITHOUT FULLY SPECIFYING IT.
+
+LOCAL MOVE:
+Ingold opposes SPECIFICATION, which attempts to state what is required, to STORY, which educates attention so a practitioner can continue intelligently.
+
+SOURCE TERMS:
+telling; specification; guidance; story; project; itinerary; attention; carry on; practice
+
+WHAT BECAME STRANGE:
+Perhaps a natural-language prompt succeeds not because ordinary language becomes sufficiently precise, but because the computational system supplies missing specificity downstream.
+
+QUESTION:
+Is a prompt a specification, or is it guidance for a machine that already knows how to continue?
+
+DEEPER QUESTION:
+If a generative model can act from underspecified language, where does missing information come from: training data, defaults, world model, inference, platform conventions, hidden software, user iteration?
+
+MECHANISM:
+One mode fixes attributes and operations; another points attention toward a course without exhausting particulars; competent action fills what has not been stated.
+
+FORMAL SHIFT:
+<LANGUAGE AS COMPLETE DESCRIPTION>
+→ <LANGUAGE AS ORIENTATION>
+→ [GUIDED CONTINUATION]
+→ <SITUATED ACTION>
+
+SOURCE FORMALISM:
+Ingold explicitly contrasts specification with storytelling and associates them with PROJECT and ITINERARY.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+SPECIFICATION MODEL: UTTERANCE → EXPLICIT PARAMETERS → EXECUTION. GUIDANCE MODEL: UTTERANCE → ORIENTATION → MODEL SUPPLIES UNSAID STRUCTURE → ACTION → OBSERVATION → CONTINUATION. PROMPT may be a pointer into learned possibilities.
+
+TENSION:
+[[HOUSE-COMP-001]] makes SHRDLU important because English commands become executable, but SHRDLU’s tiny world supplies enormous hidden structure; Alexander’s patterns similarly guide without executable syntax.
+
+MISSING:
+A measure of how much information in a prompt is explicitly supplied by user versus silently supplied by substrate.
+
+BOUNDARY:
+Ingold is not theorizing LLM prompts and does not say specification is useless.
+
+CITATION TRAIL:
+[[HOUSE-COMP-001]] → Ingold on specification versus telling → Polanyi → Alexander → Suchman → program synthesis from underspecified prompts.
+
+TEST:
+Give expert builders and an AI system the same task under exhaustive technical specification and short directional account; record every decision absent from input and identify where it came from.
+
+PLATFORM:
+[[THE HOUSE THAT WORDS BUILT]]
+
+LINKS:
+[[HOUSE-COMP-000]]
+[[HOUSE-COMP-001]]
+[[HOUSE-COMP-002]]
+[[HOUSE-COMP-007]]
+[[PROMPT AS GUIDANCE]]
+
+BIBTEX:
+@book{ingold2013making_telling,
+  author = {Ingold, Tim},
+  title = {Making: Anthropology, Archaeology, Art and Architecture},
+  publisher = {Routledge},
+  year = {2013},
+  doi = {10.4324/9780203559055}
+}
+
+ZETTEL
+
+ID:
+INGOLD-COMP-008
+
+TITLE:
+DESIGN NEED NOT PREDICT THE FINAL HOUSE; IT CAN PROJECT FAR ENOUGH AHEAD TO LET MAKING FIND ITS NEXT MOVE.
+
+SOURCE:
+Tim Ingold — Making: Anthropology, Archaeology, Art and Architecture — 2013 — Chapter 5, “The Sighted Watchmaker,” pp. 71–73.
+
+PASSAGE:
+[PARAPHRASE]
+Ingold asks what design becomes once it is no longer identified with a plan completed before execution; he recasts it as anticipatory, open-ended movement toward something not fully known in advance, while making remains constrained by material engagement.
+
+RESEARCH OBJECT:
+ANTICIPATION WITHOUT COMPLETE PREDICTION.
+
+LOCAL MOVE:
+Ingold refuses the choice DESIGN PRECEDES MAKING or THERE IS NO DESIGN. Design can run ahead of material work without dictating its final state.
+
+SOURCE TERMS:
+anticipation; foresight; open-ended; future; drawing; movement; gesture; hopes; dreams; material engagement
+
+WHAT BECAME STRANGE:
+The House That Words Built may not need WORDS → COMPLETE HOUSE SPECIFICATION. Linguistic operation might continually extend a horizon just beyond current construction.
+
+QUESTION:
+Could an architectural language build without ever containing a complete representation of the building it is producing?
+
+DEEPER QUESTION:
+What is the minimum horizon of anticipation required for coherent construction: one operation, component, room, phase, whole building?
+
+MECHANISM:
+Imagination projects ahead; current material engagement constrains possibilities; practitioner moves; new circumstances alter projection.
+
+FORMAL SHIFT:
+<COMPLETE FUTURE FORM>
+→ <ANTICIPATED DIRECTION>
+→ [MOVE / PERCEIVE / REVISE]
+→ <NEXT STATE>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+STATE₀ + INTENTION → PLAN₀…k → ACT₁ → STATE₁ → REPLAN₁…k → ACT₂ → STATE₂ → ... . No stage requires fully determined final state.
+
+TENSION:
+[[HOUSE-COMP-009]] places conversation inside design; Ingold suggests conversation may repeatedly extend a horizon into a future that remains genuinely undetermined.
+
+MISSING:
+Whether prompt-to-CAD and robotic systems permit goals/geometry to remain open during construction or require a fixed target before execution.
+
+BOUNDARY:
+Ingold does not present an algorithm for receding-horizon planning; control-theoretic formalization is OUR reconstruction.
+
+CITATION TRAIL:
+[[HOUSE-COMP-009]] → Ingold on anticipatory foresight → Pallasmaa → Suchman → receding-horizon control → interactive generative design → adaptive robotics.
+
+TEST:
+Build the same structure with a frozen complete model and with only next N operations specified; vary N and find the smallest lookahead horizon at which coherent architectural form still emerges.
+
+PLATFORM:
+[[THE HOUSE THAT WORDS BUILT]]
+
+LINKS:
+[[HOUSE-COMP-000]]
+[[HOUSE-COMP-009]]
+[[ANTICIPATORY DESIGN]]
+[[RECEDING HORIZON HOUSE]]
+
+BIBTEX:
+@book{ingold2013making_anticipation,
+  author = {Ingold, Tim},
+  title = {Making: Anthropology, Archaeology, Art and Architecture},
+  publisher = {Routledge},
+  year = {2013},
+  doi = {10.4324/9780203559055}
+}
+
+ZETTEL
+
+ID:
+INGOLD-PROMPT-001
+
+TITLE:
+DEFERRED FORMALIZATION HAS AN OLDER DESIGN LOGIC: DESIGN CAN ANTICIPATE WITHOUT PRE-SPECIFYING THE FINAL FORM.
+
+SOURCE:
+Tim Ingold — Making: Anthropology, Archaeology, Art and Architecture — 2013 — Chapter 5, “The Sighted Watchmaker,” pp. 71–73.
+
+PASSAGE:
+[QUOTE]
+“design is always a search for something that is unknown in advance”
+
+[PARAPHRASE]
+Ingold rejects the assumption that design must consist in specifying a finished form prior to implementation. Drawing can instead “break a trail”: the designer anticipates a future without determining it completely, leaving subsequent making to carry the process forward.
+
+RESEARCH OBJECT:
+ANTICIPATION WITHOUT COMPLETE SPECIFICATION.
+
+LOCAL MOVE:
+Ingold asks what becomes of design once DESIGN = PLAN BEFORE EXECUTION is abandoned. His answer is not to eliminate foresight; he distinguishes anticipatory orientation toward what might emerge from predictive representation of what must emerge.
+
+SOURCE TERMS:
+design; anticipation; future; open-ended; drawing; movement; gesture; search; unknown in advance; hopes and dreams
+
+WHAT BECAME STRANGE:
+“The Prompt Is Not the Program” says computation can begin before specification is complete. Ingold changes the question: perhaps incompleteness is not merely TEMPORARY; successful making may require parts of the future to remain unresolved until one gets there.
+
+QUESTION:
+Which constraints are merely deferred because the user has not stated them yet, and which constraints are impossible to formulate until an artifact has actually been produced?
+
+DEEPER QUESTION:
+Does natural-language programming introduce deferred formalization, or does it make computational programming capable of a design temporality long familiar to skilled making?
+
+MECHANISM:
+A practitioner projects possibilities ahead without fixing a terminal form; action advances into that field; what becomes perceptible through action changes what can be anticipated next.
+
+FORMAL SHIFT:
+<COMPLETE SPECIFICATION BEFORE EXECUTION>
+→ <PARTIALLY DETERMINED DIRECTION>
+→ [ACT / PERCEIVE / ANTICIPATE AGAIN]
+→ <PROGRESSIVELY DETERMINED FORM>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+The Prompt Is Not the Program: DESCRIBE → GENERATE → INSPECT → CORRECT → REGENERATE.
+Ingoldian pressure: ANTICIPATE₀ → ACT₀ → PERCEIVE₁ → ANTICIPATE₁ → ACT₁ → PERCEIVE₂ → ... . CORRECTION assumes error relative to target; ANTICIPATION permits the target itself to develop.
+
+TENSION:
+Deferred formalization can preserve hidden hylomorphism if it assumes every ambiguity has a correct formal resolution waiting to be discovered. Ingold leaves open the stronger possibility that making generates new possibilities.
+
+MISSING:
+A distinction among UNSTATED CONSTRAINT, UNKNOWN CONSTRAINT, UNKNOWABLE-BEFORE-EXECUTION CONSTRAINT, EMERGENT POSSIBILITY.
+
+BOUNDARY:
+Ingold is not discussing LLMs, natural-language programming, or software specification; the connection is [OUR INFERENCE].
+
+CITATION TRAIL:
+[[THE PROMPT IS NOT THE PROGRAM]] → Ingold — Making, Chapter 5 → Juhani Pallasmaa → Lucy Suchman → Donald Schön → interactive/live programming.
+
+TEST:
+Take ten prompt-programming iterations and classify each new constraint as A known-before-generation but omitted, B discovered by seeing artifact, C created by a possibility the artifact introduced, D unresolved. If C exists, deferred formalization is not merely delayed specification.
+
+PLATFORM:
+[[THE PROMPT IS NOT THE PROGRAM]]
+
+LINKS:
+[[THE PROMPT IS NOT THE PROGRAM]]
+[[DEFERRED FORMALIZATION]]
+[[ANTICIPATORY DESIGN]]
+
+BIBTEX:
+@book{ingold2013making,
+  author = {Ingold, Tim},
+  title = {Making: Anthropology, Archaeology, Art and Architecture},
+  publisher = {Routledge},
+  year = {2013},
+  doi = {10.4324/9780203559055}
+}
+
+ZETTEL
+
+ID:
+INGOLD-PROMPT-002
+
+TITLE:
+THE GENERATION LOOP IS NOT JUST ERROR CORRECTION IF THE ARTIFACT CAN REVEAL A FORM THAT WAS NEVER PRESENT IN THE INITIAL INTENTION.
+
+SOURCE:
+Tim Ingold — Making: Anthropology, Archaeology, Art and Architecture — 2013 — Chapter 9, “Drawing the Line,” pp. 126–127.
+
+PASSAGE:
+[QUOTE]
+“The drawing’s meaning, if such a thing exists, is not in my control.”
+
+[PARAPHRASE]
+Ingold invokes Richard Talbot’s drawing practice to oppose the idea that making projects an already completed mental image onto a surface. Talbot compares drawing to cathedral construction whose form develops through intention, pragmatism, accident and ongoing work.
+
+RESEARCH OBJECT:
+ARTIFACT AS DISCOVERY ENVIRONMENT.
+
+LOCAL MOVE:
+Ingold attacks MENTAL IMAGE → INSCRIPTION. The drawing is produced through unfolding activity whose meaning and form need not be fully controlled in advance. This creates a distinction inside “THE ARTIFACT BECOMES SPECIFICATION.”
+
+SOURCE TERMS:
+drawing; pre-conceived image; hunch; meaning; control; intention; pragmatism; accident; carrying on
+
+WHAT BECAME STRANGE:
+The paper says UNDERDEFINED INSTRUCTION → ARTIFACT → MISSING CONSTRAINT BECOMES VISIBLE. Ingold opens UNDERDEFINED INSTRUCTION → ARTIFACT → UNANTICIPATED POSSIBILITY BECOMES VISIBLE. One produces correction; the other invention.
+
+QUESTION:
+When a generated artifact changes the next prompt, how do we tell whether it has exposed an ERROR or created a POSSIBILITY?
+
+DEEPER QUESTION:
+Could the distinctive unit of natural-language programming be not merely a specification loop but a joint specification–invention loop?
+
+MECHANISM:
+An initial orientation starts an inscription; developing artifact presents qualities not fully determined; those qualities alter judgement; maker follows, redirects, accepts, or rejects what emerges.
+
+FORMAL SHIFT:
+<ARTIFACT AS REALIZATION OF PRIOR INTENTION>
+→ <ARTIFACT AS DEVELOPING TRACE>
+→ [INSPECT / FOLLOW / REDIRECT]
+→ <INTENTION MODIFIED BY ITS OWN MATERIALIZATION>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+PROMPT₀ → ARTIFACT₀ → FAILURE₀ → CONSTRAINT₁. Add: PROMPT₀ → ARTIFACT₀ → SURPRISE₀ → POSSIBILITY₁ → INTENTION₁. Therefore ARTIFACT FEEDBACK = ERROR DISCOVERY ∪ POSSIBILITY DISCOVERY.
+
+TENSION:
+If every unexpected output is coded as failure, the loop becomes increasingly conservative; a genealogy of constraints may erase the genealogy of discoveries that changed what the user wanted.
+
+MISSING:
+A vocabulary for positive surprises: UNEXPECTED PROPERTY WORTH KEEPING; NEW POSSIBILITY CREATED BY OUTPUT; GOAL CHANGED BECAUSE OF ARTIFACT.
+
+BOUNDARY:
+Ingold does not propose a theory of generative AI or claim computational artifacts possess independent creativity; mapping to generated artifacts is [OUR INFERENCE].
+
+CITATION TRAIL:
+[[THE PROMPT IS NOT THE PROGRAM]] → Ingold — “Drawing the Line” → Richard Talbot → Donald Schön — back-talk → generative design → mixed-initiative systems.
+
+TEST:
+Collect twenty prompt revisions and code whether SOMETHING WAS WRONG or SOMETHING INTERESTING APPEARED; separate FAILURE-DRIVEN from SURPRISE-DRIVEN revision.
+
+PLATFORM:
+[[THE PROMPT IS NOT THE PROGRAM]]
+
+LINKS:
+[[THE PROMPT IS NOT THE PROGRAM]]
+[[ARTIFACT BECOMES SPECIFICATION]]
+[[ARTIFACT BECOMES POSSIBILITY]]
+
+BIBTEX:
+@book{ingold2013making_drawing,
+  author = {Ingold, Tim},
+  title = {Making: Anthropology, Archaeology, Art and Architecture},
+  publisher = {Routledge},
+  year = {2013},
+  doi = {10.4324/9780203559055}
+}
+
+ZETTEL
+
+ID:
+INGOLD-PROMPT-003
+
+TITLE:
+A PROMPT MAY WORK NOT BY SPECIFYING THE RESULT BUT BY GIVING A CAPABLE SYSTEM ENOUGH GUIDANCE TO CONTINUE.
+
+SOURCE:
+Tim Ingold — Making: Anthropology, Archaeology, Art and Architecture — 2013 — Chapter 8, “Telling by Hand,” pp. 110–111.
+
+PASSAGE:
+[QUOTE]
+“the story offers guidance without specification”
+
+[PARAPHRASE]
+For Ingold, telling need not exhaustively encode knowledge required for action. Stories orient attention and indicate what to notice, allowing practitioners to proceed through guided rediscovery; complete specifications can provide information without teaching anyone how to carry on.
+
+RESEARCH OBJECT:
+GUIDANCE WITHOUT COMPLETE SPECIFICATION.
+
+LOCAL MOVE:
+Ingold separates two kinds of linguistic efficacy: SPECIFICATION states enough information to define a project; TELLING orients a knowledgeable practitioner so they can find their way. This destabilizes the assumption that natural-language programming works because English has become a high-level specification language.
+
+SOURCE TERMS:
+telling; story; specification; guidance; guided rediscovery; attention; project; itinerary; carry on
+
+WHAT BECAME STRANGE:
+An LLM may act on a vague prompt for the same structural reason an expert acts on incomplete instructions: the prompt does not contain all the knowledge. It recruits a system that already contains—or reconstructs—ways of continuing.
+
+QUESTION:
+Where is the information that makes an underspecified prompt executable?
+
+DEEPER QUESTION:
+Does deferred formalization describe information progressively added by the USER, or information progressively selected from capabilities already latent in the MODEL?
+
+MECHANISM:
+A linguistic utterance directs attention and establishes direction; a competent practitioner supplies situational knowledge not encoded in the utterance; action reveals circumstances; guidance and competence jointly determine continuation.
+
+FORMAL SHIFT:
+<LANGUAGE AS COMPLETE SPECIFICATION>
+→ <LANGUAGE AS GUIDANCE>
+→ [RECRUIT PRIOR COMPETENCE + SITUATED JUDGEMENT]
+→ <CONTINUED ACTION>
+
+SOURCE FORMALISM:
+Ingold explicitly distinguishes SPECIFICATION WITHOUT GUIDANCE from GUIDANCE WITHOUT SPECIFICATION and contrasts PROJECT with ITINERARY.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+OUTPUT = PROMPT + MODEL PRIORS + CONTEXT + DEFAULTS + INFERENCE + TOOL BEHAVIOR + ITERATIVE CORRECTION. The prompt may function as INDEX rather than COMPLETE DESCRIPTION.
+
+TENSION:
+“The Prompt Is Not the Program” argues formalization is delayed. Ingold suggests a rival reading: some apparent deferred formalization is never formalized by the user at all; it is delegated to prior competence.
+
+MISSING:
+A method to distinguish USER-SUPPLIED CONSTRAINT, MODEL-INFERRED CONSTRAINT, PLATFORM DEFAULT, TRAINING-INDUCED CONVENTION, TOOL-IMPOSED CONSTRAINT.
+
+BOUNDARY:
+Ingold’s story/specification distinction concerns skilled practice and education, not LLM inference; prompt-as-guidance is [OUR INFERENCE].
+
+CITATION TRAIL:
+[[THE PROMPT IS NOT THE PROGRAM]] → Ingold — “Telling by Hand” → Polanyi → Alexander → Winograd/SHRDLU → programming by example → program synthesis from partial specifications.
+
+TEST:
+Give the same short prompt to models with substantially different priors or tool environments; keep wording constant and record unstated constraints each system supplies.
+
+PLATFORM:
+[[THE PROMPT IS NOT THE PROGRAM]]
+
+LINKS:
+[[THE PROMPT IS NOT THE PROGRAM]]
+[[PROMPT AS GUIDANCE]]
+[[GUIDANCE WITHOUT SPECIFICATION]]
+
+BIBTEX:
+@book{ingold2013making_telling,
+  author = {Ingold, Tim},
+  title = {Making: Anthropology, Archaeology, Art and Architecture},
+  publisher = {Routledge},
+  year = {2013},
+  doi = {10.4324/9780203559055}
+}
+
+ZETTEL
+
+ID:
+INGOLD-PROMPT-004
+
+TITLE:
+INGOLD’S “EVERY TECHNICAL GESTURE IS A QUESTION” MAKES EXECUTION ITSELF A SPECIFICATION-PRODUCING ACT.
+
+SOURCE:
+Tim Ingold — Making: Anthropology, Archaeology, Art and Architecture — 2013 — Chapter 2, “The Materials of Life,” p. 31.
+
+PASSAGE:
+[QUOTE]
+“Their every technical gesture is a question, to which the material responds according to its bent.”
+
+[PARAPHRASE]
+Ingold describes making as correspondence: practitioners act into materials, perceive how materials respond, and continue in relation to what those responses disclose.
+
+RESEARCH OBJECT:
+EXECUTION AS INQUIRY.
+
+LOCAL MOVE:
+Ingold turns material operation into an epistemic act. A gesture does not merely realize existing knowledge; it produces information about what can happen next. This is close to deferred formalization, except the next specification can be elicited from resistance and response of the thing being made.
+
+SOURCE TERMS:
+technical gesture; question; responds; follow; correspondence; materials; potentials; becoming; forces; flows
+
+WHAT BECAME STRANGE:
+The paper’s loop is DESCRIBE → GENERATE → INSPECT → CORRECT → REGENERATE. Ingold suggests a more general primitive: PROBE → RESPONSE → ADJUST. Generation is an experiment that makes previously unavailable information perceptible.
+
+QUESTION:
+Is deferred formalization fundamentally a programming phenomenon, or one instance of the older logic of skilled inquiry through making?
+
+DEEPER QUESTION:
+What exactly must an artifact reveal for its production to count as an epistemic probe rather than merely an output?
+
+MECHANISM:
+A practitioner performs an operation; material or situation responds; response discloses properties relevant to continuation; next operation adjusts; knowledge and form emerge together.
+
+FORMAL SHIFT:
+<EXECUTION AS REALIZATION>
+→ <EXECUTION AS QUESTION>
+→ [OBSERVE RESPONSE]
+→ <NEW KNOWLEDGE + NEXT OPERATION>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+PROMPT₀ → GENERATION₀ → RESPONSE₀ → INFERENCE₁ → CONSTRAINT₁ → PROMPT₁. Or: ACT → READ CONSEQUENCE → UPDATE → ACT. Deferred formalization becomes a special case of ACTIVE INQUIRY.
+
+TENSION:
+“The Prompt Is Not the Program” gives FAILURE a central role; Ingold’s vocabulary is broader. The response can be resistance, affordance, unexpected capacity, deformation, new direction.
+
+MISSING:
+A taxonomy of artifact responses beyond PASS/FAIL: FAILURE, SURPRISE, AFFORDANCE, AMBIGUITY, SIDE EFFECT, NEW POSSIBILITY, LATENT DEFECT.
+
+BOUNDARY:
+Ingold’s “question” is not a formal query or software test; mapping to iterative generation is [OUR INFERENCE].
+
+CITATION TRAIL:
+[[THE PROMPT IS NOT THE PROGRAM]] → Ingold on correspondence → Schön → Dewey → active learning → test-driven development → interactive program synthesis.
+
+TEST:
+Take fifty prompt iterations and classify why the next prompt changed: failure, possibility, ambiguity, affordance, nothing new. Test whether “failure becomes specification” covers most informative iterations.
+
+PLATFORM:
+[[THE PROMPT IS NOT THE PROGRAM]]
+
+LINKS:
+[[THE PROMPT IS NOT THE PROGRAM]]
+[[EXECUTION AS INQUIRY]]
+[[ARTIFACT RESPONSE]]
+
+BIBTEX:
+@book{ingold2013making_correspondence,
+  author = {Ingold, Tim},
+  title = {Making: Anthropology, Archaeology, Art and Architecture},
+  publisher = {Routledge},
+  year = {2013},
+  doi = {10.4324/9780203559055}
+}
+
+ZETTEL
+
+ID:
+INGOLD-PROMPT-005
+
+TITLE:
+THE LOOP BECOMES NECESSARY WHERE RULES CAN GUIDE ACTION BUT CANNOT PREORDAIN WHAT THE SITUATION WILL REQUIRE.
+
+SOURCE:
+Tim Ingold — Making: Anthropology, Archaeology, Art and Architecture — 2013 — Chapter 4, “On Building a House,” pp. 54–57.
+
+PASSAGE:
+[QUOTE]
+“they comprised resources for action, but did not determine it”
+
+[PARAPHRASE]
+Ingold argues that medieval builders worked with rules and carefully prescribed procedures, but these did not determine practice in every detail. Skilled action had to be fine-tuned to the exigencies of the situation.
+
+RESEARCH OBJECT:
+RULE AS RESOURCE RATHER THAN COMPLETE PROGRAM.
+
+LOCAL MOVE:
+Ingold refuses RULED versus IMPROVISED. Rules can materially structure action without being sufficient to determine it. The operative unit is RULE + SITUATION + JUDGEMENT.
+
+SOURCE TERMS:
+rules; maxims; resources for action; skill; inventiveness; experience; fine-tuned; situation; workmanship
+
+WHAT BECAME STRANGE:
+“Accepted properties become invariants” sounds like progressive movement toward a complete executable specification. Ingold introduces a possible asymptote: rules may become increasingly useful without ever becoming sufficient.
+
+QUESTION:
+Does iterative prompting asymptotically approach a complete program, or does it produce better resources for situated generation while leaving an irreducible interpretive remainder?
+
+DEEPER QUESTION:
+How could we distinguish a constraint that is incompletely formalized from one whose correct application necessarily depends on context-sensitive judgement?
+
+MECHANISM:
+Rules delimit or orient possibilities; concrete situations contain particulars not exhausted by the rule; a skilled agent interprets rule and circumstance; action is fine-tuned in execution.
+
+FORMAL SHIFT:
+<RULE AS DETERMINANT>
+→ <RULE AS RESOURCE>
+→ [SITUATED JUDGEMENT]
+→ <ACTION FIT TO PRESENT CONDITIONS>
+
+SOURCE FORMALISM:
+Ingold, drawing on Polanyi, characterizes practical rules as maxims integrated into practical knowledge and uses Turnbull to reject exhaustive causal power attributed to codified rules and algorithms.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Naive thick-prompt model: C₁ + C₂ + ... + Cₙ → COMPLETE SPECIFICATION. Alternative: ACTIONₜ = INTERPRET(CONSTRAINT_HISTORY, CURRENT_SITUATION, PRACTICAL_COMPETENCE). Increasing C does not necessarily make INTERPRET disappear.
+
+TENSION:
+The strongest version of deferred formalization converts ambiguity into constraints. The Ingoldian counterclaim is that successful systems may depend on acting where formal constraint ends; LLMs may supply situated interpretation after formalization remains incomplete.
+
+MISSING:
+Evidence showing whether repeated prompting actually reduces degrees of interpretive freedom; a thick prompt may accumulate constraints while the system supplies unstated judgement.
+
+BOUNDARY:
+Ingold does not argue contextual judgement is in principle uncomputable; his evidence only blocks EXPLICIT RULES EXIST therefore EXPLICIT RULES DETERMINE PRACTICE.
+
+CITATION TRAIL:
+[[THE PROMPT IS NOT THE PROGRAM]] → Ingold → Michael Polanyi → David Turnbull → Lucy Suchman → Hubert Dreyfus → constraint programming → LLM program synthesis.
+
+TEST:
+Take a mature thick prompt across deliberately altered circumstances; measure what remains invariant, requires interpretation, breaks, and needs new constraints; repeat until behavior is determined or situated judgement continues.
+
+PLATFORM:
+[[THE PROMPT IS NOT THE PROGRAM]]
+
+LINKS:
+[[THE PROMPT IS NOT THE PROGRAM]]
+[[THICK PROMPTING]]
+[[RULE AS RESOURCE]]
+
+BIBTEX:
+@book{ingold2013making_rules,
+  author = {Ingold, Tim},
+  title = {Making: Anthropology, Archaeology, Art and Architecture},
+  publisher = {Routledge},
+  year = {2013},
+  doi = {10.4324/9780203559055}
+}
+
+ZETTEL
+
+ID:
+INGOLD-PROMPT-006
+
+TITLE:
+A CONSTRAINT MAY BE BETTER UNDERSTOOD AS THE HISTORY OF WHAT HAPPENED UNDER TEST THAN AS A STATIC ATTRIBUTE OF THE DESIRED OUTPUT.
+
+SOURCE:
+Tim Ingold — Making: Anthropology, Archaeology, Art and Architecture — 2013 — Chapter 2, “The Materials of Life,” pp. 30–31.
+
+PASSAGE:
+[QUOTE]
+“The properties of materials … are not attributes but histories.”
+
+[PARAPHRASE]
+Ingold argues that practitioners know materials through histories of what they do under particular treatments and circumstances, rather than solely through fixed classifications or context-free attributes.
+
+RESEARCH OBJECT:
+CONSTRAINT AS HISTORY OF ENCOUNTERS.
+
+LOCAL MOVE:
+Ingold replaces THING → FIXED PROPERTY SET with THING → HISTORY OF RESPONSES UNDER CONDITIONS. This gives the paper’s “genealogy of constraints” a stronger technical interpretation.
+
+SOURCE TERMS:
+properties; attributes; histories; stories; treated; particular ways; engagement; becoming
+
+WHAT BECAME STRANGE:
+The constraint “NO DIRECT SIGHTLINE” is less informative than why it appeared, what failure exposed it, under what scenario, what change satisfied it, and what else changed. The history may be part of semantic content.
+
+QUESTION:
+Should a programming system store constraints as propositions or as histories of tested encounters?
+
+DEEPER QUESTION:
+Can two identical final invariants mean different things because they emerged from different failure histories?
+
+MECHANISM:
+An entity is subjected to operations and circumstances; behavior becomes perceptible; knowledge accumulates as history of responses; future action is informed by history.
+
+FORMAL SHIFT:
+<CONSTRAINT AS STATIC PREDICATE>
+→ <CONSTRAINT + CONDITIONS + FAILURE HISTORY>
+→ [RETEST UNDER NEW CONDITIONS]
+→ <EVOLVING OPERATIONAL KNOWLEDGE>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Instead of INVARIANT: roof_drains = true, store proposition, discovered_by test, prior_failure, conditions, correction, evidence, unresolved cases. The program becomes partly genealogical.
+
+TENSION:
+Conventional specification removes historical contingency; Ingold suggests knowing behavior may depend on preserving encounters through which a property became known. This supports the constraint-history thesis while making it more demanding than retaining chat logs.
+
+MISSING:
+A criterion for deciding how much genealogy matters operationally; preserving every event is unusable, so compression must retain causal relevance without collapsing history into bare propositions.
+
+BOUNDARY:
+Ingold is discussing materials, not requirements engineering. “Constraint as history” is an analogy and [OUR INFERENCE].
+
+CITATION TRAIL:
+[[THE PROMPT IS NOT THE PROGRAM]] → Ingold — material properties as histories → case-based reasoning → provenance systems → requirements rationale → design rationale → truth-maintenance → property-based testing.
+
+TEST:
+Take ten mature constraints; create FINAL PROPOSITION ONLY versus PROPOSITION + FAILURE + TEST + CORRECTION HISTORY; give both to a new agent modifying the artifact and measure regression prevention.
+
+PLATFORM:
+[[THE PROMPT IS NOT THE PROGRAM]]
+
+LINKS:
+[[THE PROMPT IS NOT THE PROGRAM]]
+[[GENEALOGY OF CONSTRAINTS]]
+[[CONSTRAINT HISTORY]]
+
+BIBTEX:
+@book{ingold2013making_histories,
+  author = {Ingold, Tim},
+  title = {Making: Anthropology, Archaeology, Art and Architecture},
+  publisher = {Routledge},
+  year = {2013},
+  doi = {10.4324/9780203559055}
+}
+
+ZETTEL
+
+ID:
+INGOLD-PROMPT-007
+
+TITLE:
+THE ROOF PROBLEM IS NOT JUST THAT FAILURE MUST BE LEGIBLE; THE MATERIAL WORLD MUST BE ALLOWED TO INVALIDATE THE MODEL.
+
+SOURCE:
+Tim Ingold — Making: Anthropology, Archaeology, Art and Architecture — 2013 — Chapter 4, “On Building a House,” pp. 47–48.
+
+PASSAGE:
+[QUOTE]
+“the idea is crystalline, the fact fluid”
+
+[PARAPHRASE]
+Ingold describes builders as inhabiting the mismatch between architectural conception and a world of changing materials, weather, decay and unforeseen conditions. Plans do not eliminate this discrepancy; builders repeatedly improvise because operations do not simply unfold according to plan.
+
+RESEARCH OBJECT:
+LEGIBILITY REQUIRES CONTACT WITH THE WORLD THAT CAN PRODUCE THE FAILURE.
+
+LOCAL MOVE:
+The paper’s Roof Problem says deferred formalization works only when correctness is legible from outcomes. Ingold adds a prior condition: an outcome discloses a failure only if the artifact is exposed to the forces under which that failure exists.
+
+SOURCE TERMS:
+plan; process; improvise; materials; rain; leak; world; fluid; completion; builder
+
+WHAT BECAME STRANGE:
+The problem is not merely CAN THE USER RECOGNIZE THE FAILURE? Before that: HAS THE GENERATIVE LOOP CREATED THE CONDITIONS UNDER WHICH THE FAILURE CAN APPEAR? A rendered roof cannot visibly leak if it never encountered rain.
+
+QUESTION:
+Is failure legibility a property of the artifact, or of the artifact-plus-test-environment?
+
+DEEPER QUESTION:
+Does deferred formalization eventually require the generation loop to expand from artifact generation into world simulation, execution, instrumentation, and testing?
+
+MECHANISM:
+A representation proposes a form; artifact encounters omitted conditions; conditions produce effects; effects become perceptible through inspection/instrumentation; only then can a new constraint be formulated.
+
+FORMAL SHIFT:
+<GENERATED ARTIFACT>
+→ <ARTIFACT UNDER RELEVANT CONDITIONS>
+→ [EXPOSE / MEASURE / NOTICE FAILURE]
+→ <NEW CONSTRAINT>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+GENERATE → EXPOSE TO WORLD W → OBSERVE → DIAGNOSE → CORRECT → RE-EXPOSE. Correctness is indexed: CORRECT(A, W, TEST), not merely CORRECT(A).
+
+TENSION:
+Cheap generation makes iteration cheap, but if meaningful exposure is expensive, generation is not the bottleneck. Testing may become the scarce resource; judgement must be split from construction of adequate test conditions.
+
+MISSING:
+A taxonomy of FAILURE ACCESSIBILITY: directly legible; legible after interaction; after simulation; only with instrumentation; only after long duration; not reliably legible.
+
+BOUNDARY:
+Ingold is discussing architecture, materials, and maintenance, not software validation; transformation into a theory of test environments is [OUR INFERENCE].
+
+CITATION TRAIL:
+[[THE PROMPT IS NOT THE PROGRAM]] → Ingold — “On Building a House” → Stewart Brand → Donald Schön → software testing → simulation → property-based testing → digital twins → formal verification.
+
+TEST:
+Take twenty natural-language programming tasks; for every important failure record the environment needed to make it observable: screen inspection, interaction, unit test, simulation, adversarial input, physical test, longitudinal use, formal proof. Correlate success with test availability.
+
+PLATFORM:
+[[THE PROMPT IS NOT THE PROGRAM]]
+
+LINKS:
+[[THE PROMPT IS NOT THE PROGRAM]]
+[[THE ROOF PROBLEM]]
+[[FAILURE LEGIBILITY]]
+[[WORLD AS TEST HARNESS]]
+
+BIBTEX:
+@book{ingold2013making_roof,
+  author = {Ingold, Tim},
+  title = {Making: Anthropology, Archaeology, Art and Architecture},
+  publisher = {Routledge},
+  year = {2013},
+  doi = {10.4324/9780203559055}
+}
+
+ZETTEL
+
+ID:
+INGOLD-PROMPT-008
+
+TITLE:
+“THE PROMPT IS NOT THE PROGRAM” BECOMES STRONGER IF PROGRAMMING IS LOCATED IN THE INTERLEAVING OF DESCRIPTION AND EXECUTION RATHER THAN IN EITHER ONE ALONE.
+
+SOURCE:
+Tim Ingold — Making: Anthropology, Archaeology, Art and Architecture — 2013 — Chapter 4, “On Building a House,” pp. 55–56.
+
+PASSAGE:
+[QUOTE]
+“their designing, like their drawing, was a process of work, not a project of the mind”
+
+[PARAPHRASE]
+Ingold argues that medieval builders need not be understood as first completing a design and then executing it. Drawing, designing and material construction could remain interleaved within ongoing work itself.
+
+RESEARCH OBJECT:
+PROGRAMMING DURING EXECUTION.
+
+LOCAL MOVE:
+Ingold dismantles DESIGN THEN BUILD. This is close to the paper’s SPECIFY THEN EXECUTE becoming SPECIFY → EXECUTE → SPECIFY → EXECUTE. Novelty may lie not in natural language as medium but in return of specification to the temporal interior of making.
+
+SOURCE TERMS:
+design; drawing; building; work; craft; process; taking care; construction
+
+WHAT BECAME STRANGE:
+The paper describes LLM programming as a shift in time. Ingold provides a historical counterexample to treating specification-before-execution as the default temporal structure of skilled production. Conventional programming may be unusual in trying to move so much determination before execution.
+
+QUESTION:
+Is deferred formalization a genuinely new unit of programming, or the computational recovery of an older unit of making in which conception and execution were never fully separated?
+
+DEEPER QUESTION:
+What features of classical programming made pre-specification unusually valuable, and what features of generative models make interleaving specification and execution viable again?
+
+MECHANISM:
+A partial representation guides an operation; operation changes situation; changed situation generates new design information; representation is revised from within the process.
+
+FORMAL SHIFT:
+<PROGRAM FIRST / EXECUTION SECOND>
+→ <PARTIAL DESCRIPTION + EARLY EXECUTION>
+→ [OBSERVE / REDESIGN / CONTINUE]
+→ <PROGRAM EMERGING WITH ITS EXECUTION>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+CLASSICAL IDEAL: SPECIFY ──────────── EXECUTE.
+DEFERRED FORMALIZATION: SPECIFY₀ → EXECUTE₀ → SPECIFY₁ → EXECUTE₁ → SPECIFY₂ → ... .
+INGOLDIAN MAKING: DESIGN₀ ⇄ WORK₀ ⇄ DESIGN₁ ⇄ WORK₁ ⇄ ... . Structural resemblance is strong; genealogy is unproven.
+
+TENSION:
+Calling deferred formalization “new” risks conflating NEW TO PROGRAMMING INTERFACES with NEW AS A FORM OF MAKING. Ingold pressures the second claim. Novelty may lie in executable artifacts participating in older iterative temporality at extremely low cost.
+
+MISSING:
+A historical comparison among craft production, interactive programming, REPLs, debugging, live coding, programming by demonstration, CAD iteration, LLM prompting. Novelty must be split among LOOP, SPEED, ACCESSIBILITY, and SEMANTIC LATITUDE.
+
+BOUNDARY:
+Ingold provides no genealogy from medieval construction to generative programming. Formal resemblance is not historical influence.
+
+CITATION TRAIL:
+[[THE PROMPT IS NOT THE PROGRAM]] → Ingold — “On Building a House” → David Turnbull → Lucy Suchman → Donald Schön → interactive programming → REPL history → live coding → programming by demonstration → LLM natural-language programming.
+
+TEST:
+Historicize the loop. For each candidate practice record PARTIAL SPECIFICATION, EARLY EXECUTION, VISIBLE ARTIFACT, REVISION FROM OUTPUT, PRESERVATION OF PRIOR CONSTRAINTS, CHEAP REGENERATION, SEMANTICALLY LOOSE INPUT. Whatever remains after subtraction is the genuinely new property.
+
+PLATFORM:
+[[THE PROMPT IS NOT THE PROGRAM]]
+
+LINKS:
+[[THE PROMPT IS NOT THE PROGRAM]]
+[[DEFERRED FORMALIZATION]]
+[[DESIGN DURING EXECUTION]]
+[[PROGRAMMING DURING EXECUTION]]
+
+BIBTEX:
+@book{ingold2013making_building,
+  author = {Ingold, Tim},
+  title = {Making: Anthropology, Archaeology, Art and Architecture},
+  publisher = {Routledge},
+  year = {2013},
+  doi = {10.4324/9780203559055}
+}

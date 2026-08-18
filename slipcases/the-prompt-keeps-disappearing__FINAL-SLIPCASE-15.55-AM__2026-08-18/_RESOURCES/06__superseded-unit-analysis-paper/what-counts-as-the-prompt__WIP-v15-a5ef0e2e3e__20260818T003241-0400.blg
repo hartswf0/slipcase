@@ -1,0 +1,17 @@
+[1] Config.pm:308> INFO - This is Biber 2.20
+[2] Config.pm:311> INFO - Logfile is 'what-counts-as-the-prompt__WIP-v15-a5ef0e2e3e__20260818T003241-0400.blg'
+[116] biber:340> INFO - === Tue Aug 18, 2026, 04:36:50
+[150] Biber.pm:420> INFO - Reading 'what-counts-as-the-prompt__WIP-v15-a5ef0e2e3e__20260818T003241-0400.bcf'
+[206] Biber.pm:994> INFO - Found 9 citekeys in bib section 0
+[263] Biber.pm:4463> INFO - Processing section 0
+[278] Biber.pm:4654> INFO - Looking for bibtex file 'SLIPCASE-20260818-UNIT-01__references.bib' for section 0
+[280] bibtex.pm:1713> INFO - LaTeX decoding ...
+[293] bibtex.pm:1519> INFO - Found BibTeX data source 'SLIPCASE-20260818-UNIT-01__references.bib'
+[398] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[398] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[398] Biber.pm:4283> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[398] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[414] bbl.pm:676> INFO - Writing 'what-counts-as-the-prompt__WIP-v15-a5ef0e2e3e__20260818T003241-0400.bbl' with encoding 'UTF-8'
+[418] bbl.pm:779> INFO - Output to what-counts-as-the-prompt__WIP-v15-a5ef0e2e3e__20260818T003241-0400.bbl
+[418] Biber.pm:131> WARN - legacy month field 'February' in entry 'suchman1985plans' is not an integer - this will probably not sort properly.
+[418] Biber.pm:133> INFO - WARNINGS: 1

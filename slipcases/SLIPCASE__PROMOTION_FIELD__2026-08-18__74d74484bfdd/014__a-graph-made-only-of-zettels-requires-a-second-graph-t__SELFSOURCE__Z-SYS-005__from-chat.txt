@@ -1,0 +1,103 @@
+ZETTEL
+
+ID:
+Z-SYS-005
+
+TITLE:
+A graph made only of zettels requires a second graph that is not made of zettels
+
+SOURCE:
+User-provided prompt system — PRIME ZETTEL FORAGE — AUTONOMOUS GRAPH INQUIRY v4.0 — supplied 2026-08-18.
+
+PASSAGE:
+[PARAPHRASE] The daemon states that ZETTEL is the only research-object type, yet internally maintains ZETTEL_SET, EDGE_SET, ACTIVE_FRONTIER, VISITED_EDGES, OPEN_CONTRADICTIONS, and SOURCE_HUBS, explicitly excluding this orchestration state from zettel syntax.
+
+RESEARCH OBJECT:
+Research-object monism and execution-state pluralism coexist by placing the latter outside the declared graph.
+
+LOCAL MOVE:
+The prompt protects the zettel schema from scheduler metadata.
+
+SOURCE TERMS:
+ZETTEL is the only research-object type
+ZETTEL_SET
+EDGE_SET
+ACTIVE_FRONTIER
+VISITED_EDGES
+OPEN_CONTRADICTIONS
+SOURCE_HUBS
+orchestration state
+
+WHAT BECAME STRANGE:
+The daemon cannot operate on “zettels alone.” It requires a substantial shadow structure whose objects are indispensable but officially not research objects.
+
+QUESTION:
+What is the ontological status of ACTIVE_FRONTIER, OPEN_CONTRADICTIONS, and SOURCE_HUBS if they can determine future research but are not nodes in the research graph?
+
+DEEPER QUESTION:
+Which state must survive a context loss for the autonomous research process—not merely its accumulated notes—to be resumable?
+
+MECHANISM:
+Zettels remain stable public research objects.
+A hidden controller compiles transient higher-order state from them.
+That state selects actions.
+Actions create new zettels.
+The controller recompiles.
+
+FORMAL SHIFT:
+<ZETTEL graph>
+→ <compiled orchestration state>
+→ [select research action]
+→ <new ZETTEL graph>
+
+SOURCE FORMALISM:
+Internal state:
+ZETTEL_SET
+EDGE_SET
+ACTIVE_FRONTIER
+VISITED_EDGES
+OPEN_CONTRADICTIONS
+SOURCE_HUBS
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+RESEARCH_STATE =
+  immutable/public graph
+  +
+  derived/controller graph
+
+The daemon is therefore at least a two-state system even when it exposes one research-object type.
+
+TENSION:
+Ancient Master explicitly preserves reconstruction state, suggesting that some of this “internal” scheduler state becomes consequential enough to archive.
+
+MISSING:
+A specification of which orchestration state is safely recomputable and which must be checkpointed to avoid repeating or redirecting research after context loss.
+
+BOUNDARY:
+Derived state need not become a zettel. The problem is persistence and reproducibility, not necessarily datatype proliferation.
+
+CITATION TRAIL:
+[[Z-SYS-004]]
+→ daemon STATE
+→ Ancient Master reconstruction state
+
+TEST:
+Terminate a daemon after several rounds. Restart using only its zettels. Compare its reconstructed frontier, visited edges, contradictions, and next selected edge with the pre-termination state.
+
+PLATFORM:
+[[RESEARCH STATE]]
+
+LINKS:
+[[Z-SYS-004]]
+[[SHADOW GRAPH]]
+[[RECONSTRUCTION STATE]]
+
+BIBTEX:
+@misc{autonomous_graph_state_2026,
+  title = {Prime Zettel Forage — Autonomous Graph Inquiry: State Model},
+  howpublished = {User-provided research-system prompt},
+  year = {2026},
+  note = {Version 4.0; supplied 2026-08-18}
+}

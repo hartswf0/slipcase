@@ -1,0 +1,222 @@
+---
+title: "The Prompt Is Not the Author"
+subtitle: "Contribution, Control, and the Missing Scholarly Object in AI-Assisted Research"
+author: "Researcher"
+date: "2026-08-18"
+status: "Working Paper · AI-augmented research process · Evidence, prompts, and making history preserved"
+abstract: |
+  Institutions increasingly ask researchers to disclose the magnitude or significance of generative-AI use, while technical research increasingly treats model-facing instructions, constraints, templates, and chains as programmable components of systems. These practices collide around a unit that neither side handles well: the prompt. One response is to claim that prompts are simply a new form of authorship. That claim is too strong. Copyright doctrine shows why detailed instructions can contain substantial intellectual labor without supplying sufficient control over a model's expressive realization. At the same time, programming systems such as LMQL and DSPy, prompt-chain interfaces, provenance systems, and human-AI writing traces show why treating prompts as mere conversational input is too weak. This paper argues for a narrower position: consequential prompting should be evaluated as a role-relative scholarly contribution when it functions as specification, method, configuration, orchestration, selection, or an epistemic instrument, without assuming that these roles collapse into expressive authorship. The required unit of analysis is therefore not the final AI-generated sentence and not a scalar amount of "AI use," but a contribution topology that records what operations were performed, where causal leverage occurred, what degree of control was exercised, under what execution envelope the intervention was calibrated, and how the resulting claim can be traced. This account also sets limits on provenance. A full chat transcript is neither necessary nor sufficient for evaluating contribution, and audit requirements can become reactive, changing the inquiry they purport to document. The paper concludes with an admission test for prompt-based scholarly objects and a research program for evaluating prompt-forward dissertations without reducing them either to conventional authorship or to machine contamination.
+keywords:
+  - prompting
+  - scholarly contribution
+  - authorship
+  - provenance
+  - AI disclosure
+  - prompt programming
+  - human-AI writing
+---
+
+*Working Paper · AI-augmented research process · Evidence, prompts, and making history preserved.*
+
+# 1. The wrong unit
+
+A researcher submits a chapter produced through repeated interaction with a generative model. A reviewer asks, "Did AI write this?" The question sounds precise because the chapter ends in sentences, and sentences are familiar evidence of writing. Yet the question can collapse radically different production histories. One researcher may type a three-word request, accept five generated pages, and make minor edits. Another may construct a source set, specify comparisons and exclusions, run dozens of adversarial variants, reject all machine prose, and retain only a conceptual distinction that emerged through the interaction. A third may build a prompt program whose constraints and control flow become part of a reproducible experiment. The final artifact can make these workflows look similar even when their causal and intellectual structures are not.
+
+This problem is not solved by asking a slightly more quantitative version of the same question: "How much AI was involved?" Georgia Tech's current policy, for example, makes the magnitude and significance of AI use, together with disciplinary norms, relevant to disclosure [@gatech2026ai]. Those are reasonable governance predicates, but magnitude does not by itself tell us what kind of work was done. Recent work on measuring human contribution in AI-assisted generation makes the same point from another direction. Xie and colleagues propose an information-theoretic measure of how much information human input contributes to AI-assisted output rather than inferring contribution solely from the final text [@xie2026humancontribution]. Their intervention is useful precisely because raw interaction volume and human contribution are not equivalent. A short input can exert strong conditional influence; a long input can have little. But even that improvement leaves open a second distinction: informational leverage is not intellectual merit. A three-word instruction can be causally decisive and scholarly trivial.
+
+The central claim of this paper is therefore deliberately narrower than "prompts are authorship." A prompt, prompt program, selection procedure, or generative loop can become a scholarly contribution when it performs a consequential role in inquiry that can be specified, tested, bounded, and traced. That contribution may be methodological, conceptual, computational, curatorial, or expressive. These categories should not be collapsed. The U.S. Copyright Office's 2025 report on AI copyrightability is especially useful here because it pressures the strongest version of prompt authorship: detailed prompting may contain substantial human intellectual work while still failing to provide sufficient control over the expressive details of generated output [@usco2025copyrightai]. Rather than treating this as a defeat, scholarship should take it as a distinction it badly needs.
+
+The relevant unit is not the origin of the last sentence. It is the structure of contribution around the artifact.
+
+# 2. Authorship, contribution, and control are different thresholds
+
+The word *authorship* currently carries too many jobs. It can mean legal ownership, expressive origination, intellectual contribution, responsibility for claims, eligibility for a byline, or satisfaction of a degree requirement. Generative systems expose the looseness because they separate operations that conventional writing often bundled together. One person can specify an argument without realizing every sentence. Another can select and arrange generated material without specifying its initial wording. A model can supply sentences without accepting responsibility for them. A researcher can reject every generated passage while allowing the interaction to redirect the argument.
+
+CRediT already offers institutional precedent for separating contribution from authorship. Its taxonomy distinguishes conceptualization, methodology, software, validation, investigation, supervision, writing, and other roles while explicitly declining to determine who qualifies as an author [@niso_credit]. That choice matters. It shows that scholarship can describe the work people performed before deciding what higher-order status should follow. Prompt-mediated research needs the same discipline. Before asking whether a prompt makes someone "the author," we should ask what operation the prompt performed.
+
+Copyright supplies an important contrary case. The U.S. Copyright Office distinguishes human instructions from human authorship when the generative system determines expressive realization. It also recognizes that sufficiently creative human selection, coordination, arrangement, or modification of generated material can itself contain protectable authorship [@usco2025copyrightai]. Two consequences follow. First, intellectual sophistication in a prompt does not guarantee expressive control. Second, post-generation operations can sometimes be authorship even when the initial generation was not. Prompt-forward scholarship should preserve both findings instead of flattening them into a slogan.
+
+This yields at least four thresholds that should be kept separate:
+
+1. **Causal contribution:** did an intervention materially change system behavior or the artifact?
+2. **Scholarly contribution:** did the intervention perform a consequential intellectual or methodological role in the research?
+3. **Expressive control:** did the researcher determine the relevant expressive elements strongly enough for the applicable authorship standard?
+4. **Responsibility:** who accepts and can answer for the resulting scholarly claim?
+
+Ablation makes the distinction vivid. Generative Agents demonstrates through ablations that architectural components such as observation, planning, and reflection contribute to the believability of agent behavior [@park2023generative]. Removing a component and observing degradation is evidence that the component is load-bearing. But it does not by itself establish who deserves credit for the component, whether the component is novel, or whether its creator authored the system's outputs. Causal necessity is not scholarly merit. It is one evidentiary layer.
+
+This is also why the familiar director or conductor analogy has to be used carefully. Orchestration can be consequential without being identical to writing. CRediT already gives names such as methodology, supervision, software, and project administration to contributions that coordinate work without pretending that every form of coordination is textual authorship [@niso_credit]. Copyright, meanwhile, distinguishes coordinating the production process from creatively arranging the resulting expression. Prompt-forward scholarship needs both kinds of orchestration in its vocabulary.
+
+# 3. Prompt is already too broad a technical category
+
+The scholarly debate often speaks of "the prompt" as though a chat request, a templated instruction, a constrained query program, and a recursive agent workflow were variations of one object. Technical practice already undermines that assumption.
+
+LMQL explicitly generalizes prompting from free text into language-model programming by combining natural-language fragments with scripting, constraints, and control flow [@beurerkellner2023lmql]. DSPy goes further in a different direction: it abstracts language-model pipelines as parameterized modules and computational graphs and compiles them against a metric, deliberately moving away from hand-written prompt templates as the sole locus of control [@khattab2023dspy]. DSPy Assertions turns constraints into executable checks that can trigger refinement when a model output violates specified conditions [@singhvi2023assertions]. AI Chains and PromptChainer similarly make multi-step prompt workflows explicit, allowing outputs to become inputs to later stages while exposing intermediate states for inspection and debugging [@wu2022aichains; @wu2022promptchainer].
+
+These systems make a simple but consequential point: natural-language surface form does not determine computational role. A string can be conversational input in one setting, versioned configuration in another, and an element of a larger program in a third. The Generative Agents repository makes this materially visible by storing model-facing prompts as assets under the simulation engine rather than treating them as disposable chat residue. The associated paper, by contrast, describes the architecture primarily through higher-level concepts such as memory, reflection, planning, and retrieval [@park2023generative]. The prompt can therefore be load-bearing implementation without being the paper's preferred conceptual unit.
+
+This suggests a rule for scholarly classification: **classify a model-facing artifact by its use, execution context, and relation to the research claim, not by the fact that it is made of natural-language text.** The same sentence can be a protocol, a configuration value, a research direction, an interview question, or a model instruction. Those uses are not identical merely because the characters are identical.
+
+The implication is not that every prompt should be elevated into a new publication genre. On the contrary, prompt exceptionalism is another category error. Most prompts are routine. Most lines of code are routine too. The relevant question is when a model-facing artifact becomes sufficiently load-bearing, reusable, discriminating, or epistemically consequential that omitting it prevents the research from being understood, tested, or reproduced.
+
+# 4. From scalar attribution to contribution topology
+
+If "how much AI?" is too coarse, what should replace it? The answer should not be a maximally detailed ontology of every click. A useful representation must preserve distinctions that change an epistemic or institutional judgment and discard distinctions that do not.
+
+A starting point is to treat contribution as a topology with at least five dimensions: **role, leverage, control, calibration, and provenance**.
+
+## 4.1 Role
+
+Role asks *what kind of scholarly work the intervention performs*. CRediT offers a ready vocabulary at a relatively high level: conceptualization, methodology, software, validation, writing, supervision, and so forth [@niso_credit]. Prompt-forward work may require lower-level operational verbs beneath those roles: specify, constrain, retrieve, branch, compare, reject, select, verify, recurse, orchestrate, regenerate. But those verbs should be admitted only when they preserve a decision-relevant distinction. The goal is not a taxonomy of every interaction event; it is a vocabulary that prevents "AI use" from swallowing materially different research activities.
+
+This immediately reframes disclosure. "AI was used for brainstorming" is weak because *brainstorming* can hide workflows with different roles and different consequences. CoAuthor demonstrates how fine-grained writing interactions can be recorded across requests, suggestions, acceptance, dismissal, and revision [@lee2022coauthor]. Humanly similarly starts from the premise that final text alone cannot reveal how a document was produced and records writing and in-platform AI assistance as process evidence [@zhu2026humanly]. These systems make it possible, at least in principle, to derive disclosure from operations rather than from broad self-selected labels.
+
+## 4.2 Leverage
+
+Leverage asks *how much changing this intervention changes the result*. Xie et al.'s information-theoretic approach is one way to formalize a related idea: human input can contribute varying amounts of information to an AI-assisted output [@xie2026humancontribution]. Technical systems supply another family of tests. Ablation asks whether the system loses capability when a component is removed. Benchmarking asks how much performance changes relative to a baseline. Constraint systems ask whether violations decrease when the intervention is present.
+
+But leverage must not be mistaken for merit. A hard-coded constant can be indispensable. A short prohibition can dramatically change output. A clever conceptual distinction can exert only modest immediate control. The purpose of leverage is to establish causal position, not to award scholarly credit automatically.
+
+## 4.3 Control
+
+Control asks *what aspects of the outcome the researcher actually determines*. This is where copyright doctrine is most useful as a limiting case. Detailed instructions can narrow desired content without determining expressive realization [@usco2025copyrightai]. Technical constraint systems sharpen the distinction further. A prose instruction such as "do not invent citations" is a soft constraint: the model may violate it. An LMQL constraint or a validator that rejects prohibited outputs is a different mechanism because the desired condition has been moved into executable machinery [@beurerkellner2023lmql]. DSPy Assertions makes a similar distinction operational by checking constraints and using failures in refinement loops [@singhvi2023assertions].
+
+Control is therefore not adequately proxied by prompt length, specificity, or apparent sophistication. A thousand-word prompt can exert less reliable control than a short programmatic condition. If the scholarly argument depends on control, control should be measured at the level where it is exercised.
+
+## 4.4 Calibration
+
+Calibration asks *under what execution conditions the claimed operation works*. POSIX demonstrates that model behavior can be sensitive to intent-preserving variations in prompt wording [@chatterjee2024posix]. PromptBench similarly treats prompts as one component in a broader evaluation environment involving tasks, models, prompt construction, adversarial variations, and evaluation protocols [@zhu2023promptbench]. These results make the phrase "battle-hardened prompt" relational. A prompt tested repeatedly on one model may be robust only to that model and context.
+
+For prompt-based scholarly instruments, the operative unit should therefore be an **execution envelope**: prompt or prompt program, model and version, relevant parameters, supplied context or sources, task, evaluation procedure, and stopping or acceptance conditions. Exact textual replication may be impossible as proprietary models change. In that case, prompt-forward scholarship should predeclare what form of functional replication is expected: equivalent constraint satisfaction, comparable behavior distributions, preservation of a methodological distinction, or reproduction of a research conclusion.
+
+## 4.5 Provenance
+
+Provenance asks *how the relevant artifact and claim were produced*. W3C PROV is useful because it refuses to equate provenance with a raw stream. It represents entities, activities, agents, and relations such as use, generation, derivation, association, and influence [@moreau2013prov]. That is already closer to what AI-assisted scholarship needs than a binary "AI-generated" label.
+
+Yet provenance alone does not assign responsibility. A perfect production graph can show that a passage was generated from a particular prompt, selected after several trials, and edited into a chapter. It still cannot answer who should defend the claim or whether the selection constituted sufficient scholarly contribution. Provenance is descriptive infrastructure; adjudication is a normative layer added on top.
+
+The contribution topology therefore should not end in a single score. It should expose enough structure for different institutions to ask their own questions without pretending they are asking the same one.
+
+# 5. Provenance should not mean transcript
+
+The most tempting response to uncertainty is to keep everything. If final text cannot reveal the process, preserve the entire conversation and let future evaluators inspect it. This appears transparent, but it confuses event capture with useful provenance.
+
+PROV's central insight is that provenance is modeled through selected entities, activities, agents, and relations [@moreau2013prov]. A complete raw log can be one evidentiary source for such a graph, but it is not the graph itself. In AI-assisted scholarship, the consequential structure may include source selection, model choice, prompt construction, generation, rejection, verification, arrangement, and acceptance of responsibility. A transcript contains some of those events mixed with irrelevancies and may omit others entirely.
+
+Human-AI writing systems make this design problem visible. HaLLMark captures writer-LLM interaction and visualizes provenance so writers can communicate AI use to readers and publishers [@hoque2023hallmark]. DraftMarks uses familiar material metaphors such as revision traces and marks for AI-originated material to surface writing process in the final artifact [@siddiqui2025draftmarks]. Humanly packages captured process into a sealed certificate rather than asking readers to interpret a raw session log [@zhu2026humanly]. These systems disagree in representation, but they converge on a premise: **process evidence must be designed for inspection**.
+
+A prompt receipt should therefore be understood as an interface to contribution-relevant provenance, not a screenshot dump. A useful receipt might identify the execution envelope, the load-bearing instructions, representative failed trials, acceptance or rejection operations, verification steps, and the relation between those events and the final claim. The right minimum is an empirical question and probably differs by audience. A reader evaluating transparency, a reviewer evaluating reproducibility, and an integrity officer evaluating a disputed claim do not need identical traces.
+
+This proposal must also be placed under pressure from ordinary research-record norms. Guidance for laboratory notebooks has long emphasized sufficiently complete records to support validation, reporting, reproducibility, and credit. Failed experiments are not automatically private residue. This weakens any claim that failed prompts are uniquely entitled to disappear. The real difference may lie elsewhere: AI conversations can be unusually voluminous, conversationally intimate, and easy to repurpose as evidence about the researcher's intent or dependence. The design problem is therefore not simply "retain less." It is how to combine completeness, access control, purpose limitation, and useful abstraction.
+
+# 6. When provenance becomes performative
+
+There is a second danger in treating process traces as straightforward truth. Once actors know that a trace will be evaluated, the trace can change the practice that produces it.
+
+Espeland and Sauder call attention to *reactivity*: public measures and evaluations can reorganize the people and institutions they measure [@espeland2007rankings]. Their subject is rankings, not AI prompting, so the extension must remain a hypothesis. But the mechanism is directly testable. If researchers know that prompt histories may be inspected for evidence of independent authorship, they may begin asking safer questions, avoiding strong machine-generated objections, or narrating their own agency more conspicuously inside the log. The resulting record could become more polished and less naturalistic.
+
+This is not an argument against provenance. Laboratory notebooks are also written under norms of possible inspection. It is an argument for separating two properties that are too easily conflated: **event completeness** and **behavioral naturalism**. More capture can improve reconstruction while also increasing reactivity. The optimal point should be measured rather than assumed.
+
+The problem is especially acute for provenance visualization. DraftMarks deliberately makes process legible through material metaphors of revision [@siddiqui2025draftmarks]. Such interfaces may help readers reason about production, but they can also smuggle a moral economy of visible labor into authorship judgments. Revision marks, keystrokes, and prompt volume can become proof-of-work signals even though effort and intellectual contribution are not the same. A polished trace may be interpreted as virtuous; a concise high-leverage intervention may look suspiciously easy.
+
+This opens a concrete research program. Researchers can manipulate audit visibility while holding tasks constant and measure whether prompt diversity, adversarial exploration, or willingness to entertain counter-normative hypotheses changes. They can vary the visual rhetoric of provenance while holding underlying contribution constant and measure perceived ownership or authorship. These are empirical questions, not philosophical decorations.
+
+# 7. Governance needs translation, not the wholesale import of engineering ontology
+
+The technical literature already recognizes model-facing artifacts as programs, constraints, templates, modules, or components. It would be easy to conclude that governance is simply behind and should import the ontology of AI engineering. That conclusion is also too strong.
+
+Engineering and governance ask different questions. DSPy asks how to represent and optimize language-model pipelines against task metrics [@khattab2023dspy]. LMQL asks how to combine prompting with scripting, constraints, and control flow [@beurerkellner2023lmql]. Georgia Tech's policy asks when AI use must be disclosed, what oversight is required, and how disciplinary norms should shape responsible academic and research practice [@gatech2026ai]. The same artifact may be relevant to each regime without receiving the same predicate. A highly effective prompt program can be an excellent engineering component and also a form of AI involvement that should be disclosed. Those judgments are not contradictory.
+
+The sharper problem is translation. Governance categories such as *magnitude*, *significance*, and *appropriate disclosure* operate at a level that can hide distinctions technical practice makes explicit. But technical ontology has blind spots of its own: responsibility, authorship, consent, disciplinary norms, and the meaning of a doctoral contribution are not optimization targets. What is needed is a shared set of objects with different institutional predicates, not the rule of one discipline over the other.
+
+Georgia Tech's policy also forces a correction to one of the strongest claims in the initial prompt-forward argument. The use of qualitative predicates is not necessarily evidence that governance has failed to define its object. Mature institutional standards often rely on professional interpretation and precedent rather than numerical thresholds. The relevant question is whether those standards are adequately calibrated. Georgia Tech explicitly delegates part of the judgment to disciplinary norms [@gatech2026ai]. For interdisciplinary prompt-forward work, this delegation can itself become the problem: computing, HCI, literary studies, design, and graduate education may classify the same operation differently.
+
+This is why adjudicated exemplars matter. A general policy need not contain a complete theory of prompting, but researchers need some way to see how standards are applied. The evidentiary chain would include the relevant AI interaction or operational artifact, the resulting scholarly work, the disclosure, the institutional judgment, and the rationale. Whether such exemplars exist across local units is an empirical question. The absence of examples in a central policy is not proof of arbitrary governance. It is a research edge.
+
+# 8. The prompt as epistemic instrument
+
+The strongest positive claim in the field does not come from authorship at all. It comes from the philosophy of scientific instruments.
+
+Davis Baird argues that scientific knowledge is not exhausted by propositions and that material instruments can themselves embody epistemically significant know-how [@baird2004thing]. The analogy to prompting must be handled carefully because Baird's force partly comes from moving beyond language-centered epistemology, while a prompt is made of language. Yet model-facing instructions can occupy a strange hybrid position: they are linguistic artifacts whose important property may be neither their propositional content nor the prose they produce, but the repeatable operation they enable in a generative system.
+
+This suggests the possibility of **operative scholarly writing**: symbolic artifacts whose scholarly content is partly demonstrated by what they reliably make a system do. The category would include only a subset of prompts. An ordinary request for prose would not qualify. A versioned prompt program that operationalizes a comparison, survives specified perturbations, exposes its boundary conditions, and enables a reproducible analytical procedure might.
+
+The instrument analogy imposes obligations, not privileges. PromptBench and POSIX show why calibration matters [@zhu2023promptbench; @chatterjee2024posix]. A prompt cannot be declared an instrument merely because it produced a desired result once. The execution envelope must be specified; sensitivity must be measured; failure modes must be known. Baird also blocks the reverse error of attributing all instrument-mediated knowledge to the user. An effective prompt system inherits work from model builders, training data, frameworks, libraries, prior prompt designers, and institutional infrastructure. The researcher who operates the instrument does not automatically own the knowledge embodied upstream.
+
+A prompt-based scholarly object should therefore have to earn the category through use.
+
+# 9. An admission test for prompt-based scholarly objects
+
+The preceding distinctions support a practical admission test. A model-facing artifact should be treated as a candidate scholarly object when enough of the following are true:
+
+**1. It specifies an operation.** The artifact does more than ask for generic output. It encodes a comparison, constraint, transformation, retrieval procedure, decision rule, or experimental structure that matters to the research.
+
+**2. It makes a demonstrable behavioral difference.** Removing, replacing, or perturbing it changes a relevant capability or research result relative to an appropriate baseline. This establishes leverage, not merit.
+
+**3. Its execution envelope is reported.** The model, version, context, source set, relevant parameters, evaluation procedure, and acceptance conditions are specified to the extent needed for functional replication.
+
+**4. Its boundaries are known.** The researcher can identify failure cases, sensitivity, transfer limits, or contexts in which the artifact should not be expected to work.
+
+**5. Its construction has provenance.** The artifact's derivation from experiments, prior prompts, source material, or collaborative work can be traced without pretending that a raw transcript is itself the scholarly object.
+
+**6. It performs an identifiable scholarly role.** The artifact contributes to conceptualization, methodology, software, validation, writing, selection, orchestration, or another defensible role rather than receiving credit merely for existing.
+
+**7. The researcher accepts epistemic responsibility for the claims made with it.** The system's participation does not substitute for the researcher's obligation to verify sources, state limits, and answer criticism.
+
+This is intentionally not an authorship test. Some artifacts passing it may also support expressive authorship; some may not. It is a test for whether a prompt-based artifact belongs inside the scholarly record as more than generic "AI use."
+
+The test can itself be falsified. It may prove too elaborate, privilege technical prompting, or fail to change committee judgments. The zettel field points directly to experiments: compare free-form instructions with structured programs; ablate prompts and prompt architectures separately; evaluate workflow traces using scalar and graph representations; test committee judgments before and after contribution-role descriptions; measure prompt robustness across models and versions; and vary audit visibility to test reactivity. The theory should survive those experiments or change.
+
+# 10. What this means for a prompt-forward dissertation
+
+A prompt-forward dissertation should not try to win legitimacy by claiming that every prompt is writing. That position is unnecessary and vulnerable. It should instead show where the researcher's contribution resides, preserve enough evidence to inspect it, and allow different categories of contribution to remain different.
+
+For a dissertation committee, the key question is not whether every word was manually produced. Nor is it whether AI participation crossed an abstract percentage threshold. The sharper question is which roles must remain substantially the doctoral candidate's. CRediT cannot answer that because it explicitly does not determine authorship or degree requirements [@niso_credit]. A graduate program must answer it institutionally. But the contribution topology can make the answer inspectable. A committee can ask whether the candidate originated the research problem, constructed the method, designed or selected the prompt programs, performed validation, diagnosed failures, made consequential selections, integrated the argument, and can defend every claim.
+
+The answer may differ by chapter. A prompt can be method in one section, configuration in a software artifact, documentary evidence in another, and merely convenience tooling elsewhere. Placement should follow function. If a paper's central claim depends on a prompt program, exiling that artifact to an appendix can make the scholarship less inspectable. If the prompt is routine and only documents ordinary assistance, an appendix or concise disclosure may be enough.
+
+This approach also makes room for a difficult possibility: a prompt-forward dissertation can contain substantial AI-generated prose while still requiring a large and demonstrable human research contribution. Conversely, a dissertation can contain almost entirely human-typed prose while outsourcing crucial conceptual judgment to a model. Word-origin purity is not a reliable proxy for intellectual independence.
+
+The purpose of prompt receipts is therefore not to prove virtue. It is to make consequential operations inspectable. The receipt should not say "look how hard I worked." It should let another researcher or committee member see what was specified, what changed, what failed, what was selected, what was verified, and what remains the candidate's responsibility.
+
+# 11. Limits and unresolved territory
+
+Several limits prevent this account from becoming a new universal ontology.
+
+First, the evidence does not establish that current AI-disclosure policy systematically penalizes high-impact prompting. Georgia Tech's policy requires attention to magnitude, significance, and disciplinary norms, but disclosure relevance is not condemnation [@gatech2026ai]. Claims that institutions treat prompt capability as contamination require case evidence, committee interviews, or controlled studies. The stronger pharmakon formulation should therefore remain a hypothesis about institutional framing, not a description of policy fact.
+
+Second, the evidence does not establish that full prompt histories are routinely demanded in misconduct investigations. That procedural claim requires an institutional receipt. The paper instead establishes a more modest point: if process histories are used for attribution, their evidentiary design matters.
+
+Third, contribution topology may become too complicated for policy. A representation that faithfully records every node and edge of a recursive human-AI workflow can defeat its own purpose. W3C PROV supports abstraction, but the right compression level is claim-relative and context-relative [@moreau2013prov]. Any practical standard will have to trade descriptive fidelity against interpretability, privacy, and reactivity.
+
+Fourth, the account risks privileging what can be formalized. LMQL and DSPy make technical prompt operations inspectable, but literary, design, ethnographic, and tacit practices may resist the same object language [@beurerkellner2023lmql; @khattab2023dspy]. A plural operational vocabulary may be necessary.
+
+Fifth, the instrument analogy remains incomplete. Prompts are symbolic, model-relative, and often unstable under software updates. Baird's material "thing knowledge" cannot simply be transferred to them [@baird2004thing]. The category of operative scholarly writing is therefore a proposal generated by the collision, not an established lineage.
+
+These limits are not cleanup. They locate the next work.
+
+# 12. Conclusion
+
+The prompt becomes intellectually interesting at the point where familiar categories stop agreeing about it. Copyright can treat a detailed instruction as insufficient expressive control. Programming research can treat model-facing instructions and constraints as components of executable systems. Human-AI writing research can show that final text underdetermines the process that produced it. Provenance standards can represent the process without determining responsibility. Institutional policies can require disclosure of significant AI involvement without supplying a theory of prompt contribution.
+
+The mistake is to force these regimes into one verdict. A prompt need not be "the author" to be scholarly work. It need not be copyrightable expression to function as method. It need not contain final prose to redirect an argument. It need not be long to exert high causal leverage. And high leverage alone does not make it intellectually important.
+
+What scholarship needs is a way to keep those facts visible at once. The proposed contribution topology begins with five questions: **What role did the intervention perform? How much leverage did it exert? What did the researcher actually control? Under what execution envelope was the operation calibrated? What provenance is necessary to reconstruct and adjudicate the contribution?** Those questions do not eliminate authorship. They stop asking one overloaded noun to carry the entire factory.
+
+The deepest research question therefore survives, but in altered form. Not: *Should prompts count as writing?* Not even: *Should prompts be disclosed?* The question that remains is more operational and more difficult:
+
+**What kind of scholarly object is an instruction, constraint, or generative procedure that changes what a machine can reliably do, and what evidence is sufficient to show the researcher's contribution to that change?**
+
+That is where a prompt-forward dissertation can make a defensible wager.
+
+# Appendix A — Assembly Instrument
+
+The exact assembly instrument used to package this working paper and its zettel field is preserved in `_PROMPTS/SLIPCASE_ASSEMBLY_PROMPT.txt`. The prompt is treated as evidence of the publication procedure, not as evidence for the paper's substantive claims.
+
+# Appendix B — Making History
+
+The package distinguishes material **provided** by the researcher, material **preserved** from the active research context, sources **retrieved or checked** during packaging, artifacts **derived** by compilation, and claims that remain **unverified**. The complete record appears in `000__MAKING_HISTORY.txt` and the paper-specific making-history file.
+
+# Appendix C — Replication Path
+
+Open `index.html` for the sendable offline research desk. The immutable zettel payloads remain available as root `.txt` cards and exact `_MD/` mirrors. `ZETTELS.jsonl`, `_SLIPCASE/NODES.jsonl`, and `_SLIPCASE/RELATIONS.jsonl` preserve machine-readable state. `000__RETURN_PATH.txt` records the checkpoint identity and rejoin phrase; `000__REBUILD.txt` records the rebuild path.

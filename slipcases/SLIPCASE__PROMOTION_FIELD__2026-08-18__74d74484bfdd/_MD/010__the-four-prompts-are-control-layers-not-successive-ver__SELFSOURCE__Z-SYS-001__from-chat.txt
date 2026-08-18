@@ -1,0 +1,95 @@
+ZETTEL
+
+ID:
+Z-SYS-001
+
+TITLE:
+The four prompts are control layers, not successive versions of one forager
+
+SOURCE:
+User-provided prompt system — PRIME ZETTEL FORAGE v3.0; RECURSIVE INQUIRY v3.1; AUTONOMOUS GRAPH INQUIRY v4.0; SLIPCASE — ANCIENT MASTER v15.0 — supplied 2026-08-18.
+
+PASSAGE:
+[PARAPHRASE] v3.0 converts sources into atomic research objects. v3.1 converts one zettel into source-grounded children of the same type. v4.0 selects which unresolved edge in an entire graph should be investigated next. Ancient Master preserves the research state, derives relations and publication artifacts, and produces a paper.
+
+RESEARCH OBJECT:
+The prompts do not merely become increasingly sophisticated. Each occupies a different control layer.
+
+LOCAL MOVE:
+Separates operations that the combined vocabulary makes easy to mistake for one another.
+
+SOURCE TERMS:
+FORAGE
+RECURSIVE INQUIRY
+ACTIVE FRONTIER
+STEER
+ANCIENT MASTER
+EVIDENCE
+FIELD
+INTERPRETATION
+
+WHAT BECAME STRANGE:
+The system has been described as several foragers when it is closer to a small research operating system with different processes.
+
+QUESTION:
+What explicit interface should connect source reading, recursive descent, global steering, and archival publication?
+
+DEEPER QUESTION:
+Which layer is permitted to change the research question, and which layer merely preserves the consequences of that change?
+
+MECHANISM:
+v3.0 performs epistemic extraction.
+v3.1 performs local recursive expansion.
+v4.0 performs global research scheduling.
+v15.0 performs preservation, compilation, synthesis, and publication.
+
+FORMAL SHIFT:
+<SOURCE / RESEARCH STATE>
+→ <LOCAL RESEARCH OBJECTS>
+→ [RECURSE + SCHEDULE + COMPILE]
+→ <CONTINUABLE FIELD + PUBLICATION>
+
+SOURCE FORMALISM:
+FORAGE(ZETTEL) → ZETTEL[]
+COLLIDE(ZETTEL × ZETTEL) → ZETTEL[]
+EVIDENCE / FIELD / INTERPRETATION
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+READ : SOURCE → ZETTEL[]
+DESCEND : ZETTEL → ZETTEL[]
+STEER : GRAPH_STATE → RESEARCH_EDGE
+COMPILE : RESEARCH_FIELD → PORTABLE_FIELD
+WRITE : PORTABLE_FIELD → PAPER
+
+TENSION:
+The prompts share vocabulary and schema, encouraging them to look interchangeable even though they require different kinds of state and make different classes of decision.
+
+MISSING:
+A formal contract specifying what each layer receives, what it may mutate, and what it must return.
+
+BOUNDARY:
+The supplied prompts establish functional differences. They do not establish that this four-layer decomposition is the only useful architecture.
+
+CITATION TRAIL:
+Compare the input/output contracts and state requirements of all four supplied prompts.
+
+TEST:
+Give the same three-zettel field separately to each prompt. Record every operation each can perform without inventing missing state. Any operation requiring information not present in its declared input reveals a layer boundary.
+
+PLATFORM:
+[[RESEARCH OPERATING SYSTEM]]
+
+LINKS:
+[[LOCAL INQUIRY]]
+[[GLOBAL STEERING]]
+[[ARCHIVAL COMPILATION]]
+
+BIBTEX:
+@misc{prime_prompt_stack_2026,
+  title = {Prime Zettel Forage and Slipcase Prompt Stack},
+  howpublished = {User-provided research-system prompts},
+  year = {2026},
+  note = {Versions 3.0, 3.1, 4.0, and 15.0; supplied 2026-08-18}
+}

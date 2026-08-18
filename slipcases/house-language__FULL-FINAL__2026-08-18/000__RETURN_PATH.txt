@@ -1,0 +1,29 @@
+CHECKPOINT: SLIPCASE-20260817T2053-0400
+LOCAL TIME: 2026-08-17T20:53-04:00
+
+PROVIDED
+- SLIPCASE v15.0 prompt: byte-exact current attachment copy; SHA-256 9ceab9e5344b73e4218462f2ad86fea590c5b8dde2820aa25c16fd5875362b1a
+- Tim Ingold, Making PDF: byte-exact current attachment copy; SHA-256 ac1a086342aead4b6fb8ddfc5661d377cf3381899b28308d3a9ab91afd61c45e
+- “The Prompt Is Not the Program” text: captured from the user-provided visible message into a resource file; SHA-256 eaab948c33e5e948a708fb2767749ed26363a11701781a7d409a58775b7bb12f
+
+PRESERVED
+- 34 zettel payload files and byte-identical _MD mirrors.
+- IDs, field order, PLATFORM/LINKS/wikilink syntax, source strings, and BibTeX as captured in this run.
+
+CAPTURE FIDELITY LIMIT
+- The runtime does not expose a byte-level export of earlier chat messages. The 34 zettel payloads were recovered from the visible conversation state by the model and written without intentional editorial improvement, but byte-for-byte identity with prior rendered assistant messages cannot be independently verified. Their SHA-256 values identify the recovered checkpoint payloads, not inaccessible original chat-message bytes.
+- Earlier POML v3.0/v3.1 prompt bodies were visible in the conversation but not byte-materialized in this runtime. A recovery receipt is preserved; the v15.0 assembly prompt is exact.
+
+RETRIEVED / VERIFIED
+- Ingold passages were checked against the supplied PDF in the preceding research work.
+- Public bibliographic checks in this run confirmed: Eastman/Henrion GLIDE (SIGGRAPH 1977, pp. 24–33, DOI 10.1145/563858.563863); Naur “Programming as Theory Building” (1985, pp. 253–261); Suchman’s Plans and Situated Actions (Cambridge UP, 1987); MIT provenance for Winograd’s 1971 AI Technical Report 235.
+
+DERIVED
+- JSON/JSONL aggregates, relation graph, backlinks, ghost register, MOCs, arrangements, bibliography views, paper, source map, and offline reader.
+
+UNVERIFIED / PARTIAL
+- Not every external source body cited in historical zettels was downloaded or page-checked in this run. Such sources remain LINK_ONLY or bibliographic receipts.
+- Some older zettel quotations were preserved from the visible research exchange rather than freshly page-verified. The paper below relies most heavily on the supplied Ingold PDF and bibliographically verified sources and states historical claims conservatively.
+
+ADDITIONAL RETRIEVAL
+- Peter Naur, “Programming as Theory Building” (1985), University of Wisconsin mirror: _RESOURCES/NAUR_1985_PROGRAMMING_AS_THEORY_BUILDING.pdf, SHA-256 0bcd908a5862694cd228527edaf7a4b5a1f118da8c7edfaf8ad34c1e5fcbc9c4.

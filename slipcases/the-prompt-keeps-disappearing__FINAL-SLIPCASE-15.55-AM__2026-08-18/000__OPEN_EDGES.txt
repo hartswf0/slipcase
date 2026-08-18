@@ -1,0 +1,39 @@
+OPEN EDGES — SLIPCASE-20260818-UNIT-01
+
+THESE ARE NOT A CONCLUSION. THEY ARE THE PLACES THE PAPER FAILED TO CLOSE.
+
+1. MINIMUM EXPLANATORY UNIT
+QUESTION: What is the smallest unit that can explain a prompt-conditioned effect without silently borrowing state from outside the unit?
+TEST: Hold the visible utterance constant while independently varying interaction history, tool definitions, selected objects, permissions, model, and live environment. Record which “prompt effects” survive.
+
+2. THE SAME WORDS, DIFFERENT APPARATUS
+QUESTION: When identical text produces different action because the surrounding apparatus changes, what exactly belongs to the causal object under study?
+TEST: Run one utterance across read-only chat, tool-enabled chat, selected-object editing, and permission-gated mutation.
+
+3. SITUATION IS NOT A LONGER STRING
+QUESTION: Which situation particulars can be represented as context without changing the practical role they played for the situated human?
+TEST: Externalize tacit cues incrementally. Compare represented context with live re-perception and human-in-the-loop judgment.
+
+4. FAILURE OR NOISE
+QUESTION: When does breakdown reveal an interpretation, and when is it merely stochastic variation?
+TEST: Reproduce each failure under controlled seeds/models/contexts; classify only repeatable diagnostic patterns as evidence about interpretation.
+
+5. CRITERIA BEFORE RUBRICS
+QUESTION: Can a stable criterion guide revision before it can be stated, and what is lost when it is forced into a rubric?
+TEST: Collect judgments first; articulate later; measure residual decisions that the rubric cannot recover.
+
+6. PROVENANCE WITHOUT VERDICT
+QUESTION: Which attribution rules map the same production trace to different authorship judgments?
+TEST: Hold one complete trace fixed and vary explicit attribution criteria across publishing, scholarship, design, and ordinary-language evaluators.
+
+7. DISTRIBUTION WITHOUT EVASION
+QUESTION: Does “distributed” identify a mechanism or merely prevent us from naming who generated, selected, authorized, revised, and endorsed what?
+TEST: Trace one paragraph operation by operation and separate causal contribution from accountability.
+
+8. HISTORICAL NOVELTY
+QUESTION: Which mechanisms in LLM prompting are genuinely new, which are older mechanisms at new scale, and which old distinctions simply stopped being serviceable?
+TEST: Compare SHRDLU, ACE, Pygmalion, situated-action systems, and contemporary agents operation by operation; mark novelty only where no adequate prior mechanism survives comparison.
+
+9. WHEN SHOULD THE NOUN BE ABANDONED?
+QUESTION: At what point does enlarging “prompt” to include history, tools, schemas, model state, interface state, and user judgment make the term analytically empty?
+TEST: Define nested units and compare predictive/explanatory gain against added scope.

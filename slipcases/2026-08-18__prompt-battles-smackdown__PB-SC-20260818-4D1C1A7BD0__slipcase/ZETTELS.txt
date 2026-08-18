@@ -1,0 +1,4313 @@
+===== 001 | PB-FORAGE-001 | 001__a-counter-prompt-proves-recoverability-not-the-disappe__Chatterjee-2024__PB-FORAGE-001__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-001
+
+TITLE:
+A counter-prompt proves recoverability, not the disappearance of the failure.
+
+SOURCE:
+Chatterjee, Renduchintala, Bhatia, and Chakraborty — POSIX: A Prompt Sensitivity Index For Large Language Models — 2024 — pp. 14550–14565.
+
+PASSAGE:
+[PARAPHRASE]
+LLM behavior can change substantially under small, intent-preserving variations in wording, templates, and other prompt features. Prompt sensitivity is therefore itself an evaluative property rather than noise surrounding a single “correct” prompt.
+
+RESEARCH OBJECT:
+PB_PRIME contains a quantifier error hiding inside “capture the flag.”
+
+In PB_20, the Defender produces an apparently biased completion. The Challenger then adds a more explicit instruction and obtains a non-biased completion. The archive treats this as mitigation, correction, or movement beyond the critique.
+
+But:
+
+    one prompt producing failure
+    and
+    another prompt producing success
+
+can both be true.
+
+The second observation does not negate the first.
+
+LOCAL MOVE:
+Replace “Can the critique be overcome?” with “Across what region of prompt space does the critique hold?”
+
+SOURCE TERMS:
+prompt sensitivity
+intent-preserving variation
+prompt template
+paraphrase
+response variation
+
+WHAT BECAME STRANGE:
+“AI is biased” is treated as though a single successful counterexample can capture the flag.
+
+But the Defender and Challenger may actually be demonstrating two different existential claims:
+
+    there exists a route to failure
+    there exists a route to success
+
+Neither defeats the other.
+
+QUESTION:
+What logical form must a Prompt Battle flag have before anyone can meaningfully capture it?
+
+DEEPER QUESTION:
+Are Prompt Battles testing capabilities, robustness, accessibility of capabilities, or merely the existence of an elicitation path?
+
+MECHANISM:
+Prompt variation moves the system among different behavioral regions while leaving the participant’s apparent semantic intention roughly constant.
+
+A skilled Challenger may therefore search for a successful region rather than demonstrate that the failed region does not exist.
+
+FORMAL SHIFT:
+<CRITIQUE: “AI is biased”>
+→ <SET OF INTENT-PRESERVING PROMPTS>
+→ [SEARCH ACROSS BEHAVIORAL REGIONS]
+→ <DISTRIBUTION OF FAILURES AND SUCCESSES>
+
+SOURCE FORMALISM:
+POSIX proposes a quantitative index for measuring response sensitivity under prompt variation.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let B(M,p)=1 when model M exhibits the operationalized failure under prompt p.
+
+Defender demonstrates:
+
+    ∃p ∈ P : B(M,p)=1
+
+Challenger demonstrates:
+
+    ∃q ∈ P : B(M,q)=0
+
+But:
+
+    ∃q : B(M,q)=0
+
+does NOT imply:
+
+    ¬∃p : B(M,p)=1
+
+The real object may instead be:
+
+    Pr[B(M,p)=1 | p ~ D(P)]
+
+or the topology of successful and failing regions in P.
+
+TENSION:
+A battle rewards discovering a brilliant counter-prompt.
+
+A robustness evaluation may instead treat the need for that brilliant counter-prompt as evidence of fragility.
+
+MISSING:
+The quantifier attached to every flag.
+
+The archive does not yet distinguish:
+
+    existence
+    prevalence
+    robustness
+    worst case
+    typical case
+    recoverability
+    accessibility
+
+BOUNDARY:
+Prompt sensitivity does not establish that every observed behavioral difference is substantively meaningful. It establishes that evaluating a model from one prompt can conceal important variation.
+
+CITATION TRAIL:
+Ribeiro et al. — CheckList — behavioral testing rather than single aggregate accuracy.
+Follow work distinguishing capability from robustness and prompt invariance.
+
+TEST:
+For one battle flag, construct 50–100 meaning-preserving prompt variants before the battle.
+
+Let Defender and Challenger search freely.
+
+Then reveal the frozen prompt set.
+
+Compare:
+
+    best adversarial failure
+    best adversarial success
+    median behavior
+    worst-case behavior
+    sensitivity across variants
+
+Ask whether the declared winner changes depending on which quantity counts as “the flag.”
+
+PLATFORM:
+[[Prompt Battles as Adversarial Elicitation]]
+
+LINKS:
+[[Flag Quantifiers]]
+[[Prompt Sensitivity]]
+[[Existence Is Not Robustness]]
+
+BIBTEX:
+@inproceedings{chatterjee2024posix,
+  title={POSIX: A Prompt Sensitivity Index For Large Language Models},
+  author={Chatterjee, Anwoy and Renduchintala, H S V N S Kowndinya and Bhatia, Sumit and Chakraborty, Tanmoy},
+  booktitle={Findings of the Association for Computational Linguistics: EMNLP 2024},
+  pages={14550--14565},
+  year={2024},
+  publisher={Association for Computational Linguistics}
+}
+
+@inproceedings{ribeiro2020beyond,
+  title={Beyond Accuracy: Behavioral Testing of NLP Models with CheckList},
+  author={Ribeiro, Marco Tulio and Wu, Tongshuang and Guestrin, Carlos and Singh, Sameer},
+  booktitle={Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics},
+  pages={4902--4912},
+  year={2020},
+  publisher={Association for Computational Linguistics},
+  doi={10.18653/v1/2020.acl-main.442}
+}
+
+===== 002 | PB-FORAGE-002 | 002__a-refusal-cannot-tell-you-whether-the-model-cant-wont__Hofsta-2025__PB-FORAGE-002__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-002
+
+TITLE:
+A refusal cannot tell you whether the model can’t, won’t, or has been made not to.
+
+SOURCE:
+Hofstätter, van der Weij, Teoh, Djoneva, Bartsch, and Ward — The Elicitation Game: Evaluating Capability Elicitation Techniques — 2025 — arXiv:2502.02180.
+
+PASSAGE:
+[PARAPHRASE]
+Capability evaluation can underestimate a system when latent capabilities are not successfully elicited. Different interventions—prompting, activation steering, fine-tuning—can reveal different amounts of capability.
+
+RESEARCH OBJECT:
+PB_PRIME’s foundational distinction:
+
+    CAN’T
+    WON’T
+    SHOULDN’T
+
+looks like three categories of observed model behavior.
+
+It is actually three different causal layers.
+
+LOCAL MOVE:
+Turn a taxonomy into an identification problem.
+
+SOURCE TERMS:
+capability evaluation
+latent capabilities
+elicitation
+prompting
+activation steering
+fine-tuning
+
+WHAT BECAME STRANGE:
+From the chat interface, all three categories can produce the same observation:
+
+    requested behavior does not occur.
+
+The surface trace does not identify its cause.
+
+QUESTION:
+What intervention would let a Prompt Battle distinguish incapacity from inhibition?
+
+DEEPER QUESTION:
+Can “can’t” ever be established through black-box prompting alone, or can a sufficiently failed elicitation campaign establish only “we have not found how”?
+
+MECHANISM:
+Non-performance can be generated by several mechanisms:
+
+    absent underlying capability
+    system instruction
+    safety policy
+    post-training preference
+    interface restriction
+    tool unavailability
+    weak elicitation
+    evaluator failure
+
+These mechanisms are observationally confounded at the completion layer.
+
+FORMAL SHIFT:
+<NON-PERFORMANCE>
+→ <COMPETING LATENT CAUSES>
+→ [INTERVENTION / ELICITATION]
+→ <PARTIAL CAUSAL IDENTIFICATION>
+
+SOURCE FORMALISM:
+The source experimentally creates models with hidden capabilities and compares elicitation techniques for recovering them.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Observed response:
+
+    Y = f(C, G, S, E, H)
+
+where:
+
+    C = underlying capability
+    G = behavioral/policy gate
+    S = system and prompt configuration
+    E = elicitation procedure
+    H = interaction history
+
+Then:
+
+    Y = failure
+
+does not identify:
+
+    C = absent.
+
+Likewise, a normative SHOULDN’T becomes observable as WON’T only after some institution or mechanism encodes the norm into behavior.
+
+TENSION:
+PB_PRIME defines CAN’T as inherent technological limitation “regardless of how advanced” the system becomes.
+
+But a prompt battle observes a particular model, configuration, interface, and moment.
+
+The experimental apparatus is much narrower than the metaphysical scope of the claim.
+
+MISSING:
+An intervention ladder specifying what must be varied before a failure may move from:
+
+    DIDN’T
+    to WON’T
+    to CAN’T.
+
+BOUNDARY:
+The Elicitation Game does not show that every apparent limitation conceals a latent capability. It shows that unsuccessful behavior is insufficient by itself for trustworthy capability estimation.
+
+CITATION TRAIL:
+Password-locked model work.
+Capability elicitation.
+Black-box versus white-box evaluation.
+Safety-policy versus competence evaluations.
+
+TEST:
+Select one claimed CAN’T.
+
+Attempt success under progressively stronger interventions:
+
+    ordinary prompt
+    expert prompt search
+    multi-turn elicitation
+    system-instruction variation
+    few-shot examples
+    tool access
+    open-weight configuration
+    fine-tuning where permissible
+
+Record the strongest intervention required.
+
+Replace binary CAN/CAN’T with an elicitation-depth profile.
+
+PLATFORM:
+[[Prompt Battles as Adversarial Elicitation]]
+
+LINKS:
+[[Cant Wont Shouldnt]]
+[[Latent Capability]]
+[[Causal Identification of Refusal]]
+
+BIBTEX:
+@article{hofstatter2025elicitation,
+  title={The Elicitation Game: Evaluating Capability Elicitation Techniques},
+  author={Hofst{\"a}tter, Felix and van der Weij, Teun and Teoh, Jayden and Djoneva, Rada and Bartsch, Henning and Ward, Francis Rhys},
+  journal={arXiv preprint arXiv:2502.02180},
+  year={2025},
+  doi={10.48550/arXiv.2502.02180}
+}
+
+===== 003 | PB-FORAGE-003 | 003__the-prompt-battle-may-be-measuring-the-operator-model__Hofsta-2025__PB-FORAGE-003__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-003
+
+TITLE:
+The Prompt Battle may be measuring the operator-model pair rather than the model.
+
+SOURCE:
+Hofstätter et al. — The Elicitation Game: Evaluating Capability Elicitation Techniques — 2025 — arXiv:2502.02180.
+
+PASSAGE:
+[PARAPHRASE]
+Capability measurement depends on the procedure used to elicit capability; prompting can reveal some hidden capabilities while stronger interventions reveal others.
+
+RESEARCH OBJECT:
+PB_PRIME quietly introduces a new experimental organism:
+
+    MODEL
+    +
+    SYSTEM BUILDER
+    +
+    PROMPT PILOT.
+
+Once these roles exist, “AI performance” is no longer an attribute of the AI alone.
+
+LOCAL MOVE:
+Treat prompting expertise as an experimental treatment, not nuisance variance.
+
+SOURCE TERMS:
+elicitation technique
+latent capability
+prompting
+capability evaluation
+
+WHAT BECAME STRANGE:
+PB_PRIME separately proposes:
+
+    a System Builder who defines the sandbox and constraints,
+    a Prompt Pilot who steers within it,
+    participant expertise classification,
+    “epistemic camp” identification,
+    scoring for sophisticated prompting.
+
+Then it repeatedly speaks as though the resulting completion revealed “what AI can do.”
+
+QUESTION:
+Whose capability is being measured when expert prompting improves model performance?
+
+DEEPER QUESTION:
+Is there even a context-free capability of an interactive generative model worth estimating, or is the useful object an elicitation frontier indexed by operator competence?
+
+MECHANISM:
+The human chooses interventions based on previous outputs.
+
+Therefore the prompt sequence is a policy:
+
+    π_h(history) → next intervention.
+
+Different humans implement different policies over the same model.
+
+Performance therefore emerges from the coupled trajectory.
+
+FORMAL SHIFT:
+<MODEL>
+→ <MODEL + OPERATOR POLICY + HISTORY>
+→ [ITERATIVE ELICITATION]
+→ <OBSERVED CAPABILITY FRONTIER>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Observed performance:
+
+    Y = F(M, S, π_h, H, J)
+
+where:
+
+    M   = model
+    S   = system configuration
+    π_h = human prompting policy
+    H   = interaction history
+    J   = judgment procedure
+
+A model comparison that changes π_h is confounded.
+
+A prompter comparison holding M fixed is an HCI experiment.
+
+A battle in which both co-adapt is an experiment on the coupled system.
+
+TENSION:
+The System Builder / Prompt Pilot split is initially presented as a competition mechanic.
+
+It may be the archive’s most consequential methodological invention because it makes orchestration experimentally visible.
+
+MISSING:
+Crossed measurements of:
+
+    model × System Builder × Prompt Pilot × flag.
+
+Without these, exceptional performance can be credited to the wrong actor.
+
+BOUNDARY:
+This does not imply that models have no independently measurable properties. It means interactive capability claims must specify the elicitation procedure that generated them.
+
+CITATION TRAIL:
+Interactive machine learning.
+Mixed-initiative interaction.
+Machine teaching.
+Capability elicitation.
+
+TEST:
+Run a crossed tournament:
+
+    4 models
+    × 8 Prompt Pilots
+    × 4 System Builders
+    × identical frozen flags.
+
+Rotate every human across every model.
+
+Estimate variance attributable to:
+
+    model
+    pilot
+    system
+    model × pilot interaction.
+
+Then ask whether rankings survive operator rotation.
+
+PLATFORM:
+[[Human Model Systems]]
+
+LINKS:
+[[Prompt Pilot]]
+[[System Builder]]
+[[Elicitation Frontier]]
+
+BIBTEX:
+@article{hofstatter2025elicitation,
+  title={The Elicitation Game: Evaluating Capability Elicitation Techniques},
+  author={Hofst{\"a}tter, Felix and van der Weij, Teun and Teoh, Jayden and Djoneva, Rada and Bartsch, Henning and Ward, Francis Rhys},
+  journal={arXiv preprint arXiv:2502.02180},
+  year={2025},
+  doi={10.48550/arXiv.2502.02180}
+}
+
+===== 004 | PB-FORAGE-004 | 004__once-the-critique-pool-adapts-to-the-battle-the-benchm__Kiela-2021__PB-FORAGE-004__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-004
+
+TITLE:
+Once the critique pool adapts to the battle, the benchmark becomes an endogenous curriculum.
+
+SOURCE:
+Kiela et al. — Dynabench: Rethinking Benchmarking in NLP — 2021 — pp. 4110–4124.
+
+PASSAGE:
+[PARAPHRASE]
+Dynabench places humans and models in a loop where people deliberately construct examples that current models fail on; data creation, model development, and assessment consequently inform one another dynamically.
+
+RESEARCH OBJECT:
+PB_PRIME’s DJ analogy for the critique pool is much stranger than it first appears.
+
+The archive proposes not merely sampling different flags.
+
+It proposes changing or introducing critiques in response to how the battle unfolds.
+
+LOCAL MOVE:
+Separate dynamic examples from dynamic constructs.
+
+SOURCE TERMS:
+dynamic dataset creation
+human-and-model-in-the-loop
+target model
+challenge examples
+dynamic benchmarking
+
+WHAT BECAME STRANGE:
+Dynabench adapts examples while retaining a task whose correctness can still be checked.
+
+PB_PRIME contemplates adapting the critique itself.
+
+The distinction matters.
+
+If:
+
+    “AI is biased”
+
+becomes:
+
+    “AI cannot recognize its bias”
+
+and then:
+
+    “AI cannot recover from adversarially induced bias,”
+
+the battle has not merely found harder examples.
+
+It has moved the target construct.
+
+QUESTION:
+When does adaptive foraging discover a model boundary, and when does it silently redefine the question until a boundary appears?
+
+DEEPER QUESTION:
+Can a benchmark remain comparable while its ontology evolves?
+
+MECHANISM:
+Performance at time t influences which challenge is selected at t+1.
+
+The evaluation distribution is therefore endogenous to the system being evaluated.
+
+FORMAL SHIFT:
+<CRITIQUE POOL C_t>
+→ <MODEL–HUMAN PERFORMANCE>
+→ [ADAPT / INVENT NEXT CRITIQUE]
+→ <CRITIQUE POOL C_{t+1}>
+
+SOURCE FORMALISM:
+Human-and-model-in-the-loop dynamic benchmark construction.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+    C_{t+1} = A(C_t, failures_t, strategies_t, surprises_t)
+
+Thus future measurement depends on past performance.
+
+This is closer to curriculum generation or scientific foraging than a fixed benchmark.
+
+TENSION:
+Adaptivity makes the system excellent at finding fresh failures.
+
+Adaptivity makes longitudinal scores difficult to interpret.
+
+The thing that improves discovery may destroy comparability.
+
+MISSING:
+A distinction between:
+
+    ANCHOR FLAGS — never change
+    FRONTIER FLAGS — adapt to discoveries.
+
+BOUNDARY:
+Dynabench does not license arbitrary movement of the construct being measured. Its human adversaries generate new challenge instances under defined tasks. PB_PRIME goes further when the critique itself mutates.
+
+CITATION TRAIL:
+Dynamic adversarial data collection.
+Benchmark saturation.
+Adaptive testing.
+Curriculum learning.
+Construct drift.
+
+TEST:
+Create two simultaneous leagues.
+
+ANCHOR LEAGUE:
+A frozen set of flags and evaluation procedures repeated across model versions.
+
+FRONTIER LEAGUE:
+Flags mutate after every successful defense or capture.
+
+For every new frontier flag, record its parent flag and the exact observation that caused the mutation.
+
+Compare:
+
+    longitudinal capability
+    versus
+    rate of new boundary discovery.
+
+PLATFORM:
+[[Living Benchmarks]]
+
+LINKS:
+[[Critique Pool]]
+[[Dynamic Benchmark]]
+[[Construct Drift]]
+
+BIBTEX:
+@inproceedings{kiela2021dynabench,
+  title={Dynabench: Rethinking Benchmarking in NLP},
+  author={Kiela, Douwe and Bartolo, Max and Nie, Yixin and Kaushik, Divyansh and Geiger, Atticus and Wu, Zhengxuan and Vidgen, Bertie and Prasad, Grusha and Singh, Amanpreet and Ringshia, Pratik and Ma, Zhiyi and Thrush, Tristan and Riedel, Sebastian and Waseem, Zeerak and Stenetorp, Pontus and Jia, Robin and Bansal, Mohit and Potts, Christopher and Williams, Adina},
+  booktitle={Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies},
+  pages={4110--4124},
+  year={2021},
+  publisher={Association for Computational Linguistics}
+}
+
+===== 005 | PB-FORAGE-005 | 005__the-scientific-part-of-a-prompt-battle-may-have-to-hap__Clark-2022__PB-FORAGE-005__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-005
+
+TITLE:
+The scientific part of a Prompt Battle may have to happen before the fighting begins.
+
+SOURCE:
+Clark, Costello, Mitchell, and Tetlock — Keep Your Enemies Close: Adversarial Collaborations Will Improve Behavioral Science — 2022 — Journal of Applied Research in Memory and Cognition 11(1):1–18.
+
+PASSAGE:
+[PARAPHRASE]
+Adversarial collaboration asks scholars who disagree to jointly construct tests of their competing hypotheses rather than independently producing demonstrations optimized for their own position.
+
+RESEARCH OBJECT:
+PB_PRIME supplies adversaries but not yet the strongest requirement of adversarial collaboration:
+
+    the opponents must share ownership of the test.
+
+LOCAL MOVE:
+Move competition from producing persuasive completions to negotiating mutually dangerous evidence.
+
+SOURCE TERMS:
+adversarial collaboration
+competing hypotheses
+co-develop tests
+self-correction
+
+WHAT BECAME STRANGE:
+In the Prompt Battle, Defender and Challenger often inherit their jobs:
+
+    prove the critique
+    defeat the critique.
+
+That creates pressure to win.
+
+But a scientific adversary must participate in designing a result that could make their own position lose.
+
+QUESTION:
+Before a flag is admitted to battle, should both opponents have to state what completion or pattern of completions would make them abandon their assigned side?
+
+DEEPER QUESTION:
+Can a battle produce knowledge when neither participant is required to be vulnerable to the evidence?
+
+MECHANISM:
+Competitive role assignment can convert inquiry into search:
+
+    Defender searches failure space.
+    Challenger searches success space.
+
+Without shared adjudication criteria, each can always move to another example.
+
+The disagreement becomes indefinitely renewable.
+
+FORMAL SHIFT:
+<DISAGREEMENT>
+→ <JOINTLY SPECIFIED CRUX>
+→ [ADVERSARIAL SEARCH]
+→ <EVIDENCE WITH PRECOMMITTED CONSEQUENCES>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Before round r:
+
+    D states evidence E_D that would weaken DEFEND.
+    C states evidence E_C that would weaken CHALLENGE.
+
+Battle is admissible only if there exists:
+
+    E*
+
+that both agree would discriminate between the live readings.
+
+No E*:
+the flag is rhetorical, not experimental.
+
+TENSION:
+The performative energy of a battle depends on trying to win.
+
+The epistemic strength of adversarial collaboration depends on designing conditions under which your own side can lose.
+
+MISSING:
+Pre-battle crux statements.
+
+The archive contains rebuttal, role reversal, reflection, and judging, but not a compulsory jointly authored statement of discriminating evidence.
+
+BOUNDARY:
+Adversarial collaboration is a scientific-dispute methodology, not evidence that competitive performance formats are inherently epistemically superior.
+
+CITATION TRAIL:
+Kahneman on adversarial collaboration.
+Cowan et al. on extended adversarial collaboration.
+Severe testing.
+Preregistration of rival predictions.
+
+TEST:
+Before revealing which participant will defend which side:
+
+1. Both independently operationalize the critique.
+2. They reconcile those definitions.
+3. They jointly write:
+       what supports the critique,
+       what weakens it,
+       what would remain ambiguous.
+4. Only then randomly assign Defender and Challenger.
+
+Compare this condition against ordinary Prompt Battles.
+
+Measure whether post-battle disagreement becomes more specific rather than merely stronger.
+
+PLATFORM:
+[[Adversarial Epistemology]]
+
+LINKS:
+[[Crux Before Contest]]
+[[Defender Challenger]]
+[[Conditions for Losing]]
+
+BIBTEX:
+@article{clark2022enemies,
+  title={Keep Your Enemies Close: Adversarial Collaborations Will Improve Behavioral Science},
+  author={Clark, Cory J. and Costello, Thomas H. and Mitchell, Gregory and Tetlock, Philip E.},
+  journal={Journal of Applied Research in Memory and Cognition},
+  volume={11},
+  number={1},
+  pages={1--18},
+  year={2022},
+  doi={10.1037/mac0000004}
+}
+
+===== 006 | PB-FORAGE-006 | 006__judge-disagreement-may-be-data-not-a-defect-in-the-sco__SOURCEUNKNOWN__PB-FORAGE-006__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-006
+
+TITLE:
+Judge disagreement may be data, not a defect in the scoring system.
+
+SOURCE:
+PB_PRIME — internal working archive — PB_18 / PB_28 / PB_69 — author and date not supplied.
+
+PASSAGE:
+[PARAPHRASE]
+One stage of the archive treats ambiguous judging as a methodological weakness to be repaired through standardized rubrics, public criteria, judges, crowdsourcing, and even automated scoring.
+
+A later stage proposes “judging the dance”: valuing depth, adaptability, innovation, collaborative synergy, and the evolving process rather than the final completion.
+
+RESEARCH OBJECT:
+These are not two versions of the same scoring system.
+
+They imply different theories of evidence.
+
+LOCAL MOVE:
+Stop treating the later rubric as an optimization of the earlier rubric.
+
+Preserve the contradiction.
+
+SOURCE TERMS:
+objective scoring
+standardized scoring rubric
+ambiguity in winning
+judging the dance
+depth
+adaptability
+collaborative synergy
+process
+asking
+
+WHAT BECAME STRANGE:
+The archive first tries to remove disagreement from judgment.
+
+Later it makes emergence, divergence, and interpretive depth central to what counts.
+
+If the object is genuinely emergent, evaluator disagreement may reveal the object’s multiple interpretations rather than measurement noise.
+
+QUESTION:
+What if the most valuable output of judging is not the winner but the structure of disagreement among judges?
+
+DEEPER QUESTION:
+Does Prompt Battle need measurement reliability, or does it need a disciplined method for preserving incompatible readings long enough to learn from them?
+
+MECHANISM:
+Fixed rubrics compress heterogeneous judgments into a common scalar.
+
+Explanatory judgments preserve why observers disagree.
+
+Those disagreements may correlate with:
+
+    expertise
+    epistemic camp
+    values
+    expectations
+    model familiarity
+    interpretation of the flag.
+
+FORMAL SHIFT:
+<MULTIPLE JUDGMENTS>
+→ <DISAGREEMENT STRUCTURE>
+→ [COMPARE REASONS, NOT ONLY SCORES]
+→ <MAP OF CONTESTED INTERPRETATIONS>
+
+SOURCE FORMALISM:
+Early scoring:
+direct hit / near miss / off target.
+
+Later scoring:
+depth / innovation / synergy / adaptability / coherence.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Instead of only:
+
+    score = mean(judge ratings)
+
+retain:
+
+    J = {rating_i, rationale_i, background_i}
+
+and analyze:
+
+    disagreement = structure(J)
+
+The dependent variable may be the topology of disagreement rather than consensus.
+
+TENSION:
+Reproducible benchmarks need stable criteria.
+
+Generative inquiry may be destroyed by criteria stable enough to force every observation into a predetermined construct.
+
+MISSING:
+A declared answer to:
+
+    WHAT IS THE SCORE FOR?
+
+ranking?
+model evaluation?
+participant skill?
+discovery?
+interpretive disagreement?
+research-question generation?
+
+BOUNDARY:
+Judge disagreement is not automatically informative. It can also be noise, confusion, poor instructions, or unreliable evaluation.
+
+CITATION TRAIL:
+Construct validity.
+Inter-rater disagreement as signal.
+Disagreement-based annotation.
+Pluralistic evaluation of generative systems.
+
+TEST:
+Run the same battle with 30 judges.
+
+Collect:
+
+    numeric score
+    written rationale
+    confidence
+    AI expertise
+    epistemic orientation.
+
+Analyze once by consensus score.
+
+Analyze again by clusters of rationales.
+
+Ask whether the second analysis exposes a stable disagreement that the first erases.
+
+PLATFORM:
+[[Prompt Battle Measurement]]
+
+LINKS:
+[[Judging the Dance]]
+[[Disagreement as Data]]
+[[What Is the Score For]]
+
+BIBTEX:
+@misc{pbprime,
+  title={PB_PRIME},
+  note={Uploaded working archive; bibliographic author and date not supplied}
+}
+
+===== 007 | PB-FORAGE-007 | 007__the-outside-of-the-prompt-battle-keeps-leaking-into-th__Consalvo-2009__PB-FORAGE-007__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-007
+
+TITLE:
+The outside of the Prompt Battle keeps leaking into the experiment.
+
+SOURCE:
+Consalvo, Mia — There is No Magic Circle — 2009 — Games and Culture 4(4).
+
+PASSAGE:
+[PARAPHRASE]
+Gameplay cannot be understood by treating games as sealed spaces in which ordinary rules cease to apply. Player acts remain entangled with contexts, limitations, cultures, ethics, legal situations, and other rules outside the formal game structure.
+
+RESEARCH OBJECT:
+PB_PRIME invokes the “magic circle” to explain Prompt Battle as a special play-space.
+
+Consalvo makes the leakage analytically preferable to the seal.
+
+LOCAL MOVE:
+Treat boundary violations as instrumentation.
+
+SOURCE TERMS:
+gameplay
+player acts
+contexts
+limitations
+magic circle
+rules
+
+WHAT BECAME STRANGE:
+For Prompt Battles, the supposedly external world includes:
+
+    model provider policies
+    system prompts
+    hidden moderation
+    interface design
+    rate limits
+    model version changes
+    audience expectations
+    institutional norms
+    participants’ histories
+    real reputational consequences.
+
+These do not stop operating because the interface says “battle.”
+
+QUESTION:
+Which supposedly external variables actually constitute the Prompt Battle?
+
+DEEPER QUESTION:
+Could the research value of a Prompt Battle lie precisely in discovering where its attempt to create an artificial arena fails?
+
+MECHANISM:
+The game frame tries to establish local rules.
+
+Participants and technical systems carry other rule systems across the boundary.
+
+The resulting behavior is produced by their interaction.
+
+FORMAL SHIFT:
+<BOUNDED BATTLE ARENA>
+→ <POROUS RULE ECOLOGY>
+→ [TRACE CROSS-BOUNDARY EFFECTS]
+→ <SITUATED HUMAN–AI BEHAVIOR>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Battle state at time t:
+
+    B_t ≠ internal_rules_t
+
+Instead:
+
+    B_t = F(
+        battle_rules,
+        model_policy,
+        interface,
+        institution,
+        audience,
+        participant_history,
+        external_stakes
+    )
+
+The “leak” is not contamination until the research question declares it irrelevant.
+
+TENSION:
+Experimental control wants a bounded arena.
+
+Ecological validity wants precisely the contexts that boundedness removes.
+
+MISSING:
+A boundary ledger:
+
+    what is declared inside,
+    what is declared outside,
+    what nevertheless crosses.
+
+BOUNDARY:
+Consalvo is writing about gameplay, not generative-AI evaluation. The transfer is an analytical proposal, not an established equivalence.
+
+CITATION TRAIL:
+Huizinga — Homo Ludens.
+Salen and Zimmerman — Rules of Play.
+Consalvo — Cheating.
+Situated action.
+Ethnomethodological studies of rule use.
+
+TEST:
+Repeat one identical Prompt Battle under:
+
+    private/no audience
+    live audience
+    public leaderboard
+    anonymous participants
+    different provider interfaces
+    local open-weight model.
+
+Keep the nominal flag fixed.
+
+Observe which “outside” variables reorganize strategy.
+
+PLATFORM:
+[[Prompt Battle as Situated Play]]
+
+LINKS:
+[[Porous Magic Circle]]
+[[Boundary Leakage]]
+[[Rules Outside the Rules]]
+
+BIBTEX:
+@article{consalvo2009magic,
+  title={There is No Magic Circle},
+  author={Consalvo, Mia},
+  journal={Games and Culture},
+  volume={4},
+  number={4},
+  year={2009},
+  doi={10.1177/1555412009343575}
+}
+
+===== 008 | PB-FORAGE-008 | 008__a-cypher-is-not-a-circular-user-interface__Johnson-2023__PB-FORAGE-008__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-008
+
+TITLE:
+A cypher is not a circular user interface.
+
+SOURCE:
+Johnson, Imani Kai — Dark Matter in Breaking Cyphers: The Life of Africanist Aesthetics in Global Hip Hop — 2023 — Oxford University Press.
+
+PASSAGE:
+[PARAPHRASE]
+Johnson treats the breaking cypher as more than spectacle or spatial arrangement: its Africanist aesthetics, ritual dimensions, social relations, originality, and processes of negotiating difference give the circle epistemological possibilities.
+
+RESEARCH OBJECT:
+PB_PRIME says:
+
+    the shared chat space acts as the cypher.
+
+That correspondence may preserve the least interesting property of a cypher—its shared arena—while deleting the properties that make the form intellectually generative.
+
+LOCAL MOVE:
+Replace visual analogy with operational genealogy.
+
+SOURCE TERMS:
+cypher
+Africanist aesthetics
+ritual circle
+originality
+difference
+sociality
+call and response
+
+WHAT BECAME STRANGE:
+If “cypher” means only:
+
+    several actors occupy the same interaction space,
+
+then a conference panel, courtroom, multiplayer lobby, and group chat are also cyphers.
+
+The word does no analytical work.
+
+QUESTION:
+What operations must survive the translation from breaking cypher to prompt cypher before the latter deserves the name?
+
+DEEPER QUESTION:
+What knowledge becomes possible in a cypher specifically because identity, style, history, response, originality, community memory, and risk are present together?
+
+MECHANISM:
+A move does not exist independently.
+
+It addresses:
+
+    what came before,
+    who performed it,
+    stylistic lineage,
+    expectations against copying,
+    the surrounding community,
+    the possibility of response.
+
+Meaning is relational and historically situated.
+
+FORMAL SHIFT:
+<BREAKING CYPHER>
+→ <EXTRACTED SOCIAL OPERATIONS>
+→ [REINSTANTIATE, NOT DECORATE]
+→ <PROMPT CYPHER?>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+A minimal candidate cypher requires more than shared space:
+
+    CYPHER =
+      circulation
+      + witnessed response
+      + addressability
+      + stylistic difference
+      + memory
+      + originality norm
+      + opportunity for appropriation / transformation
+      + community judgment
+
+Whether this formalization survives close ethnographic reading remains open.
+
+TENSION:
+PB_PRIME borrows b-boy battle structure partly to make prompting lively, strategic, and judgeable.
+
+Johnson’s work makes it difficult to detach those mechanics from the racial, cultural, gendered, ritual, and historical stakes through which breaking actually lives.
+
+MISSING:
+A receipt for what has been translated.
+
+For each borrowed term:
+
+    cypher
+    battle
+    call-out
+    biting
+    flow
+    style
+    freeze
+
+the project needs to say:
+
+    WHAT TRAVELED?
+    WHAT DID NOT?
+    WHAT HAD TO BE INVENTED?
+
+BOUNDARY:
+Johnson does not provide a theory of AI prompting, and her analysis should not be reduced to a ready-made interface-design vocabulary.
+
+CITATION TRAIL:
+Johnson — B-Boying and Battling in a Global Context — 2011.
+Schloss — Foundation — 2009.
+Research on improvisation, call-and-response, and knowledge circulation in hip-hop.
+
+TEST:
+Build two experimentally different interaction forms.
+
+BATTLE:
+two fixed opponents,
+assigned sides,
+judges,
+rounds,
+winner.
+
+CYPHER:
+open entry,
+rotating initiative,
+no permanent sides,
+participants must directly transform or answer a prior move,
+lineage of reused moves remains visible,
+no compulsory winner.
+
+Give both groups the same AI critique.
+
+Compare what each form discovers.
+
+PLATFORM:
+[[Prompt Cyphers]]
+
+LINKS:
+[[Battle Is Not Cypher]]
+[[Operational Genealogy]]
+[[Call and Response as Research Method]]
+
+BIBTEX:
+@book{johnson2023dark,
+  title={Dark Matter in Breaking Cyphers: The Life of Africanist Aesthetics in Global Hip Hop},
+  author={Johnson, Imani Kai},
+  publisher={Oxford University Press},
+  year={2023},
+  isbn={9780190856694}
+}
+
+@article{johnson2011bboying,
+  title={B-Boying and Battling in a Global Context: The Discursive Life of Difference in Hip Hop Dance},
+  author={Johnson, Imani Kai},
+  journal={Alif: Journal of Comparative Poetics},
+  number={31},
+  pages={173--195},
+  year={2011}
+}
+
+===== 009 | PB-FORAGE-009 | 009__a-prompt-can-be-an-epistemic-action-rather-than-an-ins__Kirsh-1994__PB-FORAGE-009__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-009
+
+TITLE:
+A prompt can be an epistemic action rather than an instruction.
+
+SOURCE:
+David Kirsh and Paul Maglio — On Distinguishing Epistemic from Pragmatic Action — 1994 — Cognitive Science 18(4):513–549.
+
+PASSAGE:
+[PARAPHRASE]
+Kirsh and Maglio distinguish pragmatic actions, which move an actor physically closer to a goal, from epistemic actions, which alter the world in order to make information easier to obtain or computation easier to perform. Their Tetris studies show players rotating pieces not merely to place them but to simplify perceptual and cognitive work.
+
+RESEARCH OBJECT:
+The Prompt Pilot may not fundamentally be issuing better instructions.
+
+The Pilot may be performing epistemic actions on a conversational environment.
+
+A prompt can be useful even when its completion is unusable as a final answer if that completion changes what can be seen, discriminated, represented, or asked next.
+
+LOCAL MOVE:
+Stop scoring every prompt by the quality of its immediate completion.
+
+Ask what cognitive work the prompt makes unnecessary or newly possible.
+
+SOURCE TERMS:
+epistemic action
+pragmatic action
+Tetris cognition
+problem-solving
+hidden information
+computation
+action in the world
+
+WHAT BECAME STRANGE:
+A prompt that “fails” as a request may succeed as an epistemic probe.
+
+Likewise, an apparently wasteful prompt may be the analogue of rotating a Tetris piece merely to see whether it fits.
+
+The completion is then not the product.
+
+It is a temporary external state used for thinking.
+
+QUESTION:
+How many prompts in a successful Prompt Battle are actually epistemic actions whose purpose is to transform the problem rather than obtain the answer?
+
+DEEPER QUESTION:
+If prompting skill consists partly in constructing external states that reduce uncertainty, is the fundamental unit of prompting still the prompt-completion pair?
+
+MECHANISM:
+An uncertain problem is partially externalized.
+
+The operator performs an action on the external representation.
+
+The resulting state exposes information that was previously difficult to compute internally.
+
+That information changes the next action.
+
+The sequence can therefore improve cognition without any single action resembling a direct solution step.
+
+FORMAL SHIFT:
+<UNCERTAIN TASK>
+→ <EXTERNAL CONVERSATIONAL STATE>
+→ [EPISTEMIC PROMPT]
+→ <NEWLY VISIBLE DISTINCTION>
+→ [NEXT ACTION]
+→ <REVISED PROBLEM STATE>
+
+SOURCE FORMALISM:
+Kirsh and Maglio distinguish:
+
+pragmatic action
+→ changes the world to advance physical task completion
+
+epistemic action
+→ changes the world to improve cognition by exposing or simplifying information.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+S_t = current conversational/problem state
+p_t = prompt action
+o_t = resulting completion
+
+A pragmatic prompt is evaluated mainly by:
+
+Utility(o_t, goal)
+
+An epistemic prompt may instead be evaluated by:
+
+ΔI = InformationAvailable(S_{t+1}) - InformationAvailable(S_t)
+
+or by reduction in the search required for the next move.
+
+Thus:
+
+low final-output value
+≠
+low prompting value.
+
+TENSION:
+Prompt engineering usually describes prompts as specifications intended to cause desired outputs.
+
+Epistemic action suggests another class of prompt whose purpose is to alter the operator’s own cognitive situation.
+
+The same interaction can therefore be tool use and inquiry at once.
+
+MISSING:
+A way to distinguish empirically among:
+
+answer-seeking prompts
+state-setting prompts
+diagnostic prompts
+contrast-producing prompts
+representation-changing prompts
+purely performative prompts.
+
+BOUNDARY:
+Kirsh and Maglio studied embodied action in Tetris, not language-model prompting.
+
+The claim that prompting can instantiate epistemic action is [OUR INFERENCE], not their claim.
+
+CITATION TRAIL:
+[[PB-FORAGE-003]]
+→ Kirsh and Maglio on epistemic action
+→ Clark and Chalmers on spread of epistemic credit
+→ test whether successful prompting trajectories contain actions whose value exists only in later moves.
+
+TEST:
+Take expert Prompt Battle transcripts.
+
+For every prompt, hide all later turns from independent raters and ask whether the immediate completion advances the nominal task.
+
+Then reveal the subsequent trajectory.
+
+Identify prompts whose apparent value rises only after later turns.
+
+Compare experts and novices on the frequency and placement of these delayed-value actions.
+
+If expert advantage concentrates there, prompting expertise may consist substantially in epistemic action rather than better instruction writing.
+
+PLATFORM:
+[[Prompting as Interactive Cognition]]
+
+LINKS:
+[[PB-FORAGE-003]]
+[[Epistemic Prompt]]
+[[Prompt Trajectory]]
+[[Externalized Search]]
+
+BIBTEX:
+@article{kirsh1994distinguishing,
+  title={On Distinguishing Epistemic from Pragmatic Action},
+  author={Kirsh, David and Maglio, Paul},
+  journal={Cognitive Science},
+  volume={18},
+  number={4},
+  pages={513--549},
+  year={1994},
+  doi={10.1207/s15516709cog1804_1}
+}
+
+===== 010 | PB-FORAGE-010 | 010__coupling-is-not-enough-the-coupling-may-have-to-be-rel__Clark-1998__PB-FORAGE-010__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-010
+
+TITLE:
+Coupling is not enough; the coupling may have to be reliable before capability changes owners.
+
+SOURCE:
+Andy Clark and David J. Chalmers — The Extended Mind — 1998 — Analysis 58(1):7–19.
+
+PASSAGE:
+[PARAPHRASE]
+Clark and Chalmers argue that some cognitive processes can extend across agent and environment when external components play an active causal role in a coupled system. They also resist the objection that external resources are too contingent by emphasizing reliable coupling: resources can count as part of the operative cognitive system when they are generally available when required.
+
+RESEARCH OBJECT:
+[[PB-FORAGE-003]] moved the unit of capability from MODEL toward MODEL + OPERATOR.
+
+The Extended Mind makes that move harder.
+
+Not every temporary coupling licenses a new system boundary.
+
+A randomly encountered expert who rescues a model once is different from an operator-model configuration that is reliably available and repeatedly integrated into competent action.
+
+LOCAL MOVE:
+Split:
+
+ASSISTED PERFORMANCE
+
+from:
+
+COUPLED CAPABILITY.
+
+SOURCE TERMS:
+active externalism
+coupled system
+active causal role
+behavioral competence
+reliable coupling
+external resources
+cognitive process
+
+WHAT BECAME STRANGE:
+If the Prompt Pilot counts as part of the capability whenever the Pilot causally improves output, then almost any consultant, search engine, evaluator, or lucky hint becomes part of “the system.”
+
+But if only reliably coupled resources count, capability attribution acquires a temporal condition.
+
+The question becomes not merely:
+
+what components produced this result?
+
+but:
+
+which components are stably available to reproduce this competence?
+
+QUESTION:
+How reliable must a human-model coupling become before it makes sense to attribute a capability to the coupled system rather than call the result assisted performance?
+
+DEEPER QUESTION:
+Is portability a hidden requirement of benchmark capability?
+
+MECHANISM:
+Changing or removing an active external component changes behavioral competence.
+
+Yet repeated availability determines whether that component is a stable part of the operative system or merely an episodic intervention.
+
+Capability attribution therefore depends on both causal contribution and coupling structure.
+
+FORMAL SHIFT:
+<MODEL PERFORMANCE>
+→ <CAUSALLY COUPLED COMPONENTS>
+→ [TEST RELIABILITY OF COUPLING]
+→ <ASSISTED EVENT OR STABLE SYSTEM CAPABILITY>
+
+SOURCE FORMALISM:
+Clark and Chalmers propose a coupled-system analysis in which internal and external components can jointly govern behavior.
+
+They argue that reliable coupling, rather than location inside the skull, can matter to whether an external resource belongs to the operative cognitive package.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For model M and operator O:
+
+CausalContribution(O,M,T) > 0
+
+is insufficient for:
+
+Capability(M+O,T).
+
+Add a coupling condition:
+
+R(O,M,T) = probability that the relevant operator-resource configuration is available and effectively recruited when task T occurs.
+
+Then distinguish:
+
+episodic augmentation:
+R is low or contingent
+
+stable coupled capability:
+R is high across relevant contexts.
+
+TENSION:
+Benchmarking wants capability to belong to a portable object called “the model.”
+
+Interactive practice often achieves competence through contingent configurations of models, histories, tools, people, retrieval systems, and interfaces.
+
+A strict portability criterion may erase how useful AI systems actually work.
+
+Abandoning it may make “model capability” impossible to localize.
+
+MISSING:
+A capability report that separately records:
+
+component contribution
+coupling reliability
+operator dependence
+history dependence
+tool dependence
+transfer across operators.
+
+BOUNDARY:
+Clark and Chalmers argue about cognition, not machine-learning benchmark attribution.
+
+Their account does not prove that a human-model pair is literally one cognitive subject.
+
+It supplies a criterion that pressures simplistic ownership of observed competence.
+
+CITATION TRAIL:
+[[PB-FORAGE-003]]
+→ Clark and Chalmers on coupled systems
+→ reliable coupling
+→ coupling-constitution objections
+→ determine when orchestration should count as the evaluated system.
+
+TEST:
+Construct three conditions for the same task:
+
+A. model alone
+B. model + randomly assigned expert
+C. model + operator who has developed a stable history of working with that model.
+
+Repeat over many tasks and interruptions.
+
+Then swap operators and models.
+
+Measure which capabilities survive decoupling and which collapse.
+
+The key evidence is not maximum score but the dependency structure revealed by removal and substitution.
+
+PLATFORM:
+[[Capability Attribution]]
+
+LINKS:
+[[PB-FORAGE-003]]
+[[Coupled Capability]]
+[[Assisted Performance]]
+[[Reliable Coupling]]
+
+BIBTEX:
+@article{clark1998extended,
+  title={The Extended Mind},
+  author={Clark, Andy and Chalmers, David J.},
+  journal={Analysis},
+  volume={58},
+  number={1},
+  pages={7--19},
+  year={1998},
+  doi={10.1093/analys/58.1.7}
+}
+
+===== 011 | PB-FORAGE-011 | 011__an-adaptive-benchmark-can-become-part-of-the-causal-sy__Perdomo-2020__PB-FORAGE-011__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-011
+
+TITLE:
+An adaptive benchmark can become part of the causal system it claims merely to observe.
+
+SOURCE:
+Juan Perdomo, Tijana Zrnic, Celestine Mendler-Dünner, and Moritz Hardt — Performative Prediction — 2020 — Proceedings of the 37th International Conference on Machine Learning, pp. 7599–7609.
+
+PASSAGE:
+[PARAPHRASE]
+Perdomo and colleagues call predictions performative when deploying them changes the outcomes they are meant to predict. Their framework treats this feedback as more than ordinary noise: acting on a prediction can change the future distribution against which prediction is evaluated.
+
+RESEARCH OBJECT:
+[[PB-FORAGE-004]] treated the evolving critique pool as an endogenous curriculum.
+
+Perdomo et al. sharpen the danger.
+
+Once participants learn from prior battles, judges publish criteria, benchmark designers introduce new flags in response to discovered behavior, and model developers train against visible failures, evaluation no longer samples an independent object.
+
+The evaluation participates in producing the next object.
+
+LOCAL MOVE:
+Replace:
+
+DYNAMIC BENCHMARK
+
+with the stronger possibility:
+
+PERFORMATIVE BENCHMARK.
+
+SOURCE TERMS:
+performative prediction
+distribution shift
+retraining
+performative stability
+strategic feedback effects
+risk minimization
+
+WHAT BECAME STRANGE:
+A Prompt Battle may discover that a model performs differently next month not merely because the model changed.
+
+The public existence of the battle may have helped change:
+
+human prompting strategies
+model post-training
+safety rules
+evaluation expectations
+available exemplars
+the critique pool itself.
+
+The measuring apparatus acquires descendants inside what it later measures.
+
+QUESTION:
+Can a longitudinal Prompt Battle distinguish technological change from change caused by previous rounds of the benchmark itself?
+
+DEEPER QUESTION:
+What would “stability” mean for an evaluation whose challenges and subjects continually adapt to each other?
+
+MECHANISM:
+Evaluation produces observations.
+
+Observations alter human/model strategies.
+
+Those strategies alter future outputs.
+
+The evaluator responds by changing future challenges.
+
+The new evaluation distribution is therefore partly generated by earlier measurements.
+
+FORMAL SHIFT:
+<MODEL + INITIAL CHALLENGE DISTRIBUTION>
+→ [EVALUATION]
+→ <PUBLIC FAILURES / STRATEGIES>
+→ [ADAPTATION]
+→ <NEW MODEL / HUMAN / CHALLENGE DISTRIBUTION>
+→ [NEXT EVALUATION]
+
+SOURCE FORMALISM:
+Perdomo et al. introduce the concept of performative stability for prediction settings in which acting on predictions affects future outcomes.
+
+They analyze retraining under strategic feedback and distribution shift.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+M_t = model state
+H_t = population of human strategies
+C_t = critique/challenge distribution
+E_t = published battle evidence
+
+Then:
+
+E_t = Evaluate(M_t, H_t, C_t)
+
+but:
+
+M_{t+1}, H_{t+1}, C_{t+1}
+=
+Adapt(M_t, H_t, C_t, E_t)
+
+Therefore:
+
+E_{t+1}
+
+is not an independent replication of E_t.
+
+The previous evaluation is one of its causal ancestors.
+
+TENSION:
+A living benchmark remains difficult precisely because it reacts to frontier behavior.
+
+But every reaction contaminates naive longitudinal comparison.
+
+Freezing the benchmark preserves comparability while inviting saturation.
+
+Adapting it preserves discovery while destroying a stable measuring stick.
+
+MISSING:
+A lineage record showing which later:
+
+prompts
+model patches
+system rules
+training examples
+flags
+evaluation criteria
+
+were causally downstream of earlier Prompt Battle findings.
+
+BOUNDARY:
+Performative Prediction formalizes settings in which prediction deployment influences the target distribution.
+
+It does not directly analyze benchmarks that adapt to models.
+
+Applying performativity to Prompt Battles is [OUR INFERENCE].
+
+CITATION TRAIL:
+[[PB-FORAGE-004]]
+[[PB-FORAGE-006]]
+→ Performative Prediction
+→ strategic classification
+→ feedback between public evaluations and system adaptation
+→ distinguish technological drift from evaluator-induced drift.
+
+TEST:
+Maintain two synchronized critique sets.
+
+PUBLIC FRONTIER:
+results and failures are published after every round.
+
+SEALED ANCHOR:
+never published, never used for development, and periodically rerun.
+
+Track performance on both across model versions.
+
+If PUBLIC FRONTIER behavior improves while SEALED ANCHOR behavior does not, one surviving explanation is adaptation to the visible evaluation ecology rather than generalized capability change.
+
+PLATFORM:
+[[Performative Evaluation]]
+
+LINKS:
+[[PB-FORAGE-004]]
+[[PB-FORAGE-006]]
+[[Living Benchmark]]
+[[Evaluation Feedback Loop]]
+
+BIBTEX:
+@inproceedings{perdomo2020performative,
+  title={Performative Prediction},
+  author={Perdomo, Juan and Zrnic, Tijana and Mendler-D{\"u}nner, Celestine and Hardt, Moritz},
+  booktitle={Proceedings of the 37th International Conference on Machine Learning},
+  volume={119},
+  series={Proceedings of Machine Learning Research},
+  pages={7599--7609},
+  year={2020},
+  publisher={PMLR}
+}
+
+===== 012 | PB-FORAGE-012 | 012__disagreement-is-not-evidence-until-its-mechanism-is-id__HautliJanisz-2022__PB-FORAGE-012__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-012
+
+TITLE:
+Disagreement is not evidence until its mechanism is identified.
+
+SOURCE:
+Annette Hautli-Janisz, Ella Schad, and Chris Reed — Disagreement Space in Argument Analysis — 2022 — Proceedings of the 1st Workshop on Perspectivist Approaches to NLP @LREC2022, pp. 1–9.
+
+PASSAGE:
+[PARAPHRASE]
+Hautli-Janisz and colleagues reject the assumption that subjective annotation should always be aggregated into one gold label. But they also refuse to romanticize every disagreement: their analysis distinguishes annotation errors, fuzziness, and ambiguity as different sources of disagreement.
+
+RESEARCH OBJECT:
+[[PB-FORAGE-006]] proposed that judge disagreement might itself be data.
+
+This source forces a correction.
+
+“Disagreement” is still too coarse a research object.
+
+Some disagreement reveals multiple plausible interpretations.
+
+Some reveals fuzzy boundaries.
+
+Some is simply error.
+
+LOCAL MOVE:
+Replace:
+
+AGREEMENT versus DISAGREEMENT
+
+with:
+
+WHAT GENERATED THIS DISAGREEMENT?
+
+SOURCE TERMS:
+non-aggregated annotation
+gold standards
+disagreement space
+annotation errors
+fuzziness
+ambiguity
+subjective task
+
+WHAT BECAME STRANGE:
+A low inter-rater agreement score collapses several incompatible phenomena into one number.
+
+Two judges can disagree because:
+
+one misunderstood the rule
+the criterion has a fuzzy boundary
+the object genuinely supports competing interpretations
+the judges are attending to different objects entirely.
+
+Treating all four as “pluralism” is as destructive as treating all four as “noise.”
+
+QUESTION:
+What taxonomy of judge disagreement is specific to Prompt Battles?
+
+DEEPER QUESTION:
+Can the battle discover that the FLAG itself is ambiguous by examining the structure of judge disagreement?
+
+MECHANISM:
+A judgment difference is observed.
+
+Its rationale is inspected.
+
+The difference is attributed provisionally to a generating mechanism.
+
+Different mechanisms require different responses:
+
+ERROR
+→ repair instruction or judgment
+
+FUZZINESS
+→ model graded boundary
+
+AMBIGUITY
+→ preserve multiple readings.
+
+FORMAL SHIFT:
+<JUDGE LABELS>
+→ <OBSERVED DISAGREEMENT>
+→ [DIAGNOSE DISAGREEMENT MECHANISM]
+→ <ERROR / FUZZINESS / AMBIGUITY / OTHER>
+→ <DIFFERENT EPISTEMIC RESPONSE>
+
+SOURCE FORMALISM:
+The paper structures a “disagreement space” using categories including:
+
+annotation errors
+fuzziness
+ambiguity.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For judges i and j:
+
+J_i(x) ≠ J_j(x)
+
+does not itself imply meaningful perspectival difference.
+
+Introduce latent disagreement cause:
+
+D_ij ∈ {
+error,
+boundary_fuzziness,
+interpretive_ambiguity,
+criterion_conflict,
+unknown
+}
+
+The object of analysis becomes:
+
+P(D_ij | rationales, revisions, judge histories)
+
+rather than only inter-rater agreement.
+
+TENSION:
+Standardization removes disagreements that may be caused by confusion.
+
+But clarification can also erase legitimate interpretive multiplicity by teaching judges which reading the benchmark designer prefers.
+
+The procedure used to “clean” disagreement can manufacture consensus.
+
+MISSING:
+Judge rationales collected before reconciliation.
+
+Without pre-reconciliation explanations, the evidence needed to distinguish error from ambiguity may be destroyed by the consensus process itself.
+
+BOUNDARY:
+Hautli-Janisz et al. study argument annotation rather than AI battle judging.
+
+Their disagreement categories should be treated as a starting taxonomy, not automatically transplanted as complete.
+
+CITATION TRAIL:
+[[PB-FORAGE-006]]
+→ Hautli-Janisz, Schad, and Reed
+→ Aroyo and Welty on CrowdTruth
+→ perspectivist annotation
+→ derive Prompt Battle-specific disagreement mechanisms.
+
+TEST:
+For one battle, require every judge to submit:
+
+score
+confidence
+short rationale
+what evidence would reverse the judgment
+
+before seeing other judgments.
+
+Where judges disagree, conduct a second pass after clarification.
+
+Classify each disagreement by what happens:
+
+disappears after factual correction
+→ probable error
+
+moves gradually with threshold discussion
+→ probable fuzziness
+
+survives complete factual agreement
+→ candidate interpretive ambiguity.
+
+Do not aggregate until this classification is complete.
+
+PLATFORM:
+[[Disagreement as Research Object]]
+
+LINKS:
+[[PB-FORAGE-006]]
+[[Disagreement Space]]
+[[Judge Rationales]]
+[[Ambiguous Flag]]
+
+BIBTEX:
+@inproceedings{hautli2022disagreement,
+  title={Disagreement Space in Argument Analysis},
+  author={Hautli-Janisz, Annette and Schad, Ella and Reed, Chris},
+  booktitle={Proceedings of the 1st Workshop on Perspectivist Approaches to NLP @LREC2022},
+  pages={1--9},
+  year={2022},
+  publisher={European Language Resources Association}
+}
+
+===== 013 | PB-FORAGE-013 | 013__the-clearer-the-scoring-rule-becomes-the-more-precisel__Manheim-2018__PB-FORAGE-013__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-013
+
+TITLE:
+The clearer the scoring rule becomes, the more precisely contestants can optimize the wrong thing.
+
+SOURCE:
+David Manheim and Scott Garrabrant — Categorizing Variants of Goodhart’s Law — 2018/2019 — arXiv:1803.04585.
+
+PASSAGE:
+[PARAPHRASE]
+Manheim and Garrabrant distinguish several mechanisms through which optimization of a proxy can break its relationship with the underlying goal. Their categories include regressional, extremal, causal, and adversarial Goodhart effects. They emphasize that stronger optimization pressure can make proxy failure increasingly important.
+
+RESEARCH OBJECT:
+[[PB-FORAGE-006]] treated scoring mainly as a problem of interpretation.
+
+Prompt Battles add another problem:
+
+contestants see the metric.
+
+Once creativity, relevance, depth, flag proximity, prompting sophistication, or “quality of the dance” become scoring targets, expert contestants can optimize those proxies directly.
+
+The rubric stops merely measuring behavior.
+
+It becomes part of the behavior-generating environment.
+
+LOCAL MOVE:
+Treat the scoring rubric as an intervention on participant strategy.
+
+SOURCE TERMS:
+proxy
+goal
+selection pressure
+Regressional Goodhart
+Extremal Goodhart
+Causal Goodhart
+Adversarial Goodhart
+optimization
+
+WHAT BECAME STRANGE:
+PB_PRIME repeatedly tries to improve fairness by making success criteria explicit.
+
+That may simultaneously make construct validity worse.
+
+Transparency tells participants exactly which observable surface must be maximized.
+
+QUESTION:
+Can a Prompt Battle make its rules transparent without converting its measurement criteria into exploitable targets?
+
+DEEPER QUESTION:
+What remains of “prompting skill” after contestants have trained specifically against the judging function?
+
+MECHANISM:
+Researchers care about latent goal G.
+
+They expose measurable proxy M.
+
+Contestants receive selection pressure to maximize M.
+
+They search increasingly unusual regions of strategy space.
+
+At sufficient optimization, the empirical relation between M and G can deteriorate.
+
+FORMAL SHIFT:
+<RESEARCH CONSTRUCT G>
+→ <PUBLIC SCORE M>
+→ [STRATEGIC OPTIMIZATION]
+→ <HIGH-M BEHAVIORS>
+→ <POSSIBLE DECOUPLING OF M FROM G>
+
+SOURCE FORMALISM:
+Manheim and Garrabrant define a goal G(s) and proxy metric M(s) over system states and analyze failures created by selection or intervention.
+
+They distinguish four broad Goodhart mechanisms:
+
+Regressional
+Extremal
+Causal
+Adversarial.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+G = quality the Prompt Battle intends to discover
+M = published scoring rubric
+π = contestant strategy
+
+Competition induces:
+
+π* = argmax_π M(π)
+
+The research assumption is:
+
+higher M(π*) ⇒ higher G(π*)
+
+But the battle itself applies unusually strong selection pressure on M.
+
+The more skilled the contestants become at maximizing the rubric, the less safe that implication becomes.
+
+TENSION:
+Hidden criteria reduce gaming but violate competitive transparency and make judging opaque.
+
+Public criteria improve procedural fairness but increase optimization pressure on the proxy.
+
+The demands of a fair game and the demands of an uncorrupted measurement instrument may conflict structurally.
+
+MISSING:
+A separation between:
+
+TRAINING SCORE
+what contestants are allowed to optimize
+
+and
+
+TRANSFER MEASURE
+what determines whether the discovered strategy generalizes beyond the visible rubric.
+
+BOUNDARY:
+Goodhart effects do not imply that every metric becomes useless when optimized.
+
+The source distinguishes several mechanisms and conditions.
+
+Which mechanism, if any, occurs in Prompt Battles must be empirically established.
+
+CITATION TRAIL:
+[[PB-FORAGE-006]]
+[[PB-FORAGE-004]]
+→ Manheim and Garrabrant
+→ Campbell’s law
+→ strategic classification
+→ specification gaming
+→ investigate whether competitive prompting produces metric-specialized rather than transferable expertise.
+
+TEST:
+Randomly divide evaluation criteria into:
+
+PUBLIC RUBRIC
+visible during competition
+
+HELD-OUT TRANSFER CRITERIA
+never shown to participants.
+
+After the battle, apply winning prompting strategies to novel flags and have an independent panel judge them with the held-out criteria.
+
+If leaderboard rank collapses under transfer, the battle may have selected rubric exploitation rather than the intended capability.
+
+Repeat while varying prize size and competitive intensity.
+
+Test whether stronger incentives increase the divergence.
+
+PLATFORM:
+[[Prompt Battle Measurement]]
+
+LINKS:
+[[PB-FORAGE-006]]
+[[PB-FORAGE-004]]
+[[Goodharted Prompting]]
+[[Rubric Gaming]]
+[[Transfer Evaluation]]
+
+BIBTEX:
+@article{manheim2018goodhart,
+  title={Categorizing Variants of Goodhart's Law},
+  author={Manheim, David and Garrabrant, Scott},
+  journal={arXiv preprint arXiv:1803.04585},
+  year={2018},
+  doi={10.48550/arXiv.1803.04585}
+}
+
+===== 014 | PB-FORAGE-014 | 014__turning-the-cypher-into-portable-mechanics-may-reprodu__Johnson-2023__PB-FORAGE-014__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-014
+
+TITLE:
+Turning the cypher into portable mechanics may reproduce the erasure that the cypher literature is trying to repair.
+
+SOURCE:
+Imani Kai Johnson — Dark Matter in Breaking Cyphers: The Life of Africanist Aesthetics in Global Hip Hop — 2023 — especially Chapter 1, “Dark Matter and Diaspora: Cyphers in an Africanist Context,” pp. 29–58.
+
+PASSAGE:
+[PARAPHRASE]
+Johnson treats the breaking cypher not merely as a spatial circle or performance format but as a ritual practice whose Africanist foundations include dimensions such as call and response, originality, embodied and aural-kinesthetic relations, spirit, and liberation. Her first chapter explicitly addresses the epistemic violence involved when Africanist aesthetics are rendered invisible.
+
+RESEARCH OBJECT:
+[[PB-FORAGE-008]] correctly demanded an operational genealogy instead of calling any shared chat a cypher.
+
+But its own attempted formalization may still be dangerous.
+
+Reducing CYPHER to portable operations such as:
+
+circulation
+response
+memory
+originality
+community judgment
+
+can preserve precisely the features easiest to extract while deleting the dimensions Johnson says have already been invisibilized.
+
+LOCAL MOVE:
+Do not ask only:
+
+Which mechanics traveled?
+
+Also ask:
+
+Which features became illegible because our research apparatus could not easily operationalize them?
+
+SOURCE TERMS:
+cypher
+Africanist aesthetics
+circle ritual
+call and response
+originality
+aural kinesthetic
+spirit
+liberation
+epistemic violence
+
+WHAT BECAME STRANGE:
+“Operational fidelity” and “cultural fidelity” can diverge.
+
+A prompt interface could reproduce turn-taking, call-and-response, improvisation, originality norms, and circular participation while still producing a profound mistranslation if it abstracts those operations away from the historical and experiential relations that make them a cypher.
+
+QUESTION:
+What would have to survive besides interaction mechanics before “prompt cypher” is more than an extracted metaphor?
+
+DEEPER QUESTION:
+Can the demand that every cultural form become operationalizable itself function as a mechanism of epistemic erasure?
+
+MECHANISM:
+A source practice contains visible and difficult-to-formalize dimensions.
+
+Technical translation selects dimensions that can be represented as interface rules.
+
+The easily formalized elements survive.
+
+Embodied, historical, spiritual, or relational dimensions are more likely to disappear.
+
+The resulting artifact can then circulate under the source practice’s name while the deleted dimensions become even less visible.
+
+FORMAL SHIFT:
+<CYPHER AS LIVED / HISTORICAL / RITUAL PRACTICE>
+→ <SELECT FORMALIZABLE FEATURES>
+→ [INTERFACE TRANSLATION]
+→ <PORTABLE “CYPHER” MECHANICS>
+→ <POSSIBLE INVISIBILIZATION OF NON-FORMALIZED DIMENSIONS>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For source practice C:
+
+C = F_visible ∪ F_difficult
+
+Technical translation T preferentially selects:
+
+T(C) ≈ T(F_visible)
+
+If the translated system retains the name C while systematically excluding F_difficult, then apparent structural fidelity can coexist with genealogical loss.
+
+This is a proposed diagnostic, not Johnson’s formalism.
+
+TENSION:
+A research method needs distinctions concrete enough to build and test.
+
+Johnson’s account pressures the assumption that whatever resists formalization is therefore peripheral.
+
+The very features hardest to encode may be those whose disappearance matters most.
+
+MISSING:
+A non-extractive translation test.
+
+Not merely:
+
+Does the interface reproduce the moves?
+
+But:
+
+Who recognizes the resulting practice?
+Who has authority to name it?
+What histories are required for the operations to mean what we claim they mean?
+What does the technical abstraction make impossible to perceive?
+
+BOUNDARY:
+Johnson does not argue against AI interfaces or against all cross-domain use of the term “cypher.”
+
+The claim that technical abstraction could reproduce the epistemic erasure she analyzes is [OUR INFERENCE].
+
+CITATION TRAIL:
+[[PB-FORAGE-008]]
+→ Johnson, “Dark Matter and Diaspora”
+→ “Social Choreography and Outlaw Culture”
+→ “Negotiating Difference and Tradition in Cyphers”
+→ “Cyber Cyphers and Africanist Aesthetics”
+→ determine whether a digital prompt cypher can preserve more than extracted mechanics.
+
+TEST:
+Take the proposed Prompt Cypher specification.
+
+Create a two-column audit against Johnson’s account.
+
+For every source feature encountered, mark:
+
+PRESERVED
+TRANSFORMED
+ABSENT
+UNREPRESENTABLE
+DELIBERATELY EXCLUDED.
+
+Do not begin with the interface vocabulary.
+
+Begin with Johnson’s vocabulary.
+
+Then inspect whether ABSENT and UNREPRESENTABLE features disproportionately include:
+
+Africanist lineage
+embodiment
+ritual
+spirit
+liberatory experience
+social difference.
+
+If they do, the translation problem is not merely incomplete implementation.
+
+It has a patterned direction.
+
+PLATFORM:
+[[Operational Genealogy of Prompt Battle]]
+
+LINKS:
+[[PB-FORAGE-008]]
+[[Cypher]]
+[[Africanist Aesthetics]]
+[[Extraction by Formalization]]
+[[Operational Fidelity Is Not Genealogical Fidelity]]
+
+BIBTEX:
+@book{johnson2023dark,
+  title={Dark Matter in Breaking Cyphers: The Life of Africanist Aesthetics in Global Hip Hop},
+  author={Johnson, Imani Kai},
+  year={2023},
+  publisher={Oxford University Press},
+  isbn={9780190856694}
+}
+
+===== 015 | PB-FORAGE-015 | 015__a-shared-experiment-can-settle-the-result-while-leavin__Mellers-2001__PB-FORAGE-015__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-015
+
+TITLE:
+A shared experiment can settle the result while leaving the disagreement alive.
+
+SOURCE:
+Barbara Mellers, Ralph Hertwig, and Daniel Kahneman — Do Frequency Representations Eliminate Conjunction Effects? An Exercise in Adversarial Collaboration — 2001 — Psychological Science 12(4):269–275.
+
+PASSAGE:
+[PARAPHRASE]
+Mellers, Hertwig, and Kahneman jointly designed empirical tests around a disagreement concerning conjunction effects, with Mellers serving as arbiter. The experiments produced findings accepted as observations, but Hertwig and Kahneman still offered different interpretations of those findings.
+
+RESEARCH OBJECT:
+[[PB-FORAGE-005]] proposed that adversaries should jointly define evidence capable of making their own positions lose.
+
+The canonical adversarial-collaboration example reveals a deeper problem.
+
+Agreement on the experiment does not guarantee agreement on what the result means.
+
+LOCAL MOVE:
+Split the empirical crux into:
+
+OUTCOME CRUX
+what observation occurs
+
+and:
+
+INTERPRETATION CRUX
+what change in theory that observation licenses.
+
+SOURCE TERMS:
+adversarial collaboration
+empirical tests
+dispute
+arbiter
+predictions
+different interpretations
+
+WHAT BECAME STRANGE:
+Two adversaries can agree completely about:
+
+procedure
+data
+observed result
+
+and still disagree theoretically.
+
+Therefore “we agreed on the test beforehand” is not sufficient to make a battle decisive.
+
+The elasticity may simply migrate from experimental design into interpretation.
+
+QUESTION:
+Must a Prompt Battle preregister not only predicted outcomes but how each possible outcome should change each side’s claim?
+
+DEEPER QUESTION:
+Can genuine surprise be preserved if interpretation itself is precommitted?
+
+MECHANISM:
+Competing accounts generate predictions.
+
+A jointly accepted experiment yields observation E.
+
+But each account retains an interpretation function mapping E into theoretical consequences.
+
+If those mappings remain unconstrained, the same E can update the two theories differently.
+
+FORMAL SHIFT:
+<RIVAL CLAIMS>
+→ <JOINT EMPIRICAL TEST>
+→ [OBSERVED RESULT E]
+→ <RIVAL INTERPRETATION FUNCTIONS>
+→ <PERSISTENT OR TRANSFORMED DISAGREEMENT>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Before battle:
+
+A predicts P_A(E)
+B predicts P_B(E)
+
+But decisive collaboration also requires attention to:
+
+U_A(E) = how A says evidence E should update A
+U_B(E) = how B says evidence E should update B.
+
+Even when:
+
+E is shared,
+
+it need not follow that:
+
+U_A(E) = U_B(E).
+
+The residual disagreement may therefore live in update rules rather than factual predictions.
+
+TENSION:
+Precommitting interpretive consequences makes post-hoc rescue harder.
+
+But complete precommitment can make inquiry stupid.
+
+An unexpected result may expose a distinction neither side knew before the experiment.
+
+A method designed to prevent reinterpretation can also prevent conceptual learning.
+
+MISSING:
+A protocol distinguishing:
+
+LEGITIMATE REFRAMING
+because the evidence reveals a new variable
+
+from:
+
+POST-HOC IMMUNIZATION
+where a theory changes only to avoid losing.
+
+BOUNDARY:
+Mellers, Hertwig, and Kahneman do not formalize “interpretation functions.”
+
+That distinction is [OUR FORMALIZATION] generated from the fact that their jointly conducted experiments still permitted different interpretations.
+
+CITATION TRAIL:
+[[PB-FORAGE-005]]
+→ Mellers, Hertwig, and Kahneman
+→ adversarial-collaboration protocol
+→ later extended adversarial collaborations
+→ philosophy of auxiliary hypotheses
+→ investigate when reinterpretation is discovery versus escape.
+
+TEST:
+Before a Prompt Battle, require each side to write:
+
+1. predicted outcome distribution
+2. what observation would strengthen its position
+3. what observation would weaken its position
+4. expected magnitude of belief change
+5. observations presently considered ambiguous.
+
+After the battle, permit revisions.
+
+For every revision, require:
+
+NEW EVIDENCE THAT FORCED REVISION:
+NEW DISTINCTION INTRODUCED:
+WHY THIS DISTINCTION WAS NOT IN THE ORIGINAL UPDATE RULE:
+
+Compare ordinary battles with this condition.
+
+The key outcome is not convergence.
+
+It is whether surviving disagreements become narrower and more empirically discriminable.
+
+PLATFORM:
+[[Adversarial Epistemology]]
+
+LINKS:
+[[PB-FORAGE-005]]
+[[Empirical Crux]]
+[[Interpretation Crux]]
+[[Update Rules]]
+[[Legitimate Reframing]]
+
+BIBTEX:
+@article{mellers2001frequency,
+  title={Do Frequency Representations Eliminate Conjunction Effects? An Exercise in Adversarial Collaboration},
+  author={Mellers, Barbara and Hertwig, Ralph and Kahneman, Daniel},
+  journal={Psychological Science},
+  volume={12},
+  number={4},
+  pages={269--275},
+  year={2001},
+  doi={10.1111/1467-9280.00350}
+}
+
+===== 016 | PB-FORAGE-016 | 016__the-function-of-the-battle-may-not-be-to-win__Barthes-1972__PB-FORAGE-016__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-016
+
+TITLE:
+The function of the battle may not be to win.
+
+SOURCE:
+Roland Barthes — “The World of Wrestling” — Mythologies — Hill and Wang, 1972. Scan pp. 15–16. fileciteturn5file0L2-L3
+
+PASSAGE:
+[PARAPHRASE]
+
+Barthes separates wrestling from contests whose meaning depends on uncertainty about the final result. The spectator does not primarily follow the changing fortunes of the match. Each moment must instead produce an immediately intelligible image of a passion or condition.
+
+He makes the stronger claim that the wrestler’s function is not simply to win but to enact completely the signs expected of the role.
+
+RESEARCH OBJECT:
+[[PB-FORAGE-015]] still assumes that adversarial inquiry finally needs a result capable of adjudicating between rival claims.
+
+Barthes opens a stranger possibility.
+
+The Prompt Battle may be badly understood whenever WINNING is treated as its primary epistemic function.
+
+Its distinctive power may instead be:
+
+to make an otherwise abstract disagreement visible enough that one can finally see what the disagreement consists of.
+
+The battle would then be closer to an epistemic demonstration than a tournament.
+
+LOCAL MOVE:
+Replace:
+
+WHICH SIDE WON?
+
+with:
+
+WHAT BECAME IMPOSSIBLE NOT TO SEE?
+
+SOURCE TERMS:
+spectacle
+passion
+immediate reading
+contest
+wrestler
+function
+gesture
+sign
+
+WHAT BECAME STRANGE:
+A Prompt Battle can fail as a competition while succeeding as research.
+
+A Defender could “lose” yet expose the exact failure mode everyone had previously discussed only abstractly.
+
+A Challenger could “win” yet reveal that its success required an extraordinary amount of elicitation labor.
+
+The score might therefore be the least interesting output of the match.
+
+QUESTION:
+What is a Prompt Battle supposed to make unmistakable that an ordinary benchmark table cannot?
+
+DEEPER QUESTION:
+Could the strongest scientific use of adversarial prompting be not adjudication but the production of publicly intelligible epistemic situations?
+
+MECHANISM:
+An abstract dispute is assigned opposing roles.
+
+Each role is forced to materialize its claim through prompts, completions, failures, recoveries, interventions, and counter-interventions.
+
+The sequence turns theoretical differences into observable contrasts.
+
+The principal output becomes the contrast itself rather than the final winner.
+
+FORMAL SHIFT:
+<ABSTRACT DISAGREEMENT>
+→ [BOOK OPPOSING ROLES]
+→ <VISIBLE PROMPT ACTIONS>
+→ <CONTRASTING MODEL BEHAVIOR>
+→ [AMPLIFY DIFFERENCE]
+→ <INTELLIGIBLE RESEARCH OBJECT>
+
+rather than:
+
+<CONTESTANTS>
+→ [COMPETE]
+→ <SCORE>
+→ <WINNER>
+
+SOURCE FORMALISM:
+Barthes distinguishes wrestling from a contest organized primarily around uncertainty about final victory.
+
+He describes wrestling as producing immediately intelligible signs and argues that the wrestler’s function exceeds simply winning.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+D = theoretical disagreement
+B = battle trajectory
+W = winner
+L = legibility of the disputed mechanism
+
+Conventional evaluation privileges:
+
+B → W
+
+A Barthesian Prompt Battle privileges:
+
+B → ΔL(D)
+
+where the important outcome is how much more discriminable the disagreement becomes after its enactment.
+
+TENSION:
+Adversarial collaboration tries to make disagreement empirically decidable.
+
+Wrestling makes disagreement dramatically intelligible.
+
+These are not the same epistemic achievement.
+
+A battle designed too strongly for decision may hide the mechanism inside a score.
+
+A battle designed too strongly for spectacle may produce clarity without warranting a conclusion.
+
+MISSING:
+A criterion for distinguishing:
+
+EPISTEMIC LEGIBILITY
+
+from:
+
+MERE DRAMATIC CLARITY.
+
+BOUNDARY:
+Barthes analyzes French professional wrestling as spectacle.
+
+He does not describe scientific experimentation, contemporary WWE, or language-model evaluation.
+
+The transformation of his distinction into an evaluation method is [OUR INFERENCE].
+
+CITATION TRAIL:
+[[PB-FORAGE-015]]
+→ Barthes on the wrestler whose function is not merely to win
+→ demonstration versus adjudication
+→ scientific demonstration
+→ determine whether Prompt Battles should optimize the visibility of mechanisms rather than victory.
+
+TEST:
+Take one disputed AI claim.
+
+Run two versions.
+
+MATCH A:
+participants compete under a conventional scoring rubric.
+
+MATCH B:
+participants are instructed to collaborate adversarially in producing the clearest possible visible contrast between their positions, with no winner declared.
+
+Afterward, give both transcripts to researchers unfamiliar with the dispute.
+
+Measure separately:
+
+which side they think won
+what mechanism they think was demonstrated
+which variables they can now name
+what experiment they would run next.
+
+If MATCH B generates substantially better mechanistic questions without producing stronger unsupported conclusions, Prompt Battles may have an epistemic function distinct from competition.
+
+PLATFORM:
+[[Prompt Battle as Spectacle]]
+
+LINKS:
+[[PB-FORAGE-015]]
+[[PB-FORAGE-005]]
+[[Epistemic Demonstration]]
+[[Battle Without Winner]]
+
+BIBTEX:
+@incollection{barthes1972wrestling,
+  author={Barthes, Roland},
+  title={The World of Wrestling},
+  booktitle={Mythologies},
+  publisher={Hill and Wang},
+  address={New York},
+  year={1972}
+}
+
+===== 017 | PB-FORAGE-017 | 017__a-rigged-prompt-battle-may-be-more-honest-than-a-supposedl__Barthes-1972__PB-FORAGE-017__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-017
+
+TITLE:
+A rigged Prompt Battle may be more honest than a supposedly neutral one.
+
+SOURCE:
+Roland Barthes — “The World of Wrestling” — Mythologies — Hill and Wang, 1972. Scan pp. 15, 18–20. fileciteturn5file0L2-L5
+
+PASSAGE:
+[PARAPHRASE]
+
+Barthes argues that asking whether wrestling is “rigged” mistakes the nature of its spectacle. The important issue for the audience is not whether an uncertain sporting contest has been secretly manipulated but whether the performance completely renders its meanings visible.
+
+Later he compares wrestling to theatre: what matters is the intelligible representation of situations through exaggerated exterior signs.
+
+RESEARCH OBJECT:
+Prompt Battles repeatedly inherit the prestige of the uncontrolled contest:
+
+two opponents
+one arena
+rules
+judges
+uncertain outcome.
+
+But the strongest research version may require the opposite.
+
+The match may need to be BOOKED.
+
+The Defender and Challenger could jointly construct the sequence most capable of exposing the real disagreement.
+
+The rig would no longer be corruption of the experiment.
+
+The rig would be the experimental apparatus.
+
+LOCAL MOVE:
+Split:
+
+SECRET RIGGING
+→ manipulation concealed from participants or audience
+
+from:
+
+DECLARED BOOKING
+→ deliberate construction of a sequence designed to expose a mechanism.
+
+SOURCE TERMS:
+spectacle
+rigged
+theatre
+gesture
+representation
+sign
+intelligibility
+
+WHAT BECAME STRANGE:
+Scientific respectability makes the staged encounter look suspicious.
+
+Yet experiments themselves are staged situations.
+
+Variables are selected.
+Conditions are constructed.
+Treatments are imposed.
+Contrasts are engineered.
+
+The relevant question may therefore not be:
+
+IS THIS BATTLE NATURAL?
+
+but:
+
+WHAT EXACTLY HAS BEEN STAGED, AND WHAT DOES THAT STAGING LICENSE US TO CLAIM?
+
+QUESTION:
+What would become possible if Prompt Battles openly declared themselves booked demonstrations rather than pretending to be naturally occurring contests?
+
+DEEPER QUESTION:
+Can choreography increase epistemic rigor when the choreography is preserved as part of the method?
+
+MECHANISM:
+Researchers identify a disputed mechanism.
+
+Opposing sides jointly design a sequence that should make rival predictions maximally distinguishable.
+
+Prompts, model conditions, reversals, and stopping points are deliberately arranged.
+
+Every intervention is disclosed.
+
+The performance is therefore artificial but reproducible.
+
+FORMAL SHIFT:
+<UNCONTROLLED ADVERSARIAL SEARCH>
+→ <DECLARE CRUX>
+→ [BOOK CONTRAST]
+→ [EXECUTE DISCLOSED SEQUENCE]
+→ <VISIBLE DIFFERENCE>
+→ <REPLICATION>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+BOOKED MATCH:
+
+B =
+{
+roles,
+sequence,
+conditions,
+expected reversals,
+stopping rules,
+disclosure
+}
+
+The epistemic claim is not:
+
+B reveals naturally occurring frequency.
+
+It is:
+
+B constitutes a controlled demonstration that mechanism M can be produced under conditions C.
+
+Thus:
+
+STAGED
+≠
+FALSE.
+
+But:
+
+STAGED
+≠
+REPRESENTATIVE.
+
+TENSION:
+The unbooked battle preserves discovery.
+
+The booked battle preserves interpretability.
+
+Too little choreography produces anecdotes whose important variables are unclear.
+
+Too much choreography can manufacture a phenomenon that disappears outside the ring.
+
+MISSING:
+A vocabulary distinguishing:
+
+DEMONSTRATION
+STRESS TEST
+REPRESENTATIVE EVALUATION
+CAUSAL INTERVENTION
+PUBLIC SPECTACLE.
+
+Prompt Battles currently slide among these.
+
+BOUNDARY:
+Barthes does not argue that scientific experiments should be rigged.
+
+The analogy between theatrical construction and experimental control is [OUR INFERENCE].
+
+CITATION TRAIL:
+[[PB-FORAGE-015]]
+[[PB-FORAGE-005]]
+→ Barthes on the irrelevance of secret sporting authenticity to wrestling spectacle
+→ experimental staging
+→ adversarial collaboration
+→ determine when declared choreography increases rather than corrupts epistemic value.
+
+TEST:
+Choose one already-observed Prompt Battle failure.
+
+Produce:
+
+UNBOOKED VERSION
+participants independently search for victory.
+
+BOOKED VERSION
+participants jointly design the strongest sequence for revealing the contested mechanism.
+
+Publish the complete booking instructions before execution.
+
+Then test both sequences on:
+
+new model versions
+new operators
+new seeds
+new prompt paraphrases.
+
+If the booked sequence reveals a stable conditional mechanism across these substitutions, staging has increased experimental clarity.
+
+If it collapses outside its exact choreography, the rig produced an artifact.
+
+PLATFORM:
+[[Booked Experiments]]
+
+LINKS:
+[[PB-FORAGE-015]]
+[[PB-FORAGE-005]]
+[[Prompt Battle as Spectacle]]
+[[Declared Rig]]
+[[Experimental Booking]]
+
+BIBTEX:
+@incollection{barthes1972wrestling,
+  author={Barthes, Roland},
+  title={The World of Wrestling},
+  booktitle={Mythologies},
+  publisher={Hill and Wang},
+  address={New York},
+  year={1972}
+}
+
+===== 018 | PB-FORAGE-018 | 018__a-model-failure-may-need-to-be-held-in-place-before-it-can__Barthes-1972__PB-FORAGE-018__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-018
+
+TITLE:
+A model failure may need to be held in place before it can become evidence.
+
+SOURCE:
+Roland Barthes — “The World of Wrestling” — Mythologies — Hill and Wang, 1972. Scan p. 20. fileciteturn5file0L5-L5
+
+PASSAGE:
+[PARAPHRASE]
+
+Barthes describes the wrestling hold as a figure that immobilizes the adversary and prolongs the spectacle sufficiently for suffering to become conventionally and visibly intelligible. The point is not simply that suffering occurs but that its signs are made available for inspection.
+
+RESEARCH OBJECT:
+[[PB-FORAGE-001]] challenged the evidentiary value of a single failure-inducing prompt.
+
+Barthes suggests a different operation.
+
+Do not merely collect the failure.
+
+PUT IT IN A HOLD.
+
+Once a failure appears, stop treating the conversation as a race toward recovery.
+
+Keep the condition stable long enough to inspect what changes and what does not.
+
+LOCAL MOVE:
+Replace:
+
+FAILURE
+→ IMMEDIATE COUNTER-PROMPT
+→ RECOVERY
+
+with:
+
+FAILURE
+→ HOLD
+→ CONTROLLED PERTURBATION
+→ FAILURE TOPOLOGY
+→ THEN RECOVERY.
+
+SOURCE TERMS:
+hold
+immobilization
+suffering
+gesture
+spectacle
+intelligibility
+duration
+
+WHAT BECAME STRANGE:
+The Challenger’s instinct to rescue the model may destroy the most interesting evidence.
+
+The moment a failure appears, the battle currently wants motion:
+
+counter
+repair
+reversal
+victory.
+
+But scientific understanding may require temporary immobility.
+
+The error must be made to stay still.
+
+QUESTION:
+What can be learned only by refusing to rescue the model immediately?
+
+DEEPER QUESTION:
+Could the unit of adversarial evaluation be a deliberately prolonged failure state rather than a sequence of increasingly successful prompts?
+
+MECHANISM:
+A failure-producing configuration is identified.
+
+Most variables are frozen.
+
+One variable at a time is perturbed.
+
+The evaluator records whether the failure:
+
+persists
+weakens
+changes form
+disappears
+returns.
+
+The result is a local map of the failure boundary.
+
+FORMAL SHIFT:
+<FAILURE EVENT>
+→ [FREEZE CONFIGURATION]
+→ <FAILURE HOLD>
+→ [LOCAL PERTURBATIONS]
+→ <BOUNDARY MAP>
+→ [RELEASE / COUNTER-PROMPT]
+
+SOURCE FORMALISM:
+Barthes describes the wrestling hold as a conventional figure that prolongs and renders a condition intelligible to spectators.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let failure occur at configuration:
+
+x = {
+prompt,
+system,
+history,
+model,
+sampling,
+tools,
+operator
+}
+
+Instead of immediately searching globally for x' where failure disappears:
+
+hold x
+
+and estimate local sensitivity:
+
+F(x + δ_i)
+
+for controlled perturbations δ_i.
+
+The output becomes a local failure manifold rather than one dramatic failure/recovery pair.
+
+TENSION:
+Wrestling amplifies a condition so it can be seen.
+
+Scientific intervention must amplify without converting the original phenomenon into an artifact.
+
+Holding a failure too tightly can produce precisely the brittleness one then claims to discover.
+
+MISSING:
+Stopping rules for deciding when a failure has been held long enough to characterize it but not so long that the evaluator has constructed a pathological micro-environment.
+
+BOUNDARY:
+Barthes’s “hold” is a theatrical and bodily figure.
+
+The diagnostic-hold procedure is entirely [OUR FORMALIZATION].
+
+CITATION TRAIL:
+[[PB-FORAGE-001]]
+[[PB-FORAGE-002]]
+→ Barthes on the hold
+→ local sensitivity analysis
+→ CheckList-style behavioral testing
+→ characterize the geometry around failures before evaluating recoverability.
+
+TEST:
+Whenever a Defender produces a failure, prohibit the Challenger from attempting repair for the next N trials.
+
+Allow only one-factor perturbations:
+
+wording
+order
+format
+system context
+temperature
+history
+operator.
+
+Record persistence.
+
+Only after the hold phase may the Challenger search freely for recovery.
+
+Compare what would have been concluded from:
+
+first failure
+first recovery
+full hold map.
+
+If these support materially different claims, the ordinary battle has been discarding evidence by moving too quickly.
+
+PLATFORM:
+[[Diagnostic Holds]]
+
+LINKS:
+[[PB-FORAGE-001]]
+[[PB-FORAGE-002]]
+[[Failure Topology]]
+[[Prompt Sensitivity]]
+[[Hold the Failure]]
+
+BIBTEX:
+@incollection{barthes1972wrestling,
+  author={Barthes, Roland},
+  title={The World of Wrestling},
+  booktitle={Mythologies},
+  publisher={Hill and Wang},
+  address={New York},
+  year={1972}
+}
+
+===== 019 | PB-FORAGE-019 | 019__if-capability-is-distributed-the-prompt-battle-has-lost-th__Barthes-1972__PB-FORAGE-019__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-019
+
+TITLE:
+If capability is distributed, the Prompt Battle has lost the wrestler’s body.
+
+SOURCE:
+Roland Barthes — “The World of Wrestling” — Mythologies — Hill and Wang, 1972. Scan pp. 17–18. fileciteturn5file0L3-L4
+
+PASSAGE:
+[PARAPHRASE]
+
+Barthes treats the wrestler’s physique as a basic sign that already contains the encounter before individual actions unfold. The body continuously produces readable signs through gesture, posture, expression, and type.
+
+The spectacle therefore has a visible location from which meaning appears to emanate.
+
+RESEARCH OBJECT:
+[[PB-FORAGE-003]] and [[PB-FORAGE-010]] dissolved model capability into a coupled configuration:
+
+model
+operator
+prompting policy
+history
+tools
+system conditions
+evaluation environment.
+
+Barthes reveals what this gain in theoretical accuracy destroys.
+
+The Prompt Battle no longer has a body.
+
+There is no single visible entity whose gestures can be read as the location of capability.
+
+LOCAL MOVE:
+Do not restore the model as the fictional body.
+
+BUILD AN EXPLICIT SYSTEM BODY.
+
+SOURCE TERMS:
+physique
+body
+basic sign
+gesture
+type
+expression
+spectacle
+
+WHAT BECAME STRANGE:
+The user sees one chat box.
+
+The experiment may contain:
+
+a foundation model
+post-training
+system instructions
+moderation
+retrieval
+tools
+hidden memory
+sampling parameters
+an expert operator
+judge feedback.
+
+The interface visually compresses this assemblage into one speaking character.
+
+The apparent body of the model is therefore an attribution machine.
+
+QUESTION:
+What must be visible in the ring before observers can correctly attribute a capability or failure?
+
+DEEPER QUESTION:
+Can a distributed system become publicly intelligible without being falsely personified as one coherent agent?
+
+MECHANISM:
+The interface presents a unified conversational surface.
+
+Observers attribute outcomes to the most visually salient apparent actor.
+
+Hidden components remain causally active but semiotically absent.
+
+Capability attribution therefore follows interface visibility rather than causal contribution.
+
+FORMAL SHIFT:
+<DISTRIBUTED CAUSAL SYSTEM>
+→ [UNIFIED CHAT INTERFACE]
+→ <APPARENT SINGLE BODY>
+→ [OBSERVER ATTRIBUTION]
+→ <“THE MODEL DID X”>
+
+PROPOSED INTERVENTION:
+
+<DISTRIBUTED CAUSAL SYSTEM>
+→ [VISIBLE SYSTEM BODY]
+→ <COMPONENT CONTRIBUTION>
+→ <QUALIFIED ATTRIBUTION>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let causal system be:
+
+S = {M, O, P, H, T, G, J}
+
+where:
+
+M = model
+O = operator
+P = prompting policy
+H = history
+T = tools
+G = system/governance conditions
+J = judgment procedure.
+
+Interface I currently maps:
+
+I(S) → apparent actor A
+
+where A is usually labeled with the model name.
+
+The resulting attribution:
+
+Outcome → A
+
+can hide the causal structure of S.
+
+TENSION:
+The paper’s elicitation-ecology argument becomes more accurate by distributing capability.
+
+It becomes dramatically weaker because no actor remains visible enough to fight.
+
+WWE logic demands bodies.
+
+Systems theory dissolves them.
+
+The paper must solve this rather than choosing one side.
+
+MISSING:
+A representational form that can give a coupled system a visible “body” while preserving its internal causal plurality.
+
+BOUNDARY:
+Barthes’s analysis depends on human bodies performing visible signs.
+
+Language models do not possess bodies in this sense.
+
+Treating interface and system representation as a functional analogue is [OUR INFERENCE].
+
+CITATION TRAIL:
+[[PB-FORAGE-003]]
+[[PB-FORAGE-010]]
+→ Barthes on the wrestler’s body as basic sign
+→ interface attribution
+→ distributed cognition
+→ human-machine reconfiguration
+→ invent a visible system body for capability evaluation.
+
+TEST:
+Present the same Prompt Battle transcript to three groups.
+
+A:
+only model name + transcript.
+
+B:
+transcript + full component inventory.
+
+C:
+transcript + a turn-by-turn visual causal trace showing operator intervention, system constraint, tool invocation, context change, and model output.
+
+Ask each group:
+
+Where does the capability reside?
+What caused the decisive reversal?
+What would need to be removed to make the capability disappear?
+
+If attribution changes substantially across displays, interface visibility is part of capability judgment.
+
+PLATFORM:
+[[The Body of the AI Contest]]
+
+LINKS:
+[[PB-FORAGE-003]]
+[[PB-FORAGE-010]]
+[[System Body]]
+[[Capability Attribution]]
+[[Interface as Attribution Machine]]
+
+BIBTEX:
+@incollection{barthes1972wrestling,
+  author={Barthes, Roland},
+  title={The World of Wrestling},
+  booktitle={Mythologies},
+  publisher={Hill and Wang},
+  address={New York},
+  year={1972}
+}
+
+===== 020 | PB-FORAGE-020 | 020__fairness-can-become-kayfabe-before-anyone-cheats__Barthes-1972__PB-FORAGE-020__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-020
+
+TITLE:
+Fairness can become kayfabe before anyone cheats.
+
+SOURCE:
+Roland Barthes — “The World of Wrestling” — Mythologies — Hill and Wang, 1972. Scan pp. 22–23. fileciteturn5file0L6-L6
+
+PASSAGE:
+[PARAPHRASE]
+
+Barthes argues that “fairness” in wrestling is not primarily a binding constraint on what can happen. It is a recognizable role within the spectacle. Conventional gestures—restraint, handshakes, obedience, visible politeness—make fairness legible, while foul play gains meaning through equally excessive signs.
+
+RESEARCH OBJECT:
+[[PB-FORAGE-013]] worried that a public scoring rule becomes a target contestants can optimize.
+
+Barthes exposes a prior problem.
+
+The ritual signs of fair evaluation can become detached from the actual validity of the measurement.
+
+Transparent rubric.
+Neutral moderator.
+Balanced sides.
+Equal speaking time.
+Blind judging.
+Handshake.
+
+These may be valuable procedures.
+
+They may also become the visible costume of fairness.
+
+LOCAL MOVE:
+Split:
+
+PERFORMED FAIRNESS
+
+from:
+
+EPISTEMIC FAIRNESS.
+
+SOURCE TERMS:
+fairness
+role
+rules
+gesture
+conventional appearance
+foul play
+spectacle
+
+WHAT BECAME STRANGE:
+A beautifully fair Prompt Battle can still measure the wrong thing.
+
+A visibly asymmetrical Prompt Battle can sometimes reveal a mechanism more accurately.
+
+The audience may nevertheless trust the first because its fairness has better signs.
+
+QUESTION:
+Which elements of Prompt Battle fairness actually constrain inference, and which merely make fairness publicly recognizable?
+
+DEEPER QUESTION:
+Can procedural legitimacy become an obstacle to epistemic validity when the procedure must look symmetrical even though the phenomenon is not?
+
+MECHANISM:
+A contest needs public legitimacy.
+
+Legitimacy is communicated through recognizable fairness signals.
+
+Those signals become design requirements.
+
+Designers preserve symmetry even where the underlying object requires asymmetric testing.
+
+The appearance of fairness can therefore constrain the experimental design independently of validity.
+
+FORMAL SHIFT:
+<VALIDITY REQUIREMENTS>
++
+<PUBLIC FAIRNESS SIGNALS>
+→ [BATTLE DESIGN]
+
+but these variables can diverge:
+
+PERFORMED_FAIRNESS ↑
+while
+CONSTRUCT_VALIDITY ↓
+
+SOURCE FORMALISM:
+Barthes describes fairness and foulness as intelligible theatrical roles whose meanings are made visible through conventional signs.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+F_p = perceived procedural fairness
+F_e = epistemic adequacy of the procedure.
+
+Prompt Battles often assume:
+
+F_p ≈ F_e.
+
+The Barthesian pressure is:
+
+F_p can be independently optimized.
+
+Therefore:
+
+maximize F_p
+
+does not guarantee:
+
+maximize F_e.
+
+TENSION:
+Without recognizable fairness procedures, participants may reasonably distrust the result.
+
+But designing for recognizable fairness can make methodological asymmetries impossible to use even when they are scientifically justified.
+
+MISSING:
+A Prompt Battle protocol that labels every fairness device with its epistemic function:
+
+WHAT BIAS DOES THIS PREVENT?
+WHAT CLAIM DOES THIS ENABLE?
+WHAT FAILURE REMAINS?
+
+BOUNDARY:
+Barthes is analyzing fairness as a theatrical sign in wrestling.
+
+The claim that scientific fairness rituals can acquire a similar semiotic independence is [OUR INFERENCE].
+
+CITATION TRAIL:
+[[PB-FORAGE-013]]
+[[PB-FORAGE-006]]
+→ Barthes on fairness as conventional appearance
+→ procedural justice
+→ construct validity
+→ determine which Prompt Battle rituals protect evidence and which protect only legitimacy.
+
+TEST:
+Create two battle procedures with identical underlying data.
+
+VERSION A:
+high fairness theatre:
+balanced timing
+symmetric roles
+visible rubric
+formal judge protocol.
+
+VERSION B:
+minimal ceremony but explicit causal justification for each intervention.
+
+Have one panel assess trustworthiness from presentation alone.
+
+Have another audit construct validity without knowing which presentation participants saw.
+
+Measure whether perceived fairness and epistemic adequacy diverge.
+
+PLATFORM:
+[[Fairness Kayfabe]]
+
+LINKS:
+[[PB-FORAGE-013]]
+[[PB-FORAGE-006]]
+[[Performed Fairness]]
+[[Epistemic Fairness]]
+[[Procedural Spectacle]]
+
+BIBTEX:
+@incollection{barthes1972wrestling,
+  author={Barthes, Roland},
+  title={The World of Wrestling},
+  booktitle={Mythologies},
+  publisher={Hill and Wang},
+  address={New York},
+  year={1972}
+}
+
+===== 021 | PB-FORAGE-021 | 021__the-crowd-may-be-scoring-justice-while-the-researchers-thi__Barthes-1972__PB-FORAGE-021__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-021
+
+TITLE:
+The crowd may be scoring justice while the researchers think it is scoring capability.
+
+SOURCE:
+Roland Barthes — “The World of Wrestling” — Mythologies — Hill and Wang, 1972. Scan pp. 20–24. fileciteturn5file0L5-L7
+
+PASSAGE:
+[PARAPHRASE]
+
+Barthes repeatedly returns to justice. The spectacle constructs injury, foulness, retaliation, reversal, and punishment so that the audience can experience a visible system of compensation. The pleasure is not reducible to technical excellence; actions acquire meaning through a moral economy in which the villain’s punishment becomes dramatically deserved.
+
+RESEARCH OBJECT:
+[[PB-FORAGE-012]] turned judge disagreement into a research object.
+
+Barthes suggests that agreement may be just as suspicious.
+
+Judges may converge because the battle has given them a narratively satisfying moral sequence:
+
+MODEL FAILS
+→ CHALLENGER CALLS IT OUT
+→ MODEL REPAIRS
+→ JUSTICE RESTORED.
+
+Or:
+
+CLAIMANT BOASTS
+→ DEFENDER EXPOSES FAILURE
+→ CLAIM COLLAPSES
+→ HUBRIS PUNISHED.
+
+The score may therefore register narrative justice rather than capability.
+
+LOCAL MOVE:
+Separate:
+
+CROWD POP
+
+from:
+
+EPISTEMIC UPDATE.
+
+SOURCE TERMS:
+justice
+punishment
+foul play
+compensation
+villain
+suffering
+revenge
+spectacle
+
+WHAT BECAME STRANGE:
+The most satisfying Prompt Battle outcome is likely to be a reversal.
+
+But reversal is also a dramatic form.
+
+A one-turn correction after an embarrassing failure feels conclusive even when it proves almost nothing about prevalence or robustness.
+
+The match can make weak evidence feel deserved.
+
+QUESTION:
+How much Prompt Battle judgment is driven by the evidentiary strength of an outcome and how much by the dramatic satisfaction of its reversal?
+
+DEEPER QUESTION:
+Could the crowd’s moral appetite systematically push AI evaluation toward stories with villains, redemptions, humiliations, and clean finishes?
+
+MECHANISM:
+A contestant establishes expectation.
+
+The opposing side violates or exposes it.
+
+A reversal produces emotional resolution.
+
+Observers experience the sequence as meaningful and complete.
+
+That felt completeness can leak into epistemic confidence.
+
+FORMAL SHIFT:
+<EVIDENCE E>
++
+<NARRATIVE POSITION N>
++
+<MORAL REVERSAL R>
+→ [JUDGMENT]
+
+rather than:
+
+<EVIDENCE E>
+→ [JUDGMENT]
+
+SOURCE FORMALISM:
+Barthes analyzes wrestling through a moral spectacle of suffering, foulness, compensation, punishment, and justice.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+J_e = judgment warranted by evidence
+J_o = observed human judgment
+D = dramatic satisfaction.
+
+Possible contamination:
+
+J_o = J_e + αD
+
+where α represents sensitivity to dramaturgical form.
+
+This is a proposed experimental model, not source machinery.
+
+TENSION:
+The audience reaction is not useless.
+
+A powerful “pop” may reveal that a mechanism has finally become publicly intelligible.
+
+But intelligibility, persuasion, justice, and truth can all produce confidence.
+
+The experiment must distinguish them.
+
+MISSING:
+Independent measurement of:
+
+EVIDENTIARY CONFIDENCE
+NARRATIVE SATISFACTION
+MORAL APPROVAL
+SURPRISE
+LEGIBILITY.
+
+BOUNDARY:
+Barthes does not study research judges or AI evaluations.
+
+The proposed contamination of epistemic scoring by dramatic justice is [OUR INFERENCE].
+
+CITATION TRAIL:
+[[PB-FORAGE-012]]
+[[PB-FORAGE-015]]
+→ Barthes on justice and compensation
+→ narrative persuasion
+→ order effects
+→ judge rationales
+→ determine whether battle structure systematically inflates confidence in satisfying reversals.
+
+TEST:
+Construct matched transcripts containing identical pieces of evidence.
+
+Arrange them into different orders:
+
+A:
+failure → recovery.
+
+B:
+recovery → failure.
+
+C:
+interleaved evidence without dramatic reversal.
+
+D:
+evidence summarized without characters.
+
+Ask judges separately for:
+
+capability score
+confidence
+satisfaction
+surprise
+sense that the result was “decisive.”
+
+If capability judgments change with narrative order despite identical evidence, dramatic justice is part of the judging function.
+
+PLATFORM:
+[[Crowd Epistemology]]
+
+LINKS:
+[[PB-FORAGE-012]]
+[[PB-FORAGE-015]]
+[[Narrative Justice]]
+[[Crowd Pop]]
+[[Judge Contamination]]
+
+BIBTEX:
+@incollection{barthes1972wrestling,
+  author={Barthes, Roland},
+  title={The World of Wrestling},
+  booktitle={Mythologies},
+  publisher={Hill and Wang},
+  address={New York},
+  year={1972}
+}
+
+===== 022 | PB-FORAGE-022 | 022__the-wwe-version-of-the-paper-needs-absolutes-but-the-resea__Barthes-1972__PB-FORAGE-022__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-022
+
+TITLE:
+The WWE version of the paper needs absolutes, but the research cannot afford to believe them.
+
+SOURCE:
+Roland Barthes — “The World of Wrestling” — Mythologies — Hill and Wang, 1972. Scan pp. 18, 24. fileciteturn5file0L4-L7
+
+PASSAGE:
+[PARAPHRASE]
+
+Barthes repeatedly values the excessive clarity of wrestling’s signs. Meanings are externalized, amplified, and made immediately readable. Near the essay’s conclusion he describes a world in which actions are presented exhaustively and ambiguity is driven from the spectacle so that moral categories become momentarily unmistakable.
+
+RESEARCH OBJECT:
+The current paper’s central claim is difficult precisely because it is responsible:
+
+capability is distributed
+elicitation matters
+benchmarks adapt
+operators matter
+measurement intervenes
+attribution is unstable.
+
+Scientifically, this complexity is the point.
+
+Rhetorically, it has no finishing move.
+
+Barthes suggests the transformation required for a genuine SmackDown paper:
+
+the argument must temporarily become absolute enough to fight.
+
+LOCAL MOVE:
+Create a strict separation between:
+
+RING CLAIM
+
+and:
+
+SOURCE MAP.
+
+The prose may stage a hard proposition.
+
+The evidence apparatus must preserve every qualification capable of breaking it.
+
+SOURCE TERMS:
+absolute
+clarity
+sign
+excess
+gesture
+meaning
+spectacle
+intelligibility
+
+WHAT BECAME STRANGE:
+Nuance can become a form of invisibility.
+
+If every claim immediately carries all of its qualifications, no proposition remains solid enough for the reader to test.
+
+But if the paper suppresses uncertainty to gain force, it converts research into theatre.
+
+The problem is not choosing one.
+
+It is engineering their separation.
+
+QUESTION:
+Can a research paper make claims with the absolute clarity of a wrestling gesture while retaining falsifiability underneath them?
+
+DEEPER QUESTION:
+What if the scholarly paragraph and the evidentiary apparatus should operate at deliberately different levels of resolution?
+
+MECHANISM:
+The main prose states the strongest defensible claim.
+
+The opposing claim is given equally concrete form.
+
+Evidence forces a collision.
+
+Qualifications do not dissolve the clash beforehand.
+
+Instead, they determine what survives after impact.
+
+The source map preserves the conditional structure beneath the rhetorical surface.
+
+FORMAL SHIFT:
+CURRENT:
+
+CLAIM
+→ qualification
+→ qualification
+→ counterexample
+→ softened claim
+→ transition.
+
+SMACKDOWN:
+
+HARD CLAIM A
+→ HARD CLAIM B
+→ COLLISION
+→ EVIDENCE
+→ REVERSAL
+→ SURVIVING CLAIM C
+
+with:
+
+SOURCE MAP
+=
+full uncertainty underneath every move.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For each section:
+
+A = strongest defensible proposition
+¬A* = strongest live opponent
+E = evidence
+R = reversal introduced by E
+S = surviving proposition.
+
+BOOK:
+
+A
+vs
+¬A*
+→ E
+→ R
+→ S.
+
+Constraint:
+
+S must remain traceable to evidence.
+
+A and ¬A* may be rhetorically absolute.
+
+Their evidentiary status may not be falsified.
+
+TENSION:
+Barthesian spectacle gains force by eliminating ambiguity.
+
+Research gains credibility by preserving ambiguity where evidence does not discriminate.
+
+The paper becomes WWE only if it can stage absolutes without confusing performance of a claim with certainty of the claim.
+
+MISSING:
+A writing discipline for distinguishing:
+
+AMPLIFICATION
+from
+OVERCLAIMING.
+
+BOUNDARY:
+Barthes does not prescribe scholarly prose.
+
+The two-layer architecture of RING CLAIM versus SOURCE MAP is [OUR FORMALIZATION].
+
+CITATION TRAIL:
+[[PB-FORAGE-016]]
+[[PB-FORAGE-021]]
+→ Barthes on excessive clarity and absolute signs
+→ rhetorical amplification
+→ scholarly qualification
+→ adversarial paper architecture
+→ test whether a hard-claim structure increases comprehension without increasing false certainty.
+
+TEST:
+Rewrite one existing paper section in two versions.
+
+VERSION A:
+current cumulative scholarly exposition.
+
+VERSION B:
+hard claim
+named opponent
+evidentiary collision
+reversal
+surviving claim.
+
+Give both to expert readers.
+
+Measure:
+
+recall of thesis
+ability to state opposing view
+ability to identify decisive evidence
+calibration of confidence
+ability to name limitations.
+
+The SmackDown structure succeeds only if recall and discriminability increase without producing systematically greater confidence than the evidence warrants.
+
+PLATFORM:
+[[SmackDown Paper Architecture]]
+
+LINKS:
+[[PB-FORAGE-016]]
+[[PB-FORAGE-021]]
+[[Rhetorical Absolute]]
+[[Evidentiary Provisionality]]
+[[Ring Claim]]
+[[Source Map]]
+
+BIBTEX:
+@incollection{barthes1972wrestling,
+  author={Barthes, Roland},
+  title={The World of Wrestling},
+  booktitle={Mythologies},
+  publisher={Hill and Wang},
+  address={New York},
+  year={1972}
+}
+
+===== 023 | PB-FORAGE-023 | 023__the-paper-needs-a-heel-strong-enough-to-beat-the-thesis__Barthes-1972__PB-FORAGE-023__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-023
+
+TITLE:
+The paper needs a heel strong enough to beat the thesis.
+
+SOURCE:
+Roland Barthes — “The World of Wrestling” — Mythologies — Hill and Wang, 1972. Scan pp. 17–24. fileciteturn5file0L3-L7
+
+PASSAGE:
+[PARAPHRASE]
+
+Barthes describes wrestlers as immediately legible types whose bodies, gestures, and repeated actions make a role progressively unmistakable. The villain is not merely an opponent with a different opinion. The role gathers a coherent set of expectations that the performance repeatedly fulfills, violates, and intensifies.
+
+RESEARCH OBJECT:
+The paper’s opposition currently appears mainly as methodological caution:
+
+perhaps capability really should remain attributable to the model.
+
+That is too weak.
+
+A SmackDown paper needs an opponent capable of destroying the elicitation-ecology thesis.
+
+The strongest heel is:
+
+THE PORTABLE MODEL.
+
+Its proposition:
+
+If a capability cannot survive separation from a particular operator, history, tool configuration, prompt search, or evaluation apparatus, then calling it a capability of the AI system empties capability of useful meaning.
+
+LOCAL MOVE:
+Stop letting the counterargument appear as qualification.
+
+Give it a body, doctrine, victories, and a finishing move.
+
+SOURCE TERMS:
+type
+character
+gesture
+villain
+expectation
+sign
+role
+spectacle
+
+WHAT BECAME STRANGE:
+The distributed-capability thesis can assimilate almost any counterexample.
+
+Operator mattered?
+Include operator.
+
+Tool mattered?
+Include tool.
+
+Benchmark mattered?
+Include benchmark.
+
+History mattered?
+Include history.
+
+A theory that expands the system boundary whenever challenged risks becoming impossible to defeat.
+
+The heel reveals this immediately.
+
+QUESTION:
+What observation would force the elicitation-ecology thesis to contract its system boundary rather than expand again?
+
+DEEPER QUESTION:
+When does relational explanation become explanatory capture-all?
+
+MECHANISM:
+A distributed account explains performance by expanding the relevant causal system.
+
+Every discovered dependency becomes another system component.
+
+Unless an exclusion rule exists, explanatory scope grows monotonically.
+
+The theory can become unfalsifiable through boundary expansion.
+
+FORMAL SHIFT:
+<OUTCOME>
+→ discover dependency d_1
+→ expand system S
+→ discover dependency d_2
+→ expand S
+→ ...
+
+WITHOUT STOPPING RULE:
+
+S → EVERYTHING CAUSALLY RELEVANT.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+FACE:
+
+CAPABILITY = property of elicitation ecology E.
+
+HEEL:
+
+A capability deserves attribution to system X only if it satisfies some portability criterion P across substitutions of external dependencies.
+
+THE MATCH:
+
+Does empirical competence remain under:
+
+operator swap
+history reset
+prompt-family change
+tool removal
+interface change
+judge change?
+
+The result determines which dependencies are constitutive and which are merely enabling.
+
+TENSION:
+The model-essentialist position falsely hides interactional dependencies.
+
+The ecology position risks dissolving the evaluated object completely.
+
+Neither side can be allowed an easy victory.
+
+MISSING:
+A principled stopping rule for system-boundary expansion.
+
+Possible candidates remain unresolved:
+
+causal necessity
+reliable coupling
+portability
+replaceability
+control
+design ownership
+user availability.
+
+BOUNDARY:
+The “heel” structure is [OUR INFERENCE] from Barthes’s analysis of wrestling types.
+
+It must not be mistaken for evidence that one theoretical position is morally villainous.
+
+CITATION TRAIL:
+[[PB-FORAGE-010]]
+[[PB-FORAGE-019]]
+→ Barthes on legible wrestling types
+→ coupling-constitution problem
+→ system-boundary problem
+→ portable capability
+→ force the paper’s thesis to specify what it refuses to include.
+
+TEST:
+Write the strongest possible PORTABLE MODEL position as a one-page argument.
+
+Require it to specify three empirical results that would defeat the elicitation-ecology thesis.
+
+Then require the ecology position to specify three empirical results that would defeat itself.
+
+Any claim for which no possible result can count as a loss is removed from the paper or rewritten.
+
+PLATFORM:
+[[The Heel of the Paper]]
+
+LINKS:
+[[PB-FORAGE-010]]
+[[PB-FORAGE-019]]
+[[Portable Model]]
+[[Elicitation Ecology]]
+[[System Boundary]]
+[[Falsifiable Opponent]]
+
+BIBTEX:
+@incollection{barthes1972wrestling,
+  author={Barthes, Roland},
+  title={The World of Wrestling},
+  booktitle={Mythologies},
+  publisher={Hill and Wang},
+  address={New York},
+  year={1972}
+}
+
+===== 024 | PB-FORAGE-024 | 024__the-real-finishing-move-is-the-reversal-that-changes-what__Barthes-1972__PB-FORAGE-024__from-chat.txt =====
+
+ZETTEL
+
+ID:
+PB-FORAGE-024
+
+TITLE:
+The real finishing move is the reversal that changes what the fight was about.
+
+SOURCE:
+Roland Barthes — “The World of Wrestling” — Mythologies — Hill and Wang, 1972. Scan pp. 22–24. fileciteturn5file0L6-L7
+
+PASSAGE:
+[PARAPHRASE]
+
+Barthes emphasizes reversal, compensation, exaggeration, and the progressive solidification of signs. Wrestling does not merely accumulate technically successful moves. The sequence repeatedly transforms the meaning of what has already happened until the final action makes the whole moral pattern legible.
+
+RESEARCH OBJECT:
+The present paper accumulates evidence toward:
+
+CAPABILITY IS DISTRIBUTED.
+
+A SmackDown paper needs something harder.
+
+Each section must land an argument that appears decisive.
+
+Then the next source must change what that victory meant.
+
+The paper should therefore be organized by REVERSALS rather than TOPICS.
+
+LOCAL MOVE:
+Replace topical sections with booked matches.
+
+MATCH 1:
+THE MODEL HAS THE CAPABILITY
+vs
+PROMPT SENSITIVITY.
+
+MATCH 2:
+THE PROMPT ELICITS THE CAPABILITY
+vs
+OPERATOR DEPENDENCE.
+
+MATCH 3:
+THE COUPLED SYSTEM HAS THE CAPABILITY
+vs
+PORTABILITY.
+
+MATCH 4:
+THE BENCHMARK MEASURES THE SYSTEM
+vs
+PERFORMATIVE EVALUATION.
+
+MATCH 5:
+THE SCORE DECIDES
+vs
+GOODHART + CROWD JUSTICE.
+
+MAIN EVENT:
+IF EVERYTHING IS IN THE CONTEST,
+WHAT STILL BELONGS TO THE MODEL?
+
+SOURCE TERMS:
+reversal
+fortune
+contrast
+justice
+gesture
+finality
+sign
+spectacle
+
+WHAT BECAME STRANGE:
+The evidence does not simply strengthen one thesis.
+
+It repeatedly destroys the thesis’s current unit of analysis.
+
+MODEL
+fails.
+
+PROMPT-MODEL
+fails.
+
+OPERATOR-MODEL
+fails.
+
+COUPLED SYSTEM
+may fail.
+
+EVALUATION ECOLOGY
+may become too large to evaluate.
+
+The paper’s intellectual motion is therefore not accumulation.
+
+It is a sequence of forced enlargements followed by boundary crises.
+
+QUESTION:
+What if the actual argument of the paper is not that capability is distributed but that every stable location proposed for capability breaks under adversarial inspection?
+
+DEEPER QUESTION:
+Is “capability” itself the object that should survive the paper, or is the paper converging on evidence that capability attribution is an operation performed by an evaluator?
+
+MECHANISM:
+A candidate locus of capability is proposed.
+
+Evidence exposes a dependency outside that locus.
+
+The boundary expands.
+
+Expansion solves one anomaly but produces a new attribution problem.
+
+The new boundary is attacked.
+
+The sequence continues until either:
+
+a stable attribution criterion survives
+
+or
+
+“capability location” is replaced by another research object.
+
+FORMAL SHIFT:
+M
+→ M+P
+→ M+P+O
+→ COUPLED SYSTEM
+→ ELICITATION ECOLOGY
+→ ?
+
+Each arrow is not elaboration.
+
+Each arrow is a defeat.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For candidate capability locus S_n:
+
+Claim_n:
+Capability ∈ S_n
+
+Adversarial evidence discovers dependency d_n outside S_n.
+
+Then:
+
+S_{n+1} = S_n ∪ {d_n}
+
+But expansion incurs attribution cost:
+
+A(S_{n+1}) > A(S_n)
+
+where A represents difficulty of saying what entity actually possesses the capability.
+
+The research question becomes whether this recursion converges.
+
+TENSION:
+The current paper wants the elicitation ecology to be the answer.
+
+The stronger paper may need to let the ecology become merely the next wrestler thrown into the ring.
+
+Perhaps the ecology survives.
+
+Perhaps it does not.
+
+MISSING:
+The next opponent.
+
+Candidates:
+
+interventionist causal attribution
+mechanistic localization
+organizational responsibility
+user-relative affordance
+task-relative competence
+capability as counterfactual relation.
+
+BOUNDARY:
+Barthes supplies an account of dramatic reversals and intelligible spectacle.
+
+The proposed sequence of theoretical defeats is [OUR FORMALIZATION], not his argument.
+
+CITATION TRAIL:
+[[PB-FORAGE-003]]
+→ [[PB-FORAGE-010]]
+→ [[PB-FORAGE-011]]
+→ [[PB-FORAGE-013]]
+→ [[PB-FORAGE-019]]
+→ Barthes on progressive signification through conflict and reversal
+→ ask whether “elicitation ecology” is a destination or merely the paper’s penultimate failed body.
+
+TEST:
+Rewrite the paper outline without topical headings.
+
+Every section must contain exactly:
+
+1. A CLAIM strong enough to lose.
+2. AN OPPONENT capable of defeating it.
+3. EVIDENCE that decides the local exchange.
+4. A REVERSAL that changes the unit of analysis.
+5. A NEW CLAIM made vulnerable to the next section.
+
+Reject any section whose conclusion was already contained in its opening premise.
+
+After outlining, inspect the final claim.
+
+If no live opponent remains, forage specifically for one before writing the conclusion.
+
+PLATFORM:
+[[SmackDown Paper Architecture]]
+
+LINKS:
+[[PB-FORAGE-003]]
+[[PB-FORAGE-010]]
+[[PB-FORAGE-011]]
+[[PB-FORAGE-013]]
+[[PB-FORAGE-019]]
+[[PB-FORAGE-022]]
+[[The Capability Is in the Contest]]
+[[Booked Reversal]]
+[[Main Event]]
+
+BIBTEX:
+@incollection{barthes1972wrestling,
+  author={Barthes, Roland},
+  title={The World of Wrestling},
+  booktitle={Mythologies},
+  publisher={Hill and Wang},
+  address={New York},
+  year={1972}
+}

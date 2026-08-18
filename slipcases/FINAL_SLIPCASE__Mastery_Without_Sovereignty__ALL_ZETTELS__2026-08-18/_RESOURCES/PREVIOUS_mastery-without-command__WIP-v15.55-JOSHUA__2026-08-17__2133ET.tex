@@ -1,0 +1,117 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black}
+\fancypagestyle{firstpage}{%
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+  \fancyfoot[R]{\scriptsize Working Paper · AI-augmented research process\\Evidence, prompts, and making history preserved}
+}
+\title{Mastery Without Command\\\large Expert Prompt Craft as Experimental Calibration in Opaque Generative Systems}
+\author{Watson Hartsoe}
+\date{Working paper · 17 August 2026}
+\begin{document}
+\maketitle
+\thispagestyle{firstpage}
+\begin{abstract}
+This paper takes seriously the expertise of Joshua Larson, a professional game designer interviewed in October 2022 during the first months of Midjourney's public emergence. By his own contemporaneous account, Larson had already integrated the system into professional art-direction work, generated roughly 10,000 images around a single productive design phrase, participated in very high-volume user clubs, and described more than 99 percent of his use as professional. He also placed himself within a small cohort of active high-level practitioners. Those community counts are self-reported rather than independently audited; their analytical importance is that Larson's admissions of uncertainty come from intensive practice, not first contact. He describes a ``spidey sense'' for promising prompt regions, a stopping rule of ``going in circles,'' indirect lexical handles such as ``film still'' that outperform literal adjectives, valuable aesthetics encountered only by stumbling, and a deliberate struggle to distinguish technique from superstition. Read as expert testimony, these remarks suggest that prompt mastery in an opaque stochastic system is not equivalent to command. It is experimental calibration: learning where further sampling is worth the cost, which words reliably steer distributions, which discoveries can be captured and reproduced, where causal explanations remain provisional, and when apparent change belongs to noise or to a drifting instrument. Research on information foraging, vision-language representation learning, serendipity, prompt artists, model-feedback adaptation, distributional drift, and metamorphic testing sharpens these operations. The paper argues that Larson's deepest contribution is a practitioner epistemology of mastery without omniscience: expertise becomes more valuable precisely because it can identify where control ends.
+\end{abstract}
+\textbf{Keywords:} text-to-image generation; expertise; prompt craft; experimental practice; calibration; serendipity; model drift; human-AI interaction
+
+\section{Taking the practitioner seriously}
+The most important methodological decision in reading Joshua Larson's interview is to establish his expertise before interpreting his uncertainty. Detached from context, statements such as ``I just have to accept that I don't have that level of control'' can sound like the confession of a user who has not yet learned the right trick. The rest of the interview changes the meaning of the sentence.
+
+Larson identifies himself as a ``creative professional'' and describes Midjourney not as a recreational image generator but as part of the design process of an indie game studio. Within weeks of beginning to use the system, one phrase led him through roughly 10,000 generated images as he tested a newly discovered architectural direction across building types and scales. He reports that the resulting work helped his team reconsider the game's art direction because the generated renderings made a previously rejected design direction newly viable. By October, he described himself as being in Midjourney's 10,000/25,000-user clubs, estimated that fewer than one hundred people occupied the highest-volume club he was discussing, and said that ``99 plus percentage'' of his own use had been professional. He further estimated a much smaller subset of active high-level users who regularly exchanged ideas in the Discord community. These are Larson's own contemporaneous estimates, not externally audited population statistics. They should be used to locate the speaker, not to manufacture demographic precision.
+
+That location matters. Larson is not valuable here because high usage makes him infallible. In fact, one of the strongest marks of his expertise is that he refuses to confuse operational fluency with complete mechanistic knowledge. He explicitly discusses superstition and confirmation bias, compares misleading prompt impressions to runs of coin flips, and distinguishes aesthetics he can steer from aesthetics he can only ``stumble upon'' among dozens of generations. He describes a community engaged in ``citizen science research type stuff'' with ``varying levels of scientific rigor.'' The combination is more revealing than either confidence or humility alone: unusually intensive practice paired with an active theory of how that practice can fool its practitioner.
+
+I therefore use \emph{mastery} in a narrow, situated sense. Larson is a master practitioner of an emergent instrument because he has converted enormous repetition into differentiated judgment: which phrases deserve more search, which regions are becoming exhausted, which lexical changes exert strong influence, which outcomes are merely encountered, and which causal stories deserve skepticism. This is not a claim that he knows Midjourney's internal architecture better than its developers. It is a claim about practical epistemic position. When a practitioner at this level reports a persistent limit, that limit deserves to be investigated as a possible property of the human--model system rather than dismissed as insufficient skill.
+
+\section{Expertise as a forecast of yield}
+Larson calls one of his most important judgments a ``spidey sense.'' After only a few generations, he can sometimes feel that a phrase is ``a good one'' and worth hundreds or thousands of additional samples. Information-foraging theory offers a disciplined way to read this without romanticizing intuition. Pirolli and Card model search in environments where useful information is clustered and where proximal cues help an actor estimate the likely value of continued search \cite{PirolliCard1999}. Larson's intuition can be treated as a forecast: not ``this image is good,'' but ``this region is likely to remain productive.''
+
+That distinction makes expertise testable. A master prompter should not merely choose attractive outputs; he should be better calibrated about the expected future yield of a prompt neighborhood after a small sample. The relevant comparison is therefore prospective. Give expert and novice operators the same early generations, require them to allocate a fixed sampling budget, and ask whether expert allocations produce more later novelty, utility, or transferable control. Expertise would appear as accurate resource allocation under uncertainty.
+
+The same logic clarifies Larson's phrase ``going in circles.'' He stops working a prompt region when repeated outputs begin to feel like recombinations of already-seen material. This need not mean that he believes the region has been mathematically exhausted. It is a patch-leaving decision: the marginal value of another sample has fallen below the expected value of moving elsewhere. A less experienced operator may either abandon a productive region too early or remain trapped long after its returns have diminished. Mastery here is temporal and economic as much as linguistic. It governs where attention and generation budget go next.
+
+\section{Words as handles on learned visual structure}
+Larson's account becomes most technically interesting when literal description stops being the best control strategy. He says that ``photorealistic'' is often a word to avoid and instead reaches for phrases such as ``film still,'' ``miniatures,'' or ``museum display,'' along with photographers, film stocks, lenses, and domain-specific references. In his working theory, these words connect the model to richer bodies of photographic source material.
+
+The causal story should remain provisional. The interview does not establish that Midjourney literally retrieves a bounded ``film still'' dataset when prompted with the phrase. But related vision-language research makes the operational phenomenon intelligible. CLIP was pretrained on 400 million image--text pairs and uses language to access learned visual concepts \cite{RadfordEtAl2021}. This does not establish architectural identity with Midjourney; it shows why a culturally specific phrase can carry a dense learned visual association that a literal property adjective does not.
+
+Chang and colleagues' study of prolific text-to-image creators provides complementary practitioner evidence. Their participants searched external domains, including architectural sources, for specialized vocabulary and deliberately cultivated model glitches as recognizable styles \cite{ChangEtAl2023PromptArtists}. Larson's practice can therefore be understood as \emph{lexical prospecting}: the expert does not merely polish sentences. He mines photography, cinema, architecture, materials, museums, and other cultural vocabularies for handles whose model effects must be discovered empirically.
+
+This is a particularly strong example of why expert practice should not be reduced to folk theory. Larson's explanation of \emph{why} ``film still'' works may be incomplete while his observation that it works better under some conditions may be highly reliable. Operational validity and mechanistic validity are distinct. The expert can know how to move the instrument before knowing the true internal reason the movement occurs.
+
+\section{Discovery, capture, and control}
+Larson repeatedly distinguishes intentional steering from valuable accident. One aesthetic appears while he is working on an unrelated comic-book explosion. He recognizes its value, tries to reproduce it, and finds the result ``ephemeral'' and ``enigmatic.'' Elsewhere he says that some aesthetics cannot be intentionally locked in; he can only encounter them among thirty or forty images and must accept that he does not possess that level of control.
+
+This is not evidence against expertise once expertise has been established. It supplies a more exact vocabulary for it. \emph{Discovery} is recognizing a valuable state that was not previously specified. \emph{Capture} is preserving enough of the generative conditions to continue working from it. \emph{Control} is the ability to deliberately regenerate a recognizable family of related states. These can separate. A master practitioner may be exceptional at discovering and valuing rare states while correctly identifying that the instrument does not yet afford stable control over them.
+
+Research on serendipitous information encounters reinforces the separation. Makri and Blandford distinguish unexpected encounter, insight, recognition of value, and subsequent exploitation \cite{MakriBlandford2012}. Generative systems add a further technical burden: the conditions of a serendipitous event may themselves be difficult to preserve. Prompt text alone may omit model version, seed, image inputs, remix ancestry, or hidden service state. A singular glitch becomes a style only if an operator can give the accident a lineage.
+
+The expert contribution is therefore not eliminating chance. It is making chance productive. Larson's practice turns surprising outputs into questions: Can this be made to recur? Which part of the prompt mattered? Does the effect survive neighboring phrases? Can the feature be separated from the image that first revealed it? The difference between a lucky artifact and a technique is the construction of reproducible relations around the accident.
+
+\section{The master doubts his own instrument reading}
+The strongest reason to treat Larson as a serious experimental practitioner is that he repeatedly raises the possibility that his own successful interpretations are wrong. He names ``superstition and confirmation bias'' and notes how easy it is to become convinced of a causal reality that does not exist. His coin-flip analogy is an attempt to discipline a practice in which random variation can generate compelling patterns.
+
+But the interview also prevents an easy lesson that all apparent changes should be discounted as noise. Larson describes Midjourney as being in an ``in between'' period and speaks from a community watching the system develop rapidly. In a changing instrument, the hypothesis ``the system changed'' is sometimes correct. Research on stochastic optimization under distributional drift formalizes this broader difficulty: an optimizer can face both sampling noise and a target distribution that changes over time \cite{CutlerDrusvyatskiyHarchaoui2023}. The practical problem is not simply resisting superstition. It is discriminating at least three causes of an observed difference:
+
+\begin{enumerate}[nosep]
+\item stochastic variation within the same system state;
+\item a genuine effect of the prompt intervention;
+\item drift in the model, moderation layer, parameters, or surrounding service.
+\end{enumerate}
+
+This is where mastery without command becomes most visible. Novices may overinterpret one striking sample. Experts can also be fooled, but they have accumulated enough interaction to notice regularities, formulate rival explanations, and recognize when evidence is insufficient. Larson's admission that some intuitions may be superstition is not a retreat from expertise. It is a calibration practice: a refusal to let fluency masquerade as certainty.
+
+\section{From private tricks to citizen science}
+Larson describes a small high-level community in which users exchange principles, conduct experiments, compare observations, and sometimes obtain more authoritative information through members with access to the development team. He calls some of this ``citizen science research type stuff,'' immediately adding ``with varying levels of scientific rigor.'' The qualification is central. The community has experimentation before it has stable instrumentation, standardized protocols, or full causal access.
+
+One path toward greater rigor is to test relations rather than single outputs. Metamorphic testing was developed for systems where a correct answer to an arbitrary test case may be difficult to know, but where relations between multiple executions can still be specified \cite{ChenCheungYiu1998}. Prompt craft has an analogous problem. There may be no objective oracle that says an image is the one correct aesthetic result. Yet practitioners can still test whether changing one prompt component reliably changes a corresponding feature across many generations; whether reverting the change reverses the tendency; whether the relation persists across seeds; and whether it survives a model version change.
+
+This framework respects Larson's practice because it does not replace expert judgment with a simplistic automatic metric. It makes expert judgment more powerful by asking it to specify what relationship is expected and what evidence would count against the claim. A practitioner who already knows where the interesting effects are can design far more informative tests than an evaluator who does not know the craft.
+
+\section{Mastery without command}
+The usual metaphor of prompting is command: write the right words and obtain the intended result. Larson's interview supports a different account. His highest-level skills are not reducible to possessing secret strings. He knows how to recognize a fertile region from a few samples, when to leave a region whose marginal returns are collapsing, how to prospect for vocabulary outside the AI community, when a discovered aesthetic has not yet become controllable, and when a causal story should remain provisional.
+
+This is why his statement ``I don't have that level of control'' is analytically valuable. If the speaker were inexperienced, the statement might tell us little about the system. Coming from a practitioner who had integrated the tool into professional production, generated at very high volume, and situated himself among a small cohort of high-level users, it becomes a boundary report. It does not prove that the boundary is intrinsic or permanent; another technique, model, or practitioner may move it. But it changes where inquiry begins. The appropriate response is not to assume that the missing control word has yet to be learned. It is to ask which properties of the current instrument make the target difficult to stabilize.
+
+The concept of mastery must therefore be separated from omnipotence. Mastery of an opaque stochastic instrument can consist in knowing the response surface well enough to act decisively while also knowing where one's causal confidence should fall. This resembles experimental skill more than command-language fluency. The instrument answers every intervention with a distribution, and the expert's craft lies partly in learning what can legitimately be inferred from those answers.
+
+There is a further consequence. Research on iterative Midjourney prompting suggests that users adapt their language toward forms favored by the model as well as clarifying their own intentions \cite{DonYehiyaChoshenAbend2023}. The expert is therefore not simply learning a fixed instrument. Extended practice can alter the practitioner's own dialect. Mastery is relational: the operator becomes calibrated to a particular generative system while the system's affordances, community conventions, and sometimes the model itself continue to move.
+
+\section{Limits and unresolved territory}
+This argument rests heavily on one unusually rich practitioner interview. Larson's expertise is strongly situated by his self-reported professional use, generation volume, community participation, and detailed operational vocabulary, but the exact club sizes and usage counts were not independently audited. Nor should expertise be treated as proof of mechanistic correctness. Larson himself gives the strongest warning against that move by identifying superstition as a live risk in his own community.
+
+The external literatures used here are analytic comparators, not genealogical claims. Information foraging does not explain Midjourney's internals; CLIP does not establish Midjourney's architecture; distributional-drift theory does not show that a particular 2022 anomaly was caused by a model update; and metamorphic testing was not designed for aesthetic prompting. Their value is discriminative. They turn Larson's practitioner terms into questions that can be tested without stripping those terms of their original practical meaning.
+
+The next empirical step is therefore not another general survey of whether people find prompting difficult. It is expert-centered instrumentation. Preserve complete sessions from practitioners at Larson's level. Ask them to forecast prompt-region yield before further sampling, mark the moment they believe a region is ``going in circles,'' state causal hypotheses before tests, record confidence, preserve model/version state, and identify targets they believe are controllable, weakly controllable, or only discoverable by chance. Then compare those forecasts against later samples and across expertise levels. Such a study would test mastery where Larson locates it: not in eloquent prompt strings, but in calibrated judgment over an unruly instrument.
+
+\section{Conclusion}
+Joshua Larson should not be read as a novice whose uncertainty awaits correction by a better manual. The interview records an expert practitioner working near the frontier of an immature medium and developing a vocabulary for distinctions the technology itself did not make explicit. He learns a language from the community, but tests its claims against outputs. He uses indirect cultural terms as controls, but keeps causal explanations provisional. He searches at extraordinary volume, but knows that more samples do not guarantee more control. He recognizes serendipitous discoveries, but distinguishes them from reproducible techniques. Most importantly, he treats his own confidence as something that must be calibrated.
+
+That combination suggests a stronger account of prompt mastery. The master is not the person for whom the stochastic system has become deterministic. The master is the practitioner who can extract reliable action from partial causality without pretending the remaining uncertainty has disappeared. In opaque generative systems, expertise does not abolish stumbling. It makes stumbling legible: which accident is worth following, which regularity is worth trusting, which failure belongs to the current technique, and which may belong to the instrument itself.
+
+\begin{thebibliography}{9}
+\bibitem{Larson2022} Joshua Larson. Interview with Watson Hartsoe, 18 October 2022. Unpublished research transcript supplied by interviewer.
+\bibitem{PirolliCard1999} Peter Pirolli and Stuart Card. Information Foraging. \emph{Psychological Review} 106(4):643--675, 1999. \url{https://doi.org/10.1037/0033-295X.106.4.643}
+\bibitem{RadfordEtAl2021} Alec Radford et al. Learning Transferable Visual Models From Natural Language Supervision. \emph{Proceedings of ICML}, PMLR 139:8748--8763, 2021. \url{https://proceedings.mlr.press/v139/radford21a.html}
+\bibitem{ChangEtAl2023PromptArtists} Minsuk Chang et al. The Prompt Artists. \emph{Proceedings of the 15th Conference on Creativity and Cognition}, 75--87, 2023. \url{https://doi.org/10.1145/3591196.3593515}
+\bibitem{MakriBlandford2012} Stephann Makri and Ann Blandford. Coming across information serendipitously - Part 1: A process model. \emph{Journal of Documentation} 68(5):684--705, 2012. \url{https://doi.org/10.1108/00220411211256030}
+\bibitem{CutlerDrusvyatskiyHarchaoui2023} Joshua Cutler, Dmitriy Drusvyatskiy, and Zaid Harchaoui. Stochastic Optimization under Distributional Drift. \emph{Journal of Machine Learning Research} 24(147):1--56, 2023. \url{https://jmlr.org/papers/v24/21-1410.html}
+\bibitem{ChenCheungYiu1998} T. Y. Chen, S. C. Cheung, and S. M. Yiu. Metamorphic Testing: A New Approach for Generating Next Test Cases. Technical Report HKUST-CS98-01, 1998. \url{https://arxiv.org/abs/2002.12543}
+\bibitem{DonYehiyaChoshenAbend2023} Shachar Don-Yehiya, Leshem Choshen, and Omri Abend. Human Learning by Model Feedback: The Dynamics of Iterative Prompting with Midjourney. \emph{EMNLP 2023}, 4146--4161. \url{https://aclanthology.org/2023.emnlp-main.253/}
+\end{thebibliography}
+
+\appendix
+\section{Assembly instrument and provenance}
+This manuscript was assembled with AI assistance from a preserved research corpus. The complete package contains exact zettel payloads, the Joshua Larson source package, prior checkpoints, bibliography, graph, source map, verification report, and reconstruction instructions. The exact current assembly instrument is preserved as \texttt{SLIPCASE\_FINAL\_PROMPT.txt} and under \texttt{\_PROMPTS/}. Claims about Larson's community position and usage are explicitly marked in the source map as self-reported contemporaneous evidence rather than independently audited statistics.
+\end{document}

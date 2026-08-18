@@ -1,0 +1,49 @@
+VERIFICATION — FINAL RUN
+
+SOURCE COVERAGE
+  Centaur manuscripts: LOCAL_FILE / PASTED
+  external scholarly sources used in final paper: official/primary publication pages checked where available
+
+ZETTEL PAYLOAD INTEGRITY
+  admitted root zettels: 16
+  _MD mirrors: 16
+  byte-identical root/mirror pairs: YES
+  ZETTELS.json records: 16
+  ZETTELS.jsonl records: 16
+  exact duplicate payload groups: 0
+  ID collisions: 0
+  archived cards containing SOURCE URL field: 0/16
+  note: these 16 legacy payloads are immutable; source URLs are preserved in 000__ZETTEL_SOURCE_URLS.txt, 000__RESOURCES.txt, and the derived bibliography rather than inserted retroactively.
+
+GRAPH
+  nodes: 90
+  relations: 102
+  ghost nodes: 36
+  MEMBER_OF records: 16
+  LINKS_TO records: 51
+
+BIBLIOGRAPHY / PAPER
+  bibliography entries: 12
+  paper citekeys: 11
+  missing citekeys: NONE
+  final PDF pages: 9
+  paper body meta-archive terms (card/zettel/graph/checkpoint/SLIPCASE references): NONE FOUND by final grep
+  source map: what-can-you-still-reopen__SOURCE_MAP.txt
+
+PROMPTS / PROVENANCE
+  current SLIPCASE v15.55-AM prompt preserved byte-for-byte from current uploaded file in _PROMPTS and root SLIPCASE_FINAL_PROMPT.txt
+  prior derived paper preserved under _RESOURCES/PRIOR_DERIVED
+
+PDF STATUS
+  compiled with pandoc + xelatex: YES
+  rendered: 9/9 pages
+  visually inspected: first page, middle page, references/final page
+  clipping / broken glyphs observed: NONE
+
+ZIP STATUS
+  package target: 2026-08-18__what-can-you-still-reopen__16-zettels__FINAL.zip
+  integrity test: VERIFIED OK (final packaging pass)
+
+OPEN LIMITS
+  contestability is a derived synthesis, not a validated scale
+  no claim that current conversational systems reliably rewrite higher-order commitments

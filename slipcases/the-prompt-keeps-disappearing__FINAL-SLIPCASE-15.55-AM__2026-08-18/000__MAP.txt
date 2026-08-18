@@ -1,0 +1,216 @@
+RESEARCH FIELD MAP — SLIPCASE-20260818-UNIT-01
+ZETTELS: 40 · RELATIONS: 453 · GHOST LABELS: 65
+
+001 · SHOT-20260817-01 · 2026-08-17 — If you want the model to act, name action as the default state.
+SOURCE: Anthropic — “Prompting best practices” — Claude Platform documentation — accessed 2026-08-17.
+SOURCE URL: https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices
+FILE: 001__2026-08-17-if-you-want-the-model-to-act-name-action__prior__shot-20260817-01__from-prior-checkpoint-ver.txt
+LINKS OUT: GHOST:MJ-2022-001 (GHOST), GHOST:MJ-2022-019 (GHOST), SHOT-20260817-04 (RESOLVED_EXACT_ID), SHOT-20260817-06 (RESOLVED_EXACT_ID)
+
+002 · SHOT-20260817-02 · 2026-08-17 — Put the rule beside the operation it governs.
+SOURCE: OpenAI — “o3/o4-mini Function Calling Guide” — OpenAI Cookbook — published 2025-05-26 — current guidance consulted 2026-08-17.
+SOURCE URL: https://developers.openai.com/cookbook/examples/o-series/o3o4-mini_prompting_guide
+FILE: 002__2026-08-17-put-the-rule-beside-the-operation-it-gove__prior__shot-20260817-02__from-prior-checkpoint-ver.txt
+LINKS OUT: GHOST:MJ-2022-003 (GHOST), GHOST:MJ-2022-008-A (GHOST), SHOT-20260817-03 (RESOLVED_EXACT_ID), SHOT-20260817-04 (RESOLVED_EXACT_ID), SHOT-20260817-07 (RESOLVED_EXACT_ID)
+
+003 · SHOT-20260817-03 · 2026-08-17 — A shot becomes stronger when its legal shape exists before its content.
+SOURCE: OpenAI — “Structured model outputs” — OpenAI API documentation — accessed 2026-08-17.
+SOURCE URL: https://developers.openai.com/api/docs/guides/structured-outputs
+FILE: 003__2026-08-17-a-shot-becomes-stronger-when-its-legal-sh__prior__shot-20260817-03__from-prior-checkpoint-ver.txt
+LINKS OUT: GHOST:MJ-2022-003 (GHOST), SHOT-20260817-02 (RESOLVED_EXACT_ID), SHOT-20260817-06 (RESOLVED_EXACT_ID), SHOT-20260817-09 (RESOLVED_EXACT_ID)
+
+004 · SHOT-20260817-04 · 2026-08-17 — Call the route, not only the destination.
+SOURCE: OpenAI — “o3/o4-mini Function Calling Guide” — OpenAI Cookbook — published 2025-05-26 — current guidance consulted 2026-08-17.
+SOURCE URL: https://developers.openai.com/cookbook/examples/o-series/o3o4-mini_prompting_guide
+FILE: 004__2026-08-17-call-the-route-not-only-the-destination__prior__shot-20260817-04__from-prior-checkpoint-ver.txt
+LINKS OUT: GHOST:MJ-2022-001 (GHOST), SHOT-20260817-01 (RESOLVED_EXACT_ID), SHOT-20260817-02 (RESOLVED_EXACT_ID), SHOT-20260817-05 (RESOLVED_EXACT_ID), SHOT-20260817-06 (RESOLVED_EXACT_ID)
+
+005 · SHOT-20260817-05 · 2026-08-17 — The prompt can call a temporary program into existence and let it disappear after the shot.
+SOURCE: OpenAI — “Programmatic Tool Calling” — OpenAI API documentation — accessed 2026-08-17.
+SOURCE URL: https://developers.openai.com/api/docs/guides/tools-programmatic-tool-calling
+FILE: 005__2026-08-17-the-prompt-can-call-a-temporary-program-i__prior__shot-20260817-05__from-prior-checkpoint-ver.txt
+LINKS OUT: GHOST:MJ-2022-010 (GHOST), GHOST:MJ-2022-011 (GHOST), SHOT-20260817-04 (RESOLVED_EXACT_ID), SHOT-20260817-06 (RESOLVED_EXACT_ID), SHOT-20260817-08 (RESOLVED_EXACT_ID)
+
+006 · SHOT-20260817-06 · 2026-08-17 — Call the shot before firing the shot.
+SOURCE: Anh Ta, Junjie Zhu, Shahin Shayandeh — “Reinforced Agent: Inference-Time Feedback for Tool-Calling Agents” — arXiv:2604.27233 — submitted 2026-04-29 — consulted 2026-08-17.
+SOURCE URL: https://arxiv.org/abs/2604.27233
+FILE: 006__2026-08-17-call-the-shot-before-firing-the-shot__prior__shot-20260817-06__from-prior-checkpoint-ver.txt
+LINKS OUT: SHOT-20260817-01 (RESOLVED_EXACT_ID), SHOT-20260817-03 (RESOLVED_EXACT_ID), SHOT-20260817-04 (RESOLVED_EXACT_ID), SHOT-20260817-05 (RESOLVED_EXACT_ID), SHOT-20260817-07 (RESOLVED_EXACT_ID)
+
+007 · SHOT-20260817-07 · 2026-08-17 — A failure can become one new sentence in the program that governs the next attempt.
+SOURCE: Zehua Pei, Hui-Ling Zhen, Shixiong Kai, Sinno Jialin Pan, Yunhe Wang, Mingxuan Yuan, Bei Yu — “SCOPE: Prompt Evolution for Enhancing Agent Effectiveness” — arXiv:2512.15374v2 — version dated 2026-05-28 — consulted 2026-08-17.
+SOURCE URL: https://arxiv.org/abs/2512.15374
+FILE: 007__2026-08-17-a-failure-can-become-one-new-sentence-in__prior__shot-20260817-07__from-prior-checkpoint-ver.txt
+LINKS OUT: GHOST:MJ-2022-004 (GHOST), GHOST:MJ-2022-005 (GHOST), GHOST:MJ-2022-009 (GHOST), SHOT-20260817-02 (RESOLVED_EXACT_ID), SHOT-20260817-06 (RESOLVED_EXACT_ID), SHOT-20260817-09 (RESOLVED_EXACT_ID)
+
+008 · SHOT-20260817-08 · 2026-08-17 — Treat the first prompt as evidence of requirements, not as the finished program.
+SOURCE: Junjie Shi, Weisong Sun, Zhenpeng Chen, Zhujun Wu, Xiaohong Chen, Zhi Jin, Yang Liu — “REprompt: Prompt Generation for Intelligent Software Development Guided by Requirements Engineering” — arXiv:2601.16507 — submitted 2026-01-23 — consulted 2026-08-17.
+SOURCE URL: https://arxiv.org/abs/2601.16507
+FILE: 008__2026-08-17-treat-the-first-prompt-as-evidence-of-req__prior__shot-20260817-08__from-prior-checkpoint-ver.txt
+LINKS OUT: GHOST:MJ-2022-002 (GHOST), GHOST:MJ-2022-010 (GHOST), SHOT-20260817-01 (RESOLVED_EXACT_ID), SHOT-20260817-05 (RESOLVED_EXACT_ID), SHOT-20260817-09 (RESOLVED_EXACT_ID)
+
+009 · SHOT-20260817-09 · 2026-08-17 — Lint the words before paying the model to build the world.
+SOURCE: Chengyi Yang, Pengzhen Li, Jiayin Qi, Aimin Zhou, Ji Wu, Ji Liu — “SCMAPR: Self-Correcting Multi-Agent Prompt Refinement for Complex-Scenario Text-to-Video Generation” — arXiv:2604.05489v4 — 2026-04 — consulted 2026-08-17.
+SOURCE URL: https://arxiv.org/abs/2604.05489
+FILE: 009__2026-08-17-lint-the-words-before-paying-the-model-to__prior__shot-20260817-09__from-prior-checkpoint-ver.txt
+LINKS OUT: GHOST:MJ-2022-013-A (GHOST), SHOT-20260817-03 (RESOLVED_EXACT_ID), SHOT-20260817-07 (RESOLVED_EXACT_ID), SHOT-20260817-08 (RESOLVED_EXACT_ID)
+
+010 · SHOT-20260817-10 · 2026-08-17 — The harness can become an executable natural-language object.
+SOURCE: Linyue Pan, Lexiao Zou, Shuo Guo, Jingchen Ni, Hai-Tao Zheng — “Natural-Language Agent Harnesses” — arXiv:2603.25723v2 — version dated 2026-05-18 — consulted 2026-08-17.
+SOURCE URL: https://arxiv.org/abs/2603.25723
+FILE: 010__2026-08-17-the-harness-can-become-an-executable-natu__prior__shot-20260817-10__from-prior-checkpoint-ver.txt
+LINKS OUT: SHOT-20260817-02 (RESOLVED_EXACT_ID), SHOT-20260817-05 (RESOLVED_EXACT_ID), SHOT-20260817-07 (RESOLVED_EXACT_ID)
+
+011 · SHOT-20260817-11 · 2026-08-17 — The action boundary is where steering becomes a measurable decision.
+SOURCE: Oguz Serdar, Cuneyt Mertayak — “SteerBench-Work: A Benchmark for Agent Steering at Action Boundaries” — arXiv:2608.12654 — submitted 2026-08-12 — consulted 2026-08-17.
+SOURCE URL: https://arxiv.org/abs/2608.12654
+FILE: 011__2026-08-17-the-action-boundary-is-where-steering-bec__prior__shot-20260817-11__from-prior-checkpoint-ver.txt
+LINKS OUT: SHOT-20260817-01 (RESOLVED_EXACT_ID), SHOT-20260817-06 (RESOLVED_EXACT_ID), SHOT-20260817-12 (RESOLVED_EXACT_ID)
+
+012 · SHOT-20260817-12 · 2026-08-17 — A revoked instruction needs a tombstone because language can remain behaviorally alive after deletion.
+SOURCE: Haoyuan Zhu — “Dead text or binding clause? Measuring and restoring constraint influence in black-box LLM dialogues” — arXiv:2608.12599 — submitted 2026-08-12 — consulted 2026-08-17.
+SOURCE URL: https://arxiv.org/abs/2608.12599
+FILE: 012__2026-08-17-a-revoked-instruction-needs-a-tombstone-b__prior__shot-20260817-12__from-prior-checkpoint-ver.txt
+LINKS OUT: SHOT-20260817-02 (RESOLVED_EXACT_ID), SHOT-20260817-07 (RESOLVED_EXACT_ID), SHOT-20260817-11 (RESOLVED_EXACT_ID), GHOST:MJ-2022-009 (GHOST)
+
+013 · PF-OPERATION-001 · Description does not become operation; an apparatus makes description consequential.
+SOURCE: Unattributed working manuscript — “Aphoristic Fragments,” fragment 6 — date not stated. fileciteturn0file0L112-L124
+FILE: 013__description-does-not-become-operation-an-apparatus-m__field__pf-operation-001__from-current-visible-cont.txt
+LINKS OUT: GHOST:APPARATUS DISAPPEARS (GHOST), GHOST:CONSEQUENCE WITHOUT SYNTACTIC CHANGE (GHOST), GHOST:PROMPT FELICITY CONDITIONS (GHOST)
+
+014 · PF-CONTEXT-002 · The same sentence can become instruction without changing its grammar.
+SOURCE: Unattributed working manuscript — “Aphoristic Fragments,” fragments 3–5 — date not stated. fileciteturn0file0L74-L108
+FILE: 014__the-same-sentence-can-become-instruction-without-cha__field__pf-context-002__from-current-visible-cont.txt
+LINKS OUT: GHOST:APPARATUS DISAPPEARS (GHOST), GHOST:CONTEXT DOES THE WORK (GHOST), GHOST:PROMPT FELICITY CONDITIONS (GHOST)
+
+015 · PF-DEIXIS-003 · Prompting may depend less on command than on pointing into already-constructed state.
+SOURCE: Unattributed working manuscript — “Aphoristic Fragments,” fragments 7–9 — date not stated. fileciteturn0file0L128-L158
+FILE: 015__prompting-may-depend-less-on-command-than-on-pointin__field__pf-deixis-003__from-current-visible-cont.txt
+LINKS OUT: PLATFORM:PROMPT AS SITUATED USE (RESOLVED_PLATFORM), GHOST:CONTEXT DOES THE WORK (GHOST), GHOST:STATEFUL LANGUAGE (GHOST)
+
+016 · PF-SEMANTICS-004 · Programming constrains meaning before execution; prompting may reveal usable meaning through response.
+SOURCE: Unattributed working manuscript — “Aphoristic Fragments,” fragments 35–38 — date not stated. fileciteturn0file0L448-L492
+FILE: 016__programming-constrains-meaning-before-execution-prom__field__pf-semantics-004__from-current-visible-cont.txt
+LINKS OUT: GHOST:FAILURE AS SEMANTIC PROBE (GHOST), GHOST:PROGRAMMING / PROMPTING (GHOST), GHOST:INTERACTIVE SEMANTICS (GHOST)
+
+017 · PF-FAILURE-005 · Prompt failure can expose the hidden interpretation that successful output conceals.
+SOURCE: Unattributed working manuscript — “Aphoristic Fragments,” fragments 37–39 — date not stated. fileciteturn0file0L478-L498
+FILE: 017__prompt-failure-can-expose-the-hidden-interpretation__field__pf-failure-005__from-current-visible-cont.txt
+LINKS OUT: PLATFORM:PROMPT SEMANTICS (RESOLVED_PLATFORM), GHOST:NEGATIVE PROMPT RECEIPTS (GHOST), GHOST:BREAKDOWN REVEALS TOOL SHAPE (GHOST)
+
+018 · PF-CONTEXT-006 · Thick prompting may work by narrowing possible misreadings rather than transferring more meaning.
+SOURCE: Unattributed working manuscript — “Aphoristic Fragments,” fragments 44–47 — date not stated. fileciteturn0file0L548-L580
+FILE: 018__thick-prompting-may-work-by-narrowing-possible-misre__field__pf-context-006__from-current-visible-cont.txt
+LINKS OUT: GHOST:CONTEXT DOES THE WORK (GHOST), GHOST:INTERPRETATION SPACE (GHOST), PLATFORM:DEICTIC PROMPTING (RESOLVED_PLATFORM)
+
+019 · PF-AUTHORSHIP-007 · AI may not distribute authorship so much as externalize divisions already hidden inside writing.
+SOURCE: Unattributed working manuscript — “Aphoristic Fragments,” fragments 15–19 — date not stated. fileciteturn0file0L210-L268
+FILE: 019__ai-may-not-distribute-authorship-so-much-as-external__field__pf-authorship-007__from-current-visible-cont.txt
+LINKS OUT: GHOST:AUTHORSHIP AS ATTRIBUTION (GHOST), GHOST:OPERATIONAL DECOMPOSITION OF WRITING (GHOST), GHOST:VISIBLE DISTRIBUTION (GHOST)
+
+020 · PF-PROVENANCE-008 · Perfect provenance can document production without deciding authorship.
+SOURCE: Unattributed working manuscript — “The Unsaid” and fragments 20–25 — date not stated. fileciteturn0file0L23-L43 fileciteturn0file0L272-L326
+FILE: 020__perfect-provenance-can-document-production-without-d__field__pf-provenance-008__from-current-visible-cont.txt
+LINKS OUT: GHOST:TRACE IS NOT VERDICT (GHOST), PLATFORM:DISTRIBUTED AUTHORSHIP (RESOLVED_PLATFORM), GHOST:RESPONSIBILITY SURVIVES PRODUCTION (GHOST)
+
+021 · PF-SEARCHSPACE-009 · A prompt may specify a region of acceptable outcomes rather than a path to one output.
+SOURCE: Unattributed working manuscript — “Aphoristic Fragments,” fragments 29–32 — date not stated. fileciteturn0file0L372-L418
+FILE: 021__a-prompt-may-specify-a-region-of-acceptable-outcomes__field__pf-searchspace-009__from-current-visible-cont.txt
+LINKS OUT: GHOST:CLASS / PATH (GHOST), GHOST:GENERATIVE SEARCH SPACE (GHOST), GHOST:METAPHOR UNDER PRESSURE (GHOST)
+
+022 · PF-COMPRESSION-010 · Regenerability does not establish that the compressed prompt contains the generated work.
+SOURCE: Unattributed working manuscript — “Aphoristic Fragments,” fragments 58–62 — date not stated. fileciteturn0file0L688-L742
+FILE: 022__regenerability-does-not-establish-that-the-compresse__field__pf-compression-010__from-current-visible-cont.txt
+LINKS OUT: GHOST:SEED IS NOT TREE (GHOST), GHOST:GENERATOR CONTRIBUTION (GHOST), GHOST:REGENERABILITY (GHOST)
+
+023 · PF-RESISTANCE-011 · Automation can remove both useless labor and the resistance through which a problem becomes thinkable.
+SOURCE: Unattributed working manuscript — “Aphoristic Fragments,” fragments 77–86 — date not stated. fileciteturn0file0L894-L982
+FILE: 023__automation-can-remove-both-useless-labor-and-the-res__field__pf-resistance-011__from-current-visible-cont.txt
+LINKS OUT: GHOST:PRODUCTIVE RESISTANCE (GHOST), GHOST:AUTOMATED EVASION (GHOST), GHOST:FRICTION AS EPISTEMIC OPERATOR (GHOST)
+
+024 · PF-SITUATEDNESS-012 · The hard limit may not be private creativity but the inability to transfer a position into context.
+SOURCE: Unattributed working manuscript — “Aphoristic Fragments,” fragments 90–96 — date not stated. fileciteturn0file0L1006-L1084
+FILE: 024__the-hard-limit-may-not-be-private-creativity-but-the__field__pf-situatedness-012__from-current-visible-cont.txt
+LINKS OUT: PLATFORM:DEICTIC PROMPTING (RESOLVED_PLATFORM), GHOST:TACIT CRITERIA (GHOST), GHOST:CONTEXT WINDOW AS REPRESENTATIONAL BOUNDARY (GHOST)
+
+025 · PF-CRITERIA-013 · A criterion can govern revision before the operator can state it propositionally.
+SOURCE: Unattributed working manuscript — “Aphoristic Fragments,” fragments 40–43 — date not stated. fileciteturn0file0L502-L544
+FILE: 025__a-criterion-can-govern-revision-before-the-operator__field__pf-criteria-013__from-current-visible-cont.txt
+LINKS OUT: GHOST:FAILURE AS SEMANTIC PROBE (GHOST), PLATFORM:SITUATED PROMPTING (RESOLVED_PLATFORM), PLATFORM:ETHICS OF ATTENTION (RESOLVED_PLATFORM)
+
+026 · PF-AUTHORSHIP-014 · The authorship problem changes when “write” is treated as a bundle of operations rather than a sovereign act.
+SOURCE: Unattributed working manuscript — “Aphoristic Fragments,” fragment 15 and fragments 100–106 — date not stated. fileciteturn0file0L210-L224 fileciteturn0file0L1116-L1174
+FILE: 026__the-authorship-problem-changes-when-write-is-treated__field__pf-authorship-014__from-current-visible-cont.txt
+LINKS OUT: PLATFORM:DISTRIBUTED AUTHORSHIP (RESOLVED_PLATFORM), GHOST:TRACE IS NOT VERDICT (GHOST), GHOST:RESPONSIBILITY SURVIVES PRODUCTION (GHOST)
+
+027 · PF-RESPONSIBILITY-015 · Responsibility can remain concentrated even when sentence production is distributed.
+SOURCE: Unattributed working manuscript — “Aphoristic Fragments,” fragments 23–25 — date not stated. fileciteturn0file0L306-L326
+FILE: 027__responsibility-can-remain-concentrated-even-when-sen__field__pf-responsibility-015__from-current-visible-cont.txt
+LINKS OUT: PLATFORM:DECOMPOSE WRITE (RESOLVED_PLATFORM), PLATFORM:PROMPT RECEIPTS (RESOLVED_PLATFORM), GHOST:HUMAN UPTAKE (GHOST)
+
+028 · PF-PHILOSOPHY-016 · The machine’s philosophical force may be to break a previously serviceable compression rather than create an entirely new category.
+SOURCE: Unattributed working manuscript — “Aphoristic Fragments,” fragments 104–106 — date not stated. fileciteturn0file0L1148-L1174
+FILE: 028__the-machine-s-philosophical-force-may-be-to-break-a__field__pf-philosophy-016__from-current-visible-cont.txt
+LINKS OUT: PLATFORM:DECOMPOSE WRITE (RESOLVED_PLATFORM), GHOST:VISIBLE DISTRIBUTION (GHOST), GHOST:NOVELTY / EXPOSURE (GHOST)
+
+029 · LIT-WINOGRAD-001 · Natural language was already converted into executable procedures in SHRDLU; “description becomes operation” cannot claim firstness with prompting.
+SOURCE: Terry Winograd — “A Procedural Model of Language Understanding” — 1973 — pp. 167–170.
+FILE: 029__natural-language-was-already-converted-into-executab__lit__lit-winograd-001__from-current-visible-cont.txt
+LINKS OUT: GHOST:APPARATUS MAKES WORDS CONSEQUENTIAL (GHOST), GHOST:MICROWORLD / FOUNDATION MODEL (GHOST), GHOST:NATURAL LANGUAGE AS PROGRAM INPUT (GHOST)
+
+030 · LIT-WINOGRAD-002 · In SHRDLU, context was part of the interpreter’s machinery, not extra information appended after linguistic meaning.
+SOURCE: Terry Winograd — “A Procedural Model of Language Understanding” — 1973 — pp. 153, 167ff.
+FILE: 030__in-shrdlu-context-was-part-of-the-interpreter-s-mach__lit__lit-winograd-002__from-current-visible-cont.txt
+LINKS OUT: GHOST:STATEFUL LANGUAGE (GHOST), GHOST:CONTEXT IS NOT ONE THING (GHOST), GHOST:SHRDLU GENEALOGY (GHOST)
+
+031 · LIT-SUCHMAN-003 · Indexicality makes situation particulars constitutive of intelligibility rather than supplementary context.
+SOURCE: Lucy A. Suchman — Plans and Situated Actions: The Problem of Human-Machine Communication — 1985 — p. 36.
+FILE: 031__indexicality-makes-situation-particulars-constitutiv__lit__lit-suchman-003__from-current-visible-cont.txt
+LINKS OUT: PLATFORM:PROMPT LEANS ON A WORLD (RESOLVED_PLATFORM), GHOST:SITUATION PARTICULARS (GHOST), GHOST:CONTEXT WINDOW / SITUATION (GHOST)
+
+032 · LIT-SUCHMAN-004 · Breakdown exposes a choice between competing interpretations and therefore supplies information unavailable in smooth interaction.
+SOURCE: Lucy A. Suchman — Plans and Situated Actions: The Problem of Human-Machine Communication — 1985 — pp. 107–108.
+FILE: 032__breakdown-exposes-a-choice-between-competing-interpr__lit__lit-suchman-004__from-current-visible-cont.txt
+LINKS OUT: GHOST:PROMPT REPAIR (GHOST), GHOST:FAILED PROMPT AS PROBE (GHOST), GHOST:INTERACTIONAL DEBUGGING (GHOST)
+
+033 · LIT-CLARK-005 · Reference is not completed when the speaker emits the referring expression.
+SOURCE: Herbert H. Clark and Deanna Wilkes-Gibbs — “Referring as a Collaborative Process” — 1986 — Cognition 22(1), pp. 1–4.
+FILE: 033__reference-is-not-completed-when-the-speaker-emits-th__lit__lit-clark-005__from-current-visible-cont.txt
+LINKS OUT: GHOST:REFERENCE IS A PROCESS (GHOST), GHOST:COMMON GROUND (GHOST), GHOST:PROMPT REPAIR (GHOST)
+
+034 · LIT-NAUR-006 · Programming itself depends on knowledge that is not contained in program text, weakening a clean “code has fixed meaning / prompts discover meaning” opposition.
+SOURCE: Peter Naur — “Programming as Theory Building” — 1985 — Microprocessing and Microprogramming 15, pp. 253–261.
+FILE: 034__programming-itself-depends-on-knowledge-that-is-not__lit__lit-naur-006__from-current-visible-cont.txt
+LINKS OUT: GHOST:THEORY OF THE PROMPT (GHOST), GHOST:TEXT DOES NOT CONTAIN PRACTICE (GHOST), PLATFORM:TACIT CRITERIA (RESOLVED_PLATFORM)
+
+035 · LIT-HUTCHINS-007 · Distribution becomes explanatory only when the transformations that propagate across people and artifacts are specified.
+SOURCE: Edwin Hutchins — Cognition in the Wild — 1995 — Introduction; chapter 3 overview.
+FILE: 035__distribution-becomes-explanatory-only-when-the-trans__lit__lit-hutchins-007__from-current-visible-cont.txt
+LINKS OUT: GHOST:ANT HEAP (GHOST), GHOST:REPRESENTATIONAL STATE PROPAGATION (GHOST), GHOST:TRACE IS NOT VERDICT (GHOST)
+
+036 · LIT-AGRE-008 · Deictic computation predates LLM prompting; the new question is where indexical binding is performed.
+SOURCE: Philip E. Agre and David Chapman — “Pengi: An Implementation of a Theory of Activity” — 1987 — Proceedings of AAAI-87, pp. 268–272.
+FILE: 036__deictic-computation-predates-llm-prompting-the-new-q__lit__lit-agre-008__from-current-visible-cont.txt
+LINKS OUT: GHOST:INDEXICAL COMPUTATION (GHOST), GHOST:SITUATED ACTION (GHOST), GHOST:COMMAND / DEIXIS (GHOST)
+
+037 · LIT-AUSTIN-009 · Language did things before computers; what machines add is a new engineered regime of felicity.
+SOURCE: J. L. Austin — How to Do Things with Words — 1962 — Lectures I–III, especially Lecture II.
+FILE: 037__language-did-things-before-computers-what-machines-a__lit__lit-austin-009__from-current-visible-cont.txt
+LINKS OUT: GHOST:PROMPT FELICITY CONDITIONS (GHOST), GHOST:LANGUAGE AS ACTION (GHOST), GHOST:DESCRIPTION / OPERATION (GHOST)
+
+038 · LIT-BROOKS-010 · “The prompt leans on a world” splits into two architectures: representing the world and remaining coupled to it.
+SOURCE: Rodney A. Brooks — “Intelligence without representation” — 1991 — Artificial Intelligence 47, pp. 139–159, especially pp. 139, 146ff.
+FILE: 038__the-prompt-leans-on-a-world-splits-into-two-architec__lit__lit-brooks-010__from-current-visible-cont.txt
+LINKS OUT: GHOST:WORLD AS ITS OWN MODEL (GHOST), GHOST:CONTEXT / COUPLING (GHOST), GHOST:REPRESENTATION IS NOT SITUATION (GHOST)
+
+039 · LIT-ACE-011 · Attempto makes natural language executable by restricting the language before execution rather than by restricting the world.
+SOURCE: Norbert E. Fuchs and Rolf Schwitter — “Attempto Controlled English (ACE)” — 1996 — arXiv cmp-lg/9603003.
+SOURCE URL: https://arxiv.org/abs/cmp-lg/9603003
+FILE: 039__attempto-makes-natural-language-executable-by-restri__lit__lit-ace-011__from-new-forage-this-run.txt
+LINKS OUT: LIT-WINOGRAD-001 (RESOLVED_EXACT_ID), LIT-WINOGRAD-002 (RESOLVED_EXACT_ID), GHOST:PROMPT FELICITY CONDITIONS (GHOST), GHOST:RESTRICTION MIGRATION (GHOST)
+
+040 · LIT-SMITH-012 · Programming by demonstration made concrete examples part of specification decades before prompt iteration.
+SOURCE: David Canfield Smith — “Pygmalion: An Executable Electronic Blackboard” — 1993 retrospective chapter on the 1975 Pygmalion system — in Watch What I Do: Programming by Demonstration.
+SOURCE URL: https://acypher.com/wwid/Chapters/01Pygmalion.html
+FILE: 040__programming-by-demonstration-made-concrete-examples__lit__lit-smith-012__from-new-forage-this-run.txt
+LINKS OUT: PF-FAILURE-005 (RESOLVED_EXACT_ID), PF-SEMANTICS-004 (RESOLVED_EXACT_ID), LIT-SUCHMAN-004 (RESOLVED_EXACT_ID), GHOST:RESTRICTION MIGRATION (GHOST)

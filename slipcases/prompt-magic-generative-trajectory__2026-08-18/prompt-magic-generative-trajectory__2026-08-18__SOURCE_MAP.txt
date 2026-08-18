@@ -1,0 +1,133 @@
+PAPER: The Prompt Is Not the Unit: Magic, Causal Craft, and the Generative Trajectory
+DATE: 2026-08-18
+STATUS: Working Paper
+
+CLAIM MAP
+
+1. Prompting can contain semantically unusual but operationally useful “magic terms.”
+   ZETTEL: ZF-20260817-MAGIC-TERMS-001
+   SOURCE: Oppenlaender 2022
+   CITEKEY: oppenlaender2022taxonomy
+   SOURCE URL: https://arxiv.org/abs/2204.13988
+
+2. Evaluative competence can outrun style-specific prompting vocabulary.
+   ZETTEL: ZF-20260817-VOCABULARY-GAP-002
+   SOURCE: Oppenlaender, Linder, Silvennoinen 2023
+   CITEKEY: oppenlaender2023prompting
+   SOURCE URL: https://arxiv.org/abs/2303.13534
+
+3. Prompt practices include templates, imported specialist vocabularies, and glitches stabilized as styles.
+   ZETTEL: ZF-20260817-COMMUNITY-LEXICON-003
+   SOURCE: Chang et al. 2023
+   CITEKEY: chang2023prompt
+   SOURCE URL: https://arxiv.org/abs/2303.12253
+
+4. DALL-E 2 conditions learned CLIP representations rather than executing natural-language drawing procedures.
+   ZETTEL: ZF-20260817-PROMPT-NOT-COMMAND-004
+   SOURCE: Ramesh et al. 2022
+   CITEKEY: ramesh2022hierarchical
+   SOURCE URL: https://arxiv.org/abs/2204.06125
+
+5. CLIP learned visual-linguistic representations from internet-scale image-text pairs.
+   ZETTEL: ZF-20260817-LANGUAGE-POINTS-INTO-DATA-005
+   SOURCE: Radford et al. 2021
+   CITEKEY: radford2021learning
+   SOURCE URL: https://arxiv.org/abs/2103.00020
+
+6. The 2022 archive contains explicit internal disagreement between “prompt magic” and “magical thinking,” including concern about ignored words and seed folklore.
+   ZETTEL: ZF-20260817-SUPERSTITION-VARIANCE-006
+   SOURCE: Midjourney research archive
+   CITEKEY: hartsoe2022midjourneyarchive
+   LOCAL LINES: source archive 50-64; 239-258; 1708-1710
+
+7. Practitioners report having to relearn prompt incantations across model change; notes describe removal of earlier hacks.
+   ZETTEL: ZF-20260817-EXPERTISE-HALF-LIFE-007
+   SOURCE: Midjourney research archive + current Version documentation
+   CITEKEYS: hartsoe2022midjourneyarchive; midjourneyVersion
+   LOCAL LINES: 267-273; 990-1006
+
+8. Discord public visibility was part of the learning environment, not merely a distribution venue.
+   ZETTEL: ZF-20260817-DISCORD-INSTRUMENT-008
+   SOURCE: Midjourney research archive
+   CITEKEY: hartsoe2022midjourneyarchive
+   LOCAL LINES: 157-163; 344-346; 462-470
+
+9. Rerolling/variation is a creative operation distinct from linguistic specification.
+   ZETTEL: ZF-20260817-REROLL-OPERATOR-009
+   SOURCE: Midjourney research archive + Variations documentation
+   CITEKEYS: hartsoe2022midjourneyarchive; midjourneyVariations
+   LOCAL LINES: 217-223; 502-510
+
+10. Stylization provides a practical continuum between prompt adherence and model-led aesthetic behavior.
+    ZETTEL: ZF-20260817-STYLIZE-AGENCY-DIAL-010
+    SOURCES: Midjourney archive; Stylize docs; Raw docs
+    CITEKEYS: hartsoe2022midjourneyarchive; midjourneyStylize; midjourneyRaw
+    LOCAL LINES: 882-902
+
+11. Platform aesthetic defaults precede the user’s prompt.
+    ZETTEL: ZF-20260817-DEFAULT-AESTHETICS-011
+    SOURCES: Midjourney archive; Raw docs
+    CITEKEYS: hartsoe2022midjourneyarchive; midjourneyRaw
+    LOCAL LINES: 668-680; 956-970
+
+12. The archive explicitly proposes a “documentary” mode based on giving up control and observing what is made.
+    ZETTEL: ZF-20260817-DOCUMENTARY-MODE-012
+    SOURCE: Midjourney research archive
+    CITEKEY: hartsoe2022midjourneyarchive
+    LOCAL LINES: 1200-1210
+
+13. Prompt secrecy can turn discovered model knowledge into scarce know-how.
+    ZETTEL: ZF-20260817-PROMPT-SECRECY-013
+    SOURCE: Midjourney research archive
+    CITEKEY: hartsoe2022midjourneyarchive
+    LOCAL LINES: 127-142
+
+14. Public prompt visibility can create population-level feedback loops without model retraining.
+    ZETTEL: ZF-20260817-VISIBLE-PROMPT-CASCADE-014
+    SOURCE: Midjourney research archive
+    CITEKEY: hartsoe2022midjourneyarchive
+    LOCAL LINES: 2268-2296
+
+15. The generative trajectory is a derived research unit combining prompt, model state, sampling, selection, and changing intention.
+    ZETTEL: ZF-20260817-PROMPT-NOT-UNIT-015
+    SOURCES: archive + Midjourney Parameter List
+    CITEKEYS: hartsoe2022midjourneyarchive; midjourneyParameters
+    STATUS: COMPILER FORMALIZATION built from compiled evidence
+
+16. Intermittent noncontingent rewards can stabilize behavior; used here only as a candidate mechanism for prompt ritual.
+    ZETTEL: ZF-20260817-ADVENTITIOUS-REINFORCEMENT-016
+    SOURCES: Skinner 1948; Staddon & Simmelhag 1971
+    CITEKEYS: skinner1948superstition; staddon1971superstition
+
+17. Actual and perceived action possibilities should be separated using perceptible/hidden/false affordances.
+    ZETTEL: ZF-20260817-FALSE-AFFORDANCE-017
+    SOURCE: Gaver 1991
+    CITEKEY: gaver1991technology
+
+18. A prompt can function as a plan/resource inside situated action rather than a complete script.
+    ZETTEL: ZF-20260817-PLAN-AS-RESOURCE-018
+    SOURCE: Suchman, Human-Machine Reconfigurations
+    CITEKEY: suchman2006reconfigurations
+    NOTE: Publication-year metadata around the second edition is inconsistent across catalog surfaces; card preserved as 2006 and flagged in verification.
+
+19. Surprise can reframe both means and ends in reflective design practice.
+    ZETTEL: ZF-20260817-SURPRISE-REFRAMES-ENDS-019
+    SOURCE: Schön & Bennett 1996
+    CITEKEY: schon1996reflective
+
+20. Prompt-community cognition may be distributed across people, artifacts, archives, and information flow.
+    ZETTEL: ZF-20260817-DISCORD-COGNITIVE-SYSTEM-020
+    SOURCE: Hutchins 2006
+    CITEKEY: hutchins2006distributed
+
+21. Default aesthetic power is formalized as differential expressive friction.
+    ZETTEL: ZF-20260817-DEFAULTS-HAVE-POLITICS-021
+    SOURCE: Winner 1980 + Midjourney default evidence
+    CITEKEY: winner1980artifacts
+    STATUS: COMPILER EXTENSION; Winner does not discuss generative AI.
+
+22. “Back-talk” from generative output can be analyzed without requiring machine intentionality.
+    ZETTEL: ZF-20260817-MATERIAL-TALKS-BACK-022
+    SOURCE: Schön & Bennett 1996
+    CITEKEY: schon1996reflective
+    STATUS: COMPILER EXTENSION; the source concerns design materials generally.

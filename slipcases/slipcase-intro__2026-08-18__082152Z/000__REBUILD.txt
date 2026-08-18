@@ -1,0 +1,14 @@
+REBUILD
+
+1. Verify hashes in _SLIPCASE/MANIFEST.json.
+2. Treat root zettel .txt files as immutable evidence objects.
+3. Recreate _MD mirrors byte-for-byte from root zettels.
+4. Parse PLATFORM, LINKS, and every [[ADDRESS]] from root cards.
+5. Resolve exact ZETTEL IDs; classify all remaining addresses as unresolved/ghost unless an explicit registry supplies a stronger exact resolution. Never fuzzy-match silently.
+6. Regenerate NODES/RELATIONS, MAP, OPEN_EDGES, NETWORK, READER, and CARDS from the preserved payloads.
+7. Parse bibliography without fabricating absent fields.
+8. Treat the paper as a derived interpretation. It may be rewritten without altering evidence.
+9. Use _PROMPTS/PRIME_ZETTEL_FORAGE_RECURSIVE_INQUIRY_v3.1.poml to continue a specific card.
+10. Use _PROMPTS/SLIPCASE_PORTABLE_RESEARCH_FIELD_v15.55-AM.poml to compile a later checkpoint.
+
+This introductory package includes a build script only indirectly through its manifest and readable derived files; exact historical source resources are in _RESOURCES/.

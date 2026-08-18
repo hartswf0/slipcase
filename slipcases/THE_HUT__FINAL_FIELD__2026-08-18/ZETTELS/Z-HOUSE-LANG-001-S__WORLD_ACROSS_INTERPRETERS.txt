@@ -1,0 +1,129 @@
+ZETTEL
+
+ID:
+Z-HOUSE-LANG-001-S
+
+TITLE:
+A WORLD CAN BE BUILT ACROSS INTERPRETERS WITHOUT ANY SINGLE REPRESENTATION CONTAINING THE WHOLE WORLD
+
+SOURCE:
+Walter Benjamin — “On the Concept of History,” Thesis IX — 1940 — reading of Paul Klee’s Angelus Novus, with Scholem’s “Gruß vom Angelus” as epigraph.
+
+SOURCE URL:
+https://www.sfu.ca/~andrewf/CONCEPT2.html
+
+PASSAGE:
+[PARAPHRASE] Benjamin begins from Klee’s depicted angel and transforms visible features of the image into the temporality, agency, obstruction, and orientation of an “angel of history.”
+
+RESEARCH OBJECT:
+The supplied worldtext exposes an unusually clean COMPILATION CHAIN:
+
+PAINTING
+→ PHILOSOPHICAL DESCRIPTION
+→ HISTORICAL ALLEGORY
+→ QUOTED / TRANSLATED TEXT
+→ ONTOLOGICAL ENCODING.
+
+No stage merely copies the previous one. Each makes something newly operable.
+
+LOCAL MOVE:
+Benjamin does not merely describe Klee’s painting. He takes eyes, mouth, wings, orientation and makes them participate in another world containing past, future, dead, wreckage, reparation, storm, and progress.
+
+The image becomes infrastructure for a historical ontology.
+
+SOURCE TERMS:
+Angelus Novus
+angel of history
+past
+future
+catastrophe
+wreckage
+storm
+Paradise
+progress
+
+WHAT BECAME STRANGE:
+“How many interpreters away from the wall is a word?” has a representational analogue:
+
+HOW MANY INTERPRETERS AWAY FROM THE PAINTING IS THE ANGEL OF HISTORY?
+
+The answer is not a defect. The interpretive layers are what make the new world possible.
+
+QUESTION:
+At what point in a chain of representations should we say a new world has been created rather than the old one translated?
+
+DEEPER QUESTION:
+Can provenance preserve transformation without pretending that later representations are faithful copies of earlier ones?
+
+MECHANISM:
+visual artifact
+→ selective description
+→ metaphorical reassignment
+→ ontological relations
+→ new possible operations of thought.
+
+FORMAL SHIFT:
+<KLEE IMAGE>
+→ <BENJAMIN DESCRIPTION>
+→ [ALLEGORIZE]
+→ <ANGEL OF HISTORY>
+→ [ENCODE]
+→ <COMPUTABLE WORLDTEXT>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+R₀ = image.
+R₁ = describe(R₀).
+R₂ = allegorize(R₁).
+R₃ = translate(R₂).
+R₄ = formalize(R₃).
+
+For every transition:
+Δₙ = distinctions introduced + distinctions lost.
+
+The genealogy is therefore part of the resulting world.
+
+TENSION:
+The structured ontology in the uploaded file is not Benjamin’s ontology. Terms such as EVENT, ROLE, MODALITY, and STATE TRANSITION belong to the later encoding layer.
+
+Flattening these layers would falsely attribute our formalism to Benjamin.
+
+MISSING:
+A transformation ledger recording for every representational step what survived, what disappeared, what was invented, what became explicit, what became executable, and what remained ambiguous.
+
+BOUNDARY:
+Benjamin supplies the philosophical transformation from painting to historical allegory. The full pipeline through “ontological encoding” belongs to the supplied worldtext and our reconstruction, not to Benjamin.
+
+CITATION TRAIL:
+Walter Benjamin — “The Task of the Translator.”
+Nelson Goodman — Ways of Worldmaking.
+Ekphrasis.
+Compiler intermediate representations.
+Provenance-preserving transformation systems.
+
+TEST:
+Give Klee’s Angelus Novus independently to a poet, historian, ontology engineer, programmer, and generative model.
+
+Require each output to become input to the next. At every transformation record Δ. Then reverse the chain.
+
+Determine which distinctions are recoverable and which transformations irreversibly built a new world.
+
+PLATFORM:
+[[THE HOUSE THAT WORLDS BUILT]]
+
+LINKS:
+[[Z-HOUSE-LANG-001]]
+[[THE HOUSE THAT WORLDS BUILT]]
+[[HOW MANY INTERPRETERS AWAY FROM THE WALL IS A WORD?]]
+
+BIBTEX:
+@misc{benjamin1940concept_history,
+  author = {Benjamin, Walter},
+  title  = {On the Concept of History},
+  year   = {1940},
+  note   = {Thesis IX; commonly published posthumously in translation}
+}

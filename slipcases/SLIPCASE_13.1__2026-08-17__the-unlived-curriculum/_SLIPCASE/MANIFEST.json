@@ -1,0 +1,560 @@
+{
+  "schema": "13.1",
+  "checkpoint": "The Unlived Curriculum",
+  "checkpoint_id": "SLIPCASE-13.1-20260817-01",
+  "date": "2026-08-17",
+  "timestamp": "20260817T2034-0400",
+  "counts": {
+    "zettels": 20,
+    "platforms": 20,
+    "links": 76,
+    "wikilinks": 123,
+    "ghosts": 53,
+    "lineage": 19,
+    "sources": 18
+  },
+  "paper": {
+    "title": "The Missing Baseline: Prediction, Intervention, and the Problem of Learning from Changed Outcomes in Higher Education",
+    "pdf": "the-missing-baseline-prediction-intervention-and-the-problem-of-learning-from-changed-outcomes-in-higher-educa__WIP-v13-1__20260817T2034-0400.pdf",
+    "tex": "the-missing-baseline-prediction-intervention-and-the-problem-of-learning-from-changed-outcomes-in-higher-educa__WIP-v13-1__20260817T2034-0400.tex",
+    "source_map": "the-missing-baseline-prediction-intervention-and-the-problem-of-learning-from-changed-outcomes-in-higher-educa__SOURCE_MAP.txt"
+  },
+  "files": [
+    {
+      "path": "000__BIBLIOGRAPHY.txt",
+      "sha256": "9c7eb228a29d7b40e43a701b75abd60d28467707fdfa8f5dc6c7bef7c56ab7b1",
+      "bytes": 12756
+    },
+    {
+      "path": "000__INDEX.txt",
+      "sha256": "23542d5d9075841630c5c60de1cbfe7c1f2e64405abfe8e3e9d8a528abc4495f",
+      "bytes": 3316
+    },
+    {
+      "path": "000__LINEAGE.txt",
+      "sha256": "61d960e52434c1b193ff03dd841868b250c0da8089aa4ea66fe1bed28a598b84",
+      "bytes": 2526
+    },
+    {
+      "path": "000__MAKING_HISTORY.txt",
+      "sha256": "ff116237d8286121507243b7aae2172b111b8e8d5376d3e2ef77fdc7e729b9f6",
+      "bytes": 1025
+    },
+    {
+      "path": "000__MAP.txt",
+      "sha256": "483585e16374c6d18925476ca64025c8d885b762d6e918e3e8639bc24037d828",
+      "bytes": 7765
+    },
+    {
+      "path": "000__OPEN_EDGES.txt",
+      "sha256": "a9c64a73e484053102e6f12939f1d19e7ef0d768772cd7c97b4dee1332b7f38a",
+      "bytes": 29862
+    },
+    {
+      "path": "000__PROMPTS.txt",
+      "sha256": "4cda5df1c7521f9bdeaad56909e3d02679f45207d699ff613f313e36609617f3",
+      "bytes": 413
+    },
+    {
+      "path": "000__REBUILD.txt",
+      "sha256": "1bd2cc3a4cc3df8d640d9eed99a3ab69745c3e4b56b77f744107dc5d0320deb1",
+      "bytes": 405
+    },
+    {
+      "path": "000__RESOURCES.txt",
+      "sha256": "c53b616c563400f9b9b07043b51ed12edaa2b22c6ec819c59a8364439ee31d21",
+      "bytes": 5786
+    },
+    {
+      "path": "000__RETURN_PATH.txt",
+      "sha256": "48319b0020859295c4e6a4806a28272a0da90b47c4ba57b6fa756d571b38fc00",
+      "bytes": 954
+    },
+    {
+      "path": "000__START_HERE.txt",
+      "sha256": "284a19b15da5628949041c469a8abd7d6278e79b9ec45df31cd901816f404d95",
+      "bytes": 607
+    },
+    {
+      "path": "001__market-minimum__Wolfers-Zitzewitz2004__Z-EDUPM-001__from-20260817-s01-o001.txt",
+      "sha256": "73aefb58daa3ccae5564c456727435d9b23a5b18a42f2f241495e3298450809a",
+      "bytes": 4094
+    },
+    {
+      "path": "002__compass-before-grade__Denley2013__Z-EDUPM-002__from-20260817-s01-o002.txt",
+      "sha256": "34ff6a1bdcfaa8e30a4e267287473ba9348ef79ad66ad1539e7d4db85bf058e4",
+      "bytes": 4625
+    },
+    {
+      "path": "003__anti-settlement-alarm__Ekowo-Palmer2016__Z-EDUPM-003__from-20260817-s01-o003.txt",
+      "sha256": "a52b1aba343482fd60eae05678aab2c25257feeff8ea7cd4eff5303f9b3f99f2",
+      "bytes": 4010
+    },
+    {
+      "path": "004__replication-contract__DreberEtAl2015__Z-EDUPM-004__from-20260817-s01-o004.txt",
+      "sha256": "d8929b0e74bb78a7f7151033ba61f566bdcc7d2128be2bf9d8cef764a054caff",
+      "bytes": 4351
+    },
+    {
+      "path": "005__evaluation-loop__Love-Kotchen2010__Z-EDUPM-005__from-20260817-s01-o005.txt",
+      "sha256": "4f3f8a7080c652cd08c88c038018e77d40eea2ab7efe481b0ed7afdeba3daa47",
+      "bytes": 4654
+    },
+    {
+      "path": "006__two-inflations__DenningEtAl2026__Z-EDUPM-006__from-20260817-s01-o006.txt",
+      "sha256": "54b1888db89fc3b32e65458edb86b114adcd7830ac96e3a347009fe74d8b299d",
+      "bytes": 4523
+    },
+    {
+      "path": "007__purchased-learning-paradox__BunceEtAl2017__Z-EDUPM-007__from-20260817-s01-o007.txt",
+      "sha256": "1ce02e0d79f78622cf8e7d2abc148e6e1a4e2d58b0ad514cef38be0b6efa9033",
+      "bytes": 4237
+    },
+    {
+      "path": "008__credential-fragments__Oliver2022__Z-EDUPM-008__from-20260817-s01-o008.txt",
+      "sha256": "fa67f00eb80cace19b3fcce066b9b164cc3fe32301add93b7d77c668eb1f858b",
+      "bytes": 4648
+    },
+    {
+      "path": "009__world-it-causes__PerdomoEtAl2020__Z-EDUPM-009__from-20260817-s01-o009.txt",
+      "sha256": "131d2c32b08d6a8fd60e376483d994daabb806e160fd082d6d07de4c9c8a519c",
+      "bytes": 4844
+    },
+    {
+      "path": "010__unlived-curriculum__KleinbergEtAl2018__Z-EDUPM-010__from-20260817-s01-o010.txt",
+      "sha256": "c864667084da60a04fb0a82a45c92ed99b2c9ec64efef39f37f490f8e6e5fa1e",
+      "bytes": 4620
+    },
+    {
+      "path": "011__oracle-s-spirit__PetersonEtAl2026__Z-EDUPM-011__from-20260817-s01-o011.txt",
+      "sha256": "38cb0467ed27a94f0c9e5ca09c907d07864f4e5a59cf0a26de801503bd1a09ab",
+      "bytes": 4861
+    },
+    {
+      "path": "012__betting-on-the-actuator__PetersonEtAl2026__Z-EDUPM-012__from-20260817-s01-o012.txt",
+      "sha256": "ed1ff3a0c6edf4e648e652d87f504e129868b1a8a4992f3c5a6b2c285f3b5d1c",
+      "bytes": 4512
+    },
+    {
+      "path": "013__curricular-dark-matter__EnsignEtAl2018__Z-EDUPM-013__from-20260817-s01-o013.txt",
+      "sha256": "76e567ff12e311b57aed66544efe4f4f5defa73042736aea9bd707eac8c54b3f",
+      "bytes": 4845
+    },
+    {
+      "path": "014__living-credential__W3C2025__Z-EDUPM-014__from-20260817-s01-o014.txt",
+      "sha256": "69c3152a12549bdd65883b757f5e2f27c42b6a479ea76ee76083136a9d833b2b",
+      "bytes": 4554
+    },
+    {
+      "path": "015__semantic-last-mile__W3C2025__Z-EDUPM-015__from-20260817-s01-o015.txt",
+      "sha256": "1a84a63b3e48e67bb0f89ae8b90464475d9c0746b8b06853eeaa52b55fee3d90",
+      "bytes": 4689
+    },
+    {
+      "path": "016__predictions-that-want-to-be-wrong__LileyEtAl2021__Z-EDUPM-016__from-20260817-s02-o016.txt",
+      "sha256": "586f22e5a69b406fca0ba74c28e42cc32c5cc34be78d0b7016446441199e6432",
+      "bytes": 4002
+    },
+    {
+      "path": "017__intervention-destroys-settlement__BoekenEtAl2024__Z-EDUPM-017__from-20260817-s02-o017.txt",
+      "sha256": "47f4541f3ad858a350b43a407f448420f948d86a9ce3890c738f6251b99fd77b",
+      "bytes": 3539
+    },
+    {
+      "path": "018__prediction-must-leave-a-receipt__MendlerDunnerEtAl2022__Z-EDUPM-018__from-20260817-s02-o018.txt",
+      "sha256": "c49320193db5705551cfc55d9b5be0abfee714fab2163718116acbfaaa0edea5",
+      "bytes": 3513
+    },
+    {
+      "path": "019__learning-to-decide__KilbertusEtAl2020__Z-EDUPM-019__from-20260817-s02-o019.txt",
+      "sha256": "36934b35bde1b55011a48295420e5f9964319c28bc584521022a45f2f7926ec7",
+      "bytes": 3596
+    },
+    {
+      "path": "020__the-alert-is-the-treatment__JayaprakashEtAl2014__Z-EDUPM-020__from-20260817-s02-o020.txt",
+      "sha256": "900ca83572e7e7c77b3a76b7574e964086131bd80e575e2628be2f9a007d47b2",
+      "bytes": 3644
+    },
+    {
+      "path": "CARDS.html",
+      "sha256": "14b78fd952e0b55ead1061f02c7207394654ad7452532e225d7aa824d4adfce0",
+      "bytes": 88457
+    },
+    {
+      "path": "MARK.svg",
+      "sha256": "40555c84aa4f4967a8a88b0a7a054d4057601d2d685bf8b027e1d414b38369b4",
+      "bytes": 406
+    },
+    {
+      "path": "NETWORK.html",
+      "sha256": "1ddcc09cc177814d84c01c99d5550b0647730a792adc7dbd4bb65f9b3b3c74e4",
+      "bytes": 25568
+    },
+    {
+      "path": "NETWORK.svg",
+      "sha256": "43aceb1b15227db3fc1e5f93e756b8efd7f32b068505c085a389c60b6378a1ee",
+      "bytes": 25451
+    },
+    {
+      "path": "READER.html",
+      "sha256": "2c1b0bf1cdd5448245ab6609343839255db3a11b290ae9caa33fc99005872742",
+      "bytes": 97945
+    },
+    {
+      "path": "REBUILD.py",
+      "sha256": "bb72da5688ad0d4014317cee2f2fd7cdfd92c0e6a750953d01f3914729c9350c",
+      "bytes": 728
+    },
+    {
+      "path": "ZETTELS.json",
+      "sha256": "807af52d77128e88d4046d9bfb716832fefd7eaf08e4bab918717bf00baf0d05",
+      "bytes": 149486
+    },
+    {
+      "path": "ZETTELS.jsonl",
+      "sha256": "7f88f5dc19dcb3c0c9f2b676cddcff43674862d50303b17affd2829997f5c0d6",
+      "bytes": 140279
+    },
+    {
+      "path": "ZETTELS.txt",
+      "sha256": "3185d0d5c08a22675f55b5e95924b1c68268dc853cba945890e982ad6906025c",
+      "bytes": 90460
+    },
+    {
+      "path": "_ARRANGEMENTS/02__the-missing-baseline__paper-spine.txt",
+      "sha256": "5d497fbf941e404af1dc6b549f01189c8a76e0ad0c4a895df8401022989d63fe",
+      "bytes": 120
+    },
+    {
+      "path": "_MD/001__market-minimum__Wolfers-Zitzewitz2004__Z-EDUPM-001__from-20260817-s01-o001.md",
+      "sha256": "73aefb58daa3ccae5564c456727435d9b23a5b18a42f2f241495e3298450809a",
+      "bytes": 4094
+    },
+    {
+      "path": "_MD/002__compass-before-grade__Denley2013__Z-EDUPM-002__from-20260817-s01-o002.md",
+      "sha256": "34ff6a1bdcfaa8e30a4e267287473ba9348ef79ad66ad1539e7d4db85bf058e4",
+      "bytes": 4625
+    },
+    {
+      "path": "_MD/003__anti-settlement-alarm__Ekowo-Palmer2016__Z-EDUPM-003__from-20260817-s01-o003.md",
+      "sha256": "a52b1aba343482fd60eae05678aab2c25257feeff8ea7cd4eff5303f9b3f99f2",
+      "bytes": 4010
+    },
+    {
+      "path": "_MD/004__replication-contract__DreberEtAl2015__Z-EDUPM-004__from-20260817-s01-o004.md",
+      "sha256": "d8929b0e74bb78a7f7151033ba61f566bdcc7d2128be2bf9d8cef764a054caff",
+      "bytes": 4351
+    },
+    {
+      "path": "_MD/005__evaluation-loop__Love-Kotchen2010__Z-EDUPM-005__from-20260817-s01-o005.md",
+      "sha256": "4f3f8a7080c652cd08c88c038018e77d40eea2ab7efe481b0ed7afdeba3daa47",
+      "bytes": 4654
+    },
+    {
+      "path": "_MD/006__two-inflations__DenningEtAl2026__Z-EDUPM-006__from-20260817-s01-o006.md",
+      "sha256": "54b1888db89fc3b32e65458edb86b114adcd7830ac96e3a347009fe74d8b299d",
+      "bytes": 4523
+    },
+    {
+      "path": "_MD/007__purchased-learning-paradox__BunceEtAl2017__Z-EDUPM-007__from-20260817-s01-o007.md",
+      "sha256": "1ce02e0d79f78622cf8e7d2abc148e6e1a4e2d58b0ad514cef38be0b6efa9033",
+      "bytes": 4237
+    },
+    {
+      "path": "_MD/008__credential-fragments__Oliver2022__Z-EDUPM-008__from-20260817-s01-o008.md",
+      "sha256": "fa67f00eb80cace19b3fcce066b9b164cc3fe32301add93b7d77c668eb1f858b",
+      "bytes": 4648
+    },
+    {
+      "path": "_MD/009__world-it-causes__PerdomoEtAl2020__Z-EDUPM-009__from-20260817-s01-o009.md",
+      "sha256": "131d2c32b08d6a8fd60e376483d994daabb806e160fd082d6d07de4c9c8a519c",
+      "bytes": 4844
+    },
+    {
+      "path": "_MD/010__unlived-curriculum__KleinbergEtAl2018__Z-EDUPM-010__from-20260817-s01-o010.md",
+      "sha256": "c864667084da60a04fb0a82a45c92ed99b2c9ec64efef39f37f490f8e6e5fa1e",
+      "bytes": 4620
+    },
+    {
+      "path": "_MD/011__oracle-s-spirit__PetersonEtAl2026__Z-EDUPM-011__from-20260817-s01-o011.md",
+      "sha256": "38cb0467ed27a94f0c9e5ca09c907d07864f4e5a59cf0a26de801503bd1a09ab",
+      "bytes": 4861
+    },
+    {
+      "path": "_MD/012__betting-on-the-actuator__PetersonEtAl2026__Z-EDUPM-012__from-20260817-s01-o012.md",
+      "sha256": "ed1ff3a0c6edf4e648e652d87f504e129868b1a8a4992f3c5a6b2c285f3b5d1c",
+      "bytes": 4512
+    },
+    {
+      "path": "_MD/013__curricular-dark-matter__EnsignEtAl2018__Z-EDUPM-013__from-20260817-s01-o013.md",
+      "sha256": "76e567ff12e311b57aed66544efe4f4f5defa73042736aea9bd707eac8c54b3f",
+      "bytes": 4845
+    },
+    {
+      "path": "_MD/014__living-credential__W3C2025__Z-EDUPM-014__from-20260817-s01-o014.md",
+      "sha256": "69c3152a12549bdd65883b757f5e2f27c42b6a479ea76ee76083136a9d833b2b",
+      "bytes": 4554
+    },
+    {
+      "path": "_MD/015__semantic-last-mile__W3C2025__Z-EDUPM-015__from-20260817-s01-o015.md",
+      "sha256": "1a84a63b3e48e67bb0f89ae8b90464475d9c0746b8b06853eeaa52b55fee3d90",
+      "bytes": 4689
+    },
+    {
+      "path": "_MD/016__predictions-that-want-to-be-wrong__LileyEtAl2021__Z-EDUPM-016__from-20260817-s02-o016.md",
+      "sha256": "586f22e5a69b406fca0ba74c28e42cc32c5cc34be78d0b7016446441199e6432",
+      "bytes": 4002
+    },
+    {
+      "path": "_MD/017__intervention-destroys-settlement__BoekenEtAl2024__Z-EDUPM-017__from-20260817-s02-o017.md",
+      "sha256": "47f4541f3ad858a350b43a407f448420f948d86a9ce3890c738f6251b99fd77b",
+      "bytes": 3539
+    },
+    {
+      "path": "_MD/018__prediction-must-leave-a-receipt__MendlerDunnerEtAl2022__Z-EDUPM-018__from-20260817-s02-o018.md",
+      "sha256": "c49320193db5705551cfc55d9b5be0abfee714fab2163718116acbfaaa0edea5",
+      "bytes": 3513
+    },
+    {
+      "path": "_MD/019__learning-to-decide__KilbertusEtAl2020__Z-EDUPM-019__from-20260817-s02-o019.md",
+      "sha256": "36934b35bde1b55011a48295420e5f9964319c28bc584521022a45f2f7926ec7",
+      "bytes": 3596
+    },
+    {
+      "path": "_MD/020__the-alert-is-the-treatment__JayaprakashEtAl2014__Z-EDUPM-020__from-20260817-s02-o020.md",
+      "sha256": "900ca83572e7e7c77b3a76b7574e964086131bd80e575e2628be2f9a007d47b2",
+      "bytes": 3644
+    },
+    {
+      "path": "_MOCS/03__the-missing-baseline.txt",
+      "sha256": "0e65365024c4a0993bebe4a57d0b743c9643fd01601a92822ab802cfcfa13852",
+      "bytes": 609
+    },
+    {
+      "path": "_PROMPTS/PRIME-FORAGE__LINEAGE_RECEIPT.txt",
+      "sha256": "7a3bb99d0eb60ff0bc9efaff7e4344e69ec228bae53bb0da73c5230a3c45675a",
+      "bytes": 598
+    },
+    {
+      "path": "_PROMPTS/Pasted text(20260817-224544).txt",
+      "sha256": "994531968fd5d4990f61b1559a2c75e7d370b458f9ed7e6ff5085e2867e3391d",
+      "bytes": 17427
+    },
+    {
+      "path": "_PROMPTS/Pasted text(20260817-225809).txt",
+      "sha256": "279c90f92986cc2eb1b5529e0f13bee000f32913dc24b87c121b2af3557fb898",
+      "bytes": 22954
+    },
+    {
+      "path": "_PROMPTS/Pasted text(20260817-225913).txt",
+      "sha256": "279c90f92986cc2eb1b5529e0f13bee000f32913dc24b87c121b2af3557fb898",
+      "bytes": 22954
+    },
+    {
+      "path": "_PROMPTS/Pasted text(20260817-231241).txt",
+      "sha256": "39b6c3ef1ccd555f942802a6589b0dbaa4906497930436e42f210430f8e5fa21",
+      "bytes": 12775
+    },
+    {
+      "path": "_PROMPTS/Pasted text(20260817-232717).txt",
+      "sha256": "a94cf589c4f39e1260af7fee2d7e4c238775949a8a0d64ca504ca2e848b083ad",
+      "bytes": 17994
+    },
+    {
+      "path": "_PROMPTS/SLIPCASE-12.0__FINAL.poml",
+      "sha256": "38c0fb4566bdba851c043ab0a126d0f3dc8027d2207cfb17bad397b44ecfe063",
+      "bytes": 9681
+    },
+    {
+      "path": "_PROMPTS/SLIPCASE-13.1__GOVERNING_PROMPT_RECEIPT.txt",
+      "sha256": "77667fa53dbffedd235907bdb044d45829722e296a273c4a1d3dc13c3f08c01e",
+      "bytes": 777
+    },
+    {
+      "path": "_PROMPTS/SLIPCASE-7.14__VERBATIM.txt",
+      "sha256": "0bf20be76630fae701c6f1d098501371cf3d5451baee8968f111ed11b52421f2",
+      "bytes": 20499
+    },
+    {
+      "path": "_RESOURCES/HARVEST_SES-20260817-01__prediction-markets-education.md",
+      "sha256": "13cf9132e36cc2c9ab93ae3dd69d3d2458841be71f5c30b23c773873f34f0fbd",
+      "bytes": 99532
+    },
+    {
+      "path": "_RESOURCES/Pasted markdown(20260817-204706).md",
+      "sha256": "4c350a579342ec78fd9b2dad22238d98d7f4e1bc0c5f6893c134e3ce9761aa93",
+      "bytes": 33573
+    },
+    {
+      "path": "_RESOURCES/Pasted markdown(20260817-211434).md",
+      "sha256": "4059216e5a9fd58bbe61fe5782f3ca7983a4bbc43300d581db07d3a263be206e",
+      "bytes": 13938
+    },
+    {
+      "path": "_RESOURCES/Pasted markdown(20260817-221341).md",
+      "sha256": "3df2c6c32e1832ee87839f9a74e827e663e7a30e052f1e9459f613fbed5ac2f2",
+      "bytes": 15341
+    },
+    {
+      "path": "_RESOURCES/Pasted markdown(20260817-222807).md",
+      "sha256": "09e6e0b1d09a1ad3e44f253ee8f11e7e635e02ad1f9ed127f379a2581396b958",
+      "bytes": 18619
+    },
+    {
+      "path": "_RESOURCES/Pasted text (2)(20260817-204828).txt",
+      "sha256": "ca2c82d04a1b082de12a1ac6f7d56984d6d435bab7d9a6fc044893a61e239d4e",
+      "bytes": 11424
+    },
+    {
+      "path": "_RESOURCES/Pasted text(20260817-205155).txt",
+      "sha256": "490f42fba3beb55cb54fa55b0ff2057f564c140dbc51559b2bdd956bcad97ab9",
+      "bytes": 11510
+    },
+    {
+      "path": "_RESOURCES/Pasted text(20260817-224544).txt",
+      "sha256": "994531968fd5d4990f61b1559a2c75e7d370b458f9ed7e6ff5085e2867e3391d",
+      "bytes": 17427
+    },
+    {
+      "path": "_RESOURCES/Pasted text(20260817-225809).txt",
+      "sha256": "279c90f92986cc2eb1b5529e0f13bee000f32913dc24b87c121b2af3557fb898",
+      "bytes": 22954
+    },
+    {
+      "path": "_RESOURCES/Pasted text(20260817-225913).txt",
+      "sha256": "279c90f92986cc2eb1b5529e0f13bee000f32913dc24b87c121b2af3557fb898",
+      "bytes": 22954
+    },
+    {
+      "path": "_RESOURCES/boeken2024-performative-dss-causal-domain-shift.pdf",
+      "sha256": "ba6de5961bcac42f0ed3007f8e373b7346acedb55c21a3105b056b453abe4933",
+      "bytes": 477740
+    },
+    {
+      "path": "_RESOURCES/jayaprakash2014-early-alert-open-source-analytics.pdf",
+      "sha256": "2f0d171e875b6f055380909f71b8681053dfbe746c292cd157f09914856ee705",
+      "bytes": 1845441
+    },
+    {
+      "path": "_RESOURCES/kilbertus2020-fair-decisions-imperfect-predictions.pdf",
+      "sha256": "aaa549089e928f58bf77e07066189e445fc33b4c17338ae679164cd146b1e6c3",
+      "bytes": 1718069
+    },
+    {
+      "path": "_RESOURCES/liley2021-model-updating-after-interventions.pdf",
+      "sha256": "cc14947e914d5b5aed39e907966b569d1ee6165eff7cfb567abb3a56c49eddde",
+      "bytes": 702460
+    },
+    {
+      "path": "_RESOURCES/mendler-dunner2022-anticipating-performativity.pdf",
+      "sha256": "43a4d4e070464a16b7d884d07e8210a4c888741f7aab4a8fb0a0abb68a2c50ee",
+      "bytes": 744548
+    },
+    {
+      "path": "_SLIPCASE/ALIASES.json",
+      "sha256": "02bb212b2829716265c93658456288ec188c5ff5f507523e7e7d8fb158ac63fa",
+      "bytes": 843
+    },
+    {
+      "path": "_SLIPCASE/APPEARANCES.jsonl",
+      "sha256": "52025ef49896370590f2b66165469b7a85fd2ac9732390fc91a96c71194dca33",
+      "bytes": 3620
+    },
+    {
+      "path": "_SLIPCASE/LATEX_BUILD.log",
+      "sha256": "ea98ccf702da881716bf72b0688af2bc846a652e04ab58222c1245e4ba2a8f63",
+      "bytes": 24164
+    },
+    {
+      "path": "_SLIPCASE/LINEAGE.jsonl",
+      "sha256": "cfb485635a680bbd45bcd87d0d311f86fb8687519d7e1560cbf250b9fdd270ee",
+      "bytes": 10365
+    },
+    {
+      "path": "_SLIPCASE/MARK.pdf",
+      "sha256": "389678ac3ce58a2a726cfe7e75cb16e4a738aba81a6cd2f25ecb18643ed8ea61",
+      "bytes": 1348
+    },
+    {
+      "path": "_SLIPCASE/NODES.jsonl",
+      "sha256": "6f5a53d6fdfb7c5e65a159ec61d31d79352b379f879cb79e92606dc9740138c9",
+      "bytes": 12781
+    },
+    {
+      "path": "_SLIPCASE/RELATIONS.jsonl",
+      "sha256": "e4b35b31391e1f02ff4ced595d00765b307ec78e9dee72f84fc78453e37daa31",
+      "bytes": 30729
+    },
+    {
+      "path": "_SLIPCASE/VERIFICATION.txt",
+      "sha256": "2dcb5e727789d26b04286b6b13159994bf4a177ccc56b6f69f7f9ffb84348794",
+      "bytes": 2335
+    },
+    {
+      "path": "_SLIPCASE/WIKILINKS.jsonl",
+      "sha256": "5e5fb72fe87e2312cf8c7599e0c5a9605cc16a6732c92bf4e74e0102c8af89c8",
+      "bytes": 26300
+    },
+    {
+      "path": "the-missing-baseline-prediction-intervention-and-the-problem-of-learning-from-changed-outcomes-in-higher-educa__ASSEMBLY_APPENDIX.txt",
+      "sha256": "3544afeafa9e7e77e177d11643ecf41d7eccd6f2a733fe6ab66872e0f5f7f0b7",
+      "bytes": 987
+    },
+    {
+      "path": "the-missing-baseline-prediction-intervention-and-the-problem-of-learning-from-changed-outcomes-in-higher-educa__SOURCE_MAP.txt",
+      "sha256": "d26f9b1742388bd9e73124a737103768b3320331de944108cb794c88a9a0dbf3",
+      "bytes": 1147
+    },
+    {
+      "path": "the-missing-baseline-prediction-intervention-and-the-problem-of-learning-from-changed-outcomes-in-higher-educa__WIP-v13-1__20260817T2034-0400.aux",
+      "sha256": "0dbe372f687ad999de859fed69868187bd863c6054f785b6b6261586a61e7534",
+      "bytes": 3682
+    },
+    {
+      "path": "the-missing-baseline-prediction-intervention-and-the-problem-of-learning-from-changed-outcomes-in-higher-educa__WIP-v13-1__20260817T2034-0400.bbl",
+      "sha256": "92e72bd2e9fb474633f3a9b802c5f6afe8ce33155d483d7dc4ef6061c6560156",
+      "bytes": 23059
+    },
+    {
+      "path": "the-missing-baseline-prediction-intervention-and-the-problem-of-learning-from-changed-outcomes-in-higher-educa__WIP-v13-1__20260817T2034-0400.bcf",
+      "sha256": "1d6cb854712c68fad02cbaa9d85590369ecd6a56b56f66b2984e659dacb8679c",
+      "bytes": 109563
+    },
+    {
+      "path": "the-missing-baseline-prediction-intervention-and-the-problem-of-learning-from-changed-outcomes-in-higher-educa__WIP-v13-1__20260817T2034-0400.blg",
+      "sha256": "5cc5af8090a09847f21bb7303a2b36912502ff7227ad71a34700bfad7ce1f722",
+      "bytes": 1656
+    },
+    {
+      "path": "the-missing-baseline-prediction-intervention-and-the-problem-of-learning-from-changed-outcomes-in-higher-educa__WIP-v13-1__20260817T2034-0400.log",
+      "sha256": "a871add64554c12135748b8e13c09444b4f9c0fa50f14059b595402ebdb15392",
+      "bytes": 31067
+    },
+    {
+      "path": "the-missing-baseline-prediction-intervention-and-the-problem-of-learning-from-changed-outcomes-in-higher-educa__WIP-v13-1__20260817T2034-0400.out",
+      "sha256": "cc75e9748deb92ce9b1152e2bb834845b36b519a5a5243a13f0610422c5fc4f5",
+      "bytes": 1441
+    },
+    {
+      "path": "the-missing-baseline-prediction-intervention-and-the-problem-of-learning-from-changed-outcomes-in-higher-educa__WIP-v13-1__20260817T2034-0400.pdf",
+      "sha256": "13f624d92da4aef0aaeadaf8f450b74916feb49eb35a4c95e5f73a1bc2d1b38d",
+      "bytes": 255844
+    },
+    {
+      "path": "the-missing-baseline-prediction-intervention-and-the-problem-of-learning-from-changed-outcomes-in-higher-educa__WIP-v13-1__20260817T2034-0400.run.xml",
+      "sha256": "f5cec1ae197358718826eb1b0664161f26f831f0e7af23c5869ce595abcaa7aa",
+      "bytes": 3294
+    },
+    {
+      "path": "the-missing-baseline-prediction-intervention-and-the-problem-of-learning-from-changed-outcomes-in-higher-educa__WIP-v13-1__20260817T2034-0400.tex",
+      "sha256": "cce8c98e02352c3437a4526a675e53f6c67867fe5e6751c4e2a3e2399846bb52",
+      "bytes": 9811
+    },
+    {
+      "path": "the-unlived-curriculum__references.bib",
+      "sha256": "60801275c898396e4a384e6f6afd564b4d363298134dfa8a610682f9fe85e3cb",
+      "bytes": 7509
+    }
+  ],
+  "pdf_visual_inspection": "PASS"
+}

@@ -1,0 +1,45 @@
+SOURCE MAP — the-program-is-where-ambiguity-stops
+CHECKPOINT: SLIPCASE-20260817-CLOSURE-01
+STATUS: COMPILER TRACE, NOT PUBLIC EVIDENCE
+
+CLAIM 1 — Executable natural language and interactive specification predate LLM prompting.
+ZETTELS: LIT-WINOGRAD-001, LIT-ACE-011, LIT-SMITH-012, LIT-NAUR-006.
+SOURCES: Winograd 1973; Fuchs & Schwitter 1996; Smith 1993; Naur 1985.
+
+CLAIM 2 — FORMALIZATION and CLOSURE should be distinguished.
+ZETTELS: SHOT-20260817-03, LIT-SUCHMAN-003, LIT-CLARK-005, PF-SEMANTICS-004.
+SOURCES: OpenAI Structured Outputs documentation; Suchman 1985; Clark & Wilkes-Gibbs 1986; working manuscript.
+COMPILER SYNTHESIS: “local closure” is not source vocabulary. It names the transition by which one interpretation or action becomes binding for a particular downstream state change. Formalization can constrain representation without settling semantics; situated interaction can settle a local reference without fully formalizing the surrounding practice.
+
+CLAIM 3 — Historical systems differ in where ambiguity is closed before action.
+ZETTELS: LIT-WINOGRAD-001, LIT-WINOGRAD-002, LIT-ACE-011.
+SOURCES: Winograd 1973; Fuchs & Schwitter 1996.
+COMPILER SYNTHESIS: SHRDLU and ACE are not exclusive types. They make different sites of restriction unusually visible: world/ontology versus admitted language.
+
+CLAIM 4 — Demonstration, repair, and programmer theory allow parts of specification to remain open after the first expression.
+ZETTELS: LIT-SMITH-012, LIT-SUCHMAN-003, LIT-SUCHMAN-004, LIT-CLARK-005, LIT-NAUR-006.
+SOURCES: Smith 1993; Suchman 1985; Clark & Wilkes-Gibbs 1986; Naur 1985.
+
+CLAIM 5 — Contemporary agent stacks implement multiple local closure operators at distinct boundaries.
+ZETTELS: SHOT-20260817-03, SHOT-20260817-05, SHOT-20260817-06, SHOT-20260817-07, SHOT-20260817-08, SHOT-20260817-10, SHOT-20260817-11, SHOT-20260817-12.
+SOURCES: OpenAI Structured Outputs; OpenAI Programmatic Tool Calling; Ta et al. 2026; Pei et al. 2026; Shi et al. 2026; Pan et al. 2026; Serdar & Mertayak 2026; Zhu 2026.
+
+STRANGE STEPPING STONE — THE PROGRAM IS THE TOPOLOGY OF CLOSURE BOUNDARIES.
+STATUS: COMPILER SYNTHESIS.
+SUPPORT: conjunction of Claims 1–5.
+MEANING: what matters is not only where formal representations exist, but where a still-negotiable dimension is forced into a binding state for the next operation: which referent, which legal shape, which procedure, which acceptance criterion, which permission, which active rule, which commit.
+
+CLAIM 6 — Reliable systems should not maximize closure; they should place it in proportion to consequence while preserving live judgment where criteria remain tacit or situation-dependent.
+ZETTELS: PF-CRITERIA-013, PF-SITUATEDNESS-012, PF-RESISTANCE-011, SHOT-20260817-06, SHOT-20260817-11, LIT-SUCHMAN-003, LIT-BROOKS-010.
+SOURCES: working manuscript; Ta et al. 2026; Serdar & Mertayak 2026; Suchman 1985; Brooks 1991.
+COMPILER SYNTHESIS: “consequence-proportional closure” is a paper wager, not a source term.
+
+COUNTEREVIDENCE / RESISTANCE
+- Pygmalion, Naur, and Suchman prevent claiming that post-text specification is new.
+- Structured representation does not guarantee semantic correctness.
+- Reviewer/commit gates can false-hold authorized actions.
+- Tacit evaluative competence may be damaged by premature rubricization.
+- Represented context is not equivalent to ongoing participation in a situation.
+
+BOUNDARY
+The paper does not establish a universal metric of ambiguity, a complete formal calculus of closure, or direct historical influence among the cited traditions. It proposes a comparative and testable design vocabulary. The authorship implication remains an open edge rather than a settled paper claim.

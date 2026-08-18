@@ -1,0 +1,37 @@
+RESEARCH THAT CAN CONTINUE — SOURCE MAP
+
+STATUS: Derived interpretation; paper is not evidence.
+
+CLAIM 1 Continuability is a preservation criterion beyond readability.
+  ZETTELS: Z-SLIP-001, Z-SLIP-012
+  SOURCES: Hartsoe SLIPCASE specification; BagIt; RO-Crate
+
+CLAIM 2 Recursive zettels need invariant object type and external orchestration state.
+  ZETTELS: Z-SLIP-013, Z-SLIP-014
+  SOURCES: Recursive Inquiry; Autonomous Graph Inquiry prompts
+
+CLAIM 3 Evidence can be monotonic while interpretation is nonmonotonic.
+  ZETTELS: Z-SLIP-007, Z-SLIP-015
+  SOURCES: SLIPCASE model/laws
+
+CLAIM 4 Ghosts can steer inquiry but do not support claims.
+  ZETTELS: Z-SLIP-002, Z-SLIP-003, Z-SLIP-017
+  SOURCES: SLIPCASE graph/paper rules
+
+CLAIM 5 Production provenance and evidentiary provenance must be separated.
+  ZETTELS: Z-SLIP-008, Z-SLIP-016
+  SOURCES: SLIPCASE discipline/provenance; W3C PROV / Workflow Run RO-Crate used as scholarly context
+
+CLAIM 6 Deterministic assertions should be computed; completeness is multidimensional.
+  ZETTELS: Z-SLIP-004, Z-SLIP-005
+  SOURCES: SLIPCASE verification laws
+
+CLAIM 7 Filesystem placement can encode recoverability and the checkpoint can be a scholarly form.
+  ZETTELS: Z-SLIP-006, Z-SLIP-011, Z-SLIP-012, Z-SLIP-020
+  SOURCES: SLIPCASE repository/index rules; Git content-addressing used as context
+
+COMPILER CLAIMS / SYNTHESIS:
+  - 'continuable scholarship' is the paper's synthesis from the zettel field.
+  - the distinction between monotonic evidence and nonmonotonic interpretation is formalized by the compiler from Z-SLIP-015.
+  - 'typed epistemic authority' is a synthesis from Z-SLIP-004 and Z-SLIP-017.
+  - 'two provenance graphs' is a synthesis from Z-SLIP-008 and Z-SLIP-016.

@@ -1,0 +1,15 @@
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{hyperref}
+\definecolor{quietgray}{gray}{0.55}
+\AtBeginDocument{%
+\AddToShipoutPictureFG*{%
+  \put(36,22){\makebox[0pt][l]{\scriptsize\color{quietgray}Working Paper · AI-augmented research process}}%
+  \put(560,18){\makebox[0pt][r]{\scriptsize\color{quietgray}$\circ\!\!\raisebox{1pt}{\scriptsize ))}$}}%
+}}
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0.35em}

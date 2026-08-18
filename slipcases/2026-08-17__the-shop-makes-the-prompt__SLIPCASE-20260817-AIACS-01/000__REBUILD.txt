@@ -1,0 +1,17 @@
+REBUILD — SLIPCASE-20260817-AIACS-01
+
+1. Treat every root zettel TXT as evidence payload. Do not edit in place.
+2. Verify each _MD mirror is byte-identical to its root TXT counterpart.
+3. Parse ID, SOURCE, PLATFORM, LINKS, every [[ADDRESS]], and BIBTEX from payloads.
+4. Resolve exact zettel IDs first; unresolved addresses remain GHOSTS. Never fuzzy-merge.
+5. Regenerate ZETTELS.json/jsonl, NODES, RELATIONS, backlinks, MAP, MOCs, reader, network, and cards.
+6. Compile the paper with the bibliography, then verify every paper citekey exists in the .bib.
+7. Preserve the exact assembly instrument in SLIPCASE_FINAL_PROMPT.txt and _PROMPTS/.
+8. Recompute SHA-256 for every file and write a new MANIFEST.
+9. Render the PDF and inspect pages.
+10. Zip the root contents and test the archive.
+
+CURRENT PAPER BUILD
+pandoc the-shop-makes-the-prompt__2026-08-17.md -f markdown+raw_tex -s -t latex --citeproc --bibliography=SLIPCASE-20260817-AIACS-01__references.bib -o the-shop-makes-the-prompt__2026-08-17.tex -V documentclass=article -V papersize=letter -V fontsize=11pt -V geometry:margin=1in -V mainfont='DejaVu Serif' -H _SLIPCASE/paper_header.tex
+xelatex -interaction=nonstopmode -halt-on-error the-shop-makes-the-prompt__2026-08-17.tex
+xelatex -interaction=nonstopmode -halt-on-error the-shop-makes-the-prompt__2026-08-17.tex

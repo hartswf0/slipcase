@@ -1,0 +1,12 @@
+REBUILD
+
+1. Treat every numbered root .txt file as immutable evidence.
+2. Run: python rebuild.py
+3. Confirm rebuilt card count equals root TXT card count.
+4. Parse LINKS and all [[ADDRESSES]] conservatively: exact IDs first; unresolved literals remain ghosts.
+5. Rebuild derived JSON, maps, readers, MOCs, and paper from evidence; never edit cards to repair derived views.
+6. The exact assembly instrument is _PROMPTS/SLIPCASE_v15.55-AM.txt.
+7. The local primary archive is _RESOURCES/Midjourney_prompt_magic_archive_2022.md.
+8. Verify hashes and relations before merge.
+
+The included rebuild.py intentionally reconstructs only the minimal zettel table so that it cannot silently alter interpretive topology. The fuller relation/compiler logic is represented in _SLIPCASE data and this checkpoint’s making history.

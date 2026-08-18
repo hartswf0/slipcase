@@ -1,0 +1,63 @@
+VERIFICATION — PROMOTION-FIELD-20260818-74d74484bfdd
+
+SOURCE / CONTEXT COVERAGE
+- 24 zettels admitted from the two visible forage rounds in the active thread.
+- 4 user-provided attachment artifacts copied to _RESOURCES/.
+- Boundary: no claim of complete historical-chat or Library coverage.
+
+EXTRACTION / PAYLOAD IDENTITY
+- admitted zettels: 24
+- root zettel TXT: 24
+- _MD mirrors: 24
+- JSON records: 24
+- byte-different mirrors: 0 []
+
+DUPLICATES / ID COLLISIONS
+- exact packaged payload hashes unique: 24/24
+- original-ID collisions: NONE
+
+PLATFORM / LINKS / WIKILINKS
+- PLATFORM occurrences: 24
+- MEMBER_OF records: 24
+- LINKS occurrences: 72
+- LINKS_TO records: 72
+- all [[ADDRESS]] occurrences: 116
+- WIKILINKS_TO classified address records: 116
+
+GRAPH
+- node records: 109
+- relation records including derived backlinks: 400
+- zettel nodes: 24
+- platform nodes: 24
+- ghost nodes: 61
+
+BIBLIOGRAPHY
+- compiled citekeys: 29
+- SOURCE_MAP citekeys: 18
+- SOURCE_MAP citekeys missing from bibliography: NONE
+- External comparison sources used by paper: W3C PROV-DM and official Git Objects documentation. Bodies are LINK_ONLY, not locally snapshotted.
+
+PROMPT PRESERVATION
+- SLIPCASE_FINAL_PROMPT.txt SHA-256: 78b75bdd3421b2d75f4b068aacea16d926e5bcd4051f235bae15e3e4f9c37612
+- consequential prompt/source copies present under _PROMPTS/ and _RESOURCES/.
+
+PAPER
+- PDF compiled: YES
+- PDF pages: 6
+- LaTeX undefined-reference/citation warning detected: NO
+- visual rendering: 6 pages rendered to PNG and inspected as a contact sheet during assembly; no clipping/overlap/missing-page defect observed.
+- first-page-only disclosure present; no repeated disclosure on later pages.
+
+INDEX / RECONSTRUCTION
+- index.html self-contained data: 24 card payloads + paper + ghosts + resource manifest.
+- no framework/CDN/external font/network dependency required for preserved content.
+- REBUILD and RETURN_PATH present.
+
+ZIP STATUS
+- Intended archive: SLIPCASE__PROMOTION_FIELD__2026-08-18__74d74484bfdd.zip
+- VERIFIED during final assembly with Python zipfile.testzip() and `unzip -t`; both returned clean before delivery.
+
+GAPS
+- Card payloads were reconstructed from the active transcript available to the model rather than exported by a conversation API.
+- External source bodies were not exhaustively snapshotted.
+- No human peer review is claimed.

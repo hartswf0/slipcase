@@ -1,0 +1,89 @@
+PAPER SOURCE MAP
+
+TITLE: The Prompt Is Not the Program: Execution Lineage and the New Unit of Prompt Practice
+CHECKPOINT: SLIPCASE-20260817T2039-0400-304d480a176f
+
+CLAIM: Core thesis: visible prompt is insufficient provenance
+  ZETTEL: [[DEFAULT-IMAGES-CHI26-B]]
+  SOURCE: Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender — “An Exploration of Default Images in Text-to-Image Generation” — CHI ’26 — 2026 — https://doi.org/10.1145/3772318.3790681
+  CITEKEY: Simonen2026DefaultImages
+  ZETTEL: [[DEFAULT-IMAGES-CHI26-B-1]]
+  SOURCE: OpenAI — “DALL·E 3” — 2023 — https://openai.com/index/dall-e-3/
+  CITEKEY: OpenAI2023DALLE3
+  ZETTEL: [[WORKWORDS-PROMPT-004]]
+  SOURCE: Omar Khattab et al. — “DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines” — 2023 — arXiv:2310.03714
+  CITEKEY: Khattab2023DSPy
+  ZETTEL: [[WORKWORDS-PROMPT-002]]
+  SOURCE: Guanghui Qin and Jason Eisner — “Learning How to Ask: Querying LMs with Mixtures of Soft Prompts” — 2021 — arXiv:2104.06599
+  CITEKEY: QinEisner2021SoftPrompts
+  COMPILER SYNTHESIS: YES — relation/argument assembled across cards, not inherited as one source claim.
+
+CLAIM: Successful generation can coexist with semantic failure
+  ZETTEL: [[DEFAULT-IMAGES-CHI26-ROOT]]
+  SOURCE: Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender — “An Exploration of Default Images in Text-to-Image Generation” — CHI ’26 — 2026 — https://doi.org/10.1145/3772318.3790681
+  CITEKEY: Simonen2026DefaultImages
+  ZETTEL: [[DEFAULT-IMAGES-CHI26-A]]
+  SOURCE: Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender — “An Exploration of Default Images in Text-to-Image Generation” — CHI ’26 — 2026 — https://doi.org/10.1145/3772318.3790681
+  CITEKEY: Simonen2026DefaultImages
+  COMPILER SYNTHESIS: YES — relation/argument assembled across cards, not inherited as one source claim.
+
+CLAIM: Rewriting can occur before image generation
+  ZETTEL: [[DEFAULT-IMAGES-CHI26-B-1]]
+  SOURCE: OpenAI — “DALL·E 3” — 2023 — https://openai.com/index/dall-e-3/
+  CITEKEY: OpenAI2023DALLE3
+  COMPILER SYNTHESIS: YES — relation/argument assembled across cards, not inherited as one source claim.
+
+CLAIM: Prompts can be compiler output
+  ZETTEL: [[WORKWORDS-PROMPT-004]]
+  SOURCE: Omar Khattab et al. — “DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines” — 2023 — arXiv:2310.03714
+  CITEKEY: Khattab2023DSPy
+  COMPILER SYNTHESIS: YES — relation/argument assembled across cards, not inherited as one source claim.
+
+CLAIM: Conditioning can exceed readable language
+  ZETTEL: [[WORKWORDS-PROMPT-002]]
+  SOURCE: Guanghui Qin and Jason Eisner — “Learning How to Ask: Querying LMs with Mixtures of Soft Prompts” — 2021 — arXiv:2104.06599
+  CITEKEY: QinEisner2021SoftPrompts
+  ZETTEL: [[DEFAULT-IMAGES-CHI26-F-2]]
+  SOURCE: Raphaël Millière — “Adversarial Attacks on Image Generation With Made-Up Words” — 2022 — https://arxiv.org/abs/2208.04135
+  CITEKEY: Milliere2022MadeUpWords
+  ZETTEL: [[DEFAULT-IMAGES-CHI26-F-1]]
+  SOURCE: Lukas Struppek, Dominik Hintersdorf, Felix Friedrich, Manuel Brack, Patrick Schramowski, and Kristian Kersting — “Exploiting Cultural Biases via Homoglyphs in Text-to-Image Synthesis” — Journal of Artificial Intelligence Research 78 — 2023 — https://arxiv.org/abs/2209.08891
+  CITEKEY: Struppek2023Homoglyphs
+  COMPILER SYNTHESIS: YES — relation/argument assembled across cards, not inherited as one source claim.
+
+CLAIM: Revision can be automated and self-referential
+  ZETTEL: [[WORKWORDS-PROMPT-005]]
+  SOURCE: Reid Pryzant, Dan Iter, Jerry Li, Yin Tat Lee, Chenguang Zhu, and Michael Zeng — “Automatic Prompt Optimization with ‘Gradient Descent’ and Beam Search” — EMNLP 2023 — arXiv:2305.03495
+  CITEKEY: Pryzant2023APO
+  ZETTEL: [[WORKWORDS-PROMPT-006]]
+  SOURCE: Chrisantha Fernando, Dylan Banarse, Henryk Michalewski, Simon Osindero, and Tim Rocktäschel — “Promptbreeder: Self-Referential Self-Improvement Via Prompt Evolution” — 2023 — arXiv:2309.16797
+  CITEKEY: Fernando2023Promptbreeder
+  COMPILER SYNTHESIS: YES — relation/argument assembled across cards, not inherited as one source claim.
+
+CLAIM: Omission can be operational
+  ZETTEL: [[WORKWORDS-PROMPT-003]]
+  SOURCE: Chenyang Yang, Yike Shi, Qianou Ma, Michael Xieyang Liu, Christian Kästner, and Tongshuang Wu — “What Prompts Don’t Say: Understanding and Managing Underspecification in LLM Prompts” — 2025 — arXiv:2505.13360
+  CITEKEY: Yang2025PromptsDontSay
+  COMPILER SYNTHESIS: YES — relation/argument assembled across cards, not inherited as one source claim.
+
+CLAIM: Prompt research should be contrastive
+  ZETTEL: [[WORKWORDS-PROMPT-008]]
+  SOURCE: Ian Arawjo, Chelse Swoopes, Priyan Vaithilingam, Martin Wattenberg, and Elena L. Glassman — “ChainForge: A Visual Toolkit for Prompt Engineering and LLM Hypothesis Testing” — 2023 — arXiv:2309.09128; subsequently CHI 2024.
+  CITEKEY: Arawjo2023ChainForge
+  ZETTEL: [[DEFAULT-IMAGES-CHI26-E]]
+  SOURCE: Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender — “An Exploration of Default Images in Text-to-Image Generation” — CHI ’26 — 2026 — https://doi.org/10.1145/3772318.3790681
+  CITEKEY: Simonen2026DefaultImages
+  COMPILER SYNTHESIS: YES — relation/argument assembled across cards, not inherited as one source claim.
+
+CLAIM: Mechanistic alternatives remain unresolved
+  ZETTEL: [[DEFAULT-IMAGES-CHI26-A-1]]
+  SOURCE: Aishwarya Agarwal, Srikrishna Karanam, K J Joseph, Apoorv Saxena, Koustava Goswami, and Balaji Vasan Srinivasan — “A-STAR: Test-time Attention Segregation and Retention for Text-to-image Synthesis” — ICCV 2023 — https://arxiv.org/abs/2306.14544
+  CITEKEY: Agarwal2023ASTAR
+  ZETTEL: [[DEFAULT-IMAGES-CHI26-C-1]]
+  SOURCE: Jiafeng Mao, Xueting Wang, and Kiyoharu Aizawa — “Guided Image Synthesis via Initial Image Editing in Diffusion Model” — 2023 — https://arxiv.org/abs/2305.03382
+  CITEKEY: Mao2023InitialImageEditing
+  ZETTEL: [[DEFAULT-IMAGES-CHI26-E-1]]
+  SOURCE: Neil Chowdhury, Franklin Wang, Sumedh Shenoy, Douwe Kiela, Sarah Schwettmann, and Tristan Thrush — “Nearest Neighbor Normalization Improves Multimodal Retrieval” — 2024 — https://arxiv.org/abs/2410.24114
+  CITEKEY: Chowdhury2024NNN
+  COMPILER SYNTHESIS: YES — relation/argument assembled across cards, not inherited as one source claim.
+

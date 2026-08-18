@@ -1,0 +1,18 @@
+REBUILD — SES-20260817-234319-a5ef0e2e
+
+CANONICAL INPUTS
+1. Every numbered root zettel TXT payload (identity = exact SHA-256).
+2. _RESOURCES/corrected_elements_platforms_table.csv (SHA-256 7dc084c12811558a5134419a46bdea76f837f80a3d96e21127b66747c7d5a8ab).
+3. _PROMPTS/SLIPCASE_v15.55-AM.txt (SHA-256 a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a).
+4. _PROMPTS/PRIME_ZETTEL_FORAGE_v3.0.txt (SHA-256 ca2c82d04a1b082de12a1ac6f7d56984d6d435bab7d9a6fc044893a61e239d4e).
+
+REBUILD ORDER
+1. Verify input hashes against _SLIPCASE/MANIFEST.json.
+2. Parse zettel fields without altering payloads.
+3. Parse every PLATFORM, LINKS entry, and [[ADDRESS]].
+4. Resolve exact zettel IDs and exact unique platform IDs; preserve collisions and unknown targets.
+5. Regenerate machine records, backlinks, MOCs, views, bibliography, and reader.
+6. Treat the paper as a revisable current wager, not evidence.
+7. Run _SLIPCASE/REBUILD.py for immutable-card and mirror checks.
+
+The package intentionally does not claim deterministic regeneration of interpretive prose from evidence alone. The exact assembly prompt is preserved so a later model/researcher can reconstruct and critique that interpretive step.

@@ -1,0 +1,749 @@
+{
+  "checkpoint": "SLIPCASE-20260817-AIACS-01",
+  "schema": "15.55-AM",
+  "date": "2026-08-17",
+  "hash_algorithm": "SHA-256",
+  "scope_note": "Manifest hashes all package files except MANIFEST.json itself, the standalone index capsule, and VERIFICATION.txt; the latter two hashes are recorded in VERIFICATION after finalization.",
+  "files": [
+    {
+      "path": "000__BIBLIOGRAPHY.html",
+      "bytes": 6109,
+      "sha256": "c447e0a47f72f44a091abb082232b43d290a48319768e309cca55c1e355f95cc"
+    },
+    {
+      "path": "000__BIBLIOGRAPHY.txt",
+      "bytes": 5924,
+      "sha256": "43c41342ce6c6dcb1a075b6cf8c272d85361c4383be4fe8474bf8ae75e981823"
+    },
+    {
+      "path": "000__INDEX.txt",
+      "bytes": 931,
+      "sha256": "04a4b3049ed09350d2454cdda00ba2fbd6dfa004a76c4072dfbd5f1bcec90519"
+    },
+    {
+      "path": "000__MAKING_HISTORY.txt",
+      "bytes": 2564,
+      "sha256": "cfc0dfb6a811a3a8a46a33bbde2d1e1c1a16dba4a84ae5269bc5579638c46fc7"
+    },
+    {
+      "path": "000__MAP.txt",
+      "bytes": 3532,
+      "sha256": "13be5586bfdca2cbcc8f0d22733d23f52d88c4c1ddc47d38ccb7e4eee82c9c45"
+    },
+    {
+      "path": "000__OPEN_EDGES.txt",
+      "bytes": 34901,
+      "sha256": "91ebb80acbfcd8142cfb4307a53618879962f61c9d5d9614d5899e27c5807f7a"
+    },
+    {
+      "path": "000__PROMPTS.txt",
+      "bytes": 204,
+      "sha256": "91518175e6e4316b368a98061faeb11735718288171577c95fa9d2ba8fdf4039"
+    },
+    {
+      "path": "000__REBUILD.txt",
+      "bytes": 1328,
+      "sha256": "8fa789a378593329e0492dc482ba0afb0182910851fa681914aefb9581792eb9"
+    },
+    {
+      "path": "000__RESOURCES.txt",
+      "bytes": 3448,
+      "sha256": "582decb7c0cdc2109c65c0084958f867d3edf034a5197835c04ef3d4e04247be"
+    },
+    {
+      "path": "000__RETURN_PATH.txt",
+      "bytes": 657,
+      "sha256": "c6d21538d34eb20f61b2abe24a7fef16b9b91af519197ca4b07cb20b48b7e4f4"
+    },
+    {
+      "path": "000__START_HERE.txt",
+      "bytes": 898,
+      "sha256": "0d973dfb9dfec3ae6ce215dc8e9fad214688eceaabfdcdf19f0fb35fc8836ae4"
+    },
+    {
+      "path": "000__WEB_VERIFICATION.txt",
+      "bytes": 2125,
+      "sha256": "255b410df2ebb6874a3705c85ad07dd7808c0d9ce7be5c44d84c307901460d3d"
+    },
+    {
+      "path": "001__complementary-lenses-may-be-where-the-paper-stops-thinking__MULTISOURCE__Z-AIACS-001__from-chat.txt",
+      "bytes": 3012,
+      "sha256": "74db86b06cc30bb8d2d8f1e7b11181936c6c9a472f55bf6d1a1d601c2be62cd4"
+    },
+    {
+      "path": "002__ai-art-may-be-too-large-an-object-for-a-geertzian-analysis__AIACS__Z-AIACS-002__from-chat.txt",
+      "bytes": 2780,
+      "sha256": "6d3bbbd8f46c137fdac29f0773c4f0ea624027b9dbd740f23ce45e175c5a51eb"
+    },
+    {
+      "path": "003__an-ai-aesthetic-may-be-a-population-distribution-mistaken-for-a-machin__AIACS__Z-AIACS-003__from-chat.txt",
+      "bytes": 2624,
+      "sha256": "0a56fcac1f7dec1cf7f2025c453cc95413324c1b9701bf4fb387b63c8ee20123"
+    },
+    {
+      "path": "004__the-default-may-be-a-hidden-coauthor__AIACS__Z-AIACS-004__from-chat.txt",
+      "bytes": 2571,
+      "sha256": "87547f0eea70fb031174356a48e3ff19564f2103eabc5774f855bab296f8e9a5"
+    },
+    {
+      "path": "005__prompt-craft-may-be-a-vernacular-before-it-is-a-language__AIACS__Z-AIACS-005__from-chat.txt",
+      "bytes": 2571,
+      "sha256": "153dd98e7ad837a5f461d93605316fb15589f7f2a61d2d9365c3d3beca2851c2"
+    },
+    {
+      "path": "006__the-minority-prompt-makes-bias-correction-a-user-operation__AIACS__Z-AIACS-006__from-chat.txt",
+      "bytes": 2652,
+      "sha256": "ed3f7af22e690a6a1e1a8f25f1786fbbdf543af796111e0bd9c637efc2abe04c"
+    },
+    {
+      "path": "007__a-better-model-could-make-a-synthetic-archive-ethically-worse__AIACS__Z-AIACS-007__from-chat.txt",
+      "bytes": 2495,
+      "sha256": "44cabe95e9997dba61fb23836e1960f66c700f2fb7caf3b67af0a4c1faf701d5"
+    },
+    {
+      "path": "008__the-implied-author-may-become-a-diagnostic-error-rather-than-an-author__AIACS__Z-AIACS-008__from-chat.txt",
+      "bytes": 2561,
+      "sha256": "389518cf79ddd963d5b92468b01cc3bf68cd80158e9ced3137c688267f01d2a7"
+    },
+    {
+      "path": "009__distributed-authorship-is-too-blunt-generation-contains-different-kind__AIACS__Z-AIACS-009__from-chat.txt",
+      "bytes": 2581,
+      "sha256": "29b5ae5030d8fd34b42409c4152a37f2b286245f2dbcfcc5ca4071ac97877779"
+    },
+    {
+      "path": "010__feedback-is-not-yet-autopoiesis__AIACS__Z-AIACS-010__from-chat.txt",
+      "bytes": 2507,
+      "sha256": "3eda5332bfd3b7bae3d878fd7963a5f8bf45e087232eee77b4f12550a304942a"
+    },
+    {
+      "path": "011__randomness-is-not-the-same-thing-as-difference__AIACS__Z-AIACS-011__from-chat.txt",
+      "bytes": 2485,
+      "sha256": "0528ac3c0406c749e8c77aec48c04288c3b2206e5f3535e6920625f687bf9691"
+    },
+    {
+      "path": "012__semantic-nonsense-can-turn-interpretation-itself-into-the-artwork-s-ob__AIACS__Z-AIACS-012__from-chat.txt",
+      "bytes": 2515,
+      "sha256": "9bf9015bd85fd51dc3d8e3a6a65387533357b17873e387c354d2f2f6ad55fcf8"
+    },
+    {
+      "path": "013__the-body-can-function-as-a-query-operator__AIACS__Z-AIACS-013__from-chat.txt",
+      "bytes": 2495,
+      "sha256": "37426fdd436fb74977142169c9a5072345217af9f193bd28ccd05e9676bfc5c7"
+    },
+    {
+      "path": "014__a-generative-narrative-may-need-to-be-read-as-a-rule-for-producing-sto__AIACS__Z-AIACS-014__from-chat.txt",
+      "bytes": 2556,
+      "sha256": "28f9a2c908fa65a1babd315eb88857089f6482cce8e76c9ab366ec73777be90d"
+    },
+    {
+      "path": "015__prompting-is-ritual-remains-an-analogy-until-we-find-its-sanctions__AIACS__Z-AIACS-015__from-chat.txt",
+      "bytes": 2519,
+      "sha256": "0539e9ccbb02c61f079b9721b77cfda78e2a6cdd138079f402b9a3f1441af9f5"
+    },
+    {
+      "path": "016__the-prompt-may-be-less-interesting-than-the-correction__AIACS__Z-AIACS-016__from-chat.txt",
+      "bytes": 2557,
+      "sha256": "9d6d3eed4352ca203adb81e1bcae729b3b48bf8a51f310cc9a70152677601cfb"
+    },
+    {
+      "path": "017__meaning-in-use-splits-when-use-also-changes-what-the-system-can-do__AIACS__Z-AIACS-017__from-chat.txt",
+      "bytes": 2559,
+      "sha256": "45e044701b5418cfffa90fbc59d341d4f38b60660e9c9922fac6d84a8acb21e2"
+    },
+    {
+      "path": "018__the-strongest-platform-claim-in-the-paper-is-also-one-of-its-least-dem__AIACS__Z-AIACS-018__from-chat.txt",
+      "bytes": 2579,
+      "sha256": "c0ff07eea88ca32ddb4cb7c96747b05f79a13c3254819c4446d18c4b8fba012e"
+    },
+    {
+      "path": "019__the-battle-of-metaphors-may-be-a-battle-over-who-is-allowed-to-act__AIACS__Z-AIACS-019__from-chat.txt",
+      "bytes": 2666,
+      "sha256": "6b076377c3bbd210bb45112d683bb1aee231e0380cf90f827d936d1c3fe3176f"
+    },
+    {
+      "path": "020__the-real-object-may-be-the-path-by-which-an-image-became-possible__AIACS__Z-AIACS-020__from-chat.txt",
+      "bytes": 2772,
+      "sha256": "59f34cab8fbe1ca3cd9f0b0da47bd5e9de477c1e99208c2b298bf00e94b487cc"
+    },
+    {
+      "path": "021__a-default-image-can-be-a-semantic-fallback-rather-than-an-interface-de__SOURCE__Z-RF-20260817-001__from-chat.txt",
+      "bytes": 4362,
+      "sha256": "7e494779e720e584aeead35230cddabd19ddec7dcaa3eda95346e9e3e70a70b4"
+    },
+    {
+      "path": "022__the-users-prompt-may-not-be-the-prompt-the-model-receives__SOURCE__Z-RF-20260817-002__from-chat.txt",
+      "bytes": 3671,
+      "sha256": "014fdf9834b45c32776954c37c2d64112605bab463c2ceb350407f31e28f64ce"
+    },
+    {
+      "path": "023__interfaces-can-suppress-exploration-before-ranking-ever-begins__SOURCE__Z-RF-20260817-003__from-chat.txt",
+      "bytes": 3968,
+      "sha256": "7b82db4f72f3c06d15481c6e958c5221c22875fff428e4af8a8b252ecd1ddb1a"
+    },
+    {
+      "path": "024__prompt-vocabulary-is-operational-because-modifiers-are-learned-as-prob__SOURCE__Z-RF-20260817-004__from-chat.txt",
+      "bytes": 3746,
+      "sha256": "f9d6bcfaa37df2a90088d0c5d2caeb411baa8995585d95629b5664df9e06d91b"
+    },
+    {
+      "path": "025__trial-and-error-is-not-noise-around-prompting-it-is-part-of-the-intera__SOURCE__Z-RF-20260817-005__from-chat.txt",
+      "bytes": 3683,
+      "sha256": "40d2fe77e92ec797c8280a437e336bafad72d1b65c37e34875509d4ac61940e0"
+    },
+    {
+      "path": "026__the-minority-prompt-corrects-downstream-while-the-bias-remains-upstrea__SOURCE__Z-RF-20260817-006__from-chat.txt",
+      "bytes": 3941,
+      "sha256": "c9903d4ee7f991aee4707e3ac167ad3ba1598fbb911dab92180bd9b96bd6aabf"
+    },
+    {
+      "path": "027__in-rivass-archive-error-is-an-ethical-boundary-not-merely-an-aesthetic__SOURCE__Z-RF-20260817-007__from-chat.txt",
+      "bytes": 3567,
+      "sha256": "d9af609b55719d494f828b7ab51f351faba71e29f2887398b7a1471a420bd3ac"
+    },
+    {
+      "path": "028__the-ai-look-may-be-a-social-average-rendered-through-a-model__SOURCE__Z-RF-20260817-008__from-chat.txt",
+      "bytes": 3487,
+      "sha256": "5c9bfc56291c8f169cfcb613424e5e0c5ad380ee6dc25c215615ff2f0f4ddefe"
+    },
+    {
+      "path": "029__geertz-shifts-the-unit-of-analysis-from-the-artwork-to-the-equipment-f__SOURCE__Z-RF-20260817-009__from-chat.txt",
+      "bytes": 3368,
+      "sha256": "acaedb2055d5e34ac57e3070bbb1046b7508f3dd5d5217bbde51e2caacfcdcac"
+    },
+    {
+      "path": "030__autopoiesis-requires-self-production-not-merely-recursive-adjustment__SOURCE__Z-RF-20260817-010__from-chat.txt",
+      "bytes": 3754,
+      "sha256": "ddf187dea26beca429ea5f3f400bcf03fc6b4884a29517113f34bd385151273c"
+    },
+    {
+      "path": "031__elizas-apparent-conversational-agency-can-be-decomposed-into-small-sym__SOURCE__Z-RF-20260817-011__from-chat.txt",
+      "bytes": 4069,
+      "sha256": "af4066e0e01f0da27ca2972f42bceae58d6b179f7de5197b9d446404544f73fa"
+    },
+    {
+      "path": "032__a-prompt-may-address-the-archive-of-descriptions-more-than-the-picture__SOURCE__Z-RF-20260818-012__from-chat.txt",
+      "bytes": 4196,
+      "sha256": "abaf6154d65d5f957d082f38bedd3ddad98f206c7f348d732c32e8da5c24f068"
+    },
+    {
+      "path": "033__a-stable-prompt-ritual-can-preserve-a-false-causal-theory__SOURCE__Z-RF-20260818-013__from-chat.txt",
+      "bytes": 3683,
+      "sha256": "aa76f290f98d359c5b397b0a432707e86ee3880d31ef7710e989be4577923239"
+    },
+    {
+      "path": "034__the-shop-that-makes-aesthetic-competence-can-contain-trade-secrets__MULTISOURCE__Z-RF-20260818-014__from-chat.txt",
+      "bytes": 3763,
+      "sha256": "15712929dedd1c00fc2329ede6ce9b09807c74b3b267b1468cfeb48f30c2ef46"
+    },
+    {
+      "path": "035__body-prompting-falsifies-prompt-equals-text-without-proving-body-equal__SOURCE__Z-RF-20260818-015__from-chat.txt",
+      "bytes": 3626,
+      "sha256": "8549835db1e1b2986676445b176e10868c9c972242eacfde3dd41ff7c1cc929d"
+    },
+    {
+      "path": "036__turners-operator-and-a-computational-prompt-operate-on-different-kinds__MULTISOURCE__Z-RF-20260818-016__from-chat.txt",
+      "bytes": 4061,
+      "sha256": "f3f12cba3413bdfd54da761c5d113f0a486bfd03ad52e1f0b0b2a9b0e0cae241"
+    },
+    {
+      "path": "037__talking-about-ai-art-can-become-part-of-the-machinery-that-makes-the-n__SOURCE__Z-RF-20260818-017__from-chat.txt",
+      "bytes": 3578,
+      "sha256": "aa67a2c07867df584a1ad7e1935d423aba5f00f164e8af70f1b5875760ebd780"
+    },
+    {
+      "path": "038__sontag-asks-for-descriptive-rather-than-prescriptive-form-language-jus__MULTISOURCE__Z-RF-20260818-018__from-chat.txt",
+      "bytes": 4230,
+      "sha256": "9c0c717983da53c5ba90c68936114dc3bc056212763f53678e44458292718265"
+    },
+    {
+      "path": "039__putting-edo-period-in-a-prompt-is-not-yet-cultural-context__MULTISOURCE__Z-RF-20260818-019__from-chat.txt",
+      "bytes": 4379,
+      "sha256": "ce93eefa8629d2dcbc8d3859a9a8070931517a88ea81a54b0a4749dd77ded182"
+    },
+    {
+      "path": "040__the-most-geertzian-object-may-be-the-distinction-a-practitioner-learns__MULTISOURCE__Z-RF-20260818-020__from-chat.txt",
+      "bytes": 4423,
+      "sha256": "eed9b96d4291c5815e810250b4eb88b611fe0834c0635b8d949226197f56fa99"
+    },
+    {
+      "path": "CARDS.html",
+      "bytes": 138018,
+      "sha256": "ef110603a6eea987196adc152867c93a4e110de516afed5b50a3a72b15579dd3"
+    },
+    {
+      "path": "MARK.svg",
+      "bytes": 394,
+      "sha256": "2cbb3fdfdc0f2c9739841df1e98e74c031cc9f0b459bf41445b93e5266bcb18a"
+    },
+    {
+      "path": "NETWORK.html",
+      "bytes": 450,
+      "sha256": "e51a854d4542c12c78a8865e4fd98a9ac42d75f1e65bb8ed6fdaaaea369eca36"
+    },
+    {
+      "path": "NETWORK.svg",
+      "bytes": 21028,
+      "sha256": "34f9af02ad70aed7a1dbefbe8add6bf3a9a50675b5146197917c09cdfdd52201"
+    },
+    {
+      "path": "READER.html",
+      "bytes": 159343,
+      "sha256": "4625729970202b27e76de14ef06a0e32d0539c5bb36d0e37645ac13cc9849df9"
+    },
+    {
+      "path": "SLIPCASE-20260817-AIACS-01__references.bib",
+      "bytes": 4412,
+      "sha256": "5f992342d938c28082b6b492693534f592255be29ba152b3ee67f06e07f081b0"
+    },
+    {
+      "path": "SLIPCASE_FINAL_PROMPT.txt",
+      "bytes": 20086,
+      "sha256": "a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a"
+    },
+    {
+      "path": "ZETTELS.json",
+      "bytes": 170555,
+      "sha256": "9708745c158f3bb8e1748edf5a0ce07da4ca3828dd24ec50deaf04220447dc94"
+    },
+    {
+      "path": "ZETTELS.jsonl",
+      "bytes": 165699,
+      "sha256": "6f7ed351f7395c04ed5868a3666eaad75e09a362ced292e3fdb6267d219ac36c"
+    },
+    {
+      "path": "ZETTELS.txt",
+      "bytes": 134091,
+      "sha256": "bcc909766ac55bde9f908edde74a52854e2f5166f02d4dc3cc9433aa5ae4bfab"
+    },
+    {
+      "path": "_ARRANGEMENTS/01__paper-trail.txt",
+      "bytes": 241,
+      "sha256": "7c69891fdef08f5fdd071cb89ce11efefd5652a19b44a9446019f36d14a1d8c2"
+    },
+    {
+      "path": "_MD/001__complementary-lenses-may-be-where-the-paper-stops-thinking__MULTISOURCE__Z-AIACS-001__from-chat.md",
+      "bytes": 3012,
+      "sha256": "74db86b06cc30bb8d2d8f1e7b11181936c6c9a472f55bf6d1a1d601c2be62cd4"
+    },
+    {
+      "path": "_MD/002__ai-art-may-be-too-large-an-object-for-a-geertzian-analysis__AIACS__Z-AIACS-002__from-chat.md",
+      "bytes": 2780,
+      "sha256": "6d3bbbd8f46c137fdac29f0773c4f0ea624027b9dbd740f23ce45e175c5a51eb"
+    },
+    {
+      "path": "_MD/003__an-ai-aesthetic-may-be-a-population-distribution-mistaken-for-a-machin__AIACS__Z-AIACS-003__from-chat.md",
+      "bytes": 2624,
+      "sha256": "0a56fcac1f7dec1cf7f2025c453cc95413324c1b9701bf4fb387b63c8ee20123"
+    },
+    {
+      "path": "_MD/004__the-default-may-be-a-hidden-coauthor__AIACS__Z-AIACS-004__from-chat.md",
+      "bytes": 2571,
+      "sha256": "87547f0eea70fb031174356a48e3ff19564f2103eabc5774f855bab296f8e9a5"
+    },
+    {
+      "path": "_MD/005__prompt-craft-may-be-a-vernacular-before-it-is-a-language__AIACS__Z-AIACS-005__from-chat.md",
+      "bytes": 2571,
+      "sha256": "153dd98e7ad837a5f461d93605316fb15589f7f2a61d2d9365c3d3beca2851c2"
+    },
+    {
+      "path": "_MD/006__the-minority-prompt-makes-bias-correction-a-user-operation__AIACS__Z-AIACS-006__from-chat.md",
+      "bytes": 2652,
+      "sha256": "ed3f7af22e690a6a1e1a8f25f1786fbbdf543af796111e0bd9c637efc2abe04c"
+    },
+    {
+      "path": "_MD/007__a-better-model-could-make-a-synthetic-archive-ethically-worse__AIACS__Z-AIACS-007__from-chat.md",
+      "bytes": 2495,
+      "sha256": "44cabe95e9997dba61fb23836e1960f66c700f2fb7caf3b67af0a4c1faf701d5"
+    },
+    {
+      "path": "_MD/008__the-implied-author-may-become-a-diagnostic-error-rather-than-an-author__AIACS__Z-AIACS-008__from-chat.md",
+      "bytes": 2561,
+      "sha256": "389518cf79ddd963d5b92468b01cc3bf68cd80158e9ced3137c688267f01d2a7"
+    },
+    {
+      "path": "_MD/009__distributed-authorship-is-too-blunt-generation-contains-different-kind__AIACS__Z-AIACS-009__from-chat.md",
+      "bytes": 2581,
+      "sha256": "29b5ae5030d8fd34b42409c4152a37f2b286245f2dbcfcc5ca4071ac97877779"
+    },
+    {
+      "path": "_MD/010__feedback-is-not-yet-autopoiesis__AIACS__Z-AIACS-010__from-chat.md",
+      "bytes": 2507,
+      "sha256": "3eda5332bfd3b7bae3d878fd7963a5f8bf45e087232eee77b4f12550a304942a"
+    },
+    {
+      "path": "_MD/011__randomness-is-not-the-same-thing-as-difference__AIACS__Z-AIACS-011__from-chat.md",
+      "bytes": 2485,
+      "sha256": "0528ac3c0406c749e8c77aec48c04288c3b2206e5f3535e6920625f687bf9691"
+    },
+    {
+      "path": "_MD/012__semantic-nonsense-can-turn-interpretation-itself-into-the-artwork-s-ob__AIACS__Z-AIACS-012__from-chat.md",
+      "bytes": 2515,
+      "sha256": "9bf9015bd85fd51dc3d8e3a6a65387533357b17873e387c354d2f2f6ad55fcf8"
+    },
+    {
+      "path": "_MD/013__the-body-can-function-as-a-query-operator__AIACS__Z-AIACS-013__from-chat.md",
+      "bytes": 2495,
+      "sha256": "37426fdd436fb74977142169c9a5072345217af9f193bd28ccd05e9676bfc5c7"
+    },
+    {
+      "path": "_MD/014__a-generative-narrative-may-need-to-be-read-as-a-rule-for-producing-sto__AIACS__Z-AIACS-014__from-chat.md",
+      "bytes": 2556,
+      "sha256": "28f9a2c908fa65a1babd315eb88857089f6482cce8e76c9ab366ec73777be90d"
+    },
+    {
+      "path": "_MD/015__prompting-is-ritual-remains-an-analogy-until-we-find-its-sanctions__AIACS__Z-AIACS-015__from-chat.md",
+      "bytes": 2519,
+      "sha256": "0539e9ccbb02c61f079b9721b77cfda78e2a6cdd138079f402b9a3f1441af9f5"
+    },
+    {
+      "path": "_MD/016__the-prompt-may-be-less-interesting-than-the-correction__AIACS__Z-AIACS-016__from-chat.md",
+      "bytes": 2557,
+      "sha256": "9d6d3eed4352ca203adb81e1bcae729b3b48bf8a51f310cc9a70152677601cfb"
+    },
+    {
+      "path": "_MD/017__meaning-in-use-splits-when-use-also-changes-what-the-system-can-do__AIACS__Z-AIACS-017__from-chat.md",
+      "bytes": 2559,
+      "sha256": "45e044701b5418cfffa90fbc59d341d4f38b60660e9c9922fac6d84a8acb21e2"
+    },
+    {
+      "path": "_MD/018__the-strongest-platform-claim-in-the-paper-is-also-one-of-its-least-dem__AIACS__Z-AIACS-018__from-chat.md",
+      "bytes": 2579,
+      "sha256": "c0ff07eea88ca32ddb4cb7c96747b05f79a13c3254819c4446d18c4b8fba012e"
+    },
+    {
+      "path": "_MD/019__the-battle-of-metaphors-may-be-a-battle-over-who-is-allowed-to-act__AIACS__Z-AIACS-019__from-chat.md",
+      "bytes": 2666,
+      "sha256": "6b076377c3bbd210bb45112d683bb1aee231e0380cf90f827d936d1c3fe3176f"
+    },
+    {
+      "path": "_MD/020__the-real-object-may-be-the-path-by-which-an-image-became-possible__AIACS__Z-AIACS-020__from-chat.md",
+      "bytes": 2772,
+      "sha256": "59f34cab8fbe1ca3cd9f0b0da47bd5e9de477c1e99208c2b298bf00e94b487cc"
+    },
+    {
+      "path": "_MD/021__a-default-image-can-be-a-semantic-fallback-rather-than-an-interface-de__SOURCE__Z-RF-20260817-001__from-chat.md",
+      "bytes": 4362,
+      "sha256": "7e494779e720e584aeead35230cddabd19ddec7dcaa3eda95346e9e3e70a70b4"
+    },
+    {
+      "path": "_MD/022__the-users-prompt-may-not-be-the-prompt-the-model-receives__SOURCE__Z-RF-20260817-002__from-chat.md",
+      "bytes": 3671,
+      "sha256": "014fdf9834b45c32776954c37c2d64112605bab463c2ceb350407f31e28f64ce"
+    },
+    {
+      "path": "_MD/023__interfaces-can-suppress-exploration-before-ranking-ever-begins__SOURCE__Z-RF-20260817-003__from-chat.md",
+      "bytes": 3968,
+      "sha256": "7b82db4f72f3c06d15481c6e958c5221c22875fff428e4af8a8b252ecd1ddb1a"
+    },
+    {
+      "path": "_MD/024__prompt-vocabulary-is-operational-because-modifiers-are-learned-as-prob__SOURCE__Z-RF-20260817-004__from-chat.md",
+      "bytes": 3746,
+      "sha256": "f9d6bcfaa37df2a90088d0c5d2caeb411baa8995585d95629b5664df9e06d91b"
+    },
+    {
+      "path": "_MD/025__trial-and-error-is-not-noise-around-prompting-it-is-part-of-the-intera__SOURCE__Z-RF-20260817-005__from-chat.md",
+      "bytes": 3683,
+      "sha256": "40d2fe77e92ec797c8280a437e336bafad72d1b65c37e34875509d4ac61940e0"
+    },
+    {
+      "path": "_MD/026__the-minority-prompt-corrects-downstream-while-the-bias-remains-upstrea__SOURCE__Z-RF-20260817-006__from-chat.md",
+      "bytes": 3941,
+      "sha256": "c9903d4ee7f991aee4707e3ac167ad3ba1598fbb911dab92180bd9b96bd6aabf"
+    },
+    {
+      "path": "_MD/027__in-rivass-archive-error-is-an-ethical-boundary-not-merely-an-aesthetic__SOURCE__Z-RF-20260817-007__from-chat.md",
+      "bytes": 3567,
+      "sha256": "d9af609b55719d494f828b7ab51f351faba71e29f2887398b7a1471a420bd3ac"
+    },
+    {
+      "path": "_MD/028__the-ai-look-may-be-a-social-average-rendered-through-a-model__SOURCE__Z-RF-20260817-008__from-chat.md",
+      "bytes": 3487,
+      "sha256": "5c9bfc56291c8f169cfcb613424e5e0c5ad380ee6dc25c215615ff2f0f4ddefe"
+    },
+    {
+      "path": "_MD/029__geertz-shifts-the-unit-of-analysis-from-the-artwork-to-the-equipment-f__SOURCE__Z-RF-20260817-009__from-chat.md",
+      "bytes": 3368,
+      "sha256": "acaedb2055d5e34ac57e3070bbb1046b7508f3dd5d5217bbde51e2caacfcdcac"
+    },
+    {
+      "path": "_MD/030__autopoiesis-requires-self-production-not-merely-recursive-adjustment__SOURCE__Z-RF-20260817-010__from-chat.md",
+      "bytes": 3754,
+      "sha256": "ddf187dea26beca429ea5f3f400bcf03fc6b4884a29517113f34bd385151273c"
+    },
+    {
+      "path": "_MD/031__elizas-apparent-conversational-agency-can-be-decomposed-into-small-sym__SOURCE__Z-RF-20260817-011__from-chat.md",
+      "bytes": 4069,
+      "sha256": "af4066e0e01f0da27ca2972f42bceae58d6b179f7de5197b9d446404544f73fa"
+    },
+    {
+      "path": "_MD/032__a-prompt-may-address-the-archive-of-descriptions-more-than-the-picture__SOURCE__Z-RF-20260818-012__from-chat.md",
+      "bytes": 4196,
+      "sha256": "abaf6154d65d5f957d082f38bedd3ddad98f206c7f348d732c32e8da5c24f068"
+    },
+    {
+      "path": "_MD/033__a-stable-prompt-ritual-can-preserve-a-false-causal-theory__SOURCE__Z-RF-20260818-013__from-chat.md",
+      "bytes": 3683,
+      "sha256": "aa76f290f98d359c5b397b0a432707e86ee3880d31ef7710e989be4577923239"
+    },
+    {
+      "path": "_MD/034__the-shop-that-makes-aesthetic-competence-can-contain-trade-secrets__MULTISOURCE__Z-RF-20260818-014__from-chat.md",
+      "bytes": 3763,
+      "sha256": "15712929dedd1c00fc2329ede6ce9b09807c74b3b267b1468cfeb48f30c2ef46"
+    },
+    {
+      "path": "_MD/035__body-prompting-falsifies-prompt-equals-text-without-proving-body-equal__SOURCE__Z-RF-20260818-015__from-chat.md",
+      "bytes": 3626,
+      "sha256": "8549835db1e1b2986676445b176e10868c9c972242eacfde3dd41ff7c1cc929d"
+    },
+    {
+      "path": "_MD/036__turners-operator-and-a-computational-prompt-operate-on-different-kinds__MULTISOURCE__Z-RF-20260818-016__from-chat.md",
+      "bytes": 4061,
+      "sha256": "f3f12cba3413bdfd54da761c5d113f0a486bfd03ad52e1f0b0b2a9b0e0cae241"
+    },
+    {
+      "path": "_MD/037__talking-about-ai-art-can-become-part-of-the-machinery-that-makes-the-n__SOURCE__Z-RF-20260818-017__from-chat.md",
+      "bytes": 3578,
+      "sha256": "aa67a2c07867df584a1ad7e1935d423aba5f00f164e8af70f1b5875760ebd780"
+    },
+    {
+      "path": "_MD/038__sontag-asks-for-descriptive-rather-than-prescriptive-form-language-jus__MULTISOURCE__Z-RF-20260818-018__from-chat.md",
+      "bytes": 4230,
+      "sha256": "9c0c717983da53c5ba90c68936114dc3bc056212763f53678e44458292718265"
+    },
+    {
+      "path": "_MD/039__putting-edo-period-in-a-prompt-is-not-yet-cultural-context__MULTISOURCE__Z-RF-20260818-019__from-chat.md",
+      "bytes": 4379,
+      "sha256": "ce93eefa8629d2dcbc8d3859a9a8070931517a88ea81a54b0a4749dd77ded182"
+    },
+    {
+      "path": "_MD/040__the-most-geertzian-object-may-be-the-distinction-a-practitioner-learns__MULTISOURCE__Z-RF-20260818-020__from-chat.md",
+      "bytes": 4423,
+      "sha256": "eed9b96d4291c5815e810250b4eb88b611fe0834c0635b8d949226197f56fa99"
+    },
+    {
+      "path": "_MOCS/01__prompt-as-diagnostic-practice.md",
+      "bytes": 372,
+      "sha256": "b1312c99dc55bf55f8807ee5aa5f9e870072da06cc898929de71b4b4ccd6aead"
+    },
+    {
+      "path": "_MOCS/02__culture-inside-the-generator.md",
+      "bytes": 360,
+      "sha256": "b70c33c2dbeb80f3f0f2211b406d6972f0509e6203760b2b42cb7c2ec5cdf171"
+    },
+    {
+      "path": "_MOCS/03__description-changes-causal-position.md",
+      "bytes": 292,
+      "sha256": "bdc33935dcaa22a2155fd0edc723ce97fdd30f7e49b6b8de2b0ba6a19b6584a9"
+    },
+    {
+      "path": "_MOCS/04__provenance-and-the-visible-residue.md",
+      "bytes": 281,
+      "sha256": "c045c992fff996a681ccb0862fe81c7ef49f6d1e2b6a3e891fdda4317944a1f5"
+    },
+    {
+      "path": "_PROMPTS/assembly_prompt__v15.55-AM.txt",
+      "bytes": 20086,
+      "sha256": "a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a"
+    },
+    {
+      "path": "_PROMPTS/prime_zettel_forage__v3.0__prior.txt",
+      "bytes": 11424,
+      "sha256": "ca2c82d04a1b082de12a1ac6f7d56984d6d435bab7d9a6fc044893a61e239d4e"
+    },
+    {
+      "path": "_RESOURCES/AI_Art_as_a_Cultural_System__provided.pdf",
+      "bytes": 841213,
+      "sha256": "71efadfb62a52fa8c2afd635a991207dd24081d8869692e66544905c9455153d"
+    },
+    {
+      "path": "_RESOURCES/Art_as_Cultural_System_and_AI_Prompting__provided.pdf",
+      "bytes": 1781627,
+      "sha256": "c57691e75698f695e6e255622a0bd70ef44be8c3615130be4fdc8d4d48475d1c"
+    },
+    {
+      "path": "_RESOURCES/Geertz_Symbolic_Anthropology_and_Art__provided.pdf",
+      "bytes": 357779,
+      "sha256": "9ec9b9c3f396397ec1fd33fd50fe16ab83f711c46d3483068df8c1139112a17f"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__geertz1976artculturalsystem.txt",
+      "bytes": 171,
+      "sha256": "5ebb5837ec3866c8fc9191796190b682222635c7ed9d53bf0ba7ce41d9a11efb"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__liuchilton2021promptengineering.txt",
+      "bytes": 171,
+      "sha256": "e91afa3d5e132da09841466fe65925f433b85945642bb7b990984ef603981bd6"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__maturana1975livingorganization.txt",
+      "bytes": 205,
+      "sha256": "f851ca1ac3f88d060203936c1941d71ef7557ae23996f69377cedba3a7477b93"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__oppenlaender2022promptmodifiers.txt",
+      "bytes": 171,
+      "sha256": "e21789ff87432e89399024770f9969e79bd61a0d7985c8514f7ff56160c22e59"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__oppenlaenderetal2024bodyprompting.txt",
+      "bytes": 173,
+      "sha256": "19d4b463ff53ee18a29b99b0e1ec160165933ce47a975f872a9c8c6d4391e937"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__oppenlaenderlindersilvennoinen2023promptingaiart.txt",
+      "bytes": 188,
+      "sha256": "54ffb1b02f3e624ea557fdb6ff93d313ccf4434d06f8089aac8aecd7f6b7aa13"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__rivas2025inexistentarchive.txt",
+      "bytes": 167,
+      "sha256": "f2c862587b9dcab1ecc9302347de1d9c528f6d535d7b2a3f7cdb114b8cb14e41"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__rivassanmartin2024archivo.txt",
+      "bytes": 190,
+      "sha256": "026af5cefb2f1c34055a2b3fcca4216ddd9f4935deb1ff8d97f83e08b4b1ffe4"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__simonenetal2025defaultimages.txt",
+      "bytes": 168,
+      "sha256": "7c7c8cefdbd6d17431ec447d2ae42f54be0e8151e9c22f857d12119ead336b75"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__sontag1966againstinterpretation.txt",
+      "bytes": 220,
+      "sha256": "827c4583323731fc23abe03abf20a7f3e669a04f16d909c12139612a10429963"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__steyerl2023meanimages.txt",
+      "bytes": 201,
+      "sha256": "9962511fbae8f962600a7f3596d306044ace7a30ac9989f4284a50e11281cb58"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__torricellietal2023interface.txt",
+      "bytes": 167,
+      "sha256": "8d1ff628ab4feefc72f8d0d86e6008fb3962e70e8781be8e4205cf354ac1e1a6"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__turner1967forest.txt",
+      "bytes": 202,
+      "sha256": "1d0a66441cb96ab3d01ffb641e618640ec09a9dc1e5e7b2997af85b744f3a30e"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__weizenbaum1966eliza.txt",
+      "bytes": 354,
+      "sha256": "3e0c0a2d8ad20c7876290dd6538edeee8430942ea964a579258b0c2f9945dc93"
+    },
+    {
+      "path": "_RESOURCES/Liu_Chilton_2021_Design_Guidelines.pdf",
+      "bytes": 9821781,
+      "sha256": "78150b8274ad971882b33d2868b00b21df5ea258821a228153a04ca96d625f80"
+    },
+    {
+      "path": "_RESOURCES/Oppenlaender_2022_Prompt_Modifiers.pdf",
+      "bytes": 5175891,
+      "sha256": "da0e6c8f3c5bd23f689b5f29d9a80eb717d658efa27b83f7e6135d9a4facf34d"
+    },
+    {
+      "path": "_RESOURCES/Oppenlaender_Linder_Silvennoinen_2023_Prompting_AI_Art.pdf",
+      "bytes": 7718089,
+      "sha256": "c46de3ea18e71599b8938ed1b8b57f30dff8f72b622740c9a74bc66712b10043"
+    },
+    {
+      "path": "_RESOURCES/Oppenlaender_et_al_2024_Body_Prompting.pdf",
+      "bytes": 11079912,
+      "sha256": "b2c0a19d9870ec9f865ecd0db945422edd9ea2525f37bc6dfa40a785acdd54e2"
+    },
+    {
+      "path": "_RESOURCES/Simonen_et_al_2025_Default_Images.pdf",
+      "bytes": 10597703,
+      "sha256": "090978768d3750203c7ce56959e66bb2d836caf9d089bbbdc39a5512bb074e89"
+    },
+    {
+      "path": "_RESOURCES/Sontag_Against_Interpretation.pdf",
+      "bytes": 3752772,
+      "sha256": "45f9e7a25ec916055f1e1182c5564a14bf70917b9044277fe673e00db9551123"
+    },
+    {
+      "path": "_RESOURCES/Torricelli_et_al_2023_Interface_Design.pdf",
+      "bytes": 5128471,
+      "sha256": "feca2f363623ed383b6b9e8358da758b4e51186954267255b3dd3fac77471d0c"
+    },
+    {
+      "path": "_SLIPCASE/ALIASES.json",
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "path": "_SLIPCASE/APPEARANCES.jsonl",
+      "bytes": 11520,
+      "sha256": "4ddf5ff30483b901573d1024345ffb524c71348d1b6f67672a93b8e2f5019ec5"
+    },
+    {
+      "path": "_SLIPCASE/GHOSTS.txt",
+      "bytes": 6859,
+      "sha256": "a400162ac24fa931d76d5710461c0cd468b59b803478e17d6e80d93ab7cae4d8"
+    },
+    {
+      "path": "_SLIPCASE/NODES.jsonl",
+      "bytes": 29194,
+      "sha256": "37a1b2c813b8a493137dc42c9678d0e9cde5d7035054cb48b35a0e13282b2767"
+    },
+    {
+      "path": "_SLIPCASE/RECONSTRUCTION_TEST.txt",
+      "bytes": 301,
+      "sha256": "82237b3f1b2af303efeaab1d9b4eb98887fb7ef20f9e5567b7658d2e3dca7e41"
+    },
+    {
+      "path": "_SLIPCASE/RELATIONS.jsonl",
+      "bytes": 91035,
+      "sha256": "c2ad057d132cc071aa4f16d302e16f447eca18c40562b279499e694baa942813"
+    },
+    {
+      "path": "_SLIPCASE/RESOURCES.jsonl",
+      "bytes": 5835,
+      "sha256": "1b7f6e1f6a90763bd11f411605f5b7bd51f239e72075dec5f36bdbfc58e43a7c"
+    },
+    {
+      "path": "_SLIPCASE/paper_header.tex",
+      "bytes": 509,
+      "sha256": "ea03256f096d5fcbca8b3357bfb685043aa15c4a865b5a31d6f9f581dd04aff7"
+    },
+    {
+      "path": "_SLIPCASE/rebuild_compiler.py",
+      "bytes": 200277,
+      "sha256": "4c2337625835aeb86c5fa7b69857e1b265952c277e5184b5ce1b586df402cd6a"
+    },
+    {
+      "path": "the-shop-makes-the-prompt__2026-08-17.md",
+      "bytes": 28308,
+      "sha256": "101b9fa4b33a6b49a8114136c06542cb57dd7cbc8644efd42c5d77226ee24f9d"
+    },
+    {
+      "path": "the-shop-makes-the-prompt__2026-08-17.pdf",
+      "bytes": 89109,
+      "sha256": "e2d951392576cec24c7a2bfdfb0de0c838c93a355a8880aeefd185a03e926775"
+    },
+    {
+      "path": "the-shop-makes-the-prompt__2026-08-17.tex",
+      "bytes": 35561,
+      "sha256": "9bebde749d849cb832a6f193f3766de223b57b040037c68e8301619ad676bce3"
+    },
+    {
+      "path": "the-shop-makes-the-prompt__ASSEMBLY_APPENDIX.txt",
+      "bytes": 460,
+      "sha256": "a9ed493fe1fbe3b253a483867b9a7b1b94a68623da4fac48a758cc45a0ef9fbd"
+    },
+    {
+      "path": "the-shop-makes-the-prompt__MAKING_HISTORY.txt",
+      "bytes": 2564,
+      "sha256": "cfc0dfb6a811a3a8a46a33bbde2d1e1c1a16dba4a84ae5269bc5579638c46fc7"
+    },
+    {
+      "path": "the-shop-makes-the-prompt__SOURCE_MAP.txt",
+      "bytes": 2251,
+      "sha256": "d09ef0130fdff996aefeec4c177ae0ff126dece8ddf83a9c301dedf527184ec3"
+    }
+  ]
+}

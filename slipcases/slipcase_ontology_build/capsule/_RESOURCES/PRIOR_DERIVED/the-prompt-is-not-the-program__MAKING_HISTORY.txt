@@ -1,0 +1,24 @@
+PAPER MAKING HISTORY
+
+CHECKPOINT: SLIPCASE-20260817T2039-0400-304d480a176f
+DATE: 2026-08-17
+
+Candidate papers considered:
+1. Default images as visual failure signatures.
+2. Prompt language as a hybrid programming language.
+3. The prompt is not the program: execution lineage as the reproducible unit.
+
+Selected: 3.
+
+WHY: It crosses the strongest bridge in the field rather than summarizing one cluster. The causal-opacity cards, prompt-rewriting card, DSPy compilation card, soft-prompt card, optimization cards, underspecification card, and ChainForge card all pressure the same hidden assumption: that the visible prompt is the stable causal source of an output. Default images supply the failure case that makes the provenance problem concrete.
+
+Counterevidence preserved:
+- Soft prompts do not imply ordinary chat systems execute soft prompts.
+- DALL-E 3 prompt rewriting does not prove Midjourney prompt rewriting.
+- A-STAR, initial-noise editing, and CLIP hubness are alternative mechanisms from different systems, not established explanations of Midjourney defaults.
+- The prompt remains a meaningful artifact even when it is not the complete program record.
+
+Verification boundary:
+- Simonen et al. source body: locally available and inspected.
+- Other cited source bodies: LINK_ONLY in this build.
+- Zettel payload exactness: canonical inside this package; originating chat message hashes unavailable.

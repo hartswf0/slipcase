@@ -1,0 +1,103 @@
+ZETTEL
+
+ID:
+Z-SYS-006
+
+TITLE:
+The daemon's homogeneous graph and Slipcase's heterogeneous graph are different data models
+
+SOURCE:
+User-provided prompt system — AUTONOMOUS GRAPH INQUIRY v4.0 and SLIPCASE — ANCIENT MASTER v15.0 — supplied 2026-08-18.
+
+PASSAGE:
+[PARAPHRASE] The daemon declares that its graph consists entirely of ZETTELS. Ancient Master defines graph nodes as ZETTEL, PLATFORM, CONCEPT, GHOST, SOURCE, RESOURCE, and PROMPT.
+
+RESEARCH OBJECT:
+The research daemon and the archival compiler use the word “graph” for structurally different objects.
+
+LOCAL MOVE:
+Exposes an interface mismatch hidden by shared vocabulary.
+
+SOURCE TERMS:
+graph
+ZETTEL
+PLATFORM
+CONCEPT
+GHOST
+SOURCE
+RESOURCE
+PROMPT
+
+WHAT BECAME STRANGE:
+“Reconsider the entire graph” becomes ambiguous once the daemon is embedded inside Slipcase. Does it inspect only zettels or also source nodes, ghosts, prompts, and platforms?
+
+QUESTION:
+Which graph is the daemon actually steering when Ancient Master is the containing system?
+
+DEEPER QUESTION:
+Can a source hub, ghost, or unresolved address become the highest-value research frontier even though the daemon's declared graph does not admit that object as a node?
+
+MECHANISM:
+Daemon:
+ZETTEL ↔ ZETTEL relations create research frontier.
+
+Slipcase:
+multiple object types and typed relations create the preserved field.
+
+FORMAL SHIFT:
+<homogeneous inquiry graph>
+→ <heterogeneous archival field>
+→ [embed / project / synchronize]
+→ <steerable portable research state>
+
+SOURCE FORMALISM:
+Daemon:
+graph nodes = ZETTELS.
+
+Ancient Master:
+nodes =
+ZETTEL · PLATFORM · CONCEPT · GHOST · SOURCE · RESOURCE · PROMPT
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+G_field = heterogeneous preserved graph
+
+G_inquiry = projection(G_field, node_type = ZETTEL)
+            + selected derived research edges
+
+The unresolved design choice is whether steering operates on G_inquiry or G_field.
+
+TENSION:
+The daemon says a repeatedly appearing source is a SOURCE_HUB while simultaneously refusing SOURCE as a graph node. Ancient Master makes SOURCE an explicit node.
+
+MISSING:
+A projection contract between the archival graph and the inquiry graph.
+
+BOUNDARY:
+Different graphs are not inherently inconsistent if they are explicitly layered. The supplied system does not yet state that layering.
+
+CITATION TRAIL:
+[[Z-SYS-005]]
+→ daemon graph ontology
+→ Ancient Master graph ontology
+→ graph projection
+
+TEST:
+Construct a field where three otherwise disconnected zettels cite the same source but never link to one another. Determine whether the daemon can discover the source as a central frontier using only its declared zettel graph.
+
+PLATFORM:
+[[GRAPH ONTOLOGY]]
+
+LINKS:
+[[Z-SYS-005]]
+[[HETEROGENEOUS FIELD]]
+[[GRAPH PROJECTION]]
+
+BIBTEX:
+@misc{graph_ontology_collision_2026,
+  title = {Graph Ontology Collision between Autonomous Graph Inquiry and Slipcase},
+  howpublished = {User-provided research-system prompts},
+  year = {2026},
+  note = {Versions 4.0 and 15.0; supplied 2026-08-18}
+}

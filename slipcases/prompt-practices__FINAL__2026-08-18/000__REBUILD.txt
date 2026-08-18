@@ -1,0 +1,17 @@
+THIS PUBLICATION CAN BE REBUILT.
+
+1. Treat every root zettel .txt payload as immutable evidence for this checkpoint.
+2. Verify each root card against its _MD mirror by byte hash.
+3. Parse PLATFORM and LINKS, then classify every [[ADDRESS]] conservatively. Do not fuzzy-match ghosts.
+4. Compile ZETTELS.json/jsonl, node/relation/resource registries, backlinks, MOCs, arrangements, and bibliography.
+5. Rebuild index.html from the canonical card payloads and graph state. It must not require a server or CDN.
+6. Rebuild the paper only from compiled zettels/sources. Compiler synthesis must remain marked in SOURCE_MAP.
+7. Recount all invariants and regenerate _SLIPCASE/VERIFICATION.txt.
+8. Package only after PDF visual inspection and ZIP integrity testing.
+
+ASSEMBLY INSTRUMENT
+_PROMPTS/000__ANCIENT_MASTER__SLIPCASE_v15.5-AM.txt
+SHA-256: db0d765cf4c0cb0e293f5ae27e881ba7fcf31d30e74c17f849dfbc9d44782ff2
+
+IMPORTANT LIMIT
+The exact uploaded assembly prompt is preserved byte-for-byte. The pre-existing conversational zettels were captured from visible context, but no independent exported chat transcript was available for byte-level comparison.

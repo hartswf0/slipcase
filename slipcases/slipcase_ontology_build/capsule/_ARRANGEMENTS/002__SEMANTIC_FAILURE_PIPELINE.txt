@@ -1,0 +1,9 @@
+ARRANGEMENT
+
+01. [[DEFAULT-IMAGES-CHI26-ROOT]] — A generator can fail to understand a prompt without failing to generate: semantic failure can appear as a polished image.
+02. [[DEFAULT-IMAGES-CHI26-B]] — The paper observes default images in Midjourney, but it cannot yet locate the default inside the model.
+03. [[DEFAULT-IMAGES-CHI26-B-1]] — The visible prompt need not be the generator's prompt: an invisible writer can stand between the user and the image model.
+04. [[DEFAULT-IMAGES-CHI26-A]] — Known words can erase evidence that an unknown word was never understood.
+05. [[DEFAULT-IMAGES-CHI26-A-1]] — A generator can represent a concept early in denoising and then forget it before the image is finished.
+06. [[DEFAULT-IMAGES-CHI26-C]] — When semantic guidance weakens, the random seed stops looking like mere variation and begins choosing among meanings the prompt failed to determine.
+07. [[DEFAULT-IMAGES-CHI26-C-1]] — The random seed is not empty: blocks of Gaussian noise already have preferences for what they will become.

@@ -1,0 +1,102 @@
+```text
+ZETTEL
+
+ID:
+HOUSE-LANG-007-SUB-09
+
+TITLE:
+THE HOUSE MADE TO SCROLL IS DESIGNED FOR A REPRESENTATIONAL ENVIRONMENT AS WELL AS A PHYSICAL SITE
+
+SOURCE:
+Kate Wagner, “mcmodernslopcore,” McMansion Hell, May 28, 2026. SOURCE URL: https://mcmansionhell.com/
+
+PASSAGE:
+[QUOTE]
+“houses made to scroll in and scroll right by.”
+
+RESEARCH OBJECT:
+PLATFORM CIRCULATION AS AN ARCHITECTURAL SELECTION ENVIRONMENT.
+
+LOCAL MOVE:
+The listing-image problem can be pushed further. If a house is repeatedly encountered as a thumbnail, carousel, short video, or feed item, then architectural features can be selected for legibility under those representational conditions. The site of performance is no longer only street, lot, room, climate, and body; it also includes the image interface.
+
+SOURCE TERMS:
+design language
+houses
+scroll
+images
+AI
+virtual staging
+McModern
+
+WHAT BECAME STRANGE:
+A façade can fail as architecture yet succeed as an image token. The same feature may be excessive at bodily scale and efficient at feed scale.
+
+QUESTION:
+Are some contemporary houses increasingly optimized for being recognized in images rather than inhabited in rooms?
+
+DEEPER QUESTION:
+If circulation environments select architectural features, should the “site” of a building include the platforms through which its representations compete for attention?
+
+MECHANISM:
+building
+→ photographed representation
+→ platform circulation
+→ attention / recognition
+→ market desirability
+→ imitation / development incentives
+→ future buildings
+
+FORMAL SHIFT:
+ARCHITECTURAL SITE = LOT
+→ ARCHITECTURAL SITE = LOT + REPRESENTATIONAL CIRCULATION ENVIRONMENT
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Wagner describes contemporary McMansion descendants as developing a design language and characterizes them as houses made to scroll past.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+FITNESS(feature) = f(physical performance, social signaling, image legibility, platform circulation)
+
+A feature can persist even when physical-performance value is low if representational fitness is high.
+
+TENSION:
+This could describe a real design-selection mechanism, or it could merely be a critic’s metaphor for blandness. The source alone does not establish developer causation.
+
+MISSING:
+Developer briefs, render packages, A/B tests, listing analytics, social-media marketing practices, or interviews tying image performance to design decisions.
+
+BOUNDARY:
+Do not infer platform optimization from visual resemblance alone. The mechanism requires evidence that circulation metrics or marketing representations feed back into design.
+
+CITATION TRAIL:
+[[HOUSE-LANG-007-SUB-07]]
+→ Wagner 2026
+→ developer marketing materials
+→ MLS / Zillow image requirements
+→ social-platform real-estate marketing
+→ design revisions
+
+TEST:
+Find a production builder with repeated models across several years. Compare façade changes against listing/render imagery and marketing metrics. Interview or retrieve documents showing whether image performance influenced revisions.
+
+PLATFORM:
+[[HOUSE AND LANGUAGE]]
+
+LINKS:
+[[HOUSE-LANG-007-SUB-07]]
+[[HOUSE-LANG-007-SUB-06]]
+[[HOUSE-LANG-008]]
+
+BIBTEX:
+@misc{wagner2026scroll,
+  author = {Kate Wagner},
+  title = {mcmodernslopcore},
+  year = {2026},
+  month = {May},
+  day = {28},
+  publisher = {McMansion Hell},
+  url = {https://mcmansionhell.com/}
+}
+```

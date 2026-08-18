@@ -1,0 +1,58 @@
+VERIFICATION — ANCIENT MASTER / SLIPCASE v15.55-AM
+CHECKPOINT: SCF-20260818-BMC-004
+DATE: 2026-08-18
+
+SOURCE_COVERAGE: 23-card canonical prior checkpoint + preserved local source snapshots/verification receipts; no new external retrieval in final-paper pass
+CARDS: 23
+ROOT_CARDS: 23
+MD_MIRRORS: 23
+JSON_RECORDS: 23
+MIRROR_BYTES_MATCH: True
+PAYLOAD_HASHES_MATCH_JSON: True
+PLATFORM_OCCURRENCES: 23
+MEMBER_OF_RECORDS: 23
+LINKS_OCCURRENCES: 93
+LINKS_TO_RECORDS: 93
+ALL_ADDRESS_OCCURRENCES: 138
+NATIVE_CLASSIFIED_RECORDS: 138
+GHOSTS: 57
+AMBIGUITIES: 0
+BROKEN_EXPLICIT_IDS: 0
+EXACT_DUPLICATE_GROUPS: 0
+ID_COLLISION_GROUPS: 0
+BIB_KEYS: 6
+BIBLIOGRAPHY_CITEKEYS: ["caplanbricker2013blackmountain", "disalvo2026blackmountainmess", "freeman1972tyranny", "grannycloud_background", "mitra_sole_toolkit", "owen_open_space_guide"]
+PAPER_CITEKEYS: ["caplanbricker2013blackmountain", "disalvo2026blackmountainmess", "freeman1972tyranny", "grannycloud_background", "mitra_sole_toolkit", "owen_open_space_guide"]
+PAPER_CITEKEYS_SUBSET: True
+PROMPT_COUNT: 10
+ASSEMBLY_PROMPT_SHA256: a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a
+ASSEMBLY_PROMPT_STATUS: PRESERVED_VERBATIM_HASHED_EMBEDDED
+MACHINE_NODES: 116
+MACHINE_RELATIONS: 339
+INDEX_HAS_ALL_PAYLOAD_HASHES: True
+INDEX_GRAPH_RELATION_COUNT_MATCH: True
+INDEX_BIBKEYS_MATCH: True
+INDEX_ASSEMBLY_PROMPT_MATCH: True
+INDEX_EXTERNAL_RUNTIME_DEPENDENCIES: False
+PDF_STATUS: COMPILED_AND_RENDER_INSPECTED
+PDF_PAGES: 11
+PDF_BYTES: 309755
+PDF_VISUAL_INSPECTION: Rendered at 180 DPI; pages 1, 5, 8, 10, and 11 visually inspected. No clipping, overlaps, black squares, or broken glyphs observed. A ~1 pt table hbox warning is non-clipping and visually benign.
+STRUCTURE_REQUIRED_FILES: 26
+STRUCTURE_REQUIRED_FILES_MISSING: []
+ZIP_STATUS: VERIFIED_AFTER_REPACK_AND_INTEGRITY_TEST
+
+PAPER EVIDENCE COVERAGE
+- Every paper citekey is present in the compiled bibliography.
+- SOURCE_MAP traces substantive paper claims to zettels and sources.
+- Structured openness / SO=<T,C,X,A> is marked as compiler formalization rather than source terminology.
+
+RECONSTRUCTION STATE
+- index.html contains all exact card payloads/hashes, sources, bibliography state, graph state, ghosts/backlinks, prompts, final paper TeX/source map/making history, rebuild instructions, and the exact v15.55-AM assembly prompt.
+- index.html has no external runtime script/style/font dependency and is designed for file:// use. Source URLs remain clickable external receipts.
+
+KNOWN LIMITS
+- No human scholarly or peer review is claimed.
+- Historical Black Mountain mechanisms still require direct archival testing beyond the preserved DiSalvo source.
+- The Open Space → Black Mountain SOLE genealogy remains unproven.
+- Freeman and Granny Cloud full copyrighted webpage bodies remain LINK_ONLY/verification-note resources rather than local full-text snapshots.

@@ -1,3 +1,17 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# Redundant single-slipcase monolithic html viewers (superseded by root index.html)
+slipcases/**/READER.html
+slipcases/**/CARDS.html
+slipcases/**/NETWORK.html
+slipcases/**/000__BIBLIOGRAPHY.html
+slipcases/**/index.html
+slipcases/**/01__prior-shotcall-checkpoint-index.html
+slipcases/**/READER_CHECKPOINT_2026-08-17.html
+
+# Legacy zip backup archives
+slipcases/**/_RESOURCES/*.zip
+slipcases/**/PRIOR*/*.zip
+

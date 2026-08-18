@@ -1,0 +1,415 @@
+TENSION FIELD
+SLIPCASE v15.6-TENSION-FIRST
+Generated from 21 preserved zettels.
+This is a derived research object. It does not alter any zettel payload.
+
+RANK 1 — T-01 — WHERE DOES PROMPT CAUSALITY ACTUALLY LIVE?
+
+RIVAL CLAIM A:
+The human-readable prompt is the primary causal control object. Its words are interpreted and their semantic content guides generation.
+
+RIVAL CLAIM B:
+The human-readable prompt is only an upstream intervention. The effective control may live elsewhere: in prompt rewriting, compiled demonstrations, token/embedding geometry, denoising dynamics, random initial state, model priors, or post-generation selection.
+
+EVIDENCE FOR A:
+- WORKWORDS-PROMPT-001: developer practice often treats prompt wording as implementation.
+- WORKWORDS-PROMPT-007: LMQL makes natural-language prompting an explicit computational component inside a program.
+- DEFAULT-IMAGES-CHI26-A: changing known/unknown prompt terms changes generated imagery.
+
+EVIDENCE FOR B:
+- DEFAULT-IMAGES-CHI26-B-1: a documented DALL-E 3 pipeline rewrites user ideas before image generation.
+- WORKWORDS-PROMPT-004: DSPy can compile effective prompts from declarations and metrics.
+- WORKWORDS-PROMPT-002: soft prompts can control models without human-readable words.
+- DEFAULT-IMAGES-CHI26-C-1: initial latent noise can exhibit content-generation preferences.
+- DEFAULT-IMAGES-CHI26-A-1: concepts visible early in denoising can later disappear.
+
+SOURCES:
+Liang et al. 2025; Beurer-Kellner et al. 2023; OpenAI 2023; Khattab et al. 2023;
+Qin & Eisner 2021; Mao et al. 2023; Agarwal et al. 2023; Simonen et al. 2026.
+
+WHAT BOTH READINGS EXPLAIN:
+Prompt edits often correlate with output changes.
+
+WHAT NEITHER READING EXPLAINS:
+How causal responsibility should be partitioned when several stages are simultaneously necessary and none is sufficient.
+
+HIDDEN ASSUMPTION:
+That “the prompt” names one stable object. The field instead contains user text, rewritten text, compiled demonstrations, discrete tokens, continuous vectors, latent state, attention trajectories, and evaluator-mediated descendants.
+
+THIRD POSSIBILITY:
+Prompt causality is not located at one layer. It is interactional: wording changes the system by perturbing a trajectory whose response depends on transformation, representation, stochastic state, learned priors, and selection.
+
+QUESTION MADE HARDER:
+When we say “this prompt caused this output,” what intervention are we actually claiming made the difference?
+
+DECISIVE EVIDENCE:
+Instrument an open pipeline end-to-end. Hold user-visible text constant while independently intervening on rewrite, tokenization/embedding, seed/initial latent, denoising attention, and selection. Then hold those layers constant while changing text. Estimate which interventions change the output distribution and which prompt clauses are causally inert.
+
+CONSEQUENCE:
+If causal control is distributed, prompt-response pairs are inadequate evidence for prompt effects. Prompt engineering, authorship, reproducibility, and criticism all need stage-specific causal claims.
+
+
+RANK 2 — T-02 — CAN MORE SPECIFICATION PRODUCE LESS CONTROL?
+
+RIVAL CLAIM A:
+Prompting becomes more reliable as requirements are stated explicitly and precisely.
+
+RIVAL CLAIM B:
+Explicit requirements compete. Adding instructions can decrease compliance with instructions already present; omission can sometimes yield better behavior because the model supplies defaults.
+
+EVIDENCE FOR A:
+- WORKWORDS-PROMPT-001: prompt programming treats requirements as part of implementation.
+- WORKWORDS-PROMPT-007: formal constraints can improve reliability in LMQL.
+
+EVIDENCE FOR B:
+- WORKWORDS-PROMPT-003: Yang et al. find unspecified requirements can be satisfied by default, while specifying more requirements does not monotonically improve performance.
+- DEFAULT-IMAGES-CHI26-A: known concepts can dominate unknown terms in larger prompts, masking their failure.
+- DEFAULT-IMAGES-CHI26-A-1: multiple concepts can compete spatially and one can be ignored.
+
+SOURCES:
+Yang et al. 2025; Liang et al. 2025; Beurer-Kellner et al. 2023; Simonen et al. 2026; Agarwal et al. 2023.
+
+WHAT BOTH READINGS EXPLAIN:
+Prompt wording matters.
+
+WHAT NEITHER READING EXPLAINS:
+A general rule for deciding which requirements should be explicit, delegated, separated, constrained formally, or tested externally.
+
+HIDDEN ASSUMPTION:
+That specification is additive: each new clause contributes control without changing the effectiveness of other clauses.
+
+THIRD POSSIBILITY:
+Prompt specification behaves like a limited-capacity competitive system. Reliability depends not on amount of description but on allocation of control across channels: text, examples, constraints, defaults, and evaluators.
+
+QUESTION MADE HARDER:
+What does “fully specified” mean when making a requirement explicit can reduce the probability that it is obeyed?
+
+DECISIVE EVIDENCE:
+Factorial ablation of prompt requirements while measuring each requirement separately. Compare prose-only, separated-stage, formal-constraint, and evaluator-enforced versions of the same requirement set.
+
+CONSEQUENCE:
+The software-engineering ideal of exhaustive specification may not transfer cleanly to model-mediated execution. Prompt omission may be bug, delegation, or an engineered resource.
+
+
+RANK 3 — T-03 — WHAT LANGUAGE DOES THE MODEL ACTUALLY OBEY?
+
+RIVAL CLAIM A:
+Prompt semantics are grounded primarily in the human-language meanings of the written words.
+
+RIVAL CLAIM B:
+Operational meaning is model-relative. Human nonwords can be effective; legitimate words can be weak; single Unicode substitutions can redirect outputs; continuous vectors can replace words altogether.
+
+EVIDENCE FOR A:
+- Most prompt interfaces and prompt-programming practices are organized around natural-language instructions.
+- DEFAULT-IMAGES-CHI26-F assumes low-resource words may fail because relevant associations are weak.
+
+EVIDENCE FOR B:
+- WORKWORDS-PROMPT-002: soft prompts are arbitrary continuous vectors.
+- DEFAULT-IMAGES-CHI26-F-2: macaronic nonce strings can robustly evoke visual concepts.
+- DEFAULT-IMAGES-CHI26-F-1: single non-Latin homoglyphs can shift cultural attributes through encoder geometry.
+
+SOURCES:
+Qin & Eisner 2021; Millière 2022; Struppek et al. 2023; Simonen et al. 2026.
+
+WHAT BOTH READINGS EXPLAIN:
+Some textual interventions have stable effects.
+
+WHAT NEITHER READING EXPLAINS:
+How to translate between human semantic categories and the model’s operative geometry without assuming one mirrors the other.
+
+HIDDEN ASSUMPTION:
+That “word known to the model” is a lexical property rather than a relation among tokenization, embedding geometry, training history, and downstream generation.
+
+THIRD POSSIBILITY:
+Natural language is a human-readable control surface over a nonlinguistic representational system. Its practical power comes from partial alignment, not identity, between human and model semantics.
+
+QUESTION MADE HARDER:
+What counts as an instruction when the most effective control object need not be a sentence—or even a word?
+
+DECISIVE EVIDENCE:
+Create matched controls crossing human lexicality and model conditioning strength:
+human word/high model association; human word/low association; nonword/high association; nonword/low association; soft vector/high association.
+Compare output control, transfer, and interpretability.
+
+CONSEQUENCE:
+“Prompt literacy” cannot be reduced to better prose. It also concerns the mismatch between visible language and latent control geometry.
+
+
+RANK 4 — T-04 — DOES A MODEL FAIL TO UNDERSTAND, OR UNDERSTAND AND THEN LOSE?
+
+RIVAL CLAIM A:
+Missing content indicates failure of initial semantic representation.
+
+RIVAL CLAIM B:
+A requested concept can be represented during early denoising and then be overwritten, competed away, or forgotten before the final output.
+
+EVIDENCE FOR A:
+- DEFAULT-IMAGES-CHI26-ROOT/F: default images are associated with unknown or weakly represented inputs.
+
+EVIDENCE FOR B:
+- DEFAULT-IMAGES-CHI26-A-1: A-STAR reports concepts present in early cross-attention that are not retained to later denoising steps.
+- DEFAULT-IMAGES-CHI26-A: known terms can dominate unknown terms in larger prompts.
+
+SOURCES:
+Simonen et al. 2026; Agarwal et al. 2023.
+
+WHAT BOTH READINGS EXPLAIN:
+Final images can omit requested concepts.
+
+WHAT NEITHER READING EXPLAINS:
+Whether recurrent default motifs are present from the beginning, emerge only after requested semantics decay, or co-exist and win a competition.
+
+HIDDEN ASSUMPTION:
+That final output faithfully reveals the system’s earlier representational state.
+
+THIRD POSSIBILITY:
+Semantic control is temporal. “Understanding” is not a one-time event but a trajectory of acquisition, localization, retention, competition, and extinction.
+
+QUESTION MADE HARDER:
+At what timestep does a prompt stop controlling what the image will become?
+
+DECISIVE EVIDENCE:
+Track token-specific conditioning across denoising for default-triggering prompts and matched known prompts. Identify first representation, peak influence, decay, and emergence of fallback motifs.
+
+CONSEQUENCE:
+Prompt adherence requires temporal diagnostics; final-output evaluation alone cannot distinguish absence from extinction.
+
+
+RANK 5 — T-05 — WHEN LANGUAGE WEAKENS, DOES RANDOMNESS BECOME MEANING?
+
+RIVAL CLAIM A:
+Random seed is stochastic variation around semantics supplied by the prompt.
+
+RIVAL CLAIM B:
+Initial random state contains structured content affordances relative to a trained generator, and its causal influence increases when semantic conditioning weakens.
+
+EVIDENCE FOR A:
+- Standard prompt practice treats seed as a reproducibility/variation parameter.
+
+EVIDENCE FOR B:
+- DEFAULT-IMAGES-CHI26-C: seed changes which default motifs appear.
+- DEFAULT-IMAGES-CHI26-C-1: blocks of initial latent noise have content-generation preferences and can be relocated to steer output.
+
+SOURCES:
+Simonen et al. 2026; Mao et al. 2023.
+
+WHAT BOTH READINGS EXPLAIN:
+Changing seed changes outputs.
+
+WHAT NEITHER READING EXPLAINS:
+How prompt strength and initial-state affordances quantitatively trade causal influence.
+
+HIDDEN ASSUMPTION:
+That “random” means semantically neutral.
+
+THIRD POSSIBILITY:
+Randomness is neutral only before it enters a trained dynamical system. Once interpreted by the generator, different random initial conditions have unequal downstream affordances.
+
+QUESTION MADE HARDER:
+Is semantic underspecification best understood as missing instruction, or as ceding control to latent initial conditions and priors?
+
+DECISIVE EVIDENCE:
+Cross semantic-familiarity levels with identical seed sets, then causally transplant latent blocks between seeds. Estimate how the marginal effect of seed changes as prompt control weakens.
+
+CONSEQUENCE:
+The causal story of prompt generation must include state, not just text.
+
+
+RANK 6 — T-06 — CAN THE DETECTOR CREATE THE ATTRACTOR IT CLAIMS TO FIND?
+
+RIVAL CLAIM A:
+Visually convergent clusters across dissimilar prompts reveal recurrent generative defaults.
+
+RIVAL CLAIM B:
+Part of the apparent convergence may be induced or amplified by the embedding geometry used to detect similarity.
+
+EVIDENCE FOR A:
+- DEFAULT-IMAGES-CHI26-ROOT/E: manual affinity grouping and large-scale CLIP clustering both find recurrent motifs.
+
+EVIDENCE FOR B:
+- DEFAULT-IMAGES-CHI26-E-1: contrastive embedding spaces can exhibit hubness, where some candidates are anomalously near many queries.
+
+SOURCES:
+Simonen et al. 2026; Chowdhury et al. 2024.
+
+WHAT BOTH READINGS EXPLAIN:
+Some outputs appear unusually central in learned similarity space.
+
+WHAT NEITHER READING EXPLAINS:
+How much of cluster stability is generator behavior versus measurement geometry.
+
+HIDDEN ASSUMPTION:
+That the metric used to observe convergence does not possess a convergence pathology of its own.
+
+THIRD POSSIBILITY:
+Default images are real but their measured frequency, boundaries, and membership are representation-dependent.
+
+QUESTION MADE HARDER:
+How do we distinguish a generative attractor from an observational attractor?
+
+DECISIVE EVIDENCE:
+Replicate clustering across independent visual representations, hub-normalized metrics, and human judgments; report cluster persistence rather than one clustering solution.
+
+CONSEQUENCE:
+A benchmark of default images must include detector invariance, not only generator recurrence.
+
+
+RANK 7 — T-07 — IS IGNORANCE EMPTY, OR DOES IT HAVE A VISUAL POLITICS?
+
+RIVAL CLAIM A:
+Low-resource or unknown terms simply provide weak semantic guidance.
+
+RIVAL CLAIM B:
+Weak guidance is not absence; it hands output space to learned visual priors that can be culturally, demographically, or aesthetically structured.
+
+EVIDENCE FOR A:
+- DEFAULT-IMAGES-CHI26-F: low-resource-language prompts are used as likely weak-coverage cases.
+
+EVIDENCE FOR B:
+- DEFAULT-IMAGES-CHI26-F: fallback images contain recurring human, animal, and botanical motifs.
+- DEFAULT-IMAGES-CHI26-F-1: script-level changes can activate learned cultural biases even when lexical semantics are nearly unchanged.
+
+SOURCES:
+Simonen et al. 2026; Struppek et al. 2023.
+
+WHAT BOTH READINGS EXPLAIN:
+Language coverage affects output.
+
+WHAT NEITHER READING EXPLAINS:
+Which priors occupy the space vacated by failed semantic control and why those priors, rather than others, dominate.
+
+HIDDEN ASSUMPTION:
+That missing representation produces a neutral degradation.
+
+THIRD POSSIBILITY:
+Underrepresentation is generatively productive: it redirects control to dominant priors, turning absence into substitution.
+
+QUESTION MADE HARDER:
+When a model cannot picture a culturally specific word, whose imagery takes its place?
+
+DECISIVE EVIDENCE:
+Matched multilingual concept sets with fixed seeds and cross-language paraphrases; classify fallback motifs and demographic/cultural attributes.
+
+CONSEQUENCE:
+Bias analysis should study substitute distributions, not only prompt fidelity.
+
+
+RANK 8 — T-08 — WHERE DOES AUTHORSHIP MOVE WHEN PROMPTS REWRITE THEMSELVES?
+
+RIVAL CLAIM A:
+Prompt authorship resides primarily in selecting and composing the instruction.
+
+RIVAL CLAIM B:
+In compiled, optimized, or evolutionary prompting, authorship migrates toward objectives, examples, metrics, mutation rules, and selection environments.
+
+EVIDENCE FOR A:
+- WORKWORDS-PROMPT-001: prompt developers iteratively write and revise prompts.
+
+EVIDENCE FOR B:
+- WORKWORDS-PROMPT-004: DSPy compiles prompt realizations from declarative programs and metrics.
+- WORKWORDS-PROMPT-005: ProTeGi rewrites prompts using textual gradients and metric-guided search.
+- WORKWORDS-PROMPT-006: Promptbreeder evolves both task prompts and mutation prompts.
+
+SOURCES:
+Liang et al. 2025; Khattab et al. 2023; Pryzant et al. 2023; Fernando et al. 2023.
+
+WHAT BOTH READINGS EXPLAIN:
+Humans still set some initial conditions and goals.
+
+WHAT NEITHER READING EXPLAINS:
+How to attribute contribution when wording, optimization, and selection are distributed across humans and models.
+
+HIDDEN ASSUMPTION:
+That authorship tracks textual production.
+
+THIRD POSSIBILITY:
+Authorship in prompt systems is partly ecological: choosing the fitness landscape can matter more than writing any surviving sentence.
+
+QUESTION MADE HARDER:
+If the instruction is machine-generated but the criterion of survival is human-chosen, who wrote the behavior?
+
+DECISIVE EVIDENCE:
+Compare outcomes from fixed human prompts, machine-optimized prompts under human metrics, and human-selected outputs from unoptimized prompt populations. Track which intervention explains the largest variance in judged quality.
+
+CONSEQUENCE:
+Provenance must record evaluators and selection conditions, not merely prompt text.
+
+
+RANK 9 — T-09 — DOES FORMALIZING PROMPTING FORMALIZE THE WORDS?
+
+RIVAL CLAIM A:
+Prompt languages such as LMQL make natural-language interaction programmable by adding control flow, constraints, and formal semantics.
+
+RIVAL CLAIM B:
+Formal scaffolding leaves the central natural-language operation model-interpreted and probabilistic; the words themselves still lack conventional formal semantics.
+
+EVIDENCE FOR A:
+- WORKWORDS-PROMPT-007: LMQL generates constrained inference procedures from prompts, control flow, and output constraints.
+
+EVIDENCE FOR B:
+- WORKWORDS-PROMPT-007 TENSION: the model-interpreted natural-language transition remains qualitatively different from deterministic program transitions.
+- WORKWORDS-PROMPT-002: continuous controls can substitute for language entirely.
+
+SOURCES:
+Beurer-Kellner et al. 2023; Qin & Eisner 2021.
+
+WHAT BOTH READINGS EXPLAIN:
+Prompt systems can be embedded in reliable software structures.
+
+WHAT NEITHER READING EXPLAINS:
+What semantic theory should govern a program containing both formally defined transitions and learned interpretive transitions.
+
+HIDDEN ASSUMPTION:
+That putting an ambiguous operation inside a formal language makes that operation itself formal.
+
+THIRD POSSIBILITY:
+Prompted systems require a mixed semantics that explicitly distinguishes defined, constrained, sampled, interpreted, and delegated transitions.
+
+QUESTION MADE HARDER:
+What kind of program contains steps whose meaning is not specified by the language but inferred by another learned system?
+
+DECISIVE EVIDENCE:
+Model one LMQL program as a state machine and perturb only the prose fragments across model versions. Measure which claimed program invariants survive.
+
+CONSEQUENCE:
+“Prompting is programming” becomes an empirical and semantic question rather than a metaphor.
+
+
+RANK 10 — T-10 — CAN PROMPT PRACTICE BECOME EXPERIMENTAL WITHOUT DESTROYING WHAT IT IS TRYING TO STUDY?
+
+RIVAL CLAIM A:
+Prompting should be treated as controlled hypothesis testing: compare variants, models, and outputs.
+
+RIVAL CLAIM B:
+Creative prompt practice is path-dependent; criteria change after seeing outputs, and serendipity is part of the work. Experimental control may erase the evolving purpose of the practitioner.
+
+EVIDENCE FOR A:
+- WORKWORDS-PROMPT-008: ChainForge supports prompt variation, model comparison, and hypothesis testing.
+
+EVIDENCE FOR B:
+- WORKWORDS-PROMPT-008 TENSION: controlled comparison can discard situated judgment and criteria discovered during exploration.
+- WORKWORDS-PROMPT-003: not all omitted requirements are failures; some behavior is delegated or emergent.
+
+SOURCES:
+Arawjo et al. 2023; Yang et al. 2025.
+
+WHAT BOTH READINGS EXPLAIN:
+Iterative prompting learns from differences.
+
+WHAT NEITHER READING EXPLAINS:
+How to preserve causal evidence when the evaluation criterion itself changes during the experiment.
+
+HIDDEN ASSUMPTION:
+That the dependent variable is stable before inquiry begins.
+
+THIRD POSSIBILITY:
+Creative prompting needs reflexive experiments that version both the prompt and the criterion by which outputs are judged.
+
+QUESTION MADE HARDER:
+Can we infer what a prompt did when seeing the output changed what the user wanted?
+
+DECISIVE EVIDENCE:
+Record prompt interventions and criterion revisions separately during real creative sessions. Test whether retrospective judgments can reconstruct the criteria actually in force at each decision.
+
+CONSEQUENCE:
+A prompt history should preserve changing evaluation functions, not just text revisions.

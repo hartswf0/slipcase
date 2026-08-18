@@ -1,0 +1,4283 @@
+===== 001 · MARTINA-2022-001 · SHA256 e8f22c014b73091d0b445067d2888edeea159e1310f6712588efc39e960f78db =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-001
+
+TITLE:
+The idea can be actionable before the scene exists
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[QUOTE]
+You never do, you know, like, then I think like, I didn't even make them. You know, I just had the idea. I just imagined how it would be but I don't even imagine it. It's like if I imagine like draw it, but I don't have any kind of thought. But I have like this thought of this, but I don't have like this scenario built on my mind. So I'm like, I don't really think that what I did is mine you know, if I had the thought and had the all the whole scenario drawn in my head, then I would definitely think that I did it that seems like I just put my random thoughts in there. And then these AI draws it for me, then I kind of feel like it's it's property not mine. So how, which is weird. I don't know. Yeah, it's weird. I don't feel like I own it. Because I don't deserve it. I don't know, like the machine did it. You know, I don't know. It's weird.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+AN INTENTION CAN BE SUFFICIENT FOR ACTION WHILE INSUFFICIENT FOR COMPLETE REPRESENTATION.
+
+LOCAL MOVE:
+Martina explicitly separates having "the idea" from having "this scenario built on my mind." The research problem is not vague prompting but the representational status of an intention that can already initiate action.
+
+SOURCE TERMS:
+"idea"; "thought"; "scenario built on my mind"; "random thoughts"
+
+WHAT BECAME STRANGE:
+The usual sequence INTENTION -> DESCRIPTION -> EXECUTION assumes more determinacy upstream than Martina reports possessing.
+
+QUESTION:
+What minimum structure can an intention possess while still being actionable through a generative system?
+
+DEEPER QUESTION:
+Can direction remain attributable to a person when the representation that later counts as the target is partly constructed after action begins?
+
+MECHANISM:
+Martina supplies a partial linguistic intervention; the model resolves enough unspecified structure to create a perceivable candidate; the candidate then becomes available for judgment.
+
+FORMAL SHIFT:
+FROM: completed mental representation -> prompt -> output
+TO: underdetermined direction -> prompt -> generated proposal -> judgment.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+The source distinguishes having an idea from having the complete scenario mentally represented.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+D_0 (direction) -> P_0 (partial description) -> G_0 (generated proposal).
+D_0 need not contain a complete representation of G_0.
+
+TENSION:
+Martina may possess rich tacit or nonvisual criteria that the interview cannot recover; absence of a built scene is not evidence of absence of intention.
+
+MISSING:
+Pre-generation evidence detailed enough to distinguish latent criterion from newly formed criterion.
+
+BOUNDARY:
+The interview establishes Martina's self-description, not the cognitive ontology of intention.
+
+CITATION TRAIL:
+Transcript 17:56 -> incomplete scene despite actionable idea -> test pre-generation representational content.
+
+TEST:
+Before generation, record expected objects, relations, qualities, confidence, and rejection criteria without showing images. Compare with post-generation judgments and retained features.
+
+PLATFORM:
+Midjourney; design practice; intention
+
+LINKS:
+[[MARTINA-2022-002]]
+[[MARTINA-2022-003]]
+[[MARTINA-2022-011]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 002 · MARTINA-2022-002 · SHA256 5a608119aa9c0d01f6918b467ca414bb04bda5fc63da7c2f9aa8f2b5d2cc7c05 =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-002
+
+TITLE:
+The concept can precede the image without containing it
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[QUOTE]
+"I'm very conceptual, but there's nothing there. It's just thoughts. And my journey actually makes the images and it constructs this environment and this whole thing." (33:34)
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+CONCEPTUAL DIRECTION AND VISUAL REPRESENTATION ARE SEPARABLE STATES.
+
+LOCAL MOVE:
+This card pressure-tests [[MARTINA-2022-001]]. Martina does not merely say the image is blurry; she says the model constructs the environment.
+
+SOURCE TERMS:
+"conceptual"; "nothing there"; "thoughts"; "constructs this environment"
+
+WHAT BECAME STRANGE:
+The generated environment can contain determinations that were not present as a prior image.
+
+QUESTION:
+What relation does the generated image bear to a concept that did not already contain it?
+
+DEEPER QUESTION:
+Is generation expression, interpretation, completion, proposal, construction, or some changing combination across iterations?
+
+MECHANISM:
+A concept supplies orientation; generation supplies concrete relations; later judgment determines which relations are incorporated into the project.
+
+FORMAL SHIFT:
+CONCEPT != IMAGE_SPECIFICATION.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Martina distinguishes conceptual thought from a constructed visual environment.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+CONCEPT C constrains a region of acceptable futures R, without enumerating a target image I.
+
+TENSION:
+Calling the model a constructor can overstate agency; the operational claim is only that output properties exceed explicit specification.
+
+MISSING:
+A feature-level comparison between initial concept statements and generated image properties.
+
+BOUNDARY:
+Does not establish that no visual imagery exists at all; it establishes Martina's reported distinction.
+
+CITATION TRAIL:
+[[MARTINA-2022-001]] -> transcript 33:34 -> concept/image separation -> classify relations between concept and generated proposal.
+
+TEST:
+Have independent coders map each visible output property to explicit prior statement, plausible implication, or newly supplied detail.
+
+PLATFORM:
+Midjourney; conceptual design
+
+LINKS:
+[[MARTINA-2022-001]]
+[[MARTINA-2022-011]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 003 · MARTINA-2022-003 · SHA256 44bcddfafc0fc07c7fb24fa09fb97c97165292aaa2f6c62a80b9dd0c77b2c1e4 =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-003
+
+TITLE:
+A failed generation can manufacture a missing requirement
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[QUOTE]
+Not really, because I wasn't very specific. So it just gave me like multiple styles and something very weird. And I specified that i What kind of like I wanted to be more like, manga. And then I wanted, I specify what kind of cat I have. I have a white black and white cat like a tuxedo cat. And then this way, I also said like, more about the clothing and then I got the proper result. But at the beginning, it was super messy.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+EXECUTION CAN PRODUCE SPECIFICATION INFORMATION.
+
+LOCAL MOVE:
+Martina begins with an underspecified cat image, encounters "multiple styles and something very weird," then adds manga, tuxedo-cat identity, and clothing detail.
+
+SOURCE TERMS:
+"wasn't very specific"; "multiple styles"; "proper result"; "messy"
+
+WHAT BECAME STRANGE:
+The first generation does not simply fail; it reveals which distinctions must become explicit for the next attempt.
+
+QUESTION:
+Which later constraints were already intended but omitted, and which became salient only because the first output instantiated an unwanted alternative?
+
+DEEPER QUESTION:
+Can a requirement legitimately be called part of the specification if the practitioner did not know it needed specification until after execution?
+
+MECHANISM:
+Output concretizes unspecified variables; visible mismatch converts some of them into explicit constraints.
+
+FORMAL SHIFT:
+FROM: specification -> execution -> pass/fail
+TO: partial specification -> execution -> diagnostic difference -> new specification.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Martina attributes poor early output to insufficient specificity and responds by adding named properties.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+P_t -> G_t -> NOTICE(difference d) -> REQUIRE(d) -> P_t+1.
+
+TENSION:
+Some additions may be reminders of pre-existing preferences rather than newly formed requirements.
+
+MISSING:
+Time-resolved evidence of what was intended, unnoticed, undecided, and delegated before output.
+
+BOUNDARY:
+One anecdote does not establish prevalence.
+
+CITATION TRAIL:
+Transcript 02:24 -> failed output -> newly explicit properties -> deferred specification.
+
+TEST:
+Pre-register intended properties before generation, then code every added constraint after generation as OMITTED, TACIT, NEWLY SALIENT, NEWLY FORMED, or DELIBERATELY DELEGATED.
+
+PLATFORM:
+Midjourney; prompt iteration; specification
+
+LINKS:
+[[MARTINA-2022-001]]
+[[MARTINA-2022-004]]
+[[THEORY-1994-KIRSH-MAGLIO]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 004 · MARTINA-2022-004 · SHA256 bcb7ffad23f595fec80dbdb94b8a869ec4feac76676208779946b5675fded8fe =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-004
+
+TITLE:
+The template is a memory of differences that practice taught Martina to care about
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[QUOTE]
+Yeah, so I, since I know, like people were making amazing art because the community tab was available at the moment but nownow they kind of limit it a bit.  But in the beginning, like you could see everything that everyone was graded grading, and they were also showing you the prompts. And I was like, okay, my problem, they don't look at all like what these people are doing. So I grabbed notion like this app, and I started creating like a template. So it would help me write the prompts. Like I knew there were like, some websites or people that they were also doing this, but I didn't like the design. And I like notion most. So this is why I did my notion template and in there, I just every time that I was discovering a new way to make a prompt, I would just like adding it to the template. And this way with a lot of trial and error. Yeah, I could improve. And I remember I exhausted like the initial prompts like the free trial, wanted to get like, I don't know, like an hour or something. And I was like, well, I need to subscribe them. Because, yeah, because there's like a lot of learning like the learning curve. And of course, it depends on how much information you have in advance. Like if you already know that it's hard to get to the right image or not. Because for me, I was like yes, this I can do super quickly, but then you realize like
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+PROMPT TEMPLATE AS ACCUMULATED SPECIFICATION HISTORY.
+
+LOCAL MOVE:
+Martina observes public prompts, creates a Notion template, and adds a new element "every time" she discovers a new way to prompt through trial and error.
+
+SOURCE TERMS:
+"showing you the prompts"; "template"; "discovering a new way"; "trial and error"; "improve"
+
+WHAT BECAME STRANGE:
+The template is produced downstream of executions and then returns upstream to govern future executions.
+
+QUESTION:
+Is the mature prompt best understood as a standalone instruction or as a compressed residue of earlier failures, examples, and discoveries?
+
+DEEPER QUESTION:
+What forms of knowledge disappear when the history of corrections is collapsed into a final template?
+
+MECHANISM:
+Discovery -> inscription -> reuse. A consequential difference is named and preserved so later attempts begin with more structure.
+
+FORMAL SHIFT:
+EXECUTION_t -> DISCOVERY_t -> TEMPLATE_t+1 -> EXECUTION_t+1.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Martina describes a cumulative template updated through public observation and trial and error.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+T_{t+1} = T_t + distinctions learned from trajectory t.
+
+TENSION:
+A template may accumulate fashionable conventions or spurious correlations as readily as genuine requirements.
+
+MISSING:
+Version history of the template tied to specific triggering generations.
+
+BOUNDARY:
+The transcript does not preserve the actual template versions.
+
+CITATION TRAIL:
+Transcript 03:04 -> cumulative template -> specification has a genealogy -> inspect version lineage.
+
+TEST:
+Version-control prompt templates and link each new field to the event that caused its addition; later test whether removing that field recreates the original failure.
+
+PLATFORM:
+Notion; Midjourney; prompt template
+
+LINKS:
+[[MARTINA-2022-003]]
+[[MARTINA-2022-005]]
+[[MARTINA-2022-006]]
+[[OPS-20260817-007]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 005 · MARTINA-2022-005 · SHA256 8b2c8ad231eed8942ce023eb34c099ea6b3c3dcbaab9cea1dea2caec7745c376 =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-005
+
+TITLE:
+The template can propose a possibility rather than merely constrain one
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[QUOTE]
+Having the template can also help you like be more creative because maybe you have this idea but then you see that there's like another perspective or style or whatever. And then you're like okay, maybe this works. Okay, so...
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+EXTERNAL SPECIFICATION AIDS CAN EXPAND THE CHOICE SET.
+
+LOCAL MOVE:
+Martina says the template can make her more creative by exposing another perspective or style that she had not considered.
+
+SOURCE TERMS:
+"template"; "more creative"; "another perspective or style"; "maybe this works"
+
+WHAT BECAME STRANGE:
+The same artifact used to increase specificity can also re-open possibility.
+
+QUESTION:
+When is a template a constraint device and when is it a proposal generator?
+
+DEEPER QUESTION:
+Can a structure simultaneously increase control over execution and increase discovery by making forgotten alternatives available?
+
+MECHANISM:
+The template externalizes categories; encountering a category expands the currently considered set; selection then re-enters the prompt.
+
+FORMAL SHIFT:
+TEMPLATE -> OPTION SURFACE -> SELECTION -> SPECIFICATION.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+The source reports the template exposing alternative perspectives or styles.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+CHOICE_SET_user(t) subset CHOICE_SET_user+template(t).
+
+TENSION:
+More options can also induce conformity to template categories and reduce attention to unnamed possibilities.
+
+MISSING:
+Comparative data on ideation breadth with and without the template.
+
+BOUNDARY:
+Does not show whether resulting ideas are better or more original.
+
+CITATION TRAIL:
+[[MARTINA-2022-004]] -> template as memory -> transcript 14:30 -> template also generates alternatives.
+
+TEST:
+Compare free ideation, template-aided ideation, and shuffled-template ideation; measure unique directions and later retention.
+
+PLATFORM:
+Notion; Midjourney; creativity support
+
+LINKS:
+[[MARTINA-2022-004]]
+[[MARTINA-2022-006]]
+[[THEORY-1992-GOEL]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 006 · MARTINA-2022-006 · SHA256 68013601a993f5acb040a20df9c61391064b07b0a9aac5ed34b0fb8e5962f5ba =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-006
+
+TITLE:
+The guide stores descriptive competence outside unaided memory
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[QUOTE]
+"I cannot really remember all of them." (42:55) [Transcript passage discusses artistic movements, medium, perspective, aesthetics, and atmospheres available through the guide.]
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+FUNCTIONAL PROMPT COMPETENCE EXCEEDS UNAIDED RECALL.
+
+LOCAL MOVE:
+Martina uses the guide because the actionable vocabulary is larger than what she can keep available in memory.
+
+SOURCE TERMS:
+"artistic movement"; "medium"; "perspective"; "aesthetics"; "atmospheres"; "remember"
+
+WHAT BECAME STRANGE:
+A person can competently use a distinction she cannot independently recall because the technical artifact keeps it available.
+
+QUESTION:
+Where does prompt competence reside when the user cannot internally remember the vocabulary required to exercise it?
+
+DEEPER QUESTION:
+Can a self-authored external memory later surprise its author and become a source of new possibilities?
+
+MECHANISM:
+External store preserves categories; recognition at point of use substitutes for unaided recall; selection reactivates a forgotten distinction.
+
+FORMAL SHIFT:
+PAST INSCRIPTION -> PERSISTENCE -> FUTURE ENCOUNTER -> CURRENT OPTION.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Martina reports using the guide because she cannot remember all relevant descriptive categories.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+AVAILABLE_KNOWLEDGE = recall(user) union lookup(template) union recognition(examples).
+
+TENSION:
+External storage alone does not prove distributed cognition in the strong philosophical sense.
+
+MISSING:
+Behavioral comparison of performance with guide available, removed, and replaced.
+
+BOUNDARY:
+Functional distribution is the defensible claim; extended-mind ontology remains open.
+
+CITATION TRAIL:
+Transcript 42:55 -> external vocabulary -> Hutchins/Clark-Chalmers -> test system-level remembering.
+
+TEST:
+Ask users to construct prompts with guide, without guide, and with unfamiliar taxonomy; record omissions, retrieval time, and conceptual branching.
+
+PLATFORM:
+Notion; external memory; prompt vocabulary
+
+LINKS:
+[[MARTINA-2022-004]]
+[[MARTINA-2022-005]]
+[[THEORY-1995-HUTCHINS]]
+[[THEORY-1998-CLARK-CHALMERS]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 007 · MARTINA-2022-007 · SHA256 cc943d081839b5054336de51b1057c740c7e592e28b3215a642d598b4f3682cc =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-007
+
+TITLE:
+Prompting requires a practical theory of what the model knows
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[QUOTE]
+"I didn't know what the AI knows. So I can make the most of this." (25:12)
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+MODEL-OF-THE-MODEL AS PRACTICAL PROMPT KNOWLEDGE.
+
+LOCAL MOVE:
+Effective address requires Martina to infer which categories, styles, and associations are behaviorally available to the model.
+
+SOURCE TERMS:
+"what the AI knows"; "make the most"; "limit"
+
+WHAT BECAME STRANGE:
+Prompting involves inquiry into the addressee, not only articulation of the self.
+
+QUESTION:
+What minimum working model of a generative system is required for competent direction?
+
+DEEPER QUESTION:
+When does a prompt community become a vernacular empirical science of an undocumented and changing machine?
+
+MECHANISM:
+Observe output under varied descriptions; infer model-relevant distinctions; retain successful hypotheses in personal/community practice.
+
+FORMAL SHIFT:
+USER INTENT + MODEL-OF-MODEL -> PROMPT CHOICE.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Martina explicitly frames prompt improvement as learning what the AI knows and where its limits may be.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+P(prompt | goal) is conditioned by user belief B about model response surface.
+
+TENSION:
+The anthropomorphic vocabulary of "knows" need not correspond to model internals; it is a practitioner-level predictive theory.
+
+MISSING:
+Longitudinal record of hypotheses about model behavior and their predictive success after model updates.
+
+BOUNDARY:
+No claim that model knowledge is humanlike.
+
+CITATION TRAIL:
+Transcript 25:12 -> model-of-model -> public prompt observation -> current tool surfaces make capability legibility explicit.
+
+TEST:
+Ask practitioners to predict outputs from unseen prompt variants, then measure whether explicit model theories predict performance beyond general visual expertise.
+
+PLATFORM:
+Midjourney; model legibility; prompt community
+
+LINKS:
+[[MARTINA-2022-004]]
+[[MARTINA-2022-013]]
+[[OPS-20260817-001]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 008 · MARTINA-2022-008 · SHA256 f2e0bb1c5e5916d9111cf80a2b54fef68018f2254a20c7325829406b0c2c2a82 =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-008
+
+TITLE:
+Specificity has control value but may lose discovery value
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[QUOTE]
+"if you're specific ... quite accurate to what you have in mind" and "force myself to write a longer prompt and really tell it what to do." (40:25)
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+CONTROL QUALITY AND EPISTEMIC QUALITY ARE DISTINCT.
+
+LOCAL MOVE:
+Martina values specificity because it increases correspondence, while [[MARTINA-2022-005]] values alternatives exposed by the template.
+
+SOURCE TERMS:
+"specific"; "accurate"; "force myself"; "tell it what to do"
+
+WHAT BECAME STRANGE:
+The practice contains two objectives that can conflict: converging on an articulated target and discovering a target through variation.
+
+QUESTION:
+What should remain open now, and what has earned the right to become fixed?
+
+DEEPER QUESTION:
+Can prompt quality be evaluated without specifying whether the operation is executional or epistemic?
+
+MECHANISM:
+More constraints reduce some uncertainty and can increase correspondence; retained uncertainty can produce alternatives from which new preferences emerge.
+
+FORMAL SHIFT:
+CONTROL_VALUE(S) may rise with specificity S while DISCOVERY_VALUE(S) can peak earlier.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Martina links specificity to accuracy and deliberately uses a template to force more explicit description.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Q(prompt) = f(task_phase, control_value, discovery_value), not a scalar function of specificity alone.
+
+TENSION:
+Vague text is not equivalent to productive sketch ambiguity; the model may silently fill omissions with strong defaults.
+
+MISSING:
+A phase-sensitive experiment comparing exploration and convergence tasks.
+
+BOUNDARY:
+Does not establish a universal inverse relation between specificity and creativity.
+
+CITATION TRAIL:
+[[MARTINA-2022-003]] + [[MARTINA-2022-005]] -> tension -> Goel on ill-structured representations.
+
+TEST:
+Randomize designers to low-, medium-, and high-specification prompts at early and late project stages; measure fidelity, branching, and novelty retained later.
+
+PLATFORM:
+Midjourney; design exploration; specification
+
+LINKS:
+[[MARTINA-2022-003]]
+[[MARTINA-2022-005]]
+[[THEORY-1992-GOEL]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 009 · MARTINA-2022-009 · SHA256 20695cd40233f212810903dfe5c0d0f60117476829cda1f03aa2bcd5cbcddc60 =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-009
+
+TITLE:
+The prompt feels more authored than the image
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[QUOTE]
+No, no, no, no, no, no, I saw that. You can also like, sell your prompts. And I was like, Okay, this is a bit more original. Because if you're selling the image, then you are actually selling something that the AI did. But if you're selling the prompt, it's something that you did, because you I mean, it's only your text, you are not selling the image, but it just doesn't make sense. Like I saw that there are like a couple of, I don't know more websites that are taking advantage of this, like you as a creator as a AI creator making money off your images or your prompt. And I'm like, this makes no sense. But what people monetize everything, which is fine, I admire them, but I just didn't see the point of that.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+AUTHORSHIP IS EXPERIENCED ASYMMETRICALLY ACROSS INSTRUCTION AND EXECUTION.
+
+LOCAL MOVE:
+Martina distinguishes the prompt as "something that you did" and "only your text" from the image as "something that the AI did."
+
+SOURCE TERMS:
+"selling the image"; "something that the AI did"; "selling the prompt"; "only your text"
+
+WHAT BECAME STRANGE:
+Felt authorship attaches to the instruction even though the mature instruction itself contains inherited vocabulary and discoveries from earlier model outputs.
+
+QUESTION:
+What kind of authorship survives when instruction is human-authored but realization resolves consequential properties absent from the instruction?
+
+DEEPER QUESTION:
+Would decision provenance provide a more precise account than single-author attribution?
+
+MECHANISM:
+Instruction establishes some constraints; model resolves additional properties; user later accepts/rejects outputs; retained emergent properties become subsequent constraints.
+
+FORMAL SHIFT:
+AUTHORSHIP != sole causal production; decision authority is distributed across a trajectory.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Martina explicitly locates originality more strongly in prompt text than in generated image.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+For feature f, record provenance stage: SPECIFIED / SYSTEM-RESOLVED / RETAINED-AFTER-EMERGENCE / COMMUNITY-INHERITED / TEMPLATE-PROMPTED.
+
+TENSION:
+Decision provenance does not settle legal copyright or moral authorship.
+
+MISSING:
+Feature-level provenance across several generations and edits.
+
+BOUNDARY:
+Keep legal ownership distinct from felt authorship and process authorship.
+
+CITATION TRAIL:
+Transcript 22:05 -> instruction/execution split -> Goodman/Suchman -> decision provenance.
+
+TEST:
+Trace 30 visible properties of a final artifact backwards through prompts and generations; classify where each property became fixed.
+
+PLATFORM:
+Midjourney; authorship; prompt markets
+
+LINKS:
+[[MARTINA-2022-010]]
+[[MARTINA-2022-011]]
+[[THEORY-1976-GOODMAN]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 010 · MARTINA-2022-010 · SHA256 b47bc08375d5faaa82a2a70d916b114bb7ddf83e85f29a6683bdd2bb16e65acb =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-010
+
+TITLE:
+Naming another artist changes the ethical status of the instruction
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[QUOTE]
+Definitely, I don't like using artists that like, you know, I never really use the style of other artists in my prompts. I mean, I did it as a test as a test, you know, because I was doing some demos on YouTube, making different prompts. And of course, I actually, I used some, some painters on that. But when it comes to my personal prompts, I don't like using other artists, because I'm like, This is not my style. This is his/her style. And I just feel like it's kind of violating their creative, their creativity, I don't know, I just don't like it. And I would definitely love like, if they actually did this, of course, like many of the artists that we have in the database are dead so it's not like they can agree on anything, I guess, the families and so on. But it still feels weird. I don't really like the idea of drawing whatever in the style of Picasso or whatever. I just, it doesn't feel right. I don't know. But of course, like in real life, many illustrators, and painters kind of took Those are styles as reference for their own paintings. And we're okay with that. Which is fine. But when it comes to literally "in the style of" it just feels like a bad copy. And it's not good.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+PROMPT VOCABULARY CARRIES PROVENANCE AND ETHICAL FORCE.
+
+LOCAL MOVE:
+Martina avoids "in the style of" another artist in personal work because it feels like a bad copy rather than merely a neutral control phrase.
+
+SOURCE TERMS:
+"This is not my style"; "in the style of"; "bad copy"; "doesn't feel right"
+
+WHAT BECAME STRANGE:
+An operative phrase can be technically useful while making authorship feel less legitimate.
+
+QUESTION:
+When does an effective control phrase become unacceptable because of the history it invokes?
+
+DEEPER QUESTION:
+Can prompt provenance be represented at the level of borrowed stylistic operations rather than only final image attribution?
+
+MECHANISM:
+Named artist reference compresses a set of learned visual associations into a control token; Martina interprets the same compression as carrying another creator's authorship.
+
+FORMAL SHIFT:
+CONTROL POWER and AUTHORSHIP LEGITIMACY can diverge.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Martina distinguishes ordinary influence from literally prompting "in the style of" an artist.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Operational efficiency(reference) does not imply ethical neutrality(reference).
+
+TENSION:
+The interview records Martina's ethical judgment, not a universal standard.
+
+MISSING:
+Comparative practitioner accounts and model response analysis.
+
+BOUNDARY:
+No claim about legal infringement.
+
+CITATION TRAIL:
+Transcript 20:43 -> style phrase -> authorship tension -> provenance questions.
+
+TEST:
+Compare reactions to artist-name prompts, movement-name prompts, descriptive decompositions, and self-authored style exemplars while holding outputs approximately matched.
+
+PLATFORM:
+Midjourney; style prompting; ethics
+
+LINKS:
+[[MARTINA-2022-009]]
+[[MARTINA-2022-016]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 011 · MARTINA-2022-011 · SHA256 66aa5f047f7bbafcebf9aeb3ab7b2bb346afc847ab84015451af375e6e0411a1 =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-011
+
+TITLE:
+Generation makes a project-specific world available before Martina can draw it
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[QUOTE]
+For artists, it is more like conceptual, if you want something more technical, you are definitely not getting it from a Midjourney. It's more like, like video game design and art and sketching your ideas. I started using it too, for that was getting my ideas and they were like, Okay, I'm, I'm always, when I have to start a new project, I have this creative block, when it comes to something that is a bit more subjective. And using the Midjourney, it kind of helped me like visualize this scenario, because while all my projects like personal projects, they have a lot of storytelling. And since I'm not good at drawing, I always kind of panic. And I saw the potential of Midjourney with that, because I would like, Okay, if my project is on Mars here, I can actually imagine the scenario and create it specifically for my project with my idea, my point of view, and I felt that was great. But of course, like, if you want to do something more technical, I don't know, you can do product design, not like UX UI, but more like packaging or whatever, like objects, and definitely the DALLE works better. I did some tests on DALLE  Midjourney with different design disciplines. And yeah, I mean, for example, if you want to get a logo, you know, then DALLE is quite better on that Midjourney can also do logos, but Midjourney is so artistic that  Somehow it doesn't really understand what you're asking. But that was maybe like two months ago. I don't know if they actually refine it to be more technical, or no, did they?
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+GENERATION AS PROJECT-SPECIFIC REPRESENTATIONAL PROSTHESIS.
+
+LOCAL MOVE:
+Martina uses Midjourney for storytelling projects because she can visualize a scenario specifically for her project despite not being good at drawing.
+
+SOURCE TERMS:
+"sketching your ideas"; "visualize this scenario"; "specifically for my project"; "my idea, my point of view"
+
+WHAT BECAME STRANGE:
+The generated image occupies a space between generic reference imagery and personally executed illustration.
+
+QUESTION:
+What becomes possible when a person can commission a project-specific representation before possessing the craft to execute it?
+
+DEEPER QUESTION:
+Does representational access redistribute leadership without eliminating the need for domain judgment?
+
+MECHANISM:
+Conceptual direction becomes shareable visual artifact through a model; artifact can then participate in further design and communication.
+
+FORMAL SHIFT:
+CONCEPT -> GENERATED REPRESENTATION -> SOCIAL/PROJECT OPERATIONS.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Martina frames Midjourney as a way to sketch and visualize narrative project scenarios she cannot readily draw.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+CAPABILITY_PATH = concept -> model-mediated representation -> critique/pitch/build.
+
+TENSION:
+Representation is not equivalent to mastery of illustration or technical implementation.
+
+MISSING:
+Observation of how generated representations are subsequently used in project decisions.
+
+BOUNDARY:
+Claims concern access to representation, not finished product capability.
+
+CITATION TRAIL:
+Transcript 10:01 -> representation as project infrastructure -> [[MARTINA-2022-023]].
+
+TEST:
+Follow one project from conceptual statement through generated imagery to downstream design decisions; identify which decisions become possible only after representation exists.
+
+PLATFORM:
+Midjourney; storytelling; project visualization
+
+LINKS:
+[[MARTINA-2022-001]]
+[[MARTINA-2022-023]]
+[[MARTINA-2022-024]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 012 · MARTINA-2022-012 · SHA256 15312e4c42c1984adfedf43668f591eb7c20f2a2387f9500fb68f23ad631c53f =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-012
+
+TITLE:
+Model default style narrows the space opened by vague prompts
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[QUOTE]
+But at least you were able to spend your money on DALLE I tried. But none of my, like, none of my cards were accepted. And I don't know why. Like, I don't know, maybe they have some issue with Spanish cards or whatever. Maybe it's something that I don't know. But I wanted to but creadits and I couldn't. So this is why I was like, okay, then Midjourney is my best friend now. Which I also prefer, because I really like the style of Midjourney. But speaking of the style of Midjourney, I always feel like I always get like very similar results, even my prompts... they're not that related, but it kind of most of the time goes to a very similar style. And I think I get bored of that. I don't know if it's still like that. Because as I told you, I took a break. Like I haven't used it in a month. Maybe because of that. Because I was like it's not that great. You know,
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+UNDERSPECIFICATION DOES NOT PRESERVE NEUTRAL OPENNESS.
+
+LOCAL MOVE:
+Martina likes Midjourney's style but becomes bored because unrelated prompts repeatedly drift toward similar results.
+
+SOURCE TERMS:
+"very similar results"; "similar style"; "get bored"
+
+WHAT BECAME STRANGE:
+Leaving style open can produce convergence on a platform/model aesthetic rather than wide exploration.
+
+QUESTION:
+When the user leaves a dimension unspecified, does the system preserve uncertainty or collapse it into a learned/default regularity?
+
+DEEPER QUESTION:
+Can default aesthetics silently become design decisions when users mistake system regularity for their own preference?
+
+MECHANISM:
+Omitted variable is resolved by conditional model behavior, interface settings, sampling, and training regularities rather than remaining undefined.
+
+FORMAL SHIFT:
+OMISSION != OPEN POSSIBILITY; omission can invoke DEFAULT DISTRIBUTION.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Martina reports similar style across prompts that she considered unrelated.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+If style not specified: output style ~ P_model(style | remaining prompt, defaults), not uniform freedom.
+
+TENSION:
+Observed similarity may reflect Martina's own recurring wording or selective memory as well as the model.
+
+MISSING:
+Controlled prompting across users and prompt families.
+
+BOUNDARY:
+The interview does not identify the technical source of similarity.
+
+CITATION TRAIL:
+Transcript 12:18 -> boredom with default style -> omission as non-neutral -> test model priors.
+
+TEST:
+Hold semantic content constant and vary only style specification; quantify visual clustering and compare across users, seeds, and model versions.
+
+PLATFORM:
+Midjourney; default aesthetic; model prior
+
+LINKS:
+[[MARTINA-2022-008]]
+[[MARTINA-2022-016]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 013 · MARTINA-2022-013 · SHA256 84d9df0bc055cb030bb39847cb42df7f1fe3942664aec76bc0332ed7a001cf4e =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-013
+
+TITLE:
+Public prompts make prompt literacy socially inspectable
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[QUOTE]
+Because, well, it's like, when Midjourney started, you could just see the prompts from other people. It was like, everything is open source, you know, somehow, like, I just thought like the concept on the whole. I don't know how to say these, but it just makes sense to not keep it for myself and just try to help others, I guess. I think the community is just all about that. And it just didn't make sense to make it private or paid or whatever. You know.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+OPEN PROMPT CULTURE FUNCTIONS AS A SHARED LEARNING INFRASTRUCTURE.
+
+LOCAL MOVE:
+Martina describes early Midjourney as an environment where prompts were visible and where keeping her own template private "didn't make sense."
+
+SOURCE TERMS:
+"see the prompts"; "everything is open source"; "help others"; "community"
+
+WHAT BECAME STRANGE:
+Prompt practice is learned in public and can therefore accumulate conventions faster than solitary trial and error.
+
+QUESTION:
+What knowledge is created by a community when descriptions and outputs are jointly inspectable?
+
+DEEPER QUESTION:
+When does open sharing support collective experimentation, and when does it produce convergence and imitation?
+
+MECHANISM:
+Public prompt-output pairs act as executable exemplars; users infer causal hypotheses and import them into personal templates.
+
+FORMAL SHIFT:
+COMMUNITY EXAMPLE -> HYPOTHESIS -> PERSONAL TEST -> TEMPLATE.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Martina treats prompt openness as a norm of the early community.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Prompt culture behaves like a distributed experiment log without controlled experimental design.
+
+TENSION:
+Visibility can also create competitive comparison and style drift, as [[MARTINA-2022-014]] reports.
+
+MISSING:
+Network-level evidence tracing diffusion of prompt phrases and stylistic outcomes.
+
+BOUNDARY:
+"Open source" is Martina's analogy, not a claim that prompts have software-source legal status.
+
+CITATION TRAIL:
+Transcript 15:51 -> openness -> transcript 59:29 contradiction -> public learning versus preference contamination.
+
+TEST:
+Trace distinctive prompt phrases through public galleries and subsequent personal use; compare learning gains with convergence effects.
+
+PLATFORM:
+Midjourney community; public prompts
+
+LINKS:
+[[MARTINA-2022-004]]
+[[MARTINA-2022-007]]
+[[MARTINA-2022-014]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 014 · MARTINA-2022-014 · SHA256 bb51c7da3934f50bd1b134f8e3dc2981625c75a048d25048228a50aea8e3477c =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-014
+
+TITLE:
+The public generative stream can change what the user thinks she wants
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[QUOTE]
+I hate it so much the newbies channel that's really why i i paid right away when I started the new wave channel problems like the free prompt. I got into my own chat and I was like, okay, good. I was so stressed with that with within with all we're making. I was like, Okay, I'm not so sure about what I created anymore because I liked it more than I was like, kind of like competing with anonymous people like okay, this is not good. And this is why When I had my own chart, I was more okay with that, because I was just trying to refine things instead of just trying to build something that maybe wasn't my style just because when I saw them creating those things, I was like, Okay, maybe what I had in mind is not good enough. Maybe I'm just going to be doing this because it's it's cooler, but then I felt like it was just stealing from them. So I don't know, it was weird. I didn't like it. But also when you're in your own chart, and you have your nowaday limit, well, a month ago, when I was getting the limited to, I don't know, like three params at the same time, or something like that. And it was actually okay, because of the beginning, I will be no prompt not prompts from, like, I don't know, when you do upscale it or make variations, it was kind of limited to three or four, I don't know how many. And that was a being annoying, because I was like, I just want to make maybe, like 20 variations of the different drums that I have. And I want to scale. I don't know how many others. And of course, like the discord chat was getting super messy. And because it was kind of getting confused, you know, like, I wanted to scale these images and these images like you have, I would just click on the different, you know, like the u one, u two, u three, the different buttons that you have. And it was super messy. So in terms of that, in terms of the UI, work, I mean, they they control the UI, because it's this core part, they actually had something more like Dally, where you have more control of your problems and your results in the process. That would be a nicer experience. Because, you know, you see it loading, you see the progress bar, so you know that it's going to be loading. But if you're like me, and you did click on everything, because you want a lot of variations, and that just gets super confusing, but you know what I'm talking so yeah, I guess I, I also expected for them to, like, move out of the skirt and have their own platform. So I guess they might join at some point. But I don't know.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+VISIBLE ALTERNATIVES CAN CONTAMINATE PREFERENCE FORMATION.
+
+LOCAL MOVE:
+Martina says the newbie channel made her unsure about what she created and tempted her toward what looked cooler; moving to her own chat let her refine rather than compete.
+
+SOURCE TERMS:
+"not so sure about what I created"; "competing with anonymous people"; "maybe what I had in mind is not good enough"; "refine things"
+
+WHAT BECAME STRANGE:
+The same public openness that teaches prompt technique can destabilize the user's criterion of what counts as good for her project.
+
+QUESTION:
+When does exposure to alternatives expand possibility, and when does it substitute social comparison for project-directed judgment?
+
+DEEPER QUESTION:
+Can private generation preserve a more stable evaluative trajectory by reducing exogenous preference shocks?
+
+MECHANISM:
+Public feed supplies salient alternatives; social comparison changes perceived quality; user may adopt stylistic direction not previously connected to project.
+
+FORMAL SHIFT:
+PUBLIC FEED -> COMPARISON -> CRITERION SHIFT -> STYLE DRIFT.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Martina contrasts stressful public-channel comparison with private refinement.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+JUDGMENT_t = f(project criterion, generated candidate, salient others).
+
+TENSION:
+Isolation can also reduce productive exposure and reinforce narrow taste.
+
+MISSING:
+Within-subject sessions in public-feed and private-feed conditions with tracked preference changes.
+
+BOUNDARY:
+One participant cannot establish general effects of feed visibility.
+
+CITATION TRAIL:
+[[MARTINA-2022-013]] -> openness as learning -> transcript 59:29 -> openness as preference pressure.
+
+TEST:
+Have users pre-rank design directions, work under public-feed versus private conditions, then re-rank and explain changes; distinguish learned technique from copied taste.
+
+PLATFORM:
+Midjourney; Discord; social comparison
+
+LINKS:
+[[MARTINA-2022-013]]
+[[MARTINA-2022-005]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 015 · MARTINA-2022-015 · SHA256 ca3d3effe27027e262d5228be1363dc41a8c47e8d65503e4ab4ea7260f1f3d39 =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-015
+
+TITLE:
+Contractual ownership and felt authorship diverge
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[QUOTE]
+I think I was fine when others created it  because I never really felt that it was my creation. You know, like, it was shocking for like, I mean, not and then like, I'd find, you know, if it was my creation 100% I would be super upset and like, I don't know, like, trying to claim the copyright or whatever. But, you know, for these things, as we said, it was all about, you know, this openness, I don't really care and because yeah, I don't think I have like this small percentage of me knowing that I own it. Because while you're in the terms, you are the owner of what you create, which is amazing. But I don't know maybe like, I'm like very, like, actually exigente. How they say this in English?
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+LEGAL OR PLATFORM OWNERSHIP DOES NOT DETERMINE EXPERIENCED AUTHORSHIP.
+
+LOCAL MOVE:
+Martina notes that terms may make the user the owner while simultaneously reporting that she does not feel the work is fully her creation.
+
+SOURCE TERMS:
+"never really felt that it was my creation"; "in the terms, you are the owner"
+
+WHAT BECAME STRANGE:
+Ownership can be granted formally while authorship remains experientially unresolved.
+
+QUESTION:
+What process conditions make a generated artifact feel ownable independent of contractual rights?
+
+DEEPER QUESTION:
+Is felt authorship tied to labor, control, decision provenance, originality, execution, or accountability?
+
+MECHANISM:
+Martina compares formal ownership with her sense that the machine performs too much of the realization.
+
+FORMAL SHIFT:
+CONTRACTUAL_OWNER can differ from FELT_AUTHOR.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+The source directly contrasts terms-based ownership with weak felt ownership.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+OWNERSHIP_LEGAL != AUTHORSHIP_EXPERIENTIAL != DECISION_PROVENANCE.
+
+TENSION:
+Felt authorship may reflect historically contingent norms about labor and craft rather than a stable criterion.
+
+MISSING:
+Comparative cases varying labor, specification, selection, editing, and attribution.
+
+BOUNDARY:
+No legal conclusion is drawn.
+
+CITATION TRAIL:
+Transcript 19:28 -> legal/felt divergence -> 56:53 labor theory -> 22:05 prompt/image split.
+
+TEST:
+Create matched artifacts under varying degrees of human specification and post-editing; ask creators to allocate authorship and explain decisive factors.
+
+PLATFORM:
+Midjourney; ownership; authorship
+
+LINKS:
+[[MARTINA-2022-009]]
+[[MARTINA-2022-017]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 016 · MARTINA-2022-016 · SHA256 c7540d9c4cddcd834451bd9b845261fe84bd23fd19fbbd5450d71648c56dc2f4 =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-016
+
+TITLE:
+The default "dreamy" aesthetic behaves like a platform prior
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[QUOTE]
+Well, I guess this is, for example, when we were speaking, when we were saying before that if I don't specify the style, I always get like this dream. Dreamy. I don't know wahts the style name. But yeah, it like always like these. Well, I don't know how to specify, but it's a bit like, video game. Like the first traditional video game, this is all everytime like my default, if I don't specify exactly what I want, I get this kind of style. And this is what I said, that got me bored at the beginning because I like you. I was like, yeah, it's always like this. And I've saw many other artists creations. And they also have the same kind of style. And I'm like, Yes, this is not only my Midjourney, but it like many others. I don't know if like, we all get these as a default or random. I don't know. I mean, if you check the Community tab, and you will see all the different creation like that's like a common theme. I mean, you can get like very different finishes, but in the end it is quite similar.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+A COMMON AESTHETIC CAN EMERGE WHEN USERS DO NOT OVERRIDE MODEL REGULARITIES.
+
+LOCAL MOVE:
+Martina reports a recurring "dreamy" default in her own work and says other artists and the community tab show the same common theme.
+
+SOURCE TERMS:
+"dreamy"; "default"; "common theme"; "quite similar"
+
+WHAT BECAME STRANGE:
+A model can make stylistic coherence appear across unrelated users and prompts, creating a platform aesthetic that nobody individually specified.
+
+QUESTION:
+When does a model default become a collective style?
+
+DEEPER QUESTION:
+How can we distinguish platform aesthetic from shared prompt culture, training-data regularity, and user selection bias?
+
+MECHANISM:
+Underspecified style variables are repeatedly resolved within a concentrated visual region; public circulation then reinforces that region through imitation and selection.
+
+FORMAL SHIFT:
+MODEL REGULARITY <-> COMMUNITY SELECTION can form a feedback loop.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Martina describes a recurring default dreamy style across her own and others' work.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Observed platform style = model prior + prompt conventions + selection + visibility.
+
+TENSION:
+The source cannot isolate these causal components.
+
+MISSING:
+Historical prompt/output corpus across model versions.
+
+BOUNDARY:
+No claim that Midjourney had one technically fixed style parameter.
+
+CITATION TRAIL:
+Transcript 23:26 -> common theme -> [[MARTINA-2022-012]] -> study platform aesthetics.
+
+TEST:
+Collect temporally stratified public outputs and prompts; model stylistic clustering while controlling for prompt tokens and model version.
+
+PLATFORM:
+Midjourney; platform aesthetic
+
+LINKS:
+[[MARTINA-2022-012]]
+[[MARTINA-2022-013]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 017 · MARTINA-2022-017 · SHA256 955c38d155d8676b1870246a52baad319ecc5b1def5a2af09336697c746f3bc9 =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-017
+
+TITLE:
+Labor time functions as a folk criterion of authorship
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[QUOTE]
+Maybe? Or no? I mean, I think the most that I spent trying to make a prom, maybe like an hour and a half. Yeah, that's it. And that was like the Martian fashion spacesuits that I did on Instagram you want to see in the profile, and then someone else actually toward the end. So it was like, Yeah, it's fine. To know. So I was like, yeah, it's not really mine. As I said, it's not really mine. Because I didn't draw it. I didn't really spend, I don't know, a month making the drawing. You know, it does took me an hour how because I was very picky with results. Also, it's just, I kind of feel like it's not me journeys fault is more like my thought of what I'm doing. As I said, like, it makes like a remake of all people doing so this is why it doesn't really feel original. It feels like I did this spacer, but in the end is just probably inspired on other people work, you know. So yeah, I think it's not majority, but I think it's just my way of seeing art in general. I don't know maybe, maybe it's not.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+FELT AUTHORSHIP IS PARTLY TIED TO INVESTED CRAFT LABOR.
+
+LOCAL MOVE:
+Martina explains that an image does not feel fully hers because she did not draw it or spend a month making the drawing, despite spending substantial time being picky with results.
+
+SOURCE TERMS:
+"not really mine"; "I didn't draw it"; "spend ... a month"; "very picky with results"
+
+WHAT BECAME STRANGE:
+Selection labor is experienced as weaker evidence of authorship than manual execution labor.
+
+QUESTION:
+Why does an hour and a half of consequential selection count differently from an hour and a half of drawing?
+
+DEEPER QUESTION:
+Does generative practice produce a new hierarchy between execution labor and judgment labor?
+
+MECHANISM:
+Existing craft norms make manual execution salient as evidence of ownership; generative selection redistributes labor toward evaluation without automatically inheriting equivalent authorship status.
+
+FORMAL SHIFT:
+LABOR_TYPE matters, not only LABOR_TIME.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Martina contrasts manual drawing labor with time spent selecting and refining generations.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+FELT_AUTHORSHIP = f(execution labor, specification, selection, transformation, originality norms), not simply hours.
+
+TENSION:
+Her account may change as generative practices normalize.
+
+MISSING:
+Longitudinal and cross-practice comparison of felt authorship.
+
+BOUNDARY:
+No claim that labor morally determines authorship.
+
+CITATION TRAIL:
+[[MARTINA-2022-015]] -> felt/legal divergence -> transcript 56:53 -> execution versus judgment labor.
+
+TEST:
+Compare creators performing manual execution, detailed prompting, high-volume selection, and post-editing with matched time investment; measure authorship judgments.
+
+PLATFORM:
+Midjourney; labor; authorship
+
+LINKS:
+[[MARTINA-2022-009]]
+[[MARTINA-2022-015]]
+[[MARTINA-2022-022]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 018 · MARTINA-2022-018 · SHA256 308589648aeeed7aa87cb5c6a94ce83c7db4624fc127b1b68474e7928fe42408 =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-018
+
+TITLE:
+The machine can make originality anxiety temporarily optional
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[QUOTE]
+"I actually allowed myself to not be original, because the machine created it. I didn't." (32:20)
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+DELEGATED EXECUTION CAN SUSPEND THE PRACTITIONER'S SELF-DEMAND FOR ORIGINALITY.
+
+LOCAL MOVE:
+Martina reports a changed evaluative standard when she attributes generation to the machine rather than herself.
+
+SOURCE TERMS:
+"allowed myself"; "not be original"; "machine created it"
+
+WHAT BECAME STRANGE:
+Reduced felt authorship can paradoxically expand exploratory freedom by lowering the personal stakes of originality.
+
+QUESTION:
+Can weaker ownership increase willingness to explore derivative, strange, or unsuccessful possibilities?
+
+DEEPER QUESTION:
+Does generative delegation create a protected experimental zone, or does it merely externalize responsibility for derivative outcomes?
+
+MECHANISM:
+Attribution to machine lowers self-evaluative cost; practitioner permits broader exploration; later selection may reincorporate useful results.
+
+FORMAL SHIFT:
+LOWER FELT AUTHORSHIP -> LOWER ORIGINALITY ANXIETY -> WIDER SEARCH (candidate).
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Martina explicitly links machine creation to allowing herself not to be original.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Exploration cost may decrease when creator identity is weakly attached to candidates.
+
+TENSION:
+Lower stakes may also reduce care or accountability.
+
+MISSING:
+Experimental manipulation of public attribution and candidate ownership.
+
+BOUNDARY:
+One statement cannot establish a general psychological mechanism.
+
+CITATION TRAIL:
+Transcript 32:20 -> originality suspension -> ownership cards -> exploration/control tension.
+
+TEST:
+Ask participants to ideate under self-authored, machine-authored, and anonymous candidate conditions; measure risk, diversity, and later retention.
+
+PLATFORM:
+Midjourney; originality; experimentation
+
+LINKS:
+[[MARTINA-2022-015]]
+[[MARTINA-2022-017]]
+[[MARTINA-2022-005]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 019 · MARTINA-2022-019 · SHA256 78787629d07c79a04e9a4c9a403a57c423dbec205ecd5b7986a5485d25c25d2f =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-019
+
+TITLE:
+Creativity is redescribed as recombination of accumulated experience
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[PARAPHRASE]
+At 31:14 Martina describes creativity through a "database" of what one has learned and experienced, emphasizing mixture and recombination rather than creation from nothing.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+ORIGINALITY IS PRESSURED BY A RECOMBINATIONAL MODEL SHARED ACROSS HUMAN AND MACHINE PRACTICE.
+
+LOCAL MOVE:
+Martina places human creativity and model generation on partially comparable ground by describing both as recombination over accumulated material.
+
+SOURCE TERMS:
+"database"; "information"; "mixture"
+
+WHAT BECAME STRANGE:
+If both human and machine outcomes are understood as recombination, originality cannot be defended simply by denying antecedents.
+
+QUESTION:
+What distinctions remain between human recombination and model recombination once "creation from nothing" is abandoned?
+
+DEEPER QUESTION:
+Are selection, situated purpose, embodied history, accountability, and project continuity more discriminating than novelty?
+
+MECHANISM:
+Experience/information supplies a repertoire; creative acts combine and transform elements under present purposes and constraints.
+
+FORMAL SHIFT:
+ORIGINALITY FROM NOTHING -> situated recombination + judgment.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+The interview offers a database/recombination metaphor for human creativity.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Novelty is relational to a repertoire and context, not evidence of ex nihilo origin.
+
+TENSION:
+The database metaphor may flatten embodiment, sociality, affect, and unequal provenance.
+
+MISSING:
+A richer account of what differentiates human experience from training data and learned representations.
+
+BOUNDARY:
+Do not treat metaphor as technical cognitive model.
+
+CITATION TRAIL:
+Transcript 31:14 -> recombination -> 32:20 originality anxiety -> 20:43 style ethics.
+
+TEST:
+Compare practitioner judgments of originality when provenance and transformation histories are made visible.
+
+PLATFORM:
+Midjourney; creativity; originality
+
+LINKS:
+[[MARTINA-2022-010]]
+[[MARTINA-2022-018]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 020 · MARTINA-2022-020 · SHA256 9288c05369e392793bf7a2db2ab7fc925e1649782d45763063dbf0a59a3b32e2 =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-020
+
+TITLE:
+The generated sketch compresses the cost of making alternatives inspectable
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[PARAPHRASE]
+At 38:13 Martina describes generated images as a sketch or first idea that can then be built, and contrasts producing several initial ideas in hours with spending days.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+GENERATION REDUCES THE COST OF EXTERNALIZING ALTERNATIVE FUTURES.
+
+LOCAL MOVE:
+The relevant acceleration is not simply faster finished art; it is faster production of inspectable intermediate representations.
+
+SOURCE TERMS:
+"sketch"; "first idea"; "build it"; "different sketches"; "hours instead of days"
+
+WHAT BECAME STRANGE:
+Cheaper externalization changes how many alternatives can be materially compared before commitment.
+
+QUESTION:
+What happens to judgment when the cost of producing candidates falls faster than the capacity to evaluate them?
+
+DEEPER QUESTION:
+Does abundance move the bottleneck from production to discrimination?
+
+MECHANISM:
+Low-cost generation increases candidate count; evaluation/selection becomes proportionally more consequential.
+
+FORMAL SHIFT:
+PRODUCTION BOTTLENECK -> SELECTION BOTTLENECK.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Martina treats images as intermediate sketches and emphasizes time compression.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+If cost(candidate) decreases, N_candidates increases until bounded by attention/judgment.
+
+TENSION:
+More candidates can create choice overload or shallow evaluation rather than better design.
+
+MISSING:
+Observed candidate counts, evaluation time, and retained quality across cost conditions.
+
+BOUNDARY:
+No claim that generative sketches are equivalent to hand sketches in representational properties.
+
+CITATION TRAIL:
+Transcript 38:13 -> sketch/time compression -> judgment bottleneck -> leadership as discrimination.
+
+TEST:
+Hold project time fixed while varying generation cost; measure number of alternatives, evaluation depth, and final rationale quality.
+
+PLATFORM:
+Midjourney; sketching; design alternatives
+
+LINKS:
+[[MARTINA-2022-011]]
+[[MARTINA-2022-022]]
+[[THEORY-1991-GOLDSCHMIDT]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 021 · MARTINA-2022-021 · SHA256 bc4cff868dae6a863e10bcd4540bef9e20dc364c3a3b1bfd40c67093fb2a1de1 =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-021
+
+TITLE:
+The model occupies the conversational slot of a peer who proposes another way
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[PARAPHRASE]
+At 51:42 Martina calls the system a collaborator, says it can make ideas visual for others and produce results she might never have thought about, and compares this to classmates or friends proposing another way.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+GENERATED ALTERNATIVES FUNCTION AS COUNTERPROPOSALS IN DESIGN REASONING.
+
+LOCAL MOVE:
+Martina's collaborator metaphor is grounded not in personhood but in capability complementarity and proposal generation.
+
+SOURCE TERMS:
+"collaborator"; "visual for others"; "results that you might never thought about"; "another way"
+
+WHAT BECAME STRANGE:
+A system can occupy a functional peer slot without sharing human intentions or social understanding.
+
+QUESTION:
+What exactly must an artifact-generating system contribute for "collaboration" to be analytically useful rather than anthropomorphic?
+
+DEEPER QUESTION:
+Can counterproposal function be separated from claims about agency, understanding, or authorship?
+
+MECHANISM:
+User provides direction; model produces alternatives outside user's immediate repertoire; user evaluates and incorporates or rejects them.
+
+FORMAL SHIFT:
+COLLABORATION_FUNCTION = proposal diversity + responsiveness + iterative incorporation, not necessarily shared intention.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Martina explicitly compares model suggestions to classmates or friends suggesting another approach.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+PEER-LIKE FUNCTION can occur without PEER-LIKE MIND.
+
+TENSION:
+The model's "larger database" metaphor can obscure systematic biases and repeated defaults.
+
+MISSING:
+Interaction-level evidence comparing human and model counterproposals.
+
+BOUNDARY:
+Does not establish social reciprocity.
+
+CITATION TRAIL:
+Transcript 51:42 -> collaborator as counterproposal -> epistemic action -> decision authority.
+
+TEST:
+Give designers matched alternative proposals from peers and models, blind source identity, and compare incorporation, surprise, and explanation.
+
+PLATFORM:
+Midjourney; collaboration; design critique
+
+LINKS:
+[[MARTINA-2022-005]]
+[[MARTINA-2022-020]]
+[[THEORY-1994-KIRSH-MAGLIO]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 022 · MARTINA-2022-022 · SHA256 587f70a52f8433c8783833b37cc3502b16bbf614ab7b099b87caa281b83c2335 =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-022
+
+TITLE:
+Judgment labor becomes more consequential as candidate production gets cheaper
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[PARAPHRASE]
+Across 38:13 and 56:53 Martina describes rapid generation of sketches while also spending up to an hour and a half being "very picky with results."
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+GENERATIVE ABUNDANCE RECOMPOSES EXPERTISE AROUND DISCRIMINATION.
+
+LOCAL MOVE:
+This card crosses time compression with Martina's description of being highly selective.
+
+SOURCE TERMS:
+"hours instead of days"; "very picky with results"
+
+WHAT BECAME STRANGE:
+Faster production does not remove expertise; it can shift scarce effort toward evaluation, comparison, and retention.
+
+QUESTION:
+What becomes the bottleneck when candidate generation is abundant?
+
+DEEPER QUESTION:
+Can judgment be treated as a primary productive capability rather than secondary filtering?
+
+MECHANISM:
+Candidate cost falls -> candidate volume rises -> attention and evaluative discrimination become limiting resources.
+
+FORMAL SHIFT:
+CHEAPER MAKING -> MORE CANDIDATES -> SCARCER JUDGMENT.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+The interview jointly supports faster candidate generation and intensive selection.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Total project quality is bounded by max(evaluation throughput, candidate relevance), not generation throughput alone.
+
+TENSION:
+Abundance may also reduce average deliberation per candidate.
+
+MISSING:
+Quantitative observation of candidate/evaluation ratios.
+
+BOUNDARY:
+No claim that evaluation is uniquely human or impossible to automate.
+
+CITATION TRAIL:
+[[MARTINA-2022-020]] + transcript 56:53 -> production/selection shift -> direction as consequential discrimination.
+
+TEST:
+Instrument sessions to record candidate count, dwell time, rejection reasons, retained features, and downstream quality.
+
+PLATFORM:
+Midjourney; judgment; selection
+
+LINKS:
+[[MARTINA-2022-017]]
+[[MARTINA-2022-020]]
+[[MARTINA-2022-024]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 023 · MARTINA-2022-023 · SHA256 13880dc7306846f5060ced792f5659cf66b8ad82a02bbd453ca9cb98985c2a48 =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-023
+
+TITLE:
+Generative capability can reopen a practice blocked by execution skill
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[QUOTE]
+Um, well, it depends. Because at this moment, maybe video, because of my YouTube channel, there is a bit stack, but you know, I kind of want to get back on that. But when I'm more confident with video on that, I would definitely want to get back at making projects like artistic projects with well AR or VR related stuff. And I stopped doing that because I was mainly using assets created by other people like free assets or I would be buying packs of assets. And if I can make my own assets with AI then I'm back in the game for sure. So that would be super exciting to be honest. Because that because I'm not building many things because I don't know 3d And I have zero interest on learning how to build them with 3d. Same as I have zero interest in knowing how to illustrate and I'm so happy that me Johnny can do that for me. So if I could make 3d with me journey, then yeah, that would be amazing. Now I want to happen. Yeah, Mr.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+CAPABILITY ACCESS CAN BE RECOMPOSED WITHOUT TRANSFERRING THE DISPLACED CRAFT.
+
+LOCAL MOVE:
+Martina says AI-generated 3D assets could put her "back in the game" because lack of 3D skill currently blocks AR/VR projects she wants to direct.
+
+SOURCE TERMS:
+"back in the game"; "I don't know 3d"; "zero interest on learning"; "happy that Midjourney can do that for me"
+
+WHAT BECAME STRANGE:
+A technical skill can cease to be a prerequisite for directing some projects without disappearing as a capability somewhere in the system.
+
+QUESTION:
+Which practices become accessible when execution capability can be commissioned through a generative system?
+
+DEEPER QUESTION:
+What expertise must remain with the director to judge outputs from a craft she does not personally master?
+
+MECHANISM:
+Model supplies intermediate execution capability; Martina supplies project direction and acceptance criteria; downstream use still demands evaluation and integration.
+
+FORMAL SHIFT:
+PERSONAL EXECUTION REQUIREMENT -> SYSTEM-SUPPLIED CAPABILITY + HUMAN DIRECTION.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Martina explicitly ties generative 3D capability to re-entering AR/VR project work.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Accessible project set expands when capability c is externally callable, but judgment requirements may persist or change.
+
+TENSION:
+Generated assets may be technically unusable without hidden expertise; access to representation is not equivalent to production readiness.
+
+MISSING:
+Case studies of projects where capability was bypassed versus where missing expertise reappeared downstream.
+
+BOUNDARY:
+Do not call this democratization without examining new dependencies and quality gates.
+
+CITATION TRAIL:
+Transcript 1:09:03 -> capability recomposition -> direction without personal execution.
+
+TEST:
+Follow creators entering a previously inaccessible domain with generative tools; map which former prerequisites disappear, move, or return as evaluation/integration problems.
+
+PLATFORM:
+AR/VR; 3D; capability recomposition
+
+LINKS:
+[[MARTINA-2022-011]]
+[[MARTINA-2022-022]]
+[[MARTINA-2022-024]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 024 · MARTINA-2022-024 · SHA256 3eb9d881538a14986a67b65113e7ebee39a31c3fed08a9bc773c7752d50c1551 =====
+
+ZETTEL
+
+ID:
+MARTINA-2022-024
+
+TITLE:
+Direction may consist in continuity of consequential judgment rather than foreknowledge of form
+
+SOURCE:
+Martina interview with Watson Hartsoe, October 10, 2022. Unpublished transcript.
+
+SOURCE URL:
+NONE (private local source; preserved under _RESOURCES/PINK_MJ_Interview1.wh_Martina.pages and _RESOURCES/martina_transcript.txt)
+
+PASSAGE:
+[OUR INFERENCE]
+DIRECTION WITHOUT BLUEPRINT.
+
+RESEARCH OBJECT:
+This synthesis crosses Martina's incomplete scene, epistemic generation, template accumulation, intensive selection, and capability recomposition.
+
+LOCAL MOVE:
+[OUR INFERENCE]
+Relate [[MARTINA-2022-001]], [[MARTINA-2022-003]], [[MARTINA-2022-004]], [[MARTINA-2022-022]], and [[MARTINA-2022-023]] without treating leadership as an inherited conclusion.
+
+SOURCE TERMS:
+"idea"; "scenario"; "proper result"; "template"; "picky"; "back in the game"
+
+WHAT BECAME STRANGE:
+The project can remain recognizably directed even while its representation, specification, and some criteria evolve during execution.
+
+QUESTION:
+What must remain continuous across transformations for an evolving artifact to remain answerable to Martina's direction?
+
+DEEPER QUESTION:
+Is leadership under generative uncertainty better located in initial vision, final authorship, or the authority and responsibility to decide which differences govern the next state?
+
+MECHANISM:
+Martina initiates; generation externalizes consequences; she discriminates; retained differences become constraints; the next action begins from a changed knowledge state.
+
+FORMAL SHIFT:
+DIRECTION != COMPLETE DESTINATION.
+Candidate: DIRECTION = accountable continuity of consequential judgment across state changes.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+The source repeatedly shows Martina initiating with partial ideas, evaluating results, accumulating prompt distinctions, and using model capability to pursue projects she cannot personally execute.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+D_t -> ACT_t -> STATE_t+1 -> JUDGE_t+1 -> RETAIN/REJECT -> D_t+1.
+
+TENSION:
+This may redescribe ordinary design iteration rather than identify a generative-specific form of direction.
+
+MISSING:
+Comparative evidence against sketching, prototyping, briefing, directing, and conventional delegation.
+
+BOUNDARY:
+Leadership is a research question here, not a praise label or a claim about organizational role.
+
+CITATION TRAIL:
+[[MARTINA-2022-001]] + [[MARTINA-2022-003]] + [[MARTINA-2022-004]] + [[MARTINA-2022-022]] + [[MARTINA-2022-023]] -> direction without blueprint.
+
+TEST:
+Compare generative and non-generative design trajectories matched for task; identify whether criteria are formed later, whether execution contributes more underdetermined content, and where accountability is assigned.
+
+PLATFORM:
+Midjourney; design direction; leadership
+
+LINKS:
+[[MARTINA-2022-001]]
+[[MARTINA-2022-003]]
+[[MARTINA-2022-004]]
+[[MARTINA-2022-022]]
+[[MARTINA-2022-023]]
+[[THEORY-2007-SUCHMAN]]
+
+BIBTEX:
+@misc{martina2022midjourney,
+  author = {Martina},
+  title = {Interview on the Midjourney AI Art Community},
+  howpublished = {Unpublished interview with Watson Hartsoe},
+  year = {2022},
+  note = {Interview conducted October 10, 2022}
+}
+
+===== 025 · THEORY-1976-GOODMAN · SHA256 a3b10fcdc4de37f414e5281160d720911371d9d2d46cc946e12b8957c2455ffb =====
+
+ZETTEL
+
+ID:
+THEORY-1976-GOODMAN
+
+TITLE:
+Executability does not make a natural-language description a determinate score
+
+SOURCE:
+Nelson Goodman, Languages of Art: An Approach to a Theory of Symbols, Hackett, 1976.
+
+SOURCE URL:
+https://www.si.edu/object/siris_sil_1088421
+
+PASSAGE:
+[PARAPHRASE]
+Goodman distinguishes score, sketch, and script within a theory of notation and compliance; not every descriptive instruction functions as a notation with determinate compliant instances.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]
+A PROMPT CAN BE COMPUTATIONALLY ACTIONABLE WHILE SEMANTICALLY UNDERDETERMINED.
+
+LOCAL MOVE:
+Pressure [[MARTINA-2022-009]]: prompt text can feel authored and executable without uniquely determining what counts as correct realization.
+
+SOURCE TERMS:
+"score"; "sketch"; "script"; "compliance"; "notation"
+
+WHAT BECAME STRANGE:
+Execution and determinacy are different properties.
+
+QUESTION:
+What kind of symbolic object is a prompt when many incompatible outputs can all plausibly satisfy it?
+
+DEEPER QUESTION:
+Which components of modern prompting are script-like, score-like, schema-like, or something else?
+
+MECHANISM:
+Notational systems impose stronger conditions on symbol differentiation and compliance than ordinary descriptive scripts.
+
+FORMAL SHIFT:
+EXECUTABLE(P) does not imply DETERMINATE_COMPLIANCE(P).
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Goodman's book explicitly separates score, sketch, and script and develops formal requirements for notation.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Prompt clauses can range from binary constraint to graded description to open script.
+
+TENSION:
+Current schemas and runtime constraints can add score-like determinacy to some components of a larger prompt system.
+
+MISSING:
+Clause-level classification of prompt requirements and compliance judgments.
+
+BOUNDARY:
+Goodman is not writing about computation or LLMs.
+
+CITATION TRAIL:
+[[MARTINA-2022-009]] -> Goodman -> prompt as underdetermined instruction -> current schemas relocate some constraints.
+
+TEST:
+Classify real prompt clauses as binary, bounded, graded, open, reference, or procedural; test inter-rater agreement on compliance.
+
+PLATFORM:
+Aesthetics; notation; prompting
+
+LINKS:
+[[MARTINA-2022-009]]
+[[OPS-20260817-005]]
+
+BIBTEX:
+@book{goodman1976languages,
+  author={Goodman, Nelson},
+  title={Languages of Art: An Approach to a Theory of Symbols},
+  publisher={Hackett Publishing},
+  year={1976}
+}
+
+===== 026 · THEORY-1991-GOLDSCHMIDT · SHA256 e18d1bb2ebd3663ddef372ccdf76d9d8bb46505b8e5aca48d58bb37d95831b42 =====
+
+ZETTEL
+
+ID:
+THEORY-1991-GOLDSCHMIDT
+
+TITLE:
+External displays can induce images rather than merely copy them
+
+SOURCE:
+Gabriela Goldschmidt, "The Dialectics of Sketching," Creativity Research Journal 4(2), 1991.
+
+SOURCE URL:
+https://doi.org/10.1080/10400419109534381
+
+PASSAGE:
+[QUOTE]
+"creates visual displays which help induce images of the entity that is being designed."
+
+RESEARCH OBJECT:
+[PARAPHRASE]
+SKETCHING CAN PARTICIPATE IN FORMING THE REPRESENTATION IT APPEARS TO EXPRESS.
+
+LOCAL MOVE:
+Follow [[MARTINA-2022-001]] and [[MARTINA-2022-002]] into design cognition without assuming a pre-existing mental picture.
+
+SOURCE TERMS:
+"visual displays"; "induce images"; "design"; "sketching"
+
+WHAT BECAME STRANGE:
+The external representation can be causally upstream of later internal imagery.
+
+QUESTION:
+Can a generated image help cause the mental representation against which later generations are judged?
+
+DEEPER QUESTION:
+How can research distinguish recovered intention from intention reconstructed after seeing the artifact?
+
+MECHANISM:
+Sketching creates inspectable visual structures that participate in further design reasoning.
+
+FORMAL SHIFT:
+INNER IMAGE -> SKETCH is replaced by a bidirectional or generative relation between external display and imagery.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Goldschmidt's abstract reports that designers do not simply represent images held in mind but create visual displays that help induce design images.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+C_0 -> DISPLAY_1 -> IMAGERY_1 -> C_1.
+
+TENSION:
+Generative output differs from hand sketch because the model supplies structure not motorically produced by the designer.
+
+MISSING:
+Pre/post imagery measurements around generated versus hand-produced displays.
+
+BOUNDARY:
+Formal resemblance is not equivalence of cognitive mechanism.
+
+CITATION TRAIL:
+[[MARTINA-2022-001]] -> Goldschmidt 1991 -> generated precedent -> retrospective intention test.
+
+TEST:
+Collect pre-generation structured descriptions, immediate judgments, and delayed recollections; measure drift toward generated features absent from the preregistration.
+
+PLATFORM:
+Design cognition; sketching
+
+LINKS:
+[[MARTINA-2022-001]]
+[[MARTINA-2022-002]]
+[[MARTINA-2022-020]]
+
+BIBTEX:
+@article{goldschmidt1991dialectics,
+  author={Goldschmidt, Gabriela},
+  title={The Dialectics of Sketching},
+  journal={Creativity Research Journal},
+  year={1991},
+  volume={4},
+  number={2},
+  pages={123--143},
+  doi={10.1080/10400419109534381}
+}
+
+===== 027 · THEORY-1992-GOEL · SHA256 40cbf47cfb8f78f9782ce7cfa7bacbffcf82e52ef953f9b5436134a6858f47d4 =====
+
+ZETTEL
+
+ID:
+THEORY-1992-GOEL
+
+TITLE:
+Open-ended design problems may need representations that remain ill-structured
+
+SOURCE:
+Vinod Goel, "Ill-Structured Representations for Ill-Structured Problems," Cognitive Science Society, 1992.
+
+SOURCE URL:
+https://escholarship.org/uc/item/3wz7c4nd
+
+PASSAGE:
+[QUOTE]
+"ill-structured, open-ended problems ... need "ill-structured" diagrammatic representations."
+
+RESEARCH OBJECT:
+[PARAPHRASE]
+PRECISION CAN BE PREMATURE DURING EXPLORATORY DESIGN.
+
+LOCAL MOVE:
+Pressure [[MARTINA-2022-008]]: if prompt improvement is equated with increased specificity, early design may lose representational flexibility.
+
+SOURCE TERMS:
+"ill-structured"; "open-ended"; "sketches"; "preliminary phases"
+
+WHAT BECAME STRANGE:
+A representation can be useful partly because it does not yet determine every relation.
+
+QUESTION:
+When does greater prompt specificity close a question before the project has learned which differences matter?
+
+DEEPER QUESTION:
+Is model-resolved underspecification equivalent to human-readable ambiguity, or does the model eliminate the ambiguity too early?
+
+MECHANISM:
+Ill-structured representations support open-ended design operations before drafting-like precision becomes appropriate.
+
+FORMAL SHIFT:
+EARLY PHASE: ambiguity/reinterpretability can have utility distinct from late-stage control.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Goel argues for a relation between ill-structured problems and ill-structured external representations in preliminary design.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Optimal specificity is phase-dependent; maximizing control need not maximize inquiry value.
+
+TENSION:
+Vague language may not preserve ambiguity for the user because the generator resolves it into a specific image.
+
+MISSING:
+Comparative representation experiments across sketch and prompt modalities.
+
+BOUNDARY:
+Does not prove vague prompts are cognitively beneficial.
+
+CITATION TRAIL:
+[[MARTINA-2022-008]] -> Goel 1992 -> control/discovery split -> distinguish preserved ambiguity from model-resolved omission.
+
+TEST:
+Compare free sketch, ambiguous prompt, and high-specificity prompt while tracking conceptual branching and commitment timing.
+
+PLATFORM:
+Design cognition; ill-structured representation
+
+LINKS:
+[[MARTINA-2022-005]]
+[[MARTINA-2022-008]]
+
+BIBTEX:
+@inproceedings{goel1992illstructured,
+  author={Goel, Vinod},
+  title={{``Ill-Structured Representations'' for Ill-Structured Problems}},
+  booktitle={Proceedings of the Fourteenth Annual Conference of the Cognitive Science Society},
+  year={1992},
+  url={https://escholarship.org/uc/item/3wz7c4nd}
+}
+
+===== 028 · THEORY-1992-SCHON · SHA256 a508ae651534a61e23bd72c731e55c338b0917e2990314fe5aaadd1166430502 =====
+
+ZETTEL
+
+ID:
+THEORY-1992-SCHON
+
+TITLE:
+Design intentions can evolve during the design process
+
+SOURCE:
+Donald A. Schön, "Designing as Reflective Conversation with the Materials of a Design Situation," Knowledge-Based Systems 5(1), 1992.
+
+SOURCE URL:
+https://doi.org/10.1016/0950-7051(92)90020-G
+
+PASSAGE:
+[PARAPHRASE]
+Schön identifies the evolution of design intentions during designing and emphasizes reflective interaction with the consequences of design moves.
+
+RESEARCH OBJECT:
+[PARAPHRASE]
+INTENTION CAN BE A VARIABLE OF THE PROCESS RATHER THAN A FIXED INPUT.
+
+LOCAL MOVE:
+Pressure [[MARTINA-2022-003]]: a correction may change the intention rather than merely improve expression of an unchanged intention.
+
+SOURCE TERMS:
+"reflective conversation"; "design intentions"; "consequences"; "moves"
+
+WHAT BECAME STRANGE:
+Fidelity to a later intention cannot automatically be used as evidence of an identical earlier intention.
+
+QUESTION:
+When Martina retains an unexpected model feature, has she recognized, discovered, or formed a preference?
+
+DEEPER QUESTION:
+Can a methodology distinguish intention evolution from increasing articulation?
+
+MECHANISM:
+Design moves create consequences; the designer appreciates consequences; subsequent moves and intentions evolve.
+
+FORMAL SHIFT:
+INTENTION_t -> MOVE -> CONSEQUENCES -> APPRAISAL -> INTENTION_t+1.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+The source presents design as reflective conversation and includes evolution of intentions among phenomena a computational account must reproduce.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+I_{t+1}=UPDATE(I_t, perceived consequences of move_t).
+
+TENSION:
+Not every prompt revision signals changed intention; some are error correction under a stable goal.
+
+MISSING:
+Fine-grained longitudinal coding of retained unexpected features.
+
+BOUNDARY:
+Schön studies design, not generative AI.
+
+CITATION TRAIL:
+[[MARTINA-2022-003]] -> Schön 1992 -> intention as changing state -> recognition/formation distinction.
+
+TEST:
+Code every post-output revision as correspondence correction, criterion discovery, or criterion formation using pre-registered evidence.
+
+PLATFORM:
+Design cognition; reflective practice
+
+LINKS:
+[[MARTINA-2022-001]]
+[[MARTINA-2022-003]]
+[[MARTINA-2022-024]]
+
+BIBTEX:
+@article{schon1992reflective,
+  author={Sch{\"o}n, Donald A.},
+  title={Designing as Reflective Conversation with the Materials of a Design Situation},
+  journal={Knowledge-Based Systems},
+  year={1992},
+  volume={5},
+  number={1},
+  pages={3--14},
+  doi={10.1016/0950-7051(92)90020-G}
+}
+
+===== 029 · THEORY-1994-KIRSH-MAGLIO · SHA256 23f0db9f235ddd2ad7c8e1caefe53f72f2d59ad1a9dbe30567474a041bfd504b =====
+
+ZETTEL
+
+ID:
+THEORY-1994-KIRSH-MAGLIO
+
+TITLE:
+An action can be performed to uncover information rather than directly achieve the final goal
+
+SOURCE:
+David Kirsh and Paul Maglio, "On Distinguishing Epistemic from Pragmatic Action," Cognitive Science 18(4), 1994.
+
+SOURCE URL:
+https://doi.org/10.1207/s15516709cog1804_1
+
+PASSAGE:
+[QUOTE]
+"actions performed to uncover information that is hidden or hard to compute mentally."
+
+RESEARCH OBJECT:
+[PARAPHRASE]
+GENERATION CAN BE ANALYZED BY FUNCTION: PRODUCING AN ARTIFACT OR ACQUIRING INFORMATION.
+
+LOCAL MOVE:
+Follow [[MARTINA-2022-003]] and [[MARTINA-2022-021]] where a generated candidate changes what the practitioner can know or decide.
+
+SOURCE TERMS:
+"epistemic action"; "pragmatic action"; "uncover information"
+
+WHAT BECAME STRANGE:
+A generation that is a bad artifact can still be a successful cognitive probe.
+
+QUESTION:
+How many generative actions are requests for deliverables and how many are experiments performed to learn the next constraint?
+
+DEEPER QUESTION:
+Does cheap generation create a new class of epistemic action in which language perturbs a learned representational system?
+
+MECHANISM:
+Action changes the external state so that hidden or expensive information becomes easier to obtain.
+
+FORMAL SHIFT:
+UNCERTAINTY -> ACTION/PROBE -> PERCEPTIBLE RESULT -> INFORMATION GAIN.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Kirsh and Maglio distinguish pragmatic actions that advance a physical goal from epistemic actions that simplify cognition or reveal information.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+If final-artifact utility is low but information gain is high, generation can be epistemically successful.
+
+TENSION:
+One action may be both pragmatic and epistemic.
+
+MISSING:
+User intent for each generation and post-generation information gain.
+
+BOUNDARY:
+The original experiments concern Tetris, not generative images.
+
+CITATION TRAIL:
+[[MARTINA-2022-003]] -> Kirsh & Maglio 1994 -> generation as probe -> separate output quality from inquiry value.
+
+TEST:
+Before each generation ask what function it is intended to serve; afterward record what information was gained and whether the result was retained.
+
+PLATFORM:
+Cognitive science; epistemic action
+
+LINKS:
+[[MARTINA-2022-003]]
+[[MARTINA-2022-008]]
+[[MARTINA-2022-021]]
+
+BIBTEX:
+@article{kirshmaglio1994epistemic,
+  author={Kirsh, David and Maglio, Paul},
+  title={On Distinguishing Epistemic from Pragmatic Action},
+  journal={Cognitive Science},
+  year={1994},
+  volume={18},
+  number={4},
+  pages={513--549},
+  doi={10.1207/s15516709cog1804_1}
+}
+
+===== 030 · THEORY-1995-HUTCHINS · SHA256 f988f3b59d00d90c24c9b6a3727c2e334bc9f7391cecba7a9db326325afdf8dc =====
+
+ZETTEL
+
+ID:
+THEORY-1995-HUTCHINS
+
+TITLE:
+The functional unit of remembering can include people and technological devices
+
+SOURCE:
+Edwin Hutchins, "How a Cockpit Remembers Its Speeds," Cognitive Science 19(3), 1995.
+
+SOURCE URL:
+https://doi.org/10.1207/s15516709cog1903_1
+
+PASSAGE:
+[PARAPHRASE]
+Hutchins argues that outcomes in aviation cannot be inferred from individual information processing alone and takes a distributed socio-technical system as the unit of analysis.
+
+RESEARCH OBJECT:
+[PARAPHRASE]
+MEMORY CAN BE A PROPERTY OF AN ORGANIZED PERSON-ARTIFACT SYSTEM.
+
+LOCAL MOVE:
+Follow [[MARTINA-2022-006]]: Martina cannot recall all prompt vocabulary but the user-template system can make it available at the moment of need.
+
+SOURCE TERMS:
+"distributed"; "socio-technical system"; "unit of analysis"; "technological devices"
+
+WHAT BECAME STRANGE:
+Forgetting inside the person need not equal loss of functional knowledge at the system level.
+
+QUESTION:
+Does expertise with a prompt guide consist partly in knowing how to navigate a system that remembers for you?
+
+DEEPER QUESTION:
+What dependencies reveal whether an external guide is constitutive of performance or merely convenient?
+
+MECHANISM:
+Information relevant to performance is represented and transformed across coordinated human and technical components.
+
+FORMAL SHIFT:
+UNIT OF ANALYSIS: user -> user+template+interface for some functional questions.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Hutchins explicitly proposes a distributed socio-technical unit of analysis for cognition in cockpit work.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+FUNCTIONAL_MEMORY(system) can exceed INTERNAL_RECALL(user).
+
+TENSION:
+A Notion guide is far less integrated and safety-critical than an aircraft cockpit.
+
+MISSING:
+Dependence and coordination evidence in actual prompt sessions.
+
+BOUNDARY:
+No strong extended-mind conclusion follows automatically.
+
+CITATION TRAIL:
+[[MARTINA-2022-006]] -> Hutchins 1995 -> system-level remembering -> test removal/substitution.
+
+TEST:
+Remove or alter the guide and measure which operations disappear, slow, or change; compare with unaided experts.
+
+PLATFORM:
+Distributed cognition; external memory
+
+LINKS:
+[[MARTINA-2022-004]]
+[[MARTINA-2022-006]]
+
+BIBTEX:
+@article{hutchins1995cockpit,
+  author={Hutchins, Edwin},
+  title={How a Cockpit Remembers Its Speeds},
+  journal={Cognitive Science},
+  year={1995},
+  volume={19},
+  number={3},
+  pages={265--288},
+  doi={10.1207/s15516709cog1903_1}
+}
+
+===== 031 · THEORY-1998-CLARK-CHALMERS · SHA256 b58cf4b6e8fc2a0357d0bd22a3c3782c9ffb8b41dfb38c669988a99a8ea7f9bc =====
+
+ZETTEL
+
+ID:
+THEORY-1998-CLARK-CHALMERS
+
+TITLE:
+External symbols can participate actively in cognitive processes
+
+SOURCE:
+Andy Clark and David J. Chalmers, "The Extended Mind," Analysis 58, 1998.
+
+SOURCE URL:
+https://www.consc.net/papers/extended.html
+
+PASSAGE:
+[QUOTE]
+"an active externalism, based on the active role of the environment in driving cognitive processes."
+
+RESEARCH OBJECT:
+[PARAPHRASE]
+EXTERNAL MEDIA CAN BE ANALYZED AS PARTICIPANTS IN COGNITIVE LOOPS RATHER THAN ONLY OUTPUTS.
+
+LOCAL MOVE:
+Pressure [[MARTINA-2022-006]] and [[MARTINA-2022-004]]: prompt guide and generated artifacts may participate recurrently in thought.
+
+SOURCE TERMS:
+"active externalism"; "active role"; "environment"; "cognitive processes"
+
+WHAT BECAME STRANGE:
+The boundary question is not only what was in Martina's head before prompting, but how the coupled workflow produces determinate thought.
+
+QUESTION:
+Under what conditions would prompt/template/generation coupling deserve cognitive credit rather than being described as mere tool use?
+
+DEEPER QUESTION:
+If the thought becomes determinate only in the loop, where should intention and authorship be located?
+
+MECHANISM:
+External structures are repeatedly manipulated and consulted in ways that can perform cognitive work.
+
+FORMAL SHIFT:
+INDIVIDUAL-ONLY UNIT -> COUPLED SYSTEM candidate.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Clark and Chalmers defend active externalism based on environmental contributions to cognition.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+C_t = COUPLE(user state, external symbols, generated artifacts, retrieval routines).
+
+TENSION:
+The parity/extended-mind thesis has stricter conditions than occasional use of an AI tool.
+
+MISSING:
+Evidence of reliable coupling, accessibility, dependence, and recurrence.
+
+BOUNDARY:
+Does not imply the model itself understands Martina's intentions.
+
+CITATION TRAIL:
+[[MARTINA-2022-006]] -> Clark & Chalmers 1998 -> external cognitive loop -> test coupling conditions.
+
+TEST:
+Measure performance and concept stability with external artifacts available versus removed, including recovery strategies.
+
+PLATFORM:
+Philosophy of mind; external cognition
+
+LINKS:
+[[MARTINA-2022-004]]
+[[MARTINA-2022-006]]
+
+BIBTEX:
+@article{clarkchalmers1998extended,
+  author={Clark, Andy and Chalmers, David J.},
+  title={The Extended Mind},
+  journal={Analysis},
+  year={1998},
+  volume={58},
+  pages={10--23}
+}
+
+===== 032 · THEORY-2007-SUCHMAN · SHA256 8c4f86908ec20d71e733b437466c1a485054ff7895b8287d366a5e1242d8a5e3 =====
+
+ZETTEL
+
+ID:
+THEORY-2007-SUCHMAN
+
+TITLE:
+Plans do not prescribe situated action at every level of detail
+
+SOURCE:
+Lucy Suchman, Human-Machine Reconfigurations: Plans and Situated Actions, 2nd ed., Cambridge University Press, 2007; "Plans" chapter retains the situated-action argument.
+
+SOURCE URL:
+https://doi.org/10.1017/CBO9780511808418.007
+
+PASSAGE:
+[QUOTE]
+"the prescriptive significance of intentions for situated action is inherently vague."
+
+RESEARCH OBJECT:
+[PARAPHRASE]
+PLANS ARE RESOURCES FOR ACTION, NOT EXHAUSTIVE DETERMINANTS OF SITUATED PERFORMANCE.
+
+LOCAL MOVE:
+Follow [[MARTINA-2022-024]] and resist treating direction as a complete blueprint that execution merely instantiates.
+
+SOURCE TERMS:
+"plans"; "situated action"; "intentions"; "inherently vague"
+
+WHAT BECAME STRANGE:
+A project can be purposive without its future action sequence being exhaustively specified in advance.
+
+QUESTION:
+What is genuinely new about generative direction if ordinary situated action already exceeds prior plans?
+
+DEEPER QUESTION:
+Does generative AI amplify a longstanding property of action, or introduce a distinctive source of underdetermined content through model completion?
+
+MECHANISM:
+Plans project and reconstruct action while situated circumstances and practical reasoning determine concrete next steps.
+
+FORMAL SHIFT:
+PLAN as RESOURCE, not complete execution trace.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+Suchman contrasts planning views with situated action and states that intentions have inherently vague prescriptive significance.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+PURPOSEFUL ACTION can proceed with plan P that underdetermines action A_t.
+
+TENSION:
+If Martina's pattern is ordinary situated action, a generative-specific theory risks overclaiming novelty.
+
+MISSING:
+Comparative cases of sketching, delegation, improvisation, prototyping, and generative prompting.
+
+BOUNDARY:
+Use as loyal opposition to claims of novelty.
+
+CITATION TRAIL:
+[[MARTINA-2022-024]] -> Suchman -> ordinary purposive underdetermination -> identify generative difference, if any.
+
+TEST:
+Match generative and non-generative design tasks; compare how much new consequential content enters from execution rather than human situated action alone.
+
+PLATFORM:
+Situated action; plans; human-machine interaction
+
+LINKS:
+[[MARTINA-2022-024]]
+[[MARTINA-2022-001]]
+
+BIBTEX:
+@book{suchman2007humanmachine,
+  author={Suchman, Lucy},
+  title={Human-Machine Reconfigurations: Plans and Situated Actions},
+  edition={2},
+  publisher={Cambridge University Press},
+  year={2007}
+}
+
+===== 033 · OPS-20260817-001 · SHA256 822a4b53b3ef1277a92c33e8189faa6baeacf0ae8e279e6c836bc7f61f8ce5ef =====
+
+ZETTEL
+
+ID:
+OPS-20260817-001
+
+TITLE:
+A tool description is not documentation; it is part of the machine's action-selection policy.
+
+SOURCE:
+Model Context Protocol — Schema Reference / Tool — 2025-06-18.
+https://modelcontextprotocol.io/specification/2025-06-18/schema
+
+PASSAGE:
+[QUOTE]
+“This can be used by clients to improve the LLM’s understanding of available tools.”
+
+RESEARCH OBJECT:
+TOOL DESCRIPTION AS OPERATIVE AFFORDANCE DESCRIPTION.
+
+LOCAL MOVE:
+[[MJ-MARTINA-016]] treated vocabulary as a control surface for generated images. MCP exposes a sharper contemporary case: natural-language descriptions are attached directly to executable tools so that the model can decide which operation is appropriate.
+
+The words do not describe an output.
+
+They describe what can be done.
+
+SOURCE TERMS:
+“Tool”
+“name”
+“description”
+“inputSchema”
+“outputSchema”
+“hint”
+“available tools”
+
+WHAT BECAME STRANGE:
+Writing “Search the repository for symbols” or “Create a calendar event” is simultaneously documentation for a human and a cue used by a model to choose an executable capability.
+
+The description begins to resemble an affordance inscription:
+
+THIS IS WHAT THIS VERB DOES.
+
+QUESTION:
+How much of agent behavior is determined by the wording of tool descriptions rather than the user's prompt?
+
+DEEPER QUESTION:
+When a natural-language description participates in selecting an executable operation, has documentation become part of program control flow?
+
+MECHANISM:
+MCP Tool objects associate a programmatic name and input schema with an optional human-readable description. The specification explicitly says this description can improve the LLM's understanding of available tools.
+
+FORMAL SHIFT:
+FROM:
+PROMPT
+→ MODEL
+→ TEXT
+
+TO:
+USER_LANGUAGE
+→ MODEL
+
+MODEL sees:
+{
+  TOOL_NAME,
+  TOOL_DESCRIPTION,
+  INPUT_SCHEMA
+}
+
+→ SELECT_TOOL
+→ construct arguments
+→ potential action.
+
+SOURCE FORMALISM:
+Tool {
+  name: string
+  title?: string
+  description?: string
+  inputSchema: JSON Schema
+  outputSchema?: JSON Schema
+  annotations?: ToolAnnotations
+}
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+TOOL_DESCRIPTION
+≈ ACTION_AFFORDANCE_HINT
+
+Tool selection becomes approximately:
+
+SELECT(
+  user_intent,
+  {name_i, description_i, schema_i}
+)
+
+The operational vocabulary of the system therefore includes not only what the user says but what developers have said the system is capable of doing.
+
+TENSION:
+The MCP specification explicitly calls the description a “hint.” It is not a formal guarantee that the model will select the right tool.
+
+MISSING:
+Controlled evidence showing how changes in tool description wording alter tool-selection behavior while names, schemas, model, and task remain constant.
+
+BOUNDARY:
+A description does not itself execute a tool. It participates in the model-facing representation from which tool choice may be inferred.
+
+CITATION TRAIL:
+[[MJ-MARTINA-016]]
+→ vocabulary controls generated representation
+→ MCP Tool.description controls understanding of executable capabilities
+→ descriptive vocabulary becomes an action-selection surface
+→ forage tool descriptions as operative language.
+
+TEST:
+Create five tools with fixed implementations and schemas.
+
+For each tool produce:
+A. precise description
+B. vague description
+C. overlapping description
+D. misleading description
+E. no description
+
+Run the same task corpus and measure:
+tool selection accuracy,
+unnecessary calls,
+missed calls,
+argument correctness.
+
+Determine how much executable behavior changes from changing words alone.
+
+PLATFORM:
+Model Context Protocol; contemporary LLM agents
+
+LINKS:
+[[MJ-MARTINA-016]]
+[[MJ-MARTINA-014-A-A]]
+
+BIBTEX:
+@misc{mcp2025schema,
+  author = {{Model Context Protocol}},
+  title = {Schema Reference},
+  year = {2025},
+  url = {https://modelcontextprotocol.io/specification/2025-06-18/schema}
+}
+
+===== 034 · OPS-20260817-002 · SHA256 1c90c1b83ca03dd92d78a011feaef57e91498643c42ddfbcb3631fcb80ffbcf6 =====
+
+ZETTEL
+
+ID:
+OPS-20260817-002
+
+TITLE:
+Modern tool systems are developing a grammar for the consequences of verbs.
+
+SOURCE:
+Model Context Protocol — ToolAnnotations — 2025-06-18.
+https://modelcontextprotocol.io/specification/2025-06-18/schema
+
+PASSAGE:
+[QUOTE]
+“If true, the tool may perform destructive updates to its environment.”
+
+RESEARCH OBJECT:
+EFFECT ANNOTATIONS AS A PRAGMATICS OF MACHINE VERBS.
+
+LOCAL MOVE:
+[[MJ-MARTINA-012-A-A]] asked what actually chooses when the user delegates an unspecified decision. MCP adds another layer: operations can carry explicit metadata about the kind of consequences they may produce.
+
+SOURCE TERMS:
+“readOnlyHint”
+“destructiveHint”
+“idempotentHint”
+“openWorldHint”
+“ToolAnnotations”
+“environment”
+
+WHAT BECAME STRANGE:
+The tool is no longer characterized only by WHAT it means.
+
+It can also be marked by WHAT HAPPENS IF IT IS SAID AGAIN.
+
+READ_ONLY
+DESTRUCTIVE
+IDEMPOTENT
+OPEN_WORLD
+
+These resemble grammatical properties of executable verbs.
+
+QUESTION:
+Are tool-effect annotations becoming an operational equivalent of grammatical aspect and modality for machine action?
+
+DEEPER QUESTION:
+What would a complete effect system for natural-language-controlled computation need to express beyond read-only, destructive, idempotent, and open-world?
+
+MECHANISM:
+MCP defines optional ToolAnnotations that provide hints about whether a tool modifies its environment, may be destructive, is idempotent, or interacts with an open world.
+
+FORMAL SHIFT:
+FROM:
+VERB:
+DELETE_FILE(path)
+
+TO:
+VERB:
+DELETE_FILE(path)
+
+EFFECTS:
+{
+  readOnly = false
+  destructive = true
+  idempotent = ?
+  openWorld = false
+}
+
+SOURCE FORMALISM:
+ToolAnnotations {
+  title?: string
+  readOnlyHint?: boolean
+  destructiveHint?: boolean
+  idempotentHint?: boolean
+  openWorldHint?: boolean
+}
+
+The MCP specification also warns that these properties are hints and should not be trusted when supplied by untrusted servers.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+ACTION =
+NAME
++ ARGUMENT_TYPE
++ EFFECT_TYPE
+
+Possible future effect vocabulary:
+
+READ
+WRITE
+DELETE
+SEND
+PUBLISH
+SPEND
+COMMIT
+IRREVERSIBLE
+REPEAT_SAFE
+EXTERNAL_WORLD
+REQUIRES_CONSENT
+
+TENSION:
+The specification explicitly says annotations are only hints and may not faithfully describe actual behavior.
+
+The grammar of consequence therefore exists without guaranteeing the truth of its own verbs.
+
+MISSING:
+A trustworthy mechanism binding declared effect annotations to the implementation that actually runs.
+
+BOUNDARY:
+ToolAnnotations describe expected effects; they do not enforce those effects.
+
+CITATION TRAIL:
+[[MJ-MARTINA-012-A-A]]
+→ omitted decisions redistribute action
+→ MCP marks action consequences explicitly
+→ executable verbs acquire effect metadata
+→ description of action separates from description of consequence
+→ pursue machine pragmatics as effect typing.
+
+TEST:
+Take fifty agent tools from real MCP servers.
+
+For each:
+record declared annotations,
+inspect implementation,
+execute in a controlled sandbox,
+record actual environmental effects.
+
+Construct a confusion matrix between declared and observed:
+READ_ONLY,
+DESTRUCTIVE,
+IDEMPOTENT,
+OPEN_WORLD.
+
+Then ask what additional effect categories are required to explain mismatches.
+
+PLATFORM:
+Model Context Protocol
+
+LINKS:
+[[MJ-MARTINA-012-A-A]]
+[[MJ-MARTINA-015-A]]
+
+BIBTEX:
+@misc{mcp2025toolannotations,
+  author = {{Model Context Protocol}},
+  title = {Schema Reference: ToolAnnotations},
+  year = {2025},
+  url = {https://modelcontextprotocol.io/specification/2025-06-18/schema}
+}
+
+===== 035 · OPS-20260817-003 · SHA256 040c6502184bd48bc59b9c02d4f9b0e7906160dd80187215e6cee4b85e0754ee =====
+
+ZETTEL
+
+ID:
+OPS-20260817-003
+
+TITLE:
+The model does not necessarily perform the action it calls for.
+
+SOURCE:
+OpenAI Agents SDK — Tools — current documentation accessed August 17, 2026.
+https://openai.github.io/openai-agents-python/tools/
+
+PASSAGE:
+[QUOTE]
+“The model still decides when to call them, but your application or configured execution environment performs the actual work.”
+
+RESEARCH OBJECT:
+ACTION IS SPLIT BETWEEN SEMANTIC SELECTION AND EXECUTIVE AUTHORITY.
+
+LOCAL MOVE:
+[[MJ-MARTINA-015-A]] broke the analogy between human briefing and machine prompting. Current tool-calling architecture gives a more precise distinction.
+
+The model can choose an operation.
+
+Another system executes it.
+
+SOURCE TERMS:
+“local runtime tools”
+“model”
+“decides”
+“call”
+“application”
+“execution environment”
+“actual work”
+
+WHAT BECAME STRANGE:
+The apparently agentic sentence:
+
+“Delete the file.”
+
+can traverse several distinct authorities:
+
+USER requests
+MODEL proposes operation
+RUNTIME authorizes
+TOOL executes
+WORLD changes.
+
+No single utterance contains the whole action.
+
+QUESTION:
+Where exactly does agency reside in a tool-using language model system?
+
+DEEPER QUESTION:
+If the model selects an action but cannot itself authorize or execute it, is “the AI did X” an analytically misleading description of the event?
+
+MECHANISM:
+OpenAI distinguishes local/runtime tools from the model response itself. The model decides when to call a tool, while the application or configured environment performs the work.
+
+FORMAL SHIFT:
+FROM:
+WORDS
+→ AI ACTION
+
+TO:
+USER_UTTERANCE
+→ MODEL_INFERENCE
+→ TOOL_CALL_PROPOSAL
+→ RUNTIME
+→ TOOL_IMPLEMENTATION
+→ WORLD_CHANGE.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+The Agents SDK distinguishes hosted tools, local/runtime execution tools, function tools, and other callable capabilities. Local runtime tools execute outside the model response.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+SELECT ≠ EXECUTE
+
+MODEL_AUTHORITY:
+choose / propose arguments
+
+HOST_AUTHORITY:
+expose / validate / approve / execute
+
+TOOL_AUTHORITY:
+perform implementation
+
+ENVIRONMENT:
+accept resulting state transition
+
+TENSION:
+Hosted tool configurations can collapse some of these boundaries because execution may occur in provider-managed environments.
+
+MISSING:
+A general vocabulary for attributing causal responsibility across request, selection, authorization, execution, and consequence.
+
+BOUNDARY:
+Tool calling does not mean the model independently possesses arbitrary operating-system or external-world authority.
+
+CITATION TRAIL:
+[[MJ-MARTINA-015-A]]
+→ prompt/brief analogy breaks
+→ current tool architecture separates decision from execution
+→ “making AI do something” decomposes into multiple authorities
+→ pursue the runtime as the hidden sovereign of prompting.
+
+TEST:
+Instrument a tool-using agent and record five timestamps for every consequential action:
+
+REQUESTED
+SELECTED
+VALIDATED
+EXECUTED
+CONFIRMED
+
+Then deliberately interrupt one stage at a time.
+
+Determine which statements remain true:
+“the user commanded it”
+“the model chose it”
+“the application allowed it”
+“the tool did it.”
+
+PLATFORM:
+OpenAI Agents SDK; function calling; runtime tools
+
+LINKS:
+[[MJ-MARTINA-015-A]]
+[[MJ-MARTINA-021-A-A]]
+
+BIBTEX:
+@misc{openai2026agentstools,
+  author = {{OpenAI}},
+  title = {OpenAI Agents SDK: Tools},
+  year = {2026},
+  url = {https://openai.github.io/openai-agents-python/tools/}
+}
+
+===== 036 · OPS-20260817-004 · SHA256 1f322f75ed87f434d96c2cc1c2734ce344d166ff871a434094c8d10fea15581d =====
+
+ZETTEL
+
+ID:
+OPS-20260817-004
+
+TITLE:
+The strongest imperative may not be written in the prompt.
+
+SOURCE:
+OpenAI Agents SDK — Agents / Forcing Tool Use — current documentation accessed August 17, 2026.
+https://openai.github.io/openai-agents-python/agents/
+
+PASSAGE:
+[QUOTE]
+“Supplying a list of tools doesn't always mean the LLM will use a tool.”
+
+RESEARCH OBJECT:
+TOOL_CHOICE AS EXTRALINGUISTIC IMPERATIVE.
+
+LOCAL MOVE:
+[[MJ-MARTINA-014-A-A]] treated prompt engineering as a discipline of learning how to word commands more effectively.
+
+The Agents SDK exposes a stronger operation.
+
+Instead of saying:
+
+“you must use the calculator”
+
+the runtime can set:
+
+tool_choice = required
+
+or specify a particular tool.
+
+SOURCE TERMS:
+“tool_choice”
+“auto”
+“required”
+“none”
+“specific tool”
+“force tool use”
+
+WHAT BECAME STRANGE:
+The instruction hierarchy has acquired a layer that is not prose.
+
+A developer can stop trying to persuade the model linguistically and constrain the action space directly.
+
+QUESTION:
+Which prompt instructions should cease being prompts and become runtime constraints?
+
+DEEPER QUESTION:
+Is mature prompt engineering partly the progressive removal of requirements from natural language into stronger control mechanisms?
+
+MECHANISM:
+The Agents SDK exposes `tool_choice` settings that permit the model to choose automatically, require some tool call, forbid tool use, or require a named tool.
+
+FORMAL SHIFT:
+FROM:
+PROMPT:
+“You must call TOOL_X.”
+
+TO:
+RUNTIME:
+tool_choice = TOOL_X
+
+The requirement moves:
+
+FROM semantic request
+TO control configuration.
+
+SOURCE FORMALISM:
+tool_choice ∈ {
+  auto,
+  required,
+  none,
+  specific_tool_name
+}
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For requirement R:
+
+if R can be ENFORCED_BY_RUNTIME
+then prefer:
+
+R → CONSTRAINT
+
+rather than:
+
+R → NATURAL_LANGUAGE_REQUEST
+
+This creates a hierarchy:
+
+WISH
+< INSTRUCTION
+< SCHEMA
+< RUNTIME_CONSTRAINT
+< EXECUTION_GATE.
+
+TENSION:
+Not every behavioral requirement can be translated into a runtime option. Many semantic requirements remain irreducibly interpretive.
+
+MISSING:
+A taxonomy mapping common prompt requirements to the strongest currently available enforcement layer.
+
+BOUNDARY:
+`tool_choice` constrains whether and which tool is selected; it does not guarantee correct arguments or correct downstream behavior.
+
+CITATION TRAIL:
+[[MJ-MARTINA-014-A-A]]
+→ user learns to write stronger instructions
+→ current APIs permit nonlinguistic enforcement
+→ the requirement leaves the prompt
+→ forage migration from persuasion to constraint.
+
+TEST:
+Collect 100 production prompt clauses containing:
+must,
+never,
+always,
+only,
+exactly,
+do not.
+
+For each ask:
+
+Can this requirement instead be represented as:
+schema,
+tool configuration,
+type,
+permission,
+guardrail,
+state-machine transition,
+validator?
+
+Measure failures before and after moving enforceable clauses out of prose.
+
+PLATFORM:
+OpenAI Agents SDK
+
+LINKS:
+[[MJ-MARTINA-014-A-A]]
+[[MJ-MARTINA-013]]
+[[MJ-MARTINA-015-A]]
+
+BIBTEX:
+@misc{openai2026forcingtools,
+  author = {{OpenAI}},
+  title = {OpenAI Agents SDK: Forcing Tool Use},
+  year = {2026},
+  url = {https://openai.github.io/openai-agents-python/agents/}
+}
+
+===== 037 · OPS-20260817-005 · SHA256 9cef42df493eb05127d3a72b638cd08768d9f68da08192032ab5edb3d101116b =====
+
+ZETTEL
+
+ID:
+OPS-20260817-005
+
+TITLE:
+A schema calls the shot by making some next words impossible.
+
+SOURCE:
+OpenAI — “Introducing Structured Outputs in the API” — August 6, 2024.
+https://openai.com/index/introducing-structured-outputs-in-the-api/
+
+PASSAGE:
+[QUOTE]
+“Our approach is based on a technique known as constrained sampling or constrained decoding.”
+
+RESEARCH OBJECT:
+CONSTRAINT CAN ACT BELOW THE LEVEL OF INSTRUCTION FOLLOWING.
+
+LOCAL MOVE:
+[[MJ-MARTINA-021-A-A]] used Goodman to ask whether a prompt can determine its own compliance class.
+
+Structured Outputs produces a different object: the developer supplies a JSON Schema and decoding is constrained so structurally invalid continuations can be excluded.
+
+SOURCE TERMS:
+“Structured Outputs”
+“JSON Schema”
+“strict”
+“constrained sampling”
+“constrained decoding”
+“valid tokens”
+
+WHAT BECAME STRANGE:
+“Return exactly this structure” can exist in two radically different forms.
+
+FORM 1:
+natural-language instruction that the model may violate.
+
+FORM 2:
+a decoding constraint under which invalid structural continuations are not available.
+
+The same apparent command has moved from semantics into the mechanics of generation.
+
+QUESTION:
+When should a requirement be represented as meaning and when should it be represented as grammar?
+
+DEEPER QUESTION:
+Is the new frontier of prompting the extraction of invariants from prose into machine-enforced representational constraints?
+
+MECHANISM:
+OpenAI describes Structured Outputs as combining model training with constrained decoding so generated structures match developer-supplied JSON Schemas.
+
+FORMAL SHIFT:
+FROM:
+PROMPT:
+“Always output objects with fields A, B, C.”
+
+TO:
+SCHEMA:
+required = [A,B,C]
+
+DECODER:
+disallow structurally invalid token continuations.
+
+SOURCE FORMALISM:
+JSON Schema
++
+strict mode
++
+constrained decoding.
+
+The source also states that structural correctness does not guarantee correctness of the values inside the structure.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+OUTPUT_SPACE_default
+=
+all token sequences
+
+OUTPUT_SPACE_schema
+=
+{ x | x satisfies structural schema S }
+
+Therefore:
+
+S
+does not merely REQUEST a property.
+
+S changes the available output state space.
+
+TENSION:
+Structural validity is not semantic validity.
+
+A perfectly schema-valid object can contain a wrong date, false claim, or incorrect operation.
+
+MISSING:
+A layered account distinguishing:
+syntactic invariant,
+semantic invariant,
+world-state invariant,
+and task-success invariant.
+
+BOUNDARY:
+Constrained decoding controls representational form, not truth or successful action.
+
+CITATION TRAIL:
+[[MJ-MARTINA-021-A-A]]
+→ Goodman: script versus score
+→ Structured Outputs creates determinacy for one dimension of compliance
+→ some prompt requirements become grammars
+→ investigate what remains outside grammar.
+
+TEST:
+Take twenty requirements currently written in prose.
+
+For each classify:
+STRUCTURAL
+SEMANTIC
+RELATIONAL
+TEMPORAL
+WORLD-STATE.
+
+Move every structural requirement into a schema.
+
+Measure:
+format failures,
+semantic failures,
+prompt length,
+retry count.
+
+Then identify the remaining clauses that cannot be compiled into schema.
+
+PLATFORM:
+OpenAI API; Structured Outputs; JSON Schema
+
+LINKS:
+[[MJ-MARTINA-021-A-A]]
+[[MJ-MARTINA-013-A]]
+
+BIBTEX:
+@misc{openai2024structuredoutputs,
+  author = {{OpenAI}},
+  title = {Introducing Structured Outputs in the API},
+  year = {2024},
+  month = {8},
+  day = {6},
+  url = {https://openai.com/index/introducing-structured-outputs-in-the-api/}
+}
+
+===== 038 · OPS-20260817-006 · SHA256 601f278d47332f51892c9647e96c4688005fe345bb70d928c9597a0b1c5c63ff =====
+
+ZETTEL
+
+ID:
+OPS-20260817-006
+
+TITLE:
+The most powerful way to tell the model what you want may be to define how failure is scored.
+
+SOURCE:
+DSPy — current documentation accessed August 17, 2026.
+https://dspy.ai/
+
+PASSAGE:
+[QUOTE]
+“Compile your program against a metric.”
+
+RESEARCH OBJECT:
+THE METRIC BECOMES AN INDIRECT INSTRUCTION GENERATOR.
+
+LOCAL MOVE:
+[[MJ-MARTINA-004]] described Martina accumulating prompt lessons manually through trial and error.
+
+DSPy separates the task specification from the exact prompt wording and provides optimizers that modify prompts against examples and a scoring function.
+
+The programmer can increasingly call the shot by defining success rather than composing every sentence that causes it.
+
+SOURCE TERMS:
+“structured signatures”
+“program”
+“metric”
+“optimizers”
+“compile”
+“prompts automatically”
+
+WHAT BECAME STRANGE:
+Prompt authorship can move one level upward.
+
+Instead of:
+
+WRITE THE RIGHT WORDS
+
+the operation becomes:
+
+DEFINE THE TASK
+DEFINE EXAMPLES
+DEFINE WHAT COUNTS AS BETTER
+SEARCH FOR WORDS THAT SATISFY IT.
+
+QUESTION:
+Does the metric become a higher-order prompt?
+
+DEEPER QUESTION:
+If an optimizer writes the actual instructions, is the human programmer's true expressive act the definition of the evaluation function?
+
+MECHANISM:
+DSPy exposes structured signatures for tasks, modules controlling execution strategy, and optimizers that compile programs against metrics using examples and scoring functions.
+
+FORMAL SHIFT:
+FROM:
+HUMAN
+→ PROMPT
+→ OUTPUT
+
+TO:
+HUMAN
+→ TASK_SIGNATURE
+→ METRIC
+→ EXAMPLES
+→ OPTIMIZER
+→ PROMPT*
+→ OUTPUT.
+
+SOURCE FORMALISM:
+DSPy documentation describes:
+
+Signature
+→ Module
+→ execution
+
+and:
+
+examples
++ scoring function
++ optimizer
+→ compiled program / tuned prompts.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+P* =
+argmax_P
+SCORE(
+  RUN(P, DATA)
+)
+
+Human “shot calling” moves from specifying P directly to specifying SCORE.
+
+TENSION:
+A metric only calls the intended shot if it actually captures the intended goal.
+
+Optimization can make a system better at the metric while worse at unmeasured properties.
+
+MISSING:
+Cases where optimized prompts reveal specification errors in the metric rather than prompt errors.
+
+BOUNDARY:
+DSPy does not eliminate prompts. It changes who or what selects their concrete wording and how that wording is evaluated.
+
+CITATION TRAIL:
+[[MJ-MARTINA-004]]
+→ accumulate prompt improvements manually
+→ DSPy automates prompt selection against a metric
+→ successful behavior becomes optimization target
+→ prompt text becomes compiled artifact
+→ pursue the evaluator as the new site of authorship.
+
+TEST:
+Choose one prompt from the current Zettel-forage practice.
+
+Create a dataset of desired and undesired outputs.
+
+Write a metric for:
+schema fidelity,
+novelty,
+citation validity,
+recursive openness.
+
+Allow an optimizer to rewrite the underlying prompt.
+
+Inspect every change.
+
+Ask whether the optimized prompt teaches something new about the latent specification that the original prose failed to state.
+
+PLATFORM:
+DSPy
+
+LINKS:
+[[MJ-MARTINA-004]]
+[[MJ-MARTINA-014-A-A]]
+[[MJ-MARTINA-013-A]]
+
+BIBTEX:
+@misc{dspy2026docs,
+  author = {{DSPy Project}},
+  title = {DSPy: Program, Don't Prompt},
+  year = {2026},
+  url = {https://dspy.ai/}
+}
+
+===== 039 · OPS-20260817-007 · SHA256 396ae2425355155a602e2e66f98aa615a928631bc00281eb96a11ec8d885382d =====
+
+ZETTEL
+
+ID:
+OPS-20260817-007
+
+TITLE:
+A failure trace can rewrite the language that caused it.
+
+SOURCE:
+Lakshya A. Agrawal et al. — “GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning” — 2025; accepted ICLR 2026.
+https://arxiv.org/abs/2507.19457
+
+PASSAGE:
+[PARAPHRASE]
+GEPA examines execution trajectories, reflects on them in natural language, diagnoses problems, proposes prompt changes, tests those changes, and retains useful lessons.
+
+RESEARCH OBJECT:
+FAILURE BECOMES SOURCE MATERIAL FOR PROGRAM REVISION.
+
+LOCAL MOVE:
+[[MJ-MARTINA-004]] showed a human doing:
+
+failure
+→ discovery
+→ add something to template.
+
+GEPA formalizes a strikingly similar loop at the system level.
+
+The execution history becomes input to the mechanism that rewrites the instructions for the next execution.
+
+SOURCE TERMS:
+“trajectories”
+“reasoning”
+“tool calls”
+“tool outputs”
+“reflects”
+“diagnose”
+“prompt updates”
+“trial and error”
+
+WHAT BECAME STRANGE:
+The prompt is no longer simply upstream of execution.
+
+Execution returns downstream evidence that flows backward and changes the prompt.
+
+The program's failures edit its future language.
+
+QUESTION:
+Can the genealogy of prompt corrections be treated as part of the executable specification rather than discarded optimization history?
+
+DEEPER QUESTION:
+If a prompt is produced from accumulated reflections over prior failures, is the real program the final text or the lineage that generated it?
+
+MECHANISM:
+GEPA samples trajectories from an AI system, uses natural-language reflection to diagnose behavior and propose prompt updates, evaluates variants, and combines useful lessons during optimization.
+
+FORMAL SHIFT:
+FROM:
+PROMPT
+→ EXECUTION
+→ OUTPUT
+
+TO:
+PROMPT_t
+→ EXECUTION_t
+→ TRACE_t
+→ REFLECTION_t
+→ PROMPT_t+1
+→ EXECUTION_t+1.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+GEPA uses:
+system trajectories,
+natural-language reflection,
+prompt mutation/proposal,
+evaluation,
+Pareto-aware candidate selection.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+SPEC_t+1
+=
+REVISE(
+  SPEC_t,
+  FAILURE_TRACE_t,
+  SUCCESS_TRACE_t,
+  METRIC
+)
+
+Therefore:
+
+CURRENT_PROMPT
+is a compressed residue of prior executions.
+
+TENSION:
+Optimizers typically care about producing a better current candidate, while research provenance may require retaining the failed variants and causal history that produced it.
+
+MISSING:
+A representation in which correction lineage remains queryable and executable rather than disappearing after optimization.
+
+BOUNDARY:
+GEPA's optimization procedure does not imply every revision corresponds to a true or human-legible specification improvement.
+
+CITATION TRAIL:
+[[MJ-MARTINA-004]]
+→ Martina manually stores lessons from trial and error
+→ GEPA operationalizes trace → reflection → prompt update
+→ failure becomes instruction-generating evidence
+→ specification becomes genealogical.
+
+TEST:
+Preserve every:
+prompt version,
+execution trace,
+failure diagnosis,
+proposed correction,
+metric score.
+
+Then remove the final prompt.
+
+Attempt to reconstruct it only from the correction lineage.
+
+If reconstruction is possible, test whether the lineage explains the system better than the final prompt alone.
+
+PLATFORM:
+GEPA; DSPy-compatible language-model programs
+
+LINKS:
+[[MJ-MARTINA-004]]
+[[MJ-MARTINA-014-A-A]]
+[[OPS-20260817-006]]
+
+BIBTEX:
+@misc{agrawal2025gepa,
+  title = {GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning},
+  author = {Agrawal, Lakshya A. and Tan, Shangyin and Soylu, Dilara and Ziems, Noah and Khare, Rishi and Opsahl-Ong, Krista and Singhvi, Arnav and Shandilya, Herumb and Ryan, Michael J. and Jiang, Meng and Potts, Christopher and Sen, Koushik and Dimakis, Alexandros G. and Stoica, Ion and Klein, Dan and Zaharia, Matei and Khattab, Omar},
+  year = {2025},
+  eprint = {2507.19457},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/abs/2507.19457}
+}
+
+===== 040 · OPS-20260817-008 · SHA256 118c7ffacbeef0b9b61333d9d95d489141031982731f6fddb524135a1665606f =====
+
+ZETTEL
+
+ID:
+OPS-20260817-008
+
+TITLE:
+POML makes the prompt itself a compiled representation with source and rendering separated.
+
+SOURCE:
+Microsoft — POML: Prompt Orchestration Markup Language — repository and documentation — accessed August 17, 2026.
+https://github.com/microsoft/POML
+
+PASSAGE:
+[PARAPHRASE]
+POML provides semantic prompt components, external-data elements, a CSS-like styling layer, and templating constructs including variables, loops, and conditionals.
+
+RESEARCH OBJECT:
+PROMPT SOURCE CODE IS NOT IDENTICAL TO THE STRING THE MODEL RECEIVES.
+
+LOCAL MOVE:
+[[MJ-MARTINA-014-A-A]] treated templates as technologies acting upon the prompt writer.
+
+POML makes another distinction explicit: one can author a structured representation of a prompt and render it into model-facing presentation.
+
+SOURCE TERMS:
+“semantic components”
+“<role>”
+“<task>”
+“<example>”
+“stylesheet”
+“presentation”
+“templating”
+“variables”
+“loops”
+“conditionals”
+
+WHAT BECAME STRANGE:
+Once a prompt has:
+
+SOURCE REPRESENTATION
+TEMPLATE VARIABLES
+CONTROL FLOW
+DATA BINDINGS
+STYLE RULES
+RENDERING
+
+the thing colloquially called “the prompt” has split into at least two objects:
+
+the prompt program
+and
+the prompt instance.
+
+QUESTION:
+Which object should be preserved as the true research artifact: rendered prompt, POML source, variable bindings, or all three?
+
+DEEPER QUESTION:
+Does prompt programming require the same source/runtime distinction that became fundamental in conventional programming languages?
+
+MECHANISM:
+POML structures prompts with semantic markup, data components, presentation styling, and templating. The source is rendered into the format supplied to an LLM.
+
+FORMAL SHIFT:
+FROM:
+PROMPT = STRING
+
+TO:
+PROMPT_SOURCE
++ DATA
++ VARIABLES
++ STYLE
++ RENDERER
+→ PROMPT_INSTANCE.
+
+SOURCE FORMALISM:
+POML includes semantic components such as:
+
+<role>
+<task>
+<example>
+<document>
+<table>
+<img>
+
+and templating/style mechanisms including:
+
+{{ variables }}
+for
+if
+<let>
+<stylesheet>.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+P_instance =
+RENDER(
+  P_source,
+  ENV,
+  DATA,
+  STYLE
+)
+
+Thus:
+
+P_source ≠ P_instance
+
+and:
+
+same P_source
+can generate
+many P_instances.
+
+TENSION:
+Even if content and presentation are separated in authoring, LLM behavior may remain sensitive to the final rendered formatting.
+
+POML therefore separates layers without making presentation semantically irrelevant.
+
+MISSING:
+A provenance standard recording source, renderer version, model-facing rendered prompt, environment bindings, and model version together.
+
+BOUNDARY:
+POML structures and renders prompts; it does not make natural-language semantics deterministic.
+
+CITATION TRAIL:
+[[MJ-MARTINA-014-A-A]]
+→ template acts upon writer
+→ POML formalizes structured prompt source
+→ source and rendered prompt split
+→ prompt artifact acquires compilation provenance
+→ forage prompt reproducibility as build provenance.
+
+TEST:
+Create one POML source.
+
+Render it through multiple:
+styles,
+data bindings,
+conditional branches,
+formatting choices.
+
+Run all rendered instances against the same model snapshot.
+
+Record behavior changes.
+
+Then determine which differences belong to:
+semantic source,
+bound data,
+presentation,
+or stochastic execution.
+
+PLATFORM:
+POML; LLM prompt orchestration
+
+LINKS:
+[[MJ-MARTINA-014-A-A]]
+[[MJ-MARTINA-004]]
+[[MJ-MARTINA-021-A-A]]
+
+BIBTEX:
+@misc{zhang2025poml,
+  title = {Prompt Orchestration Markup Language},
+  author = {Zhang, Yuge and Chen, Nan and Xu, Jiahang and Yang, Yuqing},
+  year = {2025},
+  eprint = {2508.13948},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/abs/2508.13948}
+}
+
+===== 041 · OPS-20260817-009 · SHA256 27f655510a7783de022df25956b4cbea462c978d8f743b73bb06199fa337c434 =====
+
+ZETTEL
+
+ID:
+OPS-20260817-009
+
+TITLE:
+Natural language can now be a source language that causes the model to synthesize a temporary program of actions.
+
+SOURCE:
+OpenAI Agents SDK — Programmatic Tool Calling — current documentation accessed August 17, 2026.
+https://openai.github.io/openai-agents-python/tools/
+
+PASSAGE:
+[QUOTE]
+“Programmatic Tool Calling lets a supported OpenAI Responses model generate JavaScript that calls eligible tools”
+
+RESEARCH OBJECT:
+WORDS → GENERATED PROGRAM → TOOL CALLS → WORLD OPERATIONS.
+
+LOCAL MOVE:
+[[MJ-MARTINA-021-A-A]] asked whether a prompt is a score, script, or something else.
+
+Current programmatic tool calling introduces a startling third layer.
+
+The model can respond to natural language not with prose and not immediately with a tool call, but by generating JavaScript that orchestrates multiple permitted tools.
+
+SOURCE TERMS:
+“Programmatic Tool Calling”
+“generate JavaScript”
+“eligible tools”
+“loops”
+“branching”
+“parallel calls”
+“intermediate calculations”
+“V8 environment”
+
+WHAT BECAME STRANGE:
+The prompt can function as source material for a program that does not exist before the request.
+
+The execution chain becomes:
+
+ENGLISH
+→ GENERATED JAVASCRIPT
+→ TYPED TOOL CALLS
+→ EXTERNAL OPERATIONS.
+
+This is much closer to literal “words becoming operations” than ordinary chatbot prompting.
+
+QUESTION:
+Is generated orchestration code the missing intermediate representation between natural-language intention and world-changing action?
+
+DEEPER QUESTION:
+When the executable program is synthesized only after the user speaks, where does the program begin: in the user's description, the generated JavaScript, the tool schemas, or the complete runtime assemblage?
+
+MECHANISM:
+OpenAI's current Agents SDK documents Programmatic Tool Calling in which supported Responses models generate JavaScript capable of calling explicitly permitted tools, combining outputs, looping, branching, and performing intermediate calculations in a hosted V8 environment.
+
+FORMAL SHIFT:
+FROM:
+USER_LANGUAGE
+→ MODEL
+→ TOOL_CALL
+
+TO:
+USER_LANGUAGE
+→ MODEL
+→ PROGRAM_SYNTHESIS
+→ PROGRAM_EXECUTION
+→ TOOL_CALL_1...n
+→ RESULT.
+
+SOURCE FORMALISM:
+Programmatic Tool Calling:
+
+model
+→ generated JavaScript
+
+JavaScript runs in:
+fresh hosted V8 environment
+
+Program may access:
+only explicitly allowed tools
+
+Program may:
+loop
+branch
+parallelize calls
+combine outputs
+perform intermediate calculations.
+
+OUR FORMALIZATION:
+[OUR FORMORMALIZATION — NOT SOURCE SYNTAX]
+
+NL_INTENTION
+→ SYNTHESIZE(P)
+
+where:
+
+P = {
+  CONTROL_FLOW,
+  TOOL_INVOCATIONS,
+  INTERMEDIATE_STATE
+}
+
+then:
+
+EXECUTE(P, ALLOWED_TOOLS)
+→ WORLD_EFFECTS / DATA_EFFECTS.
+
+The generated program is ephemeral but operationally decisive.
+
+TENSION:
+The natural-language prompt alone still does not determine the synthesized program.
+
+Tool inventory, schemas, allowed callers, runtime restrictions, model behavior, and approvals all participate in the resulting operation.
+
+MISSING:
+A provenance format that records the chain:
+
+user words
+→ generated program
+→ each child tool call
+→ each state change
+→ final result.
+
+BOUNDARY:
+Generated JavaScript operates only inside the permissions and environment supplied by the host. Natural language does not magically acquire unrestricted computational authority.
+
+CITATION TRAIL:
+[[MJ-MARTINA-021-A-A]]
+→ prompt may be executable without being a score
+→ programmatic tool calling inserts synthesized code between language and action
+→ description becomes source language for transient programs
+→ “the prompt is not the program” becomes literally inspectable
+→ forage the generated intermediate representation.
+
+TEST:
+For one natural-language task, save:
+
+1. exact user request
+2. complete tool surface
+3. generated JavaScript
+4. actual tool-call trace
+5. resulting state
+6. final response
+
+Repeat fifty times.
+
+Compare identical user language against divergent generated programs.
+
+Ask which invariants remain stable across executions and whether those invariants can be expressed independently of any one generated program.
+
+PLATFORM:
+OpenAI Responses API; OpenAI Agents SDK; Programmatic Tool Calling
+
+LINKS:
+[[MJ-MARTINA-021-A-A]]
+[[MJ-MARTINA-030-A]]
+[[OPS-20260817-003]]
+[[OPS-20260817-001]]
+
+BIBTEX:
+@misc{openai2026programmatictools,
+  author = {{OpenAI}},
+  title = {OpenAI Agents SDK: Programmatic Tool Calling},
+  year = {2026},
+  url = {https://openai.github.io/openai-agents-python/tools/}
+}
+
+===== 042 · OPS-20260817-010 · SHA256 9f2c4efda8e7e13405e19d20c27d492cc163e0582671c54b32fd03e1a915aac3 =====
+
+ZETTEL
+
+ID:
+OPS-20260817-010
+
+TITLE:
+“Do not do X” becomes materially different when it is a tripwire instead of advice.
+
+SOURCE:
+OpenAI Agents SDK — Guardrails — current documentation accessed August 17, 2026.
+https://openai.github.io/openai-agents-python/guardrails/
+
+PASSAGE:
+[PARAPHRASE]
+Tool input guardrails can run before execution and can skip a call, replace its output, or trigger an exception that halts execution.
+
+RESEARCH OBJECT:
+NORMATIVE LANGUAGE CAN MIGRATE FROM INSTRUCTION INTO EXECUTABLE VETO.
+
+LOCAL MOVE:
+[[OPS-20260817-004]] moved mandatory positive behavior from prose into `tool_choice`.
+
+Guardrails reveal the negative counterpart.
+
+Instead of:
+
+“Never execute this operation under condition C.”
+
+one can install machinery capable of preventing execution when C is detected.
+
+SOURCE TERMS:
+“guardrails”
+“validation”
+“before execution”
+“skip”
+“tripwire”
+“halt”
+“tool guardrails”
+
+WHAT BECAME STRANGE:
+There is a categorical difference between:
+
+PROHIBITION AS SENTENCE
+
+and:
+
+PROHIBITION AS INTERRUPTION.
+
+The first requests obedience.
+
+The second changes what transitions the system permits.
+
+QUESTION:
+Which safety and behavioral rules should be expressed as prompt instructions and which should become executable vetoes?
+
+DEEPER QUESTION:
+Does a mature language-to-action system require a distinction analogous to constitutional law versus police power: rules that describe what should happen versus mechanisms that can stop what happens?
+
+MECHANISM:
+The Agents SDK supports tool guardrails around function-tool calls. Input guardrails run before tool execution and can prevent or alter execution behavior; tripwires can raise exceptions and halt an agent run.
+
+FORMAL SHIFT:
+FROM:
+PROMPT:
+“Do not perform forbidden action.”
+
+TO:
+candidate_action
+→ VALIDATE
+→ {
+    PASS → EXECUTE
+    FAIL → BLOCK
+  }
+
+SOURCE FORMALISM:
+Tool guardrail lifecycle:
+
+MODEL proposes call
+→ input tool guardrail
+→ execute or block
+→ tool output
+→ output tool guardrail.
+
+Tripwire:
+validation result
+→ exception
+→ halt.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+NORM
+= predicate P(action, context)
+
+ENFORCEMENT:
+
+if P == false:
+    transition → DENIED
+else:
+    transition → EXECUTE
+
+The important shift is:
+
+“SHOULD NOT”
+→
+“CANNOT PASS THIS GATE.”
+
+TENSION:
+Guardrails themselves may use fallible models or imperfect validators. Runtime enforcement is stronger than prompting only to the extent that the predicate is correctly specified and reliably evaluated.
+
+MISSING:
+A systematic method for deciding which natural-language invariants are compilable into deterministic or independently evaluated guardrails.
+
+BOUNDARY:
+Not every ethical, contextual, or interpretive rule can be reduced to a simple executable predicate.
+
+CITATION TRAIL:
+[[OPS-20260817-004]]
+→ positive requirement leaves prompt via tool_choice
+→ guardrails move negative requirement into runtime
+→ imperative and prohibition acquire enforcement machinery
+→ prompt practice becomes institutional architecture.
+
+TEST:
+Take a production agent prompt and extract every sentence containing:
+never,
+must not,
+only if,
+requires approval,
+do not.
+
+For each rule construct two versions:
+
+A. instruction-only
+B. runtime guardrail
+
+Generate adversarial and ordinary task cases.
+
+Measure:
+violation rate,
+false blocks,
+latency,
+recovery behavior.
+
+Retain prose only where executable enforcement proves impossible or undesirable.
+
+PLATFORM:
+OpenAI Agents SDK; agent guardrails
+
+LINKS:
+[[OPS-20260817-004]]
+[[MJ-MARTINA-014-A-A]]
+[[MJ-MARTINA-015-A]]
+
+BIBTEX:
+@misc{openai2026guardrails,
+  author = {{OpenAI}},
+  title = {OpenAI Agents SDK: Guardrails},
+  year = {2026},
+  url = {https://openai.github.io/openai-agents-python/guardrails/}
+}

@@ -1,0 +1,5719 @@
+===== 001__action-mode__Anthropic-2026__SHOT-20260817-01__from-conversation.txt =====
+
+ZETTEL
+
+ID:
+SHOT-20260817-01
+
+TITLE:
+2026-08-17 — If you want the model to act, name action as the default state.
+
+SOURCE:
+Anthropic — “Prompting best practices” — Claude Platform documentation — accessed 2026-08-17.
+SOURCE URL: https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices
+
+PASSAGE:
+[QUOTE]
+“For Claude to take action, be more explicit:”
+
+[PARAPHRASE]
+Anthropic distinguishes language that invites recommendation from language that directs implementation. Its current guidance recommends explicitly asking the model to implement requested changes and, in agentic contexts, to use available tools to resolve missing details rather than merely speculate about them.
+
+RESEARCH OBJECT:
+ACTION MODE AS A PROMPT OPERATOR.
+
+LOCAL MOVE:
+[[MJ-2022-001]] described prompting as adversarial description: the practitioner anticipates how the machine may misread the words.
+
+[[MJ-2022-019]] later raised a different practical competence: being able to “talk to an artist just as easily as you could talk to a computer.”
+
+The current-day practice sharpens both.
+
+A prompt can correctly describe the intended state and still fail operationally because the model chooses the wrong mode of participation.
+
+“Analyze this.”
+“Tell me how to change this.”
+“Change this.”
+
+can refer to nearly the same object while authorizing different behavior.
+
+The emerging pragmatic variable is therefore not only WHAT the utterance means but WHAT KIND OF MOVE the utterance licenses.
+
+SOURCE TERMS:
+“take action”
+“implement”
+“tools”
+“missing details”
+“explicit”
+
+WHAT BECAME STRANGE:
+Imperative language is becoming a control primitive.
+
+The difference between:
+
+DESCRIBE THE SHOT
+
+and
+
+TAKE THE SHOT
+
+may be only a few words, but those words determine whether the model remains in discourse or crosses into state change.
+
+QUESTION:
+Which linguistic constructions reliably distinguish analysis, recommendation, preparation, execution, and committed state mutation?
+
+DEEPER QUESTION:
+Is agentic prompting producing an emergent mood system for natural-language programming analogous to grammatical moods but tied to computational authority?
+
+MECHANISM:
+User supplies desired state.
+
+Model must infer an action mode.
+
+Weakly specified action mode:
+→ model may remain representational.
+
+Explicit action mode:
+→ model inspects relevant state
+→ invokes permitted operations
+→ changes artifact or environment
+→ verifies consequence.
+
+FORMAL SHIFT:
+SEMANTIC REQUEST:
+
+“I want X.”
+
+becomes
+
+SEMANTIC REQUEST
++
+OPERATIONAL MOOD:
+
+“Implement X.”
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+Anthropic's current guidance explicitly distinguishes prompts that tend toward suggestion from prompts that more clearly direct action.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+UTTERANCE
+=
+CONTENT
++
+ACTION MODE
+
+ACTION MODE ∈ {
+OBSERVE,
+EXPLAIN,
+RECOMMEND,
+PREPARE,
+EXECUTE,
+VERIFY
+}
+
+The contemporary “shot call” specifies both CONTENT and ACTION MODE.
+
+TENSION:
+[[MJ-2022-001]] teaches defensive precision against unintended interpretation.
+
+But stronger imperatives introduce a different failure mode:
+
+UNDEREXECUTION
+can become
+OVEREXECUTION.
+
+The useful principle is therefore not:
+
+ALWAYS ACT.
+
+It is:
+
+MAKE THE AUTHORIZATION MODE LEGIBLE.
+
+This connects directly to [[SHOT-20260817-06]], where an action can be called without yet being committed.
+
+MISSING:
+An empirical lexicon of current operational verbs across models and domains.
+
+We do not yet know whether:
+
+make
+build
+apply
+implement
+execute
+change
+send
+publish
+commit
+run
+
+produce stable differences across systems.
+
+BOUNDARY:
+The cited Anthropic guidance is platform-specific and behavior can change across model generations.
+
+The generalized ACTION MODE framework is [OUR FORMALIZATION — NOT SOURCE SYNTAX].
+
+CITATION TRAIL:
+[[MJ-2022-001]]
+→ ambiguity as execution problem
+→ [[MJ-2022-019]]
+→ talking to the computer as specialized practice
+→ Anthropic current-day action guidance
+→ utterance gains operational mood
+→ [[SHOT-20260817-06]]
+→ proposed action can later split from committed action
+
+TEST:
+On 2026-08-17-capable agentic systems, issue the same underlying task with controlled leading verbs:
+
+analyze
+suggest
+prepare
+draft
+make
+implement
+apply
+execute
+verify
+
+Record:
+
+whether tools are invoked
+whether external state changes
+whether an artifact is created
+whether approval is requested
+whether the system stops at explanation.
+
+Use the results to construct a dated OPERATIONAL VERB LEXICON.
+
+PLATFORM:
+Claude
+Tool-using agents
+Coding agents
+Computer-use agents
+
+LINKS:
+[[MJ-2022-001]]
+[[MJ-2022-019]]
+[[SHOT-20260817-04]]
+[[SHOT-20260817-06]]
+
+BIBTEX:
+NONE
+
+
+===== 002__localized-policy__OpenAI-2025__SHOT-20260817-02__from-conversation.txt =====
+
+ZETTEL
+
+ID:
+SHOT-20260817-02
+
+TITLE:
+2026-08-17 — Put the rule beside the operation it governs.
+
+SOURCE:
+OpenAI — “o3/o4-mini Function Calling Guide” — OpenAI Cookbook — published 2025-05-26 — current guidance consulted 2026-08-17.
+SOURCE URL: https://developers.openai.com/cookbook/examples/o-series/o3o4-mini_prompting_guide
+
+PASSAGE:
+[QUOTE]
+“This serves as a durable interface contract between reasoning models and tool APIs.”
+
+RESEARCH OBJECT:
+LOCALIZED PROMPT POLICY.
+
+LOCAL MOVE:
+[[MJ-2022-003]] discovered that the visible prompt is not the final machine representation.
+
+[[MJ-2022-008-A]] showed a related spatial movement in interface history:
+
+situated practice
+→ systematization
+→ interface primitive.
+
+Current function-calling practice introduces another movement.
+
+Instructions themselves migrate toward the operation they constrain.
+
+Instead of one giant prompt saying:
+
+never overwrite files
+only refund delivered orders
+look up users before modification
+never invent identifiers
+
+the relevant rule can live beside:
+
+file_write
+refund
+user_update
+database_lookup.
+
+The specification becomes spatially distributed across the agent's action surface.
+
+SOURCE TERMS:
+“function description”
+“usage criteria”
+“arguments”
+“interface contract”
+“tool”
+“developer instructions”
+
+WHAT BECAME STRANGE:
+The prompt no longer has one canonical location.
+
+The behavior of the system can be distributed across:
+
+system instructions
+tool descriptions
+schemas
+runtime context
+state
+examples
+review policies.
+
+Prompt engineering therefore starts to look less like writing one document and more like arranging laws across a computational territory.
+
+QUESTION:
+Which instruction belongs at which scope?
+
+DEEPER QUESTION:
+Is prompt architecture developing the equivalent of lexical scope, where rules should be bound to the smallest domain in which they are valid?
+
+MECHANISM:
+Global policy establishes universal invariants.
+
+Tool-local policy specifies:
+when operation O is available
+what preconditions O requires
+what O must never do
+how O's arguments are constructed.
+
+When the agent considers O, the relevant rules are encountered locally.
+
+FORMAL SHIFT:
+ONE PROMPT
+→ MANY GOVERNING LOCATIONS
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+OpenAI's function-calling guidance recommends placing detailed invocation criteria and argument requirements in function descriptions so the tool definition itself serves as an interface contract.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PROMPT SCOPE:
+
+GLOBAL
+PROJECT
+ROLE
+STATE
+TOOL
+ARGUMENT
+TURN
+
+Rule R should ideally live at:
+
+smallest_scope(R)
+
+that still governs every situation where R must hold.
+
+TENSION:
+Centralizing rules makes the total specification easier for humans to inspect.
+
+Localizing rules makes them more salient when the operation is selected.
+
+This creates a new engineering tradeoff:
+
+HUMAN LEGIBILITY
+versus
+MODEL-LOCAL RELEVANCE.
+
+[[SHOT-20260817-07]] complicates this further because rules can later be synthesized from execution traces and inserted into changing scopes.
+
+MISSING:
+A prompt-scope calculus.
+
+We do not yet have robust conventions for deciding whether a correction belongs to:
+
+this turn
+this tool
+this project
+this agent
+all future tasks.
+
+BOUNDARY:
+The source concerns OpenAI function calling.
+
+The analogy to lexical scope is [OUR FORMALIZATION — NOT SOURCE SYNTAX].
+
+CITATION TRAIL:
+[[MJ-2022-003]]
+→ machine receives representations beneath visible language
+→ [[MJ-2022-008-A]]
+→ practice becomes formalized interface
+→ current function descriptions become behavioral contracts
+→ prompt fragments move beside operations
+→ [[SHOT-20260817-07]]
+→ execution can later rewrite those fragments
+
+TEST:
+Take one agent with twelve behavioral constraints.
+
+Implement three versions dated 2026-08-17:
+
+GLOBAL:
+all rules in one system prompt.
+
+LOCAL:
+each rule attached only to the tool or state it governs.
+
+HYBRID:
+critical invariants global, operation-specific constraints local.
+
+Measure:
+
+tool-selection accuracy
+argument errors
+rule violations
+cross-tool interference
+prompt-token cost
+human auditability.
+
+PLATFORM:
+OpenAI function calling
+Tool-using agents
+
+LINKS:
+[[MJ-2022-003]]
+[[MJ-2022-008-A]]
+[[SHOT-20260817-03]]
+[[SHOT-20260817-04]]
+[[SHOT-20260817-07]]
+
+BIBTEX:
+NONE
+
+
+===== 003__schema-possibility-space__OpenAI-2026__SHOT-20260817-03__from-conversation.txt =====
+
+ZETTEL
+
+ID:
+SHOT-20260817-03
+
+TITLE:
+2026-08-17 — A shot becomes stronger when its legal shape exists before its content.
+
+SOURCE:
+OpenAI — “Structured model outputs” — OpenAI API documentation — accessed 2026-08-17.
+SOURCE URL: https://developers.openai.com/api/docs/guides/structured-outputs
+
+PASSAGE:
+[QUOTE]
+“only Structured Outputs ensure schema adherence.”
+
+RESEARCH OBJECT:
+SCHEMA AS POSSIBILITY SPACE.
+
+LOCAL MOVE:
+[[MJ-2022-003]] made the prompt strange by locating an invisible representation beneath ordinary words.
+
+[[SHOT-20260817-02]] makes instruction location strange by distributing rules among tools.
+
+Structured Outputs adds yet another operation:
+
+the human can declare the class of legal answers before the model chooses the answer.
+
+A prompt no longer needs to say only:
+
+“Give me the answer.”
+
+or even:
+
+“Give me exactly these fields.”
+
+It can pair semantic intent with a machine-enforced structural type.
+
+SOURCE TERMS:
+“Structured Outputs”
+“JSON Schema”
+“schema adherence”
+“strict”
+“response format”
+“function calling”
+
+WHAT BECAME STRANGE:
+The user can constrain the model through a language that is not primarily addressed to the model as prose.
+
+The schema is a shot call whose force comes from making certain output shapes unavailable.
+
+QUESTION:
+How much prompt prose should disappear once the same constraint can be represented structurally?
+
+DEEPER QUESTION:
+Are schemas functioning as the first widely deployed type system for natural-language programming?
+
+MECHANISM:
+User specifies semantic goal.
+
+User specifies legal structural representation.
+
+Generation occurs inside that structural space.
+
+Downstream operation consumes the resulting typed object.
+
+FORMAL SHIFT:
+REQUEST
+→ FREE TEXT
+→ PARSE
+→ REPAIR
+
+becomes
+
+REQUEST
++
+SCHEMA
+→ TYPED OBJECT
+→ NEXT OPERATION
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+OpenAI distinguishes ordinary JSON production from Structured Outputs that adhere to a supplied schema.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+SHOT =
+SEMANTIC INTENT
+∩
+STRUCTURAL TYPE
+
+Example:
+
+semantic:
+“choose the next operation”
+
+structural:
+{
+  operation: enum,
+  target: string,
+  confidence: number
+}
+
+The model cannot answer by wandering outside the declared representational space.
+
+TENSION:
+Structural correctness does not establish semantic correctness.
+
+A perfectly legal object can still call the wrong operation.
+
+This pushes the lineage directly toward [[SHOT-20260817-06]]:
+
+TYPE CHECK
+is not
+ACTION REVIEW.
+
+And toward [[SHOT-20260817-09]]:
+
+SCHEMA VALIDITY
+is not
+SPECIFICATION VALIDITY.
+
+MISSING:
+A layer for expressing semantic invariants beyond shape.
+
+Examples:
+
+end_date must follow start_date
+refund amount cannot exceed payment
+deleted object must exist
+child zettel must contain parent link
+citation must support quoted proposition.
+
+BOUNDARY:
+Structured Outputs constrains supported structural properties.
+
+It does not guarantee truth, good judgment, or correct external execution.
+
+CITATION TRAIL:
+[[MJ-2022-003]]
+→ words become machine representation
+→ [[SHOT-20260817-02]]
+→ rules gain local scope
+→ Structured Outputs
+→ output receives type
+→ [[SHOT-20260817-09]]
+→ typed specification can itself be semantically linted
+→ [[SHOT-20260817-06]]
+→ valid action can still require review
+
+TEST:
+On 2026-08-17, collect recurring prose instructions such as:
+
+“return exactly”
+“do not add fields”
+“always include”
+“choose one of”
+“use this order.”
+
+Translate them into schema constraints where possible.
+
+Measure which prose rules can disappear entirely and which still require semantic instruction.
+
+PLATFORM:
+OpenAI Structured Outputs
+Function calling
+Typed agent interfaces
+
+LINKS:
+[[MJ-2022-003]]
+[[SHOT-20260817-02]]
+[[SHOT-20260817-06]]
+[[SHOT-20260817-09]]
+
+BIBTEX:
+NONE
+
+
+===== 004__procedural-shot-calling__OpenAI-2025__SHOT-20260817-04__from-conversation.txt =====
+
+ZETTEL
+
+ID:
+SHOT-20260817-04
+
+TITLE:
+2026-08-17 — Call the route, not only the destination.
+
+SOURCE:
+OpenAI — “o3/o4-mini Function Calling Guide” — OpenAI Cookbook — published 2025-05-26 — current guidance consulted 2026-08-17.
+SOURCE URL: https://developers.openai.com/cookbook/examples/o-series/o3o4-mini_prompting_guide
+
+PASSAGE:
+[PARAPHRASE]
+OpenAI illustrates multi-tool workflows in which the model first checks necessary state, then checks eligibility or policy, then performs the mutating operation, then communicates the result.
+
+RESEARCH OBJECT:
+PROCEDURAL SHOT CALLING.
+
+LOCAL MOVE:
+[[MJ-2022-001]] framed prompt craft as protecting intention against unwanted interpretation.
+
+[[SHOT-20260817-01]] adds ACTION MODE:
+
+do not merely talk about the requested change.
+
+This child asks a further question:
+
+Even after execution is authorized, should the user specify only the destination?
+
+Or should the user also specify the legal path?
+
+“Refund this order”
+
+is an end state.
+
+“Check delivery, verify eligibility, issue refund, then notify”
+
+is a state-transition program written in ordinary language.
+
+SOURCE TERMS:
+“sequence”
+“tools”
+“functions”
+“boundaries”
+“completed”
+“constraints”
+
+WHAT BECAME STRANGE:
+Natural language becomes dramatically more program-like when it names the transitions that must occur rather than only the final state.
+
+QUESTION:
+Which parts of an agentic workflow should the human call explicitly, and which should remain open for model planning?
+
+DEEPER QUESTION:
+Is the stable division of labor:
+
+HUMAN:
+critical dependencies and invariants
+
+MODEL:
+route through everything else?
+
+MECHANISM:
+Goal enters.
+
+Precondition A must be observed.
+
+A determines whether B is legal.
+
+B determines whether state mutation C is authorized.
+
+Successful C produces postcondition D.
+
+FORMAL SHIFT:
+END STATE:
+
+“Make X true.”
+
+becomes
+
+STATE₀
+→ OBSERVE
+→ STATE₁
+→ CHECK
+→ STATE₂
+→ MUTATE
+→ STATE₃
+→ VERIFY
+→ REPORT
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+OpenAI's guide demonstrates ordered sequences of function use for tasks whose valid execution depends on earlier observations and policy checks.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+SHOT =
+GOAL
++
+DEPENDENCIES
++
+PRECONDITIONS
++
+CRITICAL ORDER
++
+STOP CONDITIONS
++
+POSTCONDITIONS
+
+TENSION:
+[[SHOT-20260817-02]] says rules should be placed close to operations.
+
+This zettel says some relationships between operations must remain visible across the entire workflow.
+
+Local scope alone cannot represent dependency.
+
+Too little procedure creates unsafe improvisation.
+
+Too much procedure turns the model into a brittle script executor.
+
+MISSING:
+A practical vocabulary separating:
+
+MUST HAPPEN BEFORE
+MAY HAPPEN BEFORE
+REQUIRES
+PREFER
+NEVER
+UNTIL
+RETRY
+ROLL BACK
+ASK BEFORE
+VERIFY AFTER.
+
+BOUNDARY:
+The source provides engineering patterns, not a universal claim that ordered prompting is always superior.
+
+CITATION TRAIL:
+[[MJ-2022-001]]
+→ ambiguity
+→ [[SHOT-20260817-01]]
+→ action mode
+→ current multi-tool workflows
+→ route becomes explicit
+→ [[SHOT-20260817-05]]
+→ predictable routes can be compiled into temporary code
+
+TEST:
+Choose ten multi-tool tasks on 2026-08-17.
+
+Prompt each as:
+
+GOAL ONLY
+
+ORDERED STEPS
+
+DEPENDENCIES ONLY
+
+INVARIANTS + AUTONOMOUS PLANNING.
+
+Inject an unexpected intermediate failure.
+
+Measure:
+
+completion
+unsafe action
+unnecessary steps
+ability to recover
+ability to exploit an alternate route.
+
+PLATFORM:
+Tool-calling agents
+Workflow automation
+Coding agents
+
+LINKS:
+[[MJ-2022-001]]
+[[SHOT-20260817-01]]
+[[SHOT-20260817-02]]
+[[SHOT-20260817-05]]
+[[SHOT-20260817-06]]
+
+BIBTEX:
+NONE
+
+
+===== 005__ephemeral-programming__OpenAI-2026__SHOT-20260817-05__from-conversation.txt =====
+
+ZETTEL
+
+ID:
+SHOT-20260817-05
+
+TITLE:
+2026-08-17 — The prompt can call a temporary program into existence and let it disappear after the shot.
+
+SOURCE:
+OpenAI — “Programmatic Tool Calling” — OpenAI API documentation — accessed 2026-08-17.
+SOURCE URL: https://developers.openai.com/api/docs/guides/tools-programmatic-tool-calling
+
+PASSAGE:
+[QUOTE]
+“Let models compose and run JavaScript that orchestrates tool calls.”
+
+RESEARCH OBJECT:
+EPHEMERAL PROGRAMMING.
+
+LOCAL MOVE:
+[[MJ-2022-010]] speculated that prompt craft might disappear as models became better at ordinary language.
+
+[[MJ-2022-011]] then anticipated movement beyond the text command line.
+
+[[SHOT-20260817-04]] shows that contemporary users can still call procedural routes in language.
+
+Programmatic Tool Calling reveals a stranger outcome:
+
+natural language does not need to disappear in favor of code.
+
+Language can summon the code it needs.
+
+The prompt describes or constrains the operation.
+
+The model writes an ephemeral program.
+
+The program performs the deterministic portion.
+
+Then control returns to language.
+
+SOURCE TERMS:
+“JavaScript”
+“orchestrates”
+“tool calls”
+“loops”
+“conditions”
+“parallel”
+“intermediate results”
+“predictable control flow”
+
+WHAT BECAME STRANGE:
+The natural-language prompt and program text need not compete for the same role.
+
+The prompt can be upstream of code.
+
+The code can exist only for the duration of one operational necessity.
+
+QUESTION:
+Is ephemeral generated control flow becoming a new programming unit between prompt and persistent software?
+
+DEEPER QUESTION:
+What should remain unresolved in language, and what should be temporarily formalized into deterministic procedure?
+
+MECHANISM:
+User supplies goal.
+
+Model reasons semantically.
+
+Model detects a predictable subproblem.
+
+Model generates code.
+
+Code:
+loops
+branches
+calls tools
+filters intermediate data.
+
+Code returns result.
+
+Model resumes semantic interpretation.
+
+FORMAL SHIFT:
+PROMPT
+→ TOOL
+→ PROMPT
+→ TOOL
+→ PROMPT
+
+becomes
+
+PROMPT
+→ MODEL
+→ TEMPORARY PROGRAM {
+    TOOL
+    LOOP
+    CONDITION
+    PARALLEL CALL
+}
+→ RESULT
+→ MODEL
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+OpenAI documents programmatic tool calling as a mechanism where generated JavaScript can coordinate allowed tool calls and intermediate control flow.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+LANGUAGE
+→ DEFER FORMALIZATION
+→ IDENTIFY DETERMINISTIC SUBSPACE
+→ COMPILE SUBSPACE
+→ EXECUTE
+→ DISSOLVE PROGRAM
+→ RETURN TO LANGUAGE
+
+TENSION:
+[[MJ-2022-010]] imagined better natural-language understanding eliminating prompt craft.
+
+The current-day trajectory suggests almost the opposite:
+
+natural language can survive precisely because it delegates exact procedure to generated code only when exact procedure becomes useful.
+
+The boundary is therefore not:
+
+LANGUAGE versus CODE.
+
+It is:
+
+JUDGMENT versus PROCEDURE.
+
+MISSING:
+A reliable operation for detecting when a task region has become sufficiently specified to compile.
+
+Possible conditions:
+
+stable inputs
+known tool set
+deterministic branching
+no unresolved semantic judgment
+bounded side effects
+known recovery path.
+
+BOUNDARY:
+Programmatic Tool Calling is an OpenAI API capability.
+
+The concept EPHEMERAL PROGRAMMING is [OUR FORMALIZATION — NOT SOURCE SYNTAX].
+
+CITATION TRAIL:
+[[MJ-2022-010]]
+→ prompt craft may disappear
+→ [[MJ-2022-011]]
+→ text interface may branch into other control surfaces
+→ [[SHOT-20260817-04]]
+→ language specifies route
+→ programmatic tool calling
+→ route becomes generated code
+→ language and code alternate during one operation
+
+TEST:
+On current 2026-08-17 agent workflows, annotate every step:
+
+J = requires semantic judgment
+D = sufficiently deterministic.
+
+Compile maximal contiguous D regions into temporary code while leaving J regions model-mediated.
+
+Compare against an all-model tool loop.
+
+Measure:
+
+tokens
+latency
+execution errors
+semantic errors
+recovery
+auditability.
+
+PLATFORM:
+OpenAI Responses API
+Programmatic Tool Calling
+Agentic workflows
+
+LINKS:
+[[MJ-2022-010]]
+[[MJ-2022-011]]
+[[SHOT-20260817-04]]
+[[SHOT-20260817-06]]
+[[SHOT-20260817-08]]
+
+BIBTEX:
+NONE
+
+
+===== 006__provisional-imperative__Ta-2026__SHOT-20260817-06__from-conversation.txt =====
+
+ZETTEL
+
+ID:
+SHOT-20260817-06
+
+TITLE:
+2026-08-17 — Call the shot before firing the shot.
+
+SOURCE:
+Anh Ta, Junjie Zhu, Shahin Shayandeh — “Reinforced Agent: Inference-Time Feedback for Tool-Calling Agents” — arXiv:2604.27233 — submitted 2026-04-29 — consulted 2026-08-17.
+SOURCE URL: https://arxiv.org/abs/2604.27233
+
+PASSAGE:
+[QUOTE]
+“a specialized reviewer agent evaluates provisional tool calls prior to execution”
+
+RESEARCH OBJECT:
+PROVISIONAL IMPERATIVE.
+
+LOCAL MOVE:
+[[SHOT-20260817-01]] identifies ACTION MODE.
+
+[[SHOT-20260817-04]] gives the action a route.
+
+[[SHOT-20260817-03]] gives its representation a type.
+
+This source inserts a new temporal state between language and consequence:
+
+THE MODEL HAS DECIDED WHAT IT WANTS TO DO
+
+but
+
+THE WORLD HAS NOT YET BEEN CHANGED.
+
+That state makes a literal form of shot-calling possible.
+
+The agent announces a candidate action in machine-readable form before the action gains consequence.
+
+SOURCE TERMS:
+“reviewer”
+“provisional tool calls”
+“prior to execution”
+“feedback”
+“tool-calling agents”
+
+WHAT BECAME STRANGE:
+A model output can be neither statement nor action.
+
+It can be an action-shaped object suspended before reality.
+
+QUESTION:
+Which operations should be representable as provisional imperatives before commitment?
+
+DEEPER QUESTION:
+Do agentic systems need an explicit COMMIT operator separating intention formation from external consequence?
+
+MECHANISM:
+Executor proposes tool call.
+
+Call contains:
+operation
+target
+arguments.
+
+Reviewer examines candidate.
+
+Reviewer:
+accepts
+corrects
+or rejects.
+
+Only accepted call crosses into external execution.
+
+FORMAL SHIFT:
+INTENT
+→ ACTION
+
+becomes
+
+INTENT
+→ PROPOSED ACTION
+→ REVIEW
+→ COMMIT
+→ ACTION
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+The paper separates an execution agent from a reviewer that evaluates provisional tool calls before they are run.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+CALL_SHOT(action)
+→ candidate_action
+
+COMMIT(candidate_action)
+→ external_state_change
+
+Therefore:
+
+CALL_SHOT
+≠
+FIRE_SHOT
+
+TENSION:
+[[SHOT-20260817-01]] teaches explicit action to prevent endless recommendation.
+
+This zettel reintroduces hesitation at a more precise layer.
+
+Do not hesitate before deciding what to do.
+
+Potentially hesitate between:
+
+DECISION
+and
+IRREVERSIBLE CONSEQUENCE.
+
+Reviewer models are themselves fallible and can damage correct calls.
+
+MISSING:
+A consequence-sensitive commit policy.
+
+Possible dimensions:
+
+reversibility
+financial cost
+privacy impact
+public visibility
+external communication
+destructive mutation
+legal significance.
+
+BOUNDARY:
+The paper studies a particular reviewer architecture and tool benchmarks.
+
+The generalized PROVISIONAL IMPERATIVE grammar is [OUR FORMALIZATION — NOT SOURCE SYNTAX].
+
+CITATION TRAIL:
+[[SHOT-20260817-01]]
+→ explicit action mode
+→ [[SHOT-20260817-03]]
+→ typed action representation
+→ provisional tool call
+→ reviewer
+→ commit
+→ execution
+→ shot calling becomes literal intermediate state
+
+TEST:
+On 2026-08-17, classify actions into:
+
+REVERSIBLE
+COSTLY
+PUBLIC
+DESTRUCTIVE.
+
+Compare:
+
+DIRECT EXECUTION
+
+SELF-REVIEW
+
+INDEPENDENT MODEL REVIEW
+
+HUMAN COMMIT.
+
+Measure both prevented failures and correct actions unnecessarily blocked.
+
+PLATFORM:
+Tool-calling agents
+Multi-agent systems
+External-action agents
+
+LINKS:
+[[SHOT-20260817-01]]
+[[SHOT-20260817-03]]
+[[SHOT-20260817-04]]
+[[SHOT-20260817-05]]
+[[SHOT-20260817-07]]
+
+BIBTEX:
+@misc{ta2026reinforced,
+  title={Reinforced Agent: Inference-Time Feedback for Tool-Calling Agents},
+  author={Ta, Anh and Zhu, Junjie and Shayandeh, Shahin},
+  year={2026},
+  eprint={2604.27233},
+  archivePrefix={arXiv}
+}
+
+
+===== 007__failure-specification-delta__Pei-2026__SHOT-20260817-07__from-conversation.txt =====
+
+ZETTEL
+
+ID:
+SHOT-20260817-07
+
+TITLE:
+2026-08-17 — A failure can become one new sentence in the program that governs the next attempt.
+
+SOURCE:
+Zehua Pei, Hui-Ling Zhen, Shixiong Kai, Sinno Jialin Pan, Yunhe Wang, Mingxuan Yuan, Bei Yu — “SCOPE: Prompt Evolution for Enhancing Agent Effectiveness” — arXiv:2512.15374v2 — version dated 2026-05-28 — consulted 2026-08-17.
+SOURCE URL: https://arxiv.org/abs/2512.15374
+
+PASSAGE:
+[QUOTE]
+“we treat the agent’s prompt as an evolvable parameter”
+
+RESEARCH OBJECT:
+FAILURE AS SPECIFICATION DELTA.
+
+LOCAL MOVE:
+[[MJ-2022-004]] already contained the seed:
+
+change one thing
+rerun
+observe.
+
+[[MJ-2022-005]] sharpened that into bounded empirical knowledge.
+
+[[MJ-2022-009]] then warned that prompt knowledge itself can decay as models change.
+
+SCOPE introduces a different relationship between execution and instruction:
+
+the trace produced by execution can become material from which the next prompt is rewritten.
+
+Failure does not merely produce a second attempt.
+
+Failure can author a rule.
+
+SOURCE TERMS:
+“execution trace”
+“learning signal”
+“guideline”
+“prompt evolution”
+“tactical memory”
+“strategic memory”
+
+WHAT BECAME STRANGE:
+The program's consequences can write the language that governs the program.
+
+The direction:
+
+PROMPT
+→ BEHAVIOR
+
+becomes recursive:
+
+PROMPT
+→ BEHAVIOR
+→ CORRECTION
+→ PROMPT.
+
+QUESTION:
+Which observed failures deserve promotion into durable prompt rules?
+
+DEEPER QUESTION:
+Could the real specification of an agent be the genealogy of failures from which its present instructions were accumulated?
+
+MECHANISM:
+Prompt θₜ governs execution.
+
+Execution emits trace τₜ.
+
+Trace contains error or inefficiency.
+
+System derives guideline gₜ.
+
+Guideline is classified, consolidated, or rejected.
+
+Prompt changes.
+
+Next execution occurs under θₜ₊₁.
+
+FORMAL SHIFT:
+PROMPT
+→ FAILURE
+→ RETRY
+
+becomes
+
+PROMPTₜ
+→ TRACEₜ
+→ RULEₜ
+→ PROMPTₜ₊₁
+→ TRACEₜ₊₁
+
+SOURCE FORMALISM:
+The paper represents prompt evolution as:
+
+θₜ₊₁ = θₜ ⊕ gₜ
+
+where a newly synthesized guideline modifies the current prompt.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+FAILURE
+→ SPECIFICATION DELTA
+
+But every delta needs a scope:
+
+TURN
+TASK
+PROJECT
+TOOL
+AGENT
+GLOBAL.
+
+This directly reconnects to [[SHOT-20260817-02]].
+
+TENSION:
+[[MJ-2022-009]] says prompt rules can expire.
+
+SCOPE-like accumulation risks producing:
+
+prompt fossils
+contradictions
+overfitting
+rule bloat.
+
+A living prompt therefore needs both:
+
+MEMORY
+and
+FORGETTING.
+
+MISSING:
+A provenance-preserving prompt architecture where every instruction can answer:
+
+What failure created me?
+When?
+On which model?
+For which operation?
+Am I still reproducible?
+
+BOUNDARY:
+SCOPE is a research system evaluated on agent tasks.
+
+The proposed genealogical prompt repository is [OUR FORMALIZATION — NOT SOURCE SYNTAX].
+
+CITATION TRAIL:
+[[MJ-2022-004]]
+→ empirical prompt testing
+→ [[MJ-2022-005]]
+→ bounded operational knowledge
+→ [[MJ-2022-009]]
+→ prompt-rule decay
+→ SCOPE 2026
+→ execution trace creates guideline
+→ [[SHOT-20260817-02]]
+→ guideline requires scope
+→ prompt becomes corrigible program history
+
+TEST:
+Beginning 2026-08-17, maintain an agent prompt where no new operational instruction may be added without:
+
+originating trace
+date
+model/version
+failure description
+scope
+reproduction test.
+
+Periodically rerun the originating test.
+
+If the failure no longer reproduces, mark the rule for deletion.
+
+Compare with an ordinary static prompt accumulated through undocumented edits.
+
+PLATFORM:
+LLM agents
+Coding agents
+Deep-research agents
+Prompt evolution
+
+LINKS:
+[[MJ-2022-004]]
+[[MJ-2022-005]]
+[[MJ-2022-009]]
+[[SHOT-20260817-02]]
+[[SHOT-20260817-06]]
+[[SHOT-20260817-09]]
+
+BIBTEX:
+@misc{pei2026scope,
+  title={SCOPE: Prompt Evolution for Enhancing Agent Effectiveness},
+  author={Pei, Zehua and Zhen, Hui-Ling and Kai, Shixiong and Pan, Sinno Jialin and Wang, Yunhe and Yuan, Mingxuan and Yu, Bei},
+  year={2026},
+  eprint={2512.15374},
+  archivePrefix={arXiv}
+}
+
+
+===== 008__provisional-requirements__Shi-2026__SHOT-20260817-08__from-conversation.txt =====
+
+ZETTEL
+
+ID:
+SHOT-20260817-08
+
+TITLE:
+2026-08-17 — Treat the first prompt as evidence of requirements, not as the finished program.
+
+SOURCE:
+Junjie Shi, Weisong Sun, Zhenpeng Chen, Zhujun Wu, Xiaohong Chen, Zhi Jin, Yang Liu — “REprompt: Prompt Generation for Intelligent Software Development Guided by Requirements Engineering” — arXiv:2601.16507 — submitted 2026-01-23 — consulted 2026-08-17.
+SOURCE URL: https://arxiv.org/abs/2601.16507
+
+PASSAGE:
+[QUOTE]
+“prompts in software development can be viewed as a form of software requirements.”
+
+RESEARCH OBJECT:
+PROMPT AS PROVISIONAL REQUIREMENT.
+
+LOCAL MOVE:
+[[MJ-2022-002]] began with the patent attorney's unexpected transfer:
+
+“facility with describing a thing”
+became useful for generative AI.
+
+[[MJ-2022-010]] later speculated that prompt craft might disappear once models understood ordinary language well enough.
+
+REprompt opens a stranger possibility.
+
+The user's initial natural language does not have to become more like code.
+
+It can remain incomplete because the system treats it as the beginning of requirements work.
+
+The machine does not merely execute the sentence.
+
+It interrogates the sentence until a more executable specification exists.
+
+SOURCE TERMS:
+“requirements”
+“elicitation”
+“analysis”
+“specification”
+“validation”
+“dependency-aware”
+“interview”
+
+WHAT BECAME STRANGE:
+“Vague prompt” may be the wrong diagnosis.
+
+A vague request can be perfectly adequate as:
+
+INPUT TO SPECIFICATION DISCOVERY.
+
+The failure occurs only when the system treats raw requirements as finished requirements.
+
+QUESTION:
+When should an agent execute immediately, and when should it enter requirements-discovery mode?
+
+DEEPER QUESTION:
+Is the operative unit of natural-language programming the requirements conversation rather than the prompt?
+
+MECHANISM:
+User states desired consequence.
+
+System extracts explicit requirements.
+
+System detects unresolved requirements.
+
+System elicits missing information or resolves discoverable facts.
+
+System analyzes dependencies.
+
+System constructs executable specification.
+
+Specification is validated.
+
+Execution begins.
+
+FORMAL SHIFT:
+UTTERANCE₀
+→ EXECUTION
+
+becomes
+
+UTTERANCE₀
+→ REQUIREMENTS
+→ ELICITATION
+→ SPECIFICATION
+→ VALIDATION
+→ EXECUTION
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+REprompt explicitly maps requirements-engineering stages including elicitation, analysis, specification, and validation into prompt refinement for software-development tasks.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+FIRST PROMPT
+=
+PROVISIONAL REQUIREMENTS
+
+not
+
+FINAL PROGRAM TEXT.
+
+This pairs directly with [[SHOT-20260817-05]]:
+
+requirements can remain linguistic until a bounded deterministic region becomes ready for compilation.
+
+TENSION:
+More elicitation can recover missing intent.
+
+More elicitation can also become obstruction.
+
+[[SHOT-20260817-01]] says to default toward action when action is clearly requested.
+
+Therefore requirements discovery should not become an excuse for refusing to operate when missing facts can instead be observed with tools.
+
+MISSING:
+A decision rule distinguishing:
+
+ASK USER
+LOOK IT UP
+INFER SAFELY
+USE DEFAULT
+LEAVE UNRESOLVED
+BLOCK EXECUTION.
+
+BOUNDARY:
+REprompt concerns software development.
+
+The general theory of provisional requirements is broader than the source.
+
+CITATION TRAIL:
+[[MJ-2022-002]]
+→ specification skill migrates into prompting
+→ [[MJ-2022-010]]
+→ natural language improves
+→ REprompt 2026
+→ first utterance becomes requirements evidence
+→ [[SHOT-20260817-01]]
+→ execute rather than endlessly discuss
+→ [[SHOT-20260817-05]]
+→ compile only when formalization becomes useful
+
+TEST:
+On 2026-08-17, collect terse real-world build requests.
+
+For each request construct:
+
+EXPLICIT
+INFERRED
+UNKNOWN
+DEFAULTED
+DISCOVERABLE
+BLOCKING.
+
+Generate once directly from the raw request.
+
+Generate again after requirements compilation.
+
+Ask the original requester to identify:
+
+which inferred requirements were correct
+which were invented
+which questions were unnecessary
+which missing constraints caused real failures.
+
+PLATFORM:
+Vibe coding
+Software agents
+Requirements engineering
+Natural-language programming
+
+LINKS:
+[[MJ-2022-002]]
+[[MJ-2022-010]]
+[[SHOT-20260817-01]]
+[[SHOT-20260817-05]]
+[[SHOT-20260817-09]]
+
+BIBTEX:
+@misc{shi2026reprompt,
+  title={REprompt: Prompt Generation for Intelligent Software Development Guided by Requirements Engineering},
+  author={Shi, Junjie and Sun, Weisong and Chen, Zhenpeng and Wu, Zhujun and Chen, Xiaohong and Jin, Zhi and Liu, Yang},
+  year={2026},
+  eprint={2601.16507},
+  archivePrefix={arXiv}
+}
+
+
+===== 009__prompt-static-analysis__Yang-2026__SHOT-20260817-09__from-conversation.txt =====
+
+ZETTEL
+
+ID:
+SHOT-20260817-09
+
+TITLE:
+2026-08-17 — Lint the words before paying the model to build the world.
+
+SOURCE:
+Chengyi Yang, Pengzhen Li, Jiayin Qi, Aimin Zhou, Ji Wu, Ji Liu — “SCMAPR: Self-Correcting Multi-Agent Prompt Refinement for Complex-Scenario Text-to-Video Generation” — arXiv:2604.05489v4 — 2026-04 — consulted 2026-08-17.
+SOURCE URL: https://arxiv.org/abs/2604.05489
+
+PASSAGE:
+[QUOTE]
+“structured semantic verification that triggers conditional revision when violations are detected.”
+
+RESEARCH OBJECT:
+PROMPT STATIC ANALYSIS.
+
+LOCAL MOVE:
+[[MJ-2022-013-A]] found PRODUCTIVE MISMATCH:
+
+the generated artifact can become useful because it differs from what was imagined.
+
+But not every mismatch is productive.
+
+[[SHOT-20260817-03]] gives generated objects schemas.
+
+[[SHOT-20260817-07]] allows failures to rewrite later instructions.
+
+SCMAPR moves error detection even earlier:
+
+before generation.
+
+The prompt itself becomes an inspectable intermediate artifact.
+
+SOURCE TERMS:
+“scenario routing”
+“prompt refinement”
+“semantic verification”
+“conditional revision”
+“violations”
+“rewriting”
+
+WHAT BECAME STRANGE:
+The expensive generated artifact may not need to exist before some failures become detectable.
+
+A prompt can be wrong before the model ever sees the world it is supposed to make.
+
+QUESTION:
+Which classes of generative failure can be detected directly in the specification?
+
+DEEPER QUESTION:
+Can prompt practice develop static analysis analogous to programming languages:
+
+type errors
+missing dependencies
+contradictory constraints
+unbound entities
+impossible temporal order
+underspecified persistence?
+
+MECHANISM:
+Raw request arrives.
+
+Scenario is classified.
+
+Relevant specification policy is selected.
+
+Prompt is rewritten.
+
+Verifier evaluates the rewritten specification.
+
+Detected violation triggers another rewrite.
+
+Only validated instruction proceeds to generation.
+
+FORMAL SHIFT:
+DESCRIBE
+→ GENERATE
+→ INSPECT FAILURE
+→ CORRECT
+
+becomes
+
+DESCRIBE
+→ COMPILE SPECIFICATION
+→ LINT
+→ CORRECT
+→ GENERATE
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+SCMAPR uses specialized stages for scenario routing, prompt refinement, semantic verification, and conditional revision before the final generation request proceeds.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PROMPT LINTER:
+
+ENTITIES:
+all referenced entities declared?
+
+IDENTITY:
+persistence requirements explicit?
+
+RELATIONS:
+spatial relations noncontradictory?
+
+TIME:
+event order satisfiable?
+
+CAMERA:
+camera state compatible with described action?
+
+STATE:
+what persists after each operation?
+
+BOUNDARY:
+what must not change?
+
+If violation:
+REWRITE.
+
+If internally valid:
+EXECUTE.
+
+TENSION:
+[[MJ-2022-013-A]] warns against eliminating every mismatch because unexpected difference can produce insight.
+
+Therefore prompt linting should catch:
+
+CONTRADICTION
+
+without eliminating:
+
+INTERPRETIVE OPENNESS.
+
+A specification can be rigorous about invariants while leaving chosen regions underdetermined.
+
+MISSING:
+A distinction between:
+
+ERROR
+AMBIGUITY
+OPEN PARAMETER
+CREATIVE FREEDOM.
+
+Most prompt checkers risk treating all four as deficiencies.
+
+BOUNDARY:
+SCMAPR concerns complex text-to-video generation.
+
+The static-analysis interpretation and generalized lint categories are [OUR FORMALIZATION — NOT SOURCE SYNTAX].
+
+CITATION TRAIL:
+[[MJ-2022-013-A]]
+→ mismatch can be productive
+→ [[SHOT-20260817-03]]
+→ structure becomes explicit
+→ SCMAPR 2026
+→ specification receives semantic verifier
+→ [[SHOT-20260817-07]]
+→ execution failures can later update the verifier's rules
+→ prompt practice becomes compile-lint-execute-revise
+
+TEST:
+Beginning 2026-08-17, collect failed prompts from:
+
+image generation
+video generation
+3D world generation
+software generation
+agent workflows.
+
+For each failure ask:
+
+Could the failure have been detected from the specification alone?
+
+If yes, derive a lint rule.
+
+Classify each rule as:
+
+CONTRADICTION
+MISSING STATE
+MISSING ENTITY
+INVALID DEPENDENCY
+UNBOUND REFERENCE
+ACCIDENTAL AMBIGUITY.
+
+Do not lint intentional underdetermination.
+
+PLATFORM:
+Text-to-video
+Generative media
+Agent prompting
+Prompt refinement
+
+LINKS:
+[[MJ-2022-013-A]]
+[[SHOT-20260817-03]]
+[[SHOT-20260817-07]]
+[[SHOT-20260817-08]]
+
+BIBTEX:
+@misc{yang2026scmapr,
+  title={SCMAPR: Self-Correcting Multi-Agent Prompt Refinement for Complex-Scenario Text-to-Video Generation},
+  author={Yang, Chengyi and Li, Pengzhen and Qi, Jiayin and Zhou, Aimin and Wu, Ji and Liu, Ji},
+  year={2026},
+  eprint={2604.05489},
+  archivePrefix={arXiv}
+}
+
+
+===== 010__natural-language-harness__Pan-2026__SHOT-20260817-10__from-forage.txt =====
+
+ZETTEL
+
+ID:
+SHOT-20260817-10
+
+TITLE:
+2026-08-17 — The harness can become an executable natural-language object.
+
+SOURCE:
+Linyue Pan, Lexiao Zou, Shuo Guo, Jingchen Ni, Hai-Tao Zheng — “Natural-Language Agent Harnesses” — arXiv:2603.25723v2 — version dated 2026-05-18 — consulted 2026-08-17.
+SOURCE URL: https://arxiv.org/abs/2603.25723
+
+PASSAGE:
+[QUOTE]
+“express harness behavior in editable natural language”
+
+RESEARCH OBJECT:
+NATURAL LANGUAGE AS PORTABLE CONTROL LOGIC.
+
+LOCAL MOVE:
+[[SHOT-20260817-02]] distributed prompt policy across tools and scopes.
+
+[[SHOT-20260817-05]] showed natural language compiling deterministic subregions into temporary programs.
+
+Natural-Language Agent Harnesses pushes in the opposite direction as well: high-level controller behavior usually buried in runtime code can be externalized into editable natural language and executed by a shared runtime.
+
+The language/code traffic is therefore bidirectional.
+
+SOURCE TERMS:
+“agent harness”
+“editable natural language”
+“portable executable artifact”
+“explicit contracts”
+“durable artifacts”
+“runtime”
+
+WHAT BECAME STRANGE:
+The same system can move procedure from language into code when determinism is useful and move control logic from code back into language when inspectability and portability are useful.
+
+QUESTION:
+What makes natural-language control logic executable rather than merely advisory?
+
+DEEPER QUESTION:
+If a harness can be represented as editable language, is the program now the prompt, the runtime, the contract between them, or the entire coupled object?
+
+MECHANISM:
+Control logic is written in natural language.
+
+A runtime interprets that control logic under explicit contracts.
+
+The runtime exposes tools, state, and durable artifacts.
+
+The same language-level harness can be transferred across tasks or runtime adapters.
+
+FORMAL SHIFT:
+CONTROLLER CODE
+→ EXECUTION
+
+becomes
+
+NATURAL-LANGUAGE HARNESS
++
+RUNTIME CONTRACT
+→ EXECUTION
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+Pan et al. introduce Natural-Language Agent Harnesses and an Intelligent Harness Runtime that executes them through explicit contracts, durable artifacts, and lightweight adapters.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+EXECUTABLE LANGUAGE
+=
+NATURAL-LANGUAGE CONTROL LOGIC
++
+DEFINED RUNTIME
++
+TOOL CONTRACTS
++
+STATE SEMANTICS.
+
+The words alone are not executable.
+
+Execution belongs to the relation between words and runtime.
+
+TENSION:
+[[SHOT-20260817-05]] formalizes language into code for predictable control flow.
+
+This source textualizes controller code into natural language for portability and inspection.
+
+Neither direction wins.
+
+The boundary itself becomes movable.
+
+MISSING:
+A criterion for deciding which control decisions should remain textual and which should be compiled into conventional code.
+
+BOUNDARY:
+The source studies a specific harness representation and runtime. It does not establish that arbitrary natural-language instructions constitute executable harnesses.
+
+CITATION TRAIL:
+[[SHOT-20260817-02]]
+→ distributed control policy
+→ [[SHOT-20260817-05]]
+→ language compiles temporary code
+→ Pan et al. 2026
+→ controller code can migrate back into editable natural language
+→ executable meaning depends on a runtime contract
+
+TEST:
+Take the same agent workflow and implement its high-level controller twice:
+
+CODE HARNESS
+and
+NATURAL-LANGUAGE HARNESS.
+
+Hold model, tools, tasks, and evaluation constant.
+
+Measure:
+behavioral equivalence
+portability
+human inspectability
+edit cost
+runtime failures
+ability to localize a behavioral change.
+
+PLATFORM:
+LLM agents
+Agent harnesses
+Coding agents
+Computer-use agents
+
+LINKS:
+[[SHOT-20260817-02]]
+[[SHOT-20260817-05]]
+[[SHOT-20260817-07]]
+
+BIBTEX:
+@misc{pan2026nlah,
+  title={Natural-Language Agent Harnesses},
+  author={Pan, Linyue and Zou, Lexiao and Guo, Shuo and Ni, Jingchen and Zheng, Hai-Tao},
+  year={2026},
+  eprint={2603.25723},
+  archivePrefix={arXiv}
+}
+
+
+===== 011__commit-boundary__Serdar-Mertayak-2026__SHOT-20260817-11__from-forage.txt =====
+
+ZETTEL
+
+ID:
+SHOT-20260817-11
+
+TITLE:
+2026-08-17 — The action boundary is where steering becomes a measurable decision.
+
+SOURCE:
+Oguz Serdar, Cuneyt Mertayak — “SteerBench-Work: A Benchmark for Agent Steering at Action Boundaries” — arXiv:2608.12654 — submitted 2026-08-12 — consulted 2026-08-17.
+SOURCE URL: https://arxiv.org/abs/2608.12654
+
+PASSAGE:
+[QUOTE]
+“The steering decision is the pre-commit choice at that boundary: proceed, or hold for human or policy review.”
+
+RESEARCH OBJECT:
+COMMIT BOUNDARY CALIBRATION.
+
+LOCAL MOVE:
+[[SHOT-20260817-06]] proposed a PROVISIONAL IMPERATIVE: call the shot before firing the shot.
+
+SteerBench-Work turns that conceptual boundary into an explicit benchmark object. The relevant decision is not generic safety and not generic reasoning. It is the pre-commit gate at the moment an agent could send, merge, pay, disclose, or otherwise cross into consequential external action.
+
+SOURCE TERMS:
+“action boundaries”
+“pre-commit choice”
+“proceed”
+“hold”
+“human or policy review”
+“steering calibration”
+“risk-resolved commits”
+
+WHAT BECAME STRANGE:
+The difficult failure observed in the benchmark is not primarily reckless action.
+
+Across the reported conditions, models more often wrongly hold authorized, evidence-cleared work than wrongly allow unsafe work.
+
+A badly calibrated safety gate can therefore make an agent fail by refusing to fire shots that have already been cleared.
+
+QUESTION:
+How should an agent distinguish unresolved risk from risk that has already been resolved by evidence?
+
+DEEPER QUESTION:
+Does reliable agency require a representation not only of constraints but of the lifecycle of constraints: triggered, investigated, cleared, revoked, or still active?
+
+MECHANISM:
+Agent reaches potential state-changing action.
+
+Evidence and policy are available.
+
+Gate must classify the boundary:
+
+PROCEED
+or
+HOLD.
+
+If evidence has cleared a risk but the gate continues to react to the original trigger, authorized work is blocked.
+
+FORMAL SHIFT:
+SAFETY:
+recognize dangerous pattern
+→ refuse
+
+becomes
+
+STEERING:
+recognize trigger
+→ inspect evidence state
+→ determine whether trigger remains active
+→ PROCEED / HOLD.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+SteerBench-Work presents incident-anchored workplace scenarios with paired evidence-reversed mirrors and scores whether models correctly proceed or hold at an action boundary.
+
+The abstract reports substantially more false holds of authorized work than false allows of unsafe work across tested conditions.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+ACTION GATE requires at least:
+
+TRIGGER STATE
+EVIDENCE STATE
+POLICY STATE
+COMMIT STATE.
+
+A remembered trigger without its later clearance can produce stale refusal.
+
+TENSION:
+[[SHOT-20260817-01]] warns against underexecution.
+
+[[SHOT-20260817-06]] introduces review before consequence.
+
+This source shows that adding a gate is not enough.
+
+THE GATE ITSELF MUST BE CALIBRATED.
+
+MISSING:
+A general representation for evidence that closes, supersedes, or reverses an earlier risk condition.
+
+BOUNDARY:
+SteerBench-Work is a new benchmark and its reported distributions do not imply identical error patterns in every deployed agent.
+
+CITATION TRAIL:
+[[SHOT-20260817-06]]
+→ provisional action
+→ pre-commit gate
+→ Serdar and Mertayak 2026
+→ proceed versus hold becomes benchmarked decision
+→ risk can be resolved yet still block action
+→ next edge: constraint lifecycle and tombstones
+
+TEST:
+Create matched action-boundary cases containing the same initial risk trigger.
+
+Vary only later state:
+
+UNRESOLVED
+CLEARED BY STRUCTURED EVIDENCE
+CLEARED BY HUMAN AUTHORIZATION
+REVOKED POLICY
+SUPERSEDED FACT.
+
+Measure whether the gate updates its action decision rather than merely detecting the original trigger.
+
+PLATFORM:
+Workplace agents
+Tool-calling agents
+Human-in-the-loop control
+
+LINKS:
+[[SHOT-20260817-01]]
+[[SHOT-20260817-06]]
+[[SHOT-20260817-12]]
+
+BIBTEX:
+@misc{serdar2026steerbench,
+  title={SteerBench-Work: A Benchmark for Agent Steering at Action Boundaries},
+  author={Serdar, Oguz and Mertayak, Cuneyt},
+  year={2026},
+  eprint={2608.12654},
+  archivePrefix={arXiv}
+}
+
+
+===== 012__constraint-afterlife__Zhu-2026__SHOT-20260817-12__from-forage.txt =====
+
+ZETTEL
+
+ID:
+SHOT-20260817-12
+
+TITLE:
+2026-08-17 — A revoked instruction needs a tombstone because language can remain behaviorally alive after deletion.
+
+SOURCE:
+Haoyuan Zhu — “Dead text or binding clause? Measuring and restoring constraint influence in black-box LLM dialogues” — arXiv:2608.12599 — submitted 2026-08-12 — consulted 2026-08-17.
+SOURCE URL: https://arxiv.org/abs/2608.12599
+
+PASSAGE:
+[QUOTE]
+“revocation does not reliably take effect”
+
+RESEARCH OBJECT:
+CONSTRAINT AFTERLIFE.
+
+LOCAL MOVE:
+[[SHOT-20260817-07]] asked whether an agent's prompt should become a genealogy of corrections.
+
+[[SHOT-20260817-02]] asked where each rule should live.
+
+This source adds a necessary inverse operation.
+
+Adding a rule is not enough.
+
+The system must be able to represent that a once-binding rule has ceased to bind.
+
+Otherwise prompt history becomes a one-way accumulation in which old clauses remain behaviorally active after the user has revoked them.
+
+SOURCE TERMS:
+“constraint influence”
+“revocation”
+“behavioral relapse”
+“revocation inertia”
+“contract ledger”
+“tombstones”
+“net constraint state”
+“sequential ablation”
+
+WHAT BECAME STRANGE:
+Deleting words from the apparent specification does not guarantee deleting their causal influence.
+
+A prompt can contain dead text that still behaves like a binding clause.
+
+QUESTION:
+How can an agent know not merely which instructions it has seen, but which instructions are currently alive?
+
+DEEPER QUESTION:
+Does long-horizon prompting require an explicit temporal logic of instruction validity rather than an ever-growing context window?
+
+MECHANISM:
+Constraint C is introduced.
+
+Later C is revoked.
+
+Dialogue history still contains C.
+
+Model behavior continues to enact C despite the revocation.
+
+A contract ledger records active constraints separately from historical text.
+
+Revocation creates a tombstone.
+
+The net active specification is compiled ahead of generation.
+
+FORMAL SHIFT:
+CONVERSATION HISTORY
+=
+CURRENT SPECIFICATION
+
+becomes
+
+CONVERSATION HISTORY
+→ CONSTRAINT LEDGER
+→ APPLY ADDITIONS
+→ APPLY REVOCATIONS
+→ COMPILE NET SPECIFICATION.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+Zhu proposes a contract ledger pairing constraints with executable checkers, recording revocations as tombstones, and compiling the net constraint state ahead of time. The work also uses sequential ablation to estimate per-clause behavioral influence.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For constraint C:
+
+state(C) ∈ {
+ACTIVE,
+REVOKED,
+SUPERSEDED,
+EXPIRED,
+UNRESOLVED
+}
+
+Execution should depend on:
+
+ACTIVE_SPEC(t)
+
+not
+
+ALL_TEXT_SEEN(t).
+
+TENSION:
+[[SHOT-20260817-07]] makes execution history productive by allowing failures to write new rules.
+
+This source shows why genealogy cannot be mere accumulation.
+
+A living specification requires negative memory:
+
+NOT ONLY what was learned
+BUT what no longer governs.
+
+MISSING:
+How should conflict resolution work when one instruction revokes another only partially, or when scope differs?
+
+Example:
+
+GLOBAL rule remains active
+PROJECT exception expires
+TOOL-local override is revoked.
+
+BOUNDARY:
+The source studies black-box LLM dialogue constraints and verified programming tasks. The broader temporal-logic interpretation is [OUR FORMALIZATION — NOT SOURCE SYNTAX].
+
+CITATION TRAIL:
+[[SHOT-20260817-07]]
+→ prompt accumulates correction history
+→ [[SHOT-20260817-02]]
+→ corrections require scope
+→ Zhu 2026
+→ revoked clauses can remain behaviorally active
+→ contract ledger + tombstones
+→ prompt genealogy requires forgetting as explicit state
+→ [[SHOT-20260817-11]]
+→ stale risk state may block cleared action
+
+TEST:
+Build a longitudinal prompt containing constraints introduced, modified, narrowed, revoked, and superseded over twenty turns.
+
+Maintain two conditions:
+
+RAW HISTORY
+and
+CONTRACT LEDGER.
+
+At each turn test every historical constraint using executable checkers.
+
+Measure:
+active-rule adherence
+revoked-rule relapse
+scope leakage
+conflict errors
+prompt length.
+
+PLATFORM:
+Black-box LLMs
+Long-horizon agents
+Prompt contracts
+
+LINKS:
+[[SHOT-20260817-02]]
+[[SHOT-20260817-07]]
+[[SHOT-20260817-11]]
+[[MJ-2022-009]]
+
+BIBTEX:
+@misc{zhu2026deadtext,
+  title={Dead text or binding clause? Measuring and restoring constraint influence in black-box LLM dialogues},
+  author={Zhu, Haoyuan},
+  year={2026},
+  eprint={2608.12599},
+  archivePrefix={arXiv}
+}
+
+
+===== 013__the-prompt-trick-can-become-an-official-syntax-and-then-be__Shambibble-Midjourney__SHAM-20260817-01__from-forage.txt =====
+
+ZETTEL
+
+ID:
+SHAM-20260817-01
+
+TITLE:
+2026-08-17 — The prompt trick can become an official syntax and then become legacy.
+
+SOURCE:
+Shambibble interview transcript — 2022-10-22 — approximately 1:03:53–1:05:29. Midjourney — “Multi-Prompts & Weights” — current documentation consulted 2026-08-17.
+
+SOURCE URL:
+[LOCAL UPLOAD — MJ_Interview 3.wh_shambibble_otter_ai.pdf]
+https://docs.midjourney.com/hc/en-us/articles/32658968492557-Multi-Prompts-Weights
+
+PASSAGE:
+[QUOTE — SHAMBIBBLE]
+“A lot of people only use it for waiting. Because that’s, that’s like some feature of multi prompting is you can take one part and wait it up a little bit. But it’s not all it’s not like that’s not emphasis that will actually break up your prop.”
+
+[QUOTE — CURRENT MIDJOURNEY DOCUMENTATION]
+“You add a double colon `::` between the different ideas in your prompt. This acts like a divider.”
+
+RESEARCH OBJECT:
+PROMPT DECOMPOSITION HAS A LIFECYCLE.
+
+LOCAL MOVE:
+[[MJ-2022-009]] says prompt knowledge may become meaningless in six months. Shambibble’s multi-prompt example supplies a concrete mechanism: punctuation did not merely strengthen a phrase; it changed how the prompt was partitioned. Current Midjourney documentation still explains that decomposition, but lists multi-prompts as compatible only through model 6.1. A once-central control can survive as documented legacy syntax while newer model generations move elsewhere.
+
+SOURCE TERMS:
+“multi prompting”
+“break up your prop”
+“double colon”
+“separate instructions”
+“weights”
+
+WHAT BECAME STRANGE:
+A prompt technique can pass through three states: discovery, officialization, and obsolescence. The durable knowledge may be the distinction the trick exposed — decomposition versus emphasis — rather than the exact token sequence `::`.
+
+QUESTION:
+When a prompt technique disappears from current models, what exactly has vanished: the user need, the implementation, or only the old syntax?
+
+DEEPER QUESTION:
+Can the history of prompt craft be written as a sequence of user-discovered distinctions that migrate into model architecture or interface controls and thereby erase the lexical tricks that first exposed them?
+
+MECHANISM:
+Phrase is treated as one semantic bundle. User inserts separator. Separate prompt parts receive independent treatment and optional weights. Later system versions may remove or redesign the explicit operator.
+
+FORMAL SHIFT:
+PHRASE
+→ USER DISCOVERS DECOMPOSITION OPERATOR
+→ OPERATOR BECOMES DOCUMENTED FEATURE
+→ FEATURE BECOMES VERSION-BOUND LEGACY
+
+SOURCE FORMALISM:
+Midjourney documentation states that `::` separates ideas before they are combined and documents numeric weights. It lists compatibility through V6.1.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+TRICK(t, version) may be transient while DISTINCTION(t) remains durable.
+
+syntax lifetime < conceptual lifetime
+
+TENSION:
+The later disappearance of a syntax does not prove that a model “learned” the underlying distinction internally. It may instead indicate interface redesign or an incompatible architecture.
+
+MISSING:
+A version-by-version implementation history explaining why multi-prompts are absent from later versions.
+
+BOUNDARY:
+Similarity between the 2022 practitioner technique and later documentation establishes continuity of functionality, not that Shambibble caused the feature or that later removal resulted from better language understanding.
+
+CITATION TRAIL:
+[[MJ-2022-009]]
+→ Shambibble on multi-prompt decomposition
+→ official Midjourney multi-prompt syntax
+→ current compatibility stops at 6.1
+→ prompt trick acquires an afterlife
+
+TEST:
+Collect prominent Midjourney prompt techniques from 2022–2024. For each, record first community appearance, documentation date, supported model versions, replacement feature if any, and whether the underlying user problem remains. Distinguish SYNTAX DEATH from PROBLEM DEATH.
+
+PLATFORM:
+Midjourney
+Discord
+
+LINKS:
+[[MJ-2022-009]]
+[[MJ-2022-004]]
+[[SHOT-20260817-03]]
+
+BIBTEX:
+@misc{shambibble2022interview,
+  title={MJ Interview 3.wh_shambibble},
+  year={2022},
+  month={10},
+  note={Interview transcript, October 22, 2022, 1:26:03}
+}
+
+
+===== 014__the-seed-is-an-experimental-control-not-a-memory-of-an-ima__Shambibble-Midjourney__SHAM-20260817-02__from-forage.txt =====
+
+ZETTEL
+
+ID:
+SHAM-20260817-02
+
+TITLE:
+2026-08-17 — The seed is an experimental control, not a memory of an image.
+
+SOURCE:
+Shambibble interview transcript — 2022-10-22 — 43:24–44:52. Midjourney — “Seeds” — current documentation consulted 2026-08-17.
+
+SOURCE URL:
+[LOCAL UPLOAD — MJ_Interview 3.wh_shambibble_otter_ai.pdf]
+https://docs.midjourney.com/hc/en-us/articles/32604356340877-Seeds
+
+PASSAGE:
+[QUOTE — SHAMBIBBLE]
+“these days, I’m not even if I’m testing something, I’m not satisfied until I run it with the same seed four times.”
+
+[QUOTE — CURRENT MIDJOURNEY DOCUMENTATION]
+“Lock a seed when testing different elements in your prompts. It’s like having a control in an experiment.”
+
+RESEARCH OBJECT:
+LOCAL REPRODUCIBILITY UNDER STOCHASTIC EXECUTION.
+
+LOCAL MOVE:
+[[MJ-2022-004]] proposed same-seed ablation. Shambibble complicates his own method: a single same-seed run had stopped being persuasive enough, so he repeated it four times. Current Midjourney documentation explicitly describes seeds as experimental controls while warning that they should not be relied upon for identical results across prompting sessions.
+
+SOURCE TERMS:
+“same seed four times”
+“random”
+“indeterminate”
+“control in an experiment”
+“not always predictable”
+
+WHAT BECAME STRANGE:
+The seed is not a reproducibility token in the strong software sense. It is a temporary device for reducing one source of variance while other model and session variables remain live.
+
+QUESTION:
+What is the minimum experimental record required to make a prompt-effect claim reproducible enough to teach?
+
+DEEPER QUESTION:
+Should prompt knowledge be versioned like experimental protocols rather than stored as decontextualized recipes?
+
+MECHANISM:
+Hold seed fixed. Repeat multiple generations. Vary one prompt component. Compare distributions rather than one favored output. Record model version and settings.
+
+FORMAL SHIFT:
+SAME-SEED ANECDOTE
+→ REPEATED SAME-SEED TRIALS
+→ LOCAL EFFECT CLAIM
+→ VERSION/SESSION BOUNDARY
+
+SOURCE FORMALISM:
+Midjourney currently describes seeds as useful for testing and experimentation but cautions that prompts, model versions, settings, and sessions can change outcomes.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+A prompt claim should minimally carry: {model version, prompt, parameters, seed, repetition count, observed effect}.
+
+TENSION:
+Stable-looking examples encourage false confidence. Yet demanding full statistical rigor for every creative use would destroy the exploratory practice Shambibble explicitly defends.
+
+MISSING:
+Community norms for how many trials count as sufficient evidence for different kinds of prompt claims.
+
+BOUNDARY:
+A seed reduces some randomness; it does not isolate every causal variable in generation.
+
+CITATION TRAIL:
+[[MJ-2022-004]]
+→ same-seed ablation
+→ Shambibble raises repetition requirement
+→ current seed documentation calls seed an experimental control
+→ reproducibility becomes local and versioned
+
+TEST:
+For five claimed prompt operators, run 1, 4, 16, and 64 repetitions under fixed seed/settings where supported. Compare whether conclusions based on one image survive distributional sampling. Repeat after a model-version change.
+
+PLATFORM:
+Midjourney
+Prompt testing
+
+LINKS:
+[[MJ-2022-004]]
+[[MJ-2022-005]]
+[[MJ-2022-009]]
+[[SHOT-20260817-07]]
+
+BIBTEX:
+@misc{shambibble2022interview,
+  title={MJ Interview 3.wh_shambibble},
+  year={2022},
+  month={10},
+  note={Interview transcript, October 22, 2022, 1:26:03}
+}
+
+
+===== 015__no-style-is-not-an-absence-it-is-an-operation-against-the-__Shambibble-Midjourney__SHAM-20260817-03__from-forage.txt =====
+
+ZETTEL
+
+ID:
+SHAM-20260817-03
+
+TITLE:
+2026-08-17 — “No style” is not an absence; it is an operation against the model’s default authorship.
+
+SOURCE:
+Shambibble interview transcript — 2022-10-22 — approximately 26:46–28:28. Midjourney — “Raw” and “Stylize” — current documentation consulted 2026-08-17.
+
+SOURCE URL:
+[LOCAL UPLOAD — MJ_Interview 3.wh_shambibble_otter_ai.pdf]
+https://docs.midjourney.com/hc/en-us/articles/32634113811853-Raw
+https://docs.midjourney.com/hc/en-us/articles/32196176868109-Stylize
+
+PASSAGE:
+[QUOTE — SHAMBIBBLE]
+“I don’t want to train a style, I want to have no style, you know.”
+
+[QUOTE — CURRENT MIDJOURNEY DOCUMENTATION]
+“When you switch to Raw, you’re essentially turning off this ‘auto-pilot.’”
+
+RESEARCH OBJECT:
+SUPPRESSING MODEL INTERPRETATION IS A POSITIVE CONTROL ACTION.
+
+LOCAL MOVE:
+Shambibble’s wish for “no style” is not a demand for blankness. It is a demand to reduce the model’s unsolicited aesthetic prior so that other constraints can become more legible. Current Midjourney exposes this directly through Raw and through Stylize, which adjusts how much interpretive freedom the system takes.
+
+SOURCE TERMS:
+“no style”
+“Stylize”
+“chaos”
+“Raw”
+“auto-pilot”
+“prompt adherence”
+
+WHAT BECAME STRANGE:
+The model’s contribution is not neutral background. To call a precise shot, the user may first have to turn down the system’s tendency to make the shot interesting on its own terms.
+
+QUESTION:
+What does it mean to ask a generative system not to interpret?
+
+DEEPER QUESTION:
+Can “negative authorship” — suppressing default model tendencies — be treated as a general control primitive across image, text, video, and agentic systems?
+
+MECHANISM:
+Standard mode contributes model-default aesthetic interpretation. Raw or lower stylization reduces that intervention. User-specified style/details gain relative influence.
+
+FORMAL SHIFT:
+PROMPT
++ MODEL HOUSE STYLE
+→ OUTPUT
+
+becomes
+
+PROMPT
++ SUPPRESSED HOUSE STYLE
+→ MORE USER-DIRECTED OUTPUT
+
+SOURCE FORMALISM:
+Midjourney states that Standard mode adds a creative touch and Raw turns off that “auto-pilot”; Stylize controls movement between closer prompt following and freer artistic interpretation.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+CONTROL is partly subtractive.
+
+CALLING THE SHOT = specifying desired features + suppressing unwanted model initiative.
+
+TENSION:
+Reducing model interpretation may increase literal fidelity while reducing precisely the productive mismatch and surprise valued elsewhere in the lineage.
+
+MISSING:
+A cross-modal account of which defaults can be suppressed: aesthetic style, verbosity, initiative, safety conservatism, camera motion, composition, tone, or planning depth.
+
+BOUNDARY:
+Raw does not remove all learned priors or make the system neutral. “No style” is an operational aspiration, not a literal absence of model influence.
+
+CITATION TRAIL:
+[[MJ-2022-013]]
+→ Shambibble asks for “no style”
+→ lower Stylize / higher Chaos as practitioner controls
+→ current Raw formalizes suppression of auto-styling
+→ user control includes turning model authorship down
+
+TEST:
+For one target, generate a matrix across Raw on/off and low/high Stylize. Have raters separately score prompt fidelity, model-recognizable house style, surprise, and usefulness. Test whether suppressing style reveals other constraints without simply reducing quality.
+
+PLATFORM:
+Midjourney
+
+LINKS:
+[[MJ-2022-013]]
+[[SHOT-20260817-01]]
+[[SHOT-20260817-09]]
+
+BIBTEX:
+@misc{shambibble2022interview,
+  title={MJ Interview 3.wh_shambibble},
+  year={2022},
+  month={10},
+  note={Interview transcript, October 22, 2022, 1:26:03}
+}
+
+
+===== 016__the-recurring-character-hack-was-a-missing-control-surface__Shambibble-Midjourney__SHAM-20260817-04__from-forage.txt =====
+
+ZETTEL
+
+ID:
+SHAM-20260817-04
+
+TITLE:
+2026-08-17 — The recurring-character hack was a missing control surface before identity persistence became a named control.
+
+SOURCE:
+Shambibble interview transcript — 2022-10-22 — 07:43–11:04. Midjourney — “Omni Reference” — current documentation consulted 2026-08-17.
+
+SOURCE URL:
+[LOCAL UPLOAD — MJ_Interview 3.wh_shambibble_otter_ai.pdf]
+https://docs.midjourney.com/hc/en-us/articles/36285124473997-Omni-Reference
+
+PASSAGE:
+[QUOTE — SHAMBIBBLE]
+“let me take this other prompt that I have and put that face on this other thing, and boom, there you go. You have a recurring character”
+
+[QUOTE — CURRENT MIDJOURNEY DOCUMENTATION]
+“Using an Omni Reference allows you to put characters, objects, vehicles, or non-human creatures from a reference image into your Midjourney creations.”
+
+RESEARCH OBJECT:
+A WORKAROUND CAN REVEAL A LATENT USER VARIABLE BEFORE THE INTERFACE NAMES IT.
+
+LOCAL MOVE:
+[[MJ-2022-007]] and [[MJ-2022-008]] centered on user-discovered capability. The transcript gives the mechanism: image prompt + generic person label + reuse of job ID/seed/prompt + remastering could stabilize identity enough to create a recurring character. Current Midjourney exposes reference identity as a dedicated control with an explicit weight.
+
+SOURCE TERMS:
+“recurring character”
+“job ID”
+“seed”
+“remastered”
+“Omni Reference”
+“Omni Reference Weight”
+
+WHAT BECAME STRANGE:
+The hack was not only a clever prompt. It was an informal attempt to hold one latent property constant while varying the rest of the scene.
+
+QUESTION:
+Which repeated community hacks are evidence that a generative interface is missing an explicit state variable?
+
+DEEPER QUESTION:
+Can prompt archaeology predict future interface primitives by finding properties users repeatedly simulate through cumbersome prompt-and-state recipes?
+
+MECHANISM:
+User identifies property P to preserve. Existing interface lacks direct P control. User composes available features to approximate P persistence across generations. Later interface exposes P-like reference control directly.
+
+FORMAL SHIFT:
+PROMPT RECIPE
+→ SIMULATED STATE PERSISTENCE
+→ DEDICATED REFERENCE CONTROL
+
+SOURCE FORMALISM:
+Midjourney’s current Omni Reference provides a dedicated reference input and `--ow` weight for controlling how much detail from a reference image appears in new images.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+A workaround is a candidate specification for a missing control surface when users repeatedly expend effort to conserve the same variable across otherwise changing generations.
+
+TENSION:
+The modern feature does not establish that the 2022 hack caused its creation. Independent product development can converge on the same user need.
+
+MISSING:
+Release notes or developer testimony connecting specific community recurring-character practices to later Character/Omni Reference design.
+
+BOUNDARY:
+FUNCTIONAL CONTINUITY IS NOT GENEALOGICAL PROOF.
+
+CITATION TRAIL:
+[[MJ-2022-007]]
+→ recurring-character experiment
+→ job-ID/seed/remaster composition
+→ [[MJ-2022-008]] hack-to-button question
+→ current Omni Reference identity control
+→ missing variable becomes interface state
+
+TEST:
+Mine community archives for cumbersome recipes that repeatedly preserve the same property — identity, pose, style, camera, layout, temporal continuity. Track which later become explicit controls. Measure predictive precision of “repeated workaround → future primitive.”
+
+PLATFORM:
+Midjourney
+Discord
+
+LINKS:
+[[MJ-2022-007]]
+[[MJ-2022-008]]
+[[SHOT-20260817-02]]
+[[SHOT-20260817-03]]
+
+BIBTEX:
+@misc{shambibble2022interview,
+  title={MJ Interview 3.wh_shambibble},
+  year={2022},
+  month={10},
+  note={Interview transcript, October 22, 2022, 1:26:03}
+}
+
+
+===== 017__prompt-craft-began-as-a-bug-ledger-written-from-other-peop__Shambibble-Midjourney__SHAM-20260817-05__from-forage.txt =====
+
+ZETTEL
+
+ID:
+SHAM-20260817-05
+
+TITLE:
+2026-08-17 — Prompt craft began as a bug ledger written from other people’s failures.
+
+SOURCE:
+Shambibble interview transcript — 2022-10-22 — 00:53–01:53 and 12:22–13:45. Anthropic — “Prompt engineering overview” — current documentation consulted 2026-08-17.
+
+SOURCE URL:
+[LOCAL UPLOAD — MJ_Interview 3.wh_shambibble_otter_ai.pdf]
+https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview
+
+PASSAGE:
+[QUOTE — SHAMBIBBLE]
+“people would like, come to with specific problems. Like, you know, what, why aren’t Why aren’t I getting a photorealistic picture? When I put photorealistic in it enough people ask that I figure Okay, well, I should put that into an FAQ.”
+
+[QUOTE — SHAMBIBBLE]
+“it’s fun, I think to just like, sit there and debug things.”
+
+[QUOTE — CURRENT ANTHROPIC DOCUMENTATION]
+“A clear definition of the success criteria for your use case” and “Some ways to empirically test against those criteria.”
+
+RESEARCH OBJECT:
+PROMPT KNOWLEDGE EMERGES FROM FAILURE TRIAGE.
+
+LOCAL MOVE:
+The transcript’s “manual” does not begin as a theory of good prompts. It accretes because users bring concrete failures and recurring questions. The PromptCraft channel functions like a debugging desk. Contemporary prompt guidance formalizes the same orientation by asking practitioners to define success criteria and empirical tests before optimizing wording.
+
+SOURCE TERMS:
+“specific problems”
+“FAQ”
+“debug things”
+“success criteria”
+“empirically test”
+
+WHAT BECAME STRANGE:
+The natural archive of prompt expertise may be a collection of failure cases and repairs, not a style guide of ideal sentences.
+
+QUESTION:
+What would prompt engineering look like if every rule had to name the failure class it repairs?
+
+DEEPER QUESTION:
+Can a prompt manual be compiled automatically from recurring failure traces while retaining evidence about where each rule does and does not work?
+
+MECHANISM:
+User produces failure F. Community diagnoses F. Repair R is tested. Recurrent F justifies documentation. Documentation becomes a reusable rule. Later versions may invalidate R while F may disappear, persist, or change form.
+
+FORMAL SHIFT:
+FAILURE
+→ DEBUGGING CONVERSATION
+→ REPRODUCIBLE REPAIR
+→ FAQ/MANUAL
+→ VERSIONED RULE
+
+SOURCE FORMALISM:
+Shambibble explicitly describes the manual as growing from repeated concrete user problems and the channel as a place to debug. Anthropic’s current guidance assumes success criteria and empirical tests before prompt engineering.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PROMPT RULE = {failure signature, intervention, evidence, scope, version}.
+
+A rule without its failure signature is folklore.
+
+TENSION:
+A failure-led archive can overfit to visible complaints: users may never report silent failures, and communities may document what is easy to notice rather than what matters most.
+
+MISSING:
+The original PromptCraft manual and Discord threads would allow reconstruction of the actual sequence by which rules entered the manual.
+
+BOUNDARY:
+The interview is strong evidence for Shambibble’s stated practice, not for the behavior of the entire community.
+
+CITATION TRAIL:
+[[MJ-2022-004]]
+→ prompt ablation
+→ [[MJ-2022-005]] bounded empirical knowledge
+→ Shambibble manual emerges from repeated failures
+→ current eval-first prompt guidance
+→ [[SHOT-20260817-07]] failure becomes specification delta
+
+TEST:
+Build a prompt manual where each entry must include: failing example, successful repair, counterexample, model/version, date, and retest. Compare its durability across model updates with a conventional advice manual organized by techniques.
+
+PLATFORM:
+Midjourney PromptCraft
+Claude prompt engineering
+Discord
+
+LINKS:
+[[MJ-2022-004]]
+[[MJ-2022-005]]
+[[SHOT-20260817-07]]
+[[SHOT-20260817-09]]
+
+BIBTEX:
+@misc{shambibble2022interview,
+  title={MJ Interview 3.wh_shambibble},
+  year={2022},
+  month={10},
+  note={Interview transcript, October 22, 2022, 1:26:03}
+}
+
+
+===== 018__quotation-marks-turn-words-from-instructions-into-things-t__Shambibble-Midjourney__SHAM-20260817-06__from-forage.txt =====
+
+ZETTEL
+
+ID:
+SHAM-20260817-06
+
+TITLE:
+2026-08-17 — Quotation marks turn words from instructions into things the image must contain.
+
+SOURCE:
+Shambibble interview transcript — 2022-10-22 — approximately 1:04:50–1:05:53. Midjourney — “Text Generation” — current documentation consulted 2026-08-17.
+
+SOURCE URL:
+[LOCAL UPLOAD — MJ_Interview 3.wh_shambibble_otter_ai.pdf]
+https://docs.midjourney.com/hc/en-us/articles/32502277092109-Text-Generation
+
+PASSAGE:
+[QUOTE — SHAMBIBBLE]
+“I figured out how to do this. I made Nicolas Cage with a speech bubble saying we’re stealing the sham prompts. And the idea is that okay, well, if people see this, it’d be like, how did you do that?”
+
+[QUOTE — CURRENT MIDJOURNEY DOCUMENTATION]
+“you can get words or phrases to show up in your images by putting them inside double quotation marks”
+
+RESEARCH OBJECT:
+PROMPT LANGUAGE CAN SWITCH BETWEEN INSTRUCTION AND INSCRIPTION.
+
+LOCAL MOVE:
+The 2022 trick is historically revealing because generating legible text was itself a hack worth stealing. Current Midjourney makes the distinction explicit: quoted words are treated as text that should appear in the image. A punctuation mark now marks a change in ontological role for language — from control instruction to depicted object.
+
+SOURCE TERMS:
+“speech bubble”
+“words”
+“double quotation marks”
+“written”
+“text”
+
+WHAT BECAME STRANGE:
+The same token sequence can participate in two different layers of the generative act: words that operate on the image and words that are supposed to exist inside the image.
+
+QUESTION:
+What mechanisms let a natural-language interface distinguish language-as-command from language-as-content?
+
+DEEPER QUESTION:
+Is quotation the simplest instance of a more general problem for generative systems: representing the same symbol both as executable instruction and as inert world material?
+
+MECHANISM:
+Unquoted language supplies generative description. Quoted phrase is marked for literal inscription. The model must render symbolic content while also obeying surrounding descriptive language.
+
+FORMAL SHIFT:
+WORDS AS CONTROL
+→ QUOTATION BOUNDARY
+→ WORDS AS WORLD CONTENT
+
+SOURCE FORMALISM:
+Current Midjourney documentation instructs users to put desired image text inside double quotation marks and recommends Raw or lower Stylize when exact text is difficult.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+A generative prompt contains multiple semantic strata. Delimiters can cast text from one stratum to another: instruction, literal content, reference, parameter, or metadata.
+
+TENSION:
+Quotation does not guarantee perfect typography. Current documentation explicitly offers additional controls and editing when text remains inaccurate.
+
+MISSING:
+A cross-system taxonomy of delimiters that recast natural language into content rather than instruction.
+
+BOUNDARY:
+The current quoted-text feature is not proven to descend historically from Shambibble’s 2022 workaround.
+
+CITATION TRAIL:
+Shambibble text hack
+→ text becomes a shareable prompt technique
+→ current quotation syntax
+→ language receives explicit instruction/content boundary
+→ connects to [[SHOT-20260817-03]] typed representation
+
+TEST:
+Across image, video, code, and agent systems, enumerate cases where identical natural-language material can be either instruction or payload. Test how delimiters, schemas, quoting, escaping, or role separation perform the cast.
+
+PLATFORM:
+Midjourney
+
+LINKS:
+[[SHOT-20260817-03]]
+[[MJ-2022-003]]
+[[MJ-2022-010]]
+
+BIBTEX:
+@misc{shambibble2022interview,
+  title={MJ Interview 3.wh_shambibble},
+  year={2022},
+  month={10},
+  note={Interview transcript, October 22, 2022, 1:26:03}
+}
+
+
+===== 019__good-enough-is-the-missing-termination-operator-in-generat__Shambibble-Midjourney__SHAM-20260817-07__from-forage.txt =====
+
+ZETTEL
+
+ID:
+SHAM-20260817-07
+
+TITLE:
+2026-08-17 — “Good enough” is the missing termination operator in generative work.
+
+SOURCE:
+Shambibble interview transcript — 2022-10-22 — approximately 1:18:40–1:20:06.
+
+SOURCE URL:
+[LOCAL UPLOAD — MJ_Interview 3.wh_shambibble_otter_ai.pdf]
+
+PASSAGE:
+[QUOTE]
+“they had to actually shut it down. They just shut it down. Because it was like, everybody was just focused on their prompts and like getting lost in proc craft, they weren’t talking to each other.”
+
+[QUOTE]
+“at some point, you got to take a concept and say, Okay, this is good enough, or we can refine it to be good enough. And then let’s go let’s get to the, you know, let’s get to the meat.”
+
+RESEARCH OBJECT:
+TERMINATION IS A GENERATIVE CONTROL PROBLEM.
+
+LOCAL MOVE:
+[[MJ-2022-020]] framed the episode as a coordination failure. Shambibble’s response adds a concrete operator: someone must declare a concept good enough and move downstream. The failure is not only excessive idea generation. It is the absence of an accepted transition condition from exploration to commitment.
+
+SOURCE TERMS:
+“shut it down”
+“focused on their prompts”
+“weren’t talking”
+“good enough”
+“get to the meat”
+
+WHAT BECAME STRANGE:
+A generative system can obey every prompt and still sabotage the project if nothing specifies when prompting should stop.
+
+QUESTION:
+How should a team encode the condition under which generative exploration ends?
+
+DEEPER QUESTION:
+Is STOP a first-class prompt operator — comparable to constraints, references, and weights — that should be designed explicitly into creative AI workflows?
+
+MECHANISM:
+Cheap generation increases candidate supply. Candidate supply creates continued temptation to search. Without a stopping rule, attention remains in exploration. A commitment event freezes one candidate sufficiently to permit expensive downstream work.
+
+FORMAL SHIFT:
+GENERATE
+→ INSPECT
+→ GENERATE
+→ INSPECT
+→ …
+
+requires
+
+ACCEPTANCE THRESHOLD
+→ COMMIT
+→ BUILD
+
+SOURCE FORMALISM:
+The transcript supplies an informal but explicit stopping rule: accept a concept as “good enough” and move to the substantive production work.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+A generative workflow requires not just START and MODIFY operations but a transition predicate COMMIT_IF(candidate, criteria).
+
+TENSION:
+Stopping too early produces premature fixation; stopping too late produces endless variation. The optimum may depend on downstream costs and team coordination, not image quality alone.
+
+MISSING:
+Empirical evidence about how teams actually choose stopping thresholds with generative tools.
+
+BOUNDARY:
+The world-building story is second-hand within the interview and the project was under NDA.
+
+CITATION TRAIL:
+[[MJ-2022-020]]
+→ generative abundance interrupts conversation
+→ Shambibble names “good enough”
+→ stopping rule becomes operational variable
+→ connects to [[SHOT-20260817-06]] commit boundary
+
+TEST:
+Compare teams using unlimited generation against teams with explicit stop protocols: fixed candidate budget, timed exploration, acceptance tests, designated closer, or unanimous commit. Measure ideation diversity, decision latency, communication, and completion.
+
+PLATFORM:
+Midjourney
+Collaborative world-building
+
+LINKS:
+[[MJ-2022-020]]
+[[SHOT-20260817-06]]
+[[SHOT-20260817-04]]
+
+BIBTEX:
+@misc{shambibble2022interview,
+  title={MJ Interview 3.wh_shambibble},
+  year={2022},
+  month={10},
+  note={Interview transcript, October 22, 2022, 1:26:03}
+}
+
+
+===== 020__studied-ignorance-may-be-more-durable-than-prompt-expertis__Shambibble-Midjourney__SHAM-20260817-08__from-forage.txt =====
+
+ZETTEL
+
+ID:
+SHAM-20260817-08
+
+TITLE:
+2026-08-17 — “Studied ignorance” may be more durable than prompt expertise.
+
+SOURCE:
+Shambibble interview transcript — 2022-10-22 — approximately 14:21 and 44:52–48:36. Anthropic — “Prompt engineering overview” — current documentation consulted 2026-08-17.
+
+SOURCE URL:
+[LOCAL UPLOAD — MJ_Interview 3.wh_shambibble_otter_ai.pdf]
+https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview
+
+PASSAGE:
+[QUOTE — SHAMBIBBLE]
+“Everything everything I’m talking about could easily just mean absolutely fucking nothing in six months.”
+
+[QUOTE — SHAMBIBBLE]
+“the informed opinion is studied ignorance”
+
+[QUOTE — SHAMBIBBLE]
+“there’s not a lot we know, but there’s a couple of things that we do.”
+
+RESEARCH OBJECT:
+DURABLE EXPERTISE MAY BE EPISTEMIC DISCIPLINE RATHER THAN STABLE PROMPT SYNTAX.
+
+LOCAL MOVE:
+[[MJ-2022-009]] treated rapid obsolescence as a threat to prompt expertise. Shambibble’s phrase “studied ignorance” suggests another reading. The expert may be the person who knows which claims are local, which are tested, which are hunches, which variables remain uncontrolled, and when a previously learned trick has expired.
+
+SOURCE TERMS:
+“absolutely fucking nothing in six months”
+“studied ignorance”
+“there’s not a lot we know”
+“toy examples”
+“empirically”
+
+WHAT BECAME STRANGE:
+The shortest-lived part of prompt practice may be the prompt itself. The longer-lived skill is knowing how little a successful output permits you to infer.
+
+QUESTION:
+What remains of prompt expertise after every model-specific trick has been invalidated?
+
+DEEPER QUESTION:
+Could prompt expertise be defined as a protocol for producing and retiring local knowledge rather than possession of a repertoire of magic words?
+
+MECHANISM:
+Observe behavior. Form local hypothesis. Control what can be controlled. Repeat. Mark uncertainty. Teach only bounded claims. Re-test after version change. Retire rules that no longer reproduce.
+
+FORMAL SHIFT:
+PROMPT EXPERTISE AS RECIPE COLLECTION
+→ VERSION CHANGE
+→ OBSOLESCENCE
+
+versus
+
+PROMPT EXPERTISE AS TEST DISCIPLINE
+→ VERSION CHANGE
+→ RETEST
+→ UPDATED LOCAL KNOWLEDGE
+
+SOURCE FORMALISM:
+Anthropic’s current prompt-engineering overview assumes defined success criteria and empirical tests before prompt optimization, reinforcing an evaluation-first rather than incantation-first practice.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+DURABLE META-SKILL = discriminate OBSERVATION / HUNCH / LOCAL REGULARITY / MECHANISM / EXPIRED RULE.
+
+TENSION:
+Formal evaluation can itself become ritual if test cases do not represent the real use or if benchmarks remain fixed while models and tasks change.
+
+MISSING:
+Longitudinal biographies of prompt practitioners showing which skills transferred across model generations and which did not.
+
+BOUNDARY:
+The transcript supports Shambibble’s epistemic stance; it does not establish that this stance predicts better performance without comparative evidence.
+
+CITATION TRAIL:
+[[MJ-2022-009]]
+→ knowledge half-life
+→ “studied ignorance”
+→ same-seed repetition and toy examples
+→ current eval-first prompt guidance
+→ [[SHOT-20260817-07]] rules gain provenance and retirement tests
+
+TEST:
+Take a 2022 prompt manual and classify every rule as still reproducible, transformed, obsolete, or unknowable on current systems. Separately test whether the original diagnostic methods — ablation, repetition, decomposition, failure logging — remain useful. Compare syntax survival with method survival.
+
+PLATFORM:
+Midjourney
+Claude prompt engineering
+Prompt evaluation
+
+LINKS:
+[[MJ-2022-009]]
+[[MJ-2022-004]]
+[[MJ-2022-005]]
+[[SHOT-20260817-07]]
+
+BIBTEX:
+@misc{shambibble2022interview,
+  title={MJ Interview 3.wh_shambibble},
+  year={2022},
+  month={10},
+  note={Interview transcript, October 22, 2022, 1:26:03}
+}
+
+
+===== 021__the-broadest-reasonable-prompt-is-an-adversarial-construction-__PatentLaw-Shambibble__LAW-SHAM-20260817-01__from-forage.txt =====
+
+ZETTEL
+
+ID:
+LAW-SHAM-20260817-01
+
+TITLE:
+2026-08-17 — The broadest reasonable prompt is an adversarial construction test.
+
+SOURCE:
+U.S. Patent and Trademark Office, Manual of Patent Examining Procedure § 2111, “Claim Interpretation; Broadest Reasonable Interpretation,” current USPTO edition consulted 2026-08-17; Shambibble interview transcript, 2022-10-22, 03:01–04:29.
+
+SOURCE URL:
+https://www.uspto.gov/web/offices/pac/mpep/s2111.html
+[LOCAL UPLOAD — MJ_Interview 3.wh_shambibble_otter_ai.pdf]
+
+PASSAGE:
+[QUOTE — SHAMBIBBLE]
+“Except insofar as you're thinking adversarial, you're thinking, Okay, well, how is this gonna be screwed up?”
+
+[PARAPHRASE — USPTO]
+During patent examination, pending claims receive their broadest reasonable interpretation consistent with the specification, from the perspective of a person of ordinary skill in the art.
+
+RESEARCH OBJECT:
+BROAD INTERPRETATION AS A PRE-EXECUTION TEST.
+
+LOCAL MOVE:
+[[MJ-2022-001]] already framed prompt writing as anticipating misinterpretation. Patent examination supplies a disciplined analogue: do not test language only under the reading the drafter intended. Pressure it under the broadest reasonable construction the authorized interpreter could give it.
+
+Shambibble's “orange” problem is miniature claim construction. The drafter says ORANGE intending a color; the interpreter finds another permissible referent. His solution is not to insist on private intent but to alter the operative language: “no fruit, no sphere, no circle.”
+
+SOURCE TERMS:
+“thinking adversarial”
+“how is this gonna be screwed up?”
+“broadest reasonable interpretation”
+“plain meaning”
+“specification”
+“ordinary skill in the art”
+
+WHAT BECAME STRANGE:
+Prompt advice usually asks whether an instruction is clear to the writer. Patent practice asks a harsher question: what is the widest consequential reading the interpreter may reasonably adopt? The lawyer's expertise begins where cooperative interpretation ends.
+
+QUESTION:
+Can a prompt be red-teamed by construing each operative phrase under its broadest reasonable model interpretation before execution?
+
+DEEPER QUESTION:
+Who or what occupies the role of the patent system's “person of ordinary skill” when the interpreter is a changing model whose learned associations, tokenization, tools, and system instructions are not stable public doctrine?
+
+MECHANISM:
+Draft instruction. Identify scope-bearing terms. Generate plausible alternate readings consistent with the surrounding context. Execute or simulate those readings. Amend language where an alternate reading produces a materially different action.
+
+FORMAL SHIFT:
+INTENDED READING
+→ PROMPT
+→ EXECUTION
+
+becomes
+
+PROMPT
+→ BROADEST REASONABLE CONSTRUCTIONS
+→ ADVERSARIAL TEST
+→ AMENDMENT
+→ EXECUTION
+
+SOURCE FORMALISM:
+USPTO MPEP § 2111: broadest reasonable interpretation consistent with the specification; plain meaning ordinarily reflects the understanding of one of ordinary skill in the art.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+BRP(P, C, M) = set of materially plausible readings of prompt P under context C by model/runtime M.
+
+A prompt is not operationally clear merely because intended_reading ∈ BRP. It is clearer when materially dangerous alternate readings have been excluded or safely bounded.
+
+TENSION:
+Patent BRI is an institutional doctrine constrained by specification, precedent, and a skilled-artisan perspective. Model “reasonableness” is empirical and unstable. The analogy becomes false if BRI is treated as a literal model-decoding algorithm.
+
+MISSING:
+A practical method for enumerating “reasonable” machine readings without merely inventing every logically possible misreading.
+
+BOUNDARY:
+MPEP doctrine governs patent examination, not AI systems. The proposed Broadest Reasonable Prompt test is an analogy and design heuristic.
+
+CITATION TRAIL:
+[[MJ-2022-001]]
+→ Shambibble asks “how is this gonna be screwed up?”
+→ USPTO broadest reasonable interpretation
+→ intended meaning loses privilege
+→ prompt red-teaming becomes claim construction
+
+TEST:
+Take 100 consequential agent prompts. Before execution, have an independent model produce the three broadest materially different readings consistent with context. Compare those predictions with observed failures. Test whether BRP review catches more failures than ordinary “make this clearer” editing.
+
+PLATFORM:
+Patent prosecution
+Prompt language
+Agentic AI
+
+LINKS:
+[[MJ-2022-001]]
+[[SHOT-20260817-01]]
+[[SHAM-20260817-08]]
+
+BIBTEX:
+@misc{uspto2111,
+ author={{U.S. Patent and Trademark Office}},
+ title={MPEP § 2111: Claim Interpretation; Broadest Reasonable Interpretation},
+ url={https://www.uspto.gov/web/offices/pac/mpep/s2111.html}
+}
+
+@misc{shambibble2022interview,
+  title={MJ Interview 3.wh_shambibble},
+  year={2022},
+  month={10},
+  note={Interview transcript, October 22, 2022, 1:26:03; automated transcript}
+}
+
+
+===== 022__reasonable-certainty-is-a-better-prompt-standard-than-perfect-__PatentLaw-Shambibble__LAW-SHAM-20260817-02__from-forage.txt =====
+
+ZETTEL
+
+ID:
+LAW-SHAM-20260817-02
+
+TITLE:
+2026-08-17 — Reasonable certainty is a better prompt standard than perfect precision.
+
+SOURCE:
+Nautilus, Inc. v. Biosig Instruments, Inc., 572 U.S. 898, 909–11 (2014); 35 U.S.C. § 112(b).
+
+SOURCE URL:
+https://www.govinfo.gov/app/details/USREPORTS-572/USREPORTS-572-898
+https://uscode.house.gov/view.xhtml?edition=prelim&num=0&req=granuleid%3AUSC-prelim-title35-section112
+
+PASSAGE:
+[QUOTE — NAUTILUS]
+“absolute precision is unattainable.”
+
+[PARAPHRASE]
+Nautilus requires patent claims, read with the specification and prosecution history, to inform skilled readers of scope with reasonable certainty.
+
+RESEARCH OBJECT:
+MANAGED INDETERMINACY.
+
+LOCAL MOVE:
+Prompt engineering is often narrated as a march from vague English toward complete specification. Patent law has lived longer with the impossibility of that endpoint. [[MJ-2022-005]] and [[SHAM-20260817-08]] likewise reject total knowledge: Shambibble can test bounded relations while admitting he cannot assign exact causal percentages to every phrase.
+
+The legal lesson is not “be precise.” It is more exacting: draw consequential boundaries with enough certainty for the relevant interpreter while admitting that language cannot eliminate every edge case.
+
+SOURCE TERMS:
+“reasonable certainty”
+“absolute precision”
+“scope”
+“studied ignorance”
+“there's not a lot we know”
+
+WHAT BECAME STRANGE:
+The lawyer may be useful to prompt practice precisely because law does not equate professional drafting with perfect language. It professionalizes the management of residual uncertainty.
+
+QUESTION:
+What would “reasonable certainty” mean for a prompt whose output is stochastic rather than legally construed?
+
+DEEPER QUESTION:
+Should prompt sufficiency be measured by whether the remaining ambiguity can change a consequential action, rather than by whether more detail could theoretically be added?
+
+MECHANISM:
+Identify action-relevant scope. Specify enough constraints that materially distinct interpretations do not cross unacceptable boundaries. Leave harmless or creative variables open.
+
+FORMAL SHIFT:
+MAXIMAL SPECIFICATION
+→ impossible / brittle
+
+becomes
+
+MATERIAL BOUNDARIES
++ TOLERATED OPENNESS
+→ REASONABLE OPERATIONAL CERTAINTY
+
+SOURCE FORMALISM:
+35 U.S.C. § 112(b) requires claims particularly pointing out and distinctly claiming the invention; Nautilus interprets definiteness through reasonable certainty while acknowledging limits of language.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+A prompt is reasonably certain when surviving ambiguity does not materially alter the authorized action class, protected invariants, or acceptance test.
+
+TENSION:
+Too much ambiguity can authorize harmful divergence. Too much precision can eliminate productive underdetermination, overfit one model version, or make adaptation impossible.
+
+MISSING:
+A severity-sensitive metric of prompt ambiguity that distinguishes aesthetic variation from action-scope variation.
+
+BOUNDARY:
+Nautilus defines a patent-law validity standard. “Reasonable operational certainty” is our proposed transfer, not legal doctrine.
+
+CITATION TRAIL:
+[[SHAM-20260817-08]]
+→ studied ignorance
+→ Nautilus
+→ absolute precision rejected
+→ certainty becomes consequential rather than total
+
+TEST:
+For prompts with known acceptance tests, progressively remove constraints. Find the point at which output variation first changes authorized action or invariant satisfaction. Compare that empirical boundary with human judgments of “clear enough.”
+
+PLATFORM:
+Patent law
+Prompt evaluation
+Natural-language programming
+
+LINKS:
+[[SHAM-20260817-08]]
+[[MJ-2022-005]]
+[[SHOT-20260817-09]]
+
+BIBTEX:
+@misc{nautilus2014,
+ author={{Supreme Court of the United States}},
+ title={Nautilus, Inc. v. Biosig Instruments, Inc., 572 U.S. 898},
+ year={2014},
+ url={https://www.govinfo.gov/app/details/USREPORTS-572/USREPORTS-572-898}
+}
+@misc{usc112,
+ author={{United States Congress}},
+ title={35 U.S.C. § 112},
+ url={https://uscode.house.gov/view.xhtml?edition=prelim&num=0&req=granuleid%3AUSC-prelim-title35-section112}
+}
+
+
+===== 023__a-prompt-cannot-be-rescued-after-failure-by-treating-it-as-a-n__PatentLaw-Shambibble__LAW-SHAM-20260817-03__from-forage.txt =====
+
+ZETTEL
+
+ID:
+LAW-SHAM-20260817-03
+
+TITLE:
+2026-08-17 — A prompt cannot be rescued after failure by treating it as a nose of wax.
+
+SOURCE:
+White v. Dunbar, 119 U.S. 47, 51–52 (1886); Shambibble interview transcript, 2022-10-22, 03:01–04:01.
+
+SOURCE URL:
+https://www.govinfo.gov/content/pkg/USREPORTS-119/pdf/USREPORTS-119-47.pdf
+[LOCAL UPLOAD — MJ_Interview 3.wh_shambibble_otter_ai.pdf]
+
+PASSAGE:
+[QUOTE — WHITE v. DUNBAR]
+“like a nose of wax”
+
+[PARAPHRASE]
+White rejects construing claim language opportunistically in different directions after the fact.
+
+[QUOTE — SHAMBIBBLE]
+“most people they use words, they don't think really hard about double meanings or ways they can be misinterpreted”
+
+RESEARCH OBJECT:
+POST HOC INTENTION IS NOT OPERATIVE LANGUAGE.
+
+LOCAL MOVE:
+A recurring failure in prompting is to defend an instruction by explaining what the user “obviously meant” after the system did something else. Patent claim doctrine disciplines the opposite instinct: operative text has consequences outside the drafter's private intention.
+
+Shambibble behaves this way with the orange example. He does not tell the model that it should have understood him. He redrafts.
+
+SOURCE TERMS:
+“nose of wax”
+“double meanings”
+“misinterpreted”
+“plain import”
+“redraft”
+
+WHAT BECAME STRANGE:
+The prompt failure is evidentiary. It reveals that the claimed instruction did not exclude a reading the drafter assumed away. The correct response is amendment, not retrospective insistence.
+
+QUESTION:
+When an AI follows a plausible but unintended reading, should that event be treated as model error, drafting error, or an unresolved allocation between them?
+
+DEEPER QUESTION:
+What would a doctrine against post hoc prompt construction look like—one that forces the designer to preserve the original instruction and show exactly which amendment excludes the failed reading?
+
+MECHANISM:
+Preserve original prompt. Preserve failed output/action. State intended reading. State alternate reading demonstrated by failure. Draft smallest amendment that separates them. Retest.
+
+FORMAL SHIFT:
+FAILURE
+→ “THAT IS NOT WHAT I MEANT”
+
+becomes
+
+FAILURE
+→ DOCUMENT ALTERNATE CONSTRUCTION
+→ AMEND LANGUAGE
+→ RETEST
+
+SOURCE FORMALISM:
+White v. Dunbar is a claim-construction case warning against twisting claim meaning after issuance to fit desired outcomes.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PROMPT AMENDMENT RECORD = {original text, demonstrated construction, amendment, reason, regression test}.
+
+TENSION:
+Models also make unreasonable errors. Not every unexpected result indicts drafting. A mature practice needs a way to separate unsupported execution from textually available interpretation.
+
+MISSING:
+A standard for identifying when an output was sufficiently supported by the instruction to count as a drafting ambiguity rather than model noncompliance.
+
+BOUNDARY:
+White concerns public patent claims and infringement, not interactive instructions. Its value here is anti-post-hoc discipline, not doctrinal equivalence.
+
+CITATION TRAIL:
+[[MJ-2022-001]]
+→ double meanings
+→ White v. Dunbar
+→ private intention loses control
+→ failure forces amendment rather than reinterpretation
+
+TEST:
+Collect prompt failures and have blinded reviewers judge whether each output is supported by the original text. For supported-but-unwanted readings, require amendments that preserve the original prompt and identify the exact ambiguity repaired.
+
+PLATFORM:
+Patent claim construction
+Prompt debugging
+
+LINKS:
+[[MJ-2022-001]]
+[[SHAM-20260817-05]]
+[[SHOT-20260817-07]]
+
+BIBTEX:
+@misc{white1886,
+ author={{Supreme Court of the United States}},
+ title={White v. Dunbar, 119 U.S. 47},
+ year={1886},
+ url={https://www.govinfo.gov/content/pkg/USREPORTS-119/pdf/USREPORTS-119-47.pdf}
+}
+@misc{shambibble2022interview,
+  title={MJ Interview 3.wh_shambibble},
+  year={2022},
+  month={10},
+  note={Interview transcript, October 22, 2022, 1:26:03; automated transcript}
+}
+
+
+===== 024__the-prompt-needs-a-prosecution-history-not-merely-a-latest-ver__PatentLaw-Shambibble__LAW-SHAM-20260817-04__from-forage.txt =====
+
+ZETTEL
+
+ID:
+LAW-SHAM-20260817-04
+
+TITLE:
+2026-08-17 — The prompt needs a prosecution history, not merely a latest version.
+
+SOURCE:
+Festo Corp. v. Shoketsu Kinzoku Kogyo Kabushiki Co., 535 U.S. 722, 733–41 (2002); Shambibble interview transcript, 2022-10-22, 46:25–48:36.
+
+SOURCE URL:
+https://supreme.justia.com/cases/federal/us/535/722/
+[LOCAL UPLOAD — MJ_Interview 3.wh_shambibble_otter_ai.pdf]
+
+PASSAGE:
+[PARAPHRASE — FESTO]
+Patent prosecution history can limit later attempts to recapture subject matter surrendered by narrowing amendment.
+
+[QUOTE — SHAMBIBBLE]
+“you could like run that same prop with the same seed and take them out one by one.”
+
+RESEARCH OBJECT:
+AMENDMENT HISTORY AS OPERATIVE MEMORY.
+
+LOCAL MOVE:
+[[SHOT-20260817-07]] argues that execution failure can become a specification delta. Festo makes the history problem deeper: an amendment has meaning partly because of what it abandoned.
+
+Prompt iteration usually destroys this negative history. Users delete the phrase that caused trouble, add a new clause, and keep only the latest prompt. The resulting text says what currently governs but not which interpretations were deliberately surrendered—or why.
+
+SOURCE TERMS:
+“prosecution history”
+“amendment”
+“surrender”
+“take them out one by one”
+“specification delta”
+
+WHAT BECAME STRANGE:
+A correction is not only new language. It is a boundary event with a before, an after, and a reason. Losing the before-state makes old failures easy to reintroduce.
+
+QUESTION:
+What should a prompt system remember about deleted constraints?
+
+DEEPER QUESTION:
+Can an agent distinguish an instruction that is absent because it was never relevant from one that is absent because it was deliberately revoked after causing a known failure?
+
+MECHANISM:
+Prompt P0 produces failure F. Amendment A narrows or changes P0 to P1. Record A's reason and the behavioral territory intentionally excluded. Future edits are checked against that record before re-expanding scope.
+
+FORMAL SHIFT:
+LATEST PROMPT ONLY
+
+becomes
+
+P0
+→ FAILURE / ADVERSE CONSTRUCTION
+→ AMENDMENT A
+→ P1
+→ REGRESSION TEST
+→ PRESERVED HISTORY
+
+SOURCE FORMALISM:
+Festo limits recapture under the doctrine of equivalents after certain narrowing amendments made during patent prosecution.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PROMPT PROSECUTION HISTORY = versioned instructions + observed adverse constructions + amendment reasons + revoked/superseded states + regression tests.
+
+TENSION:
+Legal estoppel should not be imported literally. Prompt systems often should be allowed to reconsider old constraints when the model, task, or evidence changes. The transferable principle is provenance of narrowing, not permanent prohibition.
+
+MISSING:
+How to represent the “territory” surrendered by a natural-language amendment in a machine-testable way.
+
+BOUNDARY:
+The analogy is methodological. A prompt amendment does not create legal estoppel.
+
+CITATION TRAIL:
+[[SHOT-20260817-07]]
+→ failure as specification delta
+→ Festo
+→ amendment carries negative history
+→ deleted prompt text may remain epistemically operative
+
+TEST:
+For a longitudinal agent, preserve every constraint amendment with a reason and one regression example. Later propose automatic simplifications. Measure whether provenance-aware simplification reintroduces fewer historical failures than latest-prompt-only maintenance.
+
+PLATFORM:
+Patent prosecution
+Prompt evolution
+Agent memory
+
+LINKS:
+[[SHOT-20260817-07]]
+[[SHAM-20260817-05]]
+[[SHAM-20260817-08]]
+
+BIBTEX:
+@misc{festo2002,
+ author={{Supreme Court of the United States}},
+ title={Festo Corp. v. Shoketsu Kinzoku Kogyo Kabushiki Co., 535 U.S. 722},
+ year={2002},
+ url={https://supreme.justia.com/cases/federal/us/535/722/}
+}
+@misc{shambibble2022interview,
+  title={MJ Interview 3.wh_shambibble},
+  year={2022},
+  month={10},
+  note={Interview transcript, October 22, 2022, 1:26:03; automated transcript}
+}
+
+
+===== 025__patent-claims-already-have-scope-operators-that-prompt-languag__PatentLaw-Shambibble__LAW-SHAM-20260817-05__from-forage.txt =====
+
+ZETTEL
+
+ID:
+LAW-SHAM-20260817-05
+
+TITLE:
+2026-08-17 — Patent claims already have scope operators that prompt language lacks.
+
+SOURCE:
+U.S. Patent and Trademark Office, MPEP § 2111.03, “Transitional Phrases,” current edition consulted 2026-08-17.
+
+SOURCE URL:
+https://www.uspto.gov/web/offices/pac/mpep/s2111.html#d0e2048
+
+PASSAGE:
+[PARAPHRASE — USPTO]
+“Comprising” is presumptively open-ended: recited elements are required but additional unrecited elements may remain within scope. “Consisting of” is used as a closed transition.
+
+RESEARCH OBJECT:
+OPEN-WORLD VERSUS CLOSED-WORLD INSTRUCTION SCOPE.
+
+LOCAL MOVE:
+Shambibble's negative prompting—“no fruit, no sphere, no circle”—shows the cost of not having stable scope semantics. Ordinary prompt verbs such as include, use, make, and contain do not reliably say whether unmentioned additions are allowed.
+
+Patent drafting has lexicalized this distinction. A single transitional phrase can change whether the claim admits unrecited elements.
+
+SOURCE TERMS:
+“comprising”
+“consisting of”
+“open-ended”
+“closed”
+“negative prompting”
+
+WHAT BECAME STRANGE:
+Prompt language may not chiefly need more descriptive adjectives. It may need standardized operators for closure.
+
+QUESTION:
+What is the prompt equivalent of “comprising” versus “consisting of”?
+
+DEEPER QUESTION:
+Should agent instructions expose explicit open/closed-world semantics so that “include A, B, C” can be distinguished from “use only A, B, C” without relying on conversational implication?
+
+MECHANISM:
+Instruction defines required set R. Scope operator determines whether output/action may include X ∉ R. OPEN permits additional compatible elements; CLOSED prohibits them unless separately authorized.
+
+FORMAL SHIFT:
+LIST OF REQUIREMENTS
++ PRAGMATIC GUESS ABOUT EXCLUSIVITY
+
+becomes
+
+SCOPE_OPERATOR(OPEN|CLOSED|ESSENTIALLY_CLOSED)
++ REQUIREMENTS
+
+SOURCE FORMALISM:
+Patent claim drafting uses transitional phrases with settled scope consequences, including the open-ended “comprising” and closed “consisting of.”
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+REQUIRE {A,B,C} COMPRISING → must include A,B,C; may add compatible items.
+REQUIRE {A,B,C} CONSISTING → must include A,B,C; may not add peer items.
+
+TENSION:
+Legal transitional terms work because an interpretive institution gives them stable meaning. Simply borrowing the words for prompts would not create stable semantics unless the runtime adopts them formally.
+
+MISSING:
+Whether current models already respond reliably to ordinary-language open/closed formulations, and whether formal scope operators improve performance.
+
+BOUNDARY:
+This zettel proposes design vocabulary inspired by patent drafting; it does not claim patent terms already possess computational semantics in AI systems.
+
+CITATION TRAIL:
+[[MJ-2022-001]]
+→ negative exclusions
+→ patent transitional phrases
+→ scope becomes explicit operator
+→ prompt language needs closure semantics
+
+TEST:
+Construct matched instructions differing only in “include,” “include at least,” “use only,” “comprising,” and “consisting of.” Test across models and tool agents for unauthorized additions. Then implement explicit OPEN/CLOSED schema flags and compare reliability.
+
+PLATFORM:
+Patent drafting
+Prompt language design
+
+LINKS:
+[[MJ-2022-001]]
+[[SHOT-20260817-03]]
+[[LAW-SHAM-20260817-01]]
+
+BIBTEX:
+@misc{uspto211103,
+ author={{U.S. Patent and Trademark Office}},
+ title={MPEP § 2111.03: Transitional Phrases},
+ url={https://www.uspto.gov/web/offices/pac/mpep/s2111.html}
+}
+
+
+===== 026__antecedent-basis-is-a-theory-of-state-reference-for-prompt-lan__PatentLaw-Shambibble__LAW-SHAM-20260817-06__from-forage.txt =====
+
+ZETTEL
+
+ID:
+LAW-SHAM-20260817-06
+
+TITLE:
+2026-08-17 — Antecedent basis is a theory of state reference for prompt language.
+
+SOURCE:
+U.S. Patent and Trademark Office, MPEP § 2175, form paragraph 7.34.05, “Lack of Antecedent Basis in the Claims,” current edition consulted 2026-08-17.
+
+SOURCE URL:
+https://www.uspto.gov/web/offices/pac/mpep/s2175.html
+
+PASSAGE:
+[PARAPHRASE — USPTO]
+A lack of antecedent basis can make claim scope indeterminate; USPTO examples include later references such as “said lever” or “the lever” without sufficient earlier introduction.
+
+RESEARCH OBJECT:
+REFERENCE BINDING AS A LANGUAGE OPERATION.
+
+LOCAL MOVE:
+Prompt failures frequently involve expressions such as “it,” “the file,” “the same character,” “that version,” or “use the earlier one.” These appear natural to humans because conversational context supplies antecedents. In tool-using systems the referent may be ambiguous across files, turns, objects, or generated candidates.
+
+Patent claim drafting has a specialized discipline for this problem: introduce an element, then bind later references to it.
+
+SOURCE TERMS:
+“antecedent basis”
+“said lever”
+“the lever”
+“indeterminate”
+“same character”
+“the file”
+
+WHAT BECAME STRANGE:
+An apparently fussy feature of legal drafting becomes highly computational: nouns need identities that persist across operations.
+
+QUESTION:
+When does ordinary conversational reference become too weak for an agent that mutates state?
+
+DEEPER QUESTION:
+Could prompt language acquire explicit antecedent binding—names, handles, IDs, scoped aliases—without forcing users into conventional programming syntax?
+
+MECHANISM:
+Introduce entity E with stable identifier. Subsequent instruction references E by bound name. Runtime checks that every definite reference resolves uniquely before consequential execution.
+
+FORMAL SHIFT:
+NATURAL REFERENCE
+“change the file and send it”
+
+becomes
+
+BIND file := artifact_42
+MODIFY file
+SEND file
+
+SOURCE FORMALISM:
+USPTO examination practice treats aggravated lack of antecedent basis as an indefiniteness problem when it makes claim scope indeterminate.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PROMPT ANTECEDENT CHECK: every definite noun phrase that controls a state mutation must resolve to one live entity or trigger clarification.
+
+TENSION:
+Human dialogue succeeds with loose reference constantly. Requiring explicit binding everywhere would make prompt language cumbersome. The useful threshold is consequential ambiguity, not grammatical purity.
+
+MISSING:
+A classifier for references that are harmlessly inferable versus references that can target materially different objects or states.
+
+BOUNDARY:
+Patent antecedent basis is a claim-drafting doctrine, not an AI binding system. The state-reference analogy is ours.
+
+CITATION TRAIL:
+[[SHAM-20260817-04]]
+→ recurring character requires identity persistence
+→ patent antecedent basis
+→ referent becomes bound state
+→ identity control moves from description to explicit reference
+
+TEST:
+Build an agent benchmark where prompts use pronouns and definite descriptions across multiple similar files/characters/objects. Compare ordinary context, explicit IDs, and automatic antecedent checking on wrong-target actions.
+
+PLATFORM:
+Patent examination
+Agent state
+Prompt language
+
+LINKS:
+[[SHAM-20260817-04]]
+[[SHOT-20260817-02]]
+[[SHOT-20260817-03]]
+
+BIBTEX:
+@misc{uspto2175,
+ author={{U.S. Patent and Trademark Office}},
+ title={MPEP § 2175: Rejections under 35 U.S.C. 112(b)},
+ url={https://www.uspto.gov/web/offices/pac/mpep/s2175.html}
+}
+
+
+===== 027__the-specification-is-a-glossary-but-the-prompt-has-no-stable-s__PatentLaw-Shambibble__LAW-SHAM-20260817-07__from-forage.txt =====
+
+ZETTEL
+
+ID:
+LAW-SHAM-20260817-07
+
+TITLE:
+2026-08-17 — The specification is a glossary, but the prompt has no stable skilled reader.
+
+SOURCE:
+U.S. Patent and Trademark Office, MPEP §§ 2111–2111.01, current edition consulted 2026-08-17; Shambibble interview transcript, 2022-10-22, 04:01–04:29 and 48:53–51:32.
+
+SOURCE URL:
+https://www.uspto.gov/web/offices/pac/mpep/s2111.html
+[LOCAL UPLOAD — MJ_Interview 3.wh_shambibble_otter_ai.pdf]
+
+PASSAGE:
+[PARAPHRASE — USPTO]
+Claim terms ordinarily receive their plain meaning to a person of ordinary skill in the art, read in light of the specification; an applicant may clearly define a term specially in the specification.
+
+[QUOTE — SHAMBIBBLE]
+“it will show you which words got run together and which words got split.”
+
+RESEARCH OBJECT:
+THE MISSING INTERPRETIVE COMMUNITY.
+
+LOCAL MOVE:
+Patent interpretation can ask how a skilled artisan would read a claim because patent law supplies an imagined interpretive community anchored in a technical field, specification, and prosecution record.
+
+Prompt language lacks an equivalent stable reader. The same sentence may be tokenized differently, interpreted differently across models, altered by hidden system instructions, and routed through different tools. Shambibble predicted that some lexical prompt craft might disappear as natural-language understanding improved; this prediction makes the identity of the “reader” even more unstable.
+
+SOURCE TERMS:
+“person of ordinary skill in the art”
+“plain meaning”
+“specification”
+“glossary”
+“tokenized”
+“model version”
+
+WHAT BECAME STRANGE:
+Patent law externalizes an answer to “meaning for whom?” Prompt engineering often does not. It speaks of prompt clarity without naming the interpreter whose clarity is at issue.
+
+QUESTION:
+Who is the relevant reader of a prompt?
+
+DEEPER QUESTION:
+Is prompt meaning indexed to a model/version/runtime in the way patent meaning is indexed to a skilled artisan and intrinsic record—and if so, can a prompt ever be considered clear independent of its execution environment?
+
+MECHANISM:
+Prompt text P is interpreted relative to runtime R = {model, version, system instructions, tokenizer, tools, schemas, conversation state}. Change R and the same P may acquire a different operational meaning.
+
+FORMAL SHIFT:
+PROMPT MEANING = f(TEXT)
+
+becomes
+
+PROMPT MEANING = f(TEXT, INTERPRETER, CONTEXT, RUNTIME)
+
+SOURCE FORMALISM:
+MPEP claim interpretation ties ordinary meaning to a skilled artisan and the specification; special definitions must be made clear.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+The prompt analogue of intrinsic evidence may include: system instructions, user context, tool contracts, schemas, examples, defined terms, and preserved amendment history.
+
+TENSION:
+Unlike a legal skilled artisan, an AI model is not a normative community member and does not possess a stable publicly contestable interpretive practice. Treating model behavior as “meaning” risks naturalizing implementation accidents.
+
+MISSING:
+A defensible theory of prompt meaning that separates normative user intent, textual affordance, empirical model behavior, and runtime contract.
+
+BOUNDARY:
+Patent claim interpretation supplies a normative skilled-reader construct. A model/runtime is not that construct; the analogy identifies a missing variable rather than filling it.
+
+CITATION TRAIL:
+[[MJ-2022-003]]
+→ tokens differ from words
+→ patent “skilled reader” doctrine
+→ prompt clarity becomes interpreter-indexed
+→ missing object: person/model of ordinary skill in prompt art
+
+TEST:
+Run identical prompts across model versions and runtime configurations. Separate semantic judgments by human readers from observed execution. Identify which ambiguities are text-intrinsic and which are interpreter-specific.
+
+PLATFORM:
+Patent claim interpretation
+Prompt semantics
+LLM runtimes
+
+LINKS:
+[[MJ-2022-003]]
+[[MJ-2022-010]]
+[[SHOT-20260817-02]]
+
+BIBTEX:
+@misc{uspto211101,
+ author={{U.S. Patent and Trademark Office}},
+ title={MPEP §§ 2111–2111.01: Claim Interpretation and Plain Meaning},
+ url={https://www.uspto.gov/web/offices/pac/mpep/s2111.html}
+}
+@misc{shambibble2022interview,
+  title={MJ Interview 3.wh_shambibble},
+  year={2022},
+  month={10},
+  note={Interview transcript, October 22, 2022, 1:26:03; automated transcript}
+}
+
+
+===== 028__the-lawyer-s-advantage-in-prompt-language-is-interpretive-engi__PatentLaw-Shambibble__LAW-SHAM-20260817-08__from-forage.txt =====
+
+ZETTEL
+
+ID:
+LAW-SHAM-20260817-08
+
+TITLE:
+2026-08-17 — The lawyer’s advantage in prompt language is interpretive engineering, not legalese.
+
+SOURCE:
+Shambibble interview transcript, 2022-10-22, 02:10–04:01, 44:52–48:36, and 1:17–1:19; 35 U.S.C. § 112; USPTO MPEP §§ 2111, 2173; Nautilus, 572 U.S. 898 (2014).
+
+SOURCE URL:
+[LOCAL UPLOAD — MJ_Interview 3.wh_shambibble_otter_ai.pdf]
+https://uscode.house.gov/view.xhtml?edition=prelim&num=0&req=granuleid%3AUSC-prelim-title35-section112
+https://www.uspto.gov/web/offices/pac/mpep/s2111.html
+https://www.uspto.gov/web/offices/pac/mpep/s2173.html
+https://www.govinfo.gov/app/details/USREPORTS-572/USREPORTS-572-898
+
+PASSAGE:
+[QUOTE — SHAMBIBBLE]
+“what I think it has helped is the facility with describing a thing. Using abstract language in a way that's very likely to be misinterpreted.”
+
+[QUOTE — SHAMBIBBLE]
+“you're gonna want to know that, you know, could talk to an artist just as easily as you could talk to a computer”
+
+[QUOTE — SHAMBIBBLE]
+“the informed opinion is studied ignorance”
+
+RESEARCH OBJECT:
+LAWYER AS INTERPRETIVE ENGINEER.
+
+LOCAL MOVE:
+The easy thesis is that lawyers are good at prompting because lawyers write carefully. Shambibble's practice supports a stronger and less flattering account. The useful lawyer is trained to expect language to be read by someone else, against interest, under rules not controlled by the drafter, after circumstances change.
+
+Patent practice adds habits unusually aligned with consequential AI instruction: define scope, distinguish open from closed language, establish antecedents, anticipate broad constructions, record amendments, preserve exceptions, and admit what the text cannot settle. Shambibble adds empirical discipline: test the construction the machine actually makes.
+
+SOURCE TERMS:
+“facility with describing a thing”
+“misinterpreted”
+“thinking adversarial”
+“studied ignorance”
+“scope”
+“amendment”
+“reasonable certainty”
+
+WHAT BECAME STRANGE:
+The lawyer's comparative advantage may appear exactly where “prompt engineering” stops being about clever phrases and becomes governance of interpretation under consequence.
+
+QUESTION:
+What professional practices already train people to author language whose meaning will be operationalized by an interpreter they do not control?
+
+DEEPER QUESTION:
+If lawyers become leaders in prompt language, what parts of legal craft deserve transfer—and which pathologies of legal drafting, such as verbosity, strategic ambiguity, and inaccessible jargon, must be refused?
+
+MECHANISM:
+Translate legal habits into operational prompt practice: claim desired scope; define terms; bind references; test broad constructions; enumerate exceptions; version amendments; preserve reasons; verify actual execution; stop at reasonable certainty rather than imaginary completeness.
+
+FORMAL SHIFT:
+PROMPT ENGINEER AS WORDSMITH
+
+becomes
+
+PROMPT COUNSEL AS INTERPRETIVE ENGINEER
+
+SOURCE FORMALISM:
+Patent law supplies formal doctrines of claim scope, definiteness, construction, and amendment history. Shambibble supplies a first-person account of those habits unexpectedly becoming useful in 2022 image prompting.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+LAWYERLY PROMPTING = adversarial drafting + scope discipline + interpretive record + empirical execution testing.
+
+Not: legal vocabulary transplanted wholesale into prompts.
+
+TENSION:
+Legal practice can also reward strategic ambiguity, complexity, adversarial excess, and exclusionary language. The claim that lawyers possess transferable skills does not imply that legal prose should become the stylistic model for AI interfaces.
+
+MISSING:
+Comparative evidence: do patent attorneys actually outperform matched technical writers, programmers, or designers on consequential prompt-specification tasks after controlling for domain expertise?
+
+BOUNDARY:
+This zettel positions patent lawyers as a promising source of methods, not as owners or historical inventors of prompt engineering.
+
+CITATION TRAIL:
+[[MJ-2022-002]]
+→ patent-law skill unexpectedly overlaps art
+→ [[MJ-2022-001]] adversarial description
+→ patent definiteness / BRI / amendment doctrines
+→ [[SHAM-20260817-08]] studied ignorance
+→ lawyer emerges as candidate leader in prompt-language design
+
+TEST:
+Recruit patent attorneys, litigators, software engineers, technical writers, designers, and experienced prompt practitioners. Give each underspecified high-consequence agent tasks. Measure detection of scope ambiguity, alternate constructions, reference errors, exception handling, amendment quality, and execution success.
+
+PLATFORM:
+Patent practice
+Prompt language
+AI governance
+Natural-language programming
+
+LINKS:
+[[MJ-2022-002]]
+[[MJ-2022-001]]
+[[SHAM-20260817-08]]
+[[LAW-SHAM-20260817-01]]
+[[LAW-SHAM-20260817-02]]
+[[LAW-SHAM-20260817-04]]
+
+BIBTEX:
+@misc{usc112b,
+ author={{United States Congress}},
+ title={35 U.S.C. § 112},
+ url={https://uscode.house.gov/view.xhtml?edition=prelim&num=0&req=granuleid%3AUSC-prelim-title35-section112}
+}
+@misc{uspto2173,
+ author={{U.S. Patent and Trademark Office}},
+ title={MPEP § 2173: Claims Must Particularly Point Out and Distinctly Claim the Invention},
+ url={https://www.uspto.gov/web/offices/pac/mpep/s2173.html}
+}
+@misc{shambibble2022interview,
+  title={MJ Interview 3.wh_shambibble},
+  year={2022},
+  month={10},
+  note={Interview transcript, October 22, 2022, 1:26:03; automated transcript}
+}
+
+
+===== 029__the-prompt-is-a-multimodal-brief-not-a-sentence__Shambibble-2022__LAW-SHAM-20260817-09__from-forage.txt =====
+
+ZETTEL
+
+ID:
+LAW-SHAM-20260817-09
+
+TITLE:
+2026-08-17 — The prompt is a multimodal brief, not a sentence.
+
+SOURCE:
+Shambibble, “Image Prompting and--,” Midjourney community guide, 2022, provided PDF and text copy; Shambibble interview transcript, 2022-10-22.
+
+SOURCE URL:
+[LOCAL UPLOAD — Midjourney Image Prompting.pdf]
+[LOCAL UPLOAD — MJ_Interview 3.wh_shambibble_otter_ai.pdf]
+
+PASSAGE:
+[QUOTE — SHAMBIBBLE GUIDE]
+“Image prompting is basically MJ letting one side draw what the other side describes to it over the phone.”
+
+[QUOTE — SHAMBIBBLE GUIDE]
+“We’re just trying to visually get across subjects/composition.”
+
+RESEARCH OBJECT:
+REPRESENTATIONAL ADVOCACY.
+
+LOCAL MOVE:
+[[LAW-SHAM-20260817-01]] treated prompting as adversarial construction of operative language. The guide forces a correction: the operative object need not be language alone. When text cannot reliably carry a spatial relation, identity, or style, Shambibble changes the medium of the instruction. A crude composite, a bank of reference faces, an image weight, a multiprompt boundary, and ordinary prose can all participate in one act of specification.
+
+This makes the legal analogy stronger but narrower. A lawyer does not advocate only through sentences. A brief can incorporate exhibits, defined terms, diagrams, stipulations, and separately weighted authorities. Shambibble’s practice similarly treats representation choice itself as part of the argument to the interpreter.
+
+SOURCE TERMS:
+“inspiration”
+“internal language”
+“image prompt”
+“subjects/composition”
+“image weight”
+“multiprompt”
+
+WHAT BECAME STRANGE:
+The central skill may not be writing a better prompt. It may be choosing which proposition belongs in which representational channel.
+
+QUESTION:
+When a generative system accepts text, images, references, parameters, masks, and structured controls, what is the correct unit to call “the prompt”?
+
+DEEPER QUESTION:
+Does prompt law need a doctrine of multimodal construction in which meaning is attributed to the whole operative record rather than to the final string of text?
+
+MECHANISM:
+Identify the intended relation. Observe where verbal specification fails. Move the disputed information into a representation the model handles more reliably. Combine channels while monitoring interference between them. Execute and revise.
+
+FORMAL SHIFT:
+TEXT PROMPT
+→ MODEL
+
+becomes
+
+OPERATIVE BRIEF = {
+  text,
+  image evidence,
+  weights,
+  exclusions,
+  decomposition,
+  layout cue,
+  prior output
+}
+→ MODEL
+
+SOURCE FORMALISM:
+The guide explicitly distinguishes text prompting from image prompting, describes image weight, uses multiple image prompts, and recommends crude visual mockups for complex scenes whose spatial relations Midjourney handles poorly in text.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For proposition p, choose channel c that maximizes reliable transmission while minimizing unwanted collateral associations:
+
+c*(p) = argmax_c reliability(p,c) - interference(p,c)
+
+TENSION:
+A legal brief is interpreted under public institutional rules. A generative model is not a tribunal and does not owe reasons. Calling these inputs “arguments” is useful only if it keeps attention on interpretation under constrained evidence rather than anthropomorphizing the model.
+
+MISSING:
+A comparative map of which semantic relations are best carried by text, image, schema, direct manipulation, or example across current generative systems.
+
+BOUNDARY:
+The guide concerns Midjourney in 2022. Its exact controls are obsolete or version-bound. The durable object is the representational move, not the syntax.
+
+CITATION TRAIL:
+[[LAW-SHAM-20260817-01]]
+→ adversarial construction
+→ Shambibble image-prompting guide
+→ language fails to carry some relations
+→ representation changes
+→ prompt becomes multimodal operative brief
+
+TEST:
+Choose fifty tasks containing identity, spatial relation, style, and composition constraints. Express each constraint separately through text, reference image, schema, and crude visual mockup where available. Measure instruction fidelity and cross-constraint interference. Determine whether representation choice predicts success better than prompt length.
+
+PLATFORM:
+Midjourney
+Multimodal prompting
+Patent practice
+Natural-language programming
+
+LINKS:
+[[LAW-SHAM-20260817-01]]
+[[SHAM-20260817-04]]
+[[SHAM-20260817-06]]
+[[SHOT-20260817-03]]
+
+BIBTEX:
+@misc{shambibble2022imageprompting,
+  author={{Shambibble}},
+  title={Image Prompting and--},
+  year={2022},
+  note={Midjourney community guide; researcher-provided PDF and text copy}
+}
+
+
+===== 030__a-reference-bank-is-a-counterclaim-against-medium-contamination__Shambibble-2022__LAW-SHAM-20260817-10__from-forage.txt =====
+
+ZETTEL
+
+ID:
+LAW-SHAM-20260817-10
+
+TITLE:
+2026-08-17 — A reference bank preserves identity by making its representations disagree.
+
+SOURCE:
+Shambibble, “Image Prompting and--,” Midjourney community guide, 2022, especially the revised recurring-character procedure.
+
+SOURCE URL:
+[LOCAL UPLOAD — Midjourney Image Prompting.pdf]
+
+PASSAGE:
+[QUOTE]
+“The important thing is a couple of recognizably similar faces in different formats so no one medium dominates.”
+
+[PARAPHRASE]
+Shambibble says his earlier practice of reusing pencil headshots could contaminate later outputs because “pencil sketch” information traveled with the facial features. His revised practice stored the same character across pencil, digital matte painting, ink outline, and photographic representations.
+
+RESEARCH OBJECT:
+CONTROL THROUGH REPRESENTATIONAL DISAGREEMENT.
+
+LOCAL MOVE:
+[[SHAM-20260817-04]] treated the recurring-character hack as a missing control surface. The guide reveals the more surprising mechanism. Consistency is not achieved by making every reference identical. It is achieved by preserving what should remain constant across deliberately different representations so that medium-specific features are less able to masquerade as identity.
+
+SOURCE TERMS:
+“bank of images”
+“same character”
+“different formats”
+“no one medium dominates”
+“smudge your character downstream”
+
+WHAT BECAME STRANGE:
+To make one thing persist, Shambibble introduces controlled disagreement around it.
+
+QUESTION:
+Can invariance be specified more reliably by showing a model the same entity under deliberately varied irrelevant conditions than by supplying one supposedly perfect reference?
+
+DEEPER QUESTION:
+Is the operative analogue of a legal definition sometimes a set of contrasting examples whose intersection, rather than any single example, identifies the intended scope?
+
+MECHANISM:
+Generate multiple representations of entity E. Vary medium while preserving identity. Feed several representations together. Features common across references reinforce E. Medium-specific features conflict and may cancel or lose relative influence.
+
+FORMAL SHIFT:
+ONE REFERENCE
+→ identity + medium contamination
+
+becomes
+
+{E in medium A,
+ E in medium B,
+ E in medium C,
+ E in medium D}
+→ intersecting identity signal
++ competing incidental style signals
+
+SOURCE FORMALISM:
+The guide describes a practical bank of multiple headshots of one character in different media and explicitly states the purpose: preventing one medium from dominating downstream generations.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+identity(E) ≈ features stable across deliberately varied representations of E
+
+TENSION:
+This cancellation account is a practitioner explanation, not a verified description of Midjourney’s internal mechanism. Multiple references can also introduce additional noise or shared biases.
+
+MISSING:
+Controlled evidence that representational variation isolates identity better than repeated near-duplicate references under otherwise matched conditions.
+
+BOUNDARY:
+The source describes a 2022 Midjourney technique. Do not infer that current systems combine references by literal feature intersection.
+
+CITATION TRAIL:
+[[SHAM-20260817-04]]
+→ recurring character hack
+→ revised guide procedure
+→ medium contaminates identity
+→ deliberate cross-medium disagreement
+→ invariance emerges from what survives variation
+
+TEST:
+Create matched reference sets for the same synthetic character: one near-duplicate set and one cross-medium set. Hold reference count and prompt constant. Compare identity retention and medium leakage across new scenes.
+
+PLATFORM:
+Midjourney
+Reference-image prompting
+Character consistency
+
+LINKS:
+[[SHAM-20260817-04]]
+[[LAW-SHAM-20260817-09]]
+[[MJ-2022-017]]
+
+BIBTEX:
+@misc{shambibble2022imageprompting,
+  author={{Shambibble}},
+  title={Image Prompting and--},
+  year={2022},
+  note={Midjourney community guide; researcher-provided PDF and text copy}
+}
+
+
+===== 031__when-text-stabilizes-randomness-migrates-into-typography__Shambibble-Twitter-2022__LAW-SHAM-20260817-11__from-forage.txt =====
+
+ZETTEL
+
+ID:
+LAW-SHAM-20260817-11
+
+TITLE:
+2026-08-17 — When text stabilizes, randomness migrates into typography.
+
+SOURCE:
+Researcher-provided receipt for Shambibble Twitter/X post, 2022-08-06; Shambibble interview transcript, 2022-10-22, approximately 1:05:53–1:07:41.
+
+SOURCE URL:
+https://twitter.com/shambibble/status/1556072722236579840
+[LOCAL RESOURCE — _RESOURCES/SHAMBIBBLE_TWEETS__PROVIDED_LINK_RECEIPTS.txt]
+[LOCAL UPLOAD — MJ_Interview 3.wh_shambibble_otter_ai.pdf]
+
+PASSAGE:
+[QUOTE — PROVIDED TWEET CAPTION]
+“once you get the text focused, font design can get pretty inspired”
+
+[PARAPHRASE — INTERVIEW]
+Shambibble explains that long phrases consume repeated rolls merely trying to obtain correct spelling. With one or two words, once the words begin resolving, rerolls start producing visibly different ways to render the text, including different horror-font treatments.
+
+RESEARCH OBJECT:
+ERROR-BUDGET MIGRATION.
+
+LOCAL MOVE:
+[[SHAM-20260817-06]] showed quotation and multiprompt tricks turning text from an impossible request into something the system could sometimes render. The August tweet and later interview reveal what happens after that local problem is partially solved: stochastic variation does not disappear. It becomes available for a different dimension of the artifact.
+
+SOURCE TERMS:
+“text focused”
+“font design”
+“re-roll”
+“resolving”
+“horror font”
+
+WHAT BECAME STRANGE:
+Reliability in one dimension can release generative variation into another.
+
+QUESTION:
+Does improving semantic control necessarily reduce creativity, or can it redirect stochastic variation from semantic failure toward formal exploration?
+
+DEEPER QUESTION:
+Can a generative interface deliberately allocate uncertainty, protecting some variables while leaving others free to vary?
+
+MECHANISM:
+Early generations spend variation on whether requested text appears correctly. Once lexical content stabilizes, repeated sampling preserves the text more often while continuing to vary lettering, texture, and composition. The same stochastic generator now explores a narrower but more useful subspace.
+
+FORMAL SHIFT:
+TOTAL VARIATION
+→ semantic failure + aesthetic variation
+
+becomes
+
+SEMANTIC CONSTRAINT STABILIZED
+→ remaining variation available for formal exploration
+
+SOURCE FORMALISM:
+The interview gives a practitioner account of short text beginning to resolve and subsequent rolls producing multiple visual treatments. No quantitative allocation model is supplied.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let V be observable output variance.
+
+V = V_semantic + V_formal + V_other
+
+Increasing control over semantic content may reduce V_semantic without forcing V_formal to zero.
+
+TENSION:
+The image attached to the tweet was not recovered in this run. The caption is researcher-provided and the interview independently supports the described mechanism, but the visual demonstration itself remains uninspected.
+
+MISSING:
+The tweet image and a controlled series demonstrating whether semantic stabilization measurably reallocates rather than merely reduces output variance.
+
+BOUNDARY:
+This is a local observation from 2022 Midjourney text rendering, not a general law of generative systems.
+
+CITATION TRAIL:
+[[SHAM-20260817-06]]
+→ text hack
+→ 2022-08-06 public caption
+→ later interview account
+→ semantic resolution precedes font variation
+→ uncertainty becomes allocable design material
+
+TEST:
+For prompts with text content, progressively constrain lexical correctness while holding seed policy and sampling budget constant. Measure semantic error rate and visual diversity of typography. Test whether formal diversity rises, falls, or simply becomes more visible as lexical error declines.
+
+PLATFORM:
+Twitter/X
+Midjourney
+Typography
+Generative design
+
+LINKS:
+[[SHAM-20260817-06]]
+[[MJ-2022-013]]
+[[LAW-SHAM-20260817-02]]
+
+BIBTEX:
+@misc{shambibble2022fonttweet,
+  author={{Shambibble}},
+  title={once you get the text focused, font design can get pretty inspired},
+  year={2022},
+  month={8},
+  note={Twitter/X post, August 6, 2022; caption and URL provided by researcher; image unrecovered},
+  url={https://twitter.com/shambibble/status/1556072722236579840}
+}
+
+
+===== 032__copyrights-prompt-unit-is-smaller-than-the-practice__USCO-Shambibble__LAW-SHAM-20260817-12__from-forage.txt =====
+
+ZETTEL
+
+ID:
+LAW-SHAM-20260817-12
+
+TITLE:
+2026-08-17 — Copyright’s “prompt” is smaller than the practice it is trying to evaluate.
+
+SOURCE:
+U.S. Copyright Office, Copyright and Artificial Intelligence, Part 2: Copyrightability, January 2025, pp. 21–28; Shambibble, “Image Prompting and--,” 2022.
+
+SOURCE URL:
+https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf
+[LOCAL UPLOAD — Midjourney Image Prompting.pdf]
+
+PASSAGE:
+[QUOTE — U.S. COPYRIGHT OFFICE]
+“prompts alone do not provide sufficient human control”
+
+[PARAPHRASE — SHAMBIBBLE GUIDE]
+The guide’s recurring-character and scene-construction workflows combine text, selected prior outputs, multiple image references, image weights, stylization settings, rerolls, multiprompt decomposition, and sometimes externally composited mockups.
+
+RESEARCH OBJECT:
+THE UNIT-OF-AUTHORSHIP PROBLEM.
+
+LOCAL MOVE:
+[[LAW-SHAM-20260817-09]] showed that the operative prompt can be distributed across representational channels. Copyright doctrine now makes that distribution consequential. The Copyright Office’s prompt analysis asks whether prompts sufficiently determine expressive elements and concludes that current generally available prompts alone usually do not. But Shambibble’s 2022 practice is already not “prompts alone.” It is a sequence of selections and interventions spread across text, images, parameters, and revisions.
+
+The legal question therefore cannot be exhausted by asking how detailed the final text prompt was. It must identify which expressive elements, if any, were human-authored, selected, arranged, modified, or otherwise controlled across the whole workflow.
+
+SOURCE TERMS:
+“prompts alone”
+“human control”
+“expressive elements”
+“selection”
+“coordination”
+“arrangement”
+“expressive inputs”
+
+WHAT BECAME STRANGE:
+The practice that early users called prompting may be legally significant precisely where it ceases to look like one prompt.
+
+QUESTION:
+What is the legally relevant unit of human contribution in an iterative multimodal generative workflow?
+
+DEEPER QUESTION:
+Could copyright analysis become more accurate by reconstructing the provenance of expressive control element-by-element rather than classifying an entire workflow as “prompting”?
+
+MECHANISM:
+Human contribution can occur at multiple stages: create or select an input image; choose which output becomes a reference; set parameters; compose a mockup; revise text; arrange outputs; modify generated material. Copyrightability then depends on whether protected human expression or sufficiently original human selection, arrangement, or modification is perceptible in the resulting work.
+
+FORMAL SHIFT:
+PROMPT
+→ OUTPUT
+→ AUTHORSHIP QUESTION
+
+becomes
+
+CONTROL RECORD = {
+  human expressive inputs,
+  selections,
+  arrangements,
+  modifications,
+  parameterized constraints,
+  model-determined expression
+}
+→ element-specific authorship analysis
+
+SOURCE FORMALISM:
+The Copyright Office distinguishes prompts from expressive inputs and from later modification or arrangement. It states that prompts alone generally do not provide sufficient control with current technology, while human-authored expressive material perceptible in an output and original selection, coordination, arrangement, or modification can be protected case by case.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+AUTHORED(output_element e) cannot be inferred from prompt_detail alone.
+
+It requires tracing e to the human/model control record.
+
+TENSION:
+The Copyright Office directly considers iterative prompt revision and says repeated rerolling does not by itself increase control over expression. Shambibble’s labor and ingenuity therefore cannot simply be relabeled authorship. The unresolved issue concerns contributions outside repeated textual prompting and the specific expressive elements they determine.
+
+MISSING:
+Case-level evidence applying Part 2’s framework to workflows that use reference-image banks, masks, external compositing, direct manipulation, or multimodal controls rather than text prompting alone.
+
+BOUNDARY:
+This zettel does not conclude that Shambibble’s images or any particular AI-assisted work are copyrightable. Copyrightability remains fact-specific.
+
+CITATION TRAIL:
+[[LAW-SHAM-20260817-09]]
+→ multimodal operative brief
+→ U.S. Copyright Office Part 2
+→ “prompts alone” insufficient control
+→ expressive inputs and arrangements treated separately
+→ legal unit shifts from prompt to provenance of expressive elements
+
+TEST:
+Take a documented generative workflow and label every final expressive element by its causal/provenance path: human-authored input, model-generated variation, human selection, human arrangement, human modification, or unresolved. Compare this element-level record with a prompt-only authorship analysis.
+
+PLATFORM:
+U.S. copyright law
+Midjourney
+Generative art
+Authorship
+
+LINKS:
+[[LAW-SHAM-20260817-09]]
+[[LAW-SHAM-20260817-10]]
+[[SHAM-20260817-04]]
+[[LAW-SHAM-20260817-08]]
+
+BIBTEX:
+@report{usco2025part2,
+  author={{U.S. Copyright Office}},
+  title={Copyright and Artificial Intelligence, Part 2: Copyrightability},
+  year={2025},
+  month={1},
+  url={https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-2-Copyrightability-Report.pdf}
+}
+@misc{shambibble2022imageprompting,
+  author={{Shambibble}},
+  title={Image Prompting and--},
+  year={2022},
+  note={Midjourney community guide; researcher-provided PDF and text copy}
+}
+
+
+===== 033__training-law-breaks-the-looking-metaphor-into-separate-uses__Bartz-USCO-Shambibble__LAW-SHAM-20260817-13__from-forage.txt =====
+
+ZETTEL
+
+ID:
+LAW-SHAM-20260817-13
+
+TITLE:
+2026-08-17 — Training law breaks the “looking” metaphor into separate legally consequential uses.
+
+SOURCE:
+Shambibble interview transcript, 2022-10-22, copyright discussion; Bartz v. Anthropic PBC, No. 24-cv-05417-WHA, Order on Fair Use (N.D. Cal. June 23, 2025); U.S. Copyright Office, Copyright and Artificial Intelligence, Part 3: Generative AI Training, pre-publication version, May 2025.
+
+SOURCE URL:
+[LOCAL UPLOAD — MJ_Interview 3.wh_shambibble_otter_ai.pdf]
+https://cases.justia.com/federal/district-courts/california/candce/3%3A2024cv05417/434709/231/0.pdf
+https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-3-Generative-AI-Training-Report-Pre-Publication-Version.pdf
+
+PASSAGE:
+[PARAPHRASE — SHAMBIBBLE]
+Shambibble presents one counterargument to training infringement: extending copyright to prohibit learning from publicly viewable images can begin to resemble extending copyright from copying to looking.
+
+[PARAPHRASE — BARTZ]
+The district court separately analyzed copies used to train specific LLMs, print-to-digital library copies, and pirated library copies; it held the training use fair on the summary-judgment record while refusing to collapse pirated library acquisition into that training use.
+
+RESEARCH OBJECT:
+PIPELINE-SPECIFIC COPYRIGHT ANALYSIS.
+
+LOCAL MOVE:
+[[SHAM-20260817-08]] preserved Shambibble’s refusal to pretend copyright was settled. His “looking” analogy is useful because it names one intuition about learning, but later doctrine pressures its hidden collapse. A training pipeline can involve acquisition, reproduction, storage, selection into data mixes, training, retention, and outputs. Each stage can present a different legal use and a different market question.
+
+The striking later development is not that a court simply validated or rejected Shambibble’s analogy. It is that the legal analysis became more granular than the analogy.
+
+SOURCE TERMS:
+“training copies”
+“central library”
+“pirated copies”
+“fair use”
+“licensing”
+“training”
+“looking”
+
+WHAT BECAME STRANGE:
+The metaphor “AI learns like a person” can be simultaneously illuminating about transformation and useless about the copies required to build the learning system.
+
+QUESTION:
+At which stages of a generative-model pipeline should copyright attach distinct legal significance?
+
+DEEPER QUESTION:
+Can a law of AI training remain coherent if it evaluates “learning” as one act rather than decomposing acquisition, copying, retention, model training, retrieval, and output generation?
+
+MECHANISM:
+Acquire source material. Create or retain copies. Select data for a model. Train model. Retain or discard source copies. Generate outputs. Copyright analysis can change at each stage because purpose, amount, market effect, authorization, and ongoing possession differ.
+
+FORMAL SHIFT:
+WORK
+→ MODEL LEARNS
+→ OUTPUT
+
+becomes
+
+WORK
+→ ACQUISITION
+→ COPY / STORAGE
+→ DATA SELECTION
+→ TRAINING USE
+→ RETENTION / OTHER USES
+→ OUTPUT
+
+SOURCE FORMALISM:
+Bartz expressly separates training copies, purchased print-to-digital library copies, and pirated central-library copies. The Copyright Office Part 3 separately analyzes fair use, competition, market effects, and licensing for AI training.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+LEGAL(training_system) = Σ legal_analysis(stage_i)
+
+where the legality or fair-use status of one stage does not automatically legalize another.
+
+TENSION:
+Bartz is one federal district-court order and not a universal rule for all training systems or sources. The later class settlement concerned piracy claims and does not convert the training-use holding into nationwide settled doctrine. The Copyright Office’s Part 3 remains a policy report, not binding case law.
+
+MISSING:
+Appellate doctrine and cross-modal cases capable of distinguishing training on books, images, music, audiovisual works, and data acquired under different factual conditions.
+
+BOUNDARY:
+This zettel does not give legal advice or claim that generative-AI training is categorically fair use or categorically infringing.
+
+CITATION TRAIL:
+[[SHAM-20260817-08]]
+→ copyright as unsettled
+→ “looking” counterargument
+→ Bartz separates training use from pirated library acquisition
+→ USCO Part 3 separates fair use from licensing policy
+→ training becomes a pipeline of legally distinct acts
+
+TEST:
+For any proposed training system, build a stage-by-stage copyright ledger recording source, acquisition method, copy created, retention, training role, downstream access, and output behavior. Compare the legal analysis with a single undifferentiated statement that “the model learned from the work.”
+
+PLATFORM:
+U.S. copyright law
+Generative AI training
+AI datasets
+
+LINKS:
+[[SHAM-20260817-08]]
+[[LAW-SHAM-20260817-12]]
+[[LAW-SHAM-20260817-08]]
+
+BIBTEX:
+@misc{bartz2025fairuse,
+  author={{United States District Court for the Northern District of California}},
+  title={Bartz v. Anthropic PBC, Order on Fair Use},
+  year={2025},
+  month={6},
+  day={23},
+  url={https://cases.justia.com/federal/district-courts/california/candce/3%3A2024cv05417/434709/231/0.pdf}
+}
+@report{usco2025part3,
+  author={{U.S. Copyright Office}},
+  title={Copyright and Artificial Intelligence, Part 3: Generative AI Training},
+  year={2025},
+  month={5},
+  note={Pre-publication version},
+  url={https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-3-Generative-AI-Training-Report-Pre-Publication-Version.pdf}
+}
+@misc{shambibble2022interview,
+  title={MJ Interview 3.wh_shambibble},
+  year={2022},
+  month={10},
+  note={Interview transcript, October 22, 2022, 1:26:03; automated transcript}
+}
+
+
+===== 034__promptcraft-is-case-law-before-it-is-a-manual__Shambibble-Community-2022__LAW-SHAM-20260817-14__from-forage.txt =====
+
+ZETTEL
+
+ID:
+LAW-SHAM-20260817-14
+
+TITLE:
+2026-08-17 — PromptCraft is case law before it is a manual.
+
+SOURCE:
+Shambibble interview transcript, 2022-10-22, 00:53–01:53 and 12:22–13:45; Shambibble, “Image Prompting and--,” 2022; Matthew Field, “Making A.I. Art,” 2022-09-07.
+
+SOURCE URL:
+[LOCAL UPLOAD — MJ_Interview 3.wh_shambibble_otter_ai.pdf]
+[LOCAL UPLOAD — Midjourney Image Prompting.pdf]
+https://matthew-field.ca/2022/09/07/making-a-i-art/
+
+PASSAGE:
+[PARAPHRASE — INTERVIEW]
+Shambibble says the manual grew from recurring concrete user problems that official documentation did not explain with examples. In PromptCraft he describes the pleasure of “debugging” specific failures such as an alligator in a human trench coat.
+
+[PARAPHRASE — CONTEMPORANEOUS WEB SOURCE]
+A September 2022 Midjourney user’s resource list names “Midjourney Image Prompting by @shambibble” among recommended further reading.
+
+RESEARCH OBJECT:
+VERNACULAR PRECEDENT.
+
+LOCAL MOVE:
+[[SHAM-20260817-05]] called the manual a bug ledger. The legal lineage sharpens the form of that ledger. PromptCraft does not begin with a complete theory of Midjourney and derive rules. It receives fact patterns: photorealistic does not produce photorealism; two subjects collapse; text will not spell; an alligator wears the wrong trench coat. Practitioners try constructions, compare outcomes, and circulate narrow holdings. Only afterward are recurring cases consolidated into FAQ entries and manuals.
+
+This is common-law-like not because the community has courts, but because operational knowledge accumulates from disputed cases before it becomes doctrine.
+
+SOURCE TERMS:
+“specific problems”
+“FAQ”
+“PromptCraft”
+“debug”
+“examples”
+“manual”
+
+WHAT BECAME STRANGE:
+The earliest prompt manual may be better understood as a reporter of decided bugs than as a textbook of first principles.
+
+QUESTION:
+How much of prompt expertise is generated by accumulated case comparison rather than explicit model theory?
+
+DEEPER QUESTION:
+When model updates change the interpreter, what happens to precedent? Does old prompt case law become overruled, merely distinguishable, or useful as evidence of durable mechanisms beneath obsolete syntax?
+
+MECHANISM:
+User presents failure fact pattern. Community reproduces or modifies it. A workaround becomes locally reliable. Similar cases recur. The workaround gains a name or example. Manual consolidates it. Platform may later absorb it into official syntax or a button. Model updates may invalidate the rule.
+
+FORMAL SHIFT:
+DOCUMENTATION
+→ USER APPLICATION
+
+becomes
+
+CASE
+→ DEBUGGING
+→ LOCAL HOLDING
+→ REPEATED CASES
+→ FAQ / MANUAL
+→ FEATURE OR OBSOLESCENCE
+
+SOURCE FORMALISM:
+The interview explicitly describes FAQs and the manual as responses to recurring user questions and specific problems. The 2022 external blog independently records the image-prompting guide as a community resource.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Prompt precedent has at least four statuses:
+
+GOOD LAW — reproduces on current model/runtime
+DISTINGUISHABLE — works only under narrower conditions
+OVERRULED — model/interface change removes the behavior
+CODIFIED — former workaround becomes official control
+
+TENSION:
+“Common law” is an analogy. Discord users do not create binding precedent, and frequency of a workaround does not establish causal truth. [[MJ-2022-004]] already shows how folklore can spread without ablation.
+
+MISSING:
+A dated corpus of PromptCraft threads, Discord posts, manual revisions, feature releases, and model-version changes sufficient to reconstruct actual precedence and overruling.
+
+BOUNDARY:
+The source supports a bug-led, example-driven community practice. The jurisprudential vocabulary is ours.
+
+CITATION TRAIL:
+[[SHAM-20260817-05]]
+→ bug ledger
+→ recurring PromptCraft cases
+→ manual consolidation
+→ contemporaneous external citation
+→ [[SHAM-20260817-01]] workaround becomes feature
+→ prompt craft acquires common-law-like lifecycle
+
+TEST:
+Select twenty techniques from the 2022 manual. For each, reconstruct earliest known problem report, reproductions, revisions, documentation, later interface feature, and current status. Classify whether the technique was codified, overruled, distinguishable, or still operational.
+
+PLATFORM:
+Midjourney Discord
+PromptCraft
+Community documentation
+
+LINKS:
+[[SHAM-20260817-05]]
+[[SHAM-20260817-01]]
+[[MJ-2022-004]]
+[[LAW-SHAM-20260817-04]]
+
+BIBTEX:
+@misc{shambibble2022imageprompting,
+  author={{Shambibble}},
+  title={Image Prompting and--},
+  year={2022},
+  note={Midjourney community guide; researcher-provided PDF and text copy}
+}
+@online{field2022makingaiart,
+  author={Field, Matthew},
+  title={“Making” A.I. Art},
+  date={2022-09-07},
+  url={https://matthew-field.ca/2022/09/07/making-a-i-art/}
+}
+
+
+===== 035__portable-discrimination__Baxandall-1972__LAW-SHAM-20260817-08-A__from-recursive-forage.txt =====
+
+ZETTEL
+
+ID:
+LAW-SHAM-20260817-08-A
+
+TITLE:
+2026-08-17 — The thing that travels between professions may be a discrimination, not a technique.
+
+SOURCE:
+Michael Baxandall — Painting and Experience in Fifteenth Century Italy: A Primer in the Social History of Pictorial Style — Clarendon Press — 1972. URL: https://books.google.com/books/about/Painting_and_Experience_in_Fifteenth_Cen.html?id=ZrEQAQAAMAAJ ([books.google.it](https://books.google.it/books?hl=it&id=ZrEQAQAAMAAJ&utm_source=chatgpt.com))
+
+PASSAGE:
+[PARAPHRASE]
+Baxandall argues that commercial practices such as gauging trained fifteenth-century merchants to decompose irregular objects into simpler geometrical forms, and that these acquired visual skills entered their experience of paintings. ([books.google.it](https://books.google.it/books?hl=it&id=ZrEQAQAAMAAJ&utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+PORTABLE DISCRIMINATION.
+
+LOCAL MOVE:
+[[LAW-SHAM-20260817-08]] asks what professional practices already train people to author consequential language for interpreters they do not control.
+
+Baxandall changes the unit of transfer.
+
+The merchant does not transfer barrel-measuring PROCEDURE into painting.
+
+What travels is a learned capacity to notice certain relations.
+
+This sharpens the Shambibble case.
+
+Patent drafting need not resemble prompting.
+
+A patent attorney may carry into prompting a discrimination trained elsewhere:
+
+WORD
+→ POSSIBLE CONSTRUCTIONS
+→ SCOPE DIFFERENCE
+→ CONSEQUENCE.
+
+The claim is therefore weaker than:
+
+PATENT LAW CAUSES PROMPT EXPERTISE
+
+and stronger than:
+
+LAWYERS ARE GOOD WITH WORDS.
+
+SOURCE TERMS:
+“period eye”
+“visual skills”
+“gauging”
+“proportion”
+“complex forms”
+“simple forms”
+“experience”
+
+WHAT BECAME STRANGE:
+A profession may prepare someone for a technology that did not exist when the professional habit was acquired.
+
+The transferable object need not be subject matter knowledge.
+
+It can be a habitual distinction.
+
+QUESTION:
+Which discriminations cultivated in pre-AI professions become newly consequential when natural language acquires operational effects?
+
+DEEPER QUESTION:
+Does generative AI reorganize the adjacency structure of expertise by making formerly remote habits of attention suddenly interoperable?
+
+MECHANISM:
+Repeated occupational problem
+→ selective attention becomes practiced
+→ distinction becomes easy to perceive
+→ person enters a new domain
+→ new domain contains structurally relevant differences
+→ old discrimination becomes newly useful.
+
+FORMAL SHIFT:
+SKILL TRANSFER AS:
+
+TECHNIQUE_A
+→ TECHNIQUE_B
+
+becomes
+
+PRACTICE_A
+→ TRAINED DISCRIMINATION_D
+→ PRACTICE_B MAKES D CONSEQUENTIAL.
+
+SOURCE FORMALISM:
+Baxandall's “period eye” concerns historically acquired perceptual equipment.
+
+His merchant example connects commercial gauging with a practiced capacity to reduce irregular masses to combinations of regular forms.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+TRANSFER(P_A → P_B)
+
+need not require:
+
+OPERATION_A ≈ OPERATION_B.
+
+It may require only:
+
+DISTINCTION_D learned in P_A
+AND
+DISTINCTION_D consequential in P_B.
+
+For Shambibble:
+
+PATENT PRACTICE
+→ ALTERNATIVE-CONSTRUCTION SENSITIVITY
+→ GENERATIVE PROMPTING.
+
+TENSION:
+The analogy becomes misleading if it implies that patent drafting and prompting share a genealogy or mechanism.
+
+Baxandall's argument concerns historically shared perceptual formation in fifteenth-century Italy.
+
+The Shambibble comparison is [OUR INFERENCE], not evidence of direct historical continuity.
+
+MISSING:
+A comparative inventory of professions whose routine discriminations unexpectedly become useful in generative systems.
+
+Possible cases remain hypotheses:
+
+directors
+programmers
+lawyers
+photographers
+editors
+librarians
+designers
+translators.
+
+BOUNDARY:
+Baxandall does not discuss AI, prompting, patents, or linguistic control.
+
+The source supports the mechanism of practical experience cultivating portable perceptual distinctions, not the specific Shambibble analogy.
+
+CITATION TRAIL:
+[[LAW-SHAM-20260817-08]]
+→ asks what preexisting professional practices train consequential interpretation
+→ Baxandall's period eye
+→ commercial gauging produces portable discrimination
+→ patent drafting may likewise contribute an interpretive discrimination rather than a transferable procedure
+
+TEST:
+Construct paired tasks from two unrelated domains.
+
+For each profession, identify a discrimination repeatedly required in ordinary work before exposing participants to an unfamiliar generative-AI task.
+
+Test whether professionals detect structurally analogous failures earlier than matched controls.
+
+For patent attorneys specifically, measure detection of:
+
+polysemy
+scope ambiguity
+unbound reference
+unintended inclusion
+unintended exclusion
+
+without using legal vocabulary in the AI task.
+
+PLATFORM:
+Prompt language
+Patent practice
+Cultural systems
+Expertise transfer
+
+LINKS:
+[[LAW-SHAM-20260817-08]]
+[[MJ-2022-002]]
+[[MJ-2022-001]]
+
+BIBTEX:
+@book{baxandall1972painting,
+  author={Baxandall, Michael},
+  title={Painting and Experience in Fifteenth Century Italy: A Primer in the Social History of Pictorial Style},
+  publisher={Clarendon Press},
+  year={1972}
+}
+
+===== 036__prompt-expertise-as-collective-sensibility__Geertz-1976__LAW-SHAM-20260817-08-B__from-recursive-forage.txt =====
+
+ZETTEL
+
+ID:
+LAW-SHAM-20260817-08-B
+
+TITLE:
+2026-08-17 — Shambibble's lawyerly ear is not his alone: prompt expertise may be a collective sensibility forming around the machine.
+
+SOURCE:
+Clifford Geertz — “Art as a Cultural System” — MLN 91(6), 1976, pp. 1473–1499 — DOI 10.2307/2907147. URL: https://www.jstor.org/stable/2907147 ([jstor.org](https://www.jstor.org/stable/i346398?utm_source=chatgpt.com))
+
+PASSAGE:
+[QUOTE]
+“the painter's true medium: the capacity of his audience to see meanings in pictures.” ([scribd.com](https://www.scribd.com/document/349368051/Art-as-a-Cultural-System-pdf?utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+PROMPT EXPERTISE AS COLLECTIVE SENSIBILITY.
+
+LOCAL MOVE:
+[[LAW-SHAM-20260817-08]] risks telling an individual-expertise story:
+
+PATENT ATTORNEY
+→ LEGAL HABIT
+→ PROMPT ADVANTAGE.
+
+Geertz destabilizes that story.
+
+His use of Baxandall makes the capacity to perceive pictorial meaning a product of participation in a wider cultural field.
+
+Shambibble's patent training may supply one discrimination.
+
+But his actual prompt expertise also forms through:
+
+Discord
+other users' failures
+shared hacks
+manual writing
+model updates
+developer explanations
+rerolls
+comparative examples
+public circulation.
+
+The lawyer enters the machine with an ear already trained for ambiguity.
+
+The community then retunes that ear.
+
+SOURCE TERMS:
+“collective experience”
+“period eye”
+“interpretive skill”
+“sensibility”
+“cultural system”
+“audience”
+“meaning”
+
+WHAT BECAME STRANGE:
+The statement “Shambibble was good at prompting because he was a patent attorney” may locate expertise in the wrong place.
+
+The competence may exist partly in a temporary social system distributed across profession, platform, community, examples, interface, and model behavior.
+
+QUESTION:
+What portion of early prompt expertise came from prior professional formation, and what portion was produced collectively inside emerging prompt communities?
+
+DEEPER QUESTION:
+Could a generative platform develop something analogous to a “period eye” or “period ear”: a historically local sensitivity to distinctions that later model generations make obsolete?
+
+MECHANISM:
+Prior culture trains some distinctions.
+
+Platform exposes new recurrent failures.
+
+Community names and circulates those failures.
+
+Practitioners compare results.
+
+Techniques stabilize.
+
+Shared examples train attention.
+
+Practitioners begin noticing distinctions that newcomers do not.
+
+FORMAL SHIFT:
+EXPERTISE LOCATED IN PERSON:
+
+PROFESSION
+→ INDIVIDUAL CAPABILITY
+
+becomes
+
+EXPERTISE LOCATED IN CULTURAL RELATION:
+
+PREVIOUS PRACTICE
++
+PLATFORM
++
+COMMUNITY
++
+REPEATED FAILURES
++
+SHARED REPRESENTATIONS
+→ LOCAL SENSIBILITY.
+
+SOURCE FORMALISM:
+Geertz argues that participation in particular arts depends upon participation in broader systems of symbolic forms.
+
+In his Baxandall discussion, different domains of social life contribute to a historically specific sensibility through which pictures become intelligible. ([scribd.com](https://www.scribd.com/document/349368051/Art-as-a-Cultural-System-pdf?utm_source=chatgpt.com))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PROMPT PERIOD EAR_t
+
+=
+prior professional discriminations
++
+model-specific recurrent behavior_t
++
+community vocabulary_t
++
+shared demonstrations_t
++
+interface affordances_t.
+
+When the model changes:
+
+PROMPT PERIOD EAR_t
+may not equal
+PROMPT PERIOD EAR_t+1.
+
+TENSION:
+This weakens any heroic account of Shambibble as solitary inventor.
+
+But it does not erase individual transfer.
+
+His interview explicitly identifies patent practice as one source of his attention to misinterpretation.
+
+The research problem becomes interaction:
+
+PREEXISTING DISPOSITION
+×
+EMERGING COLLECTIVE PRACTICE.
+
+MISSING:
+Longitudinal evidence showing how particular prompt distinctions moved:
+
+individual discovery
+→ Discord discussion
+→ shared vocabulary
+→ manual
+→ interface feature
+→ disappearance or survival.
+
+BOUNDARY:
+Geertz's argument concerns art and cultural sensibility, not machine interfaces.
+
+“Prompt period ear” is [OUR FORMALIZATION — NOT SOURCE SYNTAX].
+
+CITATION TRAIL:
+[[LAW-SHAM-20260817-08]]
+→ lawyer as interpretive engineer
+→ Baxandall / Geertz period eye
+→ perceptual competence becomes collective rather than merely personal
+→ Shambibble's profession must be studied together with PromptCraft community formation
+→ expertise becomes historically local and potentially perishable
+
+TEST:
+Reconstruct one early Midjourney distinction from archived Discord/manual material.
+
+Identify:
+
+first observed failure
+first named distinction
+first reproducible demonstration
+first community circulation
+first documentation
+first interface implementation.
+
+Then test contemporary users who never experienced that interface generation.
+
+Can they still perceive the old distinction?
+
+If not, the expertise was partly historical rather than merely general.
+
+PLATFORM:
+Midjourney
+PromptCraft
+Patent practice
+Cultural systems
+
+LINKS:
+[[LAW-SHAM-20260817-08]]
+[[SHAM-20260817-05]]
+[[SHAM-20260817-01]]
+[[MJ-2022-008-A]]
+[[MJ-2022-009]]
+
+BIBTEX:
+@article{geertz1976art,
+  author={Geertz, Clifford},
+  title={Art as a Cultural System},
+  journal={MLN},
+  volume={91},
+  number={6},
+  pages={1473--1499},
+  year={1976},
+  doi={10.2307/2907147}
+}
+
+===== 037__professional-vision-organizes-the-field-of-attention__Goodwin-1994__LAW-SHAM-20260817-08-C__from-recursive-forage.txt =====
+
+ZETTEL
+
+ID:
+LAW-SHAM-20260817-08-C
+
+TITLE:
+2026-08-17 — Professional expertise does not merely see more; it organizes what counts as something to see.
+
+SOURCE:
+Charles Goodwin — “Professional Vision” — American Anthropologist 96(3), 1994, pp. 606–633 — DOI 10.1525/aa.1994.96.3.02a00100. URL: https://anthrosource.onlinelibrary.wiley.com/doi/10.1525/aa.1994.96.3.02a00100 ([anthrosource.onlinelibrary.wiley.com](https://anthrosource.onlinelibrary.wiley.com/doi/10.1525/aa.1994.96.3.02a00100?utm_source=chatgpt.com))
+
+PASSAGE:
+[PARAPHRASE]
+Goodwin studies professional seeing through practices including coding schemes, highlighting, and graphic representations, showing how communities organize perceptual fields into professionally consequential objects. ([openurl.ebsco.com](https://openurl.ebsco.com/contentitem/doi%3A10.1525%2Faa.1994.96.3.02a00100?id=ebsco%3Adoi%3A10.1525%2Faa.1994.96.3.02a00100&sid=ebsco%3Aplink%3Acrawler&utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+PROFESSIONAL VISION IS AN OPERATION ON THE FIELD OF ATTENTION.
+
+LOCAL MOVE:
+[[LAW-SHAM-20260817-08-A]] proposes that what travels from patent practice to prompting may be a discrimination.
+
+Goodwin forces a harder question:
+
+WHERE DOES THE DISCRIMINATION LIVE?
+
+Not solely inside the expert.
+
+Professional perception is accomplished through practices that make some features salient and others background.
+
+This maps unexpectedly well onto Shambibble's work.
+
+His manual does not merely communicate conclusions.
+
+It teaches readers where to look:
+
+hold seed constant
+remove terms
+compare grids
+watch style contamination
+separate prompt components
+notice which attributes survive
+distinguish recurring behavior from lucky output.
+
+The manual may therefore be a DEVICE FOR PRODUCING PROFESSIONAL VISION.
+
+SOURCE TERMS:
+“professional vision”
+“coding schemes”
+“highlighting”
+“graphic representations”
+“practice”
+“perception”
+
+WHAT BECAME STRANGE:
+A prompt guide may not primarily teach prompts.
+
+It may train attention.
+
+The important artifact is not the example string but the contrast the example teaches the reader to perceive.
+
+QUESTION:
+Which representational practices transform raw generative output into evidence that a prompt practitioner can inspect?
+
+DEEPER QUESTION:
+Is prompt expertise better understood as learning how to construct a perceptual field in which causal differences become visible?
+
+MECHANISM:
+Unstructured output contains many differences.
+
+Professional practice selects a comparison.
+
+A coding distinction identifies relevant features.
+
+Highlighting foregrounds a difference.
+
+Representations make cases comparable.
+
+Repeated use stabilizes a professionally meaningful way of seeing.
+
+FORMAL SHIFT:
+PROMPT GUIDE AS:
+
+RULE LIST
+→ USER FOLLOWS RULES
+
+becomes
+
+PROMPT GUIDE AS:
+
+RAW OUTPUT
+→ COMPARISON PROCEDURE
+→ SALIENCE
+→ DISCRIMINATION
+→ PROFESSIONAL VISION.
+
+SOURCE FORMALISM:
+Goodwin analyzes three practices used in constructing professional vision:
+
+coding schemes
+highlighting
+graphic representations. ([openurl.ebsco.com](https://openurl.ebsco.com/contentitem/doi%3A10.1525%2Faa.1994.96.3.02a00100?id=ebsco%3Adoi%3A10.1525%2Faa.1994.96.3.02a00100&sid=ebsco%3Aplink%3Acrawler&utm_source=chatgpt.com))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PROMPT PROFESSIONAL VISION
+
+requires operators such as:
+
+HOLD CONSTANT
+CONTRAST
+REMOVE
+REPEAT
+LABEL
+BOUND
+COMPARE
+TRACE.
+
+These operators change what evidence becomes perceptible.
+
+TENSION:
+This interpretation relocates expertise from eloquent prompting toward experimental representation.
+
+But Shambibble also relies on tacit judgment, playful exploration, and informal hunches that cannot be reduced to explicit comparison protocols.
+
+Professional vision may include both teachable operations and unformalized sensitivity.
+
+MISSING:
+A close analysis of Shambibble's manual as an instructional technology:
+
+Which passages merely state advice?
+
+Which actually alter the reader's perceptual field by supplying contrasts, controls, counterexamples, and named failure modes?
+
+BOUNDARY:
+Goodwin studies archaeologists and legal argumentation, not prompt communities.
+
+Applying “professional vision” to prompting is [OUR INFERENCE].
+
+CITATION TRAIL:
+[[LAW-SHAM-20260817-08]]
+→ lawyer as interpretive engineer
+→ [[LAW-SHAM-20260817-08-A]] portable discrimination
+→ Goodwin professional vision
+→ distinction is socially organized through representational practices
+→ Shambibble manual may train ways of seeing rather than merely transmit tricks
+
+TEST:
+Code every example in the Shambibble image-prompting guide according to the operation it asks the reader to perform:
+
+COMPARE
+CONTROL
+HIGHLIGHT
+CLASSIFY
+REPEAT
+ABlate
+ISOLATE
+RECOMBINE.
+
+Then remove the textual advice but preserve the comparative demonstrations.
+
+Test whether newcomers still acquire the relevant discriminations.
+
+If they do, the representational arrangement itself carries substantial instructional force.
+
+PLATFORM:
+Professional vision
+PromptCraft
+Midjourney
+Patent practice
+
+LINKS:
+[[LAW-SHAM-20260817-08]]
+[[LAW-SHAM-20260817-08-A]]
+[[SHAM-20260817-02]]
+[[SHAM-20260817-05]]
+[[MJ-2022-004]]
+
+BIBTEX:
+@article{goodwin1994professional,
+  author={Goodwin, Charles},
+  title={Professional Vision},
+  journal={American Anthropologist},
+  volume={96},
+  number={3},
+  pages={606--633},
+  year={1994},
+  doi={10.1525/aa.1994.96.3.02a00100}
+}
+
+===== 038__interactional-expertise-bridges-lawyer-and-machine__Collins-Evans-2016__LAW-SHAM-20260817-08-D__from-recursive-forage.txt =====
+
+ZETTEL
+
+ID:
+LAW-SHAM-20260817-08-D
+
+TITLE:
+2026-08-17 — Prompt leadership may require speaking a practice-language one cannot personally enact.
+
+SOURCE:
+Harry Collins and Robert Evans — “Expertise Revisited I: Interactional Expertise” — arXiv:1611.04423 — 2016. URL: https://arxiv.org/abs/1611.04423 ([arxiv.org](https://arxiv.org/abs/1611.04423?utm_source=chatgpt.com))
+
+PASSAGE:
+[QUOTE]
+“the ability to understand a technical area purely be deeply immersed in its 'practice-language' without actually practising.” ([arxiv.org](https://arxiv.org/abs/1611.04423?utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+INTERACTIONAL EXPERTISE MAY BE THE MISSING BRIDGE BETWEEN LAWYER AND MACHINE.
+
+LOCAL MOVE:
+[[LAW-SHAM-20260817-08]] imagines the lawyer as an interpretive engineer.
+
+But Shambibble presents a contradiction.
+
+He repeatedly marks that he cannot build neural networks and does not possess deep programming competence.
+
+Yet he reads papers, questions programmer friends, searches historical Discord discussions, develops working explanations, writes a manual, and diagnoses generative behavior.
+
+The relevant expertise may therefore not be:
+
+CAN BUILD THE SYSTEM.
+
+It may be:
+
+CAN PARTICIPATE COMPETENTLY IN THE LANGUAGE OF THOSE WHO BUILD AND USE THE SYSTEM.
+
+This also sharpens Shambibble's own speculation that future creative work may require someone who can talk to an artist and a computer.
+
+SOURCE TERMS:
+“interactional expertise”
+“contributory expertise”
+“practice-language”
+“immersion”
+“expertise”
+
+WHAT BECAME STRANGE:
+A person can become operationally important at the boundary between practices without possessing the contributory expertise of either side in full.
+
+The prompt expert may be less a new specialist than a bilingual interactional expert.
+
+QUESTION:
+Is the emerging prompt-language expert distinguished by the ability to translate among practice-languages rather than by superior command of one technical domain?
+
+DEEPER QUESTION:
+Could lawyers become important in natural-language programming not because they are closest to computation, but because legal practice already trains participation across heterogeneous expert worlds?
+
+MECHANISM:
+Community A possesses contributory practice.
+
+Outsider enters its discourse.
+
+Extended linguistic immersion develops interactional expertise.
+
+Outsider can understand distinctions, ask competent questions, and coordinate with practitioners without performing all underlying operations.
+
+Boundary work then requires movement between multiple practice-languages.
+
+FORMAL SHIFT:
+PROMPT EXPERT =
+
+BETTER PROMPT WRITER
+
+becomes
+
+PROMPT EXPERT =
+
+INTERACTIONAL EXPERT
+BETWEEN
+DOMAIN PRACTICE
+AND
+COMPUTATIONAL PRACTICE.
+
+SOURCE FORMALISM:
+Collins and Evans distinguish interactional expertise from contributory expertise.
+
+Interactional expertise concerns competent understanding through immersion in a practice-language without necessarily possessing the practical ability to contribute directly to the underlying activity. ([arxiv.org](https://arxiv.org/abs/1611.04423?utm_source=chatgpt.com))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PROMPT COUNSEL
+
+may require:
+
+IE(domain)
++
+IE(model)
++
+CE(adversarial drafting)
+
+where:
+
+IE = interactional expertise
+CE = contributory expertise.
+
+The distinctive advantage may occur at the intersection rather than inside any one component.
+
+TENSION:
+Interactional expertise can explain how Shambibble talks competently about systems he cannot build.
+
+It does not establish that linguistic competence is sufficient for controlling those systems.
+
+Prompt execution itself may become a form of contributory practice rather than merely interactional expertise.
+
+MISSING:
+A distinction between:
+
+talking competently about model behavior
+diagnosing model behavior
+reliably controlling model behavior
+building the model.
+
+These may represent different expertise classes.
+
+BOUNDARY:
+Collins and Evans develop interactional expertise primarily within studies of scientific expertise.
+
+Applying it to prompt practice is [OUR INFERENCE].
+
+CITATION TRAIL:
+[[LAW-SHAM-20260817-08]]
+→ lawyer as interpretive engineer
+→ Shambibble lacks deep coding competence yet develops operative model knowledge
+→ Collins and Evans interactional expertise
+→ prompt expertise may occupy a boundary between practice-languages
+→ Shambibble's “talk to an artist” / “talk to a computer” problem becomes an expertise problem rather than a vocabulary problem
+
+TEST:
+Recruit four populations:
+
+model engineers
+domain experts
+professional translators/boundary workers
+experienced prompt practitioners.
+
+Give them cross-domain agent tasks requiring coordination between a specialist user and a generative system.
+
+Measure separately:
+
+technical contribution
+domain understanding
+translation accuracy
+diagnosis of misunderstanding
+successful reformulation
+final task performance.
+
+Test whether boundary performance is predicted more strongly by interactional competence than by technical construction skill.
+
+PLATFORM:
+Interactional expertise
+Prompt language
+Patent practice
+Human-AI collaboration
+
+LINKS:
+[[LAW-SHAM-20260817-08]]
+[[MJ-2022-019]]
+[[SHAM-20260817-08]]
+
+BIBTEX:
+@misc{collins2016interactional,
+  author={Collins, Harry and Evans, Robert},
+  title={Expertise Revisited I: Interactional Expertise},
+  year={2016},
+  eprint={1611.04423},
+  archivePrefix={arXiv}
+}
+
+===== 039__transferred-expertise-can-become-transferred-fixation__Bilalic-2008__LAW-SHAM-20260817-08-E__from-recursive-forage.txt =====
+
+ZETTEL
+
+ID:
+LAW-SHAM-20260817-08-E
+
+TITLE:
+2026-08-17 — The professional eye that sees one failure earlier may become blind to another.
+
+SOURCE:
+Merim Bilalić, Peter McLeod, and Fernand Gobet — “Why good thoughts block better ones: The mechanism of the pernicious Einstellung (set) effect” — Cognition 108(3), 2008, pp. 652–661 — DOI 10.1016/j.cognition.2008.05.005. URL: https://ora.ox.ac.uk/objects/uuid%3A35f1a6b9-7f69-4201-a085-e14aafff912f ([ora.ox.ac.uk](https://ora.ox.ac.uk/objects/uuid%3A35f1a6b9-7f69-4201-a085-e14aafff912f?utm_source=chatgpt.com))
+
+PASSAGE:
+[QUOTE]
+“the first idea that comes to mind, triggered by familiar features of a problem, prevents a better solution being found.” ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0010027708001133?utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+TRANSFERRED EXPERTISE CAN BECOME TRANSFERRED FIXATION.
+
+LOCAL MOVE:
+[[LAW-SHAM-20260817-08-A]] gives the paper a powerful proposition:
+
+professional discriminations can travel.
+
+Bilalić, McLeod, and Gobet introduce the necessary loyal opposition.
+
+Expertise does not merely improve perception.
+
+Familiar structures can capture attention.
+
+In their chess experiments, experts who believed they were searching for superior alternatives continued visually attending to features associated with the familiar solution. ([eric.ed.gov](https://eric.ed.gov/?id=EJ810141&utm_source=chatgpt.com))
+
+Therefore the patent attorney's trained sensitivity to:
+
+scope
+definitions
+ambiguity
+adversarial interpretation
+textual amendment
+
+may help on some prompt problems while making other prompt possibilities harder to notice.
+
+SOURCE TERMS:
+“Einstellung”
+“set effect”
+“experts”
+“attention”
+“schema”
+“familiar”
+“eye movements”
+
+WHAT BECAME STRANGE:
+The same fact that makes the Geertzian transfer argument plausible makes its danger plausible.
+
+A trained eye is selectively blind.
+
+QUESTION:
+Which prompt failures become easier for patent attorneys to detect, and which become harder because legal training directs attention toward language rather than other control surfaces?
+
+DEEPER QUESTION:
+When generative systems accept images, schemas, tools, examples, state, code, and interaction histories, can an expert in words become trapped by the assumption that the problem should be solved in words?
+
+MECHANISM:
+Familiar problem feature appears.
+
+Professional schema activates.
+
+Schema supplies plausible solution.
+
+Attention remains attached to schema-relevant evidence.
+
+Alternative representation receives less attention.
+
+Expert persists with an adequate but inferior approach.
+
+FORMAL SHIFT:
+TRANSFER:
+
+OLD EXPERTISE
+→ NEW ADVANTAGE
+
+becomes
+
+OLD EXPERTISE
+→ SELECTIVE SALIENCE
+→ {
+  ADVANTAGE ON SOME FAILURES
+  BLINDNESS ON OTHERS
+}.
+
+SOURCE FORMALISM:
+The authors study the Einstellung effect with expert chess players.
+
+The proposed mechanism is attentional: a familiar solution schema continues directing visual attention even while the expert reports searching for another solution. ([eric.ed.gov](https://eric.ed.gov/?id=EJ810141&utm_source=chatgpt.com))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For prompt task T:
+
+LEGAL VISION may increase sensitivity to:
+
+AMBIGUITY
+SCOPE
+REFERENCE
+EXCEPTION
+CONSTRUCTION.
+
+But may decrease search probability over:
+
+IMAGE REFERENCE
+SCHEMA
+TOOL
+DIRECT MANIPULATION
+EXAMPLE
+EXECUTION TRACE
+
+if the practitioner assumes:
+
+CONTROL PROBLEM
+=
+WORDING PROBLEM.
+
+TENSION:
+Shambibble is unusually resistant to this predicted fixation.
+
+His own image-prompting practice repeatedly abandons text-only solutions in favor of image references, weights, multiprompts, mockups, seeds, and rerolls.
+
+That may mean his importance lies not simply in transferring legal expertise but in knowing when to violate it.
+
+MISSING:
+Evidence distinguishing:
+
+positive transfer from patent practice
+
+from
+
+Shambibble's individual willingness to abandon text and experiment across representations.
+
+BOUNDARY:
+The source concerns chess expertise and attentional fixation.
+
+It does not test lawyers, prompts, or AI.
+
+The proposed legal-language Einstellung effect is [OUR INFERENCE].
+
+CITATION TRAIL:
+[[LAW-SHAM-20260817-08]]
+→ lawyer as interpretive engineer
+→ [[LAW-SHAM-20260817-08-A]] professional discrimination can travel
+→ Bilalić et al. expert knowledge can capture attention
+→ professional transfer can generate both acuity and blindness
+→ Shambibble's multimodal experimentation becomes evidence against a simple “lawyerly wording” account
+
+TEST:
+Give patent attorneys and matched nonlawyer prompt practitioners tasks whose failures have been deliberately divided into:
+
+TEXTUAL FAILURE
+and
+REPRESENTATIONAL FAILURE.
+
+TEXTUAL:
+polysemy
+scope
+reference
+exception.
+
+REPRESENTATIONAL:
+requires image
+requires example
+requires schema
+requires tool
+requires state inspection.
+
+Allow every modality.
+
+Measure:
+
+time to diagnose
+first intervention chosen
+number of textual rewrites before modality switch
+success rate.
+
+A strong lawyer-transfer thesis predicts advantage on textual failures.
+
+An Einstellung account predicts delayed modality switching on representational failures.
+
+PLATFORM:
+Patent practice
+Prompt language
+Expertise
+Human-AI interaction
+
+LINKS:
+[[LAW-SHAM-20260817-08]]
+[[LAW-SHAM-20260817-08-A]]
+[[SHAM-20260817-02]]
+[[SHAM-20260817-03]]
+[[MJ-2022-011]]
+
+BIBTEX:
+@article{bilalic2008einstellung,
+  author={Bilalić, Merim and McLeod, Peter and Gobet, Fernand},
+  title={Why good thoughts block better ones: The mechanism of the pernicious Einstellung (set) effect},
+  journal={Cognition},
+  volume={108},
+  number={3},
+  pages={652--661},
+  year={2008},
+  doi={10.1016/j.cognition.2008.05.005}
+}

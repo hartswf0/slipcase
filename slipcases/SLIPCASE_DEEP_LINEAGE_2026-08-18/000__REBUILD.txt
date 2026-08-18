@@ -1,0 +1,10 @@
+REBUILD
+
+1. Preserve all numbered root card TXT files unchanged.
+2. Run `python3 _SLIPCASE/rebuild.py`.
+3. Inspect ZETTELS.json, graph JSONL, bibliography, source map, and verification report.
+4. Recompile the TeX paper if changed.
+5. Render the PDF and inspect pages.
+6. Recreate the ZIP and run an integrity test.
+
+RETURN PATH: 000__RETURN_PATH.txt

@@ -1,0 +1,4769 @@
+ZETTEL
+
+ID:
+ZF-20260817-MAGIC-TERMS-001
+
+TITLE:
+The “Magic Word” Is an Empirical Handle on a Model, Not a Better Description
+
+SOURCE:
+Jonas Oppenlaender, “A Taxonomy of Prompt Modifiers for Text-To-Image Generation” (2022; rev. 2023).
+https://arxiv.org/abs/2204.13988
+
+PASSAGE:
+[PARAPHRASE] Oppenlaender identifies six practitioner categories of prompt modifiers: subject terms, image prompts, style modifiers, quality boosters, repeating terms, and “magic terms.” A magic term is semantically unlike the rest of the prompt and is introduced to increase the likelihood of surprising results. Prompt practice proceeds iteratively through defining, modifying, solidifying, varying, and mixing or excluding elements.
+
+RESEARCH OBJECT:
+Millière’s description of prompting as “alchemy” or “incantation” becomes stranger when treated literally rather than rhetorically. Practitioners really did develop vocabularies of terms whose effectiveness could not be inferred from their ordinary meanings. The important distinction is therefore not between skilled and unskilled description. It is between semantic description and empirical control.
+
+A prompt can contain words because they accurately describe the desired image, but it can also contain words because previous executions revealed that those words perturb a particular model in a useful way.
+
+The latter are less like adjectives and more like handles discovered on an opaque machine.
+
+LOCAL MOVE:
+Replace:
+
+PROMPT SKILL = finding increasingly accurate words for an artistic intention
+
+with:
+
+PROMPT SKILL = discovering which textual interventions reliably alter a particular generative system.
+
+SOURCE TERMS:
+prompt modifier
+subject term
+style modifier
+image prompt
+quality booster
+repeating term
+magic term
+prompt engineering
+iterative experimentation
+weights
+
+WHAT BECAME STRANGE:
+The most technically effective word may be the least semantically defensible word.
+
+A person can therefore become better at communicating with the model by becoming worse, in an ordinary linguistic sense, at describing what they want.
+
+“Magic words” are not merely mystification. They are evidence that natural language has acquired a second, machine-local pragmatics.
+
+QUESTION:
+When a word works because of what a model does with it rather than because of what the word conventionally means, what kind of language practice has emerged?
+
+DEEPER QUESTION:
+Does prompt expertise consist in expressing intention, or in learning a private empirical dialect produced accidentally by the interaction of training data, architecture, interface, and model version?
+
+MECHANISM:
+[PARAPHRASE] Practitioners iteratively generate images, inspect effects, add or remove modifiers, consult community resources, reuse successful phrases, and sometimes apply weighting. Oppenlaender explicitly describes prompt engineering as an acquired practice of experimentation and trial and error.
+
+FORMAL SHIFT:
+DESCRIPTION → REPRESENTATION
+
+becomes:
+
+INTERVENTION → EXECUTION → OBSERVED EFFECT → RETAINED PHRASE → REINTERVENTION
+
+The operative unit is no longer the sentence alone.
+
+It is the experimentally stabilized relation:
+
+phrase ↔ model behavior
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+Oppenlaender gives an iterative sequence:
+
+Define
+→ Modify
+→ Solidify
+→ Vary
+→ Mix / Exclude
+
+and distinguishes six modifier classes.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+M = a particular model/version
+p = prompt
+t = candidate textual modifier
+G(M,p) = distribution of generated outputs
+Δ(t|M,p) = observed change produced by adding t
+
+Then a practitioner can retain t even when:
+
+semantic_relevance(t,p) ≈ 0
+
+provided:
+
+useful_effect(Δ(t|M,p)) >> 0
+
+Prompt craft therefore permits:
+
+SEMANTICALLY WEAK TERM
+→ MODEL-SPECIFIC EFFECT
+→ PRACTITIONER RETENTION
+→ “MAGIC WORD”
+
+TENSION:
+Millière treats prompt skill as evidence of human artistic intentionality.
+
+Oppenlaender reveals a less comfortable possibility: part of that skill consists precisely in manipulating causal relations the practitioner does not understand.
+
+Expertise and ignorance can therefore increase together.
+
+MISSING:
+We do not yet know how much prompt expertise survives migration between model architectures, checkpoints, interfaces, or retrained versions.
+
+Without that evidence, “prompt engineering” may describe anything from durable artistic competence to temporary mastery of implementation quirks.
+
+BOUNDARY:
+Oppenlaender’s taxonomy arose from early text-to-image communities and systems including VQGAN–CLIP, Midjourney, and DALL-E 2. It should not be assumed to constitute a universal grammar of generative prompting.
+
+CITATION TRAIL:
+[[MILLIERE-2022-WIRED-AI-CURATION]]
+→ Millière: prompting as “alchemy” / “incantation”
+→ Oppenlaender: practitioner taxonomy includes literal “magic terms”
+→ unresolved edge: determine whether magic terms behave as durable linguistic operators or disposable model exploits
+
+TEST:
+Choose 30 historically documented prompt modifiers from the source corpus.
+
+Execute controlled prompt ablations across:
+1. multiple model families
+2. multiple versions of the same model
+3. multiple subjects
+4. multiple seeds
+
+Measure whether each modifier retains:
+a. direction of effect
+b. magnitude of effect
+c. stylistic coherence
+d. semantic interpretability
+
+If the effect disappears across versions while ordinary semantic terms persist, classify the modifier as MODEL-LOCAL rather than LANGUAGE-GENERAL.
+
+PLATFORM:
+VQGAN–CLIP
+Midjourney
+DALL-E 2
+text-to-image prompting communities
+
+LINKS:
+[[MILLIERE-2022-WIRED-AI-CURATION]]
+[[PROMPT-AS-EMPIRICAL-DIALECT]]
+[[MODEL-LOCAL-LANGUAGE]]
+[[DEFERRED-FORMALIZATION]]
+
+BIBTEX:
+@article{oppenlaender2022taxonomy,
+  title={A Taxonomy of Prompt Modifiers for Text-To-Image Generation},
+  author={Oppenlaender, Jonas},
+  journal={arXiv preprint arXiv:2204.13988},
+  year={2022},
+  url={https://arxiv.org/abs/2204.13988}
+}
+
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ZF-20260817-VOCABULARY-GAP-002
+
+TITLE:
+Prompt Expertise Appears First as a Vocabulary Deficit
+
+SOURCE:
+Jonas Oppenlaender, Rhema Linder, and Johanna Silvennoinen, “Prompting AI Art: An Investigation into the Creative Skill of Prompt Engineering” (2023; revised 2024).
+https://arxiv.org/abs/2303.13534
+
+PASSAGE:
+[PARAPHRASE] Across three studies, participants could judge prompt quality and construct descriptive prompts, but lacked the style-specific vocabulary needed for effective prompting. The authors interpret this as evidence that prompt engineering is non-intuitive and acquired through practice and learning.
+
+RESEARCH OBJECT:
+Millière says artistic prompting requires “a unique vision” plus knowledge of the right words.
+
+The experiment separates those two capacities.
+
+A person may recognize a better result and know roughly what they want while remaining unable to produce the linguistic intervention that causes the model to approach it.
+
+The bottleneck is therefore not necessarily imagination.
+
+It can be lexical access.
+
+This creates an unusual creative situation:
+
+the person can possess evaluative competence before generative control.
+
+They can know:
+
+NOT THAT.
+
+They may even know:
+
+THAT IS CLOSER.
+
+Yet they cannot formulate the operation that moves the system from one to the other.
+
+LOCAL MOVE:
+Split “creative skill” into at least three capacities:
+
+1. envisioning
+2. evaluating
+3. intervening
+
+Do not treat them as one faculty.
+
+SOURCE TERMS:
+prompt quality
+descriptive prompts
+style-specific vocabulary
+creative skill
+non-intuitive skill
+practice
+learning
+
+WHAT BECAME STRANGE:
+A person can be visually competent but prompt-incompetent.
+
+Prompting therefore introduces a translation bottleneck between aesthetic judgment and executable intervention.
+
+The skilled eye does not automatically possess the skilled sentence.
+
+QUESTION:
+What exactly has someone learned when they become a better prompter if their underlying aesthetic judgment was already present?
+
+DEEPER QUESTION:
+Is prompt literacy a new artistic competence, or is it an interface tax imposed between an already competent human judgment and an opaque generative system?
+
+MECHANISM:
+[PARAPHRASE] Participants were asked to discern prompt quality, compose prompts, and refine prompts. Performance suggested that recognizing quality was easier than possessing the specialized vocabulary required for effective generation.
+
+FORMAL SHIFT:
+ARTISTIC INTENTION
+→ PROMPT
+→ IMAGE
+
+must be split into:
+
+INTENTION
+→ EVALUATIVE MODEL
+→ AVAILABLE VOCABULARY
+→ INTERVENTION
+→ GENERATED CANDIDATE
+→ EVALUATION
+→ REVISION
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+Three empirical tasks:
+
+discern prompt quality
+→ write prompts
+→ refine prompts
+
+The study treats performance differences among these tasks as evidence relevant to whether prompting is intuitive or acquired.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+V = desired visual state
+J(x) = human judgment of candidate x
+L = available intervention vocabulary
+G(p) = model output under prompt p
+
+A user may have:
+
+J(G(p₂)) > J(G(p₁))
+
+without knowing any:
+
+δp ∈ L
+
+such that:
+
+J(G(p₁ + δp)) > J(G(p₁))
+
+Thus:
+
+ABILITY TO RECOGNIZE IMPROVEMENT
+≠
+ABILITY TO PRODUCE THE CONTROL SIGNAL
+
+TENSION:
+If specialized vocabulary must be learned, prompting looks like genuine expertise.
+
+But if the vocabulary exists only because the interface poorly exposes controllable variables, the same evidence can be read in reverse:
+
+the expertise may be compensation for a bad control surface.
+
+Skill and interface friction are observationally entangled.
+
+MISSING:
+The experiment does not by itself establish whether the learned skill is durable after changes in models or interfaces.
+
+Nor does it establish whether richer controls would eliminate the observed vocabulary advantage.
+
+BOUNDARY:
+The findings establish differences in prompt-related performance under the studied conditions. They do not establish that natural-language prompting will remain a stable creative profession or enduring artistic medium.
+
+CITATION TRAIL:
+[[MILLIERE-2022-WIRED-AI-CURATION]]
+→ claim that interesting AI art requires skill and intentionality
+→ Oppenlaender, Linder, Silvennoinen: evaluative ability can outrun style-specific prompt vocabulary
+→ unresolved edge: distinguish NEW CREATIVE SKILL from INTERFACE-INDUCED COMPENSATORY SKILL
+
+TEST:
+Give expert visual artists with no prompting experience the same target-image tasks through three interfaces:
+
+A. text prompt only
+B. direct visual controls
+C. multimodal reference + iterative editing
+
+Hold model capability constant.
+
+Measure:
+iterations to target
+semantic vocabulary required
+subjective control
+transfer to a second model
+
+If the “prompt expertise” gap collapses under B or C, much of the measured skill belongs to the interface rather than the artistic task.
+
+PLATFORM:
+text-to-image generation
+crowdsourced prompting experiments
+human-computer interaction
+
+LINKS:
+[[MILLIERE-2022-WIRED-AI-CURATION]]
+[[EVALUATION-PRECEDES-CONTROL]]
+[[PROMPTING-AS-INTERFACE-TAX]]
+[[DEFERRED-FORMALIZATION]]
+
+BIBTEX:
+@article{oppenlaender2023prompting,
+  title={Prompting AI Art: An Investigation into the Creative Skill of Prompt Engineering},
+  author={Oppenlaender, Jonas and Linder, Rhema and Silvennoinen, Johanna},
+  journal={arXiv preprint arXiv:2303.13534},
+  year={2023},
+  url={https://arxiv.org/abs/2303.13534}
+}
+
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ZF-20260817-COMMUNITY-LEXICON-003
+
+TITLE:
+The Prompt Artist Does Not Invent a Language Alone
+
+SOURCE:
+Minsuk Chang, Stefania Druga, Alex Fiannaca, Pedro Vergani, Chinmay Kulkarni, Carrie Cai, and Michael Terry, “The Prompt Artists” (2023).
+https://arxiv.org/abs/2303.12253
+
+PASSAGE:
+[PARAPHRASE] Interviews, observations, and survey work with prolific text-to-image practitioners found prompt templates circulating as reusable style structures, artists seeking specialized vocabulary from external sources such as architecture writing, and practitioners converting model glitches into recognizable artistic styles.
+
+RESEARCH OBJECT:
+Millière locates artistry in the intentional human operator.
+
+Chang et al. make that operator difficult to keep singular.
+
+The effective prompt is assembled from a distributed linguistic ecology:
+
+other artists’ prompts
+templates
+architectural vocabulary
+community experiments
+documented failures
+model glitches
+borrowed descriptors
+shared techniques
+
+Prompt expertise is therefore not simply a person becoming fluent in speaking to a machine.
+
+It is a community slowly building a vernacular around a machine.
+
+LOCAL MOVE:
+Move the unit of analysis from:
+
+ARTIST ↔ MODEL
+
+to:
+
+COMMUNITY ↔ ARCHIVE OF EXPRESSIONS ↔ ARTIST ↔ MODEL
+
+SOURCE TERMS:
+prompt artists
+community of practice
+prompt templates
+slots
+specialized vocabulary
+unique outputs
+glitches
+artistic styles
+prompts as art
+
+WHAT BECAME STRANGE:
+A model defect can become a human style.
+
+This reverses the normal engineering relation.
+
+In software engineering:
+
+GLITCH → FIX
+
+In artistic prompting:
+
+GLITCH
+→ recognition
+→ repeatability
+→ circulation
+→ signature
+→ STYLE
+
+The machine’s failure can become the artist’s technique.
+
+QUESTION:
+When a community learns to reproduce an accidental model behavior and names it as a style, where is the artistic invention located?
+
+DEEPER QUESTION:
+Are prompt cultures best understood as authorship practices at all, or as emergent folk engineering around partially knowable technical systems?
+
+MECHANISM:
+[PARAPHRASE] Practitioners circulate reusable prompt templates, search other domains for unusually precise descriptive vocabulary, and discover recurring model behaviors that can be deliberately reincorporated into subsequent work.
+
+FORMAL SHIFT:
+INDIVIDUAL INTENTION
+→ PROMPT
+→ ARTWORK
+
+becomes:
+
+COMMUNITY DISCOVERY
+→ PHRASE / TEMPLATE / GLITCH
+→ CIRCULATION
+→ INDIVIDUAL APPROPRIATION
+→ EXECUTION
+→ SELECTION
+→ PERSONAL STYLE
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+The source identifies:
+prompt + generated image as a possible joint art object;
+prompt templates containing variable “slots”;
+specialized vocabulary acquisition;
+appropriation of model glitches as styles.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+C = community
+A = shared archive of discovered interventions
+M = model
+u = individual practitioner
+
+C observes executions of M
+→ deposits successful interventions into A
+→ u samples/adapts from A
+→ u executes M
+→ novel effects return to C
+→ A changes
+
+Therefore:
+
+PROMPT PRACTICE =
+RECURSIVE CULTURAL LEARNING AROUND MODEL BEHAVIOR
+
+not merely:
+
+PERSON ISSUES COMMAND TO MODEL
+
+TENSION:
+Millière’s defense of AI art stresses individual skill and intentionality.
+
+The source does not eliminate either, but it makes them porous.
+
+Distinctive outputs may depend on communal vocabulary, inherited templates, undocumented model behavior, and other people’s discoveries.
+
+The stronger the surrounding prompt culture becomes, the harder it is to attribute the resulting control entirely to an isolated artist.
+
+MISSING:
+We lack a genealogy of individual prompt fragments.
+
+Which apparently personal artistic signatures were independently discovered?
+
+Which were copied?
+
+Which migrated from Discord, prompt repositories, technical documentation, architecture writing, photography jargon, or other practitioners?
+
+BOUNDARY:
+Evidence of communal practice does not imply that individual authorship disappears.
+
+It establishes only that the relevant competence cannot be fully described without its social infrastructure.
+
+CITATION TRAIL:
+[[MILLIERE-2022-WIRED-AI-CURATION]]
+→ “personal prompts” and artistic intentionality
+→ Chang et al.: templates, specialized vocabularies, glitches, communities of practice
+→ unresolved edge: reconstruct prompt-language transmission as a genealogy rather than attributing isolated invention
+
+TEST:
+Take a historically significant prompt or prompt style from an early generative-art community.
+
+Reconstruct its earliest discoverable appearances across:
+Discord
+Reddit
+Twitter/X
+prompt repositories
+tutorials
+source code
+artist posts
+
+Track each lexical component backward.
+
+Classify each component:
+
+INDEPENDENT
+BORROWED
+MUTATED
+DOMAIN-IMPORTED
+MODEL-DOCUMENTED
+GLITCH-DERIVED
+UNKNOWN
+
+Then ask whether the supposedly individual prompt is better represented as an authored sentence or as an assembled cultural lineage.
+
+PLATFORM:
+text-to-image communities
+online prompt sharing
+generative-art practice
+
+LINKS:
+[[MILLIERE-2022-WIRED-AI-CURATION]]
+[[PROMPT-COMMUNITY-OF-PRACTICE]]
+[[GLITCH-BECOMES-STYLE]]
+[[PROMPT-GENEALOGY]]
+
+BIBTEX:
+@inproceedings{chang2023prompt,
+  title={The Prompt Artists},
+  author={Chang, Minsuk and Druga, Stefania and Fiannaca, Alex and Vergani, Pedro and Kulkarni, Chinmay and Cai, Carrie and Terry, Michael},
+  booktitle={Proceedings of the 15th Conference on Creativity and Cognition},
+  pages={75--87},
+  year={2023},
+  publisher={Association for Computing Machinery},
+  doi={10.1145/3591196.3593515},
+  url={https://arxiv.org/abs/2303.12253}
+}
+
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ZF-20260817-PROMPT-NOT-COMMAND-004
+
+TITLE:
+The Prompt Does Not Tell the Model What to Draw
+
+SOURCE:
+Aditya Ramesh, Prafulla Dhariwal, Alex Nichol, Casey Chu, and Mark Chen, “Hierarchical Text-Conditional Image Generation with CLIP Latents” (2022).
+https://arxiv.org/abs/2204.06125
+
+PASSAGE:
+[PARAPHRASE] DALL-E 2 is described as a two-stage generative system: a prior produces a CLIP image embedding conditioned on a text caption, then a decoder generates an image conditioned on that image representation. The learned embedding captures aspects of both semantics and style while permitting variation in details.
+
+RESEARCH OBJECT:
+Millière’s “incantation” metaphor quietly assumes the prompt acts like an instruction whose peculiar wording determines whether the machine obeys.
+
+The architecture suggests another ontology.
+
+The words do not function as a miniature drawing program.
+
+They condition the production of a learned representation.
+
+The representation then conditions image generation.
+
+The prompt therefore does not contain the picture.
+
+Nor does it specify all of the operations required to construct the picture.
+
+It perturbs a statistical machinery already saturated with learned relations among language, visual concepts, semantics, and style.
+
+LOCAL MOVE:
+Stop treating:
+
+PROMPT → PICTURE
+
+as the operative relation.
+
+Insert the hidden representational machinery:
+
+TEXT
+→ LEARNED REPRESENTATION
+→ STOCHASTIC GENERATION
+→ IMAGE
+
+SOURCE TERMS:
+CLIP
+text caption
+image embedding
+prior
+decoder
+diffusion model
+joint embedding space
+semantics
+style
+variation
+
+WHAT BECAME STRANGE:
+The user writes words.
+
+The machine does not execute those words as procedures.
+
+It transforms their relation to a learned space and generates from there.
+
+Prompting therefore looks like programming at the surface while lacking an ordinary programming language’s explicit operational semantics.
+
+QUESTION:
+If a prompt does not specify the operations that produce its output, in what precise sense can prompting be called programming?
+
+DEEPER QUESTION:
+What new class of control system appears when human-readable language selects or perturbs latent machine representations whose causal structure is neither specified by the user nor fully inspectable by them?
+
+MECHANISM:
+[PARAPHRASE] In the DALL-E 2 architecture described by Ramesh et al., textual conditioning is mediated through CLIP representations: a prior maps from caption conditioning toward an image embedding, and a decoder generates an image from that representation. Variation is intrinsic rather than fully specified by the text.
+
+FORMAL SHIFT:
+PROMPT = INSTRUCTION
+
+becomes:
+
+PROMPT = CONDITION ON A GENERATIVE PROCESS
+
+and:
+
+DESCRIPTION = PROGRAM TEXT
+
+becomes:
+
+DESCRIPTION
+→ REPRESENTATIONAL CONSTRAINT
+→ UNDERDETERMINED EXECUTION
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+text caption
+→ prior
+→ CLIP image embedding
+→ decoder
+→ image
+
+The authors experiment with autoregressive and diffusion priors and use diffusion models for decoding.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Traditional explicit program:
+
+P + INPUT
+→ specified operations
+→ OUTPUT
+
+Prompt-conditioned generation:
+
+p
+→ E_text(p)
+→ latent conditional distribution
+→ sampled representation z
+→ generative decoder
+→ x
+
+Therefore the prompt constrains:
+
+P(x | p, M)
+
+rather than fully specifying x.
+
+A prompt is closer to a distribution-shaping intervention than a complete procedural description.
+
+TENSION:
+Prompt discourse repeatedly borrows the language of commands, programming, engineering, spells, and control.
+
+But these metaphors disagree about where causality lives.
+
+COMMAND suggests explicit obedience.
+
+PROGRAM suggests executable semantics.
+
+SPELL suggests effective form without transparent mechanism.
+
+The DALL-E 2 machinery makes the third metaphor unexpectedly precise:
+
+a surface expression can have reliable operational consequences without the user possessing a causal account of how those consequences are produced.
+
+MISSING:
+A theory distinguishing:
+
+COMMAND
+PROGRAM
+QUERY
+DESCRIPTION
+CONDITION
+CONSTRAINT
+CONTROL SIGNAL
+
+in generative interfaces.
+
+Without this distinction, “prompt programming” risks becoming metaphor rather than a technical claim.
+
+BOUNDARY:
+This architecture describes DALL-E 2 specifically. Other generative systems can employ different conditioning mechanisms, architectures, interfaces, and additional control channels.
+
+CITATION TRAIL:
+[[MILLIERE-2022-WIRED-AI-CURATION]]
+→ incantation / magic-word description of prompting
+→ Ramesh et al.: text conditions a learned representational pipeline
+→ unresolved edge: determine the minimum computational semantics required before natural-language interaction deserves the name PROGRAMMING
+
+TEST:
+Construct four formally distinct interaction classes:
+
+A. deterministic command language
+B. declarative constraint solver
+C. database query
+D. generative-model prompt
+
+For each, specify:
+
+what the expression denotes
+what state it addresses
+which operations are explicit
+which operations are delegated
+whether identical expressions determine identical outputs
+what constitutes execution failure
+
+Then test whether prompting forms a genuine fifth computational category or reduces to one of the existing classes.
+
+PLATFORM:
+DALL-E 2
+CLIP
+diffusion models
+text-conditioned image generation
+
+LINKS:
+[[MILLIERE-2022-WIRED-AI-CURATION]]
+[[PROMPT-NOT-THE-PROGRAM]]
+[[DEFERRED-FORMALIZATION]]
+[[DESCRIPTION-AS-CONDITION]]
+[[OPERATIVE-EKPHRASIS]]
+
+BIBTEX:
+@article{ramesh2022hierarchical,
+  title={Hierarchical Text-Conditional Image Generation with CLIP Latents},
+  author={Ramesh, Aditya and Dhariwal, Prafulla and Nichol, Alex and Chu, Casey and Chen, Mark},
+  journal={arXiv preprint arXiv:2204.06125},
+  year={2022},
+  url={https://arxiv.org/abs/2204.06125}
+}
+
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ZF-20260817-LANGUAGE-POINTS-INTO-DATA-005
+
+TITLE:
+The Prompt’s Meaning Is Partly Made by the Corpus It Points Into
+
+SOURCE:
+Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, Gretchen Krueger, and Ilya Sutskever, “Learning Transferable Visual Models From Natural Language Supervision” (2021).
+https://arxiv.org/abs/2103.00020
+
+PASSAGE:
+[PARAPHRASE] CLIP was trained on roughly 400 million image-text pairs gathered from the internet by learning to identify which textual description corresponded with which image. After training, natural-language expressions can reference learned visual concepts for downstream use.
+
+RESEARCH OBJECT:
+Millière says the prompter must discover words that “unlock specific styles or subjects.”
+
+CLIP makes the verb UNLOCK more consequential than it first appears.
+
+Words can affect image generation because language has already been statistically coupled to enormous quantities of visual material.
+
+The artist does not encounter an empty machine awaiting description.
+
+The artist speaks into a sedimented visual-linguistic archive.
+
+The prompt works partly because somebody, somewhere, previously placed words near images.
+
+Prompting therefore has ancestry.
+
+LOCAL MOVE:
+Replace:
+
+ARTIST
+→ WORD
+→ MODEL
+→ IMAGE
+
+with:
+
+HISTORICAL IMAGE-TEXT CORPUS
+→ LEARNED ASSOCIATIONS
+→ MODEL
+← CURRENT PROMPT
+→ GENERATED IMAGE
+
+The present utterance operates through accumulated past descriptions.
+
+SOURCE TERMS:
+natural language supervision
+image-text pairs
+contrastive learning
+natural-language references
+visual concepts
+zero-shot transfer
+CLIP
+
+WHAT BECAME STRANGE:
+The prompt appears to be addressed to the future image.
+
+Mechanically, much of its force comes from the past.
+
+A current word becomes generatively powerful because of earlier image-text relations embedded during training.
+
+The prompt is therefore not merely descriptive language.
+
+It is a pointer into a learned cultural residue.
+
+QUESTION:
+When an artist discovers that a phrase reliably evokes a visual property, are they inventing a control technique or discovering a preexisting statistical association sedimented from the training corpus?
+
+DEEPER QUESTION:
+Can prompt authorship be understood without also treating training-data captioning, tagging, metadata, alt text, filenames, criticism, cataloguing, and ordinary internet description as part of the remote prehistory of the prompt?
+
+MECHANISM:
+[PARAPHRASE] CLIP learns joint visual-linguistic representations through contrastive training over hundreds of millions of image-text pairs, after which natural language can refer to learned visual concepts.
+
+FORMAL SHIFT:
+PROMPT MEANING = LINGUISTIC MEANING
+
+becomes:
+
+PROMPT EFFECT =
+LINGUISTIC EXPRESSION
+× LEARNED CORPUS ASSOCIATIONS
+× MODEL ARCHITECTURE
+× CURRENT GENERATIVE PROCEDURE
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+(image, text) pairs
+→ contrastive pretraining
+→ shared learned representations
+
+After training:
+
+natural language
+→ reference to learned visual concepts
+→ downstream zero-shot behavior.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+D = historical set of image-text relations
+Train(D) = model parameters θ
+p = present prompt
+
+Then:
+
+θ = sediment(D)
+
+and:
+
+effect(p) = G(p ; θ)
+
+Therefore:
+
+CURRENT PROMPT EFFECT
+depends on
+PAST DESCRIPTION PRACTICES
+
+even where the current prompter cannot identify those practices.
+
+The prompt is an intervention into a machine whose vocabulary has a history.
+
+TENSION:
+Millière’s formulation protects human authorship by locating intention in the present artist.
+
+The technical lineage disperses causal contribution backward.
+
+The prompter chooses the current words.
+
+But the model’s response to those words was conditioned by innumerable prior acts of naming, labeling, captioning, photographing, illustrating, publishing, and categorizing.
+
+Present intentionality operates through inherited statistical memory.
+
+MISSING:
+We lack adequate methods for tracing a particular successful prompt term backward from observed generative behavior toward the classes of training associations that made it effective.
+
+The genealogy is usually inaccessible precisely where it becomes theoretically important.
+
+BOUNDARY:
+CLIP’s training procedure demonstrates that language-vision behavior can emerge from large-scale image-text supervision. It does not permit a simple one-to-one reconstruction of which individual training items caused a particular generated image or prompt effect.
+
+CITATION TRAIL:
+[[MILLIERE-2022-WIRED-AI-CURATION]]
+→ “magic words” unlock styles and subjects
+→ CLIP: natural-language expressions address visual concepts learned from internet-scale image-text relations
+→ next edge: historical study of the descriptive labor that existed before prompting but now furnishes prompting with operative power
+
+TEST:
+Select ten prompt terms with unusually strong visual effects.
+
+For each term:
+
+1. document ordinary dictionary semantics
+2. document pre-generative visual uses on the web
+3. sample historical caption/metadata contexts where legally and technically possible
+4. compare visual associations across multiple independently trained models
+5. test synonymous substitutions
+
+If visually similar effects persist despite lexical substitution, semantic concept may dominate.
+
+If specific lexical strings produce distinctive effects not shared by synonyms, investigate corpus-specific descriptive history.
+
+PLATFORM:
+CLIP
+internet-scale image-text training
+multimodal representation learning
+
+LINKS:
+[[MILLIERE-2022-WIRED-AI-CURATION]]
+[[LANGUAGE-AS-TRAINING-SEDIMENT]]
+[[PROMPT-GENEALOGY]]
+[[HOUSE-OF-LANGUAGE]]
+[[DESCRIPTION-BEFORE-OPERATION]]
+
+BIBTEX:
+@article{radford2021learning,
+  title={Learning Transferable Visual Models From Natural Language Supervision},
+  author={Radford, Alec and Kim, Jong Wook and Hallacy, Chris and Ramesh, Aditya and Goh, Gabriel and Agarwal, Sandhini and Sastry, Girish and Askell, Amanda and Mishkin, Pamela and Clark, Jack and Krueger, Gretchen and Sutskever, Ilya},
+  journal={arXiv preprint arXiv:2103.00020},
+  year={2021},
+  url={https://arxiv.org/abs/2103.00020}
+}
+
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ZF-20260817-SUPERSTITION-VARIANCE-006
+
+TITLE:
+Prompt Superstition Appears Where Causal Visibility Runs Out
+
+SOURCE:
+[PRIMARY ARCHIVE] Midjourney Discord / Office Hours research archive supplied by user.
+SOURCE URL: local:_RESOURCES/Midjourney_prompt_magic_archive_2022.md
+
+[AUTHORITATIVE TECHNICAL SOURCE] Midjourney, “Seeds.”
+https://docs.midjourney.com/hc/en-us/articles/32604356340877-Seeds
+
+PASSAGE:
+[QUOTE — PRIMARY ARCHIVE] “Seems like there's a lot of magical thinking about prompts, and not a lot of trying to really learn what is working in a prompt versus what's just being ignored.”
+
+[QUOTE — PRIMARY ARCHIVE] “there shouldn't be 'magic' values across prompts” appears in a discussion of seed numbers and pseudorandom initialization.
+
+RESEARCH OBJECT:
+The archive contains its own critique of prompt magic.
+
+That matters.
+
+“Magic” is not simply what naïve users call an incomprehensible model. It appears precisely where repeated executions make causality difficult to identify.
+
+A user adds twelve words.
+The output improves.
+Which word mattered?
+
+A user reruns the prompt.
+The output improves again.
+Did anything in the language matter?
+
+A user preserves a seed.
+The effect appears reproducible.
+Was the seed causal in the hypothesized way, or did fixing randomness merely make another variable easier to observe?
+
+The stronger object is therefore not:
+
+PROMPT MAGIC
+
+but:
+
+CAUSAL ATTRIBUTION UNDER STOCHASTIC EXECUTION.
+
+Superstition may be generated by the experimental conditions of the interface itself.
+
+LOCAL MOVE:
+Replace:
+
+SUPERSTITION = user irrationality
+
+with:
+
+SUPERSTITION =
+pattern attribution
+under repeated generation
+with partially hidden variables
+and weak experimental controls.
+
+SOURCE TERMS:
+magical thinking
+prompt magic
+seed
+pseudo-random number generator
+random seed
+experimental anecdotal knowledge
+ignored prompt terms
+reproducibility
+
+WHAT BECAME STRANGE:
+A stochastic interface can manufacture ritual behavior in otherwise technically sophisticated users.
+
+If one changes the prompt while the seed changes, then observes a better image, at least two variables moved simultaneously.
+
+The interface permits causal stories faster than it permits causal discrimination.
+
+QUESTION:
+How much early “prompt lore” was produced by confounding semantic intervention with stochastic variation?
+
+DEEPER QUESTION:
+Does model opacity create superstition by itself, or does superstition emerge more specifically from an experimental interface that makes uncontrolled comparison extraordinarily easy?
+
+MECHANISM:
+[OUR INFERENCE]
+
+prompt₁
++ random state₁
+→ output₁
+
+prompt₂
++ random state₂
+→ output₂
+
+User observes:
+
+output₂ > output₁
+
+and attributes:
+
+difference = prompt₂ - prompt₁
+
+although:
+
+random state₂ ≠ random state₁.
+
+Repeated informal use can therefore produce apparently stable causal explanations from uncontrolled experiments.
+
+FORMAL SHIFT:
+PROMPT
+→ OUTPUT
+→ BELIEF ABOUT LANGUAGE
+
+becomes:
+
+PROMPT
++ SEED
++ MODEL VERSION
++ DEFAULTS
++ SAMPLING VARIANCE
+→ OUTPUT
+→ HUMAN CAUSAL ATTRIBUTION
+→ RETAINED OR DISCARDED PROMPT LORE
+
+SOURCE FORMALISM:
+[PARAPHRASE] Midjourney documents a seed as an initialization value for the random starting noise used in generation. A random value is selected when the user does not explicitly provide one.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+p = prompt
+s = seed
+M = model/version
+d = defaults
+x = generated image
+
+x = G(M,p,s,d)
+
+The practitioner wants:
+
+∂x / ∂p
+
+but informal prompting frequently observes:
+
+G(M,p₁,s₁,d) versus G(M,p₂,s₂,d)
+
+where:
+
+p₁ ≠ p₂
+s₁ ≠ s₂
+
+The experiment therefore cannot isolate the prompt effect.
+
+“Magic” can be the folk theory produced by this identification failure.
+
+TENSION:
+The archive contains both positions simultaneously:
+
+PROMPT MAGIC IS REAL:
+certain words appear to produce repeatable desirable effects.
+
+PROMPT MAGIC IS SUPERSTITION:
+long prompts contain ignored or causally irrelevant material.
+
+Neither reading can be accepted without controlling the execution conditions.
+
+MISSING:
+A historical corpus of early prompt claims paired with controlled retrospective ablation tests.
+
+We do not know what percentage of famous 2022 prompt lore survived even elementary fixed-seed experiments.
+
+BOUNDARY:
+Fixing a seed does not make a generative system perfectly deterministic across every model, version, hardware path, or implementation.
+
+The point is methodological: holding known variables stable allows stronger causal tests than uncontrolled reroll comparison.
+
+CITATION TRAIL:
+[[ZF-20260817-MAGIC-TERMS-001]]
+→ “magic terms” as empirically discovered handles
+→ archive contains practitioners accusing prompt culture itself of magical thinking
+→ seed discussion reveals an available experimental control
+→ new object: superstition as failed causal identification
+→ next edge: experimental archaeology of famous historical prompt formulas
+
+TEST:
+Collect 50 “magic prompt” claims from the 2022 Midjourney archive.
+
+For each:
+
+1. reconstruct the original model version where possible
+2. fix seed
+3. generate baseline
+4. add claimed magic term
+5. remove claimed magic term
+6. substitute semantic synonym
+7. shuffle irrelevant neighboring terms
+8. repeat across seeds
+
+Classify each claim:
+
+CAUSAL
+CONTEXT-DEPENDENT
+SEMANTIC
+LEXICAL
+SEED-CONFOUNDED
+INERT
+UNRECOVERABLE
+
+PLATFORM:
+Midjourney
+Discord
+text-to-image generation
+
+LINKS:
+[[ZF-20260817-MAGIC-TERMS-001]]
+[[MODEL-LOCAL-LANGUAGE]]
+[[PROMPT-ABLATION]]
+[[CAUSAL-ATTRIBUTION]]
+[[PROMPT-SUPERSTITION]]
+
+BIBTEX:
+@misc{midjourneySeeds,
+  author={{Midjourney}},
+  title={Seeds},
+  howpublished={Midjourney Documentation},
+  url={https://docs.midjourney.com/hc/en-us/articles/32604356340877-Seeds}
+}
+
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ZF-20260817-EXPERTISE-HALF-LIFE-007
+
+TITLE:
+Prompt Expertise Has a Model-Version Half-Life
+
+SOURCE:
+[PRIMARY ARCHIVE] Midjourney Discord / Office Hours research archive supplied by user.
+SOURCE URL: local:_RESOURCES/Midjourney_prompt_magic_archive_2022.md
+
+[AUTHORITATIVE TECHNICAL SOURCE] Midjourney, “Version.”
+https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version
+
+PASSAGE:
+[QUOTE — PRIMARY ARCHIVE] “I have to relearn my magical prompt incantations.”
+
+[QUOTE — PRIMARY ARCHIVE] “v3—>v4 remove all the hacks” and “everything is really different.”
+
+RESEARCH OBJECT:
+The archive gives prompt expertise a temporal dimension.
+
+A practitioner can become better at operating a model while becoming no better at operating its successor.
+
+That means expertise may not simply accumulate.
+
+It can expire.
+
+The supposedly skilled phrase is not merely attached to an artistic intention. It is attached to a particular implementation state.
+
+A model update can therefore function like a language change imposed overnight.
+
+LOCAL MOVE:
+Replace:
+
+PROMPT EXPERTISE = accumulated mastery
+
+with:
+
+PROMPT EXPERTISE(t) =
+portable competence
++
+version-local competence
++
+obsolete competence.
+
+SOURCE TERMS:
+relearn
+prompt incantations
+version
+hacks
+V3
+V4
+model version
+prompt understanding
+
+WHAT BECAME STRANGE:
+Software improvement can destroy user expertise.
+
+Ordinarily, better tools are imagined as extending accumulated skill.
+
+Here:
+
+MODEL IMPROVEMENT
+→ OBSOLETE CONTROL KNOWLEDGE.
+
+The expert may wake up after an update possessing a library of once-effective expressions whose operational meanings have vanished.
+
+QUESTION:
+What portion of prompt expertise survives a model replacement?
+
+DEEPER QUESTION:
+Can a practice count as a mature craft when the material itself is repeatedly replaced by its manufacturer and the craftsperson cannot preserve the old causal substrate?
+
+MECHANISM:
+[OUR INFERENCE]
+
+Practitioners discover empirical mappings:
+
+phrase p
+→ behavior b
+under model M₁.
+
+Upgrade:
+
+M₁ → M₂
+
+changes:
+
+P(output | p,M)
+
+so previously learned:
+
+p → b
+
+may become:
+
+p → b′
+or
+p → ∅.
+
+Expertise therefore depreciates whenever the underlying model changes faster than transferable principles can be extracted.
+
+FORMAL SHIFT:
+LEARN
+→ RETAIN
+→ MASTER
+
+becomes:
+
+LEARN(M₁)
+→ MODEL UPDATE
+→ TEST TRANSFER
+→ RETAIN / REVISE / DISCARD
+→ LEARN(M₂)
+
+SOURCE FORMALISM:
+[PARAPHRASE] Midjourney officially exposes model selection through its version controls and maintains multiple generations of its image models.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+E = practitioner expertise
+E_G = generalizable expertise
+E_M = model-local expertise
+M_t = model at time t
+
+Then:
+
+E(t) = E_G + E_Mt
+
+After replacement:
+
+M_t → M_t+1
+
+transfer(E_Mt → M_t+1) may approach 0
+
+while:
+
+transfer(E_G → M_t+1) > 0.
+
+The crucial empirical question is the ratio:
+
+ρ = transferable skill / total measured skill.
+
+TENSION:
+Frequent model change produces two opposite interpretations.
+
+READING A:
+Prompting is shallow because tricks rapidly expire.
+
+READING B:
+Prompting is craft precisely because practitioners repeatedly perceive, adapt to, and learn new material behavior.
+
+The distinction cannot be settled by vocabulary alone.
+
+MISSING:
+Longitudinal evidence following the same expert practitioners through successive model versions.
+
+We need to know which competencies survive:
+visual judgment
+iteration strategy
+prompt vocabulary
+parameter knowledge
+model intuition
+selection skill
+reference-image composition.
+
+BOUNDARY:
+Model-local skill is not automatically fake skill.
+
+Many crafts depend on material-specific knowledge.
+
+The unusual condition here is that the material can be silently and centrally replaced by a platform operator.
+
+CITATION TRAIL:
+[[ZF-20260817-MAGIC-TERMS-001]]
+[[ZF-20260817-VOCABULARY-GAP-002]]
+→ model-specific vocabulary
+→ archive: practitioners explicitly report having to relearn
+→ Office Hours: new version removes old “hacks”
+→ new distinction: GENERAL CRAFT versus VERSION-LOCAL CRAFT
+→ next edge: measure skill transfer across historical model boundaries
+
+TEST:
+Recruit practitioners with archived work from two successive Midjourney versions.
+
+Give them matched reconstruction tasks on:
+
+1. their historically mastered version
+2. the immediately succeeding version
+3. a current version
+
+Measure:
+
+iterations
+time
+lexical carryover
+parameter carryover
+selection accuracy
+target similarity
+self-reported surprise
+
+Estimate:
+
+TRANSFERABILITY RATIO
+and
+EXPERTISE HALF-LIFE.
+
+PLATFORM:
+Midjourney
+versioned generative models
+Discord
+
+LINKS:
+[[ZF-20260817-MAGIC-TERMS-001]]
+[[ZF-20260817-VOCABULARY-GAP-002]]
+[[MODEL-LOCAL-LANGUAGE]]
+[[EXPERTISE-DEPRECIATION]]
+[[CRAFT-WITH-A-MOVING-MATERIAL]]
+
+BIBTEX:
+@misc{midjourneyVersion,
+  author={{Midjourney}},
+  title={Version},
+  howpublished={Midjourney Documentation},
+  url={https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version}
+}
+
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ZF-20260817-DISCORD-INSTRUMENT-008
+
+TITLE:
+Discord Was Part of the Generative Instrument
+
+SOURCE:
+[PRIMARY ARCHIVE] Midjourney Discord / Office Hours research archive supplied by user.
+SOURCE URL: local:_RESOURCES/Midjourney_prompt_magic_archive_2022.md
+
+[AUTHORITATIVE SOURCE] Midjourney Documentation.
+https://docs.midjourney.com/hc/en-us/categories/32013335627533-Documentation
+
+PASSAGE:
+[QUOTE — PRIMARY ARCHIVE] “Just throwing people into discord and hoping they learn how to use it so they can find documentation on how to build prompts...yikes.”
+
+[PARAPHRASE — PRIMARY ARCHIVE] The notes describe magical prompts as a place where new users and super-users interact and where ownership and craft are contested.
+
+RESEARCH OBJECT:
+The early Midjourney interface cannot be reduced to:
+
+TEXT BOX
+→ MODEL.
+
+The operating environment was:
+
+PUBLIC CHAT
++ VISIBLE PROMPTS
++ VISIBLE OUTPUTS
++ CONSTANT STRANGERS
++ REMIX
++ STATUS DIFFERENCES
++ RAPID COPY
++ MODEL.
+
+Discord was not merely where the tool happened to live.
+
+It changed what could be learned.
+
+Every nearby generation became an accidental tutorial.
+Every prompt became potentially observable technique.
+Every strange result became a possible communal discovery.
+Every newcomer entered a torrent of other people's experiments before possessing a theory of what counted as signal.
+
+The social room was part of the instrument.
+
+LOCAL MOVE:
+Replace:
+
+USER
+→ INTERFACE
+→ MODEL
+
+with:
+
+USER
+↔ PUBLIC EXPERIMENT STREAM
+↔ COMMUNITY
+↔ PROMPT ARCHIVE
+↔ INTERFACE
+↔ MODEL.
+
+SOURCE TERMS:
+Discord
+onboarding
+documentation
+sharing
+remixing
+community
+super users
+new users
+open community
+brainstorm
+
+WHAT BECAME STRANGE:
+Prompt literacy may have been partly manufactured by forced peripheral vision.
+
+Users did not learn only by asking:
+
+WHAT SHOULD I TYPE?
+
+They learned by continuously seeing:
+
+WHAT EVERYONE ELSE JUST TYPED
+AND WHAT HAPPENED.
+
+A crowded Discord channel therefore functions like an enormous involuntary laboratory notebook.
+
+QUESTION:
+How much early Midjourney expertise depended on the public visibility of other users’ failed and successful experiments?
+
+DEEPER QUESTION:
+If the same model had launched as a solitary blank text box rather than inside a teeming public Discord, would “prompt engineering” have developed into the same practice at all?
+
+MECHANISM:
+[OUR INFERENCE]
+
+PUBLIC GENERATION
+→ OBSERVABLE PROMPT/OUTPUT PAIRS
+→ COPYING
+→ MUTATION
+→ COMPARISON
+→ LOCAL THEORY
+→ REPOSTING
+→ COMMUNITY VOCABULARY.
+
+Knowledge production occurs beside the model rather than solely inside the individual practitioner.
+
+FORMAL SHIFT:
+PROMPTING =
+individual model interaction
+
+becomes:
+
+PROMPTING =
+socially coupled parallel experimentation.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For users u₁...uₙ:
+
+each execution:
+
+eᵢ = (promptᵢ, outputᵢ)
+
+is potentially visible to nearby users.
+
+Thus learning input for uⱼ is not:
+
+history(uⱼ)
+
+but:
+
+history(uⱼ)
+∪
+visible(e₁...eₙ).
+
+The effective training rate of the human practitioner therefore scales with socially observable experimentation.
+
+TENSION:
+Discord is simultaneously:
+
+PEDAGOGY
+and
+OVERLOAD.
+
+The same teeming stream that lets users learn from thousands of experiments also makes causal knowledge difficult to stabilize.
+
+The archive contains both the complaint that newcomers are dumped into chaos and evidence that this chaos produces prompt culture.
+
+MISSING:
+A comparison between users who learned Midjourney publicly in Discord and users who learned equivalent models privately.
+
+We do not know whether public exposure creates:
+faster expertise
+more superstition
+more convergence
+more stylistic imitation
+more exploration
+or all of these simultaneously.
+
+BOUNDARY:
+Not every observed prompt-output pair teaches anything.
+
+Public visibility can amplify cargo cults just as easily as valid techniques.
+
+CITATION TRAIL:
+[[ZF-20260817-COMMUNITY-LEXICON-003]]
+→ prompt language as communal vernacular
+→ archive reveals the spatial mechanism of circulation: Discord itself
+→ onboarding complaint reveals that immersion preceded formal instruction
+→ next edge: Discord as epistemic architecture rather than distribution channel
+
+TEST:
+Reconstruct matched novice cohorts using the same historical model:
+
+A. private generation only
+B. public live prompt/output stream
+C. curated tutorial examples
+D. searchable archive without live chat
+
+Measure after equal generation budgets:
+
+prompt competence
+causal accuracy
+lexical diversity
+style convergence
+number of copied fragments
+number of false prompt beliefs
+time to first successful target.
+
+PLATFORM:
+Discord
+Midjourney
+public generative interfaces
+
+LINKS:
+[[ZF-20260817-COMMUNITY-LEXICON-003]]
+[[PROMPT-COMMUNITY-OF-PRACTICE]]
+[[SOCIAL-CONTROL-SURFACE]]
+[[DISCORD-AS-LABORATORY]]
+[[TEEMING-MESS]]
+
+BIBTEX:
+@misc{midjourneyDocumentation,
+  author={{Midjourney}},
+  title={Documentation},
+  howpublished={Midjourney Documentation},
+  url={https://docs.midjourney.com/hc/en-us/categories/32013335627533-Documentation}
+}
+
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ZF-20260817-REROLL-OPERATOR-009
+
+TITLE:
+Rerolling Is a Creative Operation Distinct from Prompting
+
+SOURCE:
+[PRIMARY ARCHIVE] Midjourney Discord / Office Hours research archive supplied by user.
+SOURCE URL: local:_RESOURCES/Midjourney_prompt_magic_archive_2022.md
+
+[AUTHORITATIVE TECHNICAL SOURCE] Midjourney, “Variations.”
+https://docs.midjourney.com/hc/en-us/articles/32692978437005-Variations
+
+PASSAGE:
+[QUOTE — PRIMARY ARCHIVE] “i find its not so much getting magical prompts as a general prompt and a lot of rolls”
+
+[PARAPHRASE — PRIMARY ARCHIVE] The notes explicitly contrast “magical prompt” production with “V Rolling” and name an accidental, wandering mode of creation.
+
+RESEARCH OBJECT:
+Prompt discourse makes language look like the primary creative operation.
+
+The archive gives direct evidence against that assumption.
+
+A practitioner can hold language approximately constant and generate repeatedly until a useful candidate appears.
+
+The creative act then migrates from:
+
+SAYING THE RIGHT THING
+
+toward:
+
+RECOGNIZING THE RIGHT EVENT.
+
+This is not merely inferior prompting.
+
+It is a different control regime.
+
+LOCAL MOVE:
+Split:
+
+PROMPT CRAFT
+
+into at least:
+
+SPECIFICATION
+SAMPLING
+SELECTION
+VARIATION
+REVISION.
+
+SOURCE TERMS:
+roll
+V Rolling
+variations
+wandering
+accidental approach
+general prompt
+exploration
+
+WHAT BECAME STRANGE:
+Two practitioners can submit the same prompt and perform radically different amounts of creative work afterward.
+
+A prompt-only account would treat them as equivalent.
+
+A sampling account cannot.
+
+One generates four candidates and stops.
+Another generates 400, recognizes a rare anomaly, branches it through variations, rejects 397 outputs, and develops three survivors.
+
+Their textual input may be identical.
+
+Their practice is not.
+
+QUESTION:
+Is the prompt really the principal unit of generative authorship, or merely the initialization of a longer search process?
+
+DEEPER QUESTION:
+When model outputs are underdetermined, does artistic expertise move from the ability to specify a desired artifact toward the ability to perceive valuable events inside a distribution?
+
+MECHANISM:
+GENERAL PROMPT
+→ SAMPLE
+→ INSPECT
+→ REJECT
+→ SAMPLE
+→ NOTICE ANOMALY
+→ VARIATE
+→ INSPECT
+→ SELECT
+→ CONTINUE.
+
+The artist controls the trajectory through acceptance and rejection even when individual image details were not specified in advance.
+
+FORMAL SHIFT:
+DESCRIPTION
+→ IMAGE
+
+becomes:
+
+DESCRIPTION
+→ DISTRIBUTION
+→ SAMPLE
+→ JUDGMENT
+→ BRANCH
+→ NEW SAMPLE
+→ JUDGMENT
+→ ARTIFACT.
+
+SOURCE FORMALISM:
+[PARAPHRASE] Midjourney describes its variation controls as mechanisms for producing different versions of an existing generated image, altering details or broader arrangement.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+p = prompt
+G(p) = distribution of candidates
+xᵢ ~ G(p)
+J(xᵢ) = practitioner evaluation
+
+Prompt-dominant model:
+
+ART ≈ G(p)
+
+Search-dominant model:
+
+x₁...xₙ ~ G(p)
+
+x* = argmax J(xᵢ)
+
+then:
+
+x* → variation distribution → selection → ...
+
+Creative agency can therefore enter strongly through J even when p remains weakly specified.
+
+TENSION:
+Rerolling can be described either as:
+
+A. mere lottery-ticket generation
+
+or:
+
+B. trained perception navigating an enormous possibility field.
+
+Both remain plausible until selection skill is experimentally separated from brute-force sample count.
+
+MISSING:
+Evidence distinguishing:
+good taste
+good search strategy
+large generation budget
+and luck.
+
+A practitioner who finds better outputs after 1,000 rolls may be more skilled, merely richer in compute, or both.
+
+BOUNDARY:
+Selection does not eliminate prompting.
+
+A prompt changes the distribution from which selection occurs.
+
+The unresolved issue is relative contribution.
+
+CITATION TRAIL:
+[[ZF-20260817-VOCABULARY-GAP-002]]
+[[ZF-20260817-PROMPT-NOT-COMMAND-004]]
+→ archive explicitly distinguishes magical prompting from rolling
+→ generation becomes search rather than one-shot expression
+→ next edge: quantify authorship across specification and selection
+
+TEST:
+Give expert and novice practitioners:
+
+THE SAME PROMPT
+THE SAME MODEL
+THE SAME PREGENERATED 1,000 OUTPUTS.
+
+Prevent additional prompting.
+
+Ask each to select 10 candidates worth developing.
+
+Then independently evaluate resulting selections.
+
+If experts consistently identify stronger candidates, selection itself is measurable expertise independent of prompt formulation and generation budget.
+
+PLATFORM:
+Midjourney
+variations
+rerolling
+generative search
+
+LINKS:
+[[ZF-20260817-VOCABULARY-GAP-002]]
+[[ZF-20260817-PROMPT-NOT-COMMAND-004]]
+[[SELECTION-AS-AUTHORSHIP]]
+[[GENERATIVE-SEARCH]]
+[[DEFERRED-FORMALIZATION]]
+
+BIBTEX:
+@misc{midjourneyVariations,
+  author={{Midjourney}},
+  title={Variations},
+  howpublished={Midjourney Documentation},
+  url={https://docs.midjourney.com/hc/en-us/articles/32692978437005-Variations}
+}
+
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ZF-20260817-STYLIZE-AGENCY-DIAL-010
+
+TITLE:
+Stylize Turns Authorship into an Adjustable Ratio
+
+SOURCE:
+[PRIMARY ARCHIVE] Midjourney Discord / Office Hours research archive supplied by user.
+SOURCE URL: local:_RESOURCES/Midjourney_prompt_magic_archive_2022.md
+
+[AUTHORITATIVE TECHNICAL SOURCES] Midjourney, “Stylize” and “Raw.”
+https://docs.midjourney.com/hc/en-us/articles/32196176868109-Stylize
+https://docs.midjourney.com/hc/en-us/articles/32634113811853-Raw
+
+PASSAGE:
+[QUOTE — PRIMARY ARCHIVE] At the historical maximum stylize setting: “Hands off the wheels, who knows what will happen. It may look nothing like your prompt.”
+
+RESEARCH OBJECT:
+The question “Who made the image?” becomes unexpectedly concrete when the interface contains a numerical control for how strongly the system should impose its own aesthetic behavior.
+
+Stylize is not merely an aesthetic setting.
+
+It is an agency allocation mechanism.
+
+The user can deliberately ask the model to become less obedient.
+
+LOCAL MOVE:
+Replace the binary:
+
+HUMAN AUTHOR
+versus
+MACHINE AUTHOR
+
+with an interface-level variable:
+
+DEGREE OF DELEGATED AESTHETIC AUTHORITY.
+
+SOURCE TERMS:
+stylize
+artistic
+less strict
+take over
+hands off the wheels
+Raw
+creative touch
+prompt adherence
+
+WHAT BECAME STRANGE:
+Authorship becomes parameterized.
+
+The practitioner can intentionally choose:
+
+FOLLOW ME MORE
+
+or:
+
+SURPRISE ME MORE.
+
+This makes surrender itself potentially intentional.
+
+The paradox:
+
+LESS CONTROL
+can be
+A CHOSEN CREATIVE CONTROL.
+
+QUESTION:
+When an artist deliberately increases a parameter whose purpose is to let the system drift away from their text, has the resulting deviation escaped their intention or fulfilled it?
+
+DEEPER QUESTION:
+Can intentionality include intentionally creating conditions under which one will encounter outcomes one did not and could not intend in detail?
+
+MECHANISM:
+Prompt
++ stylization setting
+→ altered balance between textual constraint and model-default aesthetic behavior
+→ candidate
+→ human evaluation.
+
+FORMAL SHIFT:
+AUTHORSHIP = SOURCE OF IMAGE CONTENT
+
+becomes:
+
+AUTHORSHIP =
+CHOICE OF HOW MUCH DETAIL TO CONTROL
++
+CHOICE OF HOW MUCH DETAIL TO DELEGATE
++
+RESPONSE TO WHAT RETURNS.
+
+SOURCE FORMALISM:
+[PARAPHRASE] Midjourney’s documentation describes Stylize as controlling the degree of artistic flair applied by the model; Raw mode reduces automatic stylistic intervention and can increase user control over a detailed stylistic prompt.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+C_h = human textual constraint
+A_m = model aesthetic prior
+λ = delegated stylization strength
+
+Then approximately:
+
+OUTPUT ~ G(C_h, λA_m)
+
+Increasing λ does not simply decrease authorship.
+
+It changes the locus of the human act from:
+
+SPECIFY CONTENT
+
+toward:
+
+SPECIFY A DEGREE OF NON-SPECIFICATION.
+
+TENSION:
+One theory says:
+
+more control = more authorship.
+
+Another says:
+
+skill can consist in knowing exactly when control destroys possibility.
+
+The archive itself contains both impulses.
+
+MISSING:
+A theory of intentional delegation capable of distinguishing:
+
+deliberate openness
+from
+mere absence of control.
+
+BOUNDARY:
+The stylize parameter is not literally a mathematical measure of machine authorship.
+
+It is evidence that the interface exposes a practical continuum between textual adherence and model-led aesthetic behavior.
+
+CITATION TRAIL:
+[[ZF-20260817-PROMPT-NOT-COMMAND-004]]
+→ prompts condition rather than fully determine
+→ archive supplies an explicit “hands off the wheels” control
+→ intentionality can operate at the level of delegated uncertainty
+→ next edge: authorship as governance of possibility rather than specification of outcome
+
+TEST:
+Create matched tasks across several stylization levels.
+
+Before each generation, ask practitioners to predict:
+
+desired degree of surprise
+acceptable semantic drift
+required visual invariants.
+
+Afterward measure whether experts choose stylization levels that more reliably produce outcomes satisfying their declared higher-order constraints.
+
+If so, reduced local control can coexist with greater higher-order intentional control.
+
+PLATFORM:
+Midjourney
+Stylize
+Raw Mode
+generative image interfaces
+
+LINKS:
+[[ZF-20260817-PROMPT-NOT-COMMAND-004]]
+[[DELEGATED-INTENTIONALITY]]
+[[CONTROL-OF-NONCONTROL]]
+[[GENERATIVE-AUTHORSHIP]]
+
+BIBTEX:
+@misc{midjourneyStylize,
+  author={{Midjourney}},
+  title={Stylize},
+  howpublished={Midjourney Documentation},
+  url={https://docs.midjourney.com/hc/en-us/articles/32196176868109-Stylize}
+}
+
+@misc{midjourneyRaw,
+  author={{Midjourney}},
+  title={Raw},
+  howpublished={Midjourney Documentation},
+  url={https://docs.midjourney.com/hc/en-us/articles/32634113811853-Raw}
+}
+
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ZF-20260817-DEFAULT-AESTHETICS-011
+
+TITLE:
+Before the Prompt, Someone Already Chose What “Good” Looks Like
+
+SOURCE:
+[PRIMARY ARCHIVE] Midjourney Office Hours notes supplied by user.
+SOURCE URL: local:_RESOURCES/Midjourney_prompt_magic_archive_2022.md
+
+[AUTHORITATIVE TECHNICAL SOURCE] Midjourney, “Raw.”
+https://docs.midjourney.com/hc/en-us/articles/32634113811853-Raw
+
+PASSAGE:
+[PRIMARY ARCHIVE]
+
+“What should the aesthetics of the new version be?”
+
+“Get a lot of data and have good defaults.”
+
+The same section immediately raises “De-biasing of visual aesthetics.”
+
+RESEARCH OBJECT:
+Prompt theory usually begins too late.
+
+It begins when the user types.
+
+But before any user arrives, a model developer has already made aesthetic choices through:
+
+training data
+curation
+objective functions
+model architecture
+fine-tuning
+ranking
+default parameters
+safety systems
+interface defaults.
+
+The blank prompt box is therefore not aesthetically blank.
+
+The model comes furnished.
+
+LOCAL MOVE:
+Replace:
+
+USER PROMPT
+→ MODEL
+→ IMAGE
+
+with:
+
+DEVELOPER / DATA / TRAINING / DEFAULTS
+→ AESTHETIC PRIOR
+← USER PROMPT
+→ IMAGE.
+
+SOURCE TERMS:
+aesthetics
+good defaults
+de-biasing
+stylized defaults
+creative touch
+Raw
+opinionated
+model version
+
+WHAT BECAME STRANGE:
+The supposed neutrality of the empty interface disappears.
+
+A user may believe that every visible aesthetic property of an output came either from:
+
+THE PROMPT
+or
+THE DATA.
+
+But the platform also has an aesthetic policy.
+
+DEFAULT is an authored decision disguised as absence of decision.
+
+QUESTION:
+How much of what prompt users learn as “the model’s nature” is actually a deliberately engineered default aesthetic?
+
+DEEPER QUESTION:
+Who governs visual culture when a platform can alter the baseline aesthetic prior experienced by millions of users without changing a single word in their prompts?
+
+MECHANISM:
+DESIGNERS
+→ choose training / tuning / defaults
+→ produce model-level aesthetic tendencies
+→ user prompts inside those tendencies
+→ repeated outputs normalize those tendencies
+→ practitioners adapt their vocabulary to them.
+
+FORMAL SHIFT:
+PROMPT = CREATIVE CONTROL
+
+becomes:
+
+PROMPT = LOCAL CONTROL
+inside
+PLATFORM-DEFINED AESTHETIC BOUNDARY CONDITIONS.
+
+SOURCE FORMALISM:
+[PARAPHRASE] Midjourney currently distinguishes Standard behavior, which adds model styling, from Raw behavior, which reduces that intervention.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+D = training data
+θ = trained parameters
+A = post-training aesthetic tuning
+δ = interface defaults
+p = user prompt
+
+Then:
+
+x ~ G(p | θ(D,A), δ)
+
+The user controls p.
+
+The platform controls much of:
+
+θ
+A
+δ.
+
+Therefore:
+
+USER INTENT
+operates inside
+PLATFORM AESTHETIC GOVERNANCE.
+
+TENSION:
+“AI art is made by human artists” may be true while remaining radically incomplete.
+
+There are multiple human agencies:
+
+PROMPTER
+MODEL DESIGNER
+DATA CURATOR
+RATER
+INTERFACE DESIGNER
+POLICY TEAM.
+
+Calling only the final prompter “the human artist” can conceal upstream aesthetic decisions.
+
+MISSING:
+A method for experimentally separating:
+
+prompt contribution
+training-data association
+default aesthetic
+post-training preference tuning
+user selection.
+
+BOUNDARY:
+Platform defaults do not determine every generated image.
+
+They establish tendencies and priors against which user intervention operates.
+
+CITATION TRAIL:
+[[ZF-20260817-LANGUAGE-POINTS-INTO-DATA-005]]
+[[ZF-20260817-PROMPT-NOT-COMMAND-004]]
+→ training corpus gives language operative history
+→ archive reveals explicit model-level aesthetic decision-making
+→ Raw exposes default styling as removable rather than natural
+→ next edge: aesthetic defaults as governance
+
+TEST:
+Take a fixed corpus of prompts.
+
+Run them across:
+
+1. Standard mode
+2. Raw mode
+3. adjacent model versions
+4. identical seeds where technically supported
+
+Have independent evaluators code recurring:
+
+composition
+lighting
+beauty conventions
+facial presentation
+genre
+color
+camera position
+cultural representation.
+
+Estimate how much aesthetic variance is attributable to platform defaults without changing user language.
+
+PLATFORM:
+Midjourney
+model defaults
+Raw Mode
+generative-image platforms
+
+LINKS:
+[[ZF-20260817-LANGUAGE-POINTS-INTO-DATA-005]]
+[[ZF-20260817-PROMPT-NOT-COMMAND-004]]
+[[DEFAULT-AS-GOVERNANCE]]
+[[AESTHETIC-PRIOR]]
+[[PLATFORM-AUTHORSHIP]]
+
+BIBTEX:
+@misc{midjourneyRawMode,
+  author={{Midjourney}},
+  title={Raw},
+  howpublished={Midjourney Documentation},
+  url={https://docs.midjourney.com/hc/en-us/articles/32634113811853-Raw}
+}
+
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ZF-20260817-DOCUMENTARY-MODE-012
+
+TITLE:
+The Generative Artist May Be Hunting an Event, Not Specifying an Image
+
+SOURCE:
+[PRIMARY ARCHIVE] Midjourney Office Hours research archive supplied by user.
+SOURCE URL: local:_RESOURCES/Midjourney_prompt_magic_archive_2022.md
+
+PASSAGE:
+[QUOTE — PRIMARY ARCHIVE]
+
+“You’re either coimagining with MJ or shooting a documentary. An artist who wants a lot of control should think about trying to shoot a documentary. Giving up control and observing what is being made”
+
+“You’re going in to steal the moment.”
+
+RESEARCH OBJECT:
+This is a much stranger theory of AI art than “the artist describes what they imagine.”
+
+The model becomes an event-producing environment.
+
+The artist enters it not necessarily as architect but as witness.
+
+Their job is to notice the moment that should be taken.
+
+This moves generative practice toward photography, documentary, field observation, improvisation, and hunting.
+
+The machine does not simply execute the artist’s prior image.
+
+It produces situations in which artistic decisions become possible.
+
+LOCAL MOVE:
+Replace:
+
+ARTIST HAS IMAGE
+→ ARTIST DESCRIBES IMAGE
+→ MODEL REALIZES IMAGE
+
+with:
+
+ARTIST ENTERS GENERATIVE SITUATION
+→ SOMETHING HAPPENS
+→ ARTIST RECOGNIZES EVENT
+→ ARTIST CAPTURES / DEVELOPS IT.
+
+SOURCE TERMS:
+coimagining
+documentary
+giving up control
+observing
+steal the moment
+exploration
+wandering
+
+WHAT BECAME STRANGE:
+A person can exercise artistic control by refusing to control the event they hope to capture.
+
+That sounds contradictory only if authorship requires prior specification.
+
+Photography has long made room for another possibility:
+
+the artist authors a relation to contingency.
+
+Generative systems may radicalize that condition because the contingency itself is computationally produced.
+
+QUESTION:
+What is the generative equivalent of the photographer’s “decisive moment”?
+
+DEEPER QUESTION:
+If the artist’s primary act becomes recognizing something they could not have specified before seeing it, is prompting still the right place to locate authorship?
+
+MECHANISM:
+ENTER POSSIBILITY SPACE
+→ GENERATE
+→ ATTEND
+→ NOTICE
+→ INTERRUPT / SELECT
+→ DEVELOP
+→ FRAME
+→ PRESENT.
+
+FORMAL SHIFT:
+CREATION =
+production of intended form
+
+becomes:
+
+CREATION =
+construction of conditions
++
+attention to contingent event
++
+capture.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+G = generative process
+xₜ = candidate encountered at time t
+J = artist’s situated judgment
+
+The artist need not possess target x* beforehand.
+
+Instead:
+
+x₁, x₂, ... xₙ ~ G
+
+until:
+
+J(xₖ | encountered context) → “this.”
+
+The creative event is partially:
+
+RECOGNITION OF xₖ
+
+rather than prior specification of xₖ.
+
+TENSION:
+Millière defends AI art partly through intentionality.
+
+The documentary model weakens one conception of intention while strengthening another.
+
+WEAKENS:
+the artist need not intend the detailed outcome.
+
+STRENGTHENS:
+the artist intentionally constructs and inhabits a situation in which unforeseen material can be recognized.
+
+MISSING:
+A vocabulary separating:
+
+INTENTION-TO-PRODUCE-X
+
+from:
+
+INTENTION-TO-ENTER-A-PROCESS-WHERE-X-MAY-BE-DISCOVERED.
+
+BOUNDARY:
+Not every act of choosing among generated images constitutes meaningful artistic seeing.
+
+Without evidence of discriminating judgment, “documentary” can become an elegant description of random selection.
+
+CITATION TRAIL:
+[[ZF-20260817-REROLL-OPERATOR-009]]
+[[ZF-20260817-STYLIZE-AGENCY-DIAL-010]]
+→ rerolling establishes sampling as operation
+→ stylize establishes intentional delegation
+→ Office Hours supplies documentary metaphor
+→ authorship moves from command toward situated capture
+→ next edge: photography theory, improvisation, and skilled encounter
+
+TEST:
+Compare two generative workflows.
+
+TARGET CONDITION:
+artist writes a detailed target description before generating.
+
+DOCUMENTARY CONDITION:
+artist states only a field of interest and must discover the final work through observation and selection.
+
+Afterward ask artists to provide:
+decision histories
+rejected candidates
+reasons for selection
+moments when goals changed.
+
+Test whether expert judgment appears primarily before execution or emerges through encounter.
+
+PLATFORM:
+Midjourney
+generative image practice
+iterative selection
+
+LINKS:
+[[ZF-20260817-REROLL-OPERATOR-009]]
+[[ZF-20260817-STYLIZE-AGENCY-DIAL-010]]
+[[GENERATIVE-DOCUMENTARY]]
+[[DECISIVE-MOMENT]]
+[[AUTHORSHIP-AS-ATTENTION]]
+
+BIBTEX:
+NONE
+
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ZF-20260817-PROMPT-SECRECY-013
+
+TITLE:
+Model Opacity Can Turn Words into Scarce Productive Property
+
+SOURCE:
+[PRIMARY ARCHIVE] Midjourney Discord research archive supplied by user.
+SOURCE URL: local:_RESOURCES/Midjourney_prompt_magic_archive_2022.md
+
+PASSAGE:
+[QUOTE — PRIMARY ARCHIVE] “im keeping all the secret text prompt magic to myself, why would i want the next guy to conjure what i can???? cant be out here stealing style u know,, words are magic”
+
+[QUOTE — PRIMARY ARCHIVE] “They just want you to tell them the magic prompt to use. Not learn.”
+
+RESEARCH OBJECT:
+The “magic prompt” becomes economically strange once practitioners believe a small linguistic sequence grants access to a valuable model behavior.
+
+The phrase becomes:
+
+knowledge
+technique
+recipe
+secret
+style
+shortcut
+competitive advantage.
+
+Opacity can therefore create artificial scarcity around otherwise trivially copyable text.
+
+The scarce object is not the string itself.
+
+It is knowing that this string does something valuable.
+
+LOCAL MOVE:
+Replace:
+
+PROMPT = DESCRIPTION
+
+with:
+
+PROMPT KNOWLEDGE =
+DISCOVERED PRODUCTIVE INFORMATION.
+
+SOURCE TERMS:
+secret
+magic prompt
+stealing style
+words are magic
+learn
+prompt craft
+ownership
+
+WHAT BECAME STRANGE:
+The easier a prompt is to copy, the stronger the incentive may become to conceal it.
+
+A valuable prompt has a peculiar structure:
+
+near-zero reproduction cost
++
+high discovery cost
++
+uncertain durability.
+
+That resembles neither a conventional artwork nor an ordinary physical tool.
+
+QUESTION:
+What exactly do practitioners believe they own when they refuse to disclose a successful prompt?
+
+DEEPER QUESTION:
+Does model opacity produce a new economy in which causal knowledge about proprietary systems becomes privately accumulated productive capital?
+
+MECHANISM:
+OPAQUE MODEL
+→ EXPENSIVE TRIAL AND ERROR
+→ DISCOVERY OF USEFUL STRING
+→ PERFORMANCE ADVANTAGE
+→ SECRECY
+→ SCARCITY OF KNOWLEDGE
+→ STATUS / COMMERCIAL ADVANTAGE.
+
+FORMAL SHIFT:
+PROMPT VALUE =
+CONTENT OF WORDS
+
+becomes:
+
+PROMPT VALUE =
+INFORMATION ABOUT A HIDDEN INPUT-OUTPUT RELATION.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+c(p) = cost of copying prompt p ≈ 0
+d(p) = cost of discovering that p has useful effect
+v(p,M) = value of effect under model M
+
+Then:
+
+INFORMATION RENT ≈ v(p,M) - c(p)
+
+provided knowledge of p remains scarce.
+
+But:
+
+model update M → M′
+
+may cause:
+
+v(p,M′) → 0.
+
+The prompt secret is therefore a rapidly depreciating information asset.
+
+TENSION:
+Prompt communities depend on sharing to build collective expertise.
+
+Prompt professionals may depend on withholding to preserve advantage.
+
+The same technical opacity generates:
+
+COMMUNITY COMMONS
+and
+PRIVATE KNOW-HOW.
+
+MISSING:
+A serious empirical map of prompt secrecy.
+
+Which practitioners disclosed prompts?
+Which withheld them?
+Which sold them?
+Which treated them as signatures?
+How quickly did supposedly proprietary techniques diffuse?
+
+BOUNDARY:
+Calling prompt knowledge “property” here describes practitioner behavior and economic structure, not a conclusion about formal intellectual-property rights.
+
+CITATION TRAIL:
+[[ZF-20260817-COMMUNITY-LEXICON-003]]
+→ community circulation creates shared vernacular
+→ archive reveals simultaneous refusal to circulate
+→ useful phrase becomes scarce knowledge about hidden model behavior
+→ next edge: commons versus secrecy in prompt cultures
+
+TEST:
+Select 20 distinctive prompt techniques from early Midjourney practitioners.
+
+For each reconstruct:
+
+DATE OF FIRST OBSERVED USE
+DATE OF FIRST DISCLOSURE
+DATE OF COMMUNITY COPYING
+DATE OF WIDESPREAD NORMALIZATION
+DATE OF MODEL OBSOLESCENCE.
+
+Measure the interval during which exclusive prompt knowledge plausibly provided advantage.
+
+PLATFORM:
+Midjourney
+Discord
+creative professional practice
+
+LINKS:
+[[ZF-20260817-COMMUNITY-LEXICON-003]]
+[[PROMPT-COMMONS]]
+[[PROMPT-SECRECY]]
+[[MODEL-KNOW-HOW]]
+[[INFORMATION-RENT]]
+
+BIBTEX:
+NONE
+
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ZF-20260817-VISIBLE-PROMPT-CASCADE-014
+
+TITLE:
+A Visible Prompt Can Change the Culture Faster Than It Changes the Model
+
+SOURCE:
+[PRIMARY ARCHIVE] Midjourney Office Hours research archive supplied by user.
+SOURCE URL: local:_RESOURCES/Midjourney_prompt_magic_archive_2022.md
+
+PASSAGE:
+[PARAPHRASE — PRIMARY ARCHIVE]
+
+The community is described as an open space where users brainstorm from one another. But visible front-page keywords can rapidly cause users to reproduce the same category of imagery, creating a reason to constrain certain outputs.
+
+RESEARCH OBJECT:
+Prompt visibility creates a feedback loop outside the neural network.
+
+A striking output appears.
+Its prompt is visible.
+Other users copy the terms.
+The copied terms produce more related outputs.
+Those outputs become more visible.
+Users infer that the terms are important.
+The visual field fills with the pattern.
+
+No model retraining is necessary.
+
+The community itself can perform rapid cultural amplification.
+
+LOCAL MOVE:
+Distinguish:
+
+MODEL FEEDBACK LOOP
+
+from:
+
+PROMPT-VISIBILITY FEEDBACK LOOP.
+
+SOURCE TERMS:
+open community
+brainstorm
+keywords
+front page
+prompts
+reactive
+rapidly changing visual group
+conservative
+adventurous
+
+WHAT BECAME STRANGE:
+A model can appear to have developed an aesthetic obsession even when its weights have not changed.
+
+What changed may be the human input distribution.
+
+Prompt culture feeds itself.
+
+The visible output surface becomes an input-generating machine for future prompts.
+
+QUESTION:
+How often are apparent changes in a generative platform’s “style” actually changes in collective prompting behavior rather than changes in the model?
+
+DEEPER QUESTION:
+Once generated outputs and their instructions are publicly visible, should the human community be modeled as part of the generative system’s recurrent loop?
+
+MECHANISM:
+PROMPT
+→ IMAGE
+→ PUBLIC VISIBILITY
+→ HUMAN ATTENTION
+→ PROMPT COPYING
+→ PROMPT MUTATION
+→ MORE IMAGES
+→ RANKING / VISIBILITY
+→ FURTHER COPYING.
+
+FORMAL SHIFT:
+MODEL:
+
+p → x
+
+becomes:
+
+pₜ
+→ xₜ
+→ visibility(xₜ,pₜ)
+→ human population response
+→ distribution(pₜ₊₁)
+→ xₜ₊₁.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+Pₜ = distribution of prompts at time t
+G = unchanged generative model
+R = visibility/ranking mechanism
+H = human imitation/transformation process
+
+Xₜ = G(Pₜ)
+
+Pₜ₊₁ = H(R(Xₜ,Pₜ))
+
+Therefore:
+
+Xₜ₊₁ ≠ Xₜ
+
+even if:
+
+Gₜ₊₁ = Gₜ.
+
+Observed aesthetic drift can emerge from recurrent human prompting alone.
+
+TENSION:
+Open prompts enable:
+learning
+remix
+access
+collective discovery.
+
+The same openness enables:
+copy cascades
+aesthetic monoculture
+shock escalation
+norm amplification.
+
+Transparency does not simply democratize expertise.
+
+It changes the dynamics of the system.
+
+MISSING:
+Time-series data linking:
+prompt phrase frequency
+front-page exposure
+copying events
+output-category frequency
+moderation intervention.
+
+BOUNDARY:
+The archive establishes that Midjourney’s operators anticipated this feedback mechanism.
+
+It does not by itself quantify its actual magnitude.
+
+CITATION TRAIL:
+[[ZF-20260817-COMMUNITY-LEXICON-003]]
+[[ZF-20260817-DISCORD-INSTRUMENT-008]]
+→ prompts circulate publicly
+→ visible keywords can trigger mass repetition
+→ community becomes recurrent generative machinery
+→ next edge: separate model behavior from population-level prompt dynamics
+
+TEST:
+For a historical public prompt stream:
+
+1. identify phrases receiving sudden high-visibility exposure
+2. calculate phrase-frequency change afterward
+3. track semantic mutations
+4. track related output categories
+5. compare against matched low-visibility phrases
+6. control for model-version changes
+
+Test whether visibility predicts subsequent prompt adoption independently of model changes.
+
+PLATFORM:
+Midjourney
+Discord
+public galleries
+ranking surfaces
+
+LINKS:
+[[ZF-20260817-COMMUNITY-LEXICON-003]]
+[[ZF-20260817-DISCORD-INSTRUMENT-008]]
+[[PROMPT-CASCADE]]
+[[CULTURAL-FEEDBACK-LOOP]]
+[[MODEL-INDUCED-ECOSYSTEM]]
+[[COUNTERFEIT-CONSENSUS]]
+
+BIBTEX:
+NONE
+
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ZF-20260817-PROMPT-NOT-UNIT-015
+
+TITLE:
+The Prompt May Be the Most Visible Part of the Practice and Still Not Be Its Unit
+
+SOURCE:
+[PRIMARY ARCHIVE] Midjourney research archive supplied by user.
+SOURCE URL: local:_RESOURCES/Midjourney_prompt_magic_archive_2022.md
+
+Historical parameter notes document seed, negative prompting, image weights, stylize, quality, chaos, model version, and other controls beyond ordinary descriptive prose.
+
+[AUTHORITATIVE TECHNICAL SOURCE] Midjourney, “Parameter List.”
+https://docs.midjourney.com/hc/en-us/articles/32859204029709-Parameter-List
+
+PASSAGE:
+[PRIMARY ARCHIVE]
+
+“How does the ‘magical prompt’ compare with other forms of creative production with MJ such as ‘V Rolling’?”
+
+“A stumbling, wandering, accidental approach to creating with MJ”
+
+“Is there a difference between prompt craft and prompt magic?”
+
+“How do approaches to prompt craft account for the latent space of possibilities in the algorithm?”
+
+RESEARCH OBJECT:
+The archive keeps trying to escape the prompt.
+
+That may be its deepest finding.
+
+Each time “prompting” seems to stabilize as the creative act, another operation appears:
+
+ROLL
+WEIGHT
+SEED
+REMIX
+VARIATE
+SHORTEN
+OBSERVE
+SELECT
+ABANDON
+FOLLOW
+RELEARN
+SURRENDER.
+
+The prompt remains culturally central because it is legible.
+
+It is a sentence.
+It can be screenshotted.
+It can be shared.
+It looks like authorship.
+
+But the actual practice is a trajectory through state.
+
+The research object may therefore not be:
+
+PROMPT.
+
+It may be:
+
+SESSION.
+
+LOCAL MOVE:
+Replace the unit:
+
+PROMPT
+
+with:
+
+GENERATIVE TRAJECTORY.
+
+SOURCE TERMS:
+prompt craft
+prompt magic
+V Rolling
+wandering
+latent space
+seed
+weight
+stylize
+chaos
+version
+remix
+exploration
+
+WHAT BECAME STRANGE:
+The object easiest to quote may be the wrong object to study.
+
+A final prompt can erase the history that produced it.
+
+It does not show:
+
+the failed prompts
+the abandoned directions
+the rolls
+the moments of surprise
+the parameter changes
+the copied phrases
+the model version
+the selected seed
+the discarded outputs
+the point where the artist’s goal changed.
+
+The prompt is a residue of a process.
+
+QUESTION:
+What evidence disappears when AI-art research treats the final prompt as the creative object?
+
+DEEPER QUESTION:
+What is the minimal complete unit of generative practice?
+
+A string?
+
+A prompt-output pair?
+
+A branching session?
+
+A human-model history?
+
+A socially embedded trajectory across model versions?
+
+MECHANISM:
+INITIAL INTENTION
+→ PROMPT₀
+→ OUTPUT SET₀
+→ JUDGMENT
+→ REROLL / EDIT / WEIGHT / REMIX / SELECT
+→ OUTPUT SET₁
+→ CHANGED INTENTION
+→ ...
+→ STOP.
+
+The desired artifact and the specification co-develop.
+
+FORMAL SHIFT:
+FORAGE:
+
+PROMPT → OUTPUT
+
+becomes:
+
+STATE₀
+→ ACTION₀
+→ STATE₁
+→ OBSERVATION₁
+→ REVISED GOAL₁
+→ ACTION₁
+→ ...
+→ ARTIFACT.
+
+SOURCE FORMALISM:
+[PARAPHRASE] Midjourney’s interface exposes many controls in addition to prompt text, including model version and other generation parameters.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+A generative session S:
+
+S = {
+  M₀,
+  I₀,
+  a₀,
+  x₀,
+  J₀,
+  M₁,
+  I₁,
+  a₁,
+  x₁,
+  J₁,
+  ...
+}
+
+where:
+
+M = model state/version
+I = current intention
+a = user operation
+x = generated state/output
+J = human judgment
+
+Crucially:
+
+Iₜ₊₁ ≠ Iₜ
+
+may occur because:
+
+xₜ
+
+reveals a possibility the user could not specify at t₀.
+
+Thus the specification is endogenous to execution.
+
+TENSION:
+Prompt-centered theory has an enormous practical advantage:
+
+the prompt is recordable.
+
+Trajectory-centered theory is messier but may be more faithful.
+
+The danger is methodological convenience masquerading as ontology.
+
+MISSING:
+Lossless session traces.
+
+Most published AI artworks preserve:
+final image
+sometimes final prompt.
+
+They rarely preserve the operational genealogy that would make the creative process analyzable.
+
+BOUNDARY:
+Some generative tasks really are one-shot.
+
+The claim is not that prompts never matter.
+
+It is that prompt-centric analysis must demonstrate rather than assume that the prompt is the operative unit.
+
+CITATION TRAIL:
+[[ZF-20260817-PROMPT-NOT-COMMAND-004]]
+[[ZF-20260817-REROLL-OPERATOR-009]]
+[[ZF-20260817-STYLIZE-AGENCY-DIAL-010]]
+[[ZF-20260817-DOCUMENTARY-MODE-012]]
+→ prompt fails to specify execution
+→ reroll adds sampling
+→ stylize adds intentional delegation
+→ documentary mode adds situated observation
+→ archive repeatedly asks how these modes differ
+→ new object: GENERATIVE TRAJECTORY
+→ next edge: define a portable execution trace for generative authorship
+
+TEST:
+Instrument a generative interface to record every:
+
+prompt
+parameter
+model version
+seed
+generation
+variation
+selection
+deletion
+reference image
+elapsed interval
+user note.
+
+After completing a work, compare three representations:
+
+A. FINAL IMAGE
+B. FINAL PROMPT + IMAGE
+C. FULL TRAJECTORY
+
+Give each to independent researchers and ask them to infer:
+artist intention
+creative strategy
+skill
+degree of model contribution
+moment of conceptual change.
+
+Measure what becomes visible only in C.
+
+PLATFORM:
+Midjourney
+generative interfaces
+prompt-based systems
+iterative creation
+
+LINKS:
+[[ZF-20260817-PROMPT-NOT-COMMAND-004]]
+[[ZF-20260817-REROLL-OPERATOR-009]]
+[[ZF-20260817-STYLIZE-AGENCY-DIAL-010]]
+[[ZF-20260817-DOCUMENTARY-MODE-012]]
+[[PROMPT-IS-NOT-THE-PROGRAM]]
+[[GENERATIVE-TRAJECTORY]]
+[[DEFERRED-FORMALIZATION]]
+[[THEORY-OF-THE-PROGRAM]]
+
+BIBTEX:
+@misc{midjourneyParameters,
+  author={{Midjourney}},
+  title={Parameter List},
+  howpublished={Midjourney Documentation},
+  url={https://docs.midjourney.com/hc/en-us/articles/32859204029709-Parameter-List}
+}
+
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ZF-20260817-ADVENTITIOUS-REINFORCEMENT-016
+
+TITLE:
+A Good Image Can Reinforce a Prompt Ritual That Did Nothing
+
+SOURCE:
+B. F. Skinner, “‘Superstition’ in the Pigeon,” Journal of Experimental Psychology 38 (1948): 168–172.
+https://psychclassics.yorku.ca/Skinner/Pigeon/
+
+PASSAGE:
+[QUOTE] Skinner describes the mechanism: “The bird happens to be executing some response as the hopper appears.” He argues that temporal proximity can strengthen the coincident behavior even when food delivery was not actually contingent on it.
+
+[PARAPHRASE — OPPOSITION] Staddon and Simmelhag’s later reexamination complicated Skinner’s explanation, reporting patterned interim and terminal behaviors that were not straightforwardly explained by accidental response-reinforcement contiguity.
+
+RESEARCH OBJECT:
+[[ZF-20260817-SUPERSTITION-VARIANCE-006]] treated prompt superstition primarily as a causal-inference problem:
+
+too many variables change
+→ user misattributes the improvement.
+
+Skinner opens another mechanism.
+
+The mistaken behavior need not begin as a BELIEF.
+
+It can begin as a REPEATED ACTION.
+
+A user types:
+
+“intricate”
+
+A spectacular image appears.
+
+The user retains “intricate.”
+
+Next time:
+
+“intricate, intricate details”
+
+Another unusually good generation happens.
+
+The term becomes ritualized before the practitioner possesses any explicit theory of why it works.
+
+Prompt superstition may therefore be behavioral before it becomes explanatory.
+
+LOCAL MOVE:
+Split prompt superstition into:
+
+EPISTEMIC SUPERSTITION
+=
+false causal explanation
+
+and:
+
+BEHAVIORAL SUPERSTITION
+=
+retention of an action because desirable outputs repeatedly followed it despite weak or absent causal dependence.
+
+SOURCE TERMS:
+reinforcement
+contingent
+response
+temporal relation
+periodic presentation
+conditioning
+superstition
+
+WHAT BECAME STRANGE:
+A practitioner does not need to misunderstand the model in order to acquire a useless technique.
+
+They only need:
+
+ACTION
+→ REWARD
+
+to occur close enough in experience.
+
+The person may later invent the explanation.
+
+This reverses the ordinary sequence:
+
+BELIEF
+→ RITUAL
+
+into:
+
+RITUAL
+→ BELIEF.
+
+QUESTION:
+How much prompt lore begins as reinforced behavior rather than explicit causal theory?
+
+DEEPER QUESTION:
+Do stochastic creative systems systematically select human rituals by intermittently rewarding actions that have no reliable causal effect?
+
+MECHANISM:
+[OUR INFERENCE]
+
+user performs intervention a
+
+→ stochastic system produces unusually valued output x
+
+→ practitioner experiences reward
+
+→ probability of repeating a increases
+
+→ repetition creates apparent technique
+
+→ technique acquires explanation
+
+→ explanation circulates socially.
+
+FORMAL SHIFT:
+FALSE BELIEF
+→ USELESS PROMPT ACTION
+
+becomes:
+
+USELESS PROMPT ACTION
+→ ACCIDENTAL REWARD
+→ ACTION RETENTION
+→ EXPLICIT BELIEF.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+Skinner’s experimental arrangement:
+
+behavior occurs
++
+food is delivered periodically without behavioral contingency
+→ accidental temporal proximity
+→ repeated patterned behavior.
+
+Skinner explicitly made reinforcement independent of the pigeons’ actions.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+a = user intervention
+x = generated result
+R(x) = subjective reward
+C(a,x) = actual causal contribution of a to x
+
+A practitioner may update:
+
+P(repeat a) ↑
+
+whenever:
+
+R(x) >> 0
+
+even if:
+
+C(a,x) ≈ 0.
+
+Thus:
+
+HIGH REWARD
++
+LOW CAUSAL VISIBILITY
++
+REPEATED TRIALS
+
+can produce stable ritual.
+
+TENSION:
+Skinner gives an extraordinarily tempting analogy for prompt magic.
+
+But the analogy must not become its own superstition.
+
+Later experimental work challenged the claim that every apparently superstitious behavior in such schedules is produced simply through accidental operant reinforcement.
+
+Prompt rituals might likewise arise from several mechanisms:
+
+accidental reinforcement
+real but conditional effects
+semantic effects
+community imitation
+memory bias
+selection bias
+or model-specific affordances.
+
+MISSING:
+We lack action-level histories connecting:
+
+prompt modification
+generation outcome
+subjective reward
+retention of modification
+later causal explanation.
+
+Most prompt archives preserve strings, not learning events.
+
+BOUNDARY:
+Skinner studied animal behavior under noncontingent food schedules.
+
+Generative-art practice is not equivalent to that experimental setting.
+
+The source contributes a candidate mechanism for action retention under uncertain contingency, not evidence that AI artists are behaving like Skinner’s pigeons.
+
+CITATION TRAIL:
+[[ZF-20260817-SUPERSTITION-VARIANCE-006]]
+→ causal attribution under stochastic execution
+→ Skinner: behavior can stabilize around temporally adjacent but noncontingent rewards
+→ Staddon and Simmelhag: this mechanism is not sufficient to explain every apparently superstitious pattern
+→ new research object: distinguish FALSE BELIEF from REINFORCED RITUAL
+→ next edge: instrument prompt-learning histories rather than analyzing final prompt strings
+
+TEST:
+Build an experimental image generator containing four kinds of apparent controls:
+
+A. genuinely causal prompt modifiers
+B. weakly causal modifiers
+C. completely inert modifiers
+D. modifiers whose apparent successes are randomly scheduled
+
+Do not tell participants which is which.
+
+Record every intervention and whether participants retain, remove, or explain it.
+
+Then test:
+
+Do inert terms become persistent when unusually rewarding outputs happen immediately after their introduction?
+
+Does persistence survive explicit ablation evidence?
+
+Does social observation increase persistence?
+
+PLATFORM:
+stochastic generative systems
+Midjourney
+prompt learning
+behavioral experimentation
+
+LINKS:
+[[ZF-20260817-SUPERSTITION-VARIANCE-006]]
+[[PROMPT-SUPERSTITION]]
+[[ADVENTITIOUS-REINFORCEMENT]]
+[[RITUAL-BEFORE-BELIEF]]
+[[CAUSAL-ATTRIBUTION]]
+
+BIBTEX:
+@article{skinner1948superstition,
+  author={Skinner, B. F.},
+  title={'Superstition' in the Pigeon},
+  journal={Journal of Experimental Psychology},
+  volume={38},
+  pages={168--172},
+  year={1948}
+}
+
+@article{staddon1971superstition,
+  author={Staddon, J. E. R. and Simmelhag, Virginia L.},
+  title={The ``Superstition'' Experiment: A Reexamination of Its Implications for the Principles of Adaptive Behavior},
+  journal={Psychological Review},
+  volume={78},
+  pages={3--43},
+  year={1971}
+}
+
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ZF-20260817-FALSE-AFFORDANCE-017
+
+TITLE:
+A Magic Prompt Can Be a False Affordance
+
+SOURCE:
+William W. Gaver, “Technology Affordances,” Proceedings of CHI ’91, pp. 79–84, 1991.
+https://doi.org/10.1145/108844.108856
+
+PASSAGE:
+[PARAPHRASE] For Gaver, a false affordance occurs when available information suggests an action that the environment does not actually support; a hidden affordance exists when an action is possible but information about it is unavailable or unnoticed.
+
+RESEARCH OBJECT:
+The “magic prompt” can be reframed without deciding in advance whether it is genuine or superstitious.
+
+It is a PERCEIVED AFFORDANCE.
+
+The practitioner believes:
+
+THIS WORD LETS ME DO THAT.
+
+But generative interfaces create at least three radically different cases:
+
+PERCEPTIBLE AFFORDANCE:
+the term reliably changes model behavior and the practitioner correctly perceives this.
+
+HIDDEN AFFORDANCE:
+the system can be controlled in some way the practitioner has not yet discovered.
+
+FALSE AFFORDANCE:
+the practitioner perceives control where no reliable control exists.
+
+Prompt craft therefore involves discovering not merely vocabulary but the action possibilities of an invisible machine.
+
+LOCAL MOVE:
+Replace:
+
+MAGIC TERM
+versus
+USELESS TERM
+
+with:
+
+PERCEPTIBLE AFFORDANCE
+HIDDEN AFFORDANCE
+FALSE AFFORDANCE
+CONTEXT-CONDITIONAL AFFORDANCE.
+
+SOURCE TERMS:
+affordance
+perceptible affordance
+hidden affordance
+false affordance
+perceptual information
+action
+technology
+
+WHAT BECAME STRANGE:
+Opacity produces two opposite failures.
+
+The practitioner can believe in a lever that does not exist.
+
+But they can also fail to see a lever that does.
+
+Prompt experimentation is therefore not merely optimization.
+
+It is AFFORDANCE DISCOVERY under radically incomplete perceptual information.
+
+QUESTION:
+What information allows a practitioner to distinguish a real model affordance from a merely apparent one?
+
+DEEPER QUESTION:
+What would a generative interface look like if its actual controllable possibilities were perceptible rather than requiring users to reverse-engineer them through folklore?
+
+MECHANISM:
+SYSTEM HAS ACTION POSSIBILITY
++
+USER HAS OR LACKS INFORMATION ABOUT POSSIBILITY
+
+→ perceived control state.
+
+The crucial distinction is between:
+
+WHAT THE SYSTEM CAN DO
+
+and:
+
+WHAT THE INTERFACE LEADS THE USER TO THINK THEY CAN DO.
+
+FORMAL SHIFT:
+PROMPT TERM
+→ EFFECT / NO EFFECT
+
+becomes:
+
+ACTUAL EFFECT POSSIBILITY
+×
+PERCEIVED EFFECT POSSIBILITY
+
+yielding different classes of control.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+Gaver separates:
+
+existence of affordance
+
+from:
+
+perceptual information specifying affordance.
+
+This produces categories including:
+
+perceptible affordance
+hidden affordance
+false affordance.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+A(t,M) = whether intervention t affords useful control over model M
+
+P_u(t,M) = whether user u perceives that control
+
+Then:
+
+A=1, P=1
+→ PERCEPTIBLE CONTROL
+
+A=1, P=0
+→ HIDDEN CONTROL
+
+A=0, P=1
+→ FALSE CONTROL
+
+A=0, P=0
+→ CORRECT REJECTION.
+
+For generative models, add:
+
+A(t,M,c)
+
+where c includes:
+
+prompt context
+seed
+model version
+parameters.
+
+An apparently false affordance may instead be conditional on an unobserved c.
+
+TENSION:
+Calling prompt magic a false affordance is too easy.
+
+Some strange linguistic interventions genuinely alter generation.
+
+Conversely, calling every practitioner discovery an affordance is also too easy.
+
+The research problem is precisely that users cannot directly inspect which category they inhabit.
+
+MISSING:
+An empirical affordance map of a generative model:
+
+what actions are possible
+which are documented
+which are discoverable
+which users perceive
+which users falsely perceive
+which change across versions.
+
+BOUNDARY:
+Gaver’s affordance theory concerns perception and action in technologies generally.
+
+It does not claim that prompts are affordances or describe generative models.
+
+That extension is ours.
+
+CITATION TRAIL:
+[[ZF-20260817-SUPERSTITION-VARIANCE-006]]
+[[ZF-20260817-VOCABULARY-GAP-002]]
+→ users cannot reliably infer which prompt elements matter
+→ Gaver separates actual action possibilities from perceptual information about them
+→ magic prompt becomes a problem of hidden versus false affordance
+→ next edge: design interfaces that expose causal affordances without eliminating exploratory discovery
+
+TEST:
+Create a generative system whose actual prompt sensitivities are instrumented and known experimentally.
+
+Ask users to map:
+
+WHAT CAN I CONTROL?
+
+Compare their perceived map against the measured map.
+
+Classify each claimed prompt operation as:
+
+PERCEPTIBLE
+HIDDEN
+FALSE
+CONTEXT-CONDITIONAL.
+
+Then alter the interface to expose:
+effect previews
+ablation
+sensitivity indicators
+or causal comparisons.
+
+Test whether increased affordance visibility reduces superstition while preserving exploration.
+
+PLATFORM:
+human-computer interaction
+generative interfaces
+prompt systems
+
+LINKS:
+[[ZF-20260817-SUPERSTITION-VARIANCE-006]]
+[[ZF-20260817-VOCABULARY-GAP-002]]
+[[PROMPT-AFFORDANCE]]
+[[FALSE-AFFORDANCE]]
+[[HIDDEN-CONTROL]]
+[[EXPLAINABLE-CREATIVE-INTERFACE]]
+
+BIBTEX:
+@inproceedings{gaver1991technology,
+  author={Gaver, William W.},
+  title={Technology Affordances},
+  booktitle={Proceedings of the SIGCHI Conference on Human Factors in Computing Systems},
+  pages={79--84},
+  year={1991},
+  doi={10.1145/108844.108856}
+}
+
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ZF-20260817-PLAN-AS-RESOURCE-018
+
+TITLE:
+The Prompt May Be a Plan Used Inside Action, Not a Script Executed Before It
+
+SOURCE:
+Lucy A. Suchman, Human-Machine Reconfigurations: Plans and Situated Actions, 2nd ed., Cambridge University Press, 2006, Chapter 6, “Situated Actions.”
+https://www.cambridge.org/core/books/humanmachine-reconfigurations/situated-actions/F4AA82303887FF0875BD656977661875
+
+PASSAGE:
+[PARAPHRASE] Suchman situates plans inside ongoing practical activity: they can operate prospectively and retrospectively, but purposeful action cannot simply be identified with execution of an antecedent plan.
+
+RESEARCH OBJECT:
+[[ZF-20260817-PROMPT-NOT-UNIT-015]] asked whether the prompt is merely the most visible residue of a longer generative trajectory.
+
+Suchman gives the distinction sharper teeth.
+
+The mistake may not be:
+
+WE STUDIED THE WRONG KIND OF PROMPT.
+
+It may be:
+
+WE MISTOOK A PLAN FOR THE ACTION.
+
+A prompt can matter enormously without containing the creative process.
+
+It can orient activity.
+It can establish a direction.
+It can become a resource for judging what happens.
+It can be revised.
+It can later become an account of what the artist claims they were doing.
+
+None of those functions require the subsequent trajectory to be execution of the prompt.
+
+LOCAL MOVE:
+Replace:
+
+PROMPT = INSTRUCTION FOR ARTIFACT
+
+with:
+
+PROMPT =
+PROSPECTIVE RESOURCE
+within
+SITUATED GENERATIVE ACTION.
+
+SOURCE TERMS:
+plans
+situated actions
+purposeful action
+practical deliberation
+ongoing activity
+projective account
+retrospective account
+
+WHAT BECAME STRANGE:
+The same prompt can exist in three temporal roles:
+
+BEFORE:
+a projection of what the practitioner thinks they might do.
+
+DURING:
+a resource against which unfolding outputs are interpreted.
+
+AFTER:
+a compressed retrospective explanation of what happened.
+
+These roles are usually collapsed into one object called “the prompt.”
+
+QUESTION:
+When researchers collect the final prompt, are they observing the cause of the work or a retrospective account reconstructed after the work changed?
+
+DEEPER QUESTION:
+How much apparent prompt intentionality is produced after generation by narrating a contingent trajectory as though it had been planned from the beginning?
+
+MECHANISM:
+INITIAL PLAN
+→ SITUATED ACTION
+→ UNEXPECTED CONDITIONS
+→ LOCAL RESPONSE
+→ REVISED PLAN
+→ FURTHER ACTION
+→ RETROSPECTIVE ACCOUNT.
+
+FORMAL SHIFT:
+PLAN
+→ EXECUTION
+
+becomes:
+
+PLAN₀
+↘
+SITUATION₀
+→ ACTION₀
+→ SITUATION₁
+→ PLAN₁
+→ ACTION₁
+→ ...
+
+The plan participates without determining the sequence.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+pₜ = articulated prompt/plan at time t
+sₜ = encountered generative state
+aₜ = situated user action
+
+Then:
+
+aₜ = f(pₜ, sₜ, history)
+
+and:
+
+pₜ₊₁ = g(pₜ, sₜ, aₜ).
+
+Therefore the prompt is itself modified by the consequences of action.
+
+A final prompt pₙ cannot be assumed to represent:
+
+p₀
+
+or to have caused the full trajectory that produced it.
+
+TENSION:
+Suchman does not imply that plans are useless.
+
+The inversion is subtler:
+
+plans matter,
+but not necessarily because action is their execution.
+
+This leaves two live generative-AI cases:
+
+PROMPT-DOMINANT TASK:
+the artifact substantially realizes a stable antecedent specification.
+
+SITUATED TASK:
+the specification itself changes through encounters with generated material.
+
+MISSING:
+Time-stamped prompt histories showing when the practitioner first articulated each element of the eventual result.
+
+Without this, final prompts can create an illusion of foresight.
+
+BOUNDARY:
+Suchman’s analysis concerns purposeful human action and human-machine interaction broadly, not generative image systems.
+
+Applying it to prompting is an analytical extension, not a claimed historical influence.
+
+CITATION TRAIL:
+[[ZF-20260817-PROMPT-NOT-UNIT-015]]
+→ final prompt may conceal operational history
+→ Suchman: plans are resources within situated activity rather than exhaustive prescriptions
+→ new distinction: PROMPT-AS-PLAN versus PROMPT-AS-SCRIPT
+→ next edge: determine whether final prompts are prospective causes or retrospective rationalizations
+
+TEST:
+For 100 completed generative artworks, preserve:
+
+initial brief
+every intermediate prompt
+every generated candidate
+every user operation
+final prompt
+post-hoc artist explanation.
+
+For each feature visible in the final artwork, identify the first moment it became:
+
+INTENDED
+ARTICULATED
+GENERATED
+NOTICED
+RETAINED.
+
+If many important features are generated before they are articulated, the final prompt is partly retrospective rather than fully prospective.
+
+PLATFORM:
+situated action
+human-machine interaction
+generative workflows
+
+LINKS:
+[[ZF-20260817-PROMPT-NOT-UNIT-015]]
+[[PROMPT-AS-PLAN]]
+[[SITUATED-GENERATION]]
+[[GENERATIVE-TRAJECTORY]]
+[[RETROSPECTIVE-INTENTIONALITY]]
+
+BIBTEX:
+@book{suchman2006reconfigurations,
+  author={Suchman, Lucy A.},
+  title={Human-Machine Reconfigurations: Plans and Situated Actions},
+  edition={2},
+  publisher={Cambridge University Press},
+  year={2006},
+  url={https://www.cambridge.org/core/books/humanmachine-reconfigurations/situated-actions/F4AA82303887FF0875BD656977661875}
+}
+
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ZF-20260817-SURPRISE-REFRAMES-ENDS-019
+
+TITLE:
+A Generated Surprise Can Change the Goal That Produced It
+
+SOURCE:
+Donald A. Schön and John Bennett, “Reflective Conversation with Materials,” in Terry Winograd, ed., Bringing Design to Software, 1996.
+https://hci.stanford.edu/publications/bds/9-schon.html
+
+PASSAGE:
+[PARAPHRASE] Schön describes designers making moves, encountering consequences they did not intend, and revising their understanding while continuing to work. He explicitly notes that reframing can interactively redefine both means and ends.
+
+RESEARCH OBJECT:
+[[ZF-20260817-PROMPT-NOT-UNIT-015]] allowed intention to change during a generative session.
+
+Schön makes the mutation stronger.
+
+The output need not merely show the artist a better WAY to reach the same goal.
+
+It can change the GOAL.
+
+This matters because many theories of prompting assume a hidden stable target:
+
+human has intention I
+→ tries expressions
+→ eventually finds output approximating I.
+
+But reflective practice permits:
+
+I₀
+→ action
+→ surprising result
+→ reinterpretation
+→ I₁.
+
+The destination is partly produced by traveling.
+
+LOCAL MOVE:
+Replace:
+
+ITERATION =
+error correction toward fixed target
+
+with:
+
+ITERATION =
+conversation in which outputs can redefine both means and ends.
+
+SOURCE TERMS:
+reflection in action
+surprise
+knowing in action
+experiment
+move
+consequences
+reframing
+means
+ends
+
+WHAT BECAME STRANGE:
+A “failure” can be the event that reveals what the work should become.
+
+If the practitioner could have perfectly specified the final artifact before beginning, the most important generative discovery might never occur.
+
+The underspecification condemned as lack of control may be the condition that allows the problem itself to move.
+
+QUESTION:
+How often does a generative output solve the user’s stated problem, and how often does it cause the user to replace that problem with another one?
+
+DEEPER QUESTION:
+If the end of a creative process is partly constituted by events inside the process, where can artistic intention be located without projecting the endpoint backward in time?
+
+MECHANISM:
+INTENTION₀
+→ MOVE
+→ RESULT
+→ SURPRISE
+→ ATTENTION
+→ REFRAME
+→ INTENTION₁
+→ NEW MOVE.
+
+The generative artifact participates in reformulating the task.
+
+FORMAL SHIFT:
+OPTIMIZATION:
+
+find x maximizing J₀(x)
+
+becomes:
+
+REFLECTIVE SEARCH:
+
+generate xₜ
+→ encounter xₜ
+→ transform Jₜ
+→ generate under Jₜ₊₁.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Ordinary target model:
+
+x* = argmax_x J(x)
+
+with fixed J.
+
+Reflective generative model:
+
+xₜ ~ G(aₜ)
+
+Jₜ₊₁ = R(Jₜ, xₜ, surpriseₜ)
+
+aₜ₊₁ = π(Jₜ₊₁, xₜ).
+
+Thus:
+
+THE EVALUATION FUNCTION ITSELF CHANGES.
+
+The artist is not merely searching a possibility space.
+
+The criteria defining valuable possibilities are being reconstructed during search.
+
+TENSION:
+One interpretation:
+
+This is genuine reflective design.
+
+Another:
+
+The practitioner is merely rationalizing whatever attractive accident the model happened to produce.
+
+Both create changing goals.
+
+The difference is whether the practitioner can demonstrate discriminating, cumulative transformation rather than passive acceptance.
+
+MISSING:
+Operational criteria separating:
+
+REFRAMING
+from
+POST-HOC RATIONALIZATION.
+
+Both can produce a story in which the final result seems meaningful.
+
+BOUNDARY:
+Schön’s account concerns skilled design practice and does not establish that every generative interaction counts as reflection-in-action.
+
+Surprise alone is insufficient.
+
+The practitioner must respond to surprise in a way that restructures subsequent doing.
+
+CITATION TRAIL:
+[[ZF-20260817-PROMPT-NOT-UNIT-015]]
+[[ZF-20260817-DOCUMENTARY-MODE-012]]
+→ generative trajectory allows intention to change
+→ Schön: surprise can provoke reflection during action
+→ reframing can transform both means and ends
+→ new object: MODEL OUTPUT AS PROBLEM-REFRAMING EVENT
+→ next edge: discriminate reflective revision from opportunistic rationalization
+
+TEST:
+Before each generation, require practitioners to state:
+
+CURRENT GOAL
+CURRENT CONSTRAINTS
+EXPECTED FAILURE
+SUCCESS CRITERIA.
+
+After each generation, record whether any of those changed and why.
+
+Blind independent coders classify changes as:
+
+ERROR CORRECTION
+MEANS REVISION
+END REVISION
+UNRELATED DRIFT
+POST-HOC JUSTIFICATION.
+
+Compare experts and novices.
+
+If experts exhibit coherent end-revision triggered by interpretable surprises, generative skill includes reframing rather than mere target pursuit.
+
+PLATFORM:
+design practice
+generative AI
+iterative creative systems
+
+LINKS:
+[[ZF-20260817-PROMPT-NOT-UNIT-015]]
+[[ZF-20260817-DOCUMENTARY-MODE-012]]
+[[REFLECTION-IN-ACTION]]
+[[GENERATIVE-SURPRISE]]
+[[ENDOGENOUS-GOALS]]
+[[DEFERRED-FORMALIZATION]]
+
+BIBTEX:
+@incollection{schon1996reflective,
+  author={Schön, Donald A. and Bennett, John},
+  title={Reflective Conversation with Materials},
+  booktitle={Bringing Design to Software},
+  editor={Winograd, Terry},
+  year={1996},
+  pages={171--189},
+  doi={10.1145/229868.230044},
+  url={https://hci.stanford.edu/publications/bds/9-schon.html}
+}
+
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ZF-20260817-DISCORD-COGNITIVE-SYSTEM-020
+
+TITLE:
+The Early Prompt Community May Have Been a Cognitive System, Not Merely a Collection of Artists
+
+SOURCE:
+Edwin Hutchins, “The Distributed Cognition Perspective on Human Interaction,” in Nicholas J. Enfield and Stephen C. Levinson, eds., Roots of Human Sociality: Culture, Cognition and Interaction, 2006, pp. 375–398.
+https://pages.ucsd.edu/~ehutchins/integratedCogSci/DCOG-Interaction.pdf
+
+PASSAGE:
+[PARAPHRASE] Hutchins explicitly argues that a group working together can be analyzed as a distributed cognitive system and that social groups can exhibit cognitive properties different from those of the individuals composing them. He also argues that changing patterns of information flow can change decision outcomes.
+
+RESEARCH OBJECT:
+[[ZF-20260817-DISCORD-INSTRUMENT-008]] called Discord part of the generative instrument.
+
+Hutchins permits a more radical move.
+
+Do not ask only:
+
+HOW DID DISCORD HELP INDIVIDUALS LEARN PROMPTING?
+
+Ask:
+
+WHAT COGNITIVE PROCESS EXISTED AT THE SCALE OF THE CHANNEL THAT NO SINGLE PROMPTER POSSESSED?
+
+One user discovers a delimiter.
+Another tests it on portraits.
+Another finds a failure case.
+Another names the technique.
+Another copies it into documentation.
+Another mutates it.
+Thousands observe the result.
+
+No participant needs to know the whole system.
+
+The community can know more than any member.
+
+LOCAL MOVE:
+Replace:
+
+COMMUNITY
+→ TRAINS INDIVIDUAL EXPERTS
+
+with:
+
+COMMUNITY + INTERFACE + ARCHIVE + MODEL
+=
+DISTRIBUTED EXPERIMENTAL COGNITIVE SYSTEM.
+
+SOURCE TERMS:
+distributed cognition
+unit of analysis
+social interaction
+cognitive labor
+cognitive artifacts
+cognitive ecology
+information flow
+cultural practices
+
+WHAT BECAME STRANGE:
+The question:
+
+WHO DISCOVERED MULTIPROMPTING?
+
+may be malformed.
+
+Some discoveries may not have an individual discoverer in the strong sense.
+
+They can emerge through:
+
+partial observations
+distributed tests
+copying
+terminology
+failure reports
+interface affordances
+and accumulated archive.
+
+Discovery can be a property of the circulation pattern.
+
+QUESTION:
+Which pieces of prompt knowledge existed at the level of the Midjourney community before any individual could give a complete account of them?
+
+DEEPER QUESTION:
+Can a creative community experimentally learn the behavior of an opaque model without any member possessing an explicit model of how it works?
+
+MECHANISM:
+USER₁ produces anomaly
+→ USER₂ observes
+→ USER₃ reproduces
+→ USER₄ varies
+→ USER₅ names
+→ ARCHIVE preserves
+→ USERSₙ retrieve
+→ collective technique stabilizes.
+
+Knowledge moves through the system even when no individual contains the whole causal chain.
+
+FORMAL SHIFT:
+INDIVIDUAL:
+
+experience
+→ learning
+→ expertise
+
+becomes:
+
+DISTRIBUTED SYSTEM:
+
+many partial experiences
+→ information flow
+→ external representations
+→ social transformations
+→ community-level competence.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+Hutchins identifies distribution:
+
+across persons
+between persons and culturally constructed environments
+and through time.
+
+He also treats cognitive artifacts as components that can reorganize the functional cognitive system rather than merely increase an isolated person’s capacity.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+U = users
+A = archive
+I = interface
+M = model
+F = communication network
+
+Community cognition:
+
+C = ⟨U,A,I,M,F⟩.
+
+Knowledge state K_C need not equal:
+
+Σ K_u.
+
+Some operational capability exists only because:
+
+u₁ observes
+→ F transmits
+→ A preserves
+→ u₂ transforms
+→ M tests
+→ u₃ retrieves.
+
+Remove F or A and the cognitive capability of C changes even if every individual user remains unchanged.
+
+TENSION:
+“Distributed cognition” must not become a poetic synonym for “people collaborate.”
+
+Its stronger claim concerns the unit of analysis.
+
+To justify it here, research must identify a cognitive accomplishment that is explained better at the system level than by aggregating independent individuals.
+
+MISSING:
+A reconstructed information-flow graph of an actual prompt technique:
+
+who generated
+who observed
+who copied
+who varied
+who named
+who documented
+who popularized.
+
+BOUNDARY:
+Hutchins does not discuss Midjourney or AI-art communities.
+
+The child proposes distributed cognition as an analytical test, not as an established characterization of Discord prompting.
+
+CITATION TRAIL:
+[[ZF-20260817-DISCORD-INSTRUMENT-008]]
+[[ZF-20260817-COMMUNITY-LEXICON-003]]
+→ public prompt/output stream creates shared experimental material
+→ Hutchins: cognition can be analyzed across people, artifacts, culture, and information flow
+→ new question: whether prompt expertise exists at a supraindividual scale
+→ next edge: trace one technique as a distributed computation
+
+TEST:
+Choose one historically important Midjourney technique.
+
+Construct a chronological graph:
+
+NODE =
+user / message / prompt / image / documentation artifact
+
+EDGE =
+saw / copied / replied / modified / tested / named / documented.
+
+Then remove nodes computationally.
+
+Ask:
+
+Could any single participant have produced the stabilized technique from only their own observations?
+
+Which communication paths were necessary for convergence?
+
+If the technique depends on transformations distributed across actors and artifacts, model the discovery as a system-level accomplishment.
+
+PLATFORM:
+Midjourney Discord
+distributed cognition
+online creative communities
+
+LINKS:
+[[ZF-20260817-DISCORD-INSTRUMENT-008]]
+[[ZF-20260817-COMMUNITY-LEXICON-003]]
+[[DISTRIBUTED-PROMPT-COGNITION]]
+[[DISCORD-AS-LABORATORY]]
+[[COMMUNITY-AS-COMPUTATION]]
+[[PROMPT-GENEALOGY]]
+
+BIBTEX:
+@incollection{hutchins2006distributed,
+  author={Hutchins, Edwin},
+  title={The Distributed Cognition Perspective on Human Interaction},
+  booktitle={Roots of Human Sociality: Culture, Cognition and Interaction},
+  editor={Enfield, Nicholas J. and Levinson, Stephen C.},
+  publisher={Berg},
+  year={2006},
+  pages={375--398},
+  url={https://pages.ucsd.edu/~ehutchins/integratedCogSci/DCOG-Interaction.pdf}
+}
+
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ZF-20260817-DEFAULTS-HAVE-POLITICS-021
+
+TITLE:
+A Generative Default Does Not Merely Express Taste; It Arranges Power Over What Appears
+
+SOURCE:
+Langdon Winner, “Do Artifacts Have Politics?” Daedalus 109, no. 1 (Winter 1980): 121–136.
+https://www.jstor.org/stable/20024652
+
+PASSAGE:
+[PARAPHRASE] Winner’s argument is deliberately “both/and”: technologies are socially shaped, yet particular technical arrangements can themselves matter politically once built into material systems.
+
+RESEARCH OBJECT:
+[[ZF-20260817-DEFAULT-AESTHETICS-011]] called the platform’s aesthetic prior a form of governance.
+
+Winner forces the next question:
+
+GOVERNANCE OF WHAT?
+
+A default does not simply make one kind of picture more likely.
+
+It allocates burdens.
+
+If the default already favors a visual mode, users who want that mode spend little effort.
+
+Users who want something outside it must:
+
+discover counter-prompts
+increase specificity
+use alternate parameters
+accept degraded results
+switch models
+or abandon the attempt.
+
+The aesthetic prior therefore distributes CONTROL COST unevenly.
+
+LOCAL MOVE:
+Replace:
+
+DEFAULT AESTHETIC =
+PLATFORM TASTE
+
+with:
+
+DEFAULT AESTHETIC =
+AN ARRANGEMENT THAT DIFFERENTIALLY DISTRIBUTES THE COST OF MAKING SOME VISUAL FUTURES APPEAR.
+
+SOURCE TERMS:
+technical artifacts
+politics
+power
+authority
+technical arrangements
+social determination
+technological politics
+
+WHAT BECAME STRANGE:
+Two users can possess identical access to the prompt box while possessing radically unequal access to the image space.
+
+Formally equal interface access does not imply equal expressive effort.
+
+DEFAULT is where unequal effort can become invisible.
+
+QUESTION:
+Which visual intentions are cheap under a model’s defaults, and which require users to fight the system?
+
+DEEPER QUESTION:
+Can aesthetic power be measured as the unequal computational, lexical, monetary, and temporal effort required to make different kinds of representations appear?
+
+MECHANISM:
+PLATFORM CHOOSES MODEL / TUNING / DEFAULTS
+→ SOME OUTPUT REGIONS BECOME HIGH-PROBABILITY
+→ OTHER REGIONS BECOME LOW-PROBABILITY
+→ USER EFFORT REQUIRED TO REACH THEM DIVERGES
+→ UNEQUAL EXPRESSIVE COST.
+
+FORMAL SHIFT:
+BIAS =
+difference in output frequency
+
+becomes:
+
+AESTHETIC POWER =
+difference in the amount of intervention required to obtain desired outputs.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For desired visual state y:
+
+Cost(y|M,D) =
+expected combination of:
+
+prompt tokens
+iterations
+compute
+parameter changes
+reference materials
+time
+money
+expertise
+
+required to obtain y under model M and defaults D.
+
+Then compare:
+
+Cost(y₁|M,D)
+versus
+Cost(y₂|M,D).
+
+A default governs not only through:
+
+P(y)
+
+but through:
+
+COST OF OVERRIDING P(y).
+
+TENSION:
+Winner warns against two reductions.
+
+TECHNOLOGICAL DETERMINISM:
+the model alone dictates cultural outcomes.
+
+SOCIAL REDUCTION:
+only designers’ intentions matter, so technical form itself can be ignored.
+
+Aesthetic defaults require the same double analysis:
+
+who chose them
+and
+what they do once users encounter them.
+
+MISSING:
+A metric for expressive friction across demographic, stylistic, cultural, compositional, and representational targets.
+
+Frequency alone does not reveal how hard users must work against defaults.
+
+BOUNDARY:
+Winner’s essay concerns technological politics broadly.
+
+It does not claim that aesthetic model defaults are political artifacts.
+
+The application must be demonstrated through measurable differences in power, access, burden, or authority rather than asserted metaphorically.
+
+CITATION TRAIL:
+[[ZF-20260817-DEFAULT-AESTHETICS-011]]
+→ model defaults establish prior aesthetic conditions
+→ Winner: socially produced technical arrangements can subsequently organize power
+→ new variable: COST OF OVERRIDING DEFAULT
+→ next edge: measure aesthetic power as expressive friction
+
+TEST:
+Construct a balanced set of target images differing across:
+
+style
+composition
+cultural tradition
+age
+body
+lighting
+genre
+medium
+historical aesthetic.
+
+For each target, recruit matched practitioners and record:
+
+tokens
+iterations
+GPU cost
+elapsed time
+number of negative constraints
+reference images
+model switches
+failed generations.
+
+Estimate:
+
+EXPRESSIVE FRICTION(target).
+
+Then change only platform defaults.
+
+If expressive friction systematically redistributes, the default functions as more than aesthetic flavor.
+
+PLATFORM:
+generative-image platforms
+model defaults
+aesthetic governance
+technical politics
+
+LINKS:
+[[ZF-20260817-DEFAULT-AESTHETICS-011]]
+[[DEFAULT-AS-GOVERNANCE]]
+[[EXPRESSIVE-FRICTION]]
+[[AESTHETIC-POWER]]
+[[PLATFORM-AUTHORSHIP]]
+
+BIBTEX:
+@article{winner1980artifacts,
+  author={Winner, Langdon},
+  title={Do Artifacts Have Politics?},
+  journal={Daedalus},
+  volume={109},
+  number={1},
+  pages={121--136},
+  year={1980},
+  url={https://www.jstor.org/stable/20024652}
+}
+
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ZF-20260817-MATERIAL-TALKS-BACK-022
+
+TITLE:
+The Model Becomes Creative Material When Its Unintended Consequences Can Be Read and Answered
+
+SOURCE:
+Donald A. Schön and John Bennett, “Reflective Conversation with Materials,” in Terry Winograd, ed., Bringing Design to Software, 1996.
+https://hci.stanford.edu/publications/bds/9-schon.html
+
+PASSAGE:
+[PARAPHRASE] Schön describes design as a process without a direct path from intention to outcome: moves generate consequences beyond those intended, and the designer forms new understandings through responding to those consequences.
+
+RESEARCH OBJECT:
+[[ZF-20260817-DOCUMENTARY-MODE-012]] treated the artist as someone waiting to recognize an event.
+
+[[ZF-20260817-PROMPT-NOT-UNIT-015]] treated the creative unit as a trajectory.
+
+Schön changes what the generated output is inside that trajectory.
+
+It is not merely:
+
+RESULT.
+
+It can be:
+
+REPLY.
+
+The practitioner makes a move.
+The material returns consequences.
+Those consequences expose properties of the situation the practitioner had not represented.
+The practitioner answers.
+
+The crucial generative object may therefore be neither PROMPT nor IMAGE.
+
+It may be:
+
+MOVE ↔ BACK-TALK.
+
+LOCAL MOVE:
+Replace:
+
+HUMAN
+→ COMMAND
+→ MODEL OUTPUT
+
+with:
+
+HUMAN MOVE
+→ MATERIAL CONSEQUENCE
+→ HUMAN READING
+→ COUNTERMOVE.
+
+SOURCE TERMS:
+reflective conversation
+materials
+move
+surprise
+consequences
+reflection in action
+design
+representation
+
+WHAT BECAME STRANGE:
+Generative models are often called “collaborators” because their outputs are surprising.
+
+That may anthropomorphize the system unnecessarily.
+
+A piece of paper can “talk back” in Schön’s design sense without possessing intentions.
+
+The important property is not:
+
+DOES THE MODEL HAVE A MIND?
+
+but:
+
+CAN THE CONSEQUENCES OF WORKING WITH IT ALTER THE PRACTITIONER’S NEXT MOVE?
+
+QUESTION:
+Do we need machine agency to explain the experience of co-creation with a generative model?
+
+DEEPER QUESTION:
+Can human-AI co-creation be described more precisely as skilled responsiveness to computational material, avoiding both TOOL metaphors and anthropomorphic COLLABORATOR metaphors?
+
+MECHANISM:
+PRACTITIONER MOVE
+→ GENERATIVE TRANSFORMATION
+→ UNINTENDED CONSEQUENCES
+→ PERCEPTION OF CONSEQUENCES
+→ REINTERPRETATION
+→ PRACTITIONER COUNTERMOVE.
+
+FORMAL SHIFT:
+COLLABORATION:
+
+AGENT_A
+↔
+AGENT_B
+
+becomes:
+
+REFLECTIVE MATERIAL INTERACTION:
+
+AGENT
+↔
+TRANSFORMATIVE MATERIAL SYSTEM.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+aₜ = practitioner move
+M = generative material system
+xₜ = M(aₜ)
+Uₜ = consequences of xₜ not represented in intended outcome
+R = practitioner interpretation
+
+Then:
+
+aₜ₊₁ = R(aₜ, xₜ, Uₜ).
+
+Creative coupling exists when:
+
+∂aₜ₊₁ / ∂Uₜ ≠ 0.
+
+That is:
+
+the system’s unplanned consequences materially alter the next human move.
+
+No attribution of intention to M is required.
+
+TENSION:
+MATERIAL READING:
+The model need not be a collaborator; meaningful co-creation can arise through reflective interaction with non-agentive material.
+
+AGENTIAL READING:
+Generative systems may still differ importantly from paper, clay, or architectural sketches because they transform inputs through learned statistical structures and can produce elaborate semantically responsive outputs.
+
+Calling them merely “material” may erase that difference.
+
+MISSING:
+A discriminating vocabulary between:
+
+PASSIVE MATERIAL
+RESPONSIVE MATERIAL
+ADAPTIVE SYSTEM
+TOOL
+MEDIUM
+AGENT
+COLLABORATOR.
+
+“AI collaborator” currently collapses these distinctions.
+
+BOUNDARY:
+Schön’s “conversation with materials” is an account of design practice.
+
+It does not establish that generative models literally converse or possess agency.
+
+The useful transfer concerns cycles of action, consequence, interpretation, and revision.
+
+CITATION TRAIL:
+[[ZF-20260817-DOCUMENTARY-MODE-012]]
+[[ZF-20260817-PROMPT-NOT-UNIT-015]]
+→ outputs can be discovered rather than fully specified
+→ session is a trajectory rather than a single prompt
+→ Schön: materials reveal consequences through design moves
+→ collaborator metaphor no longer necessary
+→ new object: RESPONSIVE COMPUTATIONAL MATERIAL
+→ next edge: determine what properties distinguish generative material from traditional design materials
+
+TEST:
+Give practitioners four creative systems:
+
+A. paper sketching
+B. deterministic procedural graphics
+C. stochastic procedural graphics
+D. text-to-image generation.
+
+Record every moment when the artifact causes the practitioner to change:
+
+goal
+interpretation
+next operation
+evaluation criterion.
+
+Compare not raw surprise but:
+
+CONSEQUENTIAL BACK-TALK =
+unexpected artifact property that produces a subsequent change in practice.
+
+Test which systems produce which kinds of back-talk and whether generative models constitute a distinct class.
+
+PLATFORM:
+generative AI
+design practice
+human-machine interaction
+creative tools
+
+LINKS:
+[[ZF-20260817-DOCUMENTARY-MODE-012]]
+[[ZF-20260817-PROMPT-NOT-UNIT-015]]
+[[REFLECTIVE-CONVERSATION]]
+[[RESPONSIVE-COMPUTATIONAL-MATERIAL]]
+[[MODEL-AS-MATERIAL]]
+[[COCREATION-WITHOUT-ANTHROPOMORPHISM]]
+
+BIBTEX:
+@incollection{schon1996reflective,
+  author={Schön, Donald A. and Bennett, John},
+  title={Reflective Conversation with Materials},
+  booktitle={Bringing Design to Software},
+  editor={Winograd, Terry},
+  year={1996},
+  pages={171--189},
+  doi={10.1145/229868.230044},
+  url={https://hci.stanford.edu/publications/bds/9-schon.html}
+}

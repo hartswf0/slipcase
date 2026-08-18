@@ -1,0 +1,170 @@
+```text
+ZETTEL
+
+ID:
+HOUSE-LANG-007-SUB-05
+
+TITLE:
+THE SUBURBAN HOUSE CAN REMAIN UNDER INTERPRETATION AFTER IT HAS ALREADY BEEN BUILT
+
+SOURCE:
+Reston Association, Design Review Board — official description of current responsibilities and review procedure. SOURCE URL: https://www.reston.org/162/Design-Review-Board
+
+PASSAGE:
+[QUOTE]
+“Owners are not permitted to undertake any construction related to your project ... until you are in receipt of the final written decision.”
+
+RESEARCH OBJECT:
+COVENANT GOVERNANCE AS CONTINUOUS ARCHITECTURAL EXECUTION.
+
+LOCAL MOVE:
+The blueprint implies that architectural instructions terminate when construction terminates.
+
+Reston's Design Review Board presents another model.
+
+A built house remains inside an interpretive system.
+
+Exterior alterations become proposals.
+Guidelines become criteria.
+A board interprets them.
+A written decision authorizes or rejects transformation.
+Decisions can be appealed.
+
+The house continues to be compiled.
+
+SOURCE TERMS:
+Design Review Board
+Design Covenants
+Design Guidelines
+applications
+alterations
+improvements
+decisions
+appeals
+exception permits
+written decision
+
+WHAT BECAME STRANGE:
+A homeowner may own the physical object without possessing unilateral authority to mutate its visible state.
+
+The suburban house is therefore not simply property.
+
+It can be a governed object whose future versions require validation against shared textual rules.
+
+QUESTION:
+When does a suburban house finish executing its governing documents?
+
+DEEPER QUESTION:
+Could the more precise analogue to a “system prompt” be not the initial architectural brief but the covenant layer that remains active across every subsequent modification?
+
+MECHANISM:
+proposed physical change
+→ application
+→ interpretation against Design Covenants / Guidelines
+→ decision
+→ approval / rejection
+→ construction only after authorization
+→ possible appeal
+
+FORMAL SHIFT:
+HOUSE = BUILT STATE
+
+becomes:
+
+HOUSE_t
++ PROPOSED MUTATION
++ RULESET
++ REVIEWER
+→ HOUSE_t+1 OR REJECTION
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+APPLICATION
+→ DESIGN REVIEW
+→ DECISION
+
+Possible operations described by the source include:
+
+interpret
+administer
+review
+render decisions
+appeal
+grant temporary exception
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+STATE H_t
+
+proposal ΔH
+
+VALIDATE(ΔH, COVENANTS, GUIDELINES)
+
+IF approved:
+    H_t+1 = APPLY(H_t, ΔH)
+
+ELSE:
+    H_t+1 = H_t
+
+This makes the suburban house a versioned governed object.
+
+TENSION:
+Collective design governance can protect coherent shared environments.
+
+The same mechanism limits individual alteration after ownership.
+
+The house is simultaneously private property and a node whose visible mutations remain subject to collective interpretation.
+
+MISSING:
+Actual cases where ambiguous guideline language produced disagreement.
+
+How often does interpretation rather than explicit prohibition decide an outcome?
+
+How much architectural variation disappears before application because residents anticipate rejection?
+
+BOUNDARY:
+Reston is not representative of every suburb or HOA.
+
+Its value here is as a clear extant implementation of text-mediated architectural mutation.
+
+CITATION TRAIL:
+[[HOUSE-LANG-007]]
+→ Reston Design Review Board
+→ Reston Deed of Dedication
+→ Design Guidelines
+→ archived design applications
+→ appeals and exceptions
+→ earlier architectural-control covenants in planned subdivisions
+
+TEST:
+Sample fifty Reston alteration applications and their decisions.
+
+For each:
+
+INPUT DESCRIPTION
+REQUESTED PHYSICAL CHANGE
+RULE CITED
+INTERPRETATION
+DECISION
+BUILT OUTCOME
+
+Search specifically for cases where identical textual rules yield different physical outcomes.
+
+That would expose the interpreter as part of the architectural machine.
+
+PLATFORM:
+[[HOUSE AND LANGUAGE]]
+
+LINKS:
+[[HOUSE-LANG-007]]
+
+BIBTEX:
+@misc{restonDesignReview,
+  author = {{Reston Association}},
+  title = {Design Review Board},
+  url = {https://www.reston.org/162/Design-Review-Board},
+  note = {Accessed 2026-08-18}
+}
+```

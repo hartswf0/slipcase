@@ -1,0 +1,196 @@
+{"id": "DEFAULT-IMAGES-CHI26-A-1", "type": "ZETTEL", "label": "A generator can represent a concept early in denoising and then forget it before the image is finished.", "hash": "a28cc3efcc39cbe389851cbf4cf40f0a11c4c23d205bf8a489cf8751d6e2cc23", "root_file": "013__a-generator-can-represent-a-concept-early__Agarwal-2023__DEFAULT-IMAGES-CHI26-A-1__from-chat-20260817.txt"}
+{"id": "DEFAULT-IMAGES-CHI26-A", "type": "ZETTEL", "label": "Known words can erase evidence that an unknown word was never understood.", "hash": "e469824d0ae4612c7848723e286c84945d67a1d366d56a5ba5b0d15e497c39b5", "root_file": "012__known-words-can-erase-evidence-that-an-unk__Simonen-2026__DEFAULT-IMAGES-CHI26-A__from-chat-20260817.txt"}
+{"id": "DEFAULT-IMAGES-CHI26-B-1", "type": "ZETTEL", "label": "The visible prompt need not be the generator's prompt: an invisible writer can stand between the user and the image model.", "hash": "1e8a729fe4627c90f5e2555ddf40692325a87106cbcb4b0f234c7414d132f356", "root_file": "003__the-visible-prompt-need-not-be-the-generat__OpenAI-2023__DEFAULT-IMAGES-CHI26-B-1__from-chat-20260817.txt"}
+{"id": "DEFAULT-IMAGES-CHI26-B", "type": "ZETTEL", "label": "The paper observes default images in Midjourney, but it cannot yet locate the default inside the model.", "hash": "951711b1c08076d76a55958257816ca2ad4e2ba211d22665d53748e60a4bda65", "root_file": "002__the-paper-observes-default-images-in-midjo__Simonen-2026__DEFAULT-IMAGES-CHI26-B__from-chat-20260817.txt"}
+{"id": "DEFAULT-IMAGES-CHI26-C-1", "type": "ZETTEL", "label": "The random seed is not empty: blocks of Gaussian noise already have preferences for what they will become.", "hash": "f7595c7d6d3ffd67344a1aa9f1321fdcc20c0c51b8c3d3799ff5c2c4af9ea3cf", "root_file": "015__the-random-seed-is-not-empty-blocks-of-gau__Mao-2023__DEFAULT-IMAGES-CHI26-C-1__from-chat-20260817.txt"}
+{"id": "DEFAULT-IMAGES-CHI26-C", "type": "ZETTEL", "label": "When semantic guidance weakens, the random seed stops looking like mere variation and begins choosing among meanings the prompt failed to determine.", "hash": "7418b3322ae30ac687eb48ab67285364db0a41e1abb767118e50e697d6c6ea0a", "root_file": "014__when-semantic-guidance-weakens-the-random__Simonen-2026__DEFAULT-IMAGES-CHI26-C__from-chat-20260817.txt"}
+{"id": "DEFAULT-IMAGES-CHI26-D", "type": "ZETTEL", "label": "A model version may have a visual failure signature: what it draws when it cannot tell what you asked for.", "hash": "a76ecff1ac4f5c304b6f83624576de8f480f6b60161bf625e0ead4043d99385a", "root_file": "021__a-model-version-may-have-a-visual-failure__Simonen-2026__DEFAULT-IMAGES-CHI26-D__from-chat-20260817.txt"}
+{"id": "DEFAULT-IMAGES-CHI26-E-1", "type": "ZETTEL", "label": "The instrument used to detect default-image convergence has a convergence pathology of its own: CLIP produces hubs.", "hash": "a0575eae64e687081a012f9ed922a57b8c84edf0209cff5b934d79f1347c5172", "root_file": "017__the-instrument-used-to-detect-default-imag__Chowdhury-2024__DEFAULT-IMAGES-CHI26-E-1__from-chat-20260817.txt"}
+{"id": "DEFAULT-IMAGES-CHI26-E", "type": "ZETTEL", "label": "Default-image detection reverses ordinary prompt evaluation: the signal is visual similarity where linguistic similarity is absent.", "hash": "e98570914c031655d7303f93814f9e326f54e455be368b9c9341a1a910651e0f", "root_file": "016__default-image-detection-reverses-ordinary__Simonen-2026__DEFAULT-IMAGES-CHI26-E__from-chat-20260817.txt"}
+{"id": "DEFAULT-IMAGES-CHI26-F-1", "type": "ZETTEL", "label": "A single Unicode character can behave like a culture vector even when it appears inside a semantically irrelevant word.", "hash": "4aaf4894e3ce7c07141e4ca57ac345752f8aa300056c6df84713ccfaf90e7200", "root_file": "019__a-single-unicode-character-can-behave-like__Struppek-2023__DEFAULT-IMAGES-CHI26-F-1__from-chat-20260817.txt"}
+{"id": "DEFAULT-IMAGES-CHI26-F-2", "type": "ZETTEL", "label": "A word can be meaningless to every human in the room and still be densely meaningful to the image model.", "hash": "6d554e524f411ccdaee2ba3988921ca711519ad0932603b3f08fd55eb8efa5e9", "root_file": "020__a-word-can-be-meaningless-to-every-human-i__Milliere-2022__DEFAULT-IMAGES-CHI26-F-2__from-chat-20260817.txt"}
+{"id": "DEFAULT-IMAGES-CHI26-F", "type": "ZETTEL", "label": "When a model lacks a word, it does not leave a hole where that culture should be; it fills the hole with something it already knows how to picture.", "hash": "4c5fa97f3e31d41ca2fffc01a31c0b325be4ba6ea61a50c479a09b482e602a08", "root_file": "018__when-a-model-lacks-a-word-it-does-not-leav__Simonen-2026__DEFAULT-IMAGES-CHI26-F__from-chat-20260817.txt"}
+{"id": "DEFAULT-IMAGES-CHI26-ROOT", "type": "ZETTEL", "label": "A generator can fail to understand a prompt without failing to generate: semantic failure can appear as a polished image.", "hash": "9f4a6395346017cf4648c2bc2c664c2eee5abe7b197d3edb4965db437627d270", "root_file": "001__a-generator-can-fail-to-understand-a-promp__Simonen-2026__DEFAULT-IMAGES-CHI26-ROOT__from-chat-20260817.txt"}
+{"id": "WORKWORDS-PROMPT-001", "type": "ZETTEL", "label": "In prompt programming, specification and implementation can occupy the same sentence.", "hash": "cbcf826d86798879a08342072398783ff58dff20a48ba0b807b78a996b86631f", "root_file": "005__in-prompt-programming-specification-and-im__Liang-2025__WORKWORDS-PROMPT-001__from-chat-20260817.txt"}
+{"id": "WORKWORDS-PROMPT-002", "type": "ZETTEL", "label": "The prompt can keep working after the words have been removed.", "hash": "92383fab107cf942468f4e857deb2288a6dcbe5ab1309a276e851fd5b7a9246d", "root_file": "007__the-prompt-can-keep-working-after-the-word__Qin-Eisner-2021__WORKWORDS-PROMPT-002__from-chat-20260817.txt"}
+{"id": "WORKWORDS-PROMPT-003", "type": "ZETTEL", "label": "What a prompt leaves unsaid can function like borrowed code supplied by the model.", "hash": "052ae952b8180339c95c770f6df0693abccb9f306e083696ef5fcc052d55d9e0", "root_file": "006__what-a-prompt-leaves-unsaid-can-function-l__Yang-2025__WORKWORDS-PROMPT-003__from-chat-20260817.txt"}
+{"id": "WORKWORDS-PROMPT-004", "type": "ZETTEL", "label": "Once prompts are compiled, the writer no longer necessarily writes the words the model receives.", "hash": "9323205656bf93ff293752a742a15a396210c73c885e75973521c9c547c4ee32", "root_file": "004__once-prompts-are-compiled-the-writer-no-lo__Khattab-2023__WORKWORDS-PROMPT-004__from-chat-20260817.txt"}
+{"id": "WORKWORDS-PROMPT-005", "type": "ZETTEL", "label": "Writing acquires a loss landscape when criticism is treated as a textual gradient.", "hash": "5d9058a9f50764b6818b264bf033578291475d00c08c4e0e7610567ce90b841f", "root_file": "008__writing-acquires-a-loss-landscape-when-cri__Pryzant-2023__WORKWORDS-PROMPT-005__from-chat-20260817.txt"}
+{"id": "WORKWORDS-PROMPT-006", "type": "ZETTEL", "label": "The writer can stop breeding prompts and begin breeding the prompts that breed prompts.", "hash": "b75b3b88070c92c6119a14e403fe936f62a8cf047510a9228a08e2229abe47c3", "root_file": "009__the-writer-can-stop-breeding-prompts-and-b__Fernando-2023__WORKWORDS-PROMPT-006__from-chat-20260817.txt"}
+{"id": "WORKWORDS-PROMPT-007", "type": "ZETTEL", "label": "Prompt language becomes literally hybrid when prose, control flow, and constraints share one executable object.", "hash": "1d88b4023767b2d66a402131aad227174dc5b22fd9ee9ddddfea643b186150e4", "root_file": "010__prompt-language-becomes-literally-hybrid-w__Beurer-Kellner-2023__WORKWORDS-PROMPT-007__from-chat-20260817.txt"}
+{"id": "WORKWORDS-PROMPT-008", "type": "ZETTEL", "label": "A prompt becomes a research object when it is treated as a variable instead of a message.", "hash": "288a28b794a42f4590f9c22531b9744662c25213da35f282203591feced7a554", "root_file": "011__a-prompt-becomes-a-research-object-when-it__Arawjo-2023__WORKWORDS-PROMPT-008__from-chat-20260817.txt"}
+{"id": "SOURCE:Simonen2026DefaultImages", "type": "SOURCE", "label": "An Exploration of Default Images in Text-to-Image Generation", "citekey": "Simonen2026DefaultImages", "state": "LOCAL_FILE", "url": "https://doi.org/10.1145/3772318.3790681"}
+{"id": "SOURCE:Agarwal2023ASTAR", "type": "SOURCE", "label": "A-STAR: Test-time Attention Segregation and Retention for Text-to-image Synthesis", "citekey": "Agarwal2023ASTAR", "state": "LINK_ONLY", "url": "https://arxiv.org/abs/2306.14544"}
+{"id": "SOURCE:Mao2023InitialImageEditing", "type": "SOURCE", "label": "Guided Image Synthesis via Initial Image Editing in Diffusion Model", "citekey": "Mao2023InitialImageEditing", "state": "LINK_ONLY", "url": "https://arxiv.org/abs/2305.03382"}
+{"id": "SOURCE:Struppek2023Homoglyphs", "type": "SOURCE", "label": "Exploiting Cultural Biases via Homoglyphs in Text-to-Image Synthesis", "citekey": "Struppek2023Homoglyphs", "state": "LINK_ONLY", "url": "https://arxiv.org/abs/2209.08891"}
+{"id": "SOURCE:Milliere2022MadeUpWords", "type": "SOURCE", "label": "Adversarial Attacks on Image Generation With Made-Up Words", "citekey": "Milliere2022MadeUpWords", "state": "LINK_ONLY", "url": "https://arxiv.org/abs/2208.04135"}
+{"id": "SOURCE:Chowdhury2024NNN", "type": "SOURCE", "label": "Nearest Neighbor Normalization Improves Multimodal Retrieval", "citekey": "Chowdhury2024NNN", "state": "LINK_ONLY", "url": "https://arxiv.org/abs/2410.24114"}
+{"id": "SOURCE:OpenAI2023DALLE3", "type": "SOURCE", "label": "DALL-E 3", "citekey": "OpenAI2023DALLE3", "state": "LINK_ONLY", "url": "https://openai.com/index/dall-e-3/"}
+{"id": "SOURCE:Liang2025PromptsPrograms", "type": "SOURCE", "label": "Prompts Are Programs Too! Understanding How Developers Build Software Containing Prompts", "citekey": "Liang2025PromptsPrograms", "state": "LINK_ONLY", "url": "https://doi.org/10.1145/3729342"}
+{"id": "SOURCE:QinEisner2021SoftPrompts", "type": "SOURCE", "label": "Learning How to Ask: Querying LMs with Mixtures of Soft Prompts", "citekey": "QinEisner2021SoftPrompts", "state": "LINK_ONLY", "url": "https://arxiv.org/abs/2104.06599"}
+{"id": "SOURCE:Yang2025PromptsDontSay", "type": "SOURCE", "label": "What Prompts Don't Say: Understanding and Managing Underspecification in LLM Prompts", "citekey": "Yang2025PromptsDontSay", "state": "LINK_ONLY", "url": "https://arxiv.org/abs/2505.13360"}
+{"id": "SOURCE:Khattab2023DSPy", "type": "SOURCE", "label": "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines", "citekey": "Khattab2023DSPy", "state": "LINK_ONLY", "url": "https://arxiv.org/abs/2310.03714"}
+{"id": "SOURCE:Pryzant2023APO", "type": "SOURCE", "label": "Automatic Prompt Optimization with Gradient Descent and Beam Search", "citekey": "Pryzant2023APO", "state": "LINK_ONLY", "url": "https://arxiv.org/abs/2305.03495"}
+{"id": "SOURCE:Fernando2023Promptbreeder", "type": "SOURCE", "label": "Promptbreeder: Self-Referential Self-Improvement Via Prompt Evolution", "citekey": "Fernando2023Promptbreeder", "state": "LINK_ONLY", "url": "https://arxiv.org/abs/2309.16797"}
+{"id": "SOURCE:BeurerKellner2023LMQL", "type": "SOURCE", "label": "Prompting Is Programming: A Query Language for Large Language Models", "citekey": "BeurerKellner2023LMQL", "state": "LINK_ONLY", "url": "https://doi.org/10.1145/3591300"}
+{"id": "SOURCE:Arawjo2023ChainForge", "type": "SOURCE", "label": "ChainForge: A Visual Toolkit for Prompt Engineering and LLM Hypothesis Testing", "citekey": "Arawjo2023ChainForge", "state": "LINK_ONLY", "url": "https://arxiv.org/abs/2309.09128"}
+{"id": "PROMPT:FORAGE-v3.1", "type": "PROMPT", "label": "PRIME ZETTEL FORAGE — RECURSIVE INQUIRY", "file": "_PROMPTS/PRIME_ZETTEL_FORAGE_v3.1__forage-prompt.txt"}
+{"id": "PROMPT:ASSEMBLY-v15.5-AM", "type": "PROMPT", "label": "ANCIENT MASTER — SLIPCASE PORTABLE RESEARCH FIELD", "file": "_PROMPTS/ANCIENT_MASTER_SLIPCASE_v15.5-AM__assembly-prompt.txt"}
+{"id": "RESOURCE:DEFAULT-IMAGES-PDF", "type": "RESOURCE", "label": "Default Images CHI 2026 PDF", "file": "_RESOURCES/Simonen-et-al-2026__default-images__3772318.3790681.pdf"}
+{"id": "RESOURCE:CONVERSATION", "type": "RESOURCE", "label": "Current conversation context receipt", "file": "_RESOURCES/CURRENT_CONVERSATION_CONTEXT__receipt.txt"}
+{"id": "PLATFORM:8d7529e8f0d2", "type": "PLATFORM", "label": "Stable Diffusion / diffusion-model cross-attention analysis; proposed application to default-image experiments."}
+{"id": "CONCEPT:cross-attention", "type": "CONCEPT", "label": "cross-attention"}
+{"id": "CONCEPT:attention-segregation", "type": "CONCEPT", "label": "attention segregation"}
+{"id": "CONCEPT:attention-retention", "type": "CONCEPT", "label": "attention retention"}
+{"id": "CONCEPT:concept-overlap", "type": "CONCEPT", "label": "concept overlap"}
+{"id": "CONCEPT:denoising", "type": "CONCEPT", "label": "denoising"}
+{"id": "CONCEPT:semantic-alignment", "type": "CONCEPT", "label": "semantic alignment"}
+{"id": "CONCEPT:ignored-concepts", "type": "CONCEPT", "label": "ignored concepts"}
+{"id": "PLATFORM:93f95d800f9a", "type": "PLATFORM", "label": "Midjourney v6-series ablation study."}
+{"id": "CONCEPT:known-concepts", "type": "CONCEPT", "label": "known concepts"}
+{"id": "CONCEPT:unknown-terms", "type": "CONCEPT", "label": "unknown terms"}
+{"id": "CONCEPT:larger-prompts", "type": "CONCEPT", "label": "larger prompts"}
+{"id": "CONCEPT:prompt-specificity", "type": "CONCEPT", "label": "prompt specificity"}
+{"id": "CONCEPT:default-images", "type": "CONCEPT", "label": "default images"}
+{"id": "CONCEPT:semantic-guidance", "type": "CONCEPT", "label": "semantic guidance"}
+{"id": "CONCEPT:magnets", "type": "CONCEPT", "label": "magnets"}
+{"id": "PLATFORM:868040f7b0c7", "type": "PLATFORM", "label": "DALL-E 3 + ChatGPT as documented example; proposed comparison with Midjourney and inspectable pipelines."}
+{"id": "CONCEPT:chatgpt", "type": "CONCEPT", "label": "ChatGPT"}
+{"id": "CONCEPT:tailored-prompts", "type": "CONCEPT", "label": "tailored prompts"}
+{"id": "CONCEPT:detailed-prompts", "type": "CONCEPT", "label": "detailed prompts"}
+{"id": "CONCEPT:dall-e-3", "type": "CONCEPT", "label": "DALL-E 3"}
+{"id": "CONCEPT:prompt-refinement", "type": "CONCEPT", "label": "prompt refinement"}
+{"id": "CONCEPT:image-generation", "type": "CONCEPT", "label": "image generation"}
+{"id": "PLATFORM:51d06844cd4c", "type": "PLATFORM", "label": "Midjourney as proprietary black-box system; comparative test requires inspectable TTI models."}
+{"id": "CONCEPT:training-data", "type": "CONCEPT", "label": "training data"}
+{"id": "CONCEPT:latent-model-behavior", "type": "CONCEPT", "label": "latent model behavior"}
+{"id": "CONCEPT:sampling-mechanism", "type": "CONCEPT", "label": "sampling mechanism"}
+{"id": "CONCEPT:prompt-rewriting", "type": "CONCEPT", "label": "prompt rewriting"}
+{"id": "CONCEPT:platform-design-decisions", "type": "CONCEPT", "label": "platform design decisions"}
+{"id": "CONCEPT:black-box", "type": "CONCEPT", "label": "black-box"}
+{"id": "CONCEPT:causality", "type": "CONCEPT", "label": "causality"}
+{"id": "PLATFORM:699208d9c75f", "type": "PLATFORM", "label": "Stable Diffusion; initial-latent intervention."}
+{"id": "CONCEPT:initial-noise", "type": "CONCEPT", "label": "initial noise"}
+{"id": "CONCEPT:initial-latent-image", "type": "CONCEPT", "label": "initial latent image"}
+{"id": "CONCEPT:content-preference", "type": "CONCEPT", "label": "content preference"}
+{"id": "CONCEPT:pixel-blocks", "type": "CONCEPT", "label": "pixel blocks"}
+{"id": "CONCEPT:guided-image-synthesis", "type": "CONCEPT", "label": "guided image synthesis"}
+{"id": "CONCEPT:stable-diffusion", "type": "CONCEPT", "label": "Stable Diffusion"}
+{"id": "CONCEPT:layout-to-image", "type": "CONCEPT", "label": "layout-to-image"}
+{"id": "PLATFORM:1752475f7e2d", "type": "PLATFORM", "label": "Midjourney v6.1 manual experiments and multi-version observational dataset."}
+{"id": "CONCEPT:seed-value", "type": "CONCEPT", "label": "seed value"}
+{"id": "CONCEPT:stochastic-sampling", "type": "CONCEPT", "label": "stochastic sampling"}
+{"id": "CONCEPT:variation", "type": "CONCEPT", "label": "variation"}
+{"id": "CONCEPT:default-image-motif", "type": "CONCEPT", "label": "default-image motif"}
+{"id": "CONCEPT:many-to-many-relationship", "type": "CONCEPT", "label": "many-to-many relationship"}
+{"id": "CONCEPT:fixed-seed", "type": "CONCEPT", "label": "fixed seed"}
+{"id": "PLATFORM:9f67533f8b03", "type": "PLATFORM", "label": "Midjourney versions 1–6.1; proposed extension across TTI systems."}
+{"id": "CONCEPT:model-specific-default-images", "type": "CONCEPT", "label": "model-specific default images"}
+{"id": "CONCEPT:model-version", "type": "CONCEPT", "label": "model version"}
+{"id": "CONCEPT:default-motifs", "type": "CONCEPT", "label": "default motifs"}
+{"id": "CONCEPT:model-signature", "type": "CONCEPT", "label": "model signature"}
+{"id": "CONCEPT:visual-patterns", "type": "CONCEPT", "label": "visual patterns"}
+{"id": "PLATFORM:d2845684d9b7", "type": "PLATFORM", "label": "CLIP and other multimodal embedding models; Midjourney default-image detection pipeline."}
+{"id": "CONCEPT:hubness", "type": "CONCEPT", "label": "hubness"}
+{"id": "CONCEPT:contrastive-retrieval", "type": "CONCEPT", "label": "contrastive retrieval"}
+{"id": "CONCEPT:clip", "type": "CONCEPT", "label": "CLIP"}
+{"id": "CONCEPT:cosine-similarity", "type": "CONCEPT", "label": "cosine similarity"}
+{"id": "CONCEPT:nearest-neighbor", "type": "CONCEPT", "label": "nearest neighbor"}
+{"id": "CONCEPT:hub-images", "type": "CONCEPT", "label": "hub images"}
+{"id": "CONCEPT:nearest-neighbor-normalization", "type": "CONCEPT", "label": "Nearest Neighbor Normalization"}
+{"id": "PLATFORM:5ab19182052e", "type": "PLATFORM", "label": "Midjourney dataset; CLIP ViT-L/14; all-MiniLM-L6-v2; agglomerative hierarchical clustering."}
+{"id": "CONCEPT:agglomerative-hierarchical-clustering", "type": "CONCEPT", "label": "agglomerative hierarchical clustering"}
+{"id": "CONCEPT:lexical-overlap", "type": "CONCEPT", "label": "lexical overlap"}
+{"id": "CONCEPT:semantic-similarity", "type": "CONCEPT", "label": "semantic similarity"}
+{"id": "CONCEPT:sentence-transformers", "type": "CONCEPT", "label": "sentence transformers"}
+{"id": "CONCEPT:default-image-cluster", "type": "CONCEPT", "label": "default-image cluster"}
+{"id": "PLATFORM:8ea6b7c5bc65", "type": "PLATFORM", "label": "DALL-E 2; Stable Diffusion; CLIP-based text encoders."}
+{"id": "CONCEPT:homoglyphs", "type": "CONCEPT", "label": "homoglyphs"}
+{"id": "CONCEPT:non-latin-characters", "type": "CONCEPT", "label": "non-Latin characters"}
+{"id": "CONCEPT:text-encoder", "type": "CONCEPT", "label": "text encoder"}
+{"id": "CONCEPT:cultural-biases", "type": "CONCEPT", "label": "cultural biases"}
+{"id": "CONCEPT:embedding-space", "type": "CONCEPT", "label": "embedding space"}
+{"id": "CONCEPT:cultural-directions", "type": "CONCEPT", "label": "cultural directions"}
+{"id": "CONCEPT:unicode-scripts", "type": "CONCEPT", "label": "Unicode scripts"}
+{"id": "PLATFORM:f59f75ea4957", "type": "PLATFORM", "label": "DALL-E 2; DALL-E mini; subword-tokenized text-to-image systems."}
+{"id": "CONCEPT:macaronic-prompting", "type": "CONCEPT", "label": "macaronic prompting"}
+{"id": "CONCEPT:nonce-strings", "type": "CONCEPT", "label": "nonce strings"}
+{"id": "CONCEPT:lexical-hybridization", "type": "CONCEPT", "label": "lexical hybridization"}
+{"id": "CONCEPT:subword-units", "type": "CONCEPT", "label": "subword units"}
+{"id": "CONCEPT:bpe-tokenization", "type": "CONCEPT", "label": "BPE tokenization"}
+{"id": "CONCEPT:multilingual-data", "type": "CONCEPT", "label": "multilingual data"}
+{"id": "CONCEPT:evocative-prompting", "type": "CONCEPT", "label": "evocative prompting"}
+{"id": "PLATFORM:81fab892cd06", "type": "PLATFORM", "label": "Midjourney; comparative multilingual TTI evaluation."}
+{"id": "CONCEPT:low-resource-languages", "type": "CONCEPT", "label": "low-resource languages"}
+{"id": "CONCEPT:finnish", "type": "CONCEPT", "label": "Finnish"}
+{"id": "CONCEPT:tagalog", "type": "CONCEPT", "label": "Tagalog"}
+{"id": "CONCEPT:training-data-coverage", "type": "CONCEPT", "label": "training-data coverage"}
+{"id": "CONCEPT:dataset-diversity", "type": "CONCEPT", "label": "dataset diversity"}
+{"id": "CONCEPT:unknown-inputs", "type": "CONCEPT", "label": "unknown inputs"}
+{"id": "PLATFORM:9dc00e28ee63", "type": "PLATFORM", "label": "Midjourney; CHI 2026 empirical study."}
+{"id": "CONCEPT:unrecognized-prompts", "type": "CONCEPT", "label": "unrecognized prompts"}
+{"id": "CONCEPT:latent-space", "type": "CONCEPT", "label": "latent space"}
+{"id": "CONCEPT:generic-visual-patterns", "type": "CONCEPT", "label": "generic visual patterns"}
+{"id": "CONCEPT:model-vocabulary", "type": "CONCEPT", "label": "model vocabulary"}
+{"id": "CONCEPT:prompt-engineering", "type": "CONCEPT", "label": "prompt engineering"}
+{"id": "PLATFORM:5d4d0d2fe109", "type": "PLATFORM", "label": "LLM application development; prompt programming."}
+{"id": "CONCEPT:prompt-programming", "type": "CONCEPT", "label": "prompt programming"}
+{"id": "CONCEPT:requirements", "type": "CONCEPT", "label": "requirements"}
+{"id": "CONCEPT:implementation", "type": "CONCEPT", "label": "implementation"}
+{"id": "CONCEPT:mental-model", "type": "CONCEPT", "label": "mental model"}
+{"id": "CONCEPT:foundation-model", "type": "CONCEPT", "label": "foundation model"}
+{"id": "CONCEPT:prompt-iteration", "type": "CONCEPT", "label": "prompt iteration"}
+{"id": "CONCEPT:software-development", "type": "CONCEPT", "label": "software development"}
+{"id": "PLATFORM:5140fe100aea", "type": "PLATFORM", "label": "Pretrained language models; soft-prompt optimization."}
+{"id": "CONCEPT:soft-prompts", "type": "CONCEPT", "label": "soft prompts"}
+{"id": "CONCEPT:soft-words", "type": "CONCEPT", "label": "soft words"}
+{"id": "CONCEPT:continuous-vectors", "type": "CONCEPT", "label": "continuous vectors"}
+{"id": "CONCEPT:gradient-descent", "type": "CONCEPT", "label": "gradient descent"}
+{"id": "CONCEPT:prompt-mixture", "type": "CONCEPT", "label": "prompt mixture"}
+{"id": "CONCEPT:word-embeddings", "type": "CONCEPT", "label": "word embeddings"}
+{"id": "CONCEPT:random-initialization", "type": "CONCEPT", "label": "random initialization"}
+{"id": "PLATFORM:2c1132bfd1ec", "type": "PLATFORM", "label": "LLM-powered applications; requirements-aware prompt optimization."}
+{"id": "CONCEPT:underspecification", "type": "CONCEPT", "label": "underspecification"}
+{"id": "CONCEPT:specified-requirements", "type": "CONCEPT", "label": "specified requirements"}
+{"id": "CONCEPT:unspecified-requirements", "type": "CONCEPT", "label": "unspecified requirements"}
+{"id": "CONCEPT:behavioral-stability", "type": "CONCEPT", "label": "behavioral stability"}
+{"id": "CONCEPT:requirement-aware-prompt-optimization", "type": "CONCEPT", "label": "requirement-aware prompt optimization"}
+{"id": "CONCEPT:conditional-requirements", "type": "CONCEPT", "label": "conditional requirements"}
+{"id": "PLATFORM:13e7e9ac58a2", "type": "PLATFORM", "label": "DSPy; LLM pipelines."}
+{"id": "CONCEPT:dspy", "type": "CONCEPT", "label": "DSPy"}
+{"id": "CONCEPT:declarative-modules", "type": "CONCEPT", "label": "declarative modules"}
+{"id": "CONCEPT:compiler", "type": "CONCEPT", "label": "compiler"}
+{"id": "CONCEPT:text-transformation-graphs", "type": "CONCEPT", "label": "text transformation graphs"}
+{"id": "CONCEPT:prompt-templates", "type": "CONCEPT", "label": "prompt templates"}
+{"id": "CONCEPT:metric", "type": "CONCEPT", "label": "metric"}
+{"id": "CONCEPT:self-improving-pipelines", "type": "CONCEPT", "label": "self-improving pipelines"}
+{"id": "PLATFORM:ffb95205ba43", "type": "PLATFORM", "label": "LLM prompt optimization."}
+{"id": "CONCEPT:automatic-prompt-optimization", "type": "CONCEPT", "label": "Automatic Prompt Optimization"}
+{"id": "CONCEPT:textual-gradients", "type": "CONCEPT", "label": "textual gradients"}
+{"id": "CONCEPT:beam-search", "type": "CONCEPT", "label": "beam search"}
+{"id": "CONCEPT:bandit-selection", "type": "CONCEPT", "label": "bandit selection"}
+{"id": "CONCEPT:prompt-editing", "type": "CONCEPT", "label": "prompt editing"}
+{"id": "PLATFORM:b5bdc4203931", "type": "PLATFORM", "label": "LLM-driven evolutionary prompt optimization."}
+{"id": "CONCEPT:promptbreeder", "type": "CONCEPT", "label": "Promptbreeder"}
+{"id": "CONCEPT:task-prompts", "type": "CONCEPT", "label": "task-prompts"}
+{"id": "CONCEPT:mutation-prompts", "type": "CONCEPT", "label": "mutation-prompts"}
+{"id": "CONCEPT:population", "type": "CONCEPT", "label": "population"}
+{"id": "CONCEPT:fitness", "type": "CONCEPT", "label": "fitness"}
+{"id": "CONCEPT:evolution", "type": "CONCEPT", "label": "evolution"}
+{"id": "CONCEPT:self-referential-improvement", "type": "CONCEPT", "label": "self-referential improvement"}
+{"id": "PLATFORM:c3e82bfd321f", "type": "PLATFORM", "label": "LMQL; Language Model Programming."}
+{"id": "CONCEPT:language-model-programming", "type": "CONCEPT", "label": "Language Model Programming"}
+{"id": "CONCEPT:lmql", "type": "CONCEPT", "label": "LMQL"}
+{"id": "CONCEPT:constraints", "type": "CONCEPT", "label": "constraints"}
+{"id": "CONCEPT:control-flow", "type": "CONCEPT", "label": "control flow"}
+{"id": "CONCEPT:text-prompting", "type": "CONCEPT", "label": "text prompting"}
+{"id": "CONCEPT:scripting", "type": "CONCEPT", "label": "scripting"}
+{"id": "CONCEPT:inference-procedure", "type": "CONCEPT", "label": "inference procedure"}
+{"id": "PLATFORM:d5a45d9dac87", "type": "PLATFORM", "label": "ChainForge; LLM experimentation and prompt engineering."}
+{"id": "CONCEPT:chainforge", "type": "CONCEPT", "label": "ChainForge"}
+{"id": "CONCEPT:prompt-variation", "type": "CONCEPT", "label": "prompt variation"}
+{"id": "CONCEPT:model-comparison", "type": "CONCEPT", "label": "model comparison"}
+{"id": "CONCEPT:hypothesis-testing", "type": "CONCEPT", "label": "hypothesis testing"}
+{"id": "CONCEPT:opportunistic-exploration", "type": "CONCEPT", "label": "opportunistic exploration"}
+{"id": "CONCEPT:limited-evaluation", "type": "CONCEPT", "label": "limited evaluation"}
+{"id": "CONCEPT:iterative-refinement", "type": "CONCEPT", "label": "iterative refinement"}

@@ -1,0 +1,92 @@
+SLIPCASE 15.55-AM — VERIFICATION
+CHECKPOINT: THE CASINO IN THE FOUNTAIN
+GENERATED: 2026-08-17T203217-0400
+
+SOURCE COVERAGE
+  current assembly prompt: COMPLETE_FILE
+  prior checkpoint: PRIOR_CHECKPOINT
+  underlying zettel capture: VISIBLE_CONTEXT (not complete-chat coverage)
+
+EXTRACTION
+  admitted zettels: 33
+  root TXT cards: 33
+  _MD mirrors: 33
+  JSON zettel records: 33
+  payload/hash mismatches: 0
+
+DUPLICATES / ID COLLISIONS
+  inherited exact-duplicate and ID-collision classifications: preserved from prior checkpoint; no new zettel merge performed in this assembly.
+
+PLATFORM RELATIONS
+  MEMBER_OF records: 33
+
+LINKS RELATIONS
+  LINKS_TO records: 98
+
+WIKILINK COVERAGE
+  WIKILINKS_TO records: 150
+
+GHOSTS / AMBIGUITIES / BROKEN REFERENCES
+  GHOST nodes: 48
+  ambiguous/broken explicit IDs: none newly introduced by this assembly; inherited relation statuses preserved.
+
+BIBLIOGRAPHY COVERAGE
+  compiled BibTeX records: 35
+  paper citekeys used: 17
+  missing paper citekeys: 0
+
+RESOURCE COVERAGE
+  resource records: 36
+  preserved local/snapshot/generated bodies: 13
+  LINK_ONLY records: 23
+
+RECONSTRUCTION STATE
+  index.html: BUILT (self-contained registry will be reconciled below)
+  000__REBUILD.txt: BUILT
+  000__MAKING_HISTORY.txt: BUILT
+
+PAPER EVIDENCE COVERAGE
+  paper: The Casino Is Not the Building: Transaction Topology and the Boundaries of Virtual Worlds
+  source map: the-casino-is-not-the-building__SOURCE_MAP.txt
+  citekey subset check: PASS
+
+ASSEMBLY PROMPT STATUS
+  exact prompt: _PROMPTS/10__slipcase-v15.55-AM__assembly.poml
+  SHA-256: a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a
+  assembly appendix: the-casino-is-not-the-building__ASSEMBLY_APPENDIX.txt
+
+MAKING HISTORY
+  root: 000__MAKING_HISTORY.txt
+  paper: the-casino-is-not-the-building__MAKING_HISTORY.txt
+
+PDF STATUS
+  file: the-casino-is-not-the-building__2026-08-17.pdf
+  pages: 9
+  unresolved citations/references after final pass: NO
+  source SHA-256: 51140a6e0eb756e3201f1c3f16402d50bc18f3410361b76ca0db6c1957bc5e97
+  PDF SHA-256: 265c7dc1f78360b7bd07162e09f2f765ece7f009527961620d4d8fe31b6afa48
+  rendered visual inspection: PASS — all 9 pages rendered; title page, argument pages, references, and appendices show no clipped research text.
+  COOL RADIO visible-text occurrences: 0
+  AI-augmented research-process disclosure occurrences: 1 (title page only)
+
+ZIP STATUS
+  file: the-casino-in-the-fountain__slipcase-v15.55-AM__156066d527d3__2026-08-17T203217-0400.zip
+  integrity: PASS
+
+STRUCTURE
+  graph nodes: 177 = 24 BIBLIOGRAPHIC_WORK + 48 GHOST + 33 PLATFORM + 4 PROMPT + 35 RESOURCE + 33 ZETTEL
+  graph edges: 735
+  package: the-casino-in-the-fountain__slipcase-v15.55-AM__156066d527d3__2026-08-17T203217-0400.zip
+
+
+  reconstruction test: PASS — the ZIP writer embedded in index.html was exercised against all 150 embedded files; unzip integrity passed and all reconstructed path/size/SHA-256 values matched.
+  headless Chromium visual smoke: UNVERIFIED — Chromium exceeded the runtime timeout; no browser success is claimed.
+
+INDEX / REPLICATION CAPSULE
+  self-contained file: index.html
+  embedded non-index files: 150
+  actual non-index files: 150
+  path/size/SHA mismatches: 0
+  JavaScript syntax: PASS (Node --check)
+  reconstruction test: PASS — the ZIP writer embedded in index.html was exercised against all 150 embedded files; unzip integrity passed and all reconstructed path/size/SHA-256 values matched.
+  headless Chromium visual smoke: UNVERIFIED — Chromium exceeded the runtime timeout; no browser success is claimed.

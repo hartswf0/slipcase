@@ -1,0 +1,105 @@
+ZETTEL
+
+ID:
+Z-SYS-014
+
+TITLE:
+“Ancient Master is a recipe, not a source” defines a missing category: operational provenance
+
+SOURCE:
+User-provided prompt system — SLIPCASE — ANCIENT MASTER PORTABLE RESEARCH FIELD v15.0 — supplied 2026-08-18.
+
+PASSAGE:
+[PARAPHRASE] Ancient Master explicitly says its vocabulary governs how the system works but cannot be cited as scholarly evidence unless independently part of the subject. Elsewhere the system requires preservation of consequential prompts and making history.
+
+RESEARCH OBJECT:
+The prompt distinguishes causal influence on research from evidentiary support for scholarly claims.
+
+LOCAL MOVE:
+Prevents the instructions that selected and transformed evidence from masquerading as evidence about the external world.
+
+SOURCE TERMS:
+recipe, not a source
+HOW YOU WORK
+WHAT YOU MAY SAY
+PROMPT
+MAKING_HISTORY
+provenance
+
+WHAT BECAME STRANGE:
+Something can be causally indispensable to a result while being evidentially irrelevant to the claim that result makes.
+
+QUESTION:
+How should a research system represent artifacts that shaped selection, search, stopping, and synthesis but do not support the scholarly proposition?
+
+DEEPER QUESTION:
+Can provenance be complete if it records sources but not the decision procedures that determined which sources ever became visible?
+
+MECHANISM:
+Prompt constrains research operations.
+Operations alter which evidence enters the field.
+Prompt is preserved in provenance.
+Public claim remains grounded only in external evidence.
+
+FORMAL SHIFT:
+<instruction>
+→ <research operation>
+→ [selection / transformation / stopping]
+→ <research state>
+
+without:
+
+<instruction>
+→ [citation]
+→ <external-world claim>
+
+SOURCE FORMALISM:
+Ancient Master governs HOW YOU WORK.
+Evidence governs WHAT YOU MAY SAY.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PROVENANCE_ROLE(prompt) = OPERATIONAL_CAUSE
+
+EVIDENTIARY_ROLE(prompt, external_claim) = NONE
+unless prompt itself is the scholarly object under investigation.
+
+TENSION:
+Keeping workflow language out of scholarship improves the paper, but hiding it entirely would make the research path irreproducible.
+
+MISSING:
+A typed provenance relation such as:
+GENERATED_BY
+STEERED_BY
+FILTERED_BY
+COMPILED_BY
+that remains inspectable without entering the claim-evidence map as support.
+
+BOUNDARY:
+Operational provenance cannot reconstruct every latent model decision merely by preserving prompt text.
+
+CITATION TRAIL:
+Ancient Master DISCIPLINE
+→ PROMPT preservation
+→ MAKING_HISTORY
+→ SOURCE_MAP
+
+TEST:
+For one paper claim, reconstruct not only its cited sources but why those sources were retrieved and competing sources were not. Determine which causal decisions are recoverable solely from the preserved prompt/provenance record.
+
+PLATFORM:
+[[OPERATIONAL PROVENANCE]]
+
+LINKS:
+[[METHOD IS NOT EVIDENCE]]
+[[PROMPT PROVENANCE]]
+[[SOURCE MAP]]
+
+BIBTEX:
+@misc{ancient_master_recipe_not_source_2026,
+  title = {Slipcase — Ancient Master: Discipline and Provenance Rules},
+  howpublished = {User-provided research-system prompt},
+  year = {2026},
+  note = {Version 15.0; supplied 2026-08-18}
+}

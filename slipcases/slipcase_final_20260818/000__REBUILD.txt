@@ -1,0 +1,10 @@
+THIS PUBLICATION CAN BE REBUILT.
+
+1. Read ZETTELS.json or root numbered TXT cards.
+2. Verify each card SHA-256 against _SLIPCASE/MANIFEST.json.
+3. Confirm each _MD mirror is byte-identical to its root TXT.
+4. Recompile relations from PLATFORM, LINKS, and every [[ADDRESS]].
+5. Treat unresolved MJ-2022-* addresses as ghosts unless exact payloads are later recovered.
+6. Compile how-is-this-gonna-be-screwed-up__FINAL__2026-08-18.tex with pdflatex/latexmk.
+7. Render and inspect the PDF.
+8. Rebuild index.html from ZETTELS.json if desired; all card payloads are embedded there.

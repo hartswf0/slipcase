@@ -1,0 +1,101 @@
+ZETTEL
+
+ID:
+Z-SYS-013
+
+TITLE:
+The paper is forbidden to become evidence, but its novel synthesis needs a route back into inquiry
+
+SOURCE:
+User-provided prompt system — SLIPCASE — ANCIENT MASTER family — supplied 2026-08-18.
+
+PASSAGE:
+[PARAPHRASE] The paper must produce a non-obvious argument from the field, including at least one synthesis not already contained in a single zettel, while PAPER remains a current wager and never evidence.
+
+RESEARCH OBJECT:
+The compiler deliberately permits the paper to know something no individual zettel knew while denying that new synthesis evidentiary status.
+
+LOCAL MOVE:
+Protects scholarship from recursively laundering its own conclusions into evidence.
+
+SOURCE TERMS:
+PAPER
+CURRENT WAGER
+never evidence
+STRANGE STEPPING STONE
+compiler synthesis
+SOURCE_MAP
+
+WHAT BECAME STRANGE:
+If the paper discovers the strongest new question in the entire process, the archival rules do not yet say how that question becomes forageable without making the paper an evidentiary authority.
+
+QUESTION:
+How does a novel paper-level synthesis re-enter the research graph?
+
+DEEPER QUESTION:
+What is the difference between turning an interpretation into a new hypothesis and turning an interpretation into evidence?
+
+MECHANISM:
+Evidence and zettels support synthesis.
+Paper forms a new inference.
+Inference remains marked as inference.
+A subsequent research object could preserve the inference as a question or hypothesis and seek independent sources.
+
+FORMAL SHIFT:
+<EVIDENCE + FIELD>
+→ <paper synthesis>
+→ [re-enter as hypothesis, not evidence]
+→ <new forage edge>
+
+SOURCE FORMALISM:
+PAPER = CURRENT WAGER, never evidence.
+
+Paper claim tracing:
+PAPER CLAIM → ZETTEL(S) → SOURCE(S) → CITEKEY(S)
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PAPER_INFERENCE
+→ HYPOTHESIS_ZETTEL
+→ TEST
+→ NEW_SOURCE_EVIDENCE
+→ revised research state
+
+Never:
+PAPER_INFERENCE
+→ EVIDENCE
+
+TENSION:
+Ancient Master demands BECOME NEW but its evidence discipline correctly blocks novelty from authenticating itself.
+
+MISSING:
+An explicit “paper-to-forage” promotion pathway.
+
+BOUNDARY:
+A paper can itself become a historical source for later scholarship, but that is a different evidentiary role from treating its compiler synthesis as proof of the claim it synthesized.
+
+CITATION TRAIL:
+[[Z-SYS-008]]
+→ paper source map
+→ compiler synthesis
+→ recursive inquiry
+
+TEST:
+Take one genuinely new inference generated only during paper assembly. Remove the paper. Ask whether the surviving research field contains a durable object that states the inference as an open hypothesis and provides an executable TEST.
+
+PLATFORM:
+[[INTERPRETATION FEEDBACK]]
+
+LINKS:
+[[Z-SYS-008]]
+[[PAPER AS WAGER]]
+[[HYPOTHESIS PROMOTION]]
+
+BIBTEX:
+@misc{ancient_master_paper_feedback_2026,
+  title = {Slipcase — Ancient Master: Paper and Source-Map Rules},
+  howpublished = {User-provided research-system prompt},
+  year = {2026},
+  note = {Ancient Master prompt family; supplied 2026-08-18}
+}

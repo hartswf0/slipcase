@@ -1,0 +1,98 @@
+WHEN FAILURE IS EVIDENCE — CLAIM–SOURCE MAP
+Working Paper · 2026-08-17
+Author: Watson Hartsoe
+
+STATUS
+Derived scholarly interpretation. Not evidence.
+
+MELTED INTERPRETATION
+The prior paper, “Prompt Receipts,” foregrounded archival and zettel machinery. That interpretation is preserved but no longer governs the public argument. The new paper follows the stronger crossing: epistemic action × collaborative prompting × folk theorization × model version drift × evaluation practice.
+
+CLAIM 01
+CLAIM: Prompt executions can serve different primary functions: obtaining an artifact or obtaining information about system behavior.
+TYPE: COMPILER-SYNTHESIS
+ZETTEL: SCGAI-004-A
+SOURCE: Kirsh & Maglio 1994
+CITEKEY: kirsh1994distinguishing
+SUPPORT: Source distinguishes pragmatic from epistemic action and shows actions can improve informational state without directly improving task state.
+INFERENCE: Apply the functional distinction to generative prompting.
+
+CLAIM 02
+CLAIM: A generation can be pragmatically poor yet epistemically useful.
+TYPE: COMPILER-SYNTHESIS
+ZETTEL: SCGAI-004-A
+SOURCE: Kirsh & Maglio 1994
+CITEKEY: kirsh1994distinguishing
+SUPPORT: Epistemic actions may appear physically disadvantageous while improving cognition.
+INFERENCE: An undesirable model output can still discriminate among prompt hypotheses.
+
+CLAIM 03
+CLAIM: Prompt communities sometimes act as informal experimental institutions.
+TYPE: SOURCE-SUPPORTED + INTERPRETATION
+ZETTEL: SCGAI-004
+SOURCE: Mahdavi Goloujeh, Sullivan & Magerko 2024
+CITEKEY: mahdavigoloujeh2024social
+SUPPORT: Participants report collective experiments, iterative prompt modification, peer learning, and group exploration where defining literature was absent.
+INFERENCE: These practices constitute distributed empirical inquiry, though not necessarily controlled experimentation.
+
+CLAIM 04
+CLAIM: Non-experts often explore prompt designs opportunistically rather than systematically.
+TYPE: SOURCE-SUPPORTED
+SOURCE: Zamfirescu-Pereira et al. 2023
+CITEKEY: zamfirescu2023johnny
+SUPPORT: The study reports opportunistic exploration, overgeneralization, and barriers arising from human-to-human instructional expectations.
+
+CLAIM 05
+CLAIM: Prompt knowledge can behave like adaptive folk theory in opaque changing systems.
+TYPE: COMPILER-SYNTHESIS
+ZETTEL: SCGAI-004-B
+SOURCE: DeVito 2021
+CITEKEY: devito2021adaptive
+SUPPORT: Folk theories guide action under opaque algorithms; platform change requires repeated re-evaluation; structural theorization can enable experimentation and adaptation.
+INFERENCE: Prompt heuristics can be treated as provisional causal beliefs rather than timeless rules.
+
+CLAIM 06
+CLAIM: Model-version changes can invalidate otherwise unchanged prompt rules.
+TYPE: SOURCE-SUPPORTED + INTERPRETATION
+ZETTEL: WWP-20260817-09
+SOURCE: Midjourney Version documentation, accessed 2026-08-17
+CITEKEY: midjourney2026version
+SUPPORT: V8.1 and V8.2 had different default periods and documented behavior differences.
+INFERENCE: A stable string does not guarantee stable operational semantics.
+
+CLAIM 07
+CLAIM: Current production guidance increasingly formalizes experimental discipline through snapshots and evaluation suites.
+TYPE: SOURCE-SUPPORTED
+SOURCE: OpenAI Prompt Engineering + Working with Evals, accessed 2026-08-17
+CITEKEYS: openai2026promptengineering; openai2026evals
+SUPPORT: Documentation recommends model snapshots and tests/evals when iterating prompts or upgrading models.
+
+CLAIM 08
+CLAIM: Automated prompt generation shifts human work from wording toward task specification and evaluation.
+TYPE: SOURCE-SUPPORTED + INTERPRETATION
+ZETTEL: WWP-20260817-06
+SOURCE: OpenAI Prompt Generation, accessed 2026-08-17
+CITEKEY: openai2026promptgeneration
+SUPPORT: Playground uses meta-prompts to generate/improve prompts from task descriptions.
+INFERENCE: Durable expertise may move toward defining goals, examples, and criteria.
+
+CLAIM 09
+CLAIM: Generative control can be specified through iterative selection rather than language alone.
+TYPE: SOURCE-SUPPORTED + INTERPRETATION
+ZETTEL: WWP-20260817-05
+SOURCE: Midjourney Style Creator, accessed 2026-08-17
+CITEKEY: midjourney2026stylecreator
+SUPPORT: Style Creator learns from selected and unselected sample images; the text prompt generates previews but does not guide the Style Creator itself.
+INFERENCE: The deeper common structure is intervention → observation → discrimination → update, not wording alone.
+
+OPEN TESTS
+1. Classify real prompt executions by artifact-seeking, information-seeking, or mixed intent.
+2. Compare expert and novice intervention quality: number of variables changed, reuse of controls, retention of negative results, and version awareness.
+3. Re-run historical prompt rules across model versions to separate persistent effects from prompt fossils.
+4. Test interfaces that make branching comparison and condition visibility cheap.
+
+BOUNDARIES
+- Kirsh & Maglio do not study generative AI.
+- DeVito does not study generative models.
+- Mahdavi Goloujeh et al. study 19 U.S.-based MidJourney users.
+- Vendor documentation establishes present platform mechanisms, not general laws of all generative systems.

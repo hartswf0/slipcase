@@ -1,0 +1,12 @@
+THIS PUBLICATION CAN BE REBUILT.
+
+1. Read _SLIPCASE/MANIFEST.json and ZETTELS.json.
+2. Verify each root zettel TXT SHA-256 against MANIFEST.json.
+3. Verify every _MD mirror matches its root TXT byte-for-byte.
+4. Recompile native PLATFORM, LINKS, and [[ADDRESS]] relations from exact payloads.
+5. Resolve targets only by exact ID/alias/title rules; preserve unresolved targets as ghosts.
+6. Recompile bibliography from preserved BIBTEX fields.
+7. Rebuild index/reader/network/cards as derived views.
+8. Compile the paper TeX and visually inspect its PDF.
+9. Preserve SLIPCASE_FINAL_PROMPT.txt byte-exact; its hash is recorded in RETURN_PATH.
+10. Re-zip and test archive integrity.

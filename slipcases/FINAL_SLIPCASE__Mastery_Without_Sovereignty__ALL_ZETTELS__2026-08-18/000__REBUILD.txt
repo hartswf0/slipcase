@@ -1,0 +1,10 @@
+THIS PUBLICATION CAN BE REBUILT.
+
+1. Treat each numbered root TXT as the canonical immutable zettel payload.
+2. Verify each _MD mirror matches its root TXT byte-for-byte.
+3. Parse ID/TITLE/SOURCE/PLATFORM/LINKS/BIBTEX fields without rewriting payloads.
+4. Rebuild ZETTELS.json/jsonl, NODES.jsonl, RELATIONS.jsonl, bibliography, map, reader, and network as derived views.
+5. Preserve LINK_ONLY resources as missing bodies rather than inventing local copies.
+6. Use SLIPCASE_FINAL_PROMPT.txt as the assembly instrument.
+7. Recompile the TeX paper and render/inspect the PDF.
+8. Recompute manifest hashes before packaging.

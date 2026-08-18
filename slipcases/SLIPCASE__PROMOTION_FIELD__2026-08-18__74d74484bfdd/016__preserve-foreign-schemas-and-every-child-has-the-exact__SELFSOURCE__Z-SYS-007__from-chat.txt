@@ -1,0 +1,98 @@
+ZETTEL
+
+ID:
+Z-SYS-007
+
+TITLE:
+“Preserve foreign schemas” and “every child has the exact same schema” are compatible only at a system boundary
+
+SOURCE:
+User-provided prompt system — RECURSIVE INQUIRY v3.1 and SLIPCASE — ANCIENT MASTER v15.0 — supplied 2026-08-18.
+
+PASSAGE:
+[PARAPHRASE] Recursive Inquiry requires every generated child to preserve the exact parent schema. Ancient Master requires foreign schemas to survive unchanged and forbids rewriting existing zettels to improve the archive.
+
+RESEARCH OBJECT:
+The recursive forager can only be universal if every foreign zettel already implements the recursive fields it expects. Otherwise the compiler's preservation law prevents the conversion the forager requires.
+
+LOCAL MOVE:
+Separates archival admission from recursive executability.
+
+SOURCE TERMS:
+foreign schemas survive
+exact same field names
+immutable payload
+without rewriting
+valid input
+
+WHAT BECAME STRANGE:
+A preserved object can be a valid zettel for Slipcase while being an invalid parent for KID A.
+
+QUESTION:
+Is “ZETTEL” one universal datatype or a family of immutable research-object schemas?
+
+DEEPER QUESTION:
+Should forageability be a property of the payload or a capability supplied by an adapter around the payload?
+
+MECHANISM:
+Ancient Master admits heterogeneous immutable objects.
+KID A requires a specific recursive interface.
+Without adaptation, some admitted objects cannot enter recursive forage.
+
+FORMAL SHIFT:
+<foreign research object>
+→ <preserved immutable payload>
+→ [adapter or rejection]
+→ <forageable parent>
+
+SOURCE FORMALISM:
+KID A:
+Every child MUST use exactly the same field names, field order, and structural conventions as the parent schema.
+
+Ancient Master:
+Foreign schemas survive.
+Existing zettels are immutable.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+ARCHIVABLE(x) ≠ FORAGEABLE(x)
+
+FORAGEABLE(x) requires:
+QUESTION / DEEPER QUESTION / TENSION / MISSING /
+BOUNDARY / CITATION TRAIL / TEST
+or an explicit adapter capable of deriving them without rewriting x.
+
+TENSION:
+The compiler maximizes preservation by refusing normalization; the recursive engine maximizes composability by requiring normalization.
+
+MISSING:
+An adapter protocol that creates a forage envelope beside a foreign payload rather than rewriting it.
+
+BOUNDARY:
+Foreign objects that already satisfy the recursive schema pose no conflict.
+
+CITATION TRAIL:
+[[Z-SYS-002]]
+[[Z-SYS-006]]
+→ preservation versus recursive interface
+→ capability adapters
+
+TEST:
+Feed KID A a thin foreign zettel containing only TITLE and SOURCE. Require both exact preservation and immediate recursion. Record what additional state must exist outside the payload to make the operation possible.
+
+PLATFORM:
+[[FOREIGN SCHEMA]]
+
+LINKS:
+[[Z-SYS-002]]
+[[Z-SYS-006]]
+[[FORAGE ADAPTER]]
+
+BIBTEX:
+@misc{foreign_schema_recursive_collision_2026,
+  title = {Foreign Schema and Recursive Type Constraints in the Slipcase Prompt Stack},
+  howpublished = {User-provided research-system prompts},
+  year = {2026},
+  note = {Versions 3.1 and 15.0; supplied 2026-08-18}
+}

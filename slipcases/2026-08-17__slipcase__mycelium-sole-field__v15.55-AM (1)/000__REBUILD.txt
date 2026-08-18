@@ -1,0 +1,27 @@
+SLIPCASE REBUILD
+CHECKPOINT: mycelium-sole-field · CHK-20260817-07ca2300373f · PACKAGE: 2026-08-17__slipcase__mycelium-sole-field__v15.55-AM.zip · SCHEMA: 15.55-AM · RETURN: 000__RETURN_PATH.txt
+
+CANONICAL EVIDENCE
+- root numbered .txt cards
+- byte-identical _MD mirrors
+- _RESOURCES/ source bodies and receipts
+- _PROMPTS/ consequential prompts
+- ZETTELS.jsonl and _SLIPCASE/APPEARANCES.jsonl for machine receipts
+
+REBUILD ORDER
+1. Verify every root card against its _MD mirror and recorded payload SHA-256.
+2. Parse PLATFORM, LINKS, and every [[ADDRESS]] without rewriting cards.
+3. Resolve exact IDs/names/platforms; preserve unresolved concepts as ghosts.
+4. Rebuild bibliography from preserved BibTeX/source records.
+5. Regenerate map, network, reader, cards, MOCs, and open edges.
+6. Rebuild the paper only as a derived interpretation; validate citekeys against the bibliography.
+7. Rebuild index.html from the file tree and run RECREATE.py against it.
+8. Recompute manifest/checksums and package a new release.
+
+STANDALONE RECONSTRUCTION
+Save index.html and RECREATE.py in one directory, then run:
+  python RECREATE.py index.html ./recreated
+The script extracts the embedded package files and verifies their stored hashes.
+
+REJOIN
+REJOIN SLIPCASE CHK-20260817-07ca2300373f USING 000__RETURN_PATH.txt

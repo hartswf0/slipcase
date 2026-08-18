@@ -1,0 +1,78 @@
+VERIFICATION — PB-SC-20260818-4D1C1A7BD0
+
+SOURCE/CONTEXT COVERAGE
+- Prior 15-card Slipcase checkpoint: loaded from exact prior ZIP.
+- Prior cards 001–015 byte-preserved against that checkpoint: False.
+- PB_PRIME source PDF/text: LOCAL_FILE.
+- Barthes source scan: LOCAL_FILE.
+- SLIPCASE v13.1: exact mounted prompt file.
+- SLIPCASE v15.55-AM: exact mounted prompt file.
+- PRIME ZETTEL FORAGE v3.0: exact mounted prompt file.
+- v3.1 recursive-forage prompt: RECEIPT_ONLY; no byte-addressable source file was available in this merge.
+
+EXTRACTION / PAYLOAD IDENTITY
+- Admitted zettels: 24
+- Root zettel TXT files: 24
+- _MD mirrors: 24
+- Root/mirror byte identity: False
+- Cards 016–024 are preserved as the visible prior-turn research objects; original UI byte stream is not independently addressable.
+
+DUPLICATES / ID COLLISIONS
+- Exact duplicate payloads: 0
+- Original ID collisions: 0
+
+PLATFORM / LINKS / ADDRESSES
+- Platforms: 20
+- Total nodes: 138
+- Total relations including backlinks/lineage: 347
+- Ghost/open addresses: 71
+
+INQUIRY LINEAGE
+- Supported PARENT_OF edges: 31
+- Admission rule: exact parent zettel ID in child LINKS; no similarity-based ancestry.
+
+BIBLIOGRAPHY / RESOURCES
+- Bibliography citekeys: 16
+- Paper citekeys subset of compiled bibliography: True
+- Registered resources: 17
+- Prior working-paper artifacts preserved under _RESOURCES/PRIOR_PAPER/: YES
+
+PROMPT PRESERVATION
+- v3.0 exact: YES
+- v13.1 exact: YES
+- v15.55-AM exact: YES
+- derived merge decision: YES
+- exact v3.1: NO — receipt only, gap exposed.
+
+INDEX RECONSTRUCTION
+- index.html embeds all zettel payloads, graph relations, bibliography, prompts, PB_PRIME PDF/text, Barthes PDF, new paper PDF/TEX/source map, lineage and return path: True
+- No framework/CDN/network dependency: YES
+
+PAPER CLAIM TRACE / CITEKEYS
+- SOURCE_MAP: YES
+- New tuple <X,T,Pi,B,C,J;R> labeled as compiler synthesis: YES
+- Paper text extraction sanity check: True
+
+FIRST-PAGE-ONLY DISCLOSURE
+- Disclosure + mediation mark rendered on page 1 only: VISUALLY VERIFIED.
+- Repeated disclosure on later pages: NONE OBSERVED.
+
+PDF RENDERING
+- PDF pages: 10
+- Rendered with project PDF render tool: PASS, 10/10 pages.
+- Visual contact inspection: PASS; no observed clipping, overlaps, black squares, or broken glyphs.
+
+CARDS PRINT VIEW
+- Physical 4x6 continuation cards: 87
+- Long zettels are continued across cards rather than clipped.
+
+PACKAGE STRUCTURE
+- Root research desk, zettels, mirrors, bibliography, resources, prompts, lineage, graph, reader, print cards, source map, making history, return path, rebuild state: PRESENT.
+
+ZIP STATUS
+- FINAL ARCHIVE MUST PASS unzip -t after this verification is embedded. The final packaging command is configured to abort on failure; successful returned artifact therefore corresponds to PASS.
+
+KNOWN GAPS
+- v3.1 recursive prompt exact bytes unavailable; receipt preserved.
+- Proposed Prompt Battle experiments are not executed findings.
+- No human peer review is claimed.

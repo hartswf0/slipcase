@@ -1,0 +1,76 @@
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-16
+
+    TITLE:
+    A GENEALOGY FAILS WHEN IT RECORDS ONLY THE CONSTRAINTS THAT WON
+
+    SOURCE:
+    Walter Benjamin — “On the Concept of History,” Thesis IX — 1940.
+
+    SOURCE URL:
+    https://www.sfu.ca/~andrewf/CONCEPT2.html
+
+    PASSAGE:
+    [QUOTE] “Where we perceive a chain of events, he sees one single catastrophe”
+
+    RESEARCH OBJECT:
+    A clean version history can falsely narrate iterative work as progress if rejected artifacts, failed assumptions, unresolved damage, and reasons for rejection disappear.
+
+    LOCAL MOVE:
+    Benjamin opposes the ordinary chain of events to the angel’s view of accumulating catastrophe and wreckage.
+
+    SOURCE TERMS:
+    chain of events; catastrophe; wreckage; dead; make whole; storm; progress
+
+    WHAT BECAME STRANGE:
+    A genealogy of constraints that stores only what survived can erase the causal residue that makes later decisions intelligible.
+
+    QUESTION:
+    What should be retained from failed branches so that the final program does not rewrite its development as inevitable?
+
+    DEEPER QUESTION:
+    How can wreckage be compressed without turning it into triumphal progress?
+
+    MECHANISM:
+    candidate → failure → either deletion or preserved counterexample/rationale/nogood.
+
+    FORMAL SHIFT:
+    <FAILED BRANCHES> → [PRESERVE CAUSAL RESIDUE] → <COUNTER-ARCHIVE OF THE PROGRAM>
+
+    SOURCE FORMALISM:
+    NONE
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] PROGRAM_MEMORY = surviving constraints + failed candidates + rejection reasons + superseded assumptions + unresolved tensions.
+
+    TENSION:
+    Preserving everything produces an unusable dump; the engineering problem is selective retention without historical erasure.
+
+    MISSING:
+    A principled retention rule for counterexamples, obsolete detail, rationale, and unresolved debt.
+
+    BOUNDARY:
+    Benjamin is not writing about software; the application is a pressure-test, not technical evidence.
+
+    CITATION TRAIL:
+    ATMS; Naur; design rationale; version control.
+
+    TEST:
+    Compare final-prompt, surviving-constraint, and full-rationale memories on a late requirement that reopens an old decision.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[GENEALOGY OF CONSTRAINTS]]
+[[COUNTER-ARCHIVE OF THE PROGRAM]]
+
+    BIBTEX:
+    @misc{benjamin1940history,
+  author={Benjamin, Walter},
+  title={On the Concept of History},
+  year={1940},
+  note={Thesis IX; published posthumously in translation}
+}

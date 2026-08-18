@@ -1,0 +1,535 @@
+{
+  "checkpoint": "PB-SC-20260818-4D1C1A7BD0",
+  "package": "2026-08-18__prompt-battles-smackdown__PB-SC-20260818-4D1C1A7BD0__slipcase.zip",
+  "schema": "MERGED: SLIPCASE v13.1 research logic + v15.55-AM packaging",
+  "date": "2026-08-18",
+  "researcher": "Watson Hartsoe",
+  "prior_checkpoint": "PB-SC-20260817-85F9D4F8D2",
+  "identity_note": "MANIFEST excludes its own hash to avoid self-reference. Final ZIP SHA-256 is external to the archive.",
+  "counts": {
+    "zettels": 24,
+    "root_txt_cards": 24,
+    "md_mirrors": 24,
+    "nodes": 138,
+    "relations": 347,
+    "platforms": 20,
+    "ghosts": 71,
+    "supported_parent_edges": 31,
+    "resources": 17,
+    "bibliography_citekeys": 16,
+    "paper_pages": 10,
+    "physical_print_cards": 87
+  },
+  "files": [
+    {
+      "path": "000__BIBLIOGRAPHY.html",
+      "bytes": 10915,
+      "sha256": "09b1cfab1cc836881394dd43dcd2fd2dcc7978df9ee93bc9e0b4810f5e96d800"
+    },
+    {
+      "path": "000__BIBLIOGRAPHY.txt",
+      "bytes": 10296,
+      "sha256": "83b7f489d4702ffc8d2ba56cc64dac495e39c0b7dc9cfa2d5f3ac464fd65c1df"
+    },
+    {
+      "path": "000__INDEX.txt",
+      "bytes": 2775,
+      "sha256": "ed7e30b9d387cbd96dfb6988ec5499c805654c4f28500fd84153c2d2ea480f23"
+    },
+    {
+      "path": "000__LINEAGE.txt",
+      "bytes": 2376,
+      "sha256": "bfef72850066b2dd4263329b9eb1c82000e6473897768b88922b378a8e8b0b1d"
+    },
+    {
+      "path": "000__MAKING_HISTORY.txt",
+      "bytes": 1342,
+      "sha256": "42ad85b2b7435985e2496055d34b9e4f9bcb1d425ab4173cb85ef74f4a8aa0b8"
+    },
+    {
+      "path": "000__MAP.txt",
+      "bytes": 1785,
+      "sha256": "4f90002e31ef008f9dfd3b66fbcfa35576fa7eb08c79443bb5ac89ccdf55c1c2"
+    },
+    {
+      "path": "000__OPEN_EDGES.txt",
+      "bytes": 29332,
+      "sha256": "c5112e98a79fa77b61f8ca9f0be73ba580386c9e9d62ddc25bca86edc4a94555"
+    },
+    {
+      "path": "000__PROMPTS.txt",
+      "bytes": 781,
+      "sha256": "01fcf9aeacf4aef1e2dd707fcd54976e374a5d8673239ab18a8f02307b20b76e"
+    },
+    {
+      "path": "000__REBUILD.txt",
+      "bytes": 967,
+      "sha256": "78c66a63d7324794c29d6d14485648dba992804cefdac6c9afed52c27b31c398"
+    },
+    {
+      "path": "000__RESOURCES.txt",
+      "bytes": 5145,
+      "sha256": "ca17eb66f5474f620f87f0a04614474de161f18b75416be21f3763efa4fe3071"
+    },
+    {
+      "path": "000__RETURN_PATH.txt",
+      "bytes": 884,
+      "sha256": "302fca27864d02dc6c7813ace3171d2b147a58b9b753c84915e832e87768da9d"
+    },
+    {
+      "path": "000__START_HERE.txt",
+      "bytes": 1017,
+      "sha256": "30431e530cdbb5e82fa904e60151646f80e28d0f555f9c8f0028b743e1657a58"
+    },
+    {
+      "path": "001__a-counter-prompt-proves-recoverability-not-the-disappe__Chatterjee-2024__PB-FORAGE-001__from-chat.txt",
+      "bytes": 5027,
+      "sha256": "ef7e0438bcbf1f907c6644e947a2d894748917477d80b770dcf6101ec4bc8b9b"
+    },
+    {
+      "path": "002__a-refusal-cannot-tell-you-whether-the-model-cant-wont__Hofsta-2025__PB-FORAGE-002__from-chat.txt",
+      "bytes": 4184,
+      "sha256": "3d36a3e2ec08bdba03a37458c519433809443a083c85a6de31fabe9ed54bcb26"
+    },
+    {
+      "path": "003__the-prompt-battle-may-be-measuring-the-operator-model__Hofsta-2025__PB-FORAGE-003__from-chat.txt",
+      "bytes": 3858,
+      "sha256": "3d0023c8342c9fb86be6460c78f8887e7f04caff7e35abfe2ed56af4f5d0e3f7"
+    },
+    {
+      "path": "004__once-the-critique-pool-adapts-to-the-battle-the-benchm__Kiela-2021__PB-FORAGE-004__from-chat.txt",
+      "bytes": 4070,
+      "sha256": "1d87d9d5269b42e6bb4d2d297e1c152b749f9778d4f9f664666fb85e7268edf7"
+    },
+    {
+      "path": "005__the-scientific-part-of-a-prompt-battle-may-have-to-hap__Clark-2022__PB-FORAGE-005__from-chat.txt",
+      "bytes": 3973,
+      "sha256": "c4f204f4c572f3706caa20390212995dd1e8e55132fbcc0201b9482e20477aea"
+    },
+    {
+      "path": "006__judge-disagreement-may-be-data-not-a-defect-in-the-sco__SOURCEUNKNOWN__PB-FORAGE-006__from-chat.txt",
+      "bytes": 3677,
+      "sha256": "cc46016be808dc9270006b996c77e060a1c3e307d3258664fb568210c8fb626c"
+    },
+    {
+      "path": "007__the-outside-of-the-prompt-battle-keeps-leaking-into-th__Consalvo-2009__PB-FORAGE-007__from-chat.txt",
+      "bytes": 3344,
+      "sha256": "970af9015ba64f813351e13aad02b5921e2650d93409f00f248f8f50c757b874"
+    },
+    {
+      "path": "008__a-cypher-is-not-a-circular-user-interface__Johnson-2023__PB-FORAGE-008__from-chat.txt",
+      "bytes": 4224,
+      "sha256": "5b2cd137ee1762d5599948326adacbf1a292d533326ce1e3c6a94318db3d0adb"
+    },
+    {
+      "path": "009__a-prompt-can-be-an-epistemic-action-rather-than-an-ins__Kirsh-1994__PB-FORAGE-009__from-chat.txt",
+      "bytes": 4970,
+      "sha256": "35fca9c5da8470dc5f8d0f0cc094e4a1847a757e45af3b4b3394bd87ad4fedaa"
+    },
+    {
+      "path": "010__coupling-is-not-enough-the-coupling-may-have-to-be-rel__Clark-1998__PB-FORAGE-010__from-chat.txt",
+      "bytes": 5067,
+      "sha256": "0a873f61891c919f4015344292fdbd379dc40e0b18ac8593222890451d72f6da"
+    },
+    {
+      "path": "011__an-adaptive-benchmark-can-become-part-of-the-causal-sy__Perdomo-2020__PB-FORAGE-011__from-chat.txt",
+      "bytes": 5071,
+      "sha256": "9477c7cf4a971302566b76bfba2b51f56587cb76947ec98ef09dcadbb5a59a0e"
+    },
+    {
+      "path": "012__disagreement-is-not-evidence-until-its-mechanism-is-id__HautliJanisz-2022__PB-FORAGE-012__from-chat.txt",
+      "bytes": 4718,
+      "sha256": "e26fe1ecdb202ff9c4c86294202f1a3e6c1b2ae8726eefb2a780aaa07222b72b"
+    },
+    {
+      "path": "013__the-clearer-the-scoring-rule-becomes-the-more-precisel__Manheim-2018__PB-FORAGE-013__from-chat.txt",
+      "bytes": 4864,
+      "sha256": "0c0c3b2cb1fcd0ac1e1da03e75f7338bb81b574859ef224231fd86a198ecd23a"
+    },
+    {
+      "path": "014__turning-the-cypher-into-portable-mechanics-may-reprodu__Johnson-2023__PB-FORAGE-014__from-chat.txt",
+      "bytes": 5438,
+      "sha256": "925d42bc860beef026256b53583fa617ea21307a48dfd85e3ecc716a60b7b7d4"
+    },
+    {
+      "path": "015__a-shared-experiment-can-settle-the-result-while-leavin__Mellers-2001__PB-FORAGE-015__from-chat.txt",
+      "bytes": 4797,
+      "sha256": "edeb153ee8c41a23078d864353f02ab6bc47c50532b9046f8984379e3ea951bb"
+    },
+    {
+      "path": "016__the-function-of-the-battle-may-not-be-to-win__Barthes-1972__PB-FORAGE-016__from-chat.txt",
+      "bytes": 5329,
+      "sha256": "cf8cae283a23b5b0c7f243d32ee7defd2e97b32b1f35535db5bfa91f6cb38ab9"
+    },
+    {
+      "path": "017__a-rigged-prompt-battle-may-be-more-honest-than-a-supposedl__Barthes-1972__PB-FORAGE-017__from-chat.txt",
+      "bytes": 4911,
+      "sha256": "8688dd7a5cf533838ab9406dc30bc68ae70e6d91cc4406ceb2f2363c2a9a75e3"
+    },
+    {
+      "path": "018__a-model-failure-may-need-to-be-held-in-place-before-it-can__Barthes-1972__PB-FORAGE-018__from-chat.txt",
+      "bytes": 4412,
+      "sha256": "b2f7e7921e210a556398ae67fc88a61810403019f99faf0ce3d2b8613f4b3f2f"
+    },
+    {
+      "path": "019__if-capability-is-distributed-the-prompt-battle-has-lost-th__Barthes-1972__PB-FORAGE-019__from-chat.txt",
+      "bytes": 4671,
+      "sha256": "332a356d5d76c7d0a682b80a4d8cadd685d601d2da99236c7143f3b456ba30af"
+    },
+    {
+      "path": "020__fairness-can-become-kayfabe-before-anyone-cheats__Barthes-1972__PB-FORAGE-020__from-chat.txt",
+      "bytes": 4414,
+      "sha256": "744aa79f666f6765e23f47890b5cf2c29d10cc022080e5e329883988d58f20fe"
+    },
+    {
+      "path": "021__the-crowd-may-be-scoring-justice-while-the-researchers-thi__Barthes-1972__PB-FORAGE-021__from-chat.txt",
+      "bytes": 4434,
+      "sha256": "6c8a5fe98e72cbdfc1015d4b7bd7c0d1afe5c053e5cf97285ec809e4df466daf"
+    },
+    {
+      "path": "022__the-wwe-version-of-the-paper-needs-absolutes-but-the-resea__Barthes-1972__PB-FORAGE-022__from-chat.txt",
+      "bytes": 4788,
+      "sha256": "2707d1eca0d435b09dfa456e1269d544e0261ffecd245bac07f029fb07fc588c"
+    },
+    {
+      "path": "023__the-paper-needs-a-heel-strong-enough-to-beat-the-thesis__Barthes-1972__PB-FORAGE-023__from-chat.txt",
+      "bytes": 4563,
+      "sha256": "00e353117ff66bcd04e7dac6bae8d2b9065da07727cafe80edc2318e1457dff7"
+    },
+    {
+      "path": "024__the-real-finishing-move-is-the-reversal-that-changes-what__Barthes-1972__PB-FORAGE-024__from-chat.txt",
+      "bytes": 5136,
+      "sha256": "16eb953e56db9854f6d235c5bc00276fb500a7f7977ff4bd46420839ae7b18f7"
+    },
+    {
+      "path": "CARDS.html",
+      "bytes": 123855,
+      "sha256": "386df84d6b7338432e5c53c64ab158e50d732150a6eb043dcd3e2b6bca410500"
+    },
+    {
+      "path": "MARK.svg",
+      "bytes": 484,
+      "sha256": "943f5780507220f712f1a7129c0c4a460802045878b8da2386be4aa405d9b8ca"
+    },
+    {
+      "path": "NETWORK.html",
+      "bytes": 37536,
+      "sha256": "0588e41984ecda69457e9fc6dd42cac8e6d56bf1f4b86827f874522c6a667893"
+    },
+    {
+      "path": "NETWORK.svg",
+      "bytes": 14700,
+      "sha256": "3d89a0a7bcbc76f182b6c87276be7a1faa78e25871889f1de50b79f4b933e054"
+    },
+    {
+      "path": "PB-SC-20260818-4D1C1A7BD0__references.bib",
+      "bytes": 6633,
+      "sha256": "01a5a6c38ed5799c8ae814678d0b185887372b9989a6bb09644769889cd9c35e"
+    },
+    {
+      "path": "READER.html",
+      "bytes": 11301443,
+      "sha256": "9685f4d049b43769ced5ef33c3d10b79644b9eec2a53d2d86bba3f15f7f64577"
+    },
+    {
+      "path": "ZETTELS.json",
+      "bytes": 130517,
+      "sha256": "36700044c79f3172496ea5ab6e5e81ac3eea4020c343afc8eb7a8fb4d109f44b"
+    },
+    {
+      "path": "ZETTELS.jsonl",
+      "bytes": 126363,
+      "sha256": "e60415e9d0c8331dd6b7f26a00350988b969315c72322e77878749afbb172363"
+    },
+    {
+      "path": "ZETTELS.txt",
+      "bytes": 113292,
+      "sha256": "e8c8adaba17752167de9a1e7b504d0ddcb6c37ca220ebf7d2872a75b304ce9d4"
+    },
+    {
+      "path": "_ARRANGEMENTS/barthes-smackdown-trail.md",
+      "bytes": 393,
+      "sha256": "4d6820581b55e99a4e306c9676033f9b6840103068d53cc6ce4effc7176cbdfe"
+    },
+    {
+      "path": "_ARRANGEMENTS/main-event-trail.md",
+      "bytes": 308,
+      "sha256": "68c043e2d55d9dca9cb5e7bb7fb937820d963daa136f76722a18852cd41ab3ca"
+    },
+    {
+      "path": "_MD/001__a-counter-prompt-proves-recoverability-not-the-disappe__Chatterjee-2024__PB-FORAGE-001__from-chat.md",
+      "bytes": 5027,
+      "sha256": "ef7e0438bcbf1f907c6644e947a2d894748917477d80b770dcf6101ec4bc8b9b"
+    },
+    {
+      "path": "_MD/002__a-refusal-cannot-tell-you-whether-the-model-cant-wont__Hofsta-2025__PB-FORAGE-002__from-chat.md",
+      "bytes": 4184,
+      "sha256": "3d36a3e2ec08bdba03a37458c519433809443a083c85a6de31fabe9ed54bcb26"
+    },
+    {
+      "path": "_MD/003__the-prompt-battle-may-be-measuring-the-operator-model__Hofsta-2025__PB-FORAGE-003__from-chat.md",
+      "bytes": 3858,
+      "sha256": "3d0023c8342c9fb86be6460c78f8887e7f04caff7e35abfe2ed56af4f5d0e3f7"
+    },
+    {
+      "path": "_MD/004__once-the-critique-pool-adapts-to-the-battle-the-benchm__Kiela-2021__PB-FORAGE-004__from-chat.md",
+      "bytes": 4070,
+      "sha256": "1d87d9d5269b42e6bb4d2d297e1c152b749f9778d4f9f664666fb85e7268edf7"
+    },
+    {
+      "path": "_MD/005__the-scientific-part-of-a-prompt-battle-may-have-to-hap__Clark-2022__PB-FORAGE-005__from-chat.md",
+      "bytes": 3973,
+      "sha256": "c4f204f4c572f3706caa20390212995dd1e8e55132fbcc0201b9482e20477aea"
+    },
+    {
+      "path": "_MD/006__judge-disagreement-may-be-data-not-a-defect-in-the-sco__SOURCEUNKNOWN__PB-FORAGE-006__from-chat.md",
+      "bytes": 3677,
+      "sha256": "cc46016be808dc9270006b996c77e060a1c3e307d3258664fb568210c8fb626c"
+    },
+    {
+      "path": "_MD/007__the-outside-of-the-prompt-battle-keeps-leaking-into-th__Consalvo-2009__PB-FORAGE-007__from-chat.md",
+      "bytes": 3344,
+      "sha256": "970af9015ba64f813351e13aad02b5921e2650d93409f00f248f8f50c757b874"
+    },
+    {
+      "path": "_MD/008__a-cypher-is-not-a-circular-user-interface__Johnson-2023__PB-FORAGE-008__from-chat.md",
+      "bytes": 4224,
+      "sha256": "5b2cd137ee1762d5599948326adacbf1a292d533326ce1e3c6a94318db3d0adb"
+    },
+    {
+      "path": "_MD/009__a-prompt-can-be-an-epistemic-action-rather-than-an-ins__Kirsh-1994__PB-FORAGE-009__from-chat.md",
+      "bytes": 4970,
+      "sha256": "35fca9c5da8470dc5f8d0f0cc094e4a1847a757e45af3b4b3394bd87ad4fedaa"
+    },
+    {
+      "path": "_MD/010__coupling-is-not-enough-the-coupling-may-have-to-be-rel__Clark-1998__PB-FORAGE-010__from-chat.md",
+      "bytes": 5067,
+      "sha256": "0a873f61891c919f4015344292fdbd379dc40e0b18ac8593222890451d72f6da"
+    },
+    {
+      "path": "_MD/011__an-adaptive-benchmark-can-become-part-of-the-causal-sy__Perdomo-2020__PB-FORAGE-011__from-chat.md",
+      "bytes": 5071,
+      "sha256": "9477c7cf4a971302566b76bfba2b51f56587cb76947ec98ef09dcadbb5a59a0e"
+    },
+    {
+      "path": "_MD/012__disagreement-is-not-evidence-until-its-mechanism-is-id__HautliJanisz-2022__PB-FORAGE-012__from-chat.md",
+      "bytes": 4718,
+      "sha256": "e26fe1ecdb202ff9c4c86294202f1a3e6c1b2ae8726eefb2a780aaa07222b72b"
+    },
+    {
+      "path": "_MD/013__the-clearer-the-scoring-rule-becomes-the-more-precisel__Manheim-2018__PB-FORAGE-013__from-chat.md",
+      "bytes": 4864,
+      "sha256": "0c0c3b2cb1fcd0ac1e1da03e75f7338bb81b574859ef224231fd86a198ecd23a"
+    },
+    {
+      "path": "_MD/014__turning-the-cypher-into-portable-mechanics-may-reprodu__Johnson-2023__PB-FORAGE-014__from-chat.md",
+      "bytes": 5438,
+      "sha256": "925d42bc860beef026256b53583fa617ea21307a48dfd85e3ecc716a60b7b7d4"
+    },
+    {
+      "path": "_MD/015__a-shared-experiment-can-settle-the-result-while-leavin__Mellers-2001__PB-FORAGE-015__from-chat.md",
+      "bytes": 4797,
+      "sha256": "edeb153ee8c41a23078d864353f02ab6bc47c50532b9046f8984379e3ea951bb"
+    },
+    {
+      "path": "_MD/016__the-function-of-the-battle-may-not-be-to-win__Barthes-1972__PB-FORAGE-016__from-chat.md",
+      "bytes": 5329,
+      "sha256": "cf8cae283a23b5b0c7f243d32ee7defd2e97b32b1f35535db5bfa91f6cb38ab9"
+    },
+    {
+      "path": "_MD/017__a-rigged-prompt-battle-may-be-more-honest-than-a-supposedl__Barthes-1972__PB-FORAGE-017__from-chat.md",
+      "bytes": 4911,
+      "sha256": "8688dd7a5cf533838ab9406dc30bc68ae70e6d91cc4406ceb2f2363c2a9a75e3"
+    },
+    {
+      "path": "_MD/018__a-model-failure-may-need-to-be-held-in-place-before-it-can__Barthes-1972__PB-FORAGE-018__from-chat.md",
+      "bytes": 4412,
+      "sha256": "b2f7e7921e210a556398ae67fc88a61810403019f99faf0ce3d2b8613f4b3f2f"
+    },
+    {
+      "path": "_MD/019__if-capability-is-distributed-the-prompt-battle-has-lost-th__Barthes-1972__PB-FORAGE-019__from-chat.md",
+      "bytes": 4671,
+      "sha256": "332a356d5d76c7d0a682b80a4d8cadd685d601d2da99236c7143f3b456ba30af"
+    },
+    {
+      "path": "_MD/020__fairness-can-become-kayfabe-before-anyone-cheats__Barthes-1972__PB-FORAGE-020__from-chat.md",
+      "bytes": 4414,
+      "sha256": "744aa79f666f6765e23f47890b5cf2c29d10cc022080e5e329883988d58f20fe"
+    },
+    {
+      "path": "_MD/021__the-crowd-may-be-scoring-justice-while-the-researchers-thi__Barthes-1972__PB-FORAGE-021__from-chat.md",
+      "bytes": 4434,
+      "sha256": "6c8a5fe98e72cbdfc1015d4b7bd7c0d1afe5c053e5cf97285ec809e4df466daf"
+    },
+    {
+      "path": "_MD/022__the-wwe-version-of-the-paper-needs-absolutes-but-the-resea__Barthes-1972__PB-FORAGE-022__from-chat.md",
+      "bytes": 4788,
+      "sha256": "2707d1eca0d435b09dfa456e1269d544e0261ffecd245bac07f029fb07fc588c"
+    },
+    {
+      "path": "_MD/023__the-paper-needs-a-heel-strong-enough-to-beat-the-thesis__Barthes-1972__PB-FORAGE-023__from-chat.md",
+      "bytes": 4563,
+      "sha256": "00e353117ff66bcd04e7dac6bae8d2b9065da07727cafe80edc2318e1457dff7"
+    },
+    {
+      "path": "_MD/024__the-real-finishing-move-is-the-reversal-that-changes-what__Barthes-1972__PB-FORAGE-024__from-chat.md",
+      "bytes": 5136,
+      "sha256": "16eb953e56db9854f6d235c5bc00276fb500a7f7977ff4bd46420839ae7b18f7"
+    },
+    {
+      "path": "_MOCS/capability-attribution.md",
+      "bytes": 405,
+      "sha256": "95ca8a45c6ae1934f53d9961612af27dc703f73f942d8875d77d027522182d06"
+    },
+    {
+      "path": "_MOCS/diagnostic-holds-and-booking.md",
+      "bytes": 304,
+      "sha256": "34645d7a65a3f7ad6efa7c55f1c4c4f85c26b05019e0d8066a21db8d01346051"
+    },
+    {
+      "path": "_MOCS/evaluation-spectacle.md",
+      "bytes": 312,
+      "sha256": "0c89963753fa8606e274cd918a163963797e4a16cb871574f2acccf86e8baf30"
+    },
+    {
+      "path": "_MOCS/smackdown-paper-architecture.md",
+      "bytes": 458,
+      "sha256": "2f4f9de38344dd94c6b4b8268c2a0fd197270cc919845bfa4936d4e7f246d2ed"
+    },
+    {
+      "path": "_MOCS/wrestling-as-methodological-pressure.md",
+      "bytes": 505,
+      "sha256": "d146481e439fcfe7c18b12421bb7ae716ec9e8d8d2090b53b9a0a968e6818b00"
+    },
+    {
+      "path": "_PROMPTS/PRIME_ZETTEL_FORAGE_v3.0.txt",
+      "bytes": 11424,
+      "sha256": "ca2c82d04a1b082de12a1ac6f7d56984d6d435bab7d9a6fc044893a61e239d4e"
+    },
+    {
+      "path": "_PROMPTS/PRIME_ZETTEL_FORAGE_v3.1__RECEIPT_ONLY.txt",
+      "bytes": 290,
+      "sha256": "979633896f21d69e8dcfd6ee143b083ef19100fea5e21ea8a1072449a26d6983"
+    },
+    {
+      "path": "_PROMPTS/RUN_COMMAND__2026-08-18.txt",
+      "bytes": 36,
+      "sha256": "4b6c94d5a42780181977ded82f6306f8ce670dd854ce0d35476380b24c47c294"
+    },
+    {
+      "path": "_PROMPTS/SLIPCASE_MERGE_v13.1+v15.55__DERIVED.txt",
+      "bytes": 1167,
+      "sha256": "9a740c54d29df1711188923a77c52d0309f999a0ea95d9825dcc53978dde10c5"
+    },
+    {
+      "path": "_PROMPTS/SLIPCASE_v13.1__RESEARCH_ENGINE.txt",
+      "bytes": 20130,
+      "sha256": "8ac21ed660ad4d9c8aa1404c07bc28d024a0ba2c2d358bb1ae648fcbdbfcc814"
+    },
+    {
+      "path": "_PROMPTS/SLIPCASE_v15.55-AM__ASSEMBLY_INSTRUMENT.txt",
+      "bytes": 20086,
+      "sha256": "a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a"
+    },
+    {
+      "path": "_RESOURCES/Barthes__The_World_of_Wrestling__scan.pdf",
+      "bytes": 3167709,
+      "sha256": "06c5638f40efc7e30d23d431affb98beb3a7dcc8b0d438c9b3d30de32567a7e2"
+    },
+    {
+      "path": "_RESOURCES/PB_PRIME(1).pdf",
+      "bytes": 4508696,
+      "sha256": "f1038d6cdf4a27bd85fee8bc52545b37dc475d860b063a55436563fbfab594b6"
+    },
+    {
+      "path": "_RESOURCES/PB_PRIME(1).txt",
+      "bytes": 299999,
+      "sha256": "3158fe146bd660e5835846e372f4c14dd9b885dfc4b924d1f33c52fb8b24014d"
+    },
+    {
+      "path": "_RESOURCES/PRIOR_PAPER/the-capability-is-in-the-contest__2026-08-17.pdf",
+      "bytes": 176930,
+      "sha256": "e857a5846800cd6de3425349d4576d3432fa5ff793f1796f974b0cf78ffe81c5"
+    },
+    {
+      "path": "_RESOURCES/PRIOR_PAPER/the-capability-is-in-the-contest__2026-08-17.tex",
+      "bytes": 29813,
+      "sha256": "e7b6262ae429d9ef2b410a20933e262eec69fc70801fa7e4972f5926416584ce"
+    },
+    {
+      "path": "_RESOURCES/PRIOR_PAPER/the-capability-is-in-the-contest__2026-08-17__ASSEMBLY_APPENDIX.txt",
+      "bytes": 455,
+      "sha256": "01890d3cee12b1b78a9406180141438d12200a74c0c3257726be13823335d3dc"
+    },
+    {
+      "path": "_RESOURCES/PRIOR_PAPER/the-capability-is-in-the-contest__2026-08-17__MAKING_HISTORY.txt",
+      "bytes": 2005,
+      "sha256": "d23bb2a36c9bf10d4429324f945dcda1e2c27d9f44f41f434e9cccd2ccf4575c"
+    },
+    {
+      "path": "_RESOURCES/PRIOR_PAPER/the-capability-is-in-the-contest__2026-08-17__SOURCE_MAP.txt",
+      "bytes": 2277,
+      "sha256": "f1a0b3e164cc0c3cda33165cd2a519c85b323dd3bdc2a725746ec0d405287b1e"
+    },
+    {
+      "path": "_SLIPCASE/ALIASES.json",
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "path": "_SLIPCASE/APPEARANCES.jsonl",
+      "bytes": 5247,
+      "sha256": "c7fa731293f5f72f27feedfab8fedcd9237ddaa97a938a659aab577135264689"
+    },
+    {
+      "path": "_SLIPCASE/NODES.jsonl",
+      "bytes": 17567,
+      "sha256": "d4a65461a1e1b06f216291736dfe2205893306b0e05dbc2d2dd3bc2434f11f95"
+    },
+    {
+      "path": "_SLIPCASE/RELATIONS.jsonl",
+      "bytes": 68540,
+      "sha256": "5b2fdaaf44ee94ec28e24dbc1ccbe6f96ea15b5df26d4ba3d3ecd8ef1dcf4c98"
+    },
+    {
+      "path": "_SLIPCASE/RESOURCES.jsonl",
+      "bytes": 7567,
+      "sha256": "e3b7c22598a4378d76fe3de181152458ad65b883bfe8b852654b17e19cd00fb9"
+    },
+    {
+      "path": "_SLIPCASE/VERIFICATION.txt",
+      "bytes": 2981,
+      "sha256": "2592f68d85c807635f339c6e94d7b3d1c85b7e5e3ac0a11d3086d5cf76576c33"
+    },
+    {
+      "path": "capability-has-no-body__2026-08-18.pdf",
+      "bytes": 216043,
+      "sha256": "768cda60f984203770250944f535329871e7f084da377806e33dae3fd5784354"
+    },
+    {
+      "path": "capability-has-no-body__2026-08-18.tex",
+      "bytes": 31582,
+      "sha256": "dde4675fad6681f74170e17bb3b4f1315924f5da949919245bcf584d81f4d2f9"
+    },
+    {
+      "path": "capability-has-no-body__ASSEMBLY_APPENDIX.txt",
+      "bytes": 685,
+      "sha256": "1da71e85a2c1f3db802f3504eb7013fb1bb2d0efa6e86f7a33df06d4e180d3b2"
+    },
+    {
+      "path": "capability-has-no-body__MAKING_HISTORY.txt",
+      "bytes": 1037,
+      "sha256": "40a67295327a6927458487576ea5e965dc1ba0ae3a56a4b16fae46b6b979b5d0"
+    },
+    {
+      "path": "capability-has-no-body__SOURCE_MAP.txt",
+      "bytes": 2769,
+      "sha256": "44d9b576ba297a18237cac59f264a95140fcdc27ebdb524c291efc28b24f901d"
+    },
+    {
+      "path": "index.html",
+      "bytes": 11302093,
+      "sha256": "bc39d2b1b7e64aff3968621bd4d75a69ff8137379414d679cb91641f073b9222"
+    }
+  ]
+}

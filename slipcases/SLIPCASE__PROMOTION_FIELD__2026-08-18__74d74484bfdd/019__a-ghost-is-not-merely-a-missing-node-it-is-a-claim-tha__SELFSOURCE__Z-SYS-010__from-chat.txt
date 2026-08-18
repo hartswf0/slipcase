@@ -1,0 +1,105 @@
+ZETTEL
+
+ID:
+Z-SYS-010
+
+TITLE:
+A ghost is not merely a missing node; it is a claim that the name deserves persistence
+
+SOURCE:
+User-provided prompt system — SLIPCASE — ANCIENT MASTER PORTABLE RESEARCH FIELD v15.0 — supplied 2026-08-18.
+
+PASSAGE:
+[PARAPHRASE] Ancient Master resolves addresses conservatively through exact IDs, aliases, exact unique names, platforms, concepts, explicit external references, and finally GHOST. A GHOST is an unfinished intellectual address rather than an error, and must be distinguished from a broken explicit ID.
+
+RESEARCH OBJECT:
+The system does not treat all resolution failure alike. It preserves an unresolved semantic demand while distinguishing it from a failed promise of an already-existing target.
+
+LOCAL MOVE:
+Turns missingness into typed research state.
+
+SOURCE TERMS:
+GHOST
+BROKEN EXPLICIT ID
+ambiguous
+resolution state
+exact original ID
+alias
+CONCEPT
+
+WHAT BECAME STRANGE:
+To classify something as a ghost rather than a typo or broken reference is already to make a small intellectual wager: this unresolved name is worth keeping open.
+
+QUESTION:
+What evidence licenses promoting an unresolved string into a durable GHOST?
+
+DEEPER QUESTION:
+Can the system preserve absence without accidentally manufacturing ontology from spelling, shorthand, or malformed references?
+
+MECHANISM:
+Encounter address.
+Attempt conservative resolution.
+If explicit target was promised and absent → BROKEN EXPLICIT ID.
+If meaningful unresolved address remains → GHOST.
+Preserve inbound relations.
+
+FORMAL SHIFT:
+<unresolved address>
+→ <typed missingness>
+→ [preserve rather than discard]
+→ <future research frontier>
+
+SOURCE FORMALISM:
+exact original ID
+→ registered alias
+→ exact unique title/name
+→ PLATFORM
+→ CONCEPT
+→ explicit external
+→ GHOST
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+RESOLUTION_STATE ∈ {
+  RESOLVED,
+  AMBIGUOUS,
+  GHOST,
+  BROKEN_EXPLICIT_ID,
+  EXTERNAL,
+  MALFORMED?
+}
+
+TENSION:
+“Never guess an ambiguous target” protects evidence, but GHOST creation still requires deciding that the unresolved token is an intentional intellectual address.
+
+MISSING:
+A MALFORMED / UNKNOWN-INTENT state separating meaningful ghosts from strings whose intended referential status cannot be established.
+
+BOUNDARY:
+The prompt explicitly distinguishes ghosts from broken IDs but does not enumerate every possible failure state.
+
+CITATION TRAIL:
+Ancient Master resolution rules
+→ ghost/backlink compilation
+→ active frontier
+→ daemon steering
+
+TEST:
+Collect every unresolved [[ADDRESS]] in a mixed archive and classify independently as ghost, broken ID, ambiguous, malformed, or external. Measure inter-rater disagreement and identify the cases the current state model cannot express.
+
+PLATFORM:
+[[MISSINGNESS AS DATA]]
+
+LINKS:
+[[GHOST]]
+[[BROKEN EXPLICIT ID]]
+[[RESOLUTION STATE]]
+
+BIBTEX:
+@misc{ancient_master_ghosts_2026,
+  title = {Slipcase — Ancient Master: Ghost and Resolution Rules},
+  howpublished = {User-provided research-system prompt},
+  year = {2026},
+  note = {Version 15.0; supplied 2026-08-18}
+}

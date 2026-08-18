@@ -1,0 +1,735 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{THE MODEL COULD DRAW YELMO. IT COULD NOT KEEP
+HIM.}\label{the-model-could-draw-yelmo.-it-could-not-keep-him.}
+
+\subsection{Scott Roberts, ``the same dude each time,'' and the minimum
+conditions of generative
+storytelling}\label{scott-roberts-the-same-dude-each-time-and-the-minimum-conditions-of-generative-storytelling}
+
+\textbf{Watson Hartsoe · Working Paper · 17 August 2026}
+
+\subsubsection{Abstract}\label{abstract}
+
+The original Yelmo project should not be remembered as a failed attempt
+to make a comic with Midjourney. Its proposal was more basic and more
+consequential: could an image generator sustain a protagonist long
+enough to tell a story? The surviving 2022 notes describe a small group
+imagining ``a hero's journey of Midjourney,'' searching for ``someone
+that's kind of repeatable,'' and settling on a deliberately wrong but
+recognizable figure: yellow Elmo, quickly compressed into Yelmo. The
+joke became a stress test. Across scenes, Yelmo's eyes, frill, body, and
+relations drifted; adding other characters could cause them to alter one
+another. The problem was not simply visual inconsistency. The system
+could repeatedly generate descriptions of a type, but it did not carry
+forward a stable referent --- \emph{this same character} --- from one
+image to the next.
+
+This paper argues that Yelmo exposed a minimum ontology of generative
+storytelling before the field had good names for it. A story requires
+identity that survives transformation, not mere repetition; multiple
+actors whose boundaries survive interaction; and some mechanism that
+remembers what the story has already committed to. In the Yelmo
+experiments, much of that state appears to have lived outside the model,
+in the human group that named variants, rejected mutations, remembered
+prior versions, and treated a drifting family of images as one
+protagonist. \textbf{The model could draw Yelmo. The community was
+keeping Yelmo alive.}
+
+The argument becomes more interesting beside Scott Roberts's documented
+practice. Years before generative AI, Roberts made work about entering
+the world of a cereal mascot, animating gamers' idealized alter egos,
+crossing representation and physical space, and ``experiment{[}ing{]}
+while making comics.'' He later published a chapter titled ``Surrealist
+Storytelling: Artistic Experimentation and Spontaneity through
+Improvisation,'' publicly described Midjourney as a medium for an
+ongoing exquisite-corpse game in August 2022, and in 2023 taught an
+experimental AI-art course whose students he called research
+collaborators. None of this proves a direct lineage from those works to
+Yelmo. It does make a stronger question possible: was Yelmo not an AI
+novelty at all, but a new machine entering an older Roberts problem ---
+how a character survives translation, improvisation, and transformation?
+
+\textbf{Keywords:} generative AI; Midjourney; animation; character
+consistency; visual storytelling; improvisation; subject identity; Scott
+Roberts
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{1. The joke was already a theory of
+identity}\label{the-joke-was-already-a-theory-of-identity}
+
+The original proposal, as it survives in the research notes, is almost
+disarmingly small. A few people are trying to imagine ``a hero's journey
+of Midjourney.'' They need a protagonist --- ``someone that's kind of
+repeatable.'' A friend named Scott proposes, or helps develop, an absurd
+test figure: yellow Elmo in a gritty farm-documentary register. The
+reason is partly comic. Elmo is not yellow. ``Yellow Elmo'' rhymes its
+way into a name. Soon the group has Yelmo hiking a mountain, sitting at
+a fancy dinner, wandering into whatever scenario somebody can throw at
+him.
+
+That choice is better than it looks.
+
+Yelmo begins as a contradiction that remains recognizable. He is wrong
+before the experiment starts: Elmo recolored, category violated,
+identity bent. Yet he is still recognizable enough for the joke to land.
+The group has therefore chosen a subject that asks an unusually clean
+question: \textbf{how much can a figure change before it stops being the
+figure?}
+
+That is not the usual benchmark for an image generator. Image generators
+are usually flattered by single-frame evaluation. Is this image
+beautiful? Does it match the prompt? Does the hand have five fingers? Is
+it photorealistic? Yelmo refuses that generosity. A gorgeous Yelmo on a
+mountain is not enough. The next image has to be \emph{him again}.
+
+The surviving notes state the failure with more precision than most
+technical vocabulary of the period: ``it's not really the same dude each
+time.'' Sometimes the eyes change. Sometimes a red frill appears or
+disappears. The model seems to merge different yellow-Elmo-like
+possibilities. The image is good; the character is unstable.
+
+That distinction is the beginning of the paper. \textbf{A model can
+succeed at depiction while failing at reference.} It can produce an
+image satisfying the description \emph{yellow Elmo in an Italian
+restaurant} without possessing anything equivalent to the narrative
+commitment \emph{the individual we already met on the mountain is now at
+this table}.
+
+The difference sounds philosophical because it is. A story does not
+merely need recurring resemblance. It needs a way to say \emph{this one
+again}.
+
+\subsection{2. The original proposal was not ``make images.'' It was
+``make a protagonist
+survive.''}\label{the-original-proposal-was-not-make-images.-it-was-make-a-protagonist-survive.}
+
+The Joseph Campbell frame matters more than the notes give it credit
+for. A hero's journey is not a slideshow of unrelated illustrations. Its
+basic wager is continuity through transformation. The hero leaves home,
+crosses thresholds, meets allies and enemies, is altered by ordeals, and
+returns changed. If the hero were visually frozen, nothing would have
+happened. If the hero became a different person every frame, there would
+be no one to whom the happening belonged.
+
+So the original Yelmo proposal accidentally chose a much harder problem
+than ``character consistency.'' \textbf{It asked for identity-preserving
+transformation.}
+
+That phrase matters. Consistency is often imagined as sameness: preserve
+the face, the shirt, the fur, the proportions. Narrative asks for
+something subtler. Change the pose. Change the lighting. Change the
+costume. Injure him. Age him. Frighten him. Put him underwater. Let him
+lose the coat that seemed visually definitive in the first image. Make
+him return from the underworld with something about him genuinely
+altered. And still: same dude.
+
+This is why Yelmo is a better storytelling test than a static character
+sheet. The project forces a system to decide which differences are
+allowed to vary and which differences would destroy identity. Later
+subject-driven generation research would formalize versions of exactly
+this problem. Textual Inversion asked how a unique user-provided concept
+could be represented and recomposed into new scenes. DisenBooth
+explicitly separated identity-relevant information from pose,
+background, and other identity-irrelevant information. ConsiStory later
+pursued consistency across diverse prompts without requiring a
+permanently trained subject representation. These systems disagree about
+where persistence should live, but they share the problem Yelmo
+encountered experientially: a subject must survive variation without
+becoming trapped by its first depiction (Gal et al.~2022; Chen et
+al.~2023; Tewel et al.~2024).
+
+The strange thing is that there is no neutral answer to what counts as
+identity-relevant. If every surviving Yelmo image has the same red
+frill, the frill begins to feel essential. If one image loses it and the
+group still says ``that's Yelmo,'' the group has demoted it to costume.
+The reference set does not merely reveal identity; it helps legislate
+identity.
+
+The original project therefore contains a question that should be put
+directly to Scott as an animator: \textbf{when you said ``the same dude
+each time,'' what did you actually mean by same?} Which properties did
+your eye forgive? Which mutations killed the character? Did you think in
+terms of model-sheet invariants --- silhouette, facial spacing,
+proportion, costume, color --- or was recognition looser and more
+performative? Was a bad drawing still Yelmo if the joke, pose, or
+attitude survived?
+
+Those answers would matter more than another general interview about AI
+creativity. They would recover the human criterion against which the
+machine was being tested.
+
+\subsection{3. The community was the
+rig}\label{the-community-was-the-rig}
+
+Here is the braver claim.
+
+In the workflow described by the notes, \textbf{Yelmo did persist. He
+just did not persist inside Midjourney.}
+
+He persisted in the channel.
+
+The people remembered what he had looked like. They named him. They
+compared new generations with prior generations. They laughed when the
+model produced an especially strange deviation. They rejected some
+mutations and accepted others. They proposed new situations for the same
+supposed individual. The continuity relation --- \emph{this image
+belongs to the Yelmo lineage} --- was being maintained socially.
+
+An animator will immediately see the inversion. A conventional character
+pipeline externalizes continuity into model sheets, turnarounds,
+palettes, rigs, reference drawings, naming conventions, asset libraries,
+and human review. Those devices make the character portable across shots
+and across hands. Yelmo had almost none of that inside the generative
+system. The group became the continuity apparatus.
+
+\textbf{The community was the rig.}
+
+This is not a metaphor for collaboration. It is a description of where
+state lived. The generator could be asked again for ``yellow Elmo,'' but
+the social group carried the history of what prior outputs had already
+established. Humans supplied the memory against which the next image
+became a continuation, mutation, or failure.
+
+This makes the famous instability of early image generators newly
+interesting. Their lack of persistence did not simply prevent narrative.
+It recruited humans into maintaining the missing persistence themselves.
+The limitation helped produce the social game. Every broken Yelmo
+created an occasion to say: Is that him? Is this better? What if we try
+this? What if he goes here? The defect became a generator of
+conversation.
+
+That may explain why the project could be simultaneously a failure as a
+production tool and a success as a social practice. The notes call
+Midjourney a ``multiplayer imagination game.'' Participants riff on one
+another, propose increasingly ridiculous scenarios, and watch the model
+make moves they would not have proposed themselves. The system is bad at
+maintaining a production asset and excellent at producing provocations.
+
+The project's own language catches the split: \textbf{game, not tool}.
+Not because nothing useful is happening, but because the labor of
+coherence still belongs to the people. A tool can be inserted into a
+pipeline because its outputs can be made answerable to prior decisions.
+A game can be enjoyable precisely because prior decisions remain
+vulnerable to surprise.
+
+Yelmo sits at that threshold.
+
+\subsection{4. The second character reveals the missing
+world}\label{the-second-character-reveals-the-missing-world}
+
+The strongest technical clue in the surviving notes is not the changing
+frill. It is the failure that appears when another character enters.
+
+``We couldn't add other characters.'' Yelmo would begin altering them;
+the characters contaminated one another.
+
+That is a different problem from one-character persistence. It suggests
+that the model was not merely failing to remember Yelmo. It was failing
+to maintain \textbf{independent entity boundaries} inside a shared
+scene.
+
+A story requires relations. Yelmo needs an ally, antagonist, lover,
+stranger, mentor, crowd. But a relation is possible only if the relata
+survive the relation. If introducing a second figure causes attributes
+to leak until the figures converge, then the system does not yet have
+two stable actors; it has one image field negotiating a compromise.
+
+Later research on multi-subject generation gives this failure
+surprisingly literal names. IR-Diffusion identifies interference among
+subjects and proposes ``Isolation Attention'' to prevent one subject
+from referencing another in ways that produce subject fusion. StoryBooth
+describes ``self-attention leakage'' in which one character begins to
+look like another and frames the problem specifically as an obstacle to
+visual storytelling. These papers are not evidence that the Yelmo group
+anticipated their mechanisms, and there is no influence claim here. They
+are valuable because they let us rename the 2022 practical complaint (He
+et al.~2024; Singh et al.~2025).
+
+\textbf{Yelmo was discovering that a story needs object boundaries.}
+
+A beautiful image can blur identities and remain beautiful. A story
+cannot. If Yelmo shakes hands with a pirate and comes away half-pirate,
+the failure is not cosmetic. The world has lost the ability to say who
+did what to whom.
+
+This is where the original project becomes more ambitious than most
+discussions of prompting. The minimum generative story world requires at
+least three operations:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  preserve an entity across transformations;
+\item
+  preserve several entities simultaneously;
+\item
+  allow relations among those entities without fusing their identities.
+\end{enumerate}
+
+The Yelmo group found all three by trying to make a ridiculous Muppet go
+on an adventure.
+
+\subsection{5. Scott Roberts makes the story harder, not
+easier}\label{scott-roberts-makes-the-story-harder-not-easier}
+
+There is still a provenance problem that should not be hidden because
+Scott may be the person who can solve it.
+
+The Yelmo transcript identifies a ``Scott,'' describes him as an
+animator and the more professionally experienced artist in the group,
+and places him inside the project. The researcher supplying this archive
+identifies that Scott as DePaul animator and professor Scott Roberts.
+Public evidence independently places Roberts deep in Midjourney
+experimentation in the same period: on August 31, 2022, he described
+work made in Midjourney that included results from an ``on-going
+exquisite corpse game''; a collaborator had publicly called another
+August exchange an ``exquisite corpse collaboration'' with Roberts
+through Midjourney. But I have not found a public Roberts source that
+says ``Yelmo.'' That bridge should remain visible until Roberts confirms
+it or an original record does.
+
+The interesting part is that Roberts's documented pre-AI work makes
+Yelmo more, not less, plausible as serious artistic research.
+
+In 2002, Roberts made \emph{Lucky}, a projection sculpture that he
+describes as allowing him to ``enter the world of the cereal mascot,'' a
+childhood dream. The same year, \emph{My Favorite Character Is a Wizard}
+drew from interviews with role-playing gamers about their favorite
+characters; Roberts says the animation brings those ``idealized alter
+egos to life'' while revealing the mannerisms and idiosyncrasies of
+their creators. His artworks repeatedly cross representational systems:
+a cartoon cat projected into architecture, a low-resolution digital
+model texture-mapped with high-resolution photographs, objects conceived
+as Boolean intersections, drawings used to imitate the slow movement of
+a motion-picture camera. His comics page opens with the plain
+declaration: ``I experiment while making comics'' (Roberts, ``Comics'').
+
+Then there is the later chapter title: ``Surrealist Storytelling:
+Artistic Experimentation and Spontaneity through Improvisation.'' We do
+not yet have the chapter body in this archive, so its argument cannot be
+smuggled in from the title. But the conjunction is difficult to ignore:
+storytelling, experiment, spontaneity, improvisation. Those are also the
+terms needed to describe the Yelmo practice at its best.
+
+This does not prove Yelmo descended from \emph{Lucky}, the Wizard
+animation, or a Surrealist method. Chronology cannot do that work. But
+it gives us a better historical question than ``When did Scott start
+using AI?''
+
+The better question is: \textbf{what old problems did Midjourney
+suddenly make cheap enough, fast enough, and social enough for Roberts
+to attack in a new way?}
+
+The mascot matters. The alter ego matters. The representation crossing
+into another world matters. The willingness to improvise matters. If
+Yelmo is Roberts's project, then the most interesting reading may be
+that generative AI did not create a new artistic concern. It gave an old
+concern a machine partner that could mutate a character faster than a
+human group could stabilize him.
+
+\subsection{6. The hero's journey failed into a better research
+project}\label{the-heros-journey-failed-into-a-better-research-project}
+
+The notes suggest that the initial Joseph Campbell project did not
+harden into a finished narrative. It ``morphed into just developing that
+character.'' This is usually the point where a project history becomes
+apologetic: the story was never completed; the technology was not ready;
+the group got distracted.
+
+That is the wrong reading.
+
+The story proposal failed into the experiment it actually needed to
+become.
+
+Before asking whether Midjourney could tell twelve stages of a myth, the
+group had to establish whether the same hero could survive stage one and
+stage two. Yelmo reduced ``Can AI tell a story?'' to a prior question:
+\textbf{Can there be a recurring somebody for the story to happen to?}
+
+That is methodological progress. It takes a vague cultural question and
+turns it into a testable production problem.
+
+The project then found the next prior question: can the hero encounter
+somebody else without identities bleeding together? And another: which
+visual features are constitutive of identity, and which can change? And
+another: if the machine is most enjoyable when it surprises the group,
+how much control can be added before the improvisational value
+disappears?
+
+This last tension is especially important for Roberts because the notes
+preserve both sides. On one side is the animator's demand for
+intentionality: enough control to tell a story, define a character, and
+carry work into the world. On the other side is the pleasure of ``being
+led by MJ,'' of not trying to control everything, of receiving a visual
+move no artist in the group would have proposed.
+
+That is not a temporary contradiction to be solved by better software.
+It is a durable artistic problem.
+
+\textbf{The more perfectly the system obeys, the less it can surprise.
+The more radically it surprises, the less it can sustain a world.}
+
+Yelmo is valuable because it places those demands in the same body. Keep
+him. Change him. Surprise me. Do not lose him.
+
+That is a better research program than ``AI-assisted animation.''
+
+\subsection{7. Midjourney eventually named the
+requirement}\label{midjourney-eventually-named-the-requirement}
+
+There is a clean historical afterimage.
+
+Midjourney's own documentation describes a Character Reference as a way
+to recreate a specific character in multiple images and maintain
+consistency across scenes. The company announced Character References on
+March 12, 2024 (Midjourney 2024; Midjourney, ``Character Reference'').
+In later versions, Omni Reference similarly lets users carry characters
+and objects into new creations. Midjourney's documentation now presents
+as a product feature almost exactly the capability the Yelmo group was
+missing in 2022.
+
+No causal claim follows. There is no evidence here that Yelmo influenced
+Midjourney's roadmap. The important point is convergence. An early
+practitioner group independently formulated a limitation that later
+became legible enough to receive a dedicated interface and product
+vocabulary.
+
+The original notes even contain the product argument before the product
+existed: without character consistency, the images remain ``a beautiful
+garden of images'' trapped as one-offs; with a definable character that
+can be placed in new situations, comics, animation, poster series, and
+sustained storytelling open up.
+
+That is more than user frustration. It is a requirements document spoken
+in the vernacular of play.
+
+The braver historical claim is therefore this: \textbf{Yelmo was an
+informal benchmark before the product had a benchmark for the thing that
+mattered.}
+
+Not image quality. Not beauty. Not prompt eloquence.
+
+Can the character come back?
+
+\subsection{8. The experiment should be rerun, not
+memorialized}\label{the-experiment-should-be-rerun-not-memorialized}
+
+If the original Yelmo materials survive, the project is unusually well
+suited to reconstruction.
+
+The goal should not be to make a nostalgic gallery. It should be to
+rerun the same problem across the history of the medium.
+
+Recover the original prompts, outputs, timestamps, remix chains,
+private-server messages, and the October 12, 2022 Office Hours material
+noted in the archive. Recover the earliest image the group agreed to
+call Yelmo. Recover the first moment a participant said some variant was
+\emph{not} him. Recover the failed multi-character images. Recover the
+abandoned Campbell sequence, if it ever existed as a list of stages or
+prompts.
+
+Then build the benchmark the group was accidentally inventing:
+
+\textbf{Persistence.} Put Yelmo through twelve sharply different scenes.
+Ask whether independent raters believe the same character survives.
+
+\textbf{Transformation.} Deliberately alter pose, costume, affect, age,
+lighting, medium, and environment. Determine which transformations
+preserve identity and which destroy it.
+
+\textbf{Re-entry.} Remove Yelmo for several scenes, then bring him back.
+Does the system recover the same individual or merely another member of
+the type?
+
+\textbf{Multiplicity.} Add one, two, then five recurring characters.
+Measure when identities begin to contaminate one another.
+
+\textbf{Interaction.} Make characters touch, exchange objects, occlude
+each other, change clothes, or share props. This is where mere visual
+separation becomes world coherence.
+
+\textbf{Improvisation.} Run two conditions: one optimized for maximum
+identity control, another allowing the generator much more freedom.
+Compare not just fidelity but the number of genuinely useful surprises
+introduced by the machine.
+
+This would turn Yelmo into something rare: a longitudinal artistic
+benchmark whose question survives radical changes in model architecture.
+
+The point would not be to prove that 2026 tools are better than 2022
+tools. Of course they are better at many of these operations. The point
+would be to preserve the original human criterion and watch the medium
+slowly become able to satisfy it.
+
+\subsection{9. Scott, this is the part only you can
+break}\label{scott-this-is-the-part-only-you-can-break}
+
+If the Scott in the Yelmo record is Scott Roberts, then the next step is
+not another literature review. It is to let you damage this argument.
+
+The paper needs answers to questions only the original participants can
+supply:
+
+\textbf{What was the proposal before Yelmo existed?} Was there actually
+a planned Campbell sequence, or is ``hero's journey'' a retrospective
+shorthand for a looser desire to make a story?
+
+\textbf{Who invented Yelmo?} Who first typed the yellow-Elmo prompt, who
+named him, and was the fact that Elmo ``should'' be red part of the
+conceptual attraction or simply a joke that worked?
+
+\textbf{What did repeatable mean to you as an animator?} What were the
+non-negotiable features? Which variations did you accept as performance,
+costume, or bad drawing, and which made you say: no, that is another
+character?
+
+\textbf{Did you ever make an actual model sheet?} Did the group try to
+formalize Yelmo outside the prompt --- reference boards, prompt
+templates, seeds, image prompts, Photoshop corrections, naming rules,
+canonical images?
+
+\textbf{When did the hero's journey become the Yelmo laboratory?} Was
+there a particular failure that killed the narrative plan, or did the
+social pleasure of putting him in random situations simply become the
+better project?
+
+\textbf{What happened when other characters entered?} Did you understand
+the failure as prompt competition, model confusion, compositing failure,
+or something else? Do the images survive?
+
+\textbf{How much did you want to lose control?} The notes contain both
+the animator's frustration with insufficient intentionality and the
+pleasure of letting Midjourney lead. Were those opposite camps in the
+group, or two demands you personally wanted the tool to satisfy at once?
+
+\textbf{Was exquisite corpse already your method?} Your August 2022
+posts document Midjourney exquisite-corpse play, and your later
+published chapter names Surrealist storytelling and improvisation. Did
+that tradition consciously shape Yelmo, or is the resemblance something
+this paper is imposing after the fact?
+
+\textbf{Did Yelmo enter the 2023 DePaul course?} Your public description
+of that course calls the students research collaborators exploring
+bleeding-edge tools. Did Yelmo, character consistency, collaborative
+prompting, or the game/tool distinction become examples or assignments?
+
+\textbf{What do you still have?} The most valuable source may not be an
+interview answer at all. It may be a folder of ugly images, a forgotten
+Discord export, a screenshot of a prompt chain, or a note naming the
+twelve stages.
+
+If those materials contradict the paper, good. The point is not to turn
+Yelmo into a myth. It is to recover what the experiment actually
+discovered.
+
+\subsection{Conclusion: the character existed in the channel before he
+existed in the
+model}\label{conclusion-the-character-existed-in-the-channel-before-he-existed-in-the-model}
+
+The original Yelmo project asked a question more durable than the
+technology that failed it.
+
+Can a generative image system sustain a protagonist through change?
+
+In 2022, the answer in this small experiment appears to have been: not
+by itself. Midjourney could produce remarkable individual Yelmo images.
+It could vary him endlessly. It could surprise the group. But it could
+not reliably honor the accumulating commitments that made one generated
+image the continuation of another. It could render a character
+description without consistently maintaining a character history.
+
+The humans closed the gap. They remembered. They selected. They named.
+They laughed at mutations and carried accepted ones forward. They
+supplied the distinction between variation and replacement. They held
+the entity boundaries that broke when other characters entered. They
+supplied enough continuity for Yelmo to become socially real even while
+he remained computationally unstable.
+
+That is why the original failure matters.
+
+\textbf{The model could draw Yelmo. It could not keep him.}
+
+And for a while, the people did.
+
+If Roberts's older work belongs in this genealogy, the final irony is
+even better. An artist who had already entered the world of a cereal
+mascot, animated other people's idealized alter egos, crossed cartoons
+into physical space, experimented through comics, and written about
+improvisational storytelling encountered a machine that could summon
+characters almost instantly but could not promise that the character
+would still be there in the next scene.
+
+The brave version of the history is not that generative AI suddenly
+empowered an animator.
+
+It is that an animator and his friends used a stupid joke to discover
+what the machine still lacked before the field had agreed on the name of
+the problem.
+
+Yelmo was the joke.
+
+``The same dude each time'' was the research question.
+
+And the unfinished hero's journey may be the most important artifact
+precisely because it never got past the condition a story needs before
+the adventure can begin: \textbf{someone has to be able to leave one
+image and arrive in the next.}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Source note}\label{source-note}
+
+The core Yelmo evidence is a researcher-supplied 2022
+Midjourney-community transcript/notes file. It describes a ``Scott'' who
+is an animator and participant in Yelmo but does not, in the surviving
+excerpt, provide a surname. The researcher identifies this person as
+Scott Roberts. Public sources independently document Roberts's
+Midjourney practice in August 2022, including exquisite-corpse
+collaboration, but no public source located for this revision explicitly
+names Yelmo. The identification therefore remains a direct question for
+Roberts rather than a concealed assumption.
+
+\subsection{References}\label{references}
+
+Chen, Hong, Yipeng Zhang, Simin Wu, Xin Wang, Xuguang Duan, Yuwei Zhou,
+and Wenwu Zhu. 2023. ``DisenBooth: Identity-Preserving Disentangled
+Tuning for Subject-Driven Text-to-Image Generation.'' arXiv:2305.03374.
+https://arxiv.org/abs/2305.03374.
+
+DePaul University. ``Scott Roberts.'' Faculty profile.
+https://www.depaul.edu/faculty/scott-roberts.
+
+DePaul University Center for Teaching and Learning. 2023. ``28th Annual
+Teaching and Learning Conference.'' May 5, 2023.
+https://resources.depaul.edu/teaching-commons/events/teaching-learning-conference/Pages/28th-Annual-Teaching-and-Learning.aspx.
+
+Gal, Rinon, Yuval Alaluf, Yuval Atzmon, Or Patashnik, Amit H. Bermano,
+Gal Chechik, and Daniel Cohen-Or. 2022. ``An Image is Worth One Word:
+Personalizing Text-to-Image Generation using Textual Inversion.''
+arXiv:2208.01618. https://arxiv.org/abs/2208.01618.
+
+He, Huiguo, Qiuyue Wang, Yuan Zhou, Yuxuan Cai, Hongyang Chao, Jian Yin,
+and Huan Yang. 2024. ``Improving Multi-Subject Consistency in
+Open-Domain Image Generation with Isolation and Reposition Attention.''
+arXiv:2411.19261. https://arxiv.org/abs/2411.19261.
+
+Midjourney. 2024. ``Introducing Character References.'' March 12, 2024.
+https://updates.midjourney.com/character-refs/.
+
+Midjourney. ``Character Reference.'' Documentation.
+https://docs.midjourney.com/hc/en-us/articles/32162917505293-Character-Reference.
+
+Midjourney. ``Legacy Features.'' Documentation.
+https://docs.midjourney.com/hc/en-us/articles/33329788681101-Legacy-Features.
+
+Research archive. 2022. ``Yelmo / Midjourney community interview and
+field notes.'' Researcher-supplied transcript/notes; unpublished.
+
+Roberts, Scott. 2002. ``Lucky.'' Ubutopia.
+https://www.ubutopia.com/lucky.htm.
+
+Roberts, Scott. 2002. ``My Favorite Character Is a Wizard.'' Ubutopia.
+https://ubutopia.com/wizard.htm.
+
+Roberts, Scott. ``Comics.'' Ubutopia.
+https://www.ubutopia.com/comics.html.
+
+Roberts, Scott. 2022. Instagram post describing ``an on-going exquisite
+corpse game'' made with Midjourney. August 31, 2022.
+https://www.instagram.com/p/Ch6jYdhOw0j/.
+
+Roberts, Scott. ``Surrealist Storytelling: Artistic Experimentation and
+Spontaneity through Improvisation.'' In \emph{The Rose Metal Press Field
+Guide to Graphic Literature}, edited by Kelcey Ervick and Tom Hart. Rose
+Metal Press. Table of contents available at
+https://rosemetalpress.com/wp-content/uploads/2023/02/FGtoGraphicLiteratureTableofContents.pdf.
+
+Roberts, Scott. 2023. ``The Cyborg Muse: The Potential of AI Tools to
+Enhance and Accelerate Creativity.'' LinkedIn / DePaul Center for
+Teaching and Learning.
+https://www.linkedin.com/posts/scott-roberts-3a63523\_28th-annual-teaching-and-learning-conference-activity-7059776060971769856-V8fR.
+
+Singh, Jaskirat, Junshen Kevin Chen, Jonas Kohler, and Michael Cohen.
+2025. ``Storybooth: Training-free Multi-Subject Consistency for Improved
+Visual Storytelling.'' arXiv:2504.05800.
+https://arxiv.org/abs/2504.05800.
+
+Tewel, Yoad, Omri Kaduri, Rinon Gal, Yoni Kasten, Lior Wolf, Gal
+Chechik, and Yuval Atzmon. 2024. ``Training-Free Consistent
+Text-to-Image Generation.'' arXiv:2402.03286.
+https://arxiv.org/abs/2402.03286.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \setcounter{enumii}{2021}
+  \tightlist
+  \item
+    Instagram post: ``a plate of food'' --- ``an exquisite corpse
+    collaboration with @mrscottroberts through \#MidJourney.'' August
+    16, 2022. https://www.instagram.com/p/ChWLLqvuOXe/.
+  \end{enumerate}
+\end{enumerate}
+
+\end{document}

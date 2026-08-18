@@ -1,0 +1,76 @@
+VERIFICATION — SLIPCASE-20260817-2254-NOISE
+
+SOURCE / CONTEXT COVERAGE
+- Inherited admitted zettels carried forward: 27
+- New admitted zettels: 3
+- Total admitted zettels: 30
+- Nine visible post-checkpoint zettel identities preserved as MISSING_EXACT_PAYLOAD ghosts, not fabricated cards.
+- Original 2022 paper preserved locally.
+- Two user-provided Discord screenshots preserved locally.
+- User-provided office-hours/Joshua/originality evidence note preserved locally.
+- Chung 2020 canonical URL verified; body state LINK_ONLY.
+
+EXTRACTION / PAYLOAD IDENTITY
+- Root zettel card count: 30
+- _MD mirror count: 30
+- JSON records: 30
+- Count invariant root = _MD = JSON: PASS
+- Root payload SHA-256 checks: PASS
+- Root/_MD byte identity: PASS
+
+RELATIONS
+- Nodes: 183
+- Relations: 465
+- PLATFORM occurrences: 51
+- MEMBER_OF records: 51
+- PLATFORM invariant: PASS
+- LINKS occurrences: 63
+- LINKS_TO records: 63
+- LINKS invariant: PASS
+- [[ADDRESS]] occurrences: 139
+- WIKILINKS_TO records: 139
+- WIKILINK invariant: PASS
+
+GHOSTS / AMBIGUITIES / BROKEN REFERENCES
+- Graph ghost nodes: 12
+- Nine missing visible zettel payloads are explicit gaps in _RESOURCES/VISIBLE_POSTCHECKPOINT_ZETTEL_GAP.txt.
+- Exact spoken office-hours question remains UNVERIFIED; its substance is triangulated, not quoted as verbatim.
+
+BIBLIOGRAPHY / RESOURCES
+- Current BibTeX: SLIPCASE-20260817-2254-NOISE__references.bib
+- Original Sculptors of Noise Works Cited remains preserved separately.
+- New local resources: office-hours screenshot, Joshua screenshot, user-provided evidence note, gap receipt.
+- Chung 2020: verified canonical URL / LINK_ONLY.
+
+INDEX RECONSTRUCTION
+- index.html embedded STATE parses: PASS
+- Embedded zettel/node/relation counts match canonical files: PASS
+- Reader modes: START / ZETTELS / FIELD / LINEAGE / SOURCES / BIB / GHOSTS / PROMPTS / PAPER / REPRODUCE.
+- NETWORK.html / NETWORK.svg present.
+- CARDS.html present.
+
+PAPER CLAIM TRACE / PDF
+- Current paper: the-noise-of-sculptors__2026-08-17__checkpoint-2254.pdf
+- PDF pages: 13
+- DOCX render: 13 pages visually inspected.
+- Final PDF re-rendered with PDF renderer: 13 pages visually inspected; no clipping, overlap, black-square glyphs, or figure failures observed.
+- TeX compilation: PASS (15-page auxiliary xelatex build); final publication PDF uses the visually inspected DOCX render for layout consistency.
+- SOURCE_MAP present: YES
+- MAKING_HISTORY present: YES
+- ASSEMBLY_APPENDIX present: YES
+
+ASSEMBLY PROMPT
+- File: _PROMPTS/ANCIENT_MASTER_SLIPCASE_v15.55-AM__2026-08-17T2254-0400.txt
+- SHA-256: a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a
+- Embedded in index.html: YES
+
+ZIP STATUS
+- Preliminary archive built and tested with unzip -t: PASS.
+- Final archive is rebuilt after this verification state and tested again before delivery.
+- ZIP SHA-256 is stored in an external sidecar to avoid self-reference.
+
+STRUCTURE / BOUNDARY
+- Complete conversation export: NO.
+- Complete source verification: NO.
+- Intellectual completeness: NOT CLAIMED.
+- Current paper: WORKING PAPER / WIP.

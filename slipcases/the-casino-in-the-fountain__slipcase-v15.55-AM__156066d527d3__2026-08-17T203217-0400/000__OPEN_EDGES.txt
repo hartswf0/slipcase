@@ -1,0 +1,961 @@
+001 / 033 · “True randomness” becomes a regulatory threshold called “acceptable randomness.” [RNG-001]
+========================================================================
+QUESTION
+What happens when an ontological property such as RANDOM becomes a regulatory predicate defined by a finite battery of tests?
+
+DEEPER QUESTION
+How many supposedly intrinsic properties of technical systems—fair, secure, private, explainable, random—exist operationally only through institutions specifying what counts as sufficient evidence?
+
+MISSING
+The standard does not answer the philosophical question of whether a software RNG is “really” random. That question is unnecessary for the regulatory operation being performed.
+
+BOUNDARY
+The evidence licenses the claim that UK gambling regulation operationalizes randomness through explicit requirements. It does not establish that all jurisdictions or testing laboratories define randomness identically.
+
+TEST
+Collect the exact randomness predicates used by five gambling regulators or test laboratories and compare whether certification converges on one formal object or produces jurisdiction-specific versions of “random.”
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+002 / 033 · A fair game requires a second operation after randomness: random numbers must be mapped into outcomes. [RNG-002]
+========================================================================
+QUESTION
+Where exactly does chance become meaning?
+
+DEEPER QUESTION
+When a representation-producing machine feeds another machine that assigns consequences to those representations, which layer should be treated as the locus of fairness?
+
+MISSING
+The regulatory text specifies that mapping must correspond to declared probabilities and pay tables but does not reduce all possible implementations to a single algorithm.
+
+BOUNDARY
+This does not show that the RNG is unimportant. It shows that RNG correctness is necessary but insufficient for game-level fairness.
+
+TEST
+Construct a toy game with a perfectly uniform RNG but deliberately biased RNG-to-outcome mapping. Test whether output randomness remains statistically valid while player outcome probabilities become unfair.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+003 / 033 · The RNG seed and the game’s return-to-player percentage belong to different mechanisms. [RNG-003]
+========================================================================
+QUESTION
+Why is it so tempting to locate an entire probabilistic system inside its RNG?
+
+DEEPER QUESTION
+What conceptual errors appear when architectures are described through one charismatic component—the model, algorithm, RNG, database—while the transformations around that component disappear?
+
+MISSING
+The supplied article gives no technical derivation showing how a seed value establishes RTP.
+
+BOUNDARY
+This zettel does not establish how every commercial gambling implementation calculates RTP. It establishes that the regulator distinguishes seeding, outcome mapping, and RTP rather than treating them as one mechanism.
+
+TEST
+Implement the same game/paytable with many different PRNG seeds. Measure whether long-run theoretical RTP changes merely because the seed changes.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+004 / 033 · An online casino decomposes into components that each transform a different kind of state. [CASINO-ARCH-001]
+========================================================================
+QUESTION
+Where is the game?
+
+DEEPER QUESTION
+If no single component contains the whole operative object, should software ontology begin from modules, messages, or transformations rather than applications?
+
+MISSING
+The guidance identifies components but does not imply that every operator deploys each component as a distinct physical server or software package.
+
+BOUNDARY
+The component model is an operational/regulatory description, not necessarily the internal architecture of every commercial casino platform.
+
+TEST
+Take one actual remote-gambling transaction and trace every state representation from wager submission through RNG request, event determination, settlement, account update, and client display.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+005 / 033 · A new interface channel can change while the game engine remains the same. [PLATFORM-001]
+========================================================================
+QUESTION
+What exactly crosses platforms when software is “ported”?
+
+DEEPER QUESTION
+When interface, execution, and semantics can change independently, which layer deserves to be called the program?
+
+MISSING
+Neither source supplies enough evidence to infer the engineering quality of a particular developer from platform availability alone.
+
+BOUNDARY
+Separable testing does not mean platform changes are trivial. It means regulators recognize cases where presentation changes while game behavior does not.
+
+TEST
+Take one game released as both HTML5 and native mobile clients. Compare backend requests, state transitions, probabilities, timing, interaction design, and regulatory test reports to determine exactly what survived the port.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+006 / 033 · Simulation testing does not test “the game” at once; it tests whether one statistical consequence falls inside an acceptable range. [TEST-001]
+========================================================================
+QUESTION
+What does a test make visible, and therefore what can remain invisible while still passing?
+
+DEEPER QUESTION
+Are technical standards best understood not merely as rules governing machines but as epistemic architectures governing what institutions are capable of knowing about machines?
+
+MISSING
+The public regulatory guidance does not reveal every proprietary procedure an approved testing laboratory applies.
+
+BOUNDARY
+This does not imply certification is weak or arbitrary. It identifies certification as a bounded evidentiary process whose strength depends on the relationship between tests and possible failures.
+
+TEST
+For one certified game, obtain the testing scope and construct a matrix:
+
+FAILURE MODE × TEST PROCEDURE × OBSERVABILITY.
+
+Identify failures for which no listed procedure supplies a direct observation.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+007 / 033 · Kaneva treated 2D and 3D as alternate interfaces onto one social world rather than as separate destinations. [KANEVA-DIM-001]
+========================================================================
+QUESTION
+Where is the virtual world if its inhabitants can leave 3D without leaving the world?
+
+DEEPER QUESTION
+Can dimensionality be understood as a view over world-state rather than a defining property of the world itself?
+
+MISSING
+The public descriptions do not establish the precise backend data architecture or exactly which entities were shared between the two clients.
+
+BOUNDARY
+The evidence supports continuity of user experience and service identity across 2D and 3D. It does not by itself prove that every object or action had a single shared underlying representation.
+
+TEST
+Recover one Kaneva account through archived documentation and construct an entity matrix:
+
+ENTITY | EXISTS IN 2D | EXISTS IN 3D | SAME ID? | MUTATION PROPAGATES?
+
+Test profile, avatar name, friend, group, media item, home, event, and message.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+008 / 033 · Kaneva did not merely embed YouTube; it converted a web media object into an object located inside a room. [KANEVA-MEDIA-001]
+========================================================================
+QUESTION
+What new operations become possible when a media object is given a place?
+
+DEEPER QUESTION
+Does spatialization change what an information object is, or only alter the social relations through which it is encountered?
+
+MISSING
+The available reporting does not yet establish the exact synchronization mechanism: whether playback state was server-authoritative, host-authoritative, event-broadcast, or merely approximately coordinated.
+
+BOUNDARY
+The contemporary report verifies YouTube viewing on virtual televisions and reports Kaneva's claim that the integration was a first. Absolute historical firstness requires comparison against other virtual worlds operating before June 2007.
+
+TEST
+Recover the Kaneva client protocol or developer API and determine the minimum shared state necessary for synchronized watching:
+
+VIDEO_ID
+PLAY_STATE
+TIMECODE
+CONTROLLER
+ROOM
+AUDIENCE
+
+Then compare it with an ordinary HTML YouTube embed.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+009 / 033 · Kaneva's world was designed around ingress: the world remained alive by admitting things that were not produced inside it. [KANEVA-BOUNDARY-001]
+========================================================================
+QUESTION
+Could permeability, rather than enclosure, be a defining property of a successful virtual world?
+
+DEEPER QUESTION
+How much exteriority can a world absorb before the distinction between “inside” and “outside” ceases to explain the system?
+
+MISSING
+We do not yet know which external objects Kaneva translated into native world objects, which remained remote references, and which could not cross the boundary.
+
+BOUNDARY
+Klaus's statement is a product-design rationale, not proof that Kaneva achieved unrestricted interoperability.
+
+TEST
+Inventory everything a Kaneva user could bring from outside the system and classify each crossing as:
+
+COPY
+REFERENCE
+STREAM
+TRANSCODE
+RENDER
+RE-ENCODE
+REBUILD
+NONE
+
+The resulting table would reveal what “outside” meant technically.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+010 / 033 · In Kaneva, the virtual house begins to look less like simulated shelter than a spatial operating system for media and identity. [KANEVA-HOUSE-001]
+========================================================================
+QUESTION
+When does a profile become a house?
+
+DEEPER QUESTION
+What does architecture do to information once files, preferences, relationships, and media must acquire locations in order to be encountered?
+
+MISSING
+We still need primary documentation showing exactly how home permissions, media ownership, furniture, profiles, and visitor access were represented in Kaneva's system.
+
+BOUNDARY
+The sources establish customizable homes and spatial media use. The interpretation of the home as an “operating system for identity” is ours.
+
+TEST
+Take the same user's MySpace/Facebook-era profile and Kaneva home and map homologous elements:
+
+PROFILE PHOTO → AVATAR
+ABOUT ME → ?
+FRIENDS LIST → ?
+FAVORITE VIDEO → TELEVISION
+PHOTO ALBUM → ?
+STATUS → ?
+GROUP → ?
+PRIVACY SETTING → DOOR / ACCESS?
+
+The unmatched cells are more interesting than the matches.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+011 / 033 · Kaneva suggests that “entering the world” and “accessing the world” are different operations. [KANEVA-WORLD-001]
+========================================================================
+QUESTION
+What operation does a 3D client actually perform on a world that already exists as network state?
+
+DEEPER QUESTION
+Should rendering be understood as world creation, world access, or one temporary interpretation of an already-operating world?
+
+MISSING
+We need Kaneva's actual architecture to determine which state lived server-side independently of either rendering and which state was client-specific.
+
+BOUNDARY
+This is an architectural hypothesis generated from the documented cross-interface design, not a recovered description of Kaneva's source code.
+
+TEST
+Turn the 3D Kaneva client off.
+
+Enumerate everything that still exists.
+
+Whatever survives is a candidate for WORLD STATE rather than WORLD RENDERING.
+
+Then turn the 2D site off and repeat.
+
+The intersection is the strongest candidate for Kaneva's representation-independent world.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+012 / 033 · Mozilla Hubs made the URL itself into a door to a 3D world. [HUBS-URL-001]
+========================================================================
+QUESTION
+What changes when a URI identifies an inhabitable situation rather than a document?
+
+DEEPER QUESTION
+Is the fundamental primitive of a browser-native metaverse not the WORLD but the ADDRESS?
+
+MISSING
+What precisely persists server-side independently of desktop, mobile, and headset renderings?
+
+BOUNDARY
+The source establishes cross-device browser access. It does not establish that every device provides identical interaction, performance, or perceptual experience.
+
+TEST
+Enter the same Hubs room URL from desktop, mobile, and VR.
+
+Record:
+
+ROOM ID
+AVATAR ID
+OBJECT STATE
+MEDIA STATE
+POSITION
+PERMISSIONS
+AVAILABLE ACTIONS
+
+Separate what survives representation change from what changes with the client.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+013 / 033 · In Hubs, pasting a URL could manufacture a manipulable object. [HUBS-MEDIA-002]
+========================================================================
+QUESTION
+What must be added to information before it can participate as matter?
+
+DEEPER QUESTION
+Could a metaverse compiler be understood as a function that assigns physical verbs to informational objects?
+
+MISSING
+Which properties survive import?
+
+Authorship?
+Provenance?
+Permalink?
+Comments?
+Metadata?
+Licensing?
+Update state?
+
+BOUNDARY
+Hubs did not turn the whole originating webpage into a spatial object. Its server extracted or fetched supported media representations.
+
+TEST
+For each supported source type, construct:
+
+SOURCE OBJECT
+→ RETAINED PROPERTIES
+→ LOST PROPERTIES
+→ ADDED SPATIAL PROPERTIES.
+
+Ask whether MATERIALIZE is copying, embedding, translating, or creating a new object.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+014 / 033 · Mozilla could close Hubs without making the Hubs code cease to exist. [HUBS-DEATH-003]
+========================================================================
+QUESTION
+What exactly dies when a virtual world shuts down?
+
+DEEPER QUESTION
+Can a world possess institutional mortality while retaining technical reproducibility?
+
+MISSING
+Which Hubs rooms, assets, identities, histories, and social relations actually survived the transition?
+
+BOUNDARY
+Code survival is not world survival. Source code cannot by itself reproduce lost social history or instance state.
+
+TEST
+Define five kinds of platform survival:
+
+SOURCE SURVIVAL
+SERVER SURVIVAL
+STATE SURVIVAL
+IDENTITY SURVIVAL
+COMMUNITY SURVIVAL
+
+Apply them to Hubs, Kaneva, Second Life, Roblox, and Minecraft servers.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+015 / 033 · The metaverse may be representation-independent: 2D and 3D can be clients of the same world. [METAVERSE-DIM-004]
+========================================================================
+QUESTION
+What must remain invariant across representations for two interfaces to count as access to one world?
+
+DEEPER QUESTION
+Is a metaverse better defined by persistent referents than by spatial rendering?
+
+MISSING
+A principled threshold for determining when two interfaces are projections of one world rather than merely linked services.
+
+BOUNDARY
+Cross-device branding alone does not prove shared world-state. The invariants must be traced entity by entity.
+
+TEST
+For each system, trace:
+
+IDENTITY
+INVENTORY
+FRIENDS
+CURRENCY
+WORLD OBJECT
+PURCHASE
+MESSAGE
+PERMISSION
+
+across its web, mobile, desktop, and immersive clients.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+016 / 033 · Roblox compiles jurisdiction, age, and platform policy into runtime variables. [ROBLOX-LAW-005]
+========================================================================
+QUESTION
+What happens to law when it becomes a variable?
+
+DEEPER QUESTION
+Does platform governance increasingly operate by compiling institutional distinctions into affordance predicates?
+
+MISSING
+The precise mapping from every jurisdictional rule to Roblox's internal policy values is not publicly exposed by the API.
+
+BOUNDARY
+PolicyService exposes the result of policy evaluation, not necessarily the full reasoning or legal rule that produced it.
+
+TEST
+Join the same experience using accounts with different policy states.
+
+Construct:
+
+PLAYER
+→ LOCATION
+→ AGE
+→ POLICY BOOLEAN
+→ AVAILABLE VERBS.
+
+The result is a map of legal geometry rather than visual geometry.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+017 / 033 · Roblox does not regulate “randomness” uniformly: paid randomness can be conditional while advertising rewards must be predetermined. [ROBLOX-RANDOM-006]
+========================================================================
+QUESTION
+Where exactly does randomness become problematic?
+
+DEEPER QUESTION
+Should platform regulation be modeled over isolated mechanics or over complete transaction chains?
+
+MISSING
+The normative rationale for why these transaction paths receive different restrictions is not fully stated in the cited rules.
+
+BOUNDARY
+This does not show paid loot boxes are unrestricted. They remain subject to disclosure and player-specific policy restrictions.
+
+TEST
+Build a matrix:
+
+REAL MONEY
+ROBUX
+EARNED CURRENCY
+AD VIEW
+GAMEPLAY
+FREE CLAIM
+
+×
+
+DETERMINISTIC REWARD
+RANDOM REWARD
+
+Then map Roblox's policy for every cell.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+018 / 033 · Minecraft protects the boundary of a server by forbidding its virtual currency from crossing it. [MINECRAFT-MONEY-007]
+========================================================================
+QUESTION
+Why must money stop at the edge of the world?
+
+DEEPER QUESTION
+Does a virtual world become safer precisely when some representations cannot escape it?
+
+MISSING
+How these restrictions are enforced technically across independent Java servers.
+
+BOUNDARY
+Minecraft does permit monetization and some gameplay-affecting entitlements; the rules do not prohibit all server economies.
+
+TEST
+Compare twenty large Minecraft servers.
+
+For each currency ask:
+
+PURCHASEABLE?
+TRADEABLE?
+TRANSFERABLE?
+CASHABLE?
+REFUNDABLE?
+SERVER-BOUND?
+
+Determine whether world boundaries are more strongly enforced economically than spatially.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+019 / 033 · For UK gambling law, the border between game and world can determine whether a loot box counts as gambling. [LOOTBOX-BORDER-008]
+========================================================================
+QUESTION
+Can interoperability convert play into gambling?
+
+DEEPER QUESTION
+Does adding a bridge between virtual and external value systems transform the legal identity of an otherwise unchanged mechanic?
+
+MISSING
+The boundary becomes messier when unofficial secondary markets give nominally world-bound objects external value.
+
+BOUNDARY
+This describes the UK government's 2022 analysis. Gambling classifications differ by jurisdiction and can change.
+
+TEST
+Hold the random reward algorithm constant.
+
+Toggle only:
+
+CASHOUT = FALSE / TRUE
+
+SECONDARY_MARKET = FALSE / TRUE
+
+TRANSFERABILITY = FALSE / TRUE
+
+Observe how legal classifications change across jurisdictions.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+020 / 033 · The central loot-box evidence problem may be that the platform possesses the experiment while researchers possess only observations. [LOOTBOX-EVIDENCE-009]
+========================================================================
+QUESTION
+Is platform observability itself a governance problem?
+
+DEEPER QUESTION
+How can an external researcher establish causal mechanisms inside a system whose operator controls both the intervention and the telemetry?
+
+MISSING
+Longitudinal, player-level datasets linking exposures to outcomes while addressing privacy and selection effects.
+
+BOUNDARY
+An association with problem gambling does not establish that loot boxes cause problem gambling.
+
+Absence of proven causality likewise does not establish absence of harm.
+
+TEST
+Ask a platform to expose a privacy-preserving event stream:
+
+PLAYER_COHORT
+BOX_OFFER
+PRICE
+ODDS
+PURCHASE
+OUTCOME
+SESSION_DURATION
+TOTAL_SPEND
+COOLDOWN
+PARENTAL_CONTROL
+
+Then test competing causal hypotheses rather than only cross-sectional association.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+021 / 033 · Xsolla's Web Shop lets the purchase leave the game while the purchased object stays inside it. [XSOLLA-EXOSKELETON-010]
+========================================================================
+QUESTION
+Where does an in-game purchase occur?
+
+DEEPER QUESTION
+If payment moves to another interface, company, browser context, and legal stack while its effects return to the game, is commerce part of the world or infrastructure around it?
+
+MISSING
+Exactly which player identifiers and entitlement messages establish continuity between the game client and web checkout for each implementation.
+
+BOUNDARY
+Xsolla's claims describe its commerce architecture and product capabilities; they do not imply every game implements identical flows.
+
+TEST
+Trace one item purchase byte-by-byte:
+
+GAME OFFER
+→ URL
+→ AUTH TOKEN
+→ CART
+→ PAYMENT
+→ WEBHOOK
+→ INVENTORY DATABASE
+→ GAME CLIENT
+
+Mark every change of interface, operator, jurisdiction, and datatype.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+022 / 033 · Xsolla Metasites translates the hyperlink graph into a portal graph. [XSOLLA-PORTAL-011]
+========================================================================
+QUESTION
+What is the difference between clicking a link and walking through a portal?
+
+DEEPER QUESTION
+Could a browser-native metaverse emerge not by inventing a new network topology but by giving the existing web graph embodied verbs?
+
+MISSING
+Whether portals preserve identity, inventory, permissions, and object ownership across independently created Metasites—or merely navigate between them.
+
+BOUNDARY
+Xsolla calls the resulting system a decentralized creator-powered network, but the cited product description alone does not establish decentralization at the protocol or infrastructure-ownership level.
+
+TEST
+For a portal crossing, measure:
+
+IDENTITY survives?
+INVENTORY survives?
+URL changes?
+SERVER changes?
+ORIGIN changes?
+AUTHORITY changes?
+PERMISSIONS survive?
+
+Then determine whether PORTAL is merely navigation or true world continuity.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+023 / 033 · The hidden boundary of Roblox becomes visible on the credit-card statement: “Xsolla*Roblox.” [XSOLLA-ROBLOX-012]
+========================================================================
+QUESTION
+Can failure messages reveal the actual architecture of a supposedly seamless world?
+
+DEEPER QUESTION
+Are chargebacks, error messages, receipts, privacy notices, and refund routes better maps of a platform than its visual interface?
+
+MISSING
+Which Roblox purchasing channels currently route through Xsolla, in which jurisdictions, and under what transaction types.
+
+BOUNDARY
+The documentation proves that some Roblox charges are processed or supported through Xsolla. It does not establish that Xsolla processes every Roblox transaction.
+
+TEST
+Purchase identical Robux packages through:
+
+WEB
+IOS
+ANDROID
+XBOX
+PLAYSTATION
+QUEST
+
+Record:
+
+STATEMENT DESCRIPTOR
+MERCHANT
+PROCESSOR
+REFUND AUTHORITY
+TAX ACTOR
+PLATFORM FEE
+ENTITLEMENT PATH.
+
+The result is the institutional anatomy of one virtual currency.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+024 / 033 · A Minecraft server can acquire a second body on the web: server in 3D, commercial identity in 2D. [XSOLLA-MINECRAFT-013]
+========================================================================
+QUESTION
+How much of a Minecraft world lives outside Minecraft?
+
+DEEPER QUESTION
+When web shops, Discords, maps, wikis, voting sites, payment pages, moderation dashboards, and server databases are necessary to inhabit a server socially, where should its boundary be drawn?
+
+MISSING
+The precise Xsolla-to-Minecraft server entitlement mechanisms used by particular server operators.
+
+BOUNDARY
+Xsolla's mention of Minecraft demonstrates tooling aimed at Minecraft-related server businesses; it does not imply an official Mojang/Xsolla platform integration.
+
+TEST
+Choose one large Minecraft server and map every indispensable external service.
+
+Classify each as:
+
+DISCOVERY
+IDENTITY
+PAYMENT
+GOVERNANCE
+COMMUNICATION
+MAP
+KNOWLEDGE
+EXECUTION.
+
+Then remove each service in turn.
+
+Ask which removals leave the “world” technically running but socially nonfunctional.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+025 / 033 · The casino is not the building: gambling is a topology of value, chance, and payout that can wear any architecture. [GAMBLING-TOPOLOGY-014]
+========================================================================
+QUESTION
+If gambling cannot be identified visually, what is the smallest transaction graph that makes an action gambling-like?
+
+DEEPER QUESTION
+Can spatial interfaces disguise economic operations by translating BUY / WAGER / REVEAL into WALK / THROW / OPEN / TOUCH?
+
+MISSING
+A comparative vocabulary for identifying equivalent economic mechanics across radically different embodied interfaces.
+
+BOUNDARY
+Neither source establishes that every randomized virtual-item transaction is legally gambling. The sources establish that architecture and visual metaphor are insufficient for classification.
+
+TEST
+Implement one identical random-reward backend behind six interfaces:
+
+SLOT MACHINE
+TREASURE CHEST
+FOUNTAIN
+TREE HARVEST
+PET HATCHING
+PLAIN BUTTON
+
+Hold price, probability distribution, and reward constant.
+
+Test whether users, regulators, parents, and platform moderators classify them differently despite identical transaction graphs.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+026 / 033 · Second Life turns legal jurisdiction into literal geography: some avatars are not permitted to enter the region. [SECOND-LIFE-JURISDICTION-015]
+========================================================================
+QUESTION
+What kind of geography has borders that depend on who is approaching them?
+
+DEEPER QUESTION
+Does a governed virtual world consist of one common space, or of user-specific possible spaces generated by policy?
+
+MISSING
+The precise technical enforcement chain connecting physical geolocation, account information, jurisdiction lists, and region-entry control.
+
+BOUNDARY
+The policy describes permission and access requirements. It does not expose Linden Lab's full geolocation or enforcement implementation.
+
+TEST
+Represent Second Life as a graph:
+
+REGION = node
+TELEPORT = edge
+
+Then compute the graph separately for residents in different permitted/prohibited jurisdictions.
+
+Ask whether “the Second Life map” is actually a family of policy-conditioned maps.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+027 / 033 · A worthless virtual object can legalize a chance mechanic by failing to become money. [SECOND-LIFE-NOVELTY-016]
+========================================================================
+QUESTION
+Is value a property of an object or a path out of the world?
+
+DEEPER QUESTION
+Should virtual-object ontology include its permitted transformations rather than merely its attributes?
+
+MISSING
+How “readily converted” is operationally determined when unofficial markets, gifting, account sales, or off-platform exchanges exist.
+
+BOUNDARY
+This is Linden Lab policy language, not a universal legal definition of gambling or value.
+
+TEST
+Construct identical random rewards with four exchange graphs:
+
+A. no transfer
+B. player-to-player transfer
+C. Linden-dollar resale
+D. external cash market
+
+Hold the object itself constant.
+
+Observe which classification changes are produced solely by adding edges.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+028 / 033 · Roblox's marble fountain turns a randomized transaction into a tiny piece of world physics. [ROBLOX-MARBLE-017]
+========================================================================
+QUESTION
+What happens when economic syntax is compiled into diegetic physics?
+
+DEEPER QUESTION
+Can world design make an economic mechanism feel natural because payment becomes an object and probability becomes environmental causation?
+
+MISSING
+Whether spatial/diegetic presentation changes children's or adults' recognition of the action as a paid random transaction.
+
+BOUNDARY
+Roblox provides the fountain only as an example of when odds must be disclosed. The source does not claim the fountain representation changes behavior.
+
+TEST
+Present one mechanically identical transaction as:
+
+BUY RANDOM ITEM
+OPEN CRATE
+HATCH EGG
+PLANT SEED
+THROW MARBLE IN FOUNTAIN
+RESCUE PET
+
+Measure whether participants correctly identify:
+price,
+randomness,
+odds,
+expected value,
+and purchase frequency.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+029 / 033 · Roblox's value membrane is asymmetric: player money can enter a random-item economy while creator earnings can leave as dollars. [ROBLOX-CASHOUT-018]
+========================================================================
+QUESTION
+Can convertibility be actor-relative and history-dependent?
+
+DEEPER QUESTION
+What happens to gambling analysis when money's path OUT of the system exists for the seller but not necessarily for the purchaser holding the randomized prize?
+
+MISSING
+How consumer-protection and gambling frameworks should model asymmetric convertibility where payers and beneficiaries occupy different sides of the exchange graph.
+
+BOUNDARY
+DevEx does not mean every Robux earned through every transaction can be cashed out. Roblox defines eligibility and qualifying Earned Robux narrowly and retains discretion.
+
+TEST
+Trace one unit of real money through:
+
+PLAYER
+→ ROBUX PURCHASE
+→ RANDOM ITEM PURCHASE
+→ CREATOR REVENUE
+→ EARNED ROBUX
+→ DEVEX
+→ CREATOR BANK ACCOUNT.
+
+Identify which edge regulators conventionally treat as the “cash-out” edge and which edges disappear from the model.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+030 / 033 · Xsolla turns gambling-adjacentness into catalog metadata: “Mark as paid randomized reward.” [XSOLLA-RANDOM-FLAG-019]
+========================================================================
+QUESTION
+Can an object's regulatory type be determined by a mechanic it has not yet entered?
+
+DEEPER QUESTION
+Are modern compliance systems creating a kind of effect system for game economies, where objects carry annotations describing dangerous downstream operations?
+
+MISSING
+What exact checkout, availability, disclosure, or geo-restriction behaviors Xsolla automatically derives from this flag in each jurisdiction.
+
+BOUNDARY
+Xsolla says the parameter “may be required” in countries with legal restrictions. The documentation does not establish that the toggle alone guarantees legal compliance.
+
+TEST
+Trace the flag through Xsolla's APIs and storefront:
+
+CONFIGURATION
+→ CATALOG RESPONSE
+→ COUNTRY DETECTION
+→ CHECKOUT
+→ DISPLAY
+→ ENTITLEMENT.
+
+Determine every runtime behavior that changes when only this bit changes.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+031 / 033 · The treasure chest disappears completely in Xsolla's API: “open loot box” is a remote state mutation with three identifiers. [XSOLLA-CHANCE-API-020]
+========================================================================
+QUESTION
+What is a loot box after every representational layer has been removed?
+
+DEEPER QUESTION
+Could gambling-adjacent game mechanics be audited more accurately at the API/state-transition layer than at the interface layer?
+
+MISSING
+Where probability resolution occurred in this API generation: Xsolla-side, partner-side, or elsewhere.
+
+The endpoint does not expose the random algorithm in the retrieved documentation.
+
+BOUNDARY
+The API proves that Xsolla exposed a programmatic loot-box-opening operation. It does not establish the randomness implementation or why the operation was deprecated.
+
+TEST
+Recover the earlier Xsolla Store API loot-box specification and trace:
+
+PURCHASE
+→ INVENTORY BOX
+→ OPEN REQUEST
+→ RANDOM SELECTION
+→ REWARD
+→ INVENTORY UPDATE.
+
+Locate exactly where randomness occurred and which system possessed the probability table.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+032 / 033 · Minecraft bans “gambling” as an all-ages world-content failure while separately engineering currencies so they cannot escape the server. [MINECRAFT-GAMBLING-021]
+========================================================================
+QUESTION
+Can economic incapacity be a platform safety feature?
+
+DEEPER QUESTION
+What if metaverse interoperability is sometimes the dangerous operation rather than the desired one?
+
+MISSING
+How Mojang distinguishes prohibited gambling from permitted randomized gameplay or rewards that require no payment.
+
+BOUNDARY
+The Usage Guidelines prohibit gambling in monetized/all-ages server contexts and constrain server currencies. They do not provide a comprehensive gambling-law test.
+
+TEST
+Take a compliant Minecraft currency and successively add:
+
+PLAYER TRANSFER
+CROSS-SERVER TRANSFER
+MARKETPLACE EXCHANGE
+CASHOUT
+RANDOM PAID REWARDS.
+
+Observe which addition first destroys compliance and which first changes the regulatory interpretation.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+
+
+033 / 033 · The boundary of the virtual world is part of the gambling machine. [WORLD-MEMBRANE-022]
+========================================================================
+QUESTION
+Should convertibility be modeled as part of the gambling mechanism itself?
+
+DEEPER QUESTION
+Could the same randomizer become a fundamentally different social machine merely by adding one outbound edge from virtual object to external value?
+
+MISSING
+How to incorporate unofficial markets, account sales, gifting, creator cash-out, and grey-market exchange without collapsing every desirable virtual object into “money's worth.”
+
+BOUNDARY
+These sources come from different institutional regimes and cannot simply be treated as one common legal rule.
+
+Their convergence is conceptual: each makes boundaries and convertibility consequential.
+
+TEST
+Build a minimal simulation where every parameter is fixed except transferability.
+
+Add exchange edges one at a time:
+
+NONE
+GIFT
+PLAYER TRADE
+PLATFORM RESALE
+CROSS-WORLD TRANSFER
+FIAT CASHOUT
+UNOFFICIAL CASH MARKET
+CREATOR-ONLY CASHOUT.
+
+For each graph, rerun legal, economic, and behavioral classification.
+
+RETURN: 000__RETURN_PATH.txt · fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+

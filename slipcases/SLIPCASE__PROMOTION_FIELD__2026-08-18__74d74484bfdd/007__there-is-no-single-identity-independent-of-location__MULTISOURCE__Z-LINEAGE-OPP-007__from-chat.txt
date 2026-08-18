@@ -1,0 +1,123 @@
+ZETTEL
+
+ID:
+Z-LINEAGE-OPP-007
+
+TITLE:
+There is no single “identity independent of location”
+
+SOURCE:
+Niklas Luhmann — “Technik des Zettelkastens” — 1968.
+Project Xanadu — “Making Your Own Xanadoc.”
+Git Project — “Git Internals: Git Objects.”
+
+SOURCE URL:
+https://niklas-luhmann-archiv.de/bestand/manuskripte/manuskript/MS_2906
+https://xanadu.com/YourXanadoc.html
+https://git-scm.com/book/en/v2/Git-Internals-Git-Objects
+
+PASSAGE:
+[PARAPHRASE] Luhmann’s technique requires durable numbering of slips. Xanadu gives stabilized content permanent addresses and distinguishes links from transclusion. Git is content-addressable: stored content is retrieved by a key derived from that content.
+
+RESEARCH OBJECT:
+Three mechanisms often compressed into “identity independent of location” preserve three different invariants:
+
+Luhmann:
+identity through an assigned address in a continuing note lineage.
+
+Xanadu:
+identity of reusable addressed material across contexts.
+
+Git:
+identity of an exact stored object through content-derived naming.
+
+LOCAL MOVE:
+The comparison stops treating “address” as a single concept.
+
+SOURCE TERMS:
+Nummerierung
+permanent address
+link
+transclusion
+content-addressable
+object
+
+WHAT BECAME STRANGE:
+“Move it, rename it, renumber it — it is the same note” is not generally true. Renumbering can destroy a lineage address; editing creates a different content hash; transclusion can preserve sameness across different documentary contexts.
+
+QUESTION:
+What exactly must remain invariant for two manifestations to count as the same zettel?
+
+DEEPER QUESTION:
+Can one research object require several simultaneous identities because authorship, content, lineage, and reuse mutate independently?
+
+MECHANISM:
+Different systems choose different invariants, then build addressing around the chosen invariant.
+
+FORMAL SHIFT:
+<research object>
+→ <chosen invariant>
+→ [assign or derive identity]
+→ <persistence under a specified class of change>
+
+SOURCE FORMALISM:
+Luhmann: persistent numbering scheme.
+Xanadu: permanent addresses for stabilized extents; links and transclusions have distinct roles.
+Git: object identity derived from hashed stored representation.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+I_lineage(z) = assigned persistent lineage address
+I_content(z) = H(canonical stored payload)
+I_reuse(span) = persistent address of reused extent
+
+These functions need not agree.
+
+TENSION:
+One elegant law — “identity is not location” — conceals the harder design decision: identity with respect to what transformation?
+
+MISSING:
+An explicit identity policy for edits, forks, quotations, regenerated cards, and semantically equivalent rewrites.
+
+BOUNDARY:
+The three systems are not claimed to share a historical lineage or equivalent implementation. Their collision is analytical.
+
+CITATION TRAIL:
+Luhmann Ms. 2906 and the archive’s numbering documentation.
+Nelson on transclusion and xanalogical identity.
+Git’s hash-function transition documentation.
+
+TEST:
+Apply MOVE, RENAME, EDIT, FORK, QUOTE, REFORMAT, and REGENERATE to one zettel. Record which identities survive under lineage address, transclusion-like extent identity, and content hash.
+
+PLATFORM:
+[[IDENTITY INDEPENDENT OF LOCATION]]
+
+LINKS:
+[[IDENTITY UNDER TRANSFORMATION]]
+[[CONTENT ADDRESS IS NOT LINEAGE ADDRESS]]
+[[THE SAME NOTE PROBLEM]]
+
+BIBTEX:
+@misc{luhmann1968technik,
+  author = {Luhmann, Niklas},
+  title = {Technik des Zettelkastens},
+  year = {1968},
+  howpublished = {Ms. 2906, Niklas-Luhmann-Archiv},
+  url = {https://niklas-luhmann-archiv.de/bestand/manuskripte/manuskript/MS_2906}
+}
+
+@misc{xanadu_xanadoc,
+  author = {{Project Xanadu}},
+  title = {Making Your Own Xanadoc},
+  url = {https://xanadu.com/YourXanadoc.html},
+  note = {Accessed 2026-08-18}
+}
+
+@misc{gitobjects,
+  author = {{Git Project}},
+  title = {Git Internals: Git Objects},
+  howpublished = {Pro Git},
+  url = {https://git-scm.com/book/en/v2/Git-Internals-Git-Objects},
+  note = {Accessed 2026-08-18}
+}

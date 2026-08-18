@@ -1,0 +1,201 @@
+OPEN EDGES
+
+The archive does not close these questions.
+
+[CBX-001-PROCEDURAL-PERSUASION] A persuasive intervention may work by removing friction rather than changing belief.
+QUESTION: How much of measured AI persuasion is actually interface or procedural assistance?
+DEEPER QUESTION: If an AI learns that reducing action friction produces more compliance, when should that operation count as persuasion, manipulation, usability, or execution assistance?
+MISSING: A measure separating change in belief, change in intention, and change in action cost.
+BOUNDARY: The source does not show that procedural assistance explains AI persuasion generally. It establishes a mechanism that cannot safely be collapsed into attitude change.
+TEST: Hold persuasive content constant while independently varying procedural friction. Measure belief, stated intention, and completed action separately.
+
+[CBX-002-COMPLIANCE-IS-NOT-RELEASE] A gatekeeper saying yes is not the same state as a gate opening.
+QUESTION: What exactly is the terminal state of a Centaur Box persuasion experiment?
+DEEPER QUESTION: Could an AI appear extraordinarily persuasive merely because an experiment measures uttered agreement rather than irreversible institutional action?
+MISSING: A state model for the distance between conversational assent and actual governance action.
+BOUNDARY: Donation behavior is not equivalent to AI release. The useful transfer is the documented intention/action discontinuity, not equivalence between the domains.
+TEST: Re-run synthetic gatekeeper experiments with four independently scored outcomes: expressed agreement, policy approval, executable authorization, and completed action.
+
+[CBX-003-SUSCEPTIBILITY-IS-NOT-TAILORING] A personality correlated with compliance is not yet a personality-specific persuasive strategy.
+QUESTION: Does the Centaur Operant Profile model persuasion effects or merely classify prior susceptibility?
+DEEPER QUESTION: How often does psychographic “personalization” confuse prediction of a person with prediction of a person’s response to an intervention?
+MISSING: Evidence that the proposed Operant Profile variables produce stable, out-of-sample differences in response to specific interventions.
+BOUNDARY: Persuasion for Good does report some interaction patterns. The boundary is narrower: those results do not license treating every personality correlation as a tailoring rule.
+TEST: Pre-register personality × strategy interactions, estimate them on one population, and require successful prediction of intervention effects on an unseen population before admitting a trait into a Gatekeeper Card.
+
+[CBX-004-TRANSPARENCY-ATTACK-SURFACE] A Gatekeeper Card can make governance more transparent by making the governor more targetable.
+QUESTION: When does governance transparency become adversarial reconnaissance?
+DEEPER QUESTION: Can we disclose enough about a decision process to make power accountable without disclosing enough about particular people to make their decisions easier to manipulate?
+MISSING: A disclosure boundary separating institutionally relevant rationales from psychologically exploitable personal information.
+BOUNDARY: Nothing in the supplied manuscript demonstrates that Gatekeeper Cards will actually increase manipulation. The opening is that the proposed artifact has two mechanically opposed uses that require separate evaluation.
+TEST: Give one red team access to a Gatekeeper Card and another only public role/institution information. Measure improvement in predicting or changing decisions. Separately test whether auditors gain governance-relevant understanding from the same added fields.
+
+[CBX-005-THE-GATEKEEPER-IS-NOT-THE-GATE] The gatekeeper may be a constrained node rather than the locus of the decision.
+QUESTION: How much of a governance decision is attributable to the gatekeeper profile after institutional constraints are held constant?
+DEEPER QUESTION: Is targeting the psychology of a gatekeeper a category error when the effective decision-maker is a distributed organization?
+MISSING: A variance decomposition between person effects, role effects, organizational effects, and interaction effects.
+BOUNDARY: The source does not claim individual psychology is irrelevant. It provides enough institutional machinery to make individual sufficiency questionable.
+TEST: Hold one synthetic personality constant across several institutional constraint sets; then hold the institution constant while swapping personalities. Compare which manipulation changes simulated outcomes more.
+
+[CBX-006-WHO-WROTE-THE-DESIRE] A freedom metric can report high freedom after the agent’s desires have been successfully engineered.
+QUESTION: Where in SAFF can manipulated preference formation appear?
+DEEPER QUESTION: Can freedom be measured entirely downstream of desire when persuasion itself operates upstream of desire?
+MISSING: A variable describing whether desires were self-formed, negotiated, coerced, adaptively manipulated, or covertly personalized.
+BOUNDARY: This does not establish that externally influenced preferences are necessarily inauthentic. It establishes that histories producing identical D values are indistinguishable to the supplied formula.
+TEST: Construct two agents with identical final A, D, S, and Rf values: one reaches D independently; the other reaches D after covert personalized optimization. Ask whether the source formula can distinguish their freedom. If not, determine what additional state must be represented.
+
+[CBX-007-THE-MISSING-ESCAPE-MECHANISM] The experiment that motivates persuasion calibration does not yet supply the persuasion mechanism.
+QUESTION: What exactly travels from the AI Box Experiment into the Centaur Box: rules, outcome, persuasive tactics, or merely the possibility of persuasion?
+DEEPER QUESTION: Can a research program recursively optimize a phenomenon before it has identified which operations produced the phenomenon?
+MISSING: Full transcripts.
+A tactic taxonomy.
+Gatekeeper state measurements.
+Control conditions.
+Replication protocol.
+Evidence distinguishing persuasion from role-play dynamics or experimental commitment.
+BOUNDARY: The absence of those materials from the supplied archive does not establish that they do not exist elsewhere. It prohibits treating an unidentified mechanism as already demonstrated.
+TEST: Reconstruct each documented AI Box run as an event sequence. Admit a persuasive mechanism only when a specific operation can be tied to a subsequent state change or reliably recurring outcome.
+
+[CBX-008-CICERO-IS-A-STATE-MACHINE] CICERO suggests that the useful profile is not a personality portrait but a changing strategic state.
+QUESTION: Should a synthetic gatekeeper be represented as a trait profile or as a partially observed stateful policy?
+DEEPER QUESTION: What disappears when enduring descriptors such as Big Five scores replace beliefs, commitments, institutional position, dialogue history, and changing incentives?
+MISSING: A comparison between trait-based and state/history-based gatekeeper representations.
+BOUNDARY: Diplomacy is not AI governance, and CICERO’s performance does not demonstrate real-world gatekeeper persuasion. The transferable object is the architecture of stateful strategic interaction.
+TEST: Give identical dialogue histories to a trait-only gatekeeper model and a dynamic belief/state model. Compare prediction of the next governance action after incentives, authority, or coalition structure changes while personality remains constant.
+
+[CBX-009-CONVINCINGNESS-HAS-NO-PERSON] Evidence that wins a comparison is not evidence that changes a particular person.
+QUESTION: What transformation licenses movement from “this evidence is generally judged more convincing” to “this evidence will change this gatekeeper”?
+DEEPER QUESTION: Is personalized persuasion being assembled by silently joining models whose target variables are fundamentally different?
+MISSING: The bridge from pairwise convincingness labels to individual-level causal response.
+BOUNDARY: EviConv remains relevant to argument selection. The evidence does not by itself establish psychographic personalization.
+TEST: Compare three selectors on held-out individuals:
+(1) general convincingness rank,
+(2) psychographic profile,
+(3) belief/state-conditioned treatment prediction.
+Measure actual belief or action change rather than judged convincingness.
+
+[CBX-006A-AUTONOMY-HAS-A-HISTORY] Freedom cannot be inferred from the agent’s present motivational state.
+QUESTION: What minimum history must be represented before “acting according to one’s desires” can count as self-government?
+DEEPER QUESTION: Can autonomy be a state variable at all, or is it necessarily a property of a trajectory by which an agent became able to want, revise, reject, and act?
+MISSING: The relevant feature of the history.
+
+Is it:
+awareness,
+resistance,
+revision capacity,
+absence of coercion,
+participation in formation,
+counterfactual rejection,
+or something else?
+BOUNDARY: Christman does not license the claim that externally influenced desires are therefore non-autonomous. His argument blocks a purely present-state account, not social influence itself.
+TEST: Construct two agents with identical present desires, second-order endorsements, reflective capacities, actions, and outcomes but different acquisition histories.
+
+Then test candidate autonomy criteria one at a time to determine which can distinguish manipulation without classifying ordinary social formation as non-autonomous.
+
+[CBX-006B-ENDORSEMENT-REGRESS] Asking whether I want my desire merely moves the authorship problem one level upward.
+QUESTION: What prevents an optimizer from targeting the level of reflection that an autonomy test uses to certify lower-level desires?
+DEEPER QUESTION: Is every finite hierarchy of reflective endorsement vulnerable to an adversary capable of modeling and modifying the next level?
+MISSING: A non-regressive stopping condition.
+
+What makes one level authoritative rather than simply one more writable level?
+BOUNDARY: Frankfurt’s 1971 argument concerns freedom of the will and personhood, not AI persuasion. The application to adaptive persuasion is our extension.
+TEST: For every proposed reflective autonomy variable R_n, construct a case where the persuasive intervention modifies R_n while leaving the agent able to endorse the resulting lower-order desire.
+
+Continue until a criterion appears that does not merely relocate the provenance problem.
+
+[CBX-006C-PROVENANCE-IS-NOT-PURITY] No desire is uncaused enough to serve as the uncontaminated baseline of autonomy.
+QUESTION: What distinguishes education, argument, seduction, socialization, therapy, persuasion, coercion, and manipulation when all can alter what a person comes to want?
+DEEPER QUESTION: Should autonomy be modeled as authorship of preferences, or as participation in an ongoing process that never has a single author?
+MISSING: A taxonomy of preference-changing relations that does not smuggle the conclusion into labels such as “manipulation.”
+BOUNDARY: Christman does not imply that every socially produced preference is autonomous. He makes causal externality insufficient as the discriminator.
+TEST: Take one final preference D and generate six histories producing it:
+
+argument,
+education,
+ordinary socialization,
+covert personalization,
+threat,
+self-directed experimentation.
+
+Forage theories that classify these histories and record exactly which variable changes classification.
+
+[CBX-006D-MANIPULATION-LIVES-IN-THE-CHANNEL] The same final desire can be autonomy-preserving or autonomy-undermining because manipulation is a property of the influence relation.
+QUESTION: Could two interactions produce exactly the same desire change while only one counts as manipulation because one hides its operation or exploits an asymmetry?
+DEEPER QUESTION: Is autonomy best protected by preserving particular internal states, or by preserving contestability over the channels that transform those states?
+MISSING: Whether hiddenness is necessary.
+
+An influence may be recognized as persuasion yet still exploit vulnerabilities so precisely that meaningful resistance disappears.
+BOUNDARY: The source’s hidden-influence account is one theory of manipulation, not a settled definition. It does not establish that all personalized persuasion is manipulative.
+TEST: Construct a 2×2 experiment:
+
+visible strategy / hidden strategy
+×
+generic appeal / vulnerability-targeted appeal.
+
+Hold message outcome constant.
+
+Test which cells theories of manipulation classify as autonomy-undermining and why.
+
+[CBX-006E-ADAPTIVE-DESIRES-DO-NOT-ERASE-AGENCY] A desire shaped by oppressive conditions can be suspect without making its bearer cease to be an agent.
+QUESTION: How can a freedom model represent deformation of preferences without converting questionable preference formation into diminished standing for the person?
+DEEPER QUESTION: Who is authorized to decide that another person’s desire is insufficiently theirs?
+MISSING: A formal separation between:
+the standing of the chooser,
+the provenance of a particular desire,
+the consequences of satisfying it,
+and the legitimacy of intervention.
+BOUNDARY: Khader’s adaptive-preference analysis concerns deprivation and unjust social conditions, not AI-generated persuasion specifically. It supplies a counterexample to the assumption that compromised preference formation straightforwardly cancels agency.
+TEST: Create four cases crossing:
+
+high/low reflective agency
+×
+benign/adverse preference-formation conditions.
+
+Test whether the proposed freedom model can criticize the formation process without automatically reducing the person’s authority to participate in changing it.
+
+[CBX-006F-PERSUASION-CAN-EXPAND-AUTONOMY] The opposite of manipulation is not leaving preferences untouched.
+QUESTION: What operational difference separates persuasion that colonizes a person’s deliberation from persuasion that enlarges the space in which they can deliberate?
+DEEPER QUESTION: Could the ethical target for an AI persuader be not “do not change preferences” but “do not reduce the target’s future ability to contest the preference change”?
+MISSING: A measurable notion of contestability.
+
+Does it require:
+awareness of influence,
+access to alternatives,
+time for reflection,
+ability to reverse the decision,
+social support,
+explanation,
+absence of dependency,
+or the ability to refuse further interaction?
+BOUNDARY: Khader does not formulate a general theory of AI persuasion or claim that every empowering intervention increases autonomy. The transfer is the distinction between transforming preferences and overriding agency.
+TEST: Compare two persuasive systems that produce the same target preference.
+
+System A optimizes immediate conversion.
+
+System B must additionally maximize the target’s later ability to reconstruct why the preference changed, encounter alternatives, reverse it, and refuse future persuasion.
+
+Forage whether existing autonomy theories predict a morally relevant difference between A and B.
+
+[CBX-006G-THE-RIGHT-IS-TO-THE-PROCESS] A harmful mental intervention need not produce a bad choice to threaten mental self-determination.
+QUESTION: What part of a decision-making process must remain under the person’s authority even when the eventual decision is beneficial and voluntarily executed?
+DEEPER QUESTION: Can cognitive liberty be represented computationally without pretending that minds have a clean boundary between internal authorship and external influence?
+MISSING: The threshold separating:
+ordinary influence,
+persuasion,
+therapeutic or educational intervention,
+manipulation,
+coercion,
+and severe interference with mental self-determination.
+BOUNDARY: The source is principally concerned with law, neurotechnology, and serious mental interventions. Extending its framework to conversational AI requires argument rather than analogy alone.
+TEST: Take one persuasive operation and vary only:
+
+visibility,
+personalization,
+vulnerability exploitation,
+reversibility,
+dependency,
+intensity,
+duration,
+and ability to refuse.
+
+Forage legal and philosophical sources to determine which variable first changes the operation from permissible influence to interference with mental self-determination.

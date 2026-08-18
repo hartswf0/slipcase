@@ -1,0 +1,24 @@
+PACKAGE VERIFICATION — PRE-ARCHIVE
+
+Artifact verification completed before final ZIP creation.
+
+Computed state:
+- admitted zettels: 34
+- payload duplicate hashes: 0
+- root zettel TXT = _MD mirrors = JSON records: 34 = 34 = 34
+- PLATFORM occurrences / MEMBER_OF records: 34 / 34
+- LINKS occurrences / LINKS_TO records: 112 / 112
+- all [[ADDRESS]] occurrences / native classified relation records: 172 / 172
+- native relations: 172
+- derived relations: 82
+- unresolved ghost addresses: 63
+- bibliography citekeys: 34
+- paper citekeys: 8; all present in bibliography
+- paper PDF: 6 pages
+- PDF unresolved-citation marker scan: clear
+- representative PDF page render inspection: clear
+- index inline JavaScript syntax: PASS
+- required root artifacts and directories: PASS
+
+See _SLIPCASE/verification.txt for the detailed check list.
+Final ZIP integrity is tested externally after archive creation, because an archive cannot truthfully contain the hash of its own final bytes without changing those bytes.

@@ -1,0 +1,2041 @@
+===== 01 :: Z-HOUSE-LANG-001-K__CHARTRES_CONTINUITY.txt =====
+ZETTEL
+
+ID:
+Z-HOUSE-LANG-001-K
+
+TITLE:
+CHARTRES HAD CONTINUITY WITHOUT A MASTER SPECIFICATION BECAUSE CONSTRAINTS TRAVELLED THROUGH PEOPLE AND TEMPLATES
+
+SOURCE:
+Tim Ingold — Making: Anthropology, Archaeology, Art and Architecture — 2013 — Chapter 4, “On building a house,” pp. 56–57; discussing David Turnbull’s analysis of Chartres Cathedral.
+
+SOURCE URL:
+https://www.routledge.com/Making-Anthropology-Archaeology-Art-and-Architecture/Ingold/p/book/9780415567237
+
+PASSAGE:
+[PARAPHRASE] Ingold reports that rebuilding Chartres proceeded through roughly thirty campaigns under nine master masons across more than three decades. No one could predict its exact final form, yet continuity survived through communication among workers, masons and patrons, with templates playing a central role.
+
+RESEARCH OBJECT:
+This is a concrete historical model for a GENEALOGY OF CONSTRAINTS.
+
+A complex artifact can retain continuity across different makers, episodes, local problems, and decisions without requiring one complete master representation from which every action is derived.
+
+LOCAL MOVE:
+Ingold, following Turnbull, compares Chartres to a research laboratory: a composite achievement produced through contingent practices and communicative traffic rather than realization of a single fully prefigured design.
+
+SOURCE TERMS:
+ad hoc accumulation
+campaigns
+master masons
+patchwork
+communication
+continuity
+template
+site-specific
+contingent
+messy practices
+
+WHAT BECAME STRANGE:
+The final prompt may be the wrong analogue for architectural coherence.
+
+Chartres suggests that what survives a long project may instead be templates, working conventions, local precedents, communications, partial drawings, institutional commitments, and material states.
+
+The “program” can be distributed across a lineage.
+
+QUESTION:
+What is the smallest memory structure capable of carrying design continuity when no participant possesses the whole specification?
+
+DEEPER QUESTION:
+Could a constraint genealogy perform for iterative AI construction what templates and communication performed for Chartres?
+
+MECHANISM:
+local campaign
+→ inherits existing building + templates + communications
+→ encounters new conditions
+→ modifies structure
+→ leaves transformed structure + transmitted practices
+→ next campaign.
+
+FORMAL SHIFT:
+<MASTER PLAN>
+→ <DISTRIBUTED LOCAL CONTINUITIES>
+→ [COMMUNICATE + TEMPLATE + ADAPT]
+→ <COHERENT-ENOUGH LONGITUDINAL ARTIFACT>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PROJECT MEMORYₙ = {
+  current artifact,
+  inherited constraints,
+  templates,
+  local precedents,
+  rejected conditions,
+  unresolved problems
+}
+
+No single field need contain PROJECT_FINAL.
+Continuity can be produced recursively.
+
+TENSION:
+Distributed continuity can produce coherence, but also irregularity and incompatibility. Ingold emphasizes that Chartres is, on closer inspection, a patchwork of imperfectly matched elements.
+
+A genealogy therefore preserves history but does not guarantee global consistency.
+
+MISSING:
+A mechanism for deciding when local compatibility is insufficient and global reconciliation is required.
+
+BOUNDARY:
+The absence of surviving plans does not prove that Chartres had no prior designs. Ingold explicitly preserves this uncertainty.
+
+The stronger supported claim concerns the inadequacy of treating complex building as simple execution of a complete prior specification.
+
+CITATION TRAIL:
+David Turnbull — “The ad hoc collective work of building Gothic cathedrals with templates, string, and geometry.”
+John James — Chartres building campaigns.
+Truth-maintenance systems.
+Design rationale.
+Distributed cognition.
+Version control.
+
+TEST:
+Run a multi-agent construction experiment.
+
+No agent receives the complete project history.
+Each receives only current artifact, local constraints, relevant templates, known nogoods, and recent rationale.
+
+Change agents every five iterations. Measure whether coherent design identity survives fifty iterations and what representation actually carries it.
+
+PLATFORM:
+[[THE PROMPT IS NOT THE PROGRAM]]
+
+LINKS:
+[[GENEALOGY OF CONSTRAINTS]]
+[[THE MULTILINGUAL HOUSE]]
+[[DISTRIBUTED PROGRAM]]
+
+BIBTEX:
+@book{ingold2013making,
+  author    = {Ingold, Tim},
+  title     = {Making: Anthropology, Archaeology, Art and Architecture},
+  publisher = {Routledge},
+  address   = {London},
+  year      = {2013},
+  isbn      = {9780415567237}
+}
+
+
+===== 02 :: Z-HOUSE-LANG-001-N__ARTIFACT_INTERLOCUTOR.txt =====
+ZETTEL
+
+ID:
+Z-HOUSE-LANG-001-N
+
+TITLE:
+THE ARTIFACT BECOMES AN INTERLOCUTOR WHEN MAKING REVEALS WHERE THE WORK WANTS TO GO NEXT
+
+SOURCE:
+Tim Ingold — Making: Anthropology, Archaeology, Art and Architecture — 2013 — Preface, p. xi.
+
+SOURCE URL:
+https://www.routledge.com/Making-Anthropology-Archaeology-Art-and-Architecture/Ingold/p/book/9780415567237
+
+PASSAGE:
+[QUOTE] “the book was already telling me what to write rather than the other way around.”
+
+RESEARCH OBJECT:
+Ingold gives an autobiographical miniature of THE ARTIFACT BECOMES SPECIFICATION.
+
+As the work acquires form, the maker encounters tendencies, openings and demands that were not simply transmitted from an original intention. The produced artifact begins to condition its own continuation.
+
+LOCAL MOVE:
+Ingold uses his own writing process to introduce the book’s larger thesis: making is a correspondence between maker and material rather than unilateral imposition of prior form.
+
+SOURCE TERMS:
+thinking through making
+growth
+telling
+follow
+correspondence
+maker
+material
+
+WHAT BECAME STRANGE:
+The phrase ARTIFACT BECOMES SPECIFICATION may still be too static.
+
+Ingold suggests:
+ARTIFACT BECOMES CORRESPONDENT.
+
+The developing thing does not merely accumulate constraints. It gives the maker something to answer to.
+
+QUESTION:
+What does it mean, computationally rather than metaphorically, for an artifact to “tell” its maker where to go next?
+
+DEEPER QUESTION:
+Can we identify the observable signals through which a provisional artifact reorganizes the maker’s intentions?
+
+MECHANISM:
+initial intention
+→ partial artifact
+→ emergent relation / anomaly / opportunity
+→ maker notices
+→ intention changes
+→ artifact changes
+→ new relation appears.
+
+FORMAL SHIFT:
+<ARTIFACT AS OUTPUT>
+→ <ARTIFACT AS PERCEPTIBLE SITUATION>
+→ [NOTICE + ANSWER]
+→ <ARTIFACT AS PARTICIPANT IN ITS OWN CONTINUATION>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+I₀ = initial intention.
+A₁ = GENERATE(I₀).
+Observation of A₁ produces ΔI₁ = distinctions made perceptible by A₁.
+Then I₁ = I₀ + ΔI₁ and A₂ = GENERATE(I₁).
+
+The important term is ΔI: information about what is wanted that becomes available only because the artifact now exists.
+
+TENSION:
+“The book tells me what to write” is intentionally figurative language. It must not be converted without argument into a claim that artifacts literally possess intentions or agency.
+
+A weaker and testable reading is sufficient: artifacts alter the perceptual field from which the maker forms the next intention.
+
+MISSING:
+A method for extracting ΔI. What exactly did the maker learn from the artifact that was unavailable beforehand? Was it a failure, affordance, analogy, conflict, emergent pattern, aesthetic preference, or entirely new goal?
+
+BOUNDARY:
+Ingold’s statement is autobiographical and philosophical, not a computational mechanism. The formalization above is ours.
+
+CITATION TRAIL:
+Donald Schön — reflection-in-action / back-talk.
+Tim Ingold — correspondence.
+Output-directed programming.
+Human-in-the-loop generative systems.
+Design rationale.
+
+TEST:
+Before generation, require the maker to state everything currently known about the desired artifact.
+
+After each generated version, require them to record only genuinely NEW distinctions elicited by seeing the artifact. Classify each ΔI.
+
+If important constraints repeatedly originate after artifact production rather than merely being remembered after it, then the artifact demonstrably participates in specification formation.
+
+PLATFORM:
+[[THE PROMPT IS NOT THE PROGRAM]]
+
+LINKS:
+[[THE ARTIFACT BECOMES SPECIFICATION]]
+[[CORRESPONDENCE]]
+[[EMERGENT SPECIFICATION]]
+
+BIBTEX:
+@book{ingold2013making,
+  author    = {Ingold, Tim},
+  title     = {Making: Anthropology, Archaeology, Art and Architecture},
+  publisher = {Routledge},
+  address   = {London},
+  year      = {2013},
+  isbn      = {9780415567237}
+}
+
+
+===== 03 :: Z-HOUSE-LANG-001-P__POEM_BUILDS_HABITAT.txt =====
+ZETTEL
+
+ID:
+Z-HOUSE-LANG-001-P
+
+TITLE:
+A POEM CAN BUILD THE HABITAT BEFORE ANYONE KNOWS HOW TO BUILD THE INFRASTRUCTURE
+
+SOURCE:
+Richard Brautigan — “All Watched Over by Machines of Loving Grace” — 1967 — The Communication Company, San Francisco.
+
+SOURCE URL:
+https://www.brautiganarchives.xyz/machines.html
+
+PASSAGE:
+[QUOTE] “a cybernetic meadow / where mammals and computers / live together in mutually / programming harmony”
+
+RESEARCH OBJECT:
+Brautigan supplies a particularly clean case for distinguishing POETIC WORLD-BUILDING from executable specification.
+
+The poem specifies almost none of the implementation. It nevertheless establishes a surprisingly rich desired world: mammals and computers coexist; technology belongs inside habitat; programming is reciprocal; labor disappears; humans rejoin nonhuman kin; machines watch over the resulting ecology.
+
+The world exists linguistically before its implementation conditions exist technically.
+
+LOCAL MOVE:
+Brautigan successively imagines a cybernetic meadow, forest, and ecology, using poetic images to establish relations among organisms, machines, labor, environment, and observation.
+
+SOURCE TERMS:
+cybernetic meadow
+cybernetic forest
+cybernetic ecology
+mammals
+computers
+programming harmony
+nature
+machines of loving grace
+
+WHAT BECAME STRANGE:
+A poem can be radically underspecified as engineering and still be highly specific about WHAT KIND OF WORLD SHOULD EXIST.
+
+This suggests another kind of specification: not geometry, not algorithm, not dimensions, but RELATIONAL INVARIANTS.
+
+QUESTION:
+Can poetic language function as an upstream specification by defining relations that later technical representations must preserve?
+
+DEEPER QUESTION:
+What survives when POEM → REQUIREMENTS → ARCHITECTURE → CODE → INFRASTRUCTURE? And at what translation does the desired world become a different world?
+
+MECHANISM:
+poetic image
+→ imagined world
+→ relational distinction
+→ attempted technical interpretation
+→ implementation.
+
+FORMAL SHIFT:
+<POETIC WORLD>
+→ <RELATIONAL INVARIANTS>
+→ [FORMALIZE]
+→ <TECHNICAL WORLD>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Possible extracted constraints:
+COHABIT(mammals, computers)
+PROGRAMMING_DIRECTION = reciprocal
+TECHNOLOGY ∈ habitat
+HUMAN_LABOR → reduced
+MACHINE_ROLE = care | surveillance ?
+
+The question mark is crucial: the poem does not resolve it.
+
+TENSION:
+The same language that creates harmony also creates the possibility of total observation.
+
+A technical implementation could satisfy “computer everywhere” while destroying the poem’s desired world.
+
+MISSING:
+A translation discipline capable of distinguishing IMAGE, VALUE, RELATION, CONSTRAINT, and IMPLEMENTATION CHOICE.
+
+Without this separation, metaphor can be prematurely compiled into whatever architecture happens to be technically convenient.
+
+BOUNDARY:
+Brautigan supplies no implementation for his cybernetic ecology. The poem is not executable code. Calling it an upstream specification is [OUR INFERENCE].
+
+CITATION TRAIL:
+Christopher Alexander — pattern language.
+Tim Ingold — “guidance without specification.”
+Lucy Suchman — plans and situated action.
+Value-sensitive design.
+
+TEST:
+Give the poem independently to three engineering teams. Ask each to produce a technical system satisfying it.
+
+Before comparing implementations, extract the invariants each team believed the poem required. The divergences reveal what poetic language successfully constrains and what remains radically deferred.
+
+PLATFORM:
+[[THE HOUSE THAT WORLDS BUILT]]
+
+LINKS:
+[[Z-HOUSE-LANG-001]]
+[[Z-HOUSE-LANG-001-M]]
+[[THICK PROMPTING]]
+
+BIBTEX:
+@misc{brautigan1967machines,
+  author       = {Brautigan, Richard},
+  title        = {All Watched Over by Machines of Loving Grace},
+  year         = {1967},
+  publisher    = {The Communication Company},
+  address      = {San Francisco},
+  note         = {Originally issued as a mimeographed broadside and included in the collection of the same title}
+}
+
+
+===== 04 :: Z-HOUSE-LANG-001-Q__MUTUAL_PROGRAMMING.txt =====
+ZETTEL
+
+ID:
+Z-HOUSE-LANG-001-Q
+
+TITLE:
+MUTUAL PROGRAMMING TURNS THE PROGRAMMED WORLD INTO A PROGRAMMER
+
+SOURCE:
+Richard Brautigan — “All Watched Over by Machines of Loving Grace” — 1967 — The Communication Company, San Francisco.
+
+SOURCE URL:
+https://www.brautiganarchives.xyz/machines.html
+
+PASSAGE:
+[QUOTE] “mammals and computers / live together in mutually / programming harmony”
+
+RESEARCH OBJECT:
+Brautigan places a strange adjective beside programming: MUTUALLY.
+
+Programming normally implies an asymmetry: PROGRAMMER → PROGRAMMED. Brautigan imagines A ⇄ B.
+
+The environment is no longer merely something written in advance and imposed. Its participants alter one another.
+
+LOCAL MOVE:
+The poem uses “programming” not merely for computer instruction but for reciprocal ecological relation between mammals and computers.
+
+SOURCE TERMS:
+mutually
+programming
+harmony
+mammals
+computers
+cybernetic
+ecology
+
+WHAT BECAME STRANGE:
+If programming becomes reciprocal, then a program cannot be completely identified with an initial instruction. Its subsequent state is partly a history of encounters.
+
+QUESTION:
+What would “natural-language programming” mean if the user, model, generated artifact, and environment all alter one another over time?
+
+DEEPER QUESTION:
+Could the proper unit of programming be neither PROMPT nor LOOP but CORRESPONDENCE?
+
+MECHANISM:
+participant A acts
+→ participant B responds
+→ response modifies A’s subsequent action
+→ A responds
+→ relation develops longitudinally.
+
+FORMAL SHIFT:
+<PROGRAMMER → PROGRAMMED>
+→ <PARTICIPANTS IN FEEDBACK>
+→ [RECIPROCALLY ADAPT]
+→ <CO-DEVELOPING SYSTEM>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+UNILATERAL:
+A → B
+
+CORRESPONDENCE:
+Aₙ → Bₙ₊₁
+Bₙ₊₁ → Aₙ₊₁
+Aₙ₊₁ → Bₙ₊₂
+...
+
+PROGRAM = history of reciprocal state changes.
+
+TENSION:
+“Mutual programming” is poetic language, not a technical feedback architecture.
+
+Reciprocity can also be falsely claimed. A surveillance system that continually adapts to inhabitants is technically responsive while remaining politically unilateral.
+
+So: FEEDBACK ≠ MUTUALITY.
+
+MISSING:
+A criterion for genuine reciprocal programming. Who may change the rules, refuse participation, inspect state, alter objectives, withdraw, remember, and forget?
+
+BOUNDARY:
+Brautigan does not define an algorithm for mutual programming. The correspondence with Ingold is conceptual, not evidence of historical influence.
+
+CITATION TRAIL:
+Tim Ingold — Making.
+Norbert Wiener — feedback.
+Stafford Beer — viable regulation.
+Lucy Suchman — situated action.
+
+TEST:
+Compare two inhabited computational houses.
+
+HOUSE A: inhabitants may act only inside immutable machine rules.
+HOUSE B: some machine rules can change in response to inhabitants, and inhabitants can inspect, resist, or modify those adaptations.
+
+Determine which transformations would be necessary before “mutual programming” describes more than adaptive surveillance.
+
+PLATFORM:
+[[THE PROMPT IS NOT THE PROGRAM]]
+
+LINKS:
+[[Z-HOUSE-LANG-001]]
+[[Z-HOUSE-LANG-001-J]]
+[[CORRESPONDENCE AS COMPUTATION]]
+
+BIBTEX:
+@misc{brautigan1967machines_mutual,
+  author       = {Brautigan, Richard},
+  title        = {All Watched Over by Machines of Loving Grace},
+  year         = {1967},
+  publisher    = {The Communication Company},
+  address      = {San Francisco}
+}
+
+
+===== 05 :: Z-HOUSE-LANG-001-R__TRANSLATION_TEMPORAL_HOUSE.txt =====
+ZETTEL
+
+ID:
+Z-HOUSE-LANG-001-R
+
+TITLE:
+A TRANSLATION CAN REBUILD THE TEMPORAL HOUSE OF A POEM
+
+SOURCE:
+Gershom Scholem — “Gruß vom Angelus” — German poem; source fragment and accompanying English rendering reproduced with Walter Benjamin’s Thesis IX.
+
+SOURCE URL:
+https://www.sfu.ca/~andrewf/CONCEPT2.html
+
+PASSAGE:
+[QUOTE] German: “lebendige Zeit”
+
+[QUOTE] Supplied English rendering: “timeless time”
+
+RESEARCH OBJECT:
+The two expressions do not merely decorate the same world differently. They construct different temporal conditions.
+
+LIVING TIME is not TIMELESS TIME.
+
+The translation variance produces two possible temporal ontologies rather than a transparent copy.
+
+LOCAL MOVE:
+Scholem’s German fragment places the speaker at a threshold among flight, return, and remaining. The supplied English rendering changes a key temporal phrase, producing a second possible world rather than a transparent copy of the first.
+
+SOURCE TERMS:
+Flügel
+Schwung
+zurück
+lebendige Zeit
+Glück
+flight
+return
+time
+
+WHAT BECAME STRANGE:
+Translation may change more than semantic nuance. It can change the RULES OF THE WORLD.
+
+QUESTION:
+When two language versions support different possible actions, states, or temporal structures, in what sense are they implementations of the same world?
+
+DEEPER QUESTION:
+What must translation preserve for HOUSE_A(Language₁) and HOUSE_B(Language₂) to count as the same house?
+
+MECHANISM:
+source expression
+→ translator interpretation
+→ substituted predicate
+→ altered temporal ontology
+→ altered reading of possible action.
+
+FORMAL SHIFT:
+<LEBENDIGE ZEIT>
+→ [TRANSLATE]
+→ <TIMELESS TIME>
+→ <DIFFERENT POSSIBLE WORLD>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+WORLD(Language) = entities + relations + modalities + temporal rules + possible transitions.
+
+Therefore:
+CHANGE_CRITICAL_TERM → CHANGE_WORLD_TRANSITIONS.
+
+TENSION:
+The translator of the supplied English rendering is unidentified. The discrepancy must therefore be preserved rather than silently “corrected.”
+
+MISSING:
+A method for determining which linguistic distinctions are WORLD-CRITICAL. Not every lexical difference changes ontology. Some do.
+
+BOUNDARY:
+The evidence licenses the claim that these two supplied phrases differ materially. It does not license a claim about the translator’s intention or about one definitive philosophical meaning of Scholem’s poem.
+
+CITATION TRAIL:
+Walter Benjamin — “The Task of the Translator.”
+Roman Jakobson — linguistic aspects of translation.
+Whorf — linguistic relativity.
+Programming-language semantics and semantics-preserving compilation.
+
+TEST:
+Take five translations of the same world-defining passage.
+
+For each, independently extract entities, relations, permissions, temporal states, possible transitions, and impossibilities.
+
+Compare the resulting world models. A translation difference is WORLD-ALTERING when it changes the reachable state space rather than merely its verbal presentation.
+
+PLATFORM:
+[[THE HOUSE THAT WORLDS BUILT]]
+
+LINKS:
+[[Z-HOUSE-LANG-001]]
+[[THE MULTILINGUAL HOUSE]]
+[[HOW MANY INTERPRETERS AWAY FROM THE WALL IS A WORD?]]
+
+BIBTEX:
+@misc{scholem_gruss_angelus,
+  author = {Scholem, Gershom},
+  title  = {Gruß vom Angelus},
+  note   = {German poetic fragment reproduced as the epigraph to Walter Benjamin's Thesis IX}
+}
+
+
+===== 06 :: Z-HOUSE-LANG-001-S__WORLD_ACROSS_INTERPRETERS.txt =====
+ZETTEL
+
+ID:
+Z-HOUSE-LANG-001-S
+
+TITLE:
+A WORLD CAN BE BUILT ACROSS INTERPRETERS WITHOUT ANY SINGLE REPRESENTATION CONTAINING THE WHOLE WORLD
+
+SOURCE:
+Walter Benjamin — “On the Concept of History,” Thesis IX — 1940 — reading of Paul Klee’s Angelus Novus, with Scholem’s “Gruß vom Angelus” as epigraph.
+
+SOURCE URL:
+https://www.sfu.ca/~andrewf/CONCEPT2.html
+
+PASSAGE:
+[PARAPHRASE] Benjamin begins from Klee’s depicted angel and transforms visible features of the image into the temporality, agency, obstruction, and orientation of an “angel of history.”
+
+RESEARCH OBJECT:
+The supplied worldtext exposes an unusually clean COMPILATION CHAIN:
+
+PAINTING
+→ PHILOSOPHICAL DESCRIPTION
+→ HISTORICAL ALLEGORY
+→ QUOTED / TRANSLATED TEXT
+→ ONTOLOGICAL ENCODING.
+
+No stage merely copies the previous one. Each makes something newly operable.
+
+LOCAL MOVE:
+Benjamin does not merely describe Klee’s painting. He takes eyes, mouth, wings, orientation and makes them participate in another world containing past, future, dead, wreckage, reparation, storm, and progress.
+
+The image becomes infrastructure for a historical ontology.
+
+SOURCE TERMS:
+Angelus Novus
+angel of history
+past
+future
+catastrophe
+wreckage
+storm
+Paradise
+progress
+
+WHAT BECAME STRANGE:
+“How many interpreters away from the wall is a word?” has a representational analogue:
+
+HOW MANY INTERPRETERS AWAY FROM THE PAINTING IS THE ANGEL OF HISTORY?
+
+The answer is not a defect. The interpretive layers are what make the new world possible.
+
+QUESTION:
+At what point in a chain of representations should we say a new world has been created rather than the old one translated?
+
+DEEPER QUESTION:
+Can provenance preserve transformation without pretending that later representations are faithful copies of earlier ones?
+
+MECHANISM:
+visual artifact
+→ selective description
+→ metaphorical reassignment
+→ ontological relations
+→ new possible operations of thought.
+
+FORMAL SHIFT:
+<KLEE IMAGE>
+→ <BENJAMIN DESCRIPTION>
+→ [ALLEGORIZE]
+→ <ANGEL OF HISTORY>
+→ [ENCODE]
+→ <COMPUTABLE WORLDTEXT>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+R₀ = image.
+R₁ = describe(R₀).
+R₂ = allegorize(R₁).
+R₃ = translate(R₂).
+R₄ = formalize(R₃).
+
+For every transition:
+Δₙ = distinctions introduced + distinctions lost.
+
+The genealogy is therefore part of the resulting world.
+
+TENSION:
+The structured ontology in the uploaded file is not Benjamin’s ontology. Terms such as EVENT, ROLE, MODALITY, and STATE TRANSITION belong to the later encoding layer.
+
+Flattening these layers would falsely attribute our formalism to Benjamin.
+
+MISSING:
+A transformation ledger recording for every representational step what survived, what disappeared, what was invented, what became explicit, what became executable, and what remained ambiguous.
+
+BOUNDARY:
+Benjamin supplies the philosophical transformation from painting to historical allegory. The full pipeline through “ontological encoding” belongs to the supplied worldtext and our reconstruction, not to Benjamin.
+
+CITATION TRAIL:
+Walter Benjamin — “The Task of the Translator.”
+Nelson Goodman — Ways of Worldmaking.
+Ekphrasis.
+Compiler intermediate representations.
+Provenance-preserving transformation systems.
+
+TEST:
+Give Klee’s Angelus Novus independently to a poet, historian, ontology engineer, programmer, and generative model.
+
+Require each output to become input to the next. At every transformation record Δ. Then reverse the chain.
+
+Determine which distinctions are recoverable and which transformations irreversibly built a new world.
+
+PLATFORM:
+[[THE HOUSE THAT WORLDS BUILT]]
+
+LINKS:
+[[Z-HOUSE-LANG-001]]
+[[THE HOUSE THAT WORLDS BUILT]]
+[[HOW MANY INTERPRETERS AWAY FROM THE WALL IS A WORD?]]
+
+BIBTEX:
+@misc{benjamin1940concept_history,
+  author = {Benjamin, Walter},
+  title  = {On the Concept of History},
+  year   = {1940},
+  note   = {Thesis IX; commonly published posthumously in translation}
+}
+
+
+===== 07 :: Z-SLIP-20260817-01.txt =====
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-01
+
+    TITLE:
+    A GRAMMAR CAN GENERATE A PLAN WITHOUT GENERATING THE PRACTICE THAT BUILDS IT
+
+    SOURCE:
+    George Stiny and William J. Mitchell — “The Palladian Grammar” — 1978 — Environment and Planning B 5(1), pp. 5–18.
+
+    SOURCE URL:
+    https://doi.org/10.1068/b050005
+
+    PASSAGE:
+    [PARAPHRASE] The paper develops a parametric shape grammar that generates Palladian villa ground plans and applies it to the Villa Malcontenta.
+
+    RESEARCH OBJECT:
+    Architectural “language” becomes technically generative when rules transform a representational state into a new plan, but this still stops before material construction.
+
+    LOCAL MOVE:
+    Stiny and Mitchell turn architectural canons into a formal generative system rather than merely classifying existing buildings.
+
+    SOURCE TERMS:
+    parametric shape grammar; ground plans; Palladian style; generation; rules
+
+    WHAT BECAME STRANGE:
+    The phrase “a language builds a house” becomes testable only after specifying what layer is generated: plan, geometry, fabrication command, or inhabited building.
+
+    QUESTION:
+    Where does architectural generation stop being metaphor and become operation?
+
+    DEEPER QUESTION:
+    How many interpreters remain between a generative grammar and a wall?
+
+    MECHANISM:
+    Formal rules transform shapes through ordered derivations to produce admissible ground plans.
+
+    FORMAL SHIFT:
+    <ARCHITECTURAL CANONS> → <PARAMETRIC SHAPE RULES> → [APPLY] → <GENERATED PLAN>
+
+    SOURCE FORMALISM:
+    A parametric shape grammar for Palladian villa ground plans.
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] PLAN_GENERATION != MATERIAL_CONSTRUCTION; each additional interpreter must be named.
+
+    TENSION:
+    Ingold’s account of medieval building argues that real workmanship cannot be factored into rules without remainder.
+
+    MISSING:
+    A theory of interpreter layers between plan and building.
+
+    BOUNDARY:
+    The source licenses generation of plans, not a claim that formal grammar exhausts architectural practice.
+
+    CITATION TRAIL:
+    Tim Ingold, Making; program synthesis; robotic fabrication.
+
+    TEST:
+    Trace one generated plan through documentation, fabrication, assembly, occupancy, and maintenance; record every non-entailed judgment.
+
+    PLATFORM:
+    [[THE HOUSE THAT WORLDS BUILT]]
+
+    LINKS:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+[[HOW MANY INTERPRETERS AWAY FROM THE WALL IS A WORD?]]
+
+    BIBTEX:
+    @article{stiny_mitchell_1978_palladian,
+  author={Stiny, George and Mitchell, William J.},
+  title={The Palladian Grammar},
+  journal={Environment and Planning B: Planning and Design},
+  year={1978},
+  volume={5},
+  number={1},
+  pages={5--18},
+  doi={10.1068/b050005}
+}
+
+
+===== 08 :: Z-SLIP-20260817-02.txt =====
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-02
+
+    TITLE:
+    PROGRAM SKETCHING SHOWS THAT INCOMPLETE SPECIFICATIONS COULD EXECUTE BEFORE LLMS
+
+    SOURCE:
+    Armando Solar-Lezama — “The Sketching Approach to Program Synthesis” — 2009 — APLAS, pp. 4–13.
+
+    SOURCE URL:
+    https://people.csail.mit.edu/asolar/papers/Solar-Lezama09.pdf
+
+    PASSAGE:
+    [PARAPHRASE] A sketch is a partial program that encodes solution structure while leaving low-level details unspecified; a synthesizer fills the holes subject to tests or a reference implementation.
+
+    RESEARCH OBJECT:
+    The novelty of prompt programming cannot be “computation begins before the specification is complete” in the broad sense; program sketching already operationalizes partial programs.
+
+    LOCAL MOVE:
+    Solar-Lezama makes incompleteness explicit and computational by representing unknown details as holes constrained by correctness machinery.
+
+    SOURCE TERMS:
+    sketch; partial program; holes; synthesis; test routines; reference implementation; correctness criteria
+
+    WHAT BECAME STRANGE:
+    The interesting difference is not incompleteness but what kinds of incompleteness can remain unformalized when execution starts.
+
+    QUESTION:
+    What distinguishes a prompt gap from a program hole?
+
+    DEEPER QUESTION:
+    Have LLMs moved deferred formalization farther upstream, before the unresolved dimension has a declared type?
+
+    MECHANISM:
+    Known high-level structure + explicit holes + correctness criteria → synthesis → completed program.
+
+    FORMAL SHIFT:
+    <PARTIAL PROGRAM> → <EXPLICIT HOLES> → [SYNTHESIZE] → <COMPLETED PROGRAM>
+
+    SOURCE FORMALISM:
+    The Sketch language and synthesizer, including holes and reference/test-based correctness.
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] A prompt may contain unresolved semantic predicates such as “private” or “like a river” that are not predeclared variables.
+
+    TENSION:
+    This weakens any firstness claim for deferred formalization while sharpening the claim about untyped semantic incompleteness.
+
+    MISSING:
+    A taxonomy of missingness: hole, parameter, example-defined behavior, metaphor, value judgment, latent assumption.
+
+    BOUNDARY:
+    Sketching still requires a formal partial program and correctness criteria; it does not license arbitrary ambiguity.
+
+    CITATION TRAIL:
+    CEGIS; programming by example; natural-language programming.
+
+    TEST:
+    Give the same task to Sketch and an LLM; measure what must be formalized before the first executable candidate exists.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[DEFERRED FORMALIZATION]]
+[[PROGRAM HOLES AND PROMPT GAPS]]
+
+    BIBTEX:
+    @inproceedings{solarlezama2009sketching,
+  author={Solar-Lezama, Armando},
+  title={The Sketching Approach to Program Synthesis},
+  booktitle={Programming Languages and Systems: APLAS 2009},
+  series={Lecture Notes in Computer Science},
+  volume={5904},
+  pages={4--13},
+  year={2009},
+  doi={10.1007/978-3-642-10672-9_3}
+}
+
+
+===== 09 :: Z-SLIP-20260817-03.txt =====
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-03
+
+    TITLE:
+    THE ITERATIVE LOOP IS OLD; THE FAILURE ORACLE IS THE CONSEQUENTIAL DIFFERENCE
+
+    SOURCE:
+    Armando Solar-Lezama — “The Sketching Approach to Program Synthesis” — 2009 — section on Counterexample Guided Inductive Synthesis.
+
+    SOURCE URL:
+    https://people.csail.mit.edu/asolar/papers/Solar-Lezama09.pdf
+
+    PASSAGE:
+    [PARAPHRASE] CEGIS repeatedly synthesizes a candidate, validates it, and on failure obtains a witness or counterexample that is added to the examples before synthesis resumes.
+
+    RESEARCH OBJECT:
+    The loop describe/generate/inspect/correct/regenerate has a formal predecessor. The important difference is what recognizes failure and how decisive that recognition is.
+
+    LOCAL MOVE:
+    CEGIS turns failed candidates into new specification evidence through validator-produced counterexamples.
+
+    SOURCE TERMS:
+    candidate solution; validator; witness; counterexample; observation set; convergence
+
+    WHAT BECAME STRANGE:
+    “Failures become specifications” is not merely a metaphor: it already names a computational architecture when a verifier can generate counterexamples.
+
+    QUESTION:
+    When the verifier is a human looking at an artifact, what replaces formal validity?
+
+    DEEPER QUESTION:
+    Can failure oracles be compared by reliability, latency, specificity, and observability?
+
+    MECHANISM:
+    candidate → validator → counterexample → enlarged example set → new candidate.
+
+    FORMAL SHIFT:
+    <CANDIDATE> → [VALIDATE] → <COUNTEREXAMPLE> → [ADD EVIDENCE] → <NEW CANDIDATE>
+
+    SOURCE FORMALISM:
+    CEGIS as described in the Sketch synthesis architecture.
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] PROMPT_LOOP = candidate → human/world oracle → named failure → constraint update → candidate.
+
+    TENSION:
+    Human perceptual judgment can notice failures a verifier cannot encode, but it gives a weaker convergence story.
+
+    MISSING:
+    A taxonomy of formal, simulated, sensed, expert, social, and aesthetic failure oracles.
+
+    BOUNDARY:
+    CEGIS does not establish that subjective inspection is sufficient for correctness.
+
+    CITATION TRAIL:
+    Testing; property-based testing; human-in-the-loop synthesis; Ingold on material response.
+
+    TEST:
+    Classify fifty prompt corrections by oracle type and test which classes prevent recurrence under new scenarios.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[FAILURE AS SPECIFICATION]]
+[[THE ROOF PROBLEM]]
+[[FAILURE ORACLES]]
+
+    BIBTEX:
+    @inproceedings{solarlezama2009sketching,
+  author={Solar-Lezama, Armando},
+  title={The Sketching Approach to Program Synthesis},
+  booktitle={Programming Languages and Systems: APLAS 2009},
+  series={Lecture Notes in Computer Science},
+  volume={5904},
+  pages={4--13},
+  year={2009},
+  doi={10.1007/978-3-642-10672-9_3}
+}
+
+
+===== 10 :: Z-SLIP-20260817-04.txt =====
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-04
+
+    TITLE:
+    WHEN OUTPUT EDITS REWRITE SOURCE, THE ARTIFACT BECOMES A PROGRAMMING INTERFACE
+
+    SOURCE:
+    Brian Hempel, Justin Lubin, and Ravi Chugh — “Sketch-n-Sketch: Output-Directed Programming for SVG” — 2019 — UIST, pp. 281–292.
+
+    SOURCE URL:
+    https://doi.org/10.1145/3332165.3347925
+
+    PASSAGE:
+    [PARAPHRASE] Sketch-n-Sketch supports output-directed program transformations: users manipulate output and intermediate execution products, and the system proposes program changes using run-time provenance.
+
+    RESEARCH OBJECT:
+    The return path artifact → program is not unique to prompting. Output-directed programming makes the output surface an explicit editing interface for source.
+
+    LOCAL MOVE:
+    The system mixes direct manipulation with textual programming and uses provenance to connect rendered values back to source transformations.
+
+    SOURCE TERMS:
+    output-directed programming; direct manipulation; program transformation; intermediate execution products; provenance tracing; candidate programs
+
+    WHAT BECAME STRANGE:
+    The artifact can become more than a thing to inspect: it can be a channel through which the generator itself is revised.
+
+    QUESTION:
+    Should natural-language programming be designed as a form of output-directed programming rather than chat?
+
+    DEEPER QUESTION:
+    Can direct manipulation infer constraints that prose corrections currently carry badly?
+
+    MECHANISM:
+    program → output → manipulation → candidate source transformations → selection → reevaluation.
+
+    FORMAL SHIFT:
+    <SOURCE> → <OUTPUT> → [MANIPULATE] → <SOURCE TRANSFORMATION> → <NEW OUTPUT>
+
+    SOURCE FORMALISM:
+    A functional language, output-directed transformations, generic refactorings, and run-time provenance tracing.
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] A deferred-formalization environment needs both forward generation and a return path from artifact evidence into specification memory.
+
+    TENSION:
+    Semantic corrections such as “this feels exposed” may not map cleanly to direct manipulation.
+
+    MISSING:
+    A representation that carries artifact edits backward across prompt, code, geometry, and state.
+
+    BOUNDARY:
+    The source concerns SVG programs and does not prove arbitrary semantic judgments can be recovered from manipulation.
+
+    CITATION TRAIL:
+    Bidirectional evaluation; direct manipulation; CAD; prompt interfaces.
+
+    TEST:
+    Compare verbal correction against artifact manipulation for the same generated house over ten revisions.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[THE ARTIFACT BECOMES SPECIFICATION]]
+[[BIDIRECTIONAL DESCRIPTION]]
+
+    BIBTEX:
+    @inproceedings{hempel2019sketchnsketch,
+  author={Hempel, Brian and Lubin, Justin and Chugh, Ravi},
+  title={Sketch-n-Sketch: Output-Directed Programming for SVG},
+  booktitle={Proceedings of the 32nd Annual ACM Symposium on User Interface Software and Technology},
+  pages={281--292},
+  year={2019},
+  doi={10.1145/3332165.3347925}
+}
+
+
+===== 11 :: Z-SLIP-20260817-05.txt =====
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-05
+
+    TITLE:
+    THICKNESS IS INFORMATION GAIN, NOT PROMPT LENGTH
+
+    SOURCE:
+    Mikael Mayer et al. — “User Interaction Models for Disambiguation in Programming by Example” — 2015 — UIST.
+
+    SOURCE URL:
+    https://www.microsoft.com/en-us/research/publication/user-interaction-models-for-disambiguation-in-programming-by-example/
+
+    PASSAGE:
+    [PARAPHRASE] Examples are ambiguous specifications because many programs can remain consistent with them; the paper studies navigation and active-learning interactions for reducing that ambiguity.
+
+    RESEARCH OBJECT:
+    A specification becomes “thicker” when new evidence rules out consequential interpretations, not when it simply becomes longer.
+
+    LOCAL MOVE:
+    The authors treat ambiguity as a space of programs consistent with examples and design interactions to discriminate among them.
+
+    SOURCE TERMS:
+    Programming by Example; ambiguous specification; user intent; programs consistent with examples; active learning; disambiguation
+
+    WHAT BECAME STRANGE:
+    A six-word counterexample can carry more specification than five hundred words of description.
+
+    QUESTION:
+    Can thick prompting be measured by contraction of behavioral possibility rather than token count?
+
+    DEEPER QUESTION:
+    What observable proxy for hypothesis-space reduction works for generative models whose internal candidate set is not enumerable?
+
+    MECHANISM:
+    examples → many compatible programs → discriminating question/example → reduced candidate set.
+
+    FORMAL SHIFT:
+    <AMBIGUOUS EXAMPLES> → [DISAMBIGUATE] → <FEWER CONSISTENT PROGRAMS>
+
+    SOURCE FORMALISM:
+    Interaction models for navigation among consistent programs and active-learning questions.
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] specification gain can be approximated by reduced behavioral variance across generated candidates.
+
+    TENSION:
+    LLM output distributions are not classical version spaces, so the measurement is an analogy that must be operationalized cautiously.
+
+    MISSING:
+    A robust behavioral proxy for specification gain.
+
+    BOUNDARY:
+    The source does not establish that LLM latent distributions can be treated as enumerable hypothesis sets.
+
+    CITATION TRAIL:
+    Active learning; preference elicitation; prompt evaluation.
+
+    TEST:
+    Generate samples before and after each correction and estimate how many unwanted behaviors disappear relative to token count.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[THICK PROMPTING]]
+[[EXAMPLES AS CONSTRAINTS]]
+
+    BIBTEX:
+    @inproceedings{mayer2015disambiguation,
+  author={Mayer, Mikael and Soares, Gustavo and Grechkin, Maxim and Le, Vu and Marron, Mark and Polozov, Alex and Singh, Rishabh and Zorn, Ben and Gulwani, Sumit},
+  title={User Interaction Models for Disambiguation in Programming by Example},
+  booktitle={Proceedings of the 28th Annual ACM Symposium on User Interface Software and Technology},
+  year={2015},
+  doi={10.1145/2807442.2807459}
+}
+
+
+===== 12 :: Z-SLIP-20260817-06.txt =====
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-06
+
+    TITLE:
+    A CONSTRAINT HISTORY CAN PRESERVE DECISIONS AND STILL LOSE THE THEORY
+
+    SOURCE:
+    Peter Naur — “Programming as Theory Building” — 1985 — Microprocessing and Microprogramming 15(5), pp. 253–261.
+
+    SOURCE URL:
+    https://doi.org/10.1016/0165-6074(85)90032-8
+
+    PASSAGE:
+    [PARAPHRASE] Naur argues that the primary achievement of programming is a theory held by programmers about how the problem is solved, and that program text and documentation can fail to transfer that theory adequately.
+
+    RESEARCH OBJECT:
+    Replacing chat history with constraint history is not enough if the system preserves what survived but not why those distinctions mattered.
+
+    LOCAL MOVE:
+    Naur shifts the unit of programming away from textual product toward the programmer’s acquired understanding needed for explanation and modification.
+
+    SOURCE TERMS:
+    theory building; program text; explanation; modification; programmer knowledge
+
+    WHAT BECAME STRANGE:
+    A perfect archive of constraints may remain theoretically dead if it cannot support principled response to a novel case.
+
+    QUESTION:
+    What must a constraint genealogy preserve in order to carry a theory rather than only a history?
+
+    DEEPER QUESTION:
+    Can an AI inherit theory from rationale, counterexamples, and modification histories, or only imitate their sediment?
+
+    MECHANISM:
+    problem engagement → theory acquired → program produced/modified; text may survive while theory fails to transfer.
+
+    FORMAL SHIFT:
+    <PROGRAM HISTORY> → <TEXT + DOCUMENTATION> → [TRANSFER] → <POSSIBLE THEORY LOSS>
+
+    SOURCE FORMALISM:
+    NONE
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] THEORY = constraints + reasons + analogies + causal expectations + rules for novel cases.
+
+    TENSION:
+    Structured constraint memory is better than raw chat but may still fall short of the understanding Naur describes.
+
+    MISSING:
+    Representations for rationale, causal model, analogy, and conditions for relaxing invariants.
+
+    BOUNDARY:
+    Naur does not discuss LLMs or prompt histories; this application is an inference.
+
+    CITATION TRAIL:
+    Design rationale; truth-maintenance systems; reflective practice.
+
+    TEST:
+    Compare agents receiving final prompt, constraint history, and constraint history plus rationale on an unforeseen modification.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[PROGRAMMING AS THEORY BUILDING]]
+[[GENEALOGY OF CONSTRAINTS]]
+
+    BIBTEX:
+    @article{naur1985programming,
+  author={Naur, Peter},
+  title={Programming as Theory Building},
+  journal={Microprocessing and Microprogramming},
+  volume={15},
+  number={5},
+  pages={253--261},
+  year={1985},
+  doi={10.1016/0165-6074(85)90032-8}
+}
+
+
+===== 13 :: Z-SLIP-20260817-07.txt =====
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-07
+
+    TITLE:
+    A GENEALOGY OF CONSTRAINTS SHOULD BE A DEPENDENCY GRAPH, NOT A DIARY
+
+    SOURCE:
+    Johan de Kleer — “Problem Solving with the ATMS” — 1986 — Artificial Intelligence 28(2), pp. 197–224.
+
+    SOURCE URL:
+    https://doi.org/10.1016/0004-3702(86)90082-2
+
+    PASSAGE:
+    [PARAPHRASE] In the ATMS, hypotheses are assumptions, inferences are recorded as justifications, sets of assumptions form environments, and inconsistent environments are retained as nogoods rather than forgotten.
+
+    RESEARCH OBJECT:
+    A chronological transcript says what happened next; a dependency system says what survives because of what and which combinations are inconsistent.
+
+    LOCAL MOVE:
+    de Kleer provides a machinery for maintaining multiple assumption environments, justifications, labels, and contradictions.
+
+    SOURCE TERMS:
+    assumption; justification; environment; context; label; inconsistent; nogood
+
+    WHAT BECAME STRANGE:
+    Rejected generations may be valuable not as archived clutter but as reusable nogoods tied to the assumptions that caused failure.
+
+    QUESTION:
+    Should iterative generative systems maintain explicit nogoods and justifications for their constraints?
+
+    DEEPER QUESTION:
+    Can dependency be preserved while some nodes remain metaphors, examples, or unresolved judgments rather than formal propositions?
+
+    MECHANISM:
+    assumption → inference/justification → dependency label; inconsistent assumption set → nogood.
+
+    FORMAL SHIFT:
+    <CHAT SEQUENCE> → <ASSUMPTIONS + JUSTIFICATIONS + NOGOODS> → [DEPENDENCY MAINTENANCE] → <VIABLE CONTEXTS>
+
+    SOURCE FORMALISM:
+    ATMS assumptions, justifications, environments, labels, contexts, and nogoods.
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] Prompt memory should preserve constraint, rationale, supporting evidence, conflicting assumptions, and known failure combinations.
+
+    TENSION:
+    Formalizing fuzzy judgments too early can destroy precisely the ambiguity deferred formalization is meant to preserve.
+
+    MISSING:
+    A mixed graph where some nodes remain non-formal evidence while relations and provenance remain explicit.
+
+    BOUNDARY:
+    ATMS is not a prompt-memory architecture; the connection is architectural inference.
+
+    CITATION TRAIL:
+    Naur; design rationale; CEGIS; provenance.
+
+    TEST:
+    Compare raw chat memory with dependency-graph memory after fifty revisions and a late conflicting requirement.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[GENEALOGY OF CONSTRAINTS]]
+[[NOGOODS AS DESIGN MEMORY]]
+
+    BIBTEX:
+    @article{dekleer1986atms,
+  author={de Kleer, Johan},
+  title={Problem Solving with the ATMS},
+  journal={Artificial Intelligence},
+  volume={28},
+  number={2},
+  pages={197--224},
+  year={1986},
+  doi={10.1016/0004-3702(86)90082-2}
+}
+
+
+===== 14 :: Z-SLIP-20260817-08.txt =====
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-08
+
+    TITLE:
+    RULES CAN GUIDE A BUILDING WITHOUT CONTAINING THE BUILDING
+
+    SOURCE:
+    Tim Ingold — Making — 2013 — Chapter 4, “On building a house,” p. 54.
+
+    SOURCE URL:
+    file:MAKING_INGOLD(1).pdf
+
+    PASSAGE:
+    [QUOTE] “The masons’ rules were maxims in this sense: they comprised resources for action, but did not determine it.”
+
+    RESEARCH OBJECT:
+    Rules can participate essentially in making without preordaining the course of action. This pressures any equation of prompt, plan, grammar, or rule set with the whole program.
+
+    LOCAL MOVE:
+    Ingold distinguishes constructive rules from the skill, judgment, and creative extemporisation required in actual masonry.
+
+    SOURCE TERMS:
+    constructive geometry; rule of thumb; maxims; resources for action; skill; inventiveness
+
+    WHAT BECAME STRANGE:
+    The alternative to deterministic rules is not rulelessness; it is rules whose meaning is completed in situated practice.
+
+    QUESTION:
+    When a prompt guides generation without determining it, is it closer to code or to a maxim?
+
+    DEEPER QUESTION:
+    What variable represents situated judgment in a theory of natural-language programming?
+
+    MECHANISM:
+    rule + situation + skilled practitioner → judgment/adaptation → next material action.
+
+    FORMAL SHIFT:
+    <RULE> → <RESOURCE FOR ACTION> → [JUDGE + ADAPT] → <CONTINGENT NEXT STATE>
+
+    SOURCE FORMALISM:
+    NONE
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] NEXT_STATE = f(rule, situation, practitioner, material response), not rule alone.
+
+    TENSION:
+    Formal shape grammars can determine transformations in representational space, while situated building rules may only orient action.
+
+    MISSING:
+    A taxonomy separating formal rule, invariant, heuristic, maxim, example, and judgment.
+
+    BOUNDARY:
+    Ingold does not discuss LLMs; the prompting comparison is an inference.
+
+    CITATION TRAIL:
+    Polanyi; Suchman; Stiny and Mitchell.
+
+    TEST:
+    Classify actions in a building or coding task as entailed, selected, improvised, or forced by local conditions.
+
+    PLATFORM:
+    [[THE HOUSE THAT WORLDS BUILT]]
+
+    LINKS:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+[[RULES AS RESOURCES FOR ACTION]]
+
+    BIBTEX:
+    @book{ingold2013making,
+  author={Ingold, Tim},
+  title={Making: Anthropology, Archaeology, Art and Architecture},
+  publisher={Routledge},
+  address={London},
+  year={2013},
+  isbn={9780415567237}
+}
+
+
+===== 15 :: Z-SLIP-20260817-09.txt =====
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-09
+
+    TITLE:
+    EACH MATERIAL STATE CAN BECOME PART OF THE SPECIFICATION FOR THE NEXT
+
+    SOURCE:
+    Tim Ingold — Making — 2013 — Chapter 4, “On building a house,” pp. 54–55.
+
+    SOURCE URL:
+    file:MAKING_INGOLD(1).pdf
+
+    PASSAGE:
+    [PARAPHRASE] Ingold compares medieval building to a patchwork quilt: stones are shaped and reshaped to fit spaces prepared by previous stones and in turn prepare spaces for those that follow.
+
+    RESEARCH OBJECT:
+    Execution can recursively create the constraint field for later execution. The artifact is not only output; its current state helps specify admissible next moves.
+
+    LOCAL MOVE:
+    Ingold replaces assembly from pre-cut pieces with piecemeal adjustment in which each placed stone changes the local problem.
+
+    SOURCE TERMS:
+    patchwork quilt; piecemeal; shaped; reshaped; fit; space prepared
+
+    WHAT BECAME STRANGE:
+    Some constraints do not merely become explicit late; they are produced by earlier material decisions.
+
+    QUESTION:
+    Could deferred formalization be defined as recursive specification by produced state?
+
+    DEEPER QUESTION:
+    Which later requirements could not exist before the current artifact existed?
+
+    MECHANISM:
+    existing state → local gap/constraint → select/reshape/place → new state → next constraint field.
+
+    FORMAL SHIFT:
+    <ARTIFACT_n> → <LOCAL CONSTRAINT FIELD> → [FIT/RESHAPE] → <ARTIFACT_n+1>
+
+    SOURCE FORMALISM:
+    NONE
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] C_{n+1} = prior constraints + constraints induced by artifact state A_n.
+
+    TENSION:
+    Software synthesis often assumes the correctness relation exists logically before synthesis; this case suggests some design requirements are genuinely emergent.
+
+    MISSING:
+    A distinction between unknown-beforehand and not-yet-existent specification.
+
+    BOUNDARY:
+    The masonry case does not prove formal software correctness can safely emerge without prior criteria.
+
+    CITATION TRAIL:
+    Ingold on design continuing into making; output-directed programming.
+
+    TEST:
+    Timestamp constraints during iterative design and distinguish remembered requirements from distinctions first made possible by an artifact.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[THE ARTIFACT BECOMES SPECIFICATION]]
+[[EMERGENT SPECIFICATION]]
+
+    BIBTEX:
+    @book{ingold2013making,
+  author={Ingold, Tim},
+  title={Making: Anthropology, Archaeology, Art and Architecture},
+  publisher={Routledge},
+  address={London},
+  year={2013},
+  isbn={9780415567237}
+}
+
+
+===== 16 :: Z-SLIP-20260817-10.txt =====
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-10
+
+    TITLE:
+    DESIGN CAN CONTINUE INTO MAKING RATHER THAN PRECEDING IT
+
+    SOURCE:
+    Tim Ingold — Making — 2013 — Chapter 5, “The sighted watchmaker,” p. 69.
+
+    SOURCE URL:
+    file:MAKING_INGOLD(1).pdf
+
+    PASSAGE:
+    [QUOTE] “the designing of the watch continues into its making”
+
+    RESEARCH OBJECT:
+    Ingold gives a strong alternative to the sequence complete-design → execution: parts acquire coherence through ongoing adjustment, so design remains active inside production.
+
+    LOCAL MOVE:
+    He contrasts predictive foresight with anticipatory foresight and describes making as ontogenesis and correspondence among parts.
+
+    SOURCE TERMS:
+    anticipation; anticipatory foresight; ontogenesis; correspondence; internal coherence
+
+    WHAT BECAME STRANGE:
+    “Deferred formalization” may be too weak if it implies a complete specification merely arrives later. Some design may be generated by the act of making itself.
+
+    QUESTION:
+    Is the missing specification merely unknown, or genuinely not yet formed?
+
+    DEEPER QUESTION:
+    What properties become thinkable only after the provisional thing exists?
+
+    MECHANISM:
+    initial direction → partial assembly → perceive emerging relations → adjust → increased coherence.
+
+    FORMAL SHIFT:
+    <DESIGN BEFORE MAKING> → <DESIGN WITHIN MAKING> → [ANTICIPATE + ADJUST] → <EMERGENT COHERENCE>
+
+    SOURCE FORMALISM:
+    NONE
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] SPEC_{n+1} may contain distinctions unavailable at SPEC_n because A_n changes what can be perceived.
+
+    TENSION:
+    This departs from program synthesis systems in which correctness conditions are assumed to pre-exist the search.
+
+    MISSING:
+    A test for genuinely emergent versus merely unstated requirements.
+
+    BOUNDARY:
+    Ingold’s claim concerns making and design, not safety-critical software verification.
+
+    CITATION TRAIL:
+    Sennett; Spuybroek; program synthesis.
+
+    TEST:
+    Require designers to state known requirements before generation, then record only genuinely new distinctions after each artifact.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[DEFERRED FORMALIZATION]]
+[[EMERGENT SPECIFICATION]]
+
+    BIBTEX:
+    @book{ingold2013making,
+  author={Ingold, Tim},
+  title={Making: Anthropology, Archaeology, Art and Architecture},
+  publisher={Routledge},
+  address={London},
+  year={2013},
+  isbn={9780415567237}
+}
+
+
+===== 17 :: Z-SLIP-20260817-11.txt =====
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-11
+
+    TITLE:
+    THE MATERIAL CAN ACT AS A FAILURE ORACLE WITHOUT SPEAKING IN PROPOSITIONS
+
+    SOURCE:
+    Tim Ingold — Making — 2013 — Chapter 2, “The materials of life,” p. 31.
+
+    SOURCE URL:
+    file:MAKING_INGOLD(1).pdf
+
+    PASSAGE:
+    [QUOTE] “Their every technical gesture is a question, to which the material responds according to its bent.”
+
+    RESEARCH OBJECT:
+    Material resistance provides evidence that guides the next move. This creates a craft analogue to the validator/counterexample loop without pretending the material returns a formal proof.
+
+    LOCAL MOVE:
+    Ingold describes making as correspondence rather than imposition of preconceived form on passive substance.
+
+    SOURCE TERMS:
+    technical gesture; question; responds; matter-flow; correspondence; becoming
+
+    WHAT BECAME STRANGE:
+    A failure oracle need not emit a proposition. It can leak, resist, bend, crack, deform, or otherwise make a mismatch available to skilled perception.
+
+    QUESTION:
+    What qualifies as a failure oracle when evidence is embodied or environmental?
+
+    DEEPER QUESTION:
+    How should reliability and expertise be represented when the “counterexample” must be interpreted?
+
+    MECHANISM:
+    gesture → material response → perception/judgment → adjusted gesture.
+
+    FORMAL SHIFT:
+    <INTERVENTION> → <MATERIAL RESPONSE> → [INTERPRET] → <REVISED ACTION>
+
+    SOURCE FORMALISM:
+    NONE
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] failure_oracle = channel that turns a mismatch into actionable evidence, with explicit reliability and visibility properties.
+
+    TENSION:
+    A theorem prover and a leaking roof are not equivalent validators; the analogy must retain different evidential strength.
+
+    MISSING:
+    A taxonomy of response channels and the expertise required to read them.
+
+    BOUNDARY:
+    Ingold is not offering a formal verification theory.
+
+    CITATION TRAIL:
+    CEGIS; Schön; material computation.
+
+    TEST:
+    Introduce failures at visual, structural, drainage, thermal, and security layers and record what each evaluation environment can reveal.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[FAILURE ORACLES]]
+[[CORRESPONDENCE AS COMPUTATION]]
+
+    BIBTEX:
+    @book{ingold2013making,
+  author={Ingold, Tim},
+  title={Making: Anthropology, Archaeology, Art and Architecture},
+  publisher={Routledge},
+  address={London},
+  year={2013},
+  isbn={9780415567237}
+}
+
+
+===== 18 :: Z-SLIP-20260817-12.txt =====
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-12
+
+    TITLE:
+    A FAILURE IS LEGIBLE ONLY IN A WORLD CAPABLE OF MAKING IT APPEAR
+
+    SOURCE:
+    Tim Ingold — Making — 2013 — Chapter 4, “On building a house,” pp. 48–49.
+
+    SOURCE URL:
+    file:MAKING_INGOLD(1).pdf
+
+    PASSAGE:
+    [QUOTE] “Completion is, at best, a legal fiction.” [PARAPHRASE] Ingold contrasts architectural conception with rain, leakage, rot, infestation, and continual maintenance.
+
+    RESEARCH OBJECT:
+    The boundary of deferred formalization is not merely outcome legibility. The artifact must be placed in an evaluation world rich enough to expose the relevant failure mode.
+
+    LOCAL MOVE:
+    Ingold uses rain and maintenance to show how formal architectural worlds omit forces that later become decisive to residents and builders.
+
+    SOURCE TERMS:
+    plan; improvise; rain; leak; resident-builder; formal world; fluid reality
+
+    WHAT BECAME STRANGE:
+    A rendered roof cannot leak. Absence of visible failure can therefore mean the evaluation world is too thin, not that the artifact is correct.
+
+    QUESTION:
+    Is failure legibility a property of the artifact, or of artifact-plus-evaluation-world?
+
+    DEEPER QUESTION:
+    How much world coverage is enough before iterative inspection becomes trustworthy?
+
+    MECHANISM:
+    formal design → omitted environmental variable → exposure → failure → new constraint.
+
+    FORMAL SHIFT:
+    <ARTIFACT> + <EVALUATION WORLD> → [EXPOSE] → <FAILURE OR PASS>
+
+    SOURCE FORMALISM:
+    NONE
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] LEGIBLE_FAILURE(A,E); no observed failure implies little unless E covers the relevant failure modes.
+
+    TENSION:
+    This limits visual prompt iteration in domains such as structural safety, security, numerical stability, and privacy.
+
+    MISSING:
+    A theory of world coverage: scenarios, simulations, adversaries, users, climates, and timescales.
+
+    BOUNDARY:
+    The building example does not establish a universal testing metric.
+
+    CITATION TRAIL:
+    Simulation testing; adversarial evaluation; property-based testing.
+
+    TEST:
+    Evaluate one generated artifact in increasingly rich worlds and record the first environment in which each latent defect appears.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[THE ROOF PROBLEM]]
+[[WORLD COVERAGE]]
+[[FAILURE LEGIBILITY]]
+
+    BIBTEX:
+    @book{ingold2013making,
+  author={Ingold, Tim},
+  title={Making: Anthropology, Archaeology, Art and Architecture},
+  publisher={Routledge},
+  address={London},
+  year={2013},
+  isbn={9780415567237}
+}
+
+
+===== 19 :: Z-SLIP-20260817-13.txt =====
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-13
+
+    TITLE:
+    A PROMPT MAY BE AN ITINERARY: GUIDANCE THAT WORKS BY REFUSING COMPLETE SPECIFICATION
+
+    SOURCE:
+    Tim Ingold — Making — 2013 — Chapter 8, “Telling by hand,” p. 110.
+
+    SOURCE URL:
+    file:MAKING_INGOLD(1).pdf
+
+    PASSAGE:
+    [QUOTE] “In place of specification without guidance, the story offers guidance without specification.”
+
+    RESEARCH OBJECT:
+    Natural-language programming may be misdescribed when every useful utterance is treated as a defective specification. Some language works by orienting attention and enabling continuation rather than by exhaustively defining an end state.
+
+    LOCAL MOVE:
+    Ingold distinguishes specifications, which define a project, from stories, which lay down an itinerary and support guided rediscovery.
+
+    SOURCE TERMS:
+    telling; education of attention; guided rediscovery; complete specification; guidance; anticipatory foresight; itinerary
+
+    WHAT BECAME STRANGE:
+    The endpoint of deferred formalization need not be total formalization. A capable system may continue through a hybrid of invariants, examples, metaphors, and attention-directing cues.
+
+    QUESTION:
+    Are prompts specifications, programs, or itineraries?
+
+    DEEPER QUESTION:
+    Could “programming by itinerary” name a distinct computational regime in which guidance and evaluation remain distributed across time?
+
+    MECHANISM:
+    telling → attention → situated encounter → judgment → action → further cue.
+
+    FORMAL SHIFT:
+    <GUIDANCE> → <ENCOUNTER> → [NOTICE + JUDGE] → <NEXT ACTION>
+
+    SOURCE FORMALISM:
+    NONE
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] PROGRAMMING_BY_ITINERARY = directional guidance + executable candidate generation + situated failure oracles + preserved constraints.
+
+    TENSION:
+    An LLM is not a human apprentice and may not possess the perceptual education Ingold describes; the analogy must be tested rather than assumed.
+
+    MISSING:
+    A computational criterion distinguishing useful underspecification from mere ambiguity.
+
+    BOUNDARY:
+    Ingold does not claim stories execute on computers.
+
+    CITATION TRAIL:
+    Gibson; apprenticeship; natural-language programming; human-in-the-loop systems.
+
+    TEST:
+    Compare exhaustive specification, minimal imperative, and itinerary-style guidance on novel cases not explicitly covered by the input.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[PROMPT AS ITINERARY]]
+[[THICK PROMPTING]]
+[[GUIDANCE WITHOUT SPECIFICATION]]
+
+    BIBTEX:
+    @book{ingold2013making,
+  author={Ingold, Tim},
+  title={Making: Anthropology, Archaeology, Art and Architecture},
+  publisher={Routledge},
+  address={London},
+  year={2013},
+  isbn={9780415567237}
+}
+
+
+===== 20 :: Z-SLIP-20260817-14.txt =====
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-14
+
+    TITLE:
+    THE MACHINE CAN BE A HOUSE WITHOUT ITS MAKER AUTHORING EVERYTHING THAT INHABITS IT
+
+    SOURCE:
+    A. M. Turing — “Computing Machinery and Intelligence” — 1950 — Mind 59(236), pp. 433–460, theological objection.
+
+    SOURCE URL:
+    https://doi.org/10.1093/mind/LIX.236.433
+
+    PASSAGE:
+    [QUOTE] “instruments of His will providing mansions for the souls that He creates.”
+
+    RESEARCH OBJECT:
+    Turing’s hypothetical theological metaphor separates constructing a material mansion from creating its possible inhabitant. The structural distinction matters even if the theology is bracketed.
+
+    LOCAL MOVE:
+    He answers an objection to machine intelligence by comparing machine construction with procreation and limiting the maker’s claim to ultimate authorship.
+
+    SOURCE TERMS:
+    construct; machines; procreation; instruments; mansions; souls; creates
+
+    WHAT BECAME STRANGE:
+    A program can be understood as an architecture of possibilities rather than a complete script of everything that later happens inside it.
+
+    QUESTION:
+    When does program authorship end and inhabitant/environmental history begin?
+
+    DEEPER QUESTION:
+    What parts of emergent behavior should be attributed to architecture, agent, interaction history, or evaluator?
+
+    MECHANISM:
+    maker → constructed substrate → inhabitation/operation → behavior exceeding the construction act.
+
+    FORMAL SHIFT:
+    <MAKER> → <MANSION> → [INHABIT/OPERATE] → <TRAJECTORY>
+
+    SOURCE FORMALISM:
+    NONE
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] PROGRAM_AS_HOUSE = possibility space whose trajectories depend on more than the initial builder.
+
+    TENSION:
+    The theological argument is explicitly speculative; it cannot be used as evidence of machine souls.
+
+    MISSING:
+    An account of computational inhabitation: state space, memory, rules, interfaces, agents.
+
+    BOUNDARY:
+    The source supports a metaphorical separation of substrate construction and soul creation, not a theory of emergent software agency.
+
+    CITATION TRAIL:
+    Artificial life; open-ended systems; Brautigan.
+
+    TEST:
+    Hold a computational environment constant while varying agents and histories; partition variance by architecture, inhabitant, and interaction.
+
+    PLATFORM:
+    [[THE HOUSE THAT WORLDS BUILT]]
+
+    LINKS:
+    [[THE MULTILINGUAL HOUSE]]
+[[PROGRAM AS HOUSE]]
+
+    BIBTEX:
+    @article{turing1950computing,
+  author={Turing, A. M.},
+  title={Computing Machinery and Intelligence},
+  journal={Mind},
+  volume={59},
+  number={236},
+  pages={433--460},
+  year={1950},
+  doi={10.1093/mind/LIX.236.433}
+}
+
+
+===== 21 :: Z-SLIP-20260817-15.txt =====
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-15
+
+    TITLE:
+    THE COMPUTER MOVES FROM MANSION TO HABITAT WHEN INFRASTRUCTURE BECOMES A CONDITION OF DWELLING
+
+    SOURCE:
+    Richard Brautigan — “All Watched Over by Machines of Loving Grace” — 1967.
+
+    SOURCE URL:
+    https://brautiganarchives.xyz/machines.html
+
+    PASSAGE:
+    [QUOTE] “mammals and computers / live together in mutually / programming harmony”
+
+    RESEARCH OBJECT:
+    Brautigan’s poem distributes computing through meadow, forest, and ecology. Computation ceases to be merely an object within habitat and becomes part of the environment through which life is organized.
+
+    LOCAL MOVE:
+    The poem imagines reciprocal programming, automation, ecological integration, and machine watching without supplying an implementation.
+
+    SOURCE TERMS:
+    cybernetic meadow; cybernetic forest; cybernetic ecology; mutually programming harmony; machines of loving grace
+
+    WHAT BECAME STRANGE:
+    When infrastructure becomes ambient, interaction shifts from using a tool to inhabiting a computational condition.
+
+    QUESTION:
+    At what scale does computation become habitat rather than device?
+
+    DEEPER QUESTION:
+    What would genuine mutual programming require beyond adaptive surveillance?
+
+    MECHANISM:
+    bounded device → distributed infrastructure → ambient coordination/observation → computational habitat.
+
+    FORMAL SHIFT:
+    <COMPUTER AS OBJECT> → [DISTRIBUTE] → <COMPUTER AS HABITAT>
+
+    SOURCE FORMALISM:
+    NONE
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] mutuality requires not only feedback but reciprocal power to inspect, alter, refuse, and leave the programming relation.
+
+    TENSION:
+    The poem’s care/surveillance ambiguity means ecological integration cannot be treated as inherently emancipatory.
+
+    MISSING:
+    Criteria for reciprocity and opt-out at infrastructural scale.
+
+    BOUNDARY:
+    The poem supplies a possible world, not an engineering design or proof of mutuality.
+
+    CITATION TRAIL:
+    Turing; ubiquitous computing; cybernetics; Ingold correspondence.
+
+    TEST:
+    Instantiate one computational capability at device, room, house, neighborhood, and ambient scales and measure control, visibility, consent, and exit.
+
+    PLATFORM:
+    [[THE HOUSE THAT WORLDS BUILT]]
+
+    LINKS:
+    [[MUTUAL PROGRAMMING]]
+[[COMPUTATION AS HABITAT]]
+
+    BIBTEX:
+    @misc{brautigan1967machines,
+  author={Brautigan, Richard},
+  title={All Watched Over by Machines of Loving Grace},
+  year={1967},
+  publisher={The Communication Company},
+  address={San Francisco}
+}
+
+
+===== 22 :: Z-SLIP-20260817-16.txt =====
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-16
+
+    TITLE:
+    A GENEALOGY FAILS WHEN IT RECORDS ONLY THE CONSTRAINTS THAT WON
+
+    SOURCE:
+    Walter Benjamin — “On the Concept of History,” Thesis IX — 1940.
+
+    SOURCE URL:
+    https://www.sfu.ca/~andrewf/CONCEPT2.html
+
+    PASSAGE:
+    [QUOTE] “Where we perceive a chain of events, he sees one single catastrophe”
+
+    RESEARCH OBJECT:
+    A clean version history can falsely narrate iterative work as progress if rejected artifacts, failed assumptions, unresolved damage, and reasons for rejection disappear.
+
+    LOCAL MOVE:
+    Benjamin opposes the ordinary chain of events to the angel’s view of accumulating catastrophe and wreckage.
+
+    SOURCE TERMS:
+    chain of events; catastrophe; wreckage; dead; make whole; storm; progress
+
+    WHAT BECAME STRANGE:
+    A genealogy of constraints that stores only what survived can erase the causal residue that makes later decisions intelligible.
+
+    QUESTION:
+    What should be retained from failed branches so that the final program does not rewrite its development as inevitable?
+
+    DEEPER QUESTION:
+    How can wreckage be compressed without turning it into triumphal progress?
+
+    MECHANISM:
+    candidate → failure → either deletion or preserved counterexample/rationale/nogood.
+
+    FORMAL SHIFT:
+    <FAILED BRANCHES> → [PRESERVE CAUSAL RESIDUE] → <COUNTER-ARCHIVE OF THE PROGRAM>
+
+    SOURCE FORMALISM:
+    NONE
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] PROGRAM_MEMORY = surviving constraints + failed candidates + rejection reasons + superseded assumptions + unresolved tensions.
+
+    TENSION:
+    Preserving everything produces an unusable dump; the engineering problem is selective retention without historical erasure.
+
+    MISSING:
+    A principled retention rule for counterexamples, obsolete detail, rationale, and unresolved debt.
+
+    BOUNDARY:
+    Benjamin is not writing about software; the application is a pressure-test, not technical evidence.
+
+    CITATION TRAIL:
+    ATMS; Naur; design rationale; version control.
+
+    TEST:
+    Compare final-prompt, surviving-constraint, and full-rationale memories on a late requirement that reopens an old decision.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[GENEALOGY OF CONSTRAINTS]]
+[[COUNTER-ARCHIVE OF THE PROGRAM]]
+
+    BIBTEX:
+    @misc{benjamin1940history,
+  author={Benjamin, Walter},
+  title={On the Concept of History},
+  year={1940},
+  note={Thesis IX; published posthumously in translation}
+}

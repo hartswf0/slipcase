@@ -1,0 +1,22 @@
+RETURN PATH
+CHECKPOINT: SLIPCASE-DEEP-LINEAGE-2026-08-18
+CHECKPOINT ID: slipcase-deep-lineage-20260818-a
+SCHEMA: 15.0-AM-LINEAGE
+PACKAGE: SLIPCASE_DEEP_LINEAGE_2026-08-18
+RESEARCHER: Watson Hartsoe
+DATE: 2026-08-18
+REJOIN PHRASE: Continue the felicity-to-protocol lineage from the public/private semantics crossing.
+
+CONSEQUENTIAL FILES
+- index.html
+- felicity-to-protocol__2026-08-18.pdf
+- felicity-to-protocol__SOURCE_MAP.txt
+- 000__OPEN_EDGES.txt
+- _MOCS/01__FELICITY_TO_PROTOCOL.md
+- _ARRANGEMENTS/01__FELICITY_TO_PROTOCOL_TRAIL.txt
+- SLIPCASE_FINAL_PROMPT.txt
+- _SLIPCASE/MANIFEST.json
+
+REBUILD
+Run: python3 _SLIPCASE/rebuild.py
+Read _SLIPCASE/VERIFICATION.txt before making completeness claims.

@@ -1,0 +1,81 @@
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-03
+
+    TITLE:
+    THE ITERATIVE LOOP IS OLD; THE FAILURE ORACLE IS THE CONSEQUENTIAL DIFFERENCE
+
+    SOURCE:
+    Armando Solar-Lezama — “The Sketching Approach to Program Synthesis” — 2009 — section on Counterexample Guided Inductive Synthesis.
+
+    SOURCE URL:
+    https://people.csail.mit.edu/asolar/papers/Solar-Lezama09.pdf
+
+    PASSAGE:
+    [PARAPHRASE] CEGIS repeatedly synthesizes a candidate, validates it, and on failure obtains a witness or counterexample that is added to the examples before synthesis resumes.
+
+    RESEARCH OBJECT:
+    The loop describe/generate/inspect/correct/regenerate has a formal predecessor. The important difference is what recognizes failure and how decisive that recognition is.
+
+    LOCAL MOVE:
+    CEGIS turns failed candidates into new specification evidence through validator-produced counterexamples.
+
+    SOURCE TERMS:
+    candidate solution; validator; witness; counterexample; observation set; convergence
+
+    WHAT BECAME STRANGE:
+    “Failures become specifications” is not merely a metaphor: it already names a computational architecture when a verifier can generate counterexamples.
+
+    QUESTION:
+    When the verifier is a human looking at an artifact, what replaces formal validity?
+
+    DEEPER QUESTION:
+    Can failure oracles be compared by reliability, latency, specificity, and observability?
+
+    MECHANISM:
+    candidate → validator → counterexample → enlarged example set → new candidate.
+
+    FORMAL SHIFT:
+    <CANDIDATE> → [VALIDATE] → <COUNTEREXAMPLE> → [ADD EVIDENCE] → <NEW CANDIDATE>
+
+    SOURCE FORMALISM:
+    CEGIS as described in the Sketch synthesis architecture.
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] PROMPT_LOOP = candidate → human/world oracle → named failure → constraint update → candidate.
+
+    TENSION:
+    Human perceptual judgment can notice failures a verifier cannot encode, but it gives a weaker convergence story.
+
+    MISSING:
+    A taxonomy of formal, simulated, sensed, expert, social, and aesthetic failure oracles.
+
+    BOUNDARY:
+    CEGIS does not establish that subjective inspection is sufficient for correctness.
+
+    CITATION TRAIL:
+    Testing; property-based testing; human-in-the-loop synthesis; Ingold on material response.
+
+    TEST:
+    Classify fifty prompt corrections by oracle type and test which classes prevent recurrence under new scenarios.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[FAILURE AS SPECIFICATION]]
+[[THE ROOF PROBLEM]]
+[[FAILURE ORACLES]]
+
+    BIBTEX:
+    @inproceedings{solarlezama2009sketching,
+  author={Solar-Lezama, Armando},
+  title={The Sketching Approach to Program Synthesis},
+  booktitle={Programming Languages and Systems: APLAS 2009},
+  series={Lecture Notes in Computer Science},
+  volume={5904},
+  pages={4--13},
+  year={2009},
+  doi={10.1007/978-3-642-10672-9_3}
+}

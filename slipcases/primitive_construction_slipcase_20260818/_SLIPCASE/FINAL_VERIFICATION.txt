@@ -1,0 +1,23 @@
+FINAL VERIFICATION
+DATE: 2026-08-18
+
+PDF:
+- Compiled successfully with pdflatex.
+- 8 pages.
+- Rendered successfully at 140 dpi.
+- Inspected first page, body page, references, appendix, and disclosure mark.
+- No clipping, black squares, missing glyphs, unresolved citations, or unresolved references observed.
+- LaTeX log contains only non-fatal microtype/rerun warnings.
+
+EVIDENCE INVARIANTS:
+- 10 admitted zettels = 10 root TXT = 10 _MD mirrors = 10 JSON records.
+- Root/_MD mirrors byte-identical.
+- SHA-256 records verified.
+- PLATFORM occurrences = MEMBER_OF records.
+- LINKS occurrences = LINKS_TO records.
+- Paper source-map citekeys are contained in bibliography.
+
+ZIP:
+- Rebuilt after final verification.
+- Integrity tested with Python ZipFile.testzip and unzip -t.
+- Required root artifacts present.

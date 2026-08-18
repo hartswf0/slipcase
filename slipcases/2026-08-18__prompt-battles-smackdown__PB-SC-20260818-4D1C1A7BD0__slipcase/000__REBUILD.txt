@@ -1,0 +1,17 @@
+REBUILD — PB-SC-20260818-4D1C1A7BD0
+
+1. Verify root card hashes against _SLIPCASE/MANIFEST.json.
+2. Verify each _MD mirror has identical bytes to its root .txt card.
+3. Parse card fields without rewriting payloads.
+4. Compile PLATFORM, LINKS, and every [[ADDRESS]] conservatively.
+5. Accept PARENT_OF only where child LINKS contains an exact zettel ID.
+6. Rebuild bibliography from preserved BibTeX blocks and PB-SC-20260818-4D1C1A7BD0__references.bib.
+7. Restore resources from _RESOURCES/.
+8. Treat MOCs, arrangements, graph, reader, index, and paper as derived views.
+9. Compile capability-has-no-body__2026-08-18.tex with pdflatex twice.
+10. Render and visually inspect capability-has-no-body__2026-08-18.pdf.
+11. Recompute manifest hashes after any derived rebuild.
+12. Zip the root directory and test archive integrity.
+
+PARTIAL CONTEXT RULE
+Do not invent missing v3.1 prompt bytes. Preserve receipt-only state unless an exact source becomes available later.

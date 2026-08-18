@@ -1,0 +1,79 @@
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-12
+
+    TITLE:
+    A FAILURE IS LEGIBLE ONLY IN A WORLD CAPABLE OF MAKING IT APPEAR
+
+    SOURCE:
+    Tim Ingold — Making — 2013 — Chapter 4, “On building a house,” pp. 48–49.
+
+    SOURCE URL:
+    file:MAKING_INGOLD(1).pdf
+
+    PASSAGE:
+    [QUOTE] “Completion is, at best, a legal fiction.” [PARAPHRASE] Ingold contrasts architectural conception with rain, leakage, rot, infestation, and continual maintenance.
+
+    RESEARCH OBJECT:
+    The boundary of deferred formalization is not merely outcome legibility. The artifact must be placed in an evaluation world rich enough to expose the relevant failure mode.
+
+    LOCAL MOVE:
+    Ingold uses rain and maintenance to show how formal architectural worlds omit forces that later become decisive to residents and builders.
+
+    SOURCE TERMS:
+    plan; improvise; rain; leak; resident-builder; formal world; fluid reality
+
+    WHAT BECAME STRANGE:
+    A rendered roof cannot leak. Absence of visible failure can therefore mean the evaluation world is too thin, not that the artifact is correct.
+
+    QUESTION:
+    Is failure legibility a property of the artifact, or of artifact-plus-evaluation-world?
+
+    DEEPER QUESTION:
+    How much world coverage is enough before iterative inspection becomes trustworthy?
+
+    MECHANISM:
+    formal design → omitted environmental variable → exposure → failure → new constraint.
+
+    FORMAL SHIFT:
+    <ARTIFACT> + <EVALUATION WORLD> → [EXPOSE] → <FAILURE OR PASS>
+
+    SOURCE FORMALISM:
+    NONE
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] LEGIBLE_FAILURE(A,E); no observed failure implies little unless E covers the relevant failure modes.
+
+    TENSION:
+    This limits visual prompt iteration in domains such as structural safety, security, numerical stability, and privacy.
+
+    MISSING:
+    A theory of world coverage: scenarios, simulations, adversaries, users, climates, and timescales.
+
+    BOUNDARY:
+    The building example does not establish a universal testing metric.
+
+    CITATION TRAIL:
+    Simulation testing; adversarial evaluation; property-based testing.
+
+    TEST:
+    Evaluate one generated artifact in increasingly rich worlds and record the first environment in which each latent defect appears.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[THE ROOF PROBLEM]]
+[[WORLD COVERAGE]]
+[[FAILURE LEGIBILITY]]
+
+    BIBTEX:
+    @book{ingold2013making,
+  author={Ingold, Tim},
+  title={Making: Anthropology, Archaeology, Art and Architecture},
+  publisher={Routledge},
+  address={London},
+  year={2013},
+  isbn={9780415567237}
+}

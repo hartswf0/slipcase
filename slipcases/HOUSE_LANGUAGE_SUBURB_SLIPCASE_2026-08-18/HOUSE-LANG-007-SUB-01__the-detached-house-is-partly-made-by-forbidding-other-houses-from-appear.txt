@@ -1,0 +1,159 @@
+ZETTEL
+
+ID:
+HOUSE-LANG-007-SUB-01
+
+TITLE:
+THE DETACHED HOUSE IS PARTLY MADE BY FORBIDDING OTHER HOUSES FROM APPEARING NEAR IT
+
+SOURCE:
+Village of Euclid v. Ambler Realty Co., 272 U.S. 365 (1926), U.S. Supreme Court. SOURCE URL: https://www.law.cornell.edu/supremecourt/text/272/365
+
+PASSAGE:
+[QUOTE]
+“the apartment house is a mere parasite”
+
+[PARAPHRASE]
+The Court rehearses arguments that apartment houses can destroy an area’s character as a district of detached residences and ultimately accepts exclusionary zoning as constitutionally permissible in its general scope.
+
+RESEARCH OBJECT:
+NEGATIVE ARCHITECTURE: A HOUSE TYPE PRODUCED THROUGH THE LEGAL EXCLUSION OF NEIGHBORING TYPES.
+
+LOCAL MOVE:
+The suburban detached house cannot be modeled adequately as an object contained by its property line.
+
+Euclid reveals another part of its construction:
+
+what is permitted to exist around it.
+
+The ordinance does not merely say HOUSE.
+
+It says:
+
+HOUSE
+AND NOT APARTMENT
+AND NOT SHOP
+AND NOT INDUSTRY
+WITHIN THIS DISTRICT.
+
+The “character” of the detached house is therefore partly an exclusion relation distributed across neighboring parcels.
+
+SOURCE TERMS:
+residential districts
+detached residences
+apartment houses
+restrictions
+district
+public health
+safety
+general welfare
+nuisance
+residential character
+
+WHAT BECAME STRANGE:
+A suburb can look homogeneous because the law has already removed grammatical alternatives from the landscape.
+
+The repeated detached house is therefore not simply a popular architectural answer.
+
+It may be what remains after other answers have been made syntactically illegal.
+
+QUESTION:
+Is a suburban house partly constituted by the buildings its zoning district prevents from becoming its neighbors?
+
+DEEPER QUESTION:
+If language becomes architectural when it changes the space of possible actions, should zoning ordinances be treated as a more consequential architectural language than architectural description itself?
+
+MECHANISM:
+[PARAPHRASE]
+
+municipality
+→ zoning ordinance
+→ district classifications
+→ permitted / excluded uses
+→ altered development possibilities
+→ preservation of a designated residential character
+
+The operation occurs before architectural design begins.
+
+FORMAL SHIFT:
+HOUSE AS OBJECT
+→ HOUSE AS OBJECT + LEGALLY MAINTAINED ABSENCE FIELD
+
+The relevant unit shifts from building to possibility-space.
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+
+ORDINANCE
+→ DISTRICTS
+→ USE RESTRICTIONS
+→ ADMINISTRATION / ENFORCEMENT
+→ PERMITTED DEVELOPMENT
+
+The Court also describes a board empowered to interpret the ordinance in specified cases of hardship.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+SUBURBAN_TYPE =
+  BUILT_FORM
+  + ALLOWED_NEIGHBORS
+  + FORBIDDEN_NEIGHBORS
+
+A detached house district is therefore generated partly by:
+
+DELETE(APARTMENT)
+DELETE(COMMERCE)
+DELETE(INDUSTRY)
+
+before:
+
+GENERATE(HOUSE)
+
+TENSION:
+The ruling presents separation as capable of protecting health, safety, quiet, sunlight, and children.
+
+But the same machinery stabilizes one favored morphology by treating competing ways of dwelling as threats to “residential character.”
+
+Environmental protection and morphological exclusion occupy the same operation.
+
+MISSING:
+The exact transition from the Euclid ordinance’s legal classifications to later single-family-only zoning regimes.
+
+Also missing is evidence distinguishing restrictions motivated by incompatible physical externalities from restrictions functioning primarily to preserve social or economic exclusivity.
+
+BOUNDARY:
+Euclid does not prove that every suburban subdivision was caused by zoning or that every detached house is an exclusionary artifact.
+
+It establishes a legal mechanism by which the surrounding possibility-space of housing can be intentionally constrained.
+
+CITATION TRAIL:
+[[HOUSE-LANG-007]]
+→ Village of Euclid v. Ambler Realty Co. (1926)
+→ original Euclid zoning ordinance
+→ Standard State Zoning Enabling Act
+→ FHA subdivision standards
+→ single-family zoning genealogy
+
+TEST:
+Retrieve the original Euclid ordinance and the Standard State Zoning Enabling Act.
+
+Represent their permitted-use tables as a possibility matrix.
+
+Then ask:
+
+Which residential forms become impossible in each district before any architect begins designing?
+
+PLATFORM:
+[[HOUSE AND LANGUAGE]]
+
+LINKS:
+[[HOUSE-LANG-007]]
+
+BIBTEX:
+@misc{euclid1926,
+  title = {Village of Euclid, Ohio, et al. v. Ambler Realty Co.},
+  year = {1926},
+  note = {272 U.S. 365},
+  url = {https://www.law.cornell.edu/supremecourt/text/272/365}
+}

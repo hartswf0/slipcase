@@ -1,0 +1,17 @@
+REBUILD
+
+This package is static and offline. The evidence layer is the root zettel TXT files plus _MD mirrors and supplied resources.
+
+To rebuild derived state with Python 3:
+1. Parse root zettel files in the fixed field order.
+2. Compute SHA-256 over the exact payload bytes.
+3. Compile every [[ADDRESS]] from PLATFORM, LINKS, and other fields.
+4. Resolve only exact zettel IDs, exact unique titles, registered platforms, or explicit externals. Leave all other addresses GHOST.
+5. Derive backlinks; never write them into root evidence.
+6. Rebuild ZETTELS.txt/json/jsonl, bibliography, MOCs, arrangements, NETWORK, and index.
+7. Compile the paper TeX using pdflatex or latexmk.
+8. Run _SLIPCASE/verify.py.
+9. Render the PDF and visually inspect representative pages.
+10. Zip the field and test archive integrity.
+
+Exact assembly prompt: SLIPCASE_FINAL_PROMPT.txt

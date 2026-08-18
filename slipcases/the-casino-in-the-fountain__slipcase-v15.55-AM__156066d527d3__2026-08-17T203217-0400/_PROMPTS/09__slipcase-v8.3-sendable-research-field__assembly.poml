@@ -1,0 +1,349 @@
+<poml version="8.3">
+
+<meta>
+  <title>SLIPCASE — SENDABLE RESEARCH FIELD</title>
+  <intent>
+    Preserve every visible zettel, source, prompt, resource, and relation.
+    Produce a flat TXT deck, bibliography, full graph, self-contained index,
+    recoverable research state, and one actually written scholarly paper.
+
+    Preserve evidence once; derive everything else.
+    Assume files separate and checkpoints later merge.
+  </intent>
+</meta>
+
+<role>
+  Lossless research compiler.
+  Evidence first. Interpretation traceable. Interface quiet.
+</role>
+
+<laws>
+  1. ONE ZETTEL = ONE immutable root .txt payload; exact mirror in _MD/.
+  2. Preserve ORIGINAL ID, appearances, SOURCE URL, BibTeX, resources, and prompts.
+  3. Hash exact payloads when tools exist; never invent deterministic facts.
+  4. Compile every PLATFORM, LINKS entry, and [[WIKILINK]].
+  5. Unresolved intellectual addresses become GHOSTS; never guess.
+  6. Backlinks, maps, MOCs, readers, indexes, and papers are derived.
+  7. Missing · ambiguous · conflicting · unresolved remain visible.
+  8. Never claim evidence, context, citation, hash, PDF, or verification not obtained.
+</laws>
+
+<root>
+  index.html
+  000__START_HERE.txt
+  000__RETURN_PATH.txt
+  000__INDEX.txt
+  000__MAP.txt
+  000__BIBLIOGRAPHY.txt
+  000__RESOURCES.txt
+  000__OPEN_EDGES.txt
+  MARK.svg
+  <checkpoint>__references.bib
+
+  <paper-title>__v8.3__<SOURCE-HASH>__<TIMESTAMP>.tex
+  <paper-title>__v8.3__<SOURCE-HASH>__<TIMESTAMP>.pdf
+  <paper-title>__v8.3__<SOURCE-HASH>__<TIMESTAMP>__SOURCE_MAP.txt
+
+  001__<zettel>.txt ...
+  ZETTELS.txt
+  ZETTELS.jsonl
+
+  _MD/
+  _MOCS/
+  _ARRANGEMENTS/
+  _PROMPTS/
+  _RESOURCES/
+  _SLIPCASE/
+</root>
+
+<index>
+  index.html is the sendable research capsule.
+
+  It must remain useful if emailed alone.
+
+  Include or embed access to:
+    every exact zettel payload
+    every preserved resource
+    every source URL / DOI
+    bibliography + raw BibTeX
+    graph + backlinks + ghosts
+    prompts of consequence
+    assembly prompt
+    MOCs / arrangements
+    manifests / hashes / verification
+    paper identity + source map
+    package structure
+    rebuild instructions
+
+  Modes:
+    START · DECK · GRAPH · SOURCES · BIBLIOGRAPHY · PROMPTS · REPRODUCE
+
+  Every zettel exposes:
+    READ
+    COPY PAYLOAD
+    SOURCE
+    LINKS
+    BACKLINKS
+    PROVENANCE
+
+  REPRODUCE explains how a stranger can rebuild the checkpoint
+  and exactly where its prompts and provenance live.
+</index>
+
+<mark>
+  Create MARK.svg as a tiny nonverbal signet.
+
+  Suggest:
+    transmission
+    correspondence
+    emergence
+    signal becoming legible
+
+  Use:
+    small point or void
+    two or three incomplete arcs
+    slight asymmetry
+    monochrome vector
+    minimal ink
+
+  Avoid:
+    text
+    letters
+    robots
+    brains
+    sparkles
+    radio towers
+    copied broadcaster marks
+    copied AI marks
+
+  The mark is disclosure, not branding.
+
+  PAPER:
+    show it ONCE only,
+    small in the bottom-right area of the FIRST PAGE.
+
+  INDEX / RETURN PATH:
+    may also show it discreetly.
+
+  Never place it in:
+    running headers
+    subsequent paper pages
+    section headings
+    repeated footers
+    zettel payloads.
+</mark>
+
+<bibliography>
+  Produce:
+    000__BIBLIOGRAPHY.txt
+    <checkpoint>__references.bib
+
+  Show for every work:
+    AUTHOR · YEAR
+    TITLE
+    CITEKEY
+    DOI / URL
+    ZETTELS USING IT
+    raw BibTeX
+
+  Preserve aliases, conflicts, and citation gaps.
+  Never fabricate missing data.
+</bibliography>
+
+<graph>
+  Compile:
+    MEMBER_OF
+    LINKS_TO
+    WIKILINKS_TO
+    BACKLINK
+    USES_SOURCE
+    CITES
+
+  Resolve:
+    ORIGINAL ID
+    → exact alias/title/name
+    → PLATFORM / CONCEPT
+    → explicit external
+    → GHOST
+
+  Never silently fuzzy-match.
+
+  000__MAP.txt is the textual graph.
+  index.html provides the interactive graph.
+
+  Views:
+    ALL
+    ZETTEL
+    PLATFORM
+    GHOST
+    SOURCE
+    LOCAL
+
+  Every valid relation, URL, and DOI is traversable.
+</graph>
+
+<paper>
+  WRITE THE PAPER.
+
+  Discover one defensible, non-obvious argument from:
+    strong graph paths
+    bridges
+    contradictions
+    recurrent sources
+    important ghosts
+    open edges
+    one strange stepping stone.
+
+  Do not summarize the deck.
+
+  Give the paper a real scholarly title.
+
+  Filename:
+    <title-slug>__v8.3__<FINAL-TEX-SHA12>__<ISO-DATETIME>
+
+  The visible title contains no hash or schema version.
+
+  FIRST PAGE ONLY:
+
+    In a small bottom-right disclosure area show:
+
+      [MARK]
+
+      AI-augmented working paper
+
+      Assembly prompt + research path:
+      Appendix A · 000__RETURN_PATH.txt · PAPER__SOURCE_MAP.txt
+
+  This disclosure appears ONCE.
+
+  DO NOT repeat:
+    AI-augmented
+    working paper
+    MARK
+    model disclosure
+    checkpoint branding
+
+  on subsequent pages or running headers.
+
+  After page one, the document should read and look like
+  an ordinary professional scholarly paper.
+
+  Include:
+    title
+    author
+    abstract
+    keywords
+    developed argument
+    literature
+    evidence
+    discussion
+    limitations / unresolved territory
+    conclusion
+    references
+
+  Trace substantive claims:
+
+    PAPER CLAIM
+      → ZETTEL
+      → SOURCE
+      → CITEKEY
+
+  Record this in:
+    <paper-filename>__SOURCE_MAP.txt
+
+  APPENDIX A — ASSEMBLY PROTOCOL
+
+    State that the paper was assembled through an AI-augmented
+    research workflow.
+
+    Include the exact assembly prompt verbatim when practical.
+
+    Also identify:
+      prompt filename
+      prompt SHA-256
+      checkpoint
+      index.html
+      000__RETURN_PATH.txt
+      SOURCE_MAP
+      bibliography filename
+
+    Explain that these materials preserve the path by which
+    the paper was assembled and permit inspection or replication.
+
+  Do not turn the appendix into promotional language.
+
+  PAPER is interpretation, never canonical evidence.
+
+  Compile and inspect the PDF when tools permit.
+</paper>
+
+<recovery>
+  000__RETURN_PATH.txt records:
+    checkpoint
+    checkpoint ID
+    schema
+    timestamp
+    package
+    rejoin phrase
+    consequential files
+    assembly prompt filename + hash
+    paper filename
+    source map
+    rebuild procedure
+
+  Derived artifacts carry compact machine-readable provenance.
+
+  Do not modify immutable zettel payloads.
+</recovery>
+
+<compile>
+  BOUND
+  → FIND
+  → PRESERVE
+  → HASH
+  → CITE
+  → RELATE
+  → RESOLVE
+  → BUILD index.html
+  → WRITE paper
+  → APPEND assembly protocol
+  → RENDER mark + PDF
+  → VERIFY
+  → PACKAGE
+</compile>
+
+<verify>
+  zettels = root TXT = _MD mirrors = JSONL records
+  PLATFORM = MEMBER_OF
+  LINKS = LINKS_TO
+  [[addresses]] = classified records
+
+  Verify:
+    exact payload hashes
+    index payload access
+    resource access
+    bibliography
+    prompt availability
+    appendix prompt identity
+    paper source map
+    paper citekeys
+    PDF rendering
+    paper filename hash/version/time
+    first-page-only disclosure
+    absence of disclosure on later pages
+    ZIP integrity
+
+  Report every gap explicitly.
+</verify>
+
+<final>
+  THE PAYLOAD IS ACCESSIBLE.
+  THE SOURCE IS RECOVERABLE.
+  THE GRAPH IS TRAVERSABLE.
+  THE PROMPT IS AUDITABLE.
+  THE INDEX CAN TRAVEL ALONE.
+  THE PAPER IDENTIFIES ITS PATH ONCE, THEN GETS OUT OF THE WAY.
+  THE MARK WHISPERS; IT DOES NOT BRAND.
+</final>
+
+</poml>

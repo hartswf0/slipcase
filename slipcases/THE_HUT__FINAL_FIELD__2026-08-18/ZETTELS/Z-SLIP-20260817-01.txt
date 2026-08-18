@@ -1,0 +1,80 @@
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-01
+
+    TITLE:
+    A GRAMMAR CAN GENERATE A PLAN WITHOUT GENERATING THE PRACTICE THAT BUILDS IT
+
+    SOURCE:
+    George Stiny and William J. Mitchell — “The Palladian Grammar” — 1978 — Environment and Planning B 5(1), pp. 5–18.
+
+    SOURCE URL:
+    https://doi.org/10.1068/b050005
+
+    PASSAGE:
+    [PARAPHRASE] The paper develops a parametric shape grammar that generates Palladian villa ground plans and applies it to the Villa Malcontenta.
+
+    RESEARCH OBJECT:
+    Architectural “language” becomes technically generative when rules transform a representational state into a new plan, but this still stops before material construction.
+
+    LOCAL MOVE:
+    Stiny and Mitchell turn architectural canons into a formal generative system rather than merely classifying existing buildings.
+
+    SOURCE TERMS:
+    parametric shape grammar; ground plans; Palladian style; generation; rules
+
+    WHAT BECAME STRANGE:
+    The phrase “a language builds a house” becomes testable only after specifying what layer is generated: plan, geometry, fabrication command, or inhabited building.
+
+    QUESTION:
+    Where does architectural generation stop being metaphor and become operation?
+
+    DEEPER QUESTION:
+    How many interpreters remain between a generative grammar and a wall?
+
+    MECHANISM:
+    Formal rules transform shapes through ordered derivations to produce admissible ground plans.
+
+    FORMAL SHIFT:
+    <ARCHITECTURAL CANONS> → <PARAMETRIC SHAPE RULES> → [APPLY] → <GENERATED PLAN>
+
+    SOURCE FORMALISM:
+    A parametric shape grammar for Palladian villa ground plans.
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] PLAN_GENERATION != MATERIAL_CONSTRUCTION; each additional interpreter must be named.
+
+    TENSION:
+    Ingold’s account of medieval building argues that real workmanship cannot be factored into rules without remainder.
+
+    MISSING:
+    A theory of interpreter layers between plan and building.
+
+    BOUNDARY:
+    The source licenses generation of plans, not a claim that formal grammar exhausts architectural practice.
+
+    CITATION TRAIL:
+    Tim Ingold, Making; program synthesis; robotic fabrication.
+
+    TEST:
+    Trace one generated plan through documentation, fabrication, assembly, occupancy, and maintenance; record every non-entailed judgment.
+
+    PLATFORM:
+    [[THE HOUSE THAT WORLDS BUILT]]
+
+    LINKS:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+[[HOW MANY INTERPRETERS AWAY FROM THE WALL IS A WORD?]]
+
+    BIBTEX:
+    @article{stiny_mitchell_1978_palladian,
+  author={Stiny, George and Mitchell, William J.},
+  title={The Palladian Grammar},
+  journal={Environment and Planning B: Planning and Design},
+  year={1978},
+  volume={5},
+  number={1},
+  pages={5--18},
+  doi={10.1068/b050005}
+}

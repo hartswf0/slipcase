@@ -1,0 +1,78 @@
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-04
+
+    TITLE:
+    WHEN OUTPUT EDITS REWRITE SOURCE, THE ARTIFACT BECOMES A PROGRAMMING INTERFACE
+
+    SOURCE:
+    Brian Hempel, Justin Lubin, and Ravi Chugh — “Sketch-n-Sketch: Output-Directed Programming for SVG” — 2019 — UIST, pp. 281–292.
+
+    SOURCE URL:
+    https://doi.org/10.1145/3332165.3347925
+
+    PASSAGE:
+    [PARAPHRASE] Sketch-n-Sketch supports output-directed program transformations: users manipulate output and intermediate execution products, and the system proposes program changes using run-time provenance.
+
+    RESEARCH OBJECT:
+    The return path artifact → program is not unique to prompting. Output-directed programming makes the output surface an explicit editing interface for source.
+
+    LOCAL MOVE:
+    The system mixes direct manipulation with textual programming and uses provenance to connect rendered values back to source transformations.
+
+    SOURCE TERMS:
+    output-directed programming; direct manipulation; program transformation; intermediate execution products; provenance tracing; candidate programs
+
+    WHAT BECAME STRANGE:
+    The artifact can become more than a thing to inspect: it can be a channel through which the generator itself is revised.
+
+    QUESTION:
+    Should natural-language programming be designed as a form of output-directed programming rather than chat?
+
+    DEEPER QUESTION:
+    Can direct manipulation infer constraints that prose corrections currently carry badly?
+
+    MECHANISM:
+    program → output → manipulation → candidate source transformations → selection → reevaluation.
+
+    FORMAL SHIFT:
+    <SOURCE> → <OUTPUT> → [MANIPULATE] → <SOURCE TRANSFORMATION> → <NEW OUTPUT>
+
+    SOURCE FORMALISM:
+    A functional language, output-directed transformations, generic refactorings, and run-time provenance tracing.
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] A deferred-formalization environment needs both forward generation and a return path from artifact evidence into specification memory.
+
+    TENSION:
+    Semantic corrections such as “this feels exposed” may not map cleanly to direct manipulation.
+
+    MISSING:
+    A representation that carries artifact edits backward across prompt, code, geometry, and state.
+
+    BOUNDARY:
+    The source concerns SVG programs and does not prove arbitrary semantic judgments can be recovered from manipulation.
+
+    CITATION TRAIL:
+    Bidirectional evaluation; direct manipulation; CAD; prompt interfaces.
+
+    TEST:
+    Compare verbal correction against artifact manipulation for the same generated house over ten revisions.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[THE ARTIFACT BECOMES SPECIFICATION]]
+[[BIDIRECTIONAL DESCRIPTION]]
+
+    BIBTEX:
+    @inproceedings{hempel2019sketchnsketch,
+  author={Hempel, Brian and Lubin, Justin and Chugh, Ravi},
+  title={Sketch-n-Sketch: Output-Directed Programming for SVG},
+  booktitle={Proceedings of the 32nd Annual ACM Symposium on User Interface Software and Technology},
+  pages={281--292},
+  year={2019},
+  doi={10.1145/3332165.3347925}
+}

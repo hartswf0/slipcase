@@ -1,0 +1,49 @@
+SLIPCASE VERIFICATION — 2026-08-18
+
+EVIDENCE COUNTS
+  admitted zettels: 43
+  root zettel TXT: 43
+  _MD mirrors: 43
+  JSON records: 43
+  invariant: PASS
+
+RELATION COUNTS
+  PLATFORM occurrences: 43
+  MEMBER_OF records: 43
+  invariant: PASS
+  LINKS wikilink occurrences: 124
+  LINKS_TO records: 124
+  invariant: PASS
+
+PAYLOADS
+  fixed schema field order: PASS
+  current root TXT SHA-256 matches ZETTELS.json: PASS (43/43)
+  prior 34 zettels retain prior SHA-256 receipts where available, but original root-byte layout was unavailable; reconstructed files are not falsely claimed byte-identical.
+
+PROMPT
+  SLIPCASE_FINAL_PROMPT.txt byte-identical to current uploaded prompt: PASS
+  SHA-256: 9ceab9e5344b73e4218462f2ad86fea590c5b8dde2820aa25c16fd5875362b1a
+
+PAPER
+  PDF exists: PASS
+  rendered page count: 8
+  inspected: first page, middle page, conclusion page, references page
+  clipping / missing glyphs observed: NONE
+  paper citekeys: amesmcclelland2002suburbs, austin1962things, berenson2025levitt, euclid1926, goodman1978ways, ingold2013making, levittLease1948, restonDesignReview, sears1918honorbilt, wagner2026mcmodernslopcore, wagner2026mcmodernslopcoreRepresentation, wagner2026scroll
+  paper citekeys subset of bibliography entries: PASS
+  unresolved citations in final LaTeX log: PASS
+  LaTeX note: final build uses an embedded thebibliography because BibTeX executable was unavailable; the package also preserves the complete .bib file.
+
+SOURCE VERIFICATION
+  NPS Historic Residential Suburbs PDF body: INCLUDED and inspected.
+  Levitt production-step discrepancy: PRESERVED as 26 (Berenson/Yale) versus 27 (Ames & McClelland/NPS), not silently reconciled.
+  Sears catalog: LINK_ONLY (large external body not bundled).
+  Euclid, Reston, Wagner, Levitt covenant archive: LINK_ONLY receipts plus source-bearing zettels.
+
+GAPS / LIMITS
+  The seven chat-created SUB-01 through SUB-07 objects were reconstructed from the visible conversation state available to this run; no byte-addressable original chat export existed.
+  Prior root zettel file bytes were not individually available; their structured field values and prior hash receipts were recovered from the earlier portable index.
+  These limitations are recorded in 000__MAKING_HISTORY.txt and 000__RETURN_PATH.txt.
+
+ZIP
+  integrity test: PASS (unzip -t; no archive errors).

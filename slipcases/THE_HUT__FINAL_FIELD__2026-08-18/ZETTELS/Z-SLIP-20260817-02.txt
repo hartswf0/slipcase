@@ -1,0 +1,80 @@
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-02
+
+    TITLE:
+    PROGRAM SKETCHING SHOWS THAT INCOMPLETE SPECIFICATIONS COULD EXECUTE BEFORE LLMS
+
+    SOURCE:
+    Armando Solar-Lezama — “The Sketching Approach to Program Synthesis” — 2009 — APLAS, pp. 4–13.
+
+    SOURCE URL:
+    https://people.csail.mit.edu/asolar/papers/Solar-Lezama09.pdf
+
+    PASSAGE:
+    [PARAPHRASE] A sketch is a partial program that encodes solution structure while leaving low-level details unspecified; a synthesizer fills the holes subject to tests or a reference implementation.
+
+    RESEARCH OBJECT:
+    The novelty of prompt programming cannot be “computation begins before the specification is complete” in the broad sense; program sketching already operationalizes partial programs.
+
+    LOCAL MOVE:
+    Solar-Lezama makes incompleteness explicit and computational by representing unknown details as holes constrained by correctness machinery.
+
+    SOURCE TERMS:
+    sketch; partial program; holes; synthesis; test routines; reference implementation; correctness criteria
+
+    WHAT BECAME STRANGE:
+    The interesting difference is not incompleteness but what kinds of incompleteness can remain unformalized when execution starts.
+
+    QUESTION:
+    What distinguishes a prompt gap from a program hole?
+
+    DEEPER QUESTION:
+    Have LLMs moved deferred formalization farther upstream, before the unresolved dimension has a declared type?
+
+    MECHANISM:
+    Known high-level structure + explicit holes + correctness criteria → synthesis → completed program.
+
+    FORMAL SHIFT:
+    <PARTIAL PROGRAM> → <EXPLICIT HOLES> → [SYNTHESIZE] → <COMPLETED PROGRAM>
+
+    SOURCE FORMALISM:
+    The Sketch language and synthesizer, including holes and reference/test-based correctness.
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] A prompt may contain unresolved semantic predicates such as “private” or “like a river” that are not predeclared variables.
+
+    TENSION:
+    This weakens any firstness claim for deferred formalization while sharpening the claim about untyped semantic incompleteness.
+
+    MISSING:
+    A taxonomy of missingness: hole, parameter, example-defined behavior, metaphor, value judgment, latent assumption.
+
+    BOUNDARY:
+    Sketching still requires a formal partial program and correctness criteria; it does not license arbitrary ambiguity.
+
+    CITATION TRAIL:
+    CEGIS; programming by example; natural-language programming.
+
+    TEST:
+    Give the same task to Sketch and an LLM; measure what must be formalized before the first executable candidate exists.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[DEFERRED FORMALIZATION]]
+[[PROGRAM HOLES AND PROMPT GAPS]]
+
+    BIBTEX:
+    @inproceedings{solarlezama2009sketching,
+  author={Solar-Lezama, Armando},
+  title={The Sketching Approach to Program Synthesis},
+  booktitle={Programming Languages and Systems: APLAS 2009},
+  series={Lecture Notes in Computer Science},
+  volume={5904},
+  pages={4--13},
+  year={2009},
+  doi={10.1007/978-3-642-10672-9_3}
+}

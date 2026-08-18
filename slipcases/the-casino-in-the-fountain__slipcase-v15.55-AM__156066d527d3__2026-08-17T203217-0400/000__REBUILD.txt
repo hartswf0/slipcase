@@ -1,0 +1,44 @@
+REBUILD — THE CASINO IN THE FOUNTAIN
+
+PURPOSE
+  Reconstruct the derived research field without access to the originating chat.
+
+CANONICAL INPUTS
+  Root zettel TXT cards (exact payloads)
+  _MD/ exact mirrors
+  ZETTELS.jsonl
+  _SLIPCASE/APPEARANCES.jsonl
+  _SLIPCASE/RESOURCES.jsonl
+  _SLIPCASE/BIBLIOGRAPHY.jsonl
+  _SLIPCASE/NODES.jsonl
+  _SLIPCASE/RELATIONS.jsonl
+  _PROMPTS/
+  _RESOURCES/
+  the-casino-in-the-fountain__references.bib
+  _PROMPTS/10__slipcase-v15.55-AM__assembly.poml
+
+IDENTITY
+  Zettel object identity = SHA-256 of exact payload bytes.
+  Original IDs are historical aliases and may collide.
+  Filenames and display order are not identity.
+
+RELATION RESOLUTION
+  exact ORIGINAL ID -> registered alias -> exact unique title/name -> PLATFORM -> known CONCEPT -> explicit external -> GHOST.
+  Never fuzzy-match silently.
+
+REBUILD ORDER
+  1. Verify root TXT and _MD pairs hash identically.
+  2. Load ZETTELS.jsonl and appearances/resources/bibliography JSONL.
+  3. Recompute hashes and compare with content_sha256.
+  4. Rebuild graph nodes/edges from PLATFORM, LINKS, and every [[ADDRESS]].
+  5. Rebuild backlinks and GHOST nodes without editing zettels.
+  6. Regenerate INDEX, MAP, bibliography, resources, prompts, MOCs, NETWORK, READER, and CARDS.
+  7. Rebuild the paper only as a NEW derived interpretation; never overwrite historical paper evidence silently.
+  8. Recompute manifest/checksums and package ZIP.
+
+SENDABLE CAPSULE
+  index.html embeds the available payloads, prompts, machine records, and preserved resource bodies. It can be used as a recovery point when separated from the ZIP.
+
+ASSEMBLY INSTRUMENT
+  _PROMPTS/10__slipcase-v15.55-AM__assembly.poml
+  SHA-256: a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a

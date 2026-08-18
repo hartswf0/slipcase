@@ -1,0 +1,106 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black}
+\fancypagestyle{firstpage}{%
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+  \fancyfoot[R]{\scriptsize AI-augmented working paper\\Research and assembly record: Appendix A · SOURCE MAP}
+}
+\title{Knowing by Stumbling\\\large Prompt Craft as Experimental Calibration in Opaque Generative Systems}
+\author{Watson Hartsoe}
+\date{Working paper · 17 August 2026}
+\begin{document}
+\maketitle
+\thispagestyle{firstpage}
+\begin{abstract}
+A 2022 interview with game developer Joshua Larson captures text-to-image prompting before stable conventions had hardened. Larson describes a practice of sensing that a phrase is promising after only a few outputs, generating hundreds or thousands of variants until he feels he is ``going in circles,'' using indirect terms such as ``film still'' or ``museum display'' because they appear to summon better photographic results than the literal word ``photorealistic,'' and occasionally stumbling into valuable aesthetics he cannot reproduce. He also warns against superstition while acknowledging that the system itself is in an ``in between phase.'' Read closely, these remarks suggest a model of prompt expertise different from either command writing or expressive description. The expert operates an opaque, stochastic, and sometimes changing instrument. Skill consists in calibration: forecasting where further sampling is worth the cost, deciding when to leave a local region, discovering model-legible lexical handles, separating intervention effects from noise and drift, and converting serendipitous accidents into reproducible lineages when possible. Research on information foraging, vision-language representation learning, serendipity, prompt artists, distributional drift, model-feedback adaptation, and metamorphic testing sharpens these operations without collapsing them into a single theory. The central claim is that early prompt craft is best understood as an experimental practice of knowing by intervention under partial causal knowledge. Its deepest unresolved problem is not how to phrase the perfect command, but how to know what one has learned from a system that can surprise, mislead, and change while being studied.
+\end{abstract}
+\textbf{Keywords:} text-to-image generation; prompting; experimental practice; calibration; serendipity; model drift; human-AI interaction
+
+\section{A practitioner who does not possess the rule}
+Larson’s account begins with an apparent contradiction. He calls prompting a ``language,'' learns it socially by watching other users, and accumulates techniques for reordering phrases, balancing references, and exploring variants. Yet he repeatedly denies having full command. Some aesthetics can only be encountered in the middle of thirty or forty images. A promising phrase is not known from a specification but from what he calls a ``spidey sense.'' A particularly valuable character appears while he is working on an unrelated comic-book explosion and remains ``ephemeral'' when he tries to recreate it. His own description of expertise therefore contains a distinction that conventional accounts of command obscure: one can become highly skilled at operating a system without possessing a complete causal model of its controls.
+
+This matters because the usual unit of analysis—the prompt string—makes the wrong event central. Larson’s consequential decisions occur around the string. He decides whether a few early samples indicate a productive neighborhood; whether a prompt deserves hundreds more generations; whether repeated outputs have become too similar; whether an indirect cultural reference has more influence than a literal adjective; whether a surprising image is a discovery or only a lucky draw; and whether an apparent pattern should be trusted at all. These are judgments about an experimental process.
+
+\section{The “spidey sense” as a forecast}
+Information-foraging theory provides a useful way to sharpen Larson’s first judgment. Pirolli and Card model search in environments where valuable information is clustered, emphasizing cues that indicate likely value and decisions about how long to remain in a patch \cite{PirolliCard1999}. Larson’s ``spidey sense'' can be read in this restricted sense: not as mystical intuition and not simply as a judgment that the current image is attractive, but as a forecast that a phrase will continue to yield interesting results if sampled further.
+
+That interpretation exposes a measurable expert skill. After only a few outputs, an expert may detect variance, coherence, stylistic fit, or latent combinability that predicts future yield. But the same situation is vulnerable to selection bias: a lucky early sample can make an ordinary prompt look fertile. The relevant empirical question is therefore calibration. Can experienced users predict which prompt neighborhoods will remain productive over a large holdout batch better than novices can? Prompt expertise may reside partly in estimating future information gain from small, noisy samples.
+
+The same framework changes Larson’s phrase ``going in circles.'' He treats perceptual sameness as evidence that he has ``thoroughly explored'' a concept and can move on. Yet leaving a patch is not the same thing as exhausting it. A rational searcher can stop because marginal yield has fallen below what another region promises, even though valuable states remain undiscovered. Larson’s stopping rule may therefore be a practical estimate of diminishing returns, not a claim about complete coverage. The distinction matters for research because the success of a search policy cannot be assessed by counting generations alone. Ten thousand images can still constitute a locally narrow search if mutation remains constrained.
+
+\section{Words that address rather than describe}
+Larson’s most technically suggestive observation concerns photographic appearance. He says that ``photorealistic'' is often a word to avoid. Instead, he reaches for phrases such as ``film still,'' ``miniatures,'' ``museum display,'' photographers, film stocks, lens types, and other references that, in his working theory, point toward bodies of photographic source material. Whatever the underlying Midjourney mechanism, the operative distinction is striking: the term that literally names the desired property may be weaker than an indirect cultural phrase.
+
+Related vision-language research makes this possibility intelligible without establishing Larson’s causal explanation. CLIP was trained on 400 million image-text pairs, and its authors describe natural language as a way to reference learned visual concepts after pretraining \cite{RadfordEtAl2021}. This is not evidence that Midjourney used CLIP in the same way, nor that a phrase retrieves a literal ``set of data.'' It does, however, show why prompt language need not behave like a transparent list of desired attributes. A culturally specific expression can acquire a dense relation to learned visual regularities. The practical prompt may function as an address into learned association space.
+
+This interpretation gains ethnographic support from Chang and colleagues’ study of prolific text-to-image creators. Their participants sought specialized vocabulary—including terms found through architectural blogs—to produce distinctive images, and some cultivated model glitches as styles \cite{ChangEtAl2023PromptArtists}. Larson’s own talk of ``source data'' therefore opens a deeper question than whether his folk theory is literally correct. Prompt craft may involve lexical prospecting: mining vocabularies from photography, architecture, cinema, museums, materials, and art history because those words have model effects that ordinary descriptive language does not reveal in advance.
+
+The distinction between control and explanation should remain explicit. A heuristic can be reliably useful while its causal story is wrong. Larson may correctly observe that ``film still'' produces a stronger photographic effect than ``photorealistic'' while misidentifying the mechanism as direct access to a source-data category. Operational validity and mechanistic validity are separate axes. A mature science of prompting would preserve useful interventions while keeping explanations provisional until discriminating evidence exists.
+
+\section{Discovery is not capture}
+Larson’s rabbit-hole character is a particularly clear case of generative serendipity. He pursues one problem, encounters an unrelated aesthetic, recognizes that it has value for another task, and then fails to reproduce it reliably. Makri and Blandford’s empirical model of serendipitous information encounters separates unexpectedness, insight, recognition of potential value, and actions taken to exploit the connection \cite{MakriBlandford2012}. Generative practice requires at least one further distinction: exploitation may fail because the conditions of the discovery were not captured well enough to recreate it.
+
+The resulting sequence is not simply success or failure. \emph{Discovery} is recognition of a valuable unexpected state. \emph{Capture} is preservation of sufficient generating conditions—prompt, model version, seed, image inputs, remix ancestry, parameters, and other state—to make further work possible. \emph{Control} is the ability to deliberately produce a recognizable family of related results. Larson’s case has discovery and value recognition but incomplete control.
+
+This helps explain the otherwise paradoxical report in \emph{The Prompt Artists} that creators can turn model ``glitches'' into styles \cite{ChangEtAl2023PromptArtists}. A glitch becomes a style only when a singular anomaly acquires a lineage. The creator must stabilize some family resemblance without eliminating the instability that made the event interesting. Reproducibility is therefore not all-or-nothing. Creative control can mean controlling a distribution around a valued anomaly rather than reproducing one image exactly.
+
+\section{The coin flip and the moving instrument}
+Larson is unusually explicit about epistemic error. He calls out ``superstition and confirmation bias'' and compares prompt interpretation to believing that a run of coin flips changes the probability of the next flip. The warning is necessary: stochastic generation makes causal hallucination easy. But the same interview contains the condition that breaks the coin analogy. Larson describes Midjourney as being in an ``awkward middle ground'' and an ``in between phase'' while a next-generation model is being developed. The interviewer likewise describes a skill built on an ``ever shifting'' foundation.
+
+A coin-flip correction assumes that the generating process is stationary. Hosted generative systems may not be. Work on stochastic optimization under distributional drift explicitly separates gradient noise from time drift in systems whose objective changes under unknown dynamics \cite{CutlerDrusvyatskiyHarchaoui2023}. The direct analogy to prompt craft is limited, but the distinction is indispensable. An output difference can arise from the prompt intervention, stochastic variation, evaluator variation, or a change in the system itself. ``The model changed'' can be a superstitious story in one setting and the correct diagnosis in another.
+
+Prompt expertise therefore requires instrument calibration across time, not merely repeated sampling within a session. Stable canary prompts, version identifiers, longitudinal replication, and change records become epistemic infrastructure. Without them, a community cannot distinguish a false causal rule from a real rule that stopped working, or random variation from an undocumented shift. The deeper problem is experimental characterization of a moving target.
+
+\section{Citizen science when there is no right image}
+Larson eventually names the community’s activity directly: ``citizen science research type stuff, with varying levels of scientific rigor.'' This formulation is stronger than describing Discord as peer learning. Users are attempting to infer causal behavior from interventions on an opaque system. Yet image generation has a severe oracle problem. For many creative tasks there is no correct output against which a single run can be judged.
+
+Metamorphic testing offers an unexpected methodological precedent. Chen, Cheung, and Yiu proposed testing software without a conventional oracle by examining relations among executions of related test cases \cite{ChenCheungYiu1998}. Prompt research can adopt the logic without pretending that stochastic image generators are ordinary deterministic programs. Instead of asking whether one image is ``right,'' a prompt-craft claim can specify a probabilistic relation: if only a lens term changes, certain photographic cues should shift while content identity remains within a tolerance; if phrase order is claimed to alter emphasis, repeated distributions should differ in a preregistered direction.
+
+This changes what community evidence looks like. The unit is no longer the impressive winner image. It is a versioned relation among controlled batches. Failed relations are as important as successful ones. A community that stores these tests could accumulate causal knowledge even when no single aesthetic oracle exists. It could also expose which ``principles'' are local to one model version.
+
+\section{Learning a language that the machine teaches back}
+Larson’s earliest description—``the language of prompting''—remains important, but it should not be understood as a stable vocabulary humans simply invent. Don-Yehiya, Choshen, and Abend analyze iterative Midjourney interactions and find prompt convergence consistent both with users realizing that they omitted desired details and with users adapting to the model’s preferences \cite{DonYehiyaChoshenAbend2023}. Better prompting can therefore mean two different things: expressing a human intention more faithfully or speaking a form of language that a particular model rewards.
+
+This distinction returns us to Larson’s later comment that advanced users become interested in principles rather than exact prompt strings. A principle may indeed be more general than a phrase, but generality has to be tested. Some principles may describe humanly meaningful composition. Others may be rules of a model dialect that disappear when transferred across systems or versions. The portability of expert rules is therefore an empirical question, not a property implied by their abstraction.
+
+\section{Knowing by intervention}
+Taken together, Larson’s remarks suggest a conception of prompt craft that is narrower and more interesting than either ``natural-language programming'' or ``creative collaboration.'' The practitioner operates through interventions whose causal semantics are only partly known. They learn by changing the instrument’s inputs and observing consequences. The expert is not merely better at saying what they want. They are better—perhaps—at deciding which interventions are worth pursuing, when an effect has replicated enough to trust, when a region is no longer yielding information, when an indirect lexical handle reaches a useful learned association, when a surprise can be captured, and when the instrument itself may have drifted.
+
+The strange stepping stone is that partial causal ignorance is not incidental to the practice; it organizes the form of expertise. A complete causal model would convert many of these judgments into ordinary parameter setting. In its absence, expertise is calibration under uncertainty. That does not make prompting magical. It makes it closer to experimental instrument work, where reliable manipulation can precede full explanation and where disciplined uncertainty is itself a skill.
+
+This framing also suggests what future interfaces should preserve. They should not only save successful prompts. They should preserve sampling histories, predictions, stopping decisions, rejected branches, state needed for replay, version information, and controlled relational tests. Such records would make visible the difference between discovery and capture, between intervention validity and causal explanation, and between noise and drift. They would turn the evolution of prompt practice from a stream of anecdotes into an inspectable experimental history.
+
+\section{Limits and open questions}
+The empirical center of this paper is one practitioner interview from October 2022. Larson’s practice is unusually intensive and cannot stand for all prompt users. Several external literatures are used as discriminating lenses rather than genealogical claims: information foraging does not imply that prompting is information retrieval; CLIP does not establish Midjourney’s internal architecture; distributional-drift analysis does not describe the exact dynamics of a hosted image service; and metamorphic testing must be adapted carefully because creative outputs are probabilistic and normatively judged.
+
+The most important open questions are therefore experimental. Can experts actually predict prompt-region yield? What signal corresponds to ``going in circles''? Which indirect lexical proxies transfer across model families? What state converts a one-off anomaly into a reproducible style? Can canary prompts separate stochastic noise from service drift? Which prompt-craft rules survive preregistered relational tests? And when a prompt improves, how much of the gain is clearer human intention versus accommodation to a particular model?
+
+\section{Conclusion}
+Joshua Larson’s account is valuable precisely because it refuses the fantasy of perfect verbal control. His strongest descriptions are about uncertainty: sensing a promising phrase, wandering around a peak, stumbling into an aesthetic, failing to lock it in, trying to avoid superstition, and experimenting because the system cannot yet be fully explained. Those are not peripheral difficulties surrounding prompt craft. They are its operative center.
+
+Prompt expertise, on this account, is a form of knowing by stumbling—but not stumbling blindly. It is the attempt to make chance informative: to recognize where to search, know when to leave, preserve what matters when surprise occurs, and design tests strong enough to distinguish a useful intervention from a story told after the fact. The unresolved wager is whether this calibration can become cumulative knowledge while the models, vocabularies, and human preferences involved continue to change.
+
+\begin{thebibliography}{9}
+\bibitem{Larson2022} Joshua Larson. Interview with Watson Hartsoe, 18 October 2022. Unpublished research transcript supplied by interviewer.
+\bibitem{PirolliCard1999} Peter Pirolli and Stuart Card. Information Foraging. \emph{Psychological Review} 106(4):643--675, 1999. \url{https://doi.org/10.1037/0033-295X.106.4.643}
+\bibitem{RadfordEtAl2021} Alec Radford et al. Learning Transferable Visual Models From Natural Language Supervision. \emph{Proceedings of ICML}, PMLR 139:8748--8763, 2021. \url{https://proceedings.mlr.press/v139/radford21a.html}
+\bibitem{ChangEtAl2023PromptArtists} Minsuk Chang et al. The Prompt Artists. \emph{Proceedings of the 15th Conference on Creativity and Cognition}, 75--87, 2023. \url{https://doi.org/10.1145/3591196.3593515}
+\bibitem{MakriBlandford2012} Stephann Makri and Ann Blandford. Coming across information serendipitously - Part 1: A process model. \emph{Journal of Documentation} 68(5):684--705, 2012. \url{https://doi.org/10.1108/00220411211256030}
+\bibitem{CutlerDrusvyatskiyHarchaoui2023} Joshua Cutler, Dmitriy Drusvyatskiy, and Zaid Harchaoui. Stochastic Optimization under Distributional Drift. \emph{Journal of Machine Learning Research} 24(147):1--56, 2023. \url{https://jmlr.org/papers/v24/21-1410.html}
+\bibitem{ChenCheungYiu1998} T. Y. Chen, S. C. Cheung, and S. M. Yiu. Metamorphic Testing: A New Approach for Generating Next Test Cases. Technical Report HKUST-CS98-01, 1998. \url{https://arxiv.org/abs/2002.12543}
+\bibitem{DonYehiyaChoshenAbend2023} Shachar Don-Yehiya, Leshem Choshen, and Omri Abend. Human Learning by Model Feedback: The Dynamics of Iterative Prompting with Midjourney. \emph{EMNLP 2023}, 4146--4161. \url{https://aclanthology.org/2023.emnlp-main.253/}
+\end{thebibliography}
+
+\appendix
+\section{Assembly and provenance}
+This manuscript was assembled with AI assistance from a preserved research corpus. The package accompanying this paper contains exact zettel payloads, the Joshua Larson source package, the previous Slipcase checkpoint, bibliography, relation graph, source map, verification report, and reconstruction instructions. The prior uploaded Ancient Master assembly instrument is preserved byte-for-byte under \texttt{\_PROMPTS/}. The current inline v13.1/v15.0 refinement grammar was supplied in chat but was not exposed to the build environment as a byte-addressable attachment; the package records that limitation rather than claiming exact preservation.
+\end{document}

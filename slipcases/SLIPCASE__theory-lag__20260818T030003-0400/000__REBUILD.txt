@@ -1,0 +1,10 @@
+REBUILD
+
+1. Treat every numbered root zettel TXT as immutable evidence.
+2. Verify its SHA-256 against ZETTELS.json and 000__PACKAGE_MANIFEST.sha256.
+3. Mirror payloads exactly into _MD/ if rebuilding.
+4. Parse ORIGINAL ID, TITLE, SOURCE URL, PLATFORM, LINKS, and every [[ADDRESS]].
+5. Resolve only exact IDs/titles/platforms; preserve unresolved labels as GHOSTS.
+6. Rebuild derived JSON, MOCs, graph, index.html, READER.html, NETWORK, bibliography, and cards without rewriting evidence.
+7. Treat The_Program_Arrives_Late__FINAL.* as the final paper realization and The_Program_Arrives_Late__SOURCE_MAP.txt as its claim trace.
+8. Use _PROMPTS/005__SLIPCASE_v15.55_AM__ASSEMBLY_PROMPT.txt as the final assembly instrument.

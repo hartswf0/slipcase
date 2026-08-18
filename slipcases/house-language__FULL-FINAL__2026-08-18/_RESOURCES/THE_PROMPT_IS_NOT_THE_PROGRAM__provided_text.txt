@@ -1,0 +1,176 @@
+The Prompt Is Not the Program
+
+Deferred Formalization and the New Unit of Programming
+
+Abstract
+
+Natural-language programming is often described as an easier interface to code or a higher level of abstraction. Both miss the key change. Large language models allow computation to begin while parts of a specification remain unresolved. A user can provide a metaphor, example, or loosely stated quality; the system can produce a provisional artifact; and that artifact can reveal missing constraints. I call this deferred formalization. Its unit is not the prompt but a loop: describe → generate → inspect → correct → regenerate. Failures become specifications, examples become constraints, and accepted properties become invariants. The key boundary is not between code and language, but between problems where failure is legible enough to guide correction and those where it is not. The specification is therefore distributed across a genealogy of corrections, which future systems should preserve.
+
+Keywords: natural-language programming; large language models; specification; prompt programming; human–AI interaction
+
+---
+
+1. The Wrong Argument
+
+Natural-language programming is often framed as a question of whether prompts are “real programming,” or whether English is precise enough to replace code. These questions miss the point.
+
+The more important fact is that computation can begin before a specification is complete.
+
+Programming has always involved iteration and discovery. What changes with generative models is that unfinished ideas can directly produce executable artifacts.
+
+Consider:
+
+«Build me a house that remembers.»
+
+There is no schema or definition of “memory.” Yet a system can still produce a house. It may store history, forget it, or behave inconsistently. This gives us something to inspect.
+
+We can then refine:
+
+«Reloading cannot erase the house’s past.»
+
+The first artifact helps produce the second instruction. This reversal is central.
+
+---
+
+2. Deferred Formalization
+
+Call this process deferred formalization.
+
+It occurs when an underdefined instruction produces an artifact, and that artifact reveals missing constraints.
+
+Its basic loop is:
+
+describe → generate → inspect → correct → regenerate
+
+The prompt is not the unit; the loop is.
+
+For example:
+
+«Private.»
+
+In an architectural design, the system may place a bed in full view of the entrance. The failure is visible. We refine:
+
+«No direct sightline from entrance to bed.»
+
+The next version changes accordingly.
+
+Meaning is not fixed in advance; it is shaped through use and correction.
+
+---
+
+3. The Artifact Becomes Specification
+
+The artifact is not just output—it becomes part of the specification process.
+
+Metaphor illustrates this:
+
+«Make circulation like a river, not a corridor.»
+
+The system may first produce a curved hallway. That is rejected. The metaphor is then refined into constraints about flow, branching, and hierarchy.
+
+The key point is that metaphor can participate in design before it is fully formalized.
+
+Formalization is not removed; it is delayed and distributed across iterations.
+
+---
+
+4. Thick Prompting
+
+Thick prompting is not long prompting, but prompting enriched by prior failures and corrections.
+
+Examples, counterexamples, references, and invariants accumulate:
+
+Addition| Role
+Example| narrows outputs
+Counterexample| excludes failures
+Reference| anchors structure
+Scenario| tests behavior
+Invariant| preserves properties
+
+Thickness is measured in constraints earned through iteration, not token count.
+
+---
+
+5. The Roof Problem
+
+Deferred formalization works only when failures are visible.
+
+A roof may look correct but leak in rain. The failure becomes a test:
+
+«Ensure all roof surfaces drain under heavy rain.»
+
+Now the system must satisfy a real constraint.
+
+But not all failures are visible. Some errors—security flaws, numerical instability—may not be detectable from the artifact alone.
+
+So the limit is:
+
+«Deferred formalization works only when correctness is legible from outcomes.»
+
+---
+
+6. When Generation Gets Cheap
+
+When systems can generate many variants, the scarce skill becomes judgment across iterations.
+
+Not this one.
+This one leaks.
+This one preserves structure.
+
+Expertise shifts from building once to selecting and refining across many outputs.
+
+---
+
+7. The Genealogy of Constraints
+
+The specification is not in the final prompt but in its history:
+
+- accepted constraints
+- rejected failures
+- preserved invariants
+- unresolved tensions
+
+This is a genealogy of constraints, not a single instruction.
+
+Without it, systems lose the reasons artifacts work.
+
+---
+
+8. From Chat History to Constraint History
+
+Future systems should not just store conversations, but structured constraints:
+
+- what must be preserved
+- what failed and why
+- what scenarios define correctness
+- what contradictions remain
+
+The transcript is not the program. The constraint history is.
+
+---
+
+9. The Prompt Is Not the Program
+
+Natural-language programming is not English replacing code, nor vague programming.
+
+It is a shift in time: computation begins before specification is complete.
+
+Artifacts are produced early, inspected, and used to refine meaning.
+
+The program is distributed across:
+
+description → artifact → failure → correction → constraint
+
+The prompt is only the starting point. The program is the evolving structure of what survives iteration.
+
+---
+
+References
+
+Cypher, Allen, ed. Watch What I Do: Programming by Demonstration. MIT Press, 1993.
+Geertz, Clifford. “Thick Description.” 1973.
+Hutchins, Edwin. Cognition in the Wild. MIT Press, 1995.
+Naur, Peter. “Programming as Theory Building.” 1985.
+Schön, Donald A. The Reflective Practitioner. 1983.
+Suchman, Lucy A. Plans and Situated Actions. 1987.
+Wittgenstein, Ludwig. Philosophical Investigations. 1953.

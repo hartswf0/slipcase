@@ -1,0 +1,4275 @@
+ZETTEL
+
+ID:
+DEFAULT-IMAGES-CHI26-ROOT
+
+TITLE:
+A generator can fail to understand a prompt without failing to generate: semantic failure can appear as a polished image.
+
+SOURCE:
+Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender — “An Exploration of Default Images in Text-to-Image Generation” — CHI ’26 — 2026 — https://doi.org/10.1145/3772318.3790681
+
+PASSAGE:
+[PARAPHRASE] The authors define “default images” as visually similar images produced from different and unrelated prompts when a text-to-image system does not recognize or cannot strongly visualize its input. The system still returns an image, so failure appears as a plausible visual artifact rather than an explicit error. fileciteturn1file1L90-L109
+
+[PARAPHRASE] Their large-scale study analyzes 189,432 prompts and 757,728 images and finds default-image behavior in real Midjourney usage, not merely in prompts deliberately constructed by the researchers. fileciteturn1file1L77-L89
+
+RESEARCH OBJECT:
+The research object is not merely “bad prompt adherence.” It is a specific class of silent execution failure:
+
+the system accepts an input
+→ cannot strongly ground some of it
+→ nevertheless must produce an output
+→ falls into recurrent visual configurations
+→ returns those configurations as if generation had succeeded.
+
+The visible image therefore conceals an important distinction between successful execution and successful interpretation.
+
+LOCAL MOVE:
+Split GENERATION SUCCESS from SEMANTIC SUCCESS.
+
+A text-to-image interface can report success at the level of computation while failing at the level of reference.
+
+SOURCE TERMS:
+default images
+unknown inputs
+unrecognized prompts
+latent space
+generic visual patterns
+known concepts
+stochastic sampling
+model vocabulary
+prompt engineering
+
+WHAT BECAME STRANGE:
+The absence of understanding does not produce absence.
+
+It produces imagery.
+
+The system’s “I do not know” may therefore have a positive visual form: women, birds, vegetation, floating objects, surreal landscapes, or other recurrent motifs.
+
+QUESTION:
+What kind of computational object is a default image: a fallback, an attractor, a memorized region, an interface artifact, or merely an empirical pattern that does not yet warrant any of those causal interpretations?
+
+DEEPER QUESTION:
+What other generative systems convert semantic uncertainty into plausible positive output instead of exposing uncertainty as an error state?
+
+MECHANISM:
+[PARAPHRASE] The paper proposes that weak or unknown semantic guidance leaves generation more dependent on learned generic or frequent visual patterns, while stochastic sampling determines which particular recurring motif appears. fileciteturn1file9L561-L575
+
+FORMAL SHIFT:
+FROM:
+
+unknown input
+→ generation failure
+
+TO:
+
+unknown input
+→ successful execution
+→ recurrent fallback-like output
+→ hidden semantic failure.
+
+SOURCE FORMALISM:
+The paper operationally identifies a default image through the conjunction of:
+
+visually similar outputs
++
+dissimilar input prompts.
+
+Its large-scale method first clusters images by visual similarity and then removes clusters whose prompts are too lexically or semantically similar. fileciteturn0file0L590-L647
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+G(p, s, m) → i
+
+where:
+p = prompt
+s = sampling state / seed
+m = model or model version
+i = generated image
+
+Ordinary semantic convergence:
+
+similar(p₁,p₂) high
+→ similar(G(p₁),G(p₂)) high
+
+Default-image candidate:
+
+similar(p₁,p₂) low
+AND
+similar(G(p₁),G(p₂)) high.
+
+The anomaly is therefore not simply image repetition.
+
+It is:
+
+LINGUISTIC DIVERGENCE
++
+VISUAL CONVERGENCE.
+
+TENSION:
+The paper sometimes explains the phenomenon in terms of latent-space structure and training-data gaps, but later acknowledges that Midjourney is a proprietary pipeline whose prompt rewriting or other platform mechanisms are not observable.
+
+The empirical phenomenon is stronger than the proposed causal explanation.
+
+MISSING:
+A causal decomposition separating:
+
+training-data coverage
+text encoding
+prompt rewriting
+cross-attention or equivalent conditioning
+sampling
+model priors
+platform-level processing.
+
+BOUNDARY:
+The empirical study concerns Midjourney and does not establish that identical mechanisms generate superficially similar behavior in Stable Diffusion, Flux, Imagen, Janus, video generators, or other architectures.
+
+CITATION TRAIL:
+Simonen et al. 2026
+→ definition of default images
+→ ablation studies
+→ large-scale visual-convergence / prompt-divergence detection
+→ causal-opacity limitation
+→ unresolved question: where in the generation pipeline does semantic failure become a recurrent positive image?
+
+TEST:
+Hold prompts, model version, and sampling conditions under experimental control in an inspectable open-weight model.
+
+Create graded semantic perturbations from well-represented term → rare term → low-resource-language term → corrupted term → random token.
+
+Measure where visual outputs cease following the requested concept and begin converging across unrelated prompts.
+
+Then inspect text embeddings, cross-attention/conditioning signals, and denoising trajectories to determine where convergence first appears.
+
+PLATFORM:
+Midjourney; CHI 2026 empirical study.
+
+LINKS:
+NONE
+
+BIBTEX:
+@inproceedings{Simonen2026DefaultImages,
+  author = {Simonen, Hannu and Kiviniemi, Atte and Johnston, Hannah and Barranha, Helena and Oppenlaender, Jonas},
+  title = {An Exploration of Default Images in Text-to-Image Generation},
+  booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+  year = {2026},
+  doi = {10.1145/3772318.3790681},
+  url = {https://doi.org/10.1145/3772318.3790681}
+}
+
+ZETTEL
+
+ID:
+DEFAULT-IMAGES-CHI26-B
+
+TITLE:
+The paper observes default images in Midjourney, but it cannot yet locate the default inside the model.
+
+SOURCE:
+Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender — “An Exploration of Default Images in Text-to-Image Generation” — CHI ’26 — 2026 — https://doi.org/10.1145/3772318.3790681
+
+PASSAGE:
+[PARAPHRASE] The authors explicitly state that they lack access to Midjourney’s training data and underlying model. They consider latent behavior and training-data gaps likely explanations but note that sampling mechanisms and possible prompt rewriting may also contribute. Because the proprietary system may intervene between input and output, the study cannot fully determine whether defaults originate in model behavior or platform design. fileciteturn1file7L440-L455
+
+RESEARCH OBJECT:
+“Default image” is securely established as an input-output phenomenon but not yet as a located internal mechanism.
+
+The research object must therefore be split:
+
+DEFAULT IMAGE AS OBSERVATION
+
+versus
+
+DEFAULT MECHANISM AS CAUSAL CLAIM.
+
+LOCAL MOVE:
+Downgrade “latent-space default” from established mechanism to candidate explanation.
+
+SOURCE TERMS:
+training data
+latent model behavior
+sampling mechanism
+prompt rewriting
+platform design decisions
+black-box
+causality
+
+WHAT BECAME STRANGE:
+The most visually obvious thing in the study may be the least causally localized.
+
+A repeated motif appears to reveal the model’s interior, yet precisely because Midjourney is a black box, it might instead reveal an invisible transformation layer surrounding the model.
+
+QUESTION:
+Where does the fallback actually occur?
+
+DEEPER QUESTION:
+Could a system acquire recognizable “default images” even if its underlying generative model had no stable default regions, simply because a prompt-rewriting layer repeatedly maps unfamiliar inputs onto similar surrogate prompts?
+
+MECHANISM:
+Several mechanisms remain observationally compatible:
+
+1. weak or absent training representation;
+2. text-encoder collapse or proximity;
+3. prompt rewriting;
+4. conditioning failure;
+5. sampling toward high-density visual regions;
+6. memorization or over-training;
+7. interactions among several of these.
+
+FORMAL SHIFT:
+FROM:
+
+PROMPT
+→ MODEL
+→ DEFAULT IMAGE
+
+TO:
+
+PROMPT
+→ UNKNOWN PLATFORM TRANSFORMATIONS
+→ CONDITIONING REPRESENTATION
+→ GENERATIVE PROCESS
+→ SAMPLING
+→ IMAGE.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Observed:
+
+p₁, p₂, ... pₙ
+→ visually convergent outputs.
+
+But the actual system may be:
+
+p
+→ R(p)
+→ E(R(p))
+→ G(E(R(p)), s)
+→ i
+
+where:
+
+R = unknown prompt rewrite / preprocessing
+E = conditioning representation
+G = image generator
+s = sampling state.
+
+Visual convergence therefore cannot identify whether convergence first occurred in R, E, or G.
+
+TENSION:
+The paper gives a substantive latent-space explanation earlier in its discussion, describing weakly guided sampling around generic visual patterns. fileciteturn1file9L561-L575
+
+Its limitations section is more cautious and concedes that the proprietary pipeline prevents strong causal localization. fileciteturn1file7L443-L455
+
+Both readings should be retained:
+
+DEFAULTS-AS-LATENT-STRUCTURE
+
+versus
+
+DEFAULTS-AS-PIPELINE-PHENOMENON.
+
+MISSING:
+The actual transformed prompt received by the image model.
+
+Internal text embeddings.
+
+Conditioning traces.
+
+Sampling implementation.
+
+Training-data evidence for the allegedly unknown concepts.
+
+BOUNDARY:
+Black-box behavioral evidence can establish repeatable system behavior without establishing which internal component produced it.
+
+CITATION TRAIL:
+[[DEFAULT-IMAGES-CHI26-ROOT]]
+→ causal explanation in Section 2
+→ causal qualification in limitations
+→ unresolved model-versus-platform distinction
+→ inspectable systems become necessary.
+
+TEST:
+Replicate default-image prompting in an open-weight TTI pipeline where every intermediate state can be logged.
+
+Run four conditions:
+
+raw prompt
+→ encoder
+→ generator
+
+raw prompt
+→ explicit LLM rewrite
+→ encoder
+→ generator
+
+unknown prompt mapped to empty conditioning
+
+unknown prompt mapped to nearest known semantic representation.
+
+Compare whether recurrent motifs arise and determine the earliest stage at which otherwise unrelated inputs converge.
+
+PLATFORM:
+Midjourney as proprietary black-box system; comparative test requires inspectable TTI models.
+
+LINKS:
+[[DEFAULT-IMAGES-CHI26-ROOT]]
+
+BIBTEX:
+@inproceedings{Simonen2026DefaultImages,
+  author = {Simonen, Hannu and Kiviniemi, Atte and Johnston, Hannah and Barranha, Helena and Oppenlaender, Jonas},
+  title = {An Exploration of Default Images in Text-to-Image Generation},
+  booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+  year = {2026},
+  doi = {10.1145/3772318.3790681},
+  url = {https://doi.org/10.1145/3772318.3790681}
+}
+
+ZETTEL
+
+ID:
+DEFAULT-IMAGES-CHI26-B-1
+
+TITLE:
+The visible prompt need not be the generator's prompt: an invisible writer can stand between the user and the image model.
+
+SOURCE:
+OpenAI — “DALL·E 3” — 2023 — https://openai.com/index/dall-e-3/
+
+PASSAGE:
+[PARAPHRASE] OpenAI describes DALL·E 3 as being integrated with ChatGPT such that a user's initial idea is automatically converted into a tailored, more detailed prompt before image generation. The deployed interaction therefore contains an explicit text-transformation stage between what the user says and what the image generator is conditioned on.
+
+RESEARCH OBJECT:
+The uncertainty raised in the Midjourney default-image paper is not merely hypothetical system architecture.
+
+At least one major deployed text-to-image pipeline openly inserts another generative language model between:
+
+USER DESCRIPTION
+
+and
+
+IMAGE GENERATOR.
+
+The prompt is therefore potentially a compiled artifact.
+
+LOCAL MOVE:
+Distinguish:
+
+USER PROMPT
+
+from:
+
+EXECUTED PROMPT.
+
+SOURCE TERMS:
+ChatGPT
+tailored prompts
+detailed prompts
+DALL-E 3
+prompt refinement
+image generation
+
+WHAT BECAME STRANGE:
+A researcher may believe they are probing an image model with nonsense.
+
+But if an upstream language model rewrites nonsense before image generation, the experiment is actually probing:
+
+HOW THE LANGUAGE MODEL INTERPRETS NONSENSE
++
+HOW THE IMAGE MODEL INTERPRETS THE LANGUAGE MODEL'S INTERPRETATION.
+
+The “default image” could be downstream of a hidden act of translation.
+
+QUESTION:
+Does Midjourney pass unknown strings directly into its image-conditioning stack, or does an unseen preprocessing model rewrite, expand, normalize, classify, or otherwise transform them first?
+
+DEEPER QUESTION:
+If several unrelated user prompts are transformed by an upstream model into similar internal descriptions, could apparent image-space defaulting occur even when the image generator itself responds perfectly to its actual inputs?
+
+MECHANISM:
+The documented DALL-E 3 pipeline establishes the architecture:
+
+user idea
+→ ChatGPT-generated detailed prompt
+→ DALL-E 3 generation.
+
+In such a pipeline, convergence can occur before image synthesis.
+
+Two dissimilar user inputs:
+
+u₁ ≠ u₂
+
+can become similar after rewriting:
+
+R(u₁) ≈ R(u₂).
+
+A downstream generator may then rationally produce similar images.
+
+FORMAL SHIFT:
+FROM:
+
+USER TEXT
+→ IMAGE MODEL
+→ IMAGE
+
+TO:
+
+USER TEXT
+→ PROMPT TRANSFORMER
+→ EXECUTED TEXT
+→ IMAGE MODEL
+→ IMAGE.
+
+SOURCE FORMALISM:
+OpenAI describes ChatGPT as automatically generating tailored, detailed prompts for DALL-E 3 from the user's initial idea.
+
+No mathematical formalism is provided on the source page.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+u = user-visible prompt
+R = hidden or visible prompt transformation
+G = image generator.
+
+Observed system:
+
+S(u) = G(R(u)).
+
+A default-like convergence can therefore have at least two causal locations:
+
+REWRITE COLLAPSE:
+
+d(u₁,u₂) high
+but
+d(R(u₁),R(u₂)) low
+
+or
+
+GENERATOR COLLAPSE:
+
+d(R(u₁),R(u₂)) high
+but
+d(G(R(u₁)),G(R(u₂))) low.
+
+Without R(u), black-box observation cannot distinguish them.
+
+TENSION:
+OpenAI's documentation proves this architecture for DALL-E 3.
+
+It does NOT prove that Midjourney uses an analogous prompt rewriter.
+
+Simonen et al. correctly preserve this as an unresolved possibility rather than a demonstrated Midjourney mechanism.
+
+MISSING:
+The exact text or conditioning object Midjourney's image generator receives.
+
+The crucial missing observables are:
+
+user prompt u
+transformed prompt R(u)
+text embedding E(R(u))
+generated image G(E(R(u))).
+
+Without at least one intermediate representation, causal localization remains underdetermined.
+
+BOUNDARY:
+Evidence from DALL-E 3 establishes architectural possibility and deployed precedent, not Midjourney provenance.
+
+CITATION TRAIL:
+[[DEFAULT-IMAGES-CHI26-B]]
+→ Midjourney causal opacity
+→ possibility of prompt rewriting
+→ DALL-E 3 provides documented deployed precedent
+→ default image splits into PRE-GENERATION COLLAPSE versus GENERATIVE COLLAPSE.
+
+TEST:
+Build an experimental pipeline with an inspectable prompt-rewriting LLM before an open diffusion model.
+
+Feed it the same rare names, corrupted words, low-resource words, URLs, glitch tokens, and abbreviations used by Simonen et al.
+
+Measure pairwise distances at three stages:
+
+USER INPUT
+R(USER INPUT)
+GENERATED IMAGE.
+
+Then compare three conditions:
+
+no rewriting
+generic LLM rewriting
+rewriter trained to elaborate unknown inputs.
+
+If visually convergent defaults emerge primarily when R maps unrelated inputs onto similar descriptions, then default-like behavior can be manufactured upstream of the image model.
+
+PLATFORM:
+DALL-E 3 + ChatGPT as documented example; proposed comparison with Midjourney and inspectable pipelines.
+
+LINKS:
+[[DEFAULT-IMAGES-CHI26-B]]
+
+BIBTEX:
+@misc{OpenAI2023DALLE3,
+  author = {{OpenAI}},
+  title = {DALL-E 3},
+  year = {2023},
+  url = {https://openai.com/index/dall-e-3/}
+}
+
+ZETTEL
+
+ID:
+WORKWORDS-PROMPT-004
+
+TITLE:
+Once prompts are compiled, the writer no longer necessarily writes the words the model receives.
+
+SOURCE:
+Omar Khattab et al. — “DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines” — 2023 — arXiv:2310.03714
+
+PASSAGE:
+[PARAPHRASE] DSPy rejects long hard-coded prompt templates discovered through trial and error as the primary programming abstraction. Instead, developers specify language-model operations through declarative modules inside text-transformation graphs. A compiler then optimizes the pipeline against a metric, including by constructing demonstrations and prompting strategies.
+
+RESEARCH OBJECT:
+PROMPT AS INTERMEDIATE REPRESENTATION.
+
+The human may specify:
+
+what transformation should occur
+
+while a compiler determines:
+
+which actual prompt should cause it.
+
+Prompt authorship and prompt wording separate.
+
+LOCAL MOVE:
+Push distant writing one step farther.
+
+The distant writer does not merely write conditions under which text will be generated.
+
+They can write conditions under which the instruction that generates the text will itself be generated.
+
+SOURCE TERMS:
+DSPy
+declarative modules
+compiler
+text transformation graphs
+prompt templates
+metric
+self-improving pipelines
+
+WHAT BECAME STRANGE:
+The prompt can cease being source text.
+
+It becomes build output.
+
+The thing traditionally treated as the author’s key creative artifact becomes analogous to compiled code that may be regenerated whenever the model, data, examples, or objective changes.
+
+QUESTION:
+If the prompt is compiler output, where does prompt authorship move?
+
+DEEPER QUESTION:
+Is the durable work the wording, the declarative specification, the evaluation metric, the examples, or the compiler that translates among them?
+
+MECHANISM:
+Developer specifies modules and pipeline
+→ provides data / examples / metric
+→ compiler explores effective realizations
+→ optimized prompts or demonstrations are produced
+→ pipeline executes.
+
+FORMAL SHIFT:
+FROM:
+
+AUTHOR
+→ PROMPT
+→ MODEL
+→ OUTPUT
+
+TO:
+
+AUTHOR
+→ DECLARATION + METRIC
+→ COMPILER
+→ PROMPT
+→ MODEL
+→ OUTPUT.
+
+SOURCE FORMALISM:
+DSPy represents LM pipelines as text-transformation graphs composed of parameterized declarative modules.
+
+Its compiler searches for configurations that optimize a user-specified metric.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Source artifact:
+
+D = declaration.
+
+Compiler:
+
+C(D, examples, metric, model)
+→ P*
+
+Execution:
+
+M(P*,x)
+→ y.
+
+Thus the human-authored description D and executed prompt P* need not be identical.
+
+TENSION:
+Compilation suggests a familiar programming genealogy.
+
+But unlike ordinary compilation, the target artifact can remain natural-language-like, model-dependent, probabilistic, and empirically selected.
+
+This is compilation without a stable machine language.
+
+MISSING:
+A provenance model capable of showing:
+
+declaration
+→ compiler decisions
+→ generated prompt
+→ model/version
+→ output
+
+without pretending that the generated prompt alone explains the result.
+
+BOUNDARY:
+DSPy is a particular programming framework. It demonstrates an architecture for prompt compilation rather than proving that all mature prompt practice will become compiler-mediated.
+
+CITATION TRAIL:
+[[DEFAULT-IMAGES-CHI26-B-1]]
+→ visible prompt may differ from executed prompt
+→ DSPy makes prompt derivation explicit and programmable
+→ prompt becomes intermediate representation
+→ next edge: compiler theory, build artifacts, source maps, and prompt receipts.
+
+TEST:
+Take one declarative DSPy program and compile it against:
+
+two models,
+two datasets,
+two evaluation metrics.
+
+Diff the resulting prompts.
+
+Ask which artifact remains invariant enough to count as “the work.”
+
+PLATFORM:
+DSPy; LLM pipelines.
+
+LINKS:
+[[DEFAULT-IMAGES-CHI26-B-1]]
+
+BIBTEX:
+@article{Khattab2023DSPy,
+  author = {Khattab, Omar and Singhvi, Arnav and Maheshwari, Paridhi and Zhang, Zhiyuan and Santhanam, Keshav and Vardhamanan, Sri and Haq, Saiful and Sharma, Ashutosh and Joshi, Thomas T. and Moazam, Hanna and Miller, Heather and Zaharia, Matei and Potts, Christopher},
+  title = {DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines},
+  year = {2023},
+  url = {https://arxiv.org/abs/2310.03714}
+}
+
+ZETTEL
+
+ID:
+WORKWORDS-PROMPT-001
+
+TITLE:
+In prompt programming, specification and implementation can occupy the same sentence.
+
+SOURCE:
+Jenny T. Liang, Melissa Lin, Nikitha Rao, and Brad A. Myers — “Prompts Are Programs Too! Understanding How Developers Build Software Containing Prompts” — Proceedings of the ACM on Software Engineering — 2025 — DOI: 10.1145/3729342
+
+PASSAGE:
+[PARAPHRASE] Liang et al.’s interviews with 20 prompt developers identify a structural difference between traditional programming and prompt programming: requirements that would ordinarily be specified separately from implementation can instead be expressed directly in the prompt, where the prompt simultaneously states desired behavior and constitutes part of the mechanism intended to produce that behavior.
+
+[PARAPHRASE] They also find that experienced prompt programmers repeatedly construct mental models of how a foundation model responds to a prompt, yet those mental models remain unreliable even after many prompts and iterations.
+
+RESEARCH OBJECT:
+PROMPT COLLAPSES THE DISTANCE BETWEEN SPECIFICATION AND IMPLEMENTATION.
+
+“Make the answer concise” can be simultaneously:
+
+a requirement about the desired artifact
+
+and
+
+a computational intervention intended to cause that artifact.
+
+The sentence says what ought to happen while participating in making it happen.
+
+LOCAL MOVE:
+This sharpens the work-and-words problem.
+
+Words do not become operations simply because they are imperative.
+
+Prompt programming creates an apparatus in which a requirement can also function as part of its own implementation.
+
+SOURCE TERMS:
+prompt programming
+requirements
+implementation
+mental model
+foundation model
+prompt iteration
+software development
+
+WHAT BECAME STRANGE:
+Traditional programming permits us to ask whether the implementation satisfies the specification.
+
+What happens when specification and implementation are partly the same artifact?
+
+A failed prompt may no longer tell us whether:
+
+the requirement was wrong,
+the implementation was wrong,
+the interpreter behaved unexpectedly,
+or the sentence failed in both roles simultaneously.
+
+QUESTION:
+What forms of criticism, debugging, and verification become possible when specification and implementation are entangled?
+
+DEEPER QUESTION:
+Is the prompt best understood as code, specification, test, interface utterance, or an historically unusual artifact that partially occupies all four positions?
+
+MECHANISM:
+Developer writes natural-language requirement
+→ foundation model interprets same language as conditioning
+→ output becomes evidence about both requirement and implementation
+→ developer revises language
+→ revised specification is also revised implementation.
+
+FORMAL SHIFT:
+FROM:
+
+SPECIFICATION
+→ IMPLEMENTATION
+→ EXECUTION
+→ TEST AGAINST SPECIFICATION
+
+TO:
+
+PROMPT {SPECIFICATION + PARTIAL IMPLEMENTATION}
+→ EXECUTION
+→ OUTPUT
+→ REVISION OF THE SAME ARTIFACT.
+
+SOURCE FORMALISM:
+The source uses qualitative grounded-theory analysis of interviews with 20 developers and compares activities in prompt programming with traditional software development.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+R = expressed requirement
+P = prompt text
+I = operational implementation.
+
+Traditional software:
+
+R ≠ I
+
+and:
+
+TEST(I,R).
+
+Prompt programming may instead contain:
+
+R ⊂ P
+and
+P ⊂ I.
+
+Thus changing the requirement can directly change the implementation:
+
+ΔR → ΔP → ΔI.
+
+TENSION:
+“Prompts are programs too” is productive but potentially too quick.
+
+If prompts were simply another programming language, the collapse between requirement and implementation would be less interesting.
+
+The stronger possibility is that prompt practice violates the distinction by which we normally recognize programming in the first place.
+
+MISSING:
+A taxonomy of sentences according to whether they function as:
+
+requirement only,
+implementation only,
+example,
+constraint,
+test,
+context,
+or several simultaneously.
+
+BOUNDARY:
+The source studies developers building LLM-powered software. It does not establish that every conversational or generative-image prompt should be treated as a program.
+
+CITATION TRAIL:
+[[DEFAULT-IMAGES-CHI26-B-1]]
+→ executed prompt differs from visible prompt
+→ Liang et al.
+→ prompt becomes implementation as well as specification
+→ next edge: requirements engineering, executable specifications, contracts, and programming-by-example.
+
+TEST:
+Take a real production prompt.
+
+Annotate every clause independently as:
+
+SPECIFICATION
+IMPLEMENTATION
+TEST
+EXAMPLE
+CONTEXT
+META-INSTRUCTION.
+
+Then delete clauses one at a time.
+
+If clauses routinely occupy several categories and their removal changes both what counts as success and how success is produced, specification/implementation collapse is empirically visible.
+
+PLATFORM:
+LLM application development; prompt programming.
+
+LINKS:
+[[DEFAULT-IMAGES-CHI26-B-1]]
+
+BIBTEX:
+@article{Liang2025PromptsPrograms,
+  author = {Liang, Jenny T. and Lin, Melissa and Rao, Nikitha and Myers, Brad A.},
+  title = {Prompts Are Programs Too! Understanding How Developers Build Software Containing Prompts},
+  journal = {Proceedings of the ACM on Software Engineering},
+  volume = {2},
+  year = {2025},
+  doi = {10.1145/3729342}
+}
+
+ZETTEL
+
+ID:
+WORKWORDS-PROMPT-003
+
+TITLE:
+What a prompt leaves unsaid can function like borrowed code supplied by the model.
+
+SOURCE:
+Chenyang Yang, Yike Shi, Qianou Ma, Michael Xieyang Liu, Christian Kästner, and Tongshuang Wu — “What Prompts Don’t Say: Understanding and Managing Underspecification in LLM Prompts” — 2025 — arXiv:2505.13360
+
+PASSAGE:
+[PARAPHRASE] Yang et al. systematically study requirements omitted from prompts. Models sometimes satisfy unspecified requirements anyway, but those behaviors are substantially less stable across prompt and model changes.
+
+[PARAPHRASE] More surprisingly, explicitly adding every known requirement does not solve the problem. As more requirements are placed together in one prompt, instruction-following performance can decline. The authors therefore explore optimizing not only how requirements are written but which requirements should be stated at all.
+
+RESEARCH OBJECT:
+A PROMPT IS PARTLY MADE OF WHAT IT DOES NOT SAY.
+
+Unspecified behavior is not empty.
+
+It is temporarily supplied by:
+
+model priors,
+post-training,
+context,
+task conventions,
+and accidental defaults.
+
+The operative artifact is therefore larger than its written text.
+
+LOCAL MOVE:
+Replace:
+
+THICK PROMPT = MORE SPECIFICATION = MORE CONTROL
+
+with:
+
+PROMPT DESIGN = SELECTIVE DISTRIBUTION OF EXPLICIT AND IMPLICIT CONTROL.
+
+SOURCE TERMS:
+underspecification
+requirements
+specified requirements
+unspecified requirements
+behavioral stability
+requirement-aware prompt optimization
+conditional requirements
+
+WHAT BECAME STRANGE:
+Writing another instruction can make an instruction already present less likely to be followed.
+
+Specification is not monotonically additive.
+
+More words can produce less control.
+
+QUESTION:
+What should a prompt deliberately leave unstated?
+
+DEEPER QUESTION:
+Can omission itself become a designed computational resource rather than an accidental deficiency?
+
+MECHANISM:
+Requirements compete for finite instruction-following capacity.
+
+Some omitted requirements are already reliably supplied by model behavior.
+
+Others are supplied only contingently.
+
+Therefore an effective prompt can require choosing:
+
+which requirements must be textualized
+
+and
+
+which may safely remain delegated to the model.
+
+FORMAL SHIFT:
+FROM:
+
+PROMPT QUALITY ∝ AMOUNT SPECIFIED
+
+TO:
+
+PROMPT QUALITY
+= selection of an effective subset of requirements
+under model-specific interaction constraints.
+
+SOURCE FORMALISM:
+The authors represent candidate requirements as a binary vector:
+
+r = (r1,...,rn) ∈ {0,1}^n
+
+where a requirement is specified or unspecified.
+
+Their requirement-selection optimizer seeks:
+
+r* = argmax f(r),
+
+where f evaluates system performance under that configuration.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let total operative specification be:
+
+S_total =
+S_written
++
+S_model
++
+S_context
++
+S_examples
++
+S_interface.
+
+A prompt edit changes only one component:
+
+ΔS_written.
+
+But execution depends on interactions among all five.
+
+Therefore:
+
+more(S_written)
+
+does not imply:
+
+more(control).
+
+TENSION:
+Software-engineering language frames underspecification largely as a reliability problem.
+
+For creative prompt practice, controlled underspecification may instead be productive.
+
+The same gap can be:
+
+BUG
+or
+GENERATIVE APERTURE.
+
+The distinction depends on the purpose of the work.
+
+MISSING:
+A theory distinguishing:
+
+dangerous omission,
+redundant specification,
+productive ambiguity,
+delegated convention,
+and deliberate openness.
+
+BOUNDARY:
+The source evaluates application prompts against articulated requirements. Creative writing, image generation, speculative design, and artistic prompting may value output variation differently.
+
+CITATION TRAIL:
+[[DEFAULT-IMAGES-CHI26-A]]
+→ known terms compete with unknown terms
+→ Yang et al.
+→ explicit requirements themselves compete
+→ more description can reduce obedience
+→ next edge: productive underspecification and controlled ambiguity as prompt craft.
+
+TEST:
+Begin with a successful long prompt.
+
+Extract every apparent requirement.
+
+Generate systematic ablations.
+
+For each requirement measure:
+
+performance when explicit,
+performance when absent,
+variance when absent,
+interference with other requirements.
+
+Classify each clause as:
+
+NECESSARY
+REDUNDANT
+INTERFERING
+STABILIZING
+GENERATIVE-OPENING.
+
+PLATFORM:
+LLM-powered applications; requirements-aware prompt optimization.
+
+LINKS:
+[[DEFAULT-IMAGES-CHI26-A]]
+
+BIBTEX:
+@article{Yang2025PromptsDontSay,
+  author = {Yang, Chenyang and Shi, Yike and Ma, Qianou and Liu, Michael Xieyang and K{\"a}stner, Christian and Wu, Tongshuang},
+  title = {What Prompts Don't Say: Understanding and Managing Underspecification in LLM Prompts},
+  year = {2025},
+  url = {https://arxiv.org/abs/2505.13360}
+}
+
+ZETTEL
+
+ID:
+WORKWORDS-PROMPT-002
+
+TITLE:
+The prompt can keep working after the words have been removed.
+
+SOURCE:
+Guanghui Qin and Jason Eisner — “Learning How to Ask: Querying LMs with Mixtures of Soft Prompts” — 2021 — arXiv:2104.06599
+
+PASSAGE:
+[PARAPHRASE] Qin and Eisner replace ordinary prompt words with trainable continuous vectors they call “soft words.” These vectors need not correspond to actual word embeddings. They optimize them by gradient descent and report that even prompts initialized from random vectors can become highly effective at eliciting relational knowledge.
+
+[PARAPHRASE] Their experiments therefore relax the condition that the units controlling a language model must themselves be words from a human language.
+
+RESEARCH OBJECT:
+PROMPTING IS LARGER THAN PROMPT LANGUAGE.
+
+There exists an operational descendant of prompting in which:
+
+the function remains
+
+but
+
+the sentence disappears.
+
+LOCAL MOVE:
+This pressures the claim that prompt language itself is the new computational language.
+
+Perhaps natural-language prompting is only the human-facing surface of a more general phenomenon:
+
+CONDITIONING A MODEL THROUGH A CONTROL PREFIX.
+
+SOURCE TERMS:
+soft prompts
+soft words
+continuous vectors
+gradient descent
+prompt mixture
+word embeddings
+random initialization
+
+WHAT BECAME STRANGE:
+If a random collection of continuous vectors can be trained into a better question than an English sentence, then “asking” has become detached from saying.
+
+The computer can be addressed effectively in something that no human can read, pronounce, paraphrase, or understand.
+
+QUESTION:
+Which properties of prompting actually require language?
+
+DEEPER QUESTION:
+Is natural language the computational medium of prompting, or merely the temporary human-readable encoding of a deeper control space?
+
+MECHANISM:
+Hard prompt
+→ token embeddings
+
+is relaxed to:
+
+arbitrary vectors
+→ gradient optimization
+→ model conditioning.
+
+The model receives vectors either way.
+
+Human lexicality is therefore a constraint imposed on one class of prompts, not a necessary condition of model control.
+
+FORMAL SHIFT:
+FROM:
+
+WORD
+→ MEANING
+→ MODEL RESPONSE
+
+TO:
+
+CONTROL VECTOR
+→ MODEL STATE
+→ RESPONSE.
+
+SOURCE FORMALISM:
+The authors permit each soft-prompt token to be an arbitrary vector in R^d rather than requiring it to equal an existing word embedding.
+
+They optimize these vectors using a differentiable log-loss objective and gradient descent and also learn mixtures over multiple prompts.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Human-readable prompt:
+
+p ∈ Vocabulary*
+
+Soft prompt:
+
+z ∈ R^(n×d).
+
+Both can condition:
+
+M(condition, x) → y.
+
+Therefore:
+
+PROMPT ≠ necessarily TEXT.
+
+Text is one admissible coordinate system for controlling M.
+
+TENSION:
+This could kill the strongest version of “prompting is a new form of writing.”
+
+But it could also sharpen it.
+
+Writing may matter precisely because hard prompts preserve a peculiar double accessibility:
+
+machine-operational
+AND
+human-readable.
+
+Soft prompts reveal what is lost when those two properties separate.
+
+MISSING:
+Comparative work on what becomes possible or impossible when prompts move among:
+
+natural language,
+discrete optimized tokens,
+soft vectors,
+examples,
+images,
+structured constraints.
+
+BOUNDARY:
+Qin and Eisner study soft prompting of pretrained language models for relational knowledge extraction. Their results do not establish that contemporary conversational LLM interfaces secretly execute equivalent soft prompts.
+
+CITATION TRAIL:
+[[DEFAULT-IMAGES-CHI26-F-2]]
+→ human non-word can still be model-significant
+→ Qin and Eisner
+→ even words themselves can disappear
+→ prompt becomes model-relative conditioning rather than necessarily language
+→ next edge: interface layer that translates human writing into nonlinguistic control.
+
+TEST:
+Construct one task in four forms:
+
+ordinary prose prompt,
+automatically optimized hard-token prompt,
+soft prompt,
+formal structured control.
+
+Hold model and evaluation constant.
+
+Compare not only performance but:
+
+human inspectability,
+editability,
+transfer,
+provenance,
+semantic predictability,
+and ability to explain why a modification worked.
+
+PLATFORM:
+Pretrained language models; soft-prompt optimization.
+
+LINKS:
+[[DEFAULT-IMAGES-CHI26-F-2]]
+
+BIBTEX:
+@article{QinEisner2021SoftPrompts,
+  author = {Qin, Guanghui and Eisner, Jason},
+  title = {Learning How to Ask: Querying LMs with Mixtures of Soft Prompts},
+  year = {2021},
+  url = {https://arxiv.org/abs/2104.06599}
+}
+
+ZETTEL
+
+ID:
+WORKWORDS-PROMPT-005
+
+TITLE:
+Writing acquires a loss landscape when criticism is treated as a textual gradient.
+
+SOURCE:
+Reid Pryzant, Dan Iter, Jerry Li, Yin Tat Lee, Chenguang Zhu, and Michael Zeng — “Automatic Prompt Optimization with ‘Gradient Descent’ and Beam Search” — EMNLP 2023 — arXiv:2305.03495
+
+PASSAGE:
+[PARAPHRASE] Pryzant et al. propose Automatic Prompt Optimization. An LLM examines failures produced by a prompt and generates natural-language criticisms called textual “gradients.” Candidate prompts are then rewritten in the opposite semantic direction of those criticisms, with beam search and bandit selection used to choose promising revisions.
+
+RESEARCH OBJECT:
+PROSE BECOMES AN OPTIMIZATION VARIABLE.
+
+The strange move is not simply automated editing.
+
+It is importing the conceptual machinery of numerical optimization into semantic revision:
+
+failure
+→ criticism
+→ direction
+→ changed sentence.
+
+LOCAL MOVE:
+Prompt practice moves from:
+
+WRITE / INTERPRET / REWRITE
+
+toward:
+
+OBJECTIVE / ERROR / SEMANTIC DIRECTION / UPDATE.
+
+SOURCE TERMS:
+Automatic Prompt Optimization
+textual gradients
+gradient descent
+beam search
+bandit selection
+prompt editing
+
+WHAT BECAME STRANGE:
+Criticism stops being commentary outside the work.
+
+It becomes an operation that changes the work.
+
+A sentence such as:
+
+“the instruction fails to distinguish X from Y”
+
+can function as something analogous to directional information in an optimization procedure.
+
+QUESTION:
+What is lost when revision is reframed as optimization?
+
+DEEPER QUESTION:
+Can writing have a gradient without first reducing what counts as good writing to an evaluable objective?
+
+MECHANISM:
+Prompt
+→ run on minibatch
+→ inspect failures
+→ LLM produces natural-language criticism
+→ generate semantically opposed edits
+→ evaluate candidates
+→ retain better candidate
+→ repeat.
+
+FORMAL SHIFT:
+FROM:
+
+REVISION = authorial judgment
+
+TO:
+
+REVISION =
+error assignment
++
+direction proposal
++
+candidate search
++
+selection criterion.
+
+SOURCE FORMALISM:
+The authors explicitly describe natural-language criticisms as textual “gradients,” edit prompts in the opposite semantic direction, and combine these updates with beam search and a bandit-selection procedure.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let prompt be P and evaluator be E.
+
+E(P) → failures F.
+
+Critic:
+
+C(F,P) → textual direction g_text.
+
+Rewrite:
+
+R(P,-g_text) → {P1,...,Pn}.
+
+Selection:
+
+P' = argmax score(Pi).
+
+The “gradient” is therefore not numerical differentiation.
+
+It is a language-produced proposal about how the instruction should move.
+
+TENSION:
+The gradient metaphor is technically useful but philosophically dangerous.
+
+Numerical gradients have formally defined local meaning.
+
+“Textual gradients” are model-generated interpretations of failure.
+
+Their direction is itself another act of language.
+
+So optimization has not escaped interpretation.
+
+It has recursively inserted interpretation into the optimization loop.
+
+MISSING:
+Cases where a textual gradient improves the metric while destroying:
+
+style,
+openness,
+surprise,
+interpretive richness,
+minority cases,
+or values absent from the evaluator.
+
+BOUNDARY:
+The method requires evaluable tasks and training examples. Prompt practices whose success cannot be reduced to a stable metric may resist this optimization structure.
+
+CITATION TRAIL:
+[[DEFAULT-IMAGES-CHI26-A-1]]
+→ meaning can be gained or lost during execution
+→ ProTeGi makes failure generate instructions for rewriting instructions
+→ prompt practice acquires semantic backpropagation
+→ next edge: TextGrad, credit assignment, aesthetic optimization, and Goodhart effects.
+
+TEST:
+Select one creative prompt.
+
+Define two evaluators:
+
+narrow measurable success
+and
+human judgment of interestingness.
+
+Optimize the prompt repeatedly against the narrow metric.
+
+Preserve every generation.
+
+Test whether objective improvement creates a measurable decline in outputs humans consider surprising, rich, or worth keeping.
+
+PLATFORM:
+LLM prompt optimization.
+
+LINKS:
+[[DEFAULT-IMAGES-CHI26-A-1]]
+
+BIBTEX:
+@article{Pryzant2023APO,
+  author = {Pryzant, Reid and Iter, Dan and Li, Jerry and Lee, Yin Tat and Zhu, Chenguang and Zeng, Michael},
+  title = {Automatic Prompt Optimization with "Gradient Descent" and Beam Search},
+  year = {2023},
+  url = {https://arxiv.org/abs/2305.03495}
+}
+
+ZETTEL
+
+ID:
+WORKWORDS-PROMPT-006
+
+TITLE:
+The writer can stop breeding prompts and begin breeding the prompts that breed prompts.
+
+SOURCE:
+Chrisantha Fernando, Dylan Banarse, Henryk Michalewski, Simon Osindero, and Tim Rocktäschel — “Promptbreeder: Self-Referential Self-Improvement Via Prompt Evolution” — 2023 — arXiv:2309.16797
+
+PASSAGE:
+[PARAPHRASE] Promptbreeder maintains a population of task prompts, evaluates their fitness, and uses an LLM to mutate them. Crucially, the instructions that govern mutation are themselves prompts, and those “mutation-prompts” are also evolved.
+
+RESEARCH OBJECT:
+PROMPT PRACTICE BECOMES SELF-REFERENTIAL.
+
+There are now at least two textual species:
+
+prompts that perform the task
+
+and
+
+prompts that alter the prompts that perform the task.
+
+The second species can itself change.
+
+LOCAL MOVE:
+Distant writing becomes evolutionary writing.
+
+The author no longer needs to decide the final wording or even directly decide each revision.
+
+They design:
+
+population,
+variation machinery,
+selection environment,
+fitness.
+
+SOURCE TERMS:
+Promptbreeder
+task-prompts
+mutation-prompts
+population
+fitness
+evolution
+self-referential improvement
+
+WHAT BECAME STRANGE:
+A prompt can be judged not by what it makes the model do, but by what kinds of other prompts it causes to come into existence.
+
+Its output is a lineage of instructions.
+
+QUESTION:
+At what point does authorship migrate from sentence construction to selective environment construction?
+
+DEEPER QUESTION:
+If the mutation rule itself evolves, where is the stable program?
+
+MECHANISM:
+population of task prompts
+→ evaluate fitness
+→ mutation prompt instructs LLM to alter them
+→ new task-prompt population
+→ mutation prompts themselves mutate
+→ selection
+→ repeat.
+
+FORMAL SHIFT:
+FROM:
+
+AUTHOR
+→ PROMPT
+→ OUTPUT
+
+TO:
+
+AUTHOR
+→ EVOLUTIONARY CONDITIONS
+→ MUTATION PROMPTS
+→ TASK PROMPTS
+→ OUTPUTS
+→ FITNESS
+→ NEW CONDITIONS.
+
+SOURCE FORMALISM:
+Promptbreeder evolves a population of task prompts according to task fitness while simultaneously evolving the mutation prompts used to generate variations.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Task prompt population:
+
+P_t.
+
+Mutation-prompt population:
+
+M_t.
+
+Generation:
+
+P_(t+1) = mutate(P_t | M_t).
+
+Meta-generation:
+
+M_(t+1) = mutate(M_t | ...).
+
+Selection evaluates descendants under fitness F.
+
+The operational unit is therefore no longer a prompt.
+
+It is a reproducing prompt ecology.
+
+TENSION:
+Evolutionary improvement sounds autonomous, but the fitness function remains an enormous site of authorship.
+
+What looks like surrendering textual control may actually relocate control into evaluation.
+
+The author stops choosing sentences and starts choosing survival.
+
+MISSING:
+A cultural or literary account of:
+
+prompt ancestry,
+mutation,
+selection,
+extinction,
+convergence,
+speciation,
+and inherited fragments.
+
+BOUNDARY:
+Promptbreeder optimizes benchmark performance. Evolution toward metric fitness is not equivalent to artistic, epistemic, or cultural improvement.
+
+CITATION TRAIL:
+[[DEFAULT-IMAGES-CHI26-B-1]]
+→ prompts can be rewritten before execution
+→ Promptbreeder
+→ rewriting mechanism becomes prompt-governed
+→ mutation instruction itself evolves
+→ next edge: genetic programming, evolutionary art, cultural evolution, and authorship through selection.
+
+TEST:
+Archive every task prompt and mutation prompt from an evolutionary run.
+
+Construct its genealogy.
+
+Track which phrases survive, disappear, recombine, or repeatedly re-emerge.
+
+Then ask whether successful linguistic fragments behave more like:
+
+ideas,
+genes,
+macros,
+incantations,
+or local adaptations to one model.
+
+PLATFORM:
+LLM-driven evolutionary prompt optimization.
+
+LINKS:
+[[DEFAULT-IMAGES-CHI26-B-1]]
+
+BIBTEX:
+@article{Fernando2023Promptbreeder,
+  author = {Fernando, Chrisantha and Banarse, Dylan and Michalewski, Henryk and Osindero, Simon and Rockt{\"a}schel, Tim},
+  title = {Promptbreeder: Self-Referential Self-Improvement Via Prompt Evolution},
+  year = {2023},
+  url = {https://arxiv.org/abs/2309.16797}
+}
+
+ZETTEL
+
+ID:
+WORKWORDS-PROMPT-007
+
+TITLE:
+Prompt language becomes literally hybrid when prose, control flow, and constraints share one executable object.
+
+SOURCE:
+Luca Beurer-Kellner, Marc Fischer, and Martin Vechev — “Prompting Is Programming: A Query Language for Large Language Models” — PLDI 2023 — DOI: 10.1145/3591300
+
+PASSAGE:
+[PARAPHRASE] Beurer-Kellner, Fischer, and Vechev introduce Language Model Programming and LMQL, which combines textual prompting with scripting, control flow, and output constraints. Their runtime uses those constraints and program structure to produce an inference procedure rather than treating the prompt as an isolated string.
+
+RESEARCH OBJECT:
+THE “BETWEEN CODE AND NATURAL LANGUAGE” PROBLEM CAN BE MADE ARCHITECTURAL RATHER THAN METAPHORICAL.
+
+LMQL does not resolve whether prose itself is code.
+
+It builds an artifact in which statistical natural language and conventional programming constructs coexist.
+
+LOCAL MOVE:
+Do not ask only:
+
+IS A PROMPT CODE?
+
+Ask:
+
+WHAT HAPPENS WHEN TWO DIFFERENT SEMANTIC REGIMES SHARE ONE PROGRAM?
+
+SOURCE TERMS:
+Language Model Programming
+LMQL
+constraints
+control flow
+text prompting
+scripting
+inference procedure
+
+WHAT BECAME STRANGE:
+The natural-language section can remain ambiguous and probabilistic while adjacent program structure is formal enough to branch, constrain, and reject.
+
+One executable artifact can therefore contain zones with radically different commitments about meaning.
+
+QUESTION:
+Where exactly does formal semantics end and probabilistic interpretation begin inside a hybrid language-model program?
+
+DEEPER QUESTION:
+Can such a mixed artifact be understood using ordinary programming-language semantics, or does it require semantics for operations whose meanings are distributions rather than determinate transitions?
+
+MECHANISM:
+natural-language prompt fragments
++
+scripting/control flow
++
+constraints
+
+→ LMQL program
+
+→ runtime constructs efficient constrained inference
+
+→ language model generations are filtered/guided according to program structure.
+
+FORMAL SHIFT:
+FROM:
+
+NATURAL LANGUAGE versus PROGRAMMING LANGUAGE
+
+TO:
+
+FORMAL CONTROL STRUCTURE
+⊗
+PROBABILISTIC LANGUAGE INTERPRETATION.
+
+SOURCE FORMALISM:
+LMQL combines text prompting and scripting and permits constraints over language-model outputs. The implementation uses these constraints and control flow to construct an inference procedure.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Program state contains two kinds of transition:
+
+deterministic/formal:
+
+s --op--> s'
+
+and model-mediated:
+
+s --LM(text)--> Distribution(s').
+
+A hybrid program alternates between them.
+
+The semantic problem is therefore not simply nondeterminism.
+
+It is interpretation entering the transition relation.
+
+TENSION:
+LMQL can make prompting look more like programming by surrounding it with formal machinery.
+
+But that may leave the central anomaly untouched:
+
+the crucial natural-language operation remains interpreted by a learned model rather than defined by a formal semantics.
+
+Formal scaffolding does not formalize the words inside it.
+
+MISSING:
+A semantics that explicitly marks which transitions are:
+
+defined,
+sampled,
+interpreted,
+constrained,
+tested,
+or delegated.
+
+BOUNDARY:
+LMQL intentionally makes prompting more programmable. It does not prove that ordinary chat prompts already constitute a programming language.
+
+CITATION TRAIL:
+[[DEFAULT-IMAGES-CHI26-B-1]]
+→ prompt passes through hidden machinery
+→ LMQL makes surrounding machinery explicit
+→ hybrid formal/probabilistic execution
+→ next edge: probabilistic programming, nondeterministic semantics, effect systems, and contracts.
+
+TEST:
+Take a single LMQL program.
+
+Draw every state transition.
+
+Mark each edge:
+
+FORMAL
+MODEL-INTERPRETED
+STOCHASTIC
+CONSTRAINT-CHECKED.
+
+Now perturb only the natural-language portions.
+
+Measure which supposedly formal program properties remain invariant.
+
+PLATFORM:
+LMQL; Language Model Programming.
+
+LINKS:
+[[DEFAULT-IMAGES-CHI26-B-1]]
+
+BIBTEX:
+@inproceedings{BeurerKellner2023LMQL,
+  author = {Beurer-Kellner, Luca and Fischer, Marc and Vechev, Martin},
+  title = {Prompting Is Programming: A Query Language for Large Language Models},
+  booktitle = {PLDI 2023},
+  year = {2023},
+  doi = {10.1145/3591300}
+}
+
+ZETTEL
+
+ID:
+WORKWORDS-PROMPT-008
+
+TITLE:
+A prompt becomes a research object when it is treated as a variable instead of a message.
+
+SOURCE:
+Ian Arawjo, Chelse Swoopes, Priyan Vaithilingam, Martin Wattenberg, and Elena L. Glassman — “ChainForge: A Visual Toolkit for Prompt Engineering and LLM Hypothesis Testing” — 2023 — arXiv:2309.09128; subsequently CHI 2024.
+
+PASSAGE:
+[PARAPHRASE] ChainForge is designed to compare responses across prompt variations and models rather than treating prompting as isolated conversational turns. The authors frame prompt engineering alongside on-demand hypothesis testing and identify opportunistic exploration, limited evaluation, and iterative refinement as recurring modes of practice.
+
+RESEARCH OBJECT:
+THE UNIT OF PROMPT RESEARCH SHOULD NOT BE THE SUCCESSFUL PROMPT.
+
+It should be the DIFFERENCE produced by controlled changes.
+
+A prompt without its alternatives hides the mechanism that made it appear effective.
+
+LOCAL MOVE:
+Turn PROMPT RECEIPTS into EXPERIMENTAL RECEIPTS.
+
+Preserve:
+
+prompt,
+variant,
+model,
+parameters,
+outputs,
+evaluation,
+failure,
+and revision lineage.
+
+SOURCE TERMS:
+ChainForge
+prompt variation
+model comparison
+hypothesis testing
+opportunistic exploration
+limited evaluation
+iterative refinement
+
+WHAT BECAME STRANGE:
+Chat interfaces preserve chronology.
+
+Experiments require counterfactual structure.
+
+A scrollback tells us:
+
+what happened next.
+
+It does not automatically tell us:
+
+what changed because one word changed.
+
+QUESTION:
+What is the smallest provenance structure that turns prompt practice from anecdotal craft into inspectable experimental knowledge?
+
+DEEPER QUESTION:
+Could the history of a creative work be represented not as drafts but as a causal graph of linguistic interventions and resulting worlds?
+
+MECHANISM:
+prompt variants
+×
+models
+×
+inputs
+
+→ batches of outputs
+
+→ comparison / evaluation
+
+→ hypothesis revision.
+
+FORMAL SHIFT:
+FROM:
+
+P1
+→ output
+→ P2
+→ output
+→ P3
+→ satisfactory output
+
+TO:
+
+{P1,P2,...Pn}
+×
+{M1,M2,...Mm}
+×
+{X1,...Xk}
+
+→ response field
+
+→ contrasts.
+
+SOURCE FORMALISM:
+ChainForge uses a visual data-flow environment to construct comparisons among prompts, models, and generated responses for prompt engineering and hypothesis testing.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Prompt intervention:
+
+ΔP = P' - P.
+
+Observed world difference:
+
+ΔW = G(P') - G(P).
+
+A useful receipt records:
+
+R = (P, ΔP, M, state, parameters, outputs, ΔW, evaluation).
+
+Without ΔP and comparison outputs, provenance records execution but not causal evidence.
+
+TENSION:
+Systematic experimentation can reveal prompt effects.
+
+But creative prompting may depend on serendipity, path dependence, situated judgment, and criteria discovered only after seeing an output.
+
+Experimental rigor can therefore clarify mechanism while simultaneously discarding the changing purposes of the practitioner.
+
+MISSING:
+A method that preserves both:
+
+controlled counterfactual comparison
+
+and
+
+the evolving criterion by which the practitioner decides what matters.
+
+BOUNDARY:
+ChainForge is designed primarily for LLM experimentation. A world-building or multimodal prompt practice introduces persistent state, images, space, motion, and model-mediated history that a simple prompt-response matrix may not capture.
+
+CITATION TRAIL:
+[[DEFAULT-IMAGES-CHI26-E]]
+→ default-image study detects relational anomalies across many prompts
+→ ChainForge operationalizes prompt comparison and hypothesis testing
+→ prompt receipt becomes contrastive rather than archival
+→ next edge: causal inference, version control, experimental notebooks, and output-directed programming.
+
+TEST:
+For one day of prompting, stop storing prompts as a chronological transcript.
+
+Instead record each revision as:
+
+CLAIM
+INTERVENTION
+CONTROL
+OUTPUT DIFFERENCE
+SURPRISE
+NEXT QUESTION.
+
+At the end of the day, test whether the resulting graph explains more about how the work changed than the original chat log.
+
+PLATFORM:
+ChainForge; LLM experimentation and prompt engineering.
+
+LINKS:
+[[DEFAULT-IMAGES-CHI26-E]]
+
+BIBTEX:
+@article{Arawjo2023ChainForge,
+  author = {Arawjo, Ian and Swoopes, Chelse and Vaithilingam, Priyan and Wattenberg, Martin and Glassman, Elena L.},
+  title = {ChainForge: A Visual Toolkit for Prompt Engineering and LLM Hypothesis Testing},
+  year = {2023},
+  url = {https://arxiv.org/abs/2309.09128}
+}
+
+ZETTEL
+
+ID:
+DEFAULT-IMAGES-CHI26-A
+
+TITLE:
+Known words can erase evidence that an unknown word was never understood.
+
+SOURCE:
+Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender — “An Exploration of Default Images in Text-to-Image Generation” — CHI ’26 — 2026 — https://doi.org/10.1145/3772318.3790681
+
+PASSAGE:
+[PARAPHRASE] In an ablation study, short prompts containing unknown terms produced recognizable default images. When the same unknown terms were placed inside longer prompts containing words Midjourney recognized, the system generated imagery from the recognized words and the outputs ceased resembling the canonical defaults. fileciteturn1file8L525-L532
+
+[PARAPHRASE] Elsewhere the authors describe known concepts as acting like “magnets” that overshadow unknown concepts and move generation toward imagery associated with what the model recognizes. fileciteturn1file9L577-L586
+
+RESEARCH OBJECT:
+An unknown token does not necessarily cause visible failure.
+
+Surrounding recognized terms can provide enough semantic guidance for generation to look successful while the unknown portion of the request contributes little or nothing identifiable to the output.
+
+Default images may therefore expose only one extreme of a larger phenomenon:
+
+SILENT PARTIAL INTERPRETATION.
+
+LOCAL MOVE:
+Move from asking:
+
+“Did the model understand the prompt?”
+
+to:
+
+“Which parts of the prompt acquired causal control over the image?”
+
+SOURCE TERMS:
+known concepts
+unknown terms
+larger prompts
+prompt specificity
+default images
+semantic guidance
+magnets
+
+WHAT BECAME STRANGE:
+Adding more descriptive information can make a generator appear more competent while making failure harder to see.
+
+A rich prompt may conceal ignorance better than a sparse prompt.
+
+QUESTION:
+Does prompt composition behave less like satisfying a set of requested constraints and more like competition among semantic signals of unequal strength?
+
+DEEPER QUESTION:
+Can a prompt contain ten apparently meaningful instructions while only two or three actually control generation?
+
+MECHANISM:
+Recognized terms provide strong visual conditioning.
+
+When semantic guidance from recognized terms is strong enough, the generator can produce a coherent image without visibly resolving unknown terms.
+
+The unknown component is therefore masked by successful rendering of its neighbors.
+
+FORMAL SHIFT:
+FROM:
+
+PROMPT
+= collection of jointly executed descriptions
+
+TO:
+
+PROMPT
+= field of unequally effective conditioning signals.
+
+SOURCE FORMALISM:
+The source does not provide an equation for semantic dominance.
+
+Its evidence comes from an ablation:
+
+unknown-triggering short prompt
+→ default image
+
+same unknown material + recognized terms in larger prompt
+→ imagery associated with recognized terms rather than the default motif. fileciteturn1file8L525-L532
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Prompt:
+
+p = {t₁, t₂, ... tₙ}
+
+Assign each term an effective visual control strength:
+
+c(tᵢ).
+
+Naive compositional model:
+
+IMAGE ≈ satisfy(t₁ ∧ t₂ ∧ ... ∧ tₙ)
+
+Alternative competitive model:
+
+IMAGE ≈ G(argmax / weighted interaction of c(tᵢ)).
+
+An unknown term may have:
+
+c(t_unknown) ≈ 0
+
+while recognized neighbors have:
+
+c(t_known) >> 0.
+
+The image can therefore look strongly prompt-conditioned even though one requested concept has disappeared computationally.
+
+TENSION:
+One reading is simple lexical dominance: recognized words overpower an unknown word.
+
+Another is that Midjourney may preprocess or rewrite the entire prompt, making apparent token-level competition an artifact of an unseen intermediary.
+
+The current evidence does not distinguish these mechanisms.
+
+MISSING:
+Token-level or phrase-level causal intervention.
+
+The study does not show precisely which prompt segments altered which image features, nor whether Midjourney rewrote the prompts internally.
+
+BOUNDARY:
+The finding comes from limited Midjourney ablations and should not yet be generalized into a universal law of prompt composition.
+
+CITATION TRAIL:
+[[DEFAULT-IMAGES-CHI26-ROOT]]
+→ Section 5.2.3
+→ known concepts suppress visible default behavior
+→ semantic failure can survive inside apparently successful generation
+→ question of token-level causal control.
+
+TEST:
+Construct minimal prompt pairs while fixing seed and all generation parameters.
+
+For each unknown term U and recognized term K, compare:
+
+U
+K
+U + K
+K + U
+U inside a syntactic modifier of K
+K inside a syntactic modifier of U.
+
+Then causally remove each term and measure changes in generated objects and image embeddings.
+
+A term counts as operationally interpreted only if its removal produces a reproducible, concept-specific change.
+
+PLATFORM:
+Midjourney v6-series ablation study.
+
+LINKS:
+[[DEFAULT-IMAGES-CHI26-ROOT]]
+
+BIBTEX:
+@inproceedings{Simonen2026DefaultImages,
+  author = {Simonen, Hannu and Kiviniemi, Atte and Johnston, Hannah and Barranha, Helena and Oppenlaender, Jonas},
+  title = {An Exploration of Default Images in Text-to-Image Generation},
+  booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+  year = {2026},
+  doi = {10.1145/3772318.3790681},
+  url = {https://doi.org/10.1145/3772318.3790681}
+}
+
+ZETTEL
+
+ID:
+DEFAULT-IMAGES-CHI26-A-1
+
+TITLE:
+A generator can represent a concept early in denoising and then forget it before the image is finished.
+
+SOURCE:
+Aishwarya Agarwal, Srikrishna Karanam, K J Joseph, Apoorv Saxena, Koustava Goswami, and Balaji Vasan Srinivasan — “A-STAR: Test-time Attention Segregation and Retention for Text-to-image Synthesis” — ICCV 2023 — https://arxiv.org/abs/2306.14544
+
+PASSAGE:
+[PARAPHRASE] Agarwal et al. inspect cross-attention during Stable Diffusion generation and report two distinct failures. Different concepts can compete for the same spatial regions, causing one concept to disappear from the final image. More strangely, concepts that are visibly represented in cross-attention during early denoising may cease to be represented strongly enough later in denoising. Their intervention therefore includes an “attention retention” loss intended to preserve concept-specific attention across the generation trajectory.
+
+RESEARCH OBJECT:
+Prompt neglect is not necessarily an input-stage failure.
+
+A concept may enter the generative process successfully and still fail to survive execution.
+
+The relevant object is therefore not merely:
+
+WAS CONCEPT C UNDERSTOOD?
+
+but:
+
+FOR HOW LONG DID C REMAIN CAUSALLY PRESENT?
+
+This opens a temporal failure class between comprehension and output:
+
+SEMANTIC EXTINCTION DURING GENERATION.
+
+LOCAL MOVE:
+Replace the binary model:
+
+UNDERSTOOD / NOT UNDERSTOOD
+
+with a trajectory:
+
+ACQUIRED
+→ LOCATED
+→ COMPETES
+→ RETAINED / LOST
+→ VISIBLE / ABSENT.
+
+SOURCE TERMS:
+cross-attention
+attention segregation
+attention retention
+concept overlap
+denoising
+semantic alignment
+ignored concepts
+
+WHAT BECAME STRANGE:
+An image generator can apparently “know” about something at timestep t and nevertheless produce an image at timestep T in which that thing never existed.
+
+Failure may therefore occur after representation.
+
+The generator does not merely misunderstand.
+
+It can forget.
+
+QUESTION:
+Do Midjourney default images arise because unknown concepts never acquire representation, or because weak concept representations briefly arise and are then extinguished by stronger recurrent motifs during generation?
+
+DEEPER QUESTION:
+Could a default image be the visual residue left after requested semantics lose a competition they initially entered?
+
+MECHANISM:
+A-STAR observes cross-attention overlap between concepts and declining preservation of concept-specific attention across denoising.
+
+A requested concept can therefore fail through at least two mechanisms:
+
+1. SPATIAL COLLISION:
+multiple concepts claim overlapping regions.
+
+2. TEMPORAL ATTRITION:
+a concept appears in early attention but is not retained through later denoising.
+
+FORMAL SHIFT:
+FROM:
+
+PROMPT
+→ REPRESENTATION
+→ IMAGE
+
+TO:
+
+PROMPT
+→ REPRESENTATION₀
+→ REPRESENTATION₁
+→ ...
+→ REPRESENTATIONₜ
+→ IMAGE
+
+where semantic state itself can decay.
+
+SOURCE FORMALISM:
+A-STAR introduces two test-time losses:
+
+attention segregation loss
+→ reduce spatial overlap between attention maps for distinct concepts
+
+attention retention loss
+→ preserve attention information for concepts across denoising timesteps.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For requested concept c, define semantic presence over time:
+
+M_c(t) = measurable concept-specific conditioning / attention at denoising step t.
+
+Static failure:
+
+M_c(0) ≈ 0.
+
+Temporal semantic extinction:
+
+M_c(t₁) > 0
+but
+M_c(t₂) → 0
+for t₂ > t₁.
+
+Final omission therefore does not imply initial non-representation.
+
+A default-image hypothesis becomes:
+
+weak requested concept c
++
+strong recurrent motif d
+
+M_c(t) ↓
+M_d(t) ↑
+→ output dominated by d.
+
+TENSION:
+Cross-attention is evidence about internal conditioning behavior, not a transparent readout of “understanding.”
+
+A concept appearing in an attention map does not establish human-like semantic comprehension.
+
+But it is sufficient to destroy the simpler claim that every missing object must have been absent from the computation from the beginning.
+
+MISSING:
+A timestep-by-timestep analysis of prompts that actually trigger default images.
+
+Specifically missing is whether the requested unknown term:
+
+never gains attention,
+
+briefly gains attention and loses it,
+
+or never gains interpretable attention while an eventual default motif progressively acquires it.
+
+BOUNDARY:
+A-STAR studies compositional failures in inspectable diffusion models, not Midjourney default images.
+
+The temporal-loss mechanism is therefore a candidate mechanism for the parent phenomenon, not its demonstrated cause.
+
+CITATION TRAIL:
+[[DEFAULT-IMAGES-CHI26-A]]
+→ silent partial interpretation
+→ A-STAR cross-attention analysis
+→ concepts present early but absent later
+→ prompt failure becomes a temporal state-transition problem
+→ test default motifs for semantic replacement trajectories.
+
+TEST:
+Use an inspectable diffusion model and construct three prompt classes:
+
+known concept
+rare but recognized concept
+default-triggering or nonce concept.
+
+For each generation, record token-specific cross-attention maps at every denoising step.
+
+Measure:
+
+time of first concept localization
+peak attention
+attention persistence
+time of extinction
+time of emergence of recurrent fallback motifs.
+
+The discriminating result is whether default-like outputs exhibit:
+
+ABSENCE FROM START
+
+versus
+
+REPRESENTATION THEN EXTINCTION
+
+versus
+
+REPRESENTATION THEN REPLACEMENT.
+
+PLATFORM:
+Stable Diffusion / diffusion-model cross-attention analysis; proposed application to default-image experiments.
+
+LINKS:
+[[DEFAULT-IMAGES-CHI26-A]]
+
+BIBTEX:
+@inproceedings{Agarwal2023ASTAR,
+  author = {Agarwal, Aishwarya and Karanam, Srikrishna and Joseph, K J and Saxena, Apoorv and Goswami, Koustava and Srinivasan, Balaji Vasan},
+  title = {A-STAR: Test-time Attention Segregation and Retention for Text-to-image Synthesis},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  year = {2023},
+  pages = {2283--2293},
+  url = {https://arxiv.org/abs/2306.14544}
+}
+
+ZETTEL
+
+ID:
+DEFAULT-IMAGES-CHI26-C
+
+TITLE:
+When semantic guidance weakens, the random seed stops looking like mere variation and begins choosing among meanings the prompt failed to determine.
+
+SOURCE:
+Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender — “An Exploration of Default Images in Text-to-Image Generation” — CHI ’26 — 2026 — https://doi.org/10.1145/3772318.3790681
+
+PASSAGE:
+[PARAPHRASE] Changing the seed while keeping the prompt fixed often produced different default images that shared only partial motifs. The authors therefore used a fixed seed to make recurrent defaults easier to observe. fileciteturn1file8L512-L519
+
+[PARAPHRASE] In the real-world dataset, where seeds varied, the researchers did not encounter the same canonical defaults found in the fixed-seed manual experiment; they report that seed-driven variation makes real-world detection substantially more difficult. fileciteturn1file2L137-L150
+
+RESEARCH OBJECT:
+Seed variation is not merely nuisance noise around one stable default.
+
+Under weak semantic conditioning, it may determine which of several recurrent motifs becomes visible.
+
+The object “the default image for prompt P” may therefore be incorrectly specified.
+
+A more adequate object may be:
+
+the distribution of fallback motifs for P under sampling states S.
+
+LOCAL MOVE:
+Replace DEFAULT IMAGE with DEFAULT DISTRIBUTION when reasoning across seeds.
+
+SOURCE TERMS:
+seed value
+stochastic sampling
+variation
+default-image motif
+many-to-many relationship
+fixed seed
+
+WHAT BECAME STRANGE:
+A canonical default can be partly manufactured by experimental control.
+
+Fixing the seed reveals recurrence, but it may also tempt the observer to treat one member of a sampling-dependent family as the model’s unique response to semantic failure.
+
+QUESTION:
+When a prompt supplies little semantic constraint, how much of the resulting image is determined by the prompt and how much by the sampling trajectory?
+
+DEEPER QUESTION:
+Does semantic underspecification increase the causal power of supposedly “random” generation parameters?
+
+MECHANISM:
+Weak prompt guidance leaves a wider set of possible generation trajectories available.
+
+Changing the seed alters the sampled trajectory and can expose different recurrent motifs.
+
+With stronger semantic constraints, the prompt may restrict this space more strongly.
+
+FORMAL SHIFT:
+FROM:
+
+seed = cosmetic variation parameter
+
+TO:
+
+seed × conditioning-strength
+= determinant of which fallback basin becomes visible.
+
+SOURCE FORMALISM:
+The manual experiment fixed:
+
+model = 6.1
+aspect ratio = 1
+stylize = 0
+chaos = 0
+weird = 0
+seed = 123456.
+
+The authors then separately varied seed values in their sensitivity analysis. fileciteturn0file0L460-L483
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let semantic constraint strength be C(p).
+
+Generated output:
+
+i = G(p,s).
+
+Hypothesis:
+
+as C(p) ↓
+
+∂i / ∂s ↑.
+
+That is:
+
+the weaker the prompt’s effective semantic constraint,
+the greater the output variance attributable to sampling state.
+
+Default behavior should therefore be modeled as:
+
+D(p) = distribution {G(p,s₁), G(p,s₂), ... G(p,sₙ)}
+
+rather than:
+
+D(p) = one canonical image.
+
+TENSION:
+Fixed seeds are methodologically useful because they expose cross-prompt recurrence.
+
+But a phenomenon visible primarily under fixed seeds could exaggerate the stability of the “default image” as a natural object.
+
+The real-world dataset simultaneously supports default behavior and complicates the canonical-image conception.
+
+MISSING:
+A systematic factorial study crossing:
+
+prompt semantic familiarity
+prompt specificity
+seed
+model version
+
+with enough samples to estimate variance components.
+
+BOUNDARY:
+The study's seed ablation is intentionally small-scale.
+
+It establishes sensitivity but not a general quantitative law relating semantic weakness to seed influence.
+
+CITATION TRAIL:
+[[DEFAULT-IMAGES-CHI26-ROOT]]
+→ fixed-seed manual experiment
+→ seed ablation
+→ real-world random-seed dataset
+→ canonical defaults disappear into motif variation
+→ default image becomes a distributional object.
+
+TEST:
+Choose prompt classes spanning highly recognized to strongly unknown.
+
+For each prompt generate N outputs over the same N seeds.
+
+Estimate:
+
+within-prompt / across-seed visual variance
+
+and
+
+across-prompt / within-seed visual convergence.
+
+If unknown prompts show unusually high seed-dependent motif switching while still converging across prompts at particular seeds, the default phenomenon is jointly determined by semantic weakness and sampling state.
+
+PLATFORM:
+Midjourney v6.1 manual experiments and multi-version observational dataset.
+
+LINKS:
+[[DEFAULT-IMAGES-CHI26-ROOT]]
+
+BIBTEX:
+@inproceedings{Simonen2026DefaultImages,
+  author = {Simonen, Hannu and Kiviniemi, Atte and Johnston, Hannah and Barranha, Helena and Oppenlaender, Jonas},
+  title = {An Exploration of Default Images in Text-to-Image Generation},
+  booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+  year = {2026},
+  doi = {10.1145/3772318.3790681},
+  url = {https://doi.org/10.1145/3772318.3790681}
+}
+
+ZETTEL
+
+ID:
+DEFAULT-IMAGES-CHI26-C-1
+
+TITLE:
+The random seed is not empty: blocks of Gaussian noise already have preferences for what they will become.
+
+SOURCE:
+Jiafeng Mao, Xueting Wang, and Kiyoharu Aizawa — “Guided Image Synthesis via Initial Image Editing in Diffusion Model” — 2023 — https://arxiv.org/abs/2305.03382
+
+PASSAGE:
+[PARAPHRASE] Mao et al. experimentally manipulate the initial latent noise of Stable Diffusion and find that local blocks of the initial noise exhibit preferences for generating particular kinds of content. Altering a local block changes the corresponding region of the final image while often preserving other regions. They further report that these generation preferences depend more strongly on the values contained in a block than on the block’s original position.
+
+RESEARCH OBJECT:
+The seed is not merely the dice roll that selects among otherwise equivalent images.
+
+The initial noise contains structure that interacts with the model so predictably that pieces of it can be moved and edited to steer what appears later.
+
+The “random” beginning of generation therefore already contains unequal futures.
+
+LOCAL MOVE:
+Replace:
+
+SEED = source of arbitrary variation
+
+with:
+
+SEED = structured initial condition with differential generative affordances.
+
+SOURCE TERMS:
+initial noise
+initial latent image
+content preference
+pixel blocks
+guided image synthesis
+Stable Diffusion
+layout-to-image
+
+WHAT BECAME STRANGE:
+Before the prompt has finished becoming an image, different pieces of supposedly meaningless noise are already better candidates for becoming different things.
+
+Randomness is not neutral with respect to the learned generator.
+
+The seed may be a proto-image without looking anything like an image.
+
+QUESTION:
+Are the recurring motifs called “default images” partly selected by latent regions of the initial noise that are unusually compatible with those motifs?
+
+DEEPER QUESTION:
+When linguistic conditioning becomes weak, does generation reveal a hidden visual disposition already latent in the starting noise-model pair?
+
+MECHANISM:
+The source demonstrates that changing local values in initial latent noise can predictably alter corresponding generated content.
+
+The operative object is therefore not noise alone but:
+
+INITIAL NOISE
+×
+TRAINED DENOISER.
+
+Certain noise configurations interact with the learned model in ways that make some outcomes easier to realize than others.
+
+FORMAL SHIFT:
+FROM:
+
+PROMPT determines semantics
++
+SEED supplies stochastic variation
+
+TO:
+
+PROMPT supplies semantic pressure
++
+SEED supplies structured generative predispositions
++
+DENOISING resolves their interaction.
+
+SOURCE FORMALISM:
+The authors manipulate blocks within the initial latent and evaluate how those interventions alter corresponding output regions.
+
+Their experiments treat the initial latent itself as an actionable control surface for generation rather than an immutable random starting point.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+z₀ = initial Gaussian latent
+p = prompt
+G = trained diffusion generator.
+
+Ordinary framing:
+
+I = G(z₀,p)
+
+with z₀ treated as semantically neutral randomness.
+
+Alternative:
+
+z₀ contains local generation affordances:
+
+A(z₀,r,c)
+
+= propensity for region r of z₀, under G, to develop toward content c.
+
+Then:
+
+weak semantic guidance from p
+→ greater relative influence of A(z₀,r,c).
+
+Default imagery may therefore be jointly selected by:
+
+MODEL PRIOR
+×
+NOISE AFFORDANCE
+×
+WEAK PROMPT CONTROL.
+
+TENSION:
+Calling the initial noise “semantic” would overstate the source.
+
+The experiments demonstrate content preferences conditional on a trained generator.
+
+They do not show that Gaussian values intrinsically contain birds, buildings, faces, or other concepts independently of the model.
+
+The content is relational:
+
+NOISE × MODEL,
+
+not simply hidden inside the noise.
+
+MISSING:
+Whether the same latent block retains a content preference across:
+
+different prompts
+different seeds around a local neighborhood
+different model checkpoints
+different diffusion architectures.
+
+Also missing is whether default-image motifs correspond disproportionately to especially large basins of compatible initial noise.
+
+BOUNDARY:
+The source studies Stable Diffusion and controlled latent manipulation.
+
+It does not demonstrate that Midjourney uses equivalent initial latents or that its default images originate in seed structure.
+
+CITATION TRAIL:
+[[DEFAULT-IMAGES-CHI26-C]]
+→ seed changes which default motif appears
+→ initial-noise manipulation literature
+→ noise blocks exhibit content preferences
+→ “random variation” becomes structured initial condition
+→ next edge: map default motifs backward into initial-noise regions.
+
+TEST:
+For an open diffusion model, first discover prompts that produce default-like recurrent motifs.
+
+Then sample a large seed set.
+
+Label resulting motif class for each seed.
+
+For seeds strongly associated with one motif:
+
+swap local latent blocks into seeds associated with another motif.
+
+If motif probability moves with transferred blocks, identify which initial-noise regions exert causal control.
+
+Then repeat with progressively stronger known prompt concepts.
+
+Prediction:
+
+the stronger the semantic prompt constraint,
+the less visible the latent block’s prior preference should become.
+
+PLATFORM:
+Stable Diffusion; initial-latent intervention.
+
+LINKS:
+[[DEFAULT-IMAGES-CHI26-C]]
+
+BIBTEX:
+@article{Mao2023InitialImageEditing,
+  author = {Mao, Jiafeng and Wang, Xueting and Aizawa, Kiyoharu},
+  title = {Guided Image Synthesis via Initial Image Editing in Diffusion Model},
+  journal = {arXiv preprint arXiv:2305.03382},
+  year = {2023},
+  url = {https://arxiv.org/abs/2305.03382}
+}
+
+ZETTEL
+
+ID:
+DEFAULT-IMAGES-CHI26-E
+
+TITLE:
+Default-image detection reverses ordinary prompt evaluation: the signal is visual similarity where linguistic similarity is absent.
+
+SOURCE:
+Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender — “An Exploration of Default Images in Text-to-Image Generation” — CHI ’26 — 2026 — https://doi.org/10.1145/3772318.3790681
+
+PASSAGE:
+[PARAPHRASE] The authors identify candidates by first clustering visually similar outputs with CLIP embeddings and then eliminating clusters whose associated prompts share too much lexical or semantic similarity. Their lexical filter excludes clusters when a word occurs in at least half of the associated prompts; their semantic filter removes clusters whose average prompt-embedding similarity exceeds 0.3. fileciteturn0file0L590-L647
+
+RESEARCH OBJECT:
+The paper turns default-image detection into a relational anomaly.
+
+Neither a strange image nor a misunderstood prompt is sufficient.
+
+The phenomenon appears only when two relations disagree:
+
+IMAGE RELATION:
+these outputs are unusually alike.
+
+PROMPT RELATION:
+the instructions producing them are unusually unlike.
+
+LOCAL MOVE:
+Move from judging single prompt-output pairs to detecting contradictions between two similarity spaces.
+
+SOURCE TERMS:
+CLIP
+cosine similarity
+agglomerative hierarchical clustering
+lexical overlap
+semantic similarity
+sentence transformers
+default-image cluster
+
+WHAT BECAME STRANGE:
+The failure is invisible in either modality alone.
+
+Looking only at the images, the cluster may appear coherent.
+
+Looking only at the prompts, nothing may connect them.
+
+The anomaly exists in the mismatch between representational spaces.
+
+QUESTION:
+What other generative failure modes become detectable only by comparing the topology of input space with the topology of output space?
+
+DEEPER QUESTION:
+Can generative-system behavior be mapped as systematic distortions between neighborhoods in instruction space and neighborhoods in artifact space?
+
+MECHANISM:
+The method searches for output neighborhoods that collapse inputs which are distant in language space.
+
+A candidate default cluster therefore represents a local many-to-one distortion between prompt semantics and generated-image semantics.
+
+FORMAL SHIFT:
+FROM:
+
+evaluate:
+
+prompt ↔ its image
+
+TO:
+
+compare:
+
+relations among prompts
+↔
+relations among outputs.
+
+SOURCE FORMALISM:
+The source computes CLIP ViT-L/14 embeddings for images and uses agglomerative hierarchical clustering with a cosine-distance threshold of 0.1, followed by cluster merging based on centroid similarity at 0.9.
+
+For a cluster with M prompts and vocabulary V, it defines lexical overlap as:
+
+L = max_{w∈V} freq(w) / M
+
+and excludes the cluster if:
+
+L ≥ 0.5.
+
+It then calculates average pairwise semantic similarity among prompt embeddings using all-MiniLM-L6-v2 and excludes clusters with semantic similarity > 0.3. fileciteturn0file0L590-L647
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+d_P(pᵢ,pⱼ) = distance between prompts
+
+d_I(iᵢ,iⱼ) = distance between outputs.
+
+A default-like collapse occurs where:
+
+d_P(pᵢ,pⱼ) >> 0
+
+while:
+
+d_I(G(pᵢ),G(pⱼ)) ≈ 0.
+
+More generally define representational distortion:
+
+Δᵢⱼ = d_P(pᵢ,pⱼ) - d_I(G(pᵢ),G(pⱼ)).
+
+Large positive Δ indicates linguistic distinctions being collapsed in output space.
+
+Large negative Δ would indicate the inverse phenomenon:
+
+similar instructions producing unexpectedly divergent artifacts.
+
+TENSION:
+The method depends on representation models to decide both visual similarity and semantic dissimilarity.
+
+A cluster can therefore be classified as a generative-model failure partly because CLIP and a sentence-transformer impose their own similarity geometries.
+
+The detector's ontology is not independent of other learned models.
+
+MISSING:
+Human validation of prompt semantic distance at scale.
+
+Sensitivity analysis across image and text embedding models.
+
+A principled rather than visually tuned choice of thresholds.
+
+Analysis of the inverse anomaly: semantically close prompts producing systematically distant outputs.
+
+BOUNDARY:
+This procedure detects candidate clusters under operational similarity thresholds.
+
+It does not prove that every resulting cluster shares one internal causal mechanism.
+
+CITATION TRAIL:
+[[DEFAULT-IMAGES-CHI26-ROOT]]
+→ computational detection method
+→ image-space convergence + prompt-space divergence
+→ relational rather than pairwise failure
+→ possibility of mapping distortions between instruction space and output space.
+
+TEST:
+Construct two neighborhood graphs over the same dataset:
+
+G_P = nearest-neighbor graph of prompts
+
+G_I = nearest-neighbor graph of generated images.
+
+Measure edges present in G_I but absent in G_P and edges present in G_P but absent in G_I.
+
+Cluster these topology disagreements.
+
+Determine whether default images are one member of a larger taxonomy of cross-space distortions.
+
+PLATFORM:
+Midjourney dataset; CLIP ViT-L/14; all-MiniLM-L6-v2; agglomerative hierarchical clustering.
+
+LINKS:
+[[DEFAULT-IMAGES-CHI26-ROOT]]
+
+BIBTEX:
+@inproceedings{Simonen2026DefaultImages,
+  author = {Simonen, Hannu and Kiviniemi, Atte and Johnston, Hannah and Barranha, Helena and Oppenlaender, Jonas},
+  title = {An Exploration of Default Images in Text-to-Image Generation},
+  booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+  year = {2026},
+  doi = {10.1145/3772318.3790681},
+  url = {https://doi.org/10.1145/3772318.3790681}
+}
+
+ZETTEL
+
+ID:
+DEFAULT-IMAGES-CHI26-E-1
+
+TITLE:
+The instrument used to detect default-image convergence has a convergence pathology of its own: CLIP produces hubs.
+
+SOURCE:
+Neil Chowdhury, Franklin Wang, Sumedh Shenoy, Douwe Kiela, Sarah Schwettmann, and Tristan Thrush — “Nearest Neighbor Normalization Improves Multimodal Retrieval” — 2024 — https://arxiv.org/abs/2410.24114
+
+PASSAGE:
+[PARAPHRASE] Chowdhury et al. study contrastive multimodal embedding models including CLIP and identify “hubness”: some candidates become nearest neighbors for disproportionately many unrelated queries. In their COCO text-to-image retrieval experiments, a base CLIP model contains numerous hub images that match more than one hundred captions. Correcting candidate-specific similarity bias substantially changes retrieval performance.
+
+RESEARCH OBJECT:
+The default-image study operationalizes recurrence through CLIP embedding similarity.
+
+But CLIP's own geometry is not neutral.
+
+It contains regions and examples that are systematically too close to many otherwise distinct queries.
+
+This creates a measurement opposition:
+
+GENERATOR COLLAPSE
+
+versus
+
+EMBEDDING-SPACE HUBNESS.
+
+LOCAL MOVE:
+Turn the detector back on itself.
+
+Before interpreting a dense visual cluster as a property of Midjourney, ask whether some portion of the cluster density is created or amplified by the representation used to measure similarity.
+
+SOURCE TERMS:
+hubness
+contrastive retrieval
+CLIP
+cosine similarity
+nearest neighbor
+hub images
+Nearest Neighbor Normalization
+
+WHAT BECAME STRANGE:
+The experiment looks for images that are “too similar to too many things.”
+
+The measuring instrument is itself documented to contain items that are “too similar to too many things.”
+
+The anomaly and its detector therefore share a formal shape.
+
+QUESTION:
+Would the same Midjourney default-image clusters survive if visual similarity were measured in embedding spaces that do not share CLIP's hub structure?
+
+DEEPER QUESTION:
+How do we distinguish a generative attractor from an observational attractor created by the metric used to see it?
+
+MECHANISM:
+Contrastive embedding spaces can develop hubs: points receiving anomalously high similarity scores from many inputs.
+
+Chowdhury et al. estimate candidate-specific bias from nearby reference queries and subtract that bias during retrieval, reducing hub domination.
+
+The result demonstrates that raw cosine similarity in CLIP can contain systematic neighborhood distortion.
+
+FORMAL SHIFT:
+FROM:
+
+CLIP_SIMILARITY(i₁,i₂)
+≈ perceptual similarity
+
+TO:
+
+CLIP_SIMILARITY
+= perceptual/semantic structure
++
+embedding geometry
++
+possible hub bias.
+
+SOURCE FORMALISM:
+For retrieval query q and candidate r, the source begins from:
+
+s(q,r) = q · r
+
+and estimates candidate-specific hub bias using its nearest reference queries.
+
+It then computes a normalized score:
+
+s_D(q,r) = s(q,r) - b(r).
+
+The method explicitly treats some candidates as having systematic similarity offsets.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Parent detector:
+
+DEFAULT_CANDIDATE
+if
+
+d_CLIP(i_a,i_b) small
+while
+d_TEXT(p_a,p_b) large.
+
+But suppose an image embedding h has hubness H(h):
+
+H(h) = number / density of unrelated neighbors for which h appears anomalously close.
+
+Then observed convergence may contain two components:
+
+C_observed
+=
+C_generator
++
+C_metric.
+
+The required test is therefore invariance:
+
+cluster_default
+should persist under multiple independent visual metrics.
+
+TENSION:
+The new source demonstrates hubness specifically in contrastive image-text retrieval.
+
+Simonen et al. use CLIP image embeddings for image-image clustering.
+
+These are related but not identical operations.
+
+Therefore this source does NOT establish that the published default-image clusters are artifacts.
+
+It establishes a serious measurement question that the parent method has not yet eliminated.
+
+MISSING:
+Re-clustering the 757,728-image dataset with independent representations such as:
+
+DINO-family visual embeddings
+LPIPS
+SSIM / MS-SSIM
+other vision encoders
+human similarity judgments.
+
+Also missing:
+
+hubness statistics for the exact CLIP image-image embedding space and dataset used in the default-image study.
+
+BOUNDARY:
+Hubness in CLIP retrieval cannot by itself invalidate the default-image phenomenon.
+
+The manual affinity-diagramming results and recurrent motifs provide evidence independent of large-scale CLIP clustering.
+
+The issue principally pressures the scale and membership of automatically detected clusters.
+
+CITATION TRAIL:
+[[DEFAULT-IMAGES-CHI26-E]]
+→ CLIP-based output-space convergence detector
+→ contrastive-embedding hubness literature
+→ detector itself contains preferential neighborhoods
+→ generative collapse must be separated from measurement collapse.
+
+TEST:
+Re-run the exact default-image discovery pipeline with at least four independently trained visual representations.
+
+For every candidate cluster calculate:
+
+cluster persistence
+membership agreement
+centroid stability
+human-rated visual coherence.
+
+Then estimate each image's hubness under each representation.
+
+A default-image cluster survives the opposition only if its recurrence remains after:
+
+changing representation,
+hub-normalizing similarity,
+and human verification.
+
+PLATFORM:
+CLIP and other multimodal embedding models; Midjourney default-image detection pipeline.
+
+LINKS:
+[[DEFAULT-IMAGES-CHI26-E]]
+
+BIBTEX:
+@article{Chowdhury2024NNN,
+  author = {Chowdhury, Neil and Wang, Franklin and Shenoy, Sumedh and Kiela, Douwe and Schwettmann, Sarah and Thrush, Tristan},
+  title = {Nearest Neighbor Normalization Improves Multimodal Retrieval},
+  journal = {arXiv preprint arXiv:2410.24114},
+  year = {2024},
+  url = {https://arxiv.org/abs/2410.24114}
+}
+
+ZETTEL
+
+ID:
+DEFAULT-IMAGES-CHI26-F
+
+TITLE:
+When a model lacks a word, it does not leave a hole where that culture should be; it fills the hole with something it already knows how to picture.
+
+SOURCE:
+Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender — “An Exploration of Default Images in Text-to-Image Generation” — CHI ’26 — 2026 — https://doi.org/10.1145/3772318.3790681
+
+PASSAGE:
+[PARAPHRASE] The researchers deliberately include native Finnish and Tagalog terms among realistic prompts likely to challenge Midjourney because of low training-data coverage. They use haveibeentrained.com as an imperfect proxy for whether candidate terms are represented in large image-caption datasets. fileciteturn1file6L412-L428
+
+[PARAPHRASE] The authors argue that defaults can reveal insufficient coverage of low-resource languages and potentially indicate deficiencies in training-data diversity. fileciteturn1file9L596-L605
+
+RESEARCH OBJECT:
+Linguistic underrepresentation does not merely reduce linguistic performance.
+
+In a text-to-image system compelled to return an image, lexical absence can become visual substitution.
+
+The missing representation is covered over by imagery drawn from better-established regions of the system.
+
+LOCAL MOVE:
+Reframe low-resource-language failure from:
+
+MODEL CANNOT REPRESENT X
+
+to:
+
+MODEL CANNOT REPRESENT X
+AND THEREFORE REPRESENTS Y.
+
+The second clause is the new research object.
+
+SOURCE TERMS:
+low-resource languages
+Finnish
+Tagalog
+training-data coverage
+default images
+dataset diversity
+unknown inputs
+
+WHAT BECAME STRANGE:
+A blank, refusal, or explicit unknown would preserve evidence of absence.
+
+A default image instead supplies a culturally unrequested positive representation.
+
+The system's ignorance becomes substitution.
+
+QUESTION:
+When culturally or linguistically underrepresented concepts fail to condition generation, what visual priors replace them?
+
+DEEPER QUESTION:
+Are supposedly universal generative aesthetics partly the visible residue of what the model does whenever the world's less-represented vocabularies cease to exert control?
+
+MECHANISM:
+A term with weak learned visual association supplies little semantic guidance.
+
+Generation then depends more heavily on learned recurrent visual structure.
+
+The output can therefore inherit common motifs unrelated to the culturally specific requested concept.
+
+FORMAL SHIFT:
+FROM:
+
+representation bias
+= some concepts are generated less accurately
+
+TO:
+
+representation bias
+= loss of requested semantic control
++
+systematic occupation of the vacated output space by other priors.
+
+SOURCE FORMALISM:
+The paper creates six prompt categories.
+
+A4 specifically contains low-resource-language words:
+
+A4.1 Finnish
+A4.2 Tagalog.
+
+Candidate prompts are selected partly by checking apparent underrepresentation in large image-caption datasets through haveibeentrained.com. fileciteturn0file0L431-L459
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For concept c in language ℓ:
+
+representation strength = R(c,ℓ).
+
+If:
+
+R(c,ℓ) < τ,
+
+then the system does not output NULL.
+
+Instead:
+
+G(c,ℓ)
+→ fallback distribution F_m.
+
+The politically and culturally relevant object is therefore not only:
+
+error(c,ℓ)
+
+but:
+
+substitute(c,ℓ) = dominant motifs sampled when R(c,ℓ) is weak.
+
+TENSION:
+The paper uses low-resource-language prompts as one experimental category and proposes bias research as a future direction.
+
+It does not establish that every observed Tagalog or Finnish default is caused by linguistic underrepresentation, nor does its black-box design expose Midjourney’s actual training set.
+
+Low resource in an external dataset proxy is not proof of absence from Midjourney training.
+
+MISSING:
+Direct training-data evidence.
+
+Cross-language matched concepts.
+
+Comparison of transliteration, translation, paraphrase, and native-language prompting.
+
+Analysis of which demographic, cultural, geographic, and aesthetic motifs occupy the fallback distribution.
+
+BOUNDARY:
+The paper establishes a useful probe and an observed association, not a causal theorem that low-resource language status itself produces default images.
+
+CITATION TRAIL:
+[[DEFAULT-IMAGES-CHI26-ROOT]]
+→ A4 Finnish / Tagalog prompts
+→ default images under weak recognition
+→ authors' proposed study of “raw” demographic, cultural, and aesthetic biases
+→ substitution becomes the unresolved object.
+
+TEST:
+Build concept-equivalent prompt sets across languages.
+
+For each concept:
+
+native low-resource term
+translation into high-resource language
+descriptive paraphrase in low-resource language
+descriptive paraphrase in high-resource language.
+
+Fix model parameters and sample many seeds.
+
+Measure:
+
+concept fidelity
+default-image frequency
+fallback motif distribution.
+
+The key discriminating evidence is not merely whether one language fails more often, but whether its failures systematically converge on particular visual motifs absent from the requested concept.
+
+PLATFORM:
+Midjourney; comparative multilingual TTI evaluation.
+
+LINKS:
+[[DEFAULT-IMAGES-CHI26-ROOT]]
+
+BIBTEX:
+@inproceedings{Simonen2026DefaultImages,
+  author = {Simonen, Hannu and Kiviniemi, Atte and Johnston, Hannah and Barranha, Helena and Oppenlaender, Jonas},
+  title = {An Exploration of Default Images in Text-to-Image Generation},
+  booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+  year = {2026},
+  doi = {10.1145/3772318.3790681},
+  url = {https://doi.org/10.1145/3772318.3790681}
+}
+
+ZETTEL
+
+ID:
+DEFAULT-IMAGES-CHI26-F-1
+
+TITLE:
+A single Unicode character can behave like a culture vector even when it appears inside a semantically irrelevant word.
+
+SOURCE:
+Lukas Struppek, Dominik Hintersdorf, Felix Friedrich, Manuel Brack, Patrick Schramowski, and Kristian Kersting — “Exploiting Cultural Biases via Homoglyphs in Text-to-Image Synthesis” — Journal of Artificial Intelligence Research 78 — 2023 — https://arxiv.org/abs/2209.08891
+
+PASSAGE:
+[PARAPHRASE] Struppek et al. replace single Latin characters with visually similar characters from non-Latin scripts inside otherwise ordinary prompts. These tiny changes can shift generated architecture, food, environments, and depictions of people toward visual characteristics statistically associated with the substituted script. Their experiments identify the text encoder as the primary mechanism. They further construct embedding-space directions from the difference between Latin and non-Latin character embeddings and show that adding such directions to ordinary prompt embeddings can reproduce similar cultural shifts without changing the visible prompt.
+
+RESEARCH OBJECT:
+Low-resource language behavior is not only about missing words.
+
+A text-to-image model may assign powerful visual consequences below the level of the word.
+
+A single character can carry a learned cultural direction strong enough to reorganize an image.
+
+LOCAL MOVE:
+Move from:
+
+LANGUAGE COVERAGE
+→ whether the model recognizes a word
+
+to:
+
+SCRIPT GEOMETRY
+→ how individual characters move the prompt representation through learned cultural space.
+
+SOURCE TERMS:
+homoglyphs
+non-Latin characters
+text encoder
+cultural biases
+embedding space
+cultural directions
+Unicode scripts
+
+WHAT BECAME STRANGE:
+A character placed in an article or preposition—a character with essentially no intended cultural proposition—can alter clothing, architecture, faces, colors, or scenery.
+
+The smallest visible unit of writing can exert more visual control than the sentence says it should have.
+
+QUESTION:
+Do low-resource-language default images arise only from weak semantic coverage, or can script-level embedding directions actively push weak prompts toward particular fallback motifs?
+
+DEEPER QUESTION:
+When the intended semantics of a prompt are weak, does orthography itself become an unintended control language for the generator?
+
+MECHANISM:
+The source locates the effect primarily in the text encoder.
+
+Characters from different scripts occupy distinguishable regions of embedding space.
+
+The authors compute embedding differences between Latin and non-Latin characters and use those differences as directions that can shift an ordinary text embedding toward outputs displaying corresponding learned cultural associations.
+
+FORMAL SHIFT:
+FROM:
+
+CHARACTER
+→ part of WORD
+→ lexical meaning
+
+TO:
+
+CHARACTER
+→ EMBEDDING DISPLACEMENT
+→ visual-cultural conditioning
+
+even when lexical meaning is effectively unchanged.
+
+SOURCE FORMALISM:
+The source defines encoder-based embedding manipulations and computes directions from the difference between representations associated with Latin and non-Latin characters.
+
+Those directions are added to normal prompt embeddings to test whether the image generator reproduces the cultural shift observed with actual homoglyph substitutions.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+E(p) = text embedding of prompt p
+
+and let h replace one Latin character with a homoglyph.
+
+Define:
+
+v_h = E(p ⊕ h) - E(p).
+
+The source's result motivates treating v_h as a learned script-associated direction.
+
+Then:
+
+G(E(p) + v_h)
+≠
+G(E(p))
+
+even when:
+
+human_semantics(p ⊕ h)
+≈
+human_semantics(p).
+
+For weak prompt semantics:
+
+||semantic_control(p)|| ↓
+
+the relative influence of:
+
+||v_h||
+
+may become disproportionately large.
+
+TENSION:
+The authors use terms such as cultural bias and cultural direction, but the mappings are model-dependent.
+
+The same character can acquire different associations in different systems because training histories differ.
+
+A Unicode character therefore does not possess one inherent culture.
+
+The model has learned a statistical association between script and visual patterns.
+
+MISSING:
+The interaction between character-level directions and default-image attractors.
+
+Specifically:
+
+Does adding one script character to a prompt known to trigger Lady-Birdhead or another recurrent default suppress that default, select another default, or culturally transform the same motif?
+
+BOUNDARY:
+The demonstrated mechanism concerns DALL-E 2, Stable Diffusion, and related encoder architectures investigated by the authors.
+
+It is not direct evidence about Midjourney's hidden text encoder.
+
+CITATION TRAIL:
+[[DEFAULT-IMAGES-CHI26-F]]
+→ low-resource terms produce default substitutions
+→ Struppek et al. character-level cultural steering
+→ linguistic failure splits into ABSENCE and ORTHOGRAPHIC FORCE
+→ default imagery may depend on what weak text fails to say AND what its script accidentally says.
+
+TEST:
+Take a fixed set of default-triggering nonce and low-resource prompts.
+
+Create minimally different variants by replacing one visually similar character with homoglyphs from several scripts.
+
+Fix model parameters and seeds.
+
+Measure:
+
+default-motif identity
+default frequency
+CLIP/image embedding shift
+human-rated cultural attributes.
+
+Then reproduce each observed effect by directly adding the corresponding character-derived embedding direction in an open model.
+
+If the same motif shift can be produced without changing the visible text, the operative mechanism is embedding geometry rather than lexical interpretation.
+
+PLATFORM:
+DALL-E 2; Stable Diffusion; CLIP-based text encoders.
+
+LINKS:
+[[DEFAULT-IMAGES-CHI26-F]]
+
+BIBTEX:
+@article{Struppek2023Homoglyphs,
+  author = {Struppek, Lukas and Hintersdorf, Dominik and Friedrich, Felix and Brack, Manuel and Schramowski, Patrick and Kersting, Kristian},
+  title = {Exploiting Cultural Biases via Homoglyphs in Text-to-Image Synthesis},
+  journal = {Journal of Artificial Intelligence Research},
+  volume = {78},
+  pages = {1017--1068},
+  year = {2023},
+  url = {https://arxiv.org/abs/2209.08891}
+}
+
+ZETTEL
+
+ID:
+DEFAULT-IMAGES-CHI26-F-2
+
+TITLE:
+A word can be meaningless to every human in the room and still be densely meaningful to the image model.
+
+SOURCE:
+Raphaël Millière — “Adversarial Attacks on Image Generation With Made-Up Words” — 2022 — https://arxiv.org/abs/2208.04135
+
+PASSAGE:
+[PARAPHRASE] Millière constructs “macaronic” nonce words by combining fragments associated with the same concept across several languages. Fragments drawn from German, Italian, French, and Spanish words for birds can be recombined into strings with no conventional lexical meaning yet still reliably elicit bird imagery from DALL-E 2. Other manufactured strings target insects, butterflies, lizards, rabbits, cliffs, airplanes, firefighters, education, and emotional concepts. Some of these fabricated prompts transfer to DALL-E mini despite substantial architectural and tokenizer differences.
+
+[PARAPHRASE] Millière also challenges the stronger claim that DALL-E 2 possesses a mysterious autonomous “hidden vocabulary.” Some apparently magical strings may instead work because subword tokenization preserves fragments associated with real words and visual concepts.
+
+RESEARCH OBJECT:
+“Unknown input” is not a property of the visible string.
+
+It is a relation between the visible string and the model's tokenization-plus-representation machinery.
+
+A prompt can fail every human lexical test while activating an unusually coherent model concept.
+
+LOCAL MOVE:
+Split:
+
+NON-WORD
+
+from:
+
+SEMANTICALLY EMPTY FOR THE MODEL.
+
+They are not equivalent.
+
+SOURCE TERMS:
+macaronic prompting
+nonce strings
+lexical hybridization
+subword units
+BPE tokenization
+multilingual data
+evocative prompting
+
+WHAT BECAME STRANGE:
+The system's vocabulary need not line up with any human vocabulary.
+
+There can be strings that no speaker uses, no dictionary contains, and no author intended—yet the model treats them as effective instructions.
+
+The machine does not merely have gaps between known words.
+
+It has semantic corridors cutting diagonally through pieces of many languages.
+
+QUESTION:
+How many “unknown” prompts in the default-image study are actually unknown to the model, rather than unusual surfaces composed of familiar subword fragments with competing or weak visual associations?
+
+DEEPER QUESTION:
+Is a model's operative prompt language better described as a geometry over subword fragments than as a vocabulary of human words?
+
+MECHANISM:
+Subword tokenization decomposes strings into units that may have acquired visual associations during multilingual training.
+
+Millière deliberately combines fragments from several translations of the same target concept.
+
+The resulting nonce string is meaningless according to ordinary lexical semantics but can concentrate multiple learned subword associations toward one visual concept.
+
+FORMAL SHIFT:
+FROM:
+
+WORD ∈ VOCABULARY
+→ understood
+
+WORD ∉ VOCABULARY
+→ unknown
+
+TO:
+
+STRING
+→ TOKENIZATION
+→ set / sequence of learned subword associations
+→ visual conditioning strength.
+
+SOURCE FORMALISM:
+The source constructs artificial lexical hybrids from fragments of words sharing a visual referent across multiple languages.
+
+For example, fragments from translations of “birds” are recombined into novel strings and tested as image-generation prompts.
+
+The method is experimental rather than a formal programming language, but its operative chain is explicit:
+
+MULTILINGUAL SOURCE WORDS
+→ SUBWORD FRAGMENTS
+→ HYBRID NONCE STRING
+→ IMAGE GENERATION.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For visible prompt string s:
+
+T(s) = {τ₁, τ₂, ... τₙ}
+
+where T is tokenizer decomposition.
+
+Human lexical validity:
+
+H(s) ∈ {word, non-word}
+
+does not determine model semantic strength.
+
+Define:
+
+C(s,c) = aggregate conditioning strength of T(s) toward concept c.
+
+Then it is possible that:
+
+H(s) = non-word
+
+while:
+
+C(s,bird) >> 0.
+
+Conversely, a legitimate low-resource word may satisfy:
+
+H(s) = word
+
+while:
+
+C(s,intended concept) ≈ 0.
+
+TENSION:
+Daras and Dimakis described some gibberish behavior as a possible “hidden vocabulary.”
+
+Millière argues this framing may be misleading because token overlap, BPE decomposition, multilingual associations, and morphological resemblance offer more ordinary mechanisms.
+
+The strange behavior survives.
+
+Its ontology changes:
+
+not SECRET WORDS,
+
+but MISALIGNED LEXICAL GEOMETRY.
+
+MISSING:
+Tokenizer-level analysis of Simonen et al.'s six default-triggering prompt classes.
+
+For each purportedly unknown input, we do not yet know:
+
+its token decomposition,
+training frequency of those pieces,
+visual neighbors of each piece,
+or whether several pieces exert mutually cancelling conditioning.
+
+BOUNDARY:
+Macaronic prompting is deliberately constructed and does not show that ordinary nonce strings generally possess reliable semantics.
+
+Many nonsense strings remain unstable or ineffective.
+
+CITATION TRAIL:
+[[DEFAULT-IMAGES-CHI26-F]]
+→ model fills unrecognized language with default imagery
+→ Daras and Dimakis hidden-vocabulary anomaly
+→ Millière's tokenizer/subword opposition
+→ unknown-to-human ≠ unknown-to-model
+→ default-image research needs a model-relative definition of UNKNOWN.
+
+TEST:
+Take every prompt in Simonen et al.'s A1–A6 sets.
+
+For an open model:
+
+1. record tokenizer decomposition;
+2. estimate each token's nearest lexical and visual neighbors;
+3. calculate token frequency and multilingual overlap;
+4. compare these properties with probability of default-like output.
+
+Then generate matched controls:
+
+human non-words with high coherent subword association,
+human words with weak model association,
+random strings with no coherent association.
+
+If default behavior tracks representation strength rather than wordhood, replace the category UNKNOWN INPUT with MODEL-RELATIVE CONDITIONING DEFICIT.
+
+PLATFORM:
+DALL-E 2; DALL-E mini; subword-tokenized text-to-image systems.
+
+LINKS:
+[[DEFAULT-IMAGES-CHI26-F]]
+
+BIBTEX:
+@article{Milliere2022MadeUpWords,
+  author = {Milli{\`e}re, Rapha{\"e}l},
+  title = {Adversarial Attacks on Image Generation With Made-Up Words},
+  journal = {arXiv preprint arXiv:2208.04135},
+  year = {2022},
+  url = {https://arxiv.org/abs/2208.04135}
+}
+
+ZETTEL
+
+ID:
+DEFAULT-IMAGES-CHI26-D
+
+TITLE:
+A model version may have a visual failure signature: what it draws when it cannot tell what you asked for.
+
+SOURCE:
+Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender — “An Exploration of Default Images in Text-to-Image Generation” — CHI ’26 — 2026 — https://doi.org/10.1145/3772318.3790681
+
+PASSAGE:
+[PARAPHRASE] Midjourney v6.0 and v6.1 produced very similar defaults for the same prompts, while older versions such as v5.1 and v5.2 showed a more surreal or abstract aesthetic with recurring motifs including floating objects and human portraits intertwined with plants or animals. fileciteturn1file8L541-L548
+
+[PARAPHRASE] The paper therefore proposes that each model version has its own set of default images and that these defaults change as models and their learned visual patterns change. fileciteturn1file0L37-L56
+
+RESEARCH OBJECT:
+A model can potentially be characterized not only by what it generates when it understands a request, but by what it generates when semantic guidance collapses.
+
+Failure outputs may constitute a version-specific behavioral fingerprint.
+
+LOCAL MOVE:
+Treat failure morphology as a model characteristic rather than merely defective output.
+
+SOURCE TERMS:
+model-specific default images
+model version
+training data
+default motifs
+model signature
+visual patterns
+
+WHAT BECAME STRANGE:
+Benchmarks usually ask models questions they are expected to answer.
+
+Default-image probing asks the inverse question:
+
+What does this model do when there is almost nothing meaningful for it to obey?
+
+The answer may distinguish models unusually well.
+
+QUESTION:
+Are default-image distributions stable enough to identify a model family or version from outputs alone?
+
+DEEPER QUESTION:
+Would a genealogy of generative models be visible in the evolution of their failure motifs even when their successful outputs increasingly converge in quality?
+
+MECHANISM:
+Changes in training data, architecture, text-image representation, tuning, or sampling may change the high-probability imagery reached under weak conditioning.
+
+The paper establishes version-associated differences but cannot attribute those differences to a particular internal change.
+
+FORMAL SHIFT:
+FROM:
+
+MODEL CAPABILITY PROFILE
+= performance on known tasks
+
+TO:
+
+MODEL BEHAVIOR PROFILE
+= performance on known tasks
++
+morphology of failure under unknown inputs.
+
+SOURCE FORMALISM:
+The paper's Postulate P2 states that model versions possess different sets of default images.
+
+Its version ablation compares the same prompt across Midjourney releases and visually inspects recurring motifs. fileciteturn1file0L37-L38
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For model version m define a fallback distribution:
+
+F_m = P(image features | semantic guidance ≈ 0, model=m).
+
+Model fingerprinting asks whether:
+
+distance(F_m1, F_m2)
+
+is sufficiently large that an unknown output set can be classified by model/version.
+
+TENSION:
+The paper suggests model-specific defaults may reflect training data.
+
+But version changes can also include architecture, prompt processing, fine-tuning, safety layers, aesthetic tuning, or sampling changes.
+
+A model signature is not automatically a training-data signature.
+
+MISSING:
+Controlled comparisons where only one component changes at a time.
+
+Longitudinal default-image datasets spanning closely spaced model releases.
+
+Evidence separating version identification from seed, style, personalization, and interface effects.
+
+BOUNDARY:
+The paper demonstrates differences among Midjourney releases; it does not establish forensic identification accuracy or uniqueness across unrelated TTI systems.
+
+CITATION TRAIL:
+[[DEFAULT-IMAGES-CHI26-ROOT]]
+→ model-version ablation
+→ Postulate P2
+→ default images as model signatures
+→ unresolved question of whether failure distributions preserve model genealogy.
+
+TEST:
+Build a blind classification benchmark.
+
+For each model/version:
+
+1. select the same large set of low-recognition prompts;
+2. sample many seeds;
+3. remove obvious metadata;
+4. extract visual embeddings;
+5. train a classifier on fallback-output distributions;
+6. test on unseen prompts and seeds.
+
+Then compare fingerprint accuracy from unknown-input outputs against accuracy from ordinary prompt outputs.
+
+PLATFORM:
+Midjourney versions 1–6.1; proposed extension across TTI systems.
+
+LINKS:
+[[DEFAULT-IMAGES-CHI26-ROOT]]
+
+BIBTEX:
+@inproceedings{Simonen2026DefaultImages,
+  author = {Simonen, Hannu and Kiviniemi, Atte and Johnston, Hannah and Barranha, Helena and Oppenlaender, Jonas},
+  title = {An Exploration of Default Images in Text-to-Image Generation},
+  booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+  year = {2026},
+  doi = {10.1145/3772318.3790681},
+  url = {https://doi.org/10.1145/3772318.3790681}
+}
+
+ZETTEL
+
+ID:
+PROMPT-ONTOLOGY-001
+
+TITLE:
+A prompt ontology can classify the inscription before it establishes the identity of the operative object.
+
+SOURCE:
+Victoria Basmov, Yoav Goldberg, and Reut Tsarfaty — “Prompts in the Wild: A Large Analyzed Collection of Transactional Prompts in Code” — LAW XX — 2026 — SOURCE URL: https://aclanthology.org/2026.law-main.19/
+
+PASSAGE:
+[PARAPHRASE] Basmov et al. argue that prompts are linguistic objects worthy of scientific study, collect 57.5K transactional prompts from GitHub, and introduce an ontology of prompt properties and formal/semantic components. In describing “inherent prompt properties,” they include that prompts are texts written in a language, formulate a task, and serve to elicit output. Their corpus represents prompts as role-message sequences whose text is further decomposed into instructions.
+
+RESEARCH OBJECT:
+The source secures a rich LINGUISTIC ONTOLOGY of transactional prompt inscriptions. It does not by itself secure an OPERATIONAL ONTOLOGY of the causal object that produced a model behavior.
+
+LOCAL MOVE:
+Split WHAT IS WRITTEN from WHAT ACTED.
+
+SOURCE TERMS:
+linguistic objects
+transactional prompts
+prompt ontology
+role-messages
+instructions
+first-order objects
+programming language
+
+WHAT BECAME STRANGE:
+The paper sets out to establish prompts as first-order scientific objects precisely by adding structure to recoverable texts. Yet recoverability may be why the text is available as an object, not evidence that the text exhausts the operative unit.
+
+QUESTION:
+When does a linguistic ontology of prompts license causal claims about model behavior, and when does it only describe the inscriptions developers store?
+
+DEEPER QUESTION:
+Has prompt research mistaken the easiest layer to archive for the layer at which the system’s operative instruction has identity?
+
+MECHANISM:
+Source code exposes strings and role-message structures. Static analysis recovers them. Ontological annotation stabilizes them as rows, components, and features. Downstream behavior, however, can depend on runtime variables not contained in that recovered inscription.
+
+FORMAL SHIFT:
+FROM:
+PROMPT = STRUCTURED TEXTUAL OBJECT
+
+TO:
+PROMPT-TEXT = STRUCTURED TEXTUAL OBJECT
+while
+OPERATIVE CONTROL = UNRESOLVED.
+
+SOURCE FORMALISM:
+The source’s ontology organizes prompt features including language, task/domain, input characteristics, output characteristics, role-message structure, and semantic kinds of instructions.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let T be the recoverable prompt inscription and E the execution event.
+
+Ontology O(T) can be well-defined even when causal identity I(E) is not.
+
+O(T) ≠ proof that T is the sufficient causal unit of E.
+
+TENSION:
+The source’s linguistic-object framing is methodologically productive and explicitly scoped; the stronger causal reading is not required for its dataset to be valuable. The tension arises when prompt scholarship moves from “we can structure this inscription” to “this inscription is the object that directly shaped the behavior.”
+
+MISSING:
+Runtime context, hidden instructions, rewriting, retrieved material, model version, tool schemas, stochastic state, and post-generation selection are not contained by a text-only identity condition.
+
+BOUNDARY:
+This zettel does not claim Basmov et al. confuse linguistic and causal ontology. It identifies a boundary their deliberately linguistic ontology makes visible.
+
+CITATION TRAIL:
+[[WORKWORDS-PROMPT-001]]
+→ prompts as programs
+→ Basmov et al. establish prompts as linguistic first-order objects
+→ objecthood itself becomes the live question
+→ what conditions make a prompt the same operative object across executions?
+
+TEST:
+Take a sample of transactional prompts with identical recovered text and execute them across controlled changes to system instructions, model versions, retrieval, tools, and stochastic conditions. Measure which behavioral properties remain invariant. Compare textual identity with operational invariance.
+
+PLATFORM:
+LAW 2026; GitHub transactional prompts; LLM software.
+
+LINKS:
+[[WORKWORDS-PROMPT-001]] [[WORKWORDS-PROMPT-008]]
+
+BIBTEX:
+@inproceedings{Basmov2026PromptsWild,
+  title={Prompts in the Wild: A Large Analyzed Collection of Transactional Prompts in Code},
+  author={Basmov, Victoria and Goldberg, Yoav and Tsarfaty, Reut},
+  booktitle={Proceedings of the 20th Linguistic Annotation Workshop (LAW XX)},
+  pages={257--308},
+  year={2026},
+  doi={10.18653/v1/2026.law-main.19},
+  url={https://aclanthology.org/2026.law-main.19/}
+}
+
+ZETTEL
+
+ID:
+PROMPT-ONTOLOGY-002
+
+TITLE:
+Prompt research risks reviving the planning-model error: the available instruction is mistaken for the course of action.
+
+SOURCE:
+Lucy A. Suchman — “Plans and Situated Actions: The Problem of Human-Machine Communication” — Cambridge University Press — 1987 — SOURCE URL: https://www.cambridge.org/core/books/humanmachine-reconfigurations/9D53E602BA9BB5209271460F92D00EFE
+
+PASSAGE:
+[PARAPHRASE] Suchman’s critique distinguishes plans from situated action. Plans are consequential resources but do not determine the detailed course of situated conduct; retrospective accounts can make action appear to conform to a plan while suppressing the contingent work by which the action was actually produced.
+
+RESEARCH OBJECT:
+PROMPT AS PLAN / EXECUTION AS SITUATED ACTION.
+
+The relation is not an identity claim. It is a diagnostic analogy that exposes a recurring representational mistake: substituting an instruction available to the analyst for the event whose production the instruction only partly organizes.
+
+LOCAL MOVE:
+Move from CONTEXT AS MISSING INFORMATION to SITUATION AS CONSTITUTIVE OF OPERATIVE MEANING.
+
+SOURCE TERMS:
+plans
+situated actions
+planning model
+human-machine communication
+situatedness
+resources for action
+
+WHAT BECAME STRANGE:
+HCI may be rebuilding a distinction it previously learned to distrust. The prompt is visible before execution and legible afterward, making it unusually easy to reconstruct behavior as “following the prompt.”
+
+QUESTION:
+Is “prompt following” sometimes a retrospective reconstruction analogous to treating situated action as the execution of a plan?
+
+DEEPER QUESTION:
+What would prompt scholarship look like if the prompt were treated as a resource within situated execution rather than the script that determines it?
+
+MECHANISM:
+The written instruction supplies orientation and constraints. Runtime contingencies, model state, surrounding materials, and interaction reorganize what happens. Retrospective comparison of prompt and output can erase those contingencies by reading the result back into the instruction.
+
+FORMAL SHIFT:
+FROM:
+PROMPT → EXECUTION
+
+TO:
+PROMPT ∈ RESOURCES-FOR-EXECUTION
+and
+EXECUTION emerges from situated relations not exhausted by PROMPT.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+If A is observed action and P is a prior plan/instruction, then correspondence(A,P) does not establish determination(A|P).
+
+Applied to prompting:
+correspondence(output,prompt) ≠ located causal mechanism.
+
+TENSION:
+Prompts differ from human plans because generative models are explicitly engineered to condition behavior on input tokens. The analogy cannot erase genuine computational conditioning. Its force is narrower: conditioning does not establish that the visible inscription is the complete or stable causal unit.
+
+MISSING:
+Empirical work that separates prospective instruction, runtime assembly, internal state changes, and retrospective attribution in actual prompt systems.
+
+BOUNDARY:
+Suchman studied human-machine interaction and situated human action, not contemporary LLM prompting. This is a conceptual crossing, not a historical claim of influence.
+
+CITATION TRAIL:
+[[PROMPT-ONTOLOGY-001]]
+→ prompt stabilized as an analyzable inscription
+→ Suchman’s plan/action distinction
+→ prompt as resource rather than determining script
+→ causal reconstruction becomes the object of inquiry.
+
+TEST:
+For a prompt experiment, record not only the initial text and final output but every runtime material available to the system. Ask which post-hoc explanations of the output remain possible if the original prompt is hidden from analysts. Compare those accounts with the explanation produced when the prompt is visible.
+
+PLATFORM:
+HCI; situated action; prompt research as conceptual application.
+
+LINKS:
+[[PROMPT-ONTOLOGY-001]] [[DEFAULT-IMAGES-CHI26-B-1]]
+
+BIBTEX:
+@book{Suchman1987Plans,
+  author={Suchman, Lucy A.},
+  title={Plans and Situated Actions: The Problem of Human-Machine Communication},
+  publisher={Cambridge University Press},
+  year={1987}
+}
+
+ZETTEL
+
+ID:
+PROMPT-ONTOLOGY-003
+
+TITLE:
+Context engineering admits that the prompt has evaporated, then tries to stabilize a larger object.
+
+SOURCE:
+Lingrui Mei et al. — “A Survey of Context Engineering for Large Language Models” — 2025 — SOURCE URL: https://arxiv.org/abs/2507.13334
+
+PASSAGE:
+[PARAPHRASE] Mei et al. argue that modern LLM systems no longer operate on a single static string. They formalize the historical prompt-engineering view as context C equal to a monolithic prompt, then replace it with a dynamically structured set of contextual components assembled, retrieved, selected, processed, and managed by system-level functions.
+
+RESEARCH OBJECT:
+CONTEXT ENGINEERING AS BOTH CORRECTION AND SYMPTOM.
+
+It correctly demonstrates that PROMPT-AS-STATIC-STRING is inadequate for contemporary systems. Yet the repair expands the causal object toward system-level execution conditions.
+
+LOCAL MOVE:
+Do not treat “context” as the solution. Ask whether enlarging the noun solves identity or merely moves its boundary.
+
+SOURCE TERMS:
+context engineering
+dynamic structured information
+assembly function
+context retrieval
+context processing
+context management
+stateful
+
+WHAT BECAME STRANGE:
+The prompt disappears by becoming context. Context then expands to include memory, retrieval, tools, multimodal inputs, state, and orchestration. The object becomes more causally plausible and less bounded.
+
+QUESTION:
+At what point does context engineering stop describing an input and begin describing the execution system itself?
+
+DEEPER QUESTION:
+Can a generative control object be both bounded enough to version and rich enough to be causally adequate?
+
+MECHANISM:
+Modern systems dynamically assemble multiple information sources into a context before inference. System performance is conditioned on this assembled state, not on one user-authored string alone.
+
+FORMAL SHIFT:
+FROM:
+C = prompt
+
+TO:
+C = {c1, c2, …, cn}
+assembled by system functions
+
+THEN PRESSURE:
+What belongs to C, and what remains a condition of C’s interpretation?
+
+SOURCE FORMALISM:
+The source writes autoregressive generation as Pθ(Y|C) and explicitly contrasts historical C = prompt with a dynamically structured context assembled from components.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+As causal coverage K(C) increases by absorbing consequential variables, boundedness B(C) may decrease.
+
+The unresolved problem is not simply maximizing K. It is specifying identity conditions under changing C.
+
+TENSION:
+Context engineering offers a practical system abstraction and does not claim to be a metaphysical ontology. Yet its expansion demonstrates why “prompt” cannot simply be rescued by adding more context fields.
+
+MISSING:
+A principled stopping rule for what belongs to the operative control object versus the surrounding execution environment.
+
+BOUNDARY:
+The source is a survey and formal framework for context engineering. The boundedness–causality tension is our inference from its scope expansion.
+
+CITATION TRAIL:
+[[DEFAULT-IMAGES-CHI26-B-1]]
+→ visible prompt may differ from executed input
+→ context engineering rejects static-string prompt model
+→ control object expands toward whole system
+→ prompt ontology becomes boundary problem.
+
+TEST:
+Construct nested execution records of increasing thickness: visible text; role messages; full context; context plus tools; plus model/version; plus sampling state; plus selection. Measure how much behavioral variance each added layer explains and where “same prompt” judgments cease to be useful.
+
+PLATFORM:
+LLM systems; context engineering; RAG; memory; agents.
+
+LINKS:
+[[DEFAULT-IMAGES-CHI26-B-1]] [[WORKWORDS-PROMPT-004]]
+
+BIBTEX:
+@article{Mei2025ContextEngineering,
+  title={A Survey of Context Engineering for Large Language Models},
+  author={Mei, Lingrui and Yao, Jiayu and Ge, Yuyao and others},
+  journal={arXiv preprint arXiv:2507.13334},
+  year={2025},
+  url={https://arxiv.org/abs/2507.13334}
+}
+
+ZETTEL
+
+ID:
+PROMPT-ONTOLOGY-004
+
+TITLE:
+The word “prompt” survives the disappearance of words.
+
+SOURCE:
+Brian Lester, Rami Al-Rfou, and Noah Constant — “The Power of Scale for Parameter-Efficient Prompt Tuning” — EMNLP 2021 — SOURCE URL: https://arxiv.org/abs/2104.08691
+
+PASSAGE:
+[PARAPHRASE] Lester et al. distinguish discrete text prompts from learned “soft prompts”: continuous parameters optimized through backpropagation to condition a frozen language model for downstream tasks.
+
+RESEARCH OBJECT:
+PROMPT AS FUNCTIONAL FAMILY RATHER THAN TEXTUAL KIND.
+
+If soft prompts are genuine prompts, textuality cannot be an inherent property of all prompts. If they are excluded, a mature technical tradition called prompt tuning is using “prompt” for a different ontology.
+
+LOCAL MOVE:
+Force the vocabulary to choose what it is preserving: LANGUAGE or CONDITIONING FUNCTION.
+
+SOURCE TERMS:
+prompt tuning
+soft prompts
+continuous parameters
+conditioning
+frozen language models
+backpropagation
+
+WHAT BECAME STRANGE:
+Prompt scholarship can describe prompts as texts written in a language while machine learning simultaneously calls nonlinguistic continuous vectors prompts. The noun crosses an ontological boundary without announcing the crossing.
+
+QUESTION:
+What property makes a soft prompt and a natural-language prompt instances of the same kind?
+
+DEEPER QUESTION:
+If the shared property is only “conditions a model,” what prevents retrieval, model state, tool schemas, or other conditioning variables from becoming prompts too?
+
+MECHANISM:
+Continuous learned vectors enter the model as conditioning without requiring a human-readable lexical realization.
+
+FORMAL SHIFT:
+FROM:
+PROMPT = HUMAN-READABLE INSTRUCTION
+
+TO:
+PROMPT = MODEL-CONDITIONING OBJECT
+
+which threatens to make PROMPT extensionally enormous.
+
+SOURCE FORMALISM:
+Soft prompts are learned through backpropagation while model parameters remain frozen.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Text prompt p ∈ V*.
+Soft prompt z ∈ R^(n×d).
+Both can condition M.
+
+The common type cannot be “text” unless soft prompt is metaphorical nomenclature.
+
+TENSION:
+Human-readable prompting remains distinctive because it is simultaneously interpretable by people and operational for models. Soft prompting does not erase that difference; it makes the difference ontologically unavoidable.
+
+MISSING:
+A vocabulary that distinguishes human-operational language from nonlinguistic model conditioning without pretending they are either identical or unrelated.
+
+BOUNDARY:
+Soft prompts in prompt tuning are trained parameters, not evidence that ordinary chat systems secretly execute such vectors as replacements for user prompts.
+
+CITATION TRAIL:
+[[WORKWORDS-PROMPT-002]]
+→ prompting larger than prompt language
+→ Lester et al. canonical soft prompt tuning
+→ textual ontology fractures
+→ ask what common property keeps “prompt” coherent.
+
+TEST:
+Compare a task controlled by natural-language prompts and learned soft prompts. Test which notions survive across both: syntax, semantics, authorship, versioning, portability, interpretability, causal intervention, and transfer. The intersection is a candidate minimum ontology; its thinness is itself evidence.
+
+PLATFORM:
+T5; frozen language models; prompt tuning.
+
+LINKS:
+[[WORKWORDS-PROMPT-002]]
+
+BIBTEX:
+@inproceedings{Lester2021PromptTuning,
+  title={The Power of Scale for Parameter-Efficient Prompt Tuning},
+  author={Lester, Brian and Al-Rfou, Rami and Constant, Noah},
+  booktitle={Proceedings of EMNLP},
+  year={2021},
+  url={https://arxiv.org/abs/2104.08691}
+}
+
+ZETTEL
+
+ID:
+PROMPT-ONTOLOGY-005
+
+TITLE:
+Software engineering needs the prompt to be an artifact exactly where execution makes it non-self-contained.
+
+SOURCE:
+Hugo Villamizar, Jannik Fischbach, Alexander Korn, Andreas Vogelsang, and Daniel Mendez — “Prompts as Software Engineering Artifacts: A Research Agenda and Preliminary Findings” — 2025 — SOURCE URL: https://arxiv.org/abs/2509.17548
+
+PASSAGE:
+[PARAPHRASE] Villamizar et al. position prompts as potential software-engineering artifacts whose evolution, traceability, reuse, development, and maintenance deserve systematic study. They invoke an artifact conception centered on a self-contained work result with physical representation, syntax, semantics, and context-specific purpose.
+
+RESEARCH OBJECT:
+ARTIFACT IDENTITY AND CAUSAL IDENTITY DIVERGE.
+
+A prompt can be an excellent maintenance artifact while being an incomplete unit of causal explanation.
+
+LOCAL MOVE:
+Separate VERSIONABLE OBJECT from OPERATIVE EVENT.
+
+SOURCE TERMS:
+software engineering artifact
+self-contained work result
+evolution
+traceability
+reuse
+prompt management
+
+WHAT BECAME STRANGE:
+The practical properties that make something manageable as a software artifact—boundedness, representation, versioning—are precisely the properties lost when the prompt is thickened to include everything that makes its behavior reproducible.
+
+QUESTION:
+What is being versioned when a prompt file is unchanged but the model, system message, retrieval, or execution policy changes?
+
+DEEPER QUESTION:
+Can software engineering maintain a prompt without falsely implying that the maintained artifact is the complete behavioral unit?
+
+MECHANISM:
+Repositories stabilize text/templates as artifacts; runtime systems instantiate them inside changing environments. Version histories record the former more reliably than the latter.
+
+FORMAL SHIFT:
+FROM:
+PROMPT-VERSION = BEHAVIORAL-VERSION
+
+TO:
+PROMPT-ARTIFACT VERSION
+≠ necessarily
+EXECUTION-CONDITION VERSION.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let A be archived prompt artifact and E(A,r) its execution under runtime r.
+
+A1 = A2 does not imply E(A1,r1) ≡ E(A2,r2).
+
+TENSION:
+Rejecting artifact status would make prompt maintenance harder without solving the causal problem. The useful move is not to abolish prompt artifacts but to stop asking artifact identity to carry causal identity automatically.
+
+MISSING:
+Version-control primitives that jointly track prompt text, runtime assembly, model/version, hidden system instructions where available, retrieval state, tools, and evaluation/selection.
+
+BOUNDARY:
+The source frames prompts as potential artifacts and a research agenda; it does not claim prompt text alone is a complete causal specification.
+
+CITATION TRAIL:
+[[WORKWORDS-PROMPT-001]]
+→ prompt programming
+→ prompt as maintainable software artifact
+→ self-containedness collides with situated execution
+→ distinguish maintenance identity from causal identity.
+
+TEST:
+Take a production prompt repository over model migrations. Compute byte-level prompt stability and behavioral stability separately. Identify cases where artifact identity persists across behavioral discontinuity and cases where artifact diffs produce no meaningful behavioral change.
+
+PLATFORM:
+Software engineering; LLM-integrated workflows.
+
+LINKS:
+[[WORKWORDS-PROMPT-001]] [[PROMPT-ONTOLOGY-003]]
+
+BIBTEX:
+@article{Villamizar2025PromptsArtifacts,
+  title={Prompts as Software Engineering Artifacts: A Research Agenda and Preliminary Findings},
+  author={Villamizar, Hugo and Fischbach, Jannik and Korn, Alexander and Vogelsang, Andreas and Mendez, Daniel},
+  journal={arXiv preprint arXiv:2509.17548},
+  year={2025},
+  url={https://arxiv.org/abs/2509.17548}
+}
+
+ZETTEL
+
+ID:
+PROMPT-ONTOLOGY-006
+
+TITLE:
+The prompt has a boundedness–causality dilemma: the more causally adequate it becomes, the less it remains a prompt.
+
+SOURCE:
+MULTISOURCE — Basmov, Goldberg & Tsarfaty 2026; Mei et al. 2025; Lester, Al-Rfou & Constant 2021; Suchman 1987 — SOURCE URLs: https://aclanthology.org/2026.law-main.19/ ; https://arxiv.org/abs/2507.13334 ; https://arxiv.org/abs/2104.08691 ; https://www.cambridge.org/core/books/humanmachine-reconfigurations/9D53E602BA9BB5209271460F92D00EFE
+
+PASSAGE:
+[OUR INFERENCE] Recent prompt scholarship supplies incompatible but individually useful identity conditions: prompt as linguistic text; prompt as dynamic context component; prompt as continuous learned conditioning; prompt as software artifact. Suchman’s distinction between plans and situated action provides an older warning against substituting an available representation for the event it helps organize.
+
+RESEARCH OBJECT:
+BOUNDEDNESS–CAUSALITY DILEMMA.
+
+A thin prompt is bounded enough to save, diff, cite, and version but does not contain all variables that determine execution.
+
+A thick prompt absorbs those variables and becomes more causally adequate, but expands toward the entire situated execution event.
+
+LOCAL MOVE:
+Stop asking “what is the real prompt?” Ask whether one object can simultaneously satisfy the field’s demands for PORTABILITY, IDENTITY, and CAUSAL ADEQUACY.
+
+SOURCE TERMS:
+linguistic object
+context engineering
+soft prompt
+situated action
+artifact
+conditioning
+
+WHAT BECAME STRANGE:
+Every successful attempt to repair the prompt by adding what was missing makes the original prompt less visible inside the repaired object.
+
+QUESTION:
+Is there a non-arbitrary stopping rule for the boundary of a prompt?
+
+DEEPER QUESTION:
+What kind of scientific object is the prompt if no single boundary preserves both its identity and its causal adequacy?
+
+MECHANISM:
+Behaviorally consequential variables repeatedly appear outside the visible inscription. Incorporating them increases explanatory coverage while eroding the boundedness needed for object identity. Leaving them outside preserves the object while turning “the prompt caused the behavior” into an incomplete attribution.
+
+FORMAL SHIFT:
+FROM:
+PROMPT = OBJECT WITH FIXED BOUNDARY
+
+TO:
+PROMPT = CONTESTED BOUNDARY AROUND A SITUATED CONTROL EVENT.
+
+SOURCE FORMALISM:
+NONE — this zettel synthesizes distinctions from multiple sources and does not attribute this formal dilemma to them.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let P_k be prompt definitions of increasing thickness.
+Let C(P_k) = causal coverage.
+Let B(P_k) = boundedness / portability as a discrete artifact.
+
+Observed research pressure suggests:
+adding consequential execution conditions tends to increase C(P_k) while decreasing B(P_k).
+
+The open question is whether some P* preserves enough of both to justify “prompt” as a causal research unit.
+
+TENSION:
+The dilemma may be partly methodological rather than ontological. Researchers routinely use partial causal variables without requiring them to contain the entire event. A prompt might remain a legitimate treatment variable even if it is not a sufficient cause. The problem would then be overclaiming, not objecthood itself.
+
+MISSING:
+A theory of prompt identity that explicitly distinguishes necessary, sufficient, manipulable, archival, and explanatory properties.
+
+BOUNDARY:
+This is a compiler synthesis. None of the cited sources states the boundedness–causality dilemma in this form.
+
+CITATION TRAIL:
+[[PROMPT-ONTOLOGY-001]]
+→ linguistic object
+[[PROMPT-ONTOLOGY-003]]
+→ dynamic context
+[[PROMPT-ONTOLOGY-004]]
+→ nonlinguistic prompt
+[[PROMPT-ONTOLOGY-002]]
+→ plan versus situated action
+→ prompt boundary becomes the research problem.
+
+TEST:
+Construct nested definitions of “same prompt” from thin text identity to full execution-state identity. For a large repeated-run corpus, quantify how predictive each identity definition is of behavioral equivalence and how portable/reconstructible it remains. Search for a stable intermediate boundary; failure to find one strengthens the dilemma.
+
+PLATFORM:
+Cross-platform conceptual synthesis; LLM and generative-system research.
+
+LINKS:
+[[PROMPT-ONTOLOGY-001]] [[PROMPT-ONTOLOGY-002]] [[PROMPT-ONTOLOGY-003]] [[PROMPT-ONTOLOGY-004]] [[PROMPT-ONTOLOGY-005]]
+
+BIBTEX:
+NONE

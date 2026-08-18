@@ -1,0 +1,45 @@
+THIS PUBLICATION CAN BE REBUILT.
+
+CHECKPOINT:
+SLIPCASE-20260817T2129-0400-9d6af368d214
+
+1. Verify SLIPCASE_FINAL_PROMPT.txt SHA-256:
+   9d6af368d214da1b634d599f6d73f096d39d959404993132937b655560572d5c
+
+2. Verify the 21 root zettel payload hashes against ZETTELS.json and _MD mirrors.
+   Do not rewrite zettels.
+
+3. Recompute derived tension artifacts only if intentionally starting a new interpretation.
+   Current derived artifacts:
+   000__TENSIONS.txt
+   000__DEEP_QUESTIONS.txt
+   000__PAPER_STATE.txt
+
+4. Current paper source:
+   when-words-stop-being-the-cause__2026-08-17.tex
+
+5. Compile:
+   pdflatex -interaction=nonstopmode -halt-on-error when-words-stop-being-the-cause__2026-08-17.tex
+   run twice for references.
+
+6. Render PDF and inspect first page, mechanism table, conclusion, references, and appendix.
+
+7. Rebuild index.html / READER.html from:
+   exact zettel payloads
+   tensions
+   deep questions
+   paper state
+   bibliography
+   paper text
+   exact assembly prompt.
+
+8. Preserve prior paper under:
+   _RESOURCES/PRIOR_DERIVED/
+   It is historical interpretation, not evidence.
+
+9. Recompute _SLIPCASE/MANIFEST.json and package ZIP hashes.
+
+RESEARCH REJOIN:
+Do not begin by inventing a new thesis.
+Read 000__TENSIONS.txt.
+Choose a decisive evidence path capable of changing the ranking of the tension field.

@@ -1,0 +1,51 @@
+MAKING HISTORY — SLIPCASE-20260817-2254-a5ef0e2e
+
+WHO
+Researcher: Watson Hartsoe
+Assembly model: GPT-5.6 Sol
+Date: 2026-08-17
+
+PROVIDED
+- Martina interview Apple Pages file.
+- SLIPCASE v15.55-AM assembly prompt, exact SHA-256 a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a.
+- Prior Call-the-Shot Slipcase ZIP from this conversation.
+
+PRESERVED
+- Original interview file and extracted text.
+- 10 imported OPS zettel payloads byte-for-byte from the prior checkpoint.
+- Exact current assembly prompt and prior assembly prompt.
+
+DERIVED
+- 24 new transcript-grounded Martina zettels.
+- 8 new theory forage zettels grounded in public source records.
+- graph, ghosts, backlinks, supported lineage, MOCs, arrangements, bibliography, reader, index, source map, paper, mark, verification.
+
+CONTROL
+- Source selection and paper argument were generated during this assembly from the Martina question field, with explicit loyal opposition from situated-action/design literature.
+- Immutable imported OPS payloads were not edited.
+- Transcript quotations in new cards were copied from the converted local transcript; rough transcription was not silently corrected.
+
+RETRIEVED / VERIFIED
+- Public bibliographic/source records were checked on 2026-08-17. See 000__WEB_VERIFICATION.txt.
+- Current OpenAI/MCP details were checked against official documentation.
+
+UNVERIFIED / GAPS
+- No public URL exists in the field for the private Martina transcript.
+- The full originating chat is not available as a machine-readable resource. Earlier visible Martina zettel payloads were therefore not claimed as exact archived objects.
+- LINK_ONLY web source bodies are not preserved locally.
+
+BUILD
+- Original Pages transcript converted locally with LibreOffice and extracted with python-docx.
+- Publication state compiled with Python.
+- Paper compiled with Pandoc/XeLaTeX and visually inspected from rendered PNG pages.
+- ZIP integrity tested after packaging.
+
+EXACT PAPER BUILD COMMAND
+pandoc the-specification-comes-after-the-shot__2026-08-17.md -f markdown+raw_tex -s -t latex -o the-specification-comes-after-the-shot__2026-08-17.tex -V documentclass=article -V papersize=letter -V fontsize=11pt -V geometry:margin=1in -V mainfont='DejaVu Serif' -V colorlinks=true -V linkcolor=black -V urlcolor=blue -H _SLIPCASE/paper_header.tex --toc=false
+xelatex -interaction=nonstopmode -halt-on-error the-specification-comes-after-the-shot__2026-08-17.tex
+xelatex -interaction=nonstopmode -halt-on-error the-specification-comes-after-the-shot__2026-08-17.tex
+
+EXACT PAPER BUILD COMMAND
+pandoc the-specification-comes-after-the-shot__2026-08-17.md -f markdown+raw_tex -s -t latex -o the-specification-comes-after-the-shot__2026-08-17.tex -V documentclass=article -V papersize=letter -V fontsize=11pt -V geometry:margin=1in -V mainfont='DejaVu Serif' -V colorlinks=true -V linkcolor=black -V urlcolor=blue -H _SLIPCASE/paper_header.tex --toc=false
+xelatex -interaction=nonstopmode -halt-on-error the-specification-comes-after-the-shot__2026-08-17.tex
+xelatex -interaction=nonstopmode -halt-on-error the-specification-comes-after-the-shot__2026-08-17.tex

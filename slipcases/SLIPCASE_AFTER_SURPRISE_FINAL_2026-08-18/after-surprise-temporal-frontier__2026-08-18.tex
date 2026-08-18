@@ -1,0 +1,320 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{natbib}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\setstretch{1.08}
+\setlength{\parindent}{1.25em}
+\setlength{\parskip}{0.15em}
+\setlist{nosep,leftmargin=1.5em}
+\pagestyle{plain}
+\fancypagestyle{firstpage}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}\fancyfoot[C]{\thepage}\fancyfoot[R]{\raisebox{-1mm}{\includegraphics[width=7mm]{_SLIPCASE/MARK.pdf}}}}
+\newcommand{\term}[1]{\textsc{#1}}
+\title{\vspace{-2em}\textbf{After Surprise}\\[0.25em]\large Variable Discovery and the Temporal Frontier of Authorship in Generative Systems}
+\author{Watson Hartsoe\\\small Working Paper}
+\date{18 August 2026}
+
+\begin{document}
+\maketitle
+\thispagestyle{firstpage}
+
+\begin{abstract}
+Debates about authorship in generative systems often assume that the relevant human contribution must be specified before generation: the user forms a conception, issues an instruction, and either does or does not control the expressive result. That model is too linear for exploratory making. Designers and artists routinely discover consequential distinctions only after an intermediate artifact exists. A generated image can function not only as a candidate work but as an epistemic action: an external probe that changes what the maker knows how to notice and manipulate. Yet the opposite response---treating any later appreciation of an accident as authorship---collapses selection into creation and invites retrospective intention laundering. This article proposes a narrower temporal criterion. An unforeseen feature becomes strong evidence of subsequent human agency when, after it appears, the maker makes a newly perceived difference into a forward-looking constraint that governs later transformations. The relevant sequence is \term{surprise $\rightarrow$ discovery $\rightarrow$ commitment $\rightarrow$ intervention $\rightarrow$ stabilization}. This criterion does not retroactively make the maker the originator of the first surprise. It locates a temporal frontier after which relations, invariants, and transformations may become attributable to deliberate human work. Copyright doctrine, design theory, studies of epistemic action, interactive prompting, information-theoretic control, and video-game cases together show why neither prompt count, output selection, nor counterfactual steering alone is sufficient. The resulting account distinguishes exploratory making from shopping, practical control from authorship, and the origin of an expressive event from the later organization built around it.
+\end{abstract}
+
+\noindent\textbf{Keywords:} generative AI; authorship; creative control; prompting; reflection-in-action; epistemic action; exploratory making; copyright
+
+\section{Introduction}
+
+A peculiar feature of generative media is that a maker can become more intentional only after the system has already produced something the maker did not intend. A face arrives with an expression no prompt specified. Two figures stand farther apart than expected, and the distance suddenly reads as tension. A texture artifact becomes the visual rule for an entire series. The first appearance is a surprise. The next hour of work may be anything but accidental.
+
+This temporal structure sits awkwardly inside the dominant language of generative authorship. One familiar test asks whether a person sufficiently controlled the expressive elements of the resulting work. In current U.S. Copyright Office analysis, prompts generally function as instructions that influence a generative system without determining the particular expressive form that results; human-authored selection, arrangement, or modification may nevertheless remain protectable when those contributions satisfy ordinary copyright requirements \citep{USCO2025Copyrightability}. In the Allen litigation, the U.S. government has similarly argued that Jason Allen's prompting and selection did not make him the author of the underlying Midjourney visual expression, while distinguishing later directly human-authored additions that could be claimed if generated material were disclaimed \citep{AllenGov2026Brief}. The intuition behind this approach is important: effort, iteration, and preference do not automatically transform machine-generated expression into human expression.
+
+But an ex ante control model also risks misdescribing how exploratory practices work. A painter does not always begin with a complete mental image and then execute it. A designer can discover the relevant problem while trying to solve it. A photographer can recognize a relation in a contact sheet that was not consciously specified at exposure. A composer can hear an accidental interaction and make it the constraint of the next passage. In such cases, authorship cannot sensibly require every consequential distinction to preexist its material encounter. Samuelson, Sprigman, and Sag make this point directly in their response to the Copyright Office's inquiry: sophisticated prompting could, in some circumstances, reflect a sufficiently specific human conception, but authorship can also emerge through iterative and exploratory engagement rather than a fully formed initial plan \citep{SamuelsonSprigmanSag2023Comments}.
+
+The problem, then, is to preserve discovery without making retrospective adoption limitless. If an artist can simply point at any attractive accident and say ``I meant that,'' the criterion becomes vacuous. If, conversely, only pre-specified features count as meaningful human contribution, many familiar forms of exploratory making disappear from view. The missing middle is temporal. The strongest evidence does not necessarily occur before the surprise, and it need not reside in the first surprising artifact. It occurs when a newly perceived difference starts constraining what the maker subsequently does.
+
+This article develops that claim. I call the boundary the \emph{temporal frontier of authorship}: the point after an unforeseen difference becomes perceptible at which a maker prospectively commits to preserving, developing, or transforming it, and later actions become accountable to that commitment. The sequence is:
+
+\begin{center}
+\term{surprise $\rightarrow$ discovery $\rightarrow$ commitment $\rightarrow$ intervention $\rightarrow$ stabilization}.
+\end{center}
+
+The sequence is not offered as a new legal test. It is an analytic receipt for reconstructing creative agency in stochastic and interactive systems. It deliberately separates two questions that are often collapsed: who or what produced the first expressive occurrence, and who subsequently organized a production history around the difference that occurrence made perceptible. Later stabilization does not travel backward in time. It can establish authorship-like agency over a subsequent relation without changing the causal origin of the first event.
+
+The argument proceeds in five steps. First, I show why the simple conception--execution model becomes unstable in exploratory work. Second, I use the distinction between pragmatic and epistemic action to show that some generations are experiments rather than candidate artworks. Third, I draw on Donald Sch\"on's account of reflective designing to argue that the relevant variable itself may emerge only during making. Fourth, I propose the temporal frontier and the related concept of an authored invariant: a relation intentionally stabilized across transformations rather than a claim of ownership over the initial surprise. Finally, I pressure the account with video-game cases and information-theoretic control. These counterexamples show that effective steering remains weaker than authorship and that agency must be decomposed by function rather than expressed as a percentage of ``human'' versus ``AI'' contribution.
+
+\section{The ex ante control model and its limit}
+
+The Copyright Office's 2025 report provides a useful starting point because it refuses two tempting shortcuts. It does not infer authorship from the number of prompts, and it does not infer authorship simply because a user recognizes and selects a desirable output. Instead, it asks where human-authored expression can actually be identified in the resulting work \citep{USCO2025Copyrightability}. That orientation matters. Generative systems can respond meaningfully to language while leaving many expressive variables unresolved. A detailed prompt may strongly alter a distribution of possible images without determining the particular composition, local geometry, texture, lighting relation, or incidental form found in one sample.
+
+The Office also treats the problem as technology-contingent rather than metaphysically fixed. Its report leaves open the possibility that systems affording greater user control over expressive elements could require different analysis \citep{USCO2025Copyrightability}. This qualification is more consequential than it first appears. It means that ``prompt'' is not a stable technical unit. The same sentence can function as weak global conditioning in one interface, a local editing operation in another, or one channel in a larger control topology containing masks, pose maps, depth maps, embeddings, retained state, and direct pixel manipulation. The legal question cannot be settled by the fact that words were used; it depends on what the human--interface--model assembly lets those words do.
+
+Opposition to the Office's current prompt analysis is therefore most interesting when it remains narrow. Samuelson, Sprigman, and Sag do not need the proposition that any long or artful prompt automatically authors its output. Their stronger point is that copyright should not categorically foreclose cases in which a detailed conception is reflected in a result or in which an artist develops a work iteratively through interaction with the medium \citep{SamuelsonSprigmanSag2023Comments}. This second route creates the deeper problem. If intention itself can develop during the process, evidence of authorship cannot be limited to a snapshot of what existed in the user's mind before the first generation.
+
+Older cases involving delegated realization clarify the edge without resolving it. In \emph{Andrien v. Southern Ocean County Chamber of Commerce}, the Third Circuit accepted that an author could direct another party to embody a detailed cartographic conception where the intermediary's role was essentially one of realization rather than independent authorship \citep{Andrien1991}. The analogy is useful because it shifts attention from ``tool or not tool'' toward the expressive discretion left unresolved in the middle. Yet generative systems are difficult precisely because they can be nonauthorial in law while remaining causally nontrivial. They may resolve many expressive variables that the human did not settle. The law therefore needs no fiction that the machine is either an author or an inert typewriter. A third description is available: some expressive material may simply lack a human author even while it participates in a larger work that contains human-authored contributions.
+
+That possibility creates room for a temporal analysis. A maker can inherit an initially unowned or nonhuman-authored expressive event and later do substantial human work with it. The key is to avoid confusing later work with the origin of what came first.
+
+\section{Epistemic generation: making an output in order to know}
+
+A generation log is deceptively flat. It records prompt, output, prompt, output, perhaps with seeds and parameters. From that sequence alone it is tempting to infer that every output was a candidate and every revision was a search for a better candidate. Kirsh and Maglio's distinction between pragmatic and epistemic action suggests another possibility \citep{KirshMaglio1994Epistemic}. In their analysis of Tetris play, some physical actions directly advance the task, while others are performed because acting on the world makes relevant information easier to obtain or compute. A player may manipulate a piece even when the final physical configuration returns to where it began; the informational state of the player has changed.
+
+Generative media make this distinction unusually concrete. Consider three superficially identical clicks on a Generate button. In the first, a user is attempting to produce the final image. In the second, the user is sampling candidates and will keep the most attractive one. In the third, the user is deliberately probing a hypothesis: Does this phrase preserve identity? Does increasing a reference weight stabilize costume but damage pose? Does the word ``monumental'' change camera height or merely scale? The third image may be discarded immediately. Its role is epistemic. It externalizes a question about the generator or the current design problem.
+
+This matters because output count is nearly useless without an account of what later changes because an output was seen. Six hundred generations can be blind resampling. Six generations can be a carefully constructed sequence of interventions. Conversely, an elaborate narrative of ``experimentation'' can be retrospective theater unless the intermediate results leave operational residue. The evidentiary question is whether a generation changed the maker's subsequent capacity to act: whether it produced a new prediction, revealed a coupling between variables, exposed an invariant, or caused later actions to be reorganized.
+
+The distinction also clarifies why process evidence should not be treated as a simple labor meter. An epistemic action can be important even though its immediate artifact is worthless. What the process produces may be knowledge: a local causal approximation of the system. Experienced practitioners learn that a phrase affects framing, that one control preserves structure better than another, or that a particular model version has a repeatable glitch. Studies of prompt practice document specialized vocabularies and iterative learning; Don-Yehiya, Choshen, and Abend find that users both add details omitted from initial prompts and adapt their language toward traits that appear to work better with the model \citep{DonYehiyaEtAl2023}. Such learning can be genuine craft even when the learned method is not itself a copyrightable expressive object.
+
+This creates what might be called an epistemic authorship gap. The maker's most substantial achievement during a session may be a refined practical model of the generator rather than a directly protectable feature in the output. Copyright has good reasons not to grant monopolies over procedures and methods merely because they require skill. But the absence of copyright does not imply the absence of craft. It means only that causal knowledge, artistic expertise, and protectable expression are different categories.
+
+\section{Variable discovery: when the choice space is made during making}
+
+Epistemic action still assumes there is something to learn. Sch\"on's account of reflective designing pushes the argument further by challenging the idea that the relevant variables are fully specified before the process begins. In his 1992 discussion of designing as a reflective conversation with materials, the designer acts, encounters consequences, reframes the situation, and discovers relations that become meaningful only through the intermediate design \citep{Schon1992Reflective}. The ``design world'' is not simply a fixed search space awaiting optimization. It is partly constructed through the sequence of moves and appreciations.
+
+This is easy to miss when production histories are reconstructed after the artifact is finished. Once a relation has become salient, it is tempting to project it backward. We say the artist ``chose the spacing,'' ``chose the tension,'' or ``chose the face'' as though those variables had been cleanly present as menu items from the start. But the relation may not have been available to the maker in that form. An intermediate artifact can disclose a distinction. Only then does the maker recognize that the distance between figures matters, or that a deformation could become a rule rather than an error.
+
+A more faithful model therefore uses a time-indexed variable set. Let $V_t$ represent the distinctions that are practically available to the maker at time $t$. A move can alter not only the values of variables in $V_t$ but the set itself. An artifact may cause a new relation $q$ to become perceptible, such that $q \notin V_t$ but $q \in V_{t+1}$. The branch is not merely selected; it is made available as a branch.
+
+This is where generative systems complicate the language of control. A maker can exercise little control over the first appearance of a feature while exercising substantial agency over the discovery that the feature is consequential. Yet discovery is not identical to authorship. Seeing a useful accidental relation does not retroactively cause the accident. The analytic task is to follow what the discovery does next.
+
+There is also a methodological danger. The final artifact supplies a vocabulary with which to narrate the entire process. That vocabulary can turn a contingent discovery into a fictional master plan. Sch\"on's account warns against precisely this kind of historical revisionism in design description: later coherence should not be mistaken for a fully articulated initial problem. A robust production history should therefore timestamp not only when a feature first appears but when it first becomes perceptible as a consequential distinction, when the maker first behaves as though it matters, and when later transformations begin to be governed by it.
+
+\section{The temporal frontier: contribution without retroactive origin}
+
+The central proposal can now be stated more precisely. Suppose a generative system produces feature $x$ at time $t_1$ without the maker having specified its particular expressive form. At $t_2$, the maker notices a relation $q$ made visible by $x$. At $t_3$, the maker commits---explicitly or behaviorally---to preserving or developing $q$. From $t_3$ onward, subsequent interventions are judged against that commitment. Alternatives that violate $q$ are rejected, corrected, or revised. Changes to other properties are accepted only when $q$ survives, or $q$ itself is deliberately transformed according to a new rule.
+
+The important claim is negative before it is positive: the later sequence does not make the maker the originator of $x$ at $t_1$. Stabilization after surprise does not travel backward in time. This is consistent with the Copyright Office's insistence that later human-authored additions should be analyzed separately from underlying generated material \citep{USCO2025Copyrightability,AllenGov2026Brief}. The initial occurrence and its later career are different causal questions.
+
+The positive claim is that a temporal frontier may nevertheless exist after which a human contribution becomes increasingly strong. If the maker's later interventions are prospectively constrained by $q$, if those interventions predictably preserve or elaborate $q$, and if removing them would materially reduce its stability, the maker is doing more than choosing a liked output. The surprise has become a rule for the future.
+
+This suggests a five-stage receipt:
+
+\begin{enumerate}
+\item \textbf{Surprise.} A feature or relation appears without having been specified in its particular expressive form.
+\item \textbf{Discovery.} The maker perceives a consequential difference that the event makes available.
+\item \textbf{Commitment.} Before the relevant later transformations are complete, the maker treats that difference as something to preserve, develop, negate, or otherwise regulate.
+\item \textbf{Intervention.} The maker performs actions chosen partly because of their expected effect on the committed relation.
+\item \textbf{Stabilization.} Across later states, the relation survives or develops in ways that depend materially on those interventions.
+\end{enumerate}
+
+The receipt is designed to avoid two symmetrical errors. It rejects the strongest ex ante requirement because discovery can be legitimate even when the final intention did not exist at the outset. It rejects pure retrospective adoption because liking an accident after the work is finished creates no evidence that the discovery governed later actions. Commitment sits between surprise and subsequent consequence.
+
+The criterion is falsifiable in principle. If the supposed commitment predicts nothing about later choices, if alternatives violating the relation are retained freely, or if the relation persists equally well when the claimed interventions are removed, the stabilization claim weakens. This is why a production trace can be more useful than an iteration count. The question is not how long the route was but which later states became unavailable because the maker had learned to care about a newly discovered difference.
+
+\section{From features to invariants}
+
+The temporal frontier also changes the unit of analysis. After surprise, the human contribution may not be a local feature at all. It may be an invariant across transformations.
+
+Consider identity preservation. The first generated face may be stochastic. The maker then decides that this face must remain recognizably the same while lighting, camera distance, gesture, costume, and environment change. The contribution is not well described as ownership of the first face's pixels. It is a practical equivalence relation across later states: these different images count as preserving the same person in the respect that matters to the work.
+
+The same structure appears in less obvious forms. A peculiar gap between two bodies becomes ``the distance that must remain uncomfortable.'' A malformed architectural rhythm becomes ``the asymmetry every later room must inherit.'' A glitch becomes a repeatable textural law. The maker converts an accidental token into a criterion of sameness across a series.
+
+This motivates the notion of an \emph{authored invariant}: a relation the maker prospectively defines or adopts after discovery and then materially stabilizes across subsequent transformations. If $y_1, y_2, \ldots, y_n$ are later artifact states and $\approx_q$ is the relation by which they count as equivalent with respect to $q$, then the relevant work can be represented as maintaining
+
+\[
+y_1 \approx_q y_2 \approx_q \cdots \approx_q y_n
+\]
+
+while deliberately allowing other dimensions to vary.
+
+The formulation immediately raises a question of authority: who defines $\approx_q$? In practice, sameness is rarely supplied by the model alone. Identity may be judged visually by the maker; architectural continuity may be institutional; a character's persistence may depend on narrative expectations; a legal test may recognize only certain expressive elements. The relation is situated. A generative system may help maintain an invariant, but the maker can still be responsible for deciding which differences count as breaking it.
+
+Persistence alone, however, is not evidence of human stabilization. A pretrained model may preserve a feature by default. An interface may lock it automatically. The human claim strengthens only when interventions selected because of $q$ make a counterfactual difference. This is another reason the temporal receipt must be causal rather than merely narrative.
+
+\section{Why steering is still not authorship}
+
+The most important pressure on the argument comes from interactive systems in which humans unquestionably control what happens next but do not thereby become authors of all resulting expression. Early video-game copyright cases are useful precisely because they prevent a romantic theory of control.
+
+In \emph{Stern Electronics v. Kaufman}, the Second Circuit considered a game whose audiovisual sequence varied with player actions. The player's choices affected what appeared, yet the court treated the recurring audiovisual structure as copyrightable expression attributable to the game's creators \citep{SternElectronics1982}. \emph{Midway Manufacturing v. Artic International} similarly recognized player-dependent variation while emphasizing that the game constrained the family of reachable audiovisual sequences \citep{MidwayArtic1983}. These cases concern fixation and game copyrights rather than AI authorship, so they cannot simply decide the modern question. Their conceptual warning is nevertheless strong: counterfactual steering does not by itself establish authorship of the expressive possibility structure within which steering occurs.
+
+The implication is that ``human control'' must be decomposed. At least seven functions can diverge:
+
+\begin{enumerate}
+\item discovering that a distinction exists;
+\item committing to make that distinction matter;
+\item constraining its possible values;
+\item steering its value through intervention;
+\item stabilizing it across later transformations;
+\item originating the recurring expressive invariant;
+\item originating or materially restructuring the possibility space in which the relevant states are reachable.
+\end{enumerate}
+
+Different agents can perform different functions. A user can discover and stabilize a relation supplied initially by the model. An interface can constrain a variable while a human chooses its target. A pretrained model can make a visual family reachable while a human creates a new relation among selected members. A game player can have high trajectory control while the recurring expressive grammar remains upstream.
+
+This functional decomposition is more precise than statements such as ``70 percent human.'' Percentages obscure the type of contribution. They also encourage metaphysical debates about whether the model is ``creative'' when the more tractable question is causal: which differences were available, who or what made them consequential, and what later possibilities did each intervention remove or preserve?
+
+The after-surprise receipt therefore establishes less than authorship in the legal sense. It establishes strong evidence of practical, prospective human agency over a subsequent relation. Whether that relation contains protectable original expression remains a separate inquiry.
+
+\section{Creative channel capacity: a lower bound on practical control}
+
+If control is not authorship, it still needs a rigorous account of its own. Counting interface controls is inadequate. A button can exist while making no meaningful difference; two sliders can collapse onto the same future; a single mask can give more local leverage than hundreds of descriptive words.
+
+The information-theoretic notion of empowerment offers a useful lower bound. In agent--environment systems, empowerment measures the channel capacity between an agent's possible actions and its future observable states \citep{JungPolaniStone2011}. Informally, an agent has more empowerment when it possesses more reliably distinguishable ways of making the future go otherwise in ways it can subsequently observe.
+
+Applied to creative systems, the important shift is from nominal options to effective distinguishable futures. Let $A$ be a set of user interventions and let $Y$ be future artifact states. A creative-control measure could ask about the information transmitted from $A$ to a task-relevant representation $\Phi(Y)$:
+
+\[
+E_{creative}(s) = \max_{p(a)} I\big(\Phi(Y_{future}); A \mid s\big).
+\]
+
+This is not a proposed copyright test. The difficult term is $\Phi$: artistically meaningful differences are observer- and task-relative. Pixel-level variation can be enormous while relevant control is negligible. But the formulation makes one point precise. Practical control depends on an action--consequence loop whose differences are perceivable and learnable. Hidden causal influence that the maker cannot discriminate is a weak basis for craft.
+
+This also clarifies why automation has ambiguous effects. A new interface can reduce difficulty while increasing empowerment by making formerly unreachable states accessible. It can also improve average output quality while decreasing empowerment by hiding intervention layers and collapsing formerly independent controls. Better generator and better instrument are not synonyms.
+
+For the after-surprise account, empowerment matters because stabilization requires a usable control channel. A maker who notices a relation but cannot reliably preserve, alter, or test it has discovered something without acquiring much leverage over it. The temporal frontier becomes stronger when the discovery is followed by observable, repeatable interventions that keep the newly consequential difference alive.
+
+\section{Co-adaptation: when the system teaches the maker what to ask}
+
+So far the argument may sound too human-centered, as if the maker discovers variables in a neutral material and then decides what matters. Interactive generative systems can also shape the maker. Don-Yehiya and colleagues find that iterative prompt users both elaborate their intended descriptions and adapt toward prompt traits that appear better suited to the model \citep{DonYehiyaEtAl2023}. This makes final prompts ambiguous evidence: they encode both developing human intention and accommodation to the system.
+
+The deeper possibility is that a model can shape not only the language in which questions are asked but the practical space of questions that become salient. If a system gives rich, immediate feedback about cinematic lighting but poor, unstable feedback about subtle spatial relationships, users receive unequal opportunities to learn those distinctions. Over time, highly responsive variables can become easier to notice, name, and pursue. The system is not merely answering a fixed set of human questions. It may be participating in the formation of the question set.
+
+This claim must be stated cautiously. The existing evidence establishes adaptation to model-preferred language, not a wholesale narrowing of human aesthetic cognition. Every medium shapes attention. Oil paint, cameras, musical instruments, and architectural software all make some differences easy to manipulate and others resistant. Medium formation is not automatically capture. The research question is comparative: which distinctions become easier to perceive and act upon because of the system, and which are systematically deprived of useful feedback?
+
+The temporal frontier therefore has a reflexive complication. The relation that the artist discovers after surprise may itself be partly a product of what the system is good at making surprising. A complete account of agency must trace influence in both directions: human interventions changing artifact states and artifact/model responses changing future human attention and preference.
+
+This is another reason not to identify craft with command. A mature practitioner is not simply someone who can force a model to comply. The practitioner may also know when the model's response is training their own taste, when an easy control is becoming a default, and when an unresponsive dimension deserves to be pursued precisely because the system does not make it convenient.
+
+\section{Exploration, shopping, and the after-surprise receipt}
+
+The most practical challenge is distinguishing exploratory making from shopping. Both can have the same visible rhythm:
+
+\begin{center}
+\term{generate $\rightarrow$ inspect $\rightarrow$ reject $\rightarrow$ generate $\rightarrow$ inspect $\rightarrow$ keep}.
+\end{center}
+
+A shopper can learn preferences through browsing. A curator can exercise sophisticated judgment without having authored the items selected. Therefore ``the user learned what they wanted'' is not enough.
+
+The stronger discriminator is operational residue. In shopping, an intermediate item mainly changes which candidate the person prefers. In exploratory making, an intermediate artifact can change the operations the maker subsequently knows or chooses to perform. The artifact becomes an experimental surface. It reveals a variable, a coupling, a failure mode, or an invariant. Later actions are reorganized around what was learned.
+
+This distinction can be tested without requiring a complete verbal diary. Suppose an unexpected relation appears at $t_1$. If the maker later sacrifices attractive alternatives because they violate it, repeatedly intervenes to recover it after failures, or transfers it into new states while varying other properties, the discovery has behavioral consequences. If the relation matters only in the retrospective explanation after the final selection, the evidence is weak.
+
+The complete receipt can therefore be recorded as a temporal ledger:
+
+\begin{center}
+\begin{tabular}{p{0.16\linewidth} p{0.73\linewidth}}
+\toprule
+\textbf{Stage} & \textbf{Evidence sought}\\
+\midrule
+Surprise & first appearance of an unplanned difference or relation\\
+Discovery & first point at which that difference becomes perceptible as consequential\\
+Commitment & prospective behavioral or explicit indication that later states should preserve, develop, negate, or regulate it\\
+Intervention & actions chosen partly because of their expected effect on the committed relation\\
+Stabilization & the relation persists or develops across later transformations because of those interventions\\
+Ablation & removing the interventions weakens the claimed stability or changes the resulting path\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+This receipt is intentionally harder than an odometer. It cannot be satisfied merely by reporting 624 prompts. It can also recognize meaningful work in a shorter sequence. Most importantly, it permits intention to form during making while preserving a temporal boundary against retrospective claims.
+
+\section{Implications}
+
+\subsection{For provenance}
+
+Production provenance should record more than tool names and timestamps. A useful trace needs enough temporal structure to distinguish a feature's first occurrence from its first recognition and its later stabilization. The minimal unit is not ``prompt 17'' but an event connecting an observed difference, a prospective constraint, an intervention, and a subsequent state. Full self-narration is neither necessary nor desirable; behavior can supply evidence when later choices repeatedly preserve a discovered relation.
+
+This also changes the value of discarded artifacts. A provenance system built only around the final output and immediate ancestors can omit epistemic generations that materially changed later action. Some discarded states are part of the causal history even when none of their pixels survive.
+
+\subsection{For copyright analysis}
+
+The proposal does not ask copyright to protect methods, skill, or every causal contribution. It instead recommends temporal precision. A court or registration authority examining hybrid material should distinguish the origin of an initially generated element from later human-authored organization. The government position in Allen already points toward this separation by treating underlying generated material and directly human-authored later contributions differently \citep{AllenGov2026Brief}. The temporal-frontier account makes the logic explicit without claiming that stabilization alone satisfies originality or fixation.
+
+It also cautions against categorical statements about ``prompting.'' Current systems distribute control differently. A prompt can be weak conditioning, part of a local edit, one input among spatial constraints, or a query in an exploratory loop. The legally relevant question is not whether text was used but what human-authored expression can be identified and how that expression entered the final work.
+
+\subsection{For creative-tool design}
+
+Most generative interfaces optimize one of two things: producing a high-quality result quickly or inferring what the user probably wants. Exploratory practice requires a third objective: preserving the ability to discover and subsequently control distinctions that are not yet specified.
+
+Interfaces can support this by exposing retained state, making local interventions comparable, allowing users to lock or release variables, preserving branches, and showing which changes are coupled. A particularly useful design distinction would let a user mark dimensions as \term{fix}, \term{range}, or \term{explore}. Such controls would make delegated uncertainty explicit rather than forcing the system to treat every omission as permission to complete the image according to hidden defaults.
+
+The larger design goal is not maximum option count. It is meaningful creative channel capacity: enough observable, independent leverage for a newly discovered difference to become actionable before the system closes it on the user's behalf.
+
+\section{Limitations and unresolved territory}
+
+The temporal frontier is an analytic proposal, not settled doctrine. The legal sources discussed here operate under specific statutes and procedural postures. The U.S. Copyright Office report is administrative guidance and policy analysis; the Allen materials used here include the government's 2026 summary-judgment briefing rather than a merits holding resolving the full prompt-authorship question. Video-game cases concern different technologies and doctrinal questions, especially fixation and recurring audiovisual works. They are used as counterexamples to a conceptual inference---control therefore authorship---not as direct precedents for generative images.
+
+The theory also depends on difficult empirical judgments. Commitment can be tacit. Artists may not verbalize intentions without changing the practice being studied. Some invariants are maintained by model defaults rather than human effort. Some ``surprises'' are foreseeable members of a deliberately delegated possibility space. The boundary between discovering a distinction and inventing it is itself philosophically unstable. A maker can become attached to a result for reasons supplied by the system, cultural convention, or prior training, and no process log can isolate an immaculate human preference.
+
+Information-theoretic control introduces another unresolved problem: the choice of representation. Empowerment over raw pixels is not artistic empowerment. A useful measure needs an observer-relative space of consequential differences, but defining that space risks smuggling the very aesthetic judgment the metric is meant to analyze.
+
+Finally, the account remains deliberately non-total. Creative agency, legal authorship, craft, originality, responsibility, and artistic value need not coincide. The temporal frontier clarifies one relation among them: how meaningful human agency can begin after an unplanned event without retroactively rewriting the event's origin. It should not be asked to decide everything else.
+
+\section{Conclusion}
+
+Generative systems make an old fact of artistic practice newly visible: makers often discover what matters by encountering something they did not plan. The challenge is to describe that discovery without confusing it with authorship of the accident itself.
+
+The strongest evidence lies after surprise. An unforeseen feature becomes part of a serious human production history when it ceases to be merely an attractive result and becomes a constraint on what may happen next. The maker discovers a consequential difference, commits to it, acts in ways chosen because of it, and stabilizes a relation across later transformations. This sequence gives exploratory making a prospective structure without demanding a complete intention before the first generation.
+
+The temporal frontier also prevents overclaiming. Later commitment does not make the maker the originator of the first surprise. Counterfactual steering does not automatically make the controller an author. A game player can control a trajectory inside someone else's expressive system; a generative user can likewise possess real leverage without originating the possibility space. Attribution therefore has to be typed: discovery, commitment, constraint, steering, stabilization, invariant origin, and possibility-space origin can belong to different actors.
+
+The resulting question is more demanding than ``How many prompts did you use?'' and more faithful than ``Did you know exactly what you wanted before you began?'' It asks: \emph{What difference became visible, when did it start governing later choices, and what future states became unavailable because the maker had learned to care about it?}
+
+That is where authorship after surprise begins as a serious research problem.
+
+\begin{thebibliography}{99}
+\bibitem[U.S. Copyright Office(2025)]{USCO2025Copyrightability}
+U.S. Copyright Office. 2025. \emph{Copyright and Artificial Intelligence, Part 2: Copyrightability}. Washington, DC: U.S. Copyright Office.
+
+\bibitem[United States(2026)]{AllenGov2026Brief}
+United States of America. 2026. \emph{Reply in Support of Cross-Motion for Summary Judgment, Allen v. Perlmutter}. Litigation filing hosted by the U.S. Copyright Office.
+
+\bibitem[Samuelson et~al.(2023)Samuelson, Sprigman, and Sag]{SamuelsonSprigmanSag2023Comments}
+Pamela Samuelson, Christopher Jon Sprigman, and Matthew Sag. 2023. ``Comments in Response to the Copyright Office's Notice of Inquiry on Artificial Intelligence and Copyright.''
+
+\bibitem[Kirsh and Maglio(1994)]{KirshMaglio1994Epistemic}
+David Kirsh and Paul Maglio. 1994. ``On Distinguishing Epistemic from Pragmatic Action.'' \emph{Cognitive Science} 18(4): 513--549. doi:10.1207/s15516709cog1804\_1.
+
+\bibitem[Sch\"on(1992)]{Schon1992Reflective}
+Donald A. Sch\"on. 1992. ``Designing as Reflective Conversation with the Materials of a Design Situation.'' \emph{Research in Engineering Design} 3: 131--147. doi:10.1007/BF01580516.
+
+\bibitem[Don-Yehiya et~al.(2023)Don-Yehiya, Choshen, and Abend]{DonYehiyaEtAl2023}
+Shachar Don-Yehiya, Leshem Choshen, and Omri Abend. 2023. ``Human Learning by Model Feedback: The Dynamics of Iterative Prompting with Midjourney.'' In \emph{Proceedings of EMNLP 2023}, 4146--4161. doi:10.18653/v1/2023.emnlp-main.253.
+
+\bibitem[Jung et~al.(2011)Jung, Polani, and Stone]{JungPolaniStone2011}
+Tobias Jung, Daniel Polani, and Peter Stone. 2011. ``Empowerment for Continuous Agent-Environment Systems.'' \emph{Adaptive Behavior} 19(1): 16--39. doi:10.1177/1059712310392389.
+
+\bibitem[Stern Electronics(1982)]{SternElectronics1982}
+\emph{Stern Electronics, Inc. v. Kaufman}, 669 F.2d 852 (2d Cir. 1982).
+
+\bibitem[Midway Manufacturing(1983)]{MidwayArtic1983}
+\emph{Midway Manufacturing Co. v. Artic International, Inc.}, 704 F.2d 1009 (7th Cir. 1983).
+
+\bibitem[Andrien(1991)]{Andrien1991}
+\emph{Andrien v. Southern Ocean County Chamber of Commerce}, 927 F.2d 132 (3d Cir. 1991).
+\end{thebibliography}
+
+\clearpage
+\appendix
+\section{Assembly Instrument}
+
+This manuscript was assembled with AI assistance from a preserved research corpus. The complete assembly prompt, provenance record, and claim-source map accompany the publication for inspection and reproduction. The exact assembly instrument used for this build is preserved at:
+
+\begin{center}
+\texttt{SLIPCASE\_FINAL\_PROMPT.txt}
+\end{center}
+
+The package also preserves the preceding assembly prompt separately so the current instrument does not overwrite prior process evidence.
+
+\section{Making History}
+
+The immutable baseline comprises the previously packaged research field plus newly derived, source-attributed research objects created for this revision. Earlier payloads were not rewritten to harmonize citations or terminology. In particular, a bibliographic collision surrounding Donald Sch\"on's same-title 1992 publications is preserved as a new research object rather than silently altering earlier citations. Current source verification used the \emph{Research in Engineering Design} edition for the paper's Sch\"on claims.
+
+The current paper's title, structure, connective argument, and temporal-frontier synthesis are derived interpretation. The cited sources remain the evidentiary basis. The package's making-history and source-map files record the distinction in greater detail.
+
+\section{Replication Path}
+
+Open \texttt{index.html} from the package root using a local browser. The index embeds the card payloads, bibliography, graph records, ghosts, source receipts, paper text, and reconstruction pointers without external frameworks or fonts. Exact payload hashes and the verification report are stored under \texttt{\_SLIPCASE/}. Root cards and their \texttt{\_MD/} mirrors can be compared directly. The rebuild procedure is recorded in \texttt{000\_\_REBUILD.txt}.
+
+\end{document}

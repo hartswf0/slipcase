@@ -1,0 +1,7 @@
+<poml version="3.1">
+<meta><title>PRIME ZETTEL FORAGE — RECURSIVE INQUIRY</title></meta>
+<note>VISIBLE-CONTEXT RECONSTRUCTION: the full recursive forage prompt was supplied in the immediately preceding user turn. The exact user message remains the authoritative appearance; this package records its operative clauses and ancestry requirements rather than claiming byte-identical extraction.</note>
+<invariant>ZETTEL is a recursive type. FORAGE(ZETTEL) → ZETTEL[]. Every child uses the same field names/order; ancestry lives in LINKS and CITATION TRAIL; inherit questions, not conclusions.</invariant>
+<live_edges>QUESTION · DEEPER QUESTION · TENSION · MISSING · BOUNDARY · CITATION TRAIL · TEST</live_edges>
+<minimal_command>Recursively forage this ZETTEL. Follow the strongest live edge into primary sources; let evidence deepen, split, correct, contradict, historicize, implement, or reframe the parent. Return only new ZETTELS in the same syntax.</minimal_command>
+</poml>

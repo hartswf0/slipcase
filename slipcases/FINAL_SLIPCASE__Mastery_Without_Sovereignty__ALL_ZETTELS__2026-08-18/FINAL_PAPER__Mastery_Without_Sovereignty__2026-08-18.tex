@@ -1,0 +1,209 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{csquotes}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black}
+\setlist{nosep}
+\fancypagestyle{firstpage}{%
+  \fancyhf{}\renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}
+  \fancyfoot[R]{\begin{minipage}{0.32\textwidth}\raggedleft\includegraphics[width=0.22in]{MARK.pdf}\\[-1pt]\scriptsize Working Paper · AI-augmented research process\\Evidence and assembly record preserved\end{minipage}}}
+\title{Mastery Without Sovereignty\\\large Bugs, Quirks, and the Craft of Generative Search}
+\author{Watson Hartsoe}
+\date{Revised working-paper draft · 17 August 2026}
+\begin{document}
+\maketitle
+\thispagestyle{firstpage}
+
+\begin{abstract}
+Prompting is usually framed as a problem of control: better words should produce results closer to what the user meant. Joshua Larson is an important counterexample. A veteran game designer, artist, programmer, and generative artist, Larson began using Midjourney for active game art direction in June 2022, during the system's Version 2 era. Within weeks, a prompt result he did not plan opened an architectural direction his team had previously rejected; he then generated roughly 10,000 images to learn what that anomaly could sustain. Larson's later vocabulary is exact because it is double-sided: ``magical prompts,'' ``spidey sense,'' bugs, quirks, and stumbling sit beside superstition, confirmation bias, stochastic variation, and an explicit acceptance that some aesthetics cannot be intentionally locked in. This paper argues that his practice exposes a form of expertise that control-centered accounts of prompting miss. The expert learns not only how to steer an opaque generative instrument, but when to trust a deviation, when to test it, when to abandon a branch, and when an unforeseen output deserves to revise the goal itself. Wheelwright Pian in the \emph{Zhuangzi} sharpens the problem without supplying a historical genealogy: transferable instructions are not identical to the situated knack of knowing what to do next. In generative systems, where variation becomes cheap, creative intelligence moves toward the cultivation of consequence. I call this mastery without sovereignty: decisive agency without the fiction of total command.
+\end{abstract}
+
+\textbf{Keywords:} Midjourney; Joshua Larson; prompt craft; expertise; generative AI; Zhuangzi; serendipity; creativity
+
+\section{The expert who keeps the bug}
+Prompting is usually framed as a problem of control: choose better words, get closer to the image you meant. Joshua Larson is a bad fit for that story. One of the earliest well-documented professional game creators to use Midjourney inside active art direction, he described his most inventive styles as coming from ``essentially bugs and quirks.'' \cite{JoshuaBugsScreenshot} The model misses. He stays.
+
+In fall 2022 I was studying Midjourney for Amy Bruckman's \emph{Design of Online Communities} course at Georgia Tech. \cite{BruckmanCourse2022} Midjourney founder and CEO David Holz took questions from the community in weekly Office Hours. \cite{DavidHolz2026} I entered the stage under the name ``cool radio'' with a question I had carried from undergraduate work in Chinese philosophy with Jim Peterman \cite{PetermanSewanee}: does creativity narrow when we chase originality too directly? I asked Holz. Larson was listening. His reply appeared in Discord:
+
+\begin{quote}
+``Great question. Especially considering that the most inventive styles I've found have come from essentially bugs and quirks.'' \cite{JoshuaBugsScreenshot}
+\end{quote}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.92\textwidth]{joshua-bugs.png}\par\vspace{6pt}
+\includegraphics[width=0.92\textwidth]{office-hours.png}
+\caption{The field entry. Above: Joshua Larson's reply that his most inventive styles came from ``bugs and quirks.'' Below: Midjourney Office Hours with DavidH and the author, ``cool radio,'' in the speaker row. Screenshots supplied by the author; the relative timestamp in the upper image does not establish an archival date.}
+\label{fig:officehours}
+\end{figure}
+
+That line deserves weight because Larson was not learning visual craft from Midjourney. He brought visual craft to it. The official \emph{That Dragon, Cancer} team biography described him as an artist, designer, and programmer with fifteen years in multimedia and nine years co-founding studios that built commercial videogames; on that project he worked as a game designer and programmer. \cite{ThatDragonCancerTeam} In 2022, La Biennale di Venezia credited him as art director, developer, and artist on Numinous Games' voice-driven VR work \emph{Area Man Lives}. \cite{BiennaleAreaManLives} Larson later described an art-school background, early work in graphic design, animation and 3D, and roughly two decades of generative art and game development. \cite{AIArtWeeklyLarson2023}
+
+This is the useful historical position. Larson reached Midjourney with an existing professional practice and while the instrument itself was still unstable. He dates his decisive architectural experiment to June 2022. \cite{AIArtWeeklyLarson2023} Midjourney's retrospective documentation places Version 2 as the default model from April through July 2022 and describes it as highly creative but low in coherency. \cite{MidjourneyLegacy} I cannot establish that Larson was the first professional game developer to use Midjourney, and the paper does not need that fragile claim. The stronger fact is that he was already directing game art with it during V2, before professional conventions around text-to-image work had settled.
+
+That timing changes how his later uncertainty should be read. ``I don't have that level of control'' is not a novice's confession that the right trick remains unknown. It is a boundary report from an experienced operator who had already driven the system through thousands of professional trials. The distinction is the paper's starting point: expertise in a generative system can deepen even when sovereignty does not.
+
+\section{Ten thousand images later}
+Two weeks into using Midjourney, Larson encountered a phrase that changed his sense of what the tool was for. In our October 2022 interview, he described finding ``a new architectural style that I've never seen before'' and then using that one phrase to generate roughly 10,000 images across cityscapes, residential buildings, commercial buildings, and other variants \cite{Larson2022}. In the later AI Art Weekly account, he dates the episode to June and says the result revived a general architectural direction his team had already considered and written off; the generated image returned that direction with what he called a ``wild twist'' \cite{AIArtWeeklyLarson2023}.
+
+The important event was not the production of an unusual image. Midjourney produced unusual images constantly. The important event was Larson's judgment that the deviation solved a real design problem.
+
+His team had already encountered a rough version of the direction through ordinary concept work. In his interview, Larson says it ``didn't work in its sketch form'' but somehow worked in a more finalized representation \cite{Larson2022}. That reversal made him suspect that conventional design pipelines silently eliminate possibilities for representational reasons. Designers sketch broadly because sketches are cheap; they refine only the candidates judged worth further labor. But a sketch asks the designer to imagine the qualities that a finished representation would later supply. If those qualities carry the design, the sketch can generate a false negative.
+
+Larson's formulation is blunt: generative image technology allows someone to ``experiment and brainstorm ideas that result in a finished render,'' making possible a ``deeper, broader exploration of a design space'' \cite{Larson2022}. The claim is not that a generated render is actually finished. It is that high visual specificity arrives early enough to become exploratory material.
+
+This changes the economics of rejection. Under a costly pipeline, an idea that looks weak in thumbnail form rationally dies before anyone spends hours rendering it. Under fast generation, the same idea can be allowed to become visually articulate before judgment. Larson later put the principle even more radically: to discover the full possibility space, creators need to stop caring so early about whether an idea will work and ``curate at the end instead'' \cite{AIArtWeeklyLarson2023}.
+
+This is the first place where the originality question breaks open. The strange architecture was valuable precisely because Larson had not specified its most important feature in advance. His contribution was not fidelity to a prior mental image. He recognized that an unintended result deserved to become part of the intention.
+
+\section{From bug to quirk to affordance}
+Calling the result a ``happy accident'' would make the practice sound easier than it is. Most accidents are useless. Most glitches do not deserve a project. A professional cannot afford to romanticize every failure.
+
+Larson's phrase ``bugs and quirks'' points to a classification problem. A bug is a deviation relative to some expectation about what the system should do. A quirk is a deviation that becomes recognizable through repeated encounter. A creative affordance appears when the deviation supports a useful operation. Craft begins when the practitioner becomes good at deciding which deviations deserve another trial before their status is known.
+
+The sequence is therefore:
+
+\begin{center}
+UNEXPECTED OUTPUT $\rightarrow$ RETEST $\rightarrow$ RECOGNIZABLE QUIRK $\rightarrow$ USABLE AFFORDANCE $\rightarrow$ PROJECT CONSEQUENCE.
+\end{center}
+
+Larson's 10,000-image branch gives this sequence unusual scale. He did not merely preserve one lucky frame. He asked what else the phrase could sustain. Could the style survive changes in building type? Scale? Context? Combination with other references? At some point a singular accident acquired descendants. The project then began to reorganize around the family rather than the family merely serving the project.
+
+Research on prolific text-to-image artists independently documents a similar valuation of glitches. Chang and colleagues found creators seeking specialized language from fields such as architecture and deliberately exploring model glitches that could become styles in their own right \cite{ChangEtAl2023PromptArtists}. Larson's case is especially revealing because the glitch moved beyond gallery experimentation into active game art direction. The anomaly did not merely look distinctive. It entered a production decision.
+
+This gives the practitioner a role that neither ``author'' nor ``curator'' captures cleanly. A curator selects among completed works. Larson does more. He allocates a future to an incomplete event. He decides that a deviation deserves more samples, more combinations, more professional attention, perhaps a new art direction. Selection becomes cultivation.
+
+\section{Wheelwright Pian and the prompt that cannot carry the knack}
+The \emph{Zhuangzi} helps clarify this practice if we resist making it an origin myth for AI. The relevant story is Wheelwright Pian in the \emph{Tian Dao}. Pian interrupts a duke reading the words of ancient sages and claims that the written residue cannot contain the whole of skilled practice. In James Legge's translation, Pian explains that wheel-making depends on acting neither too gently nor too forcefully; the decisive relation is something ``there is a knack in'' \cite{Legge1891Taoism}. Chung uses the episode to describe a form of creativity grounded in responsive integration rather than novelty for novelty's sake \cite{Chung2020Originality}.
+
+The comparison initially seems almost backwards for prompting. Pian's point depends on a difference between words and embodied craft. Prompt craft appears to make the words themselves operational. If a specific string triggers a valuable aesthetic, why not say the string \emph{is} the skill?
+
+Larson's own community practice refuses that reduction. He says that advanced users eventually need not ask one another for the exact prompt because what they actually want is ``some principle''; high-level users often share the principle even when the literal prompt remains private \cite{Larson2022}. Elsewhere he describes wanting an ``exclusivity period'' over especially valuable prompts while teaching the underlying methods rather than simply handing over his strings \cite{Larson2022}.
+
+The prompt can travel. The knack does not travel so easily.
+
+What remains missing after someone receives the exact words? They may not know when the phrase is promising, what counts as a productive deviation, what visual trait is worth stabilizing, when to alter one component instead of another, how many failures to tolerate, when to stop, which output should become an image prompt, or when the target itself should change. A recipe can name an operation without transferring the judgment that makes the operation useful.
+
+Larson's prompt work therefore resembles Pian's craft at an important level: the meaningful unit is not an isolated instruction but an adjustment inside an unfolding situation. The comparison does not prove a Daoist genealogy. It reveals a shared problem of transmission. Rules travel better than discrimination.
+
+\section{The expert searcher}
+Larson often describes prompting less like writing and more like search. A strong phrase becomes the center of what he calls a ``mind map.'' He branches from it by changing artists, building types, references, and combinations; the branches become more detailed as they move outward \cite{Larson2022}. The visible Discord history may be linear, but the practitioner remembers a tree.
+
+He also has a stopping rule. After enough exploration, he says he begins to feel that he is ``going in circles'' and can move on \cite{Larson2022}. And before the evidence is complete, he develops what he calls a ``spidey sense'' for phrases that seem likely to produce something worth pursuing \cite{Larson2022}.
+
+These phrases sound informal, but they name technical judgments any search process needs: \emph{where should I spend the next sample, and when should I stop spending samples here?}
+
+Information-foraging theory provides one way to make that expert intuition testable. Pirolli and Card model searchers deciding whether the expected yield of an information patch still justifies continued attention \cite{PirolliCard1999}. Larson's ``spidey sense'' can be interpreted as a forecast of yield: this phrase is worth another hundred generations. ``Going in circles'' can be interpreted as a forecast of declining marginal return: this branch no longer justifies the sampling cost.
+
+The analogy earns its place only if it predicts expertise. If experienced practitioners are not better than novices at forecasting which prompt regions will later yield valuable descendants, then ``spidey sense'' is merely retrospective storytelling. But if experts can predict productive branches before the winning image appears, we have evidence that high-level prompt craft contains a real prospective skill rather than only selection after luck.
+
+Larson himself complicates the search further. Every so often, he deliberately becomes ``less rational'' and tries something more experimental or nonsensical \cite{Larson2022}. This is not a contradiction. Local refinement can trap a search inside the assumptions that produced the current neighborhood. A discontinuous move can expose a different region. The skilled searcher therefore needs both persistence and the capacity to break the search grammar that persistence created.
+
+\section{Mastery appears where control stops}
+The easiest definition of prompt expertise is control: experts write better instructions, so model outputs approach their intentions more closely. Larson certainly acquires more control. He talks about word order, punctuation, phrase strength, counterweights, remixing, photographic references, and model-specific behavior. Yet his most revealing statement is about the control that never arrives.
+
+Some aesthetics, he says, cannot be intentionally locked in. He can only ``stumble upon'' them among thirty or forty images, and he has to accept that he does not have that level of control \cite{Larson2022}.
+
+This sentence is easy to misread if the speaker's history disappears. A novice who says ``I cannot control it'' may identify a skill gap. Larson says it after high-volume professional use, after building an art direction around the system, after joining high-volume user communities, and after developing a vocabulary precise enough to distinguish stronger and weaker interventions. In the same interview he says more than 99 percent of his use has been professional and describes himself as part of a very small cohort operating at that level; those community counts are self-reported estimates, not audited demographics, but they establish how he understood his position in the practice \cite{Larson2022}.
+
+Expertise does not make his causal explanations automatically correct. It changes what the admission of uncertainty means. Calibrated noncontrol can be an output of expertise.
+
+The master knows not only which action works. He knows which effects remain weakly controllable, which have not replicated, and which outcomes are better approached by search than by direct command.
+
+That is why I call this \emph{mastery without sovereignty}. Sovereignty would mean that the initial intention retains final authority: the system succeeds by obeying it. Larson's practice retains agency without granting the first intention that power. He probes forcefully, but an encounter can revise the target. He can reject a generated direction, change the prompt, or let the generated direction change the project.
+
+Kirsh and Maglio's distinction between pragmatic and epistemic action helps explain why so many generations can still count as work. They show that some actions in Tetris are valuable not because they directly advance the external task but because changing the external world makes hidden information easier to perceive and reason about \cite{KirshMaglio1994}. Many generative outputs function similarly. An image need not become an asset to earn its generation. It can exist so that Larson can see what a phrase, combination, or design possibility does and know what to try next.
+
+The loop is therefore:
+
+\begin{center}
+PROVISIONAL INTENTION $\rightarrow$ PROBE $\rightarrow$ ENCOUNTER $\rightarrow$ JUDGMENT $\rightarrow$ REVISED ACTION.
+\end{center}
+
+The practitioner remains active at every stage. What disappears is the fiction that mastery requires every valuable result to have been specified before the encounter began.
+
+\section{Magic without mystification}
+Larson's use of the phrase ``magical prompt'' deserves similar care. The easy move is either to romanticize the magic or dismiss it as ignorance. Larson himself does neither.
+
+He reports strong practical regularities. He describes phrases that repeatedly open productive aesthetic regions. In 2023 he wrote that a refined prompt can generate a cohesive collection, and that for some forms of AI image generation he thinks the art lies in the collection and therefore, in an important sense, ``in the prompt itself'' \cite{AIArtWeeklyLarson2023}. He gives `hip hop haute couture' as one phrase that can branch into many directions, and describes saving special images because they pass interesting traits to later ``genetic offspring'' through image prompting \cite{AIArtWeeklyLarson2023}.
+
+But he also warns against believing too quickly. In our interview Larson says there is ``definitely a level of superstition and confirmation bias'' in prompt practice and that users can become convinced of realities that are not true \cite{Larson2022}. He characterizes the environment as containing ``a lot of random, chaotic variation'' and warns against assigning pattern where none can be established \cite{Larson2022}. His coin-flip analogy is an attempt to discipline intuition with replication.
+
+Prompt magic therefore names a useful middle state: operational knowledge outruns mechanistic explanation. A phrase has earned more confidence than a one-off accident, yet the practitioner cannot fully inspect the system that makes it effective.
+
+This problem intensifies because the instrument does not remain outside the practitioner. Don-Yehiya, Choshen, and Abend analyze iterative Midjourney prompting and find evidence for two simultaneous processes: users articulate intentions they had initially omitted, and users adapt their language toward forms favored by the model \cite{DonYehiyaChoshenAbend2023}. The expert is not merely discovering a static language of control. Extended use can train the user's own language.
+
+Larson's sophistication lies in living inside this uncertainty without collapsing it. He builds practical theories because he has to act. He distrusts those theories because the evidence is noisy. He participates in what he calls ``citizen science research type stuff, with varying levels of scientific rigor'' and describes advanced community members circulating developer answers back through prompt-craft forums \cite{Larson2022}. Prompt expertise becomes partly epistemic governance: deciding what the community actually knows.
+
+\section{After originality}
+The question that brought me into Office Hours asked whether creativity should abandon originality. Larson's practice gives a better answer than the question anticipated.
+
+Generative systems lower the cost of producing variation. Larson can make dozens, hundreds, or thousands of candidates around a phrase. Under those conditions, novelty by itself becomes less informative. The machine can keep making differences. The scarce operation moves downstream.
+
+Someone still has to decide which difference deserves a future.
+
+This is where Chung's interpretation of creativity as integration becomes useful. The architectural discovery did not matter merely because Larson had never seen it before. It mattered because he could integrate it with an actual game's problems, visual logic, building types, production needs, and collaborators. The novelty became consequential because it entered a larger situation.
+
+That distinction prevents the argument from collapsing into curation. Larson is not simply choosing the prettiest output from an infinite slot machine. He is changing the conditions under which later outputs will be judged. A strange surface becomes an architectural language. A surviving image becomes a parent for later image prompts. An anomaly causes the art direction to move. The result participates in reconstructing the problem.
+
+In this sense, generative abundance relocates creative intelligence from the production of difference toward the cultivation of consequence.
+
+The strongest evidence for this claim is precisely the moment that weak accounts would dismiss as failure: the bug. A deviation arrives without permission. The novice can discard it because it does not match the prompt. The expert can recognize that mismatch and still ask a different question: \emph{what can this become?}
+
+That is not submission. It is disciplined receptivity.
+
+\section{What this argument risks getting wrong}
+Calling Larson a master cannot become a shield against criticism. Expertise gives his boundary reports diagnostic weight; it does not grant privileged access to Midjourney's hidden causal machinery. His own warning about superstition makes that distinction nonnegotiable.
+
+Several claims in this paper therefore remain hypotheses rather than settled facts. ``Spidey sense'' should predict future yield, not merely describe hindsight. ``Going in circles'' should function as a stopping rule that experts apply more efficiently than novices. A bug promoted to a quirk should survive controlled variation often enough to support reuse. Experts should distinguish reproducible prompt effects from stochastic coincidences with better calibration. And exact prompts should transfer less skill than prompts plus situated principles if the Wheelwright Pian comparison is doing real explanatory work.
+
+The history claim also needs restraint. I have found strong evidence that Larson was using Midjourney for professional game art direction in June 2022, during the V2 period, and later received unusually visible recognition within the Midjourney ecosystem \cite{AIArtWeeklyLarson2023,MidjourneyLegacy}. I have not established that he was the first professional game developer, artist, or art director to use Midjourney. Priority would require a different archival project.
+
+Finally, the philosophical comparison is not influence. The Office Hours exchange belongs to the genealogy of this research, not to the genealogy of Midjourney. The \emph{Zhuangzi} does not explain why the model behaves as it does. It helps discriminate two conceptions of mastery: one that equates expertise with the successful imposition of a prior plan, and one that locates expertise in sensitive action among particulars that cannot all be known in advance.
+
+That narrower comparison is enough.
+
+\section{Which difference deserves a future?}
+I began with a question about originality. Joshua answered with bugs.
+
+The answer now looks less like an aside than a compact theory of generative craft. A powerful generative system can produce difference at extraordinary volume. The expert's problem is not simply how to force more difference into existence. It is how to notice when a deviation contains usable structure, how to test whether the structure survives, how to connect it to a professional situation, and how to let an encounter change what the work is trying to become.
+
+This is why Larson's language matters. ``Spidey sense.'' ``Going in circles.'' ``Magical prompt.'' ``Stumble upon.'' ``Superstition.'' ``Local maxima.'' ``I don't have that level of control.'' These are not polished theoretical terms. They are the working vocabulary of someone learning to operate an instrument before its practice had stabilized. Taken together, they describe an expertise organized around calibration rather than omnipotence.
+
+Wheelwright Pian tells the duke that the words left behind by earlier masters cannot hand over the whole knack. Generative AI makes the paradox sharper because the most visible artifact of the craft is itself a string of words. Yet Larson shows why the string remains insufficient. The words can be copied. The judgment that knows what to do next cannot be copied so cheaply.
+
+When novelty becomes abundant, originality stops being the only hard problem. The harder problem is deciding which unforeseen possibility deserves a future.
+
+Mastery begins there: not where uncertainty disappears, but where a practitioner can act decisively without pretending to own the whole field of possible outcomes.
+
+\begin{thebibliography}{99}
+\bibitem{Larson2022} Joshua Larson. Interview with Watson Hartsoe, 18 October 2022. Unpublished research transcript, 93 minutes. Research copy supplied by interviewer.
+\bibitem{JoshuaBugsScreenshot} Joshua @ Numinous. Discord reply concerning inventive styles arising from ``bugs and quirks.'' Research screenshot supplied by Watson Hartsoe; displayed date is relative and archival date remains unresolved.
+\bibitem{ThatDragonCancerTeam} That Dragon, Cancer. ``Our Team.'' Team biography for Josh Larson. \url{https://www.thatdragoncancer.com/our-team/}
+\bibitem{BiennaleAreaManLives} La Biennale di Venezia. ``Area Man Lives.'' Venice Immersive, 2022. Credits list Joshua Larson as art director, developer, and artist. \url{https://www.labiennale.org/en/cinema/2022/venice-immersive/area-man-lives}
+\bibitem{AIArtWeeklyLarson2023} AI Art Weekly. ``Joshua Larson - Interview.'' 16 June 2023. \url{https://aiartweekly.com/interviews/joshua-larson}
+\bibitem{MidjourneyLegacy} Midjourney. ``Legacy Features.'' Official documentation. Version 2 listed as the default model from April 2022 to July 2022. \url{https://docs.midjourney.com/hc/en-us/articles/33329788681101-Legacy-Features}
+\bibitem{Chung2020Originality} Julianne Chung. ``To be creative, Chinese philosophy teaches us to abandon `originality'.'' \emph{Psyche}, 1 September 2020. \url{https://psyche.co/ideas/to-be-creative-chinese-philosophy-teaches-us-to-abandon-originality}
+\bibitem{Legge1891Taoism} James Legge, trans. \emph{The Texts of Taoism, Part I}. Sacred Books of the East, vol. 39. Clarendon Press, 1891. \emph{Tian Dao} text accessed via Chinese Text Project: \url{https://ctext.org/zhuangzi/tian-dao/zh}
+\bibitem{ChangEtAl2023PromptArtists} Minsuk Chang, Stefania Druga, Alexander J. Fiannaca, Pedro Vergani, Chinmay Kulkarni, Carrie J. Cai, and Michael Terry. ``The Prompt Artists.'' \emph{Proceedings of the 15th Conference on Creativity and Cognition}, 75--87, 2023. \url{https://doi.org/10.1145/3591196.3593515}
+\bibitem{PirolliCard1999} Peter Pirolli and Stuart Card. ``Information Foraging.'' \emph{Psychological Review} 106(4):643--675, 1999. \url{https://doi.org/10.1037/0033-295X.106.4.643}
+\bibitem{KirshMaglio1994} David Kirsh and Paul Maglio. ``On Distinguishing Epistemic from Pragmatic Action.'' \emph{Cognitive Science} 18(4):513--549, 1994. \url{https://doi.org/10.1207/s15516709cog1804_1}
+\bibitem{DonYehiyaChoshenAbend2023} Shachar Don-Yehiya, Leshem Choshen, and Omri Abend. ``Human Learning by Model Feedback: The Dynamics of Iterative Prompting with Midjourney.'' \emph{Proceedings of EMNLP 2023}, 4146--4161. \url{https://doi.org/10.18653/v1/2023.emnlp-main.253}
+\bibitem{BruckmanCourse2022} Amy Bruckman. ``CS 6470: Design of Online Communities.'' Georgia Institute of Technology, Fall 2022. Official course page. \url{https://faculty.cc.gatech.edu/~asb/teaching/oc/23/index.html}
+\bibitem{DavidHolz2026} Society for Science. ``David Holz.'' Profile identifying Holz as Founder \& CEO of Midjourney. Accessed 2026. \url{https://www.societyforscience.org/people/david-holz/}
+\bibitem{PetermanSewanee} The University of the South. ``James Franklin Peterman.'' Faculty profile; areas of expertise include Chinese Philosophy. \url{https://new.sewanee.edu/programs-of-study/philosophy/faculty-staff/james-franklin-peterman/}
+\end{thebibliography}
+
+\appendix
+\section{Assembly and provenance}
+This final working-paper draft was assembled from a preserved research field containing the October 2022 Larson interview, researcher-supplied Discord and Office Hours screenshots, public sources, derived research zettels, and prior paper drafts. The exact assembly instrument is preserved as \texttt{SLIPCASE\_FINAL\_PROMPT.txt} in the accompanying package. Public biographical and historical claims were rechecked against the \emph{That Dragon, Cancer} team page, La Biennale di Venezia, AI Art Weekly, Midjourney's official legacy documentation, Georgia Tech's course archive, Sewanee's faculty profile for James Franklin Peterman, and a current profile identifying David Holz as Midjourney's founder and CEO before this draft was compiled. The philosophical comparison is presented as an analytic comparison, not a claim of historical influence on Larson, Holz, or Midjourney.
+
+\end{document}

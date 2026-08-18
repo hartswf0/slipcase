@@ -1,0 +1,79 @@
+VERIFICATION
+
+CHECKPOINT: SLIPCASE-20260818-0356-EDT-a5ef0e2e
+
+SOURCE COVERAGE
+  cards with SOURCE field: 45 / 45
+  cards with BibTeX: 45 / 45
+  local/snapshot/generated resources: 11
+  link-only resources: 9
+
+EXTRACTION
+  admitted zettels: 45
+  root zettel TXT files: 45
+  _MD mirrors: 45
+  JSON zettel records: 45
+  root/mirror byte parity: PASS
+  JSON payload SHA-256 parity: PASS
+
+DUPLICATES / ID COLLISIONS
+  exact duplicate payload groups: 0
+  original ID collision groups: 0
+
+PLATFORM RELATIONS
+  MEMBER_OF records: 45
+
+LINKS RELATIONS
+  LINKS_TO records: 193
+
+WIKILINK COVERAGE
+  WIKILINKS_TO records outside PLATFORM/LINKS: 73
+  all native [[ADDRESS]] relation records: 311
+  GHOST nodes: 85
+
+BIBLIOGRAPHY COVERAGE
+  unique citekeys compiled: 18
+  paper citekeys: 8
+  paper citekeys missing from compiled bibliography: NONE
+
+RESOURCE COVERAGE
+  resource records: 20
+  local/snapshot/generated bodies or receipts: 11
+  LINK_ONLY receipts: 9
+  prior derived paper preserved: YES
+
+RECONSTRUCTION STATE
+  index.html: standalone capsule retained and updated with current paper
+  index static self-contained parse / embedded PDF byte check: PASS
+  exact assembly prompt: PRESERVED
+  exact assembly prompt SHA-256: a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a
+
+PAPER EVIDENCE COVERAGE
+  paper SOURCE_MAP: PRESENT
+  citations resolved: PASS
+  bibliography rendered: PASS
+  SAFE defined in abstract and introduction: PASS
+  extracted PDF occurrences of "manuscript": 0
+  extracted PDF occurrences of checkpoint/zettel/slipcase: 0
+
+PDF STATUS
+  compiled PDF: PASS
+  pages: 8
+  rendered pages visually inspected: 1-8
+  clipping / missing text / broken glyphs: NONE OBSERVED
+  inspection receipt: _SLIPCASE/PDF_INSPECTION.txt
+
+STRUCTURE
+  graph nodes (all types): 230
+  native address relations: 311
+  relation records including backlinks/source/resource edges: 680
+  ghosts: 85
+
+ZIP STATUS
+  final archive will be created from this frozen package after MANIFEST generation and tested with Python zipfile.testzip().
+  external SHA-256 receipt will be written beside the final ZIP.
+
+KNOWN BOUNDARY
+  No exported conversation transcript was available for independent byte-for-byte checking beyond the preserved 45 payloads.
+  Some external sources remain LINK_ONLY.
+  No human review or peer review of the final paper is claimed.

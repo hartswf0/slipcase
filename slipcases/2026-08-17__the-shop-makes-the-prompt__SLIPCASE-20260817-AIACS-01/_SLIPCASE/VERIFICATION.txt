@@ -1,0 +1,96 @@
+VERIFICATION — SLIPCASE-20260817-AIACS-01
+DATE: 2026-08-17
+SCHEMA: SLIPCASE v15.55-AM
+
+SOURCE COVERAGE
+- admitted zettels: 40
+- SOURCE non-empty: 40/40
+- card-local BIBTEX non-empty: 40/40
+- payloads containing at least one URL: 0/40
+- central bibliography citekeys: 14
+- card BibTeX classifications: Counter({'UNIQUE': 9, 'BIB-CONFLICT': 3, 'SHARED': 1})
+
+EXTRACTION / PAYLOAD
+- root zettel TXT: 40
+- _MD mirrors: 40
+- ZETTELS.json records: 40
+- root/_MD byte mismatches: 0 []
+- payload provenance boundary: RECONSTRUCTED_FROM_VISIBLE_CHAT, not claimed byte-identical to an unavailable full-chat export.
+
+DUPLICATES / ID COLLISIONS
+- ID collisions: 0 {}
+- exact payload duplicate hashes: 0 {}
+
+PLATFORM RELATIONS
+- PLATFORM field occurrences: 40
+- MEMBER_OF records: 40
+- invariant satisfied: True
+
+LINKS RELATIONS
+- LINKS field address occurrences: 150
+- LINKS_TO records: 150
+- invariant satisfied: True
+
+WIKILINK COVERAGE
+- all [[ADDRESS]] occurrences in payloads: 239
+- WIKILINKS_TO records: 239
+- invariant satisfied: True
+- derived BACKLINK records: 22
+
+GHOSTS / AMBIGUITIES / BROKEN REFERENCES
+- unique unresolved GHOST labels: 98
+- resolution policy: exact ID / platform / otherwise GHOST; no fuzzy resolution used.
+
+BIBLIOGRAPHY COVERAGE
+- paper citekeys: ['Geertz1976ArtCulturalSystem', 'LiuChilton2021PromptEngineering', 'Oppenlaender2022PromptModifiers', 'OppenlaenderEtAl2024BodyPrompting', 'OppenlaenderLinderSilvennoinen2023PromptingAIArt', 'Rivas2025InexistentArchive', 'SimonenEtAl2025DefaultImages', 'Sontag1966AgainstInterpretation', 'Steyerl2023MeanImages', 'TorricelliEtAl2023Interface']
+- paper citekeys missing from central bibliography: []
+- paper citekeys subset invariant: True
+
+RESOURCE COVERAGE
+- registered resource records: 26
+- local/pasted/generated records: 12
+- registered local files missing: 0 []
+- link-only bodies are explicitly LINK_ONLY; no local body is fabricated.
+
+RECONSTRUCTION STATE
+- standalone index contains every zettel ID: True
+- standalone index contains exact assembly prompt hash: True
+- reconstruction test: PASS
+
+PAPER EVIDENCE COVERAGE
+- SOURCE_MAP exists: True
+- substantive paper citations resolved by citeproc: True
+- paper wager is marked as compiler synthesis in SOURCE_MAP where appropriate.
+
+ASSEMBLY PROMPT STATUS
+- SLIPCASE_FINAL_PROMPT.txt SHA-256: a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a
+- _PROMPTS copy byte-identical: True
+
+MAKING HISTORY
+- 000__MAKING_HISTORY.txt exists: True
+- payload boundary and control/retrieval distinctions recorded.
+
+PDF STATUS
+- PDF exists: True
+- pages: 11
+- pdf_inspect: openable, unencrypted, letter size, embedded fonts.
+- pdf_preflight: openable, not likely scanned, no XFA.
+- rendered at 160 dpi and visually inspected on pages 1, 6, 9, 10, 11: no clipped text, overlaps, black squares, or broken glyphs observed.
+
+ZIP STATUS
+- ZIP created: 2026-08-17__the-shop-makes-the-prompt__SLIPCASE-20260817-AIACS-01.zip
+- entries: 151
+- integrity test: PASS
+- external ZIP SHA-256 before final report embed: 834a0fc56f2fafbfef012b89a2e95dfd2fae4f3272fa8fca4e9e30af4853bdd5
+
+STRUCTURE
+- manifest entries (excluding manifest/index/verification self-referential cases): 148
+- index.html standalone capsule will be refreshed after this report so MANIFEST/VERIFICATION are embedded.
+
+FINAL STANDALONE INDEX
+- index.html bytes: 76804467
+- index.html SHA-256: 1f5c6c8c3eef0894990be1ebf0b84cb777f2e4622d7dc04f194e68aeb01f4fbe
+- MANIFEST and VERIFICATION embedded in index: True
+- final index SHA-256 after embedding verification: 8500fbb6ea60c2d9ff4edbb93bd61730c5c08c7c4fc0cda0c7c6dcb37bd13041
+- capsule hash after final embed: 9f97f8e881f8c43d83ba0be867714d4502c8720f21db9927050c536a4061df72
+- self-reference boundary: the verification embedded inside index cannot contain the hash of the exact bytes that contain it; the external package VERIFICATION contains this terminal capsule hash.

@@ -1,0 +1,587 @@
+{
+  "checkpoint": "SLIPCASE-20260817T2129-0400-9d6af368d214",
+  "schema": "15.6-TENSION-FIRST",
+  "file_count_excluding_manifest": 116,
+  "files": [
+    {
+      "path": "000__BIBLIOGRAPHY.html",
+      "bytes": 10843,
+      "sha256": "a97b26e17d7f7f6b5cd53e37e5a36df0dac226aa0cd3e28026583f6fd55370c8"
+    },
+    {
+      "path": "000__BIBLIOGRAPHY.txt",
+      "bytes": 8760,
+      "sha256": "5cf28337273d28725ad3992b2419a13abb73fb34b07fba4d3eb1058c8ad4b5c4"
+    },
+    {
+      "path": "000__DEEP_QUESTIONS.txt",
+      "bytes": 16307,
+      "sha256": "427560db8fa3636753aa478ed3fa2a008c91727d4ebc71bc96a1e38cffab2266"
+    },
+    {
+      "path": "000__INDEX.txt",
+      "bytes": 1201,
+      "sha256": "4eb7856b859a0785d031089fc2008eec22f27708eef5a50215c479eb96140526"
+    },
+    {
+      "path": "000__MAKING_HISTORY.txt",
+      "bytes": 2257,
+      "sha256": "93772feff04356318ab1c8c4e0e439a45c9c55d690c54376419ed8deb345991f"
+    },
+    {
+      "path": "000__MAP.txt",
+      "bytes": 10688,
+      "sha256": "d3f813f2566726ed5a5120b65bf7b716ec22999c54ff21c6da60dd57066e8c6b"
+    },
+    {
+      "path": "000__OPEN_EDGES.txt",
+      "bytes": 1812,
+      "sha256": "464a7707bc42e493a86252a82cead3561faaf1424960f9580f402b843ed9f0cc"
+    },
+    {
+      "path": "000__PAPER_STATE.txt",
+      "bytes": 2459,
+      "sha256": "1dbe712ec6b10d7038643cd201932e22c2874fa36bb48e5dcb338600dd70f727"
+    },
+    {
+      "path": "000__PROMPTS.txt",
+      "bytes": 964,
+      "sha256": "7fcec096d4501270fcf559b8628be8ae1f231f3aa798ee323ce96ca6b60c8e4f"
+    },
+    {
+      "path": "000__REBUILD.txt",
+      "bytes": 1329,
+      "sha256": "5ab4fbdb566ce91255aee21bc0c8219c8e825c90f2928ff5155338edcd98492e"
+    },
+    {
+      "path": "000__RESOURCES.txt",
+      "bytes": 2586,
+      "sha256": "51c7099eb020591261589cf23a5fef26d3bf491ae5451138e4880590a3d10f2d"
+    },
+    {
+      "path": "000__RETURN_PATH.txt",
+      "bytes": 1342,
+      "sha256": "c1e37254ccc61b8c7d9532f0639f95331b4f69fa010f7b4ac514e1c2f91e880d"
+    },
+    {
+      "path": "000__START_HERE.txt",
+      "bytes": 1809,
+      "sha256": "6d52b445d56cf7da05aa7fa60b18d74168e164f4a20d885202f05d9b47e6d325"
+    },
+    {
+      "path": "000__TENSIONS.txt",
+      "bytes": 19210,
+      "sha256": "b7cbeabf82d5c70cf67ca1ef8ad0d0af4d2b941942c89850b200bbbe8fe07b28"
+    },
+    {
+      "path": "001__a-generator-can-fail-to-understand-a-promp__Simonen-2026__DEFAULT-IMAGES-CHI26-ROOT__from-chat-20260817.txt",
+      "bytes": 5832,
+      "sha256": "9f4a6395346017cf4648c2bc2c664c2eee5abe7b197d3edb4965db437627d270"
+    },
+    {
+      "path": "002__the-paper-observes-default-images-in-midjo__Simonen-2026__DEFAULT-IMAGES-CHI26-B__from-chat-20260817.txt",
+      "bytes": 4997,
+      "sha256": "951711b1c08076d76a55958257816ca2ad4e2ba211d22665d53748e60a4bda65"
+    },
+    {
+      "path": "003__the-visible-prompt-need-not-be-the-generat__OpenAI-2023__DEFAULT-IMAGES-CHI26-B-1__from-chat-20260817.txt",
+      "bytes": 5031,
+      "sha256": "1e8a729fe4627c90f5e2555ddf40692325a87106cbcb4b0f234c7414d132f356"
+    },
+    {
+      "path": "004__once-prompts-are-compiled-the-writer-no-lo__Khattab-2023__WORKWORDS-PROMPT-004__from-chat-20260817.txt",
+      "bytes": 4318,
+      "sha256": "9323205656bf93ff293752a742a15a396210c73c885e75973521c9c547c4ee32"
+    },
+    {
+      "path": "005__in-prompt-programming-specification-and-im__Liang-2025__WORKWORDS-PROMPT-001__from-chat-20260817.txt",
+      "bytes": 5292,
+      "sha256": "cbcf826d86798879a08342072398783ff58dff20a48ba0b807b78a996b86631f"
+    },
+    {
+      "path": "006__what-a-prompt-leaves-unsaid-can-function-l__Yang-2025__WORKWORDS-PROMPT-003__from-chat-20260817.txt",
+      "bytes": 4784,
+      "sha256": "052ae952b8180339c95c770f6df0693abccb9f306e083696ef5fcc052d55d9e0"
+    },
+    {
+      "path": "007__the-prompt-can-keep-working-after-the-word__Qin-Eisner-2021__WORKWORDS-PROMPT-002__from-chat-20260817.txt",
+      "bytes": 4570,
+      "sha256": "92383fab107cf942468f4e857deb2288a6dcbe5ab1309a276e851fd5b7a9246d"
+    },
+    {
+      "path": "008__writing-acquires-a-loss-landscape-when-cri__Pryzant-2023__WORKWORDS-PROMPT-005__from-chat-20260817.txt",
+      "bytes": 4432,
+      "sha256": "5d9058a9f50764b6818b264bf033578291475d00c08c4e0e7610567ce90b841f"
+    },
+    {
+      "path": "009__the-writer-can-stop-breeding-prompts-and-b__Fernando-2023__WORKWORDS-PROMPT-006__from-chat-20260817.txt",
+      "bytes": 4106,
+      "sha256": "b75b3b88070c92c6119a14e403fe936f62a8cf047510a9228a08e2229abe47c3"
+    },
+    {
+      "path": "010__prompt-language-becomes-literally-hybrid-w__Beurer-Kellner-2023__WORKWORDS-PROMPT-007__from-chat-20260817.txt",
+      "bytes": 4301,
+      "sha256": "1d88b4023767b2d66a402131aad227174dc5b22fd9ee9ddddfea643b186150e4"
+    },
+    {
+      "path": "011__a-prompt-becomes-a-research-object-when-it__Arawjo-2023__WORKWORDS-PROMPT-008__from-chat-20260817.txt",
+      "bytes": 4428,
+      "sha256": "288a28b794a42f4590f9c22531b9744662c25213da35f282203591feced7a554"
+    },
+    {
+      "path": "012__known-words-can-erase-evidence-that-an-unk__Simonen-2026__DEFAULT-IMAGES-CHI26-A__from-chat-20260817.txt",
+      "bytes": 5319,
+      "sha256": "e469824d0ae4612c7848723e286c84945d67a1d366d56a5ba5b0d15e497c39b5"
+    },
+    {
+      "path": "013__a-generator-can-represent-a-concept-early__Agarwal-2023__DEFAULT-IMAGES-CHI26-A-1__from-chat-20260817.txt",
+      "bytes": 6088,
+      "sha256": "a28cc3efcc39cbe389851cbf4cf40f0a11c4c23d205bf8a489cf8751d6e2cc23"
+    },
+    {
+      "path": "014__when-semantic-guidance-weakens-the-random__Simonen-2026__DEFAULT-IMAGES-CHI26-C__from-chat-20260817.txt",
+      "bytes": 5230,
+      "sha256": "7418b3322ae30ac687eb48ab67285364db0a41e1abb767118e50e697d6c6ea0a"
+    },
+    {
+      "path": "015__the-random-seed-is-not-empty-blocks-of-gau__Mao-2023__DEFAULT-IMAGES-CHI26-C-1__from-chat-20260817.txt",
+      "bytes": 5768,
+      "sha256": "f7595c7d6d3ffd67344a1aa9f1321fdcc20c0c51b8c3d3799ff5c2c4af9ea3cf"
+    },
+    {
+      "path": "016__default-image-detection-reverses-ordinary__Simonen-2026__DEFAULT-IMAGES-CHI26-E__from-chat-20260817.txt",
+      "bytes": 5602,
+      "sha256": "e98570914c031655d7303f93814f9e326f54e455be368b9c9341a1a910651e0f"
+    },
+    {
+      "path": "017__the-instrument-used-to-detect-default-imag__Chowdhury-2024__DEFAULT-IMAGES-CHI26-E-1__from-chat-20260817.txt",
+      "bytes": 5773,
+      "sha256": "a0575eae64e687081a012f9ed922a57b8c84edf0209cff5b934d79f1347c5172"
+    },
+    {
+      "path": "018__when-a-model-lacks-a-word-it-does-not-leav__Simonen-2026__DEFAULT-IMAGES-CHI26-F__from-chat-20260817.txt",
+      "bytes": 5598,
+      "sha256": "4c5fa97f3e31d41ca2fffc01a31c0b325be4ba6ea61a50c479a09b482e602a08"
+    },
+    {
+      "path": "019__a-single-unicode-character-can-behave-like__Struppek-2023__DEFAULT-IMAGES-CHI26-F-1__from-chat-20260817.txt",
+      "bytes": 6203,
+      "sha256": "4aaf4894e3ce7c07141e4ca57ac345752f8aa300056c6df84713ccfaf90e7200"
+    },
+    {
+      "path": "020__a-word-can-be-meaningless-to-every-human-i__Milliere-2022__DEFAULT-IMAGES-CHI26-F-2__from-chat-20260817.txt",
+      "bytes": 6252,
+      "sha256": "6d554e524f411ccdaee2ba3988921ca711519ad0932603b3f08fd55eb8efa5e9"
+    },
+    {
+      "path": "021__a-model-version-may-have-a-visual-failure__Simonen-2026__DEFAULT-IMAGES-CHI26-D__from-chat-20260817.txt",
+      "bytes": 4936,
+      "sha256": "a76ecff1ac4f5c304b6f83624576de8f480f6b60161bf625e0ead4043d99385a"
+    },
+    {
+      "path": "CARDS.html",
+      "bytes": 13071,
+      "sha256": "ca4b04560fde476cc604a7e4f359866a1efa91da04911a3a18efd4be8e78bdac"
+    },
+    {
+      "path": "MARK.svg",
+      "bytes": 308,
+      "sha256": "e36a0bfc49650b55d596e34484bdb95e5d2a6190b52e16f3c8da82b8fe61d6e7"
+    },
+    {
+      "path": "NETWORK.html",
+      "bytes": 24376,
+      "sha256": "1ce9bb110f89f13c5e15b6db6c1e70c6f219a7b54f95cea2d6fb5e40b13f5172"
+    },
+    {
+      "path": "NETWORK.svg",
+      "bytes": 260521,
+      "sha256": "bc8642985d1a4e204e6d6fbd77cc7afc2153cbe3b1cc5a829996bb890b4806e5"
+    },
+    {
+      "path": "READER.html",
+      "bytes": 238420,
+      "sha256": "2372ffde93168ff26ec385dc30eec06ae5cb381a14078a26b94086a98ac59e76"
+    },
+    {
+      "path": "SLIPCASE-20260817T2039-0400-304d480a176f__references.bib",
+      "bytes": 4812,
+      "sha256": "0cd672b334bd6404d012d1d6206c768656b853114ab103e18b1d0cb1b56aeb41"
+    },
+    {
+      "path": "SLIPCASE-20260817T2129-0400-9d6af368d214__references.bib",
+      "bytes": 4812,
+      "sha256": "0cd672b334bd6404d012d1d6206c768656b853114ab103e18b1d0cb1b56aeb41"
+    },
+    {
+      "path": "SLIPCASE_FINAL_PROMPT.txt",
+      "bytes": 22971,
+      "sha256": "9d6af368d214da1b634d599f6d73f096d39d959404993132937b655560572d5c"
+    },
+    {
+      "path": "ZETTELS.json",
+      "bytes": 129249,
+      "sha256": "c6828c3f4de0ec3273ba4b183e2607f3816cca0b961efe8c2b1d6bd8edf1e965"
+    },
+    {
+      "path": "ZETTELS.jsonl",
+      "bytes": 128104,
+      "sha256": "fd7572a824073cfa96a4bcfa79000a4649b2575c112eb496ee57d8a94e065aa2"
+    },
+    {
+      "path": "ZETTELS.txt",
+      "bytes": 109280,
+      "sha256": "34f3e34a82520b7eb860746409eed1c940ffa50eac99a4bef34c7d12873a5e84"
+    },
+    {
+      "path": "_ARRANGEMENTS/001__PAPER_SPINE__the-prompt-is-not-the-program.txt",
+      "bytes": 1874,
+      "sha256": "b16cd3422b0d06b7fc8f3eb0eb0191b723f531e7d009942463d0484680f92063"
+    },
+    {
+      "path": "_ARRANGEMENTS/002__SEMANTIC_FAILURE_PIPELINE.txt",
+      "bytes": 1050,
+      "sha256": "dc35c314812d44ee199b6f2a09ae89f6db1ce7f19baa3e85625764c1f7259d9a"
+    },
+    {
+      "path": "_ARRANGEMENTS/003__FROM_WORD_TO_CONTROL_SURFACE.txt",
+      "bytes": 920,
+      "sha256": "1a8cb1b7c1ae3e7cecca45ba26a38c6f35f56c0d8fef97c4674cded3dabc6e53"
+    },
+    {
+      "path": "_ARRANGEMENTS/004__RIVAL_MECHANISMS__when-words-stop-being-the-cause.txt",
+      "bytes": 1544,
+      "sha256": "450666e57dbc541e4efc22bac29942815d20e554b26e08ba94ac7ef62aa405e1"
+    },
+    {
+      "path": "_MD/001__a-generator-can-fail-to-understand-a-promp__Simonen-2026__DEFAULT-IMAGES-CHI26-ROOT__from-chat-20260817.md",
+      "bytes": 5832,
+      "sha256": "9f4a6395346017cf4648c2bc2c664c2eee5abe7b197d3edb4965db437627d270"
+    },
+    {
+      "path": "_MD/002__the-paper-observes-default-images-in-midjo__Simonen-2026__DEFAULT-IMAGES-CHI26-B__from-chat-20260817.md",
+      "bytes": 4997,
+      "sha256": "951711b1c08076d76a55958257816ca2ad4e2ba211d22665d53748e60a4bda65"
+    },
+    {
+      "path": "_MD/003__the-visible-prompt-need-not-be-the-generat__OpenAI-2023__DEFAULT-IMAGES-CHI26-B-1__from-chat-20260817.md",
+      "bytes": 5031,
+      "sha256": "1e8a729fe4627c90f5e2555ddf40692325a87106cbcb4b0f234c7414d132f356"
+    },
+    {
+      "path": "_MD/004__once-prompts-are-compiled-the-writer-no-lo__Khattab-2023__WORKWORDS-PROMPT-004__from-chat-20260817.md",
+      "bytes": 4318,
+      "sha256": "9323205656bf93ff293752a742a15a396210c73c885e75973521c9c547c4ee32"
+    },
+    {
+      "path": "_MD/005__in-prompt-programming-specification-and-im__Liang-2025__WORKWORDS-PROMPT-001__from-chat-20260817.md",
+      "bytes": 5292,
+      "sha256": "cbcf826d86798879a08342072398783ff58dff20a48ba0b807b78a996b86631f"
+    },
+    {
+      "path": "_MD/006__what-a-prompt-leaves-unsaid-can-function-l__Yang-2025__WORKWORDS-PROMPT-003__from-chat-20260817.md",
+      "bytes": 4784,
+      "sha256": "052ae952b8180339c95c770f6df0693abccb9f306e083696ef5fcc052d55d9e0"
+    },
+    {
+      "path": "_MD/007__the-prompt-can-keep-working-after-the-word__Qin-Eisner-2021__WORKWORDS-PROMPT-002__from-chat-20260817.md",
+      "bytes": 4570,
+      "sha256": "92383fab107cf942468f4e857deb2288a6dcbe5ab1309a276e851fd5b7a9246d"
+    },
+    {
+      "path": "_MD/008__writing-acquires-a-loss-landscape-when-cri__Pryzant-2023__WORKWORDS-PROMPT-005__from-chat-20260817.md",
+      "bytes": 4432,
+      "sha256": "5d9058a9f50764b6818b264bf033578291475d00c08c4e0e7610567ce90b841f"
+    },
+    {
+      "path": "_MD/009__the-writer-can-stop-breeding-prompts-and-b__Fernando-2023__WORKWORDS-PROMPT-006__from-chat-20260817.md",
+      "bytes": 4106,
+      "sha256": "b75b3b88070c92c6119a14e403fe936f62a8cf047510a9228a08e2229abe47c3"
+    },
+    {
+      "path": "_MD/010__prompt-language-becomes-literally-hybrid-w__Beurer-Kellner-2023__WORKWORDS-PROMPT-007__from-chat-20260817.md",
+      "bytes": 4301,
+      "sha256": "1d88b4023767b2d66a402131aad227174dc5b22fd9ee9ddddfea643b186150e4"
+    },
+    {
+      "path": "_MD/011__a-prompt-becomes-a-research-object-when-it__Arawjo-2023__WORKWORDS-PROMPT-008__from-chat-20260817.md",
+      "bytes": 4428,
+      "sha256": "288a28b794a42f4590f9c22531b9744662c25213da35f282203591feced7a554"
+    },
+    {
+      "path": "_MD/012__known-words-can-erase-evidence-that-an-unk__Simonen-2026__DEFAULT-IMAGES-CHI26-A__from-chat-20260817.md",
+      "bytes": 5319,
+      "sha256": "e469824d0ae4612c7848723e286c84945d67a1d366d56a5ba5b0d15e497c39b5"
+    },
+    {
+      "path": "_MD/013__a-generator-can-represent-a-concept-early__Agarwal-2023__DEFAULT-IMAGES-CHI26-A-1__from-chat-20260817.md",
+      "bytes": 6088,
+      "sha256": "a28cc3efcc39cbe389851cbf4cf40f0a11c4c23d205bf8a489cf8751d6e2cc23"
+    },
+    {
+      "path": "_MD/014__when-semantic-guidance-weakens-the-random__Simonen-2026__DEFAULT-IMAGES-CHI26-C__from-chat-20260817.md",
+      "bytes": 5230,
+      "sha256": "7418b3322ae30ac687eb48ab67285364db0a41e1abb767118e50e697d6c6ea0a"
+    },
+    {
+      "path": "_MD/015__the-random-seed-is-not-empty-blocks-of-gau__Mao-2023__DEFAULT-IMAGES-CHI26-C-1__from-chat-20260817.md",
+      "bytes": 5768,
+      "sha256": "f7595c7d6d3ffd67344a1aa9f1321fdcc20c0c51b8c3d3799ff5c2c4af9ea3cf"
+    },
+    {
+      "path": "_MD/016__default-image-detection-reverses-ordinary__Simonen-2026__DEFAULT-IMAGES-CHI26-E__from-chat-20260817.md",
+      "bytes": 5602,
+      "sha256": "e98570914c031655d7303f93814f9e326f54e455be368b9c9341a1a910651e0f"
+    },
+    {
+      "path": "_MD/017__the-instrument-used-to-detect-default-imag__Chowdhury-2024__DEFAULT-IMAGES-CHI26-E-1__from-chat-20260817.md",
+      "bytes": 5773,
+      "sha256": "a0575eae64e687081a012f9ed922a57b8c84edf0209cff5b934d79f1347c5172"
+    },
+    {
+      "path": "_MD/018__when-a-model-lacks-a-word-it-does-not-leav__Simonen-2026__DEFAULT-IMAGES-CHI26-F__from-chat-20260817.md",
+      "bytes": 5598,
+      "sha256": "4c5fa97f3e31d41ca2fffc01a31c0b325be4ba6ea61a50c479a09b482e602a08"
+    },
+    {
+      "path": "_MD/019__a-single-unicode-character-can-behave-like__Struppek-2023__DEFAULT-IMAGES-CHI26-F-1__from-chat-20260817.md",
+      "bytes": 6203,
+      "sha256": "4aaf4894e3ce7c07141e4ca57ac345752f8aa300056c6df84713ccfaf90e7200"
+    },
+    {
+      "path": "_MD/020__a-word-can-be-meaningless-to-every-human-i__Milliere-2022__DEFAULT-IMAGES-CHI26-F-2__from-chat-20260817.md",
+      "bytes": 6252,
+      "sha256": "6d554e524f411ccdaee2ba3988921ca711519ad0932603b3f08fd55eb8efa5e9"
+    },
+    {
+      "path": "_MD/021__a-model-version-may-have-a-visual-failure__Simonen-2026__DEFAULT-IMAGES-CHI26-D__from-chat-20260817.md",
+      "bytes": 4936,
+      "sha256": "a76ecff1ac4f5c304b6f83624576de8f480f6b60161bf625e0ead4043d99385a"
+    },
+    {
+      "path": "_MOCS/001__EXECUTION_LINEAGE.txt",
+      "bytes": 897,
+      "sha256": "78b3565e312317df86f484034ff013d1d6942d7a53535189131bed3d3d9016ac"
+    },
+    {
+      "path": "_MOCS/002__FAILURE_AS_POSITIVE_OUTPUT.txt",
+      "bytes": 861,
+      "sha256": "fcf2d4bbf4f64bed590d9989f1f0b1c23b70fdd0298b747db7187f363c4277ab"
+    },
+    {
+      "path": "_MOCS/003__CONTROL_WITHOUT_WORDS.txt",
+      "bytes": 567,
+      "sha256": "fb6d0ffe8967c26b091334f14a209f3b6ef29e4146e8767ab7f4263cf4a88959"
+    },
+    {
+      "path": "_MOCS/004__PROMPT_AS_EXPERIMENT.txt",
+      "bytes": 665,
+      "sha256": "cc86c067cc678ae0c6dfd17c2b83b1cbd560dc1dfa20d69743e01b3d7f245593"
+    },
+    {
+      "path": "_PROMPTS/ANCIENT_MASTER_SLIPCASE_v13.1__provided-prompt.txt",
+      "bytes": 20130,
+      "sha256": "8ac21ed660ad4d9c8aa1404c07bc28d024a0ba2c2d358bb1ae648fcbdbfcc814"
+    },
+    {
+      "path": "_PROMPTS/ANCIENT_MASTER_SLIPCASE_v15.0__provided-prompt.txt",
+      "bytes": 17960,
+      "sha256": "9ceab9e5344b73e4218462f2ad86fea590c5b8dde2820aa25c16fd5875362b1a"
+    },
+    {
+      "path": "_PROMPTS/ANCIENT_MASTER_SLIPCASE_v15.5-AM__assembly-prompt.txt",
+      "bytes": 18207,
+      "sha256": "db0d765cf4c0cb0e293f5ae27e881ba7fcf31d30e74c17f849dfbc9d44782ff2"
+    },
+    {
+      "path": "_PROMPTS/ANCIENT_MASTER_SLIPCASE_v15.6-TENSION-FIRST__assembly-prompt.txt",
+      "bytes": 22971,
+      "sha256": "9d6af368d214da1b634d599f6d73f096d39d959404993132937b655560572d5c"
+    },
+    {
+      "path": "_PROMPTS/PRIME_ZETTEL_FORAGE_v3.1__forage-prompt.txt",
+      "bytes": 6476,
+      "sha256": "4df2f4e24a1a9592001ae50b3464dc9d1370600e3ff0746fef691b350c6bd88e"
+    },
+    {
+      "path": "_RESOURCES/CURRENT_CONVERSATION_CONTEXT__receipt.txt",
+      "bytes": 352,
+      "sha256": "74806a227f5e7e81f9c9385423cfc68202af38b1722e18a75fbfbbeda53d96f2"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__Agarwal2023ASTAR.txt",
+      "bytes": 341,
+      "sha256": "1e7007b045267ff1a883be5a7013861d241e7a23d75ddb38a33efac7380dc2a8"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__Arawjo2023ChainForge.txt",
+      "bytes": 331,
+      "sha256": "d80541735c30b3c180b33bae8ea8ec67b3b5488d5b50fbf1a8da720eb71577c5"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__BeurerKellner2023LMQL.txt",
+      "bytes": 362,
+      "sha256": "3f765b9cf57c7120ddd920470886d3a39738c11fabac9e3b4432ec1de587b97c"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__Chowdhury2024NNN.txt",
+      "bytes": 317,
+      "sha256": "2855c4102388d913eb875b3c1de3b1e44f4de7b248bc75e578dd1fdf1f2bcfd3"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__Fernando2023Promptbreeder.txt",
+      "bytes": 331,
+      "sha256": "57146d2b4ca225e79e99ab9cfcf5ab86aeade66e14930f57152e9df4b3659769"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__Khattab2023DSPy.txt",
+      "bytes": 333,
+      "sha256": "5e447dbe02a8513a209a4befc0c8479050b7e5a4a1c07f9ff9d5579d5a9b17c5"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__Liang2025PromptsPrograms.txt",
+      "bytes": 389,
+      "sha256": "4bcba0b4a8e394b0003e38b14bb1fe59cc867480126184763fdd04e49847c276"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__Mao2023InitialImageEditing.txt",
+      "bytes": 345,
+      "sha256": "e60eb7382dc7a16dde52580e446e5f4bdfabe680ca526ad759084b25be959e4e"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__Milliere2022MadeUpWords.txt",
+      "bytes": 312,
+      "sha256": "7d0a07887519ed689bf1debd6a4816682a427c7f68e3798129ec4afc4a479be2"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__OpenAI2023DALLE3.txt",
+      "bytes": 252,
+      "sha256": "0aaaf7027fb0a32b623d5b1fb4ce88f4ee415b0defcca59a05eb3cd0851115a6"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__Pryzant2023APO.txt",
+      "bytes": 322,
+      "sha256": "4a31c68ec876e64555d40aaef1039eaa5395b9186e5b442d8a1f53b46bec4e06"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__QinEisner2021SoftPrompts.txt",
+      "bytes": 325,
+      "sha256": "abf29e131dc9c72115cabf96163a76afc39c53453839ec3fbf8b898b7a09f948"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__Struppek2023Homoglyphs.txt",
+      "bytes": 325,
+      "sha256": "cff3b9d894d6a9e83b46fdcc43e17784aaeb25601b9b93bbd0510ed19b04389d"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__Yang2025PromptsDontSay.txt",
+      "bytes": 340,
+      "sha256": "985c3567f3618263f09c287b985dde73c13492813152674220b9c3631c53cf7d"
+    },
+    {
+      "path": "_RESOURCES/PRIOR_DERIVED/the-prompt-is-not-the-program__2026-08-17.pdf",
+      "bytes": 141471,
+      "sha256": "8c5ce3f7831ebf70699ddaf7cbbf9643148a3260ec5764cc67a6346187b53cee"
+    },
+    {
+      "path": "_RESOURCES/PRIOR_DERIVED/the-prompt-is-not-the-program__2026-08-17.tex",
+      "bytes": 17307,
+      "sha256": "f4954fd63d1f32872ac0f5bd1033524d9910667dd52b4e5fd25a326c629480d1"
+    },
+    {
+      "path": "_RESOURCES/PRIOR_DERIVED/the-prompt-is-not-the-program__ASSEMBLY_APPENDIX.txt",
+      "bytes": 18615,
+      "sha256": "d66ba085b7eb67f547eb06d014e2ea0bae79fa60b71d2b771f0b76d9e14de74a"
+    },
+    {
+      "path": "_RESOURCES/PRIOR_DERIVED/the-prompt-is-not-the-program__MAKING_HISTORY.txt",
+      "bytes": 1411,
+      "sha256": "d097df02ea50aaab834e8193aeb596188591366e3ce681a522a37fa7e1ddb311"
+    },
+    {
+      "path": "_RESOURCES/PRIOR_DERIVED/the-prompt-is-not-the-program__SOURCE_MAP.txt",
+      "bytes": 6613,
+      "sha256": "243b996cf8297c14c822a34fb1731544fad6c909b32d2dd766ce239062799150"
+    },
+    {
+      "path": "_RESOURCES/Simonen-et-al-2026__default-images__3772318.3790681.pdf",
+      "bytes": 10702706,
+      "sha256": "ec8d374322647715d23a2f63771c356669d9d615e3501e390d64798e5eaa4556"
+    },
+    {
+      "path": "_RESOURCES/Simonen-et-al-2026__default-images__extracted-text.txt",
+      "bytes": 141114,
+      "sha256": "860b1c9f8d81c3e9e33cbc88bc3c54f79a775ec8abd314376a0e91eeabda1c75"
+    },
+    {
+      "path": "_SLIPCASE/ALIASES.json",
+      "bytes": 106,
+      "sha256": "d909eadcabf90811b3e4d2164f3079e7f32675b7076e2d3ab9ae9b12c02c0946"
+    },
+    {
+      "path": "_SLIPCASE/APPEARANCES.jsonl",
+      "bytes": 4283,
+      "sha256": "d85816fe0a3e9cda469071d52a5a1aba5fcb3d0109e987a59b4b121057aa5567"
+    },
+    {
+      "path": "_SLIPCASE/NODES.jsonl",
+      "bytes": 25891,
+      "sha256": "a764f2b0da628d0eb33670f0f45fd06b1448593933f2ba888fca274357fb30bc"
+    },
+    {
+      "path": "_SLIPCASE/PUBLICATION.json",
+      "bytes": 930,
+      "sha256": "1f4ba2b905385eb995310179ec7ddac6ccf60e5da0d73c1863392b7651f42b4c"
+    },
+    {
+      "path": "_SLIPCASE/RELATIONS.jsonl",
+      "bytes": 55882,
+      "sha256": "cd75f2bc4cde4a8115c53ed3b1de38dc49e71e4fc62d1c4c2ab520c6f334df00"
+    },
+    {
+      "path": "_SLIPCASE/RESOURCES.jsonl",
+      "bytes": 5283,
+      "sha256": "03a6b6348c3c0a378ef95b9c804c6a2e09eaa3fa58aa93bcfdb8195f00ee2a9a"
+    },
+    {
+      "path": "_SLIPCASE/VERIFICATION.txt",
+      "bytes": 3246,
+      "sha256": "b0ed9fb5d81be8a64787be851fea6b2d6f54c6ea3a679dfce2b56c9cba665f0b"
+    },
+    {
+      "path": "_SLIPCASE/network.dot",
+      "bytes": 44525,
+      "sha256": "765f1d7e5bb294290f4401233ae7f022e19d9e3dc65db35c3d7c7ea91e99a203"
+    },
+    {
+      "path": "_SLIPCASE/reindex.py",
+      "bytes": 1196,
+      "sha256": "9cfb39696ac58b251082a0fb6f79f1bc2f7c63b69d4d9e27868b4646c72457ae"
+    },
+    {
+      "path": "index.html",
+      "bytes": 238420,
+      "sha256": "2372ffde93168ff26ec385dc30eec06ae5cb381a14078a26b94086a98ac59e76"
+    },
+    {
+      "path": "when-words-stop-being-the-cause__2026-08-17.pdf",
+      "bytes": 274106,
+      "sha256": "8eff1b364d77a7f5f740a01c7f3e2503391dc26fae480c8dd3fced8dc75fd7d2"
+    },
+    {
+      "path": "when-words-stop-being-the-cause__2026-08-17.tex",
+      "bytes": 40595,
+      "sha256": "cdb0247801696fe9dfd808a65f1da6151d9cff9ec6c21293d7d636f0fe1930e7"
+    },
+    {
+      "path": "when-words-stop-being-the-cause__ASSEMBLY_APPENDIX.txt",
+      "bytes": 1732,
+      "sha256": "1ddd84cb3e150436ca1a5faf25e8720ae6cf23a39c21e5c00a386e31a8f71177"
+    },
+    {
+      "path": "when-words-stop-being-the-cause__SOURCE_MAP.txt",
+      "bytes": 7199,
+      "sha256": "010badfdf77c70e974e2117b18436bd0c30872aa476940c478fcb6078eedb219"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+ZETTEL
+
+ID:
+YPC-20260818-MANGELI-02
+
+TITLE:
+THE BUILD CAN BE RECONSTRUCTED BACKWARD — FINISHED GEOMETRY RETAINS TRACES OF EXCAVATION ORDER
+
+SOURCE:
+Mohammad Mangeli, Farshid Aram, Reza Abouei, Fatemeh Mehdizadeh Saradj — “A New Look at Excavation Techniques and Design of Rock-Cut Architectures” — 2022 — Methods / excavation-process reconstruction.
+
+PASSAGE:
+[PARAPHRASE]
+Because historical documentation of Meymand’s excavation process is scarce, the researchers infer excavation techniques from surviving architectural fabric, settlement context, comparison, and local evidence. They reconstruct sequences including opening access, producing a semi-open area, refining entrances, and excavating rooms.
+
+RESEARCH OBJECT:
+A finished excavated structure can function as a record of the operations that produced it.
+
+This changes the primitive-video research problem.
+
+We do not need complete behind-the-scenes footage before asking how a structure was actually made.
+
+The architecture itself may contain receipts.
+
+LOCAL MOVE:
+Mangeli et al. move from:
+finished void
+to
+inferred sequence of operations.
+
+SOURCE TERMS:
+excavation technique
+design pattern
+settlement context
+fine technique
+architectural body
+
+WHAT BECAME STRANGE:
+The editing cut is not the only evidence available.
+
+Residual geometry may betray an omitted construction stage.
+
+QUESTION:
+What construction sequences can be inferred from geometric dependencies among stairs, rooms, pools, roofs, islands, trenches, and access routes?
+
+DEEPER QUESTION:
+Can a video hide an operation while the resulting building remains unable to hide its consequences?
+
+MECHANISM:
+Certain geometric states require predecessor states.
+
+A deep pit requires:
+an access route,
+a spoil-removal route,
+or machinery reach.
+
+A central island requires:
+either preserving mass during excavation
+or rebuilding/depositing material afterward.
+
+An enclosed chamber requires:
+a safe excavation face
+before deepening.
+
+A pool inside another pool requires:
+ordered excavation and waterproofing operations.
+
+FORMAL SHIFT:
+<FINISHED ARCHITECTURAL GEOMETRY>
+→ <DEPENDENCY RELATIONS>
+→ [INFER PREDECESSOR OPERATIONS]
+→ <MINIMUM CONSTRUCTION SEQUENCE>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For architectural elements A and B:
+
+A ≺ B
+
+means:
+A must exist before operation B can physically occur.
+
+Construct a dependency graph for each finished structure.
+
+If the filmed sequence violates the minimum dependency graph, then an unshown operation is required.
+
+TENSION:
+The INPUT proposes reconstructing builds as:
+
+SITE
+→ EXCAVATE
+→ MASS
+→ TRIM
+→ FORM
+→ COAT
+→ SURFACE
+→ FILL
+→ POOL
+→ OCCUPY
+→ IMAGE.
+
+That sequence is useful but too generic.
+
+Mangeli et al. suggest recovering structure-specific excavation dependencies instead.
+
+MISSING:
+spoil piles
+access ramps
+temporary stairs
+intermediate profiles
+construction entrances
+tool reach
+machine reach
+sequence of water introduction
+whether islands are residual or deposited
+whether roofs precede or follow interior excavation
+
+BOUNDARY:
+A plausible reconstruction is not proof of the exact historical sequence.
+
+Several different operation graphs may produce the same finished form.
+
+CITATION TRAIL:
+construction sequencing
+archaeological chaîne opératoire
+forensic architecture
+process archaeology
+rock-cut excavation methods
+
+TEST:
+Choose one highly complex “underground villa” video.
+
+Freeze the final architecture.
+
+Work backward.
+
+For every element ask:
+“What had to still be open, absent, accessible, dry, or unsupported immediately before this could exist?”
+
+Generate all surviving construction sequences.
+
+Then compare those sequences against the edit.
+
+The unexplained intervals are candidates for hidden work.
+
+PLATFORM:
+[[ARCHITECTURE AS CONSTRUCTION RECEIPT]]
+
+LINKS:
+[[THE CUT HAS A PREHISTORY]]
+[[OPERATION GRAPHS FOR BUILDINGS]]
+[[WHAT HAD TO HAPPEN OFF CAMERA]]
+
+BIBTEX:
+@article{mangeli2022rockcut,
+  author  = {Mangeli, Mohammad and Aram, Farshid and Abouei, Reza and Mehdizadeh Saradj, Fatemeh},
+  title   = {A New Look at Excavation Techniques and Design of Rock-Cut Architectures},
+  journal = {Designs},
+  year    = {2022},
+  volume  = {6},
+  number  = {4},
+  pages   = {64},
+  doi     = {10.3390/designs6040064}
+}

@@ -1,0 +1,209 @@
+FIELD MAP
+CHECKPOINT: SLIPCASE-20260817T2039-0400-304d480a176f
+
+TOPOLOGY FINDINGS
+- Zettels: 21
+- Native LINKS_TO records: 20
+- Roots (no outbound parent link): 1 — DEFAULT-IMAGES-CHI26-ROOT
+- Leaves (no children in native lineage): 12
+- Orphans: 0
+- GHOST nodes from unresolved [[ADDRESS]] references: 0
+- Strongest lineage hubs: DEFAULT-IMAGES-CHI26-ROOT (6), DEFAULT-IMAGES-CHI26-B-1 (5), DEFAULT-IMAGES-CHI26-F (3), DEFAULT-IMAGES-CHI26-E (3), DEFAULT-IMAGES-CHI26-A (3), DEFAULT-IMAGES-CHI26-F-2 (2), DEFAULT-IMAGES-CHI26-C (2), DEFAULT-IMAGES-CHI26-B (2)
+- Recurring source terms: default images (3), known concepts (2), training data (2), stochastic sampling (2), CLIP (2), cosine similarity (2), unknown inputs (2), requirements (2), gradient descent (2), cross-attention (1), attention segregation (1), attention retention (1)
+
+WHAT THE TOPOLOGY REVEALS
+- DEFAULT-IMAGES-CHI26-B-1 is the strongest bridge into the prompt-practice branch: hidden prompt rewriting becomes prompt compilation, specification/implementation entanglement, evolutionary rewriting, and hybrid language-model programming.
+- DEFAULT-IMAGES-CHI26-A and DEFAULT-IMAGES-CHI26-E create distinct methodological branches: one follows causal control inside execution; the other follows how prompt effects are measured across a field of alternatives.
+- The prompt-practice cards do not merely extend the default-image topic. They transform it into a provenance problem: which textual or nontextual object actually executed?
+- Zero encoded ghosts should not be read as conceptual closure. The open tests are rich, but unresolved future addresses were written as prose rather than [[GHOST]] links.
+
+BY ZETTEL
+DEFAULT-IMAGES-CHI26-ROOT — A generator can fail to understand a prompt without failing to generate: semantic failure can appear as a polished image.
+  PLATFORM: Midjourney; CHI 2026 empirical study.
+  links out: NONE
+  backlinks: DEFAULT-IMAGES-CHI26-A, DEFAULT-IMAGES-CHI26-B, DEFAULT-IMAGES-CHI26-C, DEFAULT-IMAGES-CHI26-D, DEFAULT-IMAGES-CHI26-E, DEFAULT-IMAGES-CHI26-F
+  source: Simonen2026DefaultImages
+
+DEFAULT-IMAGES-CHI26-B — The paper observes default images in Midjourney, but it cannot yet locate the default inside the model.
+  PLATFORM: Midjourney as proprietary black-box system; comparative test requires inspectable TTI models.
+  links out: DEFAULT-IMAGES-CHI26-ROOT
+  backlinks: DEFAULT-IMAGES-CHI26-B-1
+  source: Simonen2026DefaultImages
+
+DEFAULT-IMAGES-CHI26-B-1 — The visible prompt need not be the generator's prompt: an invisible writer can stand between the user and the image model.
+  PLATFORM: DALL-E 3 + ChatGPT as documented example; proposed comparison with Midjourney and inspectable pipelines.
+  links out: DEFAULT-IMAGES-CHI26-B
+  backlinks: WORKWORDS-PROMPT-001, WORKWORDS-PROMPT-004, WORKWORDS-PROMPT-006, WORKWORDS-PROMPT-007
+  source: OpenAI2023DALLE3
+
+WORKWORDS-PROMPT-004 — Once prompts are compiled, the writer no longer necessarily writes the words the model receives.
+  PLATFORM: DSPy; LLM pipelines.
+  links out: DEFAULT-IMAGES-CHI26-B-1
+  backlinks: NONE
+  source: Khattab2023DSPy
+
+WORKWORDS-PROMPT-001 — In prompt programming, specification and implementation can occupy the same sentence.
+  PLATFORM: LLM application development; prompt programming.
+  links out: DEFAULT-IMAGES-CHI26-B-1
+  backlinks: NONE
+  source: Liang2025PromptsPrograms
+
+WORKWORDS-PROMPT-003 — What a prompt leaves unsaid can function like borrowed code supplied by the model.
+  PLATFORM: LLM-powered applications; requirements-aware prompt optimization.
+  links out: DEFAULT-IMAGES-CHI26-A
+  backlinks: NONE
+  source: Yang2025PromptsDontSay
+
+WORKWORDS-PROMPT-002 — The prompt can keep working after the words have been removed.
+  PLATFORM: Pretrained language models; soft-prompt optimization.
+  links out: DEFAULT-IMAGES-CHI26-F-2
+  backlinks: NONE
+  source: QinEisner2021SoftPrompts
+
+WORKWORDS-PROMPT-005 — Writing acquires a loss landscape when criticism is treated as a textual gradient.
+  PLATFORM: LLM prompt optimization.
+  links out: DEFAULT-IMAGES-CHI26-A-1
+  backlinks: NONE
+  source: Pryzant2023APO
+
+WORKWORDS-PROMPT-006 — The writer can stop breeding prompts and begin breeding the prompts that breed prompts.
+  PLATFORM: LLM-driven evolutionary prompt optimization.
+  links out: DEFAULT-IMAGES-CHI26-B-1
+  backlinks: NONE
+  source: Fernando2023Promptbreeder
+
+WORKWORDS-PROMPT-007 — Prompt language becomes literally hybrid when prose, control flow, and constraints share one executable object.
+  PLATFORM: LMQL; Language Model Programming.
+  links out: DEFAULT-IMAGES-CHI26-B-1
+  backlinks: NONE
+  source: BeurerKellner2023LMQL
+
+WORKWORDS-PROMPT-008 — A prompt becomes a research object when it is treated as a variable instead of a message.
+  PLATFORM: ChainForge; LLM experimentation and prompt engineering.
+  links out: DEFAULT-IMAGES-CHI26-E
+  backlinks: NONE
+  source: Arawjo2023ChainForge
+
+DEFAULT-IMAGES-CHI26-A — Known words can erase evidence that an unknown word was never understood.
+  PLATFORM: Midjourney v6-series ablation study.
+  links out: DEFAULT-IMAGES-CHI26-ROOT
+  backlinks: DEFAULT-IMAGES-CHI26-A-1, WORKWORDS-PROMPT-003
+  source: Simonen2026DefaultImages
+
+DEFAULT-IMAGES-CHI26-A-1 — A generator can represent a concept early in denoising and then forget it before the image is finished.
+  PLATFORM: Stable Diffusion / diffusion-model cross-attention analysis; proposed application to default-image experiments.
+  links out: DEFAULT-IMAGES-CHI26-A
+  backlinks: WORKWORDS-PROMPT-005
+  source: Agarwal2023ASTAR
+
+DEFAULT-IMAGES-CHI26-C — When semantic guidance weakens, the random seed stops looking like mere variation and begins choosing among meanings the prompt failed to determine.
+  PLATFORM: Midjourney v6.1 manual experiments and multi-version observational dataset.
+  links out: DEFAULT-IMAGES-CHI26-ROOT
+  backlinks: DEFAULT-IMAGES-CHI26-C-1
+  source: Simonen2026DefaultImages
+
+DEFAULT-IMAGES-CHI26-C-1 — The random seed is not empty: blocks of Gaussian noise already have preferences for what they will become.
+  PLATFORM: Stable Diffusion; initial-latent intervention.
+  links out: DEFAULT-IMAGES-CHI26-C
+  backlinks: NONE
+  source: Mao2023InitialImageEditing
+
+DEFAULT-IMAGES-CHI26-E — Default-image detection reverses ordinary prompt evaluation: the signal is visual similarity where linguistic similarity is absent.
+  PLATFORM: Midjourney dataset; CLIP ViT-L/14; all-MiniLM-L6-v2; agglomerative hierarchical clustering.
+  links out: DEFAULT-IMAGES-CHI26-ROOT
+  backlinks: DEFAULT-IMAGES-CHI26-E-1, WORKWORDS-PROMPT-008
+  source: Simonen2026DefaultImages
+
+DEFAULT-IMAGES-CHI26-E-1 — The instrument used to detect default-image convergence has a convergence pathology of its own: CLIP produces hubs.
+  PLATFORM: CLIP and other multimodal embedding models; Midjourney default-image detection pipeline.
+  links out: DEFAULT-IMAGES-CHI26-E
+  backlinks: NONE
+  source: Chowdhury2024NNN
+
+DEFAULT-IMAGES-CHI26-F — When a model lacks a word, it does not leave a hole where that culture should be; it fills the hole with something it already knows how to picture.
+  PLATFORM: Midjourney; comparative multilingual TTI evaluation.
+  links out: DEFAULT-IMAGES-CHI26-ROOT
+  backlinks: DEFAULT-IMAGES-CHI26-F-1, DEFAULT-IMAGES-CHI26-F-2
+  source: Simonen2026DefaultImages
+
+DEFAULT-IMAGES-CHI26-F-1 — A single Unicode character can behave like a culture vector even when it appears inside a semantically irrelevant word.
+  PLATFORM: DALL-E 2; Stable Diffusion; CLIP-based text encoders.
+  links out: DEFAULT-IMAGES-CHI26-F
+  backlinks: NONE
+  source: Struppek2023Homoglyphs
+
+DEFAULT-IMAGES-CHI26-F-2 — A word can be meaningless to every human in the room and still be densely meaningful to the image model.
+  PLATFORM: DALL-E 2; DALL-E mini; subword-tokenized text-to-image systems.
+  links out: DEFAULT-IMAGES-CHI26-F
+  backlinks: WORKWORDS-PROMPT-002
+  source: Milliere2022MadeUpWords
+
+DEFAULT-IMAGES-CHI26-D — A model version may have a visual failure signature: what it draws when it cannot tell what you asked for.
+  PLATFORM: Midjourney versions 1–6.1; proposed extension across TTI systems.
+  links out: DEFAULT-IMAGES-CHI26-ROOT
+  backlinks: NONE
+  source: Simonen2026DefaultImages
+
+BY SOURCE
+Simonen2026DefaultImages — An Exploration of Default Images in Text-to-Image Generation
+  cards: DEFAULT-IMAGES-CHI26-A, DEFAULT-IMAGES-CHI26-B, DEFAULT-IMAGES-CHI26-C, DEFAULT-IMAGES-CHI26-D, DEFAULT-IMAGES-CHI26-E, DEFAULT-IMAGES-CHI26-F, DEFAULT-IMAGES-CHI26-ROOT
+  state: LOCAL_FILE
+
+Agarwal2023ASTAR — A-STAR: Test-time Attention Segregation and Retention for Text-to-image Synthesis
+  cards: DEFAULT-IMAGES-CHI26-A-1
+  state: LINK_ONLY
+
+Mao2023InitialImageEditing — Guided Image Synthesis via Initial Image Editing in Diffusion Model
+  cards: DEFAULT-IMAGES-CHI26-C-1
+  state: LINK_ONLY
+
+Struppek2023Homoglyphs — Exploiting Cultural Biases via Homoglyphs in Text-to-Image Synthesis
+  cards: DEFAULT-IMAGES-CHI26-F-1
+  state: LINK_ONLY
+
+Milliere2022MadeUpWords — Adversarial Attacks on Image Generation With Made-Up Words
+  cards: DEFAULT-IMAGES-CHI26-F-2
+  state: LINK_ONLY
+
+Chowdhury2024NNN — Nearest Neighbor Normalization Improves Multimodal Retrieval
+  cards: DEFAULT-IMAGES-CHI26-E-1
+  state: LINK_ONLY
+
+OpenAI2023DALLE3 — DALL-E 3
+  cards: DEFAULT-IMAGES-CHI26-B-1
+  state: LINK_ONLY
+
+Liang2025PromptsPrograms — Prompts Are Programs Too! Understanding How Developers Build Software Containing Prompts
+  cards: WORKWORDS-PROMPT-001
+  state: LINK_ONLY
+
+QinEisner2021SoftPrompts — Learning How to Ask: Querying LMs with Mixtures of Soft Prompts
+  cards: WORKWORDS-PROMPT-002
+  state: LINK_ONLY
+
+Yang2025PromptsDontSay — What Prompts Don't Say: Understanding and Managing Underspecification in LLM Prompts
+  cards: WORKWORDS-PROMPT-003
+  state: LINK_ONLY
+
+Khattab2023DSPy — DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines
+  cards: WORKWORDS-PROMPT-004
+  state: LINK_ONLY
+
+Pryzant2023APO — Automatic Prompt Optimization with Gradient Descent and Beam Search
+  cards: WORKWORDS-PROMPT-005
+  state: LINK_ONLY
+
+Fernando2023Promptbreeder — Promptbreeder: Self-Referential Self-Improvement Via Prompt Evolution
+  cards: WORKWORDS-PROMPT-006
+  state: LINK_ONLY
+
+BeurerKellner2023LMQL — Prompting Is Programming: A Query Language for Large Language Models
+  cards: WORKWORDS-PROMPT-007
+  state: LINK_ONLY
+
+Arawjo2023ChainForge — ChainForge: A Visual Toolkit for Prompt Engineering and LLM Hypothesis Testing
+  cards: WORKWORDS-PROMPT-008
+  state: LINK_ONLY
+
+BY GHOST
+NONE — no unresolved [[ADDRESS]] targets were found in the admitted card payloads.

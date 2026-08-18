@@ -1,0 +1,395 @@
+{
+  "zettels": {
+    "RNG-001": {
+      "node_id": "zettel--6dfb26c06b6f5dc94fc9",
+      "name": "“True randomness” becomes a regulatory threshold called “acceptable randomness.”",
+      "display_order": 1
+    },
+    "RNG-002": {
+      "node_id": "zettel--ba756c8f38e9960395b4",
+      "name": "A fair game requires a second operation after randomness: random numbers must be mapped into outcomes.",
+      "display_order": 2
+    },
+    "RNG-003": {
+      "node_id": "zettel--0fe2fec63fac8080de92",
+      "name": "The RNG seed and the game’s return-to-player percentage belong to different mechanisms.",
+      "display_order": 3
+    },
+    "CASINO-ARCH-001": {
+      "node_id": "zettel--ded7930d7e2dcc238f7c",
+      "name": "An online casino decomposes into components that each transform a different kind of state.",
+      "display_order": 4
+    },
+    "PLATFORM-001": {
+      "node_id": "zettel--19dc87908bb87a21403e",
+      "name": "A new interface channel can change while the game engine remains the same.",
+      "display_order": 5
+    },
+    "TEST-001": {
+      "node_id": "zettel--218fd6c7d8b17d7ebb02",
+      "name": "Simulation testing does not test “the game” at once; it tests whether one statistical consequence falls inside an acceptable range.",
+      "display_order": 6
+    },
+    "KANEVA-DIM-001": {
+      "node_id": "zettel--fa388481c4daa362c8b9",
+      "name": "Kaneva treated 2D and 3D as alternate interfaces onto one social world rather than as separate destinations.",
+      "display_order": 7
+    },
+    "KANEVA-MEDIA-001": {
+      "node_id": "zettel--78a82445c467ca6804d2",
+      "name": "Kaneva did not merely embed YouTube; it converted a web media object into an object located inside a room.",
+      "display_order": 8
+    },
+    "KANEVA-BOUNDARY-001": {
+      "node_id": "zettel--c92f8c278449468f56ca",
+      "name": "Kaneva's world was designed around ingress: the world remained alive by admitting things that were not produced inside it.",
+      "display_order": 9
+    },
+    "KANEVA-HOUSE-001": {
+      "node_id": "zettel--8dee677806c64cb13dfd",
+      "name": "In Kaneva, the virtual house begins to look less like simulated shelter than a spatial operating system for media and identity.",
+      "display_order": 10
+    },
+    "KANEVA-WORLD-001": {
+      "node_id": "zettel--d230b4f0368ef77fc136",
+      "name": "Kaneva suggests that “entering the world” and “accessing the world” are different operations.",
+      "display_order": 11
+    },
+    "HUBS-URL-001": {
+      "node_id": "zettel--f4e20f5c0d116364c526",
+      "name": "Mozilla Hubs made the URL itself into a door to a 3D world.",
+      "display_order": 12
+    },
+    "HUBS-MEDIA-002": {
+      "node_id": "zettel--d65fbc13b92640d5238d",
+      "name": "In Hubs, pasting a URL could manufacture a manipulable object.",
+      "display_order": 13
+    },
+    "HUBS-DEATH-003": {
+      "node_id": "zettel--1ea25ca5d6178fe498ca",
+      "name": "Mozilla could close Hubs without making the Hubs code cease to exist.",
+      "display_order": 14
+    },
+    "METAVERSE-DIM-004": {
+      "node_id": "zettel--a90d65d3c67daf835f63",
+      "name": "The metaverse may be representation-independent: 2D and 3D can be clients of the same world.",
+      "display_order": 15
+    },
+    "ROBLOX-LAW-005": {
+      "node_id": "zettel--7ba793deaf685d06e4ea",
+      "name": "Roblox compiles jurisdiction, age, and platform policy into runtime variables.",
+      "display_order": 16
+    },
+    "ROBLOX-RANDOM-006": {
+      "node_id": "zettel--94cb692a6efc891c8eea",
+      "name": "Roblox does not regulate “randomness” uniformly: paid randomness can be conditional while advertising rewards must be predetermined.",
+      "display_order": 17
+    },
+    "MINECRAFT-MONEY-007": {
+      "node_id": "zettel--0cbe94e90077ec25bfd2",
+      "name": "Minecraft protects the boundary of a server by forbidding its virtual currency from crossing it.",
+      "display_order": 18
+    },
+    "LOOTBOX-BORDER-008": {
+      "node_id": "zettel--9fcfbfb5862b156dabba",
+      "name": "For UK gambling law, the border between game and world can determine whether a loot box counts as gambling.",
+      "display_order": 19
+    },
+    "LOOTBOX-EVIDENCE-009": {
+      "node_id": "zettel--da7f5cfce0cd5a6b0847",
+      "name": "The central loot-box evidence problem may be that the platform possesses the experiment while researchers possess only observations.",
+      "display_order": 20
+    },
+    "XSOLLA-EXOSKELETON-010": {
+      "node_id": "zettel--9ca3d265361e4870104d",
+      "name": "Xsolla's Web Shop lets the purchase leave the game while the purchased object stays inside it.",
+      "display_order": 21
+    },
+    "XSOLLA-PORTAL-011": {
+      "node_id": "zettel--c9c3071abf15b58dd1e5",
+      "name": "Xsolla Metasites translates the hyperlink graph into a portal graph.",
+      "display_order": 22
+    },
+    "XSOLLA-ROBLOX-012": {
+      "node_id": "zettel--028847cf5d1594c6ddb5",
+      "name": "The hidden boundary of Roblox becomes visible on the credit-card statement: “Xsolla*Roblox.”",
+      "display_order": 23
+    },
+    "XSOLLA-MINECRAFT-013": {
+      "node_id": "zettel--239ca3c16a325e42e54a",
+      "name": "A Minecraft server can acquire a second body on the web: server in 3D, commercial identity in 2D.",
+      "display_order": 24
+    },
+    "GAMBLING-TOPOLOGY-014": {
+      "node_id": "zettel--3f4b7d1285ef6a617c29",
+      "name": "The casino is not the building: gambling is a topology of value, chance, and payout that can wear any architecture.",
+      "display_order": 25
+    },
+    "SECOND-LIFE-JURISDICTION-015": {
+      "node_id": "zettel--18377569db9fdcd1b6ce",
+      "name": "Second Life turns legal jurisdiction into literal geography: some avatars are not permitted to enter the region.",
+      "display_order": 26
+    },
+    "SECOND-LIFE-NOVELTY-016": {
+      "node_id": "zettel--5c841788b865530531ea",
+      "name": "A worthless virtual object can legalize a chance mechanic by failing to become money.",
+      "display_order": 27
+    },
+    "ROBLOX-MARBLE-017": {
+      "node_id": "zettel--8829751cc57d1b001565",
+      "name": "Roblox's marble fountain turns a randomized transaction into a tiny piece of world physics.",
+      "display_order": 28
+    },
+    "ROBLOX-CASHOUT-018": {
+      "node_id": "zettel--f2537e148a5b428d5d69",
+      "name": "Roblox's value membrane is asymmetric: player money can enter a random-item economy while creator earnings can leave as dollars.",
+      "display_order": 29
+    },
+    "XSOLLA-RANDOM-FLAG-019": {
+      "node_id": "zettel--c47ba80ccfe4a2d0815f",
+      "name": "Xsolla turns gambling-adjacentness into catalog metadata: “Mark as paid randomized reward.”",
+      "display_order": 30
+    },
+    "XSOLLA-CHANCE-API-020": {
+      "node_id": "zettel--6f6292536df034e7d545",
+      "name": "The treasure chest disappears completely in Xsolla's API: “open loot box” is a remote state mutation with three identifiers.",
+      "display_order": 31
+    },
+    "MINECRAFT-GAMBLING-021": {
+      "node_id": "zettel--08364ac3baaa9e1493ba",
+      "name": "Minecraft bans “gambling” as an all-ages world-content failure while separately engineering currencies so they cannot escape the server.",
+      "display_order": 32
+    },
+    "WORLD-MEMBRANE-022": {
+      "node_id": "zettel--142998563cdd11945764",
+      "name": "The boundary of the virtual world is part of the gambling machine.",
+      "display_order": 33
+    }
+  },
+  "bibliography": {
+    "ukgc_rts7_random_outcomes": {
+      "aliases": [
+        "ukgc_rts7_mapping",
+        "ukgc_rng_rtp"
+      ],
+      "title": "RTS 7 -- Generation of Random Outcomes",
+      "url": "https://www.gamblingcommission.gov.uk/standards/remote-gambling-and-software-technical-standards/rts-7-generation-of-random-outcomes"
+    },
+    "ukgc_rts7_mapping": {
+      "aliases": [
+        "ukgc_rts7_random_outcomes",
+        "ukgc_rng_rtp"
+      ],
+      "title": "RTS 7 -- Generation of Random Outcomes",
+      "url": "https://www.gamblingcommission.gov.uk/standards/remote-gambling-and-software-technical-standards/rts-7-generation-of-random-outcomes"
+    },
+    "ukgc_rng_rtp": {
+      "aliases": [
+        "ukgc_rts7_random_outcomes",
+        "ukgc_rts7_mapping"
+      ],
+      "title": "RTS 7 -- Generation of Random Outcomes and Live Return to Player Performance Monitoring",
+      "url": "https://www.gamblingcommission.gov.uk/standards/remote-gambling-and-software-technical-standards/rts-7-generation-of-random-outcomes"
+    },
+    "ukgc_remote_gambling_equipment": {
+      "aliases": [],
+      "title": "Remote Gambling Equipment",
+      "url": "https://www.gamblingcommission.gov.uk/licensees-and-businesses/guide/remote-gambling-equipment"
+    },
+    "ukgc_new_channels_testing": {
+      "aliases": [
+        "ukgc_testing_procedure_2024"
+      ],
+      "title": "Testing Strategy for Compliance with Remote Gambling and Software Technical Standards: Procedure for Testing",
+      "url": "https://www.gamblingcommission.gov.uk/strategy/testing-strategy-for-compliance-with-remote-gambling-and-software-technical/3-procedure-for-testing"
+    },
+    "ukgc_testing_procedure_2024": {
+      "aliases": [
+        "ukgc_new_channels_testing"
+      ],
+      "title": "Testing Strategy for Compliance with Remote Gambling and Software Technical Standards: Procedure for Testing",
+      "url": "https://www.gamblingcommission.gov.uk/strategy/testing-strategy-for-compliance-with-remote-gambling-and-software-technical/3-procedure-for-testing"
+    },
+    "norris2009virtualhealth": {
+      "aliases": [
+        "norris2009kaneva"
+      ],
+      "title": "The Growth and Direction of Healthcare Support Groups in Virtual Worlds",
+      "url": "https://jvwr-ojs-utexas.tdl.org/jvwr/article/view/658/500"
+    },
+    "mediapost2007kanevayoutube": {
+      "aliases": [
+        "klaus2007communitybox"
+      ],
+      "title": "Kaneva Brings YouTube Into Virtual World",
+      "url": "https://www.mediapost.com/publications/article/63231/kaneva-brings-youtube-into-virtual-world.html"
+    },
+    "klaus2007communitybox": {
+      "aliases": [
+        "mediapost2007kanevayoutube"
+      ],
+      "title": "Comments quoted in Kaneva Brings YouTube Into Virtual World",
+      "url": "https://www.mediapost.com/publications/article/63231/kaneva-brings-youtube-into-virtual-world.html"
+    },
+    "crunchbase_kaneva": {
+      "aliases": [],
+      "title": "Kaneva",
+      "url": "https://www.crunchbase.com/organization/kaneva"
+    },
+    "norris2009kaneva": {
+      "aliases": [
+        "norris2009virtualhealth"
+      ],
+      "title": "The Growth and Direction of Healthcare Support Groups in Virtual Worlds",
+      "url": "https://jvwr-ojs-utexas.tdl.org/jvwr/article/view/658/500"
+    },
+    "white2018hubs": {
+      "aliases": [],
+      "title": "Enabling Social Experiences Using Mixed Reality and the Open Web",
+      "url": "https://blog.mozilla.org/en/mozilla/enabling-social-experiences-using-mixed-reality-and-the-open-web/"
+    },
+    "marinacci2018hubsmedia": {
+      "aliases": [],
+      "title": "Share your favorite images and videos in VR with Mozilla Hubs",
+      "url": "https://hacks.mozilla.org/2018/08/share-your-favorite-images-and-videos-in-vr-with-mozilla-hubs/"
+    },
+    "mozilla2024hubsend": {
+      "aliases": [],
+      "title": "End of support for Mozilla Hubs",
+      "url": "https://support.mozilla.org/en-US/kb/end-support-mozilla-hubs"
+    },
+    "mozilla_roblox_multiclient": {
+      "aliases": [],
+      "title": "Cross-Interface World Access in Mozilla Hubs and Roblox",
+      "url": null
+    },
+    "roblox_policyservice": {
+      "aliases": [],
+      "title": "PolicyService",
+      "url": "https://create.roblox.com/docs/reference/engine/classes/PolicyService"
+    },
+    "roblox_random_items_2026": {
+      "aliases": [
+        "roblox_terms_random_2026",
+        "roblox_marble_fountain_2026",
+        "roblox_terms_economy_2026"
+      ],
+      "title": "Roblox Terms of Use and Advertising Standards",
+      "url": "https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use"
+    },
+    "mojang_usage_guidelines": {
+      "aliases": [
+        "minecraft_usage_guidelines_2026"
+      ],
+      "title": "Minecraft Usage Guidelines",
+      "url": "https://www.minecraft.net/en-us/usage-guidelines"
+    },
+    "dcms2022lootboxes": {
+      "aliases": [
+        "dcms2022lootboxevidence"
+      ],
+      "title": "Government Response to the Call for Evidence on Loot Boxes in Video Games",
+      "url": "https://www.gov.uk/government/calls-for-evidence/loot-boxes-in-video-games-call-for-evidence/outcome/government-response-to-the-call-for-evidence-on-loot-boxes-in-video-games"
+    },
+    "dcms2022lootboxevidence": {
+      "aliases": [
+        "dcms2022lootboxes"
+      ],
+      "title": "Government Response to the Call for Evidence on Loot Boxes in Video Games",
+      "url": "https://www.gov.uk/government/calls-for-evidence/loot-boxes-in-video-games-call-for-evidence/outcome/government-response-to-the-call-for-evidence-on-loot-boxes-in-video-games"
+    },
+    "xsolla2025buybutton": {
+      "aliases": [],
+      "title": "Xsolla launches Buy Button for mobile games to help developers take back control of their revenue",
+      "url": "https://xsolla.com/newsroom/xsolla-launches-buy-button-for-mobile-games-to-help-developers-take-back-control-of-their-revenue"
+    },
+    "xsolla2025metasites": {
+      "aliases": [],
+      "title": "Share your 3D Projects with Xsolla Metasites",
+      "url": "https://xsolla.com/blog/share-3d-projects-with-xsolla-metasites-and-start-your-metaverse-journey"
+    },
+    "roblox_xsolla_billing": {
+      "aliases": [],
+      "title": "Unauthorized Charges \\& Refund Requests",
+      "url": "https://en.help.roblox.com/hc/en-us/articles/203312650-Unauthorized-Charges-Refund-Requests"
+    },
+    "xsolla2025march": {
+      "aliases": [],
+      "title": "Xsolla Release Notes: March 2025",
+      "url": "https://xsolla.com/release-notes/march-2025"
+    },
+    "linden_wagering_policy": {
+      "aliases": [
+        "linden_wagering_convertibility"
+      ],
+      "title": "Policy Regarding Wagering in Second Life",
+      "url": "https://wiki.secondlife.com/wiki/Linden_Lab_Official:Policy_Regarding_Wagering_in_Second_Life"
+    },
+    "roblox_terms_random_2026": {
+      "aliases": [
+        "roblox_random_items_2026",
+        "roblox_marble_fountain_2026",
+        "roblox_terms_economy_2026"
+      ],
+      "title": "Roblox Terms of Use",
+      "url": "https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use"
+    },
+    "linden_skill_policy": {
+      "aliases": [],
+      "title": "Second Life Skill Gaming Policy",
+      "url": "https://wiki.secondlife.com/wiki/Linden_Lab_Official:Second_Life_Skill_Gaming_Policy"
+    },
+    "linden_wagering_convertibility": {
+      "aliases": [
+        "linden_wagering_policy"
+      ],
+      "title": "Policy Regarding Wagering in Second Life",
+      "url": "https://wiki.secondlife.com/wiki/Linden_Lab_Official:Policy_Regarding_Wagering_in_Second_Life"
+    },
+    "roblox_marble_fountain_2026": {
+      "aliases": [
+        "roblox_random_items_2026",
+        "roblox_terms_random_2026",
+        "roblox_terms_economy_2026"
+      ],
+      "title": "Roblox Terms of Use",
+      "url": "https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use"
+    },
+    "roblox_terms_economy_2026": {
+      "aliases": [
+        "roblox_random_items_2026",
+        "roblox_terms_random_2026",
+        "roblox_marble_fountain_2026"
+      ],
+      "title": "Roblox Terms of Use",
+      "url": "https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use"
+    },
+    "roblox_devex_2026": {
+      "aliases": [],
+      "title": "Developer Exchange Terms of Use",
+      "url": "https://en.help.roblox.com/hc/en-us/articles/115005718246-Developer-Exchange-Terms-of-Use"
+    },
+    "xsolla_catalog_randomized_reward": {
+      "aliases": [],
+      "title": "Catalog Management",
+      "url": "https://developers.xsolla.com/items-catalog/catalog-management/"
+    },
+    "xsolla_open_lootbox_api": {
+      "aliases": [],
+      "title": "Store API v1: Open Loot Box",
+      "url": "https://developers.xsolla.com/store-api/v1/loot-boxes/loot-boxes/open-loot-box/"
+    },
+    "minecraft_usage_guidelines_2026": {
+      "aliases": [
+        "mojang_usage_guidelines"
+      ],
+      "title": "Minecraft Usage Guidelines",
+      "url": "https://www.minecraft.net/en-us/usage-guidelines"
+    },
+    "ukgc_lootboxes_2017": {
+      "aliases": [],
+      "title": "Loot Boxes within Video Games",
+      "url": "https://www.gamblingcommission.gov.uk/news/article/loot-boxes-within-video-games"
+    }
+  }
+}

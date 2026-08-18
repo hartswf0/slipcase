@@ -1,0 +1,101 @@
+ZETTEL
+
+ID:
+Z-LINEAGE-OPP-008
+
+TITLE:
+Station identification and the public file are separate regulations; their disclosure pairing is the new invention
+
+SOURCE:
+Federal Communications Commission — 47 CFR § 73.1201, Station identification; public-inspection-file requirements in Part 73.
+
+SOURCE URL:
+https://www.ecfr.gov/current/title-47/chapter-I/subchapter-C/part-73/subpart-H/section-73.1201
+https://www.ecfr.gov/current/title-47/chapter-I/subchapter-C/part-73/subpart-H/section-73.3526
+
+PASSAGE:
+[PARAPHRASE] Federal broadcast rules require stations to identify themselves near the top of each hour using call letters and community of license, subject to specified permissible insertions. Separate Part 73 provisions require broadcasters to maintain categories of records for public inspection.
+
+RESEARCH OBJECT:
+Broadcast regulation supplies two useful mechanisms — recurrent concise identification and separately inspectable records — but the claim that these together constitute a designed two-level disclosure architecture goes beyond the regulations themselves.
+
+LOCAL MOVE:
+The regulations govern different accountability problems. Their recombination into “small mark here / making history there” is an act of design.
+
+SOURCE TERMS:
+station identification
+call letters
+community of license
+public inspection file
+
+WHAT BECAME STRANGE:
+The strongest part of the analogy may be exactly the part that has no historical precedent: taking two unrelated regulatory forms and making them cooperate as a provenance interface.
+
+QUESTION:
+What should an AI publication identify immediately, and what should it defer to an inspectable provenance record?
+
+DEEPER QUESTION:
+Can disclosure become more informative by being spatially divided instead of verbally expanded?
+
+MECHANISM:
+A low-bandwidth recurring identifier provides immediate attribution; a persistent external record carries information too detailed for the primary artifact.
+
+FORMAL SHIFT:
+<complex provenance obligation>
+→ <immediate identifier + inspectable record>
+→ [distribute disclosure by bandwidth]
+→ <recognition without saturating the artifact>
+
+SOURCE FORMALISM:
+§73.1201 specifies station-identification content and timing.
+Public-file sections specify records that regulated stations must maintain for inspection.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+ON-AIR / ON-PAGE:
+WHO / WHAT SYSTEM PARTICIPATED?
+
+PUBLIC FILE:
+HOW / WITH WHAT SOURCES / PROMPTS / TRANSFORMATIONS / VERSIONS?
+
+TENSION:
+Calling the design “from broadcast regulation” understates the creative operation. Regulation supplies parts; the AI provenance architecture is the synthesis.
+
+MISSING:
+Historical evidence that station identification and public inspection files were conceived as complementary layers of one disclosure system.
+
+BOUNDARY:
+FCC station identification does not document authorship process, and broadcast public files are not making-of logs. Neither rule directly specifies AI provenance.
+
+CITATION TRAIL:
+47 CFR §§ 73.1201, 73.3526, and 73.3527.
+Historical rulemaking records for station identification and public files.
+Provenance/disclosure standards for generative systems.
+
+TEST:
+Remove all broadcast vocabulary and specify the disclosure architecture purely by information requirements. If the two-layer design survives intact, “radio” is a generative analogy rather than a historical ancestor.
+
+PLATFORM:
+[[PUBLIC FILE]]
+
+LINKS:
+[[DISCLOSURE BY BANDWIDTH]]
+[[STATION ID]]
+[[PROVENANCE BESIDE THE ARTIFACT]]
+
+BIBTEX:
+@misc{fcc731201,
+  author = {{Federal Communications Commission}},
+  title = {47 CFR § 73.1201: Station identification},
+  year = {2026},
+  url = {https://www.ecfr.gov/current/title-47/chapter-I/subchapter-C/part-73/subpart-H/section-73.1201},
+  note = {Electronic Code of Federal Regulations; accessed 2026-08-18}
+}
+
+@misc{fcc733526,
+  author = {{Federal Communications Commission}},
+  title = {47 CFR § 73.3526: Local public inspection file of commercial stations},
+  year = {2026},
+  url = {https://www.ecfr.gov/current/title-47/chapter-I/subchapter-C/part-73/subpart-H/section-73.3526},
+  note = {Electronic Code of Federal Regulations; accessed 2026-08-18}
+}

@@ -1,0 +1,115 @@
+ZETTEL
+
+ID:
+Z-SYS-004
+
+TITLE:
+The daemon's “expected epistemic gain” is a scheduler without a utility function
+
+SOURCE:
+User-provided prompt system — PRIME ZETTEL FORAGE — AUTONOMOUS GRAPH INQUIRY v4.0 — supplied 2026-08-18.
+
+PASSAGE:
+[PARAPHRASE] Before every round the daemon surveys the active frontier and chooses the unresolved edge with the greatest expected epistemic gain, favoring edges likely to change several nodes, discriminate explanations, expose mechanisms, or connect branches.
+
+RESEARCH OBJECT:
+The daemon identifies the correct optimization problem but does not operationalize its objective.
+
+LOCAL MOVE:
+It converts research direction from “continue the latest child” into an explicit global selection decision.
+
+SOURCE TERMS:
+ACTIVE FRONTIER
+greatest expected epistemic gain
+STEER
+change several existing zettels
+discriminate
+exploration
+exploitation
+
+WHAT BECAME STRANGE:
+The most consequential decision in the autonomous system is expressed entirely as judgment language rather than executable machinery.
+
+QUESTION:
+How should expected epistemic gain be estimated before the evidence that would create that gain has been retrieved?
+
+DEEPER QUESTION:
+Can an autonomous research scheduler distinguish “high expected gain” from whatever currently sounds intellectually exciting?
+
+MECHANISM:
+Candidate edges are generated.
+The controller ranks them.
+One edge receives research resources.
+New evidence changes the graph.
+The frontier is ranked again.
+
+FORMAL SHIFT:
+<unresolved graph edges>
+→ <ranked research opportunities>
+→ [allocate next research action]
+→ <changed graph>
+
+SOURCE FORMALISM:
+Choose the edge with the greatest expected epistemic gain.
+
+Favor:
+multi-node impact
+discrimination
+primary-source recovery
+technical machinery
+genealogy correction
+contradiction
+cross-branch connection
+testability
+surprise.
+
+Discount:
+redundancy
+confirmation
+low consequence
+already-answered edges
+broad nondiscriminating questions.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+score(e) =
+  P(change | investigate e) × magnitude(change)
+  + discrimination_value(e)
+  + cross_graph_reach(e)
+  - expected_cost(e)
+  - redundancy(e)
+
+TENSION:
+A richly enumerated preference list can create the appearance of a scoring model without defining how conflicting criteria are compared.
+
+MISSING:
+Uncertainty estimates, research cost, source availability, diversity pressure, failure probability, and a tie-breaking policy.
+
+BOUNDARY:
+The prompt does not claim to provide a numeric utility function. Its scheduler may intentionally rely on model judgment.
+
+CITATION TRAIL:
+[[Z-SYS-001]]
+→ STEER
+→ exploration/exploitation
+→ measurable research allocation
+
+TEST:
+Give several agents the identical frontier and prompt. Measure selection agreement across repeated runs. Low agreement would reveal how much “expected epistemic gain” remains latent model judgment.
+
+PLATFORM:
+[[AUTONOMOUS RESEARCH CONTROL]]
+
+LINKS:
+[[Z-SYS-001]]
+[[FRONTIER SCHEDULER]]
+[[EPISTEMIC UTILITY]]
+
+BIBTEX:
+@misc{autonomous_graph_inquiry_40_2026,
+  title = {Prime Zettel Forage — Autonomous Graph Inquiry},
+  howpublished = {User-provided research-system prompt},
+  year = {2026},
+  note = {Version 4.0; supplied 2026-08-18}
+}

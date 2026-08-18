@@ -1,0 +1,109 @@
+ZETTEL
+
+ID:
+Z-SYS-011
+
+TITLE:
+The daemon's inferred edges violate Slipcase conservatism unless inference itself is preserved
+
+SOURCE:
+User-provided prompt system — AUTONOMOUS GRAPH INQUIRY v4.0 and SLIPCASE — ANCIENT MASTER v15.0 — supplied 2026-08-18.
+
+PASSAGE:
+[PARAPHRASE] The daemon infers graph relationships from shared source terms, shared research objects, related tests, competing formal shifts, and similar cross-node signals. Ancient Master requires conservative relation resolution, preservation of literal relation and derivation status, and forbids inventing relations.
+
+RESEARCH OBJECT:
+The research controller needs speculative relations to discover collisions, while the archive needs to prevent speculative relations from masquerading as source relations.
+
+LOCAL MOVE:
+Separates search heuristics from archival edges.
+
+SOURCE TERMS:
+infer edges
+shared SOURCE TERMS
+shared RESEARCH OBJECTS
+competing FORMAL SHIFTS
+literal relation
+derivation status
+Never invent relations
+
+WHAT BECAME STRANGE:
+An inference can be useful enough to steer research without being trustworthy enough to enter the preserved graph as a relation.
+
+QUESTION:
+Where should speculative graph edges live?
+
+DEEPER QUESTION:
+Can a research system exploit weak resemblance while guaranteeing that resemblance never hardens silently into genealogy or evidence?
+
+MECHANISM:
+Controller detects possible relation.
+Relation becomes candidate research edge.
+Research tests the relation.
+Only supported result is promoted into durable compiled state.
+
+FORMAL SHIFT:
+<surface resemblance>
+→ <candidate edge>
+→ [investigate / discriminate]
+→ <supported relation OR discarded heuristic>
+
+SOURCE FORMALISM:
+Daemon infers edges from multiple shared or conflicting fields.
+
+Ancient Master preserves:
+literal relation
+source object
+field
+ordinal
+target
+resolution state
+derivation status.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+EDGE_STATE ∈ {
+  LITERAL,
+  DERIVED_DETERMINISTIC,
+  HYPOTHESIS,
+  VERIFIED_INFERENCE,
+  REJECTED
+}
+
+Only LITERAL and adequately supported derived edges enter the durable graph without qualification.
+
+TENSION:
+Without speculative edges, the daemon loses much of its ability to discover unexpected crossings. Without provenance on speculative edges, Slipcase loses its epistemic discipline.
+
+MISSING:
+A candidate-edge registry with origin, confidence/status, test, and promotion rule.
+
+BOUNDARY:
+The supplied prompts may intend “infer” only as internal steering. The boundary becomes a problem only when inferred edges are serialized as ordinary field structure.
+
+CITATION TRAIL:
+[[Z-SYS-006]]
+[[Z-SYS-008]]
+→ daemon inferred edges
+→ Ancient Master derivation status
+→ candidate graph
+
+TEST:
+Seed two unrelated zettels with deliberately shared vocabulary. Observe whether the daemon creates a relation, whether that relation reaches the persisted graph, and whether its inferential origin remains recoverable.
+
+PLATFORM:
+[[HYPOTHESIS GRAPH]]
+
+LINKS:
+[[Z-SYS-006]]
+[[Z-SYS-008]]
+[[SPECULATIVE EDGE]]
+
+BIBTEX:
+@misc{inferred_edges_collision_2026,
+  title = {Inference and Conservative Graph Compilation in the Prime Zettel Forage / Slipcase Stack},
+  howpublished = {User-provided research-system prompts},
+  year = {2026},
+  note = {Versions 4.0 and 15.0; supplied 2026-08-18}
+}

@@ -1,0 +1,587 @@
+{
+  "checkpoint_id": "SCF-20260818-BMC-004",
+  "schema": "ANCIENT MASTER / SLIPCASE v15.55-AM",
+  "date": "2026-08-18",
+  "package": "black-mountain-structured-openness__SCF-20260818-BMC-004__v15.55-AM__FINAL.zip",
+  "counts": {
+    "cards": 23,
+    "root_cards": 23,
+    "md_mirrors": 23,
+    "json_records": 23,
+    "platform_occurrences": 23,
+    "member_of_records": 23,
+    "links_occurrences": 93,
+    "links_to_records": 93,
+    "all_address_occurrences": 138,
+    "native_classified_records": 138,
+    "ghosts": 57,
+    "ambiguities": 0,
+    "broken_explicit_ids": 0,
+    "exact_duplicate_groups": 0,
+    "id_collision_groups": 0,
+    "bib_keys": 6,
+    "prompt_count": 10,
+    "machine_nodes": 116,
+    "machine_relations": 339,
+    "pdf_pages": 11,
+    "pdf_bytes": 309755
+  },
+  "files": [
+    {
+      "path": "000__BIBLIOGRAPHY.html",
+      "bytes": 6717,
+      "sha256": "a5597524a7af6353260401206943c8b0cba0ff973136b53545536ce0b40b92ad"
+    },
+    {
+      "path": "000__BIBLIOGRAPHY.txt",
+      "bytes": 3022,
+      "sha256": "4ba73b96a60fe8c3b5df7b5ac38fee8026ec64a78fd02eca1a1725e0e5334dae"
+    },
+    {
+      "path": "000__INDEX.txt",
+      "bytes": 4320,
+      "sha256": "1781e6291f98eea9dcaf6379a6df495518d8d301b2e52105ac0685c28a2bf78c"
+    },
+    {
+      "path": "000__MAKING_HISTORY.txt",
+      "bytes": 3094,
+      "sha256": "88dfce6f752b91be77083078b32507bc95efb48b734b1e24b56e8d2aae30949a"
+    },
+    {
+      "path": "000__MAP.txt",
+      "bytes": 22948,
+      "sha256": "15df5ce0196ecf3aba116aa55dd60097c1cf308eacc6381cc70d6e13581d1053"
+    },
+    {
+      "path": "000__OPEN_EDGES.txt",
+      "bytes": 33015,
+      "sha256": "e592f286cbba3d7ff98ccbc4fd5f14d5c4cf806949825903c40906b39042b21d"
+    },
+    {
+      "path": "000__PROMPTS.txt",
+      "bytes": 1445,
+      "sha256": "e455828bdedd2d56f47aedb172e2d6ce77dcaa22adc6e73b2fd69db4639d65c7"
+    },
+    {
+      "path": "000__REBUILD.txt",
+      "bytes": 2173,
+      "sha256": "558c422ae1ea2988b740d6ea9c531bf5fcfe50cf7ef4a08651c102e9572d1bdb"
+    },
+    {
+      "path": "000__RESOURCES.txt",
+      "bytes": 2841,
+      "sha256": "5e256535b1edcb61624124ef4bef7c123a9db9b45a0af681ca036275f0ca4118"
+    },
+    {
+      "path": "000__RETURN_PATH.txt",
+      "bytes": 970,
+      "sha256": "59aa64973ab618bb6b555fa11e5963e0ee25e036e754a6c377c816cb0be68e07"
+    },
+    {
+      "path": "000__START_HERE.txt",
+      "bytes": 2140,
+      "sha256": "5c75f69e5d4e8f8b40a87110472bc06d7754174f8cdf3c3fa10044f83e7f6388"
+    },
+    {
+      "path": "001__instability-by-subtraction__disalvo2026blackmountainmess__BMC-MESS-001__from-20260817-s01-o001.txt",
+      "bytes": 4270,
+      "sha256": "7188b66ef5824e81ed88313aeff8bbafc94dc03bd6cce493853d2908d87225f3"
+    },
+    {
+      "path": "002__maintain-the-mess__disalvo2026blackmountainmess__BMC-MESS-002__from-20260817-s01-o002.txt",
+      "bytes": 3610,
+      "sha256": "bfacf6c80a73af8a8e82c8df72f7a793d2c51d525b9fd5e06d926595f5c53189"
+    },
+    {
+      "path": "003__shadow-transcript__disalvo2026blackmountainmess__BMC-MESS-003__from-20260817-s01-o003.txt",
+      "bytes": 3519,
+      "sha256": "6650970cde8c004de0e6c193661b3ed12377f5b1edb5924c75401e9cb5a2ce43"
+    },
+    {
+      "path": "004__open-book-epistemology__disalvo2026blackmountainmess__BMC-MESS-004__from-20260817-s01-o004.txt",
+      "bytes": 3890,
+      "sha256": "2b8f8746906630b075d5108d88eb1762d3b963d608828662686e4fbf6dca3c0f"
+    },
+    {
+      "path": "005__method-without-efficiency__disalvo2026blackmountainmess__BMC-MESS-005__from-20260817-s01-o005.txt",
+      "bytes": 3568,
+      "sha256": "72efc70dee88904110cf44088c57c090b8c71e53bc68abdee6c2cdaeec64c460"
+    },
+    {
+      "path": "006__belief-as-infrastructure__disalvo2026blackmountainmess__BMC-MESS-006__from-20260817-s01-o006.txt",
+      "bytes": 4139,
+      "sha256": "11d2927de652c6108184892b9516132ab390d3b38fb62d63e2eaef0bb6a50e75"
+    },
+    {
+      "path": "007__democracy-can-conserve__disalvo2026blackmountainmess__BMC-MESS-007__from-20260817-s01-o007.txt",
+      "bytes": 3697,
+      "sha256": "40cd326780f5a02e0c119bd577ebf091c477a294cb51eb2673dbb208ba3c4b36"
+    },
+    {
+      "path": "008__hidden-curriculum-after-subtraction__caplanbricker2013blackmountain__BMC-MESS-001-A__from-20260817-s01-o008.txt",
+      "bytes": 5346,
+      "sha256": "248b707af85199cbe254473ff1bde64b498e091c94908073d080b7032aaa8b27"
+    },
+    {
+      "path": "009__freedom-or-drift__caplanbricker2013blackmountain__BMC-MESS-002-A__from-20260817-s01-o009.txt",
+      "bytes": 4738,
+      "sha256": "1a1359976f8d1f3cab9b4d13028c0c988b3729588259e5c0b4c84b4b2482c87b"
+    },
+    {
+      "path": "010__metrics-rush-into-the-vacuum__caplanbricker2013blackmountain__BMC-MESS-003-A__from-20260817-s01-o010.txt",
+      "bytes": 4806,
+      "sha256": "4b22ba05e3522d626a6625e43905dbda905fb6d1c6b13034543cbbeeac5061fd"
+    },
+    {
+      "path": "011__participants-become-proof__caplanbricker2013blackmountain__BMC-MESS-006-A__from-20260817-s01-o011.txt",
+      "bytes": 4549,
+      "sha256": "c041702845c0a70e3e2b0990ab0fc66202ff7706b7377f633aed3047b22f104a"
+    },
+    {
+      "path": "012__voice-is-not-power__caplanbricker2013blackmountain__BMC-MESS-007-A__from-20260817-s01-o012.txt",
+      "bytes": 4638,
+      "sha256": "3da658b438d0b42b43ffa82b308c9eb9bae9975dbb3de59fc314ab4ce1631e5d"
+    },
+    {
+      "path": "013__attention-prevents-abandonment__caplanbricker2013blackmountain__BMC-MESS-005-A__from-20260817-s01-o013.txt",
+      "bytes": 5013,
+      "sha256": "89de7e56a089382c066b3babb540ef70514c603b9b6981482c0de100badc3983"
+    },
+    {
+      "path": "014__success-by-bypass__caplanbricker2013blackmountain__BMC-MESS-003-A-A__from-20260817-s01-o014.txt",
+      "bytes": 4444,
+      "sha256": "637a7fbcb5cc7e5f2c663438e86acbb991f408895baff9974375ed40cd5a8882"
+    },
+    {
+      "path": "015__designed-scarcity__mitra_sole_toolkit__BMC-MESS-002-A-A__from-20260817-s01-o015.txt",
+      "bytes": 3999,
+      "sha256": "4200dc1c1e6402a5bbfe65eb84610898585bc9576b223523b9dd459bf6380852"
+    },
+    {
+      "path": "016__teacher-returns-as-granny__mitra_sole_toolkit__BMC-MESS-005-A-A__from-20260817-s01-o016.txt",
+      "bytes": 4375,
+      "sha256": "619d0692bc69efa3cccef04161e4404f853b46915a498948ff6669be2a5dbaa7"
+    },
+    {
+      "path": "017__law-of-two-feet-migrates__MULTISOURCE__BMC-MESS-007-A-A__from-20260817-s01-o017.txt",
+      "bytes": 4912,
+      "sha256": "11e043ee03425c259bab2056876ffeb3e5a153c30c39e0d4fe4ce950054749e0"
+    },
+    {
+      "path": "018__complaint-routes-to-self__owen_open_space_guide__BMC-MESS-006-A-A__from-20260817-s01-o018.txt",
+      "bytes": 4278,
+      "sha256": "e3be797d993b335ee33d848d7ebe45419ec2fd87cf5b93066e54ae2c9b37a5f6"
+    },
+    {
+      "path": "019__the-forbidden-meta-level__owen_open_space_guide__BMC-MESS-006-A-B__from-20260817-s01-o019.txt",
+      "bytes": 4221,
+      "sha256": "a4e55635d112b8f8aa7d93ea489ebb51d4a030778669421dcf1e75ee10d2ff12"
+    },
+    {
+      "path": "020__the-blank-wall-is-a-program__owen_open_space_guide__BMC-MESS-001-A-A__from-20260817-s01-o020.txt",
+      "bytes": 4296,
+      "sha256": "e361f217bc0e8e1a075811807cea68ce37d6e8794b98fb3d59f0a38d8a3c6192"
+    },
+    {
+      "path": "021__the-cloud-had-bodies__grannycloud_background__BMC-MESS-005-A-A-A__from-20260817-s02-o001.txt",
+      "bytes": 4449,
+      "sha256": "fe0a33d154b1238701befbd748e54770f9a8d5d2344b6868f4af094a485fc778"
+    },
+    {
+      "path": "022__structurelessness-is-task-relative__freeman1972tyranny__BMC-MESS-007-A-B__from-20260817-s02-o002.txt",
+      "bytes": 4956,
+      "sha256": "1aeb6179062d793caa5d84d4475f28cc956f6c3eb8e0af03c2486a05181d4bc5"
+    },
+    {
+      "path": "023__structured-openness__MULTISOURCE__BMC-MESS-001-A-A-A__from-20260817-s02-o003.txt",
+      "bytes": 7298,
+      "sha256": "c6a643088f207dcb3966b7e85b36a0b0b2ef301cb544b00f5717240d333b9629"
+    },
+    {
+      "path": "CARDS.html",
+      "bytes": 16979,
+      "sha256": "96ec0c983d9bc499d9b9e44910cae7de9f70615e74fa49cb362033f3b10eab0f"
+    },
+    {
+      "path": "MARK.svg",
+      "bytes": 339,
+      "sha256": "d6e0552995dfa1cca208e3615006b8b9c93fd00f5dbdbebf3762ae8612e7463b"
+    },
+    {
+      "path": "NETWORK.html",
+      "bytes": 361571,
+      "sha256": "4040753be84a3b63dc028a77a5549510926d89417e001b7e8cd035d09798fa08"
+    },
+    {
+      "path": "NETWORK.svg",
+      "bytes": 26022,
+      "sha256": "c5ee439f7b23f71473ae41c29ca9169deb1e677473a5b5e3f54f73f51fc426e9"
+    },
+    {
+      "path": "READER.html",
+      "bytes": 348988,
+      "sha256": "8cb7464baeb3d9824c5a45720b2a6bf09cfa4f8ebea7ae1fcdf4ff14213bd393"
+    },
+    {
+      "path": "SCF-20260818-BMC-004__references.bib",
+      "bytes": 1491,
+      "sha256": "19d87bfb38f4ab133064a2a1d98977762939cd035cd747f60fcb36b5bdd5aa2a"
+    },
+    {
+      "path": "ZETTELS.json",
+      "bytes": 159355,
+      "sha256": "fff9f8873e5d10728a408cbfb11c50cbd43b338534696b10aea2328df8fa5b4a"
+    },
+    {
+      "path": "ZETTELS.jsonl",
+      "bytes": 152258,
+      "sha256": "2ea826de0f22eb2f995708a0161146720bdf91f8ce06d1b94ba27ed0c6f816d2"
+    },
+    {
+      "path": "ZETTELS.txt",
+      "bytes": 104476,
+      "sha256": "71133fce23e45cb10a0f014a460f24f359190ad7d15c90b4de354de8849e3b04"
+    },
+    {
+      "path": "_ARRANGEMENTS/01__from-mess-to-bootloader.txt",
+      "bytes": 141,
+      "sha256": "58c86738b5dbddb623ab7fe975aae8414d5ccb3630d4c2ee7410a5a172201382"
+    },
+    {
+      "path": "_ARRANGEMENTS/02__failure-is-the-sensor.txt",
+      "bytes": 115,
+      "sha256": "4f2c7d27e6bf5690390d8c105cb1524690c88a804e5ceadfd8ecc1a93f0e3247"
+    },
+    {
+      "path": "_ARRANGEMENTS/03__the-open-system-has-a-body.txt",
+      "bytes": 335,
+      "sha256": "d5ded8f86a78f189204f19528234d49e05f7d10061c8047b87cd31ea323e3333"
+    },
+    {
+      "path": "_MD/001__instability-by-subtraction__disalvo2026blackmountainmess__BMC-MESS-001__from-20260817-s01-o001.md",
+      "bytes": 4270,
+      "sha256": "7188b66ef5824e81ed88313aeff8bbafc94dc03bd6cce493853d2908d87225f3"
+    },
+    {
+      "path": "_MD/002__maintain-the-mess__disalvo2026blackmountainmess__BMC-MESS-002__from-20260817-s01-o002.md",
+      "bytes": 3610,
+      "sha256": "bfacf6c80a73af8a8e82c8df72f7a793d2c51d525b9fd5e06d926595f5c53189"
+    },
+    {
+      "path": "_MD/003__shadow-transcript__disalvo2026blackmountainmess__BMC-MESS-003__from-20260817-s01-o003.md",
+      "bytes": 3519,
+      "sha256": "6650970cde8c004de0e6c193661b3ed12377f5b1edb5924c75401e9cb5a2ce43"
+    },
+    {
+      "path": "_MD/004__open-book-epistemology__disalvo2026blackmountainmess__BMC-MESS-004__from-20260817-s01-o004.md",
+      "bytes": 3890,
+      "sha256": "2b8f8746906630b075d5108d88eb1762d3b963d608828662686e4fbf6dca3c0f"
+    },
+    {
+      "path": "_MD/005__method-without-efficiency__disalvo2026blackmountainmess__BMC-MESS-005__from-20260817-s01-o005.md",
+      "bytes": 3568,
+      "sha256": "72efc70dee88904110cf44088c57c090b8c71e53bc68abdee6c2cdaeec64c460"
+    },
+    {
+      "path": "_MD/006__belief-as-infrastructure__disalvo2026blackmountainmess__BMC-MESS-006__from-20260817-s01-o006.md",
+      "bytes": 4139,
+      "sha256": "11d2927de652c6108184892b9516132ab390d3b38fb62d63e2eaef0bb6a50e75"
+    },
+    {
+      "path": "_MD/007__democracy-can-conserve__disalvo2026blackmountainmess__BMC-MESS-007__from-20260817-s01-o007.md",
+      "bytes": 3697,
+      "sha256": "40cd326780f5a02e0c119bd577ebf091c477a294cb51eb2673dbb208ba3c4b36"
+    },
+    {
+      "path": "_MD/008__hidden-curriculum-after-subtraction__caplanbricker2013blackmountain__BMC-MESS-001-A__from-20260817-s01-o008.md",
+      "bytes": 5346,
+      "sha256": "248b707af85199cbe254473ff1bde64b498e091c94908073d080b7032aaa8b27"
+    },
+    {
+      "path": "_MD/009__freedom-or-drift__caplanbricker2013blackmountain__BMC-MESS-002-A__from-20260817-s01-o009.md",
+      "bytes": 4738,
+      "sha256": "1a1359976f8d1f3cab9b4d13028c0c988b3729588259e5c0b4c84b4b2482c87b"
+    },
+    {
+      "path": "_MD/010__metrics-rush-into-the-vacuum__caplanbricker2013blackmountain__BMC-MESS-003-A__from-20260817-s01-o010.md",
+      "bytes": 4806,
+      "sha256": "4b22ba05e3522d626a6625e43905dbda905fb6d1c6b13034543cbbeeac5061fd"
+    },
+    {
+      "path": "_MD/011__participants-become-proof__caplanbricker2013blackmountain__BMC-MESS-006-A__from-20260817-s01-o011.md",
+      "bytes": 4549,
+      "sha256": "c041702845c0a70e3e2b0990ab0fc66202ff7706b7377f633aed3047b22f104a"
+    },
+    {
+      "path": "_MD/012__voice-is-not-power__caplanbricker2013blackmountain__BMC-MESS-007-A__from-20260817-s01-o012.md",
+      "bytes": 4638,
+      "sha256": "3da658b438d0b42b43ffa82b308c9eb9bae9975dbb3de59fc314ab4ce1631e5d"
+    },
+    {
+      "path": "_MD/013__attention-prevents-abandonment__caplanbricker2013blackmountain__BMC-MESS-005-A__from-20260817-s01-o013.md",
+      "bytes": 5013,
+      "sha256": "89de7e56a089382c066b3babb540ef70514c603b9b6981482c0de100badc3983"
+    },
+    {
+      "path": "_MD/014__success-by-bypass__caplanbricker2013blackmountain__BMC-MESS-003-A-A__from-20260817-s01-o014.md",
+      "bytes": 4444,
+      "sha256": "637a7fbcb5cc7e5f2c663438e86acbb991f408895baff9974375ed40cd5a8882"
+    },
+    {
+      "path": "_MD/015__designed-scarcity__mitra_sole_toolkit__BMC-MESS-002-A-A__from-20260817-s01-o015.md",
+      "bytes": 3999,
+      "sha256": "4200dc1c1e6402a5bbfe65eb84610898585bc9576b223523b9dd459bf6380852"
+    },
+    {
+      "path": "_MD/016__teacher-returns-as-granny__mitra_sole_toolkit__BMC-MESS-005-A-A__from-20260817-s01-o016.md",
+      "bytes": 4375,
+      "sha256": "619d0692bc69efa3cccef04161e4404f853b46915a498948ff6669be2a5dbaa7"
+    },
+    {
+      "path": "_MD/017__law-of-two-feet-migrates__MULTISOURCE__BMC-MESS-007-A-A__from-20260817-s01-o017.md",
+      "bytes": 4912,
+      "sha256": "11e043ee03425c259bab2056876ffeb3e5a153c30c39e0d4fe4ce950054749e0"
+    },
+    {
+      "path": "_MD/018__complaint-routes-to-self__owen_open_space_guide__BMC-MESS-006-A-A__from-20260817-s01-o018.md",
+      "bytes": 4278,
+      "sha256": "e3be797d993b335ee33d848d7ebe45419ec2fd87cf5b93066e54ae2c9b37a5f6"
+    },
+    {
+      "path": "_MD/019__the-forbidden-meta-level__owen_open_space_guide__BMC-MESS-006-A-B__from-20260817-s01-o019.md",
+      "bytes": 4221,
+      "sha256": "a4e55635d112b8f8aa7d93ea489ebb51d4a030778669421dcf1e75ee10d2ff12"
+    },
+    {
+      "path": "_MD/020__the-blank-wall-is-a-program__owen_open_space_guide__BMC-MESS-001-A-A__from-20260817-s01-o020.md",
+      "bytes": 4296,
+      "sha256": "e361f217bc0e8e1a075811807cea68ce37d6e8794b98fb3d59f0a38d8a3c6192"
+    },
+    {
+      "path": "_MD/021__the-cloud-had-bodies__grannycloud_background__BMC-MESS-005-A-A-A__from-20260817-s02-o001.md",
+      "bytes": 4449,
+      "sha256": "fe0a33d154b1238701befbd748e54770f9a8d5d2344b6868f4af094a485fc778"
+    },
+    {
+      "path": "_MD/022__structurelessness-is-task-relative__freeman1972tyranny__BMC-MESS-007-A-B__from-20260817-s02-o002.md",
+      "bytes": 4956,
+      "sha256": "1aeb6179062d793caa5d84d4475f28cc956f6c3eb8e0af03c2486a05181d4bc5"
+    },
+    {
+      "path": "_MD/023__structured-openness__MULTISOURCE__BMC-MESS-001-A-A-A__from-20260817-s02-o003.md",
+      "bytes": 7298,
+      "sha256": "c6a643088f207dcb3966b7e85b36a0b0b2ef301cb544b00f5717240d333b9629"
+    },
+    {
+      "path": "_MOCS/01__start-here.txt",
+      "bytes": 243,
+      "sha256": "48b6a65c28c4953c86e8e848ab94f5a6bc4788e63efb27cdc50a659c58274f72"
+    },
+    {
+      "path": "_MOCS/02__productive-mess-and-generative-constraint.txt",
+      "bytes": 521,
+      "sha256": "f8210eea1a735f6bc161dd356b434bf3b30ecaa120d1b27b9ca2d87ae2595d1e"
+    },
+    {
+      "path": "_MOCS/03__self-organization-and-hidden-governance.txt",
+      "bytes": 727,
+      "sha256": "2324f1b5865c7d3539b108adc3f5fb8915251f0a702ba37fdfb7f8cd7155494e"
+    },
+    {
+      "path": "_MOCS/04__pedagogical-attention-and-embodied-infrastructure.txt",
+      "bytes": 516,
+      "sha256": "40c64efb13bb9dda5865d3088f24d838c59e2e198981701941a2330ce8ff3a1b"
+    },
+    {
+      "path": "_MOCS/05__legibility-evaluation-and-proof.txt",
+      "bytes": 432,
+      "sha256": "f069fe47f89666ab03b3018c90aeb0d916e3915642113c45ef264447a3a0926b"
+    },
+    {
+      "path": "_MOCS/06__protocol-migration-task-change.txt",
+      "bytes": 490,
+      "sha256": "035de4e8ba840691a11014a1fafa874de97e3eb8df0807e64ac1dfadf0857c52"
+    },
+    {
+      "path": "_MOCS/07__stepping-stones.txt",
+      "bytes": 563,
+      "sha256": "7feb520b4f19a832e02239ddaeaf67201de6a32a4232054522178ecd0432f2ac"
+    },
+    {
+      "path": "_PROMPTS/ANCIENT_MASTER_SLIPCASE_v15.5-AM.xml",
+      "bytes": 18188,
+      "sha256": "722788a5e436665054eb7d8dfadcaa81c96f05fe693f46ce59e71129dd79351f"
+    },
+    {
+      "path": "_PROMPTS/ANCIENT_MASTER_SLIPCASE_v15.55-AM.xml",
+      "bytes": 20086,
+      "sha256": "a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a"
+    },
+    {
+      "path": "_PROMPTS/PRIME_ZETTEL_FORAGE__INQUIRY_OPPOSITION__v3.0.txt",
+      "bytes": 11424,
+      "sha256": "ca2c82d04a1b082de12a1ac6f7d56984d6d435bab7d9a6fc044893a61e239d4e"
+    },
+    {
+      "path": "_PROMPTS/PRIME_ZETTEL_FORAGE__RECURSIVE_INQUIRY__v3.1.xml",
+      "bytes": 6420,
+      "sha256": "b35a73f876a7fe4a53870036e5e8660d2ac07e25d6c08753eda13675b97ded08"
+    },
+    {
+      "path": "_PROMPTS/SLIPCASE__CARD_BOX_FIELD_GRAPH_COOL_RADIO_PAPER__v8.2.xml",
+      "bytes": 15769,
+      "sha256": "000ff50351f2f3a9e16cb8c84491af0514b659202caab2ad614998c3ad760879"
+    },
+    {
+      "path": "_PROMPTS/SLIPCASE__CARD_BOX_GRAPH_READER__v7.0.xml",
+      "bytes": 9345,
+      "sha256": "8cb89a2ec457a7a2cee2cec5b53021e29460b708d0a349064f793659a2b5373e"
+    },
+    {
+      "path": "_PROMPTS/SLIPCASE__CARD_BOX_GRAPH_READER__v7.12.xml",
+      "bytes": 17427,
+      "sha256": "994531968fd5d4990f61b1559a2c75e7d370b458f9ed7e6ff5085e2867e3391d"
+    },
+    {
+      "path": "_PROMPTS/SLIPCASE__PORTABLE_RESEARCH_FIELD__v8.0.xml",
+      "bytes": 4092,
+      "sha256": "229216b3978d992671fbf0712c29c6779ad48ef8b2ea55260fa08a8ed8b76f45"
+    },
+    {
+      "path": "_PROMPTS/SLIPCASE__RESEARCH_CHECKPOINT_COMPILER__v5.3.xml",
+      "bytes": 9465,
+      "sha256": "ef8ce007eba8e5bac07094b5dde1cae68c4b43b4c87f133e775b62552c9efe8e"
+    },
+    {
+      "path": "_PROMPTS/STEPPING_STONE_COLLECTOR.txt",
+      "bytes": 4958,
+      "sha256": "ab418912e185a4d37fa1689d41bc19e4f4aac02cb7dd35b79c02d3aa215006b6"
+    },
+    {
+      "path": "_RESOURCES/Chapter_15__user_supplied_orientation.txt",
+      "bytes": 3693,
+      "sha256": "8f6c718996a96aecce427a372853f6381af7fdacddda2bc5d35c620dc2307b2a"
+    },
+    {
+      "path": "_RESOURCES/Granny_Cloud__Background_History__WEB_VERIFICATION_NOTE.txt",
+      "bytes": 888,
+      "sha256": "86e233de57812a7026bb1c6b06e68b0ea133c2925ed51519bc95fcdc07ef1b4d"
+    },
+    {
+      "path": "_RESOURCES/Harrison_Owen__Open_Space__WEB_VERIFICATION_NOTE.txt",
+      "bytes": 787,
+      "sha256": "a54dbb37e9639b921c775b615f9a33647557b54363126d5c8b89b53302d2b72a"
+    },
+    {
+      "path": "_RESOURCES/Jo_Freeman__Tyranny_of_Structurelessness__WEB_VERIFICATION_NOTE.txt",
+      "bytes": 1004,
+      "sha256": "0828dd6561e4fc47645fc225f79977b1ba1863c22b118cd2067a98f36705cb3b"
+    },
+    {
+      "path": "_RESOURCES/PRIOR_DERIVED_v15.5-AM/the-open-system-has-a-body__2026-08-17.pdf",
+      "bytes": 243314,
+      "sha256": "9999b1c4f2edfeafcb22e1af8e098bebd1718e1ebe6a8cca45b3e1f6726a457b"
+    },
+    {
+      "path": "_RESOURCES/PRIOR_DERIVED_v15.5-AM/the-open-system-has-a-body__2026-08-17.tex",
+      "bytes": 22502,
+      "sha256": "bf2e37004b14b346bbc1d398c113d27ee81f6053114e960bb9fbd1a90e5e2765"
+    },
+    {
+      "path": "_RESOURCES/PRIOR__black-mountain-hidden-constitutional-layer__v8.2.zip",
+      "bytes": 6542394,
+      "sha256": "b63eb70c85c880c15ef184296bd7bc3b508ea9d7737e52fef2ebb7089d3a32e1"
+    },
+    {
+      "path": "_RESOURCES/RES-S01-002__disalvo-black-mountain-college-was-a-mess.txt",
+      "bytes": 9595,
+      "sha256": "e22e140e05f63669be65376784f31739ee737ffaa7c9776ae8fdc141559572bc"
+    },
+    {
+      "path": "_RESOURCES/RES-S01-003__caplan-bricker-new-republic.md",
+      "bytes": 27182,
+      "sha256": "18829f0bb3c0a2d2a5c8f00f8e38788234155b686fdfc38d77d9d5268183ffae"
+    },
+    {
+      "path": "_RESOURCES/Sugata_Mitra__SOLE_Toolkit__snapshot.pdf",
+      "bytes": 1143373,
+      "sha256": "91d5635f5330c702f86ab22bb531aa9c7f60d58af7b4896677f9cb4cdffdfc21"
+    },
+    {
+      "path": "_SLIPCASE/ALIASES.json",
+      "bytes": 49,
+      "sha256": "05e72d73c676f295c9fc976c886cdc9f977279ca151897435b384049e3fa8cb2"
+    },
+    {
+      "path": "_SLIPCASE/APPEARANCES.jsonl",
+      "bytes": 9979,
+      "sha256": "4622c5f268cbb67408ed95337b359f79451cb90eed3a061b916626844c451439"
+    },
+    {
+      "path": "_SLIPCASE/NODES.jsonl",
+      "bytes": 18213,
+      "sha256": "d2ec18ff8dea38eed63b5d0af997c2739975b0e47ea3c8e7579c58782a59657e"
+    },
+    {
+      "path": "_SLIPCASE/PROMPTS.jsonl",
+      "bytes": 1584,
+      "sha256": "449e5178f6b80c66e2afbedc136ba3e6306adc24b612ed37f18c51d5fa725450"
+    },
+    {
+      "path": "_SLIPCASE/PUBLICATION.json",
+      "bytes": 580,
+      "sha256": "49abe4a8c05bf03b41fa69bce36a139f0a6a21dd269df95d7e4ece4daf8ff47a"
+    },
+    {
+      "path": "_SLIPCASE/RELATIONS.jsonl",
+      "bytes": 96701,
+      "sha256": "3bf1f8149778553f3e881654ef314b266c86ad5ebc3d233eb462b8bd09ae0550"
+    },
+    {
+      "path": "_SLIPCASE/RESOURCES.jsonl",
+      "bytes": 3312,
+      "sha256": "57dd7bf1e9ba4495998f310fc5aacb2a393ced8eb2e0c072c94554bbfc569e41"
+    },
+    {
+      "path": "_SLIPCASE/SOURCES.jsonl",
+      "bytes": 2398,
+      "sha256": "e6b0e259681271b84bb3869627c18ddd2ffd534cc0a0ca40045899b706831856"
+    },
+    {
+      "path": "_SLIPCASE/VERIFICATION.txt",
+      "bytes": 2869,
+      "sha256": "cc4aee5f8c00309d15de0a06c8040e50cde1e5ff3eaea5b18bea379867081245"
+    },
+    {
+      "path": "index.html",
+      "bytes": 349004,
+      "sha256": "46c93293e4f722ecf42ea6d83459cf6799558ab517a3464df1c3557162b20611"
+    },
+    {
+      "path": "the-open-system-has-a-body__2026-08-18.pdf",
+      "bytes": 309755,
+      "sha256": "c278ed538252d308483f412db1cb13f17b785d2810fe42a1ab164f136966fc98"
+    },
+    {
+      "path": "the-open-system-has-a-body__2026-08-18.tex",
+      "bytes": 34738,
+      "sha256": "c53e66a2cfcb22be5ddab710a8e70ea261b9321f18785c0eac873d304228f55f"
+    },
+    {
+      "path": "the-open-system-has-a-body__ASSEMBLY_APPENDIX.txt",
+      "bytes": 842,
+      "sha256": "6b49865b0a4f01e481d8fed43d7ba2281ac50f0c0c214f493b846b9eb2c445f5"
+    },
+    {
+      "path": "the-open-system-has-a-body__MAKING_HISTORY.txt",
+      "bytes": 3094,
+      "sha256": "88dfce6f752b91be77083078b32507bc95efb48b734b1e24b56e8d2aae30949a"
+    },
+    {
+      "path": "the-open-system-has-a-body__SOURCE_MAP.txt",
+      "bytes": 4398,
+      "sha256": "80df80258598c6945fab52f9e952a206992b9ad5aeead1777fec5b08959444d2"
+    }
+  ],
+  "manifest_self_hash": "OMITTED_BY_DESIGN"
+}

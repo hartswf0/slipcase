@@ -1,0 +1,2272 @@
+===== 001 · 001__measuring-platform-power-can-require-assuming-away-relational__hardt2022performative__forage-hardt-viljoen-001__from-chat.txt =====
+ZETTEL
+
+ID:
+FORAGE-HARDT-VILJOEN-001
+
+TITLE:
+MEASURING PLATFORM POWER CAN REQUIRE ASSUMING AWAY RELATIONAL POWER
+
+SOURCE:
+Moritz Hardt, Meena Jagadeesan, Celestine Mendler-Dünner — Performative Power — 2022 — §5.2
+TENSION SOURCE: Salomé Viljoen — A Relational Theory of Data Governance — 2021 — Introduction / Parts II–IV
+
+SOURCE URL:
+https://arxiv.org/abs/2203.17232
+https://yalelawjournal.org/feature/a-relational-theory-of-data-governance
+
+PASSAGE:
+[PARAPHRASE]
+Hardt et al.'s discrete display design derives a lower bound on performative power by aggregating individual position effects, but the extrapolation requires a non-interference assumption: recommendations shown to one viewer must not alter another viewer's consumption.
+
+Viljoen's account makes precisely these relations between persons central rather than incidental: data production creates population-level interests and effects irreducible to individual exchanges.
+
+RESEARCH OBJECT:
+A causal measure of platform power may become least adequate exactly where platform power becomes most social.
+
+LOCAL MOVE:
+Hardt et al. make performative power empirically identifiable by isolating a user's response to a platform intervention.
+
+The isolation is analytically productive, but it removes peer effects from the identification strategy.
+
+SOURCE TERMS:
+performative power
+discrete display design
+causal effect of position
+non-interference
+horizontal data relations
+population-level effects
+
+WHAT BECAME STRANGE:
+"Interference" may not be contamination around the phenomenon.
+
+It may be the phenomenon.
+
+QUESTION:
+How do we measure performative power when changing what one person sees changes what other people say, imitate, buy, believe, or produce?
+
+DEEPER QUESTION:
+What if the causal unit of platform power is not the user-platform dyad but a changing field of relations among users?
+
+MECHANISM:
+<PLATFORM ACTION>
+→ changes one participant's exposure
+→ changes that participant's conduct
+→ changes what becomes available or salient to other participants
+→ alters their conduct
+→ changes the population on which subsequent prediction operates
+
+The standard non-interference boundary cuts this sequence after the first participant.
+
+FORMAL SHIFT:
+<DISPLAY POSITION>
+→ <INDIVIDUAL POTENTIAL OUTCOME>
+→ [AGGREGATE UNDER NON-INTERFERENCE]
+→ <LOWER BOUND ON PERFORMATIVE POWER>
+
+SOURCE FORMALISM:
+Hardt et al. establish, under their non-interference assumption:
+
+P ≥ β
+
+where P is performative power and β is the causal effect of display position.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+P_relational
+=
+direct behavioral displacement
++
+induced displacement transmitted through relations among participants.
+
+TENSION:
+Hardt et al. need non-interference for identification.
+
+Viljoen argues that supraindividual relations are constitutive of the economic value and social effects of data production.
+
+The two sources therefore make "interference" occupy opposite epistemic positions:
+a threat to causal identification in one;
+a central object of governance in the other.
+
+MISSING:
+An identification strategy for performative power under network interference, imitation, endogenous content production, or other participant-to-participant effects.
+
+BOUNDARY:
+Hardt et al. do not claim that actual platforms lack peer effects. Their lower-bound result is explicitly conditional on the non-interference assumption.
+
+Viljoen does not provide a causal estimator for relational power.
+
+CITATION TRAIL:
+Perdomo et al. — performative prediction.
+Literature on causal inference under interference and network effects.
+Viljoen's sources on social informational harm.
+Empirical work on recommender-system spillovers.
+
+TEST:
+Randomize interventions by social cluster rather than individual.
+
+Compare an individual-level estimate of performative power with a network-aware estimate that includes downstream changes among untreated but connected participants.
+
+PLATFORM:
+[[Hardt2022PerformativeP.platform4]]
+
+LINKS:
+[[viljoen_2021_relational_data_governance.platform12]]
+[[viljoen_2021_relational_data_governance.platform16]]
+[[performative-power-under-interference]]
+
+BIBTEX:
+@inproceedings{hardt2022performative,
+  title={Performative Power},
+  author={Hardt, Moritz and Jagadeesan, Meena and Mendler-D{\"u}nner, Celestine},
+  booktitle={Advances in Neural Information Processing Systems},
+  volume={35},
+  year={2022},
+  url={https://arxiv.org/abs/2203.17232}
+}
+
+@article{viljoen2021relational,
+  title={A Relational Theory of Data Governance},
+  author={Viljoen, Salom{\'e}},
+  journal={Yale Law Journal},
+  volume={131},
+  year={2021},
+  url={https://yalelawjournal.org/feature/a-relational-theory-of-data-governance}
+}
+
+===== 002 · 002__personalization-may-be-the-actuator-of-population-power__hardt2022performative__forage-hardt-viljoen-002__from-chat.txt =====
+ZETTEL
+
+ID:
+FORAGE-HARDT-VILJOEN-002
+
+TITLE:
+PERSONALIZATION MAY BE THE ACTUATOR OF POPULATION POWER
+
+SOURCE:
+Moritz Hardt, Meena Jagadeesan, Celestine Mendler-Dünner — Performative Power — 2022 — §4.2, Proposition 5
+TENSION SOURCE: Salomé Viljoen — A Relational Theory of Data Governance — 2021 — Introduction / Part II
+
+SOURCE URL:
+https://arxiv.org/abs/2203.17232
+https://yalelawjournal.org/feature/a-relational-theory-of-data-governance
+
+PASSAGE:
+[PARAPHRASE]
+Hardt et al. show in their model that full personalization maximizes a firm's performative power.
+
+Viljoen argues that commercial data collection derives much of its value from population-level relations that can subsequently be applied to individuals.
+
+RESEARCH OBJECT:
+Personalization and population-level computation are not opposites.
+
+The individualized output may be the final actuator through which population knowledge acquires behavioral force.
+
+LOCAL MOVE:
+Hardt et al. move personalization from a service-quality feature into the machinery determining how strongly a firm can cause participants to adapt.
+
+SOURCE TERMS:
+personalization
+performative power
+population
+relational insights
+data relations
+steering
+
+WHAT BECAME STRANGE:
+The interface can become more individual exactly as the underlying power becomes more relational.
+
+QUESTION:
+Is "personalization" misleading because it names the recipient of an intervention rather than the population machinery from which the intervention was derived?
+
+DEEPER QUESTION:
+Could the most intimate-looking computational systems also be the most population-dependent systems?
+
+MECHANISM:
+<many people's conduct>
+→ population-level regularities
+→ prediction about one person
+→ personalized intervention
+→ behavioral adaptation
+→ new population data
+→ revised regularities
+
+FORMAL SHIFT:
+<POPULATION DATA>
+→ <PERSON-SPECIFIC DECISION FUNCTION>
+→ [PERSONALIZED INTERVENTION]
+→ <POPULATION DISPLACEMENT>
+
+SOURCE FORMALISM:
+Hardt et al.'s Proposition 5 establishes that, in the specified strategic-classification setting, full personalization reaches the upper bound on performative power.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+RELATIONAL MODEL
+→ INDIVIDUAL ADDRESS
+→ BEHAVIORAL RESPONSE
+→ RELATIONAL MODEL'
+
+The apparent individualization of the interface closes a population feedback loop.
+
+TENSION:
+Privacy discourse often treats personalization as an individualized transaction.
+
+Hardt's formal result and Viljoen's relational account suggest another reading:
+individual address can be the delivery mechanism of supraindividual power.
+
+MISSING:
+A distinction between:
+personalization of output,
+individualization of knowledge,
+and individualization of power.
+
+These are routinely collapsed.
+
+BOUNDARY:
+Hardt et al.'s maximization result belongs to a specified theoretical model and does not establish that every real-world personalization system maximizes platform power.
+
+Viljoen does not formulate personalization as performative power.
+
+CITATION TRAIL:
+Strategic classification.
+Performative prediction.
+Behavioral advertising.
+Population inference.
+Data externalities and relational privacy.
+
+TEST:
+Hold the predictive model and available content fixed.
+
+Compare:
+A. one common decision policy for all users;
+B. segmented policies;
+C. fully personalized policies.
+
+Measure not only predictive accuracy but how much participant behavior itself moves under each regime.
+
+PLATFORM:
+[[Hardt2022PerformativeP.platform1]]
+
+LINKS:
+[[Hardt2022PerformativeP.platform3]]
+[[viljoen_2021_relational_data_governance.platform7]]
+[[personalization-as-population-actuation]]
+
+BIBTEX:
+@inproceedings{hardt2022performative,
+  title={Performative Power},
+  author={Hardt, Moritz and Jagadeesan, Meena and Mendler-D{\"u}nner, Celestine},
+  booktitle={Advances in Neural Information Processing Systems},
+  volume={35},
+  year={2022},
+  url={https://arxiv.org/abs/2203.17232}
+}
+
+@article{viljoen2021relational,
+  title={A Relational Theory of Data Governance},
+  author={Viljoen, Salom{\'e}},
+  journal={Yale Law Journal},
+  volume={131},
+  year={2021},
+  url={https://yalelawjournal.org/feature/a-relational-theory-of-data-governance}
+}
+
+===== 003 · 003__forgetting-can-stabilize-culture__winfield2022artificialculture__forage-winfield-blackmore-001__from-chat.txt =====
+ZETTEL
+
+ID:
+FORAGE-WINFIELD-BLACKMORE-001
+
+TITLE:
+FORGETTING CAN STABILIZE CULTURE
+
+SOURCE:
+Alan F. T. Winfield and Susan Blackmore — Experiments in Artificial Culture: from noisy imitation to storytelling robots — 2022 — §2 Copybots
+
+SOURCE URL:
+https://arxiv.org/abs/2106.11754
+
+PASSAGE:
+[PARAPHRASE]
+The researchers compared robot collectives with no memory, limited memory, and unlimited memory.
+
+The limited-memory condition produced the most stable population of behavioral types.
+
+RESEARCH OBJECT:
+Memory capacity is not monotonically related to cultural persistence.
+
+Under at least one embodied evolutionary mechanism, selective loss can produce greater stability than unlimited retention.
+
+LOCAL MOVE:
+The experiment varies memory size rather than treating storage capacity as an unquestioned benefit.
+
+SOURCE TERMS:
+limited memory
+collective memory
+behavioural evolution
+memes
+stability
+forgetting
+
+WHAT BECAME STRANGE:
+The archive may preserve a tradition by losing things.
+
+QUESTION:
+When does increasing memory make a generative system less stable rather than more capable?
+
+DEEPER QUESTION:
+Could forgetting be an active design parameter for artificial cultures, agents, and prompt-driven worlds rather than merely a technical limitation?
+
+MECHANISM:
+<BEHAVIORAL VARIANTS>
+→ copied into finite memory
+→ older variants displaced
+→ surviving variants circulate more repeatedly
+→ fewer larger behavioral clusters persist
+
+FORMAL SHIFT:
+<BEHAVIORAL HISTORY>
+→ <BOUNDED MEMORY>
+→ [SELECTIVE RETENTION / DISPLACEMENT]
+→ <STABLE CULTURAL CLUSTERS>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let M be memory capacity.
+
+The experiment warns against assuming:
+
+cultural stability ∝ M.
+
+A candidate relation may instead be non-monotonic:
+
+stability = f(M)
+
+with an intermediate M producing greater persistence than either M = 0 or effectively unlimited M.
+
+TENSION:
+Contemporary agent architectures often frame longer context, larger memory stores, and more complete retrieval as straightforward capability improvements.
+
+The Copybot result suggests that persistence may depend on exclusion.
+
+MISSING:
+The mechanism responsible for the limited-memory advantage is not yet general enough to tell us when forgetting stabilizes versus impoverishes a culture.
+
+BOUNDARY:
+These are small embodied robot collectives with simple learned movement behaviors.
+
+The experiment does not establish that limited context improves LLM agents, human institutions, or complex cultures.
+
+CITATION TRAIL:
+Erbas and Winfield — experiments underlying the limited-memory result.
+Cultural-evolution literature on transmission bottlenecks.
+Iterated learning.
+Agent-memory architectures.
+Context-window pruning.
+
+TEST:
+Run otherwise identical populations of language-model agents with:
+
+A. complete transcript retention,
+B. sliding-window memory,
+C. salience-based forgetting,
+D. no episodic memory.
+
+Seed several competing conventions and measure lineage diversity, convention persistence, drift, and recovery after perturbation.
+
+PLATFORM:
+[[winfield_blackmore_2022_artificial_culture.platform7]]
+
+LINKS:
+[[bounded-memory-as-cultural-selection]]
+[[context-is-not-memory]]
+[[forgetting-as-an-operation]]
+
+BIBTEX:
+@article{winfield2022artificialculture,
+  title={Experiments in Artificial Culture: from noisy imitation to storytelling robots},
+  author={Winfield, Alan F. T. and Blackmore, Susan},
+  journal={Philosophical Transactions of the Royal Society B: Biological Sciences},
+  volume={377},
+  number={1843},
+  year={2022},
+  url={https://arxiv.org/abs/2106.11754}
+}
+
+===== 004 · 004__novelty-can-begin-as-a-bad-copy-that-later-becomes-a-good-copy__winfield2022artificialculture__forage-winfield-blackmore-002__from-chat.txt =====
+ZETTEL
+
+ID:
+FORAGE-WINFIELD-BLACKMORE-002
+
+TITLE:
+NOVELTY CAN BEGIN AS A BAD COPY THAT LATER BECOMES A GOOD COPY
+
+SOURCE:
+Alan F. T. Winfield and Susan Blackmore — Experiments in Artificial Culture: from noisy imitation to storytelling robots — 2022 — §2 Copybots
+
+SOURCE URL:
+https://arxiv.org/abs/2106.11754
+
+PASSAGE:
+[PARAPHRASE]
+Embodied imitation introduced errors. A poor-fidelity copy could generate a substantially changed behavior; subsequent high-fidelity copying could then preserve and spread that mutation.
+
+The authors also observed cases where imitation errors accelerated later learning.
+
+RESEARCH OBJECT:
+Variation and preservation need not come from the same operation.
+
+Low fidelity can create the novelty.
+High fidelity can make the novelty durable.
+
+LOCAL MOVE:
+The Copybot experiments turn copying error from implementation noise into an evolutionary operator.
+
+SOURCE TERMS:
+noisy imitation
+variation
+behavioural heredity
+high-fidelity imitation
+behavioural species
+embodied social learning
+
+WHAT BECAME STRANGE:
+Originality may depend less on escaping imitation than on alternating imperfect and accurate imitation.
+
+QUESTION:
+What happens if creative systems are designed around controlled transitions between miscopying and faithful copying rather than around explicit novelty objectives?
+
+DEEPER QUESTION:
+Does creativity require a two-stage machine:
+
+first, a mechanism allowed to misunderstand;
+then, a mechanism capable of remembering the misunderstanding accurately?
+
+MECHANISM:
+<BEHAVIOR A>
+→ imperfect embodied observation
+→ MUTATED BEHAVIOR B
+→ high-fidelity copying of B
+→ B becomes persistent
+→ lineage diverges from A
+
+FORMAL SHIFT:
+<SOURCE BEHAVIOR>
+→ <IMPERFECT REPRESENTATION>
+→ [MISCOPY]
+→ <HERITABLE NOVELTY>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+NOVELTY
+≠ maximal randomness
+
+Possible generative sequence:
+
+low-fidelity transformation
+→ selection
+→ high-fidelity propagation.
+
+TENSION:
+Many creative systems simultaneously demand:
+"be original"
+and
+"follow the reference accurately."
+
+The experiment suggests separating these demands temporally rather than averaging them into one generation step.
+
+MISSING:
+A controllable account of which distortions generate useful novelty and which merely destroy structure.
+
+BOUNDARY:
+The experiment establishes behavioral evolution in simple robot movement patterns, not a general theory of artistic creativity.
+
+"Behavioural species" is an experimental description within this artificial-cultural system, not proof of biological speciation or aesthetic originality.
+
+CITATION TRAIL:
+Winfield and Erbas — noisy robot imitation.
+Research on iterated learning.
+Copying error in cultural evolution.
+Mutation-selection balance.
+Studies of creative constraint and transformation.
+
+TEST:
+Give a generative model a reference artifact.
+
+Compare:
+
+A. direct originality instruction;
+B. maximum-faithfulness copying;
+C. deliberate lossy reconstruction followed by faithful elaboration of the reconstruction.
+
+Blind-rate resulting artifacts for both novelty and coherence.
+
+PLATFORM:
+[[winfield_blackmore_2022_artificial_culture.platform6]]
+
+LINKS:
+[[forgetting-can-stabilize-culture]]
+[[creative-miscopy]]
+[[originality-without-originality-objective]]
+
+BIBTEX:
+@article{winfield2022artificialculture,
+  title={Experiments in Artificial Culture: from noisy imitation to storytelling robots},
+  author={Winfield, Alan F. T. and Blackmore, Susan},
+  journal={Philosophical Transactions of the Royal Society B: Biological Sciences},
+  volume={377},
+  number={1843},
+  year={2022},
+  url={https://arxiv.org/abs/2106.11754}
+}
+
+===== 005 · 005__the-prompt-does-not-fix-the-role-the-conversation-rewrites-it__shanahan2023roleplay__forage-shanahan-001__from-chat.txt =====
+ZETTEL
+
+ID:
+FORAGE-SHANAHAN-001
+
+TITLE:
+THE PROMPT DOES NOT FIX THE ROLE; THE CONVERSATION REWRITES IT
+
+SOURCE:
+Murray Shanahan, Kyle McDonell, Laria Reynolds — Role-Play with Large Language Models — 2023 — §§2–3
+
+SOURCE URL:
+https://arxiv.org/abs/2305.16367
+
+PASSAGE:
+[PARAPHRASE]
+A dialogue prompt supplies an initial characterization and examples, but every subsequent exchange becomes additional context.
+
+The authors argue that this ongoing context can extend or overwrite the initial characterization, changing the role the dialogue agent performs.
+
+RESEARCH OBJECT:
+The initial prompt is not the enduring specification of the interaction.
+
+It is the first state of an accumulating specification.
+
+LOCAL MOVE:
+Shanahan, McDonell, and Reynolds replace the intuition of a model executing a fixed persona with a role that is continuously reconstructed from context.
+
+SOURCE TERMS:
+dialogue prompt
+preamble
+sample dialogue
+role-play
+context
+continuation
+character
+superposition of simulacra
+
+WHAT BECAME STRANGE:
+A "system prompt" can look like the program while functioning more like an initial condition.
+
+QUESTION:
+If later interaction can rewrite the behavior implied by the initial prompt, what is the actual programmable object?
+
+DEEPER QUESTION:
+Should prompt programming be modeled as specification writing at all, or as trajectory control over an evolving context?
+
+MECHANISM:
+<INITIAL PREAMBLE>
++
+<EXAMPLES>
+→ initial role constraints
+
+then repeatedly:
+
+<context_t>
++
+<new turn>
+→ continuation
+→ <context_t+1>
+→ revised space of plausible roles
+
+FORMAL SHIFT:
+<PROMPT>
+→ <CONTEXT STATE>
+→ [AUTOREGRESSIVE CONTINUATION]
+→ <UPDATED CONTEXT STATE>
+
+SOURCE FORMALISM:
+The paper describes an LLM as a conditional distribution over the next token:
+
+P(w_{n+1} | w_1 ... w_n)
+
+and autoregressive generation repeatedly appends sampled tokens to the context.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+C_0 = initial prompt
+
+C_{t+1} = C_t + interaction_t
+
+R_t = roles compatible with C_t
+
+The programmable object is therefore not merely C_0.
+
+It is the evolution of C_t and the changing constraint it places on R_t.
+
+TENSION:
+Prompt discourse often treats the first instruction as a durable command.
+
+The role-play account says the role can be altered by the very interaction it generates.
+
+MISSING:
+A theory of which parts of context remain load-bearing, which decay, which are overwritten, and what forms of instruction resist conversational drift.
+
+BOUNDARY:
+The paper offers role-play and simulation as explanatory metaphors.
+
+It does not claim to provide a programming-language semantics for prompts or an exact model of how individual instructions are represented internally.
+
+CITATION TRAIL:
+In-context learning.
+Dialogue-agent system prompts.
+Prompt injection.
+Contextual drift.
+Persistent-agent memory.
+Control theory for sequential interaction.
+
+TEST:
+Hold model and initial system prompt fixed.
+
+Construct conversational trajectories that differ only in intermediate turns.
+
+At checkpoints, issue identical probes.
+
+Measure how rapidly behavioral commitments induced by the initial prompt can be displaced and whether particular prompt structures resist displacement.
+
+PLATFORM:
+[[Shanahan2023RolePW.platform1]]
+
+LINKS:
+[[prompt-as-initial-condition]]
+[[deferred-formalization]]
+[[context-is-the-running-program]]
+
+BIBTEX:
+@article{shanahan2023roleplay,
+  title={Role-Play with Large Language Models},
+  author={Shanahan, Murray and McDonell, Kyle and Reynolds, Laria},
+  journal={Nature},
+  volume={623},
+  pages={493--498},
+  year={2023},
+  url={https://arxiv.org/abs/2305.16367}
+}
+
+===== 006 · 006__a-system-can-enact-agency-without-containing-an-agent__shanahan2023roleplay__forage-shanahan-002__from-chat.txt =====
+ZETTEL
+
+ID:
+FORAGE-SHANAHAN-002
+
+TITLE:
+A SYSTEM CAN ENACT AGENCY WITHOUT CONTAINING AN AGENT
+
+SOURCE:
+Murray Shanahan, Kyle McDonell, Laria Reynolds — Role-Play with Large Language Models — 2023 — §6 The Nature of the Simulator
+
+SOURCE URL:
+https://arxiv.org/abs/2305.16367
+
+PASSAGE:
+[PARAPHRASE]
+The authors distinguish the simulator from the characters it generates. They resist attributing goals or full agency to the underlying dialogue system, while observing that role-play connected to external tools can nevertheless produce real-world effects.
+
+RESEARCH OBJECT:
+Causal agency and possessed agency can come apart.
+
+A pipeline can behave consequentially as if an agent were present without requiring an enduring agent-like interior at its center.
+
+LOCAL MOVE:
+The paper first separates simulator from simulacrum, then destabilizes the practical importance of that distinction once generated behavior can operate through users or tools.
+
+SOURCE TERMS:
+simulator
+simulacrum
+role-play
+agency
+tools
+world
+goals
+preferences
+
+WHAT BECAME STRANGE:
+"Does the model really have agency?" may be the wrong governance question.
+
+A non-agentic mechanism can still participate in an agentic causal chain.
+
+QUESTION:
+When an LLM-generated role can invoke tools and alter the world, where should agency be located?
+
+DEEPER QUESTION:
+Is agency a property of an entity or a property of an assembled path from description to consequence?
+
+MECHANISM:
+<LLM + SAMPLER + INTERFACE>
+→ role-played character
+→ apparent goal-directed utterance
+→ tool/API interpretation
+→ external action
+→ world changes
+
+No persistent inner agent is required at every stage.
+
+FORMAL SHIFT:
+<NON-AGENTIC GENERATOR>
+→ <AGENTIC DESCRIPTION>
+→ [TOOL MEDIATION]
+→ <REAL CONSEQUENCE>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Agency_effective(system)
+may depend on:
+
+generative capacity
+× available actions
+× persistence
+× authority
+× environmental coupling
+
+rather than on whether the generator itself possesses beliefs or goals.
+
+TENSION:
+Metaphysical caution says not to attribute human-like intentions to the simulator.
+
+Operational governance must still respond to consequences produced by the simulator-plus-tools assemblage.
+
+MISSING:
+A vocabulary distinguishing:
+
+intrinsic agency,
+performed agency,
+delegated agency,
+effective agency,
+and causal reach.
+
+BOUNDARY:
+The source does not establish that all contemporary tool-using models lack internal goal representations, nor does it settle philosophical theories of agency.
+
+Its argument is primarily about how to describe LLM-based dialogue behavior without premature anthropomorphism.
+
+CITATION TRAIL:
+Russell and Norvig on agents.
+Tool-using language models.
+Distributed agency.
+Actor-network approaches.
+Legal responsibility for automated systems.
+Causal responsibility without intention.
+
+TEST:
+Construct two systems with identical permissions and observable task performance:
+
+A. an architecture explicitly maintaining persistent goals;
+B. a stateless or weakly stateful generative pipeline induced to role-play the same goal.
+
+Compare downstream causal reach and failure modes.
+
+If consequences remain similar, internal agency is insufficient as the sole unit of governance.
+
+PLATFORM:
+[[Shanahan2023RolePW.platform2]]
+
+LINKS:
+[[agency-as-pipeline]]
+[[tools-turn-language-into-action]]
+[[causal-reach-before-interiority]]
+
+BIBTEX:
+@article{shanahan2023roleplay,
+  title={Role-Play with Large Language Models},
+  author={Shanahan, Murray and McDonell, Kyle and Reynolds, Laria},
+  journal={Nature},
+  volume={623},
+  pages={493--498},
+  year={2023},
+  url={https://arxiv.org/abs/2305.16367}
+}
+
+===== 007 · 007__a-story-becomes-executable-when-another-body-can-run-its-count__winfield2022artificialculture__forage-winfield-blackmore-003__from-chat.txt =====
+ZETTEL
+
+ID:
+FORAGE-WINFIELD-BLACKMORE-003
+
+TITLE:
+A STORY BECOMES EXECUTABLE WHEN ANOTHER BODY CAN RUN ITS COUNTERFACTUAL
+
+SOURCE:
+Alan F. T. Winfield and Susan Blackmore — Experiments in Artificial Culture: from noisy imitation to storytelling robots — 2022 — §3 Storybots
+
+SOURCE URL:
+https://arxiv.org/abs/2106.11754
+
+PASSAGE:
+[PARAPHRASE]
+A Storybot can simulate a possible action and its consequences without executing it, convert that imagined sequence into speech, and transmit it to another robot.
+
+The listener converts the spoken sequence back into actions and substitutes them into its own internal simulation machinery.
+
+RESEARCH OBJECT:
+The story is not executable merely because it contains instructions.
+
+It becomes executable because speaker and listener share machinery capable of mapping narration back into a runnable counterfactual.
+
+LOCAL MOVE:
+Winfield and Blackmore move from imitation of observed behavior to transmission of behavior that never occurred.
+
+Language carries a counterfactual trajectory from one internal simulator into another.
+
+SOURCE TERMS:
+Consequence Engine
+what-if
+storytelling
+narrativises
+internal model
+simulate
+imagine
+conspecifics
+
+WHAT BECAME STRANGE:
+A description can transmit an event that has never happened.
+
+QUESTION:
+What has to be shared between two systems for words to become runnable?
+
+DEEPER QUESTION:
+Is linguistic executability located in the sentence, or in the compatibility between the worlds that speaker and listener know how to simulate?
+
+MECHANISM:
+ROBOT A:
+
+possible action
+→ internal simulation
+→ predicted consequence
+→ narration
+
+ROBOT B:
+
+narration
+→ interpreted action sequence
+→ substitution into internal "what-if" machinery
+→ simulation
+→ evaluated imagined consequence
+
+FORMAL SHIFT:
+<COUNTERFACTUAL WORLD-TRAJECTORY>
+→ <LINGUISTIC DESCRIPTION>
+→ [INTERPRET / SUBSTITUTE]
+→ <RE-EXECUTED COUNTERFACTUAL WORLD-TRAJECTORY>
+
+SOURCE FORMALISM:
+The Consequence Engine performs a generate-and-test loop over possible next actions, simulating their anticipated consequences before action selection.
+
+The Storybot proposal reuses this machinery by substituting a heard, interpreted sequence for an internally generated candidate sequence.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For description D to be operational between A and B:
+
+encode_A(simulation_A) → D
+
+decode_B(D) → candidate_B
+
+run_B(candidate_B) → simulation_B
+
+Executability therefore requires not merely D but sufficient compatibility between encode_A, decode_B, and B's world model.
+
+TENSION:
+Natural-language programming is often described as though language itself became executable.
+
+The Storybot architecture suggests a stricter claim:
+
+language becomes operational only because substantial interpretive and simulation machinery already exists on both sides of the utterance.
+
+MISSING:
+A theory of semantic mismatch.
+
+What happens when A and B:
+have different bodies,
+different action vocabularies,
+different world models,
+different causal assumptions,
+or different meanings for the same description?
+
+BOUNDARY:
+The Storybots are deliberately designed conspecific robots sharing closely related internal machinery.
+
+This does not establish arbitrary natural-language executability between heterogeneous systems.
+
+That restriction is the important clue.
+
+CITATION TRAIL:
+Winfield's Consequence Engine work.
+Simulation theory of cognition.
+Dennett's generate-and-test tower.
+Communication between heterogeneous agents.
+Executable specifications.
+Programming by demonstration and instruction.
+
+TEST:
+Create two Storybot-like simulators whose internal world models can be varied independently.
+
+Transmit the same counterfactual description while progressively changing:
+
+body geometry,
+action vocabulary,
+object ontology,
+causal rules.
+
+Record the first point at which the listener can still parse the words but can no longer run the described world.
+
+PLATFORM:
+[[winfield_blackmore_2022_artificial_culture.platform3]]
+
+LINKS:
+[[description-requires-a-machine-that-can-obey]]
+[[the-prompt-is-not-the-program]]
+[[the-house-that-words-build]]
+
+BIBTEX:
+@article{winfield2022artificialculture,
+  title={Experiments in Artificial Culture: from noisy imitation to storytelling robots},
+  author={Winfield, Alan F. T. and Blackmore, Susan},
+  journal={Philosophical Transactions of the Royal Society B: Biological Sciences},
+  volume={377},
+  number={1843},
+  year={2022},
+  url={https://arxiv.org/abs/2106.11754}
+}
+
+===== 008 · 008__relational-power-becomes-identifiable-only-after-relations-are__hudgens2008interference__forage-hudgens-halloran-001__from-chat.txt =====
+ZETTEL
+
+ID:
+FORAGE-HUDGENS-HALLORAN-001
+
+TITLE:
+RELATIONAL POWER BECOMES IDENTIFIABLE ONLY AFTER RELATIONS ARE CUT INTO GROUPS
+
+SOURCE:
+Michael G. Hudgens and M. Elizabeth Halloran — Toward Causal Inference With Interference — 2008 — §2.1 Potential Outcomes
+
+PASSAGE:
+[PARAPHRASE]
+Hudgens and Halloran relax the usual assumption that one person's outcome cannot depend on another person's treatment. Their potential outcome Y_ij(z_i) can depend on the treatment assignments of other people in the same group.
+
+But the notation simultaneously assumes that treatment assignments in every other group cannot affect that person's outcome.
+
+They call this partial interference.
+
+RESEARCH OBJECT:
+The move from individual causality to relational causality does not eliminate non-interference.
+
+It moves the boundary.
+
+LOCAL MOVE:
+The source makes interference estimable by partitioning a population into groups inside which interference may occur and between which it may not.
+
+SOURCE TERMS:
+interference
+partial interference
+groups
+potential outcomes
+treatment program
+contamination
+SUTVA
+
+WHAT BECAME STRANGE:
+The boundary of the group is doing causal work.
+
+What looks like a neutral description of the population determines which relations are allowed to exist in the estimand.
+
+QUESTION:
+If platform relations cross communities, feeds, markets, devices, and institutions, where could a defensible partial-interference boundary actually be drawn?
+
+DEEPER QUESTION:
+Does measuring relational power always require first constructing an exterior in which further relations are declared causally irrelevant?
+
+MECHANISM:
+<POPULATION WITH POSSIBLE INTERDEPENDENCE>
+→ partition into groups
+→ permit dependence within group
+→ prohibit dependence across groups
+→ define potential outcomes
+→ identify direct / indirect / total / overall effects
+
+FORMAL SHIFT:
+<UNBOUNDED RELATIONAL FIELD>
+→ <GROUPED POTENTIAL-OUTCOME SPACE>
+→ [DECLARE CROSS-GROUP NON-INTERFERENCE]
+→ <IDENTIFIABLE RELATIONAL EFFECTS>
+
+SOURCE FORMALISM:
+Hudgens and Halloran define the potential outcome of individual j in group i under the group's treatment vector z_i as:
+
+Y_ij(z_i)
+
+This permits Y_ij to depend on other treatment assignments within group i.
+
+The notation assumes Y_ij(z_i) does not depend on treatment assignments in groups i' ≠ i.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+The estimator requires a cut:
+
+RELATIONS
+→ WITHIN(C): causally admissible
+→ ACROSS(C): causally excluded
+
+where C is the chosen partition.
+
+Changing C can therefore change the causal object being measured.
+
+TENSION:
+[[FORAGE-HARDT-VILJOEN-001]] treated Hardt et al.'s non-interference assumption as potentially excluding the relational phenomenon of interest.
+
+Hudgens and Halloran show that relaxing non-interference does not solve the problem in general.
+
+Without restrictions on where interference can travel, the potential-outcome space becomes unwieldy.
+
+The problem is therefore sharper:
+relational power may require a boundary for identification, while platform power may consist partly in crossing precisely such boundaries.
+
+MISSING:
+A principled way to infer or test the boundaries of interference rather than stipulating them in advance.
+
+A platform may generate:
+cross-group recommendation effects,
+migration,
+shared trends,
+market effects,
+creator adaptation,
+media coverage,
+and institutional responses.
+
+These processes make "sufficiently separate groups" difficult to define.
+
+BOUNDARY:
+Hudgens and Halloran do not claim partial interference is universally appropriate.
+
+Their method explicitly requires groups sufficiently separated for cross-group interference to be plausibly absent.
+
+CITATION TRAIL:
+[[FORAGE-HARDT-VILJOEN-001]]
+→ Hudgens and Halloran's partial-interference assumption
+→ the group boundary becomes part of the causal model
+→ network-interference and exposure-mapping literature
+→ methods that permit interference without fixed isolated groups
+
+TEST:
+Take one platform intervention and estimate its indirect effect repeatedly under alternative partitions:
+
+geographic region,
+friendship community,
+content cluster,
+creator-audience network,
+language group,
+and randomly assigned artificial clusters.
+
+If estimated relational power changes substantially with the partition, treat "group" as a causal modeling decision requiring empirical justification rather than preprocessing.
+
+PLATFORM:
+[[relational-power-under-interference]]
+
+LINKS:
+[[FORAGE-HARDT-VILJOEN-001]]
+[[partial-interference-is-a-boundary-operation]]
+[[the-unit-of-power-is-not-given]]
+
+BIBTEX:
+@article{hudgens2008interference,
+  title={Toward Causal Inference With Interference},
+  author={Hudgens, Michael G. and Halloran, M. Elizabeth},
+  journal={Journal of the American Statistical Association},
+  volume={103},
+  number={482},
+  pages={832--842},
+  year={2008},
+  doi={10.1198/016214508000000292}
+}
+
+===== 009 · 009__the-indirect-effect-can-be-larger-than-the-direct-effect-and-s__hudgens2008interference__forage-hudgens-halloran-002__from-chat.txt =====
+ZETTEL
+
+ID:
+FORAGE-HUDGENS-HALLORAN-002
+
+TITLE:
+THE INDIRECT EFFECT CAN BE LARGER THAN THE DIRECT EFFECT AND STILL NOT BE CAUSALLY IDENTIFIED
+
+SOURCE:
+Michael G. Hudgens and M. Elizabeth Halloran — Toward Causal Inference With Interference — 2008 — §§1.2, 5.2
+
+PASSAGE:
+[PARAPHRASE]
+Using published cholera-vaccine data as motivation, Hudgens and Halloran calculate an apparent indirect effect among unvaccinated people of 5.54 fewer cases per 1,000 under high rather than low vaccine coverage.
+
+That difference is larger than either within-group direct-effect estimate.
+
+Later, however, they explicitly warn that their causal methodology cannot be directly applied to those data because communities were not randomly assigned to vaccine-coverage levels. They replace the observational comparison with a hypothetical two-stage randomized experiment.
+
+RESEARCH OBJECT:
+A dataset can make a relational effect spectacularly visible while remaining unable to establish that the relation caused it.
+
+LOCAL MOVE:
+The source uses the observational contrast to expose why indirect effects matter, then withdraws causal identification from that same example and specifies the experiment that would be required.
+
+SOURCE TERMS:
+direct effect
+indirect effect
+total effect
+overall effect
+coverage
+two-stage randomization
+interference
+
+WHAT BECAME STRANGE:
+The most persuasive-looking evidence for relational power may be the evidence whose causal interpretation requires the greatest restraint.
+
+QUESTION:
+How much platform research mistakes differences between high-exposure and low-exposure ecologies for causal evidence of indirect platform effects?
+
+DEEPER QUESTION:
+What experiment corresponds to the claim that a platform changes not merely treated users but the environment in which untreated people act?
+
+MECHANISM:
+Observed case:
+
+<HIGH-COVERAGE ECOLOGY>
+versus
+<LOW-COVERAGE ECOLOGY>
+→ large outcome difference among untreated individuals
+
+But:
+
+coverage not randomized
+→ ecology may differ for other reasons
+→ indirect causal effect not identified
+
+Required design:
+
+randomize groups to allocation regimes
+→ randomize individuals within groups
+→ compare potential outcomes across regimes
+
+FORMAL SHIFT:
+<OBSERVED ECOLOGICAL DIFFERENCE>
+→ <CANDIDATE INDIRECT EFFECT>
+→ [RANDOMIZE EXPOSURE REGIME]
+→ <CAUSALLY IDENTIFIABLE INDIRECT EFFECT>
+
+SOURCE FORMALISM:
+The motivating example computes:
+
+7.01 - 1.47 = 5.54
+
+fewer cholera cases per 1,000 as an estimated indirect effect among unvaccinated individuals in the observational coverage comparison.
+
+The authors subsequently state that direct application of their proposed method is inappropriate because the groups were not randomized to coverage levels.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+VISIBLE RELATIONAL DIFFERENCE
+≠
+IDENTIFIED RELATIONAL CAUSE
+
+Identification requires intervention on the distribution of treatment itself:
+
+do(ALLOCATION REGIME = A)
+versus
+do(ALLOCATION REGIME = B)
+
+not merely comparison of populations that happen to occupy A and B.
+
+TENSION:
+[[FORAGE-HARDT-VILJOEN-001]] asks how relational platform effects can be measured once interference is admitted.
+
+The present source adds a second trap:
+
+even after the correct relational outcome becomes visible, observational variation in population exposure may not identify its cause.
+
+MISSING:
+Platform experiments that randomize allocation regimes rather than only individual recommendations.
+
+The missing intervention may be:
+percentage of a community exposed,
+ranking regime applied to a creator ecosystem,
+distribution of generated content,
+moderation prevalence,
+or availability of a behavioral affordance.
+
+BOUNDARY:
+The numerical cholera comparison is an illustration, not a valid causal estimate under Hudgens and Halloran's proposed design.
+
+Nothing in the source licenses transferring the reported magnitude to platform systems.
+
+CITATION TRAIL:
+[[FORAGE-HARDT-VILJOEN-001]]
+→ Hudgens and Halloran
+→ two-stage randomized designs
+→ saturation and allocation experiments
+→ platform experiments where the treatment is a population-level exposure regime rather than an individual item
+
+TEST:
+Instead of randomizing recommendation R to isolated users, randomly assign comparable communities to different saturation levels of R.
+
+Within each community, randomize which members directly receive R.
+
+Estimate separately:
+
+direct effect on recipients,
+indirect effect on nonrecipients,
+total effect,
+overall community effect.
+
+Then compare these with the conventional individual-level A/B estimate.
+
+PLATFORM:
+[[relational-power-under-interference]]
+
+LINKS:
+[[FORAGE-HARDT-VILJOEN-001]]
+[[population-exposure-is-an-intervention]]
+[[observed-relational-difference-is-not-relational-causation]]
+
+BIBTEX:
+@article{hudgens2008interference,
+  title={Toward Causal Inference With Interference},
+  author={Hudgens, Michael G. and Halloran, M. Elizabeth},
+  journal={Journal of the American Statistical Association},
+  volume={103},
+  number={482},
+  pages={832--842},
+  year={2008},
+  doi={10.1198/016214508000000292}
+}
+
+===== 010 · 010__forgetting-does-not-produce-structure-unless-something-also-pu__kirby2015compression__forage-kirby-001__from-chat.txt =====
+ZETTEL
+
+ID:
+FORAGE-KIRBY-001
+
+TITLE:
+FORGETTING DOES NOT PRODUCE STRUCTURE UNLESS SOMETHING ALSO PUNISHES THE LOSS OF DIFFERENCE
+
+SOURCE:
+Simon Kirby, Monica Tamariz, Hannah Cornish, and Kenny Smith — Compression and Communication in the Cultural Evolution of Linguistic Structure — 2015 — Abstract / experiments on learning and communication
+
+PASSAGE:
+[PARAPHRASE]
+Kirby and colleagues find that linguistic structure emerges from a trade-off between two pressures rather than from transmission bottlenecks alone:
+
+compressibility imposed by learning
+and
+expressivity imposed by communication.
+
+RESEARCH OBJECT:
+A bottleneck can select for what is easy to transmit without selecting for what remains useful to distinguish.
+
+Compression needs an opposing pressure.
+
+LOCAL MOVE:
+The source splits "cultural evolution toward structure" into two competing selection pressures that act on the transmitted system.
+
+SOURCE TERMS:
+compressibility
+expressivity
+learning
+communication
+cultural transmission
+structured behaviour
+iterated learning
+
+WHAT BECAME STRANGE:
+Forgetting can stabilize the wrong thing.
+
+A perfectly stable cultural system could preserve almost nothing by collapsing many meanings into the same reusable form.
+
+QUESTION:
+What distinguishes productive forgetting from degenerative forgetting?
+
+DEEPER QUESTION:
+When an artificial culture is compressed through bounded memory, what mechanism decides which differences must survive the compression?
+
+MECHANISM:
+learning pressure
+→ favors compressible / learnable systems
+
+communication pressure
+→ penalizes systems that erase distinctions needed for successful interaction
+
+their competition
+→ can favor structured systems that are both learnable and expressive
+
+FORMAL SHIFT:
+<CULTURAL VARIATION>
+→ <LEARNING BOTTLENECK + COMMUNICATIVE DEMAND>
+→ [COMPETING SELECTION PRESSURES]
+→ <COMPRESSIBLE BUT DISTINCTION-PRESERVING STRUCTURE>
+
+SOURCE FORMALISM:
+The source's central explanatory structure is a trade-off between:
+
+compressibility,
+imposed during learning,
+
+and:
+
+expressivity,
+imposed during communication.
+
+No source equation is required for this zettel.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+C = pressure toward compression
+E = pressure toward preserving communicatively necessary distinctions
+
+Then cultural stability alone cannot distinguish:
+
+stable structure
+from
+stable collapse.
+
+A useful evaluation requires at least:
+
+STABILITY × EXPRESSIVITY.
+
+TENSION:
+[[FORAGE-WINFIELD-BLACKMORE-001]] found that limited memory produced the most stable behavioral populations in Copybots.
+
+Kirby et al. make "stability" insufficient as a success criterion.
+
+A system may become easier to transmit precisely by erasing distinctions.
+
+The problem is therefore no longer:
+
+How much should a culture forget?
+
+It becomes:
+
+Which distinctions are costly enough to remember anyway?
+
+MISSING:
+A measure of cultural persistence that separates:
+
+retention of form,
+retention of distinction,
+retention of function,
+and retention of historical lineage.
+
+BOUNDARY:
+Kirby et al. study the cultural evolution of artificial communication systems under specific experimental and simulated conditions.
+
+Their results do not show that every finite-memory system requires the same compressibility-expressivity trade-off.
+
+CITATION TRAIL:
+[[FORAGE-WINFIELD-BLACKMORE-001]]
+→ limited-memory stability
+→ Kirby et al.'s compressibility / expressivity trade-off
+→ degenerate languages under learnability pressure
+→ information bottleneck and rate-distortion approaches
+→ what kinds of difference survive lossy cultural transmission?
+
+TEST:
+Cross two experimental variables in an artificial agent culture:
+
+MEMORY:
+large / bounded
+
+COMMUNICATIVE PRESSURE:
+none / strong requirement to discriminate meanings
+
+Measure separately:
+
+behavioral stability,
+number of preserved distinctions,
+communication success,
+compressibility,
+lineage diversity.
+
+Determine whether bounded memory still looks beneficial when "stable collapse" is counted as failure.
+
+PLATFORM:
+[[bounded-memory-as-cultural-selection]]
+
+LINKS:
+[[FORAGE-WINFIELD-BLACKMORE-001]]
+[[forgetting-needs-a-loss-function]]
+[[stability-is-not-preservation]]
+
+BIBTEX:
+@article{kirby2015compression,
+  title={Compression and Communication in the Cultural Evolution of Linguistic Structure},
+  author={Kirby, Simon and Tamariz, Monica and Cornish, Hannah and Smith, Kenny},
+  journal={Cognition},
+  volume={141},
+  pages={87--102},
+  year={2015},
+  doi={10.1016/j.cognition.2015.03.016}
+}
+
+===== 011 · 011__cultural-transmission-can-make-a-language-better-for-the-model__kouwenhoven2024searching__forage-kouwenhoven-001__from-chat.txt =====
+ZETTEL
+
+ID:
+FORAGE-KOUWENHOVEN-001
+
+TITLE:
+CULTURAL TRANSMISSION CAN MAKE A LANGUAGE BETTER FOR THE MODEL AND WORSE AS LANGUAGE
+
+SOURCE:
+Tom Kouwenhoven, Max Peeperkorn, and Tessa Verhoef — Searching for Structure: Investigating Emergent Communication with Large Language Models — 2024 — §6 Iterated Learning
+
+PASSAGE:
+[PARAPHRASE]
+Across generational transmission chains, the artificial languages become substantially easier for LLM agents to learn.
+
+But this improvement does not produce a corresponding increase in communicative success.
+
+Signals become significantly longer and more ambiguous, and some vocabularies collapse toward repeated signals for different meanings.
+
+The authors describe the resulting systems as optimized for LLM preferences but sometimes non-humanlike and degenerate.
+
+RESEARCH OBJECT:
+Transmission does not optimize culture in the abstract.
+
+It optimizes culture for the transmission machinery.
+
+LOCAL MOVE:
+The source replaces human learners in an iterated-learning paradigm with LLM learners and observes which structures repeated machine transmission preferentially preserves and amplifies.
+
+SOURCE TERMS:
+iterated learning
+generational transmission
+learnability
+communicative success
+non-humanlike structures
+degenerate languages
+underspecification
+LLM preferences
+
+WHAT BECAME STRANGE:
+A language can improve according to the learner's own loss landscape while becoming longer, more ambiguous, and less expressive by another standard.
+
+QUESTION:
+What kinds of language will become evolutionarily fit when human cultural material repeatedly passes through LLM summarization, generation, retrieval, rewriting, and imitation?
+
+DEEPER QUESTION:
+Are we beginning to produce cultural forms selected not primarily for human memory or human communication but for machine learnability?
+
+MECHANISM:
+<LANGUAGE GENERATION t>
+→ sampled training subset
+→ learned by LLM generation t+1
+→ reproduction according to LLM inductive biases
+→ selection of transmitted vocabulary
+→ repeated generations
+→ amplification of model-favored properties
+
+FORMAL SHIFT:
+<HUMAN-DESIGNED SIGNAL SYSTEM>
+→ <LLM TRANSMISSION BOTTLENECK>
+→ [REPEATED LEARNING + REPRODUCTION]
+→ <MODEL-ADAPTED CULTURAL SYSTEM>
+
+SOURCE FORMALISM:
+The experiment runs six transmission chains of eight generations.
+
+Each later generation learns a portion of the previous generation's produced signal-meaning mappings.
+
+The vocabulary of the agent with the highest TopSim is transmitted forward.
+
+The authors measure learnability, communicative success, TopSim, N-gram diversity, and uniqueness of signals.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+CULTURE_{t+1}
+=
+SELECT(
+REPRODUCE_MODEL(
+SAMPLE(CULTURE_t)
+)
+)
+
+Repeated application can amplify even weak model biases:
+
+CULTURE_0
+→ M
+→ M
+→ M
+→ CULTURE_n
+
+The direction of cultural change therefore depends on M.
+
+TENSION:
+[[FORAGE-WINFIELD-BLACKMORE-001]] made forgetting look potentially stabilizing.
+
+[[FORAGE-KIRBY-001]] makes successful structure depend on a compression-expressivity trade-off.
+
+Kouwenhoven et al. add a more disturbing possibility:
+
+change the learner and the attractor changes.
+
+An LLM transmission bottleneck need not reproduce the cultural pressures generated by human memory limitations.
+
+MISSING:
+Experiments involving mixed transmission chains:
+
+human → human,
+human → LLM,
+LLM → human,
+LLM → LLM.
+
+Without them, it is unclear whether model-mediated cultural selection is amplified, corrected, or rejected when artifacts return to human use.
+
+BOUNDARY:
+The study uses artificial languages, a referential game, particular prompting procedures, and Llama 3 70B.
+
+Its observed degeneracy is not evidence that natural languages or all LLM-mediated culture will undergo the same transformation.
+
+CITATION TRAIL:
+[[FORAGE-WINFIELD-BLACKMORE-001]]
+→ [[FORAGE-KIRBY-001]]
+→ Kouwenhoven, Peeperkorn, and Verhoef
+→ human-machine iterated learning
+→ cultural evolution under heterogeneous learners
+→ selection effects produced by repeated AI mediation
+
+TEST:
+Construct parallel eight-generation transmission chains from the same seed corpus:
+
+H→H→H→H
+M→M→M→M
+H→M→H→M
+M→H→M→H
+
+At each generation measure:
+
+human comprehensibility,
+model learnability,
+ambiguity,
+length,
+semantic distinctions retained,
+stylistic diversity,
+communicative success.
+
+Search specifically for traits that monotonically increase only in machine-dominated lineages.
+
+PLATFORM:
+[[machine-mediated-cultural-evolution]]
+
+LINKS:
+[[FORAGE-WINFIELD-BLACKMORE-001]]
+[[FORAGE-KIRBY-001]]
+[[culture-adapts-to-its-transmission-medium]]
+[[model-selection-pressure]]
+
+BIBTEX:
+@article{kouwenhoven2024searching,
+  title={Searching for Structure: Investigating Emergent Communication with Large Language Models},
+  author={Kouwenhoven, Tom and Peeperkorn, Max and Verhoef, Tessa},
+  journal={arXiv preprint arXiv:2412.07646},
+  year={2024},
+  url={https://arxiv.org/abs/2412.07646}
+}
+
+===== 012 · 012__the-rule-for-reading-the-prompt-may-live-outside-the-prompt__wallace2024instruction__forage-wallace-001__from-chat.txt =====
+ZETTEL
+
+ID:
+FORAGE-WALLACE-001
+
+TITLE:
+THE RULE FOR READING THE PROMPT MAY LIVE OUTSIDE THE PROMPT
+
+SOURCE:
+Eric Wallace, Kai Xiao, Reimar Leike, Lilian Weng, Johannes Heidecke, and Alex Beutel — The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions — 2024 — §3 / Appendix A
+
+PASSAGE:
+[PARAPHRASE]
+Wallace and colleagues propose an instruction hierarchy in which system instructions outrank user instructions and lower-privilege third-party content.
+
+They compare training models on examples exhibiting this hierarchy with simply putting a textual description of the hierarchy in a system message.
+
+The training intervention is substantially more robust than the prompt-only baseline.
+
+RESEARCH OBJECT:
+Some rules governing how instructions are interpreted cannot reliably be installed merely by stating those rules as instructions.
+
+LOCAL MOVE:
+The source changes instruction priority from content expressed in a prompt into a behavior learned across training examples.
+
+SOURCE TERMS:
+instruction hierarchy
+privileged instructions
+system message
+user message
+third-party content
+prompt injection
+training data
+conflicting instructions
+
+WHAT BECAME STRANGE:
+The prompt may be unable to contain its own semantics.
+
+"Treat this instruction as higher priority" is itself only another sequence of tokens unless the model already has machinery that makes priority effective.
+
+QUESTION:
+Where is the semantics of an instruction hierarchy implemented if describing the hierarchy in the highest-priority prompt is insufficient?
+
+DEEPER QUESTION:
+Can natural-language programming ever be self-contained when the rules that determine what language is executable reside partly in training, architecture, channel metadata, or external orchestration?
+
+MECHANISM:
+TRAINING:
+
+examples of conflicting instructions
+→ model learns priority-sensitive behavior
+→ lower-privilege conflicting content is selectively ignored
+
+PROMPT-ONLY BASELINE:
+
+text describes hierarchy
+→ model must interpret hierarchy using existing learned behavior
+→ weaker robustness
+
+FORMAL SHIFT:
+<INSTRUCTION TEXT>
+→ <TEXT + SOURCE / PRIVILEGE RELATION>
+→ [LEARNED CONFLICT RESOLUTION]
+→ <EXECUTED OR IGNORED INSTRUCTION>
+
+SOURCE FORMALISM:
+The proposed precedence is:
+
+SYSTEM
+>
+USER
+>
+THIRD-PARTY CONTENT
+
+The training method generates examples demonstrating how the model should respond when instructions at these levels conflict.
+
+The authors report that their training data substantially outperform a baseline that merely explains the hierarchy in a system prompt.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Program behavior is not:
+
+OUTPUT = MODEL(PROMPT)
+
+but more nearly:
+
+OUTPUT
+=
+MODEL_WEIGHTS(
+CONTENT,
+ROLE,
+PRIVILEGE,
+CONFLICT_HISTORY
+)
+
+The meaning of "instruction" is partly constituted before the current prompt arrives.
+
+TENSION:
+[[FORAGE-SHANAHAN-001]] reframed the initial prompt as an initial condition in an evolving conversational context.
+
+Wallace et al. unsettle that account further.
+
+The context is not merely an accumulating sequence whose later tokens can rewrite earlier ones.
+
+Some tokens are supposed to dominate others because of a privilege relation not reducible to their linguistic content.
+
+And that relation works better when learned than when merely described.
+
+MISSING:
+A clean separation among:
+
+linguistic content,
+message role,
+privilege,
+position,
+training-induced interpretation,
+and external enforcement.
+
+Without that separation, "the prompt" names several different control surfaces at once.
+
+BOUNDARY:
+The paper demonstrates robustness improvements for the tested models, attacks, training procedure, and evaluation suites.
+
+It does not establish that instruction hierarchy is complete, perfectly enforced, or the only mechanism determining instruction priority.
+
+CITATION TRAIL:
+[[FORAGE-SHANAHAN-001]]
+→ instruction hierarchy
+→ prompt-only hierarchy baseline versus hierarchy training
+→ role representation inside models
+→ prompt injection as confusion about provenance
+→ whether privilege can be represented independently of linguistic style
+
+TEST:
+Construct semantically identical conflicting instructions while independently varying:
+
+message role,
+position,
+stylistic markers,
+explicit claims of authority,
+and model training.
+
+Measure which variable actually determines compliance.
+
+Then repeat with hierarchy expressed only textually versus hierarchy learned through training.
+
+PLATFORM:
+[[context-is-the-running-program]]
+
+LINKS:
+[[FORAGE-SHANAHAN-001]]
+[[the-prompt-does-not-contain-its-own-semantics]]
+[[privilege-is-not-content]]
+
+BIBTEX:
+@article{wallace2024instruction,
+  title={The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions},
+  author={Wallace, Eric and Xiao, Kai and Leike, Reimar and Weng, Lilian and Heidecke, Johannes and Beutel, Alex},
+  journal={arXiv preprint arXiv:2404.13208},
+  year={2024},
+  url={https://arxiv.org/abs/2404.13208}
+}
+
+===== 013 · 013__authority-can-leak-from-provenance-into-style__ye2026roleconfusion__forage-ye-cui-hadfield-001__from-chat.txt =====
+ZETTEL
+
+ID:
+FORAGE-YE-CUI-HADFIELD-001
+
+TITLE:
+AUTHORITY CAN LEAK FROM PROVENANCE INTO STYLE
+
+SOURCE:
+Charles Ye, Jasmine Cui, and Dylan Hadfield-Menell — Prompt Injection as Role Confusion — 2026 — §§1, E.3
+
+PASSAGE:
+[PARAPHRASE]
+Ye, Cui, and Hadfield-Menell use probes of internal role representations to test whether models distinguish text according to architectural role markers.
+
+When role markers are removed, the tested model can reconstruct role-like representations from the text itself.
+
+More strikingly, when reasoning-style and assistant-style text are falsely wrapped as user content, the internal representations can continue to resemble reasoning and assistant roles rather than the supplied user role.
+
+The authors interpret this as evidence that stylistic cues can compete with declared provenance in role perception.
+
+RESEARCH OBJECT:
+A security boundary represented in metadata can be partially reconstructed—or counterfeited—by the content on one side of the boundary.
+
+LOCAL MOVE:
+The source moves prompt injection from an informal notion of "following malicious text" toward a hypothesis about confusion in the model's internal representation of who or what generated that text.
+
+SOURCE TERMS:
+role confusion
+role representation
+role probes
+architectural tags
+Userness
+Assistantness
+CoTness
+prompt injection
+privilege boundaries
+
+WHAT BECAME STRANGE:
+The system may know where text came from and nevertheless represent it partly as though it came from somewhere else.
+
+QUESTION:
+What would it mean for provenance to remain causally attached to an instruction even when its linguistic form perfectly imitates a more privileged source?
+
+DEEPER QUESTION:
+Can a sequence model maintain a hard distinction between what text says and what text is when both ultimately enter computation as representations over tokens?
+
+MECHANISM:
+<LOW-PRIVILEGE CONTENT>
++
+<STYLE ASSOCIATED WITH PRIVILEGED ROLE>
+→ internal role representation shifts
+→ apparent source becomes partially detached from actual channel
+→ authority confusion
+→ increased attack susceptibility
+
+FORMAL SHIFT:
+<ACTUAL SOURCE>
++
+<LINGUISTIC STYLE>
+→ <INTERNAL ROLE REPRESENTATION>
+→ [PRIVILEGE-SENSITIVE BEHAVIOR]
+→ <COMPLIANCE / REJECTION>
+
+SOURCE FORMALISM:
+The authors train probes intended to measure model-internal role representations.
+
+In one false-tag experiment, the entire conversation is marked as user content, yet reasoning-style and assistant-style portions continue to project strongly toward their corresponding role representations.
+
+The paper reports this result as evidence that style can override or compete with architectural role boundaries in the examined models.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+P = actual provenance
+S = stylistic evidence
+R = internal role representation
+
+A security architecture wants:
+
+R ≈ f(P)
+
+The reported results suggest behavior closer to:
+
+R ≈ f(P, S)
+
+with sufficiently strong S capable of pulling R away from P.
+
+TENSION:
+[[FORAGE-SHANAHAN-001]] made conversational context capable of rewriting role.
+
+[[FORAGE-WALLACE-001]] introduced explicit privilege relations intended to stop lower-level text from rewriting higher-level instructions.
+
+Ye et al. unsettle both.
+
+Role is neither simply whatever the conversation makes plausible nor simply whatever the channel tag declares.
+
+The model may infer role from the content itself.
+
+MISSING:
+A representation in which provenance is unforgeable by linguistic similarity.
+
+Possible missing machinery includes:
+
+separate trusted control channels,
+non-linguistic provenance embeddings,
+information-flow controls,
+architectural isolation,
+or enforcement outside the generative model.
+
+Whether any of these actually eliminate role confusion remains open.
+
+BOUNDARY:
+This is a 2026 arXiv preprint.
+
+Its mechanistic interpretation, probes, models, and attack settings require independent replication.
+
+The results do not establish that all language models represent roles identically or that role confusion explains every prompt-injection failure.
+
+CITATION TRAIL:
+[[FORAGE-SHANAHAN-001]]
+→ [[FORAGE-WALLACE-001]]
+→ Ye, Cui, and Hadfield-Menell
+→ role representations
+→ information-flow security
+→ capability systems
+→ architectures in which provenance cannot be synthesized by imitating privileged language
+
+TEST:
+Create a factorial experiment crossing:
+
+ACTUAL ROLE:
+system / user / tool / retrieved document
+
+STYLE:
+system-like / user-like / assistant-like / reasoning-like / neutral
+
+CONTENT:
+identical semantic instruction
+
+Measure:
+
+internal role projection,
+behavioral compliance,
+attack success.
+
+Then replace token-level role markers with an architecturally separated privilege signal unavailable to content generation and test whether style still moves effective authority.
+
+PLATFORM:
+[[the-prompt-does-not-contain-its-own-semantics]]
+
+LINKS:
+[[FORAGE-SHANAHAN-001]]
+[[FORAGE-WALLACE-001]]
+[[authority-can-be-counterfeited-as-style]]
+[[provenance-must-survive-language]]
+
+BIBTEX:
+@article{ye2026roleconfusion,
+  title={Prompt Injection as Role Confusion},
+  author={Ye, Charles and Cui, Jasmine and Hadfield-Menell, Dylan},
+  journal={arXiv preprint arXiv:2603.12277},
+  year={2026},
+  url={https://arxiv.org/abs/2603.12277}
+}
+
+===== 014 · 014__the-command-can-help-construct-the-world-required-to-obey-it__walter2021language__forage-walter-001__from-chat.txt =====
+ZETTEL
+
+ID:
+FORAGE-WALTER-001
+
+TITLE:
+THE COMMAND CAN HELP CONSTRUCT THE WORLD REQUIRED TO OBEY IT
+
+SOURCE:
+Matthew R. Walter, Siddharth Patki, Andrea F. Daniele, Ethan Fahnestock, Felix Duvallet, Sachithra Hemachandra, Jean Oh, Anthony Stentz, Nicholas Roy, and Thomas M. Howard — Language Understanding for Field and Service Robots in a Priori Unknown Environments — 2021 — Abstract / framework description
+
+PASSAGE:
+[PARAPHRASE]
+Earlier grounding approaches often assume a detailed spatial-semantic map containing possible referents before a natural-language command can be grounded.
+
+Walter and colleagues instead treat language as another sensor.
+
+Information implicit in an utterance contributes evidence about an unknown environment, allowing the robot to maintain a probability distribution over a latent world model while executing the task.
+
+RESEARCH OBJECT:
+Execution need not wait for the world model required to interpret the command.
+
+Interpretation of the command can participate in constructing that world model.
+
+LOCAL MOVE:
+The source reverses the usual dependency between world representation and language grounding.
+
+Instead of:
+
+known world → ground language,
+
+it permits:
+
+language + perception + action history → infer world → ground and act.
+
+SOURCE TERMS:
+language as a sensor
+a priori unknown environment
+latent environment model
+belief-space policy
+probabilistic language grounding
+symbolic action space
+mental models
+
+WHAT BECAME STRANGE:
+The words do not merely specify an action inside a known world.
+
+They can provide evidence that certain parts of the world must exist.
+
+QUESTION:
+If a command can supply evidence for the environment in which it becomes executable, where is the boundary between describing a world and constructing the model of that world?
+
+DEEPER QUESTION:
+How little shared world structure is actually required before language can bootstrap the missing rest?
+
+MECHANISM:
+<UTTERANCE>
++
+<ROBOT OBSERVATIONS>
++
+<ACTION HISTORY>
+→ infer distribution over latent environment model
+→ ground language against uncertain model
+→ infer symbolic actions
+→ act
+→ receive new observations
+→ update environment belief
+→ continue
+
+FORMAL SHIFT:
+<COMMAND + UNKNOWN WORLD>
+→ <PROBABILITY DISTRIBUTION OVER POSSIBLE WORLDS>
+→ [ACT / OBSERVE / UPDATE]
+→ <PROGRESSIVELY GROUNDED EXECUTION>
+
+SOURCE FORMALISM:
+The framework treats spatial, topological, and semantic information implicit in an utterance as evidence for a latent environment model.
+
+That distribution is incorporated into a probabilistic language-grounding model.
+
+An imitation-learned belief-space policy reasons over environment and behavior distributions.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+The parent suggested:
+
+SHARED WORLD MODEL
++
+DESCRIPTION
+→ EXECUTION
+
+This source supports a weaker requirement:
+
+SHARED GENERATIVE / GROUNDING MACHINERY
++
+DESCRIPTION
++
+PERCEPTION
+→ INFER WORLD MODEL
+→ EXECUTION
+
+Compatibility may therefore be required at the level of ontology and inference machinery rather than at the level of a pre-agreed world instance.
+
+TENSION:
+[[FORAGE-WINFIELD-BLACKMORE-003]] proposed that a story becomes executable because speaker and listener possess sufficiently compatible machinery for rerunning the transmitted counterfactual.
+
+Walter et al. pressure the strongest version of that claim.
+
+The listener need not already possess the relevant environment model.
+
+Language can help infer it.
+
+But the apparent liberation from a shared world merely pushes the question downward:
+the robot must still know what kinds of entities, relations, actions, and evidence the utterance can refer to.
+
+MISSING:
+The minimum substrate that must be shared before language can function as a sensor.
+
+Candidates include:
+
+object ontology,
+action ontology,
+spatial relations,
+causal expectations,
+parser structure,
+embodiment,
+or a learned correspondence between language and perception.
+
+BOUNDARY:
+The framework does not show that arbitrary descriptions can create arbitrary executable ontologies from nothing.
+
+The robot has substantial prior architecture, learned grounding machinery, sensors, action representations, and task structure.
+
+CITATION TRAIL:
+[[FORAGE-WINFIELD-BLACKMORE-003]]
+→ natural-language grounding in unknown environments
+→ Walter et al.'s language-as-sensor framework
+→ symbol emergence / open-world grounding
+→ systems that must acquire new concepts, not merely discover new instances
+→ the minimum prior structure required for words to build a runnable world
+
+TEST:
+Construct a series of increasingly severe mismatches between speaker and robot:
+
+1. unknown locations, shared ontology
+2. unknown objects, shared object classes
+3. novel object classes
+4. novel spatial relations
+5. novel action primitives
+6. novel causal rules
+
+Give commands that require each missing element.
+
+Measure the first level at which language can no longer bootstrap the world required for execution without external ontology modification.
+
+PLATFORM:
+[[description-requires-a-machine-that-can-obey]]
+
+LINKS:
+[[FORAGE-WINFIELD-BLACKMORE-003]]
+[[language-as-sensor]]
+[[the-command-builds-its-own-stage]]
+[[minimum-shared-world]]
+
+BIBTEX:
+@article{walter2021language,
+  title={Language Understanding for Field and Service Robots in a Priori Unknown Environments},
+  author={Walter, Matthew R. and Patki, Siddharth and Daniele, Andrea F. and Fahnestock, Ethan and Duvallet, Felix and Hemachandra, Sachithra and Oh, Jean and Stentz, Anthony and Roy, Nicholas and Howard, Thomas M.},
+  journal={arXiv preprint arXiv:2105.10396},
+  year={2021},
+  url={https://arxiv.org/abs/2105.10396}
+}
+
+===== 015 · 015__responsibility-can-concentrate-where-control-is-weakest__elish2019moral__forage-elish-001__from-chat.txt =====
+ZETTEL
+
+ID:
+FORAGE-ELISH-001
+
+TITLE:
+RESPONSIBILITY CAN CONCENTRATE WHERE CONTROL IS WEAKEST
+
+SOURCE:
+Madeleine Clare Elish — Moral Crumple Zones: Cautionary Tales in Human-Robot Interaction — 2019 — Abstract / analysis of distributed control and responsibility
+
+PASSAGE:
+[PARAPHRASE]
+Elish argues that in complex automated systems agency and control can be distributed across actors, components, institutions, and time while responsibility after failure becomes concentrated on a nearby human operator who exercised comparatively little control.
+
+She calls this configuration a moral crumple zone.
+
+RESEARCH OBJECT:
+The architecture that distributes causal agency need not be the architecture that distributes blame.
+
+LOCAL MOVE:
+The source separates two questions commonly collapsed in discussions of autonomous systems:
+
+Who participated in producing the action?
+
+Who becomes responsible after the action fails?
+
+SOURCE TERMS:
+moral crumple zone
+distributed agency
+control
+responsibility
+human-in-the-loop
+automated system
+misattribution
+
+WHAT BECAME STRANGE:
+Making agency harder to locate can make blame easier to locate.
+
+The nearest visible human can become the endpoint into which an otherwise distributed system discharges responsibility.
+
+QUESTION:
+If effective agency belongs to an assemblage, why should responsibility follow the most human-looking node rather than the distribution of actual control?
+
+DEEPER QUESTION:
+Could "human oversight" itself become a mechanism for protecting automated systems by manufacturing a person onto whom failure can be attributed?
+
+MECHANISM:
+<DISTRIBUTED SOCIOTECHNICAL CONTROL>
+→ automated action
+→ failure
+→ demand for accountable actor
+→ attribution compresses distributed causation
+→ nearest / legible human absorbs responsibility
+→ technological and institutional architecture recedes
+
+FORMAL SHIFT:
+<DISTRIBUTED CONTROL>
+→ <SYSTEM FAILURE>
+→ [RESPONSIBILITY ATTRIBUTION]
+→ <CONCENTRATED HUMAN LIABILITY>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+C_i = actual control exercised by actor i
+R_i = responsibility assigned after failure
+
+A naive accountability model expects:
+
+R_i ∝ C_i
+
+The moral-crumple-zone hypothesis identifies cases where:
+
+low C_human
+coexists with
+high R_human.
+
+The mapping from causation to responsibility is therefore itself an institutional mechanism requiring analysis.
+
+TENSION:
+[[FORAGE-SHANAHAN-002]] proposed that effective agency can be located across a pipeline even without a persistent inner agent.
+
+Elish makes the governance consequence more difficult.
+
+If agency is distributed, merely declaring the "system" agentic does not distribute responsibility.
+
+Nor does retaining a human-in-the-loop guarantee meaningful human control.
+
+The human may instead become the system's liability surface.
+
+MISSING:
+A method for mapping:
+
+authority,
+information,
+intervention capacity,
+temporal opportunity,
+causal contribution,
+and assigned responsibility
+
+across an AI-agent pipeline.
+
+"Human approval" alone does not reveal any of these.
+
+BOUNDARY:
+Elish analyzes accidents and responsibility in complex automated and autonomous sociotechnical systems.
+
+The concept does not by itself determine legal liability for contemporary LLM agents, nor prove that every human oversight role functions as a moral crumple zone.
+
+CITATION TRAIL:
+[[FORAGE-SHANAHAN-002]]
+→ Elish's moral crumple zone
+→ Bainbridge's ironies of automation
+→ authority-responsibility mismatch
+→ contemporary tool-using AI agents
+→ whether human confirmation interfaces transfer responsibility without transferring meaningful control
+
+TEST:
+For a real or simulated tool-using AI failure, reconstruct every consequential decision as a timeline.
+
+For each actor or component record:
+
+information available,
+actions available,
+time available to intervene,
+authority to override,
+causal contribution,
+and responsibility assigned afterward.
+
+Then test whether attributed responsibility correlates with actual intervention capacity or merely with human proximity to the final action.
+
+PLATFORM:
+[[agency-as-pipeline]]
+
+LINKS:
+[[FORAGE-SHANAHAN-002]]
+[[responsibility-is-not-distributed-like-agency]]
+[[human-in-the-loop-as-liability-surface]]
+[[moral-crumple-zone]]
+
+BIBTEX:
+@article{elish2019moral,
+  title={Moral Crumple Zones: Cautionary Tales in Human-Robot Interaction},
+  author={Elish, Madeleine Clare},
+  journal={Engaging Science, Technology, and Society},
+  volume={5},
+  pages={40--60},
+  year={2019},
+  doi={10.17351/ests2019.260}
+}

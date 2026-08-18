@@ -1,0 +1,118 @@
+ZETTEL
+
+ID:
+Z-HOUSE-LANG-001-N
+
+TITLE:
+THE ARTIFACT BECOMES AN INTERLOCUTOR WHEN MAKING REVEALS WHERE THE WORK WANTS TO GO NEXT
+
+SOURCE:
+Tim Ingold — Making: Anthropology, Archaeology, Art and Architecture — 2013 — Preface, p. xi.
+
+SOURCE URL:
+https://www.routledge.com/Making-Anthropology-Archaeology-Art-and-Architecture/Ingold/p/book/9780415567237
+
+PASSAGE:
+[QUOTE] “the book was already telling me what to write rather than the other way around.”
+
+RESEARCH OBJECT:
+Ingold gives an autobiographical miniature of THE ARTIFACT BECOMES SPECIFICATION.
+
+As the work acquires form, the maker encounters tendencies, openings and demands that were not simply transmitted from an original intention. The produced artifact begins to condition its own continuation.
+
+LOCAL MOVE:
+Ingold uses his own writing process to introduce the book’s larger thesis: making is a correspondence between maker and material rather than unilateral imposition of prior form.
+
+SOURCE TERMS:
+thinking through making
+growth
+telling
+follow
+correspondence
+maker
+material
+
+WHAT BECAME STRANGE:
+The phrase ARTIFACT BECOMES SPECIFICATION may still be too static.
+
+Ingold suggests:
+ARTIFACT BECOMES CORRESPONDENT.
+
+The developing thing does not merely accumulate constraints. It gives the maker something to answer to.
+
+QUESTION:
+What does it mean, computationally rather than metaphorically, for an artifact to “tell” its maker where to go next?
+
+DEEPER QUESTION:
+Can we identify the observable signals through which a provisional artifact reorganizes the maker’s intentions?
+
+MECHANISM:
+initial intention
+→ partial artifact
+→ emergent relation / anomaly / opportunity
+→ maker notices
+→ intention changes
+→ artifact changes
+→ new relation appears.
+
+FORMAL SHIFT:
+<ARTIFACT AS OUTPUT>
+→ <ARTIFACT AS PERCEPTIBLE SITUATION>
+→ [NOTICE + ANSWER]
+→ <ARTIFACT AS PARTICIPANT IN ITS OWN CONTINUATION>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+I₀ = initial intention.
+A₁ = GENERATE(I₀).
+Observation of A₁ produces ΔI₁ = distinctions made perceptible by A₁.
+Then I₁ = I₀ + ΔI₁ and A₂ = GENERATE(I₁).
+
+The important term is ΔI: information about what is wanted that becomes available only because the artifact now exists.
+
+TENSION:
+“The book tells me what to write” is intentionally figurative language. It must not be converted without argument into a claim that artifacts literally possess intentions or agency.
+
+A weaker and testable reading is sufficient: artifacts alter the perceptual field from which the maker forms the next intention.
+
+MISSING:
+A method for extracting ΔI. What exactly did the maker learn from the artifact that was unavailable beforehand? Was it a failure, affordance, analogy, conflict, emergent pattern, aesthetic preference, or entirely new goal?
+
+BOUNDARY:
+Ingold’s statement is autobiographical and philosophical, not a computational mechanism. The formalization above is ours.
+
+CITATION TRAIL:
+Donald Schön — reflection-in-action / back-talk.
+Tim Ingold — correspondence.
+Output-directed programming.
+Human-in-the-loop generative systems.
+Design rationale.
+
+TEST:
+Before generation, require the maker to state everything currently known about the desired artifact.
+
+After each generated version, require them to record only genuinely NEW distinctions elicited by seeing the artifact. Classify each ΔI.
+
+If important constraints repeatedly originate after artifact production rather than merely being remembered after it, then the artifact demonstrably participates in specification formation.
+
+PLATFORM:
+[[THE PROMPT IS NOT THE PROGRAM]]
+
+LINKS:
+[[THE ARTIFACT BECOMES SPECIFICATION]]
+[[CORRESPONDENCE]]
+[[EMERGENT SPECIFICATION]]
+
+BIBTEX:
+@book{ingold2013making,
+  author    = {Ingold, Tim},
+  title     = {Making: Anthropology, Archaeology, Art and Architecture},
+  publisher = {Routledge},
+  address   = {London},
+  year      = {2013},
+  isbn      = {9780415567237}
+}

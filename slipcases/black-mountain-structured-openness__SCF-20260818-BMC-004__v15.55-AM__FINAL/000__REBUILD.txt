@@ -1,0 +1,52 @@
+THIS PUBLICATION CAN BE REBUILT.
+
+CHECKPOINT: SCF-20260818-BMC-004
+SCHEMA: ANCIENT MASTER / SLIPCASE v15.55-AM
+
+INPUT EVIDENCE
+- All numbered root zettel .txt files are canonical immutable payloads.
+- _MD/ mirrors must match them byte-for-byte.
+- _RESOURCES/ contains available source bodies, link-only verification receipts, and preserved prior derived artifacts.
+- _PROMPTS/ contains consequential prompts including the exact v15.55-AM assembly instrument.
+
+IDENTITY
+- Compute SHA-256 from exact card payload bytes.
+- Do not merge by filename, display order, title, original ID, or citekey.
+
+RELATIONS
+- Parse every [[ADDRESS]] in every field.
+- PLATFORM → MEMBER_OF. LINKS → LINKS_TO. Other occurrences → WIKILINKS_TO.
+- Resolve exact ID → alias → exact unique title/name → platform → concept → explicit external → ghost. Never fuzzy-match silently.
+- Derive backlinks without editing cards.
+
+CITATIONS
+- Parse BIBTEX blocks from cards.
+- Preserve raw entries and expose conflicts rather than inventing repairs.
+- Paper citekeys must be a subset of compiled bibliography keys.
+
+DERIVED VIEWS
+- Regenerate INDEX, MAP, OPEN_EDGES, MOCs, arrangements, NETWORK, READER, CARDS, bibliography, machine state, and index.html from cards + registered resources.
+
+PAPER
+- Current paper: the-open-system-has-a-body__2026-08-18.tex / .pdf.
+- Claim-to-evidence map: the-open-system-has-a-body__SOURCE_MAP.txt.
+- Paper is derived and may be rewritten; zettels are not.
+
+ASSEMBLY INSTRUMENT
+- File: _PROMPTS/ANCIENT_MASTER_SLIPCASE_v15.55-AM.xml
+- SHA-256: a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a
+- Exact body must also be embedded in index.html.
+
+VERIFY
+- root cards = _MD mirrors = JSON records
+- PLATFORM occurrences = MEMBER_OF native records
+- LINKS occurrences = LINKS_TO native records
+- all [[ADDRESSES]] = native classified relation records
+- paper citekeys ⊆ bibliography citekeys
+- assembly prompt hash matches this record
+- compile + render PDF and test ZIP integrity
+
+PACKAGE
+- Keep all root cards immediately visible.
+- Preserve missing/unavailable states.
+- Create a new immutable checkpoint rather than overwriting this one.

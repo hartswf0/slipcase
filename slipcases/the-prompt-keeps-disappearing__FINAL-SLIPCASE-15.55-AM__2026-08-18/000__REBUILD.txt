@@ -1,0 +1,13 @@
+REBUILD — SLIPCASE-20260818-UNIT-01
+
+1. Read 000__RETURN_PATH.txt and 000__MAKING_HISTORY.txt.
+2. Treat every numbered root zettel TXT as immutable evidence.
+3. Verify each _MD mirror equals its root payload byte-for-byte.
+4. Do not treat prior papers/MOCs/arrangements as evidence.
+5. Compile what-counts-as-the-prompt__WIP-v15-a5ef0e2e3e__20260818T003241-0400.tex with biber using SLIPCASE-20260818-UNIT-01__references.bib.
+6. Render PDF to images and inspect title page, body, references, and appendix.
+7. Rebuild index.html with all exact payloads, open edges, prompts, bibliography, current paper, source map, and verification state embedded.
+8. Recompute _SLIPCASE/MANIFEST.json.
+9. Create ZIP and run unzip -t.
+
+If later evidence defeats the unit-of-analysis wager, preserve this paper as prior interpretation and write a new one. Never rewrite the zettels to protect the paper.

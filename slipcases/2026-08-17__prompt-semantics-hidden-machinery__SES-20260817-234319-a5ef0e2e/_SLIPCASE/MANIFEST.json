@@ -1,0 +1,552 @@
+{
+  "checkpoint": "SES-20260817-234319-a5ef0e2e",
+  "package": "2026-08-17__prompt-semantics-hidden-machinery__SES-20260817-234319-a5ef0e2e",
+  "schema": "SLIPCASE v15.55-AM",
+  "date": "2026-08-17",
+  "identity_rule": "zettel machine identity = SHA-256 of exact immutable payload",
+  "manifest_exclusions": [
+    "index.html (embeds manifest; self-reference)",
+    "_SLIPCASE/MANIFEST.json (self)",
+    "_SLIPCASE/rebuild-test.txt (generated after manifest-driven validator)"
+  ],
+  "input_hashes": {
+    "slipcase_prompt": "a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a",
+    "forage_prompt": "ca2c82d04a1b082de12a1ac6f7d56984d6d435bab7d9a6fc044893a61e239d4e",
+    "platform_csv": "7dc084c12811558a5134419a46bdea76f837f80a3d96e21127b66747c7d5a8ab"
+  },
+  "counts": {
+    "zettels": 15,
+    "platform_appearances": 788,
+    "unique_platform_ids": 740,
+    "colliding_platform_ids": 44,
+    "source_clusters": 147,
+    "nodes": 1001,
+    "relations_including_backlinks": 973,
+    "ghost_nodes": 30,
+    "bib_citekeys": 11
+  },
+  "zettels": [
+    {
+      "original_id": "FORAGE-HARDT-VILJOEN-001",
+      "sha256": "35189ad53c4c840627b37854474515a2bd2adb5b246ee48b3bf7e805e6d607bc",
+      "filename": "001__measuring-platform-power-can-require-assuming-away-relational__hardt2022performative__forage-hardt-viljoen-001__from-chat.txt",
+      "order": 1
+    },
+    {
+      "original_id": "FORAGE-HARDT-VILJOEN-002",
+      "sha256": "2eb3905a94483cd9a5e2346493ba92b212233c7d78a1e20bbaef96991f1315f6",
+      "filename": "002__personalization-may-be-the-actuator-of-population-power__hardt2022performative__forage-hardt-viljoen-002__from-chat.txt",
+      "order": 2
+    },
+    {
+      "original_id": "FORAGE-WINFIELD-BLACKMORE-001",
+      "sha256": "15a9efd1ada0d0d1d4d270d916f7736405a5228cbece42d62dccfa33f6f61663",
+      "filename": "003__forgetting-can-stabilize-culture__winfield2022artificialculture__forage-winfield-blackmore-001__from-chat.txt",
+      "order": 3
+    },
+    {
+      "original_id": "FORAGE-WINFIELD-BLACKMORE-002",
+      "sha256": "f6008b0af3e6cf750856bbd787888985cd3f33e32c469a335edd11e73602e7b9",
+      "filename": "004__novelty-can-begin-as-a-bad-copy-that-later-becomes-a-good-copy__winfield2022artificialculture__forage-winfield-blackmore-002__from-chat.txt",
+      "order": 4
+    },
+    {
+      "original_id": "FORAGE-SHANAHAN-001",
+      "sha256": "6320d90067a3851b5558428c1276a59e82eb54b22eb59d15bdaa773533b4dc74",
+      "filename": "005__the-prompt-does-not-fix-the-role-the-conversation-rewrites-it__shanahan2023roleplay__forage-shanahan-001__from-chat.txt",
+      "order": 5
+    },
+    {
+      "original_id": "FORAGE-SHANAHAN-002",
+      "sha256": "11ab1a399ec0cb74ac3c9dedd0d1705d93d3e3c3c556fb164b2b67b7ee64d09c",
+      "filename": "006__a-system-can-enact-agency-without-containing-an-agent__shanahan2023roleplay__forage-shanahan-002__from-chat.txt",
+      "order": 6
+    },
+    {
+      "original_id": "FORAGE-WINFIELD-BLACKMORE-003",
+      "sha256": "af54a5f54d3011c16ec2c1a31c78729fa5f134981744d820d2a56eac7a772438",
+      "filename": "007__a-story-becomes-executable-when-another-body-can-run-its-count__winfield2022artificialculture__forage-winfield-blackmore-003__from-chat.txt",
+      "order": 7
+    },
+    {
+      "original_id": "FORAGE-HUDGENS-HALLORAN-001",
+      "sha256": "143d8c607851a7a23f4a6381d3a3ebe548c0725223e385c1acea0941c323d807",
+      "filename": "008__relational-power-becomes-identifiable-only-after-relations-are__hudgens2008interference__forage-hudgens-halloran-001__from-chat.txt",
+      "order": 8
+    },
+    {
+      "original_id": "FORAGE-HUDGENS-HALLORAN-002",
+      "sha256": "6e33d85e62e1c33529c854ac25d92eb22f249e0d78c2c8e210ffae16d22b1cdc",
+      "filename": "009__the-indirect-effect-can-be-larger-than-the-direct-effect-and-s__hudgens2008interference__forage-hudgens-halloran-002__from-chat.txt",
+      "order": 9
+    },
+    {
+      "original_id": "FORAGE-KIRBY-001",
+      "sha256": "8445e18d5b160ed92e5c1e32d1c5ff9af41f5de8629734d0904d0224fc228ede",
+      "filename": "010__forgetting-does-not-produce-structure-unless-something-also-pu__kirby2015compression__forage-kirby-001__from-chat.txt",
+      "order": 10
+    },
+    {
+      "original_id": "FORAGE-KOUWENHOVEN-001",
+      "sha256": "8e74161189b914c63d7d32c8b4710343eb588c0150ff7ef44ad5499015532305",
+      "filename": "011__cultural-transmission-can-make-a-language-better-for-the-model__kouwenhoven2024searching__forage-kouwenhoven-001__from-chat.txt",
+      "order": 11
+    },
+    {
+      "original_id": "FORAGE-WALLACE-001",
+      "sha256": "d165dbcd2dc4f24eaaa988071c6bc7bb7bc7286b527104b0eca7b79dac619113",
+      "filename": "012__the-rule-for-reading-the-prompt-may-live-outside-the-prompt__wallace2024instruction__forage-wallace-001__from-chat.txt",
+      "order": 12
+    },
+    {
+      "original_id": "FORAGE-YE-CUI-HADFIELD-001",
+      "sha256": "cac375d1f3556a0e07f0f693095a54bd87bdf58e1dbbed3d31a833a93f1cd7c4",
+      "filename": "013__authority-can-leak-from-provenance-into-style__ye2026roleconfusion__forage-ye-cui-hadfield-001__from-chat.txt",
+      "order": 13
+    },
+    {
+      "original_id": "FORAGE-WALTER-001",
+      "sha256": "c26e0c9242c876c2cf2b7515d30ef1edf8ad1a4ebe9f324f893c7c3147294945",
+      "filename": "014__the-command-can-help-construct-the-world-required-to-obey-it__walter2021language__forage-walter-001__from-chat.txt",
+      "order": 14
+    },
+    {
+      "original_id": "FORAGE-ELISH-001",
+      "sha256": "9e1a924bc092988bc305a502ae4e803d0cd703af501da42d68d5e4fad7922767",
+      "filename": "015__responsibility-can-concentrate-where-control-is-weakest__elish2019moral__forage-elish-001__from-chat.txt",
+      "order": 15
+    }
+  ],
+  "files": [
+    {
+      "path": "000__BIBLIOGRAPHY.html",
+      "bytes": 5852,
+      "sha256": "5f3bbe7c9f532e3c635c5eec41938e05522cdfc7e8fe1b0d44df18dfc627a817"
+    },
+    {
+      "path": "000__BIBLIOGRAPHY.txt",
+      "bytes": 6647,
+      "sha256": "f6e6644bda1c812caff27bfc4253c609e474df3dae7a95ca28bf326f4f0fbe4d"
+    },
+    {
+      "path": "000__INDEX.txt",
+      "bytes": 4256,
+      "sha256": "5102a43986ff9501ca3c46e080c01d81e0b94af0f72131af89331a9cc51e4199"
+    },
+    {
+      "path": "000__MAKING_HISTORY.txt",
+      "bytes": 1312,
+      "sha256": "a8b77e7a60de6c6c9e3d8957a927918c096cfbe45342d00a57fe2fc09ae3ba62"
+    },
+    {
+      "path": "000__MAP.txt",
+      "bytes": 1492,
+      "sha256": "f0b7ba595449ce7b4cf3b5b4762ba4bc01d52c75c403a097753a14fbd353a40e"
+    },
+    {
+      "path": "000__OPEN_EDGES.txt",
+      "bytes": 5116,
+      "sha256": "97dc942bea4614df86e2492293dba2610a03db2ed0897acf43fd7875a3e5dd21"
+    },
+    {
+      "path": "000__PROMPTS.txt",
+      "bytes": 435,
+      "sha256": "16bd6402f89fef7b5e5d7558a191c6036c4ac32cf40bc2ae9f3e0828dc0ce305"
+    },
+    {
+      "path": "000__REBUILD.txt",
+      "bytes": 1204,
+      "sha256": "024128e1fa1db186f7fa6db662a28357124f989570b4ad6096ab995eab66593f"
+    },
+    {
+      "path": "000__RESOURCES.txt",
+      "bytes": 1135,
+      "sha256": "0a922ee5724baaa5651db7c0e26115ec75893fe7ebbf162d1caa6a667a389c80"
+    },
+    {
+      "path": "000__RETURN_PATH.txt",
+      "bytes": 887,
+      "sha256": "5c1febd701e5948453a67a69d9d4d32bc3e7bab2594aca07d718929275b2e23d"
+    },
+    {
+      "path": "000__START_HERE.txt",
+      "bytes": 826,
+      "sha256": "7ca85a21579bfad8556a8e11b4fec83922c8f27d7d798b36dcf8a38328756fd1"
+    },
+    {
+      "path": "001__measuring-platform-power-can-require-assuming-away-relational__hardt2022performative__forage-hardt-viljoen-001__from-chat.txt",
+      "bytes": 4731,
+      "sha256": "35189ad53c4c840627b37854474515a2bd2adb5b246ee48b3bf7e805e6d607bc"
+    },
+    {
+      "path": "002__personalization-may-be-the-actuator-of-population-power__hardt2022performative__forage-hardt-viljoen-002__from-chat.txt",
+      "bytes": 4202,
+      "sha256": "2eb3905a94483cd9a5e2346493ba92b212233c7d78a1e20bbaef96991f1315f6"
+    },
+    {
+      "path": "003__forgetting-can-stabilize-culture__winfield2022artificialculture__forage-winfield-blackmore-001__from-chat.txt",
+      "bytes": 3620,
+      "sha256": "15a9efd1ada0d0d1d4d270d916f7736405a5228cbece42d62dccfa33f6f61663"
+    },
+    {
+      "path": "004__novelty-can-begin-as-a-bad-copy-that-later-becomes-a-good-copy__winfield2022artificialculture__forage-winfield-blackmore-002__from-chat.txt",
+      "bytes": 3672,
+      "sha256": "f6008b0af3e6cf750856bbd787888985cd3f33e32c469a335edd11e73602e7b9"
+    },
+    {
+      "path": "005__the-prompt-does-not-fix-the-role-the-conversation-rewrites-it__shanahan2023roleplay__forage-shanahan-001__from-chat.txt",
+      "bytes": 3640,
+      "sha256": "6320d90067a3851b5558428c1276a59e82eb54b22eb59d15bdaa773533b4dc74"
+    },
+    {
+      "path": "006__a-system-can-enact-agency-without-containing-an-agent__shanahan2023roleplay__forage-shanahan-002__from-chat.txt",
+      "bytes": 3689,
+      "sha256": "11ab1a399ec0cb74ac3c9dedd0d1705d93d3e3c3c556fb164b2b67b7ee64d09c"
+    },
+    {
+      "path": "007__a-story-becomes-executable-when-another-body-can-run-its-count__winfield2022artificialculture__forage-winfield-blackmore-003__from-chat.txt",
+      "bytes": 4501,
+      "sha256": "af54a5f54d3011c16ec2c1a31c78729fa5f134981744d820d2a56eac7a772438"
+    },
+    {
+      "path": "008__relational-power-becomes-identifiable-only-after-relations-are__hudgens2008interference__forage-hudgens-halloran-001__from-chat.txt",
+      "bytes": 4913,
+      "sha256": "143d8c607851a7a23f4a6381d3a3ebe548c0725223e385c1acea0941c323d807"
+    },
+    {
+      "path": "009__the-indirect-effect-can-be-larger-than-the-direct-effect-and-s__hudgens2008interference__forage-hudgens-halloran-002__from-chat.txt",
+      "bytes": 5094,
+      "sha256": "6e33d85e62e1c33529c854ac25d92eb22f249e0d78c2c8e210ffae16d22b1cdc"
+    },
+    {
+      "path": "010__forgetting-does-not-produce-structure-unless-something-also-pu__kirby2015compression__forage-kirby-001__from-chat.txt",
+      "bytes": 4536,
+      "sha256": "8445e18d5b160ed92e5c1e32d1c5ff9af41f5de8629734d0904d0224fc228ede"
+    },
+    {
+      "path": "011__cultural-transmission-can-make-a-language-better-for-the-model__kouwenhoven2024searching__forage-kouwenhoven-001__from-chat.txt",
+      "bytes": 4988,
+      "sha256": "8e74161189b914c63d7d32c8b4710343eb588c0150ff7ef44ad5499015532305"
+    },
+    {
+      "path": "012__the-rule-for-reading-the-prompt-may-live-outside-the-prompt__wallace2024instruction__forage-wallace-001__from-chat.txt",
+      "bytes": 4970,
+      "sha256": "d165dbcd2dc4f24eaaa988071c6bc7bb7bc7286b527104b0eca7b79dac619113"
+    },
+    {
+      "path": "013__authority-can-leak-from-provenance-into-style__ye2026roleconfusion__forage-ye-cui-hadfield-001__from-chat.txt",
+      "bytes": 5284,
+      "sha256": "cac375d1f3556a0e07f0f693095a54bd87bdf58e1dbbed3d31a833a93f1cd7c4"
+    },
+    {
+      "path": "014__the-command-can-help-construct-the-world-required-to-obey-it__walter2021language__forage-walter-001__from-chat.txt",
+      "bytes": 5661,
+      "sha256": "c26e0c9242c876c2cf2b7515d30ef1edf8ad1a4ebe9f324f893c7c3147294945"
+    },
+    {
+      "path": "015__responsibility-can-concentrate-where-control-is-weakest__elish2019moral__forage-elish-001__from-chat.txt",
+      "bytes": 4570,
+      "sha256": "9e1a924bc092988bc305a502ae4e803d0cd703af501da42d68d5e4fad7922767"
+    },
+    {
+      "path": "CARDS.html",
+      "bytes": 19737,
+      "sha256": "05541bbcc6b459b0c587c0f1ce1f5ee0649d06cb717ccb2ea9f3f0a258ff2bca"
+    },
+    {
+      "path": "MARK.svg",
+      "bytes": 437,
+      "sha256": "853221dcf702ed5db51bbcc94d5aff632f431bcb1298682e39ebb972d05eda2f"
+    },
+    {
+      "path": "NETWORK.html",
+      "bytes": 492524,
+      "sha256": "d02a03d945b0317c96138aa28b266c6b6757cbe39d0b099194839a3863f67079"
+    },
+    {
+      "path": "NETWORK.svg",
+      "bytes": 121555,
+      "sha256": "b67660f3f184575fe0b39ee3b873418f5021175f8bb4db77211d3de0daa646d5"
+    },
+    {
+      "path": "READER.html",
+      "bytes": 1733049,
+      "sha256": "09015ecc47e7de0ed86e16e75caaa32cea8bceaf269fc80f3ad888297e262e1a"
+    },
+    {
+      "path": "SES-20260817-234319-a5ef0e2e__references.bib",
+      "bytes": 3590,
+      "sha256": "e6c62c1b1089fcea47b0ee36a922fad291ea498a79b486634da39ab78873debc"
+    },
+    {
+      "path": "ZETTELS.json",
+      "bytes": 82329,
+      "sha256": "7e2119a83d72d08ea2b0081051b551195b2afc962a6c7d57169c681c1505d7ea"
+    },
+    {
+      "path": "ZETTELS.jsonl",
+      "bytes": 79437,
+      "sha256": "344c92822431f56aae949ed1dc71e1f8fe6dfaca46b98d549343f6a357d1523e"
+    },
+    {
+      "path": "ZETTELS.txt",
+      "bytes": 70272,
+      "sha256": "8f75e1ffcd9223e35dfaa231cd8e7a6b64a0e991f531eb7fb86c8b69230ed59a"
+    },
+    {
+      "path": "_ARRANGEMENTS/01__instruction-to-execution.path.txt",
+      "bytes": 179,
+      "sha256": "da8a83dd940702192c77f4a716effaa2f11b9fdfe22a63f776557db1bb01ea8e"
+    },
+    {
+      "path": "_ARRANGEMENTS/02__interference-to-estimation.path.txt",
+      "bytes": 130,
+      "sha256": "d0d7c07eb3e7430012ec131485f745874dd48f9bc6bd9d6294e0fa34fac6179b"
+    },
+    {
+      "path": "_ARRANGEMENTS/03__memory-to-machine-culture.path.txt",
+      "bytes": 119,
+      "sha256": "65a6ee6bfbe0ba8a390b7b36ff162929bf0f1d2770a58837f4694990375733f3"
+    },
+    {
+      "path": "_ARRANGEMENTS/04__agency-to-liability.path.txt",
+      "bytes": 78,
+      "sha256": "7818704708e137bb9629254c84c642cee6c39436525a554a6e5d1ff9b20af6fc"
+    },
+    {
+      "path": "_MD/001__measuring-platform-power-can-require-assuming-away-relational__hardt2022performative__forage-hardt-viljoen-001__from-chat.md",
+      "bytes": 4731,
+      "sha256": "35189ad53c4c840627b37854474515a2bd2adb5b246ee48b3bf7e805e6d607bc"
+    },
+    {
+      "path": "_MD/002__personalization-may-be-the-actuator-of-population-power__hardt2022performative__forage-hardt-viljoen-002__from-chat.md",
+      "bytes": 4202,
+      "sha256": "2eb3905a94483cd9a5e2346493ba92b212233c7d78a1e20bbaef96991f1315f6"
+    },
+    {
+      "path": "_MD/003__forgetting-can-stabilize-culture__winfield2022artificialculture__forage-winfield-blackmore-001__from-chat.md",
+      "bytes": 3620,
+      "sha256": "15a9efd1ada0d0d1d4d270d916f7736405a5228cbece42d62dccfa33f6f61663"
+    },
+    {
+      "path": "_MD/004__novelty-can-begin-as-a-bad-copy-that-later-becomes-a-good-copy__winfield2022artificialculture__forage-winfield-blackmore-002__from-chat.md",
+      "bytes": 3672,
+      "sha256": "f6008b0af3e6cf750856bbd787888985cd3f33e32c469a335edd11e73602e7b9"
+    },
+    {
+      "path": "_MD/005__the-prompt-does-not-fix-the-role-the-conversation-rewrites-it__shanahan2023roleplay__forage-shanahan-001__from-chat.md",
+      "bytes": 3640,
+      "sha256": "6320d90067a3851b5558428c1276a59e82eb54b22eb59d15bdaa773533b4dc74"
+    },
+    {
+      "path": "_MD/006__a-system-can-enact-agency-without-containing-an-agent__shanahan2023roleplay__forage-shanahan-002__from-chat.md",
+      "bytes": 3689,
+      "sha256": "11ab1a399ec0cb74ac3c9dedd0d1705d93d3e3c3c556fb164b2b67b7ee64d09c"
+    },
+    {
+      "path": "_MD/007__a-story-becomes-executable-when-another-body-can-run-its-count__winfield2022artificialculture__forage-winfield-blackmore-003__from-chat.md",
+      "bytes": 4501,
+      "sha256": "af54a5f54d3011c16ec2c1a31c78729fa5f134981744d820d2a56eac7a772438"
+    },
+    {
+      "path": "_MD/008__relational-power-becomes-identifiable-only-after-relations-are__hudgens2008interference__forage-hudgens-halloran-001__from-chat.md",
+      "bytes": 4913,
+      "sha256": "143d8c607851a7a23f4a6381d3a3ebe548c0725223e385c1acea0941c323d807"
+    },
+    {
+      "path": "_MD/009__the-indirect-effect-can-be-larger-than-the-direct-effect-and-s__hudgens2008interference__forage-hudgens-halloran-002__from-chat.md",
+      "bytes": 5094,
+      "sha256": "6e33d85e62e1c33529c854ac25d92eb22f249e0d78c2c8e210ffae16d22b1cdc"
+    },
+    {
+      "path": "_MD/010__forgetting-does-not-produce-structure-unless-something-also-pu__kirby2015compression__forage-kirby-001__from-chat.md",
+      "bytes": 4536,
+      "sha256": "8445e18d5b160ed92e5c1e32d1c5ff9af41f5de8629734d0904d0224fc228ede"
+    },
+    {
+      "path": "_MD/011__cultural-transmission-can-make-a-language-better-for-the-model__kouwenhoven2024searching__forage-kouwenhoven-001__from-chat.md",
+      "bytes": 4988,
+      "sha256": "8e74161189b914c63d7d32c8b4710343eb588c0150ff7ef44ad5499015532305"
+    },
+    {
+      "path": "_MD/012__the-rule-for-reading-the-prompt-may-live-outside-the-prompt__wallace2024instruction__forage-wallace-001__from-chat.md",
+      "bytes": 4970,
+      "sha256": "d165dbcd2dc4f24eaaa988071c6bc7bb7bc7286b527104b0eca7b79dac619113"
+    },
+    {
+      "path": "_MD/013__authority-can-leak-from-provenance-into-style__ye2026roleconfusion__forage-ye-cui-hadfield-001__from-chat.md",
+      "bytes": 5284,
+      "sha256": "cac375d1f3556a0e07f0f693095a54bd87bdf58e1dbbed3d31a833a93f1cd7c4"
+    },
+    {
+      "path": "_MD/014__the-command-can-help-construct-the-world-required-to-obey-it__walter2021language__forage-walter-001__from-chat.md",
+      "bytes": 5661,
+      "sha256": "c26e0c9242c876c2cf2b7515d30ef1edf8ad1a4ebe9f324f893c7c3147294945"
+    },
+    {
+      "path": "_MD/015__responsibility-can-concentrate-where-control-is-weakest__elish2019moral__forage-elish-001__from-chat.md",
+      "bytes": 4570,
+      "sha256": "9e1a924bc092988bc305a502ae4e803d0cd703af501da42d68d5e4fad7922767"
+    },
+    {
+      "path": "_MOCS/01__prompt-semantics-and-hidden-machinery.txt",
+      "bytes": 729,
+      "sha256": "9ac00059531bb843f3d86c8097bb08e612d9df8029b944da0bbcd171e2698371"
+    },
+    {
+      "path": "_MOCS/02__relational-power-and-causal-boundaries.txt",
+      "bytes": 666,
+      "sha256": "0b5356777a76d46be5abc3c5e3a11f3d0f062198323778483c5b62729aa12a63"
+    },
+    {
+      "path": "_MOCS/03__culture-transmission-and-loss.txt",
+      "bytes": 620,
+      "sha256": "4fd0205004b7e729b573b5e49eea337af4e441bd328af438c4823bbbd3ad7098"
+    },
+    {
+      "path": "_MOCS/04__agency-control-and-blame.txt",
+      "bytes": 435,
+      "sha256": "a6db9bd433506a09ff06c997a23d396ee4d58a3f21fab5777e73b5c6b9bb1b06"
+    },
+    {
+      "path": "_PROMPTS/PRIME_ZETTEL_FORAGE_v3.0.txt",
+      "bytes": 11424,
+      "sha256": "ca2c82d04a1b082de12a1ac6f7d56984d6d435bab7d9a6fc044893a61e239d4e"
+    },
+    {
+      "path": "_PROMPTS/SLIPCASE_v15.55-AM.txt",
+      "bytes": 20086,
+      "sha256": "a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__elish2019moral.txt",
+      "bytes": 481,
+      "sha256": "7abf1b1bad1b45ea63c4852aef8a0bab364fb9437171998e6c9a5810363a6bf9"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__hardt2022performative.txt",
+      "bytes": 396,
+      "sha256": "90e5fb174953501cdd584d852ee50686f628c1767cf2ec3518c4cc3e9abe2d65"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__hudgens2008interference.txt",
+      "bytes": 486,
+      "sha256": "2f1b9864d952aea56fc952ee717971e2c18381bc95c7516159f86ef7688a24c8"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__kirby2015compression.txt",
+      "bytes": 542,
+      "sha256": "8110b9a4d3810cd16a83ce1d395c2c3a819d022cebb4d3b845b0704400020bd3"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__kouwenhoven2024searching.txt",
+      "bytes": 520,
+      "sha256": "797803b0fe27d3c4f1f1f8aac3d5f7e52a2be8ae82f69d0cbab814920d00382e"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__shanahan2023roleplay.txt",
+      "bytes": 434,
+      "sha256": "d4cdecbeb3cd3ee9d961286488ed4fd2fe47158fd3bd64e23e40073879a807a5"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__viljoen2021relational.txt",
+      "bytes": 458,
+      "sha256": "4bdaf5c016f900eb6a932b1335ad6acd55223e90104d2055e58cbb20cf296097"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__wallace2024instruction.txt",
+      "bytes": 469,
+      "sha256": "9d1ab78baabecbb7dfe87781617ef1d656741eaf297543f77e3074560a74eb82"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__walter2021language.txt",
+      "bytes": 485,
+      "sha256": "21108466997f9838f9f4dff8d6ac130ddd4678952a258ec4832d2b544b2e5b8e"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__winfield2022artificialculture.txt",
+      "bytes": 559,
+      "sha256": "0b4310565a339b2f8663062bc05194fb5fdc687649e9e5cf007f5deacf815e21"
+    },
+    {
+      "path": "_RESOURCES/LINK_ONLY__ye2026roleconfusion.txt",
+      "bytes": 416,
+      "sha256": "c0baacfaac2e54766aa260b8a1f9024b24bd4546e605307b4491757d59780654"
+    },
+    {
+      "path": "_RESOURCES/corrected_elements_platforms_table.csv",
+      "bytes": 404477,
+      "sha256": "7dc084c12811558a5134419a46bdea76f837f80a3d96e21127b66747c7d5a8ab"
+    },
+    {
+      "path": "_SLIPCASE/ALIASES.json",
+      "bytes": 1907,
+      "sha256": "3595721f49741305b1d00c5116f79a25284852974183bed0ca921bc6a787e4f7"
+    },
+    {
+      "path": "_SLIPCASE/APPEARANCES.jsonl",
+      "bytes": 206150,
+      "sha256": "36ba2c3cc50be24a8575927a6b769c2f2021250bc59309bf697c4454f099c753"
+    },
+    {
+      "path": "_SLIPCASE/MARK.pdf",
+      "bytes": 1275,
+      "sha256": "fa10b7358cb63bad5e726cc376d95d0b075a8727ad88d7de688103e3e3500c11"
+    },
+    {
+      "path": "_SLIPCASE/NODES.jsonl",
+      "bytes": 250631,
+      "sha256": "f1a135a47fa0cc1569cccb2f554b8d170aec9aad2a887769325503b3fdc54598"
+    },
+    {
+      "path": "_SLIPCASE/REBUILD.py",
+      "bytes": 750,
+      "sha256": "93053895954277a3b298d464d14c48e120812211fb1e7b25775039063dfc3840"
+    },
+    {
+      "path": "_SLIPCASE/RELATIONS.jsonl",
+      "bytes": 265000,
+      "sha256": "6fec24b3663c0a9ac54c58f44bcdc24f3fb956a720b49dda4a54687f4f8af905"
+    },
+    {
+      "path": "_SLIPCASE/RESOURCES.jsonl",
+      "bytes": 3723,
+      "sha256": "b946e1e113db55adac9ee064f5bb4d0aa554e628694fb17c7adf62fc9b4a3ef9"
+    },
+    {
+      "path": "_SLIPCASE/VERIFICATION.txt",
+      "bytes": 4408,
+      "sha256": "7ebf1d879e8bc07dd44ed07877d4febb423526106764acc0e4087f7eccdd5458"
+    },
+    {
+      "path": "_SLIPCASE/paper-build.log",
+      "bytes": 20051,
+      "sha256": "dc3a5e767945c82cd1d756c00daea89962a02e5aa8d85384bf4371260ffdf05d"
+    },
+    {
+      "path": "the-prompt-does-not-contain-its-own-semantics__2026-08-17.pdf",
+      "bytes": 77596,
+      "sha256": "a167ca41865700a2a7cc53457dfee267c6ac80bc4500e28c4261f0125efaab76"
+    },
+    {
+      "path": "the-prompt-does-not-contain-its-own-semantics__2026-08-17.tex",
+      "bytes": 35376,
+      "sha256": "ef681049a320ad884b488afebfc5904551bee3bdbc925dc464c73a1e5ec6eb84"
+    },
+    {
+      "path": "the-prompt-does-not-contain-its-own-semantics__ASSEMBLY_APPENDIX.txt",
+      "bytes": 1063,
+      "sha256": "737c9582e8777428b96ebdee0503c4d332a4f1d19ca26bfdef4490e553cbbb9c"
+    },
+    {
+      "path": "the-prompt-does-not-contain-its-own-semantics__MAKING_HISTORY.txt",
+      "bytes": 1607,
+      "sha256": "cf8e3de82d8ac1eb2798c1bae208fe41288089a57775825d574660f6100f755a"
+    },
+    {
+      "path": "the-prompt-does-not-contain-its-own-semantics__SOURCE_MAP.txt",
+      "bytes": 2571,
+      "sha256": "aa0bba7358bff40a0d9e07d6085b80f6ae96e8a22f79b86d64f6e54c6c0dc1c5"
+    }
+  ]
+}

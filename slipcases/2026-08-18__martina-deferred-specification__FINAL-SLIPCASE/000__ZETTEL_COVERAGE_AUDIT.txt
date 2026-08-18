@@ -1,0 +1,127 @@
+ZETTEL COVERAGE AUDIT — FINAL RECONCILIATION
+
+PURPOSE
+Account for every zettel identity known in the Martina / current-day operations branch without pretending that unavailable prior payload bytes are preserved.
+
+EXACT PAYLOADS CURRENTLY PRESERVED
+- Immutable root zettel payloads: 42
+- Distinct admitted ORIGINAL IDs: 42
+- These root payloads remain unchanged from the verified prior Slipcase build.
+- The 10 OPS-20260817-001..010 payloads are among the exact admitted payloads.
+
+KNOWN PRIOR ZETTEL IDENTITIES WHOSE ORIGINAL PAYLOAD BYTES ARE NOT AVAILABLE IN THE CURRENT FILE CONTEXT
+- Prior transcript-derived IDs: 34 (MJ-MARTINA-001 through MJ-MARTINA-034)
+- Recursive child IDs: 14
+- Total known prior IDs without byte-recoverable immutable payloads: 48
+
+RECURSIVE CHILD IDS:
+- MJ-MARTINA-011-A
+- MJ-MARTINA-011-B
+- MJ-MARTINA-030-A
+- MJ-MARTINA-018-A
+- MJ-MARTINA-014-A
+- MJ-MARTINA-015-A
+- MJ-MARTINA-012-A
+- MJ-MARTINA-021-A
+- MJ-MARTINA-011-B-A
+- MJ-MARTINA-013-A
+- MJ-MARTINA-021-A-A
+- MJ-MARTINA-014-A-A
+- MJ-MARTINA-018-A-A
+- MJ-MARTINA-012-A-A
+
+STATE / NON-SUBSTITUTION RULE
+- These prior IDs are ACCOUNTED_FOR_BUT_PAYLOAD_UNAVAILABLE.
+- They are not silently rewritten, normalized, or declared exact.
+- The later MARTINA-2022-* and THEORY-* cards in this package are distinct research objects. They preserve/reconstruct substantial research content from the transcript and source-led forage, but they are NOT byte-identical substitutes for the unavailable earlier MJ-MARTINA-* payloads.
+- If an originating conversation export later becomes available, merge by exact payload SHA-256 and preserve both appearances/IDs rather than overwriting this checkpoint.
+
+KNOWN ZETTEL-ID UNIVERSE IN THIS BRANCH
+- Exact admitted current IDs: 42
+- Additional prior known IDs: 48
+- Known distinct zettel IDs accounted for by this audit: 90
+
+EXACT ADMITTED IDS:
+- MARTINA-2022-001
+- MARTINA-2022-002
+- MARTINA-2022-003
+- MARTINA-2022-004
+- MARTINA-2022-005
+- MARTINA-2022-006
+- MARTINA-2022-007
+- MARTINA-2022-008
+- MARTINA-2022-009
+- MARTINA-2022-010
+- MARTINA-2022-011
+- MARTINA-2022-012
+- MARTINA-2022-013
+- MARTINA-2022-014
+- MARTINA-2022-015
+- MARTINA-2022-016
+- MARTINA-2022-017
+- MARTINA-2022-018
+- MARTINA-2022-019
+- MARTINA-2022-020
+- MARTINA-2022-021
+- MARTINA-2022-022
+- MARTINA-2022-023
+- MARTINA-2022-024
+- OPS-20260817-001
+- OPS-20260817-002
+- OPS-20260817-003
+- OPS-20260817-004
+- OPS-20260817-005
+- OPS-20260817-006
+- OPS-20260817-007
+- OPS-20260817-008
+- OPS-20260817-009
+- OPS-20260817-010
+- THEORY-1976-GOODMAN
+- THEORY-1991-GOLDSCHMIDT
+- THEORY-1992-GOEL
+- THEORY-1992-SCHON
+- THEORY-1994-KIRSH-MAGLIO
+- THEORY-1995-HUTCHINS
+- THEORY-1998-CLARK-CHALMERS
+- THEORY-2007-SUCHMAN
+
+PRIOR TRANSCRIPT IDS (PAYLOAD UNAVAILABLE):
+- MJ-MARTINA-001
+- MJ-MARTINA-002
+- MJ-MARTINA-003
+- MJ-MARTINA-004
+- MJ-MARTINA-005
+- MJ-MARTINA-006
+- MJ-MARTINA-007
+- MJ-MARTINA-008
+- MJ-MARTINA-009
+- MJ-MARTINA-010
+- MJ-MARTINA-011
+- MJ-MARTINA-012
+- MJ-MARTINA-013
+- MJ-MARTINA-014
+- MJ-MARTINA-015
+- MJ-MARTINA-016
+- MJ-MARTINA-017
+- MJ-MARTINA-018
+- MJ-MARTINA-019
+- MJ-MARTINA-020
+- MJ-MARTINA-021
+- MJ-MARTINA-022
+- MJ-MARTINA-023
+- MJ-MARTINA-024
+- MJ-MARTINA-025
+- MJ-MARTINA-026
+- MJ-MARTINA-027
+- MJ-MARTINA-028
+- MJ-MARTINA-029
+- MJ-MARTINA-030
+- MJ-MARTINA-031
+- MJ-MARTINA-032
+- MJ-MARTINA-033
+- MJ-MARTINA-034
+
+VERIFICATION BOUNDARY
+- “All zettels” can be claimed here only in the sense that all presently known zettel identities in this branch are accounted for as either exact payloads or explicit unavailable prior payloads.
+- It would be false to claim that all 90 known identities have byte-preserved original payloads.
+- Exact payload completeness remains contingent on recovery of the earlier conversation export.

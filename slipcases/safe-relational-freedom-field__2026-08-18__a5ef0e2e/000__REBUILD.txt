@@ -1,0 +1,15 @@
+REBUILD
+
+1. Treat every root numbered TXT card as immutable evidence. Verify SHA-256 against _SLIPCASE/MANIFEST.json.
+2. Parse fields without rewriting payloads.
+3. Mirror each payload exactly into _MD/.
+4. Extract every PLATFORM, LINKS item, and [[wikilink]]; resolve only exact IDs, exact unique titles, registered aliases, exact platforms, or known recurring concepts. Preserve the rest as GHOST.
+5. Parse BibTeX blocks; do not fabricate missing fields.
+6. Register local resources and LINK_ONLY receipts from 000__RESOURCES.txt.
+7. Rebuild NODES.jsonl, RELATIONS.jsonl, APPEARANCES.jsonl, MOCs, arrangements, index, reader, network, and cards from evidence.
+8. Treat whose-freedom__2026-08-18.pdf as the current derived wager. Use whose-freedom__SOURCE_MAP.txt to inspect its claim-source trace; rewrite if evidence leads elsewhere.
+9. Exact assembly prompt: _PROMPTS/SLIPCASE_v15.55-AM__ASSEMBLY_PROMPT_EXACT.txt.
+10. Preserve prior derived papers as history, never as evidence.
+11. Recompute every deterministic count and hash.
+
+CHECKPOINT: SLIPCASE-20260818-0356-EDT-a5ef0e2e

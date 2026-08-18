@@ -1,0 +1,63 @@
+{
+  "house_id": "SENTENCE-HOUSE-01",
+  "seed": "Build me a house that remembers.",
+  "note": "Research demonstrator, not construction documents or engineering advice.",
+  "constraints": [
+    {
+      "id": "C0",
+      "stage": 0,
+      "origin": "USER",
+      "statement": "Build me a house that remembers.",
+      "reason": "Seed description. 'House' and 'remembers' are intentionally underdefined."
+    },
+    {
+      "id": "C1",
+      "stage": 1,
+      "origin": "USER_AFTER_ARTIFACT",
+      "statement": "Reloading cannot erase the house's past.",
+      "reason": "The first prototype treated memory as current state rather than persistent history."
+    },
+    {
+      "id": "C2",
+      "stage": 2,
+      "origin": "USER_AFTER_VISIBLE_FAILURE",
+      "statement": "No direct sightline from the entrance to the bed.",
+      "reason": "The first plan rendered 'private' as a label while leaving the bed visible from entry."
+    },
+    {
+      "id": "C3",
+      "stage": 3,
+      "origin": "USER_AFTER_REJECTION",
+      "statement": "Circulation must branch around shared space rather than become a single central corridor.",
+      "reason": "A literal curved hallway satisfied the metaphor 'like a river' without producing branching flow."
+    },
+    {
+      "id": "C4",
+      "stage": 4,
+      "origin": "WORLD_TEST",
+      "statement": "Every roof plane must drain at no less than two percent slope to a collector.",
+      "reason": "A visually complete flat roof failed the rain test."
+    },
+    {
+      "id": "C5",
+      "stage": 5,
+      "origin": "PROVENANCE_RULE",
+      "statement": "Every consequential constraint records who or what introduced it.",
+      "reason": "Successful defaults otherwise disappear into the artifact without authorship."
+    },
+    {
+      "id": "C6",
+      "stage": 6,
+      "origin": "CONSTITUTION",
+      "statement": "A world response may veto a prior instruction, and an inhabitant amendment appends rather than overwrites history.",
+      "reason": "The house remains open to weather, use, maintenance, and later occupation."
+    }
+  ],
+  "tests": [
+    {"id": "T1", "name": "history_survives_reload", "introduced": 1},
+    {"id": "T2", "name": "entry_to_bed_sightline_blocked", "introduced": 2},
+    {"id": "T3", "name": "circulation_branches", "introduced": 3},
+    {"id": "T4", "name": "roof_slope_at_least_2_percent", "introduced": 4},
+    {"id": "T5", "name": "constraint_origin_recorded", "introduced": 5}
+  ]
+}

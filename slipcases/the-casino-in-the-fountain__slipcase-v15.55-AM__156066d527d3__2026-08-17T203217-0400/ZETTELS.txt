@@ -1,0 +1,4478 @@
+
+
+ZETTEL
+
+ID: RNG-001
+
+TITLE:
+“True randomness” becomes a regulatory threshold called “acceptable randomness.”
+
+SOURCE:
+UK Gambling Commission — Remote Gambling and Software Technical Standards — RTS 7: Generation of Random Outcomes — current version, accessed 2026-08-17.
+
+SOURCE URL:
+https://www.gamblingcommission.gov.uk/standards/remote-gambling-and-software-technical-standards/rts-7-generation-of-random-outcomes
+
+PASSAGE:
+[QUOTE] “Random number generation and game results must be ‘acceptably random’.”
+
+RESEARCH OBJECT:
+The regulatory object is not metaphysical or mathematical proof of “true randomness.” It is an operational standard assembled from statistical distribution, unpredictability, non-repetition, safe seeding, and scaling.
+
+LOCAL MOVE:
+The Commission replaces an absolute property—randomness—with a demonstrable compliance condition: “acceptably random.”
+
+SOURCE TERMS:
+acceptably random
+high degree of confidence
+statistical analysis
+unpredictable
+seed value
+seeding and re-seeding
+scaling
+
+WHAT BECAME STRANGE:
+A certification does not need to establish that an RNG is “truly random” in an unrestricted sense. It needs to establish particular observable and computational properties strongly enough for the regulatory purpose.
+
+QUESTION:
+What happens when an ontological property such as RANDOM becomes a regulatory predicate defined by a finite battery of tests?
+
+DEEPER QUESTION:
+How many supposedly intrinsic properties of technical systems—fair, secure, private, explainable, random—exist operationally only through institutions specifying what counts as sufficient evidence?
+
+MECHANISM:
+<RNG>
+→ statistical + computational tests
+→ [COMPARE AGAINST REGULATORY CRITERIA]
+→ <ACCEPTABLY RANDOM>
+
+FORMAL SHIFT:
+<RANDOMNESS AS PROPERTY>
+→ <TESTABLE OUTPUT + IMPLEMENTATION CHARACTERISTICS>
+→ [CERTIFY]
+→ <REGULATORY ACCEPTABILITY>
+
+SOURCE FORMALISM:
+RTS 7A requires:
+- distribution according to expected/theoretical probabilities
+- computational unpredictability
+- avoidance of repeated or synchronized streams
+- seeding/re-seeding that does not introduce predictability
+- scaling that preserves required qualities
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+ACCEPTABLE_RANDOMNESS(R) :=
+DISTRIBUTION_OK(R)
+∧ UNPREDICTABLE(R)
+∧ NONCYCLING(R)
+∧ SEEDING_SAFE(R)
+∧ SCALING_PRESERVES(R)
+
+TENSION:
+The supplied mycelium.is text describes testing as searching for statistical “patterns” and says successful testing certifies an RNG as “safe and truly random.” The regulator uses the more qualified “acceptably random” and specifies several requirements beyond absence of detectable statistical patterns. fileciteturn0file0L84-L94
+
+MISSING:
+The standard does not answer the philosophical question of whether a software RNG is “really” random. That question is unnecessary for the regulatory operation being performed.
+
+BOUNDARY:
+The evidence licenses the claim that UK gambling regulation operationalizes randomness through explicit requirements. It does not establish that all jurisdictions or testing laboratories define randomness identically.
+
+CITATION TRAIL:
+UK Gambling Commission — Testing Strategy for Compliance with Remote Gambling and Software Technical Standards.
+Gaming Laboratories International — GLI-11.
+Technical literature distinguishing statistical randomness, pseudorandomness, and entropy sources.
+
+TEST:
+Collect the exact randomness predicates used by five gambling regulators or test laboratories and compare whether certification converges on one formal object or produces jurisdiction-specific versions of “random.”
+
+PLATFORM:
+[[Properties become operational through tests]]
+
+LINKS:
+[[Certification constructs technical properties]]
+[[Randomness as institutional object]]
+[[Tests as definitions]]
+
+BIBTEX:
+@misc{ukgc_rts7_random_outcomes,
+  author       = {{UK Gambling Commission}},
+  title        = {RTS 7 -- Generation of Random Outcomes},
+  howpublished = {Remote Gambling and Software Technical Standards},
+  url          = {https://www.gamblingcommission.gov.uk/standards/remote-gambling-and-software-technical-standards/rts-7-generation-of-random-outcomes},
+  note         = {Accessed 2026-08-17}
+}
+
+================================================================================
+
+ZETTEL
+
+ID: RNG-002
+
+TITLE:
+A fair game requires a second operation after randomness: random numbers must be mapped into outcomes.
+
+SOURCE:
+UK Gambling Commission — Remote Gambling and Software Technical Standards — RTS 7B: Generation of Random Outcomes — current version, accessed 2026-08-17.
+
+SOURCE URL:
+https://www.gamblingcommission.gov.uk/standards/remote-gambling-and-software-technical-standards/rts-7-generation-of-random-outcomes
+
+PASSAGE:
+[QUOTE] “The mapping of the random inputs to game outcomes should be in accordance with prevailing probabilities, pay tables, etc.”
+
+RESEARCH OBJECT:
+Randomness alone cannot make a game fair. Between RNG output and what the player experiences lies a mapping operation that converts random inputs into game outcomes according to probabilities and pay tables.
+
+LOCAL MOVE:
+RTS 7B separates generation of randomness from implementation of game rules.
+
+SOURCE TERMS:
+random inputs
+game outcomes
+prevailing probabilities
+pay tables
+mapping
+scaled
+rules
+
+WHAT BECAME STRANGE:
+“The RNG decides what happens” is technically too compressed. The RNG produces inputs. Another mechanism decides what those inputs mean inside the game.
+
+QUESTION:
+Where exactly does chance become meaning?
+
+DEEPER QUESTION:
+When a representation-producing machine feeds another machine that assigns consequences to those representations, which layer should be treated as the locus of fairness?
+
+MECHANISM:
+<RANDOM NUMBER>
+→ mapping / scaling
+→ [APPLY GAME RULES + PAY TABLE]
+→ <GAME OUTCOME>
+
+FORMAL SHIFT:
+<UNDifferentiated CHANCE>
+→ <RANDOM INPUT>
+→ [MAP THROUGH GAME MODEL]
+→ <PLAYER-VISIBLE EVENT + PAYOUT>
+
+SOURCE FORMALISM:
+RTS 7 distinguishes:
+1. generation of random outputs,
+2. scaling,
+3. mapping random inputs to game outcomes,
+4. application of probabilities/pay tables,
+5. presentation of the resulting game event.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+R := RNG()
+I := SCALE(R, required_range)
+O := GAME_MAP(I, rules, paytable)
+P := SETTLE(O)
+
+Fairness cannot therefore be tested solely as a property of R.
+
+TENSION:
+The uploaded source treats the RNG as the mechanism guaranteeing the outcome of each round is random. fileciteturn0file0L68-L82 The regulatory architecture exposes additional transformations between generated number and experienced result.
+
+MISSING:
+The regulatory text specifies that mapping must correspond to declared probabilities and pay tables but does not reduce all possible implementations to a single algorithm.
+
+BOUNDARY:
+This does not show that the RNG is unimportant. It shows that RNG correctness is necessary but insufficient for game-level fairness.
+
+CITATION TRAIL:
+UK Gambling Commission RTS 7A–7D.
+UK Gambling Commission Remote Gambling Equipment architecture.
+Independent test-house documentation distinguishing RNG testing from game-math testing.
+
+TEST:
+Construct a toy game with a perfectly uniform RNG but deliberately biased RNG-to-outcome mapping. Test whether output randomness remains statistically valid while player outcome probabilities become unfair.
+
+PLATFORM:
+[[Representation becomes consequence through mapping]]
+
+LINKS:
+[[RNG-001]]
+[[Fairness is architectural]]
+[[The map between number and event]]
+
+BIBTEX:
+@misc{ukgc_rts7_mapping,
+  author       = {{UK Gambling Commission}},
+  title        = {RTS 7 -- Generation of Random Outcomes},
+  howpublished = {Remote Gambling and Software Technical Standards},
+  url          = {https://www.gamblingcommission.gov.uk/standards/remote-gambling-and-software-technical-standards/rts-7-generation-of-random-outcomes},
+  note         = {Accessed 2026-08-17}
+}
+
+================================================================================
+
+ZETTEL
+
+ID: RNG-003
+
+TITLE:
+The RNG seed and the game’s return-to-player percentage belong to different mechanisms.
+
+SOURCE:
+UK Gambling Commission — RTS 7; Live Return to Player Performance Monitoring of Games of Chance — accessed 2026-08-17.
+
+SOURCE URL:
+https://www.gamblingcommission.gov.uk/standards/remote-gambling-and-software-technical-standards/rts-7-generation-of-random-outcomes
+
+PASSAGE:
+[PARAPHRASE] RTS 7 treats seeds as an unpredictability problem, while theoretical RTP is defined separately as the designed return percentage of the game.
+
+RESEARCH OBJECT:
+The supplied article collapses two technical objects when it says PRNG “seed” numbers are the means of ensuring a steady RTP. Regulatory documentation instead treats seeding as part of RNG unpredictability and RTP as a designed statistical property of the game.
+
+LOCAL MOVE:
+The regulatory architecture separates initialization/state of the random generator from probabilities, pay tables, and expected financial return.
+
+SOURCE TERMS:
+seed value
+seeding
+re-seeding
+predictability
+theoretical RTP
+actual RTP
+expected probabilities
+pay tables
+
+WHAT BECAME STRANGE:
+A seed selects or initializes a pseudorandom sequence. It is not, in the regulatory model, the object that directly specifies how much money the game is designed to return.
+
+QUESTION:
+Why is it so tempting to locate an entire probabilistic system inside its RNG?
+
+DEEPER QUESTION:
+What conceptual errors appear when architectures are described through one charismatic component—the model, algorithm, RNG, database—while the transformations around that component disappear?
+
+MECHANISM:
+SOURCE ACCOUNT:
+<SEED>
+→ PRNG
+→ [ENSURE STEADY RTP]
+→ <GAME RETURN>
+
+REGULATORY ARCHITECTURE:
+<SEED + RNG ALGORITHM>
+→ [GENERATE UNPREDICTABLE INPUT]
+→ <RANDOM INPUT>
+
+<RANDOM INPUT + GAME RULES + PAYTABLE>
+→ [MAP]
+→ <OUTCOME DISTRIBUTION>
+→ <THEORETICAL / ACTUAL RTP>
+
+FORMAL SHIFT:
+<ONE PROBABILISTIC MACHINE>
+→ <RNG STATE> + <OUTCOME MAPPING> + <PAYTABLE>
+→ [SEPARATE OPERATIONS]
+→ <DISTINCT TESTABLE PROPERTIES>
+
+SOURCE FORMALISM:
+RTS 7A: seeding must not introduce predictability.
+RTS 7B: random inputs are mapped according to probabilities and pay tables.
+RTP guidance: theoretical RTP is the designed return percentage; actual RTP is calculated from operational wins and turnover.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+SEED ≠ RTP
+
+seed → RNG state
+RNG state → random stream
+random stream + mapping → outcome distribution
+outcome distribution + payouts → theoretical RTP
+
+TENSION:
+The uploaded source explicitly states that PRNGs use “seed” numbers and claims this is “the only way” to ensure a steady RTP. fileciteturn0file0L74-L82 The regulator assigns these concerns to separate parts of the system.
+
+MISSING:
+The supplied article gives no technical derivation showing how a seed value establishes RTP.
+
+BOUNDARY:
+This zettel does not establish how every commercial gambling implementation calculates RTP. It establishes that the regulator distinguishes seeding, outcome mapping, and RTP rather than treating them as one mechanism.
+
+CITATION TRAIL:
+RTS 7A and 7B.
+UKGC Live Return to Player Performance Monitoring.
+Technical game-mathematics documentation from approved test houses.
+
+TEST:
+Implement the same game/paytable with many different PRNG seeds. Measure whether long-run theoretical RTP changes merely because the seed changes.
+
+PLATFORM:
+[[Do not mistake a component for the system]]
+
+LINKS:
+[[RNG-001]]
+[[RNG-002]]
+[[Architecture corrects vocabulary]]
+
+BIBTEX:
+@misc{ukgc_rng_rtp,
+  author       = {{UK Gambling Commission}},
+  title        = {RTS 7 -- Generation of Random Outcomes and Live Return to Player Performance Monitoring},
+  url          = {https://www.gamblingcommission.gov.uk/standards/remote-gambling-and-software-technical-standards/rts-7-generation-of-random-outcomes},
+  note         = {Accessed 2026-08-17}
+}
+
+================================================================================
+
+ZETTEL
+
+ID: CASINO-ARCH-001
+
+TITLE:
+An online casino decomposes into components that each transform a different kind of state.
+
+SOURCE:
+UK Gambling Commission — Remote Gambling Equipment — current guidance, accessed 2026-08-17.
+
+SOURCE URL:
+https://www.gamblingcommission.gov.uk/licensees-and-businesses/guide/remote-gambling-equipment
+
+PASSAGE:
+[PARAPHRASE] The Commission separately identifies customer management, settling, RNG, virtual-event control, back-office tools, security, and data components.
+
+RESEARCH OBJECT:
+The casino is not one program. It is an arrangement of components that generate numbers, map them to events, settle gambles, modify balances, maintain customer state, display results, and enforce access.
+
+LOCAL MOVE:
+The regulator decomposes an apparently singular application according to operational responsibilities and state transitions.
+
+SOURCE TERMS:
+component
+customer management
+settling
+random number generator
+virtual event control
+back-office tools
+security
+customer account
+event state
+
+WHAT BECAME STRANGE:
+What the player encounters as “a casino game” exists only because several machines with different authorities pass representations and state changes among one another.
+
+QUESTION:
+Where is the game?
+
+DEEPER QUESTION:
+If no single component contains the whole operative object, should software ontology begin from modules, messages, or transformations rather than applications?
+
+MECHANISM:
+<RNG>
+→ random number
+
+<RANDOM NUMBER + EVENT RULES>
+→ virtual event result
+
+<VIRTUAL EVENT RESULT + BET>
+→ settling
+
+<SETTLEMENT>
+→ account balance change
+
+<STATE>
+→ client display
+
+FORMAL SHIFT:
+<CASINO AS APPLICATION>
+→ <NETWORK OF SPECIALIZED COMPONENTS>
+→ [PASS STATE + COMMANDS]
+→ <GAMBLING EVENT>
+
+SOURCE FORMALISM:
+The source explicitly distinguishes software/data components by function, including RNG generation, virtual-event determination, settling, customer account management, and security.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PLAYER
+→ BET
+→ EVENT_CONTROL
+→ RNG
+→ EVENT_CONTROL
+→ SETTLEMENT
+→ ACCOUNT_STATE
+→ DISPLAY
+
+The “game” is the successful traversal of this chain rather than a single executable object.
+
+TENSION:
+The uploaded mycelium.is source already notices that casinos may rely on separate developer platforms and separate payment-management systems. fileciteturn0file0L44-L54 The regulatory architecture makes the decomposition considerably finer-grained.
+
+MISSING:
+The guidance identifies components but does not imply that every operator deploys each component as a distinct physical server or software package.
+
+BOUNDARY:
+The component model is an operational/regulatory description, not necessarily the internal architecture of every commercial casino platform.
+
+CITATION TRAIL:
+UK Gambling Commission — Remote Gambling Equipment.
+RTS 7 — Generation of Random Outcomes.
+RTS requirements concerning interrupted gambling, security, and customer funds.
+Software architecture literature on distributed transactions and state machines.
+
+TEST:
+Take one actual remote-gambling transaction and trace every state representation from wager submission through RNG request, event determination, settlement, account update, and client display.
+
+PLATFORM:
+[[A program can be a choreography of state transformations]]
+
+LINKS:
+[[RNG-002]]
+[[Where is the program?]]
+[[Interfaces between machines]]
+
+BIBTEX:
+@misc{ukgc_remote_gambling_equipment,
+  author       = {{UK Gambling Commission}},
+  title        = {Remote Gambling Equipment},
+  url          = {https://www.gamblingcommission.gov.uk/licensees-and-businesses/guide/remote-gambling-equipment},
+  note         = {Accessed 2026-08-17}
+}
+
+================================================================================
+
+ZETTEL
+
+ID: PLATFORM-001
+
+TITLE:
+A new interface channel can change while the game engine remains the same.
+
+SOURCE:
+UK Gambling Commission — Testing Strategy for Compliance with Remote Gambling and Software Technical Standards — Procedure for Testing — updated 2024.
+
+SOURCE URL:
+https://www.gamblingcommission.gov.uk/strategy/testing-strategy-for-compliance-with-remote-gambling-and-software-technical/3-procedure-for-testing
+
+PASSAGE:
+[PARAPHRASE] When an existing game is ported to a new channel, testing may concern the interface and display while unchanged backend game functionality need not be retested.
+
+RESEARCH OBJECT:
+The regulator distinguishes a game's channel from its backend game logic strongly enough that one can change without necessarily changing the other.
+
+LOCAL MOVE:
+The testing regime uses selective retesting to encode an architectural distinction between presentation and game-engine behavior.
+
+SOURCE TERMS:
+channel
+game client
+user interface
+player display
+backend game design
+functionality
+HTML5
+native mobile app
+retesting
+
+WHAT BECAME STRANGE:
+Moving a game from one platform to another does not necessarily mean translating the game itself. Sometimes only the apparatus through which the game becomes perceptible and actionable changes.
+
+QUESTION:
+What exactly crosses platforms when software is “ported”?
+
+DEEPER QUESTION:
+When interface, execution, and semantics can change independently, which layer deserves to be called the program?
+
+MECHANISM:
+<EXISTING GAME ENGINE>
+→ attach new client/channel
+→ [TEST UI + PLAYER DISPLAY]
+→ <NEW PLATFORM ACCESS>
+
+while:
+
+<BACKEND LOGIC>
+→ unchanged
+→ [REUSE PRIOR TEST EVIDENCE]
+→ <NO FULL RETEST>
+
+FORMAL SHIFT:
+<PLATFORM CHANGE>
+→ <CHANNEL CHANGE | ENGINE CHANGE>
+→ [CLASSIFY SCOPE OF CHANGE]
+→ <SELECT TEST OBLIGATION>
+
+SOURCE FORMALISM:
+The testing strategy explicitly distinguishes:
+- intended channels,
+- HTML5/native mobile clients,
+- interface/player-display tests,
+- backend game design/functionality,
+- conditions under which backend retesting is unnecessary.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PROGRAM :=
+ENGINE × CHANNEL
+
+PORT(P, C₁ → C₂)
+
+If ENGINE₁ = ENGINE₂:
+    RETEST := CHANNEL_DELTA
+else:
+    RETEST := CHANNEL_DELTA + ENGINE_DELTA
+
+TENSION:
+The uploaded article proposes lack of mobile availability as evidence that a developer may have used “obsolete development technology.” fileciteturn0file0L32-L42 The testing framework shows that channel support is a separable architectural dimension and cannot by itself identify the condition of backend game logic.
+
+MISSING:
+Neither source supplies enough evidence to infer the engineering quality of a particular developer from platform availability alone.
+
+BOUNDARY:
+Separable testing does not mean platform changes are trivial. It means regulators recognize cases where presentation changes while game behavior does not.
+
+CITATION TRAIL:
+UKGC testing strategy — new channels.
+Historical Flash-to-HTML5 casino migrations.
+Software portability and separation-of-concerns literature.
+Research on whether interface changes alter gambling behavior despite unchanged underlying probabilities.
+
+TEST:
+Take one game released as both HTML5 and native mobile clients. Compare backend requests, state transitions, probabilities, timing, interaction design, and regulatory test reports to determine exactly what survived the port.
+
+PLATFORM:
+[[What travels when software crosses media?]]
+
+LINKS:
+[[Channel is not engine]]
+[[Porting as selective transformation]]
+[[Interfaces can change without changing semantics]]
+
+BIBTEX:
+@misc{ukgc_new_channels_testing,
+  author       = {{UK Gambling Commission}},
+  title        = {Testing Strategy for Compliance with Remote Gambling and Software Technical Standards: Procedure for Testing},
+  year         = {2024},
+  url          = {https://www.gamblingcommission.gov.uk/strategy/testing-strategy-for-compliance-with-remote-gambling-and-software-technical/3-procedure-for-testing},
+  note         = {Updated 13 September 2024; accessed 2026-08-17}
+}
+
+================================================================================
+
+ZETTEL
+
+ID: TEST-001
+
+TITLE:
+Simulation testing does not test “the game” at once; it tests whether one statistical consequence falls inside an acceptable range.
+
+SOURCE:
+UK Gambling Commission — Testing Strategy for Compliance with Remote Gambling and Software Technical Standards — Procedure for Testing — 2024.
+
+SOURCE URL:
+https://www.gamblingcommission.gov.uk/strategy/testing-strategy-for-compliance-with-remote-gambling-and-software-technical/3-procedure-for-testing
+
+PASSAGE:
+[PARAPHRASE] The Commission defines simulation testing as automated high-volume play used to determine whether actual RTP falls within an acceptable range of expected RTP.
+
+RESEARCH OBJECT:
+Testing becomes analytically interesting when decomposed by what each test can actually see. Simulation testing observes aggregate statistical performance; emulation targets rare outcomes; manual play exposes common player-visible behavior.
+
+LOCAL MOVE:
+The testing strategy distributes epistemic access across different test procedures instead of treating “tested” as a single condition.
+
+SOURCE TERMS:
+simulation testing
+emulation testing
+manual game play
+actual RTP
+expected RTP
+rare game outcomes
+game fairness
+
+WHAT BECAME STRANGE:
+A certificate can summarize multiple epistemically different encounters with the software. “The software was tested” hides which behaviors were observable under which procedure.
+
+QUESTION:
+What does a test make visible, and therefore what can remain invisible while still passing?
+
+DEEPER QUESTION:
+Are technical standards best understood not merely as rules governing machines but as epistemic architectures governing what institutions are capable of knowing about machines?
+
+MECHANISM:
+<SYSTEM>
+→ choose test procedure
+→ [PRODUCE PARTICULAR EVIDENCE]
+→ <COMPLIANCE JUDGMENT>
+
+Simulation:
+many runs → aggregate distribution
+
+Emulation:
+constructed condition → rare outcome behavior
+
+Manual play:
+human interaction → ordinary visible behavior
+
+FORMAL SHIFT:
+<SOFTWARE>
+→ <TEST-SPECIFIC OBSERVATION>
+→ [EVALUATE]
+→ <CERTIFICATION EVIDENCE>
+
+SOURCE FORMALISM:
+The Commission distinguishes at least:
+SIMULATION
+EMULATION
+MANUAL GAME PLAY
+
+and assigns different evidentiary purposes to each.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+OBSERVABLE(SYSTEM, TEST) ≠ SYSTEM
+
+Therefore:
+
+PASS(TEST₁) ⇏ PASS(TEST₂)
+
+and:
+
+Σ PASS(TESTᵢ) still does not imply exhaustive observation of SYSTEM.
+
+TENSION:
+The uploaded source compresses certification into a story in which an agency runs “hundreds of thousands” of playthroughs, searches for patterns, and certifies the RNG if none appear. fileciteturn0file0L84-L94 The Commission's testing strategy distinguishes multiple forms of evidence and requires reports to identify test scope, methods, versions, platforms, limitations, and results.
+
+MISSING:
+The public regulatory guidance does not reveal every proprietary procedure an approved testing laboratory applies.
+
+BOUNDARY:
+This does not imply certification is weak or arbitrary. It identifies certification as a bounded evidentiary process whose strength depends on the relationship between tests and possible failures.
+
+CITATION TRAIL:
+UKGC Testing Strategy.
+Specific approved test-house methodologies.
+Software testing literature on oracle problems, coverage, property testing, and model-based testing.
+Science and technology studies of standards and certification.
+
+TEST:
+For one certified game, obtain the testing scope and construct a matrix:
+
+FAILURE MODE × TEST PROCEDURE × OBSERVABILITY.
+
+Identify failures for which no listed procedure supplies a direct observation.
+
+PLATFORM:
+[[Tests construct what can be known about programs]]
+
+LINKS:
+[[RNG-001]]
+[[Certification as epistemic architecture]]
+[[Passing is indexed to a test]]
+
+BIBTEX:
+@misc{ukgc_testing_procedure_2024,
+  author       = {{UK Gambling Commission}},
+  title        = {Testing Strategy for Compliance with Remote Gambling and Software Technical Standards: Procedure for Testing},
+  year         = {2024},
+  url          = {https://www.gamblingcommission.gov.uk/strategy/testing-strategy-for-compliance-with-remote-gambling-and-software-technical/3-procedure-for-testing},
+  note         = {Updated 13 September 2024; accessed 2026-08-17}
+}
+
+================================================================================
+
+ZETTEL
+
+ID: KANEVA-DIM-001
+
+TITLE:
+Kaneva treated 2D and 3D as alternate interfaces onto one social world rather than as separate destinations.
+
+SOURCE:
+James R. Norris — “The Growth and Direction of Healthcare Support Groups in Virtual Worlds” — Journal of Virtual Worlds Research — 2009.
+
+SOURCE URL:
+https://jvwr-ojs-utexas.tdl.org/jvwr/article/view/658/500
+
+PASSAGE:
+[QUOTE] Kaneva provided “flexibility to easily move back and forth from the 2D web to the 3D Virtual World of Kaneva.”
+
+RESEARCH OBJECT:
+The unusual object is not a 3D world with an accompanying website. It is an identity-and-content system deliberately exposed through representations of different dimensionality.
+
+LOCAL MOVE:
+Kaneva refuses to make entry into 3D the prerequisite for participation. The 2D profile/social-network layer and 3D avatar/world layer are presented as traversable faces of the same service.
+
+SOURCE TERMS:
+2D web
+3D Virtual World
+move back and forth
+social networking
+avatar
+profile
+
+WHAT BECAME STRANGE:
+A “virtual world” need not coincide with its rendered three-dimensional space. If relationships, profiles, media, groups, and identity persist while the interface changes dimensionality, the world may reside in the persistent state beneath both representations.
+
+QUESTION:
+Where is the virtual world if its inhabitants can leave 3D without leaving the world?
+
+DEEPER QUESTION:
+Can dimensionality be understood as a view over world-state rather than a defining property of the world itself?
+
+MECHANISM:
+[OUR INFERENCE]
+
+<USER + SOCIAL STATE + MEDIA + RELATIONS>
+→ [SELECT REPRESENTATION]
+→ <2D PROFILE / SOCIAL WEB>
+
+or
+
+<USER + SOCIAL STATE + MEDIA + RELATIONS>
+→ [SELECT REPRESENTATION]
+→ <3D AVATAR / SPATIAL WORLD>
+
+FORMAL SHIFT:
+<WORLD = 3D SCENE>
+→ <PERSISTENT SOCIAL STATE>
+→ [RENDER THROUGH DIFFERENT INTERFACES]
+→ <2D WORLD-VIEW | 3D WORLD-VIEW>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+WORLD := persistent_state
+
+VIEW₂D(WORLD) := profiles + groups + messages + media
+VIEW₃D(WORLD) := avatars + homes + places + embodied interaction
+
+switch(VIEW₂D, VIEW₃D) ≠ exit(WORLD)
+
+TENSION:
+Calling Kaneva a “3D virtual world” makes the 3D client sound ontologically primary. Kaneva's own product language instead emphasized movement between the 2D web and 3D world.
+
+MISSING:
+The public descriptions do not establish the precise backend data architecture or exactly which entities were shared between the two clients.
+
+BOUNDARY:
+The evidence supports continuity of user experience and service identity across 2D and 3D. It does not by itself prove that every object or action had a single shared underlying representation.
+
+CITATION TRAIL:
+Kaneva's archived technical documentation.
+Kaneva client/server documentation.
+Database schemas or source released through its developer program.
+Contemporary comparisons with Second Life, Vivaty, There, and Active Worlds.
+
+TEST:
+Recover one Kaneva account through archived documentation and construct an entity matrix:
+
+ENTITY | EXISTS IN 2D | EXISTS IN 3D | SAME ID? | MUTATION PROPAGATES?
+
+Test profile, avatar name, friend, group, media item, home, event, and message.
+
+PLATFORM:
+[[A world can exceed its rendering]]
+
+LINKS:
+[[Representation is not world-state]]
+[[One object multiple interfaces]]
+[[Dimensional continuity]]
+
+BIBTEX:
+@article{norris2009virtualhealth,
+  author  = {Norris, James R.},
+  title   = {The Growth and Direction of Healthcare Support Groups in Virtual Worlds},
+  journal = {Journal of Virtual Worlds Research},
+  year    = {2009},
+  url     = {https://jvwr-ojs-utexas.tdl.org/jvwr/article/view/658/500}
+}
+
+================================================================================
+
+ZETTEL
+
+ID: KANEVA-MEDIA-001
+
+TITLE:
+Kaneva did not merely embed YouTube; it converted a web media object into an object located inside a room.
+
+SOURCE:
+MediaPost — “Kaneva Brings YouTube Into Virtual World” — June 29, 2007.
+
+SOURCE URL:
+https://www.mediapost.com/publications/article/63231/kaneva-brings-youtube-into-virtual-world.html
+
+PASSAGE:
+[PARAPHRASE] YouTube videos could be viewed and shared on residents' virtual television sets inside Kaneva.
+
+RESEARCH OBJECT:
+A web video undergoes a representational change without ceasing to be the same media object: outside the world it is a networked video; inside the world it acquires location, furniture, spectators, and a social situation.
+
+LOCAL MOVE:
+Kaneva turns media access into spatial activity. Instead of opening a video page, avatars gather around a simulated television.
+
+SOURCE TERMS:
+YouTube
+virtual TV sets
+shared
+favorite media
+3D setting
+friends
+
+WHAT BECAME STRANGE:
+The transformation is not:
+
+VIDEO → 3D VIDEO.
+
+It is:
+
+VIDEO → PLACE WHERE VIDEO IS WATCHED.
+
+A piece of information acquires architecture.
+
+QUESTION:
+What new operations become possible when a media object is given a place?
+
+DEEPER QUESTION:
+Does spatialization change what an information object is, or only alter the social relations through which it is encountered?
+
+MECHANISM:
+<YOUTUBE VIDEO>
+→ select/import
+→ <MEDIA REFERENCE IN KANEVA>
+→ [ATTACH TO VIRTUAL DISPLAY]
+→ <VIDEO LOCATED IN ROOM>
+→ [CO-VIEW]
+→ <SHARED SOCIAL EVENT>
+
+FORMAL SHIFT:
+<NETWORK RESOURCE>
+→ <IN-WORLD ADDRESSABLE MEDIA>
+→ [SPATIALIZE]
+→ <SOCIAL FURNITURE>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+SPATIALIZE(media, room, display) :=
+    bind(media, display)
+    locate(display, room)
+    expose(media_state, occupants(room))
+
+The added variable is not geometry alone.
+
+It is CO-PRESENCE.
+
+TENSION:
+Calling this simply “YouTube integration” hides the consequential transformation. A normal embed attaches media to a page. Kaneva attached media to an object inside a socially occupiable place.
+
+MISSING:
+The available reporting does not yet establish the exact synchronization mechanism: whether playback state was server-authoritative, host-authoritative, event-broadcast, or merely approximately coordinated.
+
+BOUNDARY:
+The contemporary report verifies YouTube viewing on virtual televisions and reports Kaneva's claim that the integration was a first. Absolute historical firstness requires comparison against other virtual worlds operating before June 2007.
+
+CITATION TRAIL:
+Kaneva June 2007 announcement.
+Client network traces or developer documentation for synchronized media.
+Second Life parcel-media implementation.
+Active Worlds web/media objects.
+There.com shared-media systems.
+
+TEST:
+Recover the Kaneva client protocol or developer API and determine the minimum shared state necessary for synchronized watching:
+
+VIDEO_ID
+PLAY_STATE
+TIMECODE
+CONTROLLER
+ROOM
+AUDIENCE
+
+Then compare it with an ordinary HTML YouTube embed.
+
+PLATFORM:
+[[Information becomes architecture]]
+
+LINKS:
+[[KANEVA-DIM-001]]
+[[Media becomes furniture]]
+[[The house as interface]]
+
+BIBTEX:
+@misc{mediapost2007kanevayoutube,
+  author = {{MediaPost}},
+  title  = {Kaneva Brings YouTube Into Virtual World},
+  date   = {2007-06-29},
+  url    = {https://www.mediapost.com/publications/article/63231/kaneva-brings-youtube-into-virtual-world.html}
+}
+
+================================================================================
+
+ZETTEL
+
+ID: KANEVA-BOUNDARY-001
+
+TITLE:
+Kaneva's world was designed around ingress: the world remained alive by admitting things that were not produced inside it.
+
+SOURCE:
+Christopher Klaus, quoted in MediaPost — “Kaneva Brings YouTube Into Virtual World” — June 29, 2007.
+
+SOURCE URL:
+https://www.mediapost.com/publications/article/63231/kaneva-brings-youtube-into-virtual-world.html
+
+PASSAGE:
+[QUOTE] “We don't want to put our community in a box and force them to live with what we feed them.”
+
+RESEARCH OBJECT:
+Klaus identifies enclosure itself as a design problem. Kaneva's world is supposed to acquire content from an exterior rather than become a self-sufficient representational universe.
+
+LOCAL MOVE:
+The platform positions permeability as an affordance: users bring video, photos, games, and other media into a shared spatial environment.
+
+SOURCE TERMS:
+community
+box
+bring in
+favorite media
+friends
+express their interests
+connect
+
+WHAT BECAME STRANGE:
+“Immersion” is often imagined as eliminating the outside. Kaneva treats the inability to import the outside as impoverishment.
+
+QUESTION:
+Could permeability, rather than enclosure, be a defining property of a successful virtual world?
+
+DEEPER QUESTION:
+How much exteriority can a world absorb before the distinction between “inside” and “outside” ceases to explain the system?
+
+MECHANISM:
+<EXTERNAL CULTURAL OBJECT>
+→ [IMPORT / REFERENCE]
+→ <IN-WORLD REPRESENTATION>
+→ [SOCIAL USE]
+→ <WORLD ACTIVITY>
+
+FORMAL SHIFT:
+<WORLD AS CONTAINER>
+→ <WORLD AS PERMEABLE INTERFACE>
+→ [INGEST EXTERNAL OBJECTS]
+→ <RECOMBINED SOCIAL ENVIRONMENT>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+WORLD_t+1 =
+WORLD_t
++ TRANSLATE(EXTERNAL_OBJECT)
+
+rather than:
+
+WORLD_t+1 =
+GENERATE_ONLY_FROM(WORLD_t)
+
+TENSION:
+A world normally gets conceptual force from possessing an inside. Kaneva's stated design philosophy weakens that boundary deliberately.
+
+MISSING:
+We do not yet know which external objects Kaneva translated into native world objects, which remained remote references, and which could not cross the boundary.
+
+BOUNDARY:
+Klaus's statement is a product-design rationale, not proof that Kaneva achieved unrestricted interoperability.
+
+CITATION TRAIL:
+Kaneva media-import documentation.
+Kaneva developer SDK.
+Second Life media-on-a-prim.
+VRML external-resource architectures.
+Later metaverse interoperability specifications.
+
+TEST:
+Inventory everything a Kaneva user could bring from outside the system and classify each crossing as:
+
+COPY
+REFERENCE
+STREAM
+TRANSCODE
+RENDER
+RE-ENCODE
+REBUILD
+NONE
+
+The resulting table would reveal what “outside” meant technically.
+
+PLATFORM:
+[[A world needs doors]]
+
+LINKS:
+[[KANEVA-MEDIA-001]]
+[[Porous worlds]]
+[[Import is world-making]]
+
+BIBTEX:
+@misc{klaus2007communitybox,
+  author = {Klaus, Christopher},
+  title  = {Comments quoted in Kaneva Brings YouTube Into Virtual World},
+  date   = {2007-06-29},
+  url    = {https://www.mediapost.com/publications/article/63231/kaneva-brings-youtube-into-virtual-world.html}
+}
+
+================================================================================
+
+ZETTEL
+
+ID: KANEVA-HOUSE-001
+
+TITLE:
+In Kaneva, the virtual house begins to look less like simulated shelter than a spatial operating system for media and identity.
+
+SOURCE:
+Crunchbase — Kaneva company profile; MediaPost — “Kaneva Brings YouTube Into Virtual World” — 2007.
+
+SOURCE URL:
+https://www.crunchbase.com/organization/kaneva
+
+PASSAGE:
+[PARAPHRASE] Users personalized homes and worlds, met through avatars, and could bring shared media such as YouTube video into the 3D environment.
+
+RESEARCH OBJECT:
+The Kaneva home combines three ordinarily separate representational forms:
+
+PROFILE → WHO I AM
+PLAYLIST/MEDIA LIBRARY → WHAT I LIKE
+ROOM/HOME → WHERE I AM
+
+Kaneva makes them mutually spatial.
+
+LOCAL MOVE:
+A user's social profile becomes associated with an avatar, possessions, a customizable home, and media encountered by visitors.
+
+SOURCE TERMS:
+profile
+avatar
+home
+personalize
+media sharing
+virtual TV
+friends
+
+WHAT BECAME STRANGE:
+The digital “home” may not primarily imitate domestic architecture. Its walls and furniture provide an interface for arranging social identity, access, media, and attention.
+
+QUESTION:
+When does a profile become a house?
+
+DEEPER QUESTION:
+What does architecture do to information once files, preferences, relationships, and media must acquire locations in order to be encountered?
+
+MECHANISM:
+<PROFILE ATTRIBUTE>
+<MEDIA>
+<RELATIONSHIP>
+<POSSESSION>
+→ [SPATIAL ASSIGNMENT]
+→ <AVATAR / OBJECT / ROOM / DISPLAY>
+→ [VISIT]
+→ <SOCIAL LEGIBILITY>
+
+FORMAL SHIFT:
+<IDENTITY AS DATABASE RECORD>
+→ <IDENTITY AS SPATIALLY DISTRIBUTED OBJECTS>
+→ [PLACE]
+→ <INHABITABLE PROFILE>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+HOME :=
+SPATIALIZE({
+    identity,
+    taste,
+    media,
+    possessions,
+    permissions,
+    relationships
+})
+
+A home is therefore not merely GEOMETRY.
+
+It is an ACCESSIBLE ARRANGEMENT OF SIGNS.
+
+TENSION:
+A contemporary critic dismissed Kaneva as something like a glorified television set. But that criticism accidentally identifies the stranger possibility: Kaneva made the television set, room, avatar, and media library into one social interface.
+
+MISSING:
+We still need primary documentation showing exactly how home permissions, media ownership, furniture, profiles, and visitor access were represented in Kaneva's system.
+
+BOUNDARY:
+The sources establish customizable homes and spatial media use. The interpretation of the home as an “operating system for identity” is ours.
+
+CITATION TRAIL:
+Archived Kaneva housing documentation.
+Kaneva screenshots and walkthroughs.
+Kaneva developer SDK.
+Contemporary player accounts of homes.
+Comparative study: MySpace profile customization versus Kaneva home customization.
+
+TEST:
+Take the same user's MySpace/Facebook-era profile and Kaneva home and map homologous elements:
+
+PROFILE PHOTO → AVATAR
+ABOUT ME → ?
+FRIENDS LIST → ?
+FAVORITE VIDEO → TELEVISION
+PHOTO ALBUM → ?
+STATUS → ?
+GROUP → ?
+PRIVACY SETTING → DOOR / ACCESS?
+
+The unmatched cells are more interesting than the matches.
+
+PLATFORM:
+[[The house that information builds]]
+
+LINKS:
+[[KANEVA-DIM-001]]
+[[KANEVA-MEDIA-001]]
+[[Profile becomes architecture]]
+
+BIBTEX:
+@misc{crunchbase_kaneva,
+  author = {{Crunchbase}},
+  title  = {Kaneva},
+  url    = {https://www.crunchbase.com/organization/kaneva},
+  note   = {Accessed 2026-08-17}
+}
+
+================================================================================
+
+ZETTEL
+
+ID: KANEVA-WORLD-001
+
+TITLE:
+Kaneva suggests that “entering the world” and “accessing the world” are different operations.
+
+SOURCE:
+Kaneva product language preserved by Norris — 2009; contemporary Kaneva descriptions — 2007–2009.
+
+SOURCE URL:
+https://jvwr-ojs-utexas.tdl.org/jvwr/article/view/658/500
+
+PASSAGE:
+[PARAPHRASE] Kaneva advertised movement back and forth between its 2D web presence and its 3D virtual world.
+
+RESEARCH OBJECT:
+The distinction between WORLD and WORLD CLIENT becomes visible.
+
+A user can remain connected to the social system without invoking the representational machinery that makes the system appear as navigable 3D space.
+
+LOCAL MOVE:
+Kaneva distributes participation across a lightweight 2D representation and a heavier 3D client.
+
+SOURCE TERMS:
+2D web
+3D Virtual World
+move back and forth
+social networking
+virtual world
+
+WHAT BECAME STRANGE:
+Downloading or launching the 3D client may not be “entering Kaneva.” It may instead be requesting a particular rendering and interaction regime for something the user was already inside.
+
+QUESTION:
+What operation does a 3D client actually perform on a world that already exists as network state?
+
+DEEPER QUESTION:
+Should rendering be understood as world creation, world access, or one temporary interpretation of an already-operating world?
+
+MECHANISM:
+<WORLD STATE>
+→ [2D CLIENT]
+→ <DOCUMENTARY / PROFILE INTERFACE>
+
+<WORLD STATE>
+→ [3D CLIENT]
+→ <SPATIAL / AVATAR INTERFACE>
+
+FORMAL SHIFT:
+[ENTER WORLD]
+→ [INVOKE REPRESENTATION]
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+ACCESS(W) ≠ RENDER_3D(W)
+
+RENDER_3D(W) :=
+project(
+    W,
+    dimensions = 3,
+    interaction = embodied_navigation,
+    representation = avatar + object + place
+)
+
+RENDER_2D(W) :=
+project(
+    W,
+    dimensions = 2,
+    interaction = document_navigation,
+    representation = profile + list + page
+)
+
+TENSION:
+Virtual-world discourse commonly identifies the rendered environment with the world. Kaneva's explicit 2D/3D traversal makes that identification harder to sustain.
+
+MISSING:
+We need Kaneva's actual architecture to determine which state lived server-side independently of either rendering and which state was client-specific.
+
+BOUNDARY:
+This is an architectural hypothesis generated from the documented cross-interface design, not a recovered description of Kaneva's source code.
+
+CITATION TRAIL:
+Kaneva source/code releases associated with its developer program.
+Client protocol documentation.
+Persistence research in virtual-world literature.
+Database-versus-rendering architectures in MUDs, Active Worlds, and Second Life.
+
+TEST:
+Turn the 3D Kaneva client off.
+
+Enumerate everything that still exists.
+
+Whatever survives is a candidate for WORLD STATE rather than WORLD RENDERING.
+
+Then turn the 2D site off and repeat.
+
+The intersection is the strongest candidate for Kaneva's representation-independent world.
+
+PLATFORM:
+[[The world is not the picture of the world]]
+
+LINKS:
+[[KANEVA-DIM-001]]
+[[Persistent state precedes rendering]]
+[[Entering is an interface effect]]
+
+BIBTEX:
+@article{norris2009kaneva,
+  author  = {Norris, James R.},
+  title   = {The Growth and Direction of Healthcare Support Groups in Virtual Worlds},
+  journal = {Journal of Virtual Worlds Research},
+  year    = {2009},
+  url     = {https://jvwr-ojs-utexas.tdl.org/jvwr/article/view/658/500}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+HUBS-URL-001
+
+TITLE:
+Mozilla Hubs made the URL itself into a door to a 3D world.
+
+SOURCE:
+Sean White — “Enabling Social Experiences Using Mixed Reality and the Open Web” — Mozilla — 2018.
+
+SOURCE URL:
+https://blog.mozilla.org/en/mozilla/enabling-social-experiences-using-mixed-reality-and-the-open-web/
+
+PASSAGE:
+[QUOTE] “You can then share and access that room with a URL.”
+
+RESEARCH OBJECT:
+Hubs collapses a distinction that earlier virtual worlds usually preserve: the distinction between linking to information and entering a world.
+
+The browser URL is not merely a page describing the room.
+
+It addresses the room.
+
+LOCAL MOVE:
+Mozilla deliberately places immersive social space inside ordinary web addressing rather than behind a dedicated application, store installation, or headset platform.
+
+SOURCE TERMS:
+browser
+web link
+URL
+room
+web standards
+WebVR
+WebXR
+desktop
+mobile
+Mixed Reality
+
+WHAT BECAME STRANGE:
+A hyperlink can become architectural circulation.
+
+The web's ordinary operation:
+
+CLICK LINK → OPEN DOCUMENT
+
+becomes:
+
+CLICK LINK → ENTER PLACE
+
+QUESTION:
+What changes when a URI identifies an inhabitable situation rather than a document?
+
+DEEPER QUESTION:
+Is the fundamental primitive of a browser-native metaverse not the WORLD but the ADDRESS?
+
+MECHANISM:
+<URL>
+→ [RESOLVE]
+→ <HUBS ROOM>
+→ [RENDER ACCORDING TO AVAILABLE HARDWARE]
+→ <DESKTOP | MOBILE | VR EXPERIENCE>
+
+FORMAL SHIFT:
+<WEB ADDRESS>
+→ <ROOM ADDRESS>
+→ [ENTER]
+→ <CO-PRESENCE>
+
+SOURCE FORMALISM:
+Mozilla says Hubs uses web standards and progressively uses the hardware available to the participant.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+URL : ADDRESS<PLACE>
+
+GET(URL, DEVICE)
+→ RENDER(ROOM_STATE, capabilities(DEVICE))
+
+The representation changes.
+
+The address does not.
+
+TENSION:
+Kaneva linked a 2D social site to a distinct 3D world. Hubs makes the browser itself capable of becoming the 3D world.
+
+MISSING:
+What precisely persists server-side independently of desktop, mobile, and headset renderings?
+
+BOUNDARY:
+The source establishes cross-device browser access. It does not establish that every device provides identical interaction, performance, or perceptual experience.
+
+CITATION TRAIL:
+WebVR
+WebXR
+A-Frame
+Mozilla Hubs source
+networked MUD URLs
+Kaneva 2D/3D architecture
+
+TEST:
+Enter the same Hubs room URL from desktop, mobile, and VR.
+
+Record:
+
+ROOM ID
+AVATAR ID
+OBJECT STATE
+MEDIA STATE
+POSITION
+PERMISSIONS
+AVAILABLE ACTIONS
+
+Separate what survives representation change from what changes with the client.
+
+PLATFORM:
+[[The world is not its rendering]]
+
+LINKS:
+[[KANEVA-DIM-001]]
+[[KANEVA-WORLD-001]]
+[[Addresses become architecture]]
+
+BIBTEX:
+@misc{white2018hubs,
+  author = {White, Sean},
+  title = {Enabling Social Experiences Using Mixed Reality and the Open Web},
+  year = {2018},
+  publisher = {Mozilla},
+  url = {https://blog.mozilla.org/en/mozilla/enabling-social-experiences-using-mixed-reality-and-the-open-web/}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+HUBS-MEDIA-002
+
+TITLE:
+In Hubs, pasting a URL could manufacture a manipulable object.
+
+SOURCE:
+Josh Marinacci — “Share your favorite images and videos in VR with Mozilla Hubs” — Mozilla Hacks — 2018.
+
+SOURCE URL:
+https://hacks.mozilla.org/2018/08/share-your-favorite-images-and-videos-in-vr-with-mozilla-hubs/
+
+PASSAGE:
+[QUOTE] “Anything you share becomes a virtual object that everyone can interact with.”
+
+RESEARCH OBJECT:
+Hubs contains an unusually literal translation pipeline:
+
+WEB ADDRESS
+→ media retrieval
+→ validation/cache
+→ spatial object
+→ embodied manipulation.
+
+A URL does not merely summon representation onto a screen. It becomes material available to spatial action.
+
+LOCAL MOVE:
+Mozilla extends the web's embedding mechanism into object construction.
+
+SOURCE TERMS:
+URL
+media
+virtual object
+interact
+import
+cached
+move
+throw
+resize
+play
+pause
+
+WHAT BECAME STRANGE:
+The transformation from 2D web to 3D world is not principally a graphics transformation.
+
+It is an affordance transformation.
+
+A video changes from something you WATCH into something you can PICK UP.
+
+QUESTION:
+What must be added to information before it can participate as matter?
+
+DEEPER QUESTION:
+Could a metaverse compiler be understood as a function that assigns physical verbs to informational objects?
+
+MECHANISM:
+<URL>
+→ [FETCH]
+→ <MEDIA>
+→ [VALIDATE + CACHE]
+→ <ROOM OBJECT>
+→ [ASSIGN SPATIAL AFFORDANCES]
+→ <MOVE / THROW / RESIZE / PLAY>
+
+FORMAL SHIFT:
+<RESOURCE>
+→ <REPRESENTATION>
+→ [MATERIALIZE]
+→ <THING>
+
+SOURCE FORMALISM:
+Mozilla documents special URL handling for images, audio, video, GLB models, Sketchfab, Giphy, Imgur, Google Poly, and YouTube.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+MATERIALIZE(url) :=
+    media = resolve(url)
+    safe_media = validate(media)
+    obj = instantiate(safe_media)
+    obj.affordances += {
+        position,
+        rotation,
+        scale,
+        grab,
+        throw
+    }
+
+TENSION:
+Kaneva spatialized YouTube by binding video to a virtual television.
+
+Hubs generalizes the operation: heterogeneous web resources can themselves become movable room objects.
+
+MISSING:
+Which properties survive import?
+
+Authorship?
+Provenance?
+Permalink?
+Comments?
+Metadata?
+Licensing?
+Update state?
+
+BOUNDARY:
+Hubs did not turn the whole originating webpage into a spatial object. Its server extracted or fetched supported media representations.
+
+CITATION TRAIL:
+Mozilla Hubs media resolver
+GLTF
+Open Graph
+oEmbed
+Kaneva synchronized YouTube
+media-on-a-prim in Second Life
+
+TEST:
+For each supported source type, construct:
+
+SOURCE OBJECT
+→ RETAINED PROPERTIES
+→ LOST PROPERTIES
+→ ADDED SPATIAL PROPERTIES.
+
+Ask whether MATERIALIZE is copying, embedding, translating, or creating a new object.
+
+PLATFORM:
+[[Information becomes matter by acquiring verbs]]
+
+LINKS:
+[[KANEVA-MEDIA-001]]
+[[Affordance compilation]]
+[[URL-to-object]]
+
+BIBTEX:
+@misc{marinacci2018hubsmedia,
+  author = {Marinacci, Josh},
+  title = {Share your favorite images and videos in VR with Mozilla Hubs},
+  year = {2018},
+  publisher = {Mozilla Hacks},
+  url = {https://hacks.mozilla.org/2018/08/share-your-favorite-images-and-videos-in-vr-with-mozilla-hubs/}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+HUBS-DEATH-003
+
+TITLE:
+Mozilla could close Hubs without making the Hubs code cease to exist.
+
+SOURCE:
+Mozilla Support — “End of support for Mozilla Hubs” — 2024.
+
+SOURCE URL:
+https://support.mozilla.org/en-US/kb/end-support-mozilla-hubs
+
+PASSAGE:
+[PARAPHRASE]
+Mozilla ended Hubs support on May 31, 2024; the codebase subsequently moved under management of the Hubs Foundation.
+
+RESEARCH OBJECT:
+SERVICE DEATH and SYSTEM DEATH become separable.
+
+Mozilla could terminate:
+
+billing
+demo infrastructure
+Hubs Cloud provisioning
+institutional support
+
+without necessarily terminating:
+
+source
+protocols
+client architecture
+the possibility of independently operated instances.
+
+LOCAL MOVE:
+Open source creates a strange afterlife in which the institution and the computational object can diverge.
+
+SOURCE TERMS:
+ended support
+demo server
+Hubs Cloud
+codebase
+Hubs Foundation
+
+WHAT BECAME STRANGE:
+Who owns the continuity of a world after its maker leaves?
+
+QUESTION:
+What exactly dies when a virtual world shuts down?
+
+DEEPER QUESTION:
+Can a world possess institutional mortality while retaining technical reproducibility?
+
+MECHANISM:
+<MOZILLA HUBS>
+→ [MOZILLA WITHDRAWS OPERATION]
+→ <SERVICE ENDS>
+
+while:
+
+<SOURCE CODE>
+→ [TRANSFER COMMUNITY STEWARDSHIP]
+→ <POTENTIAL NEW INSTANCES>
+
+FORMAL SHIFT:
+<PLATFORM>
+→ SPLIT
+→ <OPERATOR> + <CODE> + <DATA> + <COMMUNITY>
+→ [REMOVE OPERATOR]
+→ <PARTIAL SURVIVAL>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+DEATH(WORLD) is not Boolean.
+
+DEATH :=
+{
+    hosted_service: true,
+    original_operator: true,
+    source_code: false,
+    recreatability: partial,
+    historical_instance_state: ?
+}
+
+TENSION:
+A proprietary virtual world can disappear when its operator shuts down its servers.
+
+An open-source world may lose its inhabited instance while its machinery remains reproducible.
+
+MISSING:
+Which Hubs rooms, assets, identities, histories, and social relations actually survived the transition?
+
+BOUNDARY:
+Code survival is not world survival. Source code cannot by itself reproduce lost social history or instance state.
+
+CITATION TRAIL:
+Hubs Foundation
+Mozilla Hubs repositories
+Active Worlds
+There.com shutdown/relaunch
+Worlds.com
+MUD archival projects
+
+TEST:
+Define five kinds of platform survival:
+
+SOURCE SURVIVAL
+SERVER SURVIVAL
+STATE SURVIVAL
+IDENTITY SURVIVAL
+COMMUNITY SURVIVAL
+
+Apply them to Hubs, Kaneva, Second Life, Roblox, and Minecraft servers.
+
+PLATFORM:
+[[World mortality]]
+
+LINKS:
+[[Protocol outlives institution]]
+[[KANEVA-WORLD-001]]
+[[What dies when a world closes?]]
+
+BIBTEX:
+@misc{mozilla2024hubsend,
+  author = {{Mozilla}},
+  title = {End of support for Mozilla Hubs},
+  year = {2024},
+  url = {https://support.mozilla.org/en-US/kb/end-support-mozilla-hubs}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+METAVERSE-DIM-004
+
+TITLE:
+The metaverse may be representation-independent: 2D and 3D can be clients of the same world.
+
+SOURCE:
+Mozilla — Hubs — 2018; Roblox Terms of Use — 2026; Kaneva lineage.
+
+SOURCE URL:
+https://blog.mozilla.org/en/mozilla/enabling-social-experiences-using-mixed-reality-and-the-open-web/
+
+PASSAGE:
+[PARAPHRASE]
+Hubs exposed one room across desktop, mobile, and VR; Roblox defines its Services across websites, applications, consoles, VR, Player, and Studio.
+
+RESEARCH OBJECT:
+The Kaneva → Hubs → Roblox line suggests that DIMENSION is the wrong ontology.
+
+A world can have:
+
+2D menus
+web profiles
+commerce pages
+mobile screens
+3D scenes
+VR embodiment
+
+without becoming six different worlds.
+
+LOCAL MOVE:
+The persistent entities—identity, inventory, permissions, relationships, purchases, world state—can survive shifts in representational dimensionality.
+
+SOURCE TERMS:
+website
+platform
+applications
+virtual reality
+desktop
+mobile
+room
+Services
+
+WHAT BECAME STRANGE:
+“2D metaverse” may not be a contradiction.
+
+Neither may “3D metaverse” describe the decisive feature.
+
+QUESTION:
+What must remain invariant across representations for two interfaces to count as access to one world?
+
+DEEPER QUESTION:
+Is a metaverse better defined by persistent referents than by spatial rendering?
+
+MECHANISM:
+<WORLD STATE>
+→ [CLIENT A]
+→ <2D>
+
+<WORLD STATE>
+→ [CLIENT B]
+→ <3D>
+
+<WORLD STATE>
+→ [CLIENT C]
+→ <VR>
+
+FORMAL SHIFT:
+<METAVERSE = 3D SPACE>
+→ <METAVERSE = PERSISTENT REFERENTIAL SYSTEM>
+→ [MULTIPLE RENDERERS]
+→ <POLYMORPHIC WORLD>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+WORLD :=
+{
+    identities,
+    objects,
+    relations,
+    permissions,
+    histories,
+    economies
+}
+
+INTERFACE :=
+projection(WORLD, device, context)
+
+DIMENSION(INTERFACE) ≠ DIMENSION(WORLD)
+
+TENSION:
+Immersive-metaverse rhetoric privileges 3D embodiment.
+
+Actual platforms repeatedly place critical world operations—identity, discovery, purchase, policy, moderation, administration—outside the rendered 3D scene.
+
+MISSING:
+A principled threshold for determining when two interfaces are projections of one world rather than merely linked services.
+
+BOUNDARY:
+Cross-device branding alone does not prove shared world-state. The invariants must be traced entity by entity.
+
+CITATION TRAIL:
+Kaneva
+Mozilla Hubs
+Roblox
+Minecraft
+MUD web frontends
+MMORPG account portals
+
+TEST:
+For each system, trace:
+
+IDENTITY
+INVENTORY
+FRIENDS
+CURRENCY
+WORLD OBJECT
+PURCHASE
+MESSAGE
+PERMISSION
+
+across its web, mobile, desktop, and immersive clients.
+
+PLATFORM:
+[[The world is invariant; the interface conjugates it]]
+
+LINKS:
+[[KANEVA-DIM-001]]
+[[HUBS-URL-001]]
+[[Representation-independent worlds]]
+
+BIBTEX:
+@misc{mozilla_roblox_multiclient,
+  title = {Cross-Interface World Access in Mozilla Hubs and Roblox},
+  note = {Primary-source comparison},
+  year = {2026}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+ROBLOX-LAW-005
+
+TITLE:
+Roblox compiles jurisdiction, age, and platform policy into runtime variables.
+
+SOURCE:
+Roblox — PolicyService / Paid Random Items documentation — current documentation.
+
+SOURCE URL:
+https://create.roblox.com/docs/reference/engine/classes/PolicyService
+
+PASSAGE:
+[PARAPHRASE]
+PolicyService returns player-specific policy information based on factors including geolocation, age group, and platform.
+
+RESEARCH OBJECT:
+Law does not remain outside the virtual world as prose.
+
+Roblox provides an API through which policy becomes executable world-state.
+
+LOCAL MOVE:
+A developer asks the platform about a particular player and receives values that determine whether specific mechanics may be exposed.
+
+SOURCE TERMS:
+PolicyService
+player
+geolocation
+age group
+platform
+ArePaidRandomItemsRestricted
+
+WHAT BECAME STRANGE:
+A statute, platform rule, age category, or regional constraint can eventually appear inside a Lua program as:
+
+TRUE
+or
+FALSE.
+
+QUESTION:
+What happens to law when it becomes a variable?
+
+DEEPER QUESTION:
+Does platform governance increasingly operate by compiling institutional distinctions into affordance predicates?
+
+MECHANISM:
+<PLAYER>
++ <LOCATION>
++ <AGE>
++ <PLATFORM>
++ <POLICY>
+→ [PolicyService]
+→ <PERMISSION DICTIONARY>
+→ [ENABLE / DISABLE MECHANIC]
+
+FORMAL SHIFT:
+<LEGAL / PLATFORM RULE>
+→ <MACHINE-READABLE POLICY>
+→ [QUERY]
+→ <BOOLEAN>
+→ [ALTER WORLD]
+
+SOURCE FORMALISM:
+A documented value is:
+
+ArePaidRandomItemsRestricted
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+CAN_OPEN_PAID_RANDOM_GENERATOR(player)
+:=
+NOT PolicyService(player).ArePaidRandomItemsRestricted
+
+TENSION:
+A supposedly shared Roblox “experience” need not have identical rules for all avatars standing in the same simulated room.
+
+Two co-present players may inhabit different legally executable affordance spaces.
+
+MISSING:
+The precise mapping from every jurisdictional rule to Roblox's internal policy values is not publicly exposed by the API.
+
+BOUNDARY:
+PolicyService exposes the result of policy evaluation, not necessarily the full reasoning or legal rule that produced it.
+
+CITATION TRAIL:
+Roblox Paid Random Items Policy
+PolicyService
+regional age restrictions
+geo-compliance architectures
+feature flags
+
+TEST:
+Join the same experience using accounts with different policy states.
+
+Construct:
+
+PLAYER
+→ LOCATION
+→ AGE
+→ POLICY BOOLEAN
+→ AVAILABLE VERBS.
+
+The result is a map of legal geometry rather than visual geometry.
+
+PLATFORM:
+[[Law becomes affordance]]
+
+LINKS:
+[[Executable governance]]
+[[Lootbox jurisdiction]]
+[[One room, different worlds]]
+
+BIBTEX:
+@misc{roblox_policyservice,
+  author = {{Roblox Corporation}},
+  title = {PolicyService},
+  url = {https://create.roblox.com/docs/reference/engine/classes/PolicyService},
+  note = {Accessed 2026-08-17}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+ROBLOX-RANDOM-006
+
+TITLE:
+Roblox does not regulate “randomness” uniformly: paid randomness can be conditional while advertising rewards must be predetermined.
+
+SOURCE:
+Roblox — Terms of Use; Advertising Standards — 2026.
+
+SOURCE URL:
+https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use
+
+PASSAGE:
+[PARAPHRASE]
+Creators offering Random Virtual Items must disclose acquisition odds; Roblox separately requires rewarded-video rewards to be predetermined rather than random.
+
+RESEARCH OBJECT:
+The governed object is not RANDOMNESS alone.
+
+The platform distinguishes the pathway by which chance is attached to value.
+
+LOCAL MOVE:
+Roblox permits some random-item mechanisms under disclosure and user/jurisdiction constraints while categorically removing random rewards from rewarded-video advertising.
+
+SOURCE TERMS:
+Random Virtual Item
+odds
+transaction
+Rewarded Video
+pre-determined
+chance-based mechanics
+
+WHAT BECAME STRANGE:
+The same algorithmic primitive:
+
+RANDOM_SELECT(items)
+
+changes governance category depending on what operation precedes it.
+
+PAY → RANDOM
+and
+WATCH AD → RANDOM
+
+are not treated identically.
+
+QUESTION:
+Where exactly does randomness become problematic?
+
+DEEPER QUESTION:
+Should platform regulation be modeled over isolated mechanics or over complete transaction chains?
+
+MECHANISM:
+PAID PATH:
+<USER VALUE>
+→ [TRANSACTION]
+→ <RANDOM ITEM>
+→ disclosure/policy constraints
+
+AD PATH:
+<USER ATTENTION>
+→ [WATCH AD]
+→ <REWARD>
+→ RANDOMNESS FORBIDDEN
+
+FORMAL SHIFT:
+<RANDOMNESS>
+→ <RANDOMNESS-IN-A-TRANSACTION-TOPOLOGY>
+→ [CLASSIFY]
+→ <DIFFERENT POLICY>
+
+SOURCE FORMALISM:
+Roblox Terms require disclosure of odds for Random Virtual Items.
+
+Roblox Advertising Standards require rewarded-video rewards to be predetermined.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+POLICY(randomness, exchange_type)
+
+not:
+
+POLICY(randomness)
+
+TENSION:
+If chance itself were the prohibited property, both systems would receive the same treatment.
+
+They do not.
+
+MISSING:
+The normative rationale for why these transaction paths receive different restrictions is not fully stated in the cited rules.
+
+BOUNDARY:
+This does not show paid loot boxes are unrestricted. They remain subject to disclosure and player-specific policy restrictions.
+
+CITATION TRAIL:
+Roblox random items
+Roblox advertising rules
+FTC dark-pattern work
+rewarded advertising research
+gacha regulation
+
+TEST:
+Build a matrix:
+
+REAL MONEY
+ROBUX
+EARNED CURRENCY
+AD VIEW
+GAMEPLAY
+FREE CLAIM
+
+×
+
+DETERMINISTIC REWARD
+RANDOM REWARD
+
+Then map Roblox's policy for every cell.
+
+PLATFORM:
+[[Mechanics acquire meaning from transaction topology]]
+
+LINKS:
+[[ROBLOX-LAW-005]]
+[[Lootbox topology]]
+[[Randomness is not one operation]]
+
+BIBTEX:
+@misc{roblox_random_items_2026,
+  author = {{Roblox Corporation}},
+  title = {Roblox Terms of Use and Advertising Standards},
+  year = {2026},
+  url = {https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+MINECRAFT-MONEY-007
+
+TITLE:
+Minecraft protects the boundary of a server by forbidding its virtual currency from crossing it.
+
+SOURCE:
+Mojang Studios — Minecraft Usage Guidelines — current version.
+
+SOURCE URL:
+https://www.minecraft.net/en-us/usage-guidelines
+
+PASSAGE:
+[PARAPHRASE]
+Server currencies may be sold but cannot be cashed out, transferred between servers, or converted to real-world currency.
+
+RESEARCH OBJECT:
+Minecraft permits a virtual economy partly by requiring that its money remain provincial.
+
+The server economy is protected from interoperability.
+
+LOCAL MOVE:
+Mojang defines acceptable server currency through negative convertibility conditions.
+
+SOURCE TERMS:
+virtual currencies
+real-world value
+cashed out
+transferred across other servers
+converted
+server
+
+WHAT BECAME STRANGE:
+Metaverse discourse often treats interoperability as an unquestioned good.
+
+Minecraft's commercial rules make ECONOMIC NON-INTEROPERABILITY a safety boundary.
+
+QUESTION:
+Why must money stop at the edge of the world?
+
+DEEPER QUESTION:
+Does a virtual world become safer precisely when some representations cannot escape it?
+
+MECHANISM:
+<REAL MONEY>
+→ [PURCHASE]
+→ <SERVER CURRENCY>
+→ [SPEND LOCALLY]
+
+FORBIDDEN:
+
+<SERVER CURRENCY>
+-X→ <OTHER SERVER>
+
+<SERVER CURRENCY>
+-X→ <REAL MONEY>
+
+FORMAL SHIFT:
+<CURRENCY>
+→ <WORLD-BOUNDED TOKEN>
+→ [REMOVE CONVERTIBILITY]
+→ <LOCAL ECONOMY>
+
+SOURCE FORMALISM:
+Minecraft requires server virtual currencies to:
+- lack real-world value,
+- be non-cashable,
+- be non-transferable across servers,
+- be non-convertible to real-world currency.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+currency c belongs_to world W
+
+valid(c) only if:
+
+cashout(c) = false
+transfer(c, W₂) = false
+real_value(c) = null
+
+TENSION:
+Interoperable asset proposals seek:
+
+OBJECT_W1 → OBJECT_W2.
+
+Minecraft's rules intentionally block an analogous transformation for server currencies.
+
+MISSING:
+How these restrictions are enforced technically across independent Java servers.
+
+BOUNDARY:
+Minecraft does permit monetization and some gameplay-affecting entitlements; the rules do not prohibit all server economies.
+
+CITATION TRAIL:
+Minecraft Usage Guidelines
+Minecoins
+Minecraft Marketplace
+server monetization history
+Tebex
+Xsolla server commerce
+
+TEST:
+Compare twenty large Minecraft servers.
+
+For each currency ask:
+
+PURCHASEABLE?
+TRADEABLE?
+TRANSFERABLE?
+CASHABLE?
+REFUNDABLE?
+SERVER-BOUND?
+
+Determine whether world boundaries are more strongly enforced economically than spatially.
+
+PLATFORM:
+[[A world is partly defined by what cannot cross its border]]
+
+LINKS:
+[[Economic membrane]]
+[[Lootbox convertibility]]
+[[Metaverse interoperability opposition]]
+
+BIBTEX:
+@misc{mojang_usage_guidelines,
+  author = {{Mojang Studios}},
+  title = {Minecraft Usage Guidelines},
+  url = {https://www.minecraft.net/en-us/usage-guidelines},
+  note = {Accessed 2026-08-17}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+LOOTBOX-BORDER-008
+
+TITLE:
+For UK gambling law, the border between game and world can determine whether a loot box counts as gambling.
+
+SOURCE:
+UK Department for Digital, Culture, Media & Sport — Government Response to the Call for Evidence on Loot Boxes in Video Games — 2022.
+
+SOURCE URL:
+https://www.gov.uk/government/calls-for-evidence/loot-boxes-in-video-games-call-for-evidence/outcome/government-response-to-the-call-for-evidence-on-loot-boxes-in-video-games
+
+PASSAGE:
+[PARAPHRASE]
+The UK government observed that most loot boxes did not meet the Gambling Act definition because prizes remained confined to the game and lacked real-money convertibility.
+
+RESEARCH OBJECT:
+The legal boundary can turn on whether value crosses the membrane of the game.
+
+RANDOMNESS is insufficient.
+
+PAYMENT is insufficient.
+
+PRIZE is insufficient.
+
+CONVERTIBILITY becomes load-bearing.
+
+LOCAL MOVE:
+The government's analysis distinguishes gambling-like similarities from the statutory classification of gambling.
+
+SOURCE TERMS:
+randomised items
+gambling
+prize
+confined
+real-world money
+Gambling Act 2005
+
+WHAT BECAME STRANGE:
+The ontology of the WORLD has legal consequences.
+
+The same random digital object may change regulatory category if it acquires an exit into a real-money market.
+
+QUESTION:
+Can interoperability convert play into gambling?
+
+DEEPER QUESTION:
+Does adding a bridge between virtual and external value systems transform the legal identity of an otherwise unchanged mechanic?
+
+MECHANISM:
+CASE A:
+
+MONEY
+→ RANDOM EVENT
+→ VIRTUAL OBJECT
+→ [WORLD-BOUND]
+→ NO CASH VALUE
+
+CASE B:
+
+MONEY
+→ RANDOM EVENT
+→ VIRTUAL OBJECT
+→ [CONVERT]
+→ REAL-WORLD VALUE
+
+The random mechanism can be identical.
+
+The boundary changes.
+
+FORMAL SHIFT:
+<LOOTBOX>
+→ <LOOTBOX + VALUE EXIT>
+→ [LEGAL CLASSIFICATION]
+→ <POTENTIALLY DIFFERENT REGULATORY OBJECT>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+LEGAL_MEANING :=
+f(
+  consideration,
+  chance,
+  prize,
+  convertibility
+)
+
+not simply:
+
+f(chance)
+
+TENSION:
+Psychologically, a non-cashable randomized purchase can still resemble gambling.
+
+Legally, resemblance and statutory qualification are not identical.
+
+MISSING:
+The boundary becomes messier when unofficial secondary markets give nominally world-bound objects external value.
+
+BOUNDARY:
+This describes the UK government's 2022 analysis. Gambling classifications differ by jurisdiction and can change.
+
+CITATION TRAIL:
+Gambling Act 2005
+UK Gambling Commission
+skin gambling
+Steam marketplace
+secondary-market virtual goods
+Roblox Limited items
+
+TEST:
+Hold the random reward algorithm constant.
+
+Toggle only:
+
+CASHOUT = FALSE / TRUE
+
+SECONDARY_MARKET = FALSE / TRUE
+
+TRANSFERABILITY = FALSE / TRUE
+
+Observe how legal classifications change across jurisdictions.
+
+PLATFORM:
+[[The membrane changes the meaning of the mechanism]]
+
+LINKS:
+[[MINECRAFT-MONEY-007]]
+[[Lootbox jurisdiction]]
+[[Convertibility is world leakage]]
+
+BIBTEX:
+@misc{dcms2022lootboxes,
+  author = {{Department for Digital, Culture, Media \& Sport}},
+  title = {Government Response to the Call for Evidence on Loot Boxes in Video Games},
+  year = {2022},
+  url = {https://www.gov.uk/government/calls-for-evidence/loot-boxes-in-video-games-call-for-evidence/outcome/government-response-to-the-call-for-evidence-on-loot-boxes-in-video-games}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+LOOTBOX-EVIDENCE-009
+
+TITLE:
+The central loot-box evidence problem may be that the platform possesses the experiment while researchers possess only observations.
+
+SOURCE:
+UK Department for Digital, Culture, Media & Sport — Government Response to the Call for Evidence on Loot Boxes — 2022.
+
+SOURCE URL:
+https://www.gov.uk/government/calls-for-evidence/loot-boxes-in-video-games-call-for-evidence/outcome/government-response-to-the-call-for-evidence-on-loot-boxes-in-video-games
+
+PASSAGE:
+[PARAPHRASE]
+The review found a stable association between loot-box use and problem gambling but did not establish causation; access to industry and player data remained a research barrier.
+
+RESEARCH OBJECT:
+The unresolved question is not simply:
+
+ARE LOOT BOXES HARMFUL?
+
+It is:
+
+WHO POSSESSES THE DATA NECESSARY TO DETERMINE WHICH MECHANISMS PRODUCE WHICH EFFECTS?
+
+LOCAL MOVE:
+The government preserves a distinction between correlation and causation while identifying inaccessible platform data as a constraint on better evidence.
+
+SOURCE TERMS:
+association
+causative link
+data
+industry
+player data
+dose-response
+research
+
+WHAT BECAME STRANGE:
+The system capable of measuring every opening, purchase, probability, loss streak, session, and player segment may not be the institution capable of independently evaluating harm.
+
+QUESTION:
+Is platform observability itself a governance problem?
+
+DEEPER QUESTION:
+How can an external researcher establish causal mechanisms inside a system whose operator controls both the intervention and the telemetry?
+
+MECHANISM:
+<PLAYER>
+→ <LOOTBOX SYSTEM>
+→ <BEHAVIOR>
+
+PLATFORM observes:
+transactions
+timing
+odds
+sessions
+experiments
+player histories
+
+RESEARCHER often observes:
+surveys
+self-report
+partial behavioral data
+
+FORMAL SHIFT:
+<QUESTION ABOUT HARM>
+→ <QUESTION ABOUT OBSERVABILITY>
+→ [DATA ACCESS]
+→ <POSSIBLE CAUSAL TEST>
+
+SOURCE FORMALISM:
+The government distinguishes association from causation and calls for better evidence enabled by improved data access.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+CAUSAL_LEGIBILITY
+≈
+MECHANISM_VISIBILITY
+×
+DATA_ACCESS
+×
+EXPERIMENTAL_CONTROL
+
+TENSION:
+Platforms frequently advertise personalization and sophisticated behavioral analytics.
+
+Regulators simultaneously report difficulty obtaining sufficiently robust data to determine effects of monetization mechanics.
+
+MISSING:
+Longitudinal, player-level datasets linking exposures to outcomes while addressing privacy and selection effects.
+
+BOUNDARY:
+An association with problem gambling does not establish that loot boxes cause problem gambling.
+
+Absence of proven causality likewise does not establish absence of harm.
+
+CITATION TRAIL:
+DCMS Video Games Research Framework
+FTC loot-box workshop
+platform telemetry research
+randomized controlled field experiments
+data-access regulation
+
+TEST:
+Ask a platform to expose a privacy-preserving event stream:
+
+PLAYER_COHORT
+BOX_OFFER
+PRICE
+ODDS
+PURCHASE
+OUTCOME
+SESSION_DURATION
+TOTAL_SPEND
+COOLDOWN
+PARENTAL_CONTROL
+
+Then test competing causal hypotheses rather than only cross-sectional association.
+
+PLATFORM:
+[[Who gets to observe the world?]]
+
+LINKS:
+[[Legibility governs evidence]]
+[[Lootbox causal uncertainty]]
+[[Platform telemetry]]
+
+BIBTEX:
+@misc{dcms2022lootboxevidence,
+  author = {{Department for Digital, Culture, Media \& Sport}},
+  title = {Government Response to the Call for Evidence on Loot Boxes in Video Games},
+  year = {2022},
+  url = {https://www.gov.uk/government/calls-for-evidence/loot-boxes-in-video-games-call-for-evidence/outcome/government-response-to-the-call-for-evidence-on-loot-boxes-in-video-games}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+XSOLLA-EXOSKELETON-010
+
+TITLE:
+Xsolla's Web Shop lets the purchase leave the game while the purchased object stays inside it.
+
+SOURCE:
+Xsolla — “Xsolla launches Buy Button for mobile games” — 2025.
+
+SOURCE URL:
+https://xsolla.com/newsroom/xsolla-launches-buy-button-for-mobile-games-to-help-developers-take-back-control-of-their-revenue
+
+PASSAGE:
+[PARAPHRASE]
+An in-game link can open browser checkout for virtual items, currency, or bundles and synchronize those offers with the game.
+
+RESEARCH OBJECT:
+Commerce and world-state can be spatially separated.
+
+The user exits the game's rendering environment to transact, yet the consequence returns to the game as an inventory or currency mutation.
+
+LOCAL MOVE:
+Xsolla externalizes the payment interface while retaining continuity with in-game identity, catalog, LiveOps, rewards, and purchases.
+
+SOURCE TERMS:
+external link
+browser-based checkout
+virtual items
+currencies
+bundles
+catalog synchronization
+LiveOps
+Merchant of Record
+
+WHAT BECAME STRANGE:
+The shop does not have to be inside the world for the transaction to alter the world.
+
+QUESTION:
+Where does an in-game purchase occur?
+
+DEEPER QUESTION:
+If payment moves to another interface, company, browser context, and legal stack while its effects return to the game, is commerce part of the world or infrastructure around it?
+
+MECHANISM:
+<IN-GAME OFFER>
+→ [LINK]
+→ <WEB CHECKOUT>
+→ [PAYMENT]
+→ <ENTITLEMENT>
+→ [SYNC]
+→ <IN-GAME STATE CHANGE>
+
+FORMAL SHIFT:
+<3D / GAME COMMERCE UI>
+→ <2D WEB COMMERCE>
+→ [TRANSACT]
+→ <GAME OBJECT>
+
+SOURCE FORMALISM:
+Xsolla describes:
+browser checkout
+catalog synchronization
+Merchant-of-Record handling
+LiveOps synchronization
+parental controls
+multi-channel commerce.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+WORLD_ACTION:
+buy(sword)
+
+may compile to:
+
+leave_rendering()
+→ authenticate_web()
+→ transact()
+→ issue_entitlement()
+→ return()
+→ inventory += sword
+
+TENSION:
+“Leaving the game” visually does not mean leaving the game's economy.
+
+The economic world can extend farther than the rendered world.
+
+MISSING:
+Exactly which player identifiers and entitlement messages establish continuity between the game client and web checkout for each implementation.
+
+BOUNDARY:
+Xsolla's claims describe its commerce architecture and product capabilities; they do not imply every game implements identical flows.
+
+CITATION TRAIL:
+Xsolla Web Shop
+Apple anti-steering litigation
+Epic v. Apple
+Merchant of Record
+cross-platform entitlements
+
+TEST:
+Trace one item purchase byte-by-byte:
+
+GAME OFFER
+→ URL
+→ AUTH TOKEN
+→ CART
+→ PAYMENT
+→ WEBHOOK
+→ INVENTORY DATABASE
+→ GAME CLIENT
+
+Mark every change of interface, operator, jurisdiction, and datatype.
+
+PLATFORM:
+[[The world has a commercial exoskeleton]]
+
+LINKS:
+[[2D commerce / 3D consequence]]
+[[KANEVA-DIM-001]]
+[[Transaction topology]]
+
+BIBTEX:
+@misc{xsolla2025buybutton,
+  author = {{Xsolla}},
+  title = {Xsolla launches Buy Button for mobile games to help developers take back control of their revenue},
+  year = {2025},
+  url = {https://xsolla.com/newsroom/xsolla-launches-buy-button-for-mobile-games-to-help-developers-take-back-control-of-their-revenue}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+XSOLLA-PORTAL-011
+
+TITLE:
+Xsolla Metasites translates the hyperlink graph into a portal graph.
+
+SOURCE:
+Xsolla — “Share your 3D Projects with Xsolla Metasites” — 2025.
+
+SOURCE URL:
+https://xsolla.com/blog/share-3d-projects-with-xsolla-metasites-and-start-your-metaverse-journey
+
+PASSAGE:
+[QUOTE] “Portals connect diverse Metasites, forming a navigable 3D web.”
+
+RESEARCH OBJECT:
+Xsolla's Metasites proposal contains an almost literal translation of web topology into spatial topology.
+
+WEB:
+PAGE —LINK→ PAGE
+
+METASITES:
+WORLD —PORTAL→ WORLD
+
+LOCAL MOVE:
+Instead of replacing the web with a metaverse, Metasites spatializes one of the web's foundational operations: linking.
+
+SOURCE TERMS:
+browser
+portals
+interconnected
+3D web
+no downloads
+Unreal Engine
+WebGL
+inventory
+in-world items
+
+WHAT BECAME STRANGE:
+A portal may simply be a hyperlink that has acquired architecture.
+
+QUESTION:
+What is the difference between clicking a link and walking through a portal?
+
+DEEPER QUESTION:
+Could a browser-native metaverse emerge not by inventing a new network topology but by giving the existing web graph embodied verbs?
+
+MECHANISM:
+<3D SITE A>
+→ [PORTAL]
+→ <3D SITE B>
+
+corresponding to:
+
+<WEB PAGE A>
+→ [HYPERLINK]
+→ <WEB PAGE B>
+
+FORMAL SHIFT:
+<LINK>
+→ <SPATIAL REPRESENTATION OF LINK>
+→ [TRAVERSE]
+→ <PLACE CHANGE>
+
+SOURCE FORMALISM:
+Xsolla describes browser-accessible Unreal/WebGL experiences, interconnected portals, social layers, inventories, in-world items, and a network of Metasites.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+HYPERLINK:
+A --click--> B
+
+PORTAL:
+A --walk--> B
+
+Both instantiate:
+
+EDGE(A,B)
+
+Only the interaction grammar differs.
+
+TENSION:
+Earlier “metaverse” rhetoric often imagined a successor to the web.
+
+Metasites instead makes the web itself three-dimensional.
+
+MISSING:
+Whether portals preserve identity, inventory, permissions, and object ownership across independently created Metasites—or merely navigate between them.
+
+BOUNDARY:
+Xsolla calls the resulting system a decentralized creator-powered network, but the cited product description alone does not establish decentralization at the protocol or infrastructure-ownership level.
+
+CITATION TRAIL:
+Mozilla Hubs URLs
+WebXR
+VRML
+HyperCard
+Xanadu
+spatial hypertext
+Metasites technical documentation
+
+TEST:
+For a portal crossing, measure:
+
+IDENTITY survives?
+INVENTORY survives?
+URL changes?
+SERVER changes?
+ORIGIN changes?
+AUTHORITY changes?
+PERMISSIONS survive?
+
+Then determine whether PORTAL is merely navigation or true world continuity.
+
+PLATFORM:
+[[The hyperlink acquires a body]]
+
+LINKS:
+[[HUBS-URL-001]]
+[[Spatial hypertext]]
+[[A world made of edges]]
+
+BIBTEX:
+@misc{xsolla2025metasites,
+  author = {{Xsolla}},
+  title = {Share your 3D Projects with Xsolla Metasites},
+  year = {2025},
+  url = {https://xsolla.com/blog/share-3d-projects-with-xsolla-metasites-and-start-your-metaverse-journey}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+XSOLLA-ROBLOX-012
+
+TITLE:
+The hidden boundary of Roblox becomes visible on the credit-card statement: “Xsolla*Roblox.”
+
+SOURCE:
+Roblox Support — “Unauthorized Charges & Refund Requests” — current; Xsolla corporate timeline.
+
+SOURCE URL:
+https://en.help.roblox.com/hc/en-us/articles/203312650-Unauthorized-Charges-Refund-Requests
+
+PASSAGE:
+[QUOTE] “If the charge on your statement says ‘Xsolla*Roblox’, please contact Xsolla’s Customer Support team.”
+
+RESEARCH OBJECT:
+The player experiences ROBLOX.
+
+The payment system may experience a multi-actor transaction involving Roblox, Xsolla, banks, card networks, and customer-support jurisdictions.
+
+The architectural seam becomes legible when the transaction fails.
+
+LOCAL MOVE:
+Roblox routes support responsibility according to the payment processor encoded in the statement descriptor.
+
+SOURCE TERMS:
+Xsolla*Roblox
+third-party payment processors
+refund
+charge
+Customer Support
+payment provider
+
+WHAT BECAME STRANGE:
+Infrastructure that is deliberately invisible during successful play becomes visible during failure.
+
+QUESTION:
+Can failure messages reveal the actual architecture of a supposedly seamless world?
+
+DEEPER QUESTION:
+Are chargebacks, error messages, receipts, privacy notices, and refund routes better maps of a platform than its visual interface?
+
+MECHANISM:
+<PLAYER>
+→ ROBLOX
+→ <PAYMENT REQUEST>
+→ XSOLLA
+→ <PAYMENT NETWORK>
+
+failure:
+
+<CHARGE>
+→ [READ DESCRIPTOR]
+→ <DETERMINE RESPONSIBLE ACTOR>
+→ [ROUTE DISPUTE]
+
+FORMAL SHIFT:
+<ONE PLATFORM>
+→ <MULTI-INSTITUTIONAL STACK>
+→ [FAILURE]
+→ <ARCHITECTURE BECOMES VISIBLE>
+
+SOURCE FORMALISM:
+Roblox distinguishes charges labeled:
+
+Xsolla*Roblox
+
+from charges labeled:
+
+Roblox
+
+and assigns different support paths.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+SUCCESS hides topology.
+
+FAILURE exposes topology.
+
+if descriptor == "Xsolla*Roblox":
+    authority = XSOLLA_SUPPORT
+else if descriptor == "Roblox":
+    authority = ROBLOX_SUPPORT
+
+TENSION:
+The user-facing world promises continuity.
+
+The transactional backend partitions responsibility.
+
+MISSING:
+Which Roblox purchasing channels currently route through Xsolla, in which jurisdictions, and under what transaction types.
+
+BOUNDARY:
+The documentation proves that some Roblox charges are processed or supported through Xsolla. It does not establish that Xsolla processes every Roblox transaction.
+
+CITATION TRAIL:
+Roblox billing architecture
+Xsolla/Roblox 2018 agreement
+Merchant of Record
+payment descriptors
+chargebacks
+consumer recourse
+
+TEST:
+Purchase identical Robux packages through:
+
+WEB
+IOS
+ANDROID
+XBOX
+PLAYSTATION
+QUEST
+
+Record:
+
+STATEMENT DESCRIPTOR
+MERCHANT
+PROCESSOR
+REFUND AUTHORITY
+TAX ACTOR
+PLATFORM FEE
+ENTITLEMENT PATH.
+
+The result is the institutional anatomy of one virtual currency.
+
+PLATFORM:
+[[Failures reveal the machine]]
+
+LINKS:
+[[XSOLLA-EXOSKELETON-010]]
+[[Invisible infrastructure]]
+[[Roblox economy]]
+
+BIBTEX:
+@misc{roblox_xsolla_billing,
+  author = {{Roblox Corporation}},
+  title = {Unauthorized Charges \& Refund Requests},
+  url = {https://en.help.roblox.com/hc/en-us/articles/203312650-Unauthorized-Charges-Refund-Requests},
+  note = {Accessed 2026-08-17}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+XSOLLA-MINECRAFT-013
+
+TITLE:
+A Minecraft server can acquire a second body on the web: server in 3D, commercial identity in 2D.
+
+SOURCE:
+Xsolla — Release Notes, March 2025; Mojang Studios — Minecraft Usage Guidelines.
+
+SOURCE URL:
+https://xsolla.com/release-notes/march-2025
+
+PASSAGE:
+[PARAPHRASE]
+Xsolla describes dedicated server rentals and custom Xsolla Mall landing pages for popular games including Minecraft.
+
+RESEARCH OBJECT:
+The multiplayer world can be operationally distributed across:
+
+MINECRAFT SERVER
++
+WEB LANDING PAGE
++
+PAYMENT SYSTEM
++
+ACCOUNT / ENTITLEMENT RECORDS.
+
+The 2D page is not an advertisement external to the world if actions there change access or economic state inside the server.
+
+LOCAL MOVE:
+Xsolla attaches discovery and commerce infrastructure to worlds whose rendered spatial environment remains elsewhere.
+
+SOURCE TERMS:
+dedicated game server
+landing page
+Xsolla Mall
+Minecraft
+server
+web
+monetization
+
+WHAT BECAME STRANGE:
+A Minecraft server may have an architecture made of blocks but an economy made of webpages.
+
+QUESTION:
+How much of a Minecraft world lives outside Minecraft?
+
+DEEPER QUESTION:
+When web shops, Discords, maps, wikis, voting sites, payment pages, moderation dashboards, and server databases are necessary to inhabit a server socially, where should its boundary be drawn?
+
+MECHANISM:
+<WEB PAGE>
+→ discover server
+→ purchase / authenticate
+→ <SERVER ENTITLEMENT>
+→ connect
+→ <MINECRAFT WORLD>
+
+FORMAL SHIFT:
+<WORLD = GAME SERVER>
+→ <WORLD = SERVER + WEB EXOSKELETON>
+→ [COORDINATE]
+→ <DISTRIBUTED SOCIAL WORLD>
+
+SOURCE FORMALISM:
+Minecraft itself defines a server as a connecting address/IP for purposes of its Usage Guidelines and imposes rules on monetization occurring around that server.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+MINECRAFT_WORLD :=
+{
+    executable_server,
+    world_state,
+    identity,
+    economic_interfaces,
+    discovery_interfaces,
+    governance_interfaces
+}
+
+TENSION:
+Minecraft prohibits server access from being controlled by ownership of out-of-game products or services, while simultaneously permitting various forms of server monetization under specified conditions.
+
+Therefore the 2D/3D connection is not unconstrained.
+
+MISSING:
+The precise Xsolla-to-Minecraft server entitlement mechanisms used by particular server operators.
+
+BOUNDARY:
+Xsolla's mention of Minecraft demonstrates tooling aimed at Minecraft-related server businesses; it does not imply an official Mojang/Xsolla platform integration.
+
+CITATION TRAIL:
+Minecraft server monetization
+Xsolla Mall
+Tebex/Buycraft
+server voting sites
+Dynmap
+Discord integration
+Minecraft server list ecosystem
+
+TEST:
+Choose one large Minecraft server and map every indispensable external service.
+
+Classify each as:
+
+DISCOVERY
+IDENTITY
+PAYMENT
+GOVERNANCE
+COMMUNICATION
+MAP
+KNOWLEDGE
+EXECUTION.
+
+Then remove each service in turn.
+
+Ask which removals leave the “world” technically running but socially nonfunctional.
+
+PLATFORM:
+[[The world exceeds the executable]]
+
+LINKS:
+[[XSOLLA-EXOSKELETON-010]]
+[[MINECRAFT-MONEY-007]]
+[[2D/3D distributed worlds]]
+
+BIBTEX:
+@misc{xsolla2025march,
+  author = {{Xsolla}},
+  title = {Xsolla Release Notes: March 2025},
+  year = {2025},
+  url = {https://xsolla.com/release-notes/march-2025}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+GAMBLING-TOPOLOGY-014
+
+TITLE:
+The casino is not the building: gambling is a topology of value, chance, and payout that can wear any architecture.
+
+SOURCE:
+Linden Lab — Policy Regarding Wagering in Second Life — current official policy.
+Roblox Corporation — Roblox Terms of Use — Random Virtual Items — May 19, 2026.
+
+PASSAGE:
+[QUOTE] Linden Lab: “whether or not they are in a building that you may call an inworld ‘casino.’”
+
+[PARAPHRASE] Roblox's own example of a Random Virtual Item is not a slot machine or chest: the user acquires a virtual marble and throws it into a fountain to trigger the random reward.
+
+RESEARCH OBJECT:
+Two platform policies independently detach gambling-like mechanics from gambling iconography.
+
+Second Life says the architectural container is irrelevant.
+
+Roblox demonstrates that a paid random reward can be spatialized as an innocent-seeming world action.
+
+Therefore:
+
+CASINO ≠ CASINO-SHAPED PLACE.
+
+The regulated object is closer to a relation among payment, contingency, reward, and convertibility.
+
+LOCAL MOVE:
+Linden Lab strips the casino of architectural significance.
+
+Roblox inadvertently demonstrates how the same transaction topology can be re-skinned as environmental interaction.
+
+SOURCE TERMS:
+wagering
+game of chance
+Linden dollars
+Random Virtual Item
+transaction
+odds
+marble
+fountain
+inworld object
+
+WHAT BECAME STRANGE:
+A fountain can be functionally closer to a slot machine than a building full of casino decoration.
+
+Conversely, a perfect 3D reconstruction of a casino can contain no gambling at all.
+
+QUESTION:
+If gambling cannot be identified visually, what is the smallest transaction graph that makes an action gambling-like?
+
+DEEPER QUESTION:
+Can spatial interfaces disguise economic operations by translating BUY / WAGER / REVEAL into WALK / THROW / OPEN / TOUCH?
+
+MECHANISM:
+<THING OF VALUE>
+→ [COMMIT]
+→ <CONTINGENT EVENT>
+→ [RESOLVE]
+→ <VALUED OUTPUT>
+
+Possible interface:
+
+<MARBLE>
+→ [THROW INTO FOUNTAIN]
+→ <RANDOM ITEM>
+
+Possible interface:
+
+<CHEST>
+→ [OPEN]
+→ <RANDOM ITEM>
+
+Possible interface:
+
+<BUTTON>
+→ [CLICK]
+→ <RANDOM ITEM>
+
+The skin changes.
+
+The transaction graph may not.
+
+FORMAL SHIFT:
+<CASINO AS PLACE>
+→ <GAMBLING AS RELATIONAL TOPOLOGY>
+→ [RE-SKIN]
+→ <ARBITRARY WORLD ACTION>
+
+SOURCE FORMALISM:
+Second Life's policy identifies wagering through:
+- contribution of Linden dollars, real-world money, or things of value;
+- contingency/chance;
+- payout.
+
+Roblox defines Random Virtual Items through random acquisition and requires disclosure of acquisition odds before the transaction.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+GAMBLINGLIKE(x) :=
+CONSIDERATION(x)
+∧ CHANCE(x)
+∧ PRIZE(x)
+
+APPEARANCE(x) := arbitrary
+
+Therefore:
+
+APPEARANCE(x) does not determine GAMBLINGLIKE(x).
+
+TENSION:
+Game worlds govern through representation.
+
+Gambling regulation often has to ignore representation in order to reach the underlying operation.
+
+This makes immersive design unusually capable of separating what an action FEELS LIKE from what it ECONOMICALLY DOES.
+
+MISSING:
+A comparative vocabulary for identifying equivalent economic mechanics across radically different embodied interfaces.
+
+BOUNDARY:
+Neither source establishes that every randomized virtual-item transaction is legally gambling. The sources establish that architecture and visual metaphor are insufficient for classification.
+
+CITATION TRAIL:
+[[LOOTBOX-BORDER-008]]
+→ Linden Lab wagering policy
+→ Roblox Random Virtual Item fountain example
+→ embodied economic equivalence
+
+[[ROBLOX-RANDOM-006]]
+→ interface transformation
+→ transaction topology
+
+TEST:
+Implement one identical random-reward backend behind six interfaces:
+
+SLOT MACHINE
+TREASURE CHEST
+FOUNTAIN
+TREE HARVEST
+PET HATCHING
+PLAIN BUTTON
+
+Hold price, probability distribution, and reward constant.
+
+Test whether users, regulators, parents, and platform moderators classify them differently despite identical transaction graphs.
+
+PLATFORM:
+[[The world can camouflage the transaction]]
+
+LINKS:
+[[LOOTBOX-BORDER-008]]
+[[ROBLOX-RANDOM-006]]
+[[KANEVA-HOUSE-001]]
+
+BIBTEX:
+@misc{linden_wagering_policy,
+  author = {{Linden Lab}},
+  title = {Policy Regarding Wagering in Second Life},
+  url = {https://wiki.secondlife.com/wiki/Linden_Lab_Official:Policy_Regarding_Wagering_in_Second_Life},
+  note = {Accessed 2026-08-17}
+}
+
+@misc{roblox_terms_random_2026,
+  author = {{Roblox Corporation}},
+  title = {Roblox Terms of Use},
+  year = {2026},
+  url = {https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+SECOND-LIFE-JURISDICTION-015
+
+TITLE:
+Second Life turns legal jurisdiction into literal geography: some avatars are not permitted to enter the region.
+
+SOURCE:
+Linden Lab — Second Life Skill Gaming Policy — current official policy.
+
+PASSAGE:
+[PARAPHRASE] A Skill Gaming Region is a designated full Second Life region, and a resident must be of legal age and accessing from a jurisdiction where participation is permitted in order to enter.
+
+RESEARCH OBJECT:
+Legal permission is translated into spatial access.
+
+The law does not merely govern what an avatar may DO after entering a place.
+
+It helps determine whether the avatar may ENTER THE PLACE.
+
+LOCAL MOVE:
+Linden Lab binds:
+
+PERSON
+JURISDICTION
+AGE
+ACCOUNT STATE
+GAME APPROVAL
+OPERATOR APPROVAL
+REGION APPROVAL
+
+into a gate on virtual geography.
+
+SOURCE TERMS:
+Skill Gaming Region
+jurisdiction
+legal age
+enter
+Inworld object
+Operator
+Creator
+License
+Full Region
+
+WHAT BECAME STRANGE:
+Two avatars can stand conceptually adjacent on the same global map while one is legally unable to cross the parcel boundary.
+
+Virtual geography becomes personalized jurisdiction.
+
+QUESTION:
+What kind of geography has borders that depend on who is approaching them?
+
+DEEPER QUESTION:
+Does a governed virtual world consist of one common space, or of user-specific possible spaces generated by policy?
+
+MECHANISM:
+<AVATAR>
++ <AGE>
++ <ACCOUNT>
++ <PHYSICAL JURISDICTION>
+→ [POLICY CHECK]
+→ <ENTRY ALLOWED | ENTRY DENIED>
+
+FORMAL SHIFT:
+<LAW APPLIES TO PLACE>
+→ <LAW GENERATES ACCESS CONDITION>
+→ [GATE]
+→ <PERSON-SPECIFIC GEOGRAPHY>
+
+SOURCE FORMALISM:
+Linden Lab defines a Skill Gaming Region as a recognized Second Life Full Region.
+
+Participation requires that the resident:
+1. have appropriate legal authority;
+2. reside in and access from an authorized jurisdiction;
+3. be of legal age;
+4. maintain qualifying account information.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+VISIBLE_WORLD(user) :=
+WORLD
+-
+FORBIDDEN_REGIONS(policy(user))
+
+Therefore:
+
+WORLD_A ≠ WORLD_B
+
+even when:
+
+RENDERER_A = RENDERER_B.
+
+TENSION:
+The usual map represents places as existing independently of viewers.
+
+Here, lawful reachability is a property of the user-place relation.
+
+MISSING:
+The precise technical enforcement chain connecting physical geolocation, account information, jurisdiction lists, and region-entry control.
+
+BOUNDARY:
+The policy describes permission and access requirements. It does not expose Linden Lab's full geolocation or enforcement implementation.
+
+CITATION TRAIL:
+[[ROBLOX-LAW-005]]
+→ player-specific Roblox policy
+→ Second Life region-specific access
+→ personalized legal geography
+
+[[LOOTBOX-BORDER-008]]
+→ jurisdiction
+→ world boundary
+→ spatial gate
+
+TEST:
+Represent Second Life as a graph:
+
+REGION = node
+TELEPORT = edge
+
+Then compute the graph separately for residents in different permitted/prohibited jurisdictions.
+
+Ask whether “the Second Life map” is actually a family of policy-conditioned maps.
+
+PLATFORM:
+[[Law becomes geometry]]
+
+LINKS:
+[[ROBLOX-LAW-005]]
+[[LOOTBOX-BORDER-008]]
+
+BIBTEX:
+@misc{linden_skill_policy,
+  author = {{Linden Lab}},
+  title = {Second Life Skill Gaming Policy},
+  url = {https://wiki.secondlife.com/wiki/Linden_Lab_Official:Second_Life_Skill_Gaming_Policy},
+  note = {Accessed 2026-08-17}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+SECOND-LIFE-NOVELTY-016
+
+TITLE:
+A worthless virtual object can legalize a chance mechanic by failing to become money.
+
+SOURCE:
+Linden Lab — Policy Regarding Wagering in Second Life — current official policy.
+
+PASSAGE:
+[PARAPHRASE] Linden Lab says a free-entry activity will likely be permitted, and similarly treats payouts involving novelty objects that cannot readily be converted into Linden dollars, real currency, or value as likely permissible.
+
+RESEARCH OBJECT:
+The virtual object's crucial property is not its texture, rarity, beauty, size, or 3D form.
+
+It is its EXIT CAPACITY.
+
+A reward can cease to trigger the same policy concern when it cannot readily traverse:
+
+OBJECT
+→ LINDEN DOLLARS
+→ MONEY / VALUE.
+
+LOCAL MOVE:
+Linden Lab classifies an in-world object's significance partly by convertibility.
+
+SOURCE TERMS:
+payout
+objects
+novelty objects
+converted
+Linden dollars
+real-world currency
+value
+consideration
+
+WHAT BECAME STRANGE:
+The legal/policy ontology of an object depends upon where it can go next.
+
+A golden dragon and a useless pebble may look equally substantial in-world.
+
+Their regulatory difference can reside entirely in an invisible exchange edge.
+
+QUESTION:
+Is value a property of an object or a path out of the world?
+
+DEEPER QUESTION:
+Should virtual-object ontology include its permitted transformations rather than merely its attributes?
+
+MECHANISM:
+<CHANCE>
+→ <OBJECT>
+
+PATH A:
+<OBJECT>
+-X→ <MONEY>
+→ likely lower wagering concern under this policy
+
+PATH B:
+<OBJECT>
+→ [CONVERT]
+→ <L$ / REAL VALUE>
+→ wagering concern increases
+
+FORMAL SHIFT:
+<VIRTUAL OBJECT AS THING>
+→ <VIRTUAL OBJECT AS NODE IN EXCHANGE GRAPH>
+→ [TEST REACHABILITY]
+→ <VALUE STATUS>
+
+SOURCE FORMALISM:
+Linden Lab explicitly distinguishes novelty objects that cannot readily be converted into Linden dollars, real-world currency, or value.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+VALUE(o) :=
+REACHABLE(
+    o,
+    {LINDEN_DOLLAR, REAL_CURRENCY, EXCHANGEABLE_VALUE}
+)
+
+The surprising variable is not:
+
+PRICE(o)
+
+but:
+
+PATH_EXISTS(o → money).
+
+TENSION:
+Minecraft similarly permits server currencies only when they cannot be cashed out or transferred across servers.
+
+The “failed” currency—the currency that cannot travel—may be precisely the compliant one.
+
+MISSING:
+How “readily converted” is operationally determined when unofficial markets, gifting, account sales, or off-platform exchanges exist.
+
+BOUNDARY:
+This is Linden Lab policy language, not a universal legal definition of gambling or value.
+
+CITATION TRAIL:
+[[LOOTBOX-BORDER-008]]
+→ money or money's worth
+→ Second Life novelty objects
+→ value as graph reachability
+
+[[MINECRAFT-MONEY-007]]
+→ non-convertible server currency
+→ economic membranes
+
+TEST:
+Construct identical random rewards with four exchange graphs:
+
+A. no transfer
+B. player-to-player transfer
+C. Linden-dollar resale
+D. external cash market
+
+Hold the object itself constant.
+
+Observe which classification changes are produced solely by adding edges.
+
+PLATFORM:
+[[Value is an exit route]]
+
+LINKS:
+[[LOOTBOX-BORDER-008]]
+[[MINECRAFT-MONEY-007]]
+
+BIBTEX:
+@misc{linden_wagering_convertibility,
+  author = {{Linden Lab}},
+  title = {Policy Regarding Wagering in Second Life},
+  url = {https://wiki.secondlife.com/wiki/Linden_Lab_Official:Policy_Regarding_Wagering_in_Second_Life},
+  note = {Accessed 2026-08-17}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+ROBLOX-MARBLE-017
+
+TITLE:
+Roblox's marble fountain turns a randomized transaction into a tiny piece of world physics.
+
+SOURCE:
+Roblox Corporation — Roblox Terms of Use — Random Virtual Items — May 19, 2026.
+
+PASSAGE:
+[PARAPHRASE] Roblox illustrates its odds-disclosure requirement with a user acquiring a virtual marble and throwing it into a fountain to receive a Random Virtual Item.
+
+RESEARCH OBJECT:
+The example contains a miniature compiler:
+
+PURCHASE / ACQUIRE CHANCE
+→ MARBLE
+→ THROW
+→ FOUNTAIN
+→ RANDOM REWARD.
+
+A financial-probabilistic operation has been translated into nouns, movement, causality, and spectacle.
+
+LOCAL MOVE:
+Roblox acknowledges that randomized acquisition can be embedded in ordinary world interaction while requiring the probability information to remain legible before the triggering action.
+
+SOURCE TERMS:
+virtual marble
+throw
+fountain
+Random Virtual Item
+odds
+transaction
+acquire
+
+WHAT BECAME STRANGE:
+A loot box does not need a box.
+
+More radically:
+
+a transaction does not need to present itself as a transaction.
+
+It can become a causal story in the world.
+
+QUESTION:
+What happens when economic syntax is compiled into diegetic physics?
+
+DEEPER QUESTION:
+Can world design make an economic mechanism feel natural because payment becomes an object and probability becomes environmental causation?
+
+MECHANISM:
+<TRANSACTION>
+→ represent as <MARBLE>
+
+<RANDOM GENERATOR>
+→ represent as <FOUNTAIN>
+
+<EXECUTE>
+→ represent as [THROW]
+
+<RESULT>
+→ represent as <FOUND OBJECT>
+
+FORMAL SHIFT:
+<ECONOMIC OPERATION>
+→ <DIEGETIC REPRESENTATION>
+→ [EMBODIED ACTION]
+→ <ECONOMIC CONSEQUENCE>
+
+SOURCE FORMALISM:
+Roblox requires that odds for each possible Random Virtual Item be disclosed before the user engages in the acquisition transaction.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+COMPILE(
+    paid_random_reward
+)
+→
+{
+    token: marble,
+    trigger: throw,
+    resolver: fountain,
+    output: item
+}
+
+TENSION:
+Disclosure attempts to pull the probabilistic machinery back into explicit representation.
+
+World design can simultaneously push it into metaphor.
+
+The interface therefore performs two opposing moves:
+
+MAKE MECHANISM LEGIBLE.
+MAKE MECHANISM DIEGETIC.
+
+MISSING:
+Whether spatial/diegetic presentation changes children's or adults' recognition of the action as a paid random transaction.
+
+BOUNDARY:
+Roblox provides the fountain only as an example of when odds must be disclosed. The source does not claim the fountain representation changes behavior.
+
+CITATION TRAIL:
+[[ROBLOX-RANDOM-006]]
+→ Random Virtual Item
+→ fountain example
+→ diegetic transaction syntax
+
+[[GAMBLING-TOPOLOGY-014]]
+→ visual form versus operational topology
+
+TEST:
+Present one mechanically identical transaction as:
+
+BUY RANDOM ITEM
+OPEN CRATE
+HATCH EGG
+PLANT SEED
+THROW MARBLE IN FOUNTAIN
+RESCUE PET
+
+Measure whether participants correctly identify:
+price,
+randomness,
+odds,
+expected value,
+and purchase frequency.
+
+PLATFORM:
+[[Economic operations can masquerade as world physics]]
+
+LINKS:
+[[ROBLOX-RANDOM-006]]
+[[KANEVA-HOUSE-001]]
+[[GAMBLING-TOPOLOGY-014]]
+
+BIBTEX:
+@misc{roblox_marble_fountain_2026,
+  author = {{Roblox Corporation}},
+  title = {Roblox Terms of Use},
+  year = {2026},
+  url = {https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+ROBLOX-CASHOUT-018
+
+TITLE:
+Roblox's value membrane is asymmetric: player money can enter a random-item economy while creator earnings can leave as dollars.
+
+SOURCE:
+Roblox Corporation — Roblox Terms of Use — 2026.
+Roblox Corporation — Developer Exchange Terms of Use — current 2026 version.
+
+PASSAGE:
+[PARAPHRASE] Roblox permits location-dependent Random Virtual Items acquired with Robux or otherwise. Separately, eligible creators may convert qualifying Earned Robux—including Robux earned from in-game virtual-product purchases—into real money through DevEx.
+
+RESEARCH OBJECT:
+“Can it cash out?” is not one question.
+
+Cash-out capability depends on ACTOR and PROVENANCE.
+
+A player may spend Robux on an in-experience transaction.
+
+Robux received by the creator through compliant monetization may become Earned Robux and enter DevEx.
+
+The economic membrane therefore has direction.
+
+LOCAL MOVE:
+Roblox distinguishes Robux not merely by numerical denomination but by how they were obtained.
+
+SOURCE TERMS:
+Random Virtual Item
+Robux
+Earned Robux
+DevEx
+Cash Out
+in-game purchases
+virtual products
+creator
+
+WHAT BECAME STRANGE:
+Two numerically identical Robux balances can have different relationships to real money because one is classified as Earned Robux and the other is not.
+
+Money itself acquires provenance.
+
+QUESTION:
+Can convertibility be actor-relative and history-dependent?
+
+DEEPER QUESTION:
+What happens to gambling analysis when money's path OUT of the system exists for the seller but not necessarily for the purchaser holding the randomized prize?
+
+MECHANISM:
+<PLAYER REAL MONEY>
+→ <ROBUX>
+→ [RANDOMIZED PURCHASE]
+→ <VIRTUAL ITEM>
+
+simultaneously:
+
+<PLAYER PURCHASE>
+→ <CREATOR EARNED ROBUX>
+→ [DEVEX IF ELIGIBLE]
+→ <REAL MONEY>
+
+FORMAL SHIFT:
+<CURRENCY HAS VALUE>
+→ <CURRENCY TOKEN HAS PROVENANCE>
+→ [CLASSIFY EARNING SOURCE + ACTOR]
+→ <CASHABLE | NON-CASHABLE>
+
+SOURCE FORMALISM:
+DevEx distinguishes Earned Robux from:
+- directly purchased Robux,
+- gift-card Robux,
+- Premium grants,
+- certain trading/resale proceeds,
+and permits qualifying Earned Robux to be cashed out subject to eligibility and Roblox discretion.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+CASHABLE(amount, actor, provenance)
+
+not:
+
+CASHABLE(currency)
+
+Value is typed:
+
+Robux<Purchased>
+Robux<Earned>
+Robux<Resale>
+Robux<Grant>
+
+TENSION:
+Loot-box analysis often asks whether the prize possessed by the PLAYER is cashable.
+
+But platform economies may send real-money value out through a different actor entirely: the CREATOR.
+
+MISSING:
+How consumer-protection and gambling frameworks should model asymmetric convertibility where payers and beneficiaries occupy different sides of the exchange graph.
+
+BOUNDARY:
+DevEx does not mean every Robux earned through every transaction can be cashed out. Roblox defines eligibility and qualifying Earned Robux narrowly and retains discretion.
+
+CITATION TRAIL:
+[[LOOTBOX-BORDER-008]]
+→ convertibility
+→ Roblox DevEx
+→ actor-relative cashout
+
+[[ROBLOX-RANDOM-006]]
+→ paid randomized rewards
+→ creator monetization
+
+TEST:
+Trace one unit of real money through:
+
+PLAYER
+→ ROBUX PURCHASE
+→ RANDOM ITEM PURCHASE
+→ CREATOR REVENUE
+→ EARNED ROBUX
+→ DEVEX
+→ CREATOR BANK ACCOUNT.
+
+Identify which edge regulators conventionally treat as the “cash-out” edge and which edges disappear from the model.
+
+PLATFORM:
+[[Money has direction and provenance]]
+
+LINKS:
+[[ROBLOX-RANDOM-006]]
+[[LOOTBOX-BORDER-008]]
+[[XSOLLA-ROBLOX-012]]
+
+BIBTEX:
+@misc{roblox_terms_economy_2026,
+  author = {{Roblox Corporation}},
+  title = {Roblox Terms of Use},
+  year = {2026},
+  url = {https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use}
+}
+
+@misc{roblox_devex_2026,
+  author = {{Roblox Corporation}},
+  title = {Developer Exchange Terms of Use},
+  year = {2026},
+  url = {https://en.help.roblox.com/hc/en-us/articles/115005718246-Developer-Exchange-Terms-of-Use}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+XSOLLA-RANDOM-FLAG-019
+
+TITLE:
+Xsolla turns gambling-adjacentness into catalog metadata: “Mark as paid randomized reward.”
+
+SOURCE:
+Xsolla — Catalog Management Documentation — current documentation, accessed 2026-08-17.
+
+PASSAGE:
+[QUOTE] “Mark as paid randomized reward”
+
+[PARAPHRASE] Xsolla instructs developers to enable this toggle when a paid currency, item, package, or bundle will participate in random-reward mechanics such as loot boxes or gacha, noting that the parameter may be required in countries with legal restrictions.
+
+RESEARCH OBJECT:
+A sprawling legal controversy eventually becomes a boolean-looking property in an item-management interface.
+
+The product is classified BEFORE the random event occurs.
+
+The metadata anticipates what the item will later participate in.
+
+LOCAL MOVE:
+Xsolla attaches regulatory significance not only to a loot box itself but to currencies, items, packages, and bundles that feed paid randomized-reward mechanics.
+
+SOURCE TERMS:
+paid randomized reward
+toggle
+virtual currency
+virtual item
+bundle
+loot boxes
+gacha
+countries
+legal restrictions
+
+WHAT BECAME STRANGE:
+The legal property does not belong solely to the random generator.
+
+A currency becomes legally interesting because of its FUTURE USE.
+
+QUESTION:
+Can an object's regulatory type be determined by a mechanic it has not yet entered?
+
+DEEPER QUESTION:
+Are modern compliance systems creating a kind of effect system for game economies, where objects carry annotations describing dangerous downstream operations?
+
+MECHANISM:
+<VIRTUAL ITEM / CURRENCY / BUNDLE>
+→ [ANNOTATE: PAID_RANDOMIZED_REWARD]
+→ <CATALOG METADATA>
+→ [JURISDICTIONAL COMPLIANCE LOGIC]
+→ <AVAILABLE / RESTRICTED / ALTERED>
+
+FORMAL SHIFT:
+<LEGAL ANALYSIS IN PROSE>
+→ <CATALOG ATTRIBUTE>
+→ [MACHINE PROCESS]
+→ <COMMERCE BEHAVIOR>
+
+SOURCE FORMALISM:
+Xsolla documentation supplies the explicit configuration operation:
+
+Mark as paid randomized reward = enabled
+
+for relevant paid currencies, currency packages, items, and bundles.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+type Item = {
+    sku,
+    price,
+    ...
+    paid_randomized_reward: Boolean
+}
+
+The remarkable shift is:
+
+LEGAL CATEGORY
+→ DATA FIELD.
+
+TENSION:
+Roblox exposes policy through player-specific booleans.
+
+Xsolla exposes randomized-reward status through product metadata.
+
+The legal system is appearing at two different locations in the stack:
+
+PLAYER POLICY
+and
+OBJECT TYPE.
+
+MISSING:
+What exact checkout, availability, disclosure, or geo-restriction behaviors Xsolla automatically derives from this flag in each jurisdiction.
+
+BOUNDARY:
+Xsolla says the parameter “may be required” in countries with legal restrictions. The documentation does not establish that the toggle alone guarantees legal compliance.
+
+CITATION TRAIL:
+[[XSOLLA-EXOSKELETON-010]]
+→ Xsolla catalog
+→ randomized-reward toggle
+→ law as metadata
+
+[[ROBLOX-LAW-005]]
+→ policy boolean
+→ regulatory typing
+
+TEST:
+Trace the flag through Xsolla's APIs and storefront:
+
+CONFIGURATION
+→ CATALOG RESPONSE
+→ COUNTRY DETECTION
+→ CHECKOUT
+→ DISPLAY
+→ ENTITLEMENT.
+
+Determine every runtime behavior that changes when only this bit changes.
+
+PLATFORM:
+[[Law becomes a datatype]]
+
+LINKS:
+[[XSOLLA-EXOSKELETON-010]]
+[[ROBLOX-LAW-005]]
+[[LOOTBOX-BORDER-008]]
+
+BIBTEX:
+@misc{xsolla_catalog_randomized_reward,
+  author = {{Xsolla}},
+  title = {Catalog Management},
+  url = {https://developers.xsolla.com/items-catalog/catalog-management/},
+  note = {Accessed 2026-08-17}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+XSOLLA-CHANCE-API-020
+
+TITLE:
+The treasure chest disappears completely in Xsolla's API: “open loot box” is a remote state mutation with three identifiers.
+
+SOURCE:
+Xsolla — Store API v1 — Open Loot Box — current deprecated API documentation.
+
+PASSAGE:
+[PARAPHRASE] Xsolla documents a POST endpoint that “opens a loot box in a game inventory,” taking a project identifier plus item, SKU/class, and user identifiers. The endpoint is now deprecated.
+
+RESEARCH OBJECT:
+Strip away the animation.
+
+Strip away the chest.
+
+Strip away the avatar.
+
+Strip away the room.
+
+The supposedly spatial event:
+
+OPEN LOOT BOX
+
+reduces to an authenticated network request over inventory state.
+
+LOCAL MOVE:
+The API reveals the non-diegetic machinery beneath a familiar world metaphor.
+
+SOURCE TERMS:
+POST
+open loot box
+game inventory
+asset_id
+class_id
+user_id
+deprecated
+
+WHAT BECAME STRANGE:
+The chest is optional.
+
+The world is optional.
+
+Even the visible act of opening is optional.
+
+The operative object is an inventory transition associated with a user.
+
+QUESTION:
+What is a loot box after every representational layer has been removed?
+
+DEEPER QUESTION:
+Could gambling-adjacent game mechanics be audited more accurately at the API/state-transition layer than at the interface layer?
+
+MECHANISM:
+POST
+/projects/{project_id}/store/lootbox/open
+
+INPUT:
+asset_id
+class_id
+user_id
+
+→ [OPEN]
+→ <CHANGED GAME INVENTORY>
+
+FORMAL SHIFT:
+<TREASURE CHEST>
+→ <API ENDPOINT>
+→ [STATE TRANSITION]
+→ <INVENTORY MUTATION>
+
+SOURCE FORMALISM:
+POST /projects/{project_id}/store/lootbox/open
+
+The endpoint is documented as deprecated and scheduled for future removal.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+OPEN_BOX(user, box)
+→ RNG?
+→ resolve_reward()
+→ mutate(inventory[user])
+
+The API documentation exposes the outer operation but not the internal random-selection mechanism.
+
+TENSION:
+Xsolla's marketing language in 2022 called “the gamble” part of loot-box excitement.
+
+Its API presents none of that phenomenology.
+
+The same object appears as:
+
+MARKETING:
+EXCITEMENT
+
+INTERFACE:
+CHEST
+
+API:
+POST
+
+DATABASE:
+STATE CHANGE.
+
+MISSING:
+Where probability resolution occurred in this API generation: Xsolla-side, partner-side, or elsewhere.
+
+The endpoint does not expose the random algorithm in the retrieved documentation.
+
+BOUNDARY:
+The API proves that Xsolla exposed a programmatic loot-box-opening operation. It does not establish the randomness implementation or why the operation was deprecated.
+
+CITATION TRAIL:
+[[XSOLLA-EXOSKELETON-010]]
+→ commerce infrastructure
+→ deprecated loot-box API
+→ representational stripping
+
+[[RNG-002]]
+→ RNG-to-outcome mapping
+→ inventory state transition
+
+TEST:
+Recover the earlier Xsolla Store API loot-box specification and trace:
+
+PURCHASE
+→ INVENTORY BOX
+→ OPEN REQUEST
+→ RANDOM SELECTION
+→ REWARD
+→ INVENTORY UPDATE.
+
+Locate exactly where randomness occurred and which system possessed the probability table.
+
+PLATFORM:
+[[The box is an interface fiction over a state transition]]
+
+LINKS:
+[[XSOLLA-EXOSKELETON-010]]
+[[RNG-002]]
+[[GAMBLING-TOPOLOGY-014]]
+
+BIBTEX:
+@misc{xsolla_open_lootbox_api,
+  author = {{Xsolla}},
+  title = {Store API v1: Open Loot Box},
+  url = {https://developers.xsolla.com/store-api/v1/loot-boxes/loot-boxes/open-loot-box/},
+  note = {Deprecated API; accessed 2026-08-17}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+MINECRAFT-GAMBLING-021
+
+TITLE:
+Minecraft bans “gambling” as an all-ages world-content failure while separately engineering currencies so they cannot escape the server.
+
+SOURCE:
+Mojang Studios — Minecraft Usage Guidelines — current version, accessed 2026-08-17.
+
+PASSAGE:
+[PARAPHRASE] Minecraft permits server monetization and virtual currencies under constraints, requires those currencies to lack real-world value and cross-server/cash-out capability, and requires servers and monetization to remain suitable for all ages, explicitly listing gambling among unsuitable content.
+
+RESEARCH OBJECT:
+Minecraft attacks the gambling boundary from two directions that are usually separated:
+
+CONTENT:
+gambling is unsuitable for the all-ages environment.
+
+ECONOMY:
+server money must not become external money.
+
+LOCAL MOVE:
+Mojang does not need to supply a complete mathematical definition of loot boxes in order to constrain the space in which gambling-like economies can emerge.
+
+It makes the server's economy deliberately provincial and the server's content deliberately all-ages.
+
+SOURCE TERMS:
+server
+virtual currencies
+real-world value
+cashed out
+transferred
+all ages
+gambling
+trusted environment
+
+WHAT BECAME STRANGE:
+Minecraft's safest currency is, by design, a bad currency.
+
+It cannot travel.
+It cannot cash out.
+It cannot become general money.
+
+Its weakness is protective.
+
+QUESTION:
+Can economic incapacity be a platform safety feature?
+
+DEEPER QUESTION:
+What if metaverse interoperability is sometimes the dangerous operation rather than the desired one?
+
+MECHANISM:
+<REAL MONEY>
+→ <SERVER CURRENCY>
+→ [SPEND INSIDE SERVER]
+
+blocked:
+
+<SERVER CURRENCY>
+-X→ <CASH>
+
+<SERVER CURRENCY>
+-X→ <OTHER SERVER>
+
+simultaneously:
+
+<SERVER CONTENT>
+→ [ALL-AGES TEST]
+→ gambling excluded
+
+FORMAL SHIFT:
+<INTEROPERABILITY AS FEATURE>
+→ <NON-INTEROPERABILITY AS GOVERNANCE>
+→ [BLOCK EXITS]
+→ <BOUNDED ECONOMY>
+
+SOURCE FORMALISM:
+Minecraft allows in-game virtual currencies only if they:
+- have no real-world value;
+- cannot be cashed out;
+- cannot be transferred across other servers;
+- cannot be converted into real-world currency.
+
+It separately requires server monetization/content to remain suitable for all ages and names gambling as an example of unsuitable content.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+SAFE_SERVER_CURRENCY(c) requires:
+
+CASHOUT(c) = false
+CROSS_SERVER(c) = false
+REAL_WORLD_CONVERT(c) = false
+
+A currency can function locally because it fails globally.
+
+TENSION:
+Metaverse imaginaries repeatedly celebrate portable identities, assets, and currencies.
+
+Minecraft makes portability of server currency precisely what must NOT happen.
+
+MISSING:
+How Mojang distinguishes prohibited gambling from permitted randomized gameplay or rewards that require no payment.
+
+BOUNDARY:
+The Usage Guidelines prohibit gambling in monetized/all-ages server contexts and constrain server currencies. They do not provide a comprehensive gambling-law test.
+
+CITATION TRAIL:
+[[MINECRAFT-MONEY-007]]
+→ current Usage Guidelines
+→ all-ages requirement
+→ non-interoperability as protection
+
+[[LOOTBOX-BORDER-008]]
+→ convertibility
+→ world boundary
+→ safety by containment
+
+TEST:
+Take a compliant Minecraft currency and successively add:
+
+PLAYER TRANSFER
+CROSS-SERVER TRANSFER
+MARKETPLACE EXCHANGE
+CASHOUT
+RANDOM PAID REWARDS.
+
+Observe which addition first destroys compliance and which first changes the regulatory interpretation.
+
+PLATFORM:
+[[Some world walls are safety mechanisms]]
+
+LINKS:
+[[MINECRAFT-MONEY-007]]
+[[LOOTBOX-BORDER-008]]
+[[SECOND-LIFE-NOVELTY-016]]
+
+BIBTEX:
+@misc{minecraft_usage_guidelines_2026,
+  author = {{Mojang Studios}},
+  title = {Minecraft Usage Guidelines},
+  year = {2026},
+  url = {https://www.minecraft.net/en-us/usage-guidelines},
+  note = {Accessed 2026-08-17}
+}
+
+================================================================================
+
+ZETTEL
+
+ID:
+WORLD-MEMBRANE-022
+
+TITLE:
+The boundary of the virtual world is part of the gambling machine.
+
+SOURCE:
+UK Gambling Commission — “Loot boxes within video games” — 2017, updated 2021.
+Linden Lab — Policy Regarding Wagering in Second Life.
+Mojang Studios — Minecraft Usage Guidelines.
+
+PASSAGE:
+[PARAPHRASE] The UK Gambling Commission identifies cash-out capability as a key factor in determining whether chance-acquired in-game items become money or money's worth. Linden Lab similarly distinguishes non-convertible novelty objects. Minecraft explicitly requires server currencies not to cross into other servers or real-world currency.
+
+RESEARCH OBJECT:
+The decisive mechanism may sit nowhere near the RNG.
+
+It can sit at the BORDER.
+
+The same chance mechanism acquires a different economic or regulatory character depending upon whether its output can leave the world.
+
+LOCAL MOVE:
+Three different governance systems make permeability load-bearing.
+
+The question shifts from:
+
+HOW RANDOM IS THE BOX?
+
+to:
+
+WHERE CAN THE RESULT GO?
+
+SOURCE TERMS:
+money or money's worth
+cashed out
+confined
+converted
+novelty objects
+real-world value
+transferred across servers
+
+WHAT BECAME STRANGE:
+The world boundary is not passive scenery around the economic system.
+
+It participates causally in the economic system.
+
+QUESTION:
+Should convertibility be modeled as part of the gambling mechanism itself?
+
+DEEPER QUESTION:
+Could the same randomizer become a fundamentally different social machine merely by adding one outbound edge from virtual object to external value?
+
+MECHANISM:
+SYSTEM A:
+
+PAY
+→ CHANCE
+→ OBJECT
+→ [WORLD MEMBRANE: CLOSED]
+
+SYSTEM B:
+
+PAY
+→ CHANCE
+→ OBJECT
+→ [WORLD MEMBRANE: PERMEABLE]
+→ MONEY / MONEY'S WORTH
+
+FORMAL SHIFT:
+<GAMBLING MECHANIC LOCATED IN RNG>
+→ <GAMBLING MECHANIC DISTRIBUTED ACROSS RNG + ECONOMY + WORLD BOUNDARY>
+→ [ADD EXIT]
+→ <NEW REGULATORY OBJECT>
+
+SOURCE FORMALISM:
+UK Gambling Commission:
+chance-acquired items confined to the game and unable to cash out are unlikely to constitute licensable gambling on that basis.
+
+Linden Lab:
+non-convertible novelty-object payouts are treated differently from convertible value.
+
+Minecraft:
+server currency must not be cashable, cross-server transferable, or real-world convertible.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+MECHANIC :=
+{
+    consideration,
+    randomizer,
+    reward,
+    transfer_graph
+}
+
+not:
+
+MECHANIC := randomizer
+
+Classification may therefore change when:
+
+randomizer₁ = randomizer₂
+reward₁ = reward₂
+consideration₁ = consideration₂
+
+but:
+
+transfer_graph₁ ≠ transfer_graph₂.
+
+TENSION:
+A player may experience both systems identically at the moment of opening.
+
+Their downstream economic topology may nevertheless make them different regulatory objects.
+
+MISSING:
+How to incorporate unofficial markets, account sales, gifting, creator cash-out, and grey-market exchange without collapsing every desirable virtual object into “money's worth.”
+
+BOUNDARY:
+These sources come from different institutional regimes and cannot simply be treated as one common legal rule.
+
+Their convergence is conceptual: each makes boundaries and convertibility consequential.
+
+CITATION TRAIL:
+[[LOOTBOX-BORDER-008]]
+→ UK Gambling Commission
+→ [[SECOND-LIFE-NOVELTY-016]]
+→ [[MINECRAFT-GAMBLING-021]]
+→ transfer topology as mechanism
+
+TEST:
+Build a minimal simulation where every parameter is fixed except transferability.
+
+Add exchange edges one at a time:
+
+NONE
+GIFT
+PLAYER TRADE
+PLATFORM RESALE
+CROSS-WORLD TRANSFER
+FIAT CASHOUT
+UNOFFICIAL CASH MARKET
+CREATOR-ONLY CASHOUT.
+
+For each graph, rerun legal, economic, and behavioral classification.
+
+PLATFORM:
+[[The membrane is machinery]]
+
+LINKS:
+[[LOOTBOX-BORDER-008]]
+[[SECOND-LIFE-NOVELTY-016]]
+[[MINECRAFT-MONEY-007]]
+[[ROBLOX-CASHOUT-018]]
+
+BIBTEX:
+@misc{ukgc_lootboxes_2017,
+  author = {{UK Gambling Commission}},
+  title = {Loot Boxes within Video Games},
+  year = {2017},
+  url = {https://www.gamblingcommission.gov.uk/news/article/loot-boxes-within-video-games},
+  note = {Updated 2021}
+}
+
+@misc{linden_wagering_policy,
+  author = {{Linden Lab}},
+  title = {Policy Regarding Wagering in Second Life},
+  url = {https://wiki.secondlife.com/wiki/Linden_Lab_Official:Policy_Regarding_Wagering_in_Second_Life}
+}
+
+@misc{minecraft_usage_guidelines_2026,
+  author = {{Mojang Studios}},
+  title = {Minecraft Usage Guidelines},
+  year = {2026},
+  url = {https://www.minecraft.net/en-us/usage-guidelines}
+}

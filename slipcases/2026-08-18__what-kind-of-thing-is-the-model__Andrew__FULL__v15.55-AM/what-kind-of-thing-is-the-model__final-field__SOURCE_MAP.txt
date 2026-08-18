@@ -1,0 +1,95 @@
+WHAT KIND OF THING IS THE MODEL? — CLAIM/SOURCE MAP
+Final field · August 18, 2026
+
+CLAIM ID: C1
+CLAIM: Andrew describes early Midjourney prompting as exploratory intervention: users probe capability boundaries and may follow unexpected outputs rather than correct them back toward the original intention.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: MJ-GC-004 · MJ-GC-005 · MJ-GC-006 · GC-DEEP-20260817-01
+SOURCE: October 23, 2022 Midjourney interview with Andrew
+CITEKEY: andrew2022interview
+SUPPORT: Direct interview passages include “I wonder if,” questions about what the system can do, and “that’s not what I asked for … Let’s investigate that more.”
+INFERENCE: The paper groups these moves under the term epistemic prompting; that label is the paper’s synthesis, not Andrew’s vocabulary.
+
+CLAIM ID: C2
+CLAIM: Some prompting actions are valuable because they reveal information about the system rather than because they directly advance a finished artifact.
+TYPE: COMPILER-SYNTHESIS
+ZETTEL: GC-DEEP-20260817-02 · MJ-GC-004 · MJ-GC-006
+SOURCE: Kirsh & Maglio 1994 + Andrew interview
+CITEKEY: kirsh1994epistemic · andrew2022interview
+SUPPORT: Kirsh and Maglio distinguish epistemic from pragmatic actions; Andrew describes capability probes whose immediate product is knowledge about model behavior.
+INFERENCE: The paper applies the functional distinction to prompting without claiming a historical influence or identity between Tetris action and generative-AI practice.
+
+CLAIM ID: C3
+CLAIM: Unexpected generated artifacts can reorganize the next design move when their deviation remains interpretable enough to become new material for intention.
+TYPE: INTERPRETATION
+ZETTEL: MJ-GC-005 · MJ-GC-029 · MJ-GC-029-A · GC-DEEP-20260817-03
+SOURCE: Schön 1992 + Andrew interview + Epstein et al. 2022
+CITEKEY: schon1992reflective · andrew2022interview · epstein2022happy
+SUPPORT: Schön analyzes reflective conversation with materials; Andrew describes pursuing unexpected images; Epstein et al. report useful lateral or implementation ideas from discrepant generated imagery, with overly abstract outputs sometimes becoming less useful.
+INFERENCE: The paper treats useful deviation as interpretable discrepancy rather than maximum surprise.
+
+CLAIM ID: C4
+CLAIM: Public Discord visibility was not merely distribution infrastructure; it was part of how prompt expertise was socially acquired.
+TYPE: SOURCE-SUPPORTED / INTERPRETATION
+ZETTEL: MJ-GC-002 · MJ-GC-003 · MJ-GC-007 · MJ-GC-014 · MJ-GC-015 · MJ-GC-028 · GC-DEEP-20260817-04
+SOURCE: Andrew interview + Brown, Collins & Duguid 1989
+CITEKEY: andrew2022interview · brown1989situated
+SUPPORT: Andrew says users learned by seeing how other prompts were written and what they produced, describes remixing and “random serendipitous collisions,” and notes expert migration to smaller groups; Brown et al. argue that knowledge is situated in activity, context, and culture.
+INFERENCE: The paper names early public Discord an apprenticeship environment.
+
+CLAIM ID: C5
+CLAIM: Early prompt culture contained exploratory observations, candidate regularities, superstitions, proposed controlled comparisons, and changing apparatus conditions; these should not be collapsed into a single category of “prompt knowledge.”
+TYPE: COMPILER-SYNTHESIS
+ZETTEL: MJ-GC-009 · MJ-GC-010 · MJ-GC-011 · MJ-GC-011-A · MJ-GC-011-A-A · MJ-GC-013 · GC-DEEP-20260817-05 · GC-DEEP-20260817-08
+SOURCE: Andrew interview + Rheinberger 2004 + MPIWG Generating Experimental Knowledge + Midjourney Seeds documentation + Maliha & Hougen 2026
+CITEKEY: andrew2022interview · rheinberger2004experimental · mpiwgExperimentalKnowledge · midjourneySeeds · maliha2026mechanistic
+SUPPORT: Andrew explicitly invokes scientific method and Type I/II errors while also describing “If it works, keep using it”; Rheinberger and MPIWG distinguish explorative experimentation and changing experimental systems; later seed and ablation work makes some controls more explicit.
+INFERENCE: The paper uses experimental-system vocabulary as an analytic analogy, not as a claim that prompt culture constitutes disciplinary science.
+
+CLAIM ID: C6
+CLAIM: Andrew’s “valleys,” “galaxies,” “gravity wells,” and “orbital mechanics” should be evaluated as working interface theories rather than accepted as literal machine diagrams or dismissed as meaningless folklore.
+TYPE: SOURCE-SUPPORTED / OPPOSITION
+ZETTEL: MJ-GC-012 · MJ-GC-017 · MJ-GC-018 · MJ-GC-019 · MJ-GC-020 · MJ-GC-021 · MJ-GC-022 · MJ-GC-023 · MJ-GC-022-A · MJ-GC-022-A-A · MJ-GC-023-A · MJ-GC-023-A-A · GC-DEEP-20260817-06
+SOURCE: Andrew interview + Hertz et al. 2022 + Tang et al. 2023 + Feng et al. 2022
+CITEKEY: andrew2022interview · hertz2022prompt · tang2023daam · feng2022structured
+SUPPORT: Andrew supplies the gravitational vernacular; later open-diffusion studies provide measurable token/spatial effects, compositional binding failures, and attribution-map phenomena that can produce some superficially similar behavior through different mechanisms.
+INFERENCE: Predictive usefulness and mechanistic fidelity are distinct achievements.
+
+CLAIM ID: C7
+CLAIM: A generated regularity can change status inside practice: first noticed as a phenomenon, then named/theorized, and later recruited as a repeatable test object.
+TYPE: COMPILER-SYNTHESIS
+ZETTEL: MJ-GC-017 · MJ-GC-024 · GC-DEEP-20260817-09
+SOURCE: Andrew interview + Rheinberger 2004
+CITEKEY: andrew2022interview · rheinberger2004experimental
+SUPPORT: Andrew describes a recurring default face named “Midge” and a deliberately odd recurring character used as a “test subject.” Rheinberger distinguishes epistemic things from technical objects within experimental systems.
+INFERENCE: The paper reads the movement from recurring output to reusable probe as a conversion from phenomenon into local apparatus. It does not claim a formal scientific instrument or Rheinbergerian genealogy.
+
+CLAIM ID: C8
+CLAIM: Andrew’s distinction between Midjourney as a “game” and as a “tool” is best understood not as capability versus incapability, but as exploratory generativity versus enough stabilized control to sustain consequential work across generations.
+TYPE: COMPILER-SYNTHESIS
+ZETTEL: MJ-GC-016 · MJ-GC-025 · MJ-GC-026 · MJ-GC-027 · GC-DEEP-20260817-07
+SOURCE: Andrew interview + Kirsh & Maglio 1994
+CITEKEY: andrew2022interview · kirsh1994epistemic
+SUPPORT: Andrew explicitly says Midjourney can feel like a game because there is “not quite enough control,” links control to bringing work into the real world and meaning something, and calls isolated images too ephemeral for sustained stories.
+INFERENCE: Toolhood is formulated as stabilization of selected epistemic gains into reusable invariants.
+
+CLAIM ID: C9
+CLAIM: Later hard-control mechanisms—schemas, typed tool vocabularies, spatial conditioning, and runtime-indexed grammars—can be read as technical answers to the general problem of stabilizing discovered relations, but they do not establish a historical lineage from Andrew’s 2022 practice.
+TYPE: OPEN-QUESTION / CONCEPTUAL CROSSING
+ZETTEL: CALLSHOT-20260817-02 · CALLSHOT-20260817-03 · CALLSHOT-20260817-09 · CALLSHOT-20260817-10
+SOURCE: OpenAI Structured Outputs 2024 + OpenAI Function Calling 2023 + ControlNet 2023 + Decode-Time Grammars 2026
+CITEKEY: openai2024structured · openai2023functioncalling · zhang2023controlnet · zhang2026decodetime
+SUPPORT: These systems harden different dimensions of generative behavior: legal output forms, action vocabularies, spatial constraints, and valid runtime references.
+INFERENCE: The paper treats them as conceptual stabilizations of a control problem, explicitly not as proof of influence or product genealogy.
+
+CLAIM ID: C10
+CLAIM: The branch from real-time dungeon description to operative language remains an open extension of the paper’s argument: descriptions can become world-changing only relative to interpreters, domain models, control regimes, or reusable transformation descriptions.
+TYPE: OPEN-QUESTION
+ZETTEL: MJ-GC-030 · MJ-GC-030-A · MJ-GC-030-B · MJ-GC-030-B-A · MJ-GC-030-B-B · MJ-GC-030-B-C · MJ-GC-030-B-D
+SOURCE: Andrew interview + Winograd 1972 + Minsky & Papert 1971 + Honovich et al. 2022 + Akli et al. 2026 + Kowalski 1979
+CITEKEY: andrew2022interview · winograd1972understanding · minskyPapert1971progress · honovich2022instruction · akli2026failing · kowalski1979algorithm
+SUPPORT: Andrew describes real-time description becoming visualization during play; the historical/technical sources distinguish description, interpretation, control, transformation, and relational execution.
+INFERENCE: This branch is preserved as an open research edge and is not required for the paper’s central empirical thesis.
+
+VERIFICATION NOTE
+All zettel IDs and citekeys named above are checked against the final 64-zettel field and compiled bibliography during final verification. Claims labeled COMPILER-SYNTHESIS or INTERPRETATION are not treated as source quotations or source-native terminology.

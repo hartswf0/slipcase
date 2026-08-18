@@ -1,0 +1,81 @@
+TENSION FIELD — THE VANISHING PROMPT
+
+T01 — BOUNDEDNESS vs CAUSAL ADEQUACY
+A: A prompt must be bounded enough to identify, store, diff, cite, version, and manipulate.
+B: The behavior attributed to a prompt depends on variables outside that bounded object.
+NEITHER EXPLAINS: where the principled stopping boundary lies.
+THIRD POSSIBILITY: prompt is a legitimate intervention variable but not a sufficient causal object.
+QUESTION MADE HARDER: what kind of object can be both experimentally manipulable and causally adequate?
+DECISIVE EVIDENCE: nested prompt-identity definitions tested against behavioral invariance.
+
+T02 — LINGUISTIC OBJECT vs NONLINGUISTIC PROMPT
+A: Prompt ontologies treat prompts as texts/discourse units.
+B: prompt tuning treats continuous learned vectors as prompts.
+NEITHER EXPLAINS: what common property makes both “prompts.”
+THIRD POSSIBILITY: “prompt” names a functional family, while “prompt language” is a distinct human-facing subclass.
+QUESTION MADE HARDER: if conditioning function is enough, what does not count as a prompt?
+DECISIVE EVIDENCE: cross-form comparison of identity, semantics, portability, and causal intervention.
+
+T03 — PROMPT AS SOFTWARE ARTIFACT vs PROMPT AS SITUATED EVENT
+A: Engineering requires maintainable, versionable artifacts.
+B: effective behavior depends on changing runtime context and model state.
+NEITHER EXPLAINS: which identity should govern claims of evolution or regression.
+THIRD POSSIBILITY: artifact identity and execution identity must be versioned separately.
+QUESTION MADE HARDER: what changed when behavior changes but prompt bytes do not?
+DECISIVE EVIDENCE: longitudinal prompt repos across model/runtime migrations.
+
+T04 — PROMPT AS SPECIFICATION vs SPECIFICATION INTERFERENCE
+A: stating a requirement should increase control over that requirement.
+B: adding requirements can reduce instruction following because constraints compete.
+NEITHER EXPLAINS: where operative specification resides when text and behavior diverge.
+THIRD POSSIBILITY: specification is distributed across prompt, model priors, examples, constraints, and evaluators.
+QUESTION MADE HARDER: can omission be part of a specification?
+DECISIVE EVIDENCE: factorial requirement allocation across control channels.
+
+T05 — PROMPT FOLLOWING vs SITUATED ACTION
+A: the model’s output is conditioned on the instruction.
+B: Suchman’s planning critique warns that correspondence between plan and action does not locate determination.
+NEITHER EXPLAINS: how much of “following” is prospective control versus retrospective reconstruction.
+THIRD POSSIBILITY: prompt is a resource for execution, not its script.
+QUESTION MADE HARDER: what does “follow” mean mechanically?
+DECISIVE EVIDENCE: intermediate-state and runtime intervention studies.
+
+T06 — CONTEXT ENGINEERING AS SOLUTION vs CONTEXT ENGINEERING AS SYMPTOM
+A: the prompt is too thin; replace it with structured dynamic context.
+B: the larger the context object becomes, the more it approaches the whole system.
+NEITHER EXPLAINS: what remains outside context yet causally relevant.
+THIRD POSSIBILITY: no single container is the right ontology; use explicit relations among partial objects.
+QUESTION MADE HARDER: when does context stop being input and become execution?
+DECISIVE EVIDENCE: causal-coverage gain versus boundedness loss across nested context records.
+
+T07 — REPRODUCIBLE PROMPT vs REPRODUCIBLE EXECUTION
+A: prompts can be published, copied, and rerun.
+B: same text may not reproduce behavior across models, hidden instructions, retrieval, or stochastic state.
+NEITHER EXPLAINS: what level of sameness a reproducibility claim commits to.
+THIRD POSSIBILITY: reproducibility must name its invariant explicitly.
+QUESTION MADE HARDER: are we reproducing typography, distributions, or acts?
+DECISIVE EVIDENCE: replicated runs with progressively restored runtime state.
+
+T08 — AUTHORSHIP OF WORDS vs AUTHORSHIP OF OPERATIVE CONTROL
+A: a user/developer writes the prompt.
+B: rewriters, compilers, retrieval, system prompts, optimizers, and selectors may determine the effective instruction.
+NEITHER EXPLAINS: which contribution deserves authorship rather than causal credit or infrastructure credit.
+THIRD POSSIBILITY: authorship and causal control are orthogonal dimensions.
+QUESTION MADE HARDER: who authored an instruction the user never saw?
+DECISIVE EVIDENCE: complete provenance through rewrite/assembly/selection pipelines.
+
+T09 — FINAL OUTPUT AS EVIDENCE vs TEMPORAL SEMANTIC CAREER
+A: if a concept is missing in output, the prompt failed to convey it.
+B: diffusion studies show concepts can appear in intermediate attention and later disappear.
+NEITHER EXPLAINS: whether absence means non-representation, competition, or extinction.
+THIRD POSSIBILITY: prompt meaning has a temporal trajectory inside execution.
+QUESTION MADE HARDER: when did the instruction stop acting?
+DECISIVE EVIDENCE: timestep-level concept interventions.
+
+T10 — PROMPT CAUSE vs STOCHASTIC AFFORDANCE
+A: language supplies semantics; random state supplies variation.
+B: initial latent blocks can exhibit reproducible content preferences relative to a trained model.
+NEITHER EXPLAINS: how causal weight shifts under weak semantic guidance.
+THIRD POSSIBILITY: prompt and stochastic state trade control as conditioning strength changes.
+QUESTION MADE HARDER: what does “underspecified” cede control to?
+DECISIVE EVIDENCE: prompt-strength × seed/latent intervention experiments.

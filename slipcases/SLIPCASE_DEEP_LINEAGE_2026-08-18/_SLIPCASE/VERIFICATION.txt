@@ -1,0 +1,139 @@
+VERIFICATION — SLIPCASE-DEEP-LINEAGE-2026-08-18
+
+BOUND / SOURCE COVERAGE
+- Material inherited from prior field: 80 numbered payloads.
+- Inherited payloads byte-identical to prior field: 80/80.
+- IMPORTANT BOUNDARY: those inherited payloads are exact copies of the prior portable field, not a newly recovered verbatim chat export. The prior field itself marks older objects as canonicalized/recovered where exact original blocks were unavailable.
+- Recovery-only source families still lacking exact original card payloads: 5 (Axelrod; Park et al.; Weil/Lévi-Strauss; Leach; Parsons), preserved in _RESOURCES/RECOVERY_MANIFEST.md rather than fabricated.
+- New lineage zettels: 32.
+- New lineage zettels with SOURCE URL: 32/32; distinct lineage source URLs: 7.
+- Total SOURCE nodes compiled: 87.
+
+EXTRACTION / EXACT PAYLOAD INTEGRITY
+- admitted zettels: 112
+- root numbered zettel TXT files: 112
+- _MD mirrors: 112
+- ZETTELS.json records: 112
+- ZETTELS.jsonl records: 112
+- root ↔ _MD exact byte matches: 112/112
+- root ↔ JSON payload exact byte matches: 112/112
+- 80 inherited roots unchanged from preceding field: PASS
+- required count invariant: PASS
+
+DUPLICATES / ID COLLISIONS
+- exact payload duplicate hash groups: 0
+- duplicate payload extras: 0
+- ORIGINAL ID collision groups: 0
+- missing ORIGINAL IDs: 0
+
+PLATFORM RELATIONS
+- PLATFORM [[...]] occurrences: 112
+- MEMBER_OF relation records: 112
+- equality: PASS
+
+LINKS RELATIONS
+- LINKS [[...]] occurrences: 190
+- LINKS_TO relation records: 190
+- equality: PASS
+
+WIKILINK COVERAGE
+- [[ADDRESS]] occurrences outside PLATFORM/LINKS: 99
+- WIKILINKS_TO relation records: 99
+- equality: PASS
+- all native [[ADDRESS]] occurrences: 401
+- all native relation records: 401
+- equality: PASS
+
+GHOSTS / AMBIGUITIES / BROKEN REFERENCES
+- GHOST nodes: 28
+- relation records resolving to GHOST: 58
+- distinct ghost targets referenced: 28
+- ambiguous relation resolutions: 0
+- broken explicit-ID relation resolutions: 0
+- no fuzzy resolution was used by the compiler.
+
+GRAPH / TOPOLOGY
+- compiled nodes: 301
+- compiled relations: 879
+- node types: ZETTEL 112; SOURCE 87; PLATFORM 65; GHOST 28; RESOURCE 8; PROMPT 1.
+- native graph nodes participating in an edge: 205
+- native unique undirected edges: 275
+- native connected components: 12
+- native bridge edges: 102
+- native articulation nodes: 73
+- derived BACKLINK relations: 302
+
+BIBLIOGRAPHY COVERAGE
+- cards with a BIBTEX field body: 112/112.
+- compiled bibliography citekeys: 95.
+- paper citekeys: austin1962things, fipa2002cal, flores1993conversation, medinamora1992actionworkflow, shoham1993aop, singh1998rethinking, smithcohen1996semantics, suchman1993categories, suchman1995speech, winograd1994categories, winogradflores1986understanding, yolumsingh2002flexible
+- paper citekeys ⊆ compiled bibliography citekeys: PASS
+- inherited-card warning: much of the older field carries canonical archive @misc placeholders rather than source-verified full bibliographic records. They are preserved, not silently upgraded inside immutable payloads.
+
+RESOURCE COVERAGE
+- registered resources: 8 (7 LOCAL_FILE; 1 LINK_ONLY).
+- missing registered local resource bodies: 0.
+- local registered bodies embedded byte-for-byte inside standalone index.html / READER.html: 7/7.
+- embedded-body byte validation errors: 0.
+- inherited prior-publication resources are additionally preserved under _RESOURCES/prior_publication/.
+
+RECONSTRUCTION STATE
+- _SLIPCASE/rebuild.py exists and verifies immutable-card hashes before rebuilding ZETTELS.json/jsonl.
+- rebuild execution is re-run during finalization after this report is written; final external build log records PASS/FAIL.
+- stale prior NODES.rebuilt.jsonl is removed before packaging so it cannot be mistaken for current graph state.
+
+PAPER EVIDENCE COVERAGE
+- paper: felicity-to-protocol__2026-08-18.pdf
+- title: From Felicity to Protocol: How Speech-Act Theory Became Executable Social Order
+- SOURCE_MAP substantive claim records: 15
+- SOURCE_MAP zettel references unresolved against current IDs: 0
+- SOURCE_MAP citekeys absent from compiled bibliography: 0
+- paper citekeys absent from compiled bibliography: 0
+- “migration of semantic burden” and the four-layer semantic architecture are paper syntheses, not terminology attributed to the cited authors.
+- direct Suchman→Singh and Winograd/Flores→Yolum/Singh influence claims remain explicitly UNVERIFIED; the paper treats those as convergences unless direct citation evidence is recovered.
+
+ASSEMBLY PROMPT STATUS
+- SLIPCASE_FINAL_PROMPT.txt bytes: 17753
+- SHA-256: 931a32f39ae7bea35356b4b91f7f9b13bb6259af1ccc19612fb55e860a230730
+- _PROMPTS mirror byte-identical: PASS
+- status: TRANSCRIBED FROM THE VISIBLE USER TURN. Raw chat-transport bytes are unavailable to build tools, so platform-level byte identity is UNVERIFIED.
+
+MAKING HISTORY
+- 000__MAKING_HISTORY.txt: present
+- human scholarly review claimed: NO
+- model recorded: GPT-5.6 Sol
+
+PDF STATUS
+- TeX compilation: PASS (pdflatex; final log inspected).
+- PDF exists: YES
+- PDF page count: 14
+- title/conclusion/references/appendix text landmarks: PASS
+- unresolved citation/reference/LaTeX-error patterns in final log: NONE
+- remaining final-log warning: microtype footnote patch warning only; no unresolved citation or fatal error.
+- rendered pages: 14 PNG pages using the PDF render workflow.
+- visually inspected pages during finalization: 1, 7, 12, 13, 14.
+- observed clipping / overlap / black squares / broken glyphs on inspected pages: NONE.
+- disclosure mark: visible as a small bottom-right mark on inspected interior/final pages; not used as headline branding.
+
+INDEX / READER STATUS
+- index.html bytes: 48528822
+- READER.html bytes: 48528822
+- embedded zettel records: 112
+- embedded nodes / relations: 301 / 879
+- embedded registered local resource bodies: 7
+- embedded prompt byte-equal to SLIPCASE_FINAL_PROMPT.txt: PASS
+- inline UI JavaScript syntax check with node --check: PASS.
+- DATA JSON parse and all embedded-resource base64/byte comparisons: PASS.
+- headless Chromium full-load test: TIMED OUT in the build environment on the ~46 MB standalone capsule; therefore interactive browser behavior is not claimed as fully runtime-verified beyond syntax/data checks.
+- file:// design has no CDN, external font, or external JavaScript dependency for preserved material.
+
+ROOT STRUCTURE
+- required root/directory artifacts missing before ZIP: 0
+- flat numbered root zettel cards: 112
+- _MD mirrors: 112
+- appearances records: 112
+
+ZIP STATUS
+- Final ZIP is created only after this verification payload is frozen.
+- The finalizer then runs Python zipfile.testzip() and `unzip -t` against the exact closed archive.
+- Because changing this file after that test would change the archive, final ZIP PASS/FAIL is recorded externally in the archive comment and final handoff rather than retroactively rewriting this evidence file.

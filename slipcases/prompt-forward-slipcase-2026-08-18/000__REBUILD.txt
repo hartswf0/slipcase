@@ -1,0 +1,8 @@
+REBUILD
+1. Treat every root zettel TXT as immutable evidence.
+2. Verify SHA-256 against _SLIPCASE/MANIFEST.json.
+3. Parse PLATFORM, LINKS, and [[addresses]] conservatively; unresolved addresses remain ghosts.
+4. Recompile bibliography from preserved BIBTEX; original variants remain in cards.
+5. Regenerate derived reader, network, cards, MOCs, and paper separately from evidence.
+6. Do not infer that this package contains the entire originating conversation. It contains the 90-card forage deck plus the mounted source/prompt files explicitly registered in _RESOURCES.
+7. To continue research, begin with 000__OPEN_EDGES.txt and PAPER_TRAIL.md.

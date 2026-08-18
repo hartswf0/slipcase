@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Sentence House 01 - The House That Words Built</title>
+<style>
+:root{--ink:#111;--muted:#666;--paper:#f7f6f2;--line:#c9c7c0;--panel:#fff;--fail:#7a1f1f;--pass:#1d5b39}
+*{box-sizing:border-box} html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--paper);color:var(--ink);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+body{padding:12px}.shell{height:100%;display:grid;grid-template-rows:auto 1fr auto;gap:10px}
+header{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid var(--ink);padding-bottom:8px;gap:16px}.title{font:700 17px/1.15 Georgia,serif;letter-spacing:.01em}.sub{font-size:10px;color:var(--muted);margin-top:3px}.status{font-size:10px;text-align:right;white-space:nowrap}
+main{min-height:0;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(330px,.75fr);gap:10px}.panel{background:var(--panel);border:1px solid var(--line);min-height:0;overflow:hidden}.planPanel{display:grid;grid-template-rows:1fr auto}.planWrap{min-height:0;padding:10px;display:flex;align-items:center;justify-content:center}.planWrap svg{width:100%;height:100%;max-height:68vh}.tests{border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);font-size:9px}.test{padding:7px;border-right:1px solid var(--line);min-width:0}.test:last-child{border-right:0}.test b{display:block;font-size:9px;margin-bottom:2px}.pass{color:var(--pass)}.fail{color:var(--fail)}.pending{color:var(--muted)}
+.side{display:grid;grid-template-rows:auto 1fr auto;min-height:0}.seed{padding:10px;border-bottom:1px solid var(--line);font:italic 16px/1.3 Georgia,serif}.ledger{overflow:auto;padding:6px 10px}.entry{border-bottom:1px solid #e3e1db;padding:7px 0;opacity:.28}.entry.active{opacity:1}.meta{font-size:9px;color:var(--muted);display:flex;justify-content:space-between}.statement{font:12px/1.35 Georgia,serif;margin-top:3px}.reason{font-size:9px;line-height:1.3;color:var(--muted);margin-top:3px}.controls{border-top:1px solid var(--line);padding:8px;display:grid;grid-template-columns:1fr auto;gap:8px}.stages{display:flex;gap:4px;flex-wrap:wrap}button{appearance:none;border:1px solid var(--ink);background:#fff;color:#111;padding:5px 7px;font:10px ui-monospace,monospace;cursor:pointer}button.on{background:#111;color:white}.memory{font-size:9px;color:var(--muted);align-self:center;text-align:right}
+footer{display:flex;justify-content:space-between;gap:12px;font-size:9px;color:var(--muted);border-top:1px solid var(--line);padding-top:6px}.mark{font-size:12px;color:#777}
+.room{fill:#fbfbf9;stroke:#111;stroke-width:2}.shared{fill:#f1f0eb}.wet{fill:#ecebe6}.bed{fill:none;stroke:#111;stroke-width:1.5}.label{font-size:14px;font-family:ui-monospace,monospace;fill:#111}.small{font-size:10px;fill:#666}.door{stroke:#111;stroke-width:3}.path{fill:none;stroke:#666;stroke-width:7;stroke-linecap:round;opacity:.38}.privacy{stroke:#111;stroke-width:9}.sight{stroke:#7a1f1f;stroke-width:2;stroke-dasharray:6 5}.blocked{stroke:#1d5b39}.roofArrow{stroke:#111;stroke-width:2;marker-end:url(#arrow)}.ghost{opacity:.18}
+@media(max-width:760px){body{padding:7px}header{align-items:flex-start}.status{display:none}main{grid-template-columns:1fr;grid-template-rows:58% 42%}.side{grid-template-rows:auto 1fr auto}.planWrap{padding:4px}.tests{font-size:8px}.test{padding:4px}.reason{display:none}.seed{font-size:13px;padding:6px}.ledger{padding:3px 7px}.entry{padding:4px 0}.statement{font-size:10px}.controls{padding:5px}footer{display:none}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header><div><div class="title">THE HOUSE THAT WORDS BUILT / SENTENCE HOUSE 01</div><div class="sub">A runnable argument about deferred specification, delegated completion, and a house that can answer back.</div></div><div class="status" id="status"></div></header>
+<main>
+<section class="panel planPanel">
+<div class="planWrap">
+<svg viewBox="0 0 760 500" role="img" aria-label="Evolving plan of Sentence House 01">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#111"/></marker></defs>
+<!-- house body -->
+<rect x="70" y="60" width="560" height="370" class="room shared"/>
+<!-- bedroom -->
+<rect x="430" y="60" width="200" height="175" class="room"/><text x="445" y="85" class="label">BEDROOM</text>
+<!-- bath/service -->
+<rect x="488" y="300" width="142" height="130" class="room wet"/><text x="501" y="324" class="label">BATH</text>
+<rect x="430" y="300" width="58" height="130" class="room wet"/><text x="438" y="322" class="small">SERVICE</text>
+<!-- shared -->
+<text x="92" y="88" class="label">COMMON ROOM / KITCHEN</text>
+<!-- entry -->
+<line x1="333" y1="430" x2="373" y2="430" stroke="#fff" stroke-width="7"/><line x1="333" y1="430" x2="333" y2="392" class="door"/><path d="M333 392 A38 38 0 0 1 371 430" fill="none" stroke="#777"/>
+<text x="318" y="463" class="label">ENTRY</text>
+<!-- bedroom door -->
+<line x1="430" y1="235" x2="430" y2="270" stroke="#fff" stroke-width="7"/><line x1="430" y1="235" x2="464" y2="235" class="door"/>
+<!-- bed -->
+<rect x="520" y="105" width="82" height="105" rx="2" class="bed"/><line x1="520" y1="130" x2="602" y2="130" class="bed"/><text x="542" y="164" class="small">BED</text>
+<!-- circulation path, activated stage 3 -->
+<path id="river" d="M353 410 C348 355,305 326,274 300 C243 273,250 234,300 218 C349 201,395 224,422 261 C445 293,462 332,518 357" class="path ghost"/>
+<path id="branch" d="M313 299 C258 316,197 318,147 299" class="path ghost"/>
+<!-- initial sightline -->
+<line id="sight" x1="353" y1="420" x2="558" y2="158" class="sight"/>
+<!-- privacy wall stage 2 -->
+<line id="privacy" x1="404" y1="258" x2="465" y2="258" class="privacy ghost"/>
+<!-- roof test inset -->
+<g transform="translate(650,95)"><text x="0" y="0" class="small">ROOF SECTION</text><line x1="0" y1="75" x2="90" y2="75" stroke="#999"/><line id="roof" x1="5" y1="45" x2="85" y2="45" stroke="#111" stroke-width="4"/><line id="rainArrow" x1="73" y1="20" x2="73" y2="38" class="roofArrow"/><text id="roofLabel" x="0" y="95" class="small">0% / PONDS</text></g>
+<!-- memory wall -->
+<g id="memoryWall" class="ghost"><rect x="92" y="385" width="155" height="24" fill="none" stroke="#111"/><text x="102" y="401" class="small">APPEND-ONLY HOUSE HISTORY</text></g>
+<!-- north arrow -->
+<g transform="translate(680,380)"><line x1="0" y1="30" x2="0" y2="0" class="roofArrow"/><text x="-4" y="48" class="small">N</text></g>
+</svg>
+</div>
+<div class="tests" id="tests"></div>
+</section>
+<section class="panel side">
+<div class="seed">“Build me a house that remembers.”</div>
+<div class="ledger" id="ledger"></div>
+<div class="controls"><div class="stages" id="stages"></div><div class="memory" id="memory"></div></div>
+</section>
+</main>
+<footer><div>Research demonstrator only - not construction documents. The point is not that a sentence directly becomes a house; the point is to expose who completes what the sentence leaves open.</div><div class="mark">◜·◝</div></footer>
+</div>
+<script>
+const HOUSE_LEDGER = {
+  "house_id": "SENTENCE-HOUSE-01",
+  "seed": "Build me a house that remembers.",
+  "note": "Research demonstrator, not construction documents or engineering advice.",
+  "constraints": [
+    {
+      "id": "C0",
+      "stage": 0,
+      "origin": "USER",
+      "statement": "Build me a house that remembers.",
+      "reason": "Seed description. 'House' and 'remembers' are intentionally underdefined."
+    },
+    {
+      "id": "C1",
+      "stage": 1,
+      "origin": "USER_AFTER_ARTIFACT",
+      "statement": "Reloading cannot erase the house's past.",
+      "reason": "The first prototype treated memory as current state rather than persistent history."
+    },
+    {
+      "id": "C2",
+      "stage": 2,
+      "origin": "USER_AFTER_VISIBLE_FAILURE",
+      "statement": "No direct sightline from the entrance to the bed.",
+      "reason": "The first plan rendered 'private' as a label while leaving the bed visible from entry."
+    },
+    {
+      "id": "C3",
+      "stage": 3,
+      "origin": "USER_AFTER_REJECTION",
+      "statement": "Circulation must branch around shared space rather than become a single central corridor.",
+      "reason": "A literal curved hallway satisfied the metaphor 'like a river' without producing branching flow."
+    },
+    {
+      "id": "C4",
+      "stage": 4,
+      "origin": "WORLD_TEST",
+      "statement": "Every roof plane must drain at no less than two percent slope to a collector.",
+      "reason": "A visually complete flat roof failed the rain test."
+    },
+    {
+      "id": "C5",
+      "stage": 5,
+      "origin": "PROVENANCE_RULE",
+      "statement": "Every consequential constraint records who or what introduced it.",
+      "reason": "Successful defaults otherwise disappear into the artifact without authorship."
+    },
+    {
+      "id": "C6",
+      "stage": 6,
+      "origin": "CONSTITUTION",
+      "statement": "A world response may veto a prior instruction, and an inhabitant amendment appends rather than overwrites history.",
+      "reason": "The house remains open to weather, use, maintenance, and later occupation."
+    }
+  ],
+  "tests": [
+    {
+      "id": "T1",
+      "name": "history_survives_reload",
+      "introduced": 1
+    },
+    {
+      "id": "T2",
+      "name": "entry_to_bed_sightline_blocked",
+      "introduced": 2
+    },
+    {
+      "id": "T3",
+      "name": "circulation_branches",
+      "introduced": 3
+    },
+    {
+      "id": "T4",
+      "name": "roof_slope_at_least_2_percent",
+      "introduced": 4
+    },
+    {
+      "id": "T5",
+      "name": "constraint_origin_recorded",
+      "introduced": 5
+    }
+  ]
+};
+const LS_KEY='sentence-house-01-history';
+let stage=6;
+function history(){try{return JSON.parse(localStorage.getItem(LS_KEY)||'[]')}catch(e){return[]}}
+function remember(type,data={}){const h=history();h.push({at:new Date().toISOString(),type,...data});localStorage.setItem(LS_KEY,JSON.stringify(h));return h}
+if(!history().length) remember('HOUSE_OPENED',{stage});
+const tests=[
+ {id:'T1',name:'HISTORY',at:1,pass:s=>s>=1 && history().length>0,detail:'reload retains ledger'},
+ {id:'T2',name:'PRIVACY',at:2,pass:s=>s>=2,detail:'entry-bed sightline interrupted'},
+ {id:'T3',name:'BRANCH',at:3,pass:s=>s>=3,detail:'shared circulation has branch'},
+ {id:'T4',name:'RAIN',at:4,pass:s=>s>=4,detail:'roof slope >= 2%'},
+ {id:'T5',name:'ORIGIN',at:5,pass:s=>s>=5,detail:'constraint provenance visible'}
+];
+function render(){
+ document.getElementById('status').textContent=`stage ${stage}/6 · ${history().length} remembered events`;
+ document.getElementById('ledger').innerHTML=HOUSE_LEDGER.constraints.map(c=>`<div class="entry ${c.stage<=stage?'active':''}"><div class="meta"><b>${c.id}</b><span>${c.origin}</span></div><div class="statement">${c.statement}</div><div class="reason">${c.reason}</div></div>`).join('');
+ document.getElementById('stages').innerHTML=[0,1,2,3,4,5,6].map(s=>`<button class="${s===stage?'on':''}" data-stage="${s}">v${s}</button>`).join('')+`<button id="mark">MARK</button>`;
+ document.querySelectorAll('[data-stage]').forEach(b=>b.onclick=()=>{stage=+b.dataset.stage;remember('STAGE_VIEWED',{stage});render()});
+ document.getElementById('mark').onclick=()=>{remember('INHABITANT_MARK',{stage});render()};
+ document.getElementById('memory').textContent=`memory ${history().length} · survives reload`;
+ document.getElementById('tests').innerHTML=tests.map(t=>{const state=stage<t.at?'pending':(t.pass(stage)?'pass':'fail');return `<div class="test ${state}"><b>${t.name}: ${state.toUpperCase()}</b>${t.detail}</div>`}).join('');
+ const privacy=document.getElementById('privacy'), sight=document.getElementById('sight');
+ privacy.classList.toggle('ghost',stage<2); sight.classList.toggle('blocked',stage>=2);
+ document.getElementById('river').classList.toggle('ghost',stage<3); document.getElementById('branch').classList.toggle('ghost',stage<3);
+ document.getElementById('memoryWall').classList.toggle('ghost',stage<1);
+ const roof=document.getElementById('roof'), roofLabel=document.getElementById('roofLabel');
+ if(stage>=4){roof.setAttribute('y1','40');roof.setAttribute('y2','48');roofLabel.textContent='3% / DRAINS';roofLabel.setAttribute('fill','#1d5b39')}else{roof.setAttribute('y1','45');roof.setAttribute('y2','45');roofLabel.textContent='0% / PONDS';roofLabel.setAttribute('fill','#7a1f1f')}
+}
+render();
+</script>
+</body></html>

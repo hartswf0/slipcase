@@ -1,0 +1,100 @@
+ZETTEL
+
+ID:
+Z-SYS-009
+
+TITLE:
+“Identity is not location” still leaves at least four identities
+
+SOURCE:
+User-provided prompt system — SLIPCASE — ANCIENT MASTER PORTABLE RESEARCH FIELD v15.0 — supplied 2026-08-18.
+
+PASSAGE:
+[PARAPHRASE] Ancient Master preserves original ID but declares it non-global; exact payload SHA-256 is machine identity; filenames and order do not define identity; appearances are preserved separately.
+
+RESEARCH OBJECT:
+The system already contains several notions of sameness that should not collapse into one another.
+
+LOCAL MOVE:
+Separates byte identity from authored identity, lineage identity, and occurrence identity.
+
+SOURCE TERMS:
+original ID
+SHA-256
+machine identity
+appearance
+filename
+order
+immutable payload
+
+WHAT BECAME STRANGE:
+Two byte-identical zettels from different histories receive the same content hash, while a one-character correction to the same intellectual object produces a completely different content hash.
+
+QUESTION:
+What kind of sameness does each identity mechanism actually preserve?
+
+DEEPER QUESTION:
+Can “the same zettel” be answered without specifying the transformation under which sameness is being tested?
+
+MECHANISM:
+Payload hashing identifies exact byte equality.
+Original ID preserves the author's/local system's address.
+Appearance records an occurrence in context.
+Inquiry links preserve descent or relation.
+
+FORMAL SHIFT:
+<research object occurrence>
+→ <multiple identity coordinates>
+→ [compare under chosen invariant]
+→ <same / changed relative to that invariant>
+
+SOURCE FORMALISM:
+Exact payload SHA-256 is machine identity when computable.
+Filename, order, title, and original ID are not global identity.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+I(z) = {
+  content_hash,
+  original_id,
+  lineage_position,
+  appearance_id,
+  provenance_context
+}
+
+SAME(z1,z2) requires naming which component is invariant.
+
+TENSION:
+Content addressing solves exact duplicate recognition but cannot by itself model revision, conceptual continuity, or independent identical creation.
+
+MISSING:
+A declared identity vector and comparison rules for copy, edit, fork, merge, quotation, regeneration, and coincidentally identical payloads.
+
+BOUNDARY:
+The prompt already avoids claiming that SHA-256 captures every kind of identity; it explicitly calls it machine identity.
+
+CITATION TRAIL:
+Ancient Master RULE 4
+→ duplicates / collisions
+→ appearances
+→ inquiry lineage
+
+TEST:
+Apply COPY, MOVE, RENAME, EDIT, FORK, REGENERATE, and MERGE to one object. Record which identity coordinates survive each transformation.
+
+PLATFORM:
+[[IDENTITY UNDER TRANSFORMATION]]
+
+LINKS:
+[[CONTENT IDENTITY]]
+[[PROVENANCE IDENTITY]]
+[[APPEARANCE IDENTITY]]
+
+BIBTEX:
+@misc{ancient_master_identity_2026,
+  title = {Slipcase — Ancient Master: Identity Rules},
+  howpublished = {User-provided research-system prompt},
+  year = {2026},
+  note = {Version 15.0; supplied 2026-08-18}
+}

@@ -1,0 +1,238 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[backend=biber,style=authoryear,maxcitenames=2,maxbibnames=20]{biblatex}
+\addbibresource{prompt-magic-generative-trajectory__2026-08-18__references.bib}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black,pdfauthor={Watson Hartsoe},pdftitle={The Prompt Is Not the Unit}}
+\setstretch{1.08}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.62em}
+\setlength{\emergencystretch}{2em}
+\titleformat{\section}{\large\bfseries}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.8em}{}
+\newcommand{\term}[1]{\textsc{#1}}
+\newcommand{\archive}{\textit{Midjourney Prompt Magic and Office Hours Research Archive}}
+
+\title{\textbf{The Prompt Is Not the Unit}\\\large Magic, Causal Craft, and the Generative Trajectory}
+\author{Watson Hartsoe}
+\date{Working Paper --- 18 August 2026\\\small AI-augmented research process; evidence, prompts, and making history preserved in the accompanying slipcase.}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Accounts of text-to-image art have repeatedly centered the prompt. The prompt is easy to quote, teach, own, criticize, and archive, and early discussions of generative art consequently treated ``prompt engineering'' as a new linguistic skill. Yet the practice preserved in early Midjourney communities does not stay inside the sentence. Users reroll, weight, seed, remix, select, abandon, imitate, withhold, relearn, and deliberately surrender control. They also argue among themselves about whether prompt lore is craft, luck, or superstition. This paper argues that the prompt is not the basic unit of generative practice. The more adequate unit is the \emph{generative trajectory}: a temporally extended sequence in which a practitioner intervenes in a stochastic model, reads what returns, revises both means and ends, and learns within a social and platform-defined environment. ``Prompt magic'' is therefore neither simply mystical language nor simply false belief. It is a folk experimental culture produced where real but unstable affordances coexist with hidden variables, stochastic reinforcement, changing model versions, public imitation, and aesthetic defaults. This reframing changes what should count as expertise, authorship, interface legibility, and evidence. It also suggests a concrete research program: preserve session genealogies, test prompt claims by ablation, measure skill transfer across model versions, and measure the expressive friction imposed by model defaults.
+\end{abstract}
+
+\textbf{Keywords:} generative AI; prompt engineering; text-to-image; creative practice; situated action; distributed cognition; affordances; stochastic systems
+
+\section{The Wrong Object}
+
+A prompt is an unusually seductive research object. It is compact. It is human-readable. It can be copied from a Discord message, placed beside an image, sold, hidden, or cited as evidence of what an artist intended. Most importantly, it looks like the thing that caused the image. When a text-to-image system presents a command box labeled \emph{imagine}, the apparent sequence is almost irresistible: person forms intention, person writes description, machine executes description, image appears.
+
+Raphaël Millière's 2022 defense of AI art already complicated the button-pushing caricature. He argued that generative artists exercise skill through output curation and through what he called a quasi-alchemical search for the ``right combination'' of words that unlock styles or subjects. He also emphasized the feedback loop between prompts and selected outputs \parencite{milliere2022curation}. Empirical HCI work soon made the skill claim more precise. Oppenlaender identified six classes of prompt modifiers, including practitioners' own category of ``magic terms,'' and described iterative prompt engineering as an acquired experimental practice \parencite{oppenlaender2022taxonomy}. Oppenlaender, Linder, and Silvennoinen then found that participants could evaluate prompt quality and write descriptions while still lacking the style-specific vocabulary associated with effective prompting \parencite{oppenlaender2023prompting}. Chang and colleagues found templates, imported specialist vocabularies, community practices, and even model glitches converted into repeatable artistic styles \parencite{chang2023prompt}.
+
+These studies establish that prompting can involve expertise. They do not establish that the prompt is the correct unit of that expertise. The distinction matters because a linguistic object can be central to a practice without containing the practice. A musical score matters without being the performance. A plan matters without exhausting situated action. A camera setting matters without being the act of seeing. The early Midjourney archive considered here repeatedly exposes the same gap. Practitioners talk about ``magic prompts,'' but they also insist that long prompts may be mostly ignored; they distinguish a good prompt from ``a lot of rolls''; they discuss seeds, weighting, remixing, stylization, versions, public copying, accidental discoveries, and a mode of working explicitly described as ``shooting a documentary'' rather than controlling the scene \parencite{hartsoe2022midjourneyarchive}.
+
+The central wager of this paper is therefore simple: \textbf{the prompt is one move inside a larger generative trajectory}. The trajectory, not the string, is where specification, stochastic variation, judgment, learning, model change, and social circulation meet. This claim does not diminish prompting. It makes possible a more discriminating account of when prompt knowledge is real control, when it is superstition, when skill lies in selection rather than specification, and when apparently individual expertise is produced by a community or by platform defaults.
+
+\section{Words That Work for Reasons the User Does Not Know}
+
+The ``magic'' metaphor survives because prompt effects occupy an awkward position between semantics and causality. In an ordinary descriptive sentence, a modifier earns its place by contributing to what the sentence means. A prompt term may instead earn its place because repeated executions have shown that it changes model behavior in a useful direction. Oppenlaender's taxonomy matters here because ``magic terms'' are not an outside critic's insult; they are a practitioner category inside an emergent craft \parencite{oppenlaender2022taxonomy}. The word can be semantically weak yet operationally strong.
+
+The technical architecture explains why this is possible without requiring any literal magic. Text-conditioned image systems do not execute a natural-language sentence as a sequence of explicit drawing procedures. DALL-E 2, for example, used text conditioning to produce a CLIP image representation and then generated images through a decoder conditioned on that representation \parencite{ramesh2022hierarchical}. CLIP itself learned visual-linguistic associations from hundreds of millions of image-text pairs and permitted natural language to reference learned visual concepts \parencite{radford2021learning}. A prompt therefore acts through learned statistical structure whose detailed causal organization is not available to the practitioner.
+
+This produces a peculiar kind of know-how. The user can learn that $t$ is an effective intervention under model $M$ without knowing why. If $G(M,p)$ denotes a distribution of images generated by model $M$ from prompt $p$, a practitioner can discover that adding token or phrase $t$ produces a desirable empirical change
+\[
+\Delta(t\mid M,p)=G(M,p+t)-G(M,p)
+\]
+without possessing an interpretable model of $\Delta$. The skill is real if the effect is real. The ignorance is also real if the causal path is opaque. Expertise and incomplete explanation are not opposites.
+
+This is the first reason ``prompt magic'' should not be dismissed as a naïve metaphor. It names a genuine epistemic condition: effective form without transparent mechanism. But the same condition creates a serious identification problem. Because generation is stochastic, a user can easily mistake coincident success for causal effect. The archive's own practitioners noticed this. One complains about ``magical thinking'' and the failure to determine what a prompt is actually doing; another discussion rejects the idea of universally ``magic'' seed values \parencite{hartsoe2022midjourneyarchive}. The community is not divided into rational engineers and mystical artists. The same people move between practical experimentation, causal skepticism, and ritual vocabulary.
+
+\section{When Stochasticity Manufactures Ritual}
+
+Suppose a user changes a prompt and reruns the model. The next image is much better. What changed? At minimum the prompt changed, but unless the generation is controlled, the random initialization changed as well. Model defaults, hidden transformations, safety layers, version state, and other implementation details may also differ. The desired quantity is something like the causal contribution of the prompt modification, but the observed comparison usually bundles multiple changes:
+\[
+G(M,p_1,s_1,d) \quad \text{versus} \quad G(M,p_2,s_2,d),
+\]
+where $s$ is a seed and $d$ collects defaults. If $p_1 \neq p_2$ and $s_1 \neq s_2$, the user has not isolated the prompt effect. Midjourney's own seed documentation now explicitly presents seeds as useful for testing and experimentation \parencite{midjourneySeeds}. The control was technically available; the social practice of using it rigorously was another matter.
+
+A second mechanism makes the problem more interesting. B. F. Skinner's classic ``superstition'' experiment arranged rewards independently of pigeons' actions and described repeated behaviors emerging around accidentally contiguous reinforcement \parencite{skinner1948superstition}. Later work complicated a simple accidental-reinforcement account \parencite{staddon1971superstition}, and the analogy must not be overstated. Human creative practice is not an operant chamber. Yet the structure suggests an empirical question that prompt research has mostly ignored: useful-looking prompt rituals may be retained before users possess explicit causal beliefs about them.
+
+A practitioner adds ``intricate details.'' An exceptional image appears. The phrase stays. Another good image eventually follows. The behavior acquires a name, then an explanation, then a place in a template. The sequence can be \term{ritual $\rightarrow$ belief}, not only \term{belief $\rightarrow$ ritual}. In a system that emits intermittent aesthetic rewards, actions can be reinforced even when their causal contribution is weak.
+
+Gaver's distinction between perceptible, hidden, and false affordances provides a cleaner vocabulary than ``real magic'' versus ``nonsense'' \parencite{gaver1991technology}. Generative prompting can contain all three. A real prompt affordance may be correctly perceived. A real affordance may remain hidden because the interface provides poor information about it. A user may also perceive control where no stable affordance exists. The important research object is therefore a matrix between actual and perceived controllability, not a binary between rational and irrational users.
+
+This changes the design question. A prompt interface is not merely a place to express intent; it is an experimental environment in which people infer what actions are possible. If the system gives no causal feedback, it leaves users to build folk theories from visually rewarding but poorly controlled trials. ``Prompt engineering'' may then contain a mixture of genuine affordance discovery and culturally stabilized false affordances. The fact that both are learned through practice is exactly why observation alone cannot distinguish them.
+
+\section{The Craft Has a Half-Life}
+
+A traditional account of expertise imagines accumulation. The craftsperson encounters material repeatedly, extracts regularities, and becomes more capable. Versioned generative models introduce a discontinuity: the material can be replaced centrally by the platform. The 2022 Midjourney archive records practitioners saying they must ``relearn'' their prompt incantations and notes a transition from one model version to another as removing prior ``hacks'' \parencite{hartsoe2022midjourneyarchive}. Current Midjourney documentation still treats model version as an explicit control because versions differ materially in behavior \parencite{midjourneyVersion}.
+
+Prompt expertise should therefore be decomposed. Let
+\[
+E_t = E_G + E_{M_t},
+\]
+where $E_G$ is generalizable competence---visual judgment, experimental discipline, selection skill, knowledge of composition---and $E_{M_t}$ is knowledge local to model version $M_t$. After an update from $M_t$ to $M_{t+1}$, the second component may transfer poorly even while the first remains valuable.
+
+This does not prove that prompt craft is shallow. Potters learn clays; photographers learn films and sensors; instrumentalists learn particular instruments. Material-specific knowledge is still knowledge. The unusual feature is political-economic as much as technical: the practitioner does not control the continuity of the material. A platform can invalidate a lexicon overnight. What looked like a durable vocabulary may reveal itself as temporary knowledge of implementation quirks.
+
+The strongest empirical question is therefore not whether prompting is ``a skill.'' It is the \emph{transferability ratio}: what proportion of measured performance survives a model boundary? The answer could also differentiate kinds of expertise. If style-specific tokens decay but expert selection and iteration strategy remain, then the enduring craft lies less in linguistic incantation than in how practitioners navigate uncertainty.
+
+\section{From Prompt to Generative Trajectory}
+
+The archive offers the decisive counterexample to prompt-centered analysis in a deceptively ordinary sentence: successful work may require ``a general prompt and a lot of rolls'' \parencite{hartsoe2022midjourneyarchive}. Rerolling is not a modifier to language. It is a sampling operation. Midjourney's variation controls likewise branch from existing results rather than merely restating descriptions \parencite{midjourneyVariations}. A practitioner may hold language fixed while doing significant creative work through repeated generation, rejection, recognition, and branching.
+
+This separates specification from selection. Let $x_i \sim G(p)$ denote samples from the distribution conditioned by prompt $p$ and let $J(x_i)$ denote a practitioner's evaluation. A prompt-centered theory gives most causal and authorial weight to $p$. A search-centered account adds the selection operation
+\[
+x^* = \operatorname*{arg\,max}_{x_i \in \{x_1,\ldots,x_n\}} J(x_i),
+\]
+followed by new variations around $x^*$. Two people can therefore use an identical prompt yet perform very different creative processes. One accepts the first grid. Another generates hundreds of candidates, recognizes a rare anomaly, branches it, rejects almost everything, and develops the surviving line. Their textual input is the same; their trajectory is not.
+
+Stylization makes the allocation of control even more explicit. Current Midjourney documentation describes its stylize parameter as granting the model more freedom to interpret an idea as stylization rises \parencite{midjourneyStylize}. The older archive made the same continuum vivid with a high-stylization gloss equivalent to taking one's hands off the wheel \parencite{hartsoe2022midjourneyarchive}. This yields a paradox only if authorship is identified with local specification. A practitioner can intentionally choose a condition of reduced specification. The act is no longer ``I intended every visible property'' but ``I intended a region of possibility and a degree of surprise, then judged what happened.''
+
+The generative trajectory can be represented as a session
+\[
+S = \langle M_t,I_t,a_t,x_t,J_t \rangle_{t=0}^{n},
+\]
+where $M_t$ is model state, $I_t$ current intention, $a_t$ a user action, $x_t$ the resulting generated state, and $J_t$ the practitioner's judgment. This matters because $I_t$ need not be constant. The output can reveal a possibility the practitioner did not represent in advance, producing $I_{t+1} \neq I_t$. The specification is then endogenous to execution.
+
+This model explains why a final prompt is such poor evidence for creative history. It can omit abandoned prompts, rejected generations, seed choices, reference images, parameter changes, model versions, copied fragments, moments of surprise, and the point at which the goal changed. The final string is not false evidence. It is drastically lossy evidence.
+
+\section{Plans, Back-Talk, and Ends That Move}
+
+Lucy Suchman's critique of plan-centered accounts of human action provides the theoretical inversion required here. Plans can matter prospectively and retrospectively without serving as exhaustive scripts that determine situated action \parencite{suchman2006reconfigurations}. Applied to generative practice, the prompt can be a resource for action rather than the program of the artwork. Before generation it projects a possible direction. During generation it becomes one resource among others for deciding what counts as deviation or opportunity. After generation it may become a compressed retrospective account of what the artist says they were doing.
+
+The temporal distinction is critical because a final prompt can create an illusion of foresight. If a surprising output introduces a feature and the user subsequently adds language describing that feature, the final prompt will contain the feature even though the model produced it before the practitioner articulated it. Without a time-stamped genealogy, researchers can easily read retrospective articulation as antecedent intention.
+
+Donald Schön's ``reflective conversation with materials'' sharpens the point. In design, moves produce consequences not fully intended; those consequences can be read, answered, and used to reframe both means and ends \parencite{schon1996reflective}. This supplies a better account of the archive's ``documentary'' language than anthropomorphic claims about AI collaborators. The model need not possess intentions for its outputs to function as consequential back-talk. A computational material can return unplanned consequences that alter the human's next move.
+
+The relevant loop is
+\[
+\text{move} \rightarrow \text{generated consequence} \rightarrow \text{reading} \rightarrow \text{reframing} \rightarrow \text{countermove}.
+\]
+If an unexpected result changes not merely the method but the criterion of success, the process is no longer optimization toward a fixed target. Let $J_t$ denote the evaluation function at time $t$. Reflective search permits
+\[
+J_{t+1}=R(J_t,x_t),
+\]
+where encountering $x_t$ changes what the practitioner values. This is stronger than iteration as error correction. The work can discover its own problem.
+
+That possibility also creates a genuine tension. Goal change can be skilled reframing, but it can also be opportunistic rationalization: the practitioner may simply declare whatever the model produced to have been the intention all along. A trajectory account does not automatically romanticize drift. It makes the distinction testable. Preserve pre-generation goals, intermediate states, decisions, and reasons; then ask whether changing ends are cumulative and discriminating or merely post-hoc acceptance.
+
+\section{Discord Was Part of the Instrument}
+
+The individual trajectory is still too small a unit for early Midjourney. The archive records an environment in which prompts and outputs were visible in public channels, users copied and remixed one another, newcomers were effectively immersed in other people's experiments, and ``magic prompts'' became a site of contested ownership and craft \parencite{hartsoe2022midjourneyarchive}. Chang and colleagues independently document a community of practice built around templates, specialist vocabularies, and learned glitches \parencite{chang2023prompt}. The social layer was not just distribution after creation; it altered what could be discovered.
+
+Hutchins's distributed-cognition perspective provides a stringent version of this claim. The point is not merely that people collaborate. It is that the relevant cognitive accomplishment may exist at the level of a system of persons, artifacts, and information flows rather than inside any one participant \parencite{hutchins2006distributed}. One user encounters an anomaly. Another reproduces it. A third identifies a boundary condition. Someone names the technique. Someone else writes documentation. Thousands observe the prompt-output pair. The community can stabilize operational knowledge that no single person discovered whole.
+
+This suggests a different genealogy for prompt expertise. Instead of asking who authored a magic phrase, trace the transformations by which a phrase became actionable public knowledge. The effective experimental apparatus is
+\[
+\text{users} + \text{public stream} + \text{archive} + \text{interface} + \text{model}.
+\]
+Remove the public stream and the human learning environment changes even if the model weights remain identical.
+
+The same visibility can amplify error. The archive notes that visible keywords can provoke waves of repetition, a concern connected there to moderation and rapidly changing collective imagery \parencite{hartsoe2022midjourneyarchive}. A prompt that appears on a high-visibility surface becomes input to future prompts. Thus the population creates a recurrent loop outside the neural network:
+\[
+P_t \rightarrow G(P_t) \rightarrow \text{visibility} \rightarrow \text{human imitation} \rightarrow P_{t+1}.
+\]
+Aesthetic drift can therefore occur without model retraining. The community may make a model look obsessed with a style simply by changing the distribution of what it asks for.
+
+Discord was consequently both laboratory and contamination source. Public observability accelerates collective learning, but it also accelerates cargo cults, imitation cascades, and apparent consensus. The epistemic architecture that produces expertise can manufacture superstition at the same time.
+
+\section{Defaults Before Words}
+
+Prompt-centered accounts also begin too late in another sense: they begin after the platform has already decided what the unmarked state will do. The 2022 Office Hours notes explicitly discuss the aesthetics of new versions, ``good defaults,'' and visual debiasing \parencite{hartsoe2022midjourneyarchive}. Current Midjourney documentation makes default style intervention visible by contrasting ordinary behavior with Raw mode and by exposing stylization controls \parencite{midjourneyRaw,midjourneyStylize}. The blank prompt box is therefore not aesthetically blank.
+
+The platform controls training data, model architecture, post-training choices, moderation, ranking, versions, and defaults. The user controls some local inputs inside those prior decisions. This disperses human agency rather than eliminating it. It also suggests a concrete extension of Winner's argument that technical arrangements can organize power \parencite{winner1980artifacts}: aesthetic defaults distribute the cost of expression.
+
+Consider two desired visual states, $y_1$ and $y_2$. If $y_1$ lies near the model's default aesthetic and $y_2$ lies against it, formally identical access to the prompt box can mask unequal effort. Define an exploratory measure of expressive friction
+\[
+F(y\mid M,D)=\mathbb{E}[\text{iterations} + \text{time} + \text{compute} + \text{special controls} + \text{expertise}]
+\]
+required to obtain target $y$ under model $M$ and defaults $D$. A default matters politically and aesthetically not only through the frequency of outputs but through the burden required to override it.
+
+This reframes debates about bias. Output counts remain important, but they do not capture the experience of fighting a system. Two representations may both be technically possible while one requires repeated negative prompting, references, retries, parameter changes, or a different model. Aesthetic governance can therefore reside in \emph{differential expressive friction}.
+
+The same reasoning applies to skill. What looks like brilliant prompt expertise may partly be compensation for a poorly exposed control surface. If a richer interface makes the same artistic intentions easy to express, the old lexical virtuosity may disappear. That does not make the prior expertise unreal. It locates it more precisely: some craft belongs to the artistic problem, and some to overcoming the interface.
+
+\section{What Counts as Skill After the Prompt}
+
+Once the trajectory replaces the prompt as unit, ``skill'' decomposes into several experimentally separable capacities. A practitioner can have a strong evaluative eye while lacking an effective intervention vocabulary, as Oppenlaender and colleagues' studies suggest \parencite{oppenlaender2023prompting}. A practitioner can also have model-local lexical knowledge but weak selection ability; excellent selection ability but little causal knowledge; disciplined ablation habits; strong ability to recognize generative accidents; or the social fluency required to retrieve techniques from a community.
+
+At least five capacities should therefore be measured separately:
+
+\begin{enumerate}[leftmargin=1.6em]
+\item \textbf{Specification}: constructing interventions that shift the output distribution toward intended constraints.
+\item \textbf{Causal discrimination}: distinguishing reliable controls from stochastic coincidence or ignored material.
+\item \textbf{Selection}: recognizing valuable candidates under a fixed sample set.
+\item \textbf{Reframing}: revising goals coherently in response to generated consequences.
+\item \textbf{Transfer}: retaining competence across models, versions, interfaces, and tasks.
+\end{enumerate}
+
+These capacities can conflict. A user who believes many false prompt affordances may still be an excellent selector. A user with unusually accurate causal knowledge may make aesthetically uninteresting work. A practitioner can be extraordinarily effective on one model and helpless after an update. Treating all of this as ``prompt engineering ability'' obscures the structure of expertise.
+
+The same decomposition clarifies authorship. Authorship need not require detailed prior intention for every visible property, but neither should random sampling automatically become artistry. The relevant evidence lies in the pattern of decisions across the trajectory: what constraints were preserved, what surprises were recognized, what was rejected, what was reframed, and how those choices accumulated. This is closer to an account of practiced judgment than to either the ``push a button'' caricature or a romantic claim that every prompt is a poem.
+
+\section{A Research Program for Generative Trajectories}
+
+The argument makes several tests unusually urgent. First, prompt folklore should be subjected to experimental archaeology. Historical ``magic'' modifiers can be reconstructed on preserved model versions where possible, tested with fixed seeds, ablated, replaced by synonyms, and repeated across contexts. The goal is not debunking; it is classification. Some terms will be semantic, some lexical, some context-dependent, some inert, and some unrecoverable.
+
+Second, expertise should be studied longitudinally across version changes. Separate generalizable visual and experimental skill from model-local vocabulary. The result would be an empirical half-life for different forms of generative expertise.
+
+Third, creative studies should preserve full session genealogies. For every visible feature in a finished artifact, researchers could identify when it was first intended, articulated, generated, noticed, and retained. This would finally distinguish prospective specification from retrospective description.
+
+Fourth, selection should be tested independently from generation budget. Experts and novices can be given identical pregenerated candidate sets from the same prompt. If experts reliably identify candidates with greater later value, selection is measurable creative competence rather than merely access to more compute.
+
+Fifth, social circulation should be reconstructed as an information-flow graph. A single historical technique can be followed through users, messages, copied fragments, modifications, failure reports, and documentation. This would test whether particular discoveries are better explained at the level of distributed cognition than individual invention.
+
+Finally, platform defaults should be measured through expressive friction. Instead of asking only what a model tends to output, measure how much work different users must perform to obtain matched target categories. Change defaults while holding prompts and practitioners as constant as possible. If the distribution of effort changes, aesthetic governance becomes experimentally visible.
+
+These tests have a shared methodological demand: \textbf{preserve the path}. The prompt-output pair is insufficient for causal, artistic, and social analysis. A generative session should be treated as an execution trace whose relevant state includes model version, parameters, seed or stochastic state where available, prompts, reference inputs, generations, selections, deletions, and time-ordered revisions. The trace should also permit links to the public or archival materials from which prompt knowledge was imported.
+
+\section{Limitations and Unresolved Territory}
+
+The evidence here is deliberately heterogeneous. The Midjourney material is a research archive combining Discord excerpts, Office Hours notes, technical parameter records, questions, and theoretical juxtapositions. It is invaluable for reconstructing an emergent practice but is not a statistically representative sample of users. Several speakers are not independently identified in the local archive. Claims about community-wide behavior therefore remain research questions rather than population estimates.
+
+The theoretical transfers are also controlled analogies, not genealogical claims. Suchman's situated action, Schön's reflective conversation, Hutchins's distributed cognition, Gaver's affordances, Skinner's reinforcement experiment, and Winner's technological politics were not written to explain text-to-image systems. Their value here is discriminative: each splits a concept that prompt discourse tends to collapse. Plans differ from actions. Actual affordances differ from perceived ones. individual cognition differs from system-level information flow. contingency differs from authorship. defaults differ from neutrality. The paper does not claim historical influence unless separately established.
+
+The formalizations are likewise analytic scaffolds, not source syntax. Real image models do not expose a clean scalar for ``authorship,'' and the expressive-friction metric would require careful operationalization. Seeds do not guarantee perfect reproducibility across every implementation. Model architecture also varies, so the DALL-E 2 description cannot be universalized to every generative system.
+
+Most importantly, the trajectory thesis may be wrong for some tasks. One-shot prompting exists. A stable antecedent specification can sometimes dominate the work. The claim is not that prompts are never the operative unit. It is that researchers should demonstrate that they are, rather than assuming it because the string is the easiest artifact to capture.
+
+\section{Conclusion: Craft Under Causal Uncertainty}
+
+``Prompt magic'' initially appears to offer a choice between two stories. In one, skilled artists learn a new language and use it intentionally. In the other, users surround opaque AI systems with superstition. The early practice is stranger than either story.
+
+A prompt can be a genuine empirical handle and still be poorly understood. A prompt ritual can be reinforced by stochastic success and still coexist with real expertise. A practitioner can become fluent in a model-local vocabulary that expires at the next version. A general prompt can matter less than hundreds of rolls and the judgment that selects one result. A high stylization setting can intentionally delegate control. A surprising output can alter the goal that supposedly caused it. A public Discord can function as both a distributed laboratory and a machine for propagating false affordances. And before any of those actions occur, platform defaults have already made some visual futures easier to reach than others.
+
+The common structure is not language alone. It is \emph{causal craft under uncertainty}: intervention, stochastic consequence, perception, attribution, selection, revision, circulation, and relearning. This is why the prompt is not the unit. The unit is the trajectory through which a person, a model, an interface, and often a community repeatedly change what can be done and what is worth doing next.
+
+That shift is methodologically inconvenient. A string is easy to archive; a trajectory is not. But the convenience of the prompt has become an ontology. If generative practice is studied through its full traces, many familiar debates become more precise. The question is no longer whether the human ``really made'' an image because they typed the right sentence. It becomes: what did the practitioner control, what did they discover, what did they falsely infer, what did they recognize, what changed their goal, what knowledge came from the community, what burden came from the defaults, and which parts of the competence survived when the machine changed?
+
+Those are harder questions. They are also finally questions about the work people are actually doing.
+
+\printbibliography
+
+\appendix
+\small
+\section{Assembly Instrument}
+The exact publication assembly prompt is preserved in the accompanying package at \nolinkurl{_PROMPTS/SLIPCASE_v15.55-AM.txt}. The sendable \texttt{index.html} also carries the reconstruction pointer and package manifest.
+
+\section{Making History}
+This working paper was assembled from a supplied Midjourney prompt-magic/Office-Hours research archive, twenty-two zettels developed in the present research context, and source verification against primary or authoritative pages where available. Archived zettel payloads are preserved separately from this derived manuscript. The paper is a current interpretive wager, not evidence.
+
+\section{Replication Path}
+Open \texttt{index.html} or \texttt{000\_\_START\_HERE.txt} in the slipcase root. The package contains the root cards, exact Markdown mirrors, bibliography, graph relations, ghosts/backlinks, resources, prompts, source map, making history, verification report, and rebuild instructions.
+
+\end{document}

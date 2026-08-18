@@ -1,0 +1,79 @@
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-13
+
+    TITLE:
+    A PROMPT MAY BE AN ITINERARY: GUIDANCE THAT WORKS BY REFUSING COMPLETE SPECIFICATION
+
+    SOURCE:
+    Tim Ingold — Making — 2013 — Chapter 8, “Telling by hand,” p. 110.
+
+    SOURCE URL:
+    file:MAKING_INGOLD(1).pdf
+
+    PASSAGE:
+    [QUOTE] “In place of specification without guidance, the story offers guidance without specification.”
+
+    RESEARCH OBJECT:
+    Natural-language programming may be misdescribed when every useful utterance is treated as a defective specification. Some language works by orienting attention and enabling continuation rather than by exhaustively defining an end state.
+
+    LOCAL MOVE:
+    Ingold distinguishes specifications, which define a project, from stories, which lay down an itinerary and support guided rediscovery.
+
+    SOURCE TERMS:
+    telling; education of attention; guided rediscovery; complete specification; guidance; anticipatory foresight; itinerary
+
+    WHAT BECAME STRANGE:
+    The endpoint of deferred formalization need not be total formalization. A capable system may continue through a hybrid of invariants, examples, metaphors, and attention-directing cues.
+
+    QUESTION:
+    Are prompts specifications, programs, or itineraries?
+
+    DEEPER QUESTION:
+    Could “programming by itinerary” name a distinct computational regime in which guidance and evaluation remain distributed across time?
+
+    MECHANISM:
+    telling → attention → situated encounter → judgment → action → further cue.
+
+    FORMAL SHIFT:
+    <GUIDANCE> → <ENCOUNTER> → [NOTICE + JUDGE] → <NEXT ACTION>
+
+    SOURCE FORMALISM:
+    NONE
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] PROGRAMMING_BY_ITINERARY = directional guidance + executable candidate generation + situated failure oracles + preserved constraints.
+
+    TENSION:
+    An LLM is not a human apprentice and may not possess the perceptual education Ingold describes; the analogy must be tested rather than assumed.
+
+    MISSING:
+    A computational criterion distinguishing useful underspecification from mere ambiguity.
+
+    BOUNDARY:
+    Ingold does not claim stories execute on computers.
+
+    CITATION TRAIL:
+    Gibson; apprenticeship; natural-language programming; human-in-the-loop systems.
+
+    TEST:
+    Compare exhaustive specification, minimal imperative, and itinerary-style guidance on novel cases not explicitly covered by the input.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[PROMPT AS ITINERARY]]
+[[THICK PROMPTING]]
+[[GUIDANCE WITHOUT SPECIFICATION]]
+
+    BIBTEX:
+    @book{ingold2013making,
+  author={Ingold, Tim},
+  title={Making: Anthropology, Archaeology, Art and Architecture},
+  publisher={Routledge},
+  address={London},
+  year={2013},
+  isbn={9780415567237}
+}

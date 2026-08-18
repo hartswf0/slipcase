@@ -1,0 +1,2019 @@
+===== 001 Z-SLIP-001 =====
+
+ZETTEL
+
+ID:
+Z-SLIP-001
+
+TITLE:
+A research file must preserve the next possible move, not merely the previous statement
+
+SOURCE:
+Watson Hartsoe — SLIPCASE — 2026 — “The problem,” “Every run ends in files,” “The paper is a wager”
+
+PASSAGE:
+[PARAPHRASE]
+SLIPCASE asks what must be true of a file for research to survive the software that produced it. Cards preserve not only claims but provenance, relations, unresolved addresses, questions, and tests.
+
+RESEARCH OBJECT:
+Durability in research archives may depend less on preserving content than on preserving affordances for continuation.
+
+LOCAL MOVE:
+The specification shifts archival survival from “can this document still be read?” to “can another intelligence reconstruct what could reasonably be done next?”
+
+SOURCE TERMS:
+research checkpoint
+zettel
+ghost
+PLATFORM
+LINKS
+provenance
+reconstruction state
+open edges
+
+WHAT BECAME STRANGE:
+A perfectly preserved note may still be intellectually dead if its unresolved dependencies, questions, and possible tests have disappeared.
+
+QUESTION:
+What is the minimum information a research object must contain for an unfamiliar future reader or machine to continue the inquiry rather than merely recover its conclusions?
+
+DEEPER QUESTION:
+Could “continuability” become a stronger archival criterion than readability or format longevity?
+
+MECHANISM:
+Research survives when the file carries enough evidence of its position in an inquiry—identity, origin, links, unresolved edges, and possible tests—to regenerate future operations.
+
+FORMAL SHIFT:
+<research statement>
+→ <addressable research object with provenance and unresolved edges>
+→ [RECONSTRUCT / LINK / FORAGE / TEST]
+→ <continuable inquiry>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+SURVIVAL ≠ readability alone
+
+SURVIVAL =
+READABILITY
++ ADDRESSABILITY
++ PROVENANCE
++ RELATIONAL RECOVERY
++ CONTINUATION POTENTIAL
+
+TENSION:
+More continuation metadata may make the supposedly simple durable file increasingly dependent on a schema.
+
+MISSING:
+A failure test demonstrating when a readable file can no longer support reconstruction of its inquiry.
+
+BOUNDARY:
+The SLIPCASE specification proposes features of continuable research objects but does not establish which are strictly necessary or sufficient.
+
+CITATION TRAIL:
+Digital preservation literature on significant properties; archival diplomatics; provenance models; executable and reproducible research objects.
+
+TEST:
+Delete all derived SLIPCASE machinery and give only root-level cards to an unfamiliar researcher. Measure which intended research operations they can reconstruct.
+
+PLATFORM:
+[[research objects that survive their software]]
+
+LINKS:
+[[continuability]]
+[[significant properties]]
+[[reconstruction state]]
+[[archive as executable possibility]]
+
+BIBTEX:
+@misc{hartsoe2026slipcase,
+  author = {Hartsoe, Watson},
+  title = {SLIPCASE: A Research Checkpoint Compiler},
+  year = {2026},
+  note = {Working specification}
+}
+
+
+===== 002 Z-SLIP-002 =====
+
+ZETTEL
+
+ID:
+Z-SLIP-002
+
+TITLE:
+A ghost is not missing information but a declared future object
+
+SOURCE:
+Watson Hartsoe — SLIPCASE — 2026 — “The relations get compiled”
+
+PASSAGE:
+[PARAPHRASE]
+An unresolved declared address becomes a ghost. Ghosts are published rather than hidden, and those receiving multiple inbound links become promising forage targets.
+
+RESEARCH OBJECT:
+An unresolved reference can become a positive research object when the system preserves its identity and inbound demand.
+
+LOCAL MOVE:
+SLIPCASE converts failed resolution from an error state into prospective structure.
+
+SOURCE TERMS:
+ghost
+unresolved
+address
+inbound links
+conceptual attractor
+forage target
+broken link
+
+WHAT BECAME STRANGE:
+The archive may know that an idea is important before anyone has written the note describing it.
+
+QUESTION:
+Can an archive discover a concept before it possesses content for that concept?
+
+DEEPER QUESTION:
+Is a sufficiently connected absence already a weak form of knowledge?
+
+MECHANISM:
+Independent cards emit the same unresolved address; relation compilation aggregates those references; repeated convergence produces a visible empty node; that node becomes a candidate for investigation.
+
+FORMAL SHIFT:
+<unwritten but repeatedly named concept>
+→ <persistent unresolved address>
+→ [INVERT LINKS + COUNT INBOUND REFERENCES]
+→ <visible conceptual attractor>
+
+SOURCE FORMALISM:
+ghost = declared [[ADDRESS]] with no conservatively resolvable card
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+GHOST(g) :=
+unresolved(g) ∧ indegree(g) ≥ 1
+
+ATTRACTOR(g) :=
+GHOST(g) ∧ independent_origins(g) ≥ 2
+
+LIVE_EDGE(g) :=
+ATTRACTOR(g) ∧ occurrence_in(g,
+ {QUESTION, DEEPER_QUESTION, MISSING, CITATION_TRAIL, TEST})
+
+TENSION:
+High indegree can reflect repeated vocabulary, bad naming practice, or copied assumptions rather than genuine conceptual importance.
+
+MISSING:
+A notion of independent origin strong enough to distinguish genuine convergence from copying or template inheritance.
+
+BOUNDARY:
+Link frequency alone does not establish scholarly significance.
+
+CITATION TRAIL:
+Information retrieval work on query expansion and latent needs; graph-theoretic treatments of missing nodes; Luhmann on references to unwritten continuations; open-world knowledge representation.
+
+TEST:
+Compare the top ten high-indegree ghosts against expert-chosen future research questions across several mature checkpoints.
+
+PLATFORM:
+[[ghosts as positive research objects]]
+
+LINKS:
+[[conceptual attractor]]
+[[negative space]]
+[[forage target]]
+[[open world archive]]
+
+BIBTEX:
+@misc{hartsoe2026slipcase,
+  author = {Hartsoe, Watson},
+  title = {SLIPCASE: A Research Checkpoint Compiler},
+  year = {2026},
+  note = {Working specification}
+}
+
+
+===== 003 Z-SLIP-003 =====
+
+ZETTEL
+
+ID:
+Z-SLIP-003
+
+TITLE:
+The strongest research queue may be compiled from what the archive fails to resolve
+
+SOURCE:
+Watson Hartsoe — SLIPCASE — 2026 — “The relations get compiled”; “The paper is a wager”
+
+PASSAGE:
+[PARAPHRASE]
+SLIPCASE retains ghosts, missing relations, contradictions, open edges, and unresolved citations rather than treating them as noise.
+
+RESEARCH OBJECT:
+Research planning can be derived mechanically from accumulated unresolved structure instead of generated anew from a topic prompt.
+
+LOCAL MOVE:
+The archive changes from storing research results to producing its own prospective agenda.
+
+SOURCE TERMS:
+ghosts
+open edges
+missing
+forage
+future work
+contradictions
+
+WHAT BECAME STRANGE:
+A research agenda may be an emergent property of a sufficiently explicit archive.
+
+QUESTION:
+What happens if the next research question is selected from unresolved relational pressure rather than proposed by the researcher from scratch?
+
+DEEPER QUESTION:
+Can a research archive acquire something resembling endogenous curiosity without pretending that it possesses intentions?
+
+MECHANISM:
+Cards externalize unresolved questions and references; compilation aggregates them; recurrent absences become ranked; selected absences are returned to forage as inputs.
+
+FORMAL SHIFT:
+<distributed unresolvedness>
+→ <ranked edge structure>
+→ [SELECT FORAGE TARGET]
+→ <next inquiry>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+CHECKPOINT_n
+→ unresolved_edges
+→ rank(edge pressure)
+→ FORAGE(edge_max)
+→ cards_new
+→ CHECKPOINT_n+1
+
+TENSION:
+Mechanical ranking can amplify whatever vocabulary the archive already knows how to name, leaving genuinely alien questions invisible.
+
+MISSING:
+A source of novelty not reducible to graph recurrence.
+
+BOUNDARY:
+The archive can surface pressure in its existing representational system; it cannot identify questions for which it has no trace whatsoever.
+
+CITATION TRAIL:
+Active learning; curiosity-driven exploration; scientific discovery systems; bibliometric research fronts; Luhmann on connection value.
+
+TEST:
+Run two research branches from the same checkpoint: one following top-ranked ghosts, another following human-selected strange low-frequency edges. Compare novelty and usefulness after three generations.
+
+PLATFORM:
+[[archive-generated research agendas]]
+
+LINKS:
+[[ghosts as positive research objects]]
+[[endogenous curiosity]]
+[[representation blind spot]]
+[[recursive forage]]
+
+BIBTEX:
+@misc{hartsoe2026slipcase,
+  author = {Hartsoe, Watson},
+  title = {SLIPCASE: A Research Checkpoint Compiler},
+  year = {2026},
+  note = {Working specification}
+}
+
+
+===== 004 Z-SLIP-004 =====
+
+ZETTEL
+
+ID:
+Z-SLIP-004
+
+TITLE:
+The epistemic boundary should run between judgment and enumeration
+
+SOURCE:
+Watson Hartsoe — SLIPCASE — 2026 — “The model judges; the tool counts”
+
+PASSAGE:
+[PARAPHRASE]
+Interpretive operations belong to the model; deterministic operations such as hashing, counting, parsing, extraction, resolution, compilation, and verification belong to scripts. No quantity should be reported unless a command produced it.
+
+RESEARCH OBJECT:
+Hybrid research systems need an explicit allocation of epistemic authority between probabilistic interpretation and deterministic computation.
+
+LOCAL MOVE:
+SLIPCASE converts a practical anti-hallucination measure into an architectural rule.
+
+SOURCE TERMS:
+model judges
+tool counts
+deterministic operation
+verification
+fabrication surface
+
+WHAT BECAME STRANGE:
+“Use tools” is underspecified. The important question is not whether tools exist but which claims each component is permitted to make.
+
+QUESTION:
+Can every output claim in an AI research system be assigned to the weakest mechanism capable of establishing it?
+
+DEEPER QUESTION:
+Should provenance record not just where information came from but which computational authority licensed each assertion?
+
+MECHANISM:
+Semantic interpretation is delegated to a language model; enumerable and verifiable properties are delegated to programs; final artifacts retain the distinction.
+
+FORMAL SHIFT:
+<mixed research operation>
+→ <typed epistemic responsibilities>
+→ [MODEL JUDGMENT | DETERMINISTIC COMMAND]
+→ <claims with differentiated authority>
+
+SOURCE FORMALISM:
+“No number is reported that no command produced.”
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+ASSERTION_TYPES:
+
+SEMANTIC → model permitted
+ENUMERATIVE → command required
+IDENTITY → deterministic resolution preferred
+VERIFICATION → command required
+INTERPRETIVE_SYNTHESIS → model permitted + provenance required
+
+TENSION:
+Many operations—entity resolution, citation matching, duplicate detection, even deciding what counts as a zettel—sit between purely semantic and purely deterministic categories.
+
+MISSING:
+A treatment of mixed operations and uncertainty thresholds.
+
+BOUNDARY:
+Deterministic production does not make the underlying categories correct; a script can count precisely what was classified badly.
+
+CITATION TRAIL:
+Human-in-the-loop systems; proof-carrying data; data provenance; typed effect systems; reproducible computational research.
+
+TEST:
+Annotate every field in one checkpoint with the mechanism authorized to produce it and identify fields whose authority cannot be cleanly assigned.
+
+PLATFORM:
+[[epistemic division of labor]]
+
+LINKS:
+[[model judges tool counts]]
+[[typed assertions]]
+[[fabrication surface]]
+[[mechanical reconciliation]]
+
+BIBTEX:
+@misc{hartsoe2026slipcase,
+  author = {Hartsoe, Watson},
+  title = {SLIPCASE: A Research Checkpoint Compiler},
+  year = {2026},
+  note = {Working specification}
+}
+
+
+===== 005 Z-SLIP-005 =====
+
+ZETTEL
+
+ID:
+Z-SLIP-005
+
+TITLE:
+Completeness has at least three independent dimensions
+
+SOURCE:
+Watson Hartsoe — SLIPCASE — 2026 — “Missing is data”
+
+PASSAGE:
+[PARAPHRASE]
+SLIPCASE distinguishes how much source material was available, whether discovered candidates were classified, and whether generated files and counts mechanically reconcile.
+
+RESEARCH OBJECT:
+Claims of archival completeness become misleading when epistemic coverage, workflow coverage, and mechanical consistency are collapsed into a single status.
+
+LOCAL MOVE:
+The specification decomposes “complete” into separately auditable claims.
+
+SOURCE TERMS:
+available
+unswept
+classified
+reconciled
+visible context
+missing is data
+
+WHAT BECAME STRANGE:
+An archive can be mechanically perfect and epistemically tiny.
+
+QUESTION:
+What classes of completeness need to remain orthogonal in AI-mediated research?
+
+DEEPER QUESTION:
+Can a system be designed so that it is structurally difficult to utter an unqualified “complete”?
+
+MECHANISM:
+Separate state variables prevent one successful verification operation from laundering uncertainty in another layer.
+
+FORMAL SHIFT:
+<ambiguous completeness>
+→ <multiple independent coverage states>
+→ [REPORT SEPARATELY]
+→ <bounded completeness claim>
+
+SOURCE FORMALISM:
+Three distinct answers:
+source availability
+candidate classification
+mechanical reconciliation
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+C = (
+  SOURCE_COVERAGE,
+  CLASSIFICATION_COVERAGE,
+  MECHANICAL_RECONCILIATION
+)
+
+No scalar COMPLETE(C).
+
+TENSION:
+Users often need a single actionable status, while multidimensional completeness resists compression.
+
+MISSING:
+A vocabulary for unknown denominators, where even the amount of unseen material cannot be estimated.
+
+BOUNDARY:
+Separating completeness dimensions improves honesty but does not establish whether the discovery process itself was adequate.
+
+CITATION TRAIL:
+Data quality dimensions; recall estimation; archival completeness; uncertainty representation; missing-data taxonomy.
+
+TEST:
+Take a checkpoint currently described as “complete” and score its three dimensions independently. Observe whether materially different states were hidden by the single label.
+
+PLATFORM:
+[[multidimensional completeness]]
+
+LINKS:
+[[missing is data]]
+[[mechanical reconciliation]]
+[[unknown denominator]]
+[[bounded claims]]
+
+BIBTEX:
+@misc{hartsoe2026slipcase,
+  author = {Hartsoe, Watson},
+  title = {SLIPCASE: A Research Checkpoint Compiler},
+  year = {2026},
+  note = {Working specification}
+}
+
+
+===== 006 Z-SLIP-006 =====
+
+ZETTEL
+
+ID:
+Z-SLIP-006
+
+TITLE:
+Root placement can encode irreversibility rather than category
+
+SOURCE:
+Watson Hartsoe — SLIPCASE — 2026 — “Repository”
+
+PASSAGE:
+[PARAPHRASE]
+SLIPCASE keeps irreplaceable research objects at the checkpoint root while placing reproducible derivatives in underscore-prefixed directories: “Root holds what you would grieve. Underscore folders hold what you would regenerate.”
+
+RESEARCH OBJECT:
+Filesystem topology can distinguish primary intellectual events from reproducible views without imposing a topical hierarchy.
+
+LOCAL MOVE:
+The folder system stops answering “what kind of thing is this?” and starts answering “what would be lost if this vanished?”
+
+SOURCE TERMS:
+root
+underscore folders
+regenerate
+zettel
+derived artifact
+
+WHAT BECAME STRANGE:
+A filesystem hierarchy can encode reversibility rather than ontology.
+
+QUESTION:
+Would organizing artifacts by recoverability produce more durable research repositories than organizing them by document type or topic?
+
+DEEPER QUESTION:
+Is irreversibility a more fundamental archival property than category?
+
+MECHANISM:
+Objects whose loss destroys unique intellectual history receive privileged placement; objects derivable from them are segregated as disposable views.
+
+FORMAL SHIFT:
+<heterogeneous files>
+→ <recoverability classes>
+→ [PLACE BY LOSS CONSEQUENCE]
+→ <filesystem expressing preservation priority>
+
+SOURCE FORMALISM:
+root = what you would grieve
+underscore folder = what you would regenerate
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PLACEMENT(x) =
+ROOT       if recovery_cost(x) includes irrecoverable intellectual loss
+DERIVED    if x = f(preserved_objects)
+
+TENSION:
+Some supposedly derived artifacts contain editorial decisions that cannot actually be regenerated without reproducing the original model state or prompt context.
+
+MISSING:
+A test for whether an artifact is genuinely derivable rather than merely reproducible in rough form.
+
+BOUNDARY:
+Filesystem placement communicates preservation priority but does not itself guarantee recoverability.
+
+CITATION TRAIL:
+Content-addressable storage; build systems; source/derived distinctions in scientific computing; archival appraisal.
+
+TEST:
+Delete every underscore directory from a mature checkpoint and rebuild it using only root objects and retained compiler instructions. Diff the results.
+
+PLATFORM:
+[[filesystem as epistemic architecture]]
+
+LINKS:
+[[irreversibility]]
+[[derived artifact]]
+[[build system]]
+[[research source of truth]]
+
+BIBTEX:
+@misc{hartsoe2026slipcase,
+  author = {Hartsoe, Watson},
+  title = {SLIPCASE: A Research Checkpoint Compiler},
+  year = {2026},
+  note = {Working specification}
+}
+
+
+===== 007 Z-SLIP-007 =====
+
+ZETTEL
+
+ID:
+Z-SLIP-007
+
+TITLE:
+A disposable paper can protect the archive from its own argument
+
+SOURCE:
+Watson Hartsoe — SLIPCASE — 2026 — “The paper is a wager”
+
+PASSAGE:
+[PARAPHRASE]
+The checkpoint paper is interpretive, regenerable, disposable, and explicitly not evidence. It traces claims to cards and sources while preserving contradictions and limitations.
+
+RESEARCH OBJECT:
+Treating scholarly prose as a temporary traversal rather than the canonical research object may prevent synthesis from overwriting unresolved evidence.
+
+LOCAL MOVE:
+SLIPCASE reverses the usual hierarchy in which notes are disposable scaffolding and the paper is the durable intellectual product.
+
+SOURCE TERMS:
+paper
+wager
+interpretation
+regenerable
+disposable
+evidence
+claim
+source map
+
+WHAT BECAME STRANGE:
+Perhaps the scholarly paper is not the archive's culmination but one lossy rendering of it.
+
+QUESTION:
+What changes if papers are treated as compiled views over a persistent field of research objects?
+
+DEEPER QUESTION:
+Could scholarly disagreement become cheaper if rival papers could be compiled from the same evidence field without forcing the archive to choose one narrative?
+
+MECHANISM:
+Atomic research objects persist; synthesis selects relations and constructs an argument; claim-to-card-to-source mappings keep the synthesis subordinate to the archive.
+
+FORMAL SHIFT:
+<research field>
+→ <selected relations + wager>
+→ [COMPILE ARGUMENT]
+→ <temporary paper>
+
+SOURCE FORMALISM:
+CLAIM → CARD → SOURCE → CITEKEY
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PAPER = view(CHECKPOINT, thesis, arrangement, model_state)
+
+CHECKPOINT ≠ PAPER
+
+TENSION:
+Publication institutions reward stable, authored arguments rather than replaceable compilations.
+
+MISSING:
+A method for distinguishing legitimate alternative compilations from cherry-picked arguments using the same card field.
+
+BOUNDARY:
+Calling the paper disposable does not eliminate its rhetorical or institutional consequences.
+
+CITATION TRAIL:
+Executable papers; literate programming; scholarly editions; argument mapping; versioned scientific workflows.
+
+TEST:
+Compile two explicitly opposed papers from the same checkpoint while forbidding either process from deleting or rewriting source cards.
+
+PLATFORM:
+[[paper as compiled view]]
+
+LINKS:
+[[research field]]
+[[claim source map]]
+[[rival compilation]]
+[[archive over argument]]
+
+BIBTEX:
+@misc{hartsoe2026slipcase,
+  author = {Hartsoe, Watson},
+  title = {SLIPCASE: A Research Checkpoint Compiler},
+  year = {2026},
+  note = {Working specification}
+}
+
+
+===== 008 Z-SLIP-008 =====
+
+ZETTEL
+
+ID:
+Z-SLIP-008
+
+TITLE:
+Disclosure becomes more informative when its unit is the production chain
+
+SOURCE:
+Watson Hartsoe — SLIPCASE — 2026 — “Disclosure is an identification, not a label”
+
+PASSAGE:
+[PARAPHRASE]
+SLIPCASE distinguishes a short recurring public identification from a fuller public file describing who acted, what was verbatim, where consequential control entered, what was verified, and what remains unchecked.
+
+RESEARCH OBJECT:
+AI disclosure may become more epistemically useful when it identifies consequential transformations in a production chain rather than assigning a binary AI/human label to the final artifact.
+
+LOCAL MOVE:
+The specification borrows the broadcast station-identification model to separate lightweight attribution from detailed provenance.
+
+SOURCE TERMS:
+identification
+public file
+chain
+consequential control
+verbatim
+verified
+thinness
+
+WHAT BECAME STRANGE:
+“Was AI used?” may be the wrong unit of disclosure because the answer contains almost no information about authorship, verification, or control.
+
+QUESTION:
+What events in a mixed human-model production chain are consequential enough to require explicit disclosure?
+
+DEEPER QUESTION:
+Can authorship become an event log rather than a categorical property of the artifact?
+
+MECHANISM:
+Short-form identification points to a fuller provenance record; the detailed record attributes operations and verification states across the chain.
+
+FORMAL SHIFT:
+<binary artifact label>
+→ <production-chain provenance>
+→ [IDENTIFY CONSEQUENTIAL TRANSFORMATIONS]
+→ <inspectable authorship history>
+
+SOURCE FORMALISM:
+who
+origin
+where consequential control entered
+what is verbatim
+what a human verified
+what nobody checked
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+ARTIFACT_AUTHORSHIP :=
+ordered set of consequential interventions
++ verification events
++ preserved source contributions
+
+TENSION:
+A highly detailed provenance chain may still hide the significance of individual interventions behind exhaustive procedural logging.
+
+MISSING:
+A principled definition of consequential control.
+
+BOUNDARY:
+Production-chain disclosure may improve transparency without resolving normative disputes over credit, responsibility, or authorship.
+
+CITATION TRAIL:
+Provenance standards; contributorship taxonomies; documentary editing; broadcast station identification; software commit history.
+
+TEST:
+Show readers a binary AI label and a chain-style public file for the same artifact. Test which supports more accurate judgments about control, verification, and responsibility.
+
+PLATFORM:
+[[chain-level disclosure]]
+
+LINKS:
+[[consequential control]]
+[[authorship event log]]
+[[public file]]
+[[thin provenance]]
+
+BIBTEX:
+@misc{hartsoe2026slipcase,
+  author = {Hartsoe, Watson},
+  title = {SLIPCASE: A Research Checkpoint Compiler},
+  year = {2026},
+  note = {Working specification}
+}
+
+
+===== 009 Z-SLIP-009 =====
+
+ZETTEL
+
+ID:
+Z-SLIP-009
+
+TITLE:
+Low-definition research artifacts can deliberately transfer completion to the reader
+
+SOURCE:
+Watson Hartsoe — SLIPCASE — 2026 — “Cool media”
+
+PASSAGE:
+[PARAPHRASE]
+SLIPCASE characterizes the card as a fragment, the ghost as a labeled hole, and the platform as a name without necessarily supplying completion. The receiver participates by completing relations and pursuing open edges.
+
+RESEARCH OBJECT:
+Research incompleteness can be an interface property designed to provoke participation rather than merely a defect awaiting correction.
+
+LOCAL MOVE:
+The system applies the logic of low-definition media to scholarly infrastructure.
+
+SOURCE TERMS:
+cool media
+fragment
+ghost
+labeled hole
+receiver
+open edge
+desk
+
+WHAT BECAME STRANGE:
+A research interface might become less generative as it becomes more explanatory.
+
+QUESTION:
+How much incompleteness is necessary for an archive to invite intellectual participation without becoming merely confusing?
+
+DEEPER QUESTION:
+Could interface “clarity” suppress research by resolving tensions before the reader encounters them?
+
+MECHANISM:
+Partial objects externalize unresolved relations; visible gaps require readers to infer, question, follow, or create connecting material.
+
+FORMAL SHIFT:
+<unfinished research structure>
+→ <visible low-definition interface>
+→ [READER COMPLETION]
+→ <new inquiry / relation / card>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PARTICIPATION may vary non-monotonically with EXPLICITNESS.
+
+too little structure → noise
+intermediate incompleteness → participation
+too much completion → spectatorship
+
+TENSION:
+Incomplete interfaces can reproduce exclusion when only insiders possess enough background knowledge to finish the signal.
+
+MISSING:
+An account of who is capable of participating and what prerequisite knowledge the archive assumes.
+
+BOUNDARY:
+The analogy to cool media does not establish that incompleteness reliably produces participation.
+
+CITATION TRAIL:
+McLuhan on hot/cool media; reader-response theory; productive ambiguity; gap filling; boundary objects.
+
+TEST:
+Build three versions of the same checkpoint interface with increasing explanatory completion. Compare reader-generated questions, cross-links, and successful reconstructions.
+
+PLATFORM:
+[[productive incompleteness]]
+
+LINKS:
+[[cool radio]]
+[[reader completion]]
+[[ghosts as interface]]
+[[clarity tax]]
+
+BIBTEX:
+@misc{hartsoe2026slipcase,
+  author = {Hartsoe, Watson},
+  title = {SLIPCASE: A Research Checkpoint Compiler},
+  year = {2026},
+  note = {Working specification}
+}
+
+
+===== 010 Z-SLIP-010 =====
+
+ZETTEL
+
+ID:
+Z-SLIP-010
+
+TITLE:
+A vocabulary that never converges may reveal either intellectual breadth or addressing failure
+
+SOURCE:
+Watson Hartsoe — SLIPCASE — 2026 — “The relations get compiled”; “Status”
+
+PASSAGE:
+[PARAPHRASE]
+SLIPCASE proposes reporting when no concept is named by two or more cards and identifies cross-session platform-vocabulary convergence as an unresolved problem.
+
+RESEARCH OBJECT:
+Graph fragmentation is ambiguous: it may indicate productive conceptual heterogeneity, unstable naming, failed entity resolution, or an archive that has not yet developed shared objects.
+
+LOCAL MOVE:
+The system refuses to treat disconnectedness as merely a visualization problem.
+
+SOURCE TERMS:
+PLATFORM
+vocabulary
+converge
+islands
+network
+fragmenting
+
+WHAT BECAME STRANGE:
+A disconnected graph does not tell us whether the research lacks structure or whether the addressing language lacks stability.
+
+QUESTION:
+How can a research system distinguish conceptual novelty from accidental synonymy?
+
+DEEPER QUESTION:
+At what point does vocabulary convergence become premature standardization that erases useful differences?
+
+MECHANISM:
+Cards independently emit named platforms and links; relation resolution produces either recurrent shared addresses or isolated naming islands.
+
+FORMAL SHIFT:
+<locally named research objects>
+→ <cross-card address graph>
+→ [RESOLVE / COMPARE / DETECT NEAR MATCHES]
+→ <convergence or fragmentation signal>
+
+SOURCE FORMALISM:
+If no concept is named by two or more cards, report the collection as islands.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+FRAGMENTATION can arise from:
+
+F1 = genuinely distinct objects
+F2 = synonymous names
+F3 = granularity mismatch
+F4 = lineage drift
+F5 = failed resolution
+
+Observed disconnectedness does not identify Fi.
+
+TENSION:
+Aggressive canonicalization improves network density while potentially destroying distinctions the cards were meant to preserve.
+
+MISSING:
+A reversible mechanism for proposing equivalence without silently merging identities.
+
+BOUNDARY:
+Network density is not by itself a measure of intellectual coherence.
+
+CITATION TRAIL:
+Ontology alignment; entity resolution; faceted classification; synonym control; boundary objects; folksonomies.
+
+TEST:
+Have independent reviewers classify 100 near-match platform names as SAME, RELATED, DISTINCT, or UNCERTAIN and compare those judgments to automated normalization.
+
+PLATFORM:
+[[vocabulary convergence without ontology collapse]]
+
+LINKS:
+[[conceptual islands]]
+[[entity resolution]]
+[[reversible canonicalization]]
+[[platform drift]]
+
+BIBTEX:
+@misc{hartsoe2026slipcase,
+  author = {Hartsoe, Watson},
+  title = {SLIPCASE: A Research Checkpoint Compiler},
+  year = {2026},
+  note = {Working specification}
+}
+
+
+===== 011 Z-SLIP-011 =====
+
+ZETTEL
+
+ID:
+Z-SLIP-011
+
+TITLE:
+Lineage addresses make intellectual descent visible but may confuse descent with identity
+
+SOURCE:
+Watson Hartsoe — SLIPCASE — 2026 — “Three ancestors”; “Status”
+
+PASSAGE:
+[PARAPHRASE]
+SLIPCASE retains original IDs and extends them for descendants, so an identifier such as Z-CEPTR-002-K1-K2 records a chain of descent. The durability of this identity scheme under long-term merging remains unresolved.
+
+RESEARCH OBJECT:
+Encoding genealogy directly into identifiers makes derivation legible but creates tension when objects merge, split, migrate, or acquire multiple parents.
+
+LOCAL MOVE:
+Identity is made historically informative instead of opaque.
+
+SOURCE TERMS:
+original ID
+address
+descent
+child
+lineage
+merge
+derived identity
+
+WHAT BECAME STRANGE:
+An identifier that tells a story about where an object came from may become less stable precisely because intellectual objects can have more than one ancestry.
+
+QUESTION:
+Can a research object simultaneously have a stable identity and an identifier that encodes its evolving genealogy?
+
+DEEPER QUESTION:
+Should identity record descent, or should descent be a relation attached to identity?
+
+MECHANISM:
+Descendants inherit and extend parent identifiers, preserving a readable path through recursive forage.
+
+FORMAL SHIFT:
+<research object with parent>
+→ <lineage-bearing identifier>
+→ [EXTEND ID]
+→ <human-readable descent>
+
+SOURCE FORMALISM:
+Example:
+Z-CEPTR-002-K1-K2
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+If ID encodes lineage:
+
+ID(child) = ID(parent) + derivation token
+
+But for merge:
+child = f(parent_A, parent_B)
+
+No single linear identifier preserves both ancestries without becoming structurally complex.
+
+TENSION:
+Human-readable descent and permanent location-independent identity may be incompatible goals.
+
+MISSING:
+A merge semantics for cards with multiple intellectual ancestors.
+
+BOUNDARY:
+The lineage scheme works straightforwardly for trees but has not been shown to survive graph-shaped derivation.
+
+CITATION TRAIL:
+Content-addressable identifiers; Merkle DAGs; version control commit graphs; archival provenance; genealogical identifiers.
+
+TEST:
+Construct adversarial merge histories—two-parent merges, split/recombine, duplicate discovery, independent rediscovery—and attempt to preserve stable IDs without losing ancestry.
+
+PLATFORM:
+[[identity versus genealogy]]
+
+LINKS:
+[[derived identity]]
+[[merge semantics]]
+[[address by identity]]
+[[research DAG]]
+
+BIBTEX:
+@misc{hartsoe2026slipcase,
+  author = {Hartsoe, Watson},
+  title = {SLIPCASE: A Research Checkpoint Compiler},
+  year = {2026},
+  note = {Working specification}
+}
+
+
+===== 012 Z-SLIP-012 =====
+
+ZETTEL
+
+ID:
+Z-SLIP-012
+
+TITLE:
+A sendable research object is stronger than a shareable interface
+
+SOURCE:
+Watson Hartsoe — SLIPCASE — 2026 — “One file you can send”
+
+PASSAGE:
+[PARAPHRASE]
+The checkpoint’s index.html embeds payloads, bibliography, graph, supporting files, PDF, and reconstruction instructions and requires no server, CDN, or network request.
+
+RESEARCH OBJECT:
+Portability becomes stronger when an artifact contains not merely a view of research but enough material to reconstruct the research environment that produced the view.
+
+LOCAL MOVE:
+SLIPCASE moves from “offline reader” toward self-describing checkpoint.
+
+SOURCE TERMS:
+one file you can send
+embed
+no server
+no CDN
+no network request
+rebuild
+replicate
+
+WHAT BECAME STRANGE:
+A webpage can function less like a publication and more like a portable research seed.
+
+QUESTION:
+What is the smallest self-contained artifact from which a research field can be reconstructed after its original tooling disappears?
+
+DEEPER QUESTION:
+Could scholarship be distributed as self-describing checkpoints rather than references to remotely maintained platforms?
+
+MECHANISM:
+Primary payloads and reconstruction instructions are embedded inside a universally openable container; derived interfaces can then be recreated from the carried evidence.
+
+FORMAL SHIFT:
+<platform-dependent research environment>
+→ <self-contained checkpoint>
+→ [TRANSFER + RECONSTRUCT]
+→ <new local research environment>
+
+SOURCE FORMALISM:
+index.html carries:
+payloads
+bibliography
+graph
+supporting files
+PDF
+rebuild instructions
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PORTABILITY =
+OFFLINE_OPENABLE
+∧ SELF_DESCRIBING
+∧ PRIMARY_PAYLOAD_PRESENT
+∧ RECONSTRUCTION_INSTRUCTIONS_PRESENT
+
+TENSION:
+Embedding everything in one file creates a new monolith and may make inspection, diffing, incremental update, or archival preservation worse.
+
+MISSING:
+A separation between “single-file transmission object” and “canonical storage form.”
+
+BOUNDARY:
+Self-containment improves transfer independence but does not guarantee future browser compatibility or executable reconstruction.
+
+CITATION TRAIL:
+BagIt; RO-Crate; WARC; single-file web archives; reproducible research compendia; self-extracting archives.
+
+TEST:
+Air-gap a checkpoint, remove the original repository, and ask another researcher to reconstruct every mechanically derivable artifact using only the transmitted file.
+
+PLATFORM:
+[[self-describing research checkpoint]]
+
+LINKS:
+[[portable research field]]
+[[single-file transmission]]
+[[reconstruction state]]
+[[software-independent scholarship]]
+
+BIBTEX:
+@misc{hartsoe2026slipcase,
+  author = {Hartsoe, Watson},
+  title = {SLIPCASE: A Research Checkpoint Compiler},
+  year = {2026},
+  note = {Working specification}
+}
+
+
+===== 013 Z-SLIP-013 =====
+
+ZETTEL
+
+ID:
+Z-SLIP-013
+
+TITLE:
+Recursive research objects require a second state that must never become part of the object
+
+SOURCE:
+Watson Hartsoe — Combined FORAGE / RESEARCH DAEMON / SLIPCASE prompt architecture — 2026 — “Recursive Inquiry”; “Autonomous Graph Inquiry”
+
+PASSAGE:
+[PARAPHRASE]
+The recursive forager requires every child to preserve exactly the same ZETTEL type so that any output can immediately become another input. The graph daemon simultaneously maintains ZETTEL_SET, EDGE_SET, ACTIVE_FRONTIER, VISITED_EDGES, OPEN_CONTRADICTIONS, and SOURCE_HUBS, but explicitly forbids this orchestration state from entering the ZETTEL syntax.
+
+RESEARCH OBJECT:
+Recursive research requires a separation between the invariant research object and the changing state of inquiry over those objects.
+
+LOCAL MOVE:
+The combined architecture discovers that recursion alone is insufficient. Something outside the recursive type must remember which possibilities have been explored, which contradictions remain open, and which edge should be pursued next.
+
+SOURCE TERMS:
+ZETTEL
+recursive type
+ACTIVE_FRONTIER
+VISITED_EDGES
+OPEN_CONTRADICTIONS
+SOURCE_HUBS
+orchestration state
+
+WHAT BECAME STRANGE:
+A self-forageable card is not a self-directing research system.
+
+QUESTION:
+What is the minimum external state required to turn recursively forageable research objects into sustained inquiry?
+
+DEEPER QUESTION:
+Can orchestration state remain disposable if losing it changes what the system would investigate next?
+
+MECHANISM:
+ZETTELS preserve local intellectual state while an external controller maintains global search state and chooses subsequent operations.
+
+FORMAL SHIFT:
+<recursive research object>
+→ <invariant ZETTEL + external inquiry state>
+→ [SELECT FRONTIER EDGE]
+→ <continued graph inquiry>
+
+SOURCE FORMALISM:
+FORAGE : ZETTEL → ZETTEL[]
+
+Internal daemon state:
+ZETTEL_SET
+EDGE_SET
+ACTIVE_FRONTIER
+VISITED_EDGES
+OPEN_CONTRADICTIONS
+SOURCE_HUBS
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+RESEARCH_SYSTEM =
+  IMMUTABLE_OBJECTS
+  +
+  MUTABLE_ORCHESTRATION_STATE
+
+where:
+
+OBJECT_STATE is portable
+
+ORCHESTRATION_STATE determines attention
+
+TENSION:
+SLIPCASE privileges preserved evidence and regenerable derived structures, but orchestration history may itself contain irrecoverable information about abandoned paths, skipped edges, and why one branch was chosen over another.
+
+MISSING:
+A classification of which orchestration state is mechanically reconstructible and which constitutes consequential research history.
+
+BOUNDARY:
+The prompts establish the separation but do not prove that the external state can safely disappear.
+
+CITATION TRAIL:
+[[research orchestration as provenance]]
+→ workflow systems
+→ search-state persistence
+→ scientific workflow provenance
+
+TEST:
+Run the same ZETTEL graph twice, once with preserved daemon state and once after reconstructing state only from the cards. Compare the next ten selected research edges.
+
+PLATFORM:
+[[recursive research architecture]]
+
+LINKS:
+[[Z-SLIP-003]]
+[[research orchestration as provenance]]
+[[active frontier]]
+[[recursive type]]
+
+BIBTEX:
+@misc{hartsoe2026combinedforage,
+  author = {Hartsoe, Watson},
+  title = {Combined FORAGE, Research Daemon, and SLIPCASE Prompt Architecture},
+  year = {2026},
+  note = {Working research-system specification}
+}
+
+
+===== 014 Z-SLIP-014 =====
+
+ZETTEL
+
+ID:
+Z-SLIP-014
+
+TITLE:
+Research direction becomes an operation over the whole graph rather than inheritance from the latest note
+
+SOURCE:
+Watson Hartsoe — PRIME ZETTEL FORAGE — AUTONOMOUS GRAPH INQUIRY — 2026 — “loop_command”
+
+PASSAGE:
+[PARAPHRASE]
+The daemon surveys the entire supplied graph, determines an active frontier, selects the unresolved edge most capable of changing understanding, forages it, adds the resulting children, and then reconsiders the entire graph rather than continuing automatically from the newest branch. Its objective is not zettel count but changes in what the graph knows to ask.
+
+RESEARCH OBJECT:
+Choosing what to investigate next is itself a first-class research operation.
+
+LOCAL MOVE:
+The daemon breaks the assumption that research genealogy should also determine research attention.
+
+SOURCE TERMS:
+ACTIVE FRONTIER
+expected epistemic gain
+entire graph
+newest branch
+most promising question
+changes in what the graph knows to ask
+
+WHAT BECAME STRANGE:
+Parentage tells us where a question came from but not whether it deserves the next unit of attention.
+
+QUESTION:
+What should determine the allocation of research attention when lineage, novelty, uncertainty, and potential consequence point toward different edges?
+
+DEEPER QUESTION:
+Can “expected epistemic gain” be operationalized without forcing inquiry to optimize only what its current representation can already recognize as valuable?
+
+MECHANISM:
+Global survey detaches edge selection from generation order and reallocates attention toward unresolved relations expected to alter multiple interpretations.
+
+FORMAL SHIFT:
+<latest generated node>
+→ <global unresolved frontier>
+→ [STEER]
+→ <highest-value next inquiry>
+
+SOURCE FORMALISM:
+Survey graph
+→ determine ACTIVE_FRONTIER
+→ choose edge
+→ forage
+→ oppose
+→ emit
+→ update graph
+→ reassess
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+NEXT_EDGE =
+argmax(e ∈ ACTIVE_FRONTIER)
+EXPECTED_GRAPH_CHANGE(e)
+
+TENSION:
+A system can only estimate epistemic gain using features already represented in the graph. The most transformative question may therefore receive a low score precisely because the archive lacks vocabulary for its importance.
+
+MISSING:
+A novelty mechanism capable of surfacing edges that are low-connectivity, low-frequency, or poorly represented but potentially field-changing.
+
+BOUNDARY:
+The architecture defines a steering principle, not a validated measure of epistemic gain.
+
+CITATION TRAIL:
+[[epistemic gain]]
+→ active learning
+→ optimal experimental design
+→ curiosity-driven search
+→ value of information
+
+TEST:
+Compare global-frontier steering against depth-first lineage following and random edge selection on the same checkpoint. Measure how often each strategy changes multiple existing interpretations rather than merely adding leaves.
+
+PLATFORM:
+[[research attention allocation]]
+
+LINKS:
+[[Z-SLIP-003]]
+[[active frontier]]
+[[expected epistemic gain]]
+[[representation blind spot]]
+
+BIBTEX:
+@misc{hartsoe2026graphdaemon,
+  author = {Hartsoe, Watson},
+  title = {Prime Zettel Forage: Autonomous Graph Inquiry},
+  year = {2026},
+  note = {Working prompt specification}
+}
+
+
+===== 015 Z-SLIP-015 =====
+
+ZETTEL
+
+ID:
+Z-SLIP-015
+
+TITLE:
+A research archive can be monotonic in evidence while remaining nonmonotonic in interpretation
+
+SOURCE:
+Watson Hartsoe — SLIPCASE — PORTABLE RESEARCH FIELD — 2026 — “model”; “laws”
+
+PASSAGE:
+[PARAPHRASE]
+SLIPCASE separates EVIDENCE, FIELD, and INTERPRETATION. Evidence is preserved, field structure is compiled, and interpretation remains revisable. Existing zettel payloads are immutable rather than rewritten.
+
+RESEARCH OBJECT:
+The architecture permits knowledge revision without evidence mutation by making accumulation and interpretation obey different temporal rules.
+
+LOCAL MOVE:
+What appears to be a preservation convention becomes an epistemic architecture: evidence accumulates while theses, maps, MOCs, and arrangements may be abandoned.
+
+SOURCE TERMS:
+EVIDENCE
+FIELD
+INTERPRETATION
+immutable payload
+compiled
+revisable
+
+WHAT BECAME STRANGE:
+Changing one's mind does not require changing one's notes.
+
+QUESTION:
+Could a research system support radical theoretical revision while maintaining an append-only evidentiary substrate?
+
+DEEPER QUESTION:
+What kinds of scholarly disagreement become easier when competing interpretations share an immutable evidentiary history?
+
+MECHANISM:
+New evidence enters as new immutable objects; relations are recompiled; interpretations can be discarded and regenerated without deleting earlier receipts.
+
+FORMAL SHIFT:
+<mutable notebook>
+→ <append-only evidence + recomputable relations>
+→ [REINTERPRET]
+→ <revisable scholarly state>
+
+SOURCE FORMALISM:
+EVIDENCE:
+ZETTEL · SOURCE · RESOURCE · PROMPT · APPEARANCE
+
+FIELD:
+PLATFORM · LINK · CONCEPT · GHOST · BACKLINK · LINEAGE
+
+INTERPRETATION:
+MOC · ARRANGEMENT · TRAIL · PAPER
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+E_(t+1) ⊇ E_t
+
+I_(t+1) need not contain I_t
+
+Therefore:
+
+EVIDENCE HISTORY = monotonic
+
+INTERPRETATION HISTORY = nonmonotonic
+
+TENSION:
+Evidence is never interpretation-free: admitting something as a zettel, selecting its boundaries, assigning identity, and deciding what counts as a source already contain judgment.
+
+MISSING:
+A distinction between immutable source payload and the revisable admission decision that made it a research object.
+
+BOUNDARY:
+Immutability protects history but cannot make the archive epistemically neutral.
+
+CITATION TRAIL:
+[[monotonic evidence nonmonotonic interpretation]]
+→ truth-maintenance systems
+→ append-only event sourcing
+→ nonmonotonic logic
+→ versioned scientific knowledge
+
+TEST:
+Take a checkpoint whose central thesis has been defeated. Recompile a contradictory interpretation without modifying or deleting any admitted evidence and record exactly where the old architecture obstructs the new reading.
+
+PLATFORM:
+[[evidence architecture]]
+
+LINKS:
+[[paper as compiled view]]
+[[immutable evidence]]
+[[revisable interpretation]]
+[[append-only scholarship]]
+
+BIBTEX:
+@misc{hartsoe2026slipcasearchitecture,
+  author = {Hartsoe, Watson},
+  title = {SLIPCASE: Portable Research Field},
+  year = {2026},
+  note = {Working system specification}
+}
+
+
+===== 016 Z-SLIP-016 =====
+
+ZETTEL
+
+ID:
+Z-SLIP-016
+
+TITLE:
+A prompt can be causally consequential to scholarship without becoming evidence for the scholarship
+
+SOURCE:
+Watson Hartsoe — SLIPCASE — ANCIENT MASTER PORTABLE RESEARCH FIELD — 2026 — “discipline”; “provenance”
+
+PASSAGE:
+[PARAPHRASE]
+The Ancient Master grammar is explicitly classified as a recipe rather than a source: its instructions govern how research is conducted but do not license claims about the research object. At the same time, consequential forage and assembly prompts must be preserved as provenance.
+
+RESEARCH OBJECT:
+Methodological causation and evidentiary support are different provenance relations.
+
+LOCAL MOVE:
+The architecture prevents the prompt that shaped an interpretation from being mistaken for evidence supporting that interpretation.
+
+SOURCE TERMS:
+recipe
+source
+how you work
+public evidence
+consequential prompts
+making history
+provenance receipt
+
+WHAT BECAME STRANGE:
+A text can materially cause a scholarly claim to exist while providing zero evidence that the claim is true.
+
+QUESTION:
+How should research provenance distinguish artifacts that caused inquiry from artifacts that justify its conclusions?
+
+DEEPER QUESTION:
+Does AI-mediated research require two independent citation systems: one for epistemic support and another for causal production history?
+
+MECHANISM:
+Prompt instructions alter search, attention, selection, and synthesis; their causal role is preserved in making history while source maps reserve evidentiary support for actual research evidence.
+
+FORMAL SHIFT:
+<single undifferentiated provenance relation>
+→ <causal provenance | evidentiary provenance>
+→ [TRACE SEPARATELY]
+→ <inspectable production without evidentiary laundering>
+
+SOURCE FORMALISM:
+Ancient Master governs HOW YOU WORK.
+
+Evidence governs WHAT YOU MAY SAY.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+CAUSES(claim, prompt) ≠ SUPPORTS(claim, prompt)
+
+PRODUCTION_TRACE:
+artifact ← operation ← prompt
+
+EVIDENCE_TRACE:
+claim ← zettel ← source
+
+TENSION:
+Prompts can influence what evidence is searched for, admitted, ignored, or foregrounded, so causal provenance can still affect epistemic reliability even when it is not itself evidence.
+
+MISSING:
+A vocabulary for recording consequential prompt interventions without drowning the archive in every trivial instruction.
+
+BOUNDARY:
+Separating causal from evidentiary provenance does not remove prompt-induced selection bias.
+
+CITATION TRAIL:
+[[causal provenance versus evidentiary provenance]]
+→ scientific workflow provenance
+→ documentary genetic criticism
+→ process tracing
+→ AI-assisted authorship provenance
+
+TEST:
+For each major paper claim in one checkpoint, trace both SUPPORT and PRODUCTION ancestry. Identify cases where the production chain materially shaped the claim but is invisible in the evidence chain.
+
+PLATFORM:
+[[dual provenance]]
+
+LINKS:
+[[consequential control]]
+[[prompt provenance]]
+[[source map]]
+[[research making history]]
+
+BIBTEX:
+@misc{hartsoe2026ancientmaster,
+  author = {Hartsoe, Watson},
+  title = {SLIPCASE: Ancient Master Portable Research Field},
+  year = {2026},
+  note = {Working prompt and provenance specification}
+}
+
+
+===== 017 Z-SLIP-017 =====
+
+ZETTEL
+
+ID:
+Z-SLIP-017
+
+TITLE:
+A ghost can govern research attention while remaining forbidden as evidence
+
+SOURCE:
+Watson Hartsoe — SLIPCASE — PORTABLE RESEARCH FIELD — 2026 — “paper”; “graph”
+
+PASSAGE:
+[PARAPHRASE]
+The system treats active ghosts as objects worth investigating and asks which ghost attracts independent lines of inquiry, yet explicitly states that ghosts generate questions and never count as evidence.
+
+RESEARCH OBJECT:
+The same object can have high procedural authority and zero evidentiary authority.
+
+LOCAL MOVE:
+SLIPCASE turns missingness into a steering signal without allowing absence to masquerade as proof.
+
+SOURCE TERMS:
+ghost
+active ghost
+independent lines of inquiry
+question
+evidence
+
+WHAT BECAME STRANGE:
+Research can rationally be organized around something for which there is currently no evidence.
+
+QUESTION:
+What kinds of non-evidence may legitimately determine where research effort is spent?
+
+DEEPER QUESTION:
+Could a rigorous inquiry system explicitly type objects by the actions they authorize rather than assigning them a single global status such as “known” or “unknown”?
+
+MECHANISM:
+Repeated unresolved references create a ghost; graph structure raises its research priority; subsequent forage must retrieve independent evidence before any substantive claim can be supported.
+
+FORMAL SHIFT:
+<unresolved absence>
+→ <typed procedural signal>
+→ [FORAGE]
+→ <possible evidence>
+
+SOURCE FORMALISM:
+Ghosts generate questions; they never count as evidence.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+AUTHORITY(GHOST) = {
+  MAY_PRIORITIZE_SEARCH: yes,
+  MAY_GENERATE_QUESTION: yes,
+  MAY_SUPPORT_CLAIM: no
+}
+
+TENSION:
+A high-priority ghost can indirectly dominate the archive by repeatedly directing research resources toward a concept created by the archive's own vocabulary.
+
+MISSING:
+A decay or skepticism mechanism for ghosts repeatedly investigated without yielding evidence.
+
+BOUNDARY:
+Graph prominence licenses attention, not belief.
+
+CITATION TRAIL:
+[[typed epistemic authority]]
+→ epistemic status systems
+→ active learning uncertainty
+→ hypothesis generation
+→ null results
+
+TEST:
+Track high-ranking ghosts through several forage generations. Record which become evidenced research objects, which dissolve through renaming, and which continue consuming attention without evidentiary yield.
+
+PLATFORM:
+[[ghosts as control signals]]
+
+LINKS:
+[[Z-SLIP-002]]
+[[Z-SLIP-003]]
+[[typed assertions]]
+[[negative space]]
+
+BIBTEX:
+@misc{hartsoe2026ghosts,
+  author = {Hartsoe, Watson},
+  title = {SLIPCASE: Portable Research Field},
+  year = {2026},
+  note = {Working research architecture}
+}
+
+
+===== 018 Z-SLIP-018 =====
+
+ZETTEL
+
+ID:
+Z-SLIP-018
+
+TITLE:
+Autonomous inquiry requires a principled condition for surrendering priority back to a human
+
+SOURCE:
+Watson Hartsoe — PRIME ZETTEL FORAGE — AUTONOMOUS GRAPH INQUIRY — 2026 — “stopping”
+
+PASSAGE:
+[PARAPHRASE]
+The research daemon should stop not only when budgets or evidence are exhausted, but when the graph reaches a state in which a human choice of research priority would be more valuable than automatic continuation. It must never manufacture findings merely to keep the loop running.
+
+RESEARCH OBJECT:
+A useful autonomous research system needs a deference criterion, not merely a stopping criterion.
+
+LOCAL MOVE:
+The daemon treats human intervention as epistemically valuable when the unresolved frontier becomes a question of priorities rather than information retrieval.
+
+SOURCE TERMS:
+stopping
+human choice
+research priority
+automatic continuation
+available evidence
+duplicate
+unavailable sources
+
+WHAT BECAME STRANGE:
+Automation may fail not because it cannot continue, but because continuing would require choosing what ought to matter.
+
+QUESTION:
+How can a research system detect the transition from an epistemic decision to a value-laden priority decision?
+
+DEEPER QUESTION:
+Is knowing when not to choose a research direction a necessary component of research autonomy?
+
+MECHANISM:
+The daemon evaluates whether remaining edges can be discriminated through evidence and whether automatic search is still likely to add informational value; when priority judgment dominates, control should leave the autonomous loop.
+
+FORMAL SHIFT:
+<open research frontier>
+→ <classify remaining uncertainty>
+→ [CONTINUE | DEFER]
+→ <machine forage or human priority choice>
+
+SOURCE FORMALISM:
+Stop when:
+budget exhausted;
+evidence cannot discriminate;
+work would duplicate;
+sources unavailable;
+or human research-priority choice is more valuable.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+CONTINUE iff
+EXPECTED_EVIDENTIARY_GAIN >
+EXPECTED_VALUE_OF_HUMAN_PRIORITY_JUDGMENT
+
+TENSION:
+The system itself must estimate when human judgment is more valuable, which seems to require the very normative competence it is supposed to defer.
+
+MISSING:
+Observable indicators that distinguish “hard research problem” from “human priority decision.”
+
+BOUNDARY:
+The prompt states the deference principle but does not provide an operational detector.
+
+CITATION TRAIL:
+[[deference boundary]]
+→ mixed-initiative systems
+→ selective prediction
+→ abstention
+→ human-in-the-loop decision theory
+
+TEST:
+Collect daemon stopping decisions across a large graph and ask independent researchers whether each frontier required more evidence or a substantive choice of values/priorities. Compare classifications.
+
+PLATFORM:
+[[bounded research autonomy]]
+
+LINKS:
+[[human deference]]
+[[active frontier]]
+[[research attention allocation]]
+[[abstention]]
+
+BIBTEX:
+@misc{hartsoe2026graphdaemon,
+  author = {Hartsoe, Watson},
+  title = {Prime Zettel Forage: Autonomous Graph Inquiry},
+  year = {2026},
+  note = {Working prompt specification}
+}
+
+
+===== 019 Z-SLIP-019 =====
+
+ZETTEL
+
+ID:
+Z-SLIP-019
+
+TITLE:
+The research tree disappears when children can pressure ancestors
+
+SOURCE:
+Watson Hartsoe — PRIME ZETTEL FORAGE — AUTONOMOUS GRAPH INQUIRY — 2026 — “graph”; “collision”
+
+PASSAGE:
+[PARAPHRASE]
+The daemon explicitly refuses to treat the archive as a tree: a zettel may descend from another, connect distant branches, pressure an ancestor, contradict a sibling, revive an abandoned question, or expose a shared object. Cross-branch collisions may themselves generate new zettels.
+
+RESEARCH OBJECT:
+Lineage records historical descent, but intellectual consequence travels in directions that genealogy cannot represent.
+
+LOCAL MOVE:
+Recursive parent-child generation is retained as provenance while losing its privilege as the primary structure of knowledge.
+
+SOURCE TERMS:
+graph
+tree
+ancestor
+sibling
+distant branches
+collision
+unexpected crossing
+
+WHAT BECAME STRANGE:
+A child can change the meaning of its parent without changing the parent's payload.
+
+QUESTION:
+What relation should represent the event in which later evidence changes how an earlier research object must be read?
+
+DEEPER QUESTION:
+Can immutable objects support genuinely retrospective intellectual change without acquiring versioned interpretations?
+
+MECHANISM:
+Later nodes remain separate but introduce contradiction, qualification, or cross-branch evidence that changes the derived graph interpretation surrounding earlier nodes.
+
+FORMAL SHIFT:
+<genealogical tree>
+→ <persistent nodes + multidirectional relations>
+→ [COLLIDE / PRESSURE / REINTERPRET]
+→ <research graph>
+
+SOURCE FORMALISM:
+A zettel may:
+descend;
+connect;
+pressure;
+contradict;
+revive;
+expose shared objects.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+LINEAGE_EDGE:
+records origin
+
+INTERPRETIVE_EDGE:
+records consequence
+
+These need not point in the same direction.
+
+TENSION:
+If reinterpretive relations are derived rather than payload evidence, two compilations may disagree radically about what a later card does to an ancestor.
+
+MISSING:
+A relation vocabulary for retrospective qualification that preserves the distinction between explicit card links and compiler interpretation.
+
+BOUNDARY:
+Graph structure can represent multidirectional intellectual relations but cannot by itself establish their correctness.
+
+CITATION TRAIL:
+[[retrospective research relations]]
+→ belief revision
+→ citation contexts
+→ argument graphs
+→ temporal knowledge graphs
+
+TEST:
+Select ten cases where later zettels appear to alter earlier ones. Have multiple compilers independently classify the relation as SUPPORTS, QUALIFIES, CONTRADICTS, SPLITS, or UNRELATED and compare disagreement.
+
+PLATFORM:
+[[research graph beyond genealogy]]
+
+LINKS:
+[[research DAG]]
+[[collision]]
+[[lineage]]
+[[retrospective interpretation]]
+
+BIBTEX:
+@misc{hartsoe2026graphdaemon,
+  author = {Hartsoe, Watson},
+  title = {Prime Zettel Forage: Autonomous Graph Inquiry},
+  year = {2026},
+  note = {Working prompt specification}
+}
+
+
+===== 020 Z-SLIP-020 =====
+
+ZETTEL
+
+ID:
+Z-SLIP-020
+
+TITLE:
+The full system is not a forager but a research metabolism
+
+SOURCE:
+Watson Hartsoe — Combined FORAGE / RESEARCH DAEMON / SLIPCASE prompt architecture — 2026
+
+PASSAGE:
+[PARAPHRASE]
+The component prompts divide the work into distinct operations: source-led forage generates atomic openings; recursive inquiry makes each result valid input for another generation; autonomous graph inquiry reallocates attention across the whole frontier; SLIPCASE preserves evidence, compiles relations, melts defeated interpretations, and ships a reconstructible checkpoint. The final assembly process explicitly cycles through preservation, inquiry, reinterpretation, settlement, and publication.
+
+RESEARCH OBJECT:
+The combined architecture behaves less like a note-taking pipeline than a metabolism in which inquiry continuously transforms a persistent substrate without consuming it.
+
+LOCAL MOVE:
+No single component owns “research.” Different layers specialize in noticing, reproduction, attention, revision, preservation, and transmission.
+
+SOURCE TERMS:
+FORAGE
+recursive inquiry
+ACTIVE FRONTIER
+MELT
+SETTLE
+SHELTER
+BECOME NEW
+PACKAGE
+
+WHAT BECAME STRANGE:
+The stable object in the system is not the argument, graph, research plan, or interface. It is the capacity to undergo another research cycle without destroying the evidence of previous cycles.
+
+QUESTION:
+What is the correct unit of analysis for a research system whose important property is continued transformation rather than any individual output?
+
+DEEPER QUESTION:
+Should research infrastructure be evaluated by the quality of its documents or by the transformations it can undergo while retaining epistemic memory?
+
+MECHANISM:
+Sources produce cards; cards expose edges; edges steer retrieval; retrieval produces children; children alter global topology; failed interpretations melt; evidence remains; checkpoints preserve enough state for another cycle.
+
+FORMAL SHIFT:
+<research archive>
+→ <persistent substrate + transformation operators>
+→ [FORAGE / COLLIDE / STEER / MELT / COMPILE / SHELTER]
+→ <continuing research field>
+
+SOURCE FORMALISM:
+The assembly process includes:
+FORD
+REGARD
+ALLOW
+BE SIMPLE
+HOLD MUD
+SETTLE
+OPEN
+STIR
+MELT
+SETTLE AGAIN
+BECOME NEW
+SHELTER
+RENDER
+VERIFY
+DO NOT FILL
+PACKAGE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+R_(t+1) =
+SHELTER(
+  COMPILE(
+    MELT(
+      STEER(
+        FORAGE(R_t)
+      )
+    )
+  )
+)
+
+with evidence persistence across transformations.
+
+TENSION:
+Calling the system a continuing metabolism risks naturalizing what remains a sequence of authored computational choices: admission, steering, graph construction, and publication all depend on designed criteria.
+
+MISSING:
+A benchmark for research-system quality that evaluates transformation across generations rather than the apparent quality of one final paper.
+
+BOUNDARY:
+The source supplies an architecture for recursive continuation; “metabolism” is our formal analogy, not source terminology and not evidence of autonomy or life.
+
+CITATION TRAIL:
+[[research metabolism]]
+→ scientific workflow systems
+→ evolutionary search
+→ cybernetic research processes
+→ persistent computation
+→ knowledge revision
+
+TEST:
+Evaluate the system after five checkpoint generations using two criteria: quality of the latest paper and recoverability/change-history of the whole field. Determine whether these rankings diverge.
+
+PLATFORM:
+[[continuable research systems]]
+
+LINKS:
+[[Z-SLIP-001]]
+[[Z-SLIP-013]]
+[[Z-SLIP-014]]
+[[Z-SLIP-015]]
+[[research metabolism]]
+
+BIBTEX:
+@misc{hartsoe2026combinedforage,
+  author = {Hartsoe, Watson},
+  title = {Combined FORAGE, Research Daemon, and SLIPCASE Prompt Architecture},
+  year = {2026},
+  note = {Working research-system specification}
+}

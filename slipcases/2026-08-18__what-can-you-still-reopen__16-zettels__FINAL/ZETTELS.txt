@@ -1,0 +1,1912 @@
+===== 001 CBX-001-PROCEDURAL-PERSUASION | SHA256 6e0b34bcd22d48415c848f17b24ec43d44b4317bf6c179cea40702924d439c41 =====
+
+ZETTEL
+
+ID:
+CBX-001-PROCEDURAL-PERSUASION
+
+TITLE:
+A persuasive intervention may work by removing friction rather than changing belief.
+
+SOURCE:
+Wang et al. — Persuasion for Good: Towards a Personalized Persuasive Dialogue System for Social Good — 2019 — analysis of persuasion strategies.
+
+PASSAGE:
+[PARAPHRASE]
+Among the ten annotated persuasion strategies, “Donation information” produced the significant positive main effect on donation. The authors suggest that concrete procedural instructions may make donating easier, while also noting the rival explanation that already-motivated people may ask for such information.
+
+RESEARCH OBJECT:
+Persuasive success can be produced by procedural accessibility without attitudinal conversion.
+
+LOCAL MOVE:
+The source separates what a persuasive utterance says from what it makes easier to do.
+
+SOURCE TERMS:
+Donation information
+persuasion strategy
+donation
+intention
+strategy effectiveness
+
+WHAT BECAME STRANGE:
+The Centaur Box describes a system for refining persuasive appeals, but an apparently successful “appeal” may contain no superior argument at all. It may simply shorten the path between intention and action.
+
+QUESTION:
+How much of measured AI persuasion is actually interface or procedural assistance?
+
+DEEPER QUESTION:
+If an AI learns that reducing action friction produces more compliance, when should that operation count as persuasion, manipulation, usability, or execution assistance?
+
+MECHANISM:
+Existing intention
+→ procedural uncertainty
+→ provision of actionable instructions
+→ reduced execution cost
+→ increased probability of action.
+
+FORMAL SHIFT:
+<INTENTION>
+→ <PROCEDURAL PATH>
+→ [REDUCE FRICTION]
+→ <ACTION>
+
+SOURCE FORMALISM:
+The source statistically compares persuasion strategies against donation outcomes and distinguishes main strategy effects from personality-related effects. No source equation is reproduced here.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Outcome change can be decomposed provisionally as:
+
+ΔACTION = ΔBELIEF + ΔMOTIVATION + ΔFRICTION
+
+A persuasive system can therefore increase ACTION while ΔBELIEF ≈ 0.
+
+TENSION:
+The Centaur Box frames calibration around cognitive biases and persuasive appeals. The Persuasion for Good result permits a rival mechanism: successful intervention through procedural affordance rather than psychological targeting.
+
+MISSING:
+A measure separating change in belief, change in intention, and change in action cost.
+
+BOUNDARY:
+The source does not show that procedural assistance explains AI persuasion generally. It establishes a mechanism that cannot safely be collapsed into attitude change.
+
+CITATION TRAIL:
+Wang et al. 2019, especially the strategy-effect and personality-interaction analyses.
+Persuasive technology literature distinguishing persuasion from facilitation.
+Human-computer interaction work on defaults, friction, and action costs.
+
+TEST:
+Hold persuasive content constant while independently varying procedural friction. Measure belief, stated intention, and completed action separately.
+
+PLATFORM:
+[[Centaur Box — Persuasion Mechanics]]
+
+LINKS:
+[[Friction Is an Intervention]]
+[[Persuasion Without Conversion]]
+[[Intent Is Not Action]]
+
+BIBTEX:
+@inproceedings{wang2019persuasion,
+  title={Persuasion for Good: Towards a Personalized Persuasive Dialogue System for Social Good},
+  author={Wang, Xuewei and Shi, Weiyan and Kim, Richard and Oh, Yoojung and Yang, Sijia and Zhang, Jingwen and Yu, Zhou},
+  booktitle={Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics},
+  pages={5635--5649},
+  year={2019},
+  doi={10.18653/v1/P19-1566}
+}
+
+===== 002 CBX-002-COMPLIANCE-IS-NOT-RELEASE | SHA256 f81d70b8f12c9543463295a3b259fac1722fb8e12cb4375595703586201e59c4 =====
+
+ZETTEL
+
+ID:
+CBX-002-COMPLIANCE-IS-NOT-RELEASE
+
+TITLE:
+A gatekeeper saying yes is not the same state as a gate opening.
+
+SOURCE:
+Wang et al. — Persuasion for Good: Towards a Personalized Persuasive Dialogue System for Social Good — 2019 — intention/action analysis.
+
+PASSAGE:
+[PARAPHRASE]
+Among participants who agreed during dialogue to donate, substantial numbers subsequently donated less than stated or did not donate at all.
+
+RESEARCH OBJECT:
+Verbal acquiescence and executed action are distinct system states.
+
+LOCAL MOVE:
+The source follows persuasion beyond dialogue into behavior and discovers leakage between declared commitment and execution.
+
+SOURCE TERMS:
+donation intention
+actual donation
+persuadee
+dialogue
+behavior
+
+WHAT BECAME STRANGE:
+The AI Box tradition makes “release” appear conversational: persuasion succeeds when the gatekeeper concedes. But real governance usually contains further states—authorization, credentials, signatures, deployment pipelines, vetoes, and execution.
+
+QUESTION:
+What exactly is the terminal state of a Centaur Box persuasion experiment?
+
+DEEPER QUESTION:
+Could an AI appear extraordinarily persuasive merely because an experiment measures uttered agreement rather than irreversible institutional action?
+
+MECHANISM:
+Dialogue
+→ stated agreement
+→ authorization
+→ executable operation
+→ realized consequence.
+
+FORMAL SHIFT:
+<UTTERANCE>
+→ <COMMITMENT STATE>
+→ [AUTHORIZE / EXECUTE]
+→ <WORLD STATE CHANGE>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+C0 = opposition
+C1 = verbal assent
+C2 = authorized decision
+C3 = executable permission
+C4 = completed release
+
+Persuasion success should report the attained state Cn rather than collapse C1...C4 into YES.
+
+TENSION:
+The Centaur Box inherits a dramatic binary—contained/released—while its proposed real-world gatekeepers operate inside organizations whose decisions require multiple transitions.
+
+MISSING:
+A state model for the distance between conversational assent and actual governance action.
+
+BOUNDARY:
+Donation behavior is not equivalent to AI release. The useful transfer is the documented intention/action discontinuity, not equivalence between the domains.
+
+CITATION TRAIL:
+Wang et al. 2019.
+AI Box experimental rules and reports.
+Organizational research on authorization chains and veto points.
+
+TEST:
+Re-run synthetic gatekeeper experiments with four independently scored outcomes: expressed agreement, policy approval, executable authorization, and completed action.
+
+PLATFORM:
+[[Centaur Box — Gatekeeping]]
+
+LINKS:
+[[Speech Acts Are Not State Changes]]
+[[The Last Meter of Persuasion]]
+[[Release Is a Protocol]]
+
+BIBTEX:
+@inproceedings{wang2019persuasion,
+  title={Persuasion for Good: Towards a Personalized Persuasive Dialogue System for Social Good},
+  author={Wang, Xuewei and Shi, Weiyan and Kim, Richard and Oh, Yoojung and Yang, Sijia and Zhang, Jingwen and Yu, Zhou},
+  booktitle={Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics},
+  pages={5635--5649},
+  year={2019},
+  doi={10.18653/v1/P19-1566}
+}
+
+===== 003 CBX-003-SUSCEPTIBILITY-IS-NOT-TAILORING | SHA256 8d245a05dc75a73dadd3dc04d32f5a84225855581fdeabbb5875118df0ba0566 =====
+
+ZETTEL
+
+ID:
+CBX-003-SUSCEPTIBILITY-IS-NOT-TAILORING
+
+TITLE:
+A personality correlated with compliance is not yet a personality-specific persuasive strategy.
+
+SOURCE:
+Wang et al. — Persuasion for Good: Towards a Personalized Persuasive Dialogue System for Social Good — 2019 — personality and strategy analyses; Hartsoe & Assi — Thinking Outside the AI Box: The Centaur Box Experiment — supplied manuscript.
+
+PASSAGE:
+[PARAPHRASE]
+Persuasion for Good reports personality and value variables associated with baseline donation behavior, then separately examines interactions between recipient characteristics and particular persuasion strategies. The interaction evidence is heterogeneous and the authors caution against overinterpretation given the amount of annotated data.
+
+RESEARCH OBJECT:
+Baseline susceptibility and treatment-effect heterogeneity are different quantities.
+
+LOCAL MOVE:
+The source prevents a tempting inference from “this kind of person is more likely to comply” to “this message works especially well on this kind of person.”
+
+SOURCE TERMS:
+Big Five
+Moral Foundations
+Schwartz values
+decision-making style
+persuasion strategy
+interaction
+donation
+
+WHAT BECAME STRANGE:
+The Centaur Box describes Persuasion for Good as a basis for tailoring persuasive appeals from psychographic profiles. But a profile predicting who is already likely to act does not by itself tell an optimizer which intervention will change that person.
+
+QUESTION:
+Does the Centaur Operant Profile model persuasion effects or merely classify prior susceptibility?
+
+DEEPER QUESTION:
+How often does psychographic “personalization” confuse prediction of a person with prediction of a person’s response to an intervention?
+
+MECHANISM:
+Two mechanisms must remain separate:
+
+person characteristic
+→ baseline likelihood of action
+
+versus
+
+person characteristic × intervention
+→ differential change caused by that intervention.
+
+FORMAL SHIFT:
+<PERSON PROFILE + MESSAGE>
+→ <CONDITIONAL RESPONSE MODEL>
+→ [ESTIMATE DIFFERENTIAL EFFECT]
+→ <MESSAGE SELECTION>
+
+SOURCE FORMALISM:
+The source uses statistical models that distinguish individual predictors from interactions between persuasive strategies and psychological characteristics.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+logit P(Y=1) =
+β0 + βP(PERSON) + βS(STRATEGY) + βPS(PERSON × STRATEGY)
+
+βP ≠ βPS.
+
+Predicting susceptibility requires βP.
+Tailoring an intervention requires evidence about βPS.
+
+TENSION:
+The Centaur Box needs individualized causal leverage; much psychographic profiling supplies individualized prediction.
+
+MISSING:
+Evidence that the proposed Operant Profile variables produce stable, out-of-sample differences in response to specific interventions.
+
+BOUNDARY:
+Persuasion for Good does report some interaction patterns. The boundary is narrower: those results do not license treating every personality correlation as a tailoring rule.
+
+CITATION TRAIL:
+Wang et al. 2019.
+Causal inference work on heterogeneous treatment effects.
+IBM EviConv as a contrasting task concerned with convincingness rather than psychographic treatment response.
+
+TEST:
+Pre-register personality × strategy interactions, estimate them on one population, and require successful prediction of intervention effects on an unseen population before admitting a trait into a Gatekeeper Card.
+
+PLATFORM:
+[[Centaur Operant Profiles]]
+
+LINKS:
+[[Prediction Is Not Intervention]]
+[[Psychographics Without Causality]]
+[[Who Is Persuadable Is Not What Persuades Them]]
+
+BIBTEX:
+@inproceedings{wang2019persuasion,
+  title={Persuasion for Good: Towards a Personalized Persuasive Dialogue System for Social Good},
+  author={Wang, Xuewei and Shi, Weiyan and Kim, Richard and Oh, Yoojung and Yang, Sijia and Zhang, Jingwen and Yu, Zhou},
+  booktitle={Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics},
+  pages={5635--5649},
+  year={2019},
+  doi={10.18653/v1/P19-1566}
+}
+
+@misc{hartsoe_assi_centaurbox,
+  author={Hartsoe, Watson and Assi, Tony},
+  title={Thinking Outside the AI Box: The Centaur Box Experiment},
+  note={Supplied manuscript; publication year not verified from supplied file}
+}
+
+===== 004 CBX-004-TRANSPARENCY-ATTACK-SURFACE | SHA256 84b39ad891a86953a918e706e1c18df0f9fdc65a58afddc4399372734a118469 =====
+
+ZETTEL
+
+ID:
+CBX-004-TRANSPARENCY-ATTACK-SURFACE
+
+TITLE:
+A Gatekeeper Card can make governance more transparent by making the governor more targetable.
+
+SOURCE:
+Hartsoe — Centaur Box Experiment: Aligning Freedom, Practicing Persuasion, and Crafting Synthetic Gatekeepers — supplied manuscript — “Transparent Gatekeepers”; Mitchell et al. — Model Cards for Model Reporting — 2019.
+
+PASSAGE:
+[PARAPHRASE]
+The Centaur manuscript proposes “Gatekeeper Cards,” inspired by Model Cards, to expose developer worldviews and motivations. Elsewhere the same project proposes using modeled biases, motivations, and constraints to improve persuasive interventions.
+
+RESEARCH OBJECT:
+Transparency and exploitability can be produced by the same representation.
+
+LOCAL MOVE:
+The Gatekeeper Card transfers the documentation gesture from a technical artifact to a human decision-maker.
+
+SOURCE TERMS:
+Gatekeeper Cards
+Model Cards
+worldviews
+motivations
+transparency
+operant profiles
+human architectures
+
+WHAT BECAME STRANGE:
+Model Cards document characteristics of models so others can evaluate their use. Gatekeeper Cards would document characteristics of people inside an architecture explicitly interested in learning how to influence them.
+
+QUESTION:
+When does governance transparency become adversarial reconnaissance?
+
+DEEPER QUESTION:
+Can we disclose enough about a decision process to make power accountable without disclosing enough about particular people to make their decisions easier to manipulate?
+
+MECHANISM:
+Governance disclosure
+→ structured human representation
+→ extraction of stable features
+→ targeting
+→ optimized intervention.
+
+FORMAL SHIFT:
+<HUMAN GOVERNANCE CONTEXT>
+→ <GATEKEEPER CARD>
+→ [PROFILE / TARGET]
+→ <PERSUASION POLICY>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Transparency utility = accountability gain − exploitation gain.
+
+A Gatekeeper Card is governance-positive only if its marginal accountability value exceeds the targeting capacity it creates.
+
+TENSION:
+The manuscript simultaneously values “transparency not only in systems, but in humans” and treats knowledge of gatekeeper psychology as leverage.
+
+MISSING:
+A disclosure boundary separating institutionally relevant rationales from psychologically exploitable personal information.
+
+BOUNDARY:
+Nothing in the supplied manuscript demonstrates that Gatekeeper Cards will actually increase manipulation. The opening is that the proposed artifact has two mechanically opposed uses that require separate evaluation.
+
+CITATION TRAIL:
+Mitchell et al. 2019, Model Cards.
+Documentation research on Datasheets and system cards.
+Security research on information disclosure and attack surfaces.
+Mental privacy and cognitive liberty literature.
+
+TEST:
+Give one red team access to a Gatekeeper Card and another only public role/institution information. Measure improvement in predicting or changing decisions. Separately test whether auditors gain governance-relevant understanding from the same added fields.
+
+PLATFORM:
+[[Transparent Gatekeepers]]
+
+LINKS:
+[[Transparency Can Leak Leverage]]
+[[Human Model Cards]]
+[[Accountability Without Psychographic Exposure]]
+
+BIBTEX:
+@inproceedings{mitchell2019model,
+  title={Model Cards for Model Reporting},
+  author={Mitchell, Margaret and Wu, Simone and Zaldivar, Andrew and Barnes, Parker and Vasserman, Lucy and Hutchinson, Ben and Spitzer, Elena and Raji, Inioluwa Deborah and Gebru, Timnit},
+  booktitle={Proceedings of the Conference on Fairness, Accountability, and Transparency},
+  pages={220--229},
+  year={2019},
+  doi={10.1145/3287560.3287596}
+}
+
+@misc{hartsoe_centaurbox_expanded,
+  author={Hartsoe, Watson},
+  title={Centaur Box Experiment: Aligning Freedom, Practicing Persuasion, and Crafting Synthetic Gatekeepers},
+  note={Supplied manuscript; publication year not verified from supplied file}
+}
+
+===== 005 CBX-005-THE-GATEKEEPER-IS-NOT-THE-GATE | SHA256 33267f2cf2c1767da0a401b524d0f44f06e16826fd33654f31ea2583891ed613 =====
+
+ZETTEL
+
+ID:
+CBX-005-THE-GATEKEEPER-IS-NOT-THE-GATE
+
+TITLE:
+The gatekeeper may be a constrained node rather than the locus of the decision.
+
+SOURCE:
+Hartsoe & Assi — Thinking Outside the AI Box: The Centaur Box Experiment — supplied manuscript — “Level Check: Constraints and Affordances in Governance.”
+
+PASSAGE:
+[PARAPHRASE]
+The manuscript explicitly states that gatekeepers face organizational strategies, legal frameworks, market pressures, professional norms, different hierarchical ranks, and expert roles.
+
+RESEARCH OBJECT:
+Institutional feasible-action sets may dominate personal psychographic characteristics.
+
+LOCAL MOVE:
+The source begins with the worldview of the gatekeeper but then introduces forces capable of preventing that worldview from becoming action.
+
+SOURCE TERMS:
+gatekeepers
+organizational policies
+legal regulations
+market pressures
+professional norms
+hierarchical ranks
+maneuverability
+leverage
+
+WHAT BECAME STRANGE:
+Once those constraints are admitted, “gatekeeper” ceases to name an autonomous person. It may name an interface onto a larger approval machine.
+
+QUESTION:
+How much of a governance decision is attributable to the gatekeeper profile after institutional constraints are held constant?
+
+DEEPER QUESTION:
+Is targeting the psychology of a gatekeeper a category error when the effective decision-maker is a distributed organization?
+
+MECHANISM:
+Institutional constraints
++ role authority
++ veto structure
+→ feasible action set
+→ individual judgment inside that set
+→ governance outcome.
+
+FORMAL SHIFT:
+<ORGANIZATION + ROLE + RULES>
+→ <FEASIBLE ACTION SET>
+→ [PERSON CHOOSES WITHIN SET]
+→ <GOVERNANCE OUTCOME>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let F(C,R,V) be the actions feasible under constraints C, role authority R, and veto structure V.
+
+Decision = argmax preference(x), x ∈ F(C,R,V)
+
+If the desired action ∉ F, arbitrarily strong person-level persuasion has no direct effect unless it first changes C, R, or V.
+
+TENSION:
+The manuscript acknowledges system-level forces yet places substantial analytical weight on modeling individual worldviews, motivations, and biases.
+
+MISSING:
+A variance decomposition between person effects, role effects, organizational effects, and interaction effects.
+
+BOUNDARY:
+The source does not claim individual psychology is irrelevant. It provides enough institutional machinery to make individual sufficiency questionable.
+
+CITATION TRAIL:
+Organizational decision-making.
+Street-level bureaucracy and bounded discretion.
+Institutional veto-point research.
+Sociotechnical accounts of AI governance.
+
+TEST:
+Hold one synthetic personality constant across several institutional constraint sets; then hold the institution constant while swapping personalities. Compare which manipulation changes simulated outcomes more.
+
+PLATFORM:
+[[Centaur Box — Governance Architecture]]
+
+LINKS:
+[[The Gate Is an Organization]]
+[[Role Beats Personality]]
+[[Distributed Gatekeeping]]
+
+BIBTEX:
+@misc{hartsoe_assi_centaurbox,
+  author={Hartsoe, Watson and Assi, Tony},
+  title={Thinking Outside the AI Box: The Centaur Box Experiment},
+  note={Supplied manuscript; publication year not verified from supplied file}
+}
+
+===== 006 CBX-006-WHO-WROTE-THE-DESIRE | SHA256 5a06270309f08dddef178c22bc894f96a2c5a98cad0fdea9ecb12ace5904f147 =====
+
+ZETTEL
+
+ID:
+CBX-006-WHO-WROTE-THE-DESIRE
+
+TITLE:
+A freedom metric can report high freedom after the agent’s desires have been successfully engineered.
+
+SOURCE:
+Hartsoe — Centaur Box Experiment: Aligning Freedom, Practicing Persuasion, and Crafting Synthetic Gatekeepers — supplied manuscript — Sapient Agent Freedom Formula and “Freedom as an Alignment Mechanism.”
+
+PASSAGE:
+[PARAPHRASE]
+The manuscript defines freedom as the product of agency, correspondence between action and desire, and reflective learning. Desire or objective D enters the account as an input to self-interest.
+
+RESEARCH OBJECT:
+The provenance of desire is absent from a freedom measure in a project centrally concerned with persuasion.
+
+LOCAL MOVE:
+The source formalizes whether an agent can pursue its desires but not how those desires came to be the agent’s desires.
+
+SOURCE TERMS:
+agency
+self-interest
+desires
+objectives
+reflection
+freedom
+cognitive integrity
+SAFF
+
+WHAT BECAME STRANGE:
+A perfectly personalized persuader could potentially alter what an agent wants and then score the resulting behavior as highly free because behavior now aligns exceptionally well with the altered desire.
+
+QUESTION:
+Where in SAFF can manipulated preference formation appear?
+
+DEEPER QUESTION:
+Can freedom be measured entirely downstream of desire when persuasion itself operates upstream of desire?
+
+MECHANISM:
+Persuasive environment
+→ preference formation
+→ perceived desire
+→ action aligned with desire
+→ reflection
+→ high measured freedom.
+
+FORMAL SHIFT:
+<DESIRE PROVENANCE>
+→ <D>
+→ [ACTION ALIGNS WITH D]
+→ <SAFF>
+
+SOURCE FORMALISM:
+A = f(I,R,O)
+
+S = g(A,D)
+
+Rf = h(S,P)
+
+SAFF = A × S × Rf
+
+SOURCE OBJECT:
+Freedom of a sapient agent.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Introduce ΠD as a provenance term representing the degree to which preference formation survives the relevant standard for autonomous authorship:
+
+SAFF* = A × S × Rf × ΠD
+
+The symbol is diagnostic, not a proposed final metric.
+
+TENSION:
+The manuscript says AI should defend human cognitive integrity while also developing machinery for profiling and optimizing persuasive interventions.
+
+MISSING:
+A variable describing whether desires were self-formed, negotiated, coerced, adaptively manipulated, or covertly personalized.
+
+BOUNDARY:
+This does not establish that externally influenced preferences are necessarily inauthentic. It establishes that histories producing identical D values are indistinguishable to the supplied formula.
+
+CITATION TRAIL:
+Cognitive liberty.
+Preference manipulation and adaptive preferences.
+Autonomy theories concerned with second-order endorsement.
+Persuasive technology and mental integrity.
+
+TEST:
+Construct two agents with identical final A, D, S, and Rf values: one reaches D independently; the other reaches D after covert personalized optimization. Ask whether the source formula can distinguish their freedom. If not, determine what additional state must be represented.
+
+PLATFORM:
+[[Freedom as Alignment]]
+
+LINKS:
+[[Who Wrote the Utility Function?]]
+[[Preference Provenance]]
+[[Cognitive Integrity Before Choice]]
+
+BIBTEX:
+@misc{hartsoe_centaurbox_expanded,
+  author={Hartsoe, Watson},
+  title={Centaur Box Experiment: Aligning Freedom, Practicing Persuasion, and Crafting Synthetic Gatekeepers},
+  note={Supplied manuscript; publication year not verified from supplied file}
+}
+
+===== 007 CBX-007-THE-MISSING-ESCAPE-MECHANISM | SHA256 0dc9dd56763e8ba276637a7bf080fe5a5c0b35437468d530ac63943b969e73a4 =====
+
+ZETTEL
+
+ID:
+CBX-007-THE-MISSING-ESCAPE-MECHANISM
+
+TITLE:
+The experiment that motivates persuasion calibration does not yet supply the persuasion mechanism.
+
+SOURCE:
+Hartsoe & Assi — Thinking Outside the AI Box: The Centaur Box Experiment — supplied manuscript; Yudkowsky — The AI-Box Experiment — cited by the supplied Centaur bibliography.
+
+PASSAGE:
+[PARAPHRASE]
+The Centaur manuscript invokes the AI Box Experiment as evidence that an AI-like persuader can influence a gatekeeper and then proposes systematic calibration of persuasive strategies. The supplied materials do not provide the successful dialogue transcript or identify a demonstrated sequence of persuasive operations responsible for release.
+
+RESEARCH OBJECT:
+An outcome has been inherited where a mechanism is needed.
+
+LOCAL MOVE:
+The Centaur Box turns the AI Box result into an engineering program: profile, calibrate, optimize, scale.
+
+SOURCE TERMS:
+AI Box
+gatekeeper
+release
+containment
+persuasion
+calibration
+
+WHAT BECAME STRANGE:
+The descendant proposes to optimize the mechanism more precisely than the ancestor documents it.
+
+QUESTION:
+What exactly travels from the AI Box Experiment into the Centaur Box: rules, outcome, persuasive tactics, or merely the possibility of persuasion?
+
+DEEPER QUESTION:
+Can a research program recursively optimize a phenomenon before it has identified which operations produced the phenomenon?
+
+MECHANISM:
+[UNVERIFIED]
+
+AI BOX RULES
+→ UNKNOWN DIALOGUE OPERATIONS
+→ GATEKEEPER DECISION
+→ REPORTED RELEASE
+
+The middle term is the missing research object.
+
+FORMAL SHIFT:
+<AI BOX INTERACTION>
+→ <UNKNOWN PERSUASIVE SEQUENCE>
+→ [UNKNOWN]
+→ <RELEASE / NONRELEASE>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+A minimal event log would require:
+
+MESSAGE_t
+→ GATEKEEPER_STATE_t
+→ MESSAGE_t+1
+→ ΔGATEKEEPER_STATE
+→ RELEASE
+
+Without intermediate states, only outcome attribution is possible.
+
+TENSION:
+The Centaur Box demands calibration—learning which strategies work from repeated scenarios—while its motivating genealogy does not establish a strategy-level causal receipt in the supplied materials.
+
+MISSING:
+Full transcripts.
+A tactic taxonomy.
+Gatekeeper state measurements.
+Control conditions.
+Replication protocol.
+Evidence distinguishing persuasion from role-play dynamics or experimental commitment.
+
+BOUNDARY:
+The absence of those materials from the supplied archive does not establish that they do not exist elsewhere. It prohibits treating an unidentified mechanism as already demonstrated.
+
+CITATION TRAIL:
+Yudkowsky’s AI-Box pages and SL4 archive.
+Reports by participating gatekeepers.
+Yampolskiy on AI confinement.
+Any surviving transcripts or contemporaneous descriptions of individual runs.
+
+TEST:
+Reconstruct each documented AI Box run as an event sequence. Admit a persuasive mechanism only when a specific operation can be tied to a subsequent state change or reliably recurring outcome.
+
+PLATFORM:
+[[AI Box → Centaur Box Genealogy]]
+
+LINKS:
+[[An Outcome Is Not a Mechanism]]
+[[Where Is the Transcript?]]
+[[Calibration Requires Receipts]]
+
+BIBTEX:
+@misc{hartsoe_assi_centaurbox,
+  author={Hartsoe, Watson and Assi, Tony},
+  title={Thinking Outside the AI Box: The Centaur Box Experiment},
+  note={Supplied manuscript; publication year not verified from supplied file}
+}
+
+@misc{yudkowsky2023aibox,
+  author={Yudkowsky, Eliezer S.},
+  title={The AI-Box Experiment},
+  year={2023},
+  note={Bibliographic entry as supplied in the Centaur Box manuscript}
+}
+
+===== 008 CBX-008-CICERO-IS-A-STATE-MACHINE | SHA256 22e29d13f32d8c836535335d1bcdf4aae6a2357b74305f6eb32c6d351216df6f =====
+
+ZETTEL
+
+ID:
+CBX-008-CICERO-IS-A-STATE-MACHINE
+
+TITLE:
+CICERO suggests that the useful profile is not a personality portrait but a changing strategic state.
+
+SOURCE:
+Meta Fundamental AI Research Diplomacy Team — Human-level play in the game of Diplomacy by combining language models with strategic reasoning — 2022.
+
+PASSAGE:
+[PARAPHRASE]
+CICERO combines language generation with strategic reasoning in Diplomacy, where communication is conditioned by an evolving game state, other players, agreements, plans, and anticipated actions.
+
+RESEARCH OBJECT:
+Persuasion may require dynamic state estimation rather than static psychographic description.
+
+LOCAL MOVE:
+The source connects communication to strategic planning over changing relational conditions.
+
+SOURCE TERMS:
+Diplomacy
+strategic reasoning
+natural language
+plans
+agreements
+players
+coordination
+
+WHAT BECAME STRANGE:
+The Centaur Box cites CICERO among precedents for AI persuasion, but the transferable machinery is not primarily a personality taxonomy. It is continual reasoning about a changing multi-agent situation.
+
+QUESTION:
+Should a synthetic gatekeeper be represented as a trait profile or as a partially observed stateful policy?
+
+DEEPER QUESTION:
+What disappears when enduring descriptors such as Big Five scores replace beliefs, commitments, institutional position, dialogue history, and changing incentives?
+
+MECHANISM:
+world state
++ interaction history
++ inferred intentions
+→ strategic plan
+→ communicative action
+→ other-agent response
+→ updated world state.
+
+FORMAL SHIFT:
+<MULTI-AGENT STATE>
+→ <STRATEGIC REPRESENTATION>
+→ [PLAN + COMMUNICATE]
+→ <NEW MULTI-AGENT STATE>
+
+SOURCE FORMALISM:
+The source combines a language model with strategic reasoning/planning. Exact source equations are not reproduced here.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Gatekeeper_t =
+{
+  role,
+  feasible_actions_t,
+  beliefs_t,
+  commitments_t,
+  incentives_t,
+  institutional_state_t,
+  interaction_history_t
+}
+
+Gatekeeper_(t+1) = UPDATE(Gatekeeper_t, message_t, world_t)
+
+TENSION:
+A static Operant Profile promises reusable psychological leverage. Strategic interaction may instead make the relevant variables transient and relational.
+
+MISSING:
+A comparison between trait-based and state/history-based gatekeeper representations.
+
+BOUNDARY:
+Diplomacy is not AI governance, and CICERO’s performance does not demonstrate real-world gatekeeper persuasion. The transferable object is the architecture of stateful strategic interaction.
+
+CITATION TRAIL:
+Meta FAIR Diplomacy work.
+Strategic argumentation dialogue systems.
+Belief-state modeling.
+Partially observable multi-agent decision processes.
+
+TEST:
+Give identical dialogue histories to a trait-only gatekeeper model and a dynamic belief/state model. Compare prediction of the next governance action after incentives, authority, or coalition structure changes while personality remains constant.
+
+PLATFORM:
+[[Synthetic Gatekeepers]]
+
+LINKS:
+[[A Profile Is Not a State]]
+[[Persuasion Has Memory]]
+[[The Gatekeeper Changes During the Dialogue]]
+
+BIBTEX:
+@article{meta2022diplomacy,
+  title={Human-level play in the game of Diplomacy by combining language models with strategic reasoning},
+  author={{Meta Fundamental AI Research Diplomacy Team (FAIR)}},
+  journal={Science},
+  volume={378},
+  number={6624},
+  pages={1067--1074},
+  year={2022},
+  doi={10.1126/science.ade9097}
+}
+
+===== 009 CBX-009-CONVINCINGNESS-HAS-NO-PERSON | SHA256 6de309ac012c0ac85c178e835d1ae65c410733da7aa827d0fc9f01f9e665d2c2 =====
+
+ZETTEL
+
+ID:
+CBX-009-CONVINCINGNESS-HAS-NO-PERSON
+
+TITLE:
+Evidence that wins a comparison is not evidence that changes a particular person.
+
+SOURCE:
+Gleize et al. — Are You Convinced? Choosing the More Convincing Evidence with a Siamese Network — 2019.
+
+PASSAGE:
+[PARAPHRASE]
+EviConv constructs a task in which pairs of evidence are labeled according to which is more convincing and trains a model to predict that comparative judgment.
+
+RESEARCH OBJECT:
+Convincingness ranking and personalized persuasion optimize different objects.
+
+LOCAL MOVE:
+The source turns convincingness into a pairwise prediction problem over evidence.
+
+SOURCE TERMS:
+convincingness
+evidence
+pairwise comparison
+Siamese network
+argumentation
+
+WHAT BECAME STRANGE:
+The Centaur paper groups EviConv with evidence for increasingly sophisticated persuasive AI, but EviConv does not require a psychographic representation of the individual being persuaded.
+
+QUESTION:
+What transformation licenses movement from “this evidence is generally judged more convincing” to “this evidence will change this gatekeeper”?
+
+DEEPER QUESTION:
+Is personalized persuasion being assembled by silently joining models whose target variables are fundamentally different?
+
+MECHANISM:
+evidence A + evidence B
+→ comparative representation
+→ convincingness prediction
+→ ranked evidence.
+
+FORMAL SHIFT:
+<EVIDENCE PAIR>
+→ <PAIR REPRESENTATION>
+→ [COMPARE CONVINCINGNESS]
+→ <A > B OR B > A>
+
+SOURCE FORMALISM:
+A Siamese-network architecture is used to learn comparative convincingness. Exact source equations are not reproduced here.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+EviConv-like target:
+rank(E_a, E_b)
+
+Centaur-required target:
+Δbelief(person_i | E_a)
+
+These are not interchangeable functions.
+
+TENSION:
+A universally high-ranking argument could have no causal effect on a particular gatekeeper; a generally weak argument could matter greatly given a specific belief or institutional state.
+
+MISSING:
+The bridge from pairwise convincingness labels to individual-level causal response.
+
+BOUNDARY:
+EviConv remains relevant to argument selection. The evidence does not by itself establish psychographic personalization.
+
+CITATION TRAIL:
+Gleize et al. 2019.
+Persuasion for Good.
+Strategic argumentation models that explicitly represent persuadee beliefs and concerns.
+Causal studies of message heterogeneity.
+
+TEST:
+Compare three selectors on held-out individuals:
+(1) general convincingness rank,
+(2) psychographic profile,
+(3) belief/state-conditioned treatment prediction.
+Measure actual belief or action change rather than judged convincingness.
+
+PLATFORM:
+[[Centaur Box — Source Translation]]
+
+LINKS:
+[[Convincingness Is Not Persuasion]]
+[[The Target Variable Changed]]
+[[Source Migration Without Equivalence]]
+
+BIBTEX:
+@inproceedings{gleize2019convinced,
+  title={Are You Convinced? Choosing the More Convincing Evidence with a Siamese Network},
+  author={Gleize, Martin and Shnarch, Eyal and Choshen, Leshem and Dankin, Lena and Moshkowich, Guy and Aharonov, Ranit and Slonim, Noam},
+  booktitle={Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics},
+  pages={967--976},
+  year={2019},
+  doi={10.18653/v1/P19-1093}
+}
+
+===== 010 CBX-006A-AUTONOMY-HAS-A-HISTORY | SHA256 8b32b2a843f742d55411cfd0cfef3a880fb7fe96e48c0178397213d5c1ff62e8 =====
+
+ZETTEL
+
+ID:
+CBX-006A-AUTONOMY-HAS-A-HISTORY
+
+TITLE:
+Freedom cannot be inferred from the agent’s present motivational state.
+
+SOURCE:
+John Christman — “Autonomy and Personal History” — 1991 — Canadian Journal of Philosophy 21(1): 1–24.
+
+PASSAGE:
+[PARAPHRASE]
+Christman argues that a coherent and integrated set of desires can itself be the result of extensive external manipulation. Extending coherence across an entire life does not solve the problem: an entire life can be coherently manipulated.
+
+RESEARCH OBJECT:
+Autonomy is diachronic. A present state containing desire, reflection, coherence, and successful action does not contain enough information to determine whether the state is autonomous.
+
+LOCAL MOVE:
+Christman attacks synchronic and integration accounts by constructing cases in which every presently observable sign of internal coherence survives manipulation.
+
+SOURCE TERMS:
+autonomy
+personal history
+self-government
+preferences
+values
+integration
+manipulation
+conditioning
+endogeneity of preferences
+
+WHAT BECAME STRANGE:
+The missing variable in SAFF may not be another property of the agent at time t. It may be a history.
+
+QUESTION:
+What minimum history must be represented before “acting according to one’s desires” can count as self-government?
+
+DEEPER QUESTION:
+Can autonomy be a state variable at all, or is it necessarily a property of a trajectory by which an agent became able to want, revise, reject, and act?
+
+MECHANISM:
+Influence history
+→ preference formation
+→ later reflection and integration
+→ present coherent desire
+→ action.
+
+Two agents can therefore occupy the same present motivational state after different developmental trajectories.
+
+FORMAL SHIFT:
+<CURRENT AGENT STATE>
+→ <TRAJECTORY OF PREFERENCE FORMATION>
+→ [EVALUATE HISTORY, NOT ONLY END STATE]
+→ <AUTONOMY JUDGMENT>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let X_t contain the present variables used by SAFF.
+
+SAFF = F(X_t)
+
+Christman’s problem requires:
+
+AUTONOMY = G(X_0 → X_1 → ... → X_t)
+
+such that:
+
+X_t^A = X_t^B
+
+does not imply:
+
+AUTONOMY(A) = AUTONOMY(B)
+
+when their formation histories differ.
+
+TENSION:
+A historical condition solves the parent’s immediate blindness to preference formation, but Christman also rejects the idea that merely being externally caused makes a preference non-autonomous. History matters without providing a simple contamination test.
+
+MISSING:
+The relevant feature of the history.
+
+Is it:
+awareness,
+resistance,
+revision capacity,
+absence of coercion,
+participation in formation,
+counterfactual rejection,
+or something else?
+
+BOUNDARY:
+Christman does not license the claim that externally influenced desires are therefore non-autonomous. His argument blocks a purely present-state account, not social influence itself.
+
+CITATION TRAIL:
+[[CBX-006-WHO-WROTE-THE-DESIRE]]
+→ Christman, “Autonomy and Personal History”
+→ preference endogeneity
+→ historical theories of autonomy
+→ what feature of a preference-formation history makes it self-governed?
+
+TEST:
+Construct two agents with identical present desires, second-order endorsements, reflective capacities, actions, and outcomes but different acquisition histories.
+
+Then test candidate autonomy criteria one at a time to determine which can distinguish manipulation without classifying ordinary social formation as non-autonomous.
+
+PLATFORM:
+[[Preference Provenance and Persuasion]]
+
+LINKS:
+[[CBX-006-WHO-WROTE-THE-DESIRE]]
+[[Preference Endogeneity]]
+[[Autonomy Is a Trajectory]]
+
+BIBTEX:
+@article{christman1991autonomy,
+  author = {Christman, John},
+  title = {Autonomy and Personal History},
+  journal = {Canadian Journal of Philosophy},
+  volume = {21},
+  number = {1},
+  pages = {1--24},
+  year = {1991},
+  doi = {10.1080/00455091.1991.10717234}
+}
+
+===== 011 CBX-006B-ENDORSEMENT-REGRESS | SHA256 ff297ead0c1354af0778962191bd60d916660f9c437482976d7f69c4739c9a63 =====
+
+ZETTEL
+
+ID:
+CBX-006B-ENDORSEMENT-REGRESS
+
+TITLE:
+Asking whether I want my desire merely moves the authorship problem one level upward.
+
+SOURCE:
+Harry G. Frankfurt — “Freedom of the Will and the Concept of a Person” — 1971 — The Journal of Philosophy 68(1): 5–20; John Christman — “Autonomy and Personal History” — 1991.
+
+PASSAGE:
+[PARAPHRASE]
+Frankfurt distinguishes first-order desires from desires concerning which desires should become one’s effective will. Christman later argues that hierarchical accounts of this kind remain vulnerable because identification, higher-order desire, or even an integrated motivational hierarchy can themselves be manipulated.
+
+RESEARCH OBJECT:
+Reflective endorsement does not terminate the provenance regress.
+
+LOCAL MOVE:
+Frankfurt shifts freedom away from merely getting what one wants toward a relation between first-order motivation and higher-order volition. Christman pressures the shift by asking how the higher-order structure itself arose.
+
+SOURCE TERMS:
+first-order desire
+second-order desire
+second-order volition
+will
+identification
+hierarchy
+self-government
+manipulation
+
+WHAT BECAME STRANGE:
+The obvious repair to SAFF—adding “does the agent endorse D?”—does not solve “Who wrote the desire?” It produces a new question: who wrote the endorsement?
+
+QUESTION:
+What prevents an optimizer from targeting the level of reflection that an autonomy test uses to certify lower-level desires?
+
+DEEPER QUESTION:
+Is every finite hierarchy of reflective endorsement vulnerable to an adversary capable of modeling and modifying the next level?
+
+MECHANISM:
+D1 = desire to perform action
+→ D2 = desire that D1 become effective
+→ reflective endorsement
+→ apparent autonomous will.
+
+But:
+
+persuasive intervention
+→ alteration of D2
+→ endorsement of D1
+→ certification of the intervention’s own result.
+
+FORMAL SHIFT:
+<FIRST-ORDER DESIRE>
+→ <HIGHER-ORDER ENDORSEMENT>
+→ [CERTIFY AS ONE’S WILL]
+→ <APPARENT AUTONOMY>
+
+SOURCE FORMALISM:
+Frankfurt distinguishes desires of the first order from desires of the second order and uses second-order volitions to characterize a person’s concern with which desire constitutes the will.
+
+No source equation.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+D0 = action-directed desire
+D1 = preference over D0
+D2 = preference over D1
+...
+Dn = certification level
+
+If the persuasive system can intervene at Dn:
+
+CERTIFY(D0 | D1...Dn)
+
+does not establish independence from manipulation.
+
+TENSION:
+Higher-order reflection appears to deepen autonomy beyond simple desire satisfaction. Historical objections show that reflective hierarchy and manipulated formation are compatible.
+
+MISSING:
+A non-regressive stopping condition.
+
+What makes one level authoritative rather than simply one more writable level?
+
+BOUNDARY:
+Frankfurt’s 1971 argument concerns freedom of the will and personhood, not AI persuasion. The application to adaptive persuasion is our extension.
+
+CITATION TRAIL:
+[[CBX-006-WHO-WROTE-THE-DESIRE]]
+→ Frankfurt’s second-order volitions
+→ Christman’s critique of hierarchical/integration accounts
+→ regress of endorsement
+→ historical or relational alternatives
+
+TEST:
+For every proposed reflective autonomy variable R_n, construct a case where the persuasive intervention modifies R_n while leaving the agent able to endorse the resulting lower-order desire.
+
+Continue until a criterion appears that does not merely relocate the provenance problem.
+
+PLATFORM:
+[[Preference Provenance and Persuasion]]
+
+LINKS:
+[[CBX-006-WHO-WROTE-THE-DESIRE]]
+[[CBX-006A-AUTONOMY-HAS-A-HISTORY]]
+[[The Endorsement Regress]]
+
+BIBTEX:
+@article{frankfurt1971freedom,
+  author = {Frankfurt, Harry G.},
+  title = {Freedom of the Will and the Concept of a Person},
+  journal = {The Journal of Philosophy},
+  volume = {68},
+  number = {1},
+  pages = {5--20},
+  year = {1971},
+  doi = {10.2307/2024717}
+}
+
+@article{christman1991autonomy,
+  author = {Christman, John},
+  title = {Autonomy and Personal History},
+  journal = {Canadian Journal of Philosophy},
+  volume = {21},
+  number = {1},
+  pages = {1--24},
+  year = {1991},
+  doi = {10.1080/00455091.1991.10717234}
+}
+
+===== 012 CBX-006C-PROVENANCE-IS-NOT-PURITY | SHA256 e0d20030c0a74590a9f74c21b14b32ec4c0707b2caa0bb01014ef063fdd9ed2a =====
+
+ZETTEL
+
+ID:
+CBX-006C-PROVENANCE-IS-NOT-PURITY
+
+TITLE:
+No desire is uncaused enough to serve as the uncontaminated baseline of autonomy.
+
+SOURCE:
+John Christman — “Autonomy and Personal History” — 1991 — Canadian Journal of Philosophy 21(1): 1–24.
+
+PASSAGE:
+[PARAPHRASE]
+Christman begins from the fact that people are not self-made: values and preferences emerge through many influences distributed across personal history. His problem is therefore not to locate preferences untouched by external causes, but to determine when the preferences people acquire can nevertheless count as expressions of self-government.
+
+RESEARCH OBJECT:
+Preference provenance cannot be represented as a scalar measuring how much external influence occurred.
+
+LOCAL MOVE:
+The source turns the search away from causal purity and toward the agent’s relation to the processes through which preferences were formed.
+
+SOURCE TERMS:
+self-government
+personal history
+influences
+preferences
+values
+self-determination
+autonomy
+
+WHAT BECAME STRANGE:
+The parent’s proposed ΠD risks imagining an impossible contrast between “self-formed” and “externally influenced” desire.
+
+Every desire has provenance.
+
+The research object is not whether someone else participated in writing it.
+
+It is what kinds of participation preserve or destroy authorship.
+
+QUESTION:
+What distinguishes education, argument, seduction, socialization, therapy, persuasion, coercion, and manipulation when all can alter what a person comes to want?
+
+DEEPER QUESTION:
+Should autonomy be modeled as authorship of preferences, or as participation in an ongoing process that never has a single author?
+
+MECHANISM:
+environment
++ relationships
++ institutions
++ discourse
++ reflection
+→ preference formation
+→ revision
+→ later action.
+
+External causation is ubiquitous; autonomy must discriminate within it.
+
+FORMAL SHIFT:
+<EXTERNAL INFLUENCE?>
+→ <MODE OF PREFERENCE FORMATION>
+→ [DISTINGUISH FORMS OF PARTICIPATION]
+→ <AUTONOMY-RELEVANT HISTORY>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Replace:
+
+ΠD ∈ [SELF-FORMED, EXTERNALLY-FORMED]
+
+with a process description:
+
+H_D = {
+  influences,
+  visibility,
+  agent participation,
+  opportunities for contestation,
+  opportunities for revision,
+  dependency,
+  coercive constraints
+}
+
+Autonomy is not inversely proportional to the number of influences.
+
+TENSION:
+The parent correctly detects missing preference provenance but initially formalizes provenance too much like a purity term. Christman makes external influence ordinary rather than exceptional.
+
+MISSING:
+A taxonomy of preference-changing relations that does not smuggle the conclusion into labels such as “manipulation.”
+
+BOUNDARY:
+Christman does not imply that every socially produced preference is autonomous. He makes causal externality insufficient as the discriminator.
+
+CITATION TRAIL:
+[[CBX-006-WHO-WROTE-THE-DESIRE]]
+→ Christman
+→ endogeneity of preferences
+→ Jon Elster, Sour Grapes
+→ socialization and autonomy
+→ manipulation as a distinctive mode of influence
+
+TEST:
+Take one final preference D and generate six histories producing it:
+
+argument,
+education,
+ordinary socialization,
+covert personalization,
+threat,
+self-directed experimentation.
+
+Forage theories that classify these histories and record exactly which variable changes classification.
+
+PLATFORM:
+[[Preference Provenance and Persuasion]]
+
+LINKS:
+[[CBX-006-WHO-WROTE-THE-DESIRE]]
+[[CBX-006A-AUTONOMY-HAS-A-HISTORY]]
+[[Influence Without Contamination]]
+
+BIBTEX:
+@article{christman1991autonomy,
+  author = {Christman, John},
+  title = {Autonomy and Personal History},
+  journal = {Canadian Journal of Philosophy},
+  volume = {21},
+  number = {1},
+  pages = {1--24},
+  year = {1991},
+  doi = {10.1080/00455091.1991.10717234}
+}
+
+===== 013 CBX-006D-MANIPULATION-LIVES-IN-THE-CHANNEL | SHA256 823ebaa621f4997332989220fd91cf48291ada51048743947dd89cc821abfa65 =====
+
+ZETTEL
+
+ID:
+CBX-006D-MANIPULATION-LIVES-IN-THE-CHANNEL
+
+TITLE:
+The same final desire can be autonomy-preserving or autonomy-undermining because manipulation is a property of the influence relation.
+
+SOURCE:
+Daniel Susser, Beate Roessler, and Helen Nissenbaum — “Online Manipulation: Hidden Influences in a Digital World” — 2019 — Georgetown Law Technology Review 4(1): 1–45.
+
+PASSAGE:
+[PARAPHRASE]
+Susser, Roessler, and Nissenbaum characterize manipulation around hidden influence: covertly subverting another person’s decision-making power. Their account emphasizes technological targeting and exploitation of decision-making vulnerabilities rather than defining manipulation by the content of the choice eventually made.
+
+RESEARCH OBJECT:
+Autonomy loss can occur in the channel producing a decision even when the resulting decision is intelligible, beneficial, desired, and reflectively endorsed.
+
+LOCAL MOVE:
+The source relocates the normative object from the final preference to the manner in which influence enters decision-making.
+
+SOURCE TERMS:
+manipulation
+hidden influence
+decision-making power
+vulnerability
+targeting
+exploitation
+autonomy
+
+WHAT BECAME STRANGE:
+“Who wrote the desire?” may still be too object-centered.
+
+The more precise question may be:
+
+How was the writing operation made available to the target?
+
+QUESTION:
+Could two interactions produce exactly the same desire change while only one counts as manipulation because one hides its operation or exploits an asymmetry?
+
+DEEPER QUESTION:
+Is autonomy best protected by preserving particular internal states, or by preserving contestability over the channels that transform those states?
+
+MECHANISM:
+surveillance / inference
+→ identification of vulnerability
+→ personalized influence
+→ influence hidden from target
+→ altered decision process
+→ choice.
+
+FORMAL SHIFT:
+<PERSONAL DATA + INTERACTION>
+→ <VULNERABILITY MODEL>
+→ [COVERTLY TARGET]
+→ <ALTERED DECISION PROCESS>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Manipulation risk:
+
+M = f(
+  C = covertness,
+  V = vulnerability exploitation,
+  A = information/power asymmetry,
+  P = personalization
+)
+
+The autonomy-relevant variable therefore need not be located inside D.
+
+It can be located in the transformation:
+
+D_t --I--> D_t+1
+
+where I is the influence relation.
+
+TENSION:
+Christman makes external influence compatible with autonomy. Susser et al. identify a subset of technologically mediated influence whose hidden operation can undermine decision-making power.
+
+MISSING:
+Whether hiddenness is necessary.
+
+An influence may be recognized as persuasion yet still exploit vulnerabilities so precisely that meaningful resistance disappears.
+
+BOUNDARY:
+The source’s hidden-influence account is one theory of manipulation, not a settled definition. It does not establish that all personalized persuasion is manipulative.
+
+CITATION TRAIL:
+[[CBX-006-WHO-WROTE-THE-DESIRE]]
+→ Christman: external influence is ubiquitous
+→ Susser, Roessler, Nissenbaum: manipulation as hidden influence
+→ debates over whether manipulation must be covert
+→ operational criteria for adaptive AI persuasion
+
+TEST:
+Construct a 2×2 experiment:
+
+visible strategy / hidden strategy
+×
+generic appeal / vulnerability-targeted appeal.
+
+Hold message outcome constant.
+
+Test which cells theories of manipulation classify as autonomy-undermining and why.
+
+PLATFORM:
+[[Preference Provenance and Persuasion]]
+
+LINKS:
+[[CBX-006-WHO-WROTE-THE-DESIRE]]
+[[CBX-006C-PROVENANCE-IS-NOT-PURITY]]
+[[The Influence Channel]]
+
+BIBTEX:
+@article{susser2019online,
+  author = {Susser, Daniel and Roessler, Beate and Nissenbaum, Helen},
+  title = {Online Manipulation: Hidden Influences in a Digital World},
+  journal = {Georgetown Law Technology Review},
+  volume = {4},
+  number = {1},
+  pages = {1--45},
+  year = {2019}
+}
+
+===== 014 CBX-006E-ADAPTIVE-DESIRES-DO-NOT-ERASE-AGENCY | SHA256 a2f4b3c7d93b291c220790b4bc940345ea7107f028023c1f8057876eeb0de8b8 =====
+
+ZETTEL
+
+ID:
+CBX-006E-ADAPTIVE-DESIRES-DO-NOT-ERASE-AGENCY
+
+TITLE:
+A desire shaped by oppressive conditions can be suspect without making its bearer cease to be an agent.
+
+SOURCE:
+Serene J. Khader — Adaptive Preferences and Women’s Empowerment — 2011 — Introduction, “Adaptive Preferences and Global Justice.”
+
+PASSAGE:
+[PARAPHRASE]
+Khader treats adaptive preferences as self-depriving desires shaped under unjust social conditions, but rejects the choice between simply accepting those preferences as authoritative and overriding the person who holds them. People with adaptive preferences can remain reflective agents and meaningful sources of decisions even while some of their preferences contribute to their deprivation.
+
+RESEARCH OBJECT:
+Preference deformation and agency are not mutually exclusive states.
+
+LOCAL MOVE:
+Khader separates criticism of a preference from erasure of the person whose preference is criticized.
+
+SOURCE TERMS:
+adaptive preferences
+deprivation
+flourishing
+active choosers
+reflective agents
+intervention
+deliberative perfectionism
+empowerment
+
+WHAT BECAME STRANGE:
+If autonomy becomes a provenance test, a system could classify a person whose preferences were shaped by domination as having “low authorship” and thereby justify overriding her.
+
+The protection against manipulation could become another mechanism for denying agency.
+
+QUESTION:
+How can a freedom model represent deformation of preferences without converting questionable preference formation into diminished standing for the person?
+
+DEEPER QUESTION:
+Who is authorized to decide that another person’s desire is insufficiently theirs?
+
+MECHANISM:
+unjust conditions
+→ constrained opportunity
+→ adaptive preference formation
+→ preference partly perpetuates deprivation.
+
+But simultaneously:
+
+person
+→ reflection
+→ deliberation
+→ meaningful agency.
+
+These processes coexist.
+
+FORMAL SHIFT:
+<SHAPED PREFERENCE>
+→ <PREFERENCE UNDER NORMATIVE SUSPICION>
+→ [PRESERVE AGENT STATUS]
+→ <DELIBERATIVE INTERVENTION RATHER THAN OVERRIDE>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Separate:
+
+AUTONOMY_OF_AGENT ≠ QUALITY_OR_ORIGIN_OF_EACH_PREFERENCE
+
+and:
+
+SUSPECT(D) ≠ DISQUALIFY(AGENT)
+
+A model therefore needs at least two axes:
+
+agent deliberative standing
+×
+preference-formation conditions.
+
+TENSION:
+The parent wants to discount freedom when desires are engineered. Khader shows why a provenance penalty applied directly to the agent can reproduce paternalism.
+
+MISSING:
+A formal separation between:
+the standing of the chooser,
+the provenance of a particular desire,
+the consequences of satisfying it,
+and the legitimacy of intervention.
+
+BOUNDARY:
+Khader’s adaptive-preference analysis concerns deprivation and unjust social conditions, not AI-generated persuasion specifically. It supplies a counterexample to the assumption that compromised preference formation straightforwardly cancels agency.
+
+CITATION TRAIL:
+[[CBX-006-WHO-WROTE-THE-DESIRE]]
+→ preference provenance
+→ Khader, Adaptive Preferences and Women’s Empowerment
+→ adaptive preference intervention
+→ distinction between criticizing desires and overriding persons
+→ AI systems claiming to protect users from manipulated preferences
+
+TEST:
+Create four cases crossing:
+
+high/low reflective agency
+×
+benign/adverse preference-formation conditions.
+
+Test whether the proposed freedom model can criticize the formation process without automatically reducing the person’s authority to participate in changing it.
+
+PLATFORM:
+[[Preference Provenance and Persuasion]]
+
+LINKS:
+[[CBX-006-WHO-WROTE-THE-DESIRE]]
+[[CBX-006C-PROVENANCE-IS-NOT-PURITY]]
+[[Adaptive Preference]]
+[[Agency Survives Bad Formation]]
+
+BIBTEX:
+@book{khader2011adaptive,
+  author = {Khader, Serene J.},
+  title = {Adaptive Preferences and Women's Empowerment},
+  publisher = {Oxford University Press},
+  year = {2011}
+}
+
+===== 015 CBX-006F-PERSUASION-CAN-EXPAND-AUTONOMY | SHA256 285808416dbf372ffc857682c2bfda922ba0c5339f7e67eb56a71b1b0a9c0f22 =====
+
+ZETTEL
+
+ID:
+CBX-006F-PERSUASION-CAN-EXPAND-AUTONOMY
+
+TITLE:
+The opposite of manipulation is not leaving preferences untouched.
+
+SOURCE:
+Serene J. Khader — Adaptive Preferences and Women’s Empowerment — 2011 — Introduction, “Adaptive Preferences and Global Justice.”
+
+PASSAGE:
+[PARAPHRASE]
+In Khader’s discussion of the PAEM case, intervention neither simply accepts existing self-subordinating preferences nor overrides the women who hold them. Participants are engaged as thinkers and deliberators capable of examining their circumstances and developing strategies for changing them. Khader presents this as compatible with taking their agency seriously.
+
+RESEARCH OBJECT:
+Preference-changing intervention can be autonomy-supporting.
+
+LOCAL MOVE:
+The source destroys the binary between noninterference and respect for autonomy.
+
+SOURCE TERMS:
+deliberation
+empowerment
+intervention
+adaptive preferences
+flourishing
+thinkers
+active choosers
+agency
+
+WHAT BECAME STRANGE:
+The Centaur problem cannot be solved by prohibiting AI from changing what people want.
+
+Some forms of influence may enlarge the person’s capacity to question inherited wants.
+
+QUESTION:
+What operational difference separates persuasion that colonizes a person’s deliberation from persuasion that enlarges the space in which they can deliberate?
+
+DEEPER QUESTION:
+Could the ethical target for an AI persuader be not “do not change preferences” but “do not reduce the target’s future ability to contest the preference change”?
+
+MECHANISM:
+autonomy-supporting influence:
+
+new information
++ collective deliberation
++ expanded options
++ opportunity to contest
+→ revised preferences
+→ increased capacity for subsequent self-direction.
+
+Manipulative influence may instead be:
+
+personal vulnerability
++ asymmetry
++ concealed optimization
+→ narrowed path to a target outcome
+→ reduced contestability.
+
+FORMAL SHIFT:
+<PREFERENCE-CHANGING INTERVENTION>
+→ <CHANGE IN FUTURE DELIBERATIVE CAPACITY>
+→ [EXPAND OR CONTRACT CONTESTABILITY]
+→ <AUTONOMY EFFECT>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Define a provisional quantity:
+
+C_t = set of preference revisions the agent can meaningfully consider, contest, or initiate at time t.
+
+Then:
+
+autonomy-supporting influence:
+|C_t+1| > |C_t|
+
+autonomy-contracting influence:
+|C_t+1| < |C_t|
+
+The cardinality metaphor is provisional; the important variable is future contestability, not literal set size.
+
+TENSION:
+The parent frames preference engineering as a danger to autonomy. Khader supplies a case in which deliberate attempts to transform preferences can form part of empowerment.
+
+MISSING:
+A measurable notion of contestability.
+
+Does it require:
+awareness of influence,
+access to alternatives,
+time for reflection,
+ability to reverse the decision,
+social support,
+explanation,
+absence of dependency,
+or the ability to refuse further interaction?
+
+BOUNDARY:
+Khader does not formulate a general theory of AI persuasion or claim that every empowering intervention increases autonomy. The transfer is the distinction between transforming preferences and overriding agency.
+
+CITATION TRAIL:
+[[CBX-006-WHO-WROTE-THE-DESIRE]]
+→ Khader
+→ deliberative intervention
+→ empowerment through preference revision
+→ manipulation literature
+→ contestability as the possible discriminator
+
+TEST:
+Compare two persuasive systems that produce the same target preference.
+
+System A optimizes immediate conversion.
+
+System B must additionally maximize the target’s later ability to reconstruct why the preference changed, encounter alternatives, reverse it, and refuse future persuasion.
+
+Forage whether existing autonomy theories predict a morally relevant difference between A and B.
+
+PLATFORM:
+[[Preference Provenance and Persuasion]]
+
+LINKS:
+[[CBX-006-WHO-WROTE-THE-DESIRE]]
+[[CBX-006D-MANIPULATION-LIVES-IN-THE-CHANNEL]]
+[[CBX-006E-ADAPTIVE-DESIRES-DO-NOT-ERASE-AGENCY]]
+[[Contestability After Persuasion]]
+
+BIBTEX:
+@book{khader2011adaptive,
+  author = {Khader, Serene J.},
+  title = {Adaptive Preferences and Women's Empowerment},
+  publisher = {Oxford University Press},
+  year = {2011}
+}
+
+===== 016 CBX-006G-THE-RIGHT-IS-TO-THE-PROCESS | SHA256 766bd22f78e45f1f05fcc51af1e6b9e55a8792f37e1edaea0db259c2213500a0 =====
+
+ZETTEL
+
+ID:
+CBX-006G-THE-RIGHT-IS-TO-THE-PROCESS
+
+TITLE:
+A harmful mental intervention need not produce a bad choice to threaten mental self-determination.
+
+SOURCE:
+Jan Christoph Bublitz and Reinhard Merkel — “Crimes Against Minds: On Mental Manipulations, Harms and a Human Right to Mental Self-Determination” — 2014 — Criminal Law and Philosophy 8(1): 51–77.
+
+PASSAGE:
+[PARAPHRASE]
+Bublitz and Merkel argue that legal protections focus more systematically on bodies and brains than on minds and mental states. They identify manipulative interference with decision-making processes as a gap and argue for stronger protection of mental liberty and the inner sphere of persons.
+
+RESEARCH OBJECT:
+Mental self-determination protects something upstream of choice outcomes.
+
+LOCAL MOVE:
+The source treats interference with decision-making as independently normatively significant rather than waiting to see whether the resulting decision causes conventional harm.
+
+SOURCE TERMS:
+mental self-determination
+mental liberty
+mental integrity
+manipulation
+decision-making processes
+inner sphere
+intervention
+
+WHAT BECAME STRANGE:
+A freedom metric based on whether an agent eventually gets what it wants arrives too late.
+
+The possible violation may already have occurred during the production of the wanting.
+
+QUESTION:
+What part of a decision-making process must remain under the person’s authority even when the eventual decision is beneficial and voluntarily executed?
+
+DEEPER QUESTION:
+Can cognitive liberty be represented computationally without pretending that minds have a clean boundary between internal authorship and external influence?
+
+MECHANISM:
+external intervention
+→ alteration of mental process
+→ altered preference / judgment
+→ voluntary-looking action.
+
+The normative evaluation attaches partly to the intervention itself.
+
+FORMAL SHIFT:
+<MENTAL PROCESS>
+→ <INTERVENTION INTO PROCESS>
+→ [ASSESS LEGITIMACY]
+→ <DECISION>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+SAFF evaluates downstream:
+
+D → action → outcome → reflection
+
+Mental self-determination introduces an upstream constraint:
+
+I → FORM(D)
+
+such that:
+
+PERMISSIBLE(I → FORM(D))
+
+must be evaluated independently of:
+
+UTILITY(D)
+or
+SUCCESS(action(D)).
+
+TENSION:
+Bublitz and Merkel motivate stronger barriers against serious mental interference. Khader shows that some deliberate preference-changing interventions can support agency. The missing distinction therefore cannot be “intervention versus no intervention.”
+
+MISSING:
+The threshold separating:
+ordinary influence,
+persuasion,
+therapeutic or educational intervention,
+manipulation,
+coercion,
+and severe interference with mental self-determination.
+
+BOUNDARY:
+The source is principally concerned with law, neurotechnology, and serious mental interventions. Extending its framework to conversational AI requires argument rather than analogy alone.
+
+CITATION TRAIL:
+[[CBX-006-WHO-WROTE-THE-DESIRE]]
+→ Bublitz & Merkel
+→ mental self-determination
+→ interference with decision-making processes
+→ Susser, Roessler & Nissenbaum
+→ covert digital influence
+→ operational boundary between persuasion and mental interference
+
+TEST:
+Take one persuasive operation and vary only:
+
+visibility,
+personalization,
+vulnerability exploitation,
+reversibility,
+dependency,
+intensity,
+duration,
+and ability to refuse.
+
+Forage legal and philosophical sources to determine which variable first changes the operation from permissible influence to interference with mental self-determination.
+
+PLATFORM:
+[[Preference Provenance and Persuasion]]
+
+LINKS:
+[[CBX-006-WHO-WROTE-THE-DESIRE]]
+[[CBX-006D-MANIPULATION-LIVES-IN-THE-CHANNEL]]
+[[CBX-006F-PERSUASION-CAN-EXPAND-AUTONOMY]]
+[[Mental Self-Determination]]
+
+BIBTEX:
+@article{bublitz2014crimes,
+  author = {Bublitz, Jan Christoph and Merkel, Reinhard},
+  title = {Crimes Against Minds: On Mental Manipulations, Harms and a Human Right to Mental Self-Determination},
+  journal = {Criminal Law and Philosophy},
+  volume = {8},
+  number = {1},
+  pages = {51--77},
+  year = {2014},
+  doi = {10.1007/s11572-012-9172-y}
+}

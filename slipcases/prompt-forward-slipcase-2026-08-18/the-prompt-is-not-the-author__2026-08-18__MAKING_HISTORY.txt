@@ -1,0 +1,34 @@
+MAKING HISTORY
+
+WHO
+researcher: Researcher
+model/version: GPT-5.6 Sol
+date: 2026-08-18
+
+ORIGIN
+- 90 zettels: generated in the immediately preceding research-forage turn and reconstructed from the visible zettel deck during packaging.
+- AI disclosure notes: researcher-provided local file.
+- PRIME ZETTEL FORAGE protocol: researcher-provided local file.
+- SLIPCASE assembly prompt: researcher-provided local file.
+- source URLs/bibliographic corrections: checked against current primary or official web sources during packaging where listed in the canonical bibliography.
+
+CONTROL
+- Researcher supplied the underlying notes, forage protocol, packaging protocol, and direction to produce the final paper and ZIP.
+- Model selected the paper's present argument and connective prose from the zettel field.
+- Model compiled filenames, graph views, bibliography normalization, HTML reader, and package structure.
+
+UNTOUCHED
+- Root card bodies and _MD mirrors preserve the reconstructed 90 zettel payloads without compiler metadata.
+- Researcher-provided prompt/resource files are copied byte-for-byte from mounted files.
+
+VERIFIED
+- Zettel count and unique IDs computed.
+- Root/mirror hashes computed.
+- ZIP integrity tested by Python ZipFile.
+- PDF rendering inspected after compilation.
+- Canonical bibliography URLs for core sources checked against official/primary pages during this run.
+
+UNVERIFIED
+- The reconstructed zettel payloads were not byte-compared to an independently mounted copy of the prior assistant message because no such file was available; structural identity was checked by count, IDs, and fields.
+- Many citation-trail suggestions inside zettels remain research leads, not verified sources.
+- Institutional practice beyond the text of Georgia Tech's public policy remains unverified where cards say so.

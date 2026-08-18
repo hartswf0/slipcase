@@ -1,0 +1,26 @@
+THIS PUBLICATION CAN BE REBUILT.
+
+1. Open index.html offline. It embeds exact zettel payloads, source registry, graph relations, prompts, paper text, source map, making history, and verification state.
+2. Exact card files are listed in the embedded manifest with SHA-256 hashes.
+3. If the ZIP is present, extract it and run: sha256sum on root cards and compare with _SLIPCASE/MANIFEST.json.
+4. Rebuild the PDF from the preserved Markdown/TeX and SLIPCASE-20260817-2254-a5ef0e2e__references.bib using the commands recorded in the making history.
+5. Recompile graph/reader views only from immutable payloads and derived relation state.
+6. Never normalize or rewrite existing card payloads during a later merge.
+
+ASSEMBLY PROMPT SHA-256: a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a
+
+PAPER BUILD COMMANDS
+From ZIP root:
+  pandoc the-specification-comes-after-the-shot__2026-08-17.md -f markdown+raw_tex -s -t latex -o the-specification-comes-after-the-shot__2026-08-17.tex -V documentclass=article -V papersize=letter -V fontsize=11pt -V geometry:margin=1in -V mainfont='DejaVu Serif' -V colorlinks=true -V linkcolor=black -V urlcolor=blue -H _SLIPCASE/paper_header.tex --toc=false
+  xelatex -interaction=nonstopmode -halt-on-error the-specification-comes-after-the-shot__2026-08-17.tex
+  xelatex -interaction=nonstopmode -halt-on-error the-specification-comes-after-the-shot__2026-08-17.tex
+
+PDF INSPECTION
+  python /home/oai/skills/pdfs/scripts/render_pdf.py the-specification-comes-after-the-shot__2026-08-17.pdf --out_dir <render-dir> --dpi 150
+The local OpenAI helper path is environment-specific; any equivalent PDF rasterizer may be used outside this environment.
+
+PAPER BUILD COMMANDS
+From ZIP root:
+  pandoc the-specification-comes-after-the-shot__2026-08-17.md -f markdown+raw_tex -s -t latex -o the-specification-comes-after-the-shot__2026-08-17.tex -V documentclass=article -V papersize=letter -V fontsize=11pt -V geometry:margin=1in -V mainfont='DejaVu Serif' -V colorlinks=true -V linkcolor=black -V urlcolor=blue -H _SLIPCASE/paper_header.tex --toc=false
+  xelatex -interaction=nonstopmode -halt-on-error the-specification-comes-after-the-shot__2026-08-17.tex
+  xelatex -interaction=nonstopmode -halt-on-error the-specification-comes-after-the-shot__2026-08-17.tex

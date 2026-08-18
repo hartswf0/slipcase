@@ -1,0 +1,78 @@
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-11
+
+    TITLE:
+    THE MATERIAL CAN ACT AS A FAILURE ORACLE WITHOUT SPEAKING IN PROPOSITIONS
+
+    SOURCE:
+    Tim Ingold — Making — 2013 — Chapter 2, “The materials of life,” p. 31.
+
+    SOURCE URL:
+    file:MAKING_INGOLD(1).pdf
+
+    PASSAGE:
+    [QUOTE] “Their every technical gesture is a question, to which the material responds according to its bent.”
+
+    RESEARCH OBJECT:
+    Material resistance provides evidence that guides the next move. This creates a craft analogue to the validator/counterexample loop without pretending the material returns a formal proof.
+
+    LOCAL MOVE:
+    Ingold describes making as correspondence rather than imposition of preconceived form on passive substance.
+
+    SOURCE TERMS:
+    technical gesture; question; responds; matter-flow; correspondence; becoming
+
+    WHAT BECAME STRANGE:
+    A failure oracle need not emit a proposition. It can leak, resist, bend, crack, deform, or otherwise make a mismatch available to skilled perception.
+
+    QUESTION:
+    What qualifies as a failure oracle when evidence is embodied or environmental?
+
+    DEEPER QUESTION:
+    How should reliability and expertise be represented when the “counterexample” must be interpreted?
+
+    MECHANISM:
+    gesture → material response → perception/judgment → adjusted gesture.
+
+    FORMAL SHIFT:
+    <INTERVENTION> → <MATERIAL RESPONSE> → [INTERPRET] → <REVISED ACTION>
+
+    SOURCE FORMALISM:
+    NONE
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] failure_oracle = channel that turns a mismatch into actionable evidence, with explicit reliability and visibility properties.
+
+    TENSION:
+    A theorem prover and a leaking roof are not equivalent validators; the analogy must retain different evidential strength.
+
+    MISSING:
+    A taxonomy of response channels and the expertise required to read them.
+
+    BOUNDARY:
+    Ingold is not offering a formal verification theory.
+
+    CITATION TRAIL:
+    CEGIS; Schön; material computation.
+
+    TEST:
+    Introduce failures at visual, structural, drainage, thermal, and security layers and record what each evaluation environment can reveal.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[FAILURE ORACLES]]
+[[CORRESPONDENCE AS COMPUTATION]]
+
+    BIBTEX:
+    @book{ingold2013making,
+  author={Ingold, Tim},
+  title={Making: Anthropology, Archaeology, Art and Architecture},
+  publisher={Routledge},
+  address={London},
+  year={2013},
+  isbn={9780415567237}
+}

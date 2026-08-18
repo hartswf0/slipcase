@@ -1,0 +1,71 @@
+SOURCE MAP — what-counts-as-the-prompt
+CHECKPOINT: SLIPCASE-20260818-UNIT-01
+STATUS: COMPILER TRACE, NOT PUBLIC EVIDENCE
+
+CURRENT WAGER — PROMPT RESEARCH HAS A UNIT-OF-ANALYSIS PROBLEM.
+STATUS: COMPILER SYNTHESIS.
+MEANING: before an effect is attributed to “the prompt,” the analysis must state what is included in that object, what is excluded, and what surrounding state is held fixed. This does NOT claim one universally correct unit exists.
+SUPPORT: collisions below; no single source states this thesis.
+
+FAILED DEFINITION 1 — PROMPT = COMMAND.
+ZETTELS: SHOT-20260817-01, PF-DEIXIS-003, LIT-SUCHMAN-003, LIT-CLARK-005, LIT-AUSTIN-009.
+SOURCES: Anthropic current guidance as preserved in SHOT-20260817-01; Suchman 1985; Clark & Wilkes-Gibbs 1986; Austin 1962; working manuscript.
+SURVIVES: authorization/action mode matters.
+BREAKS: deictic reference and intelligibility can depend on prior/situational state outside the current command.
+
+FAILED DEFINITION 2 — PROMPT = DESCRIPTION.
+ZETTELS: PF-OPERATION-001, PF-CONTEXT-002, LIT-WINOGRAD-001, LIT-AUSTIN-009.
+SOURCES: working manuscript; Winograd 1973; Austin 1962.
+SURVIVES: wording can participate in consequential action.
+BREAKS: apparatus, procedures, state, and authority are causally necessary.
+
+FAILED DEFINITION 3 — PROMPT = PROGRAM.
+ZETTELS: SHOT-20260817-05, LIT-WINOGRAD-001, LIT-ACE-011, LIT-SMITH-012, LIT-NAUR-006, PF-SEMANTICS-004.
+SOURCES: OpenAI Programmatic Tool Calling as preserved in SHOT-20260817-05; Winograd 1973; Fuchs & Schwitter 1996; Smith 1993; Naur 1985; working manuscript.
+SURVIVES: prompts can enter executable chains and synthesize temporary procedures.
+BREAKS: programming itself exceeds program text, and natural-language-to-execution has older precedents.
+
+FAILED DEFINITION 4 — PROMPT = SPECIFICATION.
+ZETTELS: SHOT-20260817-07, SHOT-20260817-08, PF-FAILURE-005, PF-CRITERIA-013, LIT-SUCHMAN-004, LIT-SMITH-012.
+SOURCES: SCOPE and REprompt evidence as preserved in current cards; working manuscript; Suchman 1985; Smith 1993.
+SURVIVES: prompts carry requirements and constraints.
+BREAKS: repair, demonstration, failure, and tacit criteria continue to modify what the task is after the initial expression.
+
+FAILED DEFINITION 5 — PROMPT = LANGUAGE + CONTEXT.
+ZETTELS: LIT-WINOGRAD-002, LIT-SUCHMAN-003, LIT-BROOKS-010, PF-CONTEXT-006, PF-SITUATEDNESS-012.
+SOURCES: Winograd 1973; Suchman 1985; Brooks 1991; working manuscript.
+SURVIVES: surrounding state is essential.
+BREAKS: “context” collapses represented world state, discourse history, live coupling, and situated position into one word.
+
+FAILED DEFINITION 6 — PROMPT = PRODUCTION TRACE.
+ZETTELS: PF-PROVENANCE-008, PF-AUTHORSHIP-014, PF-RESPONSIBILITY-015, PF-COMPRESSION-010.
+SOURCES: working manuscript.
+SURVIVES: traces expose operations and provenance.
+BREAKS: evidence does not supply the attribution rule; the same trace can support different authorship judgments.
+
+FAILED DEFINITION 7 — PROMPT = PART OF A DISTRIBUTED SYSTEM.
+ZETTELS: LIT-HUTCHINS-007, PF-AUTHORSHIP-007, PF-AUTHORSHIP-014, PF-RESPONSIBILITY-015.
+SOURCES: Hutchins 1995; working manuscript.
+SURVIVES: production can cross people and artifacts.
+BREAKS: distribution is not explanatory until transformations, authority, and responsibility are separately specified.
+
+MELTED PRIOR WAGER — THE PROGRAM IS THE TOPOLOGY OF CLOSURE BOUNDARIES.
+STATUS: PRIOR COMPILER SYNTHESIS, PRESERVED AS HISTORY, NO LONGER GOVERNING.
+REASON: useful for some action/commit transitions but falsely fluent when stretched over situatedness, tacit criteria, authorship, and programmer theory. It unified mechanisms that the evidence has not shown to be one mechanism.
+
+REPORTING DISCIPLINE CLAIM.
+STATUS: COMPILER PROPOSAL, NOT SOURCE SYNTAX.
+PROPOSAL: when relevant, distinguish utterance, history, instruction apparatus, world access, execution, and human aftermath. These are bookkeeping boundaries, not an asserted universal architecture.
+
+COUNTEREVIDENCE / RESISTANCE
+- Suchman and Clark prevent treating current utterance as self-sufficient reference.
+- Winograd and Austin prevent attributing consequentiality to language alone.
+- Naur prevents using “program text” as a synonym for programming practice.
+- Pygmalion prevents claiming iterative/example-based specification is wholly new.
+- Brooks prevents equating richer representation with continued world coupling.
+- Tacit criteria prevent assuming every operative judgment already has propositional form.
+- Provenance fragments prevent treating complete traces as self-interpreting authorship verdicts.
+- Hutchins prevents “distributed” from doing explanatory work without named transformations.
+
+BOUNDARY
+This paper does not establish that “prompt” should be abandoned, that one unit of analysis is always superior, or that historical mechanisms are identical to current LLM systems. It proposes a testable methodological problem and leaves several ontological and attribution questions open.

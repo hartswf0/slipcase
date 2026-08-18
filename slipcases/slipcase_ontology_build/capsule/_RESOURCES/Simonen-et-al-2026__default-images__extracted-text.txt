@@ -1,0 +1,1141 @@
+  An Exploration of Default Images in Text-to-Image Generation
+                 Hannu Simonen                                              Atte Kiviniemi                            Hannah Johnston
+              University of Oulu                                         University of Oulu                   School of Information Technology
+                Oulu, Finland                                               Oulu, Finland                            Carleton University
+        hannu.simonen@student.oulu.fi                              atte.kiviniemi@student.oulu.fi                 Ottawa, Ontario, Canada
+                                                                                                              hannahjohnston@cmail.carleton.ca
+
+                                             Helena Barranha                                 Jonas Oppenlaender
+                                      Instituto Superior Técnico                          Centre for Applied Computing
+                                         University of Lisbon                                  University of Oulu
+                                            Lisbon, Portugal                                      Oulu, Finland
+                                     IHA-NOVA FCSH / IN2PAST                               jonas.oppenlaender@oulu.fi
+                                            Lisbon, Portugal
+                                  helenabarranha@tecnico.ulisboa.pt
+
+
+
+
+Figure 1: Default images in Midjourney. Varied prompts lead to visually similar outputs, motivating our exploration of default
+image behavior.
+Abstract                                                                                which we manually created input prompts triggering default im-
+In the creative practice of text-to-image (TTI) generation, images                      ages, and several ablation studies. Building on these, we conduct a
+are synthesized from textual prompts. By design, TTI models always                      computational analysis of over 750,000 images, revealing consistent
+yield an output, even if the prompt contains unknown terms. In this                     default images across unrelated prompts. We also conduct an online
+case, the model may generate default images: images that closely                        user study investigating how default images may affect user satis-
+resemble each other across many unrelated prompts. Studying de-                         faction. Our work lays the foundation for understanding default
+fault images is valuable for designing better solutions for prompt                      images in TTI generation, highlighting their practical relevance as
+engineering and TTI generation. We present the first investigation                      well as challenges and future research directions.
+into default images on Midjourney. We describe an initial study in
+
+
+
+
+This work is licensed under a Creative Commons Attribution 4.0 International License.   CCS Concepts
+CHI ’26, Barcelona, Spain                                                               • Human-centered computing → Empirical studies in HCI; •
+© 2026 Copyright held by the owner/author(s).
+ACM ISBN 979-8-4007-2278-3/26/04                                                        Computing methodologies → Neural networks; • Applied com-
+https://doi.org/10.1145/3772318.3790681                                                 puting → Media arts.
+CHI ’26, April 13–17, 2026, Barcelona, Spain                           Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender
+
+
+Keywords                                                                        broader HCI discussions on transparency, interpretability, and the
+text-to-image generation, Midjourney, AI art, prompt engineering,               design of meaningful interactions with generative models. Default
+creativity                                                                      images have not received attention in prior research.
+                                                                                   In this paper, we present the first exploration of default images
+ACM Reference Format:                                                           in Midjourney,1 a popular image generation system. We describe
+Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas      our systematic approach to manually create input prompts likely
+Oppenlaender. 2026. An Exploration of Default Images in Text-to-Image
+                                                                                triggering default images and our initial experiments in generating
+Generation. In Proceedings of the 2026 CHI Conference on Human Factors in
+                                                                                images from these prompts. We then apply affinity diagramming to
+Computing Systems (CHI ’26), April 13–17, 2026, Barcelona, Spain. ACM, New
+York, NY, USA, 22 pages. https://doi.org/10.1145/3772318.3790681                find similarities between the generated images and identify ten de-
+                                                                                fault images. We further conduct an online user study investigating
+                                                                                how default images impact user satisfaction, and how they align
+1    Introduction                                                               with human perception and expectations. Scaling up our analysis,
+Generative artificial intelligence (AI) has swept into mainstream.              we then present insights from a large-scale computational analysis
+One popular type of generative AI is text-to-image (TTI) generation,            of images on Midjourney.
+where images are created by prompting the generative model with                    We make the following contributions:
+text [16, 61, 62]. The prompt consists of a textual description of the               • Conceptual and empirical contribution: We define the concept
+envisioned image, including keywords that are known to trigger                         of default images and provide examples of this phenomenon.
+specific subjects, forms, and styles [45, 60, 64]. The practice of                     Based on an initial study, we contribute six categories of
+‘prompt engineering’ is key to TTI generation [61]. Practitioners                      prompts that are likely to elicit default images. We present
+craft a prompt, observe the outcome, and adjust the prompt until a                     the results of our manual experiments with these prompts
+satisfactory outcome is achieved [62].                                                 and several ablation studies. We also present a user study
+   While there is a growing number of studies investigating the                        with crowdsourced participants (N = 48) investigating how
+practice of prompt engineering or prompt design for TTI generation                     default images may affect user satisfaction.
+(e.g., [7, 45, 50, 52, 62, 65, 83]), and the design of user interfaces for           • Methodological contribution: We describe our initial system-
+prompt engineering (e.g., [2, 26, 40, 51]), less attention has been                    atic approach for manually creating prompts that trigger
+given to how models behave when prompts are misunderstood or                           default images. We then describe a simple method for identi-
+ambiguously interpreted. TTI models are trained to always yield                        fying default images at scale, first clustering images by visual
+an output, even if the input prompt contains terms and concepts                        similarity and then filtering by intra-cluster prompt diversity.
+not known to the model. When such a prompt is given to the TTI                         With this method, we computationally analyze over 750,000
+model, it may generate what we call default images – visually similar                  images from Midjourney, providing empirical evidence of
+images resulting from dissimilar prompts (see figures 1 and 5, and                     the existence of default images in response to user-written
+Appendix 10). These images are seemingly unrelated to the input                        prompts on Midjourney.
+prompt and, therefore, often do not match the user’s expectations.                   • Open-source contribution: We share a dataset with 189,432
+   Default images reveal gaps in the generative model’s vocabulary                     prompts and 757,728 candidates of default images, enabling
+and capabilities. For instance, a creative practitioner may prompt                     future research on default images (see https://huggingface.co/
+a TTI model with the Tagalog word “pagpag” (referring to a dish                        datasets/tti-dev/default-images).
+made from leftover food scavenged from garbage dumps), resulting
+                                                                                   We discuss the challenges of identifying unique but realistic
+in a default image (e.g., a painting of a woman with a cloud covering
+                                                                                input prompts that reliably trigger default images, and the chal-
+her face). This indicates that the prompt was not understood and
+                                                                                lenges of identifying default images in a real-world setting. Based
+the practitioner should revise the wording to improve the generated
+                                                                                on the results of our investigation, we make eight postulates, detail-
+image. Default images can put an early end to a potentially unfruit-
+                                                                                ing the characteristics of default images in generative TTI models
+ful pathway in the practitioner’s prompting of the TTI model, but
+                                                                                and providing a basis for future experimentation and theoretical
+they can also derail the entire creative process, leading the user to
+                                                                                development.
+abandon the quest to generate their desired image (cf. Section 2.2).
+Therefore, default images and their recognition play a crucial role
+in the creative practice of prompt engineering and for discover-
+                                                                                2 Default Images in Text-to-Image Generation
+ing the limits of TTI models and their (computational) creativity.              2.1 What are Default Images?
+Understanding how generative systems respond to unfamiliar or ill-              Some inputs to TTI generation systems may seemingly fail to gener-
+formed prompts is essential for designing interactive systems that              ate the intended results from the creative practitioner’s perspective.
+support creative exploration and for providing feedback to users. In            We call this failure mode default images. We use the term ‘default’
+human–AI co-creation, unexpected outputs (such as default images)               to denote that TTI models resort to generating these images when
+can disrupt the feedback loop between user intent and system out-               they do not recognize their input. This could be because the input
+put, introducing ambiguity or undifferentiation. This undermines                terms were not part of the generative model’s training dataset or
+trust, perceived accuracy, usability, and user agency [24, 33, 72].             because the terms in the prompt do not invoke strong imagery. In
+The misalignment between user intent and outputs can lead to                    these cases, distinct prompts may yield near-identical images. In
+frustration and a sense of lost control over the creative process [48].
+Investigating the phenomenon of default images contributes to                   1 www.midjourney.com
+Default Images                                                                                            CHI ’26, April 13–17, 2026, Barcelona, Spain
+
+
+machine learning, a related concept is called mode collapse [19],        2.2    Importance of Studying Default Images
+a failure that limits the usefulness of generative models for image      Many Midjourney users type long, descriptive prompts containing
+synthesis.                                                               specific keywords, representing known concepts and style modifiers
+   The defining characteristic of default images is that they are en-    [60, 62]. Known concepts reliably elicit the desired imagery, but they
+countered in response to multiple different and unrelated prompts.       also act like ‘magnets’ that overshadow any unknown concepts,
+We demonstrate this in Figure 1 and Figure 5. While there are often      moving the output away from default images towards imagery
+slight variations to the default images, they can be remarkably sta-     related to the known concept. For instance, including “trump” or
+ble in terms of motif (i.e., subject) and style (cf. Figure 5), making   even “donald” in a Midjourney prompt may invoke images of a
+default images distinctly recognizable. Experienced practitioners        certain U.S. president in many different contexts. This means the
+and in particular creative practitioners who seek to deviate from        majority of Midjourney users will likely not encounter default
+common prompts will likely have encountered default images in            images in their image creation efforts. So why study default images?
+their prompting. This paradoxical situation, which may go unno-             Default images provide valuable insights into the robustness
+ticed by most users, reflects the current limitations of TTI models.     and limitations of TTI models. When models generate similar out-
+As Manovich observes, AI image generators “deal well with fre-           puts from diverse, unrelated prompts, this indicates semantic gaps
+quently occurring items and patterns in the data but do not know         and challenges with linguistic constructs, niche topics, or abstract
+what to do with the infrequent and uncommon” [54]. These mod-            concepts, and a lack of generalization (i.e., the ability of a model
+els “are much better at generating visuals of popular subjects and       to perform well on unseen data). Such patterns suggest that the
+aesthetics than unfamiliar or rare ones.”                                model may rely on memorized outputs rather than generating
+   Artists and other creative practitioners often seek to generate im-   novel imagery, revealing limits in the model’s computational cre-
+ages that are novel [32], a key component of creativity [75]. Default    ativity. Awareness of these issues can help with assessing model
+images may pose a particular challenge to these users, since default     capabilities, benchmarking TTI model performance, and detecting
+images with their generic visuals tend to occur with uncommon            vulnerabilities related to adversarial prompting.
+and highly original prompts. Default images may satisfy users with          Understanding default images informs data and model quality
+less specific image requirements or lower task persistence. In these     improvements. Default images can indicate that the training data
+cases, users may engage in cognitive gap-filling processes [93] or       lacks diversity or contains biased patterns, for instance, highlighting
+construct personal associations [5], resulting in images that appear     insufficient coverage of low-resource languages, such as Tagalog, an
+more relevant to the prompts than they actually are. This effect may     Austronesian language spoken as a first language by about a quarter
+be further amplified when the generated images have strong aes-          of the population of the Philippines. Addressing these cases can
+thetic appeal, since aesthetically pleasing stimuli are often judged     enhance dataset curation and fine-tuning, promoting more inclusive
+more favorably [70] and attractive designs are often perceived as        and culturally diverse images. Studying this phenomenon can help
+more effective, regardless of their actual function [35]. Users may      monitor the risk of default images entering training datasets, which
+accept visually appealing default outputs rather than investing ef-      could amplify the self-reinforcing loop of AI-generated media [3,
+fort to generate better alternatives. It is detrimental to creativity    25, 99].
+overall if TTI users are pushed towards repetitive, generic images          Understanding default images is valuable for creative practition-
+in response to their novel prompting. This issue makes the phe-          ers and prompt engineers exploring computational creativity and
+nomenon of default images particularly relevant to visual creativity     comparing different generative models. Default images reveal the
+and originality.                                                         model’s limitations in interpreting abstract or unfamiliar concepts.
+   Default images primarily result from how text-to-image models         Knowledge of these gaps allows users to refine prompts and cir-
+structure internal representations of visual concepts. When pre-         cumvent “dead zones” where outputs are generic or repetitive, and
+sented with ambiguous or unknown inputs, these models rely on            implement strategies to recover from failures, ultimately supporting
+their learned latent space – the continuous, high-dimensional inter-     more meaningful and original visual outputs.
+nal space encoding visual relationships. Regions of this space cor-         Default images also have potential security implications. An
+respond to generic or frequently occurring visual patterns, which        attacker could infer from the appearance of default images the
+the model defaults to in the absence of specific semantic guidance.      model’s limitations or gaps in training data. This knowledge could
+Stochastic sampling adds variability, and over-training or memo-         be exploited to reverse-engineer aspects of the model’s dataset or
+rization of frequent training examples can reinforce these biases.       architecture. Default images can act as a model signature, allowing
+Ultimately, default images arise from latent space’s inherent struc-     attackers to craft prompts that identify the TTI model or version
+ture and learned biases.                                                 being used. This information could be help launch more targeted
+   We can use a metaphor to help understand default images: the          attacks. For instance, knowing that a model produces a predictable
+latent space as a vast landscape. Images are generated by sampling       default image for certain prompts could allow attackers to inject
+from regions within this landscape. Known concepts are easy to spot      misleading or confusing input in systems that rely on generative
+(think of them as mountains and hills that attract attention). But       models.
+there are also planes that connect vast regions of the space, which do      From a user experience perspective, recognizing patterns in de-
+not correspond strongly to specific learned concepts. Default images     fault image generation can inform more resilient and user-friendly
+result when the TTI model samples from these planes because of
+the absence of strong ‘attractors’ (known concepts) in the sampled
+region of latent space.
+CHI ’26, April 13–17, 2026, Barcelona, Spain                        Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender
+
+
+interface design. When users encounter similar outputs from di-              Nibbler, a system for crowdsourcing the collection of adversarial
+verse prompts, it can be frustrating. Interfaces that provide feed-          examples [66], and Maldaner et al. presented Mirage, a system for
+back, suggest alternative prompts, or guide users through effective          crowdsourced auditing of generative models [12, 53].
+prompt engineering can help navigate these limitations and recover              Beyond adversarial prompts, training artifacts can manifest as
+from failures, enhancing creativity and usability.                           bizarre text–image associations. As these pairs have been drawn
+                                                                             from the internet, they can include incorrect assignments or mis-
+3     Related Work                                                           matched correspondences [16]. Daras and Dimakis found “strange”
+Our review of related work covers three intertwined topics: 1)               associations between special terms in prompts and concepts in gen-
+how TTI models are built and prompted, 2) known failure modes                erated images [11]. They speculated that these associations in TTI
+and “degenerate” outputs in generative systems, and 3) user-facing           models constituted a “secret language”. Williams et al. investigated
+evaluations of generation quality and satisfaction.                          the effects of non-mainstream dialects in TTI [95], finding that min-
+                                                                             imal changes in prompts (including dialect) can manifest biases in
+3.1     Text-to-Image Generation and Prompt                                  TTI models. Community reports of special tokens in language mod-
+                                                                             els (and by extension, in TTI models), such as “SolidGoldMagikarp”,
+        Engineering
+                                                                             highlight spontaneous ‘glitch’ phenomena that can arise without
+Text-to-image generation has emerged as a powerful subfield of               adversarial intent [42, 74].
+generative AI, in which deep neural networks (e.g., text-conditioned            In addition to semantic and training-related failures, TTI models
+diffusion models) learn to translate free-form textual prompts con-          exhibit high stochasticity, introducing a form of variability that
+sisting of discrete words into high-fidelity images. Prominent TTI           itself constitutes a failure mode. Identical prompts can produce
+systems, such as Midjourney, OpenAI’s DALL·E, and Stable Diffu-              substantially different images across runs, complicating both user
+sion, demonstrate the ability to produce photorealistic or artistically      expectation and scientific reproducibility. Strategies such as sam-
+stylized images across many domains. Generative TTI models are               pling multiple random seeds and aggregating outputs have been
+pre-trained on extensive datasets and generate images for a given            proposed to mitigate this variability [46], and studies show that
+prompt by probabilistic sampling from their latent space.                    seed choice alone can influence the emergence of rare or novel
+   While TTI systems attempt to match human expectations, the                concepts [78]. Failures of prompt recognition – where the model
+prompting language is loose and it is near impossible to describe            fails to parse novel or unsupported inputs and defaults to place-
+every detail of an envisioned output in one textual prompt, with a           holder imagery – remain underexamined. Our work targets this
+limited number of characters [17]. Further, the model may lack rele-         gap by presenting a systematic approach for eliciting, identifying,
+vant prior knowledge and context. While special prompt keywords              and classifying default-image failures in Midjourney.
+can address some of these shortcomings, such as improving the
+resulting image quality and imbuing it with certain styles [60], TTI
+models have specific failure modes that we review in the following           3.3     Detecting Mode Collapse in Text-to-Image
+section.                                                                             Models
+                                                                             Mode collapse is a failure mode in generative models where the
+3.2     Failure Modes in Generative Models                                   model produces less diverse outputs than expected. It was first noted
+TTI outputs frequently diverge from user intent due to the limi-             by Goodfellow et al. in Generative Adversarial Networks (GANs)
+tations of prompting as an interface [57]. One reason is semantic            [19]. Default images share characteristics with mode collapse: both
+ambiguity. Polysemous terms (such as “bank”, “bat”, or “ball”) can           involve gravitating toward a limited set of outputs and occur only
+yield images that reflect unintended word senses, creating a mis-            in response to specific prompts.
+match between the user’s mental model and the generative model’s                Various techniques for detecting and mitigating mode collapse
+output [69, 94]. Users may intentionally use polysemous and am-              in TTI models have been developed and applied to GANs and dif-
+bigous terms in their creative practice. So-called “magic terms” –           fusion models. Barsha and Eberle studied early detection of mode
+lexical additives intentionally designed to induce randomness or             collapse through loss monitoring [4]. Other techniques include
+probe latent failure boundaries – may result in unpredictable or             multi-generator approaches (e.g., MTC-GAN [101]), regularization
+uncanny imagery [53, 60, 66].                                                techniques (e.g., ICCR [84]), contrastive learning (e.g., MCL [20]),
+   Liu and Chilton presented a manual analysis of failure modes              and novel architectures (e.g., style-guided discriminator [10]). Bau
+in text-to-image models [45], identifying recurring breakdowns               et al. used semantic segmentation networks to compare the distri-
+including underspecified prompts, overloaded terms, and model                bution of objects in generated images with the target distribution
+over-reliance on stereotypical associations. Their findings high-            to identify omitted classes [6]. Hashemi et al. developed Connective
+light that many failures stem from subtle mismatches between user            Novelty Detection, a method that uses an autoencoder and a binary
+phrasing and model priors. This research was later extended to               classifier to detect out-of-distribution samples. By creating negative
+image prompts. Qiao et al. categorized sources of model misinter-            instances close to the positive class distribution and combining real
+pretation and proposed design strategies to expose latent failure            and generated samples, the method improves the robustness of
+cases [65]. These studies contribute to a broader understanding              detecting mode collapse [22]. Gong et al. used Feature Distribution
+of how prompt formulation interacts with failure patterns in TTI             Divergence Minimization to minimize the divergence between the
+systems. Failure modes are relevant in interfaces for reviewing and          distributions of real and generated features, reducing the learn-
+auditing TTI models [53, 67]. Quaye et al. presented Adversarial             ing pressure on the discriminator and addressing mode collapse
+Default Images                                                                                           CHI ’26, April 13–17, 2026, Barcelona, Spain
+
+
+without requiring prior knowledge or manual design [18]. Duym           images with superhuman accuracy, and suggesting a more reliable
+et al. developed the Mode Collapse Entropy (MCE) score [14] to          protocol for evaluating TTI outputs [31]. Researchers extended
+overcome weaknesses of previous metrics in real-world scenarios.        this work with ImageReward, a preference-based reward model
+   These approaches are applied at training time and assume full        from 137,000 expert comparisons. Fine-tuning diffusion models
+access to either the model or training data, or both, making them       against this reward function produces images that users consis-
+impracticable for use in black-box models, such as Midjourney,          tently rate as higher quality [98]. Otani et al. highlight the lack
+where the training data is not known and the model is not directly      of verifiable, reproducible human evaluation in TTI research and
+accessible. This is particularly important in the context of TTI gen-   propose a standardized, crowdsourced protocol [63]. Their results
+eration, as the opacity of training image datasets raises questions     reveal that automatic metrics frequently diverge from human judg-
+concerning data provenance, diversity, quality, and representative-     ments, underscoring the need for rigorous user studies. In interac-
+ness.                                                                   tive settings, tools, such as PromptAid [56] and PromptCharm [89],
+   Several inference-time methods have been proposed for detect-        helpedparticipants craft prompts yielding images better aligned
+ing mode collapse in black-box models. Statistical, sampling-based      with their intent, with users reporting increased satisfaction and
+tools can be used to visualize and quantify intra-mode collapse with-   perceived control over output quality. Multi-turn guidance sys-
+out access to training data or model parameters, providing a practi-    tems, such as DialPrompt [47], achieve significant gains in both
+cal approach for black-box diagnosis and calibration [97]. Inversion-   image quality ratings and user-centricity scores compared to base-
+based inference perturbation (IIP) alters the inference process to      line prompt-engineering interfaces. Finally, exploratory work in
+detect memorized images, using unconditional DDIM inversion to          teacher education demonstrates how practitioners reflect on prompt
+extract latent codes and identify images exhibiting collapse-like       strategies and generator behaviors in art and design, revealing both
+behavior [29]. EncoderMI leverages membership inference against         learning affordances and cognitive challenges when integrating
+contrastive learning–based image encoders, exploiting their overfit-    TTI tools into creative pedagogy [71].
+ting tendencies to reveal whether inputs belong to the training set,       Together, this prior work illustrates the complex interplay be-
+which can indirectly indicate mode collapse [44]. Binary noise guid-    tween objective metrics, human preference, and interaction design
+ance learning (BnGLGAN) introduces distribution-guided noise            in assessing and improving TTI systems.
+reconstruction to stabilize image translation and mitigate collapse
+[100].                                                                  4     Method
+   While these techniques require careful statistical modeling or
+                                                                        We present the first investigation into default images, acknowledg-
+inference perturbation, we adopt a simpler approach. We exploit the     ing that the complexity of TTI models limits us to a tiny glimpse
+properties of default images – visually similar outputs generated       of the latent space and its default images. Our approach involves
+from dissimilar prompts – to identify mode collapse in black-box        systematic prompt creation (Section 4.1), manual image genera-
+TTI models (Section 4.5).                                               tion experiments and ablation studies to probe the latent space
+                                                                        (Section 4.2), identification of default images using affinity diagram-
+3.4    Experiments and User Studies on TTI                              ming (Section 4.3), a user study on user satisfaction with default
+       Quality and Satisfaction                                         images (Section 4.4), and a large-scale computational analysis of
+                                                                        Midjourney images (Section 4.5).
+Evaluations of TTI models often rely on automatic metrics and cu-
+rated benchmarks, yet these measures are known to misalign with
+human perception [36, 63]. The Fréchet Inception Distance (FID),
+                                                                        4.1    Input Prompts Likely Triggering Default
+for instance, can yield scores that disagree with user judgments of            Images
+image quality and prompt alignment, limiting its utility as a sole      In our initial exploration of the phenomenon of default images, we
+evaluation criterion [21, 36, 63]. Complementary metrics – such as      explored three categories of prompts that could result in a concep-
+CLIPScore [23] – have been proposed to capture semantic fidelity,       tual mismatch between user expectations and the resulting image.
+but also exhibit gaps when compared to subjective assessments           We first tried to ‘confuse’ the model with polysemous words or
+[43]. Recognizing these shortcomings, Russo suggested criteria for      prompts outside the training data (e.g., e-mail addresses), but the
+a creative TTI benchmark incorporating insights from linguistics,       rate of default images was too low. We then tried prompts that were
+cognitive psychology, and art theory to better capture human no-        likely not recognized by the model and lacked practical purpose,
+tions of creativity and relevance [76]. More recently, the Holistic     including (but not limited to): contextually misleading phrases (e.g.,
+Evaluation of Text-to-Image Models (HEIM) benchmark system-             Einstein’s relativity theology), random character strings, emojis, and
+atically assessed 26 state-of-the-art TTI generators across twelve      special characters (e.g., aölkjnewjbtn and %), lyrics and misheard
+dimensions (ranging from aesthetics and originality to bias and         lyrics, and abstract and metaphorical concepts that may not invoke
+robustness) using a combination of automated measures and hu-           strong imagery (e.g., absolute ownership and extreme aptitude). We
+man ratings, providing a richer, multidimensional view of model         excluded prompts in this category from further analysis because,
+performance [41].                                                       although they often trigger default images, they are not intended to
+   Human-centered studies bridge the gap between automatic scores       produce coherent visual content. These prompts often function as
+and actual user experience. The Pick-a-Pic dataset includes over        stress tests or purposeful creative experiments rather than artistic
+half a million human preference annotations, enabling the train-        image generation attempts. While these prompts remain impor-
+ing of PickScore, a model predicting human rankings of generated        tant for future investigations into model boundaries and creative
+CHI ’26, April 13–17, 2026, Barcelona, Spain                             Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender
+
+
+prompting strategies, in this work, we focus on default images aris-                 As a sensitivity analysis to test the robustness of default images,
+ing from realistic prompting scenarios, where users aim to generate               we conducted five small-scale ablation studies. We investigated the
+meaningful images (instead of default images).                                    effect of different seed values on the default image (Section 5.2.1).
+   We explored prompts that involve both unrecognized terms and                   We explored whether default images could be altered with prompt
+practical use cases, a combination likely found in real world use,                modifiers [60] (Section 5.2.2). We then examined default image
+but that still challenge the TTI model. These include:                            behavior within larger prompts, including known terms (Section
+  A1: Rare or uncommon names, such as fantasy names, (e.g., Kirk                  5.2.3) and combinations of prompts known to trigger default images
+       Kirkson and Shelan Creswell)                                               (Section 5.2.4. In our last study, we investigated default images in
+  A2: Corrupted words or altered words (e.g., tractoajrte)                        different model versions (Section 5.2.5).
+  A3: Web addresses (e.g., www.facebook.com and www.quora.com)
+  A4: Words from low-resource languages, like A4.1 Finnish (e.g.,
+                                                                                  4.3     Default Image Identification
+       hevonen [horse]), and A4.2 Tagalog, an Austronesian lan-
+       guage spoken mainly in the Philippines, (e.g., gubat [forest])             To identify default images in the set of generated images, we used
+  A5: Glitch tokens [74] (e.g. rawdownload)                                       affinity diagramming (or KJ Method) [81]. It is a qualitative method
+  A6: Syllables or abbreviations (e.g., BCD and YMCA)                             that organizes data into groups based on perceived similarity. The
+                                                                                  method is commonly employed to categorize complex data. The
+   We manually created a set of 130 prompts based on the six cate-
+                                                                                  first two authors collaboratively grouped images on a digital canvas
+gories, A1–A6. We created prompts in category A2 by introducing
+                                                                                  based on their perceived similarity. During the session, the two
+altering known words with slight variations. We selected the two
+                                                                                  authors discussed their rationale and iteratively refined the groups.
+low-resource languages (A4.1 Finnish and A4.2 Tagalog) for their
+                                                                                  Simultaneously, the two authors developed descriptive labels for
+language-native words that are not borrowed from other languages,
+                                                                                  the images (e.g., “Lady-Birdhead”), enabling them to refer to these
+so they do not cognate with widely known foreign languages. We
+                                                                                  images by name. They continued this collaborative process until
+collected the glitch tokens from related literature [74, 91, 92]. The
+                                                                                  all images were either categorized as default images (those with
+prompts are in Appendix A).
+                                                                                  strong similarities across multiple images created with different
+   To assess the likelihood that the selected prompts had been
+                                                                                  prompts) or not. Identifying similarities between images was often
+encountered during model training, we checked each prompt on
+                                                                                  straightforward despite subtle variations, as visible in Figure 5.
+haveibeentrained.com, a search interface for over 5.8 billion image-
+caption pairs. The tool helps users determine whether a specific
+term (e.g., their name) appears in large-scale datasets, such as                  4.4     Online User Study
+LAION [38]. These datasets are commonly used in the TTI model
+                                                                                  We used crowdsourcing through Prolific,3 an online human subject
+training [38, 80]. We sought prompts that were absent from – or un-
+                                                                                  pool, to explore participant perception of default images, specifi-
+derrepresented in – the training data, increasing the likelihood that
+                                                                                  cally, the impact of default images on user satisfaction. We used
+the resulting generated imagery would involve default or fallback
+                                                                                  an onlinea questionnaire presented participants with four images,
+behavior. Our inclusion criteria were twofold: 1) the prompt should
+                                                                                  including the original prompt that created the image. Unknown to
+plausibly occur in real-world use, and 2) it should pose a challenge
+                                                                                  the participant, for two of the images (Q1 and Q2), we replaced one
+to the model due to low training data coverage. We describe our
+                                                                                  term in the prompt with a term identified as causing default images.
+image generation process next.
+                                                                                  For instance, in Q1, we replaced ‘raven’ in the prompt “photoshoot
+                                                                                  of a woman wearing a white off-shoulder dress with a black raven on
+4.2     Image Generation Experiments and                                          top of her head” with ’Greagoft’. For Q2, we replaced “leaves and
+        Ablation Studies                                                          flowers” with “Shuttastfr”. With this replacement, we simulated the
+We used Midjourney’s webpage2 (see Figure 2) to execute the ex-                   situation where a word is unknown to the generative model. We
+periments, using fixed parameters listed in Table 1. For each of the              showed participants the original prompt and the image resulting
+130 prompts in the six input categories (A1–A6), we ran 1 trial,                  from the modified prompt, simulating the mismatch in expecta-
+resulting in four images per prompt, for a total of 520 images. We                tions that an encounter with a default image can produce. For Q3,
+then visually analyzed the images, as described in Section 4.2.                   we used an image that matched the descriptive prompt, without
+                                                                                  replacements. For Q4, we used a prompt that was unknown to the
+Table 1: Image generation parameters used in manual study                         model and, thus, the accompanying image was a default image. The
+                                                                                  four prompts and images are in Figure 8. We asked participants to
+                                                                                  rate their satisfaction with each image, given the prompt, on a scale
+ Parameter        Value      Description
+                                                                                  from 1 (Strongly Dissatisfied) to 7 (Strongly Satisfied). Participants
+ model            6.1        Setting the model version                            received £6.29 per hour, and the median time to complete the survey
+ aspect ratio     1          Standardizing the image format to square             was 3 min and 49 seconds.
+ stylize          0          Controlling the artistic flair
+ chaos            0          Controlling surprising random outputs
+ weird            0          Controlling quirky unconventional outputs
+ seed value       123456     Ensuring consistency and reproducibility
+
+2 www.midjourney.com/imagine                                                      3 www.prolific.com
+Default Images                                                                                                              CHI ’26, April 13–17, 2026, Barcelona, Spain
+
+
+
+
+Figure 2: Default–prompt relationships in Midjourney. A screenshot illustrating how diverse input prompts (e.g., the Tagalog
+words bata, aso, apoy) yield overlapping clusters of recurring default images.
+
+
+4.5 Computational Analysis of Midjourney                                       From the resulting 6,302,304 prompts collected, we removed
+    Default Images                                                          exact duplicates. We also excluded prompts larger than 25 charac-
+                                                                            ters (counting multi-byte characters as one character) as all of the
+We extended our study to real-world data on Midjourney to exam-
+                                                                            prompts in our manual study are less than 25 characters in length.
+ine whether the phenomenon of default images exists at scale and
+                                                                            We cleaned the prompts by removing any remaining parameters
+in real-world usage. We applied a similar approach as in our initial
+                                                                            (such as --relax, --weird, and --stylize) and applied FastText’s lan-
+manual study, and used the definition of default images – visually
+                                                                            guage identification model (lid.176.bin) to detect the language in the
+similar images created from dissimilar prompts – to computation-
+                                                                            prompts. We took the Midjourney version from explicit parameters
+ally identify clusters of default images in Midjourney data.
+                                                                            (such as –v 5.1) or, if the parameter was not present, inferred it
+4.5.1 Data collection. We collected image-prompt pairs from Mid-            from model release dates. The inferred version is only an estimate,
+journey with DiscordChatExporter,4 a tool to retrieve Discord mes-          because Midjourney sometimes tests new models before making
+sages. We downloaded a sample from the Midjourney Discord chan-             them the default model. We did not perform filtering for copy-
+nels ‘general-2’, ‘general-3’, ‘general-18’, and ‘general-19’, starting     righted content or sensitive terms in prompts and instead relied on
+from the earliest messages. We included only messages originating           Midjourney’s built-in moderation to limit such cases.
+from the Midjourney Bot with image attachments. We further ex-
+cluded images with non-square aspect ratio, image prompts (i.e.,                              8%
+                                                                                  Frequency
+
+
+
+
+                                                                                              6%
+                                                                                   Relative
+
+
+
+
+prompts containing ‘https://’), panned images, zoomed images, vari-
+                                                                                              4%
+ations, image inpainting, and upscaled images. The complete filter
+                                                                                              2%
+settings are as follows:
+                                                                                              0%
+                                                                                                   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+        --media --reuse-media --filter "from:’Midjourney Bot’ & has:image                                          Prompt Length (characters)
+        & -’https://’ & -’—ar ’ & -’\-\-ar’ & -’Upscaled’ & -’Zoom Out’
+        & -’Pan Right’ & -’Pan Left’ & -’Pan Up’ & -’Pan Down’ &
+                                                                            Figure 3: Prompt-length distribution. Shows the relative fre-
+        -’ \- Image #1 ’ & -’ \- Image #2 ’ & -’ \- Image #3 ’ & -’ \-
+                                                                            quencies of prompt lengths (in characters) in the dataset.
+        Image #4 ’ & -’\-\-draft’ & -’\-\-sref’ & -’Variations by’ & -
+        ’Variations (Region) by’ & -’Variations (Strong) by’ & -’Remix
+        by’ & -’Remix (Strong) by’ & -’Remix (Subtle) by’ & -’\-\-p’"
+        --before 2025-04-03                                                 4.5.2 Dataset description. The dataset contains 189,432 prompts,
+                                                                            from July 9, 2022 to March 17, 2025. Each prompt produced exactly
+All downloaded images are panels of four square images, which we            four images, for a total of 757,728 images. This includes 29,872
+split into four separate images with a script. We excluded drafts,          images for Midjourney version 1.0, 92,496 images for v2.0, 173,468
+style references, and personalization. We also excluded model ver-          images for v3.0, 109,672 images for v4.0, 64,092 images for v5.0,
+sion 7 (released 2025-04-03), because of its personalization feature.       67,248 images for v5.1, 60,300 images for v5.2, 108,868 images for
+Because we applied these filtering criteria directly during the scrape,     v6.0, and 51,712 images for v6.1.The mean prompt length is 17.5
+we do not know the total number of images processed and excluded.           characters (𝑀𝑒𝑑𝑖𝑎𝑛 = 18, 𝑆𝐷 = 5.5, 𝑄1 = 14, 𝑄3 = 22). Some
+                                                                            prompts include special tokens and punctuation, although single
+4 https://github.com/Tyrrrz/DiscordChatExporter                             character prompts are rare (see Figure 3). The prompt languages
+CHI ’26, April 13–17, 2026, Barcelona, Spain                       Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender
+
+
+include English (47.2%), Italian (5.4%), Romanian (4.0%), French            word occuring in prompts. It did, however, not filter visually simi-
+(3.1%), and many others. The columns included in our dataset are            lar images resulting from semantic similarity in prompts (such as
+described in Table 2 in Appendix B.                                         the prompts labrador and dog). This was addressed with a second
+                                                                            filter in which we assessed the intra-cluster semantic similarity of
+4.5.3 Data analysis. To analyze the dataset, we follow the same             prompts. We used sentence transformers (all-MiniLM-L6-v2) and
+approach as our manual study. We first cluster visually similar             calculated a numeric score representing the intra-cluster semantic
+images and then keep only clusters with dissimilar prompts.                 similarity – the average pairwise similarity between all prompt
+    We experimented with different solutions to identify visually           embeddings within a cluster. After computing over 100 cluster-
+similar images, including training a joint image-prompt embedding           ing solutions with different parameters and visually inspecting
+with a contrastive learning loss, as well as image similarity mea-          the results, we found that clusters with semantic similarity scores
+sures, such as cosine similarity between pixel vectors, LPIPS [102],        over 0.3 often had prompts semantically related to the same topic
+SSIM [88], and MS-SSIM [27]. We found the CLIP model (ViT-L/14)             not covered by our lexical filter. For this reason, we excluded any
+[13, 68] produced the most visually coherent clusters for our use           clusters with semantic similarity score > 0.3. This two-staged filter-
+case. Using CLIP, we transformed the images into embeddings (i.e.,          ing by lexical diversity and semantic similarity helped us identify
+numeric vectors), which we precomputed locally and then trans-              candidates of default image clusters in the dataset.
+ferred to a cloud server. We then computed the full pairwise cosine
+similarity matrix between embeddings to identify visually similar           5 Results
+images. Because the number of unique pairs grows quadratically
+with the number of images, the computation and storage scale as             5.1 Default Images
+𝑂 (𝑁 2 ). In practice, we exploit symmetry by evaluating only the up-       Figure 4 showcases the ten default images identified with affinity
+per triangle and mirroring. To fit in memory, we computed matrices          diagramming in our manual study, based on the set of input prompts
+separately for each major Midjourney version. All computations              from Section 4.1. Some default images occurred more frequently,
+were performed on a cloud server with 96 vCPUs and 1 TB RAM.                as depicted in Figure 6. In this figure, A1–A6 denote the different
+    To find clusters among the visually similar images, we employed         test sets, comprising 130 prompts (Section 4.1 and Appendix A).
+a clustering algorithm. Again, we experimented with different so-           Figure 5 showcases how the same default image (in this case, ‘Lady-
+lutions, such as connected component clustering and HDBSCAN                 Birdhead’) appears in response to different prompts, with only
+[8], but settled on simple agglomerative hierarchical clustering [58]       minor visual variations. Due to Midjourney’s internal diversity
+with a threshold of 0.1 on cosine distances between normalized              sampling mechanism, the relationship between prompt and default
+CLIP embeddings. This threshold controls cluster formation by               image is many-to-many: one prompt can produce multiple different
+stopping merges once the cosine distance between clusters exceeds           default images, and the same default image can appear in response
+0.1, thereby grouping images with high visual similarity. We set            to multiple different prompts (cf. Figure 2 and Figure 7B).
+the minimum cluster size to 𝑛 = 3 images. From visual inspection,
+we noted that clusters were individually tight but sometimes simi-
+lar to each other across clusters, a common artifact of hierarchical
+clustering with a fixed distance threshold. To address this, we imple-
+mented a post-processing merge of clusters based on their centroid
+similarity with a threshold of 0.9.
+    This resulted in many clusters of visually similar images. How-
+ever, they contained images that were often created from lexically
+(e.g., dragons and a grim dragon) or semantically (e.g., dog and
+labrador) similar prompts. Default images, however, arise from
+lexically and semantically dissimilar prompts. To address this, we
+developed a two-stage rule-based filtering process, first filtering
+out clusters with high lexical overlap in a clusters’ prompt words,
+and then filtering clusters with high semantic similarity. The first        Figure 4: Set of default images. Shows the set of default im-
+filter counted the number of appearances of each word in prompts            ages identified in our manual study, along with the descrip-
+within the cluster. If any word occurred in more than 50% of the            tive labels we assign for future reference.
+prompts within the cluster, we excluded the cluster from further
+analysis. Formally, let a cluster contain 𝑀 prompts, and let 𝑉 be the          The default images we identified exhibit recurring motifs, re-
+set of all distinct words appearing in those prompts. For each word         flecting the model’s aesthetic biases when faced with ambiguous
+𝑤 ∈ 𝑉 , let freq(𝑤) denote the number of prompts in the cluster             or unrecognized prompts. Human figures and natural elements –
+that contain 𝑤. We then compute the lexical–overlap score                   such as birds, clouds, trees, and flowers – appear as primary mo-
+                                           freq(𝑤)                          tifs, separately or merged into strange creatures. Human-vegetal
+                               𝐿 = max                                      and/or human-animal fusions emerge as key subjects in default im-
+                                    𝑤 ∈𝑉      𝑀
+                                                                            ages, appearing across different atmospheres, from oneiric scenes
+and exclude the cluster if 𝐿 ≥ 0.5. This simple lexical-overlap fil-        to mythological metamorphoses. Some identified default images
+ter removed prompts where images were similar due to the same               confirm that similarly to human dreams, “AI has an uncanny ability
+Default Images                                                                                             CHI ’26, April 13–17, 2026, Barcelona, Spain
+
+
+
+
+Figure 5: Same default image from dissimilar prompts. Demonstrates that diverse and semantically unrelated prompts still
+yield the same default image in Midjourney v6 and v6.1, with only minor variations.
+
+
+
+
+Figure 6: Default-image frequencies across test sets. Shows how often each default image appears in our six prompt groups
+(A1–A6), revealing consistent patterns across disparate prompt types.
+
+
+to combine seemingly disparate elements into sometimes sinisterly        through the massive production of born-digital pictures that fuel
+coherent representations” [55].                                          social media.
+   Although the literature on AI imagery attests that visual ex-            The intriguing association of a stereotyped female figure and a
+pression tends to vary according to specific TTI generators, and         bird in place of a hat in Figure 5 poses a twofold question concern-
+some note ‘default styles’ associated with different models [54], the    ing the generation of default images. Apparently, the TTI model
+curated series of 10 images presented in Figure 4 reveals signifi-       was unable to understand the prompt or correctly recognize some
+cant aesthetic disparities. While the five images in the lower row       of the images it was trained with. Feather hats are a recurring
+are reminiscent of abstract expressionist and surrealist painting,       theme in the history of female portraiture and fashion since the
+also evoking magical realism and epic fantasy films, the first five      Renaissance, from Titian’s Portrait of a Young Woman (c. 1536) to
+images draw from other artistic movements. As shown in figures           Rubens’ Portrait of Helena Fourment (c. 1630), from Klimt’s The
+4 and 5, the female portrait is also an important theme, particu-        Black Feathered Hat (1910) to Karl Lagerfeld’s exuberant designs
+larly prone to formal and stylistic derivations. From the solitary       for Chanel’s Spring Collection in 1992. The examples are countless,
+woman standing before a romantic landscape – in which Caspar             hence it seems plausible that many of these images were used to
+David Friedrich’s painting resonates – to close-up representations       train the model. However, there seems to be a fundamental differ-
+that seem to combine the tradition of portrait painting with lyrical     ence between human perception of visual representations of feather
+abstraction and contemporary fashion photography, these default          hats and the way computer vision ‘sees’ such images. Rather than a
+images illustrate the hybrid and composite nature of AI-generated        dataset bias, what is at stake here is a perceptual bias [59]. Follow-
+pictures. Figure 5 further emphasizes how AI-generated pictures          ing a metonymical logic (i.e., taking a part to stand in for the whole),
+can condense multiple artistic references into a single visual com-      the model takes the part for the whole, assuming that the feathers
+position that, similarly to a musical piece, can then unfold in subtle   correspond to the presence of a bird whose species differs across the
+variations. This series reflects the wide dissemination of individual    variations of the default image. This is an insightful demonstration
+portraits, both through the digitization and online circulation of       of “the nomadic existence to which images seem to be condemned
+art collections – including popular museum masterpieces – and            within the historical formations of knowledge” [1].
+CHI ’26, April 13–17, 2026, Barcelona, Spain                      Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender
+
+
+
+
+Figure 7: Ablation results for default-image behavior. Shows the effect of seed choice, style modifiers, known-term dominance,
+and model version on default images.
+A: Default images remain consistent across varied seeds and prompts.
+B: Style modifiers change appearance but preserve the underlying default-image motif.
+C: Known concepts override unknown tokens, yielding non-default images.
+D: Some Midjourney versions generate visually similar defaults from the same prompt.
+
+
+5.2     Ablation Studies                                                   as part of larger prompts to mirror real-world usage. As shown
+To evaluate the consistency of the default images generated by             in Figure 7–C, a short prompt with unknown terms may generate
+Midjourney in response to our set of input prompts, we examined            default images. The short prompt also produces more varied images
+how altering the seed value, prompt, and model version affected            because it places fewer constraints on the model. However, when
+the default images.                                                        those same terms are included in longer prompts, the model can
+                                                                           generate imagery from any words that it recognizes. Using longer
+5.2.1 Effects of seed values. We visually analyzed how different           prompts resulted in images distinct from the default images.
+seed values affect the default images. Using different seeds with the
+same prompt resulted in different default images, partially sharing        5.2.4 Effects of combining multiple default image prompts. We
+some of the motifs (Figure 7–A1). While there are similarities, one        found that when we combined two of the default image prompts
+might not associate these images with each other. Thus, the best           (from either the same or different sets), they would still reliably
+way to generate default images is by having a fixed seed value for         yield default images. However, as the number of default image
+all image generation runs. The images in Figure 7–A2 show default          triggering terms increased, the number of resulting default images
+image similarities with variations in both seed values and prompts.        appeared to decrease. When we combined all 20 prompts from a
+                                                                           set, the default images identified in the main study (see Figure 4)
+                                                                           were rare.
+5.2.2 Effects of style modifiers on default images. We found default
+images respond to style modifiers just like regular generated im-          5.2.5 Effects of model versions. Last, we analyzed how different
+ages. The same default image motifs reliably arise when applying           model versions affect the default images. In our experiments with
+different styles. Figure 7–B depicts how the prompt “kinkku”, which        Midjourney, both model versions 6.0 and 6.1 consistently generated
+triggers default images, can be modified with different styles, like       very similar default images with the same prompt, as depicted in
+“in the style of cubism” or “oil on canvas”.                               Figure 7–D. Older model versions (e.g., 5.1 and 5.2) generated default
+                                                                           images with a more surreal or abstract aesthetic, but with similar
+5.2.3 Effects of default prompts within larger prompts. We exper-          motifs, including floating objects, human portraits intertwined with
+imented with prompts that are known to trigger default images              natural elements (plants or animals, or both).
+Default Images                                                                                              CHI ’26, April 13–17, 2026, Barcelona, Spain
+
+
+
+
+Figure 8: User satisfaction with default-image outputs. Responses from our online study (N = 48) show that default images can
+lead to user dissatisfaction.
+
+
+5.3    Default Images and User Satisfaction                              5.4     Default Images on Midjourney
+5.3.1 Participants. The study participants (N = 48) were between         5.4.1 Results. Our computational analysis of images on Midjour-
+21 and 68 years old (𝑀𝑒𝑎𝑛 = 32.9, 𝑆𝐷 = 9.7) with 27 men and 21           ney resulted in the identification of 4,715 clusters of potential default
+women. About 52% of the participants had completed a Bachelor            images. In total, the clusters comprise 36,243 images, representing
+degree and 23% a Master’s degree. Participants were familiar with        4.84% of our dataset. This percentage refers only to our filtered
+TTI (𝑀𝑒𝑎𝑛 = 6.0 and 𝑆𝐷 = 1.3 on a scale of 1–Strongly Disagree to        dataset and parameters (i.e., less than 25 characters per prompt,
+7–Strongly Agree).                                                       lexical diversity ≥ 0.5, and semantic similarity ≤ 0.3) and should
+                                                                         not be interpreted as representative of the overall prevalence of
+                                                                         default images on Midjourney. The mean number of images per
+5.3.2 Results. Figure 8 depicts the results of our user study, show-
+                                                                         cluster is 7.69 (SD = 9.04, Median = 5, Min = 3, Max = 100). The
+ing that default images negatively affect user satisfaction, but not
+                                                                         lexical diversity of prompts within clusters ranges from 0.5 to 1.0
+in all cases.
+                                                                         (Mean = 0.92, SD = 0.12, Median = 1.0), and the semantic similarity
+   In Q1, implicitly replacing ‘raven’ with ‘greagoft’ resulted in
+                                                                         from 0.01 to 0.3 (Mean = 0.2, SD = 0.05, Median = 0.2). From smaller-
+only subtle image changes. The image appeared almost as if a raven
+                                                                         scale experiments, we note the largest clusters were stable across
+could be there. The participants’ satisfaction, therefore, was rela-
+                                                                         multiple parameter settings. Some selected canonical examples are
+tively high (𝑀𝑒𝑎𝑛 = 4.9, 𝑆𝐷 = 2.0). In Q2, where ‘leaves and flowers’
+                                                                         depicted in Figure 9 and Appendix C.
+was replaced with ‘greagoft’, the divergence between prompt and
+                                                                            We make the following observations based on the results of the
+resulting image was more noticeable and satisfaction was lower
+                                                                         computational analysis:
+(𝑀𝑒𝑎𝑛 = 2.6, 𝑆𝐷 = 1.8). A Fisher’s test with continuity correction
+indicated that participants’ perception of the change in the result-
+ing image (subtle vs. noticeable) was significantly related to their           • We found evidence of short prompts, like the ones in our man-
+satisfaction level (𝑂𝑅 = 10.7, 𝑝 < 0.05). The odds ratio of 10.7 indi-           ual study, being in real-world use by Midjourney users. These
+cated that dissatisfaction (1–3 on the Likert scale) was much less               prompts include, for instance, fantasy names, domain names,
+likely when the change was subtle compared to noticeable. In other               oxymorons, conceptual metaphors, abstract noun phrasing,
+words, participants were significantly more likely to be satisfied               poetic paradoxes and lyrical abstraction, surreal compound
+(5–7) when the change in the image was subtle (Q1) rather than                   phrases, other neologisms and creative compounds, or ty-
+noticeable (Q2).                                                                 pos. This confirms that the six categories of prompts likely
+   For Q3, we did not switch or omit any words in the prompt: the                triggering default images in our manual study are realistic
+image was the exact result of the prompt. Participants were satisfied            and have practical relevance.
+with the resulting image (𝑀𝑒𝑎𝑛 = 4.6, 𝑆𝐷 = 1.8). For Q4, we used               • The clusters contain recurrent themes in the images, identi-
+a prompt known to trigger default images. Participants showed                    fied in our earlier manual study, such as portrait-style images,
+particularly strong dissatisfaction with this image (𝑀𝑒𝑎𝑛 = 2.4,                 intricate cityscapes, and dream-like imagery. This includes
+𝑆𝐷 = 1.9). There was a significant difference in user satisfaction               some of the iconic Midjourney motifs, such as a person walk-
+between Q3 (representing an exact match between prompt and                       ing up an eternal staircase or road, a town on a floating island,
+image) and Q4 (representing a default image) with 𝑂𝑅 = 16.2 and                  abstract and diffuse color arrangements, and depictions of
+𝑝 < 0.05.                                                                        seemingly the same person.
+CHI ’26, April 13–17, 2026, Barcelona, Spain                   Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender
+
+
+
+
+Figure 9: Examples of default images and triggering prompts. A curated set of default images and their associated prompts
+from our dataset, illustrating the diversity of motifs and styles that recur across unrelated inputs.
+
+
+     • Major versions of Midjourney have different sets of default             likely a result of training data being shared between training
+       images (as expected), although some versions (such as ver-              runs.
+       sion 3 and 4) share common default image motifs. This is              • As models became more powerful, default images changed
+                                                                               (cf. Figure 9 and Appendix C). While in earlier models, default
+Default Images                                                                                            CHI ’26, April 13–17, 2026, Barcelona, Spain
+
+
+       images tended to be more simplistic or abstract, in recent        6.2    Characteristics of Default Images in
+       systems default images are more complex and intricate.                   Generative Models
+     • There is more variation in the dataset than in our manual
+                                                                         We outline eight postulates that define key characteristics of default
+       experiment. We did not encounter the default images from
+                                                                         images, highlighting their occurrence, variability, and evolution as
+       our manual study in our collected dataset. This is expected,
+                                                                         TTI models develop.
+       as most images in our collected dataset were created with
+       random seed values, as opposed to fixed seed values in our          P1. Emergence of default images due to unknown inputs: TTI
+       manual experiments.                                                     models default to certain visuals (“default images”) with
+     • The variation makes detecting default images in real-world              distinct motifs when they encounter inputs outside their
+       context more difficult. Motifs in default images seamlessly             training data.
+       blend with each other based on (often random) seed values,          P2. Model-specific default images: Each model version has its
+       further complicating real-world detection of default images             own set of default images, based on its training data.
+       in blackbox TTI models.                                             P3. Paradox of rarity and commonality: Default images are both
+                                                                               rare and common. Default images are rare in that they do not
+                                                                               occur in response to most prompts written by Midjourney
+                                                                               users. However, default images are also common in that they
+                                                                               may occur in response to unknown inputs in a prompt. De-
+                                                                               fault images blend seamlessly with other knappear to share
+                                                                               a common style, this straightforward association may obfus-
+                                                                               cate a more complex reality. For instance, inown concepts in
+6 Discussion                                                                   a prompt.
+6.1 Default Images in Text-to-Image Generation                             P4. Influence of prompt specificity: When users provide vague
+Default images in TTI generation are an underexplored phenome-                 or ambiguous prompts, default images are more likely to
+non. We presented the first study on default images in Midjourney.             emerge due to the model’s reliance on generic visual pat-
+When prompts are vague and contain unknown terms, Midjourney                   terns.
+may generate default images, suggesting that the model defaults to         P5. Paradox of creativity and default image frequency: Default
+familiar visual elements when it encounters words outside of its               images are more common in ‘creative’ prompts that seek to
+training data.                                                                 deviate and innovate.
+    Our computational analysis of images on Midjourney reveals             P6. Decreasing frequency with model advancement: As the vo-
+that default images are not a theoretical construct, they occur daily          cabulary of TTI models grows, default images become rarer.
+in response to real-world creative user prompts. Some of the images            Therefore, newer models can be expected to produce fewer
+we identified in our analysis represent iconic Midjourney failure              default images. As Midjourney releases new versions or inte-
+modes that many users may have encountered, especially with the                grates feedback, the nature and frequency of default images
+early Midjourney versions. Our findings confirm that these default             may change, reflecting shifts in the model’s learned visual
+images are not generated randomly and, on the basis of our sys-                patterns.
+tematic experiments, have a relatively narrow thematic and formal          P7. Modifying default images: Styles, aesthetic modifiers, and
+range. Uncanny elements emerged in common motifs that often                    compositional constraints can be applied to default images,
+depicted human portraits (usually women) and animals (especially               altering their appearance while retaining their underlying
+birds), along with other botanical or organic forms. Earlier versions          motifs. We can adjust color palettes, lighting, perspective, or
+of Midjourney have a different set of default images, often including          texture, yet traces of the default image’s motif and structure
+motifs such as balloons, butterflies, fishes, floating islands, towns,         often remain detectable.
+or simply color pallettes and transitions (see Figure 1 and Appendix       P8. Variability of default images per prompt: One prompt can
+C). Although many default images appear to share a common style,               produce several different default images. This is related to
+this straightforward association may obfuscate a more complex re-              how Midjourney leverages stochastic sampling within its
+ality. For instance, in model version 5, some default images appear            generative model to produce diverse visual outputs.
+related to surrealism and cartoonish grotesque (cf. Figure 1), with
+other identifiable references from art history, namely Dutch and
+                                                                         6.3    Explainability and Alignment of
+Flemish Renaissance painting, particularly Hieronymus Bosch and                 Text-to-Image Generation Models
+Bruegel the Elder. AI-generated images are hybrid and composite,         What does ‘absolute ownership’, ‘nallopand’, or a ‘protruding goo-
+condensing multiple forms and references learned from the training       fus’ look like? Humans could, perhaps, imagine some creative im-
+dataset into a single visual output. As Wasielewski points out “style    agery for these abstract concepts and lexical inventions. However,
+is a gradient” [90]. Therefore, an AI image is unlikely to correspond    machines struggle to produce a result (cf. Figure 1). This is not
+to a specific artistic movement, rather reflecting “a fluctuating set    surprising, given that these terms were likely not part of the TTI
+of visual characteristics with highly fuzzy boundaries” [90].            models’ training data. While polysemia and ambiguity will likely
+    Our findings also demonstrate that default images may nega-          continue to be an issue in the alignment of TTI models with human
+tively affect user satisfaction. In the following section, we describe   intent (consider, for instance, the polysemous prompt “a plant on
+the characteristics of default images in eight postulates.               a bank”), default images are a different phenomenon – a type of
+CHI ’26, April 13–17, 2026, Barcelona, Spain                      Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender
+
+
+image that appears in response to prompts that are not understood          challenging, but it also opens questions about how visual defaults
+by the model, revealing a misalignment between model and human             might adapt to, or even reinforce, a user’s creative identity.
+intent.                                                                       However, the phenomenon of default images itself will likely not
+   Daras and Dimakis experimented with how gibberish prompts               disappear entirely. We will continue to see situations where words
+are understood by the model and suspected that TTI models have             in prompts are not understood by the generative model, where
+developed a ‘secret language’ [11]. Their hypothesis was that DALL-        users type incoherent prompts [34] in error, or where users inten-
+E 2 had made ‘hidden’ associations between certain terms in text           tionally experiment with unfamiliar language, unusual phrasing,
+prompts and concepts in images, such as ‘Apoploe vesrreaitais’ mean-       or invented terms to push the model beyond known outputs. In
+ing ‘bird’. Daras and Dimakis found that these terms often produced        such cases, the model may revert to visual patterns that function
+consistent results in isolation but also sometimes in combination          as a “fallback,” even if these patterns become less recognizable as
+with other terms in prompts. Our work is similar in that some input        defaults in future generative systems.
+prompts reliably sample from the same region in latent space. We              Finally, the interplay between user prompting practices and
+found that with prompts that include both known and unknown                model architecture could shape new forms of defaults. For example,
+terms, the model often generates images from known terms, omit-            as prompt engineering becomes more sophisticated, communities
+ting unknown terms. However, when Midjourney does not ignore               might discover and share emergent default patterns, treating them
+unknown terms, it may generate images sharing visual motifs with           as creative resources rather than artifacts of model limitations.
+default images. However, unlike in a ‘secret language’, this is not a      Conversely, model designers may introduce mechanisms – such
+one-to-one mapping between prompt and resulting image. In our              as semantic interpolation or on-the-fly fine-tuning – that actively
+case, several unrelated prompts can produce variations of the same         mask or diversify defaults, making them harder to detect. The
+default image, as demonstrated in Figure 2.                                prompt rewriting employed in some commercial models under-the-
+   Because it is often unclear why the model produced a certain            hood already works towards this goal.
+default image, the problem of default images touches on research
+in interpretability and Explainable AI (XAI). Default images reflect
+inherent biases and patterns encoded in the TTI model. In a sense,
+                                                                           6.5     Design Recommendations for Text-to-Image
+the default image is a nonce output and this output currently is                   Systems
+the only mechanism of the TTI system to let the user know that             In light of these observations, designers of text-to-image systems
+the prompt is not understood. Other generative models, such as             can draw several lessons from default images as a signal of model
+language models, include clear, explicit ways of letting users know        limitations. First, default images point to a gap between user in-
+that something is not understood or that they cannot respond (e.g.,        tent and model interpretation. Generative systems could surface
+by refusing to answer for reasons of content policy). TTI models           this gap more transparently by clearly indicating which prompt
+lack these mechanisms by default. In practice, language models             elements are interpretable and which are not. This could take the
+internally handle such content and safety checks on Midjourney.            form of hints and gentle uncertainty cues in the user interface or
+Our prompts, however, pass these checks and obscure the fact that          interactive explanations that highlight the parts of a prompt that
+the model can not respond to the user prompt as expected. Instead          receive little or no semantic grounding in the generative model’s
+of returning nothing, the TTI model generates default images. This         internal representation. Such feedback may support user awareness
+could be termed a case of ostensive inferential communication              without interrupting creative flow.
+[82, 96], a model of communication where a speaker provides cues              Second, designers could introduce mechanisms that reduce the
+(ostension) to make their intended meaning clear, and the listener         likelihood that default images become the only response to an unfa-
+infers that meaning through a process of reasoning (inference). This       miliar prompt. This could involve controlled fallback strategies that
+miscommunication is also a plausible explanation as to why user            interpolate toward nearby known concepts while signaling that
+satisfaction is lower when the image is different from expectations.       the system has done so, or the introduction of explicit “request for
+                                                                           clarification” prompts that preserve creative freedom while main-
+                                                                           taining communicative clarity. Some language models already ask
+                                                                           for clarifications, and TTI generative models could be instruction-
+6.4     The Future of Default Images                                       tuned to do the same. These strategies could help prevent situations
+We believe that in the future, the phenomenon of default images            where users assume intentionality in outputs that originate from
+will transform for several reasons. First, the available visual mate-      unrecognized terms. On the other hand, many Midjourney users
+rial, model vocabulary, and processing power will likely continue to       are likely not aware that some images in response to their prompts
+increase. As TTI models become more powerful in terms of training          are default images. For instance, the prompt “modernika” (see Fig-
+vocabulary, they will likely generate fewer default images in re-          ure 10 in Appendix C) could potentially depict a fantasy figure
+sponse to user prompts. Second, TTI models will continue to evolve.        named Modernika. Yet, this image is a default image. Whether or
+In particular, personalization could alter default image outputs in        not the user needs to know the presence of this default image is a
+unpredictable ways, making it an important area for future research.       design choice.
+As personalization and context-awareness become standard, default             Third, personalization features raise questions about how de-
+images may shift from being shared phenomena to individualized             fault images evolve when generative systems adapt to individual
+experiences, tied to each user’s history, style preferences, or in-        users. Designers may wish to consider whether personalized de-
+teraction patterns. This shift could make systematic study more            faults should be transparent as defaults, or whether they should
+Default Images                                                                                            CHI ’26, April 13–17, 2026, Barcelona, Spain
+
+
+blend into the user’s broader creative trajectory. In other terms,       environment. Future research could adopt a comparative lens, in-
+designers will need to decide if users should be alerted of default      vestigating default images in other TTI generation systems, such
+images or not. Further, in creative contexts where exploration and       as Stable Diffusion [73], Imagen [77], Flux [37], Janus [9], or video
+play are central, personalized defaults could serve as material for      generation models, potentially revealing differences in model capa-
+experimentation, opening new creative pathways. Conversely, in           bilities and biases beyond canonical benchmarks.
+contexts that emphasize precision, such defaults may need more               Due to the vastness of Midjourney’s latent space, our analysis
+explicit framing so that users can distinguish between grounded          cannot be exhaustive [45, 67]. Each model version introduces its
+outputs and fallback patterns.                                           own set of default images, with some occurring far more frequently
+   Fourth, as communities develop shared prompting practices, sys-       than others (cf. Figure 6). As a result, our work can only provide
+tem designers could support ways of documenting, sharing, and            a partial view of the phenomenon. Nonetheless, certain defaults
+surfacing these practices without reinforcing unwanted defaults.         (like the Lady-Birdhead image), are common and straightforward
+Features that let users annotate prompts, sets of prompts, and dis-      to identify even in small-scale manual studies, suggesting that foun-
+covered quirks could guide future users and inform model improve-        dational insights can be gained without full coverage. Future work
+ment. Such community insight may also support internal design            could extend our approach to systematically map default images
+processes by revealing how defaults interact with the expectations       across different model versions. Default images could form the basis
+and workflows of different creative user groups.                         of a benchmark for model evaluation, capturing how systems re-
+   Finally, the presence of default images raises questions for future   spond to unknown or ambiguous inputs. Such a benchmark would
+evaluation practices in TTI generation. Designers could consider         complement existing technical metrics by foregrounding model
+incorporating default-image behavior into model diagnostics, us-         behavior in edge-case scenarios encountered in creative practice.
+ing default images as indicators or benchmarks of blind spots in             We restricted our analysis to short prompts to maximize the
+the training corpus or the prompt parser. Benchmarks that stress         likelihood of encountering default images while keeping compu-
+unknown terms or ambiguous phrasing may help identify where              tational demands manageable. This constraint limits conclusions
+generative systems fail to align with user intent. Such evaluation       about default images that may emerge in more elaborate prompt
+schemes would complement traditional performance metrics and             contexts. Future studies could explore how prompt length, structure,
+help center, but also manage, user experience in next-generation         modifiers, and semantic specificity influence the emergence and
+TTI models.                                                              variability of default images. From a preliminary study, we saw dif-
+   In the following we review some of the limitations of our study       ferent images arise when combining large amounts of our prompts.
+which can inspire additional future work.                                Future work could study whether these prompts are default images,
+                                                                         or whether there is a change in model behavior when prompted
+                                                                         with longer prompts. Negative prompts, weighted prompts, and
+                                                                         image prompts were also not in scope of our foundational study and
+6.6    Limitations and Future Work                                       left to future work. Further, our sensitivity analysis and ablation
+Our study offers a foundational investigation into the phenomenon        studies were limited and offer new ground for research. Future work
+of default images in TTI models. While the work is necessarily           could systematically examine the role of seeds, negative prompts,
+constrained in scope, these limitations highlight productive avenues     and other parameters in shaping default outputs.
+for future research.                                                         Calculating the full similarity matrix for images becomes com-
+   We presented a systematic empirical study without having ac-          putationally prohibitive for large numbers of images. The memory
+cess to the underlying training data or model. It is our belief that     requirement was substantial for our sample, but still feasible. Instead
+default images arise from latent model behavior, likely due to gaps      of the full similarity matrix, future work could employ approximate
+in the training data. However, some system internals on Midjour-         nearest neighbor search and clustering methods, e.g. by computing
+ney’s platform (like the sampling mechanism or potential prompt          a sparse similarity matrix and retrieving only the top-k most similar
+rewriting) may contribute to the phenomenon of default images.           images (e.g., top-100 images).
+For instance, the many-to-many relationship between prompts and              We did not directly investigate bias in default images in this
+images observed in Figure 2 can be attributed to diversity mech-         work, yet their occurrence in the absence of explicit text guidance
+anisms in Midjourney’s stochastic sampling. On the other hand,           potentially provides an opportunity to study “raw” biases in TTI
+other mechanisms, such as the LLM-based moderation feature, can          models. Building on related studies on bias in TTI models (e.g.,
+likely be excluded as an alternative explanation for default im-         [15, 28, 30, 39, 49, 79, 86, 87]), future research could analyze demo-
+ages. Moderation either lets prompts pass or not, and moderation is      graphic, cultural, or aesthetic biases embedded in default images.
+therefore not mechanistically involved in generating default images.         Studying default images from a color theory perspective could
+Nevertheless, important interpretative limitations around causality      also provide new insights on prevailing harmonies and contrasts
+remain due to the opaque nature of Midjourney’s proprietary plat-        and contribute to an understanding of the symbolism and poten-
+form. Without knowing whether and how the system is intervening          tial impact of such associations. Exploring how default images tie
+in its inputs and outputs, it is difficult to fully interpret whether    into the creative practice could be an interesting avenue for future
+default images reflect model behavior or platform design decisions.      studies. Future work could examine the implications of default im-
+   Our focus on Midjourney limits the external validity of findings      ages for creativity support, for example through Construal Level
+to other TTI systems. We selected this scope to allow in-depth           Theory [85] or other psychological frameworks.
+qualitative and quantitative analysis within a consistent model
+CHI ’26, April 13–17, 2026, Barcelona, Spain                                         Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender
+
+
+   Finally, while our study focused on characterizing default images,                           [9] Xiaokang Chen, Zhiyu Wu, Xingchao Liu, Zizheng Pan, Wen Liu, Zhenda Xie,
+mechanisms for detecting and handling them on-the-fly remain                                        Xingkai Yu, and Chong Ruan. 2025. Janus-Pro: Unified Multimodal Understand-
+                                                                                                    ing and Generation with Data and Model Scaling. arXiv:2501.17811
+an open challenge. Future work could explore real-time detection                               [10] Jaewoong Choi, Daeha Kim, and Byung Cheol Song. 2022. Style-Guided and
+pipelines, interface designs that highlight misunderstood prompt                                    Disentangled Representation for Robust Image-to-Image Translation. Proceed-
+                                                                                                    ings of the AAAI Conference on Artificial Intelligence 36, 1 (Jun. 2022), 463–471.
+segments, and techniques to mitigate unintended defaults without                                    doi:10.1609/aaai.v36i1.19924
+reducing creative potential. Such approaches could improve prompt                              [11] Giannis Daras and Alexandros G. Dimakis. 2022. Discovering the Hidden
+engineering practices and enhance user satisfaction.                                                Vocabulary of DALLE-2. arXiv:2206.00169
+                                                                                               [12] Wesley Hanwen Deng, Mireia Yurrita, Mark Díaz, Jina Suh, Nick Judd, Lara
+                                                                                                    Groves, Hong Shen, Motahhare Eslami, and Kenneth Holstein. 2024. Responsible
+                                                                                                    Crowdsourcing for Responsible Generative AI: Engaging Crowds in AI Auditing
+7      Conclusion                                                                                   and Evaluation. Proceedings of the AAAI Conference on Human Computation
+                                                                                                    and Crowdsourcing 12, 1 (Oct. 2024), 148–150. doi:10.1609/hcomp.v12i1.31609
+We presented the first systematic investigation of default images in                           [13] Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn,
+Midjourney. Default images are images with a certain motif that                                     Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Minderer,
+occur in response to a variety of dissimilar prompts. Through an                                    Georg Heigold, Sylvain Gelly, Jakob Uszkoreit, and Neil Houlsby. 2021. An
+                                                                                                    Image is Worth 16x16 Words: Transformers for Image Recognition at Scale. In
+initial study with manual prompt-generation and affinity diagram-                                   International Conference on Learning Representations. https://openreview.net/
+ming, we identified ten canonical default images. Scaling up to a                                   forum?id=YicbFdNTTy
+larger set of images, we presented a simple method for identifying                             [14] Jens Duym, José Antonio Oramas Mogrovejo, and Ali Anwar. 2025.
+                                                                                                    Quantifying Generative Stability: Mode Collapse Entropy Score for
+default images in Midjourney. Through a large-scale computational                                   Mode Diversity Evaluation. In Proceedings of the Winter Confer-
+analysis of Midjourney images, we demonstrated that default im-                                     ence on Applications of Computer Vision (WACV) Workshops. 187–196.
+                                                                                                    https://openaccess.thecvf.com/content/WACV2025W/ImageQuality/html/
+ages are not just a theoretical construct, but occur in response to                                 Duym_Quantifying_Generative_Stability_Mode_Collapse_Entropy_Score_
+real-world user prompts. Our user study showed that default images                                  for_Mode_Diversity_WACVW_2025_paper.html
+may negatively influence user satisfaction. Based on our findings,                             [15] Wala Elsharif, Mahmood Alzubaidi, and Marco Agus. 2025. Cultural Bias in
+                                                                                                    Text-to-Image Models: A Systematic Review of Bias Identification, Evaluation,
+we distilled eight postulates characterizing the properties of default                              and Mitigation Strategies. IEEE Access 13 (2025), 122636 – 122659. doi:10.1109/
+images. By defining the notion of default images, our work lays the                                 ACCESS.2025.3585745
+groundwork for future research on the limits of generative systems.                            [16] Qianyu Feng, Yulei Sui, and Hongyu Zhang. 2023. Uncovering Limitations in
+                                                                                                    Text-to-Image Generation: A Contrastive Approach with Structured Semantic
+                                                                                                    Alignment. In Findings of the Association for Computational Linguistics: EMNLP
+                                                                                                    2023, Houda Bouamor, Juan Pino, and Kalika Bali (Eds.). Association for Com-
+Acknowledgments                                                                                     putational Linguistics, Singapore, 8876–8888. doi:10.18653/v1/2023.findings-
+                                                                                                    emnlp.595
+This work is supported in part by the Natural Sciences and Engi-                               [17] Oran Gafni, Adam Polyak, Oron Ashual, Shelly Sheynin, Devi Parikh, and Yaniv
+neering Research Council of Canada (NSERC) Vanier Scholarship                                       Taigman. 2022. Make-A-Scene: Scene-Based Text-to-Image Generation with
+CGV-186947. The last author gratefully acknowledges support from                                    Human Priors. In Computer Vision – ECCV 2022, Shai Avidan, Gabriel Brostow,
+                                                                                                    Moustapha Cissé, Giovanni Maria Farinella, and Tal Hassner (Eds.). Springer
+the University of Oulu’s Centre for Applied Computing (CAC) and                                     Nature Switzerland, Cham, 89–106.
+the NOSTE development programme for education.                                                 [18] Yanxiang Gong, Minjiang Zhong, Yang Ji, Mei Xie, and Xin Ma. 2023. Dis-
+                                                                                                    tribution constraining for combating mode collapse in generative adversarial
+                                                                                                    networks. Journal of Electronic Imaging 32, 4 (2023). doi:10.1117/1.JEI.32.4.043029
+                                                                                               [19] Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-
+References                                                                                          Farley, Sherjil Ozair, Aaron Courville, and Yoshua Bengio. 2014. Generative Ad-
+    [1] Emmanuel Alloa. 2021. Looking Through Images. A Phenomenology of Visual                     versarial Nets. In Advances in Neural Information Processing Systems, Z. Ghahra-
+        Media. Columbia University Press, New York, NY.                                             mani, M. Welling, C. Cortes, N. Lawrence, and K.Q. Weinberger (Eds.), Vol. 27.
+    [2] Ian Arawjo, Chelse Swoopes, Priyan Vaithilingam, Martin Wattenberg, and                     Curran Associates, Inc. https://proceedings.neurips.cc/paper_files/paper/2014/
+        Elena L. Glassman. 2024. ChainForge: A Visual Toolkit for Prompt Engineering                file/f033ed80deb0234979a61f95710dbe25-Paper.pdf
+        and LLM Hypothesis Testing. In Proceedings of the 2024 CHI Conference on Human         [20] Yao Gou, Min Li, Yu Song, Yujie He, and Litao Wang. 2023. Multi-feature con-
+        Factors in Computing Systems (CHI ’24). Association for Computing Machinery,                trastive learning for unpaired image-to-image translation. Complex & Intelligent
+        New York, NY, USA, Article 304, 18 pages. doi:10.1145/3613904.3642016                       Systems 9, 4 (2023), 4111–4122. doi:10.1007/s40747-022-00924-1
+    [3] Emanuele Arielli. 2024. Made By and For Humans? The Issue of Aesthetic                 [21] Sebastian Hartwig, Dominik Engel, Leon Sick, Hannah Kniesel, Tristan Payer,
+        Alignment. In Artificial Aesthetics: Generative AI, Art and Visual Media, Lev               Poonam Poonam, Michael Glöckler, Alex Bäuerle, and Timo Ropinski. 2025. A
+        Manovich and Emanuele Arielli (Eds.). 180–193.                                              Survey on Quality Metrics for Text-to-Image Generation. IEEE Transactions
+    [4] Farhat Lamia Barsha and William Eberle. 2025. Early Detection of Mode Collapse              on Visualization and Computer Graphics 31, 10 (2025), 9464–9483. doi:10.1109/
+        in GANs Through Loss Monitoring. In Computational Science and Computational                 TVCG.2025.3585077
+        Intelligence, Hamid R. Arabnia, Leonidas Deligiannidis, Farid Ghareh Moham-            [22] Seyyed Morteza Hashemi, Parvaneh Aliniya, and Parvin Razzaghi. 2023. Con-
+        madi, Soheyla Amirian, and Farzan Shenavarmasouleh (Eds.). Springer Nature                  nective Reconstruction-Based Novelty Detection. In 2023 31st International
+        Switzerland, Cham, 268–283.                                                                 Conference on Electrical Engineering (ICEE). 563–569. doi:10.1109/ICEE59167.
+    [5] Frederic C. Bartlett. 1995. Remembering: A Study in Experimental and Social                 2023.10334839
+        Psychology. Cambridge University Press, Cambridge, UK.                                 [23] Jack Hessel, Ari Holtzman, Maxwell Forbes, Ronan Le Bras, and Yejin Choi.
+    [6] David Bau, Jun-Yan Zhu, Jonas Wulff, William Peebles, Hendrik Strobelt, Bolei               2021. CLIPScore: A Reference-free Evaluation Metric for Image Captioning. In
+        Zhou, and Antonio Torralba. 2019. Seeing What a GAN Cannot Generate.                        Proceedings of the 2021 Conference on Empirical Methods in Natural Language
+        arXiv:1910.11626                                                                            Processing, Marie-Francine Moens, Xuanjing Huang, Lucia Specia, and Scott
+    [7] Charlotte Bird. 2023. Evaluating Prompt Engineering as a Creative Practice.                 Wen-tau Yih (Eds.). Association for Computational Linguistics, Online and Punta
+        In Proceedings of the 14th International Conference on Computational Creativity,            Cana, Dominican Republic, 7514–7528. doi:10.18653/v1/2021.emnlp-main.595
+        ICCC 2023, Ontario, Canada, June 19-23, 2023, Alison Pease, João Miguel Cunha,         [24] Donald R. Honeycutt, Mahsan Nourani, and Eric D. Ragan. 2020. Solicit-
+        Maya Ackerman, and Daniel G. Brown (Eds.). Association for Computational                    ing Human-in-the-Loop User Feedback for Interactive Machine Learning Re-
+        Creativity (ACC), 352–356. https://computationalcreativity.net/iccc23/papers/               duces User Trust and Impressions of Model Accuracy. Proceedings of the
+        ICCC-2023_paper_104.pdf                                                                     AAAI Conference on Human Computation and Crowdsourcing 8 (2020), 63 –
+    [8] Ricardo J. G. B. Campello, Davoud Moulavi, and Joerg Sander. 2013. Density-                 72. doi:10.1609/hcomp.v8i1.7464
+        Based Clustering Based on Hierarchical Density Estimates. In Advances in               [25] Zizhao Hu, Mohammad Rostami, and Jesse Thomason. 2025. Multi-modal
+        Knowledge Discovery and Data Mining, Jian Pei, Vincent S. Tseng, Longbing Cao,              Synthetic Data Training and Model Collapse: Insights from VLMs and Diffusion
+        Hiroshi Motoda, and Guandong Xu (Eds.). Springer Berlin Heidelberg, Berlin,                 Models. arXiv:2505.08803
+        Heidelberg, 160–172.
+Default Images                                                                                                                      CHI ’26, April 13–17, 2026, Barcelona, Spain
+
+
+ [26] Mina Huh, Yi-Hao Peng, and Amy Pavel. 2023. GenAssist: Making Image                   [43] Zhiqiu Lin, Deepak Pathak, Baiqi Li, Jiayao Li, Xide Xia, Graham Neubig,
+      Generation Accessible. In Proceedings of the 36th Annual ACM Symposium on                  Pengchuan Zhang, and Deva Ramanan. 2024. Evaluating Text-to-Visual Genera-
+      User Interface Software and Technology (UIST ’23). Association for Computing               tion with Image-to-Text Generation. In Computer Vision – ECCV 2024: 18th Euro-
+      Machinery, New York, NY, USA, Article 38, 17 pages. doi:10.1145/3586183.                   pean Conference, Milan, Italy, September 29–October 4, 2024, Proceedings, Part IX.
+      3606735                                                                                    Springer-Verlag, Berlin, Heidelberg, 366–384. doi:10.1007/978-3-031-72673-6_20
+ [27] A. Jalobeanu, L. Blanc-Feraud, and J. Zerubia. 2004. An adaptive Gaussian model       [44] Hongbin Liu, Jinyuan Jia, Wenjie Qu, and Neil Zhenqiang Gong. 2021. En-
+      for satellite image deblurring. IEEE Transactions on Image Processing 13, 4 (2004),        coderMI: Membership Inference against Pre-trained Encoders in Contrastive
+      613–621. doi:10.1109/TIP.2003.819969                                                       Learning. Proceedings of the ACM Conference on Computer and Communications
+ [28] Akshita Jha, Vinodkumar Prabhakaran, Remi Denton, Sarah Laszlo, Shachi Dave,               Security (2021), 2081 – 2095. doi:10.1145/3460120.3484749
+      Rida Qadri, Chandan K. Reddy, and Sunipa Dev. 2024. ViSAGe: A Global-Scale            [45] Vivian Liu and Lydia B Chilton. 2022. Design Guidelines for Prompt Engineering
+      Analysis of Visual Stereotypes in Text-to-Image Generation. In Proceedings                 Text-to-Image Generative Models. In Proceedings of the 2022 CHI Conference
+      of the 62nd Annual Meeting of the Association for Computational Linguistics                on Human Factors in Computing Systems (CHI ’22). Association for Computing
+      (Volume 1: Long Papers), Lun-Wei Ku, Andre Martins, and Vivek Srikumar (Eds.).             Machinery, New York, NY, USA, Article 384, 23 pages. doi:10.1145/3491102.
+      Association for Computational Linguistics, Bangkok, Thailand, 12333–12347.                 3501825
+      doi:10.18653/v1/2024.acl-long.667                                                     [46] Vivian Liu and Lydia B. Chilton. 2022. Design Guidelines for Prompt Engineering
+ [29] Yue Jiang, Haokun Lin, Yang Bai, Bo Peng, Zhili Liu, Yueming Lyu, Yong Yang,               Text-to-Image Generative Models. In Proceedings of the 2022 CHI Conference on
+      Xing Zheng, and Jing Dong. 2025. Image-level Memorization Detection Via                    Human Factors in Computing Systems. Association for Computing Machinery,
+      Inversion-based Inference Perurbation. 13th International Conference on Learning           New York, NY, USA, 23 pages. doi:10.1145/3491102.3501825
+      Representations, ICLR 2025 (2025), 90485 – 90504.                                     [47] Yilun Liu, Minggui He, Feiyu Yao, Yuhe Ji, Shimin Tao, Jingzhou Du, Duan Li,
+ [30] Siddharth Kandwal and Vibha Nehra. 2024. A Survey of Text-to-Image Diffusion               Jian Gao, Li Zhang, Hao Yang, Boxing Chen, and Osamu Yoshie. 2024. What
+      Models in Generative AI. Proceedings of the 14th International Conference on               Do You Want? User-centric Prompt Generation for Text-to-image Synthesis via
+      Cloud Computing, Data Science and Engineering, Confluence 2024 (2024), 73 – 78.            Multi-turn Guidance. arXiv:2408.12910
+      doi:10.1109/Confluence60223.2024.10463372                                             [48] Ryan Louie, Andy Coenen, Cheng Zhi Huang, Michael Terry, and Carrie J. Cai.
+ [31] Yuval Kirstain, Adam Polyak, Uriel Singer, Shahbuland Matiana, Joe Penna, and              2020. Novice-AI Music Co-Creation via AI-Steering Tools for Deep Generative
+      Omer Levy. 2023. Pick-a-Pic: An Open Dataset of User Preferences for Text-to-              Models. Conference on Human Factors in Computing Systems - Proceedings (2020).
+      Image Generation. In Advances in Neural Information Processing Systems, A. Oh,             doi:10.1145/3313831.3376739
+      T. Naumann, A. Globerson, K. Saenko, M. Hardt, and S. Levine (Eds.), Vol. 36. Cur-    [49] Alexandra Sasha Luccioni, Christopher Akiki, Margaret Mitchell, and Yacine
+      ran Associates, Inc., 36652–36663. https://proceedings.neurips.cc/paper_files/             Jernite. 2023. Stable Bias: Analyzing Societal Representations in Diffusion
+      paper/2023/file/73aacd8b3b05b4b503d58310b523553c-Paper-Conference.pdf                      Models. arXiv:2303.11408
+ [32] Hyung-Kwon Ko, Gwanmo Park, Hyeon Jeon, Jaemin Jo, Juho Kim, and Jinwook              [50] Atefeh Mahdavi Goloujeh, Anne Sullivan, and Brian Magerko. 2024. Is It AI or Is
+      Seo. 2023. Large-scale Text-to-Image Generation Models for Visual Artists’                 It Me? Understanding Users’ Prompt Journey with Text-to-Image Generative AI
+      Creative Works. In Proceedings of the 28th International Conference on Intelligent         Tools. In Proceedings of the 2024 CHI Conference on Human Factors in Computing
+      User Interfaces (IUI ’23). Association for Computing Machinery, New York, NY,              Systems (CHI ’24). Association for Computing Machinery, New York, NY, USA,
+      USA, 919–933. doi:10.1145/3581641.3584078                                                  Article 183, 13 pages. doi:10.1145/3613904.3642861
+ [33] Max Kreminski. 2025. Endless forms most similar: The death of the author in           [51] Atefeh Mahdavi Goloujeh, Anne Sullivan, and Brian Magerko. 2024. Is It AI or Is
+      AI-supported art. AI and Society (2025). doi:10.1007/s00146-025-02326-6                    It Me? Understanding Users’ Prompt Journey with Text-to-Image Generative AI
+ [34] Christopher B. Kuhn, Boğaç Ünver, Diego Vera, Christoph Burgmair, and Tamay                Tools. In Proceedings of the 2024 CHI Conference on Human Factors in Computing
+      Aykut. 2025. Detecting and Mitigating Incoherent Input of Latent Diffusion                 Systems (CHI ’24). Association for Computing Machinery, New York, NY, USA,
+      Models. In 2025 IEEE International Conference on Image Processing (ICIP). 337–342.         Article 183, 13 pages. doi:10.1145/3613904.3642861
+      doi:10.1109/ICIP55913.2025.11084610                                                   [52] Atefeh Mahdavi Goloujeh, Anne Sullivan, and Brian Magerko. 2024. The
+ [35] Masaaki Kurosu and Kaori Kashimura. 1995. Apparent Usability vs. Inherent                  Social Construction of Generative AI Prompts. In Extended Abstracts of the
+      Usability: Experimental Analysis on the Determinants of the Apparent Usability.            CHI Conference on Human Factors in Computing Systems (CHI EA ’24). Asso-
+      In Conference Companion on Human Factors in Computing Systems (CHI ’95).                   ciation for Computing Machinery, New York, NY, USA, Article 320, 7 pages.
+      Association for Computing Machinery, New York, NY, USA, 292–293. doi:10.                   doi:10.1145/3613905.3650947
+      1145/223355.223680                                                                    [53] Matheus Kunzler Maldaner, Wesley Hanwen Deng, Jason Hong, Ken Hol-
+ [36] Tuomas Kynkäänniemi, Tero Karras, Miika Aittala, Timo Aila, and Jaakko                     stein, and Motahhare Eslami. 2025. MIRAGE: Multi-model Interface for Re-
+      Lehtinen. 2023. The Role of ImageNet Classes in Fréchet Inception Dis-                     viewing and Auditing Generative Text-to-Image AI. In Proceedings of the
+      tance. In The Eleventh International Conference on Learning Representations.               Twelfth AAAI Conference on Human Computation and Crowdsourcing. https:
+      https://openreview.net/forum?id=4oXTQ6m_ws8                                                //www.humancomputation.com/assets/wip_2024/HCOMP_24_WIP_4.pdf
+ [37] Black Forest Labs, Stephen Batifol, Andreas Blattmann, Frederic Boesel, Saksham       [54] Lev Manovich. 2024. From Representation to Prediction: Theorizing the AI
+      Consul, Cyril Diagne, Tim Dockhorn, Jack English, Zion English, Patrick Esser,             Image. In Artificial Aesthetics: Generative AI, Art and Visual Media, Lev Manovich
+      Sumith Kulal, Kyle Lacey, Yam Levi, Cheng Li, Dominik Lorenz, Jonas Müller,                and Emanuele Arielli (Eds.). 75–99.
+      Dustin Podell, Robin Rombach, Harry Saini, Axel Sauer, and Luke Smith. 2025.          [55] Juan Martín Prada. 2025. AI-based generative image production systems in
+      FLUX.1 Kontext: Flow Matching for In-Context Image Generation and Editing                  the artistic problematisation of the past: the thematisation of memory and
+      in Latent Space. arXiv:2506.15742 https://arxiv.org/abs/2506.15742                         temporality in “AI art”. AI & Society 40, 5 (2025), 3271–3282. doi:10.1007/s00146-
+ [38] LAION.ai. n.d.. LAION. Large-scale Artificial Intelligence Open Network. https:            024-02163-z
+      //laion.ai                                                                            [56] Aditi Mishra, Utkarsh Soni, Anjana Arunkumar, Jinbin Huang, Bum Chul
+ [39] Xingyu Lan, Jiaxi An, Yisu Guo, Tong Chiyou, Xintong Cai, and Jun Zhang.                   Kwon, and Chris Bryan. 2025. PromptAid: Prompt Exploration, Perturba-
+      2025. Imagining the Far East: Exploring Perceived Biases in AI-Generated                   tion, Testing and Iteration using Visual Analytics for Large Language Models.
+      Images of East Asian Women. In Proceedings of the Extended Abstracts of the CHI            arXiv:2304.01964 https://arxiv.org/abs/2304.01964
+      Conference on Human Factors in Computing Systems (CHI EA ’25). Association            [57] Meredith Ringel Morris. 2024. Prompting Considered Harmful. Commun. ACM
+      for Computing Machinery, New York, NY, USA, Article 332, 7 pages. doi:10.                  67, 12 (Nov. 2024), 28–30. doi:10.1145/3673861
+      1145/3706599.3719678                                                                  [58] Fionn Murtagh and Pedro Contreras. 2012. Algorithms for hierarchical clus-
+ [40] Daniel Lee, Nikhil Sharma, Donghoon Shin, DaEun Choi, Harsh Sharma, Jeongh-                tering: an overview. WIREs Data Mining and Knowledge Discovery 2, 1 (2012),
+      wan Kim, and Heng Ji. 2025. ThematicPlane: Bridging Tacit User Intent and                  86–97. doi:10.1002/widm.53
+      Latent Spaces for Image Generation. In UIST Adjunct ’25: Adjunct Proceedings          [59] Fabian Offert and Peter Bell. 2021. Perceptual bias and technical metapictures:
+      of the 38th Annual ACM Symposium on User Interface Software and Technology.                Critical machine vision as a humanities challenge. AI & Society 36, 4 (2021),
+      doi:10.1145/3746058.3758376                                                                1133–1144. doi:10.1007/s00146-020-01058-z
+ [41] Tony Lee, Michihiro Yasunaga, Chenlin Meng, Yifan Mai, Joon Sung                      [60] Jonas Oppenlaender. 2023. A Taxonomy of Prompt Modifiers for Text-To-Image
+      Park, Agrim Gupta, Yunzhi Zhang, Deepak Narayanan, Hannah Teufel,                          Generation. Behaviour & Information Technology 43, 15 (2023), 3763–3776.
+      Marco Bellagente, Minguk Kang, Taesung Park, Jure Leskovec, Jun-                           doi:10.1080/0144929X.2023.2286532
+      Yan Zhu, Fei-Fei Li, Jiajun Wu, Stefano Ermon, and Percy S Liang.                     [61] Jonas Oppenlaender. 2024. The Cultivated Practices of Text-to-Image Generation.
+      2023. Holistic Evaluation of Text-to-Image Models. In Advances in Neu-                     In Humane Autonomous Technology. Re-thinking Experience with and in Intelligent
+      ral Information Processing Systems, A. Oh, T. Naumann, A. Globerson,                       Systems. Palgrave Macmillan. doi:10.1007/978-3-031-66528-8_14
+      K. Saenko, M. Hardt, and S. Levine (Eds.), Vol. 36. Curran Associates, Inc.,          [62] Jonas Oppenlaender, Rhema Linder, and Johanna Silvennoinen. 2024. Prompt-
+      69981–70011.        https://proceedings.neurips.cc/paper_files/paper/2023/file/            ing AI Art: An Investigation into the Creative Skill of Prompt Engineering.
+      dd83eada2c3c74db3c7fe1c087513756-Paper-Datasets_and_Benchmarks.pdf                         International Journal of Human–Computer Interaction (2024), 1–23. doi:10.1080/
+ [42] LessWrong. n.d.. Glitch Tokens. https://www.lesswrong.com/tag/glitch-tokens                10447318.2024.2431761
+CHI ’26, April 13–17, 2026, Barcelona, Spain                                        Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender
+
+
+ [63] Mayu Otani, Riku Togashi, Yu Sawai, Ryosuke Ishigami, Yuta Nakashima, Esa               [80] Christoph Schuhmann, Romain Beaumont, Richard Vencu, Cade Gordon, Ross
+      Rahtu, Janne Heikkilä, and Shin’ichi Satoh. 2023. Toward Verifiable and Repro-               Wightman, Mehdi Cherti, Theo Coombes, Aarush Katta, Clayton Mullis, Mitchell
+      ducible Human Evaluation for Text-to-Image Generation. arXiv:2304.01816                      Wortsman, Patrick Schramowski, Srivatsa Kundurthy, Katherine Crowson, Lud-
+ [64] Dani Di Placido. 2025.          The AI-Generated Studio Ghibli Trend, Ex-                    wig Schmidt, Robert Kaczmarczyk, and Jenia Jitsev. 2022. LAION-5B: An
+      plained.        https://www.forbes.com/sites/danidiplacido/2025/03/27/the-ai-                open large-scale dataset for training next generation image-text models. In
+      generated-studio-ghibli-trend-explained/                                                     Advances in Neural Information Processing Systems, S. Koyejo, S. Mohamed,
+ [65] Han Qiao, Vivian Liu, and Lydia Chilton. 2022. Initial Images: Using Image                   A. Agarwal, D. Belgrave, K. Cho, and A. Oh (Eds.), Vol. 35. Curran Associates,
+      Prompts to Improve Subject Representation in Multimodal AI Generated Art.                    Inc., 25278–25294. https://proceedings.neurips.cc/paper_files/paper/2022/file/
+      In Proceedings of the 14th Conference on Creativity and Cognition (C&C ’22).                 a1859debfb3b59d094f3504d5ebb6c25-Paper-Datasets_and_Benchmarks.pdf
+      Association for Computing Machinery, New York, NY, USA, 15–28. doi:10.1145/             [81] Raymond Scupin. 1997. The KJ Method: A Technique for Analyzing Data
+      3527927.3532792                                                                              Derived from Japanese Ethnology. Human Organization 56, 2 (1997), 233–237.
+ [66] Jessica Quaye, Alicia Parrish, Oana Inel, Charvi Rastogi, Hannah Rose Kirk,                  http://www.jstor.org/stable/44126786
+      Minsuk Kahng, Erin Van Liemt, Max Bartolo, Jess Tsang, Justin White, Nathan             [82] Dan Sperber and Deirdre Wilson. 1995. Relevance: Communication and Cognition
+      Clement, Rafael Mosquera, Juan Ciro, Vijay Janapa Reddi, and Lora Aroyo. 2024.               (2nd ed.). Blackwell, Oxford, UK.
+      Adversarial Nibbler: An Open Red-Teaming Method for Identifying Diverse                 [83] Hari Subramonyam, Divy Thakkar, Andrew Ku, Juergen Dieber, and Anoop K.
+      Harms in Text-to-Image Generation. In Proceedings of the 2024 ACM Conference                 Sinha. 2025. Prototyping with Prompts: Emerging Approaches and Challenges
+      on Fairness, Accountability, and Transparency (FAccT ’24). Association for Com-              in Generative AI Design for Collaborative Software Teams. In Proceedings of
+      puting Machinery, New York, NY, USA, 388–406. doi:10.1145/3630106.3658913                    the 2025 CHI Conference on Human Factors in Computing Systems (CHI ’25).
+ [67] Jessica Quaye, Charvi Rastogi, Alicia Parrish, Oana Inel, Minsuk Kahng, Lora                 Association for Computing Machinery, New York, NY, USA, Article 882, 22 pages.
+      Aroyo, and Vijay Janapa Reddi. 2025. From Seed to Harvest: Augmenting Human                  doi:10.1145/3706598.3713166
+      Creativity with AI for Red-teaming Text-to-Image Models. arXiv:2507.17922               [84] Rihito Tominaga and Masataka Seo. 2023. Novel Regularization Method for
+ [68] Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh,                      Text-to-Image Generation Using Deep Learning. In 2023 IEEE 12th Global Con-
+      Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark,                  ference on Consumer Electronics (GCCE). 842–844. doi:10.1109/GCCE59613.2023.
+      Gretchen Krueger, and Ilya Sutskever. 2021. Learning Transferable Visual Models              10315510
+      From Natural Language Supervision. In Proceedings of the 38th International             [85] Yaacov Trope and Nira Liberman. 2010. Construal-Level Theory of Psychological
+      Conference on Machine Learning (Proceedings of Machine Learning Research,                    Distance. Psychological Review 117, 2 (2010), 440–463. doi:10.1037/a0018963
+      Vol. 139), Marina Meila and Tong Zhang (Eds.). PMLR, 8748–8763. https://                [86] Viacheslav Vasilev, Vladimir Arkhipkin, Julia Agafonova, Tatiana Nikulina,
+      proceedings.mlr.press/v139/radford21a.html                                                   Evelina Mironova, Alisa Shichanina, Nikolai Gerasimenko, Mikhail Shoytov, and
+ [69] Amon Rapp, Chiara Di Lodovico, Federico Torrielli, and Luigi Di Caro. 2025. How              Denis Dimitrov. 2024. CRAFT: Cultural Russian-Oriented Dataset Adaptation
+      do People Experience the Images created by Generative Artificial Intelligence?               for Focused Text-to-Image Generation. Doklady Mathematics 110, Suppl 1 (2024),
+      An Exploration of People’s Perceptions, Appraisals, and Emotions related to a                S137 – S150. doi:10.1134/S1064562424602324
+      Gen-AI Text-to-Image Model and its Creations. Int. J. Hum.-Comput. Stud. 193,           [87] Jordan Vice, Naveed Akhtar, Richard Hartley, and Ajmal Mian. 2025. Quantifying
+      C (2025), 16 pages. doi:10.1016/j.ijhcs.2024.103375                                          Bias in Text-to-Image Generative Models. IEEE Transactions on Dependable and
+ [70] Rolf Reber, Norbert Schwarz, and Piotr Winkielman. 2004. Processing Fluency                  Secure Computing 22, 5 (2025), 5658–5671. doi:10.1109/TDSC.2025.3572115
+      and Aesthetic Pleasure: Is Beauty in the Perceiver’s Processing Experience?             [88] Zhou Wang, A.C. Bovik, H.R. Sheikh, and E.P. Simoncelli. 2004. Image quality
+      Personality and Social Psychology Review 8, 4 (2004), 364–382. doi:10.1207/                  assessment: from error visibility to structural similarity. IEEE Transactions on
+      s15327957pspr0804_3                                                                          Image Processing 13, 4 (2004), 600–612. doi:10.1109/TIP.2003.819861
+ [71] Tore Andre Ringvold, Ingri Strand, Peter Haakonsen, and Kari Saasen Strand.             [89] Zhijie Wang, Yuheng Huang, Da Song, Lei Ma, and Tianyi Zhang. 2024.
+      2023. AI Text-to-Image Generation in Art and Design Teacher Education: A                     PromptCharm: Text-to-Image Generation through Multi-modal Prompting and
+      Creative Tool or a Hindrance to Future Creativity? The 40th International Pupils’            Refinement. In Proceedings of the 2024 CHI Conference on Human Factors in
+      Attitudes Towards Technology Conference Proceedings 2023 1, October (Oct. 2023).             Computing Systems (CHI ’24). Association for Computing Machinery, New York,
+      https://openjournals.ljmu.ac.uk/PATT40/article/view/1350                                     NY, USA, Article 185, 21 pages. doi:10.1145/3613904.3642803
+ [72] Maria Riveiro and Serge Thill. 2021. “That’s (not) the output I expected!” On the       [90] Amanda Wasielewski. 2023. Computational Formalism: Art History and Machine
+      role of end user expectations in creating explanations of AI systems. Artificial             Learning. The MIT Press. doi:10.7551/mitpress/14268.001.0001
+      Intelligence 298 (2021). doi:10.1016/j.artint.2021.103507                               [91] M. Watkins and Jessica Rumbelow. 2023. SolidGoldMagikarp II: Technical
+ [73] Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, and Björn                   details and more recent findings.             https://www.lesswrong.com/posts/
+      Ommer. 2022. High-Resolution Image Synthesis With Latent Diffusion Mod-                      Ya9LzwEbfaAMY8ABo/solidgoldmagikarp-ii-technical-details-and-more-
+      els. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern                recent
+      Recognition (CVPR). 10684–10695.                                                        [92] M. Watkins and Jessica Rumbelow. 2023. SolidGoldMagikarp III: Glitch to-
+ [74] Jessica Rumbelow and M. Watkins. 2023.                 SolidGoldMagikarp (plus,              ken archaeology. https://www.lesswrong.com/posts/8viQEp8KBg2QSW4Yc/
+      prompt generation). https://www.lesswrong.com/posts/aPeJE8bSo6rAFoLqg/                       solidgoldmagikarp-iii-glitch-token-archaeology
+      solidgoldmagikarp-plus-prompt-generation                                                [93] Max Wertheimer. 1938. Laws of Organization in Perceptual Forms. In A Source
+ [75] Mark A. Runco and Garrett J. Jaeger. 2012. The Standard Definition of Creativity.            Book of Gestalt Psychology, W. D. Ellis (Ed.). Routledge and Kegan Paul, London,
+      Creativity Research Journal 24, 1 (2012), 92–96. doi:10.1080/10400419.2012.650092            71–88. English translation of Wertheimer, M. (1923). Untersuchungen zur Lehre
+ [76] Irene Russo. 2022. Creative Text-to-Image Generation: Suggestions for a Bench-               von der Gestalt II. Psychologische Forschung, 4, 301–350..
+      mark. In Proceedings of the 2nd International Workshop on Natural Language              [94] Jennifer C. White and Ryan Cotterell. 2022. Schrödinger’s Bat: Diffusion Models
+      Processing for Digital Humanities, Mika Hämäläinen, Khalid Alnajjar, Niko Par-               Sometimes Generate Polysemous Words in Superposition. arXiv:2211.13095
+      tanen, and Jack Rueter (Eds.). Association for Computational Linguistics, Taipei,       [95] Joshua N. Williams, Molly FitzMorris, Osman Aka, and Sarah Laszlo. 2024.
+      Taiwan, 145–154. doi:10.18653/v1/2022.nlp4dh-1.18                                            DrawL: Understanding the Effects of Non-Mainstream Dialects in Prompted
+ [77] Chitwan Saharia, William Chan, Saurabh Saxena, Lala Li, Jay Whang, Emily Den-                Image Generation. arXiv:2405.05382
+      ton, Seyed Kamyar Seyed Ghasemipour, Raphael Gontijo-Lopes, Burcu Karagol               [96] Deirdre Wilson and Dan Sperber. 2006. Relevance Theory. In The Handbook of
+      Ayan, Tim Salimans, Jonathan Ho, David J. Fleet, and Mohammad Norouzi.                       Pragmatics, Laurence R. Horn and Gregory Ward (Eds.). Blackwell, Oxford, UK,
+      2022. Photorealistic Text-to-Image Diffusion Models with Deep Language                       607–632. doi:10.1002/9780470756959
+      Understanding. In Advances in Neural Information Processing Systems, Al-                [97] Zhenyu Wu, Zhaowen Wang, Ye Yuan, Jianming Zhang, Zhangyang Wang, and
+      ice H. Oh, Alekh Agarwal, Danielle Belgrave, and Kyunghyun Cho (Eds.).                       Hailin Jin. 2021. Black-box diagnosis and calibration on gan intra-mode collapse:
+      https://openreview.net/forum?id=08Yk-n5l2Al                                                  A pilot study. ACM Transactions on Multimedia Computing, Communications
+ [78] Dvir Samuel, Rami Ben-Ari, Simon Raviv, Nir Darshan, and Gal Chechik.                        and Applications 17, 3s (2021). doi:10.1145/3472768
+      2024. Generating images of rare concepts using pre-trained diffusion mod-               [98] Jiazheng Xu, Xiao Liu, Yuchen Wu, Yuxuan Tong, Qinkai Li, Ming Ding, Jie Tang,
+      els. In Proceedings of the Thirty-Eighth AAAI Conference on Artificial Intel-                and Yuxiao Dong. 2023. ImageReward: Learning and Evaluating Human Pref-
+      ligence and Thirty-Sixth Conference on Innovative Applications of Artificial                 erences for Text-to-Image Generation. In Thirty-seventh Conference on Neural
+      Intelligence and Fourteenth Symposium on Educational Advances in Artifi-                     Information Processing Systems. https://openreview.net/forum?id=JVzeOYEx6d
+      cial Intelligence (AAAI’24/IAAI’24/EAAI’24). AAAI Press, Article 522, 9 pages.          [99] Youngseok Yoon, Dainong Hu, Iain Weissburg, Yao Qin, and Haewon Jeong.
+      doi:10.1609/aaai.v38i5.28270                                                                 2025. Model Collapse in the Self-Consuming Chain of Diffusion Finetuning: A
+ [79] Adhithya Saravanan, Rafal Kocielnik, Roy Jiang, Pengrui Han, and Anima Anand-                Novel Perspective from Quantitative Trait Modeling. arXiv:2407.17493
+      kumar. 2023. Exploring Social Bias in Downstream Applications of Text-to-              [100] Guoqing Zhang, Ruixin Zhou, Yuhui Zheng, and Baozhu Li. 2024. Binary Noise
+      Image Foundation Models. Proceedings of Machine Learning Research 239 (2023),                Guidance Learning for Remote Sensing Image-to-Image Translation. Remote
+      84 – 102.                                                                                    Sensing 16, 1 (2024). doi:10.3390/rs16010065
+Default Images                                                                         CHI ’26, April 13–17, 2026, Barcelona, Spain
+
+
+[101] Min Zhang, Chunye Li, and Zhiping Zhou. 2021. Text to image synthesis using
+      multi-generator text conditioned generative adversarial networks. Multimedia
+      Tools and Applications 80, 5 (2021), 7789–7803. doi:10.1007/s11042-020-09965-5
+[102] Richard Zhang, Phillip Isola, Alexei A. Efros, Eli Shechtman, and Oliver Wang.
+      2018. The Unreasonable Effectiveness of Deep Features as a Perceptual Metric .
+      In 2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR).
+      IEEE Computer Society, Los Alamitos, CA, USA, 586–595. doi:10.1109/CVPR.
+      2018.00068
+CHI ’26, April 13–17, 2026, Barcelona, Spain                            Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender
+
+
+Appendix                                                                         B Dataset
+A Prompts
+                                                                                               Table 2: Description of dataset columns
+A1 – Unique Names: Aranoak Iarnin, Arend Perlaft, Aziel Vartani,
+Droak Fedril, Fizzah Borandur, Frentl Geddik, Fraoa Seinalur, Jhureth
+Nyxar, Kaithis Vornex, Meztli Acan, Nuoka Zuberi, Oarn Iznilaker,                  Column       Description                     Example
+Papatya Marwood, Pirnak Zerlian, Shelan Creswell, Soraya Lonescu,                  Content      Raw message collected from **painted rose petals –v 4**
+Torrence Vexley, Tzivani Rhekai, Unnah Nenosim, Uua Lakeiram                                    Midjourney, including the - @voltz23 (fast)
+                                                                                                prompt, parameters, and
+A2 – Corrupted Words: Greagoft, Greafirx, Greawarz, Greatird, Gre-
+                                                                                                username
+anist, Grealorn, Greamylt, Greavorn, Greaweld, Greatrix, Shuttastfr,
+                                                                                   Prompt       Pre-processed prompt, ex- painted rose petals
+Shuttagpdr, Shuttaaips, Shuttagust, Shuttamagu, Shuttagait, Shut-                               tracted from Content
+tapmt, Shuttagolt, Shuttaiain, Shuttapirn                                          User         Discord username, ex- voltz23
+A3 – URLs: www.amazon.com, www.bing.com, www.chatgpt.com,                                       tracted from Content
+www.deepseek.com, www.ebay.com, www.facebook.com, www.imdb.                        Image        Path to the image extracted dataset/images/general-19/
+com, www.instagram.com, www.linkedin.com, www.nytimes.com,                                      from the four-image panel    voltz23_painted_rose_petals
+                                                                                                                             _4a1b15f9-ecf5-
+www.paypal.com, www.pinterest.com, www.tiktok.com, www.tumblr.
+                                                                                                                             9CD4A_2.png
+com, www.quora.com, www.reddit.com, www.whatsapp.com, www.
+                                                                                   Num          Number of image (1=top left, 2
+wikipedia.org, www.x.com, www.youtube.com                                                       2=top right, 3=bottom left,
+A4.1 – Finnish: mökki, tuoli, pöytä, kasvi, kauppa, maito, kinkku,                              4=bottom right)
+muovi, mustikka, suola, hevonen, heinasirkka, lapanen, saapas, pelto,              Reactions    Reactions to the message
+lato, käsi, iho, akseli, pultti                                                                 from Discord users
+                                                                                   Version      The Midjourney version, de- 4.0
+A4.2 – Tagalog: apoy, aso, bata, daga, dila, galit, gising, gubat, iyak,                        tected in the prompt or in-
+kamay, kulay, lakad, lupa, matanda, ngiti, paa, pagpag, takbo, tulog,                           ferred by date
+ulan                                                                               Date         Date and time of message     2023-02-
+A5 – Glitch Tokens: Rawdownload, PsyNetMessage, UnfocusedRange,                                                              01T17:53:24.1370000+00:00
+Downloadha, RandomRedditorWithNo, InstoreAndOnline, externalAc-                    Datetime     Date and time without time- 2023-02-01 17:53:24.137
+                                                                                                zone
+tionCode, Embedreportprint, ExternalToEVAOnly, cloneembedreport-
+                                                                                   Lang         Detected prompt language     en
+print
+                                                                                   Channel      Name of Midjourney dis- general-19
+A6 – Abbreviations: bcd, dwew, fsde, gsod, sfew, gogw, pqwe, fsie,                              cord channel
+dqae, gafc, grd, jfdsk, tkrafl, fkeriw, ltr, dfaf, fdfd, rtyu, fgetiu, daqz
+
+                                                                                 C     Additional Examples of Default Images
+Default Images                                                      CHI ’26, April 13–17, 2026, Barcelona, Spain
+
+
+
+
+                 Figure 10: Additional examples of default images
+CHI ’26, April 13–17, 2026, Barcelona, Spain                            Hannu Simonen, Atte Kiviniemi, Hannah Johnston, Helena Barranha, and Jonas Oppenlaender
+
+
+
+
+                                               Figure 10: Additional examples of default images (continued)
+

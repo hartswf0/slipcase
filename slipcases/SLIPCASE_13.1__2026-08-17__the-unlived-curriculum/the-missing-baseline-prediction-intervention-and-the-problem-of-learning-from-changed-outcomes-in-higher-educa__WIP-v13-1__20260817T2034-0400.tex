@@ -1,0 +1,159 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.05in]{geometry}
+\usepackage[T1]{fontenc}\usepackage{lmodern}\usepackage{microtype}\usepackage{setspace}
+\usepackage{graphicx}\usepackage{enumitem}\usepackage{csquotes}\usepackage[hidelinks]{hyperref}
+\usepackage[backend=biber,style=authoryear,maxcitenames=2,maxbibnames=99]{biblatex}
+\addbibresource{the-unlived-curriculum__references.bib}
+\onehalfspacing
+\title{\textbf{The Missing Baseline}\\\large Prediction, Intervention, and the Problem of Learning from Changed Outcomes in Higher Education}
+\author{Watson Hartsoe}\date{August 17, 2026}
+\begin{document}\maketitle
+\begin{abstract}
+Predictive analytics in higher education is often evaluated as if prediction and
+outcome occupy the same observational world. Yet many systems are deployed precisely
+to change the outcomes they predict: a risk score triggers advising, notification,
+resource allocation, or another intervention. This paper argues that such deployment
+creates a missing-baseline problem. Once prediction changes action, post-deployment
+outcomes no longer directly reveal untreated risk. Successful prevention can weaken
+the visible statistical relation that justified intervention, while selective
+decisions make alternative trajectories unobserved. Educational predictive systems
+should therefore be evaluated as intervention policies with causal histories, not
+only as estimators scored against their own post-deployment labels.
+\end{abstract}
+\noindent\textbf{Keywords:} predictive analytics; higher education; performative prediction;
+early warning; selective labels; causal inference
+\begin{flushright}\begin{minipage}{0.29\textwidth}\raggedleft
+\includegraphics[width=.18\textwidth]{_SLIPCASE/MARK.pdf}\\[-.2em]
+{\scriptsize AI-augmented working paper}\\{\tiny Research and assembly record: Appendix A; SOURCE MAP; 000\_\_RETURN\_PATH.txt}
+\end{minipage}\end{flushright}
+
+\section{Prediction That Is Supposed to Fail}
+Educational analytics can be deployed not merely to forecast outcomes but to trigger
+actions intended to change them. Higher-education predictive systems have been used
+to identify students judged at risk and target support \parencite{ekowo2016promise}.
+The Open Academic Analytics Initiative concretely coupled predictive models to
+intervention strategies intended to improve student outcomes
+\parencite{jayaprakash2014earlyalert}. In such settings, the prediction enters the
+trajectory it will later be used to evaluate.
+
+If a model predicts likely failure and the resulting intervention helps a student
+succeed, the realized label makes the warning look wrong. Yet the relevant
+counterfactual is not simply what happened after the warning; it is what would have
+happened without the warning and the actions it caused. This is a special case of
+performative prediction: deployment changes the environment that later generates
+data \parencite{perdomo2020performative}.
+
+\section{The Missing Baseline}
+The problem becomes acute when deployed models are updated. Liley and colleagues
+show that prediction scores driving interventions can become victims of their own
+success: later observations are produced after the earlier model has affected
+treatment, and naive replacement can introduce bias
+\parencite{pmlr-v130-liley21a}. The untreated outcome relation becomes partly
+counterfactual.
+
+Boeken, Zoeter, and Mooij model this problem as causal domain shift. In alarm-type
+decision support, outcomes observed under an effective prior model can lead naive
+retraining to underestimate risk; evaluation must distinguish the deployed policy
+from a baseline target policy \parencite{pmlr-v236-boeken24a}.
+
+Together these results support a further inference: successful intervention can
+produce \emph{institutional forgetting}. Prevention may suppress adverse outcomes
+so effectively that subsequent training data weaken visible evidence of the risk
+that originally justified intervention. If an institution learns only from realized
+post-intervention labels, success can eventually look like evidence that prevention
+was unnecessary. This is not a claim that every declining risk estimate is an
+artifact. It is a warning that intervention effect and baseline risk become
+different quantities once predictions alter action.
+
+\section{The Unlived Curriculum}
+A related problem concerns outcomes that never enter the dataset. Under selective
+labels, outcomes are observed only after certain decisions, so alternatives not
+chosen remain unlabeled \parencite{kleinberg2018human}. In education, a student
+steered away from a course produces no grade for that student-course pairing.
+
+Feedback can make this absence self-reinforcing. Prediction-guided allocation can
+generate more observations where a system already looks, as work on predictive
+policing demonstrates \parencite{ensign2018runaway}. The educational mechanism is
+not identical, but it raises the same empirical question: when recommendation
+changes enrollment, later data partly describe the policy's prior choices.
+
+Kilbertus and colleagues show that selective labels can make the familiar sequence
+of learning a predictor and applying a deterministic rule inferior to directly
+learning a decision policy; exploration can be necessary to observe otherwise
+missing outcomes \parencite{pmlr-v108-kilbertus20a}. This introduces an ethical
+cost. Learning about suppressed alternatives may require institutions to vary
+decisions imposed on real people.
+
+\section{Prediction Must Leave a Receipt}
+If predictions help cause outcomes, the prediction itself can become necessary
+evidence for later causal reconstruction. Mendler-Dünner, Ding, and Wang show that
+performative effects can be unidentifiable from ordinary feature-and-outcome records
+and identify settings in which recording deployed predictions enables estimation
+\parencite{mendlerdunner2022anticipating}.
+
+For educational systems, this suggests a minimum causal receipt: model version,
+score or displayed category, recipient, action triggered, timing, and eventual
+outcome. The point is not maximal data retention. It is to prevent later records
+from collapsing ``low failure because risk was low'' with ``low failure because the
+intervention worked.'' Determining the minimum sufficient receipt is a governance
+problem because auditability and surveillance burden pull in opposite directions.
+
+\section{From Accuracy to Policy Evaluation}
+An intervention-coupled predictive system has at least three analytically distinct
+objects:
+\begin{enumerate}[label=(\arabic*)]
+\item estimated risk under a stated baseline policy;
+\item the effect of actions triggered by the prediction; and
+\item the outcomes actually observed under deployment.
+\end{enumerate}
+Collapsing these into a single post-deployment accuracy measure invites category
+mistakes. A warning can be useful while becoming less literally accurate against
+treated labels; a replacement model can fit those labels while estimating untreated
+risk worse \parencite{pmlr-v130-liley21a}; and causal-domain-shift correction may be
+required to estimate performance under another policy
+\parencite{pmlr-v236-boeken24a}.
+
+Educational systems already contain the institutional ingredients that make this
+distinction consequential. Degree-planning systems can forecast grades in order to
+redirect enrollment decisions \parencite{denley2013degreecompass}; early-alert
+systems can couple classifications to interventions
+\parencite{jayaprakash2014earlyalert}. The proper unit of evaluation is often the
+coupled prediction-action system rather than the model in isolation.
+
+\section{Limits and Unresolved Territory}
+The argument combines educational deployments with general causal and machine-
+learning results. That combination does not prove that every educational predictive
+system exhibits the same feedback. Institution-specific evidence remains necessary:
+what action a score triggers, whether intervention is delivered, how treatment
+effects vary, and which baseline policy is meaningful.
+
+Three questions remain especially important. What designs can estimate untreated
+educational risk without withholding beneficial support? What forms of bounded
+exploration are ethically legitimate when selective labels hide alternatives? And
+what is the minimum causal receipt that preserves evaluability without converting
+every intervention into permanent behavioral surveillance?
+
+\section{Conclusion}
+Predictive analytics becomes conceptually unstable when evaluated as passive
+forecasting while deployed as active intervention. Warnings and recommendations can
+change the trajectories that later become labels. The result is a missing baseline:
+post-deployment data describe a world already altered by earlier predictions.
+
+The practical danger is institutional forgetting. Prevention can erase visible
+evidence of the risk that made prevention necessary; deterministic decisions can
+erase outcomes for paths not taken; and missing prediction histories can erase the
+receipt needed to reconstruct causal effects. Evaluation should distinguish baseline
+risk, intervention effect, and observed outcome, while preserving enough prediction
+and action history to keep those quantities meaningfully separable.
+
+\printbibliography
+\appendix
+\section{Assembly and Provenance}
+This manuscript was assembled through an AI-augmented research workflow. The
+scholarly claims above rely on the cited public sources; the workflow is not
+evidence. The associated research field preserves source-to-claim traces, prompt
+lineage receipts, unresolved questions, and reconstruction instructions. The
+governing SLIPCASE 13.1 prompt was supplied in the originating conversation, but a
+byte-identical standalone copy was not exposed to the build runtime; that limitation
+is recorded rather than silently repaired.
+\end{document}

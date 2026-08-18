@@ -1,0 +1,236 @@
+SOURCE MAP
+Paper: When Words Stop Being the Cause: The Causal Attribution Problem in Prompted Generative Systems
+State: RIVAL-MECHANISMS-PAPER
+
+CLAIM 01
+CLAIM:
+A visible prompt-output relation is insufficient by itself to establish where a causal effect entered a layered generative system.
+TYPE:
+COMPILER-SYNTHESIS
+ZETTELS:
+DEFAULT-IMAGES-CHI26-B
+DEFAULT-IMAGES-CHI26-B-1
+WORKWORDS-PROMPT-004
+WORKWORDS-PROMPT-002
+DEFAULT-IMAGES-CHI26-A-1
+DEFAULT-IMAGES-CHI26-C-1
+SOURCES:
+Simonen et al. 2026; OpenAI 2023; Khattab et al. 2023; Qin & Eisner 2021; Agarwal et al. 2023; Mao et al. 2023.
+SUPPORT:
+Each source demonstrates or preserves a distinct stage at which user-visible text can diverge from effective control.
+INFERENCE:
+The paper combines them as rival causal locations rather than treating them as one mechanism.
+
+CLAIM 02
+CLAIM:
+Prompt rewriting is a deployed architecture, not merely a hypothetical explanation.
+TYPE:
+SOURCE-SUPPORTED
+ZETTEL:
+DEFAULT-IMAGES-CHI26-B-1
+SOURCE:
+OpenAI 2023, DALL-E 3 documentation.
+CITEKEY:
+OpenAI2023DALLE3
+SUPPORT:
+OpenAI documented ChatGPT-generated detailed prompts and DALL-E 3 prompt rewriting before downstream image generation.
+INFERENCE:
+A user-visible prompt can differ from executed text, so surface wording need not be the direct input to the generator.
+
+CLAIM 03
+CLAIM:
+DSPy can make effective prompt wording a compiled product of declarations and a metric.
+TYPE:
+SOURCE-SUPPORTED
+ZETTEL:
+WORKWORDS-PROMPT-004
+SOURCE:
+Khattab et al. 2023.
+CITEKEY:
+Khattab2023DSPy
+SUPPORT:
+DSPy abstracts LM pipelines as text-transformation graphs with parameterized declarative modules and a compiler that optimizes a metric.
+INFERENCE:
+Prompt wording can be downstream of a program and objective.
+
+CLAIM 04
+CLAIM:
+Human readability is not necessary for effective model conditioning.
+TYPE:
+SOURCE-SUPPORTED
+ZETTEL:
+WORKWORDS-PROMPT-002
+SOURCE:
+Qin & Eisner 2021.
+CITEKEY:
+QinEisner2021SoftPrompts
+SUPPORT:
+The source trains arbitrary continuous “soft words,” including from random initialization.
+INFERENCE:
+Natural-language prompt text is one control representation, not the only one.
+
+CLAIM 05
+CLAIM:
+Human lexical meaning and model-relative control can diverge in both directions.
+TYPE:
+COMPILER-SYNTHESIS
+ZETTELS:
+DEFAULT-IMAGES-CHI26-F-1
+DEFAULT-IMAGES-CHI26-F-2
+WORKWORDS-PROMPT-002
+SOURCES:
+Struppek et al. 2023; Millière 2022; Qin & Eisner 2021.
+SUPPORT:
+Nonce strings can evoke visual concepts; homoglyph substitutions can alter outputs through the text encoder; continuous vectors can control models.
+INFERENCE:
+Human meaningfulness is not a reliable proxy for effective control strength.
+
+CLAIM 06
+CLAIM:
+Final absence of a requested concept does not prove that the concept was absent from earlier generation state.
+TYPE:
+SOURCE-SUPPORTED
+ZETTEL:
+DEFAULT-IMAGES-CHI26-A-1
+SOURCE:
+Agarwal et al. 2023.
+CITEKEY:
+Agarwal2023ASTAR
+SUPPORT:
+A-STAR reports concepts captured in early cross-attention whose information is not retained through later denoising.
+INFERENCE:
+Prompt failure can be temporal, not only representational at input.
+
+CLAIM 07
+CLAIM:
+Initial random state can have reproducible content preferences relative to a trained diffusion generator.
+TYPE:
+SOURCE-SUPPORTED
+ZETTEL:
+DEFAULT-IMAGES-CHI26-C-1
+SOURCE:
+Mao et al. 2023.
+CITEKEY:
+Mao2023InitialImageEditing
+SUPPORT:
+The source manipulates initial latent blocks and reports content preferences determined largely by block values.
+INFERENCE:
+Calling seed “mere variation” can hide structured downstream affordances.
+
+CLAIM 08
+CLAIM:
+More explicitly stated requirements do not monotonically increase instruction following.
+TYPE:
+SOURCE-SUPPORTED
+ZETTEL:
+WORKWORDS-PROMPT-003
+SOURCE:
+Yang et al. 2025.
+CITEKEY:
+Yang2025PromptsDontSay
+SUPPORT:
+The source reports that omitted requirements can be guessed but are less robust, while adding more requirements can introduce competing constraints and fail to improve performance.
+INFERENCE:
+Written specification and effective control should be separated.
+
+CLAIM 09
+CLAIM:
+Default images establish a behavioral phenomenon more securely than they establish its internal causal mechanism.
+TYPE:
+SOURCE-SUPPORTED + INTERPRETATION
+ZETTELS:
+DEFAULT-IMAGES-CHI26-ROOT
+DEFAULT-IMAGES-CHI26-B
+DEFAULT-IMAGES-CHI26-E
+SOURCE:
+Simonen et al. 2026.
+CITEKEY:
+Simonen2026DefaultImages
+SUPPORT:
+The study identifies recurring visual motifs across dissimilar prompts, but explicitly notes causal limitations from Midjourney’s proprietary pipeline and possible internal interventions.
+INFERENCE:
+Default images are a case of underdetermined causal localization.
+
+CLAIM 10
+CLAIM:
+Embedding-space hubness creates a measurement question for any clustering pipeline that treats learned similarity as neutral.
+TYPE:
+SOURCE-SUPPORTED + BOUNDED INFERENCE
+ZETTEL:
+DEFAULT-IMAGES-CHI26-E-1
+SOURCE:
+Chowdhury et al. 2024.
+CITEKEY:
+Chowdhury2024NNN
+SUPPORT:
+The source documents hubs in contrastive multimodal retrieval and proposes candidate-specific normalization.
+INFERENCE:
+This does not invalidate Simonen et al.’s image-image clusters; it motivates detector-invariance tests.
+
+CLAIM 11
+CLAIM:
+Automated prompt optimization can make prompt wording itself an effect of evaluator-guided search.
+TYPE:
+SOURCE-SUPPORTED + COMPILER-SYNTHESIS
+ZETTELS:
+WORKWORDS-PROMPT-005
+WORKWORDS-PROMPT-006
+SOURCES:
+Pryzant et al. 2023; Fernando et al. 2023.
+CITEKEYS:
+Pryzant2023APO; Fernando2023Promptbreeder
+SUPPORT:
+ProTeGi uses textual gradients, beam search, and selection; Promptbreeder evolves task prompts and mutation prompts by fitness.
+INFERENCE:
+Selection criteria can be a major causal locus in the ancestry of an executed prompt.
+
+CLAIM 12
+CLAIM:
+Creative prompt experimentation may require versioning the evaluation criterion, not only the prompt.
+TYPE:
+COMPILER-SYNTHESIS / OPEN-QUESTION
+ZETTELS:
+WORKWORDS-PROMPT-008
+WORKWORDS-PROMPT-005
+WORKWORDS-PROMPT-006
+SOURCE:
+Arawjo et al. 2023 plus optimization sources.
+CITEKEYS:
+Arawjo2023ChainForge; Pryzant2023APO; Fernando2023Promptbreeder
+SUPPORT:
+ChainForge supports prompt/model comparison and identifies opportunistic exploration and iterative refinement; optimization methods formalize selection.
+INFERENCE:
+In creative practice, outputs can alter what counts as success. The source corpus does not yet provide a decisive empirical study of criterion drift.
+
+CLAIM 13
+CLAIM:
+The paper’s four rival accounts are a diagnostic synthesis, not source terminology.
+TYPE:
+COMPILER-SYNTHESIS
+ZETTELS:
+Multiple.
+SOURCE:
+Multiple.
+SUPPORT:
+The sources separately support surface-semantic, transformation, dynamic/state, and selection mechanisms.
+INFERENCE:
+The four-account taxonomy is introduced solely to organize discriminating tests.
+
+CLAIM 14
+CLAIM:
+The intervention ladder is a proposed research program.
+TYPE:
+COMPILER-SYNTHESIS / OPEN-QUESTION
+ZETTELS:
+DEFAULT-IMAGES-CHI26-B
+DEFAULT-IMAGES-CHI26-A
+DEFAULT-IMAGES-CHI26-A-1
+DEFAULT-IMAGES-CHI26-C
+DEFAULT-IMAGES-CHI26-C-1
+WORKWORDS-PROMPT-008
+WORKWORDS-PROMPT-005
+WORKWORDS-PROMPT-006
+SUPPORT:
+Each zettel contains a partially executable TEST at a different causal layer.
+INFERENCE:
+The paper composes those tests into a stage-by-stage intervention ladder.

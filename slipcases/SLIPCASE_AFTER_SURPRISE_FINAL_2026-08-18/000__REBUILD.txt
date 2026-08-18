@@ -1,0 +1,11 @@
+REBUILD
+
+1. Open _SLIPCASE/MANIFEST.json and ZETTELS.json.
+2. Verify each payload SHA-256.
+3. Verify every root zettel file named in _SLIPCASE/ZETTEL_MANIFEST.csv equals its payload and its _MD mirror.
+4. Recompute PLATFORM, LINKS, and every [[ADDRESS]] from exact payloads. Resolve only by exact ID, registered alias, exact unique title, PLATFORM, explicit external target, otherwise GHOST.
+5. Recompile bibliography from preserved BibTeX plus source receipts. Preserve collisions.
+6. Rebuild derived MOCs, arrangements, backlinks, network, reader, cards, and index without mutating cards.
+7. Treat the paper as interpretation. Rebuild or replace it only from traceable evidence.
+8. Preserve SLIPCASE_FINAL_PROMPT.txt exactly.
+9. Run _SLIPCASE/verify_package.py; compile and render the PDF; test the ZIP.

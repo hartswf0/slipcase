@@ -1,0 +1,574 @@
+
+========================================================================STATE: UNIQUE
+CITEKEY: chen1998metamorphic
+USED BY: PROMPT-PRACTICE-METAMORPHIC-002
+
+@techreport{chen1998metamorphic,
+  author = {T. Y. Chen and S. C. Cheung and S. M. Yiu},
+  title = {Metamorphic Testing: A New Approach for Generating Next Test Cases},
+  institution = {Hong Kong University of Science and Technology},
+  number = {HKUST-CS98-01},
+  year = {1998},
+  url = {https://arxiv.org/abs/2002.12543}
+}
+
+STATE: UNIQUE
+CITEKEY: claessen2000quickcheck
+USED BY: PROMPT-PRACTICE-PROPERTY-008
+
+@inproceedings{claessen2000quickcheck,
+  author = {Koen Claessen and John Hughes},
+  title = {QuickCheck: A Lightweight Tool for Random Testing of Haskell Programs},
+  booktitle = {Proceedings of the Fifth ACM SIGPLAN International Conference on Functional Programming},
+  pages = {268--279},
+  year = {2000},
+  doi = {10.1145/351240.351266},
+  url = {https://doi.org/10.1145/351240.351266}
+}
+
+STATE: UNIQUE
+CITEKEY: compvis_sd14_modelcard
+USED BY: SON-SAFETY-006
+
+@misc{compvis_sd14_modelcard,
+  author = {{CompVis}},
+  title = {Stable Diffusion v1-4 Model Card},
+  howpublished = {Hugging Face},
+  url = {https://huggingface.co/CompVis/stable-diffusion-v1-4}
+}
+
+STATE: SHARED
+CITEKEY: compvis_stablediffusion
+USED BY: SON-CONTROL-003, SON-SAFETY-006
+
+@misc{compvis_stablediffusion,
+  author = {{CompVis}},
+  title = {Stable Diffusion: A Latent Text-to-Image Diffusion Model},
+  howpublished = {GitHub repository},
+  url = {https://github.com/CompVis/stable-diffusion}
+}
+
+STATE: UNIQUE
+CITEKEY: earle2026picbreeder
+USED BY: SON-IEC-005-C
+
+@misc{earle2026picbreeder,
+  author = {Sam Earle and Kai Arulkumaran and Andrew Dai and Akarsh Kumar and Julian Togelius and Sebastian Risi},
+  title = {In Search of the Ingredients of Open-Endedness: Replicating Picbreeder with Large Vision-Language Models},
+  year = {2026},
+  eprint = {2605.23908},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.AI},
+  doi = {10.1145/3795095.3805186},
+  url = {https://arxiv.org/abs/2605.23908}
+}
+
+STATE: UNIQUE
+CITEKEY: elhage2022toy
+USED BY: SON-PROMPTSEMANTICS-007-B-A
+
+@misc{elhage2022toy,
+  author = {Nelson Elhage and Tristan Hume and Catherine Olsson and Nicholas Schiefer and Tom Henighan and Shauna Kravec and Zac Hatfield-Dodds and Robert Lasenby and Dawn Drain and Carol Chen and Roger Grosse and Sam McCandlish and Jared Kaplan and Dario Amodei and Martin Wattenberg and Christopher Olah},
+  title = {Toy Models of Superposition},
+  year = {2022},
+  eprint = {2209.10652},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.LG},
+  url = {https://arxiv.org/abs/2209.10652}
+}
+
+STATE: UNIQUE
+CITEKEY: engels2024notall
+USED BY: SON-LATENT-002-A-A
+
+@misc{engels2024notall,
+  author = {Joshua Engels and Eric J. Michaud and Isaac Liao and Wes Gurnee and Max Tegmark},
+  title = {Not All Language Model Features Are One-Dimensionally Linear},
+  year = {2024},
+  eprint = {2405.14860},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.LG},
+  url = {https://arxiv.org/abs/2405.14860},
+  note = {Accepted to ICLR 2025}
+}
+
+STATE: SHARED
+CITEKEY: goh2021multimodalneurons
+USED BY: SON-PROMPTSEMANTICS-007-A, SON-PROMPTSEMANTICS-007-B
+
+@misc{goh2021multimodalneurons,
+  author = {Gabriel Goh and Chelsea Voss and Daniela Amodei and Shan Carter and Michael Petrov and Justin Jay Wang and Nick Cammarata and Chris Olah},
+  title = {Multimodal Neurons in Artificial Neural Networks},
+  year = {2021},
+  month = {March},
+  howpublished = {OpenAI},
+  url = {https://openai.com/index/multimodal-neurons/}
+}
+
+STATE: UNIQUE
+CITEKEY: harkonen2020ganspace
+USED BY: SON-LATENT-002-A
+
+@inproceedings{harkonen2020ganspace,
+  author = {Erik H{\"a}rk{\"o}nen and Aaron Hertzmann and Jaakko Lehtinen and Sylvain Paris},
+  title = {GANSpace: Discovering Interpretable GAN Controls},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume = {33},
+  pages = {9841--9850},
+  year = {2020},
+  url = {https://arxiv.org/abs/2004.02546}
+}
+
+STATE: UNIQUE
+CITEKEY: hertz2022prompttoprompt
+USED BY: SON-WORDPOWER-004
+
+@misc{hertz2022prompttoprompt,
+  title = {Prompt-to-Prompt Image Editing with Cross Attention Control},
+  author = {Amir Hertz and Ron Mokady and Jay Tenenbaum and Kfir Aberman and Yael Pritch and Daniel Cohen-Or},
+  year = {2022},
+  eprint = {2208.01626},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CV},
+  url = {https://arxiv.org/abs/2208.01626}
+}
+
+STATE: UNIQUE
+CITEKEY: ho2022classifierfree
+USED BY: SON-CONTROL-003
+
+@misc{ho2022classifierfree,
+  title = {Classifier-Free Diffusion Guidance},
+  author = {Jonathan Ho and Tim Salimans},
+  year = {2022},
+  eprint = {2207.12598},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.LG},
+  url = {https://arxiv.org/abs/2207.12598}
+}
+
+STATE: UNIQUE
+CITEKEY: jha2015theory
+USED BY: PROMPT-PRACTICE-ORACLE-007
+
+@misc{jha2015theory,
+  author = {Susmit Jha and Sanjit A. Seshia},
+  title = {A Theory of Formal Synthesis via Inductive Learning},
+  year = {2015},
+  eprint = {1505.03953},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.AI},
+  url = {https://arxiv.org/abs/1505.03953}
+}
+
+STATE: UNIQUE
+CITEKEY: leask2025sparse
+USED BY: SON-PROMPTSEMANTICS-007-B-B
+
+@misc{leask2025sparse,
+  author = {Patrick Leask and Bart Bussmann and Michael Pearce and Joseph Bloom and Curt Tigges and Noura Al Moubayed and Lee Sharkey and Neel Nanda},
+  title = {Sparse Autoencoders Do Not Find Canonical Units of Analysis},
+  year = {2025},
+  eprint = {2502.04878},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.LG},
+  url = {https://arxiv.org/abs/2502.04878},
+  note = {Accepted to ICLR 2025}
+}
+
+STATE: UNIQUE
+CITEKEY: lehman2011abandoning
+USED BY: SON-IEC-005-A
+
+@article{lehman2011abandoning,
+  author = {Joel Lehman and Kenneth O. Stanley},
+  title = {Abandoning Objectives: Evolution Through the Search for Novelty Alone},
+  journal = {Evolutionary Computation},
+  volume = {19},
+  number = {2},
+  pages = {189--223},
+  year = {2011},
+  doi = {10.1162/EVCO_a_00025},
+  url = {https://doi.org/10.1162/EVCO_a_00025}
+}
+
+STATE: UNIQUE
+CITEKEY: mcgrath2023hydra
+USED BY: SON-PROMPTSEMANTICS-007-B-C
+
+@misc{mcgrath2023hydra,
+  author = {Thomas McGrath and Matthew Rahtz and Janos Kramar and Vladimir Mikulik and Shane Legg},
+  title = {The Hydra Effect: Emergent Self-repair in Language Model Computations},
+  year = {2023},
+  eprint = {2307.15771},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.LG},
+  url = {https://arxiv.org/abs/2307.15771}
+}
+
+STATE: UNIQUE
+CITEKEY: midjourney_legacy_features
+USED BY: SON-GENEALOGY-001
+
+@misc{midjourney_legacy_features,
+  author = {{Midjourney}},
+  title = {Legacy Features},
+  howpublished = {Midjourney Documentation},
+  url = {https://docs.midjourney.com/hc/en-us/articles/33329788681101-Legacy-Features},
+  note = {Accessed 2026-08-17}
+}
+
+STATE: UNIQUE
+CITEKEY: nagaraja2025imagebased
+USED BY: SON-PROMPTSEMANTICS-007-A-A
+
+@inproceedings{nagaraja2025imagebased,
+  author = {Neha Nagaraja and Lan Zhang and Zhilong Wang and Bo Zhang and Pawan Patil},
+  title = {Image-based Prompt Injection: Hijacking Multimodal LLMs through Visually Embedded Adversarial Instructions},
+  booktitle = {2025 3rd International Conference on Foundation and Large Language Models (FLLM)},
+  pages = {916--922},
+  year = {2025},
+  doi = {10.1109/FLLM67465.2025.11391218},
+  url = {https://arxiv.org/abs/2603.03637}
+}
+
+STATE: UNIQUE
+CITEKEY: naur1985programming
+USED BY: PROMPT-PRACTICE-THEORYTRACE-005
+
+@article{naur1985programming,
+  author = {Peter Naur},
+  title = {Programming as Theory Building},
+  journal = {Microprocessing and Microprogramming},
+  volume = {15},
+  number = {5},
+  pages = {253--261},
+  year = {1985},
+  doi = {10.1016/0165-6074(85)90032-8},
+  url = {https://doi.org/10.1016/0165-6074(85)90032-8}
+}
+
+STATE: UNIQUE
+CITEKEY: radford2021learning
+USED BY: SON-PROMPTSEMANTICS-007
+
+@misc{radford2021learning,
+  title = {Learning Transferable Visual Models From Natural Language Supervision},
+  author = {Alec Radford and Jong Wook Kim and Chris Hallacy and Aditya Ramesh and Gabriel Goh and Sandhini Agarwal and Girish Sastry and Amanda Askell and Pamela Mishkin and Jack Clark and Gretchen Krueger and Ilya Sutskever},
+  year = {2021},
+  eprint = {2103.00020},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CV},
+  url = {https://arxiv.org/abs/2103.00020}
+}
+
+STATE: UNIQUE
+CITEKEY: rombach2021highresolution
+USED BY: SON-LATENT-002
+
+@misc{rombach2021highresolution,
+  title = {High-Resolution Image Synthesis with Latent Diffusion Models},
+  author = {Robin Rombach and Andreas Blattmann and Dominik Lorenz and Patrick Esser and Björn Ommer},
+  year = {2021},
+  eprint = {2112.10752},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CV},
+  url = {https://arxiv.org/abs/2112.10752}
+}
+
+STATE: UNIQUE
+CITEKEY: schon1992designing
+USED BY: PROMPT-PRACTICE-TALKBACK-006
+
+@article{schon1992designing,
+  author = {Donald A. Sch{\"o}n},
+  title = {Designing as Reflective Conversation with the Materials of a Design Situation},
+  journal = {Research in Engineering Design},
+  volume = {3},
+  pages = {131--147},
+  year = {1992},
+  doi = {10.1007/BF01580516},
+  url = {https://doi.org/10.1007/BF01580516}
+}
+
+STATE: UNIQUE
+CITEKEY: secretan2008picbreeder
+USED BY: SON-IEC-005-B
+
+@inproceedings{secretan2008picbreeder,
+  author = {Jimmy Secretan and Nicholas Beato and David B. D'Ambrosio and Adelein Rodriguez and Adam Campbell and Kenneth O. Stanley},
+  title = {Picbreeder: Evolving Pictures Collaboratively Online},
+  booktitle = {Proceedings of the SIGCHI Conference on Human Factors in Computing Systems},
+  pages = {1759--1768},
+  year = {2008},
+  doi = {10.1145/1357054.1357328},
+  url = {https://doi.org/10.1145/1357054.1357328}
+}
+
+STATE: UNIQUE
+CITEKEY: seung1992query
+USED BY: PROMPT-PRACTICE-DISAGREEMENT-003
+
+@inproceedings{seung1992query,
+  author = {H. S. Seung and M. Opper and H. Sompolinsky},
+  title = {Query by Committee},
+  booktitle = {Proceedings of the Fifth Annual ACM Workshop on Computational Learning Theory},
+  pages = {287--294},
+  year = {1992},
+  doi = {10.1145/130385.130417},
+  url = {https://doi.org/10.1145/130385.130417}
+}
+
+STATE: UNIQUE
+CITEKEY: solarlezama2008program
+USED BY: PROMPT-PRACTICE-HOLES-004
+
+@phdthesis{solarlezama2008program,
+  author = {Armando Solar-Lezama},
+  title = {Program Synthesis By Sketching},
+  school = {University of California, Berkeley},
+  year = {2008},
+  url = {https://people.csail.mit.edu/asolar/papers/thesis.pdf}
+}
+
+STATE: UNIQUE
+CITEKEY: stabilityai_stable_diffusion_launch_2022
+USED BY: SON-GENEALOGY-001
+
+@misc{stabilityai_stable_diffusion_launch_2022,
+  author = {{Stability AI}},
+  title = {Stable Diffusion Launch Announcement},
+  year = {2022},
+  month = {August},
+  url = {https://stability.ai/news-updates/stable-diffusion-announcement}
+}
+
+STATE: UNIQUE
+CITEKEY: stabilityai_stable_diffusion_public_2022
+USED BY: SON-GENEALOGY-001
+
+@misc{stabilityai_stable_diffusion_public_2022,
+  author = {{Stability AI}},
+  title = {Stable Diffusion Public Release},
+  year = {2022},
+  month = {August},
+  url = {https://stability.ai/news-updates/stable-diffusion-public-release}
+}
+
+STATE: UNIQUE
+CITEKEY: sun_hartsoe_ottolin2022_sculptors
+USED BY: SCULPTORS-NOISE-CONTROL-2022
+
+@unpublished{sun_hartsoe_ottolin2022_sculptors,
+  author = {Zhoujun Sun and Watson Hartsoe and Tommy Ottolin},
+  title = {Sculptors of Noise: Control in Midjourney AI Art Community},
+  year = {2022},
+  institution = {Georgia Institute of Technology},
+  note = {CS 6470: Design of Online Communities; user-provided PDF}
+}
+
+STATE: UNIQUE
+CITEKEY: takagi2001interactive
+USED BY: SON-IEC-005
+
+@article{takagi2001interactive,
+  author = {Hideyuki Takagi},
+  title = {Interactive Evolutionary Computation: Fusion of the Capabilities of EC Optimization and Human Evaluation},
+  journal = {Proceedings of the IEEE},
+  volume = {89},
+  number = {9},
+  pages = {1275--1296},
+  year = {2001},
+  doi = {10.1109/5.949485},
+  url = {https://ieeexplore.ieee.org/document/949485/}
+}
+
+STATE: UNIQUE
+CITEKEY: wang2019poet
+USED BY: SON-IEC-005-A-A
+
+@misc{wang2019poet,
+  author = {Rui Wang and Joel Lehman and Jeff Clune and Kenneth O. Stanley},
+  title = {Paired Open-Ended Trailblazer (POET): Endlessly Generating Increasingly Complex and Diverse Learning Environments and Their Solutions},
+  year = {2019},
+  eprint = {1901.01753},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.NE},
+  url = {https://arxiv.org/abs/1901.01753}
+}
+
+STATE: UNIQUE
+CITEKEY: zeller2002simplifying
+USED BY: PROMPT-PRACTICE-DELTA-001
+
+@article{zeller2002simplifying,
+  author = {Andreas Zeller and Ralf Hildebrandt},
+  title = {Simplifying and Isolating Failure-Inducing Input},
+  journal = {IEEE Transactions on Software Engineering},
+  volume = {28},
+  number = {2},
+  pages = {183--200},
+  year = {2002},
+  doi = {10.1109/32.988498},
+  url = {https://doi.org/10.1109/32.988498}
+}
+
+
+================================================================================
+INHERITED WORKS CITED — SCULPTORS OF NOISE
+================================================================================
+
+Works Cited
+A bias bounty for AI will help to catch unfair algorithms faster. (n.d.). MIT Technology Review. Retrieved
+November 3, 2022, from https://www.technologyreview.com/2022/10/20/1061977/ai-bias-bountyhelp-catch-unfair-algorithms-faster/
+A Very Unofficial Midjourney Manual—Google Docs. (n.d.). Retrieved November 4, 2022, from
+https://docs.google.com/document/d/1ivAYy_JXJsGE-9Rh97iMyXkWlmF_MxO2NFshrIvuns4/edit
+AI art prompts cheat sheet. (n.d.). Gumroad. Retrieved November 4, 2022, from
+https://martinaverse.gumroad.com/l/aicheatsheet
+AI Creating “Art” Is An Ethical And Copyright Nightmare. (2022, August 25). Kotaku. https://kotaku.com/aiart-dall-e-midjourney-stable-diffusion-copyright-1849388060
+An AI-Generated Artwork Won First Place at a State Fair Fine Arts Competition, and Artists Are Pissed. (n.d.).
+Retrieved November 2, 2022, from https://www.vice.com/en/article/bvmvqm/an-ai-generated-artworkwon-first-place-at-a-state-fair-fine-arts-competition-and-artists-are-pissed
+Beneschan, M. (2021, May 27). “Centaurs” Are Often More Powerful than Computers. Geek Culture.
+https://medium.com/geekculture/centaurs-are-often-more-powerful-than-computers-549f827130d9
+boyd, danah. (2017). Why Youth Heart Social Network Sites: The Role of Networked Publics in Teenage Social
+Life [Preprint]. Open Science Framework. https://doi.org/10.31219/osf.io/22hq2
+Broken Windows Theory—Simply Psychology. (n.d.). Retrieved November 2, 2022, from
+https://www.simplypsychology.org/broken-windows-theory.html
+
+Chalmers, D. J. (2016). The singularity: A philosophical analysis. Science fiction and philosophy: From
+time travel to superintelligence, 171-224.
+64
+
+Claburn, T. (n.d.). Holz, founder of AI art service Midjourney, on future images. Retrieved November 2, 2022,
+from https://www.theregister.com/2022/08/01/david_holz_midjourney/
+Content and Moderation. (n.d.). Retrieved November 2, 2022, from
+https://midjourney.gitbook.io/docs/content-and-moderation-policy
+Daniele, A., & Song, Y.-Z. (2019). AI + Art = Human. Proceedings of the 2019 AAAI/ACM Conference on AI,
+Ethics, and Society, 155–161. https://doi.org/10.1145/3306618.3314233
+Diaz, J. (2022, September 7). The joy of AI. Fast Company. https://www.fastcompany.com/90786477/the-joyof-ai
+Dosono, B., & Semaan, B. (2019). Moderation Practices as Emotional Labor in Sustaining Online Communities:
+The Case of AAPI Identity Work on Reddit. Proceedings of the 2019 CHI Conference on Human Factors in
+Computing Systems, 1–13. https://doi.org/10.1145/3290605.3300372
+Dweck’s Fixed and Growth Mindsets: Overcoming Obstacles and Recognizing Effort. (n.d.). Retrieved
+November 3, 2022, from http://www.mindtools.com/pages/article/dwecks-mindsets.htm
+Edwards, B. (2022, September 22). Artist receives first known US copyright registration for latent diffusion AI
+art. Ars Technica. https://arstechnica.com/information-technology/2022/09/artist-receives-first-knownus-copyright-registration-for-generative-ai-art/
+Eliot, L. (n.d.). AI Ethics Lucidly Questioning This Whole Hallucinating AI Popularized Trend That Has Got To
+Stop. Forbes. Retrieved September 10, 2022, from
+https://www.forbes.com/sites/lanceeliot/2022/08/24/ai-ethics-lucidly-questioning-this-wholehallucinating-ai-popularized-trend-that-has-got-to-stop/
+Franganillo, J. (n.d.). Contenido generado por inteligencia artificial: Oportunidades y amenazas. 16.
+
+65
+
+Geertz, C. (2008). Thick description: Toward an interpretive theory of culture. In The cultural
+geography reader (pp. 41-51). Routledge.
+Hadji-Vasilev, A. (2022, July 30). 20 Discord Statistics, Facts and Trends for 2022. Cloudwards.
+https://www.cloudwards.net/discord-statistics/
+How a computer designed this week’s cover | The Economist. (n.d.). Retrieved November 2, 2022, from
+https://www.economist.com/news/2022/06/11/how-a-computer-designed-this-weeks-cover
+
+Ito, M. (2013). Hanging out, messing around, and geeking out: Kids living and learning with new
+media (p. 440). The MIT press.
+Jhaver, S., Birman, I., Gilbert, E., & Bruckman, A. (2019). Human-Machine Collaboration for Content
+Regulation: The Case of Reddit Automoderator. ACM Transactions on Computer-Human Interaction,
+26(5), 1–35. https://doi.org/10.1145/3338243
+Jhaver, S., Bruckman, A., & Gilbert, E. (2019). Does Transparency in Moderation Really Matter?: User Behavior
+After Content Removal Explanations on Reddit. Proceedings of the ACM on Human-Computer
+Interaction, 3(CSCW), 1–27. https://doi.org/10.1145/3359252
+Jhaver, S., Ghoshal, S., Bruckman, A., & Gilbert, E. (n.d.). Online Harassment and Content Moderation: The
+Case of Blocklists. 25(2), 33.
+Johri, A., & Yang, S. (2017a). Scaffolded Help for Learning: How Experts Collaboratively Support Newcomer
+Participation in Online Communities. Proceedings of the 8th International Conference on Communities
+and Technologies, 149–158. https://doi.org/10.1145/3083671.3083694
+
+66
+
+Johri, A., & Yang, S. (2017b). Scaffolded Help for Learning: How Experts Collaboratively Support Newcomer
+Participation in Online Communities. Proceedings of the 8th International Conference on Communities
+and Technologies, 149–158. https://doi.org/10.1145/3083671.3083694
+Matias, J. N. (n.d.). Posting Rules in Online Science Discussions Prevents Problems & Increases Participation.
+CivilServant. Retrieved October 18, 2022, from http://civilservant.io/r_science_sticky_coments_1.html
+Matsuo, Y., & Yamamoto, H. (2009). Community gravity: Measuring bidirectional effects by trust and rating on
+online social networks. Proceedings of the 18th International Conference on World Wide Web, 751–760.
+https://doi.org/10.1145/1526709.1526810
+
+Manovich, L. (2009). The practice of everyday (media) life: From mass consumption to mass cultural
+production?. Critical Inquiry, 35(2), 319-331.
+MEE6—The Discord Bot. (n.d.). Retrieved November 3, 2022, from https://mee6.xyz/
+Midjourney [@midjourney]. (2022a, March 21). Signups for our limited beta are open: Http://bit.ly/3J2NNVs
+
+❤
+
+We’re sending waves of invites every day, thank you for your patience
+
+[Tweet]. Twitter.
+
+https://twitter.com/midjourney/status/1505993505537081345
+Midjourney [@midjourney]. (2022b, April 18). We’re starting phase 2 of our beta today. Current members can
+now send out invites to new people. To expand the community sustainably we will be giving new guests
+limited numbers of images and then we will ask you to buy a 1-month pass to become a full member.
+[Tweet]. Twitter. https://twitter.com/midjourney/status/1515864018405056516
+Mikalonytė, E. S., & Kneer, M. (2022). Can Artificial Intelligence Make Art?: Folk Intuitions as to whether AIdriven Robots Can Be Viewed as Artists and Produce Art. ACM Transactions on Human-Robot
+Interaction, 11(4), 43:1-43:19. https://doi.org/10.1145/3530875
+
+67
+
+Millière, R. (n.d.). AI Art Is Challenging the Boundaries of Curation. Wired. Retrieved November 4, 2022, from
+https://www.wired.com/story/dalle-art-curation-artificial-intelligence/
+Moderation Challenges in Voice-based Online Communities on Discord | Proceedings of the ACM on HumanComputer Interaction. (n.d.). Retrieved November 3, 2022, from
+https://dl.acm.org/doi/abs/10.1145/3359157
+
+Oldenburg, R., & Brissett, D. (1982). The third place. Qualitative sociology, 5(4), 265-284.
+Open Library of Artist Styles by MJ Community—Google Sheets. (n.d.). Retrieved October 18, 2022, from
+https://docs.google.com/spreadsheets/d/1cm6239gw1XvvDMRtazV6txa9pnejpKkM5z24wRhhFz0/edit#
+gid=30571608
+Oppenlaender, J. (2022). The Creativity of Text-to-Image Generation (arXiv:2206.02904). arXiv.
+http://arxiv.org/abs/2206.02904
+Paetzhold, M. (2022, September 4). Will DALL-E the AI Artist Take My Job? Intelligencer.
+https://nymag.com/intelligencer/article/will-dall-e-ai-artist-take-my-job.html
+Person, A. (2022, August 27). Dall-e 2: The Artificial Intelligence Question That Artists Face. Medium.
+https://medium.com/@arlisperson/dall-e-2-the-artificial-intelligence-question-that-artists-faceb17fb6c1af55
+Privacy Policy. (n.d.). Retrieved November 2, 2022, from https://midjourney.gitbook.io/docs/privacy-policy
+Quick Start Guide. (n.d.). Retrieved November 3, 2022, from https://midjourney.gitbook.io/docs/#createyour-first-image
+Roberts, S. T. (n.d.). Commercial Content Moderation: Digital Laborers’ Dirty Work. Dirty Work, 12.
+
+68
+
+Robertson, A. (2022, February 21). The US Copyright Office says an AI can’t copyright its art. The Verge.
+https://www.theverge.com/2022/2/21/22944335/us-copyright-office-reject-ai-generated-art-recententrance-to-paradise
+Rtology, E. (2022, August 27). 200 million AI artists in 1 month. Data-Driven Fiction.
+https://medium.com/data-driven-fiction/200-million-ai-artists-in-1-month-4c1e36e122e9
+Selan, J. (n.d.). The Case of Hypothetical Art: From Philosophy of Art to Contemporary Art Practice. 17.
+Shutterstock will sell AI-generated art and “compensate” human artists | New Scientist. (n.d.). Retrieved
+November 3, 2022, from https://www.newscientist.com/article/2343953-shutterstock-will-sell-aigenerated-art-and-compensate-human-artists/
+Shutterstock will start selling AI-generated stock imagery with help from OpenAI - The Verge. (n.d.). Retrieved
+November 3, 2022, from https://www.theverge.com/2022/10/25/23422359/shutterstock-ai-generatedart-openai-dall-e-partnership-contributors-fund-reimbursement?scrolla=5eb6d68b7fedc32c19ef33b4
+Siegmann, C., & Anderljung, M. (2022). The Brussels Effect and Artificial Intelligence: How EU regulation will
+impact the global AI market (arXiv:2208.12645). arXiv. http://arxiv.org/abs/2208.12645
+Smith, A., & Colton, S. (n.d.). The @artbhot Text-To-Image Twitter Bot. 5.
+Terms of Service. (n.d.). Retrieved November 2, 2022, from https://midjourney.gitbook.io/docs/terms-ofservice
+The Revolution Has Arrived: AI Authorship and Copyright Law by Ryan Abbott, Elizabeth Shubov: SSRN. (n.d.).
+Retrieved September 7, 2022, from https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4185327
+Three experts discuss Midjourney’s promise and pitfalls. (2022, September 23). The Architect’s Newspaper.
+https://www.archpaper.com/2022/09/three-experts-discuss-midjourneys-promise-pitfalls/
+
+69
+
+Vincent, J. (2022a, September 21). Getty Images bans AI-generated content over fears of legal challenges. The
+Verge. https://www.theverge.com/2022/9/21/23364696/getty-images-ai-ban-generated-artworkillustration-copyright
+Vincent, J. (2022b, October 25). Shutterstock will start selling AI-generated stock imagery with help from
+OpenAI. The Verge. https://www.theverge.com/2022/10/25/23422359/shutterstock-ai-generated-artopenai-dall-e-partnership-contributors-fund-reimbursement
+What’s Really Behind Those AI Art Images? (2022, September 7). Galaxy Brain.
+https://newsletters.theatlantic.com/galaxy-brain/6317de90bcbd490021b246bf/ai-art-dalle-midjourneystable-diffusion/
+Who Owns AI-Generated Art? | LBBOnline. (n.d.). Retrieved November 2, 2022, from
+https://www.lbbonline.com/news/who-owns-ai-generated-art
+Wiggers, K. (2022, August 24). Deepfakes: Uncensored AI art model prompts ethics questions. TechCrunch.
+https://techcrunch.com/2022/08/24/deepfakes-for-all-uncensored-ai-art-model-prompts-ethicsquestions/
+
+70
+
+
+
+=== ADDED IN NOISE CHECKPOINT ===
+Chung, Julianne. 2020. “To be creative, Chinese philosophy teaches us to abandon ‘originality’.” Psyche. https://psyche.co/ideas/to-be-creative-chinese-philosophy-teaches-us-to-abandon-originality
+Sun, Zhoujun, Watson Hartsoe, and Tommy Ottolin. 2022. Sculptors of Noise: Control in Midjourney AI Art Community. Georgia Institute of Technology. [Local source PDF]

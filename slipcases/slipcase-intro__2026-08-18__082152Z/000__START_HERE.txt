@@ -1,0 +1,134 @@
+ SLIPCASE
+
+A research checkpoint compiler for work that needs to survive the chat, the app, and the current interpretation.
+
+SLIPCASE is a way to do research with language models without allowing the conversation window to become the archive.
+
+It has four cooperating parts:
+
+1. FORAGE reads a source or a research object and emits atomic zettels only when the evidence changes the research state.
+2. RECURSIVE FORAGE treats each zettel as a reusable type: a child has exactly the same schema as its parent and can immediately be foraged again.
+3. THE RESEARCH DAEMON looks across the whole graph and decides which unresolved edge is now most worth pursuing. Lineage records where a question came from; the frontier determines where attention goes next.
+4. SLIPCASE freezes a checkpoint: exact cards, source relations, ghosts, bibliography, prompts, provenance, a reader, and a current paper - all in files that can be separated and reconstructed.
+
+The simplest description is:
+
+text
+SOURCE
+  - FORAGE
+  - ZETTEL
+  - FORAGE AGAIN
+  - GRAPH
+  - CHOOSE A LIVE EDGE
+  - MORE SOURCES / MORE ZETTELS
+  - SLIPCASE CHECKPOINT
+  - SHARE / MERGE / RESUME
+
+
+The point is not to make a prettier notebook. The point is to make continuable research: research that an unfamiliar future researcher or model can pick up without needing the vanished conversation that produced it.
+
+---
+
+ Start here if somebody sent you this ZIP
+
+You do not need any special software.
+
+1. Open index.html in a browser. It works offline.
+2. Read 000__START_HERE.txt or this README.md.
+3. Search or browse the root .txt cards. Each one is one preserved research object.
+4. Read the paper if you want the present argument, but do not confuse it with the archive. The paper is a current interpretation of the field.
+5. Open 000__OPEN_EDGES.txt when you want to continue the research.
+6. If you want a model to continue a particular line, give it one root card together with _PROMPTS/PRIME_ZETTEL_FORAGE_RECURSIVE_INQUIRY_v3.1.poml.
+7. If the field has become large enough that choosing the next card is the hard problem, use the autonomous graph inquiry prompt preserved in the supplied prompt history/resource.
+8. To make a new checkpoint after the field changes, use _PROMPTS/SLIPCASE_PORTABLE_RESEARCH_FIELD_v15.55-AM.poml.
+
+Nothing important requires index.html to survive. It is the sendable front door, not the source of truth.
+
+---
+
+ The mental model
+
+ The zettel is the durable research object
+
+A zettel is not a summary paragraph and not a topic label. It is the smallest research opening worth preserving: a distinction, mechanism, changed genealogy, contradiction, missing variable, boundary, counterexample, technical implementation, unexpected citation trail, transformed question, or better test.
+
+The schema deliberately leaves the object open. QUESTION, DEEPER QUESTION, TENSION, MISSING, BOUNDARY, CITATION TRAIL, and TEST are not concluding sections. They are handles for the next operation.
+
+ Recursion keeps the type stable
+
+Recursive forage has one hard rule:
+
+text
+FORAGE(ZETTEL) - ZETTEL[]
+
+
+A child must be immediately usable as a parent without conversion. This matters more than it looks. If each generation adds workflow metadata, child-only fields, or a new wrapper, the research object slowly becomes dependent on the particular agent that produced it. The invariant schema lets the card travel.
+
+Lineage stays in fields the card already knows how to carry: LINKS and CITATION TRAIL.
+
+ The graph is not the genealogy
+
+Parent-child descent tells you where an object came from. It does not tell you what deserves attention next.
+
+Once several cards exist, the live research field includes:
+
+- questions left open by individual cards;
+- contradictions between cards;
+- repeated or unstable vocabulary;
+- sources connecting otherwise distant branches;
+- ghosts - named addresses with no resolved card;
+- tests that could kill one of several live readings;
+- collisions where a later card changes how an earlier card must be read.
+
+The daemon surveys this whole frontier. It should not automatically continue the most recent branch.
+
+ The checkpoint is not the paper
+
+SLIPCASE keeps three layers separate:
+
+text
+EVIDENCE       ZETTEL · SOURCE · RESOURCE · PROMPT · APPEARANCE
+FIELD          PLATFORM · LINK · CONCEPT · GHOST · BACKLINK · LINEAGE
+INTERPRETATION MOC · ARRANGEMENT · TRAIL · PAPER
+
+
+Evidence is preserved. Field structure is compiled. Interpretation is allowed to change.
+
+This is why the paper is called a wager. A later checkpoint can make a different argument without rewriting yesterday's evidence.
+
+---
+
+ A ten-minute workflow
+
+ 1. Make or choose a seed zettel
+
+Start with a source-grounded zettel. Do not begin recursive forage from a topic phrase if you already possess a card. The card contains the exact unresolved edges that make the next search specific.
+
+ 2. Run recursive forage
+
+Use:
+
+_PROMPTS/PRIME_ZETTEL_FORAGE_RECURSIVE_INQUIRY_v3.1.poml
+
+Replace {{ZETTEL}} with the complete card.
+
+The most useful first move is often one of these:
+
+- execute TEST;
+- follow CITATION TRAIL;
+- retrieve what MISSING names;
+- find evidence that discriminates the TENSION;
+- pressure the BOUNDARY;
+- pursue the strongest QUESTION.
+
+Do not demand a child. A run is allowed to discover that the evidence does not justify a new card.
+
+ 3. Keep the child unchanged
+
+Save the returned zettel as its own file. Do not rewrite the parent to absorb the new result. Corrections and reversals are additional objects, not edits to history.
+
+ 4. Repeat until depth-first research stops being the hard part
+
+For a small lineage, just keep foraging the strongest card. When there are many branches, stop assuming the newest child should be next.
+
+At that point the research problem changes from how do I deepen this card? to which unresolved edge would most change t

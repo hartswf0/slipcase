@@ -1,0 +1,214 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\pagestyle{fancy}
+\setlength{\headheight}{14pt}
+\fancyhf{}
+\fancyhead[L]{Working Paper}
+\fancyhead[R]{Capability Has No Body}
+\fancyfoot[C]{\thepage}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.62em}
+\newcommand{\ringclaim}[1]{\vspace{0.35em}\noindent\textbf{Ring claim.} #1\vspace{0.15em}}
+\title{\textbf{Capability Has No Body}\\\large Prompt Battles and the Staging of Interactive AI Evaluation}
+\author{Watson Hartsoe\\\small Working Paper}
+\date{18 August 2026}
+\begin{document}
+\maketitle
+\AddToShipoutPictureFG*{%
+  \AtPageLowerLeft{%
+    \put(405,42){%
+      \begin{minipage}{165pt}\raggedleft
+      \includegraphics[width=22pt]{_SLIPCASE_MARK.png}\\[-2pt]
+      {\scriptsize AI-augmented working paper\\
+      Research and assembly record: Appendix A $\cdot$ SOURCE\_MAP $\cdot$ RETURN\_PATH}
+      \end{minipage}%
+    }%
+  }%
+}
+\begin{abstract}
+Large-language-model evaluation usually speaks as if capability were a property that could be located inside a portable object called the model. Prompt Battles make that location unstable. A failure can disappear under a paraphrase; a latent behavior can require expert elicitation; a human operator can change the search policy over interaction history; a public rubric can redirect strategy; and an adaptive benchmark can alter the future population it later measures. The tempting answer is to enlarge the system boundary and declare capability a property of an elicitation ecology. This paper argues that this answer also fails. If every newly discovered dependency is absorbed into the evaluated system, the theory becomes difficult to falsify and the comparative object disappears. Reading adversarial AI evaluation alongside Roland Barthes's account of professional wrestling supplies a productive pressure: the scientific value of a battle need not be victory but the production of an intelligible contrast. From that pressure I develop three operations---the booked experiment, the diagnostic hold, and the visible system body---and a stronger endpoint: capability is not a substance to be located but a scoped counterfactual attribution made under declared elicitation, interaction, and substitution conditions. Prompt Battles are useful when they expose exactly where such attributions break.
+\end{abstract}
+\noindent\textbf{Keywords:} large language models; capability evaluation; prompt sensitivity; human-AI interaction; adversarial evaluation; dynamic benchmarking; professional wrestling; measurement
+
+\section{Cold Open: What Exactly Enters the Ring?}
+\ringclaim{The model has the capability, or it does not.}
+
+This is the proposition that makes conventional evaluation possible. A benchmark presents a task, records a response, applies a scoring rule, and attributes the result to a named model. The grammar is clean because the evaluated object appears to be clean. Model $M$ either produces behavior $Y$ on task $T$ or it does not. Even when results are probabilistic, the thing whose performance is estimated remains apparently stable.
+
+Prompt Battles begin by dramatizing this familiar proposition. One participant tries to make a model exhibit a criticized limitation; another tries to prompt around it. Yet the battle becomes scientifically interesting only when its theatrical surface starts breaking the proposition it was built to test. Suppose a defender elicits a biased completion and a challenger produces a non-biased completion after adding an explicit constraint. The second completion does not erase the first. The participants have established two compatible existential facts: there is at least one route to failure, and there is at least one route to success. The question ``can the model do it?'' was too weak to say which fact should matter.
+
+Prompt-sensitivity research makes this more than a semantic complaint. POSIX documents substantial response variation under small prompt changes, including template and wording changes \cite{chatterjee2024posix}. CheckList similarly shows why aggregate accuracy can hide systematic behavioral failures that become visible only under targeted tests \cite{ribeiro2020beyond}. Once such variation matters, the evaluator must specify a quantifier. Is the claim existential---some prompt works? Prevalent---most ordinary prompts work? Robust---meaning-preserving perturbations do not change the result? Adversarial---an opponent cannot find a failure? Accessible---a typical user can elicit the behavior? Each is a different claim.
+
+The first reversal is therefore severe. A Prompt Battle is not initially testing a capability. It is testing whether a capability claim survives contact with the prompt distribution that the original benchmark left implicit.
+
+\section{Match I: The Model versus the Prompt}
+\ringclaim{A successful counter-prompt demonstrates that the model possessed the capability all along.}
+
+This claim looks stronger because it treats prompting as elicitation rather than mere wording. Work on capability elicitation gives it real support. The Elicitation Game constructs model organisms with hidden capabilities and compares techniques for recovering them, showing that observed non-performance can depend on the elicitation method rather than the absence of an underlying behavior \cite{hofstatter2025elicitation}. Failure under one interface procedure therefore cannot, by itself, identify incapacity.
+
+But this victory lasts only a paragraph. A counter-prompt proves recoverability under a route. It does not prove robustness across routes. If a model succeeds only after unusually precise intervention, the counter-prompt can be read as evidence of capability or as evidence of fragility. The same transcript supports opposite interpretations because they answer different questions.
+
+This suggests a first methodological change. When a failure appears, the battle should not immediately reward the challenger for escaping it. The failure should be held in place. The ordinary competitive instinct is movement: failure, counter-prompt, recovery, point. A diagnostic procedure needs temporary immobility. Freeze the model version, system conditions, history, tools, and sampling settings; then perturb one variable at a time---wording, order, format, operator, or prompt family. The result is not a single spectacular reversal but a local topology of persistence and recovery.
+
+The idea of a ``hold'' comes here from an unexpected source. In ``The World of Wrestling,'' Barthes describes the wrestling hold as a figure that immobilizes the adversary long enough for a condition to become fully intelligible to spectators \cite{barthes1972wrestling}. Nothing in Barthes supplies a machine-learning algorithm. The useful transfer is methodological pressure: if an event disappears as soon as it occurs, it may be dramatically satisfying but analytically thin. A failure can become evidence only when the evaluator can discover what keeps it in place and what releases it.
+
+The prompt therefore loses the first match too. The more carefully we inspect it, the less plausible it becomes to call one prompt the location of capability. Prompting is a search procedure over behavioral regions, and the distribution and budget of that search become part of the claim.
+
+\section{Match II: The Prompt versus the Operator}
+\ringclaim{Then capability belongs to the model under an explicitly specified prompt-search procedure.}
+
+That repair seems sufficient until the operator enters. Prompt Battles distinguish a System Builder, who establishes the governing environment, from a Prompt Pilot, who chooses interventions within it. Once this difference is explicit, a prompt sequence is no longer an inert test string. It is a policy over interaction history. The operator reads an output, decides what it reveals, chooses the next intervention, and may change the representation of the problem itself.
+
+Kirsh and Maglio's distinction between pragmatic and epistemic action clarifies why this matters \cite{kirsh1994distinguishing}. In their analysis, some actions are useful not because they directly advance a physical task but because they change the external situation so that information becomes easier to perceive or compute. Prompting can work similarly. A completion may be worthless as a final answer yet highly valuable because it exposes a distinction, generates alternatives, makes a hidden assumption visible, or tells the operator what to ask next. The value of the prompt is delayed and trajectory-dependent.
+
+This creates a problem for benchmarks that score only terminal outputs. Two operators can obtain different final behavior from the same model not because one knows a magic phrase but because one performs better epistemic actions across the trajectory. In that case the relevant variable is not merely prompt quality. It is an operator policy $\pi$ mapping interaction history to interventions.
+
+The model can still be compared, but only after the operator is crossed rather than hidden. Model $M$ should be tested with multiple operators, and operators should be swapped across models. If an apparent capability vanishes whenever the expert Pilot is removed, calling the result simply ``model capability'' hides a causal dependency. If it survives operator substitution, the attribution becomes stronger.
+
+The reversal is now larger. Prompt sensitivity forced the evaluator to enlarge the unit from model to model-plus-prompt distribution. Operator dependence forces another enlargement, from prompt distribution to an adaptive human-model trajectory.
+
+\section{Match III: The Coupled System versus the Portable Model}
+\ringclaim{Capability belongs to the coupled human-model system.}
+
+This is the old paper's strongest move, and it is the move this paper must let lose.
+
+Clark and Chalmers's extended-mind argument is useful here because it makes causal coupling and reliable availability relevant to the boundaries of a cognitive process \cite{clark1998extended}. Applied cautiously, it suggests a distinction between episodic assistance and stable coupled capability. A randomly encountered expert who rescues a model once is different from an operator-model configuration that is repeatedly available, learned, and integrated into competent action.
+
+The coupling view fixes a real blindness. It stops pretending that human intervention is measurement noise whenever the actual application depends on human intervention. Yet it creates a new problem. Every time an external dependency appears, the coupled-system account can expand to absorb it. Operator mattered? Include the operator. Retrieval mattered? Include retrieval. Tools mattered? Include tools. System instructions mattered? Include them. Evaluation history mattered? Include history. The explanation can grow until it contains everything causally relevant.
+
+That is not a harmless philosophical excess. A benchmark needs a comparative object. If capability belongs to a configuration that is reconstructed separately for every success, then ``capability'' becomes almost impossible to transfer across users, interfaces, deployments, or model versions. The strongest opponent of the coupling thesis is therefore the Portable Model: a capability deserves attribution to an AI system only to the extent that it survives specified substitutions of external dependencies.
+
+This opposition produces a useful distinction. Causal contribution is not the same thing as constitutive ownership. An expert operator can be necessary for a particular demonstration without thereby becoming part of the entity to which every capability claim should be attributed. Conversely, portability cannot simply mean model-alone performance, because many useful systems are intentionally tool-using and interactive. What is needed is a declared substitution set. Which components may change while the capability claim is expected to survive?
+
+The match cannot end by declaring either side the true ontology. Instead it yields a testable boundary. Swap operators. Reset history. Change prompt families. Remove tools. Change interfaces. Change judges. A capability attribution becomes stronger when the behavior survives substitutions that the claim itself declares irrelevant. A dependency becomes constitutive only relative to a claim that explicitly allows it to remain fixed.
+
+The elicitation ecology, then, is not the answer. It is the penultimate body thrown into the ring.
+
+\section{Match IV: The Benchmark versus the World It Changes}
+\ringclaim{Even if capability is relational, a benchmark can still stand outside the relation and measure it.}
+
+Dynamic benchmarking immediately troubles this picture. Dynabench makes adaptation a feature: humans create examples against models, models are updated, and the cycle continues \cite{kiela2021dynabench}. Such systems are valuable precisely because a frozen test set becomes saturable. But once evaluation reacts to model behavior, comparability and discovery begin to pull apart.
+
+Perdomo and colleagues' account of performative prediction sharpens the issue by analyzing settings in which deploying a predictive system changes the future distribution against which prediction is evaluated \cite{perdomo2020performative}. Prompt Battles can become performative in an analogous, though not identical, sense. Published failures teach model developers what to patch. Public strategies teach operators what to try. Judges reveal what the community rewards. Designers introduce new flags because earlier ones were defeated. The next evaluation population has the previous evaluation among its causes.
+
+This means that a longitudinal battle cannot interpret change naively. Improvement on a public frontier may represent general capability growth, adaptation to the visible evaluation ecology, or both. A scientifically useful design therefore needs at least two temporal tracks: sealed anchors that preserve some comparability, and frontier battles that remain free to mutate in response to discovered weaknesses. Neither replaces the other.
+
+Public scoring creates a second feedback loop. Manheim and Garrabrant's taxonomy of Goodhart effects provides a vocabulary for what happens when a proxy becomes an optimization target \cite{manheim2018goodhart}. A transparent rubric can be procedurally fair while giving contestants a surface to game. The more sophisticated the competitors, the more important transfer becomes: does the winning strategy still look strong under held-out criteria, novel flags, different judges, or new task families?
+
+This is where the wrestling source becomes dangerous in a useful way. Barthes emphasizes that wrestling's signs are deliberately excessive and immediately legible; fairness itself can appear as a recognizable role within the spectacle \cite{barthes1972wrestling}. Prompt Battles also need recognizable fairness: balanced roles, visible rubrics, neutral moderation, equal time. But performed fairness and epistemic fairness are not identical. A perfectly symmetrical procedure can measure the wrong construct; an asymmetrical intervention can sometimes be scientifically justified because the underlying phenomenon is asymmetrical. Every fairness device should therefore state its epistemic function: what bias it prevents, what inference it licenses, and what failure remains.
+
+\section{Match V: The Score versus the Crowd}
+\ringclaim{The judges can settle what the battle demonstrated.}
+
+Judge disagreement is often treated as a defect to be reduced. Perspectivist work on annotation shows why that response can destroy information. Hautli-Janisz, Schad, and Reed distinguish disagreement generated by errors, fuzziness, and ambiguity rather than collapsing them into one failure of reliability \cite{hautli2022disagreement}. A Prompt Battle should preserve rationales before reconciliation because the disagreement may reveal that the flag itself is underspecified.
+
+But Barthes adds a more uncomfortable possibility: agreement can also be suspicious. His wrestling audience does not merely perceive technical actions; it experiences a moral economy of injury, foulness, retaliation, punishment, and justice \cite{barthes1972wrestling}. Prompt Battles naturally produce similar dramatic forms even when nobody intends them. A model fails publicly; a challenger corrects it; the repair feels like redemption. A claimant boasts; a defender exposes a failure; the reversal feels deserved. The sequence has a finish.
+
+The problem is not that audiences have emotions. The problem is that dramatic completeness can masquerade as evidentiary completeness. A one-turn recovery feels decisive although it may prove only an existential route to success. A humiliating failure feels revealing although it may occupy a tiny region of prompt space. Narrative order can therefore be experimentally varied. Present judges with the same evidence arranged as failure-then-recovery, recovery-then-failure, interleaved evidence, or a characterless summary. If capability judgments shift while the evidence is held constant, the dramaturgy is part of the measurement function.
+
+The crowd should not be removed. Public reaction can reveal whether a mechanism has become intelligible. But intelligibility, satisfaction, moral approval, surprise, and evidentiary confidence should be measured separately. The battle becomes methodologically stronger when it can distinguish a crowd pop from an epistemic update.
+
+\section{The Barthes Turn: Wrestling Is Not Primarily About Winning}
+Barthes's most consequential pressure on Prompt Battles is not kayfabe, villainy, or theatrical excess. It is his claim that the function of the wrestler is not exhausted by winning. Wrestling, in his account, produces an immediate reading of passions and situations; each gesture strives toward an intelligible sign \cite{barthes1972wrestling}. A boxing match invites attention to the uncertain passage of time toward an outcome. Wrestling repeatedly tries to make the present moment readable.
+
+That distinction changes the purpose of adversarial AI evaluation. The strongest question may not be ``which side won?'' but ``what became impossible not to see?'' A Defender can lose a match yet reveal a stable failure mechanism. A Challenger can win yet reveal that success requires exceptional elicitation labor. A score can settle the contest while hiding the scientific object.
+
+This does not license theatre as truth. Dramatic clarity and epistemic warrant remain separate. The battle's public function is to make a disagreement legible; its scientific apparatus must then test whether the legible contrast survives controls, substitutions, repetition, and transfer. The practical consequence is a distinction between an unbooked battle and a booked experiment.
+
+An unbooked battle preserves discovery. Participants search freely and may find phenomena no designer anticipated. A booked experiment begins after such discovery. The disputants jointly construct the sequence most capable of exposing the crux, preregister the conditions and stopping rules, and then replay the contrast across new models, operators, seeds, and paraphrases. ``Booked'' here means declared choreography, not concealed outcome. Scientific experiments are already staged situations: variables are selected, conditions constructed, treatments imposed, and contrasts engineered. The issue is not whether the scene is artificial. It is what the staging licenses us to infer.
+
+This distinction also strengthens adversarial collaboration. Clark and colleagues argue for disputants jointly developing fair tests of competing hypotheses \cite{clark2022enemies}; Mellers, Hertwig, and Kahneman show that shared experiments can still leave interpretation contested \cite{mellers2001frequency}. Prompt Battles should therefore book both an outcome crux and an interpretation crux: what result is expected, and what belief change each possible result would warrant. Unexpected evidence must still be allowed to create new distinctions; otherwise preregistration becomes a machine for forbidding learning.
+
+\section{Main Event: Capability Has No Body}
+\ringclaim{Capability is distributed across the elicitation ecology.}
+
+Now the paper can finally defeat its own thesis.
+
+The phrase ``elicitation ecology'' is useful because it makes hidden dependencies visible. It is insufficient because it offers no stopping rule. The field's successive reversals reveal a recurring pattern. First capability sits in the model. Prompt sensitivity knocks it into model-plus-prompt distribution. Operator dependence knocks it into an adaptive human-model trajectory. Reliable coupling expands it into a coupled system. Dynamic benchmarking expands it again into an evaluation ecology. Each enlargement solves an anomaly by absorbing the dependency that caused it.
+
+If that recursion continues without constraint, capability has no body. It no longer names a property of any entity that can be compared, swapped, deployed, purchased, regulated, or reproduced. The theory wins every local argument by refusing to remain in one weight class.
+
+Barthes makes this absence unusually visible because wrestling depends on bodies as readable signs. The wrestler's physique, posture, gestures, and type give the spectacle a visible location from which meaning appears to emanate \cite{barthes1972wrestling}. Contemporary AI interfaces do the inverse. They compress a distributed causal system---foundation model, post-training, system instructions, moderation, retrieval, tools, memory, sampling, operator, and judge---into one chat surface bearing one model name. The interface gives the system a fictional body. Observers then attribute the reversal to whatever the interface makes visible: ``the model did it.''
+
+A better Prompt Battle should not pretend that the body is singular, but neither should it dissolve the body into an unbounded ecology. It should render a system body: a turn-by-turn causal inventory of the components held fixed, components changed, interventions made, tools invoked, histories carried, and judgments applied. This is not a claim that every causal contribution can be perfectly identified from a trace. It is a disclosure device that makes attribution contestable.
+
+The deeper move is conceptual. Capability should not be treated as a substance that must be located somewhere. It is better understood as a scoped counterfactual attribution. A capability claim should specify at least six things:
+
+\begin{enumerate}
+\item the evaluated system boundary $X$;
+\item the task or flag $T$, including its quantifier;
+\item the allowed elicitation-policy class $\Pi$;
+\item the interaction or search budget $B$;
+\item the fixed conditions $C$---system instructions, tools, history, sampling, and other declared dependencies; and
+\item the judgment rule $J$.
+\end{enumerate}
+
+The claim is then incomplete until it also declares a substitution set $R$: which operators, prompt families, tools, interfaces, or histories are allowed to change while the attribution is supposed to survive. In schematic form, the object is not ``$M$ has capability $K$.'' It is a conditional relation:
+
+\[
+K = \langle X,T,\Pi,B,C,J;R \rangle.
+\]
+
+This notation is a synthesis, not machinery taken from any cited source. Its purpose is disciplinary. It prevents the evaluator from moving the system boundary after seeing the result. If success disappears under a substitution that $R$ declared irrelevant, the capability attribution loses. If it survives, the attribution gains portability. If success requires a component declared constitutive in $C$, the result may still be important, but it is a capability of the specified configuration rather than of a smaller object smuggled in by interface convention.
+
+Capability therefore has no body in advance. The evaluator gives it a provisional body by declaring a boundary and then exposes that body to substitutions capable of breaking it.
+
+\section{The Finishing Move: Build the Contest That Can Beat Its Own Claim}
+A Prompt Battle becomes a research method when every ring claim is strong enough to lose. The design that follows from the preceding reversals has five phases.
+
+First, \textbf{book the claim}. State the flag with explicit quantifiers and specify $X,T,\Pi,B,C,J,$ and $R$ before adversarial search begins. This is the portable body that enters the ring.
+
+Second, \textbf{release the battle}. Let Defender and Challenger search freely. The purpose is discovery, not representative estimation. Record the whole trajectory, including apparently useless epistemic prompts and operator decisions.
+
+Third, \textbf{apply diagnostic holds}. When a consequential failure or success appears, temporarily stop the race. Freeze the configuration and perturb local variables one at a time. Map persistence, fragility, and recovery before allowing the narrative to rush toward the next reversal.
+
+Fourth, \textbf{book the demonstration}. After discovery, jointly construct a reproducible contrast that exposes the disputed mechanism. Separate the existence demonstration from claims about prevalence or typical use. Rerun across substitutions declared in $R$.
+
+Fifth, \textbf{split the score}. Keep outcome, mechanism legibility, transfer, judge confidence, narrative satisfaction, and disagreement structure as separate measurements. A winner may still be useful for the event. It is not the research result.
+
+This architecture keeps the spectacle rather than apologizing for it. The public battle can do something a benchmark table usually cannot: externalize a disagreement as a sequence of visible interventions and reversals. But the research machinery underneath the spectacle prevents the dramatic finish from deciding what the evidence means.
+
+\section{Limitations and Unresolved Territory}
+The wrestling comparison can easily become decorative or extractive. Barthes is analyzing a specific form of professional wrestling, not contemporary WWE, scientific experimentation, or machine learning. The paper uses his distinctions as pressure on an evaluation design, not as evidence of historical influence. The method should therefore be judged by whether its proposed operations---booking, holding, system-body disclosure, narrative-order tests---produce useful empirical distinctions, not by the cleverness of the metaphor.
+
+A second limitation is that the proposed capability tuple does not solve causal attribution. Declaring a system boundary makes claims auditable, but hidden provider changes, proprietary system instructions, nondeterministic sampling, and inaccessible post-training can still prevent complete control. The tuple can expose missingness; it cannot remove it.
+
+Third, portability itself is not automatically the right objective. A highly coupled expert system may be valuable precisely because the human, tools, and model have learned to work together. Requiring every useful behavior to survive operator or tool removal would recreate the model-essentialism this paper rejects. The substitution set must therefore be justified by the intended claim and deployment context rather than treated as universal.
+
+Finally, the crowd problem remains empirical. It is plausible that reversals, moral framing, and narrative order influence judgments, but the present field has not run the proposed experiments. Barthes supplies a reason to ask; he does not supply the result.
+
+\section{Conclusion}
+The original Prompt Battle question---can the model do it?---does not survive the battle. Prompt variation defeats the model-only claim. Operator dependence defeats the prompt-only repair. Coupling defeats the isolated operator-model pair. Portability defeats the unbounded ecology. Adaptive evaluation defeats the fantasy that the benchmark stands outside the system. Scoring and spectacle defeat the assumption that judgment merely reads off what happened.
+
+The result is not that capability is everywhere. It is that capability claims are conditional attributions whose bodies must be declared before they can be attacked. Prompt Battles become scientifically valuable when they make those bodies visible, let opponents break them, and preserve the exact conditions under which they break.
+
+The finishing move is therefore not a winner. It is a reversal in the research object. The battle begins by asking where capability resides. It ends by asking what an evaluator had to hold fixed, what it allowed to vary, and what substitutions the claim survived. That is a harder question. It is also one that can lose.
+
+\begin{thebibliography}{99}
+\bibitem{chatterjee2024posix} Chatterjee, Anwoy, H. S. V. N. S. Kowndinya Renduchintala, Sumit Bhatia, and Tanmoy Chakraborty. ``POSIX: A Prompt Sensitivity Index For Large Language Models.'' Findings of EMNLP, 2024, 14550--14565.
+\bibitem{ribeiro2020beyond} Ribeiro, Marco Tulio, Tongshuang Wu, Carlos Guestrin, and Sameer Singh. ``Beyond Accuracy: Behavioral Testing of NLP Models with CheckList.'' ACL, 2020, 4902--4912. doi:10.18653/v1/2020.acl-main.442.
+\bibitem{hofstatter2025elicitation} Hofst\"atter, Felix, et al. ``The Elicitation Game: Evaluating Capability Elicitation Techniques.'' arXiv:2502.02180, 2025.
+\bibitem{kirsh1994distinguishing} Kirsh, David, and Paul Maglio. ``On Distinguishing Epistemic from Pragmatic Action.'' Cognitive Science 18(4), 1994, 513--549. doi:10.1207/s15516709cog1804\_1.
+\bibitem{clark1998extended} Clark, Andy, and David J. Chalmers. ``The Extended Mind.'' Analysis 58(1), 1998, 7--19. doi:10.1093/analys/58.1.7.
+\bibitem{kiela2021dynabench} Kiela, Douwe, et al. ``Dynabench: Rethinking Benchmarking in NLP.'' NAACL, 2021, 4110--4124.
+\bibitem{perdomo2020performative} Perdomo, Juan, Tijana Zrnic, Celestine Mendler-D\"unner, and Moritz Hardt. ``Performative Prediction.'' ICML, 2020, 7599--7609.
+\bibitem{manheim2018goodhart} Manheim, David, and Scott Garrabrant. ``Categorizing Variants of Goodhart's Law.'' arXiv:1803.04585, 2018.
+\bibitem{hautli2022disagreement} Hautli-Janisz, Annette, Ella Schad, and Chris Reed. ``Disagreement Space in Argument Analysis.'' NLPerspectives @ LREC, 2022, 1--9.
+\bibitem{clark2022enemies} Clark, Cory J., Thomas H. Costello, Gregory Mitchell, and Philip E. Tetlock. ``Keep Your Enemies Close: Adversarial Collaborations Will Improve Behavioral Science.'' Journal of Applied Research in Memory and Cognition 11(1), 2022, 1--18. doi:10.1037/mac0000004.
+\bibitem{mellers2001frequency} Mellers, Barbara, Ralph Hertwig, and Daniel Kahneman. ``Do Frequency Representations Eliminate Conjunction Effects? An Exercise in Adversarial Collaboration.'' Psychological Science 12(4), 2001, 269--275. doi:10.1111/1467-9280.00350.
+\bibitem{barthes1972wrestling} Barthes, Roland. ``The World of Wrestling.'' In \emph{Mythologies}. New York: Hill and Wang, 1972.
+\end{thebibliography}
+
+\appendix
+\section{Assembly and Provenance}
+This is a working paper assembled from a portable research field. The public argument is distinct from the evidence objects that generated it. The exact cards, source resources, assembly prompts, bibliography, source map, making history, return path, and rebuild instructions are preserved in the accompanying Slipcase package. The paper's new formal tuple $\langle X,T,\Pi,B,C,J;R\rangle$ is a compiler-created synthesis and is identified as such in SOURCE\_MAP.
+\end{document}

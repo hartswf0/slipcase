@@ -1,0 +1,104 @@
+VERIFICATION — SES-20260817-234319-a5ef0e2e
+Generated: 2026-08-17
+
+SOURCE COVERAGE
+- Compiled bibliography citekeys: 11.
+- Citekeys with LINK_ONLY source receipts: 11/11.
+- Full external source bodies preserved locally: 0/11. This limitation is explicit; receipts are not snapshots.
+- Platform-table substantive source verification: NOT EXHAUSTIVE. The CSV is preserved as supplied.
+
+EXTRACTION
+- Admitted zettels: 15.
+- Root zettel TXT files: 15.
+- _MD exact mirrors: 15.
+- JSON zettel records: 15.
+- Immutable payload hash check: PASS.
+- Byte-identical mirror check: PASS.
+
+DUPLICATES / ID COLLISIONS
+- Exact duplicate zettel payloads: 0.
+- Zettel ORIGINAL-ID collisions: 0.
+- Platform appearances: 788.
+- Unique literal Platform IDs: 740.
+- Colliding literal Platform IDs: 44.
+- Extra platform appearances beyond unique literal IDs: 48.
+- Collision policy: preserved as separate appearance nodes; never silently merged by ORIGINAL ID.
+
+PLATFORM RELATIONS
+- PLATFORM field occurrences in admitted zettels: 15.
+- MEMBER_OF native records: 15.
+- Equality invariant: PASS.
+
+LINKS RELATIONS
+- LINKS field occurrences: 49.
+- LINKS_TO native records: 49.
+
+WIKILINK COVERAGE
+- All [[ADDRESS]] occurrences parsed from TENSION, CITATION TRAIL, PLATFORM, and LINKS: 84.
+- Native relation records across those fields: 84.
+- Equality invariant: PASS.
+- Backlinks derived separately and do not count as native occurrences.
+
+GHOSTS / AMBIGUITIES / BROKEN REFERENCES
+- Graph ghost/ambiguous nodes generated from admitted zettel addresses: 30.
+- Platform-table literal ID collisions preserved separately: 44 IDs.
+- Silent fuzzy resolutions: 0 by design.
+- Detailed literal collision list: 000__OPEN_EDGES.txt.
+
+BIBLIOGRAPHY COVERAGE
+- Unique compiled citekeys: 11.
+- BIB-CONFLICT records among admitted zettels: 0.
+- Paper citekeys: shanahan2023roleplay, wallace2024instruction, walter2021language, winfield2022artificialculture, ye2026roleconfusion.
+- paper citekeys subset compiled bibliography: PASS.
+
+RESOURCE COVERAGE
+- Exact local prompt bodies: 2/2.
+- Exact local platform CSV: 1/1.
+- Source receipts: 11 LINK_ONLY.
+- Unavailable source bodies are never represented as local snapshots.
+
+RECONSTRUCTION STATE
+- index.html: standalone embedded capsule with zettels, table, prompts, graph state, bibliography/source receipts, paper PDF, source map, making history, return path, rebuild text, and manifest.
+- READER.html: offline, no network dependency.
+- NETWORK.html: offline, 1001 compiled nodes represented.
+- NETWORK.svg: static complete field representation; every one of 788 platform appearances has a dot.
+- CARDS.html: printable 4x6 derived fronts; exact payloads remain root TXT cards.
+- HTML external dependency scan: PASS (0 issues).
+- _SLIPCASE/REBUILD.py: validator included and executed after manifest creation.
+
+PAPER EVIDENCE COVERAGE
+- Paper: the-prompt-does-not-contain-its-own-semantics__2026-08-17.pdf.
+- Pages: 10.
+- Source map: present.
+- Substantive cited evidence: 5 citekeys, all compiled.
+- Compiler-created connective claims are explicitly marked COMPILER in SOURCE_MAP.
+- Final LaTeX diagnostic warnings/overfull boxes: 0.
+- PDF raster render: 10/10 pages rendered at 160 dpi during this run.
+- Visual inspection: PASS on title, first argument page, middle evidence page, and final references/appendix page; no clipping observed.
+
+ASSEMBLY PROMPT STATUS
+- Exact SLIPCASE v15.55-AM preserved: PASS.
+- SHA-256: a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a.
+- Exact forage v3.0 preserved: PASS.
+- SHA-256: ca2c82d04a1b082de12a1ac6f7d56984d6d435bab7d9a6fc044893a61e239d4e.
+
+MAKING HISTORY
+- Present: 000__MAKING_HISTORY.txt and paper-specific making history.
+- Human review of finished paper: NOT CLAIMED.
+- Model selection/writing/design control: DISCLOSED.
+
+PDF STATUS
+- Compile: PASS (XeLaTeX + Biber).
+- Page count: 10.
+- Final-pass warnings/overfull/underfull diagnostics: 0.
+- Render inspection: PASS.
+
+ZIP STATUS
+- Final ZIP is created after this report and manifest are written.
+- Build aborts if Python ZipFile.testzip() returns a bad member.
+- Final successful run therefore implies ZIP integrity: PASS.
+
+STRUCTURE
+- ZIP root is the research desk: PASS.
+- Root numbered TXT zettel count equals _MD mirror count equals JSON zettel record count: PASS.
+- Evidence / field / interpretation layers remain separate: PASS by file layout and immutable-card hash checks.

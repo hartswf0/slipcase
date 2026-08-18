@@ -1,0 +1,78 @@
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-09
+
+    TITLE:
+    EACH MATERIAL STATE CAN BECOME PART OF THE SPECIFICATION FOR THE NEXT
+
+    SOURCE:
+    Tim Ingold — Making — 2013 — Chapter 4, “On building a house,” pp. 54–55.
+
+    SOURCE URL:
+    file:MAKING_INGOLD(1).pdf
+
+    PASSAGE:
+    [PARAPHRASE] Ingold compares medieval building to a patchwork quilt: stones are shaped and reshaped to fit spaces prepared by previous stones and in turn prepare spaces for those that follow.
+
+    RESEARCH OBJECT:
+    Execution can recursively create the constraint field for later execution. The artifact is not only output; its current state helps specify admissible next moves.
+
+    LOCAL MOVE:
+    Ingold replaces assembly from pre-cut pieces with piecemeal adjustment in which each placed stone changes the local problem.
+
+    SOURCE TERMS:
+    patchwork quilt; piecemeal; shaped; reshaped; fit; space prepared
+
+    WHAT BECAME STRANGE:
+    Some constraints do not merely become explicit late; they are produced by earlier material decisions.
+
+    QUESTION:
+    Could deferred formalization be defined as recursive specification by produced state?
+
+    DEEPER QUESTION:
+    Which later requirements could not exist before the current artifact existed?
+
+    MECHANISM:
+    existing state → local gap/constraint → select/reshape/place → new state → next constraint field.
+
+    FORMAL SHIFT:
+    <ARTIFACT_n> → <LOCAL CONSTRAINT FIELD> → [FIT/RESHAPE] → <ARTIFACT_n+1>
+
+    SOURCE FORMALISM:
+    NONE
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] C_{n+1} = prior constraints + constraints induced by artifact state A_n.
+
+    TENSION:
+    Software synthesis often assumes the correctness relation exists logically before synthesis; this case suggests some design requirements are genuinely emergent.
+
+    MISSING:
+    A distinction between unknown-beforehand and not-yet-existent specification.
+
+    BOUNDARY:
+    The masonry case does not prove formal software correctness can safely emerge without prior criteria.
+
+    CITATION TRAIL:
+    Ingold on design continuing into making; output-directed programming.
+
+    TEST:
+    Timestamp constraints during iterative design and distinguish remembered requirements from distinctions first made possible by an artifact.
+
+    PLATFORM:
+    [[THE PROMPT IS NOT THE PROGRAM]]
+
+    LINKS:
+    [[THE ARTIFACT BECOMES SPECIFICATION]]
+[[EMERGENT SPECIFICATION]]
+
+    BIBTEX:
+    @book{ingold2013making,
+  author={Ingold, Tim},
+  title={Making: Anthropology, Archaeology, Art and Architecture},
+  publisher={Routledge},
+  address={London},
+  year={2013},
+  isbn={9780415567237}
+}

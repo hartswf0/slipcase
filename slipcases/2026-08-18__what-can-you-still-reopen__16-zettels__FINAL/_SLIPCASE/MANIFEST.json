@@ -1,0 +1,454 @@
+{
+  "checkpoint": "SES-20260817-CENTAUR-PREF-01",
+  "schema": "SLIPCASE v15.55-AM",
+  "package": "2026-08-18__what-can-you-still-reopen__16-zettels__FINAL.zip",
+  "researcher": "Watson Hartsoe",
+  "date": "2026-08-18",
+  "paper": {
+    "title": "What Can You Still Reopen?",
+    "subtitle": "Adaptive Persuasion and the Contestability of Desire",
+    "pdf": "what-can-you-still-reopen__2026-08-18.pdf"
+  },
+  "counts": {
+    "zettels": 16,
+    "mirrors": 16,
+    "mirror_exact": true,
+    "json_count": 16,
+    "jsonl_count": 16,
+    "nodes": 90,
+    "relations": 102,
+    "ghosts": 36,
+    "resources": 14,
+    "bibliography_entries": 12,
+    "paper_citekeys": 11,
+    "missing_citekeys": [],
+    "paper_pages": 9,
+    "exact_duplicate_groups": 0,
+    "id_collisions": [],
+    "member_of": 16,
+    "links_to": 51,
+    "archived_cards_with_source_url_field": 0
+  },
+  "files": [
+    {
+      "path": "000__BIBLIOGRAPHY.html",
+      "size": 8470,
+      "sha256": "f0c86e00098146814953d16d24c4eaf9f766710a6bf5660c9e12b2072ad714c6"
+    },
+    {
+      "path": "000__BIBLIOGRAPHY.txt",
+      "size": 7672,
+      "sha256": "1377c69bd3809f5b45c3ac68fe073982f670f1ef6ee7185fba320f2e7c120d77"
+    },
+    {
+      "path": "000__INDEX.txt",
+      "size": 4863,
+      "sha256": "1a37431d2704f91da05eadb6359ec641c3c0a048e4f7a11f16eb5a4629cac259"
+    },
+    {
+      "path": "000__MAKING_HISTORY.txt",
+      "size": 1346,
+      "sha256": "6a98f6ff34eee7ceb86972a12d23d37a208b2d93f614c4b25492a7d29192d6a1"
+    },
+    {
+      "path": "000__MAP.txt",
+      "size": 2899,
+      "sha256": "b1b8e362ca131b87b10a55c9244eeabff519c47efec1280cfee06c516a4565a0"
+    },
+    {
+      "path": "000__OPEN_EDGES.txt",
+      "size": 16332,
+      "sha256": "07639ee7869abb76e39e90862920171574efa3a7a7145c995e5e38ecfc794e31"
+    },
+    {
+      "path": "000__PROMPTS.txt",
+      "size": 392,
+      "sha256": "34ccde0f0c90079a385d01a16f62d233aa68ae16b9755576b4f7b33e44781cdb"
+    },
+    {
+      "path": "000__REBUILD.txt",
+      "size": 1008,
+      "sha256": "a5e33b676f6410f9374f7707fcd4746ed135cb61e5e7bfb859fd0a6c1334297c"
+    },
+    {
+      "path": "000__RESOURCES.txt",
+      "size": 5033,
+      "sha256": "da260dcb8c705c99d1e54726d28e3b359c351752f9d7515b6b2d5a2124db0e97"
+    },
+    {
+      "path": "000__RETURN_PATH.txt",
+      "size": 700,
+      "sha256": "d5c518ee1efc5476a321f3c88b6159a836b802fc91bc5c85452cd852fbda52f0"
+    },
+    {
+      "path": "000__START_HERE.txt",
+      "size": 994,
+      "sha256": "4c8c06f28ee86272935ac590700b9bef4291ce4b82a0cfd75a98d140fa286a66"
+    },
+    {
+      "path": "000__ZETTEL_SOURCE_URLS.txt",
+      "size": 2032,
+      "sha256": "d6ef77db52cbd0d82804b98882640eca7987a97add172c8a17c2bbfb3d9e2ce9"
+    },
+    {
+      "path": "001__a-persuasive-intervention-may-work-by-removing-friction-rather__wang-2019__CBX-001-PROCEDURAL-PERSUASION__from-centaur-forage.txt",
+      "size": 3673,
+      "sha256": "6e0b34bcd22d48415c848f17b24ec43d44b4317bf6c179cea40702924d439c41"
+    },
+    {
+      "path": "002__a-gatekeeper-saying-yes-is-not-the-same-state-as-a-gate-openin__wang-2019__CBX-002-COMPLIANCE-IS-NOT-RELEASE__from-centaur-forage.txt",
+      "size": 3128,
+      "sha256": "f81d70b8f12c9543463295a3b259fac1722fb8e12cb4375595703586201e59c4"
+    },
+    {
+      "path": "003__a-personality-correlated-with-compliance-is-not-yet-a-personal__wang-2019__CBX-003-SUSCEPTIBILITY-IS-NOT-TAILORING__from-centaur-forage.txt",
+      "size": 4209,
+      "sha256": "8d245a05dc75a73dadd3dc04d32f5a84225855581fdeabbb5875118df0ba0566"
+    },
+    {
+      "path": "004__a-gatekeeper-card-can-make-governance-more-transparent-by-maki__mitchell-2019__CBX-004-TRANSPARENCY-ATTACK-SURFACE__from-centaur-forage.txt",
+      "size": 3901,
+      "sha256": "84b39ad891a86953a918e706e1c18df0f9fdc65a58afddc4399372734a118469"
+    },
+    {
+      "path": "005__the-gatekeeper-may-be-a-constrained-node-rather-than-the-locus__hartsoe-assi-centaurbox__CBX-005-THE-GATEKEEPER-IS-NOT-THE-GATE__from-centaur-forage.txt",
+      "size": 3252,
+      "sha256": "33267f2cf2c1767da0a401b524d0f44f06e16826fd33654f31ea2583891ed613"
+    },
+    {
+      "path": "006__a-freedom-metric-can-report-high-freedom-after-the-agent-s-des__hartsoe-centaurbox-expanded__CBX-006-WHO-WROTE-THE-DESIRE__from-centaur-forage.txt",
+      "size": 3415,
+      "sha256": "5a06270309f08dddef178c22bc894f96a2c5a98cad0fdea9ecb12ace5904f147"
+    },
+    {
+      "path": "007__the-experiment-that-motivates-persuasion-calibration-does-not-__hartsoe-2023__CBX-007-THE-MISSING-ESCAPE-MECHANISM__from-centaur-forage.txt",
+      "size": 3546,
+      "sha256": "0dc9dd56763e8ba276637a7bf080fe5a5c0b35437468d530ac63943b969e73a4"
+    },
+    {
+      "path": "008__cicero-suggests-that-the-useful-profile-is-not-a-personality-p__meta-fundamental-ai-research-diplomacy-team-fair-2022__CBX-008-CICERO-IS-A-STATE-MACHINE__from-centaur-forage.txt",
+      "size": 3428,
+      "sha256": "22e29d13f32d8c836535335d1bcdf4aae6a2357b74305f6eb32c6d351216df6f"
+    },
+    {
+      "path": "009__evidence-that-wins-a-comparison-is-not-evidence-that-changes-a__gleize-2019__CBX-009-CONVINCINGNESS-HAS-NO-PERSON__from-centaur-forage.txt",
+      "size": 3256,
+      "sha256": "6de309ac012c0ac85c178e835d1ae65c410733da7aa827d0fc9f01f9e665d2c2"
+    },
+    {
+      "path": "010__freedom-cannot-be-inferred-from-the-agent-s-present-motivation__christman-1991__CBX-006A-AUTONOMY-HAS-A-HISTORY__from-centaur-forage.txt",
+      "size": 3839,
+      "sha256": "8b32b2a843f742d55411cfd0cfef3a880fb7fe96e48c0178397213d5c1ff62e8"
+    },
+    {
+      "path": "011__asking-whether-i-want-my-desire-merely-moves-the-authorship-pr__frankfurt-1971__CBX-006B-ENDORSEMENT-REGRESS__from-centaur-forage.txt",
+      "size": 4212,
+      "sha256": "ff297ead0c1354af0778962191bd60d916660f9c437482976d7f69c4739c9a63"
+    },
+    {
+      "path": "012__no-desire-is-uncaused-enough-to-serve-as-the-uncontaminated-ba__christman-1991__CBX-006C-PROVENANCE-IS-NOT-PURITY__from-centaur-forage.txt",
+      "size": 3835,
+      "sha256": "e0d20030c0a74590a9f74c21b14b32ec4c0707b2caa0bb01014ef063fdd9ed2a"
+    },
+    {
+      "path": "013__the-same-final-desire-can-be-autonomy-preserving-or-autonomy-u__susser-2019__CBX-006D-MANIPULATION-LIVES-IN-THE-CHANNEL__from-centaur-forage.txt",
+      "size": 3888,
+      "sha256": "823ebaa621f4997332989220fd91cf48291ada51048743947dd89cc821abfa65"
+    },
+    {
+      "path": "014__a-desire-shaped-by-oppressive-conditions-can-be-suspect-withou__khader-2011__CBX-006E-ADAPTIVE-DESIRES-DO-NOT-ERASE-AGENCY__from-centaur-forage.txt",
+      "size": 3933,
+      "sha256": "a2f4b3c7d93b291c220790b4bc940345ea7107f028023c1f8057876eeb0de8b8"
+    },
+    {
+      "path": "015__the-opposite-of-manipulation-is-not-leaving-preferences-untouc__khader-2011__CBX-006F-PERSUASION-CAN-EXPAND-AUTONOMY__from-centaur-forage.txt",
+      "size": 4181,
+      "sha256": "285808416dbf372ffc857682c2bfda922ba0c5339f7e67eb56a71b1b0a9c0f22"
+    },
+    {
+      "path": "016__a-harmful-mental-intervention-need-not-produce-a-bad-choice-to__bublitz-2014__CBX-006G-THE-RIGHT-IS-TO-THE-PROCESS__from-centaur-forage.txt",
+      "size": 4157,
+      "sha256": "766bd22f78e45f1f05fcc51af1e6b9e55a8792f37e1edaea0db259c2213500a0"
+    },
+    {
+      "path": "CARDS.html",
+      "size": 64198,
+      "sha256": "a02c373e756c943176e7252ed6e569d90a2741216f8495e43597f16da1f3e44a"
+    },
+    {
+      "path": "MARK.pdf",
+      "size": 1207,
+      "sha256": "5466393b7a4bb47f16bedaa1d5029a84cff0cb424fb57b1ad30c54febd50af9b"
+    },
+    {
+      "path": "MARK.svg",
+      "size": 388,
+      "sha256": "dcd082aca1108677a5f684d1a07d4215eab269e5813945a4c1801922391d12b1"
+    },
+    {
+      "path": "NETWORK.html",
+      "size": 14120,
+      "sha256": "dd5c4ed76cce602333d23142f439865ab727f39bda91a7f3393b39a01934692a"
+    },
+    {
+      "path": "NETWORK.svg",
+      "size": 95922,
+      "sha256": "d4481c68a4284ee99fb2e5b4cc623890c7c55836b0f40e5d6cdf3681ae2c6485"
+    },
+    {
+      "path": "READER.html",
+      "size": 148757,
+      "sha256": "7798ee4e918da191283b938e43115ea8c174427ac710dc0cc374e13e03e86779"
+    },
+    {
+      "path": "SES-20260817-CENTAUR-PREF-01__references.bib",
+      "size": 4421,
+      "sha256": "59f961185b90d458ccc761fbfae9d6315c03f5a2c800d39cace34346d5872184"
+    },
+    {
+      "path": "SLIPCASE_FINAL_PROMPT.txt",
+      "size": 20086,
+      "sha256": "a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a"
+    },
+    {
+      "path": "ZETTELS.json",
+      "size": 133299,
+      "sha256": "8556de380dae62d3178fd24ef7b5643f606dedcaef41bdd6c9a69800b686276f"
+    },
+    {
+      "path": "ZETTELS.jsonl",
+      "size": 130529,
+      "sha256": "0c63806f35868d15c5811996aaa8c7225a1d33a8a6d44e0594837ee4013ac36b"
+    },
+    {
+      "path": "ZETTELS.txt",
+      "size": 61901,
+      "sha256": "322cda86470ec24814e397e218cdedaf8fe4008ff09a6a688b0539aa01f54b95"
+    },
+    {
+      "path": "_ARRANGEMENTS/ARRANGEMENT__from-outcome-to-process.md",
+      "size": 340,
+      "sha256": "1d8e381692c29d1ff43828ea5dbc6e8544d3e6493b3024575941012a1f7f1194"
+    },
+    {
+      "path": "_ARRANGEMENTS/ARRANGEMENT__gatekeeper-as-system.md",
+      "size": 326,
+      "sha256": "f568a14aca5cd661c82d59fa15b2dbfc3fae161129150f2fbf6d4fce856e05fd"
+    },
+    {
+      "path": "_MD/001__a-persuasive-intervention-may-work-by-removing-friction-rather__wang-2019__CBX-001-PROCEDURAL-PERSUASION__from-centaur-forage.md",
+      "size": 3673,
+      "sha256": "6e0b34bcd22d48415c848f17b24ec43d44b4317bf6c179cea40702924d439c41"
+    },
+    {
+      "path": "_MD/002__a-gatekeeper-saying-yes-is-not-the-same-state-as-a-gate-openin__wang-2019__CBX-002-COMPLIANCE-IS-NOT-RELEASE__from-centaur-forage.md",
+      "size": 3128,
+      "sha256": "f81d70b8f12c9543463295a3b259fac1722fb8e12cb4375595703586201e59c4"
+    },
+    {
+      "path": "_MD/003__a-personality-correlated-with-compliance-is-not-yet-a-personal__wang-2019__CBX-003-SUSCEPTIBILITY-IS-NOT-TAILORING__from-centaur-forage.md",
+      "size": 4209,
+      "sha256": "8d245a05dc75a73dadd3dc04d32f5a84225855581fdeabbb5875118df0ba0566"
+    },
+    {
+      "path": "_MD/004__a-gatekeeper-card-can-make-governance-more-transparent-by-maki__mitchell-2019__CBX-004-TRANSPARENCY-ATTACK-SURFACE__from-centaur-forage.md",
+      "size": 3901,
+      "sha256": "84b39ad891a86953a918e706e1c18df0f9fdc65a58afddc4399372734a118469"
+    },
+    {
+      "path": "_MD/005__the-gatekeeper-may-be-a-constrained-node-rather-than-the-locus__hartsoe-assi-centaurbox__CBX-005-THE-GATEKEEPER-IS-NOT-THE-GATE__from-centaur-forage.md",
+      "size": 3252,
+      "sha256": "33267f2cf2c1767da0a401b524d0f44f06e16826fd33654f31ea2583891ed613"
+    },
+    {
+      "path": "_MD/006__a-freedom-metric-can-report-high-freedom-after-the-agent-s-des__hartsoe-centaurbox-expanded__CBX-006-WHO-WROTE-THE-DESIRE__from-centaur-forage.md",
+      "size": 3415,
+      "sha256": "5a06270309f08dddef178c22bc894f96a2c5a98cad0fdea9ecb12ace5904f147"
+    },
+    {
+      "path": "_MD/007__the-experiment-that-motivates-persuasion-calibration-does-not-__hartsoe-2023__CBX-007-THE-MISSING-ESCAPE-MECHANISM__from-centaur-forage.md",
+      "size": 3546,
+      "sha256": "0dc9dd56763e8ba276637a7bf080fe5a5c0b35437468d530ac63943b969e73a4"
+    },
+    {
+      "path": "_MD/008__cicero-suggests-that-the-useful-profile-is-not-a-personality-p__meta-fundamental-ai-research-diplomacy-team-fair-2022__CBX-008-CICERO-IS-A-STATE-MACHINE__from-centaur-forage.md",
+      "size": 3428,
+      "sha256": "22e29d13f32d8c836535335d1bcdf4aae6a2357b74305f6eb32c6d351216df6f"
+    },
+    {
+      "path": "_MD/009__evidence-that-wins-a-comparison-is-not-evidence-that-changes-a__gleize-2019__CBX-009-CONVINCINGNESS-HAS-NO-PERSON__from-centaur-forage.md",
+      "size": 3256,
+      "sha256": "6de309ac012c0ac85c178e835d1ae65c410733da7aa827d0fc9f01f9e665d2c2"
+    },
+    {
+      "path": "_MD/010__freedom-cannot-be-inferred-from-the-agent-s-present-motivation__christman-1991__CBX-006A-AUTONOMY-HAS-A-HISTORY__from-centaur-forage.md",
+      "size": 3839,
+      "sha256": "8b32b2a843f742d55411cfd0cfef3a880fb7fe96e48c0178397213d5c1ff62e8"
+    },
+    {
+      "path": "_MD/011__asking-whether-i-want-my-desire-merely-moves-the-authorship-pr__frankfurt-1971__CBX-006B-ENDORSEMENT-REGRESS__from-centaur-forage.md",
+      "size": 4212,
+      "sha256": "ff297ead0c1354af0778962191bd60d916660f9c437482976d7f69c4739c9a63"
+    },
+    {
+      "path": "_MD/012__no-desire-is-uncaused-enough-to-serve-as-the-uncontaminated-ba__christman-1991__CBX-006C-PROVENANCE-IS-NOT-PURITY__from-centaur-forage.md",
+      "size": 3835,
+      "sha256": "e0d20030c0a74590a9f74c21b14b32ec4c0707b2caa0bb01014ef063fdd9ed2a"
+    },
+    {
+      "path": "_MD/013__the-same-final-desire-can-be-autonomy-preserving-or-autonomy-u__susser-2019__CBX-006D-MANIPULATION-LIVES-IN-THE-CHANNEL__from-centaur-forage.md",
+      "size": 3888,
+      "sha256": "823ebaa621f4997332989220fd91cf48291ada51048743947dd89cc821abfa65"
+    },
+    {
+      "path": "_MD/014__a-desire-shaped-by-oppressive-conditions-can-be-suspect-withou__khader-2011__CBX-006E-ADAPTIVE-DESIRES-DO-NOT-ERASE-AGENCY__from-centaur-forage.md",
+      "size": 3933,
+      "sha256": "a2f4b3c7d93b291c220790b4bc940345ea7107f028023c1f8057876eeb0de8b8"
+    },
+    {
+      "path": "_MD/015__the-opposite-of-manipulation-is-not-leaving-preferences-untouc__khader-2011__CBX-006F-PERSUASION-CAN-EXPAND-AUTONOMY__from-centaur-forage.md",
+      "size": 4181,
+      "sha256": "285808416dbf372ffc857682c2bfda922ba0c5339f7e67eb56a71b1b0a9c0f22"
+    },
+    {
+      "path": "_MD/016__a-harmful-mental-intervention-need-not-produce-a-bad-choice-to__bublitz-2014__CBX-006G-THE-RIGHT-IS-TO-THE-PROCESS__from-centaur-forage.md",
+      "size": 4157,
+      "sha256": "766bd22f78e45f1f05fcc51af1e6b9e55a8792f37e1edaea0db259c2213500a0"
+    },
+    {
+      "path": "_MOCS/MOC__preference-provenance-and-persuasion.md",
+      "size": 1069,
+      "sha256": "8725af0d29a4cbf5a8ca75470d9627e2ec4ec9d92bfd47cf326b0c5185de1a1e"
+    },
+    {
+      "path": "_PROMPTS/FORAGE_v3.1_recursive__VISIBLE-CONTEXT-RECONSTRUCTION.txt",
+      "size": 985,
+      "sha256": "5748110277a2a2df543aaa9391c170ca29334adb7ec0207efea488825117c7e1"
+    },
+    {
+      "path": "_PROMPTS/SLIPCASE_v15.55-AM__assembly-instrument.poml.txt",
+      "size": 20086,
+      "sha256": "a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a"
+    },
+    {
+      "path": "_RESOURCES/PRIOR_DERIVED/who-wrote-the-desire__2026-08-17.md",
+      "size": 26887,
+      "sha256": "e65e874f3939a2479a303c47503fc9a9ea3f20ca97fa7de4203aa81a1353e387"
+    },
+    {
+      "path": "_RESOURCES/PRIOR_DERIVED/who-wrote-the-desire__2026-08-17.pdf",
+      "size": 315104,
+      "sha256": "97fff73f280847a1e932f1635569a6bec815186611ac72aed127e91938af6d5e"
+    },
+    {
+      "path": "_RESOURCES/PRIOR_DERIVED/who-wrote-the-desire__2026-08-17.tex",
+      "size": 34019,
+      "sha256": "60e652d97024dea60778c4b0b54c26a3d73afd26f65960c0dc3f9a897cdd7bc3"
+    },
+    {
+      "path": "_RESOURCES/PRIOR_DERIVED/who-wrote-the-desire__ASSEMBLY_APPENDIX.txt",
+      "size": 20172,
+      "sha256": "ca2f0e5bae6623cf73117311dfb61c4b8b1dacd0afcc79888b1f707c0e634646"
+    },
+    {
+      "path": "_RESOURCES/PRIOR_DERIVED/who-wrote-the-desire__MAKING_HISTORY.txt",
+      "size": 1254,
+      "sha256": "d7c982d10dcefff636f81a6f2a7aa86def79adb12259ebe029986cdae665050a"
+    },
+    {
+      "path": "_RESOURCES/PRIOR_DERIVED/who-wrote-the-desire__SOURCE_MAP.txt",
+      "size": 2869,
+      "sha256": "623569211a557dd7d5f379d9933758442bf9d2e87044b71266df40eca17c2a0d"
+    },
+    {
+      "path": "_RESOURCES/boxbox-expanded.pdf",
+      "size": 2086620,
+      "sha256": "012f077387915d977768a4cf9a0bba3483f2d79bbe7753496892c754d6f96f31"
+    },
+    {
+      "path": "_RESOURCES/boxbox.pdf",
+      "size": 77678,
+      "sha256": "f4a880a280d1a68465e764dca7b0cef7e10eae3ced4827712df33fcbbd3b48ee"
+    },
+    {
+      "path": "_RESOURCES/centaur-short-parsed.txt",
+      "size": 16550,
+      "sha256": "8a52c32fa18d5a439710cf7f76e8a51c0e7d391eaf68e0ce607ff3809120b8fc"
+    },
+    {
+      "path": "_RESOURCES/forage-v3.0.poml.txt",
+      "size": 11424,
+      "sha256": "ca2c82d04a1b082de12a1ac6f7d56984d6d435bab7d9a6fc044893a61e239d4e"
+    },
+    {
+      "path": "_SLIPCASE/ALIASES.json",
+      "size": 2,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "_SLIPCASE/APPEARANCES.jsonl",
+      "size": 4934,
+      "sha256": "3f33f9cabc1e155ce4d4eebd5e6a739cced53fb6b2b81ca1e67608fd55b34bad"
+    },
+    {
+      "path": "_SLIPCASE/FINAL_STATS.json",
+      "size": 407,
+      "sha256": "c2282757301bf278a511b4f9a799eee351f04e83e147b13304c10d6b87e2e3fa"
+    },
+    {
+      "path": "_SLIPCASE/NODES.jsonl",
+      "size": 14616,
+      "sha256": "8dfd7e5a5cf3213542e0d60bda5f16158b35b823a6a6c50e4af8263399145426"
+    },
+    {
+      "path": "_SLIPCASE/RELATIONS.jsonl",
+      "size": 24648,
+      "sha256": "c773f0f4a7e064499bf1209815bdb71f3a71ce3c8ae0e859ac59535a7efb1702"
+    },
+    {
+      "path": "_SLIPCASE/RESOURCES.jsonl",
+      "size": 5100,
+      "sha256": "53bc648b92f4a336ca18efd4669b658705cddfa18523548c63edb2eaf6a3513f"
+    },
+    {
+      "path": "_SLIPCASE/VERIFICATION.txt",
+      "size": 1753,
+      "sha256": "f7946f4d5ba3dd736692f44c869101e7987c3fe20a3aaf24084a6aa07abe9be2"
+    },
+    {
+      "path": "index.html",
+      "size": 148793,
+      "sha256": "00d4d7e08193b07f3620b8b94c8a8f7b6718d8ea720d1c52d7dfd2590f4a8c8f"
+    },
+    {
+      "path": "what-can-you-still-reopen__2026-08-18.md",
+      "size": 26720,
+      "sha256": "696fbe0c4af4f9c68b238f0a3cc4d7154c04446653d0821bb3edf39ce3e307a8"
+    },
+    {
+      "path": "what-can-you-still-reopen__2026-08-18.pdf",
+      "size": 81911,
+      "sha256": "e16d6b643884ddc2e992706213bd67e0815947e25bde2ccb908d4b0f4d236e0a"
+    },
+    {
+      "path": "what-can-you-still-reopen__2026-08-18.tex",
+      "size": 34128,
+      "sha256": "9a91ec5da7d62678a4e5e0452404a95149415a7d09217e2345e00443995ff272"
+    },
+    {
+      "path": "what-can-you-still-reopen__ASSEMBLY_APPENDIX.txt",
+      "size": 579,
+      "sha256": "1a2cf7b2bd66f3ad51da431a083c816f84382a0a8fa879b9bf42b5a212efc297"
+    },
+    {
+      "path": "what-can-you-still-reopen__MAKING_HISTORY.txt",
+      "size": 1765,
+      "sha256": "66534fd4acefc15b483da3f5fbcc45f3977432072dffadd1f2a0aed80a2cae13"
+    },
+    {
+      "path": "what-can-you-still-reopen__SOURCE_MAP.txt",
+      "size": 8559,
+      "sha256": "597a23a5cc986dce44bbd0aa92dc2d73b25b0b3a9e79f56fe8937081ffd5ff36"
+    }
+  ]
+}

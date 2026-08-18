@@ -1,0 +1,104 @@
+SOURCE MAP — PROMPT RECEIPTS
+
+PAPER STATUS
+The paper is a compiler synthesis and current wager. It is not evidence. Every substantive source-backed claim below points through a zettel to a compiled source. Terms marked COMPILER SYNTHESIS are not source terminology.
+
+CLAIM 1 — Prompting is socially situated; sharing/reuse orientations shape practice.
+ZETTELS: SCGAI-001, SCGAI-002, SCGAI-005, SCGAI-006, SCGAI-007, SCGAI-008
+SOURCE: SRC-001 — Mahdavi Goloujeh, Sullivan & Magerko (2024), The Social Construction of Generative AI Prompts.
+CITEKEY: mahdavigoloujeh2024social
+
+CLAIM 2 — Earlier external products can functionally transform later cognition.
+ZETTEL: SCGAI-003-A
+SOURCE: SRC-005 — Hollan, Hutchins & Kirsh (2000), Distributed Cognition.
+CITEKEY: hollan2000distributed
+
+CLAIM 3 — Some actions are epistemic: their function is to uncover information rather than only advance an external task.
+ZETTEL: SCGAI-004-A
+SOURCE: SRC-002 — Kirsh & Maglio (1994), On Distinguishing Epistemic from Pragmatic Action.
+CITEKEY: kirsh1994distinguishing
+
+CLAIM 4 — Folk theories of opaque platforms require revision as platforms change.
+ZETTEL: SCGAI-004-B
+SOURCE: SRC-004 — DeVito (2021), Adaptive Folk Theorization.
+CITEKEY: devito2021adaptive
+
+CLAIM 5 — Interaction history can be rendered perceptible on a digital artifact.
+ZETTEL: SCGAI-008-A
+SOURCE: SRC-006 — Hill et al. (1992), Edit Wear and Read Wear.
+CITEKEY: hill1992editwear
+
+CLAIM 6 — Private benefit and collective revelation can coexist in an innovation model.
+ZETTEL: SCGAI-006-A
+SOURCE: SRC-007 — von Hippel & von Krogh (2003), Private-Collective Innovation Model.
+CITEKEY: vonhippel2003privatecollective
+
+CLAIM 7 — Stigmergic coordination can occur through traces left in a medium.
+ZETTEL: SCGAI-005-A
+SOURCE: SRC-003 — Heylighen (2016), Stigmergy as a Universal Coordination Mechanism I.
+CITEKEY: heylighen2016stigmergy
+
+CLAIM 8 — In the documented Codex agent loop, the end-user message is not necessarily the verbatim prompt sampled by the model; agent context is assembled with instructions/tools/history/state.
+ZETTEL: WWP-20260817-01
+SOURCE: SRC-008 — Bolin/OpenAI (2026), Unrolling the Codex agent loop.
+CITEKEY: bolin2026codexloop
+
+CLAIM 9 — Current production guidance treats prompts as code-managed artifacts with testing/versioning practices.
+ZETTEL: WWP-20260817-02
+SOURCE: SRC-009 — OpenAI, Prompting.
+CITEKEY: openai_prompting
+
+CLAIM 10 — A short map into maintained repository knowledge can outperform a giant monolithic agent instruction manual as an information architecture.
+ZETTEL: WWP-20260817-03
+SOURCE: SRC-010 — OpenAI, Harness engineering.
+CITEKEY: openai2026harness
+
+CLAIM 11 — Long-horizon agent work can externalize continuity into progress/test/git artifacts for reconstruction in a fresh context.
+ZETTEL: WWP-20260817-04
+SOURCE: SRC-011 — Anthropic, Prompting best practices.
+CITEKEY: anthropic_prompting_best_practices
+
+CLAIM 12 — Midjourney Style Creator uses preference selections to refine a reusable style reference; preview text does not itself guide the Style Creator.
+ZETTEL: WWP-20260817-05
+SOURCE: SRC-012 — Midjourney, Style Creator.
+CITEKEY: midjourney_style_creator
+
+CLAIM 13 — Prompt-generation tooling can generate prompt/schema artifacts from higher-level task descriptions.
+ZETTEL: WWP-20260817-06
+SOURCE: SRC-013 — OpenAI, Prompt generation.
+CITEKEY: openai_prompt_generation
+
+CLAIM 14 — Explicit model-visible handles can carry application state between tools in the documented stateless MCP design.
+ZETTEL: WWP-20260817-07
+SOURCE: SRC-014 — Soria Parra & Delimarsky, The 2026-07-28 Specification.
+CITEKEY: soriaparra2026mcp
+
+CLAIM 15 — Exact repeated prompt prefixes determine cache reuse in the documented OpenAI prompt-caching system.
+ZETTEL: WWP-20260817-08
+SOURCE: SRC-015 — OpenAI, Prompt caching.
+CITEKEY: openai_prompt_caching
+
+CLAIM 16 — Midjourney model versions/defaults change over time and can alter how preserved prompts execute.
+ZETTEL: WWP-20260817-09
+SOURCE: SRC-016 — Midjourney, Version.
+CITEKEY: midjourney_version
+
+COMPILER SYNTHESIS A — PROMPT RECEIPT
+ZETTEL: FIELD-20260817-01
+SUPPORT: SCGAI-003, SCGAI-008, WWP-20260817-01, WWP-20260817-09
+STATUS: OUR FORMALIZATION. Not source terminology.
+
+COMPILER SYNTHESIS B — PROMPT EXPERTISE MIGRATING TOWARD SPECIFICATION/HARNESS/EVALUATION
+ZETTEL: FIELD-20260817-02
+SUPPORT: WWP-20260817-02, WWP-20260817-03, WWP-20260817-06, SCGAI-004-A
+STATUS: OUR INFERENCE.
+
+COMPILER SYNTHESIS C — ARCHIVE / ACTIVE-CONTEXT SPLIT + CONTEXT RECALL DEBT
+ZETTEL: FIELD-20260817-03
+SUPPORT: WWP-20260817-03, WWP-20260817-04, WWP-20260817-08
+STATUS: OUR FORMALIZATION. “Context recall debt” is not source terminology.
+
+COMPILER SYNTHESIS D — EPISTEMIC PROVENANCE
+ZETTEL: FIELD-20260817-04
+SUPPORT: SCGAI-003, SCGAI-003-A, SCGAI-008, SCGAI-008-A
+STATUS: OUR FORMALIZATION.

@@ -1,0 +1,74 @@
+VERIFICATION — PMGT-2026-08-18
+
+SOURCE COVERAGE
+- Local primary research archive: PRESENT (_RESOURCES/Midjourney_prompt_magic_archive_2022.md)
+- Exact assembly prompt: PRESENT (_PROMPTS/SLIPCASE_v15.55-AM.txt)
+- Web sources: registered as LINK_ONLY; core identities/claims checked during assembly where available.
+
+EXTRACTION
+- Admitted zettels: 22
+- Root zettel TXT files: 22
+- _MD mirrors: 22
+- ZETTELS.json records: 22
+- Mirror byte equality: PASS
+
+DUPLICATES / ID COLLISIONS
+- Exact payload duplicate groups: 0
+- ID collisions: 0
+
+PLATFORM RELATIONS
+- MEMBER_OF records: 76
+
+LINKS RELATIONS
+- LINKS_TO records: 114
+- WIKILINKS_TO records: 0
+- BACKLINK records: 114
+
+WIKILINK COVERAGE
+- Unresolved ghost addresses: 65
+- Ghosts preserved in 000__OPEN_EDGES.txt and graph data: PASS
+
+BIBLIOGRAPHY COVERAGE
+- Compiled citekeys: 20
+- Paper citekeys: 19
+- Missing paper citekeys: NONE
+
+RESOURCE COVERAGE
+- Local archive body: LOCAL_FILE
+- Assembly prompt body: LOCAL_FILE
+- Web resources: LINK_ONLY unless explicitly local
+
+RECONSTRUCTION STATE
+- rebuild.py test: PASS (22 cards)
+- index.html: self-contained data and assembly prompt embedded; external URLs are links, not runtime dependencies.
+- READER.html: self-contained offline desk.
+
+PAPER EVIDENCE COVERAGE
+- SOURCE_MAP present: PASS
+- Main paper cites only compiled bibliography keys: PASS
+
+ASSEMBLY PROMPT STATUS
+- Exact supplied prompt preserved: PASS
+
+MAKING HISTORY
+- 000__MAKING_HISTORY.txt present: PASS
+- Paper making-history appendix file present: PASS
+
+PDF STATUS
+- Compiled PDF: PASS
+- Page count: 12
+- Render verification: PASS (150 dpi; first, representative middle, bibliography/appendix pages visually inspected)
+- PDF preflight: completed; no clipping or missing-glyph failure observed
+
+ZIP STATUS
+- PASS after final seal; archive tested with unzip -t.
+
+STRUCTURE
+- Required file omissions before ZIP: NONE
+- NETWORK.html includes complete node/relation data; NETWORK.svg is printable static field view.
+
+KNOWN LIMITATIONS
+- The historical Discord archive was not independently authenticated message-by-message.
+- Office Hours speaker identities were not inferred where the local source did not identify them.
+- Suchman second-edition year is bibliographically ambiguous across catalog surfaces; archived card wording is preserved rather than silently rewritten.
+- Root zettel payloads 006-022 are conversation-preserved research objects; they are not claimed as externally peer-reviewed findings.

@@ -1,0 +1,117 @@
+ZETTEL
+
+ID:
+Z-HOUSE-LANG-001-P
+
+TITLE:
+A POEM CAN BUILD THE HABITAT BEFORE ANYONE KNOWS HOW TO BUILD THE INFRASTRUCTURE
+
+SOURCE:
+Richard Brautigan — “All Watched Over by Machines of Loving Grace” — 1967 — The Communication Company, San Francisco.
+
+SOURCE URL:
+https://www.brautiganarchives.xyz/machines.html
+
+PASSAGE:
+[QUOTE] “a cybernetic meadow / where mammals and computers / live together in mutually / programming harmony”
+
+RESEARCH OBJECT:
+Brautigan supplies a particularly clean case for distinguishing POETIC WORLD-BUILDING from executable specification.
+
+The poem specifies almost none of the implementation. It nevertheless establishes a surprisingly rich desired world: mammals and computers coexist; technology belongs inside habitat; programming is reciprocal; labor disappears; humans rejoin nonhuman kin; machines watch over the resulting ecology.
+
+The world exists linguistically before its implementation conditions exist technically.
+
+LOCAL MOVE:
+Brautigan successively imagines a cybernetic meadow, forest, and ecology, using poetic images to establish relations among organisms, machines, labor, environment, and observation.
+
+SOURCE TERMS:
+cybernetic meadow
+cybernetic forest
+cybernetic ecology
+mammals
+computers
+programming harmony
+nature
+machines of loving grace
+
+WHAT BECAME STRANGE:
+A poem can be radically underspecified as engineering and still be highly specific about WHAT KIND OF WORLD SHOULD EXIST.
+
+This suggests another kind of specification: not geometry, not algorithm, not dimensions, but RELATIONAL INVARIANTS.
+
+QUESTION:
+Can poetic language function as an upstream specification by defining relations that later technical representations must preserve?
+
+DEEPER QUESTION:
+What survives when POEM → REQUIREMENTS → ARCHITECTURE → CODE → INFRASTRUCTURE? And at what translation does the desired world become a different world?
+
+MECHANISM:
+poetic image
+→ imagined world
+→ relational distinction
+→ attempted technical interpretation
+→ implementation.
+
+FORMAL SHIFT:
+<POETIC WORLD>
+→ <RELATIONAL INVARIANTS>
+→ [FORMALIZE]
+→ <TECHNICAL WORLD>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Possible extracted constraints:
+COHABIT(mammals, computers)
+PROGRAMMING_DIRECTION = reciprocal
+TECHNOLOGY ∈ habitat
+HUMAN_LABOR → reduced
+MACHINE_ROLE = care | surveillance ?
+
+The question mark is crucial: the poem does not resolve it.
+
+TENSION:
+The same language that creates harmony also creates the possibility of total observation.
+
+A technical implementation could satisfy “computer everywhere” while destroying the poem’s desired world.
+
+MISSING:
+A translation discipline capable of distinguishing IMAGE, VALUE, RELATION, CONSTRAINT, and IMPLEMENTATION CHOICE.
+
+Without this separation, metaphor can be prematurely compiled into whatever architecture happens to be technically convenient.
+
+BOUNDARY:
+Brautigan supplies no implementation for his cybernetic ecology. The poem is not executable code. Calling it an upstream specification is [OUR INFERENCE].
+
+CITATION TRAIL:
+Christopher Alexander — pattern language.
+Tim Ingold — “guidance without specification.”
+Lucy Suchman — plans and situated action.
+Value-sensitive design.
+
+TEST:
+Give the poem independently to three engineering teams. Ask each to produce a technical system satisfying it.
+
+Before comparing implementations, extract the invariants each team believed the poem required. The divergences reveal what poetic language successfully constrains and what remains radically deferred.
+
+PLATFORM:
+[[THE HOUSE THAT WORLDS BUILT]]
+
+LINKS:
+[[Z-HOUSE-LANG-001]]
+[[Z-HOUSE-LANG-001-M]]
+[[THICK PROMPTING]]
+
+BIBTEX:
+@misc{brautigan1967machines,
+  author       = {Brautigan, Richard},
+  title        = {All Watched Over by Machines of Loving Grace},
+  year         = {1967},
+  publisher    = {The Communication Company},
+  address      = {San Francisco},
+  note         = {Originally issued as a mimeographed broadside and included in the collection of the same title}
+}

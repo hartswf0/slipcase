@@ -1,0 +1,59 @@
+SLIPCASE 15.55-AM PAPER SOURCE MAP
+
+PAPER: The Casino Is Not the Building: Transaction Topology and the Boundaries of Virtual Worlds
+TEX: the-casino-is-not-the-building__2026-08-17.tex
+PDF: the-casino-is-not-the-building__2026-08-17.pdf
+CHECKPOINT: THE CASINO IN THE FOUNTAIN
+CHECKPOINT ID: fld-sha256:dedbbcf3ea682379a05c5ce93d129399e936896252ce4c70a88c0c7e2ef6813d
+GENERATED: 2026-08-17T203217-0400
+ASSEMBLY PROMPT: _PROMPTS/10__slipcase-v15.55-AM__assembly.poml
+ASSEMBLY PROMPT SHA256: a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a
+INDEX CAPSULE: index.html
+RETURN PATH: 000__RETURN_PATH.txt
+REBUILD: 000__REBUILD.txt
+MAKING HISTORY: 000__MAKING_HISTORY.txt
+BIBLIOGRAPHY: the-casino-in-the-fountain__references.bib
+
+SOURCE MAP — THE CASINO IS NOT THE BUILDING
+==============================================================================
+
+ABSTRACT / CENTRAL CLAIM
+  COMPILER SYNTHESIS: Gambling-like mechanics are better modeled as transaction topologies than as visual places or objects.
+  ZETTELS: GAMBLING-TOPOLOGY-014; WORLD-MEMBRANE-022; ROBLOX-MARBLE-017; XSOLLA-CHANCE-API-020
+  SOURCES: linden_wagering_policy; ukgc_lootboxes_2017; roblox_marble_fountain_2026; xsolla_open_lootbox_api
+
+1 · FROM WORLD RENDERING TO WORLD STATE
+  COMPILER SYNTHESIS: 2D/3D are possible representations of persistent world state; critical operations can occur outside the 3D scene.
+  ZETTELS: KANEVA-DIM-001; HUBS-URL-001; HUBS-MEDIA-002; METAVERSE-DIM-004; XSOLLA-EXOSKELETON-010
+  SOURCES: norris2009virtualhealth; white2018hubs; marinacci2018hubsmedia; xsolla2025buybutton
+
+2 · THE TRANSACTION BELOW THE SKIN
+  COMPILER SYNTHESIS: Randomness, mapping, payout, interface, and inventory mutation are separable components.
+  ZETTELS: RNG-001; RNG-002; CASINO-ARCH-001; XSOLLA-CHANCE-API-020
+  SOURCES: ukgc_rts7_random_outcomes; ukgc_rts7_mapping; ukgc_remote_gambling_equipment; xsolla_open_lootbox_api
+
+3 · THE WORLD MEMBRANE IS MACHINERY
+  COMPILER SYNTHESIS: Convertibility and value-exit paths can alter the regulatory/economic character of an otherwise similar random-reward mechanism.
+  ZETTELS: LOOTBOX-BORDER-008; SECOND-LIFE-NOVELTY-016; MINECRAFT-MONEY-007; ROBLOX-CASHOUT-018; WORLD-MEMBRANE-022
+  SOURCES: dcms2022lootboxes; linden_wagering_convertibility; mojang_usage_guidelines; roblox_devex_2026; ukgc_lootboxes_2017
+
+4 · LAW BECOMES WORLD STATE
+  COMPILER SYNTHESIS: Rules become runtime gates, product metadata, and spatial permissions.
+  ZETTELS: ROBLOX-LAW-005; SECOND-LIFE-JURISDICTION-015; XSOLLA-RANDOM-FLAG-019; MINECRAFT-GAMBLING-021
+  SOURCES: roblox_policyservice; linden_skill_policy; xsolla_catalog_randomized_reward; minecraft_usage_guidelines_2026
+
+5 · DIEGETIC CAMOUFLAGE
+  COMPILER SYNTHESIS: An invariant transaction can be represented as slot, box, fountain, or API call; visual metaphor and economic operation are analytically distinct.
+  ZETTELS: GAMBLING-TOPOLOGY-014; ROBLOX-MARBLE-017; XSOLLA-CHANCE-API-020
+  SOURCES: linden_wagering_policy; roblox_terms_random_2026; xsolla_open_lootbox_api
+
+6 · OBSERVABILITY AND GOVERNANCE
+  COMPILER SYNTHESIS: Platforms often possess transaction telemetry necessary to distinguish mechanisms while outside researchers have partial observational access.
+  ZETTELS: LOOTBOX-EVIDENCE-009
+  SOURCES: dcms2022lootboxevidence
+
+LIMITATIONS
+  Jurisdiction-specific platform rules are not a universal legal definition.
+  The corpus does not establish that diegetic skins causally change player behavior.
+  Cross-interface continuity is demonstrated selectively, not for every platform object.
+  Xsolla documentation establishes infrastructure behavior, not all underlying randomization internals.

@@ -1,0 +1,246 @@
+---
+title: "Research That Can Continue"
+subtitle: "Recursive Objects, Typed Absence, and the Checkpoint as a Scholarly Form"
+author: "Watson Hartsoe"
+date: "18 August 2026"
+abstract: |
+  Research conducted with language models is unusually vulnerable to a mundane form of loss: the conversation disappears while the research remains unfinished. Saving the prose is not enough. What disappears with the interface is the structure of continuation - which question remained live, which source was still missing, which contradiction mattered, which test could discriminate rival readings, and which interpretive layer could be discarded without destroying evidence. This working paper develops the idea of *continuable scholarship*: a research object should preserve not only what has been said but enough epistemic and operational state for another researcher or model to make the next warranted move. I examine a four-layer architecture consisting of atomic source-grounded zettels, type-invariant recursive forage, graph-level allocation of research attention, and portable checkpoints. The central argument is that durability requires different temporal rules for evidence and interpretation: evidence should accumulate monotonically, while interpretation must remain nonmonotonic and replaceable. From this follow three further requirements: unresolved addresses may steer inquiry without becoming evidence; production provenance must be separated from evidentiary support; and deterministic verification should be delegated to tools rather than rhetorical confidence. The result is less a note-taking system than a proposal for a scholarly object that can come back alive after its originating context is gone.
+keywords:
+  - research objects
+  - provenance
+  - recursive inquiry
+  - language models
+  - digital preservation
+  - knowledge graphs
+  - reproducible research
+geometry: margin=1in
+fontsize: 11pt
+linestretch: 1.12
+header-includes:
+  - \usepackage{tikz}
+---
+
+```{=latex}
+\begin{tikzpicture}[remember picture,overlay]
+  \coordinate (m) at ([xshift=-0.62in,yshift=0.58in]current page.south east);
+  \fill (m) circle (0.8pt);
+  \draw[line width=0.35pt] ([xshift=-2pt,yshift=5pt]m) arc[start angle=220,end angle=320,radius=7pt];
+  \draw[line width=0.35pt] ([xshift=-9pt,yshift=7pt]m) arc[start angle=150,end angle=255,radius=12pt];
+  \node[anchor=south east,align=right,font=\fontsize{6.5}{8}\selectfont,text=black!65] at ([xshift=-18pt,yshift=-1pt]m) {Working Paper $\cdot$ AI-augmented research process\\Evidence, prompts, and making history preserved};
+\end{tikzpicture}
+```
+
+# 1. The missing object is not the note
+
+The ordinary description of research preservation starts too late. It asks whether a document can still be opened, whether its bytes remain intact, whether its citations resolve, or whether its workflow can be reproduced. Those are necessary questions, but research often becomes unusable before any of them fail. A note can remain perfectly readable while the inquiry that produced it has disappeared.
+
+This is especially visible in research conducted through language-model conversations. A working session may contain a source passage, a provisional interpretation, a correction, an unresolved disagreement, a promising citation, and a proposed test. If the session is reduced to a polished summary, the conclusions may survive while the *handles for continuing the work* vanish. The loss is not semantic content alone. It is the loss of research state.
+
+The SLIPCASE / FORAGE architecture begins from a different preservation question: what has to be true of a research object for another researcher or capable model to continue the inquiry without the originating conversation? The first zettel in the present field names the criterion as **continuability**: a durable object must carry enough identity, evidence, relational position, unresolvedness, and possible action to permit a warranted next move (Z-SLIP-001). That proposal shifts the unit of preservation. The object to be preserved is not a statement but a *statement-in-an-inquiry*.
+
+This differs from established packaging and provenance work by emphasis rather than opposition. BagIt defines a minimal filesystem convention for reliable storage and transfer of arbitrary digital content [1]. W3C PROV provides a general model for representing entities, activities, agents, and derivations so provenance can be exchanged across systems [2]. RO-Crate packages research artifacts with machine-readable metadata for reuse, preservation, and reproducibility [3]. These systems establish that a research package should be inspectable, attributable, and transferable. The present wager is narrower and more operational: a package should also expose enough unfinished structure to make *the next research operation* recoverable.
+
+That requires distinguishing preservation from continuation. A complete archive of yesterday can still be a poor instrument for tomorrow.
+
+# 2. The recursive object
+
+The first layer is deliberately small: one atomic zettel. Its unusual property is not atomism by itself but **type invariance**. Recursive forage is formally described as:
+
+```text
+FORAGE(ZETTEL) -> ZETTEL[]
+```
+
+Every child preserves the same field names and field order as its parent. No child-only `PARENT`, `STATUS`, `ANSWERS`, or workflow metadata is permitted. A child must be able to become a parent without rewriting.
+
+This constraint turns a formatting choice into an architectural boundary. Systems that append workflow-specific metadata at every generation gradually make their outputs dependent on the tool that produced them. The zettel instead carries only research-state fields: source, passage, research object, question, mechanism, tension, missing element, boundary, citation trail, test, platform, links, and bibliography. Lineage uses the same representational vocabulary available to every other card. The object remains recursively operable because it does not acquire a new ontological status merely by being produced later.
+
+The resulting card has a peculiar temporal structure. It records what has been learned while deliberately exposing what remains unresolved. `QUESTION`, `TENSION`, `MISSING`, `BOUNDARY`, `CITATION TRAIL`, and `TEST` are not metadata around the finding; they are part of the finding because they delimit how the evidence can be used and where inquiry can proceed.
+
+This explains why a card can be readable yet dead. If one preserves only its thesis, the next operation must be invented from scratch. If one preserves the strongest unresolved edge and a discriminating test, the object can be resumed.
+
+Yet recursion reveals a limit. Z-SLIP-013 notes that a self-forageable card is not a self-directing research system. Once there are many cards, a second state becomes necessary: which edges have already been investigated, which contradictions remain open, which sources recur across branches, and which possible next move is worth spending attention on? That state should not be stuffed back into the zettel, because doing so would destroy type invariance. The research object and the research controller therefore separate.
+
+# 3. The frontier: genealogy is not attention
+
+Recursive systems tempt depth-first continuation: produce a child, then forage the child, then forage its child. That preserves genealogy but confuses descent with priority.
+
+The autonomous graph layer makes a different claim. Parentage tells us where a question came from. It does not tell us whether that question deserves the next hour. The controller therefore surveys an **active frontier** consisting both of local open fields and relations between cards: contradictions, repeated vocabulary, competing genealogies, source/implementation mismatches, unexpected crossings, or shared sources that connect distant branches.
+
+Its governing question is not “what follows from the latest card?” but “if I could know one new thing next, which finding would most change the graph?” Z-SLIP-014 interprets this as a theory of research-attention allocation.
+
+The gain is obvious: a minor leaf no longer monopolizes research merely because it was generated last. The danger is equally important. Any estimate of “expected epistemic gain” is computed from features already represented in the graph. The archive therefore risks rewarding what it already knows how to name. A low-frequency anomaly, an unfamiliar vocabulary, or a source outside the current conceptual language may be more transformative precisely because the existing graph cannot score it well.
+
+The architecture partly protects itself by treating exploration as a distinct mode and by periodically “looking sideways” for collisions. But the deeper issue remains open: a research system that directs its own attention needs a theory of *representation blindness*. Optimization over the frontier cannot discover what has left no trace in the frontier.
+
+This is one reason human deference is not merely a safety stop. Z-SLIP-018 identifies a stronger condition: automatic inquiry should yield when the remaining problem is not “which evidence would discriminate these readings?” but “which question ought to matter?” The unresolved technical problem is how a system can detect that boundary without already possessing the normative judgment it is supposed to defer.
+
+# 4. Evidence should accumulate; interpretations should be allowed to die
+
+The most consequential design move appears in the separation of three layers:
+
+```text
+EVIDENCE       ZETTEL · SOURCE · RESOURCE · PROMPT · APPEARANCE
+FIELD          PLATFORM · LINK · CONCEPT · GHOST · BACKLINK · LINEAGE
+INTERPRETATION MOC · ARRANGEMENT · TRAIL · PAPER
+```
+
+The layers obey different rules. Evidence is preserved. Field structure is compiled. Interpretation remains revisable.
+
+Z-SLIP-015 makes the temporal consequence explicit. The evidentiary history should be approximately monotonic: new objects may be appended, but previously preserved payloads are not silently rewritten to fit later theory. Interpretation is nonmonotonic: a taxonomy may fail, a genealogy may collapse, a graph bridge may prove superficial, and a paper thesis may need to be abandoned.
+
+This is not a claim that preserved evidence is interpretation-free. Admission, segmentation, naming, and source selection are already judgments. The claim is more practical: a later change of mind should not require retroactively editing the historical object that made the change of mind possible.
+
+That principle changes the status of the paper. In ordinary scholarly workflow, notes are often treated as disposable scaffolding for the stable publication. Here the relation is reversed. The cards persist; the paper is a compiled view over them. Z-SLIP-007 calls the paper “a wager”: one defensible traversal of a field that may later support a rival argument.
+
+This makes disagreement cheaper in a precise sense. Two papers can disagree while sharing an evidentiary substrate. Each can be traced back through a source map; neither is entitled to rewrite the cards it finds inconvenient. The cost is that the archive can no longer hide behind the apparent coherence of the manuscript. Contradictions remain visible after the prose has resolved them rhetorically.
+
+# 5. Typed absence: the ghost can steer but cannot testify
+
+The most distinctive object in the system may be one that contains no content at all.
+
+A card may declare `[[an address]]` that cannot be conservatively resolved to another card, platform, concept, or explicit external object. SLIPCASE preserves the unresolved address as a **ghost** instead of deleting it or guessing a fuzzy match.
+
+The ghost changes the meaning of absence. It is not automatically a broken link. It may be a concept that several branches independently need but nobody has yet written; an unstable synonym; a granularity mismatch; a copied assumption; or a genuine missing research object. Z-SLIP-002 proposes that repeated inbound demand can make such an absence a conceptual attractor. Z-SLIP-017 adds the necessary epistemic type rule: a ghost may authorize *search* but may not authorize *belief*.
+
+That distinction can be written as a small permission table:
+
+```text
+GHOST
+  may prioritize search       yes
+  may generate a question     yes
+  may support a claim         no
+```
+
+The idea matters beyond ghosts. Research systems often collapse all information into one scale of confidence. But different objects authorize different operations. A verified quotation may support a textual claim. A high-degree unresolved address may justify spending retrieval effort. A prompt may explain why the system searched a particular source. A mechanical checksum may establish byte identity. None is interchangeable with the others.
+
+This typed view of epistemic authority also prevents a subtle form of circularity. If the archive creates a concept, notices that many of its own cards refer to the concept, and then treats graph centrality as evidence that the concept is important in the world, it has converted self-reference into pseudo-evidence. Ghosts must therefore remain questions until independent evidence arrives.
+
+# 6. Two provenance graphs, not one
+
+The same typing problem appears in AI disclosure.
+
+A prompt can be causally consequential to a scholarly argument without being evidence for that argument. Z-SLIP-016 states the distinction compactly:
+
+```text
+CAUSES(claim, prompt) != SUPPORTS(claim, prompt)
+```
+
+A research artifact therefore has at least two provenance structures.
+
+The **evidence trace** answers: what supports this substantive statement?
+
+```text
+claim -> zettel -> source -> citekey
+```
+
+The **production trace** answers: what operations and interventions caused this artifact to take its present form?
+
+```text
+artifact -> operation -> prompt / model / human intervention
+```
+
+W3C PROV is intentionally general enough to describe entities, activities, and agents in a production process [2]. Workflow-oriented RO-Crate profiles similarly treat inputs, outputs, code, and execution provenance as packageable research context [4]. The problem here is not the absence of provenance vocabularies. It is the temptation to let production history stand in for epistemic support. “The model generated this after reading source X” is not the same claim as “source X warrants this sentence.”
+
+This suggests a better form of AI disclosure. Rather than placing a binary label on the final artifact and expecting the label to explain authorship, the system should preserve consequential interventions while keeping them separate from evidence. The public paper can carry a quiet identification; the package carries the fuller making history.
+
+The unresolved problem is selection. If every keystroke and prompt is preserved, provenance becomes noise. If only a few interventions are kept, the system requires a theory of **consequential control**: which operation changed the source set, interpretation, graph resolution, title, argument, or verification state enough to deserve a durable receipt?
+
+# 7. The checkpoint as scholarly form
+
+The final layer is the checkpoint itself.
+
+BagIt demonstrates a useful preservation principle: a package can have enough structure to support reliable transfer without understanding the internal semantics of every payload file [1]. RO-Crate extends the research-object idea by aggregating research data and contextual metadata in a lightweight, machine-readable package [3]. Git demonstrates another complementary property: content-addressable storage can separate an object's identity from its human-facing pathname [5]. SLIPCASE borrows from all three tendencies while pursuing a different object: a research field whose unfinished structure remains operable.
+
+The root-level `.txt` cards are therefore not merely a retro preference for simple files. They encode a recoverability hierarchy. Z-SLIP-006 summarizes it as: root holds what would be intellectually grieved; derived folders hold what should be regenerable. A graph, reader, bibliography view, or paper can be useful and beautifully made while remaining secondary. If it disappears, the preserved research objects should be sufficient to produce another one.
+
+The single-file `index.html` has the opposite role. It is intentionally monolithic because transmission and canonical storage optimize for different things. The canonical package favors inspectable separate files. The sendable capsule favors a recipient who receives one file and needs immediate access to the cards, graph, paper, prompts, and reconstruction path. Z-SLIP-012 names this distinction: a sendable research object is stronger than a shareable interface when it carries enough state to reconstruct the environment behind the view.
+
+This is the point at which “research preservation” becomes “research continuation.” The checkpoint does not merely answer *what happened?* It should answer:
+
+- What evidence is here?
+- What claims are derived from it?
+- What remains unresolved?
+- Which relations are literal and which are compiled?
+- What source or test should be pursued next?
+- Which parts of the present interpretation may be discarded safely?
+- What can be mechanically verified?
+- What could not be verified?
+- How does another context rejoin the work?
+
+A checkpoint is successful when those questions can be answered without the originating chat.
+
+# 8. The model judges; the tool counts
+
+A final principle protects the architecture from a mundane but pervasive failure. Language models are good at interpreting fuzzy material and bad at pretending that remembered quantities are measurements. SLIPCASE therefore assigns deterministic assertions to deterministic mechanisms wherever possible.
+
+Hashes, file counts, relation extraction, citekey inclusion, duplicate detection, PDF status, and ZIP integrity should be computed. Interpretation remains a model or human judgment. Z-SLIP-004 describes this not as “use tools” but as a division of epistemic authority.
+
+The distinction needs one qualification. A script can count a badly defined category perfectly. Determinism proves neither the category nor the interpretation; it proves only the operation it actually performed. A strong checkpoint therefore reports several kinds of completeness separately. Z-SLIP-005 distinguishes source/context coverage, classification coverage, and mechanical reconciliation. There is no honest scalar `COMPLETE: YES` when the denominators are different or unknown.
+
+This is where the checkpoint becomes more than packaging. It publishes the boundary of what the research process knows about itself.
+
+# 9. Continuability as a design criterion
+
+The combined system can be described as a research metabolism, but the metaphor should not be allowed to imply autonomy or life. Its components are designed operations: source selection, admission, steering, relation resolution, compilation, and publication. The value of the metaphor is narrower. The system is stable not because its interpretations remain fixed but because it can undergo another transformation without consuming the evidence of the previous one.
+
+That yields a candidate design criterion for AI-mediated scholarship:
+
+> A research state is continuable when another competent researcher or model can recover a warranted next operation, execute it against identifiable evidence, append the result without rewriting prior evidence, and reconstruct the relation between the new state and the old one.
+
+This criterion is stronger than readability and weaker than full reproducibility. A recipient may be unable to reproduce every historical model output and still be able to continue the inquiry responsibly. Conversely, a recipient may reproduce a PDF byte-for-byte while having no idea what question remained open.
+
+Continuability therefore connects preservation, provenance, and inquiry without collapsing them. It asks not whether the archive can replay the past perfectly, but whether it preserves enough structure for the future to disagree with the past intelligently.
+
+# 10. Limits and unresolved territory
+
+Several claims in this architecture remain proposals rather than established results.
+
+First, no evidence yet shows which zettel fields are necessary or sufficient for successful continuation. The decisive test is empirical: give stripped-down research objects to unfamiliar researchers and measure which operations they can reconstruct.
+
+Second, graph steering may amplify the vocabulary of the archive. High-degree ghosts and recurring sources are useful signals, but they can also reward copied assumptions or premature naming convergence.
+
+Third, immutable payloads do not make evidence neutral. Admission and segmentation are interpretive acts whose histories may themselves require preservation.
+
+Fourth, the line between reconstructible orchestration state and irrecoverable research history is unsettled. If the daemon's choice not to pursue a branch materially shaped the field, the absence of that decision from the cards may matter.
+
+Fifth, dual provenance needs a practical rule for consequentiality. Capturing everything is unusable; capturing too little turns making history into decoration.
+
+Finally, the system has not yet demonstrated long-horizon merges across genuinely independent checkpoints. Content hashes solve byte identity, not conceptual identity, synonymy, or intellectual descent.
+
+These are not reasons to close the design. They are the next research objects the design has managed to expose.
+
+# Conclusion
+
+The durable scholarly object is usually imagined as the publication, dataset, repository, or executable workflow. AI-mediated research reveals another possibility: the thing worth preserving may be a state of inquiry that remains capable of becoming different.
+
+The architecture developed here separates atomic evidence-bearing objects from the controller that allocates attention; separates literal evidence from compiled field structure; separates support provenance from production provenance; permits unresolved objects to steer search without becoming evidence; and treats the paper as a revisable wager over an append-only history.
+
+The resulting checkpoint is not valuable because it captures everything. It is valuable because it can state what it has, what it lacks, what it currently thinks, and what operation could make it think differently.
+
+A readable archive remembers. A continuable archive can be disagreed with, extended, and made new without losing the path by which it arrived.
+
+# References
+
+[1] J. Kunze, J. Littman, E. Madden, J. Scancella, and C. Adams. **The BagIt File Packaging Format (V1.0)**. RFC 8493, 2018. DOI: 10.17487/RFC8493.
+
+[2] L. Moreau and P. Missier, eds. **PROV-DM: The PROV Data Model**. W3C Recommendation, 30 April 2013.
+
+[3] S. Soiland-Reyes et al. **Packaging research artefacts with RO-Crate**. *Data Science* 5(2):97-138, 2022. DOI: 10.3233/DS-210053.
+
+[4] S. Leo et al. **Recording provenance of workflow runs with RO-Crate**. arXiv:2312.07852, 2023.
+
+[5] S. Chacon and B. Straub. **Pro Git**, 2nd ed., section “Git Internals - Plumbing and Porcelain.” Git documentation describes Git as fundamentally a content-addressable filesystem with a version-control interface layered above it.
+
+# Appendix A. Assembly instrument
+
+The exact recursive-forage and SLIPCASE assembly prompts used for this checkpoint are preserved under `_PROMPTS/` and embedded in `index.html`. Their byte hashes are recorded in `_SLIPCASE/MANIFEST.json`.
+
+# Appendix B. Making history
+
+This paper was assembled from the twenty `Z-SLIP-*` zettels produced in the working conversation, the supplied prompt architecture, and a small set of external standards used only to position the design against existing approaches to provenance and research-object packaging. The zettel payloads were preserved as cards. The organization and connective argument of this paper are derived interpretation.
+
+See `000__MAKING_HISTORY.txt` for the package-level record.
+
+# Appendix C. Replication path
+
+Open `index.html` for the self-contained reader. Open `000__RETURN_PATH.txt` and `000__REBUILD.txt` for the checkpoint identity and reconstruction procedure. The canonical evidence objects are the root zettel cards and preserved source/prompt resources, not this paper.

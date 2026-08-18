@@ -1,0 +1,91 @@
+SOURCE MAP — THE VANISHING PROMPT
+
+CLAIM C01
+CLAIM: Prompt scholarship is actively stabilizing prompts as linguistic objects, structured discourse units, programs, and software artifacts.
+TYPE: SOURCE-SUPPORTED SYNTHESIS
+ZETTEL: PROMPT-ONTOLOGY-001; PROMPT-ONTOLOGY-005; WORKWORDS-PROMPT-001
+SOURCE: Basmov et al. 2026; Jeoung et al. 2026; Villamizar et al. 2025; Liang et al. 2025
+CITEKEY: Basmov2026PromptsWild; Jeoung2026PromptPrism; Villamizar2025PromptsArtifacts; Liang2025PromptsPrograms
+SUPPORT: Each source explicitly frames prompt objects in one of these ways.
+INFERENCE: Their co-presence makes prompt objecthood itself available as a research tension.
+
+CLAIM C02
+CLAIM: The visible/stored prompt can be bounded and portable while remaining causally incomplete.
+TYPE: COMPILER-SYNTHESIS
+ZETTEL: PROMPT-ONTOLOGY-006
+SOURCE: MULTISOURCE
+CITEKEY: Basmov2026PromptsWild; Mei2025ContextEngineering; Lester2021PromptTuning; Suchman1987Plans
+SUPPORT: Sources establish textual prompt ontology, dynamic context beyond static strings, nonlinguistic soft prompts, and the distinction between plans and situated action.
+INFERENCE: “Boundedness–causality dilemma” is not source vocabulary; it is the paper’s current wager.
+
+CLAIM C03
+CLAIM: Context engineering explicitly rejects the model in which context is one monolithic static prompt string.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: PROMPT-ONTOLOGY-003
+SOURCE: Mei et al. 2025
+CITEKEY: Mei2025ContextEngineering
+SUPPORT: The source formalizes historical C=prompt and replaces it with dynamically assembled contextual components.
+INFERENCE: Enlarging context pressures object boundaries rather than automatically solving them.
+
+CLAIM C04
+CLAIM: Prompt tuning uses learned continuous conditioning objects called soft prompts rather than only discrete natural-language strings.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: PROMPT-ONTOLOGY-004; WORKWORDS-PROMPT-002
+SOURCE: Lester et al. 2021; Qin & Eisner 2021
+CITEKEY: Lester2021PromptTuning; QinEisner2021SoftPrompts
+SUPPORT: Both papers explicitly define/train soft prompts or soft words.
+INFERENCE: Textuality cannot be assumed as an inherent property of every technical object named “prompt.”
+
+CLAIM C05
+CLAIM: Prompt artifacts can be versionable while runtime behavior changes under other conditions.
+TYPE: INTERPRETATION
+ZETTEL: PROMPT-ONTOLOGY-005
+SOURCE: Villamizar et al. 2025; Mei et al. 2025
+CITEKEY: Villamizar2025PromptsArtifacts; Mei2025ContextEngineering
+SUPPORT: Sources motivate artifact management and document runtime context beyond static prompt strings.
+INFERENCE: artifact identity and causal identity should not be treated as automatically identical.
+
+CLAIM C06
+CLAIM: Adding explicit prompt requirements does not monotonically increase control.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: WORKWORDS-PROMPT-003
+SOURCE: Yang et al. 2025/2026 revision
+CITEKEY: Yang2025PromptsDontSay
+SUPPORT: The study reports fragility of unspecified requirements and interference when more requirements are explicitly added.
+INFERENCE: textual specification and effective behavioral constraint are distinct variables.
+
+CLAIM C07
+CLAIM: In diffusion models, requested semantics can have a temporal career and stochastic state can have structured generative effects.
+TYPE: SOURCE-SUPPORTED SYNTHESIS
+ZETTEL: DEFAULT-IMAGES-CHI26-A-1; DEFAULT-IMAGES-CHI26-C-1
+SOURCE: Agarwal et al. 2023; Mao et al. 2023
+CITEKEY: Agarwal2023ASTAR; Mao2023InitialImageEditing
+SUPPORT: A-STAR analyzes attention retention through denoising; Mao et al. intervene on initial latent blocks and find content preferences.
+INFERENCE: final prompt-output correspondence can underdetermine where semantic control entered or disappeared.
+
+CLAIM C08
+CLAIM: Prompt scholarship risks a planning-model reconstruction in which an available instruction is substituted for situated execution.
+TYPE: COMPILER-SYNTHESIS / HISTORICAL CROSSING
+ZETTEL: PROMPT-ONTOLOGY-002
+SOURCE: Suchman 1987
+CITEKEY: Suchman1987Plans
+SUPPORT: Suchman distinguishes plans from the contingent course of situated action.
+INFERENCE: Applying this distinction to prompt research is the paper’s conceptual crossing; no claim of direct genealogy is made.
+
+CLAIM C09
+CLAIM: The field can manufacture causal certainty by allowing visible inscription to inherit causal privilege because it is easy to archive and manipulate.
+TYPE: COMPILER-SYNTHESIS
+ZETTEL: PROMPT-ONTOLOGY-006; PROMPT-ONTOLOGY-002; PROMPT-ONTOLOGY-005
+SOURCE: MULTISOURCE
+CITEKEY: Suchman1987Plans; Basmov2026PromptsWild; Villamizar2025PromptsArtifacts; Mei2025ContextEngineering
+SUPPORT: Sources establish the archival/textual object, artifact management needs, situated-action warning, and wider runtime context.
+INFERENCE: “manufacture of causal certainty” is the Axis Inversion of the field; it is the claim most exposed to opposition.
+
+CLAIM C10
+CLAIM: The paper does not establish that the prompt is unreal or epiphenomenal.
+TYPE: BOUNDARY
+ZETTEL: PROMPT-ONTOLOGY-006
+SOURCE: MULTISOURCE
+CITEKEY: Basmov2026PromptsWild; Jeoung2026PromptPrism; Yang2025PromptsDontSay
+SUPPORT: Prompt text is demonstrably consequential and can be studied as language even if it is not a sufficient causal unit.
+INFERENCE: The paper asks for more disciplined attribution, not abolition of prompt research.

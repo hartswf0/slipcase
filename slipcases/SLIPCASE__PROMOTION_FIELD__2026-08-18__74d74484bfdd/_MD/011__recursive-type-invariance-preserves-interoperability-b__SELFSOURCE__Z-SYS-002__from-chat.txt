@@ -1,0 +1,101 @@
+ZETTEL
+
+ID:
+Z-SYS-002
+
+TITLE:
+Recursive type invariance preserves interoperability by forbidding schema evolution
+
+SOURCE:
+User-provided prompt system — PRIME ZETTEL FORAGE — RECURSIVE INQUIRY v3.1 — supplied 2026-08-18.
+
+PASSAGE:
+[PARAPHRASE] Every child must preserve exactly the parent schema's field names, order, and conventions so that any child can immediately become a parent. New child-specific fields are forbidden.
+
+RESEARCH OBJECT:
+The recursive guarantee is purchased by freezing the representational vocabulary.
+
+LOCAL MOVE:
+The prompt makes closure under recursion more important than allowing children to invent new kinds of metadata.
+
+SOURCE TERMS:
+recursive type
+exactly the same field names
+field order
+structural conventions
+child
+parent
+without rewriting
+
+WHAT BECAME STRANGE:
+A system designed to discover things it did not know to ask forbids its research object from discovering that it needs a new field.
+
+QUESTION:
+What happens when inquiry produces a distinction that the invariant ZETTEL schema cannot represent without overloading an existing field?
+
+DEEPER QUESTION:
+Can a research object be recursively closed and epistemically open at the same time?
+
+MECHANISM:
+Schema invariance guarantees that:
+output_n
+can become
+input_n+1
+without a migration step.
+
+FORMAL SHIFT:
+<heterogeneous possible findings>
+→ <fixed ZETTEL datatype>
+→ [encode every descendant into existing fields]
+→ <frictionless recursion>
+
+SOURCE FORMALISM:
+FORAGE(ZETTEL) → ZETTEL[]
+
+Every child MUST use exactly the same field names, field order, and structural conventions.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+closure:
+FORAGE(Z) ⊆ Z*
+
+cost:
+new distinction D ∉ schema(Z)
+must become either
+  reinterpret(existing_field, D)
+or
+  unrepresentable(D)
+
+TENSION:
+The prompt demands transformed questions and newly discovered machinery while prohibiting transformation of the datatype carrying those discoveries.
+
+MISSING:
+An extension mechanism that preserves recursive compatibility without silently stuffing novel state into semantically unrelated fields.
+
+BOUNDARY:
+This does not show that the current schema is inadequate. It identifies the condition under which inadequacy could become impossible to express.
+
+CITATION TRAIL:
+[[Z-SYS-001]]
+→ v3.1 invariant
+→ schema evolution under recursive research
+
+TEST:
+Deliberately forage for a finding requiring provenance confidence, competing parents, temporal state, or execution status. Determine whether it can be represented faithfully using the existing fields without semantic overload.
+
+PLATFORM:
+[[RECURSIVE RESEARCH TYPE]]
+
+LINKS:
+[[Z-SYS-001]]
+[[SCHEMA CLOSURE]]
+[[REPRESENTATIONAL DEBT]]
+
+BIBTEX:
+@misc{recursive_inquiry_31_2026,
+  title = {Prime Zettel Forage — Recursive Inquiry},
+  howpublished = {User-provided research-system prompt},
+  year = {2026},
+  note = {Version 3.1; supplied 2026-08-18}
+}

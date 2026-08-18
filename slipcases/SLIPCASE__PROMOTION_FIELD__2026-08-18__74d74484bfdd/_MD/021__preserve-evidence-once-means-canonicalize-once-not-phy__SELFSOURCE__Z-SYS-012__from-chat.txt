@@ -1,0 +1,97 @@
+ZETTEL
+
+ID:
+Z-SYS-012
+
+TITLE:
+“Preserve evidence once” means canonicalize once, not physically store once
+
+SOURCE:
+User-provided prompt system — SLIPCASE — ANCIENT MASTER PORTABLE RESEARCH FIELD v15.0 — supplied 2026-08-18.
+
+PASSAGE:
+[PARAPHRASE] Ancient Master says to preserve evidence once and derive everything else, yet also requires one exact root .txt payload and an exact mirror in _MD/.
+
+RESEARCH OBJECT:
+The system's “once” cannot literally mean one physical copy. It must mean one canonical evidentiary identity from which redundant representations are verified.
+
+LOCAL MOVE:
+Resolves an apparent contradiction between archival normalization and portability.
+
+SOURCE TERMS:
+Preserve evidence once
+derive everything else
+root .txt
+Mirror it exactly
+immutable payload
+SHA-256
+
+WHAT BECAME STRANGE:
+Redundancy is necessary for usability and portability, but redundancy is also the mechanism by which supposedly identical evidence can drift.
+
+QUESTION:
+What makes one representation canonical when several exact copies are deliberately shipped?
+
+DEEPER QUESTION:
+Can every duplicated manifestation be mechanically proven to be a representation of one preserved evidentiary object rather than an independent copy?
+
+MECHANISM:
+Canonical payload is admitted once logically.
+Hash establishes exact identity.
+TXT and Markdown manifestations may duplicate bytes.
+Verification asserts equality between manifestations.
+
+FORMAL SHIFT:
+<one evidentiary payload>
+→ <canonical content identity>
+→ [materialize redundant views]
+→ <portable verified representations>
+
+SOURCE FORMALISM:
+ONE ZETTEL = ONE immutable payload = ONE root .txt file.
+Mirror it exactly in _MD/.
+Exact payload SHA-256 is machine identity when computable.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+logical_evidence_count = unique(content_hash)
+
+physical_representation_count ≥ logical_evidence_count
+
+For mirror m of payload p:
+SHA256(m_exact_payload) = SHA256(p)
+
+TENSION:
+“Evidence once” sounds like deduplicated storage, while the package explicitly values redundant independently readable files.
+
+MISSING:
+A canonicalization rule stating which representation controls when verification discovers drift.
+
+BOUNDARY:
+If “mirror” contains Markdown fencing or metadata rather than byte-identical payload, simple whole-file hash equality will not work and a payload-extraction rule is required.
+
+CITATION TRAIL:
+Ancient Master intent
+→ immutable payload rule
+→ verification equations
+→ package reconstruction
+
+TEST:
+Modify whitespace in one _MD mirror without changing the root TXT. Run reconstruction and determine which artifact is authoritative and how the mismatch is recorded.
+
+PLATFORM:
+[[CANONICAL EVIDENCE]]
+
+LINKS:
+[[CONTENT ADDRESS]]
+[[REDUNDANT REPRESENTATION]]
+[[DRIFT DETECTION]]
+
+BIBTEX:
+@misc{ancient_master_canonical_evidence_2026,
+  title = {Slipcase — Ancient Master: Canonical Evidence and Mirroring Rules},
+  howpublished = {User-provided research-system prompt},
+  year = {2026},
+  note = {Version 15.0; supplied 2026-08-18}
+}

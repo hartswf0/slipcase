@@ -1,0 +1,112 @@
+SOURCE MAP — adversarial-description__WIP-v15-a5ef0e2e__20260817T2254-0400
+
+STATUS: Working paper; compiler synthesis is explicitly distinguished from source-supported propositions.
+CHECKPOINT: ADVERSARIAL-20260817-2254
+
+CLAIM AD-01
+CLAIM: Shambibble explicitly attributes part of his early prompting facility to patent practice: describing things in abstract language while anticipating misinterpretation.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: LAW-SHAM-20260817-01; LAW-SHAM-20260817-08
+SOURCE: MJ Interview 3.wh_shambibble, 2022-10-22
+CITEKEY: shambibble2022interview
+SUPPORT: Interview statement that patent practice helped with description and thinking adversarially about ways words can be misread.
+INFERENCE: The paper names this transferable practice adversarial description.
+
+CLAIM AD-02
+CLAIM: Patent claim construction supplies a useful comparison because operative language is interpreted under a disciplined external construction standard rather than by authorial intent alone.
+TYPE: SOURCE-SUPPORTED + INTERPRETATION
+ZETTEL: LAW-SHAM-20260817-01; LAW-SHAM-20260817-02; LAW-SHAM-20260817-03
+SOURCE: USPTO MPEP §2111; Nautilus v. Biosig; White v. Dunbar
+CITEKEY: uspto2111; nautilus2014; white1886
+SUPPORT: BRI must be reasonable and consistent with specification; reasonable certainty does not require absolute precision; claim language cannot be twisted post hoc like a nose of wax.
+INFERENCE: These doctrines illuminate prompt drafting as construction under another interpreter without making the model a court.
+
+CLAIM AD-03
+CLAIM: Shambibble's PromptCraft practice grew from recurring concrete failures and debugging rather than from a stable formal theory of the model.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: SHAM-20260817-05; LAW-SHAM-20260817-14
+SOURCE: 2022 interview; Image Prompting and--; Matthew Field 2022 resource listing
+CITEKEY: shambibble2022interview; shambibble2022imageprompting; field2022makingaiart
+SUPPORT: Interview describes FAQ/manual formation from recurring user problems and debugging; guide was publicly circulated by 2022.
+INFERENCE: The paper calls this a common-law-like accumulation of cases, while preserving the analogy as analogy.
+
+CLAIM AD-04
+CLAIM: The operative prompt practice documented in the guide is multimodal: text, reference images, weights, prompt decomposition, and crude visual mockups can jointly specify a result.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: LAW-SHAM-20260817-09
+SOURCE: Image Prompting and--
+CITEKEY: shambibble2022imageprompting
+SUPPORT: Guide gives explicit procedures for image prompting, image weight, multiprompting, recurring characters, style transfer, and mockups.
+INFERENCE: The paper calls the operative object a multimodal brief rather than a sentence.
+
+CLAIM AD-05
+CLAIM: Shambibble revised his recurring-character method after discovering that medium information from a reference image could contaminate downstream generations.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: LAW-SHAM-20260817-10
+SOURCE: Image Prompting and--
+CITEKEY: shambibble2022imageprompting
+SUPPORT: Guide explicitly contrasts original tweet advice with later practice of preserving a character through recognizably similar faces in several media so no one medium dominates.
+INFERENCE: Stable identity can be approached through invariance across deliberately disagreeing representations.
+
+CLAIM AD-06
+CLAIM: Shambibble rejects incantational prompt folklore in explanatory contexts and proposes controlled comparison such as same-seed term removal, while admitting interactions limit causal attribution.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: SHAM-20260817-02; SHAM-20260817-05
+SOURCE: 2022 interview
+CITEKEY: shambibble2022interview
+SUPPORT: Interview distinguishes copying junk from empirical testing and says the manual uses simple toy examples for the few things believed known.
+INFERENCE: The paper joins adversarial reading and experimental revision as adversarial empiricism.
+
+CLAIM AD-07
+CLAIM: The supplied August 2022 tweet caption says that once text becomes focused, font design becomes inspired; the later interview independently describes a tradeoff between getting short text legible and exploring font forms.
+TYPE: SOURCE-SUPPORTED WITH MATERIAL GAP
+ZETTEL: LAW-SHAM-20260817-11
+SOURCE: Researcher-provided Twitter/X receipt; 2022 interview
+CITEKEY: shambibble2022fonttweet; shambibble2022interview
+SUPPORT: Caption and interview text are available. Tweet image was not recovered.
+INFERENCE: The paper hypothesizes that stabilizing one dimension can redirect stochastic variation into another.
+
+CLAIM AD-08
+CLAIM: The U.S. Copyright Office Part 2 concludes that prompts alone, under current generally available systems, do not supply sufficient human control for authorship of generated expressive output, while recognizing protectable human-authored inputs, selection/arrangement, and modification in appropriate cases.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: LAW-SHAM-20260817-12
+SOURCE: U.S. Copyright Office Part 2 (2025)
+CITEKEY: usco2025part2
+SUPPORT: Official report.
+INFERENCE: A prompt-only description of Shambibble's documented workflow may be factually narrower than the full control sequence relevant to authorship analysis.
+
+CLAIM AD-09
+CLAIM: The paper does not infer that effort, rerolling, or prompt complexity establishes copyright authorship.
+TYPE: SOURCE-SUPPORTED LIMIT
+ZETTEL: LAW-SHAM-20260817-12
+SOURCE: U.S. Copyright Office Part 2 (2025)
+CITEKEY: usco2025part2
+SUPPORT: Office expressly distinguishes iterative prompting/labor from sufficient control over expressive elements.
+INFERENCE: None beyond application of the limitation.
+
+CLAIM AD-10
+CLAIM: Later training-law analysis requires decomposing Shambibble's 2022 'looking' analogy into legally distinct acts rather than treating training as one undifferentiated event.
+TYPE: SOURCE-SUPPORTED + COMPILER-SYNTHESIS
+ZETTEL: LAW-SHAM-20260817-13
+SOURCE: 2022 interview; Bartz v. Anthropic order; Copyright Office Part 3
+CITEKEY: shambibble2022interview; bartz2025fairuse; usco2025part3
+SUPPORT: Bartz distinguishes training use, purchased-library conversion, and pirated library acquisition; Part 3 analyzes fair use, market effects, competition, and licensing.
+INFERENCE: The paper uses pipeline decomposition as a methodological parallel to decomposing prompt practice.
+
+CLAIM AD-11
+CLAIM: The proposal that lawyers may contribute unusually well to prompt-language research is a research hypothesis, not demonstrated professional superiority.
+TYPE: OPEN-QUESTION
+ZETTEL: LAW-SHAM-20260817-08
+SOURCE: Shambibble interview + patent-law comparison
+CITEKEY: shambibble2022interview; uspto2111
+SUPPORT: One practitioner supplies a plausible transfer mechanism.
+INFERENCE: Comparative studies across patent lawyers, programmers, designers, directors, and technical writers are required.
+
+CLAIM AD-12
+CLAIM: A successful prompt technique can be temporary because a model/interface can later absorb the distinction the technique was compensating for.
+TYPE: COMPILER-SYNTHESIS
+ZETTEL: SHAM-20260817-01; SHAM-20260817-08; LAW-SHAM-20260817-14
+SOURCE: 2022 interview and guide
+CITEKEY: shambibble2022interview; shambibble2022imageprompting
+SUPPORT: Interview reports a workaround becoming a button and predicts prompt craft may become obsolete; guide records version-specific caveats and changed practice.
+INFERENCE: The paper distinguishes durable diagnostic expertise from ephemeral prompt syntax.

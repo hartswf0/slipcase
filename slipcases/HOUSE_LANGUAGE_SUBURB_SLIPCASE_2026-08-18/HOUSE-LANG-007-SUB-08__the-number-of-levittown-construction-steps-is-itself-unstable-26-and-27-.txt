@@ -1,0 +1,102 @@
+ZETTEL
+
+ID:
+HOUSE-LANG-007-SUB-08
+
+TITLE:
+THE NUMBER OF LEVITTOWN CONSTRUCTION STEPS IS ITSELF UNSTABLE: “26” AND “27” CIRCULATE IN AUTHORITATIVE ACCOUNTS
+
+SOURCE:
+David L. Ames and Linda Flint McClelland, Historic Residential Suburbs (National Park Service, 2002), p. 66; Edward G. Berenson, “William Levitt, the Henry Ford of Housing” (Yale University Press, 2025). SOURCE URLS: https://www.nps.gov/subjects/nationalregister/upload/NRB46_Suburbs_part1_508.pdf ; https://yalebooks.yale.edu/2025/04/02/william-levitt-the-henry-ford-of-housing/
+
+PASSAGE:
+[PARAPHRASE]
+The National Park Service says Levitt’s construction process was divided into 27 steps. Berenson’s Yale University Press essay says 26 discrete steps.
+
+RESEARCH OBJECT:
+A QUANTITATIVE CONTRADICTION INSIDE THE CANONICAL ASSEMBLY-LINE STORY.
+
+LOCAL MOVE:
+The previous zettel treated “twenty-six steps” as a stable technical fact. Verification breaks that stability. The disagreement is small numerically but methodologically important: a supposedly precise operational decomposition is being repeated through secondary accounts without an agreed count.
+
+SOURCE TERMS:
+27 steps
+26 discrete steps
+construction process
+specialized crew
+assembly line
+repetitive tasks
+
+WHAT BECAME STRANGE:
+The most program-like fact about Levittown—the finite number of operations—may itself be an artifact of retrospective narration. The exact “program” cannot yet be claimed until the contemporary construction schedule is recovered.
+
+QUESTION:
+Where do the competing counts of 26 and 27 originate?
+
+DEEPER QUESTION:
+When historians translate industrial practice into a finite sequence, how much of the apparent program is discovered in the source and how much is imposed by retrospective description?
+
+MECHANISM:
+contemporary building process
+→ reporting / documentation
+→ later historical summary
+→ repeated finite-step claim
+→ divergent counts
+
+FORMAL SHIFT:
+KNOWN PROGRAM LENGTH = 26
+→ PROGRAM LENGTH = UNRESOLVED {26, 27}
+
+SOURCE FORMALISM:
+[PARAPHRASE]
+NPS: construction process divided into 27 steps, performed in sequence by specialized crews.
+Berenson: construction broken into 26 discrete steps, each done by a specialized crew.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+COUNT(STEPS) ∈ {26, 27}
+
+Do not instantiate BUILD(HOUSE)=STEP_01…STEP_n until the primary schedule is recovered.
+
+TENSION:
+Both accounts agree on decomposition, specialization, movement from site to site, and repetition. They disagree on the exact cardinality of the decomposition.
+
+MISSING:
+The earliest recoverable Levitt & Sons schedule, Architectural Forum description, Time reporting, subcontractor documentation, or other contemporary source listing the operations.
+
+BOUNDARY:
+The 26/27 discrepancy does not invalidate the broader claim that Levitt used serial specialized operations. It invalidates confidence in an exact step count.
+
+CITATION TRAIL:
+[[HOUSE-LANG-007-SUB-04]]
+→ Ames & McClelland 2002
+→ Berenson 2025
+→ Architectural Forum contemporary reporting
+→ Levitt & Sons production records
+
+TEST:
+Locate the earliest source that enumerates the operations rather than merely reporting a count. Compare all later 26/27 claims against it and record whether any step was merged, split, or omitted.
+
+PLATFORM:
+[[HOUSE AND LANGUAGE]]
+
+LINKS:
+[[HOUSE-LANG-007-SUB-04]]
+[[HOUSE-LANG-007]]
+
+BIBTEX:
+@book{amesmcclelland2002suburbs,
+  author = {Ames, David L. and McClelland, Linda Flint},
+  title = {Historic Residential Suburbs: Guidelines for Evaluation and Documentation for the National Register of Historic Places},
+  publisher = {National Park Service},
+  year = {2002},
+  url = {https://www.nps.gov/subjects/nationalregister/upload/NRB46_Suburbs_part1_508.pdf}
+}
+
+@misc{berenson2025levitt_steps,
+  author = {Edward G. Berenson},
+  title = {William Levitt, the Henry Ford of Housing},
+  year = {2025},
+  publisher = {Yale University Press},
+  url = {https://yalebooks.yale.edu/2025/04/02/william-levitt-the-henry-ford-of-housing/}
+}

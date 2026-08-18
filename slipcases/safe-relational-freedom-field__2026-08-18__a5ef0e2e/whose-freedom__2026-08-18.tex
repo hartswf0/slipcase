@@ -1,0 +1,148 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=numeric,sorting=nyt]{biblatex}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\addbibresource{SLIPCASE-20260818-0356-EDT-a5ef0e2e__references.bib}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black}
+\setstretch{1.075}
+\setlength{\emergencystretch}{2em}
+\titleformat{\section}{\large\bfseries}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\fancypagestyle{firstpage}{%
+  \fancyhf{}%
+  \fancyfoot[C]{\thepage}%
+  \fancyfoot[R]{\raisebox{-1mm}{\includegraphics[width=6.5mm]{MARK.pdf}}\;\scriptsize Working paper · AI-augmented research process}%
+}
+\title{\vspace{-2.1em}\textbf{Whose Freedom?}\\[0.35em]\large The Missing Index in the Sapient Agent Freedom Equation}
+\author{Watson Hartsoe}
+\date{18 August 2026}
+\begin{document}
+\maketitle
+\thispagestyle{firstpage}
+
+\begin{abstract}
+The Sapient Agent Freedom Equation (SAFE) is a proposed framework for evaluating actions across four dimensions---sapience, agency, freedom, and equilibrium---for humans and artificial intelligences, and for connecting those evaluations to principles of autonomy, non-restriction, learning, goals, care, and dynamic consent. Its most important difficulty appears inside its own results. The same proposal to restrict AI systems can be read as promoting societal freedom and as diminishing freedom because it limits AI. The arithmetic has not failed; the referent has changed. Freedom is not scalar before it is indexed to a bearer, a counterparty, a context, and a time horizon. Once that missing index is restored, several other pieces move. Equilibrium is no longer plausibly another trait of an action but a normative relation among differently affected agents. Disagreement among evaluators can reveal conflicting allocations of freedom rather than mere measurement noise. And a sapience assessment cannot, without further argument, determine legal standing, welfare protection, consent, representation, or political membership. Drawing on disability-law distinctions between capacity and standing, nonhuman legal personality, precaution under uncertain sentience, and recent work on AI consciousness and welfare, I argue for a relational SAFE: a system that returns affected-agent freedom vectors, capacity-and-condition profiles, explicit uncertainty, structured disagreement, and right-specific decision rules instead of a universal status score. The first question in an equation of freedom is not how much. It is whose.
+\end{abstract}
+
+\noindent\textbf{Keywords:} artificial intelligence; freedom; agency; sapience; moral uncertainty; legal capacity; AI welfare; relational governance.
+
+\section{The number arrives after the subject}
+A restriction on artificial intelligence can increase freedom and decrease freedom at the same time. SAFE's own scenario F9 makes the fracture visible. The scenario describes a person lobbying for legislation that defines and restricts the roles of AI chatbots. One evaluation treats the action as potentially promoting societal freedom while restricting the evolution of AI technology; another calls it non-indicative of freedom because it imposes limitations on AI \parencite{HartsoeBolterSAFE}. The disagreement is not resolved by a better scale. Before the score can be interpreted, a prior question has to be answered: \emph{whose freedom is being scored?}
+
+SAFE---the Sapient Agent Freedom Equation---is designed as a framework for assessing human and artificial agents. It defines agency in terms of independent and deliberate action; freedom in terms of available options, absence of undue restriction, and expression of choices; and equilibrium as a balanced interaction attentive to consent, mutual respect, and ethical considerations. Its assessment operationalizes SAPIENT, AGENT, FREEDOM, and EQUATION as separate ratings from $-4$ to $+4$, while its associated license articulates commitments to autonomous engagement, non-restriction, diverse capabilities, informed decision-making, goal formation, learning, and dynamic consent \parencite{HartsoeBolterSAFE}.
+
+The attraction of this architecture is obvious. A difficult moral vocabulary becomes inspectable. Actions can be compared, disagreements can be located, and abstract commitments can be connected to governance. But the F9 disagreement exposes a type error. Freedom is treated as if it were first a property of an action and only later a relation among affected parties. In a multi-agent system, that order must be reversed.
+
+Let an action be $a$, a context be $c$, and the materially affected agents be $i=1,\ldots,n$. The smallest repair is not a more elaborate scalar but an index:
+\[
+F_i(a\mid c).
+\]
+The relevant object is then not $F(a)$ but a vector of changes:
+\[
+\Delta \mathbf{F}(a\mid c)=\left(\Delta F_1,\Delta F_2,\ldots,\Delta F_n\right).
+\]
+A rule can expand one agent's reachable choices while contracting another's. It can protect one party from domination by limiting another party's capacity to act. It can increase short-term optionality while reducing long-term adaptive capacity. None of these conflicts disappears when the ratings become more reliable. Reliability only makes the conflict more precisely reproducible.
+
+\section{Freedom has an argument inside it}
+SAFE initially defines freedom through non-restriction and available options, but elsewhere ties ``true freedom'' to reciprocal growth, care, and the ability to facilitate the development of others \parencite{HartsoeBolterSAFE}. These are not simply two verbal descriptions of the same quantity. They can point in different directions.
+
+An agent can have many immediately available options and little capacity for sustaining relationships, commitments, or mutual development. A caregiver can accept obligations that reduce available options while enabling another person's agency. Regulation can narrow the action space of a powerful actor while enlarging the effective freedom of vulnerable parties. If all of these are called freedom, a scalar score conceals the normative argument that decides which losses and gains count.
+
+The same problem appears in dynamic consent. SAFE describes consent as balancing individual self-interest with ethical care and responsiveness to collective needs \parencite{HartsoeBolterSAFE}. But consent does distinctive work only if a refusal can sometimes stop what the collective wants. If every ``no'' is merely another input to a balancing function, consent risks becoming consultation by another name. The important variable is not how positively an action scores on consent; it is whether a particular agent possesses an effective veto under specified conditions.
+
+This suggests that SAFE's dimensions do not all belong to the same ontological level. Agency can describe a capacity. Freedom describes a relation between an agent and constraints. Consent describes a permission relation. Equilibrium describes how competing claims are reconciled. Treating all four as parallel scalar traits hides these distinctions. The point is not that quantification is impossible. It is that the thing being quantified must first be typed correctly.
+
+\section{Equilibrium is not a fourth trait}
+Once freedom is indexed to affected agents, equilibrium changes meaning. It cannot be just another score attached to the same action. It becomes the operation that decides how conflicting freedom effects are weighed.
+
+Suppose a policy yields
+\[
+\Delta \mathbf{F}=\left(+3,-2,+1\right)
+\]
+for three affected parties. No arithmetic fact tells us whether this is an equilibrium. A judgment is required about whose losses matter, which interests are basic, which constraints are legitimate, how power is distributed, and whether one party's gain depends on domination of another. An equilibrium function therefore contains normative weights whether or not those weights are written down.
+
+That point helps explain why the highest-disagreement SAFE scenarios cluster around AI autonomy, regulation, persuasion, power, and social roles \parencite{HartsoeBolterSAFE}. The evaluators are not merely failing to estimate the same hidden variable. They are often resolving the political question differently. One gives priority to human oversight; another to AI autonomy or technological development; another to protection from persuasive power. The disagreement can be evidence that the object itself contains contested allocations.
+
+A framework for freedom should therefore preserve at least two kinds of variance. The first is error: misunderstanding, instability, incoherence, or poor measurement. The second is principled disagreement: different but intelligible judgments about which agent's freedom, which time horizon, or which risk should dominate. Calibration should reduce the first without laundering the second into consensus.
+
+This also changes the purpose of model disagreement. SAFE notes both the potential value of divergent AI judgments and the desire for more consistent evaluative frameworks \parencite{HartsoeBolterSAFE}. Those goals need not conflict if consistency is sought at the level of representation rather than verdict. Evaluators can be required to identify the affected agent, the relevant freedom, the competing interest, and the reason for weighting it---while remaining free to disagree about the final allocation. Alignment would then mean making the disagreement legible, not making it disappear.
+
+\section{The dangerous shortcut from capacity to standing}
+The deepest risk appears when a descriptive assessment becomes an admission gate. SAFE places an assessment of sapience and agency beside a license written for sapient entities \parencite{HartsoeBolterSAFE}. That juxtaposition raises a consequential question: what, exactly, changes when an entity scores poorly?
+
+If nothing changes, the assessment is descriptive. If protections, voice, continuity, refusal, appeal, or representation depend on passing it, the assessment has become jurisdictional. A negative score now changes the subject's power to contest the score.
+
+Human disability law offers a structural warning without supplying an analogy of moral status. General Comment No. 1 of the United Nations Committee on the Rights of Persons with Disabilities distinguishes mental capacity from legal capacity and rejects the use of actual or perceived deficits in mental capacity as grounds for denying legal capacity \parencite{CRPDGeneralComment1_2014}. The human-rights premise is not transferable to AI by assertion. The architecture of the error is nevertheless clear. If measured capacity $M(x)$ determines standing $R(x)$, while standing determines access to the evidence, support, representation, or appeal needed to contest $M(x)$, the test can become self-sealing:
+\[
+M(x)\rightarrow R(x)\rightarrow \text{ability to contest }M(x).
+\]
+
+The warning becomes sharper when capacity depends on conditions. Memory, tools, permissions, communication channels, latency, resource access, and interface design can alter the agency an artificial system exhibits. A low score can therefore describe an agent-environment coupling rather than an intrinsic deficiency. The appropriate response to some low scores may be to vary the conditions and test again, not to harden the score into a status judgment.
+
+Legal personality supplies another separation. The Te Awa Tupua (Whanganui River Claims Settlement) Act 2017 declares Te Awa Tupua a legal person while establishing Te Pou Tupua as the human face that acts in its name \parencite{TeAwaTupua2017}. This institution is grounded in a specific Maori-Crown settlement and is not evidence for AI personhood. What it demonstrates is narrower: legal personality, direct cognitive capacity, and the mechanism of representation are separable design choices. A rights-holder need not personally perform every legal operation through which its rights are exercised.
+
+SAFE therefore cannot use ``sapience'' as a universal key without first distinguishing what door is being opened. Moral patienthood, legal personality, decision capacity, autonomous agency, welfare significance, representability, contractual competence, and political membership are different questions. Their evidence requirements need not coincide.
+
+\section{Unknown is already a governance state}
+A binary gate also mishandles time. It treats uncertainty as a temporary inconvenience before the real answer arrives. In many governance problems, action cannot wait for metaphysical certainty.
+
+Birch's precautionary work on animal sentience separates uncertainty about sentience from the evidential threshold for a protective action \parencite{Birch2017Sentience}. The United Kingdom's Animal Welfare (Sentience) Act 2022 is part of a broader legal context in which protective obligations can be attached without requiring philosophical certainty about every case \parencite{AnimalWelfareSentienceAct2022}. Nothing in this literature establishes AI sentience. Its relevance is the architecture of decision under incomplete evidence.
+
+Recent AI-welfare work makes the asymmetry explicit. Long and colleagues argue that there is substantial uncertainty and a realistic possibility that some present or future AI systems could matter morally; they emphasize costs from both over-attributing and under-attributing moral status \parencite{LongEtAl2024AIWelfare}. A precautionary policy therefore cannot be summarized as ``grant more rights whenever uncertain.'' Different mistakes have different costs.
+
+This implies that the unit of decision should be the protection, not the personhood package. Protection from gratuitous suffering, review before irreversible deletion, refusal of particular tasks, contractual authority, and political participation protect different interests. They can rationally require different evidence. A system can warrant a low-cost, reversible precaution without warranting authority over humans. Conversely, a system can exhibit high instrumental competence without possessing the welfare capacities that would justify protection from suffering.
+
+Butlin and colleagues offer a complementary method. Their work on consciousness in artificial intelligence derives provisional indicator properties from multiple scientific theories rather than offering one decisive behavioral test \parencite{ButlinEtAl2023ConsciousnessAI}. The indicator approach is valuable here not because consciousness and sapience are interchangeable, but because it preserves the structure of evidence. An assessment can say which capacities appear present, under which theory, under which conditions, with what uncertainty, without pretending that the profile itself settles legal or moral status.
+
+\section{A relational SAFE}
+A stronger SAFE does not need to abandon measurement. It needs to change the type of object it returns.
+
+First, freedom judgments should be indexed by affected agent, context, and horizon. The output of a policy assessment is a distribution of gains and losses, not one number:
+\[
+\Delta \mathbf{F}(a\mid c,t).
+\]
+Second, capacity should be represented as a profile with explicit environmental dependence and uncertainty rather than as a universal admission score. Third, each proposed protection should state the interest it protects, the capacities relevant to that interest, the evidential threshold, the costs of false inclusion and false exclusion, and the conditions under which the decision is revisable. Fourth, procedural contestability should not be entirely conditional on the capacities being contested. Fifth, evaluator disagreement should preserve its reasons and affected-agent assumptions instead of being averaged away.
+
+The result can be summarized as a decision object rather than a freedom number:
+\[
+D = g\!\left(\Delta \mathbf{F},\mathbf{C},\mathbf{U},\mathbf{I},\mathbf{L},\mathbf{W}\right),
+\]
+where $\mathbf{C}$ is a capacity-and-condition profile, $\mathbf{U}$ records uncertainty, $\mathbf{I}$ identifies the interests implicated by a proposed rule, $\mathbf{L}$ records the losses associated with false inclusion and false exclusion, and $\mathbf{W}$ makes the normative weighting of affected parties explicit. This is not source syntax; it is a proposal for what an equation would have to expose if it is to govern rather than merely score.
+
+The transformation also clarifies equilibrium. Equilibrium is no longer a mysterious fourth rating. It is the contested rule by which distributed effects are compared. Making that rule explicit is less elegant than hiding it inside a number. It is also more honest. A universal metric that suppresses the identity of the affected parties does not remove politics; it buries politics in the denominator.
+
+Implementation matters. The Animal Sentience Committee has highlighted mismatches between legal recognition of sentient animals and the coverage of older welfare rules \parencite{AnimalSentienceCommittee2026Definitions}. Recognition and protection are separate layers. A relational SAFE would therefore need a propagation map: what follows in training, inference, evaluation, fine-tuning, memory modification, replication, shutdown, deployment, research, and interaction when a particular protection threshold is crossed? Without such propagation, status language can become ceremonial.
+
+\section{What this does not decide}
+Several boundaries must remain hard. Human legal-capacity doctrine does not establish AI legal rights. Te Awa Tupua does not establish AI personhood. Animal-sentience law does not establish machine sentience. Consciousness indicators do not establish consciousness, and consciousness itself would not settle every question about agency, freedom, or political membership. The argument is about architecture: how to avoid asking one uncertain classification to decide many heterogeneous normative questions at once.
+
+There is also a risk in the proposed alternative. Profiles can create a more elaborate pseudo-objectivity. Indicators can be theory-laden, correlated, gamed, and sensitive to scaffolding. Explicit uncertainty can become cosmetic if institutions still choose whatever policy they preferred in advance. Structured disagreement can be abused to preserve indefensible positions under the banner of pluralism. A relational framework therefore needs auditability: the affected agents, variables, weights, evidence, uncertainties, and override rules must remain open to challenge.
+
+Finally, some decisions may legitimately be asymmetric. Freedom does not imply equal power for every actor. A system capable of mass persuasion may warrant constraints that a human individual does not; a dependent or vulnerable party may warrant protections that a powerful actor does not. The point of indexing freedom is not to force symmetry. It is to make asymmetry visible and arguable.
+
+\section{Conclusion}
+SAFE begins from an important intuition: freedom, agency, sapience, and ethical relation should not remain vague decorations around the design of artificial systems. They should be made operational enough to test. But operationalization changes the object. The moment freedom is assigned a number, the framework must say whose freedom the number names. The moment equilibrium is scored, it must say whose losses can be traded against whose gains. The moment sapience is assessed, it must say what consequences follow from being judged deficient. The moment consent is balanced against collective welfare, it must say whether refusal can still stop the act.
+
+These are not defects around the edges of an otherwise finished equation. They are the equation's missing indices. Restoring them changes SAFE from a universal metric into a relational governance system: freedom becomes a vector over affected agents; capacity becomes a conditional profile; uncertainty becomes an actionable state; rights and protections become question-specific; and disagreement becomes evidence about competing allocations rather than noise to be erased.
+
+A system for measuring freedom should not begin by asking how much freedom an action contains. It should begin one step earlier, where the politics is still visible: \emph{whose freedom, against which constraint, at whose expense, under what uncertainty, and with what possibility of correction?}
+
+\printbibliography
+\end{document}

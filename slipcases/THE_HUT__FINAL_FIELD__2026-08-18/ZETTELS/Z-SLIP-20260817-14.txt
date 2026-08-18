@@ -1,0 +1,80 @@
+ZETTEL
+
+    ID:
+    Z-SLIP-20260817-14
+
+    TITLE:
+    THE MACHINE CAN BE A HOUSE WITHOUT ITS MAKER AUTHORING EVERYTHING THAT INHABITS IT
+
+    SOURCE:
+    A. M. Turing — “Computing Machinery and Intelligence” — 1950 — Mind 59(236), pp. 433–460, theological objection.
+
+    SOURCE URL:
+    https://doi.org/10.1093/mind/LIX.236.433
+
+    PASSAGE:
+    [QUOTE] “instruments of His will providing mansions for the souls that He creates.”
+
+    RESEARCH OBJECT:
+    Turing’s hypothetical theological metaphor separates constructing a material mansion from creating its possible inhabitant. The structural distinction matters even if the theology is bracketed.
+
+    LOCAL MOVE:
+    He answers an objection to machine intelligence by comparing machine construction with procreation and limiting the maker’s claim to ultimate authorship.
+
+    SOURCE TERMS:
+    construct; machines; procreation; instruments; mansions; souls; creates
+
+    WHAT BECAME STRANGE:
+    A program can be understood as an architecture of possibilities rather than a complete script of everything that later happens inside it.
+
+    QUESTION:
+    When does program authorship end and inhabitant/environmental history begin?
+
+    DEEPER QUESTION:
+    What parts of emergent behavior should be attributed to architecture, agent, interaction history, or evaluator?
+
+    MECHANISM:
+    maker → constructed substrate → inhabitation/operation → behavior exceeding the construction act.
+
+    FORMAL SHIFT:
+    <MAKER> → <MANSION> → [INHABIT/OPERATE] → <TRAJECTORY>
+
+    SOURCE FORMALISM:
+    NONE
+
+    OUR FORMALIZATION:
+    [OUR FORMALIZATION — NOT SOURCE SYNTAX] PROGRAM_AS_HOUSE = possibility space whose trajectories depend on more than the initial builder.
+
+    TENSION:
+    The theological argument is explicitly speculative; it cannot be used as evidence of machine souls.
+
+    MISSING:
+    An account of computational inhabitation: state space, memory, rules, interfaces, agents.
+
+    BOUNDARY:
+    The source supports a metaphorical separation of substrate construction and soul creation, not a theory of emergent software agency.
+
+    CITATION TRAIL:
+    Artificial life; open-ended systems; Brautigan.
+
+    TEST:
+    Hold a computational environment constant while varying agents and histories; partition variance by architecture, inhabitant, and interaction.
+
+    PLATFORM:
+    [[THE HOUSE THAT WORLDS BUILT]]
+
+    LINKS:
+    [[THE MULTILINGUAL HOUSE]]
+[[PROGRAM AS HOUSE]]
+
+    BIBTEX:
+    @article{turing1950computing,
+  author={Turing, A. M.},
+  title={Computing Machinery and Intelligence},
+  journal={Mind},
+  volume={59},
+  number={236},
+  pages={433--460},
+  year={1950},
+  doi={10.1093/mind/LIX.236.433}
+}

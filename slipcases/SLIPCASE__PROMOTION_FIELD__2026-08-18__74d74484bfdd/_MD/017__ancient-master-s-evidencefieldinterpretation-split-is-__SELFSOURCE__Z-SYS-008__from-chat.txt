@@ -1,0 +1,112 @@
+ZETTEL
+
+ID:
+Z-SYS-008
+
+TITLE:
+Ancient Master's evidence–field–interpretation split is not three levels of certainty
+
+SOURCE:
+User-provided prompt system — SLIPCASE — ANCIENT MASTER PORTABLE RESEARCH FIELD v15.0 — supplied 2026-08-18.
+
+PASSAGE:
+[PARAPHRASE] Ancient Master separates preserved EVIDENCE from compiled FIELD structure and revisable INTERPRETATION. It instructs the system to discard failed taxonomies, relations, genealogies, graph interpretations, MOCs, and paper theses while never discarding the underlying evidence.
+
+RESEARCH OBJECT:
+The three-part model separates mutability regimes rather than simply ranking claims from certain to uncertain.
+
+LOCAL MOVE:
+It assigns different revision policies to different kinds of research state.
+
+SOURCE TERMS:
+EVIDENCE
+FIELD
+INTERPRETATION
+preserved
+compiled
+revisable
+MELT
+
+WHAT BECAME STRANGE:
+A graph edge can look like a fact because it is mechanically compiled, yet resolving an ambiguous address or classifying a concept can itself require interpretation.
+
+QUESTION:
+Where exactly is the boundary between compiled field structure and interpretation?
+
+DEEPER QUESTION:
+Can a relation be mechanically reproducible and still epistemically interpretive?
+
+MECHANISM:
+Evidence is frozen.
+Relations are compiled from evidence.
+Interpretations are built from evidence plus relations.
+Failed interpretations are regenerated without mutating evidence.
+
+FORMAL SHIFT:
+<immutable evidence>
+→ <derived relational field>
+→ [interpret]
+→ <revisable argument>
+
+SOURCE FORMALISM:
+EVIDENCE:
+ZETTEL · SOURCE · RESOURCE · PROMPT · APPEARANCE
+
+FIELD:
+PLATFORM · LINK · CONCEPT · GHOST · BACKLINK
+
+INTERPRETATION:
+MOC · ARRANGEMENT · TRAIL · PAPER
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+The important axis may be:
+
+PRESERVED
+DERIVED-DETERMINISTIC
+DERIVED-JUDGMENTAL
+ARGUMENTATIVE
+
+rather than only:
+EVIDENCE / FIELD / INTERPRETATION.
+
+TENSION:
+Ancient Master simultaneously says FIELD structure is compiled and warns against inventing relations, fuzzy-matching targets, or confusing resemblance with genealogy. Those warnings imply that relation production can contain judgment.
+
+MISSING:
+A derivation-status vocabulary distinguishing literal edges from deterministic derived edges and judgment-dependent inferred edges.
+
+BOUNDARY:
+Some field relations are plainly literal and mechanically recoverable, such as an explicit LINKS entry. The uncertainty concerns derived or resolved relations.
+
+CITATION TRAIL:
+Ancient Master MODEL
+→ RULES
+→ GRAPH resolution states
+→ derivation status
+
+TEST:
+Take every graph edge class and label the minimal operation required to produce it:
+COPY
+PARSE
+EXACT_RESOLVE
+INFER
+JUDGE.
+Test whether the current EVIDENCE/FIELD/INTERPRETATION division predicts those labels.
+
+PLATFORM:
+[[EPISTEMIC LAYERS]]
+
+LINKS:
+[[DERIVATION STATUS]]
+[[REVISION REGIME]]
+[[FIELD IS NOT RAW EVIDENCE]]
+
+BIBTEX:
+@misc{ancient_master_15_model_2026,
+  title = {Slipcase — Ancient Master Portable Research Field},
+  howpublished = {User-provided research-system prompt},
+  year = {2026},
+  note = {Version 15.0; supplied 2026-08-18}
+}

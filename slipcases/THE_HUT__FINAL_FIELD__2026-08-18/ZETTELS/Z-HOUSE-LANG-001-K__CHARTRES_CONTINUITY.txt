@@ -1,0 +1,128 @@
+ZETTEL
+
+ID:
+Z-HOUSE-LANG-001-K
+
+TITLE:
+CHARTRES HAD CONTINUITY WITHOUT A MASTER SPECIFICATION BECAUSE CONSTRAINTS TRAVELLED THROUGH PEOPLE AND TEMPLATES
+
+SOURCE:
+Tim Ingold — Making: Anthropology, Archaeology, Art and Architecture — 2013 — Chapter 4, “On building a house,” pp. 56–57; discussing David Turnbull’s analysis of Chartres Cathedral.
+
+SOURCE URL:
+https://www.routledge.com/Making-Anthropology-Archaeology-Art-and-Architecture/Ingold/p/book/9780415567237
+
+PASSAGE:
+[PARAPHRASE] Ingold reports that rebuilding Chartres proceeded through roughly thirty campaigns under nine master masons across more than three decades. No one could predict its exact final form, yet continuity survived through communication among workers, masons and patrons, with templates playing a central role.
+
+RESEARCH OBJECT:
+This is a concrete historical model for a GENEALOGY OF CONSTRAINTS.
+
+A complex artifact can retain continuity across different makers, episodes, local problems, and decisions without requiring one complete master representation from which every action is derived.
+
+LOCAL MOVE:
+Ingold, following Turnbull, compares Chartres to a research laboratory: a composite achievement produced through contingent practices and communicative traffic rather than realization of a single fully prefigured design.
+
+SOURCE TERMS:
+ad hoc accumulation
+campaigns
+master masons
+patchwork
+communication
+continuity
+template
+site-specific
+contingent
+messy practices
+
+WHAT BECAME STRANGE:
+The final prompt may be the wrong analogue for architectural coherence.
+
+Chartres suggests that what survives a long project may instead be templates, working conventions, local precedents, communications, partial drawings, institutional commitments, and material states.
+
+The “program” can be distributed across a lineage.
+
+QUESTION:
+What is the smallest memory structure capable of carrying design continuity when no participant possesses the whole specification?
+
+DEEPER QUESTION:
+Could a constraint genealogy perform for iterative AI construction what templates and communication performed for Chartres?
+
+MECHANISM:
+local campaign
+→ inherits existing building + templates + communications
+→ encounters new conditions
+→ modifies structure
+→ leaves transformed structure + transmitted practices
+→ next campaign.
+
+FORMAL SHIFT:
+<MASTER PLAN>
+→ <DISTRIBUTED LOCAL CONTINUITIES>
+→ [COMMUNICATE + TEMPLATE + ADAPT]
+→ <COHERENT-ENOUGH LONGITUDINAL ARTIFACT>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PROJECT MEMORYₙ = {
+  current artifact,
+  inherited constraints,
+  templates,
+  local precedents,
+  rejected conditions,
+  unresolved problems
+}
+
+No single field need contain PROJECT_FINAL.
+Continuity can be produced recursively.
+
+TENSION:
+Distributed continuity can produce coherence, but also irregularity and incompatibility. Ingold emphasizes that Chartres is, on closer inspection, a patchwork of imperfectly matched elements.
+
+A genealogy therefore preserves history but does not guarantee global consistency.
+
+MISSING:
+A mechanism for deciding when local compatibility is insufficient and global reconciliation is required.
+
+BOUNDARY:
+The absence of surviving plans does not prove that Chartres had no prior designs. Ingold explicitly preserves this uncertainty.
+
+The stronger supported claim concerns the inadequacy of treating complex building as simple execution of a complete prior specification.
+
+CITATION TRAIL:
+David Turnbull — “The ad hoc collective work of building Gothic cathedrals with templates, string, and geometry.”
+John James — Chartres building campaigns.
+Truth-maintenance systems.
+Design rationale.
+Distributed cognition.
+Version control.
+
+TEST:
+Run a multi-agent construction experiment.
+
+No agent receives the complete project history.
+Each receives only current artifact, local constraints, relevant templates, known nogoods, and recent rationale.
+
+Change agents every five iterations. Measure whether coherent design identity survives fifty iterations and what representation actually carries it.
+
+PLATFORM:
+[[THE PROMPT IS NOT THE PROGRAM]]
+
+LINKS:
+[[GENEALOGY OF CONSTRAINTS]]
+[[THE MULTILINGUAL HOUSE]]
+[[DISTRIBUTED PROGRAM]]
+
+BIBTEX:
+@book{ingold2013making,
+  author    = {Ingold, Tim},
+  title     = {Making: Anthropology, Archaeology, Art and Architecture},
+  publisher = {Routledge},
+  address   = {London},
+  year      = {2013},
+  isbn      = {9780415567237}
+}

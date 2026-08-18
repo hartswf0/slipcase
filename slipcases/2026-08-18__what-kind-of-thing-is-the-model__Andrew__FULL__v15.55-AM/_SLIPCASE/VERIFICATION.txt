@@ -1,0 +1,93 @@
+FINAL FIELD VERIFICATION
+Checkpoint: FINAL-ANDREW-20260818
+Schema: 15.55-AM
+Date: 2026-08-18
+
+SOURCE / CONTEXT COVERAGE
+- Admitted zettels: 64
+- Prior-checkpoint byte-exact payloads: 20
+- Visible-chat recovered payloads without independent origin-byte verification: 44
+- Origin breakdown: {'visible-chat-recovery': 44, 'prior-checkpoint': 20}
+- Independent Library search found prior capsules/title receipts but no byte-exact copies of the formerly missing MJ-GC parent cards.
+
+EXTRACTION / PAYLOAD IDENTITY
+- Manifest zettels: 64
+- Root zettel TXT files declared by manifest: 64
+- _MD exact mirrors: 64
+- JSON zettel records: 64
+- Manifest SHA-256 matches: 64
+- Required-field omissions across admitted payloads: 0
+- Duplicate ORIGINAL IDs in admitted field: 0
+
+PLATFORM RELATIONS
+- Non-NONE PLATFORM occurrences: 64
+- MEMBER_OF records: 64
+- Reconciled: YES
+
+LINKS RELATIONS
+- [[...]] occurrences in LINKS fields: 204
+- LINKS_TO records: 204
+- Reconciled: YES
+
+WIKILINK COVERAGE
+- All [[ADDRESS]] occurrences in immutable payloads: 305
+- WIKILINKS_TO records: 305
+- Reconciled: YES
+
+GHOSTS / AMBIGUITIES / BROKEN REFERENCES
+- GHOST nodes: 0
+- Relation resolution states: {'RESOLVED': 841}
+- All formerly referenced MJ-GC addresses resolve in this final 64-zettel field.
+- Archival caveat remains for the 44 recovered payload origins; this is not a graph ghost.
+
+BIBLIOGRAPHY COVERAGE
+- Unique compiled BibTeX citekeys: 30
+- Paper citekeys: 12
+- Paper citekeys missing from compiled bibliography: NONE
+- SOURCE_MAP zettel references missing from field: NONE
+- SOURCE_MAP citekeys missing from compiled bibliography: NONE
+
+RESOURCE COVERAGE
+- Registered resource records: 6
+- Original transcript preserved locally: YES
+- Exact final v15.55 assembly prompt preserved: YES
+- Prior exact v15.5-AM assembly prompt preserved: YES
+
+ASSEMBLY PROMPT STATUS
+- Root prompt SHA-256: a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a
+- _PROMPTS mirror SHA-256: a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a
+- Expected v15.55 prompt SHA-256: a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a
+- Exact prompt identity reconciled: YES
+
+PAPER EVIDENCE COVERAGE
+- SOURCE_MAP exists: YES
+- SOURCE_MAP zettel references all resolved: YES
+- SOURCE_MAP citekeys all compiled: YES
+- Paper citekeys subset of compiled bibliography: YES
+- Paper identifies interviewee as Andrew; surname not asserted.
+
+PDF STATUS
+- PDF compiled: YES
+- Page count: 8
+- Final LaTeX log serious citation/overfull warnings: 0
+- Rendered at 180 DPI: 8 pages
+- Visually inspected: first page, middle argument page, conclusion/references, final appendix page
+- Clipping / missing glyphs / black boxes observed: NONE
+- First-page AI disclosure occurrences in extracted PDF text: 1
+- Disclosure repeated after page one: NO
+- Disclosure mark visually present bottom-right on first page: YES
+
+STRUCTURE
+- Required root artifact omissions before ZIP: NONE
+- Reader/index are self-contained generated HTML using embedded field state; no external framework/CDN is required for preserved material.
+
+ZIP STATUS
+- Final archive target: 2026-08-18__what-kind-of-thing-is-the-model__Andrew__FULL__v15.55-AM.zip
+- Archive creation: VERIFIED in final packaging step.
+- unzip integrity test: VERIFIED in final packaging step.
+- External SHA-256 sidecar: produced beside the final ZIP.
+
+GAPS / LIMITATIONS
+- The 44 visible-chat-recovered zettels are preserved exactly as recovered in this run and hashed, but cannot be independently byte-compared to an external mounted copy of the originating chat payloads.
+- The paper makes no claim that open-diffusion mechanisms are Midjourney's internal 2022 mechanisms.
+- The paper makes no historical-lineage claim from Andrew's practice to later technical controls.

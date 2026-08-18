@@ -1,0 +1,137 @@
+SOURCE MAP — From Felicity to Protocol
+RETURN PATH: 000__RETURN_PATH.txt
+
+CLAIM ID: C01
+CLAIM: Austin distributes performative success across conventional procedure, appropriate persons/circumstances, correct execution, and additional sincerity/conduct conditions.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: austin-1962-felicity-procedure-context
+SOURCE: J. L. Austin — How to Do Things with Words — 1962
+CITEKEY: austin1962things
+SUPPORT: Austin’s explicit felicity conditions and examples establish the distributed conditions of successful performance.
+INFERENCE: The paper calls this “distributed felicity” to contrast it with later machine-local semantics.
+
+CLAIM ID: C02
+CLAIM: Authority and institutional standing are semantic preconditions of some performative acts.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: austin-1962-authority-as-felicity-condition
+SOURCE: J. L. Austin — How to Do Things with Words — 1962
+CITEKEY: austin1962things
+SUPPORT: Austin’s ship-naming, marriage, and judge examples require appropriate or appointed persons/circumstances.
+INFERENCE: The paper interprets authorization as a runtime-relevant semantic variable.
+
+CLAIM ID: C03
+CLAIM: Winograd and Flores transform rather than merely implement speech-act theory by combining it with Heideggerian/Gadamerian background and interpretation.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: winograd-flores-1986-lineage-heidegger-gadamer; winograd-flores-1986-speech-act-synthesis
+SOURCE: Terry Winograd and Fernando Flores — Understanding Computers and Cognition — 1986
+CITEKEY: winogradflores1986understanding
+SUPPORT: The authors explicitly identify Heidegger/Gadamer as formative and call speech-act theory a starting point for their synthesis.
+INFERENCE: “Transform rather than merely implement” is the paper’s genealogical distinction.
+
+CLAIM ID: C04
+CLAIM: Conversation for action separates communicative coordination from the practical work that satisfies a commitment.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: winograd-flores-1986-cfa-possibility-space; winograd-flores-1986-doing-outside-speech-act
+SOURCE: Terry Winograd and Fernando Flores — Understanding Computers and Cognition — 1986
+CITEKEY: winogradflores1986understanding
+SUPPORT: The source distinguishes speech-act coordination from the doing required to meet conditions of satisfaction.
+INFERENCE: The paper models this as normative state/world-state separation.
+
+CLAIM ID: C05
+CLAIM: Conditions of satisfaction are interpretive and may be disputed rather than objective predicates independent of participants.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: winograd-flores-1986-cos-not-objective; medina-mora-1992-background-runtime-a
+SOURCE: Winograd & Flores 1986; Medina-Mora et al. 1992
+CITEKEY: winogradflores1986understanding; medinamora1992actionworkflow
+SUPPORT: Winograd/Flores explicitly deny objectivity of conditions of satisfaction; ActionWorkflow acknowledges shared background assumptions.
+INFERENCE: DISPUTED is proposed as a first-class runtime state.
+
+CLAIM ID: C06
+CLAIM: The Coordinator and ActionWorkflow make communicative categories operational by storing state, tracking incompletions, and calculating permitted next moves.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: coordinator-1993-fsm-permitted-moves; coordinator-1993-menu-semantics-a; coordinator-1993-incompletion-token-a; medina-mora-1992-executable-workflow
+SOURCE: US Patent 5,208,748; Medina-Mora et al. 1992
+CITEKEY: flores1993conversation; medinamora1992actionworkflow
+SUPPORT: Patent and paper specify finite-state/state-role machinery, workflow interpreter/processors, permitted moves, and incompletion tracking.
+INFERENCE: The paper calls the interface an action space generated from ontology.
+
+CLAIM ID: C07
+CLAIM: Suchman’s critique concerns both interactional indeterminacy and the political consequence of embedding analytic categories as organizational ordering devices.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: suchman-1993-interactional-intention; suchman-1993-category-discipline
+SOURCE: Lucy Suchman — Do Categories Have Politics? — 1993
+CITEKEY: suchman1993categories
+SUPPORT: Suchman grounds the critique in conversation analysis and explicitly connects categorization to discipline/control and accountability.
+INFERENCE: The paper frames this as the crossing from category to infrastructure.
+
+CLAIM ID: C08
+CLAIM: Shoham’s AOP makes mental attitudes and speech-act-like message types part of executable software abstraction.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: shoham-1993-mental-state-programming; shoham-1993-speech-act-primitives
+SOURCE: Yoav Shoham — Agent-oriented programming — 1993
+CITEKEY: shoham1993aop
+SUPPORT: AOP formalizes agent mental state and supplies a programming language/interpreter with typed communication primitives.
+INFERENCE: The paper describes this as migration of semantic burden into agent-private state.
+
+CLAIM ID: C09
+CLAIM: Smith and Cohen treat finite dialogue structures, including conversation-for-action-like patterns, as derivable from deeper communicative-act/joint-intention semantics.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: smith-cohen-1996-joint-intention-semantics; smith-cohen-1996-cfa-derived-not-primitive
+SOURCE: Ira A. Smith and Philip R. Cohen — 1996
+CITEKEY: smithcohen1996semantics
+SUPPORT: The paper grounds ACL semantics in joint action and discusses deriving finite-state dialogue structure from logical act relations.
+INFERENCE: The paper contrasts semantics-first and sequence-first protocol architectures.
+
+CLAIM ID: C10
+CLAIM: FIPA standardizes a mentalistic communicative-act semantics using feasibility preconditions and rational effects, while also supplying pre-enumerated interaction protocols.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: fipa-2002-feasibility-rational-effect; fipa-2002-mental-attitude-model; fipa-2002-preenumerated-plans
+SOURCE: FIPA Communicative Act Library Specification — 2002
+CITEKEY: fipa2002cal
+SUPPORT: The specification formally defines communicative acts through FP/RE clauses and describes interaction protocols as pre-enumerated inter-agent plans.
+INFERENCE: The paper contrasts FIPA’s semantic location with Austinian contextual felicity without claiming direct equivalence.
+
+CLAIM ID: C11
+CLAIM: Singh argues that normative ACL semantics requires a public perspective because compliance among autonomous heterogeneous agents must be testable without access to private mental states.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: singh-1998-public-perspective-testability; singh-1998-private-intention-normative-limit
+SOURCE: Munindar P. Singh — Agent Communication Languages: Rethinking the Principles — 1998
+CITEKEY: singh1998rethinking
+SUPPORT: Singh explicitly links useful standards to compliance testing and public/social semantics, criticizing mind-reading assumptions.
+INFERENCE: The paper calls this a relocation of semantic burden from private to public state.
+
+CLAIM ID: C12
+CLAIM: Yolum and Singh define commitment operations in event calculus and use commitment state to support flexible protocol planning beyond fixed sequences.
+TYPE: SOURCE-SUPPORTED
+ZETTEL: yolum-singh-2002-sequence-overconstraint; yolum-singh-2002-commitment-as-action-meaning; yolum-singh-2002-event-calculus-operations; yolum-singh-2002-flexible-runtime-paths
+SOURCE: Pınar Yolum and Munindar P. Singh — 2002
+CITEKEY: yolumsingh2002flexible
+SUPPORT: The paper defines Create/Discharge/Cancel/Release/Assign/Delegate through event-calculus machinery and motivates flexible protocol execution.
+INFERENCE: The paper interprets commitment as the public normative invariant replacing a canonical trace.
+
+CLAIM ID: C13
+CLAIM: Across the lineage, formalization repeatedly relocates rather than eliminates the contextual conditions that make social action meaningful.
+TYPE: COMPILER-SYNTHESIS
+ZETTEL: austin-1962-felicity-procedure-context; winograd-flores-1986-listening-background; coordinator-1993-fsm-permitted-moves; fipa-2002-mental-attitude-model; singh-1998-social-context; yolum-singh-2002-commitment-as-action-meaning
+SOURCE: Multiple
+CITEKEY: austin1962things; winogradflores1986understanding; flores1993conversation; fipa2002cal; singh1998rethinking; yolumsingh2002flexible
+SUPPORT: Each source locates semantic conditions in a different representational layer.
+INFERENCE: “Migration of semantic burden” is introduced by this paper; no source is claimed to use the term.
+
+CLAIM ID: C14
+CLAIM: Suchman and Singh independently expose a common failure form: semantics becomes unstable when it demands information that is not publicly settled or available at the point of classification/compliance.
+TYPE: COMPILER-SYNTHESIS
+ZETTEL: suchman-1993-interactional-intention; singh-1998-public-perspective-testability
+SOURCE: Suchman 1993; Singh 1998
+CITEKEY: suchman1993categories; singh1998rethinking
+SUPPORT: Suchman challenges preclassified interactional intent; Singh challenges private mental-state compliance semantics.
+INFERENCE: The common failure form is the paper’s comparison. NO direct intellectual influence is asserted.
+
+CLAIM ID: C15
+CLAIM: Executable institutions should distinguish event, normative, interpretive, and contestability semantics.
+TYPE: COMPILER-SYNTHESIS
+ZETTEL: coordinator-1993-reorder-before-transition; yolum-singh-2002-event-calculus-operations; winograd-flores-1986-cos-not-objective; austin-1962-authority-as-felicity-condition; suchman-1993-category-discipline
+SOURCE: Multiple
+CITEKEY: flores1993conversation; yolumsingh2002flexible; winogradflores1986understanding; austin1962things; suchman1993categories
+SUPPORT: The sources separately establish event ordering, public normative operations, interpretive dispute, authority conditions, and category politics.
+INFERENCE: The four-layer decomposition is the paper’s current design wager and remains open to revision.

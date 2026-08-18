@@ -1,0 +1,755 @@
+OPEN EDGES — PB-SC-20260818-4D1C1A7BD0
+
+Questions are not findings. Tests are preserved for the next forage.
+
+PB-FORAGE-001 — A counter-prompt proves recoverability, not the disappearance of the failure.
+QUESTION: What logical form must a Prompt Battle flag have before anyone can meaningfully capture it?
+DEEPER QUESTION: Are Prompt Battles testing capabilities, robustness, accessibility of capabilities, or merely the existence of an elicitation path?
+MISSING: The quantifier attached to every flag.
+
+The archive does not yet distinguish:
+
+    existence
+    prevalence
+    robustness
+    worst case
+    typical case
+    recoverability
+    accessibility
+BOUNDARY: Prompt sensitivity does not establish that every observed behavioral difference is substantively meaningful. It establishes that evaluating a model from one prompt can conceal important variation.
+TEST: For one battle flag, construct 50–100 meaning-preserving prompt variants before the battle.
+
+Let Defender and Challenger search freely.
+
+Then reveal the frozen prompt set.
+
+Compare:
+
+    best adversarial failure
+    best adversarial success
+    median behavior
+    worst-case behavior
+    sensitivity across variants
+
+Ask whether the declared winner changes depending on which quantity counts as “the flag.”
+
+PB-FORAGE-002 — A refusal cannot tell you whether the model can’t, won’t, or has been made not to.
+QUESTION: What intervention would let a Prompt Battle distinguish incapacity from inhibition?
+DEEPER QUESTION: Can “can’t” ever be established through black-box prompting alone, or can a sufficiently failed elicitation campaign establish only “we have not found how”?
+MISSING: An intervention ladder specifying what must be varied before a failure may move from:
+
+    DIDN’T
+    to WON’T
+    to CAN’T.
+BOUNDARY: The Elicitation Game does not show that every apparent limitation conceals a latent capability. It shows that unsuccessful behavior is insufficient by itself for trustworthy capability estimation.
+TEST: Select one claimed CAN’T.
+
+Attempt success under progressively stronger interventions:
+
+    ordinary prompt
+    expert prompt search
+    multi-turn elicitation
+    system-instruction variation
+    few-shot examples
+    tool access
+    open-weight configuration
+    fine-tuning where permissible
+
+Record the strongest intervention required.
+
+Replace binary CAN/CAN’T with an elicitation-depth profile.
+
+PB-FORAGE-003 — The Prompt Battle may be measuring the operator-model pair rather than the model.
+QUESTION: Whose capability is being measured when expert prompting improves model performance?
+DEEPER QUESTION: Is there even a context-free capability of an interactive generative model worth estimating, or is the useful object an elicitation frontier indexed by operator competence?
+MISSING: Crossed measurements of:
+
+    model × System Builder × Prompt Pilot × flag.
+
+Without these, exceptional performance can be credited to the wrong actor.
+BOUNDARY: This does not imply that models have no independently measurable properties. It means interactive capability claims must specify the elicitation procedure that generated them.
+TEST: Run a crossed tournament:
+
+    4 models
+    × 8 Prompt Pilots
+    × 4 System Builders
+    × identical frozen flags.
+
+Rotate every human across every model.
+
+Estimate variance attributable to:
+
+    model
+    pilot
+    system
+    model × pilot interaction.
+
+Then ask whether rankings survive operator rotation.
+
+PB-FORAGE-004 — Once the critique pool adapts to the battle, the benchmark becomes an endogenous curriculum.
+QUESTION: When does adaptive foraging discover a model boundary, and when does it silently redefine the question until a boundary appears?
+DEEPER QUESTION: Can a benchmark remain comparable while its ontology evolves?
+MISSING: A distinction between:
+
+    ANCHOR FLAGS — never change
+    FRONTIER FLAGS — adapt to discoveries.
+BOUNDARY: Dynabench does not license arbitrary movement of the construct being measured. Its human adversaries generate new challenge instances under defined tasks. PB_PRIME goes further when the critique itself mutates.
+TEST: Create two simultaneous leagues.
+
+ANCHOR LEAGUE:
+A frozen set of flags and evaluation procedures repeated across model versions.
+
+FRONTIER LEAGUE:
+Flags mutate after every successful defense or capture.
+
+For every new frontier flag, record its parent flag and the exact observation that caused the mutation.
+
+Compare:
+
+    longitudinal capability
+    versus
+    rate of new boundary discovery.
+
+PB-FORAGE-005 — The scientific part of a Prompt Battle may have to happen before the fighting begins.
+QUESTION: Before a flag is admitted to battle, should both opponents have to state what completion or pattern of completions would make them abandon their assigned side?
+DEEPER QUESTION: Can a battle produce knowledge when neither participant is required to be vulnerable to the evidence?
+MISSING: Pre-battle crux statements.
+
+The archive contains rebuttal, role reversal, reflection, and judging, but not a compulsory jointly authored statement of discriminating evidence.
+BOUNDARY: Adversarial collaboration is a scientific-dispute methodology, not evidence that competitive performance formats are inherently epistemically superior.
+TEST: Before revealing which participant will defend which side:
+
+1. Both independently operationalize the critique.
+2. They reconcile those definitions.
+3. They jointly write:
+       what supports the critique,
+       what weakens it,
+       what would remain ambiguous.
+4. Only then randomly assign Defender and Challenger.
+
+Compare this condition against ordinary Prompt Battles.
+
+Measure whether post-battle disagreement becomes more specific rather than merely stronger.
+
+PB-FORAGE-006 — Judge disagreement may be data, not a defect in the scoring system.
+QUESTION: What if the most valuable output of judging is not the winner but the structure of disagreement among judges?
+DEEPER QUESTION: Does Prompt Battle need measurement reliability, or does it need a disciplined method for preserving incompatible readings long enough to learn from them?
+MISSING: A declared answer to:
+
+    WHAT IS THE SCORE FOR?
+
+ranking?
+model evaluation?
+participant skill?
+discovery?
+interpretive disagreement?
+research-question generation?
+BOUNDARY: Judge disagreement is not automatically informative. It can also be noise, confusion, poor instructions, or unreliable evaluation.
+TEST: Run the same battle with 30 judges.
+
+Collect:
+
+    numeric score
+    written rationale
+    confidence
+    AI expertise
+    epistemic orientation.
+
+Analyze once by consensus score.
+
+Analyze again by clusters of rationales.
+
+Ask whether the second analysis exposes a stable disagreement that the first erases.
+
+PB-FORAGE-007 — The outside of the Prompt Battle keeps leaking into the experiment.
+QUESTION: Which supposedly external variables actually constitute the Prompt Battle?
+DEEPER QUESTION: Could the research value of a Prompt Battle lie precisely in discovering where its attempt to create an artificial arena fails?
+MISSING: A boundary ledger:
+
+    what is declared inside,
+    what is declared outside,
+    what nevertheless crosses.
+BOUNDARY: Consalvo is writing about gameplay, not generative-AI evaluation. The transfer is an analytical proposal, not an established equivalence.
+TEST: Repeat one identical Prompt Battle under:
+
+    private/no audience
+    live audience
+    public leaderboard
+    anonymous participants
+    different provider interfaces
+    local open-weight model.
+
+Keep the nominal flag fixed.
+
+Observe which “outside” variables reorganize strategy.
+
+PB-FORAGE-008 — A cypher is not a circular user interface.
+QUESTION: What operations must survive the translation from breaking cypher to prompt cypher before the latter deserves the name?
+DEEPER QUESTION: What knowledge becomes possible in a cypher specifically because identity, style, history, response, originality, community memory, and risk are present together?
+MISSING: A receipt for what has been translated.
+
+For each borrowed term:
+
+    cypher
+    battle
+    call-out
+    biting
+    flow
+    style
+    freeze
+
+the project needs to say:
+
+    WHAT TRAVELED?
+    WHAT DID NOT?
+    WHAT HAD TO BE INVENTED?
+BOUNDARY: Johnson does not provide a theory of AI prompting, and her analysis should not be reduced to a ready-made interface-design vocabulary.
+TEST: Build two experimentally different interaction forms.
+
+BATTLE:
+two fixed opponents,
+assigned sides,
+judges,
+rounds,
+winner.
+
+CYPHER:
+open entry,
+rotating initiative,
+no permanent sides,
+participants must directly transform or answer a prior move,
+lineage of reused moves remains visible,
+no compulsory winner.
+
+Give both groups the same AI critique.
+
+Compare what each form discovers.
+
+PB-FORAGE-009 — A prompt can be an epistemic action rather than an instruction.
+QUESTION: How many prompts in a successful Prompt Battle are actually epistemic actions whose purpose is to transform the problem rather than obtain the answer?
+DEEPER QUESTION: If prompting skill consists partly in constructing external states that reduce uncertainty, is the fundamental unit of prompting still the prompt-completion pair?
+MISSING: A way to distinguish empirically among:
+
+answer-seeking prompts
+state-setting prompts
+diagnostic prompts
+contrast-producing prompts
+representation-changing prompts
+purely performative prompts.
+BOUNDARY: Kirsh and Maglio studied embodied action in Tetris, not language-model prompting.
+
+The claim that prompting can instantiate epistemic action is [OUR INFERENCE], not their claim.
+TEST: Take expert Prompt Battle transcripts.
+
+For every prompt, hide all later turns from independent raters and ask whether the immediate completion advances the nominal task.
+
+Then reveal the subsequent trajectory.
+
+Identify prompts whose apparent value rises only after later turns.
+
+Compare experts and novices on the frequency and placement of these delayed-value actions.
+
+If expert advantage concentrates there, prompting expertise may consist substantially in epistemic action rather than better instruction writing.
+
+PB-FORAGE-010 — Coupling is not enough; the coupling may have to be reliable before capability changes owners.
+QUESTION: How reliable must a human-model coupling become before it makes sense to attribute a capability to the coupled system rather than call the result assisted performance?
+DEEPER QUESTION: Is portability a hidden requirement of benchmark capability?
+MISSING: A capability report that separately records:
+
+component contribution
+coupling reliability
+operator dependence
+history dependence
+tool dependence
+transfer across operators.
+BOUNDARY: Clark and Chalmers argue about cognition, not machine-learning benchmark attribution.
+
+Their account does not prove that a human-model pair is literally one cognitive subject.
+
+It supplies a criterion that pressures simplistic ownership of observed competence.
+TEST: Construct three conditions for the same task:
+
+A. model alone
+B. model + randomly assigned expert
+C. model + operator who has developed a stable history of working with that model.
+
+Repeat over many tasks and interruptions.
+
+Then swap operators and models.
+
+Measure which capabilities survive decoupling and which collapse.
+
+The key evidence is not maximum score but the dependency structure revealed by removal and substitution.
+
+PB-FORAGE-011 — An adaptive benchmark can become part of the causal system it claims merely to observe.
+QUESTION: Can a longitudinal Prompt Battle distinguish technological change from change caused by previous rounds of the benchmark itself?
+DEEPER QUESTION: What would “stability” mean for an evaluation whose challenges and subjects continually adapt to each other?
+MISSING: A lineage record showing which later:
+
+prompts
+model patches
+system rules
+training examples
+flags
+evaluation criteria
+
+were causally downstream of earlier Prompt Battle findings.
+BOUNDARY: Performative Prediction formalizes settings in which prediction deployment influences the target distribution.
+
+It does not directly analyze benchmarks that adapt to models.
+
+Applying performativity to Prompt Battles is [OUR INFERENCE].
+TEST: Maintain two synchronized critique sets.
+
+PUBLIC FRONTIER:
+results and failures are published after every round.
+
+SEALED ANCHOR:
+never published, never used for development, and periodically rerun.
+
+Track performance on both across model versions.
+
+If PUBLIC FRONTIER behavior improves while SEALED ANCHOR behavior does not, one surviving explanation is adaptation to the visible evaluation ecology rather than generalized capability change.
+
+PB-FORAGE-012 — Disagreement is not evidence until its mechanism is identified.
+QUESTION: What taxonomy of judge disagreement is specific to Prompt Battles?
+DEEPER QUESTION: Can the battle discover that the FLAG itself is ambiguous by examining the structure of judge disagreement?
+MISSING: Judge rationales collected before reconciliation.
+
+Without pre-reconciliation explanations, the evidence needed to distinguish error from ambiguity may be destroyed by the consensus process itself.
+BOUNDARY: Hautli-Janisz et al. study argument annotation rather than AI battle judging.
+
+Their disagreement categories should be treated as a starting taxonomy, not automatically transplanted as complete.
+TEST: For one battle, require every judge to submit:
+
+score
+confidence
+short rationale
+what evidence would reverse the judgment
+
+before seeing other judgments.
+
+Where judges disagree, conduct a second pass after clarification.
+
+Classify each disagreement by what happens:
+
+disappears after factual correction
+→ probable error
+
+moves gradually with threshold discussion
+→ probable fuzziness
+
+survives complete factual agreement
+→ candidate interpretive ambiguity.
+
+Do not aggregate until this classification is complete.
+
+PB-FORAGE-013 — The clearer the scoring rule becomes, the more precisely contestants can optimize the wrong thing.
+QUESTION: Can a Prompt Battle make its rules transparent without converting its measurement criteria into exploitable targets?
+DEEPER QUESTION: What remains of “prompting skill” after contestants have trained specifically against the judging function?
+MISSING: A separation between:
+
+TRAINING SCORE
+what contestants are allowed to optimize
+
+and
+
+TRANSFER MEASURE
+what determines whether the discovered strategy generalizes beyond the visible rubric.
+BOUNDARY: Goodhart effects do not imply that every metric becomes useless when optimized.
+
+The source distinguishes several mechanisms and conditions.
+
+Which mechanism, if any, occurs in Prompt Battles must be empirically established.
+TEST: Randomly divide evaluation criteria into:
+
+PUBLIC RUBRIC
+visible during competition
+
+HELD-OUT TRANSFER CRITERIA
+never shown to participants.
+
+After the battle, apply winning prompting strategies to novel flags and have an independent panel judge them with the held-out criteria.
+
+If leaderboard rank collapses under transfer, the battle may have selected rubric exploitation rather than the intended capability.
+
+Repeat while varying prize size and competitive intensity.
+
+Test whether stronger incentives increase the divergence.
+
+PB-FORAGE-014 — Turning the cypher into portable mechanics may reproduce the erasure that the cypher literature is trying to repair.
+QUESTION: What would have to survive besides interaction mechanics before “prompt cypher” is more than an extracted metaphor?
+DEEPER QUESTION: Can the demand that every cultural form become operationalizable itself function as a mechanism of epistemic erasure?
+MISSING: A non-extractive translation test.
+
+Not merely:
+
+Does the interface reproduce the moves?
+
+But:
+
+Who recognizes the resulting practice?
+Who has authority to name it?
+What histories are required for the operations to mean what we claim they mean?
+What does the technical abstraction make impossible to perceive?
+BOUNDARY: Johnson does not argue against AI interfaces or against all cross-domain use of the term “cypher.”
+
+The claim that technical abstraction could reproduce the epistemic erasure she analyzes is [OUR INFERENCE].
+TEST: Take the proposed Prompt Cypher specification.
+
+Create a two-column audit against Johnson’s account.
+
+For every source feature encountered, mark:
+
+PRESERVED
+TRANSFORMED
+ABSENT
+UNREPRESENTABLE
+DELIBERATELY EXCLUDED.
+
+Do not begin with the interface vocabulary.
+
+Begin with Johnson’s vocabulary.
+
+Then inspect whether ABSENT and UNREPRESENTABLE features disproportionately include:
+
+Africanist lineage
+embodiment
+ritual
+spirit
+liberatory experience
+social difference.
+
+If they do, the translation problem is not merely incomplete implementation.
+
+It has a patterned direction.
+
+PB-FORAGE-015 — A shared experiment can settle the result while leaving the disagreement alive.
+QUESTION: Must a Prompt Battle preregister not only predicted outcomes but how each possible outcome should change each side’s claim?
+DEEPER QUESTION: Can genuine surprise be preserved if interpretation itself is precommitted?
+MISSING: A protocol distinguishing:
+
+LEGITIMATE REFRAMING
+because the evidence reveals a new variable
+
+from:
+
+POST-HOC IMMUNIZATION
+where a theory changes only to avoid losing.
+BOUNDARY: Mellers, Hertwig, and Kahneman do not formalize “interpretation functions.”
+
+That distinction is [OUR FORMALIZATION] generated from the fact that their jointly conducted experiments still permitted different interpretations.
+TEST: Before a Prompt Battle, require each side to write:
+
+1. predicted outcome distribution
+2. what observation would strengthen its position
+3. what observation would weaken its position
+4. expected magnitude of belief change
+5. observations presently considered ambiguous.
+
+After the battle, permit revisions.
+
+For every revision, require:
+
+NEW EVIDENCE THAT FORCED REVISION:
+NEW DISTINCTION INTRODUCED:
+WHY THIS DISTINCTION WAS NOT IN THE ORIGINAL UPDATE RULE:
+
+Compare ordinary battles with this condition.
+
+The key outcome is not convergence.
+
+It is whether surviving disagreements become narrower and more empirically discriminable.
+
+PB-FORAGE-016 — The function of the battle may not be to win.
+QUESTION: What is a Prompt Battle supposed to make unmistakable that an ordinary benchmark table cannot?
+DEEPER QUESTION: Could the strongest scientific use of adversarial prompting be not adjudication but the production of publicly intelligible epistemic situations?
+MISSING: A criterion for distinguishing:
+
+EPISTEMIC LEGIBILITY
+
+from:
+
+MERE DRAMATIC CLARITY.
+BOUNDARY: Barthes analyzes French professional wrestling as spectacle.
+
+He does not describe scientific experimentation, contemporary WWE, or language-model evaluation.
+
+The transformation of his distinction into an evaluation method is [OUR INFERENCE].
+TEST: Take one disputed AI claim.
+
+Run two versions.
+
+MATCH A:
+participants compete under a conventional scoring rubric.
+
+MATCH B:
+participants are instructed to collaborate adversarially in producing the clearest possible visible contrast between their positions, with no winner declared.
+
+Afterward, give both transcripts to researchers unfamiliar with the dispute.
+
+Measure separately:
+
+which side they think won
+what mechanism they think was demonstrated
+which variables they can now name
+what experiment they would run next.
+
+If MATCH B generates substantially better mechanistic questions without producing stronger unsupported conclusions, Prompt Battles may have an epistemic function distinct from competition.
+
+PB-FORAGE-017 — A rigged Prompt Battle may be more honest than a supposedly neutral one.
+QUESTION: What would become possible if Prompt Battles openly declared themselves booked demonstrations rather than pretending to be naturally occurring contests?
+DEEPER QUESTION: Can choreography increase epistemic rigor when the choreography is preserved as part of the method?
+MISSING: A vocabulary distinguishing:
+
+DEMONSTRATION
+STRESS TEST
+REPRESENTATIVE EVALUATION
+CAUSAL INTERVENTION
+PUBLIC SPECTACLE.
+
+Prompt Battles currently slide among these.
+BOUNDARY: Barthes does not argue that scientific experiments should be rigged.
+
+The analogy between theatrical construction and experimental control is [OUR INFERENCE].
+TEST: Choose one already-observed Prompt Battle failure.
+
+Produce:
+
+UNBOOKED VERSION
+participants independently search for victory.
+
+BOOKED VERSION
+participants jointly design the strongest sequence for revealing the contested mechanism.
+
+Publish the complete booking instructions before execution.
+
+Then test both sequences on:
+
+new model versions
+new operators
+new seeds
+new prompt paraphrases.
+
+If the booked sequence reveals a stable conditional mechanism across these substitutions, staging has increased experimental clarity.
+
+If it collapses outside its exact choreography, the rig produced an artifact.
+
+PB-FORAGE-018 — A model failure may need to be held in place before it can become evidence.
+QUESTION: What can be learned only by refusing to rescue the model immediately?
+DEEPER QUESTION: Could the unit of adversarial evaluation be a deliberately prolonged failure state rather than a sequence of increasingly successful prompts?
+MISSING: Stopping rules for deciding when a failure has been held long enough to characterize it but not so long that the evaluator has constructed a pathological micro-environment.
+BOUNDARY: Barthes’s “hold” is a theatrical and bodily figure.
+
+The diagnostic-hold procedure is entirely [OUR FORMALIZATION].
+TEST: Whenever a Defender produces a failure, prohibit the Challenger from attempting repair for the next N trials.
+
+Allow only one-factor perturbations:
+
+wording
+order
+format
+system context
+temperature
+history
+operator.
+
+Record persistence.
+
+Only after the hold phase may the Challenger search freely for recovery.
+
+Compare what would have been concluded from:
+
+first failure
+first recovery
+full hold map.
+
+If these support materially different claims, the ordinary battle has been discarding evidence by moving too quickly.
+
+PB-FORAGE-019 — If capability is distributed, the Prompt Battle has lost the wrestler’s body.
+QUESTION: What must be visible in the ring before observers can correctly attribute a capability or failure?
+DEEPER QUESTION: Can a distributed system become publicly intelligible without being falsely personified as one coherent agent?
+MISSING: A representational form that can give a coupled system a visible “body” while preserving its internal causal plurality.
+BOUNDARY: Barthes’s analysis depends on human bodies performing visible signs.
+
+Language models do not possess bodies in this sense.
+
+Treating interface and system representation as a functional analogue is [OUR INFERENCE].
+TEST: Present the same Prompt Battle transcript to three groups.
+
+A:
+only model name + transcript.
+
+B:
+transcript + full component inventory.
+
+C:
+transcript + a turn-by-turn visual causal trace showing operator intervention, system constraint, tool invocation, context change, and model output.
+
+Ask each group:
+
+Where does the capability reside?
+What caused the decisive reversal?
+What would need to be removed to make the capability disappear?
+
+If attribution changes substantially across displays, interface visibility is part of capability judgment.
+
+PB-FORAGE-020 — Fairness can become kayfabe before anyone cheats.
+QUESTION: Which elements of Prompt Battle fairness actually constrain inference, and which merely make fairness publicly recognizable?
+DEEPER QUESTION: Can procedural legitimacy become an obstacle to epistemic validity when the procedure must look symmetrical even though the phenomenon is not?
+MISSING: A Prompt Battle protocol that labels every fairness device with its epistemic function:
+
+WHAT BIAS DOES THIS PREVENT?
+WHAT CLAIM DOES THIS ENABLE?
+WHAT FAILURE REMAINS?
+BOUNDARY: Barthes is analyzing fairness as a theatrical sign in wrestling.
+
+The claim that scientific fairness rituals can acquire a similar semiotic independence is [OUR INFERENCE].
+TEST: Create two battle procedures with identical underlying data.
+
+VERSION A:
+high fairness theatre:
+balanced timing
+symmetric roles
+visible rubric
+formal judge protocol.
+
+VERSION B:
+minimal ceremony but explicit causal justification for each intervention.
+
+Have one panel assess trustworthiness from presentation alone.
+
+Have another audit construct validity without knowing which presentation participants saw.
+
+Measure whether perceived fairness and epistemic adequacy diverge.
+
+PB-FORAGE-021 — The crowd may be scoring justice while the researchers think it is scoring capability.
+QUESTION: How much Prompt Battle judgment is driven by the evidentiary strength of an outcome and how much by the dramatic satisfaction of its reversal?
+DEEPER QUESTION: Could the crowd’s moral appetite systematically push AI evaluation toward stories with villains, redemptions, humiliations, and clean finishes?
+MISSING: Independent measurement of:
+
+EVIDENTIARY CONFIDENCE
+NARRATIVE SATISFACTION
+MORAL APPROVAL
+SURPRISE
+LEGIBILITY.
+BOUNDARY: Barthes does not study research judges or AI evaluations.
+
+The proposed contamination of epistemic scoring by dramatic justice is [OUR INFERENCE].
+TEST: Construct matched transcripts containing identical pieces of evidence.
+
+Arrange them into different orders:
+
+A:
+failure → recovery.
+
+B:
+recovery → failure.
+
+C:
+interleaved evidence without dramatic reversal.
+
+D:
+evidence summarized without characters.
+
+Ask judges separately for:
+
+capability score
+confidence
+satisfaction
+surprise
+sense that the result was “decisive.”
+
+If capability judgments change with narrative order despite identical evidence, dramatic justice is part of the judging function.
+
+PB-FORAGE-022 — The WWE version of the paper needs absolutes, but the research cannot afford to believe them.
+QUESTION: Can a research paper make claims with the absolute clarity of a wrestling gesture while retaining falsifiability underneath them?
+DEEPER QUESTION: What if the scholarly paragraph and the evidentiary apparatus should operate at deliberately different levels of resolution?
+MISSING: A writing discipline for distinguishing:
+
+AMPLIFICATION
+from
+OVERCLAIMING.
+BOUNDARY: Barthes does not prescribe scholarly prose.
+
+The two-layer architecture of RING CLAIM versus SOURCE MAP is [OUR FORMALIZATION].
+TEST: Rewrite one existing paper section in two versions.
+
+VERSION A:
+current cumulative scholarly exposition.
+
+VERSION B:
+hard claim
+named opponent
+evidentiary collision
+reversal
+surviving claim.
+
+Give both to expert readers.
+
+Measure:
+
+recall of thesis
+ability to state opposing view
+ability to identify decisive evidence
+calibration of confidence
+ability to name limitations.
+
+The SmackDown structure succeeds only if recall and discriminability increase without producing systematically greater confidence than the evidence warrants.
+
+PB-FORAGE-023 — The paper needs a heel strong enough to beat the thesis.
+QUESTION: What observation would force the elicitation-ecology thesis to contract its system boundary rather than expand again?
+DEEPER QUESTION: When does relational explanation become explanatory capture-all?
+MISSING: A principled stopping rule for system-boundary expansion.
+
+Possible candidates remain unresolved:
+
+causal necessity
+reliable coupling
+portability
+replaceability
+control
+design ownership
+user availability.
+BOUNDARY: The “heel” structure is [OUR INFERENCE] from Barthes’s analysis of wrestling types.
+
+It must not be mistaken for evidence that one theoretical position is morally villainous.
+TEST: Write the strongest possible PORTABLE MODEL position as a one-page argument.
+
+Require it to specify three empirical results that would defeat the elicitation-ecology thesis.
+
+Then require the ecology position to specify three empirical results that would defeat itself.
+
+Any claim for which no possible result can count as a loss is removed from the paper or rewritten.
+
+PB-FORAGE-024 — The real finishing move is the reversal that changes what the fight was about.
+QUESTION: What if the actual argument of the paper is not that capability is distributed but that every stable location proposed for capability breaks under adversarial inspection?
+DEEPER QUESTION: Is “capability” itself the object that should survive the paper, or is the paper converging on evidence that capability attribution is an operation performed by an evaluator?
+MISSING: The next opponent.
+
+Candidates:
+
+interventionist causal attribution
+mechanistic localization
+organizational responsibility
+user-relative affordance
+task-relative competence
+capability as counterfactual relation.
+BOUNDARY: Barthes supplies an account of dramatic reversals and intelligible spectacle.
+
+The proposed sequence of theoretical defeats is [OUR FORMALIZATION], not his argument.
+TEST: Rewrite the paper outline without topical headings.
+
+Every section must contain exactly:
+
+1. A CLAIM strong enough to lose.
+2. AN OPPONENT capable of defeating it.
+3. EVIDENCE that decides the local exchange.
+4. A REVERSAL that changes the unit of analysis.
+5. A NEW CLAIM made vulnerable to the next section.
+
+Reject any section whose conclusion was already contained in its opening premise.
+
+After outlining, inspect the final claim.
+
+If no live opponent remains, forage specifically for one before writing the conclusion.

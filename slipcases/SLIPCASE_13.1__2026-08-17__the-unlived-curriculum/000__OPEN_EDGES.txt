@@ -1,0 +1,666 @@
+OPEN EDGES
+==========
+
+RESEARCH EDGES
+--------------
+
+001 · Market Minimum
+QUESTION:
+  What additional machinery must an educational prediction acquire before “prediction market” becomes a literal rather than analogical description?
+DEEPER QUESTION:
+  Does the more interesting object turn out to be not “education as prediction market” but an ecology of heterogeneous predictive instruments that allocate futures without allowing reciprocal bets?
+TENSION:
+  The initial hypothesis gains rhetorical power by calling grades “prices,” degrees “contracts,” and universities “markets,” but doing so can erase the machinery that makes prediction markets epistemically distinctive.
+MISSING:
+  A buyer.
+  A seller.
+  A trade.
+  A market-clearing mechanism.
+  A payoff.
+  A settlement rule.
+BOUNDARY:
+  This does not show that grades or credentials lack predictive functions. It shows only that predictive function is insufficient to establish market structure.
+CITATION TRAIL:
+  Wolfers & Zitzewitz — “Interpreting Prediction Market Prices as Probabilities.”
+  Robin Hanson — information markets / idea futures.
+  Mechanism-design literature on scoring rules and market makers.
+  Educational signaling literature distinguishing signals from markets.
+TEST:
+  Take each proposed educational “prediction market” object and fill five columns:
+  
+  TRADE?
+  CONTINGENT CONTRACT?
+  PRICE?
+  COUNTERPARTY?
+  SETTLEMENT?
+  
+  Reject the literal market classification when the mechanism cannot populate them.
+
+002 · Compass Before Grade
+QUESTION:
+  When a university predicts where a student will succeed and then routes the student toward that location, what exactly is being measured afterward: student aptitude, model accuracy, or the consequence of having followed the model?
+DEEPER QUESTION:
+  At what point does predicting student success become producing the population distribution that later appears to validate the prediction?
+TENSION:
+  A prediction market ordinarily waits for an uncertain external event to settle.
+  
+  Degree Compass inserts the prediction into the causal path leading to the event.
+  
+  The prediction is therefore not merely epistemic. It is advisory and potentially performative.
+MISSING:
+  A counterfactual record of what the same student would have achieved had the recommendation not been shown.
+BOUNDARY:
+  The source establishes a predictive recommendation system, not evidence that Degree Compass inevitably creates self-fulfilling predictions or unjustly restricts students.
+CITATION TRAIL:
+  Austin Peay / EDUCAUSE Degree Compass case study, 2012.
+  Ekowo & Palmer — predictive analytics in higher education.
+  Literature on recommender-system feedback loops.
+  Performative prediction / performative prediction models.
+  Algorithmic confounding caused by interventions.
+TEST:
+  For students with two courses receiving similar predicted-success scores, randomly vary whether the recommendation is shown.
+  
+  Compare:
+  choice,
+  grade,
+  persistence,
+  major trajectory,
+  and subsequent model predictions.
+  
+  Ask whether the act of prediction changes the object predicted.
+
+003 · Anti-Settlement Alarm
+QUESTION:
+  How should an educational predictive system be evaluated when successful use destroys the observable event against which accuracy would normally be judged?
+DEEPER QUESTION:
+  Is the university constructing predictions or counterfactual action triggers?
+TENSION:
+  Prediction markets generally reward forecasts that correctly settle against realized outcomes.
+  
+  Early-warning systems may be most valuable when their forecasts provoke actions that prevent those outcomes from ever settling as predicted.
+MISSING:
+  The untreated counterfactual:
+  What would have happened had the prediction not triggered intervention?
+BOUNDARY:
+  Ekowo and Palmer do not themselves describe early-warning analytics as an “anti-settlement machine.” That is our inference from the intervention structure they document.
+CITATION TRAIL:
+  Causal inference under treatment assignment.
+  Selective labels.
+  Performative prediction.
+  Algorithmic decision-making under feedback.
+  Early-warning intervention evaluations.
+  Self-fulfilling and self-defeating prophecy.
+TEST:
+  Separate students around a risk-score threshold and measure:
+  
+  predicted risk,
+  whether intervention occurred,
+  actual outcome,
+  and estimated untreated outcome.
+  
+  Ask whether apparently “false positive” predictions are concentrated among successfully treated students.
+
+004 · Replication Contract
+QUESTION:
+  What must be removed from a scientific result before researchers can trade a binary contract on whether it “replicates”?
+DEEPER QUESTION:
+  Does making science market-compatible require turning an open-ended claim about the world into an institutionally defined settlement event?
+TENSION:
+  A replication result is not equivalent to the truth of a scientific theory.
+  
+  Binary settlement may aggregate beliefs effectively while compressing context, effect sizes, protocol dependence, and degrees of evidential support.
+MISSING:
+  A theory of what scientific information cannot survive conversion into a binary replication contract.
+BOUNDARY:
+  The study demonstrates prediction-market forecasting of replication outcomes. It does not establish that prediction markets determine scientific truth or should replace peer review.
+CITATION TRAIL:
+  Camerer et al. — replication forecasting in experimental economics / social science.
+  Van Bavel et al. — contextual sensitivity in replication.
+  Yang et al. — estimating deep replicability.
+  Robin Hanson — idea futures.
+TEST:
+  Take one disputed result and construct three settlement contracts:
+  
+  A. exact replication success
+  B. effect direction preserved
+  C. effect size remains within a specified interval
+  
+  Compare market prices.
+  
+  The divergence measures how much “will it replicate?” hides.
+
+005 · Evaluation Loop
+QUESTION:
+  When the target of an evaluation can alter the conditions producing that evaluation, is the resulting number still an observation—or has it become a negotiated equilibrium?
+DEEPER QUESTION:
+  Could grade inflation be produced not by students purchasing grades but by institutions coupling two otherwise distinct signals: student satisfaction and faculty career evaluation?
+TENSION:
+  Calling evaluations “options contracts” suggests students incur market-like positions and payoffs.
+  
+  Love and Kotchen require no such mechanism.
+  
+  The perverse effect arises simply because incentives become coupled.
+MISSING:
+  Strong causal evidence establishing the magnitude of this mechanism across contemporary institutions and employment categories.
+BOUNDARY:
+  This is a theoretical model. It identifies possible equilibrium responses; it does not prove that every professor inflates grades in response to evaluations or that student evaluations are the primary cause of grade inflation.
+CITATION TRAIL:
+  Uttl, White & Gonzalez — student evaluations and learning.
+  Stroebe — evaluations and grading leniency.
+  Goodhart / Campbell on reactive indicators.
+  Research on contingent faculty and SET consequences.
+TEST:
+  Within an institution, exploit a policy change that sharply increases or decreases the weight of SETs in promotion.
+  
+  Measure subsequent changes in:
+  grade distributions,
+  course workload,
+  teaching effort,
+  student learning,
+  and evaluations.
+
+006 · Two Inflations
+QUESTION:
+  Which part of the grade distribution is actually changing when a university says its standards have weakened?
+DEEPER QUESTION:
+  Could attempts to “restore rigor” accidentally destroy beneficial threshold leniency while doing little about broad compression at the top?
+TENSION:
+  The initial “market manipulation” analogy implies that increasing grades uniformly corrupts information.
+  
+  This source suggests the consequences depend on exactly how the grading function changes.
+MISSING:
+  Direct evidence that the same decomposition produces the same effects in universities.
+BOUNDARY:
+  The study analyzes high-school teachers and explicitly leaves open whether the findings generalize to college grading.
+  
+  It therefore cannot be used as direct evidence about university grade inflation.
+CITATION TRAIL:
+  Gans & Kominers — informativeness and strategic manipulation of grading systems.
+  Butcher et al. — anti-grade-inflation policy at Wellesley.
+  Boleslavsky & Cotton — grading standards and education quality.
+  College-level studies of transcript informativeness.
+TEST:
+  For university transcript data, decompose historical grade changes into:
+  
+  mean shift,
+  pass/fail threshold shift,
+  upper-tail compression,
+  variance change.
+  
+  Test each separately against:
+  subsequent-course performance,
+  major persistence,
+  graduate admissions,
+  and labor-market outcomes.
+
+007 · Purchased Learning Paradox
+QUESTION:
+  Does marketization primarily corrupt grading standards, or does it first change the student’s theory of where learning comes from?
+DEEPER QUESTION:
+  What happens when an institution sells an outcome whose production still requires uncompensated participation by the buyer?
+TENSION:
+  The source supports concern about consumer orientation but pressures the stronger story that students simply “pay and receive an A.”
+  
+  Its empirical pattern instead associates stronger consumer orientation with poorer performance.
+MISSING:
+  Direct causal identification.
+  Evidence from U.S. universities.
+  Direct measures of grading pressure on faculty.
+  Administrative rather than self-reported performance.
+BOUNDARY:
+  The study is observational, based on students in England, and uses self-reported academic performance. It cannot establish that consumer orientation causes lower grades or that tuition policy causes faculty grade inflation.
+CITATION TRAIL:
+  Naidoo & Jamieson — student consumerism.
+  Molesworth, Nixon & Scullion — marketisation and student subjectivity.
+  Research on academic entitlement.
+  Love & Kotchen — grade/evaluation incentive coupling.
+TEST:
+  Measure separately:
+  
+  A. consumer orientation,
+  B. academic entitlement,
+  C. learner identity,
+  D. willingness to complain about grades,
+  E. actual grade appeals,
+  F. faculty grading response.
+  
+  Determine whether “consumerism” reaches grades through student disengagement, complaint pressure, faculty incentives, or distinct pathways.
+
+008 · Credential Fragments
+QUESTION:
+  Is hyper-credentialism an inflation of signals—or a response to the inability of large credentials to expose which particular claim is being certified?
+DEEPER QUESTION:
+  What happens to education when every competence must become small enough to be separately assessed, verified, transported, and recombined?
+TENSION:
+  The initial hypothesis reads endless micro-credentials as evidence that the old degree has lost predictive value.
+  
+  UNESCO gives another surviving interpretation:
+  smaller credentials may be designed for flexibility, portability, focused learning, and lifelong education even where conventional degrees retain value.
+MISSING:
+  Evidence establishing why a particular labor market adopts micro-credentials:
+  signal failure,
+  skills change,
+  institutional marketing,
+  regulation,
+  learner flexibility,
+  or employer demand.
+BOUNDARY:
+  The UNESCO definition does not claim that micro-credentials emerged because degrees stopped predicting worker quality. That genealogy remains unverified.
+CITATION TRAIL:
+  European Council definition of micro-credentials.
+  OECD alternative credentials.
+  Credential ecology / stackability research.
+  Labor-market studies comparing employer interpretation of degrees versus granular credentials.
+  Randall Collins on credentialism — but only after separating his sociological mechanism from contemporary micro-credential architecture.
+TEST:
+  Show employers equivalent candidate profiles containing:
+  
+  A. degree only;
+  B. micro-credentials only;
+  C. degree + micro-credentials;
+  D. direct work sample.
+  
+  Measure predicted competence, interview selection, wage offer, and confidence.
+  
+  Then test whether micro-credentials substitute for, complement, or merely decorate the degree signal.
+
+009 · World It Causes
+QUESTION:
+  When educational predictions become performatively stable, what exactly has stabilized: knowledge about students, institutional routing behavior, or a new student population produced by the predictions?
+DEEPER QUESTION:
+  Could “model improvement” sometimes mean increasing agreement between an institution and the world the institution has successfully forced into existence?
+TENSION:
+  [[Z-EDUPM-003]] framed educational intervention as potentially making a correct prediction appear false.
+  
+  Performative stability exposes the mirror-image danger:
+  
+  intervention can also make a model appear increasingly correct because the deployment changes the target toward the model.
+MISSING:
+  The distribution of educational trajectories that would have existed without predictive intervention.
+BOUNDARY:
+  Perdomo et al. develop a general machine-learning framework, not an empirical study of university advising.
+  
+  Applying performative stability to educational recommendation remains an inference requiring direct evidence.
+CITATION TRAIL:
+  [[Z-EDUPM-003]]
+  → Perdomo et al., performative prediction
+  → performative stability
+  → educational routing as distribution-producing intervention
+  
+  Follow:
+  strategic classification
+  performative power
+  causal prediction under intervention
+  dynamic algorithmic decision systems
+TEST:
+  Take a deployed student-risk or course-recommendation system with repeated retraining.
+  
+  For successive model generations record:
+  
+  prediction distributions,
+  interventions,
+  course choices,
+  student outcomes,
+  population composition.
+  
+  Then compare observed calibration with an experimentally maintained non-intervention or randomized-exploration population.
+  
+  Ask whether apparent improvement disappears when deployment effects are removed.
+
+010 · Unlived Curriculum
+QUESTION:
+  How can a course-recommendation model learn whether its rejected alternatives were actually worse when rejection prevents their outcomes from ever becoming data?
+DEEPER QUESTION:
+  Does personalized education gradually destroy the counterfactual diversity required to know whether personalization works?
+TENSION:
+  [[Z-EDUPM-002]] asked whether recommendation produces the distribution that later validates it.
+  
+  Selective labels sharpen the issue:
+  
+  sometimes there is not even contrary evidence available to falsify the recommendation, because the alternative trajectory was never lived.
+MISSING:
+  Counterfactual performance in courses not taken.
+BOUNDARY:
+  Kleinberg et al. study judicial bail decisions, not course recommendation.
+  
+  The selective-label structure transfers formally only if course choice actually determines whether the outcome needed to evaluate alternative recommendations is observed.
+CITATION TRAIL:
+  [[Z-EDUPM-002]]
+  → Kleinberg et al.
+  → selectively observed outcomes
+  → missing counterfactual labels
+  → educational recommendation
+  
+  Follow:
+  Lakkaraju et al. — The Selective Labels Problem
+  off-policy evaluation
+  contextual bandits
+  exploration versus exploitation
+  causal recommender systems
+TEST:
+  Within a set of academically acceptable electives, randomly perturb which eligible course appears first in the recommendation interface.
+  
+  Use that randomized exploration to estimate outcomes for trajectories the ordinary recommender would rarely expose.
+  
+  Compare those results with the model's counterfactual grade predictions.
+
+011 · Oracle’s Spirit
+QUESTION:
+  If educational institutions are predictive infrastructures, where are their resolution sources—the procedures authorized to convert messy human capability into settleable institutional facts?
+DEEPER QUESTION:
+  How often does the “spirit” of educational success diverge from the literal event that the institutional oracle is authorized to recognize?
+TENSION:
+  [[Z-EDUPM-004]] treated replication markets as a process of converting open scientific claims into settleable events.
+  
+  Augur makes the hidden consequence visible:
+  
+  settleability introduces an oracle, and the oracle can become the thing actually being predicted.
+MISSING:
+  A systematic inventory of educational resolution sources and disputes where institutional settlement diverges from later assessments of capability.
+BOUNDARY:
+  Augur is a prediction-market protocol.
+  
+  Calling grading committees, registrars, accreditors, or employers “oracles” is our formal analogy, not terminology used by the source.
+CITATION TRAIL:
+  [[Z-EDUPM-001]]
+  [[Z-EDUPM-004]]
+  → Augur resolution source
+  → ambiguous markets
+  → letter / spirit divergence
+  → institutional settlement
+  
+  Follow:
+  decentralized common-knowledge oracles
+  contract specification
+  measurement theory
+  assessment validity
+  boundary objects
+  classification infrastructures
+TEST:
+  Choose one educational proposition:
+  
+  “Student X is competent at Y.”
+  
+  Construct four possible resolution sources:
+  
+  exam score,
+  professor judgment,
+  portfolio review,
+  employer task performance.
+  
+  Ask independent evaluators to settle the identical proposition under each rule.
+  
+  Measure disagreement.
+  
+  The disagreement is the oracle-dependence hidden by the apparently singular credential.
+
+012 · Betting on the Actuator
+QUESTION:
+  Which educational forecasts accidentally create financial, reputational, or administrative incentives for the predicted actors to manufacture the predicted outcome?
+DEEPER QUESTION:
+  At what point does a forecast stop being a sensor and become an actuator?
+TENSION:
+  [[Z-EDUPM-003]] describes prediction changing its target through decision deployment.
+  
+  [[Z-EDUPM-004]] describes markets settling externally specified future events.
+  
+  Self-referential markets collapse these:
+  
+  the prediction mechanism becomes one of the causal variables determining what it will later claim to have predicted.
+MISSING:
+  An educational case where exposing a forecast can be experimentally shown to change behavior strongly enough to alter its own measured outcome.
+BOUNDARY:
+  Augur demonstrates the possibility within its oracle architecture.
+  
+  It does not establish that student evaluations, rankings, or educational dashboards exhibit the same incentive structure.
+CITATION TRAIL:
+  [[Z-EDUPM-003]]
+  [[Z-EDUPM-004]]
+  → Augur III.4
+  → self-referential oracle query
+  → prediction as incentive
+  → prediction as actuator
+  
+  Follow:
+  decision markets
+  Goodhart effects
+  Lucas critique
+  performative prediction
+  reflexivity
+  self-fulfilling prophecy
+TEST:
+  Construct an educational forecast about an outcome controlled partly by the predicted actor.
+  
+  Randomize whether the actor sees the forecast.
+  
+  Compare:
+  
+  behavior,
+  outcome,
+  forecast calibration.
+  
+  If visibility changes the outcome distribution, the forecast is partly an actuator.
+
+013 · Curricular Dark Matter
+QUESTION:
+  Can educational personalization create epistemic rich-get-richer effects in which frequently recommended pathways become increasingly data-rich while neglected pathways disappear from the model's knowable world?
+DEEPER QUESTION:
+  Does algorithmic advising eventually construct “main roads” through a curriculum simply because prior recommendations made those roads easiest to observe?
+TENSION:
+  [[Z-EDUPM-002]] focused on recommendations changing student trajectories.
+  
+  This source forces a more technical distinction:
+  
+  the model may change not only outcomes but the LOCATION AND DENSITY OF OBSERVATION.
+MISSING:
+  Evidence about whether educational recommender systems normalize, explore, or otherwise correct for recommendation-dependent exposure.
+BOUNDARY:
+  Predictive policing is not educational advising.
+  
+  Crime discovery and course performance differ substantively.
+  
+  Only the feedback architecture is being transferred as a hypothesis.
+CITATION TRAIL:
+  [[Z-EDUPM-002]]
+  → Ensign et al.
+  → discovered versus independently reported events
+  → allocation-generated data
+  → recommendation-generated curriculum visibility
+  
+  Follow:
+  exposure bias in recommender systems
+  bandit exploration
+  positivity violations
+  feedback loops in ranking systems
+TEST:
+  For every course in a recommender system, estimate:
+  
+  recommendation exposure,
+  enrollment following exposure,
+  number of observed outcomes,
+  prediction confidence,
+  future recommendation frequency.
+  
+  Test whether early exposure predicts later recommendation after controlling for measured student-course fit.
+
+014 · Living Credential
+QUESTION:
+  What happens to education when credentials cease to be durable records of completed events and become continuously inspectable states with validity windows and status transitions?
+DEEPER QUESTION:
+  Could hyper-credentialism mutate into a system in which competence must not merely be earned repeatedly but remain technically “alive”?
+TENSION:
+  [[Z-EDUPM-008]] proposed that micro-credentials decompose one large signal into smaller settlement events.
+  
+  The W3C architecture introduces another axis:
+  
+  those smaller claims can also acquire TIME and STATE.
+  
+  Granularity need not merely multiply credentials.
+  
+  It can make credentials dynamically revisable.
+MISSING:
+  Evidence about which educational and workforce credentials actually use expiration, suspension, or revocation rather than merely supporting those fields technically.
+BOUNDARY:
+  The W3C standard permits validity periods and credential status.
+  
+  It does not require educational credentials to expire or claim that degrees should become revocable competence subscriptions.
+CITATION TRAIL:
+  [[Z-EDUPM-008]]
+  → W3C Verifiable Credentials Data Model 2.0
+  → validity period
+  → credential status
+  → qualification as temporal state
+  
+  Follow:
+  Open Badges 3.0
+  professional license renewal
+  expiring technical certifications
+  continuing education requirements
+  credential-status privacy architectures
+TEST:
+  Collect 1,000 machine-verifiable educational and workforce credentials.
+  
+  Record whether each implements:
+  
+  validUntil,
+  credentialStatus,
+  revocation,
+  suspension,
+  refresh,
+  recertification.
+  
+  Then classify what kinds of knowledge institutions choose to make permanent versus perishable.
+
+015 · Semantic Last Mile
+QUESTION:
+  If machine verification cannot establish fitness for purpose, does finer-grained credentialization actually eliminate institutional gatekeepers—or multiply the number of moments at which gatekeepers must interpret claims?
+DEEPER QUESTION:
+  Could the future credential economy automate authenticity while making meaning more contested?
+TENSION:
+  [[Z-EDUPM-008]] asked whether smaller credentials might restore signal resolution.
+  
+  This source reveals that technical resolution does not remove semantic ambiguity.
+  
+  The credential can become perfectly machine-readable while the question “what does this mean about this person?” remains institutionally undecided.
+MISSING:
+  Empirical evidence about how employers construct fitness-for-purpose rules when consuming machine-verifiable skill credentials at scale.
+BOUNDARY:
+  The W3C standard specifies credential architecture, not labor-market hiring policy.
+  
+  It does not conclude that verifiable credentials increase or decrease credentialism.
+CITATION TRAIL:
+  [[Z-EDUPM-008]]
+  → W3C validation
+  → verification versus fitness for purpose
+  → local verifier judgment
+  → persistence of interpretation
+  
+  Follow:
+  credential trust frameworks
+  assessment validity
+  construct validity
+  employer skill inference
+  qualification equivalence
+  automated hiring
+TEST:
+  Create one cryptographically valid skill credential.
+  
+  Present the identical credential to:
+  
+  a university,
+  a regulated profession,
+  a startup,
+  a federal employer,
+  a freelance marketplace.
+  
+  Record each verifier's acceptance rules and rationale.
+  
+  If decisions diverge while cryptographic verification remains constant, map precisely where interpretive authority re-enters.
+
+016 · Predictions That Want To Be Wrong
+QUESTION:
+  Can a successful educational early-warning system erase from its retraining data the evidence that its intervention was necessary?
+DEEPER QUESTION:
+  What institutional memory must survive so that prevention does not become indistinguishable from absence of risk?
+TENSION:
+  This does not license treating every false positive as a successful rescue. The untreated counterfactual still has to be identified.
+MISSING:
+  A recoverable untreated-risk estimate or design separating baseline risk from the effects of prior interventions.
+BOUNDARY:
+  The source analyzes intervention-driven updating generally, not higher education specifically. The educational application is our inference.
+CITATION TRAIL:
+  [[Z-EDUPM-003]] → self-defeating warning → Liley et al. 2021 → naive model replacement
+  [[Z-EDUPM-009]] → prediction changes its data-generating world → updating under intervention
+TEST:
+  Compare naive post-intervention retraining with a holdout or explicit intervention model. Test whether apparent risk declines concentrate where intervention was effective.
+
+017 · Intervention Destroys Settlement
+QUESTION:
+  What should count as settlement for an educational warning once the warning has altered the policy under which the outcome is generated?
+DEEPER QUESTION:
+  Should intervention-coupled predictors be evaluated as policies rather than isolated estimators?
+TENSION:
+  Recovering a baseline requires identification assumptions. “Correct the feedback” can overstate what the available data permit.
+MISSING:
+  In educational deployments: explicit mappings from scores to interventions and a defensible baseline policy.
+BOUNDARY:
+  The source studies decision support systems generally; it does not prove that a particular university system satisfies its assumptions.
+CITATION TRAIL:
+  [[Z-EDUPM-003]] → anti-settlement problem → [[Z-EDUPM-016]] → intervention-conditioned labels → Boeken et al. 2024
+TEST:
+  Write the actual intervention policy triggered by each risk state, then test whether post-deployment retraining changes when evaluation targets a no-alert or baseline policy.
+
+018 · Prediction Must Leave a Receipt
+QUESTION:
+  Should institutions treat consequential predictions as intervention receipts linked to the outcomes they helped produce?
+DEEPER QUESTION:
+  What is the minimum prediction/action provenance necessary for later causal audit without creating indefinite surveillance?
+TENSION:
+  More logging can improve auditability while increasing surveillance and governance burdens.
+MISSING:
+  A principled minimum-retention rule for causal evaluation.
+BOUNDARY:
+  The source provides identification results, not an educational data-retention policy.
+CITATION TRAIL:
+  [[Z-EDUPM-002]] → recommendation changes choice → [[Z-EDUPM-017]] → baseline depends on policy → predictions must remain observable
+TEST:
+  Attempt the same causal evaluation with and without historic model version, score, recipient, and action fields. Record what becomes unidentified.
+
+019 · Learning to Decide
+QUESTION:
+  What forms of educational exploration are necessary to learn about trajectories a recommender would otherwise suppress?
+DEEPER QUESTION:
+  Who bears the cost of experiments required to make a decision system epistemically corrigible?
+TENSION:
+  Exploration can improve learning while exposing people to actions not selected as the current estimated optimum.
+MISSING:
+  A theory of legitimate educational exploration: consent, reversibility, risk limits, and distribution of burden.
+BOUNDARY:
+  The source is not specifically about course recommendation; the application follows from the selective-label structure.
+CITATION TRAIL:
+  [[Z-EDUPM-010]] → unlived outcomes → [[Z-EDUPM-013]] → recommendation produces observation → learning to decide
+TEST:
+  Compare deterministic recommendation, bounded exploration, and direct policy learning; measure both knowledge gain and who bears exploratory cost.
+
+020 · The Alert Is the Treatment
+QUESTION:
+  What is the object being evaluated: the risk model, the message, the support protocol, or the coupled prediction-intervention system?
+DEEPER QUESTION:
+  Can model accuracy remain primary when deployment changes both the outcome and its meaning?
+TENSION:
+  Positive average effects do not imply uniform benefit. Alerts can change help-seeking, withdrawal, anxiety, or disengagement in different directions.
+MISSING:
+  An event-level record linking model version and score to exact intervention, recipient response, timing, and outcome.
+BOUNDARY:
+  The article supports prediction-intervention coupling and reports intervention effects; it does not itself use the language of performative prediction.
+CITATION TRAIL:
+  [[Z-EDUPM-003]] → early warning as intervention → [[Z-EDUPM-016]] → intervention changes later labels → Jayaprakash et al. 2014
+TEST:
+  Reanalyze early alerts at event level, distinguishing score, message, intervention, student response, withdrawal timing, and final outcome.
+
+NEW FRONTIER AFTER 13.1
+-----------------------
+How can institutions preserve a minimum causal receipt without turning auditability into unlimited surveillance?
+What ethical forms of exploration can recover unlived outcomes under selective labels?
+How can evaluation distinguish disappearing risk from successful prevention?
+Should baseline risk, intervention effect, and observed outcome be reported as separate quantities?

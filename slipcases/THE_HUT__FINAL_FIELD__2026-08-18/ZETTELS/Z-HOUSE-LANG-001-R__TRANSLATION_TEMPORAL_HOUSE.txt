@@ -1,0 +1,108 @@
+ZETTEL
+
+ID:
+Z-HOUSE-LANG-001-R
+
+TITLE:
+A TRANSLATION CAN REBUILD THE TEMPORAL HOUSE OF A POEM
+
+SOURCE:
+Gershom Scholem — “Gruß vom Angelus” — German poem; source fragment and accompanying English rendering reproduced with Walter Benjamin’s Thesis IX.
+
+SOURCE URL:
+https://www.sfu.ca/~andrewf/CONCEPT2.html
+
+PASSAGE:
+[QUOTE] German: “lebendige Zeit”
+
+[QUOTE] Supplied English rendering: “timeless time”
+
+RESEARCH OBJECT:
+The two expressions do not merely decorate the same world differently. They construct different temporal conditions.
+
+LIVING TIME is not TIMELESS TIME.
+
+The translation variance produces two possible temporal ontologies rather than a transparent copy.
+
+LOCAL MOVE:
+Scholem’s German fragment places the speaker at a threshold among flight, return, and remaining. The supplied English rendering changes a key temporal phrase, producing a second possible world rather than a transparent copy of the first.
+
+SOURCE TERMS:
+Flügel
+Schwung
+zurück
+lebendige Zeit
+Glück
+flight
+return
+time
+
+WHAT BECAME STRANGE:
+Translation may change more than semantic nuance. It can change the RULES OF THE WORLD.
+
+QUESTION:
+When two language versions support different possible actions, states, or temporal structures, in what sense are they implementations of the same world?
+
+DEEPER QUESTION:
+What must translation preserve for HOUSE_A(Language₁) and HOUSE_B(Language₂) to count as the same house?
+
+MECHANISM:
+source expression
+→ translator interpretation
+→ substituted predicate
+→ altered temporal ontology
+→ altered reading of possible action.
+
+FORMAL SHIFT:
+<LEBENDIGE ZEIT>
+→ [TRANSLATE]
+→ <TIMELESS TIME>
+→ <DIFFERENT POSSIBLE WORLD>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+WORLD(Language) = entities + relations + modalities + temporal rules + possible transitions.
+
+Therefore:
+CHANGE_CRITICAL_TERM → CHANGE_WORLD_TRANSITIONS.
+
+TENSION:
+The translator of the supplied English rendering is unidentified. The discrepancy must therefore be preserved rather than silently “corrected.”
+
+MISSING:
+A method for determining which linguistic distinctions are WORLD-CRITICAL. Not every lexical difference changes ontology. Some do.
+
+BOUNDARY:
+The evidence licenses the claim that these two supplied phrases differ materially. It does not license a claim about the translator’s intention or about one definitive philosophical meaning of Scholem’s poem.
+
+CITATION TRAIL:
+Walter Benjamin — “The Task of the Translator.”
+Roman Jakobson — linguistic aspects of translation.
+Whorf — linguistic relativity.
+Programming-language semantics and semantics-preserving compilation.
+
+TEST:
+Take five translations of the same world-defining passage.
+
+For each, independently extract entities, relations, permissions, temporal states, possible transitions, and impossibilities.
+
+Compare the resulting world models. A translation difference is WORLD-ALTERING when it changes the reachable state space rather than merely its verbal presentation.
+
+PLATFORM:
+[[THE HOUSE THAT WORLDS BUILT]]
+
+LINKS:
+[[Z-HOUSE-LANG-001]]
+[[THE MULTILINGUAL HOUSE]]
+[[HOW MANY INTERPRETERS AWAY FROM THE WALL IS A WORD?]]
+
+BIBTEX:
+@misc{scholem_gruss_angelus,
+  author = {Scholem, Gershom},
+  title  = {Gruß vom Angelus},
+  note   = {German poetic fragment reproduced as the epigraph to Walter Benjamin's Thesis IX}
+}

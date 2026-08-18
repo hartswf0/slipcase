@@ -1,0 +1,12 @@
+REBUILD — SLIPCASE-20260817-2254-NOISE
+
+1. Treat root zettel .txt payloads and _MD mirrors as immutable evidence.
+2. Verify root zettel SHA-256 values against ZETTELS.json.
+3. Load _SLIPCASE/NODES.jsonl and RELATIONS.jsonl; do not infer missing zettel payloads from ghosts.
+4. Open _RESOURCES/2022_office_hours_joshua_originality_notes__user_provided.txt and the two screenshots before revising the paper’s office-hours sequence.
+5. Current assembly prompt: _PROMPTS/ANCIENT_MASTER_SLIPCASE_v15.55-AM__2026-08-17T2254-0400.txt; SHA-256 a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a.
+6. Current paper: the-noise-of-sculptors__2026-08-17__checkpoint-2254.md / .docx / .tex / .pdf.
+7. Claim trace: the-noise-of-sculptors__2026-08-17__checkpoint-2254__SOURCE_MAP.txt.
+8. Re-render the DOCX with /home/oai/skills/docx/render_docx.py and the PDF with /home/oai/skills/pdfs/scripts/render_pdf.py before publication.
+9. To merge a later checkpoint, identify zettels by exact payload SHA-256, not ID/title/filename. Preserve colliding IDs and appearances.
+10. Re-admit the nine visible post-checkpoint zettels only from an exact payload source; until then they remain ghosts/gaps.

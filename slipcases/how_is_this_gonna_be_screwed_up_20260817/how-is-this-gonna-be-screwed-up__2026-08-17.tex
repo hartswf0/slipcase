@@ -1,0 +1,261 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{mathpazo}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[hidelinks,hypertexnames=false]{hyperref}
+\usepackage{url}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{footmisc}
+\usepackage{lastpage}
+\usepackage{hanging}
+
+\setstretch{1.13}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\setlength{\footnotesep}{0.5em}
+\setlength{\skip\footins}{1em}
+\setlist{nosep,leftmargin=1.4em}
+\titleformat{\section}{\large\bfseries}{\Roman{section}.}{0.6em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\Alph{subsection}.}{0.5em}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small How Is This Gonna Be Screwed Up?}
+\fancyhead[R]{\small Working Paper}
+\fancyfoot[C]{\small \thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\raggedbottom
+
+\begin{document}
+
+\begin{titlepage}
+\thispagestyle{empty}
+\vspace*{0.6in}
+{\Large\bfseries How Is This Gonna Be Screwed Up?\par}
+\vspace{0.2em}
+{\large Patent Drafting and the Cultural Formation of Prompt Expertise\par}
+\vspace{1.1em}
+{\normalsize Watson Hartsoe\par}
+{\small Working Paper -- August 17, 2026\par}
+\vspace{1.4em}
+
+\textbf{Abstract.} Research on prompting has become increasingly good at describing what users do wrong once they are already inside a generative interface: they overgeneralize, iterate opportunistically, trust brittle formulations, and confuse fluent language with reliable control. That diagnosis is useful but incomplete. It starts the clock too late. In a 2022 interview, the Midjourney practitioner Shambibble attributed part of his unusual facility with prompts to a profession acquired before generative image systems mattered to him: patent law. The relevant carryover was not legal vocabulary or generic precision. It was a practiced suspicion of language -- an ability to notice double meanings, anticipate adverse constructions, and ask how operative wording could be "screwed up." This Article argues that prompt expertise should therefore be studied not only as interface literacy but as culturally formed professional vision. Following Michael Baxandall and Clifford Geertz, it treats expertise as a repertoire of discriminations cultivated in one domain that can become consequential in another. The patent claim does not resemble the prompt. What migrates is the discrimination. Shambibble's later image-prompting guide complicates the legal analogy in a productive way: expert prompting often requires abandoning words for images, weights, seed-controlled comparisons, multiprompt decomposition, and crude visual mockups. The result is not lawyerly prose but adversarial empiricism -- construe against yourself, execute, inspect the interpretation, amend, and retain only what survives testing. This account matters for human-computer interaction because it changes what we should measure, teach, and recruit as prompt expertise; it matters for copyright because the legally salient human contribution may be distributed across a control path rather than concentrated in a final prompt string. The broader claim is that generative AI does not merely create new skills. It changes the adjacency map of old ones.
+
+\vspace{0.8em}
+\textbf{Keywords:} prompting; patent law; professional vision; cultural systems; generative AI; Midjourney; human-AI interaction; copyright; expertise
+
+\vfill
+\begin{flushright}
+{\scriptsize Working Paper -- AI-augmented research process\\Evidence and assembly record preserved separately.}
+\end{flushright}
+\end{titlepage}
+
+\section{The Error: We Keep Looking for Prompt Expertise in the Prompt}
+
+Prompt research has learned to diagnose a familiar instability: ordinary language looks like an easy interface until people try to make a model do something exact. Studies of end-user prompting find brittle strategies, opportunistic iteration, overgeneralization, and expectations imported from human-to-human instruction.\footnote{J.D. Zamfirescu-Pereira, Richmond Y. Wong, Bjoern Hartmann \& Qian Yang, \textit{Why Johnny Can't Prompt: How Non-AI Experts Try (and Fail) to Design LLM Prompts}, CHI '23, art. 437, at 1--21 (2023), \url{https://doi.org/10.1145/3544548.3581388}.} Prompt-programming research likewise treats natural language as a means of controlling or locating model behavior.\footnote{Laria Reynolds \& Kyle McDonell, \textit{Prompt Programming for Large Language Models: Beyond the Few-Shot Paradigm}, arXiv:2102.07350 (2021).} The practical response is predictable: improve prompt literacy, expose better controls, scaffold systematic comparison, or redesign the interface so users do not have to discover fragile tricks unaided.
+
+However, this framing makes a costly assumption. It treats prompt expertise as if it begins at the interface.
+
+That assumption mislocates the object. It makes prior professional formation look like demographic background rather than part of the causal story. It encourages training schemes that teach model-specific syntax while ignoring older habits of attention that may travel better than syntax. It also tempts law and policy to treat "the prompt" as a self-contained unit of human control even when the operative work is spread across examples, reference images, selections, exclusions, weights, masks, rerolls, and revisions. The field becomes more precise about what people do after the model arrives while remaining oddly incurious about what the person brought into the room.
+
+A 2022 interview with an early Midjourney practitioner exposes the problem because the transfer is unusually explicit. Asked about his background, Shambibble answered that he was a patent attorney. Asked what that contributed, he did not claim a special aesthetic education. He described a facility with abstract description under conditions in which language could later be misinterpreted. He then reduced the competence to a vernacular question: when drafting for the model, he was "thinking adversarial" -- asking how the wording was going to be "screwed up."\footnote{Interview by Watson Hartsoe with Shambibble, Oct. 22, 2022, approx. 02:02--04:01 (automated transcript on file with author). The transcript contains recognition errors; quoted language here follows the preserved transcript and should be checked against audio before publication.}
+
+His example was almost too small to deserve theory. He wanted the color orange. The model produced the fruit. Private intention did not save the instruction. The repair was to alter the operative record: exclude fruit, sphere, circle, or otherwise close the unwanted branch. This was not patent claim drafting in any literal sense, and Shambibble said so. The connection existed in the habit of anticipating adverse construction.
+
+That anomaly requires a different account of prompt expertise. The transferable asset was not a vocabulary. It was a way of noticing.
+
+This Article argues that prompt expertise can be culturally formed before the prompt exists. Generative AI can make an old professional discrimination newly valuable by changing the domain in which that discrimination has consequences. Patent practice is one unusually visible case because it institutionalizes attention to ambiguity, scope, construction, amendment, and the difference between what a drafter intended and what an external interpreter can make operative. Shambibble's practice then shows that this inherited discrimination is not enough. Contact with the model and its user community retunes it into a multimodal, experimental craft. The resulting expertise is neither "good writing" nor magical syntax. It is the capacity to construct a testable interpretation problem, make the interpreter answer, and revise from the answer.
+
+The error is therefore not that HCI has failed to study prompts. It is that prompt expertise is too often measured at the wrong temporal scale. Start at the interface and one sees tricks. Start earlier and one can see the cultural formation of the person capable of distinguishing a trick from a result.
+
+\section{The Claim Does Not Resemble the Prompt}
+
+Michael Baxandall's merchants did not study barrels in order to become better viewers of paintings. Fifteenth-century commerce nevertheless trained forms of attention that could travel. Gauging irregular containers required practical decomposition: awkward masses had to be seen as combinations of manageable solids because money depended on estimating them. Baxandall used such practices to argue that the visual skills brought to painting were not sealed inside the history of painting; they were partly furnished by ordinary social life.\footnote{Michael Baxandall, \textit{Painting and Experience in Fifteenth-Century Italy: A Primer in the Social History of Pictorial Style} 86--91 (Clarendon Press 1972).}
+
+Clifford Geertz seized on the consequence. Quattrocento sensibility was not manufactured by paintings alone. Religious preaching, social dance, commercial gauging, and humanist rhetoric helped form the capacities through which paintings could be made and read. Geertz's point was not that barrel measurement caused Renaissance composition. It was that the capacity to perceive meaning in an art form is itself a product of collective experience.\footnote{Clifford Geertz, \textit{Art as a Cultural System}, 91 MLN 1473, 1487--89 (1976). Geertz, following Baxandall, describes the painter's medium as including the audience's learned capacity to see meanings in pictures.}
+
+The barrel did not resemble the painting. What migrated was the discrimination.
+
+That distinction keeps the Shambibble case from collapsing into analogy. A patent claim does not resemble a Midjourney prompt in institutional function, legal effect, interpretive procedure, or technical execution. A model is not a court. A reroll is not an appeal. An image prompt is not a claim limitation. The resemblance that matters is narrower: both environments can punish a drafter who confuses intended meaning with the set of constructions an external interpreter can actually produce.
+
+Patent practice can therefore be understood as one cultural training ground for a suspicious ear. The lawyer learns to hear language under pressure. What other reading is available? Which noun does this limitation modify? What does "it" refer to? Is a category open or closed? Has an exception swallowed the rule? Does an amendment solve the problem or merely move it? Which ambiguity is harmless and which reallocates valuable scope? These are not aesthetic questions. But when generative systems made ordinary words behave partly like controls, the distinctions abruptly acquired a creative and computational use.
+
+Shambibble himself marked the discontinuity. He said the relevant skill had little overlap with art until only months earlier. The timing is the point. Generative AI did not teach him from scratch to suspect words. It changed the value of a suspicion cultivated elsewhere.
+
+This suggests a broader research program. Instead of asking only which users have more prompt experience, we should ask which practices had already trained people to detect distinctions the model makes consequential. A film director may arrive practiced in specifying effect without specifying implementation. A programmer may arrive practiced in decomposition, state, and edge cases. An editor may arrive practiced in preserving invariants across revision. A translator may arrive practiced in meaning that survives lexical change. A patent attorney may arrive practiced in hostile or unexpected construction. None of those professions owns prompt expertise. The point is precisely that the machine can create new adjacencies among competencies that previously had little reason to meet.
+
+Generative AI's novelty, on this account, includes a redistributive effect on expertise. It does not merely create a new body of knowledge called prompt engineering. It reprices old discriminations.
+
+\section{Patent Practice Trains a Suspicious Ear}
+
+The legal comparison becomes useful only if it resists the flattering myth that lawyers are simply more precise with words. Patent law itself rejects perfect precision as the standard. Under the USPTO's examination practice, pending claims receive their broadest reasonable interpretation consistent with the specification, in part because the applicant still has an opportunity to amend.\footnote{U.S. Patent \& Trademark Office, \textit{Manual of Patent Examining Procedure} \S 2111 (rev. 2026), \url{https://www.uspto.gov/web/offices/pac/mpep/s2111.html}.} The rule is not "read the claim as badly as possible." Broadest reasonable is not broadest imaginable. The practice is valuable here because it deliberately subjects operative language to an external construction while correction is still available.
+
+The Supreme Court's definiteness cases sharpen the habit. In \textit{Nautilus v. Biosig}, the Court required claims to inform skilled readers of scope with "reasonable certainty" while recognizing that absolute precision is unattainable.\footnote{\textit{Nautilus, Inc. v. Biosig Instruments, Inc.}, 572 U.S. 898, 910--11 (2014).} That is a better design principle for generative control than the usual advice to "be specific." Specificity is not an unlimited good. Creative systems often require open degrees of freedom. Agentic systems may require hard boundaries around actions with external consequences. The important question is not whether ambiguity survives. It is what surviving ambiguity is allowed to do.
+
+Patent doctrine also distrusts retrospective rescue. In \textit{White v. Dunbar}, the Court warned against treating claim language like a "nose of wax" that could be twisted after the fact to suit the desired result.\footnote{\textit{White v. Dunbar}, 119 U.S. 47, 51--52 (1886).} Prompt practice has its own version of the temptation: "that is obviously not what I meant." Sometimes that complaint is correct because the model failed to follow a well-bounded instruction. Sometimes the output reveals a construction the words actually left open. Those cases should not be collapsed. A practitioner who never distinguishes them cannot tell whether to improve the model, change the prompt, alter the representation, or leave useful openness alone.
+
+The legal contribution is therefore not legalese. It is an interpretive discipline:
+
+\begin{enumerate}[label=\arabic*.]
+\item construe against yourself before blaming the interpreter;
+\item identify the scope difference that matters rather than pursuing maximal detail;
+\item amend against an observed adverse construction rather than accumulating boilerplate;
+\item preserve enough amendment history to know what a rule was responding to;
+\item distinguish a drafting failure from a compliance failure; and
+\item stop when the remaining uncertainty is tolerable for the consequence at stake.
+\end{enumerate}
+
+These operations describe an attitude toward language under consequence. They also explain why Shambibble's orange example is more than a joke. He is not searching for the uniquely correct English phrase. He is examining a field of possible constructions and changing the instrument after one branch proves costly.
+
+That is a lawyerly competence. It is not yet prompt expertise.
+
+\section{The Manual Trains the Eye}
+
+The strongest evidence against a lawyer-centric account is Shambibble's own manual. If the transferable expertise were merely adversarial wording, a patent attorney should respond to model failure by writing more carefully. Shambibble repeatedly does something else: he changes the representation.
+
+His 2022 image-prompting guide treats text, image references, weights, prompt decomposition, seed-controlled comparisons, rerolls, and crude visual composites as parts of one operative practice. In one passage he explicitly describes working with both "text and visual arguments."\footnote{Shambibble, \textit{Image Prompting and--} (2022), researcher-provided PDF, concluding sections. The guide's descriptions of Midjourney's internal mechanism are practitioner theories and are not treated here as verified architecture.} When complex spatial relations are difficult to carry in English, he recommends rough mockups assembled from generated images, clip art, photographs, or even simple paint tools. Visual polish is beside the point. The mockup is there to make a relation available to the model: this subject here, that object there, this horizon behind them.
+
+His recurring-character method makes the same move in a more sophisticated form. An early technique used a single pencil-sketch headshot as a reference. He later noticed that the medium itself contaminated downstream generations. His repair was not a more exhaustive verbal definition of the face. He assembled a bank of recognizably similar faces across several media so that no single medium would dominate.\footnote{Id., recurring-character section. The guide explicitly records the revision from the earlier single-medium recommendation to a multi-medium bank.}
+
+The operation is striking: preserve identity by surrounding it with controlled disagreement. What counts as the character is approximated by what survives changes in medium.
+
+Charles Goodwin's account of "professional vision" helps explain why this matters. Professional seeing is not simply a private faculty possessed by an expert. Communities organize fields of attention through coding schemes, highlighting practices, and graphic representations that make some distinctions actionable.\footnote{Charles Goodwin, \textit{Professional Vision}, 96 Am. Anthropologist 606, 606--33 (1994), \url{https://doi.org/10.1525/aa.1994.96.3.02a00100}.} Shambibble's manual functions in this way. Its most durable content is not a list of magic strings. It teaches readers how to construct comparisons.
+
+Hold a seed fixed for a like-for-like test. Remove a term and run again. Change the image weight. Separate a prompt into components. Observe when an attribute disappears. Notice when the medium rides along with the face. Compare the first generation with rerolls. Ask whether an apparent improvement survives controlled variation. The representational arrangement makes a causal hypothesis visible enough to be embarrassed by output.
+
+This is a different theory of prompt literacy. The novice asks, "what words should I use?" The practitioner asks, "what comparison would let me know which distinction matters?"
+
+The difference is consequential because probabilistic systems reward superstition. A long prompt produces a beautiful output; every token in the prompt acquires retrospective charisma. Shambibble described users copying prompt "junk" without knowing which terms mattered. His proposed remedy was empirical but modest: reuse a seed, remove terms, compare results, and admit that interactions among words, order, tokenization, and stochastic variation can defeat simple attribution. His manual, he said, tried to reserve strong explanations for a small number of toy examples where he could show why he believed something worked.\footnote{Hartsoe-Shambibble Interview, supra note 3, approx. 47:03--48:53.}
+
+The lawyer's adversarial reading has therefore been transformed. It is no longer only "what alternate meaning could these words bear?" It becomes "what test would expose whether my story about these words is false?"
+
+That combination -- adverse construction plus experimental correction -- is better described as \textit{adversarial empiricism}. Construe the instruction against yourself. Execute it. Observe the interpretation that actually wins. Alter one representation or boundary. Execute again. Keep the rule only as long as the evidence and interpreter still support it.
+
+The method is more durable than the incantation because Shambibble expects the incantation to die.
+
+\section{PromptCraft Retunes the Lawyer}
+
+Prior professional formation cannot explain the whole case. Shambibble did not walk out of patent practice fully equipped with a Midjourney craft. The interview records a social process in which the discrimination was retuned by a platform and its community.
+
+His manual grew out of repeated concrete failures. Official documentation could tell users what controls existed but often could not supply enough situated examples to answer the questions arriving in PromptCraft: why does "photorealistic" not produce photorealism? How do I keep a character recognizable? How do I separate two subjects that bleed into each other? Recurring questions became an FAQ; the FAQ became a forum; examples accumulated around particular failure types.\footnote{Id. approx. 00:53--01:53, 12:22--13:45.}
+
+That sequence matters because it prevents a heroic biography. Shambibble repeatedly says he learned from other users, read old Discord discussions, bounced explanations off friends who could code, and played with operations he did not invent. He could not build the neural networks he was theorizing. He could nevertheless become highly competent at diagnosing behavior through immersion, experimentation, and circulation.
+
+The community also created a rapid common law of the interface. A workaround could stabilize as a recognizable technique, spread, enter a manual, and then disappear when the interface absorbed it. Shambibble recounts one limitation he worked around by recovering a job ID, seed, and prompt, then remastering and publicizing the procedure until the capability eventually became a button.\footnote{Id. approx. 09:48--11:04. The claim here concerns the reported lifecycle, not priority. Shambibble is cautious elsewhere about priority claims.} The important line is not "user invented feature." It is the lifecycle:
+
+\begin{center}
+failure $\rightarrow$ workaround $\rightarrow$ shared technique $\rightarrow$ interface feature $\rightarrow$ forgotten craft
+\end{center}
+
+This is where a culturally formed account becomes stronger than a prompt-syntax account. Model-specific techniques can be correct and still be perishable. Shambibble warned that much of what he was explaining might mean nothing within six months. He even predicted that prompt craft as a distinct activity might disappear if natural-language understanding improved. The guide itself closes by asking readers to treat it like an 1896 cinematography manual built from second-hand rumors about cameras.\footnote{Shambibble, \textit{Image Prompting and--}, supra note 8.}
+
+A syntax-centered account sees this as obsolescence. A discrimination-centered account asks what remains when the syntax disappears.
+
+Some habits do not survive: a particular seed trick, an old stylize value, a prompt ordering quirk. Others may travel: distinguishing apparent causality from repeatable control; locating which variable drifted; knowing when a problem is semantic rather than representational; preserving an invariant while varying everything around it; recognizing when a workaround has become infrastructure and can be forgotten.
+
+This also clarifies the role of community. Patent practice supplied one prior repertoire. PromptCraft supplied cases, counterexamples, labels, and comparative artifacts. The eventual expertise was an interaction between inherited attention and new collective experience. Geertz's point returns in altered form: the operative medium is not just the interface. It includes the socially produced capacity to notice what the interface is doing.
+
+\section{The Lawyer's Blind Spot}
+
+The cultural-transfer thesis becomes dangerous if it is allowed to become a recruitment slogan: hire lawyers because lawyers are good at prompts. The evidence does not support that claim. One practitioner can reveal a mechanism without establishing a population advantage.
+
+There is also a stronger reason for caution. Expertise can improve attention and trap it at the same time.
+
+Research on the Einstellung effect in expert chess shows that familiar solution schemas can continue to control visual attention even when experts report searching for a better alternative.\footnote{Merim Bilalic, Peter McLeod \& Fernand Gobet, \textit{Why Good Thoughts Block Better Ones: The Mechanism of the Pernicious Einstellung (Set) Effect}, 108 Cognition 652, 652--61 (2008), \url{https://doi.org/10.1016/j.cognition.2008.05.005}.} The implication for professional transfer is uncomfortable: the same discrimination that reveals one class of failure can make another harder to see.
+
+Patent training may make polysemy, scope leakage, negative limitation, ambiguity, and referential instability unusually salient. It may also tempt a practitioner to treat every control problem as a wording problem. Modern generative systems increasingly accept other forms of specification: images, schemas, examples, tools, masks, state, code, direct manipulation, and structured data. A lawyer who keeps redrafting the sentence when the correct move is to supply a diagram may be displaying expertise as fixation.
+
+Shambibble is interesting precisely because his practice resists this prediction. He does not remain loyal to words. If English cannot carry the relation, he uses an image. If a single image smuggles unwanted medium information, he constructs a bank of disagreeing images. If a term's contribution is uncertain, he tries controlled removal. If the model will not give two concepts independent attention, he separates them. His professional inheritance matters because he knows interpretation can fail. His craft develops because he refuses to assume that language is always the right place to repair it.
+
+This is the sharper sense in which lawyers might matter to prompt language. The valuable lawyer is not the one who writes the longest instruction. It is the one who treats wording as one instrument among several and knows when the interpretive problem has moved outside the sentence.
+
+That is a testable claim. Give patent attorneys, programmers, directors, designers, technical writers, and experienced prompt practitioners the same agentic tasks. Divide the failures into at least two classes. In the first, success depends on detecting scope, ambiguity, reference, exception, or authorization problems. In the second, success requires abandoning prose for another representation or control surface. Measure not just final performance but the first failure each group notices, the first repair it attempts, the number of rewrites before switching modalities, and whether the repair generalizes to a new model. If lawyers dominate the first class and stall on the second, cultural transfer and professional fixation are both visible at once.
+
+The point of the experiment is not to crown a profession. It is to stop pretending that expertise is born when the benchmark begins.
+
+\section{Copyright Is Counting the Wrong Object}
+
+Copyright doctrine exposes the cost of the same unit error from another direction. The U.S. Copyright Office's 2025 report on AI copyrightability concludes that generative outputs can be protected when a human author determines sufficient expressive elements, including through human-authored material perceptible in the output or creative arrangement and modification, but not through the mere provision of prompts.\footnote{U.S. Copyright Office, \textit{Copyright and Artificial Intelligence, Part 2: Copyrightability} (Jan. 2025); U.S. Copyright Office, NewsNet No. 1060 (Jan. 29, 2025), \url{https://www.copyright.gov/newsnet/2025/1060.html}.}
+
+That conclusion should not be caricatured as hostility to prompt craft. It identifies a different problem: control over instructions is not automatically authorship of resulting expression. A perfectly drafted instruction may still leave the model to determine the expressive details copyright protects.
+
+However, Shambibble's 2022 practice shows why "the prompt" can still be a factually impoverished unit. He is rarely doing a prompt alone. He selects previous outputs to become references. He constructs image banks. He changes weights. He separates concepts. He uses rough composites to constrain layout. He rerolls and compares. He preserves some outputs and discards others. He revises his method when a reference medium contaminates later generations. Some of those acts may be legally irrelevant to authorship; some may involve protectable human-authored inputs, arrangement, or modification; many will still leave model-generated expression unprotectable. The point is not to decide the copyright status of his works. It is that "prompting" collapses a heterogeneous control path into one noun.
+
+The Review Board's decision concerning Jason Allen's \textit{Th\'e\^atre D'op\'era Spatial} illustrates why volume of iteration does not solve the problem. The administrative record described hundreds of prompt revisions before the initial Midjourney image, followed by additional human editing. The Office still required AI-generated material to be disclaimed for the registration as submitted.\footnote{U.S. Copyright Office Review Board, \textit{Th\'e\^atre D'op\'era Spatial} (Sept. 5, 2023), available through the Office's Review Board database, \url{https://www.copyright.gov/rulings-filings/review-board/}.} A large prompt count establishes a long path. It does not, by itself, establish where control over protected expression resided.
+
+A better evidentiary object would trace significant expressive elements backward through the production sequence: human-authored input, model-generated expression, human selection, human arrangement, human modification, unresolved provenance. Such a record could still end in noncopyrightability. It would simply describe the actual workflow before applying the legal rule.
+
+Shambibble's own copyright discussion offers a methodological warning. In 2022 he called his informed position a form of "studied ignorance." He entertained competing intuitions about training data but repeatedly marked the law as unsettled.\footnote{Hartsoe-Shambibble Interview, supra note 3, approx. 14:21--19:21.} That posture is part of the expertise worth preserving. A culturally trained eye is not a license to claim authority outside its evidence.
+
+The copyright lesson therefore returns us to prompting: the relevant human contribution may not be where the interface labels it. Legal analysis should not assume that the final prompt string is the natural factual unit any more than HCI should assume prompt history begins when the user opens the box.
+
+\section{AI Changes the Adjacency Map of Expertise}
+
+The standard story of prompt engineering has a built-in expiration date. Models improve, interfaces absorb workarounds, structured controls replace prose, and tricks that once separated experts from novices become defaults. Shambibble understood this almost immediately. He was not precious about prompt secrets because he expected them to decay.
+
+If prompt expertise is defined as possession of those secrets, the field will spend its life cataloguing disappearing syntax.
+
+The alternative is not to declare a timeless essence of prompting. It is to study the movement of discriminations. Which distinction was learned where? Which new machine made it consequential? Which community refined it? Which representation taught others to perceive it? Which interface later absorbed it? Which parts survived the update? Which parts became fixation?
+
+That research agenda changes what HCI should measure. "Experience with AI" is too coarse. So is "prompt literacy." A participant can have little generative-AI experience and still arrive practiced in decomposing ambiguity, specifying scope, preserving invariants, or detecting unwanted coupling. Another can have thousands of hours inside one interface and possess elaborate but brittle local superstitions. These are not the same expertise profile.
+
+It changes what design should teach. Prompt tutorials that supply successful strings may produce dependence on the current interpreter. Training that teaches users to call the shot before seeing the output, construct contrasts, preserve invariants, record failures, and switch representational channels may survive model change more effectively. The goal is not to memorize what the machine likes. It is to make one's causal story vulnerable to the machine's answer.
+
+It changes what organizations should recruit. The emerging work of natural-language operation may require people who can move among practice-languages: domain experts who understand the consequence, technical experts who understand the available machinery, and interpretive experts who can identify where ordinary language leaves dangerous scope unresolved. Sometimes those competencies will live in one person. Often they will not.
+
+And it changes the historical claim we make about AI itself. The consequential novelty may not be that a new machine produced a new profession called prompt engineer. It may be that the machine made previously distant practices newly adjacent. Patent prosecution became relevant to image making. Illustration became relevant to software specification. Editing became relevant to agent control. Requirements engineering became relevant to conversation. The boundaries among expertise domains did not disappear. The cost of crossing them changed.
+
+That is why Shambibble matters beyond Midjourney history. He gives us a rare contemporaneous record of an old discrimination becoming useful in a new place while the place itself is still changing. He enters as an oil-and-gas patent attorney and hobbyist. He leaves the interview no less a patent attorney. What changed was the field in which a familiar professional suspicion could operate.
+
+\section{Conclusion: The Skill Arrived Before the Tool}
+
+The field's error is easy to make because the prompt is visible. The cultural formation that made one person unusually attentive to it is not.
+
+Shambibble's case makes that hidden history observable. Patent practice had trained him to expect language to acquire consequences under an interpreter he did not control. Midjourney made the habit artistically useful. PromptCraft then changed it again, adding cases, shared failures, experimental comparisons, multimodal representations, and the expectation that today's reliable workaround could become tomorrow's button. The result was neither patent drafting transplanted into art nor an autonomous new literacy born in 2022. It was a recombination of old attention and new machinery.
+
+Baxandall's merchant provides the right discipline for reading the case. The barrel did not resemble the painting. The patent claim does not resemble the prompt. What migrates is the discrimination.
+
+That proposition should make prompt research less impressed by prompt syntax and more demanding about expertise. We should ask what people were trained to notice before the model arrived, what the interface teaches them to notice now, what their training prevents them from seeing, and which of those distinctions survive when the model changes.
+
+The important question is not who writes the cleverest prompt. It is who learned, long before the model arrived, to hear where an instruction can break -- and who can still notice when the problem is no longer in the words.
+
+\section*{References and Authorities}
+\begingroup
+\footnotesize
+\setlength{\parskip}{0.18em}
+\begin{hangparas}{1.5em}{1}
+Baxandall, Michael. \textit{Painting and Experience in Fifteenth-Century Italy: A Primer in the Social History of Pictorial Style}. Oxford: Clarendon Press, 1972.
+
+Bilalic, Merim, Peter McLeod, and Fernand Gobet. "Why Good Thoughts Block Better Ones: The Mechanism of the Pernicious Einstellung (Set) Effect." \textit{Cognition} 108, no. 3 (2008): 652--661. \url{https://doi.org/10.1016/j.cognition.2008.05.005}.
+
+Geertz, Clifford. "Art as a Cultural System." \textit{MLN} 91, no. 6 (1976): 1473--1499. doi:10.2307/2907147.
+
+Goodwin, Charles. "Professional Vision." \textit{American Anthropologist} 96, no. 3 (1994): 606--633. \url{https://doi.org/10.1525/aa.1994.96.3.02a00100}.
+
+Hartsoe, Watson. Interview with Shambibble. October 22, 2022. Automated transcript on file with author.
+
+\textit{Nautilus, Inc. v. Biosig Instruments, Inc.}, 572 U.S. 898 (2014).
+
+Reynolds, Laria, and Kyle McDonell. "Prompt Programming for Large Language Models: Beyond the Few-Shot Paradigm." arXiv:2102.07350 (2021).
+
+Shambibble. \textit{Image Prompting and--}. Community guide, 2022. Researcher-provided PDF.
+
+U.S. Copyright Office. \textit{Copyright and Artificial Intelligence, Part 2: Copyrightability}. January 2025.
+
+U.S. Copyright Office Review Board. \textit{Th\'e\^atre D'op\'era Spatial}. September 5, 2023.
+
+U.S. Patent and Trademark Office. \textit{Manual of Patent Examining Procedure} \S 2111, "Claim Interpretation; Broadest Reasonable Interpretation." Current revision consulted August 2026.
+
+\textit{White v. Dunbar}, 119 U.S. 47 (1886).
+
+Zamfirescu-Pereira, J.D., Richmond Y. Wong, Bjoern Hartmann, and Qian Yang. "Why Johnny Can't Prompt: How Non-AI Experts Try (and Fail) to Design LLM Prompts." \textit{Proceedings of CHI 2023}, Article 437, 1--21. \url{https://doi.org/10.1145/3544548.3581388}.
+\end{hangparas}
+\endgroup
+
+\end{document}

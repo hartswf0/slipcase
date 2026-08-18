@@ -1,0 +1,64 @@
+VERIFICATION
+============
+SOURCE COVERAGE: prior checkpoint COMPLETE_FILE; 5 new primary PDFs LOCAL_FILE.
+GOVERNING 13.1 PROMPT BYTE IDENTITY: UNVERIFIED.
+
+PAYLOAD:
+  admitted=20
+  root_txt=20
+  root_exact=20/20
+  md_exact=20/20
+  json_records=20
+
+RELATIONS:
+  PLATFORM=20
+  MEMBER_OF=20
+  LINKS=76
+  LINKS_TO=76
+  ALL_ADDRESSES=123
+  CLASSIFIED_ADDRESSES=123
+  GHOSTS=53
+
+LINEAGE:
+  PARENT_OF=19
+  ROOTS=8
+  LEAVES=10
+  BRANCHES=5
+  MULTI_PARENT=7
+
+PAPER:
+  PDF=GENERATED
+  PAGES=5
+  PAPER_CITEKEY_GAPS=NONE
+  FIRST_PAGE_DISCLOSURE_TEXT_OCCURRENCES=1
+  VISUAL_INSPECTION=PASS
+
+INDEX_REBUILD=PENDING
+ZIP=PENDING
+
+INDEX RECONSTRUCTION:
+  RECONSTRUCTED 108 FILES; ALL SHA-256 HASHES MATCH Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/generated/interface/models.py", line 32317, in hydrate_crdt_from_proto
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/remote.py", line 749, in __call__
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/client.py", line 150, in call
+artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
+  files=108
+
+ZIP:
+  entries=109
+  integrity=PASS
+  sha256=126f7b68b6ba53ddceabad558ac23bf7adb2d7df52c1fd6284210c63b8267920
+
+PDF RENDER INSPECTION
+  renderer: render_pdf.py at 180 DPI
+  pages rendered: 5/5
+  page 1 inspected: PASS — title/abstract complete, quiet mark/disclosure bottom-right, no clipping
+  page 2 inspected: PASS — ordinary scholarly layout, no repeated disclosure
+  page 5 inspected: PASS — references + provenance appendix complete, no clipping/broken glyphs
+  first-page disclosure phrase count: 1
+  later-page repeated disclosure: NONE DETECTED

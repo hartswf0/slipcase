@@ -1,0 +1,9 @@
+REBUILD
+=======
+1. Save index.html and REBUILD.py in the same directory.
+2. Run: python REBUILD.py index.html ./reconstructed
+3. The script extracts every embedded package file except index.html itself.
+4. It validates every reconstructed file against its embedded SHA-256.
+5. Open reconstructed/000__RETURN_PATH.txt.
+
+LINK_ONLY means a source receipt exists but the source body is not locally preserved.

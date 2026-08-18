@@ -1,0 +1,633 @@
+OPEN EDGES
+
+Compiled from MISSING, BOUNDARY, QUESTION, DEEPER QUESTION, and TEST fields.
+
+## PF-001 — Disclosure templates do not adjudicate disclosure thresholds.
+QUESTION: What artifact teaches researchers how qualitative AI-disclosure standards are actually applied?
+DEEPER: Does AI governance need adjudicated exemplars, or are discipline-specific precedents supposed to perform that work?
+MISSING: Published examples containing interaction, artifact, disclosure decision, and rationale.
+BOUNDARY: The policy's lack of adjudicated exemplars does not establish that no such precedents exist elsewhere at Georgia Tech.
+TEST: Find ten real disclosure decisions and compare which properties actually predict the judgment.
+
+## PF-002 — Amount of interaction and amount of contribution are different variables.
+QUESTION: Should AI scholarship distinguish interaction volume, informational influence, and intellectual judgment?
+DEEPER: Can informational contribution capture choices such as rejection, source selection, or diagnosis that leave little lexical trace in the output?
+MISSING: Selection, rejection, validation, and orchestration that do not survive as output text.
+BOUNDARY: The paper does not claim to measure scholarly authorship.
+TEST: Construct pairs where a five-word prompt has high causal leverage and a thousand-word prompt has low leverage, then compare token-count and contribution metrics.
+
+## PF-003 — Governance can regulate prompts without giving them a scholarly ontology.
+QUESTION: What ontology must governance possess in order to regulate an activity fairly?
+DEEPER: Can governance remain artifact-agnostic while still distinguishing trivial prompting from methodologically consequential prompting?
+MISSING: Evidence that this deferral causes actual misclassification.
+BOUNDARY: Policy silence does not establish institutional denial of prompts as intellectual work.
+TEST: Compare how the same prompt artifact is classified by a policy office, an IRB, a software venue, and a dissertation committee.
+
+## PF-004 — Contribution taxonomies already fracture the simple human-author category.
+QUESTION: Could AI-assisted scholarship be described first through contribution roles rather than percentage-of-AI labels?
+DEEPER: Which existing CRediT roles change meaning when the operation is mediated through a generative model?
+MISSING: Roles for prompt specification, iterative orchestration, machine-output validation, and generative selection.
+BOUNDARY: CRediT cannot simply be treated as an AI authorship standard.
+TEST: Take twenty AI-assisted research workflows and attempt to encode them using only current CRediT roles; record recurrent residue.
+
+## PF-005 — Intellectual labor in a prompt does not automatically become copyright authorship.
+QUESTION: What forms of scholarly contribution do prompts perform that copyright's expressive-control test intentionally ignores?
+DEEPER: Are “authorship,” “intellectual work,” “method,” and “copyrightable expression” being falsely treated as interchangeable?
+MISSING: A positive scholarly category for sophisticated specification that is not final-expression authorship.
+BOUNDARY: The report addresses U.S. copyrightability, not doctoral contribution or research methodology.
+TEST: Classify the same complex prompt under copyright, research-method, software, and dissertation-contribution criteria.
+
+## PF-006 — The same words can perform different research roles without having the same institutional status.
+QUESTION: Can prompt classification be made relational—by workflow position and operation—rather than lexical?
+DEEPER: What must remain invariant for “the same linguistic act” to genuinely count as the same act across protocol, code, interview instrument, and prompt?
+MISSING: A cross-context comparison of identical instructions.
+BOUNDARY: CRediT does not classify prompts.
+TEST: Place one instruction verbatim into a protocol, code comment, research-assistant memo, interview guide, and LLM prompt; trace what each actually causes.
+
+## PF-007 — The blueprint analogy overstates how much a prompt controls execution.
+QUESTION: What physical artifact is a better analogy for a prompt: blueprint, brief, score, constraint set, seed, or experimental intervention?
+DEEPER: Can the analogy be replaced by an operational measure of constraint rather than another metaphor?
+MISSING: A metric for how much an instruction actually contracts an output distribution.
+BOUNDARY: The Copyright Office does not claim prompts have no causal effect.
+TEST: Estimate output diversity before and after progressively detailed prompts while keeping model and sampling fixed.
+
+## PF-008 — “Prompt” hides a boundary between instruction and prompt program.
+QUESTION: Where should the boundary between prompt, prompt program, and generative application be drawn?
+DEEPER: Does scholarly evaluation need to classify the artifact's computational structure before evaluating its contribution?
+MISSING: A taxonomy from free-text instruction through structured prompt programs to full agent systems.
+BOUNDARY: LMQL demonstrates one programming approach, not the universal native form of prompting.
+TEST: Classify one hundred published LLM systems by whether their model-facing artifacts are text instructions, structured templates, constrained programs, or graph-level pipelines.
+
+## PF-009 — Prompt robustness belongs to a prompt–model relation, not to the prompt alone.
+QUESTION: What does it mean for a prompt to “work elsewhere” when robustness is relational?
+DEEPER: Should a scholarly prompt artifact include the tested model distribution as part of its identity?
+MISSING: Cross-model, cross-version, cross-context durability studies for prompts claimed as research instruments.
+BOUNDARY: POSIX measures sensitivity, not scholarly reproducibility.
+TEST: Run one “battle-hardened” prompt across ten models, three model versions, and five context conditions.
+
+## PF-010 — A prompt becomes instrument-like only when its calibration conditions are specified.
+QUESTION: What would constitute calibration documentation for a prompt used as a scholarly instrument?
+DEEPER: Is the instrument the prompt, or the prompt + model + parameters + context + evaluation protocol?
+MISSING: Calibration certificates for scholarly prompt instruments.
+BOUNDARY: PromptBench benchmarks LLMs; it does not claim prompts are scientific instruments.
+TEST: Attempt to reproduce a prompt-based scholarly result after changing each member of the proposed instrument tuple individually.
+
+## PF-011 — Output-only attribution loses upstream human information.
+QUESTION: How much upstream history is required to distinguish materially different production processes?
+DEEPER: What human work remains invisible even when both input and output are preserved?
+MISSING: An interaction graph rather than an input/output pair.
+BOUNDARY: The study does not invalidate the category “AI-generated”; it shows that category is insufficient for contribution estimation.
+TEST: Construct indistinguishable final passages through radically different human-AI processes and ask whether evaluators can classify contribution from output alone.
+
+## PF-012 — Discarded model text can still leave a measurable writing-process contribution.
+QUESTION: How can a distinction or conceptual redirection caused by discarded generations be represented as contribution?
+DEEPER: Does contribution require traceable textual inheritance, or can counterfactual influence be enough?
+MISSING: A method for proving that a rejected generation caused a later conceptual move.
+BOUNDARY: CoAuthor records process but does not provide a general authorship test.
+TEST: Ask writers to annotate moments where rejected generations changed their subsequent argument, then compare against interaction traces.
+
+## PF-013 — The final text cannot distinguish workflows that leave the same surface artifact.
+QUESTION: Which process variables are sufficient to distinguish consequentially different AI-assisted workflows?
+DEEPER: Can a trace reveal intellectual control, or only observable interaction?
+MISSING: Validation that trace features correspond to intellectual contribution rather than mere activity.
+BOUNDARY: Humanly does not settle legal or institutional authorship.
+TEST: Generate identical final texts using controlled workflows with radically different human involvement and test which trace features discriminate them.
+
+## PF-014 — “Upstream” contribution requires a graph, not merely a better percentage.
+QUESTION: What representation is needed when “the human input” is itself a temporally distributed program of interventions?
+DEEPER: Should attribution move from scalar contribution to topology of contribution?
+MISSING: A graph-based scholarly contribution model.
+BOUNDARY: Nothing in Xie et al. requires a provenance graph; this is a reframe generated by the limitation.
+TEST: Encode the same ten workflows as both scalar contribution scores and provenance graphs; identify distinctions lost by each.
+
+## PF-015 — Provenance is selectable description, not necessarily total conversational capture.
+QUESTION: What rule should decide which prompt interactions become provenance entities and which remain disposable residue?
+DEEPER: Can contribution-sensitive provenance be generated prospectively without distorting inquiry?
+MISSING: A prospective retention rule that does not require omniscience.
+BOUNDARY: PROV does not prescribe what a university should retain from AI conversations.
+TEST: Have independent researchers compress the same AI interaction into minimal PROV graphs and measure disagreement over what must be retained.
+
+## PF-016 — Discarded intellectual work can be contribution without becoming authorship.
+QUESTION: Which prompt-mediated activities should be credited as conceptualization or methodology even when no generated text survives?
+DEEPER: Would contribution-role reporting resolve more of the AI dispute than arguments over who wrote the sentences?
+MISSING: Prompt-specific descriptions of conceptualization and methodology.
+BOUNDARY: The taxonomy does not say every abandoned note deserves formal credit.
+TEST: Ask research teams to classify discarded AI-mediated work using CRediT and compare those classifications with final-text-based AI disclosures.
+
+## PF-017 — The claim that prompt histories become misconduct evidence still needs a procedural receipt.
+QUESTION: When an AI-authorship dispute occurs, what evidence does Georgia Tech actually request?
+DEEPER: Does prompt history have a formally defined evidentiary status, or only an ad hoc one?
+MISSING: Investigation procedures, adjudicated cases, evidentiary guidelines.
+BOUNDARY: Do not state that Georgia Tech treats prompt histories as guilt/innocence evidence until an institutional receipt is found.
+TEST: Locate explicit institutional instructions listing permissible or required evidence in suspected AI-use cases.
+
+## PF-018 — Auditability can make the record reactive.
+QUESTION: Does anticipated audit change how researchers prompt?
+DEEPER: Which forms of provenance minimize reactivity without sacrificing accountability?
+MISSING: Empirical evidence from actual prompted research.
+BOUNDARY: Espeland and Sauder study rankings, not AI provenance.
+TEST: Randomly assign researchers to “private prompt history” versus “history will be reviewed” conditions and compare exploratory behavior.
+
+## PF-019 — Performative provenance is a measurable hypothesis, not yet an established AI effect.
+QUESTION: What observable signatures would distinguish ordinary careful prompting from auditor-facing prompting?
+DEEPER: Can staged transparency be detected without creating another layer of reactive measurement?
+MISSING: A comparison between AI chat traces and established research-record practices.
+BOUNDARY: The source cannot establish that AI prompt logs actually produce this effect.
+TEST: Compare linguistic markers, question diversity, and rejected paths in private versus audit-visible prompt logs.
+
+## PF-020 — Transparency and naturalistic evidence can conflict.
+QUESTION: What degree of process capture yields useful accountability without substantially reorganizing the process?
+DEEPER: Is there an analogue of observer effect for scholarly provenance systems?
+MISSING: A measured transparency–reactivity curve.
+BOUNDARY: The tradeoff is inferred, not quantified by the source.
+TEST: Increase trace visibility incrementally across experimental conditions and measure behavioral drift.
+
+## PF-021 — Authorship surveillance could select for weaker inquiry.
+QUESTION: Does perceived AI-authorship scrutiny reduce the willingness to solicit strong counterarguments, unfamiliar ideas, or machine initiative?
+DEEPER: Could a governance regime accidentally reward epistemically weaker human-AI collaboration?
+MISSING: Behavioral evidence.
+BOUNDARY: This remains a hypothesis generated from reactivity literature.
+TEST: Give researchers identical tasks under permissive and authorship-scrutinized disclosure regimes; compare challenge-seeking and prompt diversity.
+
+## PF-022 — A clean provenance record may be evidence of optimization for inspection.
+QUESTION: What makes a provenance trace credible once producing a favorable trace itself has institutional value?
+DEEPER: Can audit systems authenticate process without incentivizing process theater?
+MISSING: Evidence of gaming in AI provenance systems.
+BOUNDARY: Do not equate all careful documentation with staged transparency.
+TEST: Create an explicit provenance score and observe whether users begin optimizing visible interactions for that score.
+
+## PF-023 — Prompt templates can occupy the same repository stratum as simulation code.
+QUESTION: When does repository placement make a prompt part of the inspectable scientific apparatus?
+DEEPER: Would deleting or changing the prompt directory alter claims of reproducibility enough that prompts should be treated as research artifacts?
+MISSING: Ablation or version history showing which prompt templates materially determine scientific findings.
+BOUNDARY: Repository inclusion establishes operational use, not authorship status.
+TEST: Remove or systematically perturb prompt templates and measure which reported agent behaviors survive.
+
+## PF-024 — The paper-level architecture can hide implementation-level prompt machinery.
+QUESTION: At what abstraction level should prompt work receive scholarly description?
+DEEPER: When is a prompt merely implementation detail, and when is it the actual mechanism of a claimed contribution?
+MISSING: Criteria distinguishing incidental prompt wording from load-bearing prompt mechanism.
+BOUNDARY: The paper's architectural claims cannot be reduced to prompt text alone.
+TEST: Trace one published architectural claim down to the exact prompts and code paths that realize it.
+
+## PF-025 — Capability and compliance evaluate causal influence under different norms.
+QUESTION: Is “capability versus contamination” too strong a formulation for a policy that may merely require disclosure?
+DEEPER: What empirical evidence would show that disclosure itself functions as stigma rather than neutral provenance?
+MISSING: Evidence of sanctions, reputational costs, or negative evaluations attached to disclosed high-impact AI use.
+BOUNDARY: Disclosure relevance is not itself a finding of misconduct.
+TEST: Compare evaluations of identical work under otherwise equivalent disclosure descriptions varying only magnitude of AI involvement.
+
+## PF-026 — Significant AI effect triggers scrutiny, not necessarily condemnation.
+QUESTION: When does institutional disclosure become de facto negative classification even if the written policy is neutral?
+DEEPER: Is the real conflict located in policy language, or in how audiences interpret disclosed AI assistance?
+MISSING: Reader, committee, and reviewer response data.
+BOUNDARY: Do not call significant AI influence “contamination” on the basis of the Georgia Tech policy alone.
+TEST: Experimental vignette study varying disclosure language while holding scholarly artifact constant.
+
+## PF-027 — The pharmakon hypothesis requires evidence that disclosure functions as poison.
+QUESTION: What exactly is poisonous—AI influence, undisclosed AI influence, or the social interpretation of disclosure?
+DEEPER: Can the pharmakon be located empirically rather than rhetorically?
+MISSING: Evidence on evaluators' reactions.
+BOUNDARY: The policy cannot support “prompt = poison.”
+TEST: Measure whether disclosed prompt-forward methods receive lower authorship judgments than equivalent undisclosed or conventionally assisted methods.
+
+## PF-028 — Constraint effectiveness can be engineered independently of authorship status.
+QUESTION: Should capability-producing constraints be evaluated as software/method contributions even when copyright authorship remains weak?
+DEEPER: What kinds of scholarly credit attach to constraints that reliably alter behavior but do not determine expression?
+MISSING: Criteria for scholarly originality of behavioral constraints.
+BOUNDARY: The paper evaluates pipeline performance, not authorship.
+TEST: Compare scholarly evaluation of a novel assertion architecture with evaluation of the prose it causes a model to emit.
+
+## PF-029 — A prompt's institutional identity may change while its executable identity remains fixed.
+QUESTION: Which institutional category changes are merely labels, and which alter actual rights, obligations, or evidentiary use?
+DEEPER: Can one prompt artifact be traced across software, publication, IP, employment, and compliance regimes without assuming those regimes should converge?
+MISSING: Actual documents from each institutional regime.
+BOUNDARY: LMQL establishes programmability, not employment or IP valuation.
+TEST: Choose one published prompt program and document how five institutional regimes formally classify it.
+
+## PF-030 — Technical ontology cannot simply be imported into governance unchanged.
+QUESTION: What should governance import from technical AI practice, and what must it refuse?
+DEEPER: What is the minimum shared ontology that lets engineers and governance officers refer to the same underlying operations?
+MISSING: A translation layer rather than wholesale import.
+BOUNDARY: DSPy cannot tell institutions what counts as scholarly responsibility.
+TEST: Map the objects recognized by DSPy against the objects required by an AI disclosure policy and identify unmatched categories in both directions.
+
+## PF-031 — Qualitative governance predicates may depend intentionally on disciplinary interpretation.
+QUESTION: When does principled flexibility become under-specification?
+DEEPER: What evidence would distinguish productive disciplinary discretion from arbitrary adjudication?
+MISSING: Cross-disciplinary decision consistency data.
+BOUNDARY: Qualitative terms do not become meaningless merely because they lack numerical units.
+TEST: Present identical AI-use scenarios to committees in five disciplines and measure agreement and rationales.
+
+## PF-032 — A scale can be qualitative yet still require calibration.
+QUESTION: What would count as adequate calibration for qualitative AI-use judgments?
+DEEPER: Are exemplars, precedent, rubrics, and professional norms functional substitutes for units?
+MISSING: Inter-rater reliability data.
+BOUNDARY: The policy does not report calibration performance.
+TEST: Have evaluators independently classify a fixed set of AI-use scenarios before and after exposure to shared exemplars.
+
+## PF-033 — Operational languages make some prompt distinctions inspectable before governance judges them.
+QUESTION: Could governance reason about explicit operational roles instead of estimating AI involvement from narrative disclosure?
+DEEPER: Would this unfairly privilege technically formalizable prompting over ordinary-language work?
+MISSING: An operational vocabulary usable for non-programmer prompting.
+BOUNDARY: LMQL cannot classify all prompt use.
+TEST: Encode the same prompt workflow once as free prose and once in LMQL, then compare what evaluators can infer about contribution.
+
+## PF-034 — Ablation establishes causal dependence, not scholarly contribution.
+QUESTION: What extra evidence converts causal necessity into intellectual contribution?
+DEEPER: Can a trivial constant be causally indispensable without being a scholarly contribution?
+MISSING: Novelty, intentionality, difficulty, generality, and explanatory role.
+BOUNDARY: Do not use ablation alone as an authorship test.
+TEST: Compare indispensable but trivial prompt components with dispensable but conceptually novel ones.
+
+## PF-035 — Prompt templates can function as configuration even when written in natural language.
+QUESTION: What makes a prompt configuration rather than conversation?
+DEEPER: Should prompt templates inherit reproducibility expectations from source code when they control scientific simulations?
+MISSING: A criterion for novelty independent of runtime necessity.
+BOUNDARY: Filesystem location alone does not prove scholarly significance.
+TEST: Survey published LLM repositories for how prompts are stored, versioned, tested, and cited.
+
+## PF-036 — A method can be linguistic without every linguistic instruction becoming method.
+QUESTION: What operational properties make a prompt methodological?
+DEEPER: Must a methodological prompt be reusable, explicit, discriminating, and linked to an epistemic objective?
+MISSING: Admission criteria separating method prompts from convenience prompts.
+BOUNDARY: CRediT does not recognize prompts specifically.
+TEST: Blindly classify a mixed set of prompts as writing assistance or methodology using explicit criteria, then assess agreement.
+
+## PF-037 — The research-assistant analogy breaks at delegated expressive judgment.
+QUESTION: Which parts of the research-assistant analogy survive, and which collapse, when the recipient is a generative model?
+DEEPER: Is the crucial difference agency, legal personhood, epistemic accountability, execution control, or something else?
+MISSING: A precise comparison of human and machine delegation.
+BOUNDARY: Copyright doctrine does not determine scholarly collaboration norms.
+TEST: Compare identical research instructions given to an RA and an LLM; trace where clarification, discretion, verification, and responsibility differ.
+
+## PF-038 — Contribution can be decomposed without forcing the verbs back into one author noun.
+QUESTION: Can AI scholarship report operations with sufficient precision that the authorship binary becomes secondary?
+DEEPER: Which operations matter for responsibility even when they do not count as writing?
+MISSING: A human-AI role taxonomy linked to those downstream decisions.
+BOUNDARY: Role decomposition cannot abolish authorship requirements.
+TEST: Replace binary AI-authorship disclosures with operation-role statements and test whether evaluators make more consistent judgments.
+
+## PF-039 — Contribution quantity and contribution topology answer different questions.
+QUESTION: What should be measured on separate axes: magnitude, role, timing, control, or responsibility?
+DEEPER: Can a contribution vector outperform both binary disclosure and a single scalar?
+MISSING: Evidence that each proposed axis changes judgments.
+BOUNDARY: The source does not advocate topology.
+TEST: Compare prediction of expert contribution judgments using scalar versus multidimensional representations.
+
+## PF-040 — Token count is especially weak when informational leverage is concentrated.
+QUESTION: How should leverage be separated from intellectual difficulty?
+DEEPER: Can a three-word instruction be both causally dominant and scholarly negligible?
+MISSING: A theory of scholarly significance layered over causal contribution.
+BOUNDARY: High measured human contribution need not imply high-quality research.
+TEST: Construct high-leverage trivial prompts and low-leverage conceptually sophisticated prompts; ask experts to score contribution separately.
+
+## PF-041 — Natural-language constraints are not the same thing as executable constraints.
+QUESTION: What kinds of constraint can prompt-forward scholarship claim to impose?
+DEEPER: Does the scholarly contribution lie in writing a desired condition or in constructing machinery that enforces it?
+MISSING: Constraint taxonomy tied to reliability.
+BOUNDARY: LMQL constraints themselves can still depend on model behavior and implementation.
+TEST: Implement the same prohibition as prose, LMQL constraint, and post-generation validator; compare failure rates.
+
+## PF-042 — Selection counts as authorship only when the selection itself is sufficiently creative.
+QUESTION: What distinguishes creative selection from mere preference or quality control?
+DEEPER: Do scholarship and copyright need different thresholds for consequential selection?
+MISSING: A scholarly—not copyright—test for selection.
+BOUNDARY: The report does not say every selection earns copyright.
+TEST: Compare evaluator judgments across random selection, quality filtering, theory-driven selection, and compositional arrangement.
+
+## PF-043 — Orchestration can be a contribution role without becoming writing authorship.
+QUESTION: What kind of contribution is prompt orchestration most analogous to: methodology, supervision, software, writing, or a new role?
+DEEPER: Could “orchestration” be decomposed into several existing roles instead of introduced as a new authorship category?
+MISSING: Empirical mapping of AI workflows to CRediT roles.
+BOUNDARY: CRediT expressly does not determine authorship.
+TEST: Have expert panels classify prompt-orchestration tasks using existing CRediT categories and record irreducible residue.
+
+## PF-044 — Recursive prompting converts attribution from a sentence problem into a workflow problem.
+QUESTION: What is the correct unit of attribution in a chained generative workflow?
+DEEPER: Should contribution attach to nodes, edges, graph structure, or interventions on the graph?
+MISSING: A principled compression method.
+BOUNDARY: AI Chains addresses interaction design, not scholarly authorship.
+TEST: Encode a recursive dissertation-generation sequence as a graph and compare attribution judgments against the final text alone.
+
+## PF-045 — Provenance graphs separate causal history from responsibility only if responsibility is represented explicitly.
+QUESTION: What additional relation is needed to move from provenance to scholarly responsibility?
+DEEPER: Should responsibility be a provenance property at all, or a separate institutional judgment layered onto the graph?
+MISSING: Normative edges such as “defends claim,” “accepts responsibility,” “authorized inclusion.”
+BOUNDARY: PROV was not designed to settle authorship.
+TEST: Add responsibility relations to real AI-writing provenance graphs and test whether evaluators find them more useful than causal provenance alone.
+
+## PF-046 — Prompt placement should follow evidentiary function, not a universal appendix rule.
+QUESTION: Where should a prompt appear when the paper's contribution is the prompt program itself?
+DEEPER: Can publication structure be determined by dependency: if the claim cannot be understood or reproduced without the prompt, must it move into the main scholarly object?
+MISSING: Publication conventions for prompt artifacts.
+BOUNDARY: DSPy does not prescribe article layout.
+TEST: Analyze fifty prompt-centric papers and classify where load-bearing prompts are published and whether replication is possible.
+
+## PF-047 — Workflow categories should be tested against process traces, not invented from intuition.
+QUESTION: What workflow classes actually emerge from large corpora of human-AI writing traces?
+DEEPER: Should governance categories be empirically induced from practice rather than stipulated from edge cases?
+MISSING: Large diverse trace corpora across scholarly disciplines.
+BOUNDARY: Humanly's environment is not a representative sample of all AI writing.
+TEST: Cluster interaction traces without using preassigned “brainstorming/editing/generation” labels and inspect resulting categories.
+
+## PF-048 — A prompt can be a contribution without being a sufficient authorship claim.
+QUESTION: What are the minimum conditions for a prompt to count as a scholarly contribution?
+DEEPER: Should those conditions differ for methodology, software, conceptualization, and writing?
+MISSING: Role-specific prompt admission tests.
+BOUNDARY: Not every prompt, like not every line of code, is scholarly contribution.
+TEST: Develop separate criteria for prompt-as-method, prompt-as-software, prompt-as-writing, and prompt-as-conceptualization; apply them to published cases.
+
+## PF-049 — Medium does not determine computational role.
+QUESTION: What feature should classify prompt artifacts: syntax, execution, role, causal effect, or reuse?
+DEEPER: Can scholarly ontology follow affordance rather than material form?
+MISSING: A contextual identity model for prompts.
+BOUNDARY: LMQL does not imply all natural language is program text.
+TEST: Hold text constant while changing execution context and document which properties of the artifact change institutionally and computationally.
+
+## PF-050 — Contribution thresholds should attach to roles before they attach to “AI use” globally.
+QUESTION: Should disclosure name where AI entered the contribution topology before estimating magnitude?
+DEEPER: Would “AI-assisted methodology” and “AI-assisted prose drafting” trigger different concerns even at equal magnitude?
+MISSING: AI extensions to contributor-role vocabularies.
+BOUNDARY: CRediT describes human contributions, not AI disclosure.
+TEST: Compare evaluator judgments for identical “30% AI involvement” scenarios placed in different research roles.
+
+## PF-051 — A good prompt can be robust, effective, interpretable, or transferable—and these need not coincide.
+QUESTION: What dimensions belong in a scholarly prompt-quality profile?
+DEEPER: Can a prompt be methodologically strong if it is effective but brittle?
+MISSING: Empirically justified dimensions and tradeoffs.
+BOUNDARY: POSIX measures sensitivity, not overall prompt quality.
+TEST: Evaluate a set of famous prompts along independent quality dimensions and inspect rank reversals.
+
+## PF-052 — Calibration turns “prompt as instrument” into an ensemble claim.
+QUESTION: What is the smallest execution envelope that must accompany a scholarly prompt?
+DEEPER: How should prompt methods survive proprietary model updates that make exact replication impossible?
+MISSING: Standards for functional replication under model drift.
+BOUNDARY: Benchmark reproducibility and scholarly reproducibility are not identical.
+TEST: Re-run a prompt instrument across successive model versions and define what level of behavioral equivalence counts as replication.
+
+## PF-053 — Reproducible prompting may require reproducible procedure rather than identical output.
+QUESTION: What should “reproduce the method” mean for stochastic generative systems?
+DEEPER: Should replication target distributional behavior, decision structure, or exact artifacts?
+MISSING: Predeclared equivalence criteria.
+BOUNDARY: AI Chains does not propose a science-wide reproducibility standard.
+TEST: Have independent teams run the same prompt chain and assess whether conclusions replicate despite divergent text.
+
+## PF-054 — System-component ablation and researcher-contribution attribution must not be conflated.
+QUESTION: What additional provenance links a load-bearing system component to an individual's intellectual contribution?
+DEEPER: How should collaborative prompt systems distribute credit when many people iteratively shaped the component?
+MISSING: Novelty and contributor history.
+BOUNDARY: Ablation alone does not establish scholarly ownership.
+TEST: Use Git histories and ablation together to separate component importance from contributor responsibility.
+
+## PF-055 — A loop becomes method when its branching conditions become inspectable.
+QUESTION: What minimum transition rule converts iterative prompting into a reportable method?
+DEEPER: Can tacit judgment be represented without falsifying it into rigid criteria?
+MISSING: A representation for tacit but consequential evaluation.
+BOUNDARY: PromptChainer supports debugging; it does not define scholarly method.
+TEST: Compare reproducibility of loops documented only as transcripts versus loops documented with transition rationale.
+
+## PF-056 — Explicit selection rules are not necessary for selection to be creative.
+QUESTION: How can prompt-forward scholarship document tacit selection without pretending that taste was an algorithm?
+DEEPER: What evidence of intellectual selection is available when the criterion is recognitional rather than propositional?
+MISSING: Methods for eliciting retrospective but non-fabricated selection rationale.
+BOUNDARY: Copyright's creativity threshold is not identical to scholarly rigor.
+TEST: Ask experts to perform selections first and articulate criteria afterward; compare with predeclared-rule selections.
+
+## PF-057 — Expressive arrangement and process orchestration are different kinds of control.
+QUESTION: Which form is doing the work in the director/conductor analogy?
+DEEPER: Can process orchestration be scholarly method while expressive orchestration is authorship?
+MISSING: Separate provenance markers.
+BOUNDARY: The copyright report speaks to expressive authorship, not research-method credit.
+TEST: Create cases varying process control and expressive arrangement independently and ask evaluators to assign contribution roles.
+
+## PF-058 — Capability claims are always indexed to a benchmark and system envelope.
+QUESTION: What evidence is required before calling a prompt-generated behavior a scholarly capability rather than a local performance gain?
+DEEPER: How general must a capability be to count as an independent contribution?
+MISSING: Transfer and baseline robustness.
+BOUNDARY: DSPy results do not license general claims about any individual prompt.
+TEST: Require every claimed prompt capability to survive at least two models, tasks, and baseline prompt families.
+
+## PF-059 — “Liability versus capability” currently joins two different institutional questions too quickly.
+QUESTION: Where is there actual evidence that prompt effectiveness increases legal or disciplinary liability?
+DEEPER: Would “responsibility/capability” be a more accurate opposition until misconduct cases are found?
+MISSING: Cases in which prompt capability itself increased sanction or liability.
+BOUNDARY: Current sources support different institutional functions, not direct inversion.
+TEST: Search adjudicated AI cases for whether effective prompting is explicitly treated as aggravating evidence.
+
+## PF-060 — The prompt does not become “nothing” in scholarship; its scholarly status is simply unstable.
+QUESTION: When do academic venues require, reward, ignore, or suppress prompt artifacts?
+DEEPER: Is “the scholarly record” itself too singular a category?
+MISSING: Systematic survey across publication genres.
+BOUNDARY: One repository cannot establish broad academic practice.
+TEST: Sample 200 LLM papers and record whether prompts appear in article, appendix, code, dataset, or nowhere.
+
+## PF-061 — The same prompt should be followed across institutions as a comparative object, not presumed to expose contradiction.
+QUESTION: What exactly changes when a prompt moves from software artifact to dissertation method to compliance evidence?
+DEEPER: Which properties survive the translation, and which are created by the receiving institution?
+MISSING: A real multi-regime case.
+BOUNDARY: Resemblance between classifications is not contradiction.
+TEST: Create a dossier for one published prompt program and solicit formal classifications from engineering, copyright, research-integrity, and graduate-education experts.
+
+## PF-062 — A complete evidentiary chain needs a judgment node that ordinary provenance does not supply.
+QUESTION: How should an adjudication be represented alongside provenance without pretending it is another causal event?
+DEEPER: Could provenance systems encode reasons and standards as first-class entities?
+MISSING: Representation of rules, reasons, and appeals.
+BOUNDARY: PROV is descriptive infrastructure, not jurisprudence.
+TEST: Model one hypothetical AI-disclosure case with separate provenance and adjudication graphs and test where evaluators disagree.
+
+## PF-063 — The scholarly object may be a derived object whose derivation itself needs provenance.
+QUESTION: When should a prompt be modeled as data, method, result, or all three at different stages?
+DEEPER: Can the same artifact legitimately change epistemic type over its lifecycle?
+MISSING: Lifecycle-aware classification.
+BOUNDARY: PROV tracks derivation but does not assign epistemic type.
+TEST: Trace one prompt from exploratory conversation through stabilization, testing, publication, and reuse.
+
+## PF-064 — Minimal provenance is a compression problem with epistemic loss.
+QUESTION: What can safely be discarded before future claims are known?
+DEEPER: Should provenance have multiple retention tiers rather than one minimal record?
+MISSING: Retention policy under uncertainty.
+BOUNDARY: The source does not prescribe data-retention duration or granularity.
+TEST: Simulate later disputes against provenance records compressed at different levels and measure evidentiary failure.
+
+## PF-065 — A prompt receipt can communicate process without reproducing the entire process.
+QUESTION: What representation gives a dissertation committee enough process evidence without drowning it in chat logs?
+DEEPER: Which compression choices create misleading impressions of agency or effort?
+MISSING: Committee-specific evidence requirements.
+BOUNDARY: DraftMarks does not validate its traces as misconduct evidence.
+TEST: Give committees raw logs, summary disclosure, and visual prompt receipts for the same workflows; compare accuracy and confidence.
+
+## PF-066 — The “minimum useful receipt” is an empirical interface question.
+QUESTION: What is the smallest trace that allows accurate judgments of contribution?
+DEEPER: Does the minimum differ for authorship, reproducibility, disclosure, and misconduct review?
+MISSING: Audience/task-specific ablation of provenance fields.
+BOUNDARY: Humanly does not establish the proposed seven-field receipt as sufficient.
+TEST: Remove receipt fields one at a time and measure when evaluator accuracy collapses.
+
+## PF-067 — Traditional research-record norms often favor more completeness than prompt-minimalism assumes.
+QUESTION: Why should AI prompt records be treated differently from laboratory notebooks?
+DEEPER: Is the relevant difference privacy, conversational intimacy, scale, reactivity, or the model's role as interlocutor?
+MISSING: Comparative ethics of AI traces versus lab notebooks.
+BOUNDARY: ORI guidance is laboratory-oriented and not automatically applicable to prompt conversations.
+TEST: Compare what information conventional notebook standards would require versus what full prompt histories contain.
+
+## PF-068 — Process traces can become moral signals even when designed as descriptive evidence.
+QUESTION: Do provenance visualizations cause readers to reward visible labor independently of quality or intellectual contribution?
+DEEPER: Can a process interface avoid smuggling a moral economy of sweat into authorship judgments?
+MISSING: Controlled studies separating trace appearance from actual contribution.
+BOUNDARY: DraftMarks does not imply that effort should determine authorship.
+TEST: Manipulate visual evidence of revision while holding actual workflow constant and measure perceived authorship.
+
+## PF-069 — Exploratory freedom under prompt logging is an empirical governance variable.
+QUESTION: Does audit visibility reduce adversarial, speculative, taboo, or counter-normative exploration?
+DEEPER: Which kinds of inquiry are selectively chilled?
+MISSING: Measured benefits and chilling effects in the same experiment.
+BOUNDARY: Reactivity literature alone does not establish chilling.
+TEST: Measure semantic diversity and risk profiles of prompts under private, team-visible, and committee-visible conditions.
+
+## PF-070 — Completeness and psychological safety are separate properties of a research record.
+QUESTION: Could prompt workspaces remain complete while access is purpose-limited?
+DEEPER: Is access governance more important than data minimization for protecting exploratory inquiry?
+MISSING: Institutional access architecture for prompt histories.
+BOUNDARY: ORI does not address AI conversation privacy.
+TEST: Compare selective-retention and complete-but-access-controlled provenance designs against a set of realistic audit scenarios.
+
+## PF-071 — Failed prompts fit ordinary research-record logic better than the exceptionalism thesis suggests.
+QUESTION: Which aspects of failed prompting are genuinely novel relative to existing recordkeeping practice?
+DEEPER: Does conversational generativity change the evidentiary status of failure, or only its volume and intimacy?
+MISSING: Comparison of failure-record norms across sciences, design, humanities, and AI research.
+BOUNDARY: Notebook norms do not automatically justify publishing failures.
+TEST: Compare disclosure expectations for failed code experiments, failed wet-lab experiments, and failed prompt experiments.
+
+## PF-072 — A committee can inspect contribution roles without requiring human production of every word.
+QUESTION: Which contribution roles must remain substantially the doctoral candidate's for a prompt-forward dissertation to qualify as their research?
+DEEPER: Can degree requirements be stated as nondelegable contribution roles?
+MISSING: Graduate-school rules specifying nondelegable intellectual work.
+BOUNDARY: CRediT does not define doctoral requirements.
+TEST: Translate current doctoral evaluation criteria into contribution roles and identify which ones AI could or could not mediate.
+
+## PF-073 — “Did AI write this?” can be replaced by a provenance query only if the provenance captures decision points.
+QUESTION: What decision-event types must be added to a provenance graph for scholarly contribution?
+DEEPER: Can “rejection,” “verification,” and “defense” be represented as activities with evidentiary force?
+MISSING: Semantics for decision activities.
+BOUNDARY: PROV gives generic relations, not a ready-made AI-writing schema.
+TEST: Build a PROV extension for one chapter's production history and see which committee questions remain unanswered.
+
+## PF-074 — Process evidence can turn disclosure from confession into method reporting—but only for some audiences.
+QUESTION: Can one prompt receipt satisfy all three audiences?
+DEEPER: Should AI disclosure be audience-specific rather than universal?
+MISSING: Cross-audience requirements.
+BOUNDARY: HaLLMark does not establish what graduate schools must accept.
+TEST: Give the same provenance representation to readers, reviewers, and integrity officers and compare what each still needs.
+
+## PF-075 — “Brainstorming” hides interaction structure that process datasets can recover.
+QUESTION: Which process features should replace broad labels such as brainstorming, editing, or drafting?
+DEEPER: Could disclosures be generated from traces rather than self-selected category names?
+MISSING: A compact vocabulary grounded in actual trace variation.
+BOUNDARY: CoAuthor does not provide a compliance schema.
+TEST: Derive five to ten operational disclosure labels from CoAuthor-style traces and test whether readers infer contribution more accurately.
+
+## PF-076 — Human and AI contribution can be measured separately rather than treated as complements.
+QUESTION: Should disclosure report machine contribution and human contribution as independent dimensions?
+DEEPER: Can both be high simultaneously?
+MISSING: A non-zero-sum empirical attribution framework.
+BOUNDARY: The source's metric alone does not settle all contribution types.
+TEST: Construct workflows where human effort and AI computation both increase together and test whether evaluators still force zero-sum judgments.
+
+## PF-077 — More rigorous AI mediation can increase both human work and measured AI significance.
+QUESTION: Do current disclosure practices mistakenly treat those axes as inversely related?
+DEEPER: What cases most clearly break the zero-sum intuition?
+MISSING: Evidence that evaluators infer lower human contribution from greater disclosed AI use.
+BOUNDARY: The sources do not demonstrate such an inference.
+TEST: Experimentally vary human scaffolding and AI output volume independently.
+
+## PF-078 — The “wrong axis” hypothesis must show that disclosure magnitude is being used as a proxy for human contribution.
+QUESTION: Where is the actual conflation occurring: policy text, committee practice, reader perception, or researcher anxiety?
+DEEPER: Could the dissertation be attacking an imagined rule rather than an institutional one?
+MISSING: Committee interviews, case decisions, or experiments.
+BOUNDARY: Do not attribute the zero-sum inference to Georgia Tech without evidence.
+TEST: Ask faculty how they judge human contribution at several explicitly disclosed levels of AI involvement.
+
+## PF-079 — Scientific instruments can themselves embody knowledge rather than merely subtract from human knowledge.
+QUESTION: Could prompt systems be treated as epistemic artifacts rather than merely aids to human authors?
+DEEPER: What would have to change in Baird's account to include a linguistic-computational instrument rather than a material device?
+MISSING: A theory of executable symbolic instruments.
+BOUNDARY: Do not cite Baird as having theorized prompts.
+TEST: Compare prompts with scientific software and material instruments along reliability, calibration, intervention, and embodied-knowledge dimensions.
+
+## PF-080 — An effective instrument can embody others' knowledge without transferring their contribution to its user.
+QUESTION: What portion of a prompt-mediated capability belongs to the current researcher rather than the inherited instrument?
+DEEPER: Can contribution analysis separate instrument-building knowledge from instrument-using knowledge?
+MISSING: Upstream technical provenance.
+BOUNDARY: Baird does not provide a quantitative allocation of credit.
+TEST: Trace one prompt capability backward through prompt, framework, model, fine-tuning, and training infrastructure.
+
+## PF-081 — Double ablation could separate output dependence from architecture dependence.
+QUESTION: Can paired counterfactual removal distinguish machine textual contribution from human system contribution?
+DEEPER: What if neither ablation is independently possible because the process is path-dependent?
+MISSING: A causal design for path-dependent collaboration.
+BOUNDARY: The source does not endorse double ablation.
+TEST: Implement paired ablations on controlled chained-writing tasks and observe when counterfactual workflows become incoherent.
+
+## PF-082 — Prompt sophistication does not guarantee expressive control.
+QUESTION: What dimensions of prompt sophistication matter for scholarship if detail is not a reliable proxy for expressive control?
+DEEPER: Could a very short but formally operative prompt program exert more control than a long prose specification?
+MISSING: Direct measures of control.
+BOUNDARY: The report's conclusion is about copyrightability under current systems.
+TEST: Compare long prose prompts and short executable constraints for actual output-space reduction.
+
+## PF-083 — A prompt must earn epistemic-object status rather than receive it by metaphor.
+QUESTION: What properties of scientific instruments—reliability, intervention, embodied technique, calibration, material stability—can prompts satisfy?
+DEEPER: Could there be “instruction knowledge” analogous to thing knowledge?
+MISSING: A bridge from material to executable-linguistic artifact.
+BOUNDARY: Baird does not support the prompt claim directly.
+TEST: Compare a prompt, algorithm, laboratory protocol, and physical instrument against Baird-inspired epistemic criteria.
+
+## PF-084 — Disciplinary norms may be the missing middle layer of AI governance.
+QUESTION: Have disciplines actually supplied the missing operational distinctions?
+DEEPER: What happens when a doctoral project crosses digital media, computing, literary study, HCI, and design, each with different norms?
+MISSING: The relevant local rules for each committee discipline.
+BOUNDARY: The central policy cannot be evaluated without examining those delegated norms.
+TEST: Build a matrix of AI-use categories across the disciplines represented on one dissertation committee.
+
+## PF-085 — Before saying governance cannot calibrate “too much,” identify what object its threshold actually targets.
+QUESTION: Is “AI use” too broad to support reliable judgment, or appropriately broad because the governed risk cuts across techniques?
+DEEPER: Which distinctions materially change the policy outcome?
+MISSING: Decision-sensitive feature analysis.
+BOUNDARY: Do not assume governance must define prompts in order to regulate AI use at all.
+TEST: Ask adjudicators whether detailed prompt-role information changes decisions compared with broad AI-use descriptions.
+
+## PF-086 — Metalanguage can precede object theory when institutions govern by standards rather than definitions.
+QUESTION: Is the core failure absent definition or absent precedent?
+DEEPER: Would adjudicated examples solve more than a philosophical ontology of prompting?
+MISSING: Case history.
+BOUNDARY: The policy's qualitative vocabulary does not prove conceptual inversion.
+TEST: Compare consistency gains from giving evaluators definitions versus giving them adjudicated exemplars.
+
+## PF-087 — Technical object languages can clarify prompting while also biasing governance toward what engineers can formalize.
+QUESTION: Would an LMQL/DSPy-style ontology systematically privilege technical prompt work over literary, design, conversational, or tacit prompting?
+DEEPER: Can an operational ontology remain plural?
+MISSING: Comparative representations from nontechnical prompt practices.
+BOUNDARY: LMQL is a programming language, not a universal grammar of prompting.
+TEST: Attempt to represent five radically different prompting practices in one technical ontology and catalogue what cannot be expressed.
+
+## PF-088 — Contributor vocabularies already demonstrate the power of verbs before verdicts.
+QUESTION: Which prompt-forward verbs map cleanly onto CRediT, and which are genuinely new?
+DEEPER: Are “specify, constrain, branch, reject, recurse, orchestrate” new scholarly roles or lower-level operations inside existing ones?
+MISSING: Granularity rule.
+BOUNDARY: CRediT roles are intentionally broader than individual workflow actions.
+TEST: Code one hundred prompt interactions with both fine-grained verbs and CRediT roles; identify stable correspondences.
+
+## PF-089 — “AI use” is crude only if finer distinctions change an epistemic or institutional decision.
+QUESTION: Which AI-use distinctions change judgments of reproducibility, originality, responsibility, or disclosure?
+DEEPER: Can the dissertation identify the smallest vocabulary that preserves those decision-relevant differences?
+MISSING: Decision-sensitive ontology testing.
+BOUNDARY: CRediT's success does not prove an analogous AI taxonomy will be useful.
+TEST: Iteratively remove AI-workflow categories until evaluator accuracy meaningfully drops.
+
+## PF-090 — The prompt may be an epistemic instrument precisely where it cannot be reduced to either prose or output.
+QUESTION: Can there be a class of **operative scholarly writing** whose epistemic content is demonstrated by what it makes a system reliably do?
+DEEPER: Would the prompt then be closer to a protocol, algorithm, instrument, score, or a genuinely new hybrid object?
+MISSING: A genealogy linking scientific protocol, program text, executable specification, prompt program, and epistemic instrument without pretending they are identical.
+BOUNDARY: No source yet establishes “prompt = scholarly object.” The source merely makes the question sharper and harder.
+TEST: Take one prompt claimed as a scholarly contribution. Remove its rhetoric and test only five things: whether it specifies an operation, changes capability reproducibly, survives model/context variation, records its own construction, and enables an epistemic result unavailable without it. Then ask which existing scholarly artifact class can describe all five without residue.

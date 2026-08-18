@@ -1,0 +1,90 @@
+ZETTEL
+
+ID:
+Z-LINEAGE-OPP-005
+
+TITLE:
+Bush’s consequential object is not merely the link but the transmissible trail
+
+SOURCE:
+Vannevar Bush — “As We May Think” — 1945.
+
+SOURCE URL:
+https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/
+
+PASSAGE:
+[PARAPHRASE] Bush proposes associative indexing in which items are tied together, named trails can be traversed in sequence, items can participate in multiple trails, side trails can branch from a main one, and an entire trail can be reproduced for another person’s memex.
+
+RESEARCH OBJECT:
+Bush gives the path itself persistence and transmissibility. The important unit is therefore not exhausted by node or edge; a curated traversal can itself become an intellectual object.
+
+LOCAL MOVE:
+Bush moves from association to the preservation and exchange of a route through associations.
+
+SOURCE TERMS:
+associative indexing
+tie
+trail
+side trail
+memex
+trail blazer
+
+WHAT BECAME STRANGE:
+A graph that stores every link but discards the sequence in which a researcher learned to traverse them may preserve relations while destroying an argument.
+
+QUESTION:
+Should a research system treat a trail as a first-class record alongside cards and links?
+
+DEEPER QUESTION:
+What knowledge exists only in the traversal and not in any individual node or pairwise connection?
+
+MECHANISM:
+Items are associated; associations are composed into named traversals; traversals persist and can be transferred to another reader.
+
+FORMAL SHIFT:
+<documents>
+→ <associative connections>
+→ [compose and name traversal]
+→ <transferable intellectual path>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+TRAIL = ordered traversal over addressable items, with optional branches and annotations
+
+TENSION:
+A backlink graph says what is connected. A Bushian trail says how someone went through it.
+
+MISSING:
+A representation of research history that preserves consequential traversal without freezing future readers into the original route.
+
+BOUNDARY:
+Bush does not supply a modern graph data model, and “first-class object” is our computational reconstruction.
+
+CITATION TRAIL:
+Bush’s descriptions of associative indexing, trail duplication, and “trail blazers.”
+Engelbart’s later augmentation systems.
+Nelson’s distinction between structure and content identity.
+
+TEST:
+Take the same zettel graph and give one group only backlinks while another receives several saved research trails. Compare reconstruction of the originating argument and production of new departures.
+
+PLATFORM:
+[[MACHINES OF ASSOCIATION]]
+
+LINKS:
+[[THE TRAIL IS AN OBJECT]]
+[[GRAPH WITHOUT TRAVERSAL]]
+[[RESEARCH PATH AS TRANSMISSIBLE ARTIFACT]]
+
+BIBTEX:
+@article{bush1945aswemaythink,
+  author = {Bush, Vannevar},
+  title = {As We May Think},
+  journal = {The Atlantic Monthly},
+  year = {1945},
+  month = {July},
+  url = {https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/}
+}

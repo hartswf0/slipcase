@@ -1,0 +1,92 @@
+THE MODEL COULD DRAW YELMO. IT COULD NOT KEEP HIM.
+SOURCE MAP — Scott-facing revision — 2026-08-17
+
+STATUS
+Working paper. Connective claims below marked INTERPRETATION are arguments of this paper, not source facts.
+The Yelmo archive identifies a participant named Scott as an animator; the researcher identifies him as Scott Roberts. No public source located for this revision explicitly connects Roberts by surname to Yelmo. That bridge remains UNVERIFIED and is stated as such in the manuscript.
+
+CORE YELMO EVIDENCE
+Y1 — Researcher-supplied 2022 Midjourney interview/field notes, section YELMO.
+Supports: group sought “a hero’s journey of Midjourney”; wanted a protagonist “someone that’s kind of repeatable”; yellow Elmo/Yelmo was used across disparate scenes.
+Local resource: /mnt/data/Pasted markdown(20260817-192051).md
+
+Y2 — Same archive, section NO STORY GAME NOT TOOL.
+Supports: Scott described as an animator; Yelmo’s eyes/frill and other traits varied; “it’s not really the same dude each time”; character consistency framed as necessary for stories and for moving from one-off images to comics/animation; lack of control linked to “game and not a tool yet.”
+Local resource: /mnt/data/Pasted markdown(20260817-192051).md
+
+Y3 — Same archive, “Midjourney Office Hours 10.12.2022Yelmo.”
+Supports: yellow+elmo appearing across prompts; inability to add other characters without alteration; tension between artist intentionality and being led by Midjourney; “not trying to control everything.”
+Local resource: /mnt/data/Pasted markdown(20260817-192051).md
+
+Y4 — Same archive, sections NO RANDOS and MULTIPLAYER IMAGINATION VIDEO GAME.
+Supports: private server; collaborative riffing; initial Campbell/hero’s-journey experiment morphing into character development; social “multiplayer imagination game.”
+Local resource: /mnt/data/Pasted markdown(20260817-192051).md
+
+PUBLIC ROBERTS EVIDENCE
+R1 — Roberts, Scott. “Lucky.” Ubutopia, 2002. https://www.ubutopia.com/lucky.htm
+Supports: Roberts describes a video-projection sculpture allowing him to “enter the world of the cereal mascot.”
+
+R2 — Roberts, Scott. “My Favorite Character Is a Wizard.” Ubutopia, 2002. https://ubutopia.com/wizard.htm
+Supports: work built from interviews with role-playing gamers; animation brings their “idealized alter egos” to life and preserves/expresses features of their creators.
+
+R3 — Roberts, Scott. “Comics.” Ubutopia. https://www.ubutopia.com/comics.html
+Supports: Roberts’s statement “I experiment while making comics” and long-standing experimental comics practice.
+
+R4 — Roberts, Scott. Instagram, 2022-08-31. https://www.instagram.com/p/Ch6jYdhOw0j/
+Supports: Roberts publicly describes Midjourney outputs including an “on-going exquisite corpse game” with @onetoomanyoptions.
+
+R5 — @onetoomanyoptions. Instagram, 2022-08-16. https://www.instagram.com/p/ChWLLqvuOXe/
+Supports: collaborator independently calls the work an “exquisite corpse collaboration” with @mrscottroberts through Midjourney.
+
+R6 — Roberts, Scott. “Surrealist Storytelling: Artistic Experimentation and Spontaneity through Improvisation.” In The Rose Metal Press Field Guide to Graphic Literature.
+TOC: https://rosemetalpress.com/wp-content/uploads/2023/02/FGtoGraphicLiteratureTableofContents.pdf
+Supports: exact chapter title and Roberts’s published alignment of Surrealist storytelling, experimentation, spontaneity, and improvisation. Full chapter text was not recovered in this revision.
+
+R7 — DePaul University. “Scott Roberts.” Faculty profile. https://www.depaul.edu/faculty/scott-roberts
+Supports: Roberts’s animation role; research in generative AI art tools; 2023 course on generative AI art tools for animation, film, and theater.
+
+R8 — Roberts / DePaul CTL. “The Cyborg Muse: The Potential of AI Tools to Enhance and Accelerate Creativity,” 2023.
+https://www.linkedin.com/posts/scott-roberts-3a63523_28th-annual-teaching-and-learning-conference-activity-7059776060971769856-V8fR
+Supports: experimental course; students described as research collaborators; tools “researched and discovered.”
+
+TECHNICAL DESCENDANTS / COMPARATORS
+T1 — Gal et al. 2022, Textual Inversion. https://arxiv.org/abs/2208.01618
+Supports: learning a reusable representation of a user-provided concept from a small image set and composing it into new scenes.
+
+T2 — Chen et al. 2023, DisenBooth. https://arxiv.org/abs/2305.03374
+Supports: explicit distinction between identity-relevant subject information and identity-irrelevant variation such as pose/background.
+
+T3 — Tewel et al. 2024, ConsiStory. https://arxiv.org/abs/2402.03286
+Supports: consistent subjects across diverse prompts through shared generation-time information without per-subject optimization.
+
+T4 — He et al. 2024, IR-Diffusion. https://arxiv.org/abs/2411.19261
+Supports: multi-subject interference/fusion in diffusion attention and an isolation intervention to reduce identity contamination.
+
+T5 — Singh et al. 2025, StoryBooth. https://arxiv.org/abs/2504.05800
+Supports: multi-subject consistency as a visual-storytelling problem; reports leakage/interference among characters.
+
+PRODUCT HISTORY
+M1 — Midjourney, “Introducing Character References,” 2024-03-12. https://updates.midjourney.com/character-refs/
+M2 — Midjourney, “Character Reference.” https://docs.midjourney.com/hc/en-us/articles/32162917505293-Character-Reference
+Supports: explicit product capability for maintaining/recreating the same character across multiple images/scenes. No claim is made that Yelmo influenced this feature.
+
+MAJOR CONNECTIVE CLAIMS
+C1 — “A model can succeed at depiction while failing at reference.” INTERPRETATION grounded in Y1-Y3.
+C2 — “Yelmo asked for identity-preserving transformation.” INTERPRETATION grounded in the Campbell-story proposal (Y1/Y4) plus the observed continuity failures (Y2), sharpened by T1-T3.
+C3 — “The community was the rig.” INTERPRETATION grounded in Y1-Y4: persistence/history were maintained by participants across otherwise independent generations. This is not a claim that participants themselves used the word rig.
+C4 — “A story requires entity boundaries that survive relation.” INTERPRETATION grounded in Y3 and sharpened by T4-T5.
+C5 — “The instability that made Midjourney weak as a production tool also made it generative as an improvisational social game.” INTERPRETATION grounded in Y2-Y4 and Roberts’s exquisite-corpse evidence R4-R5.
+C6 — Roberts’s earlier artistic practice may make Yelmo legible as an older problem entering a new medium. HYPOTHESIS grounded in R1-R6. No direct causal genealogy is claimed.
+C7 — “Yelmo was an informal benchmark before the product had a benchmark for the thing that mattered.” INTERPRETATION comparing Y1-Y3 with M1-M2. No causal influence claimed.
+C8 — The proposed rerun (persistence / transformation / re-entry / multiplicity / interaction / improvisation) is a COMPILER-DERIVED experimental program, not present as such in any source.
+
+UNRESOLVED QUESTIONS FOR ROBERTS
+U1 — Is the Scott named in the Yelmo archive Scott Roberts?
+U2 — What was the original proposal and planned Campbell sequence, if any?
+U3 — Who first generated and named Yelmo?
+U4 — What counted as “the same dude” to Roberts as an animator?
+U5 — What continuity apparatus (seeds, image prompts, model sheets, Photoshop, canonical images, prompt templates) was actually used?
+U6 — What exactly happened when additional characters were introduced?
+U7 — Was exquisite-corpse / Surrealist improvisation consciously part of Yelmo’s method?
+U8 — Did Yelmo or its lessons enter Roberts’s 2023 DePaul course?
+U9 — Which original prompts, images, Discord logs, or Office Hours artifacts still survive?

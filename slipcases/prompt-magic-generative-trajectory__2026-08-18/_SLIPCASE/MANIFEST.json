@@ -1,0 +1,479 @@
+{
+  "checkpoint": "PMGT-2026-08-18",
+  "schema": "SLIPCASE 15.55-AM",
+  "package": "prompt-magic-generative-trajectory__2026-08-18.zip",
+  "researcher": "Watson Hartsoe",
+  "date": "2026-08-18",
+  "zettel_count": 22,
+  "root_zettels": 22,
+  "md_mirrors": 22,
+  "json_zettels": 22,
+  "native_relation_count": 210,
+  "relation_counts": {
+    "MEMBER_OF": 76,
+    "LINKS_TO": 114,
+    "WIKILINKS_TO": 0,
+    "USES_SOURCE": 20,
+    "BACKLINK": 114
+  },
+  "ghost_count": 65,
+  "pdf_pages": 12,
+  "card_sha256": {
+    "001__the-magic-word-is-an-empirical-handle-on-a-model-not-a-better-de__oppenlaender-2022__ZF-20260817-MAGIC-TERMS-001__from-chat.txt": "a96777a4fbedc8d2f118231f4c3fb0a4ddf91cc0e17d5c8d181e7607ee77f5cf",
+    "002__prompt-expertise-appears-first-as-a-vocabulary-deficit__oppenlaender-et-al-2023__ZF-20260817-VOCABULARY-GAP-002__from-chat.txt": "c70bd0e7bfb5b8dfd7fa6ca7db10e5595a1ecea3244affeef637eed36e96003a",
+    "003__the-prompt-artist-does-not-invent-a-language-alone__chang-et-al-2023__ZF-20260817-COMMUNITY-LEXICON-003__from-chat.txt": "15ed4f6c850010ad58b811f287732306a296b023890def1127d64df710c16da6",
+    "004__the-prompt-does-not-tell-the-model-what-to-draw__ramesh-et-al-2022__ZF-20260817-PROMPT-NOT-COMMAND-004__from-chat.txt": "49ff7877de40a8afdd03dd4aa6308bb8ef05e16f697aef712a2368cf50477bb3",
+    "005__the-prompt-s-meaning-is-partly-made-by-the-corpus-it-points-into__radford-et-al-2021__ZF-20260817-LANGUAGE-POINTS-INTO-DATA-005__from-chat.txt": "61eeabf2a2ae0169258f48958cc21dba2a9cdb3063b8b772fcee2424746da5d1",
+    "006__prompt-superstition-appears-where-causal-visibility-runs-out__midjourney-2022__ZF-20260817-SUPERSTITION-VARIANCE-006__from-chat.txt": "df1ad6a9aef4576444d2a22a2088de9016ec5a6e434c802b2623f230c3191bb0",
+    "007__prompt-expertise-has-a-model-version-half-life__midjourney-2022__ZF-20260817-EXPERTISE-HALF-LIFE-007__from-chat.txt": "6126276cef470c234ec77db72866cb044b4da8616504c3fe57f883f971604977",
+    "008__discord-was-part-of-the-generative-instrument__midjourney-2022__ZF-20260817-DISCORD-INSTRUMENT-008__from-chat.txt": "ead703cfd5d8131ee5ecdcacdd5dc125e7166e99e2b27b22cd661709d8811c84",
+    "009__rerolling-is-a-creative-operation-distinct-from-prompting__midjourney-2022__ZF-20260817-REROLL-OPERATOR-009__from-chat.txt": "71647a7755c8e5fbc26cd1a1bc27892d0c7b599a9f01bb3b237203f2c4193eec",
+    "010__stylize-turns-authorship-into-an-adjustable-ratio__midjourney-2022__ZF-20260817-STYLIZE-AGENCY-DIAL-010__from-chat.txt": "41ed551e8ef9db272cbc4e0b23b233808ff623d3288540822d8afdc8abad23a2",
+    "011__before-the-prompt-someone-already-chose-what-good-looks-like__midjourney-2022__ZF-20260817-DEFAULT-AESTHETICS-011__from-chat.txt": "d9a520878a28915613fed0b18313001e5fdc5da3125f09d4900f1d67a1fcf22b",
+    "012__the-generative-artist-may-be-hunting-an-event-not-specifying-an-__midjourney-2022__ZF-20260817-DOCUMENTARY-MODE-012__from-chat.txt": "3f9b4518bdfbe1fb25e315cf63075232ef8f2d4560d77430ba203807e74103d5",
+    "013__model-opacity-can-turn-words-into-scarce-productive-property__midjourney-2022__ZF-20260817-PROMPT-SECRECY-013__from-chat.txt": "284c009cc576f1269348d2943d97d63a2fc1c48218f481a995bea8b11f1420c6",
+    "014__a-visible-prompt-can-change-the-culture-faster-than-it-changes-t__midjourney-2022__ZF-20260817-VISIBLE-PROMPT-CASCADE-014__from-chat.txt": "d2ea6b206d103b48f6f70179bd7af7c7b8ed606e3275489be799808fa0987e3a",
+    "015__the-prompt-may-be-the-most-visible-part-of-the-practice-and-stil__midjourney-2022__ZF-20260817-PROMPT-NOT-UNIT-015__from-chat.txt": "ec3665b6eae902fc2ab93f17ec5405c36815deaa706c0c767bcd5acf460eaceb",
+    "016__a-good-image-can-reinforce-a-prompt-ritual-that-did-nothing__skinner-1948__ZF-20260817-ADVENTITIOUS-REINFORCEMENT-016__from-chat.txt": "8f53cab05a073a872601eef714cf4191a42123c90e93d6c1839be3d2c1443d8a",
+    "017__a-magic-prompt-can-be-a-false-affordance__gaver-1991__ZF-20260817-FALSE-AFFORDANCE-017__from-chat.txt": "b9def38c1ab574f9f5fb9bc71b8b4d43ca9af084c708fcf5cc434d5e659e6d02",
+    "018__the-prompt-may-be-a-plan-used-inside-action-not-a-script-execute__suchman-2006__ZF-20260817-PLAN-AS-RESOURCE-018__from-chat.txt": "f3a0ecfe5d5a1e0ab535d6c5e28e8fd9fd3d1cbf7fda18aa6b1a826172836684",
+    "019__a-generated-surprise-can-change-the-goal-that-produced-it__schon-bennett-1996__ZF-20260817-SURPRISE-REFRAMES-ENDS-019__from-chat.txt": "e670288968333eea7355897948bdbb0458156730f13bce84c72453700238906f",
+    "020__the-early-prompt-community-may-have-been-a-cognitive-system-not-__hutchins-2006__ZF-20260817-DISCORD-COGNITIVE-SYSTEM-020__from-chat.txt": "cdc2c1fecd4ac22780e00c9dccf485002326343cb89bed821ed9b2bac1508a3b",
+    "021__a-generative-default-does-not-merely-express-taste-it-arranges-p__winner-1980__ZF-20260817-DEFAULTS-HAVE-POLITICS-021__from-chat.txt": "0106140bcdd3e29ee76784a260e50e1ad79ba7571500dfcf08f039c6150695d2",
+    "022__the-model-becomes-creative-material-when-its-unintended-conseque__schon-bennett-1996__ZF-20260817-MATERIAL-TALKS-BACK-022__from-chat.txt": "ea70ee0ee20780f5f3bc90e9a360e12a26d2bcce2284daf8f0ae669947bd4b52"
+  },
+  "files": [
+    {
+      "path": "000__BIBLIOGRAPHY.html",
+      "sha256": "89ccb6c0a2375d877b376c6ccd3d73dc2e0d454e1858a731749e4b1a6fcbdf2e",
+      "bytes": 11143
+    },
+    {
+      "path": "000__BIBLIOGRAPHY.txt",
+      "sha256": "60466528085937176b7a594fc6bb307edc8537d3b032da0bf0ea77b30f8f07e2",
+      "bytes": 10648
+    },
+    {
+      "path": "000__INDEX.txt",
+      "sha256": "26c01c6645e5000068b90f04a86043b5cbaa64b17085d6c0106405e67f9e8e97",
+      "bytes": 546
+    },
+    {
+      "path": "000__MAKING_HISTORY.txt",
+      "sha256": "9a28a8d256b2a68bf3af04b32cab7295bd90471a0c92d54d27269af03280205a",
+      "bytes": 2080
+    },
+    {
+      "path": "000__MAP.txt",
+      "sha256": "3bec0422b62a3df8f6d71c9044c0a7a4510414e9ed04a43511836c41ec356352",
+      "bytes": 1239
+    },
+    {
+      "path": "000__OPEN_EDGES.txt",
+      "sha256": "1813789efd5492f85da3db6a2b28302a8004bb5d72abbfc8a549e67a39f70876",
+      "bytes": 6262
+    },
+    {
+      "path": "000__PROMPTS.txt",
+      "sha256": "ca876882e8ec69b17b909a8b069421705bff997f3851f3bd0c0be338dbf9d164",
+      "bytes": 322
+    },
+    {
+      "path": "000__REBUILD.txt",
+      "sha256": "e8f799953bfb18825d99778b087c3198277b8286a4e7ecea9e01d01aa8fdd288",
+      "bytes": 817
+    },
+    {
+      "path": "000__RESOURCES.txt",
+      "sha256": "1ff18bf99c1c6dbe8201d71cc10092ebb772797d2fdd6ea3dca3473a013ffb67",
+      "bytes": 4625
+    },
+    {
+      "path": "000__RETURN_PATH.txt",
+      "sha256": "8b97ff410ecd4671f8af65bba23522655ed95a2e695988a9e45037e6627f450d",
+      "bytes": 696
+    },
+    {
+      "path": "000__START_HERE.txt",
+      "sha256": "29118b815118fb5f13b0e07ff0aa83541c2faba4153b4b95d8915b7c3a7df20c",
+      "bytes": 671
+    },
+    {
+      "path": "001__the-magic-word-is-an-empirical-handle-on-a-model-not-a-better-de__oppenlaender-2022__ZF-20260817-MAGIC-TERMS-001__from-chat.txt",
+      "sha256": "a96777a4fbedc8d2f118231f4c3fb0a4ddf91cc0e17d5c8d181e7607ee77f5cf",
+      "bytes": 5979
+    },
+    {
+      "path": "002__prompt-expertise-appears-first-as-a-vocabulary-deficit__oppenlaender-et-al-2023__ZF-20260817-VOCABULARY-GAP-002__from-chat.txt",
+      "sha256": "c70bd0e7bfb5b8dfd7fa6ca7db10e5595a1ecea3244affeef637eed36e96003a",
+      "bytes": 5454
+    },
+    {
+      "path": "003__the-prompt-artist-does-not-invent-a-language-alone__chang-et-al-2023__ZF-20260817-COMMUNITY-LEXICON-003__from-chat.txt",
+      "sha256": "15ed4f6c850010ad58b811f287732306a296b023890def1127d64df710c16da6",
+      "bytes": 5663
+    },
+    {
+      "path": "004__the-prompt-does-not-tell-the-model-what-to-draw__ramesh-et-al-2022__ZF-20260817-PROMPT-NOT-COMMAND-004__from-chat.txt",
+      "sha256": "49ff7877de40a8afdd03dd4aa6308bb8ef05e16f697aef712a2368cf50477bb3",
+      "bytes": 5852
+    },
+    {
+      "path": "005__the-prompt-s-meaning-is-partly-made-by-the-corpus-it-points-into__radford-et-al-2021__ZF-20260817-LANGUAGE-POINTS-INTO-DATA-005__from-chat.txt",
+      "sha256": "61eeabf2a2ae0169258f48958cc21dba2a9cdb3063b8b772fcee2424746da5d1",
+      "bytes": 6252
+    },
+    {
+      "path": "006__prompt-superstition-appears-where-causal-visibility-runs-out__midjourney-2022__ZF-20260817-SUPERSTITION-VARIANCE-006__from-chat.txt",
+      "sha256": "df1ad6a9aef4576444d2a22a2088de9016ec5a6e434c802b2623f230c3191bb0",
+      "bytes": 5815
+    },
+    {
+      "path": "007__prompt-expertise-has-a-model-version-half-life__midjourney-2022__ZF-20260817-EXPERTISE-HALF-LIFE-007__from-chat.txt",
+      "sha256": "6126276cef470c234ec77db72866cb044b4da8616504c3fe57f883f971604977",
+      "bytes": 5031
+    },
+    {
+      "path": "008__discord-was-part-of-the-generative-instrument__midjourney-2022__ZF-20260817-DISCORD-INSTRUMENT-008__from-chat.txt",
+      "sha256": "ead703cfd5d8131ee5ecdcacdd5dc125e7166e99e2b27b22cd661709d8811c84",
+      "bytes": 5115
+    },
+    {
+      "path": "009__rerolling-is-a-creative-operation-distinct-from-prompting__midjourney-2022__ZF-20260817-REROLL-OPERATOR-009__from-chat.txt",
+      "sha256": "71647a7755c8e5fbc26cd1a1bc27892d0c7b599a9f01bb3b237203f2c4193eec",
+      "bytes": 4948
+    },
+    {
+      "path": "010__stylize-turns-authorship-into-an-adjustable-ratio__midjourney-2022__ZF-20260817-STYLIZE-AGENCY-DIAL-010__from-chat.txt",
+      "sha256": "41ed551e8ef9db272cbc4e0b23b233808ff623d3288540822d8afdc8abad23a2",
+      "bytes": 4737
+    },
+    {
+      "path": "011__before-the-prompt-someone-already-chose-what-good-looks-like__midjourney-2022__ZF-20260817-DEFAULT-AESTHETICS-011__from-chat.txt",
+      "sha256": "d9a520878a28915613fed0b18313001e5fdc5da3125f09d4900f1d67a1fcf22b",
+      "bytes": 4597
+    },
+    {
+      "path": "012__the-generative-artist-may-be-hunting-an-event-not-specifying-an-__midjourney-2022__ZF-20260817-DOCUMENTARY-MODE-012__from-chat.txt",
+      "sha256": "3f9b4518bdfbe1fb25e315cf63075232ef8f2d4560d77430ba203807e74103d5",
+      "bytes": 4568
+    },
+    {
+      "path": "013__model-opacity-can-turn-words-into-scarce-productive-property__midjourney-2022__ZF-20260817-PROMPT-SECRECY-013__from-chat.txt",
+      "sha256": "284c009cc576f1269348d2943d97d63a2fc1c48218f481a995bea8b11f1420c6",
+      "bytes": 4010
+    },
+    {
+      "path": "014__a-visible-prompt-can-change-the-culture-faster-than-it-changes-t__midjourney-2022__ZF-20260817-VISIBLE-PROMPT-CASCADE-014__from-chat.txt",
+      "sha256": "d2ea6b206d103b48f6f70179bd7af7c7b8ed606e3275489be799808fa0987e3a",
+      "bytes": 4137
+    },
+    {
+      "path": "015__the-prompt-may-be-the-most-visible-part-of-the-practice-and-stil__midjourney-2022__ZF-20260817-PROMPT-NOT-UNIT-015__from-chat.txt",
+      "sha256": "ec3665b6eae902fc2ab93f17ec5405c36815deaa706c0c767bcd5acf460eaceb",
+      "bytes": 5709
+    },
+    {
+      "path": "016__a-good-image-can-reinforce-a-prompt-ritual-that-did-nothing__skinner-1948__ZF-20260817-ADVENTITIOUS-REINFORCEMENT-016__from-chat.txt",
+      "sha256": "8f53cab05a073a872601eef714cf4191a42123c90e93d6c1839be3d2c1443d8a",
+      "bytes": 6429
+    },
+    {
+      "path": "017__a-magic-prompt-can-be-a-false-affordance__gaver-1991__ZF-20260817-FALSE-AFFORDANCE-017__from-chat.txt",
+      "sha256": "b9def38c1ab574f9f5fb9bc71b8b4d43ca9af084c708fcf5cc434d5e659e6d02",
+      "bytes": 5405
+    },
+    {
+      "path": "018__the-prompt-may-be-a-plan-used-inside-action-not-a-script-execute__suchman-2006__ZF-20260817-PLAN-AS-RESOURCE-018__from-chat.txt",
+      "sha256": "f3a0ecfe5d5a1e0ab535d6c5e28e8fd9fd3d1cbf7fda18aa6b1a826172836684",
+      "bytes": 5248
+    },
+    {
+      "path": "019__a-generated-surprise-can-change-the-goal-that-produced-it__schon-bennett-1996__ZF-20260817-SURPRISE-REFRAMES-ENDS-019__from-chat.txt",
+      "sha256": "e670288968333eea7355897948bdbb0458156730f13bce84c72453700238906f",
+      "bytes": 5201
+    },
+    {
+      "path": "020__the-early-prompt-community-may-have-been-a-cognitive-system-not-__hutchins-2006__ZF-20260817-DISCORD-COGNITIVE-SYSTEM-020__from-chat.txt",
+      "sha256": "cdc2c1fecd4ac22780e00c9dccf485002326343cb89bed821ed9b2bac1508a3b",
+      "bytes": 6094
+    },
+    {
+      "path": "021__a-generative-default-does-not-merely-express-taste-it-arranges-p__winner-1980__ZF-20260817-DEFAULTS-HAVE-POLITICS-021__from-chat.txt",
+      "sha256": "0106140bcdd3e29ee76784a260e50e1ad79ba7571500dfcf08f039c6150695d2",
+      "bytes": 4921
+    },
+    {
+      "path": "022__the-model-becomes-creative-material-when-its-unintended-conseque__schon-bennett-1996__ZF-20260817-MATERIAL-TALKS-BACK-022__from-chat.txt",
+      "sha256": "ea70ee0ee20780f5f3bc90e9a360e12a26d2bcce2284daf8f0ae669947bd4b52",
+      "bytes": 5550
+    },
+    {
+      "path": "CARDS.html",
+      "sha256": "dbfdf98d4bdfa230a5f1aac82356d3443d11f1c6983fd9b4041c52a799f92e3f",
+      "bytes": 16846
+    },
+    {
+      "path": "MARK.svg",
+      "sha256": "910a4b59f7e675273a064aa6dcb10877bbc0bb8ec3e6f7b7463836d648d68202",
+      "bytes": 385
+    },
+    {
+      "path": "NETWORK.html",
+      "sha256": "11ff1efa8f853087fe984a17d1ef8a658ca622ecfe8062d01330693617230fca",
+      "bytes": 66456
+    },
+    {
+      "path": "NETWORK.svg",
+      "sha256": "5facc58fb7f4cdd8b93a2d2339481c61f6c421409915a85d0f578f838c9a468d",
+      "bytes": 41494
+    },
+    {
+      "path": "READER.html",
+      "sha256": "8a5bfa944468573f6aded85fc21a21f3a41fa08c3926051d0dd680d6d4589f51",
+      "bytes": 205136
+    },
+    {
+      "path": "ZETTELS.json",
+      "sha256": "d7a1492c2d93e52935a904fe32cefbcd8b53672629d41947a46e1cc314f0af83",
+      "bytes": 262805
+    },
+    {
+      "path": "ZETTELS.jsonl",
+      "sha256": "c497811ce93bdb3b6ebae4a6cc16f828c0187a731f5071db3656773205baaa7e",
+      "bytes": 257397
+    },
+    {
+      "path": "ZETTELS.txt",
+      "sha256": "0520bba0de0267f5910a703f176853a61f1cf89f794343da90ed31439776db1d",
+      "bytes": 118437
+    },
+    {
+      "path": "_ARRANGEMENTS/001__FROM_MAGIC_TO_CAUSAL_CRAFT.txt",
+      "sha256": "e5aa08b2a4dbb96cb5029bb7b2f0272578a69151bd1711cddc3c3af68ce14837",
+      "bytes": 154
+    },
+    {
+      "path": "_ARRANGEMENTS/002__FROM_PROMPT_TO_TRAJECTORY.txt",
+      "sha256": "6de789d9aa00c221f84663c0d385ab9faac2d4b4912fa3638459a18f2e1e4cf6",
+      "bytes": 267
+    },
+    {
+      "path": "_ARRANGEMENTS/003__FROM_DISCORD_TO_DISTRIBUTED_COGNITION.txt",
+      "sha256": "bf1a0a054c5f7b3187b0a3baead4f2300b19eb72e16e240d0e07c6259632fdca",
+      "bytes": 161
+    },
+    {
+      "path": "_MD/001__the-magic-word-is-an-empirical-handle-on-a-model-not-a-better-de__oppenlaender-2022__ZF-20260817-MAGIC-TERMS-001__from-chat.md",
+      "sha256": "a96777a4fbedc8d2f118231f4c3fb0a4ddf91cc0e17d5c8d181e7607ee77f5cf",
+      "bytes": 5979
+    },
+    {
+      "path": "_MD/002__prompt-expertise-appears-first-as-a-vocabulary-deficit__oppenlaender-et-al-2023__ZF-20260817-VOCABULARY-GAP-002__from-chat.md",
+      "sha256": "c70bd0e7bfb5b8dfd7fa6ca7db10e5595a1ecea3244affeef637eed36e96003a",
+      "bytes": 5454
+    },
+    {
+      "path": "_MD/003__the-prompt-artist-does-not-invent-a-language-alone__chang-et-al-2023__ZF-20260817-COMMUNITY-LEXICON-003__from-chat.md",
+      "sha256": "15ed4f6c850010ad58b811f287732306a296b023890def1127d64df710c16da6",
+      "bytes": 5663
+    },
+    {
+      "path": "_MD/004__the-prompt-does-not-tell-the-model-what-to-draw__ramesh-et-al-2022__ZF-20260817-PROMPT-NOT-COMMAND-004__from-chat.md",
+      "sha256": "49ff7877de40a8afdd03dd4aa6308bb8ef05e16f697aef712a2368cf50477bb3",
+      "bytes": 5852
+    },
+    {
+      "path": "_MD/005__the-prompt-s-meaning-is-partly-made-by-the-corpus-it-points-into__radford-et-al-2021__ZF-20260817-LANGUAGE-POINTS-INTO-DATA-005__from-chat.md",
+      "sha256": "61eeabf2a2ae0169258f48958cc21dba2a9cdb3063b8b772fcee2424746da5d1",
+      "bytes": 6252
+    },
+    {
+      "path": "_MD/006__prompt-superstition-appears-where-causal-visibility-runs-out__midjourney-2022__ZF-20260817-SUPERSTITION-VARIANCE-006__from-chat.md",
+      "sha256": "df1ad6a9aef4576444d2a22a2088de9016ec5a6e434c802b2623f230c3191bb0",
+      "bytes": 5815
+    },
+    {
+      "path": "_MD/007__prompt-expertise-has-a-model-version-half-life__midjourney-2022__ZF-20260817-EXPERTISE-HALF-LIFE-007__from-chat.md",
+      "sha256": "6126276cef470c234ec77db72866cb044b4da8616504c3fe57f883f971604977",
+      "bytes": 5031
+    },
+    {
+      "path": "_MD/008__discord-was-part-of-the-generative-instrument__midjourney-2022__ZF-20260817-DISCORD-INSTRUMENT-008__from-chat.md",
+      "sha256": "ead703cfd5d8131ee5ecdcacdd5dc125e7166e99e2b27b22cd661709d8811c84",
+      "bytes": 5115
+    },
+    {
+      "path": "_MD/009__rerolling-is-a-creative-operation-distinct-from-prompting__midjourney-2022__ZF-20260817-REROLL-OPERATOR-009__from-chat.md",
+      "sha256": "71647a7755c8e5fbc26cd1a1bc27892d0c7b599a9f01bb3b237203f2c4193eec",
+      "bytes": 4948
+    },
+    {
+      "path": "_MD/010__stylize-turns-authorship-into-an-adjustable-ratio__midjourney-2022__ZF-20260817-STYLIZE-AGENCY-DIAL-010__from-chat.md",
+      "sha256": "41ed551e8ef9db272cbc4e0b23b233808ff623d3288540822d8afdc8abad23a2",
+      "bytes": 4737
+    },
+    {
+      "path": "_MD/011__before-the-prompt-someone-already-chose-what-good-looks-like__midjourney-2022__ZF-20260817-DEFAULT-AESTHETICS-011__from-chat.md",
+      "sha256": "d9a520878a28915613fed0b18313001e5fdc5da3125f09d4900f1d67a1fcf22b",
+      "bytes": 4597
+    },
+    {
+      "path": "_MD/012__the-generative-artist-may-be-hunting-an-event-not-specifying-an-__midjourney-2022__ZF-20260817-DOCUMENTARY-MODE-012__from-chat.md",
+      "sha256": "3f9b4518bdfbe1fb25e315cf63075232ef8f2d4560d77430ba203807e74103d5",
+      "bytes": 4568
+    },
+    {
+      "path": "_MD/013__model-opacity-can-turn-words-into-scarce-productive-property__midjourney-2022__ZF-20260817-PROMPT-SECRECY-013__from-chat.md",
+      "sha256": "284c009cc576f1269348d2943d97d63a2fc1c48218f481a995bea8b11f1420c6",
+      "bytes": 4010
+    },
+    {
+      "path": "_MD/014__a-visible-prompt-can-change-the-culture-faster-than-it-changes-t__midjourney-2022__ZF-20260817-VISIBLE-PROMPT-CASCADE-014__from-chat.md",
+      "sha256": "d2ea6b206d103b48f6f70179bd7af7c7b8ed606e3275489be799808fa0987e3a",
+      "bytes": 4137
+    },
+    {
+      "path": "_MD/015__the-prompt-may-be-the-most-visible-part-of-the-practice-and-stil__midjourney-2022__ZF-20260817-PROMPT-NOT-UNIT-015__from-chat.md",
+      "sha256": "ec3665b6eae902fc2ab93f17ec5405c36815deaa706c0c767bcd5acf460eaceb",
+      "bytes": 5709
+    },
+    {
+      "path": "_MD/016__a-good-image-can-reinforce-a-prompt-ritual-that-did-nothing__skinner-1948__ZF-20260817-ADVENTITIOUS-REINFORCEMENT-016__from-chat.md",
+      "sha256": "8f53cab05a073a872601eef714cf4191a42123c90e93d6c1839be3d2c1443d8a",
+      "bytes": 6429
+    },
+    {
+      "path": "_MD/017__a-magic-prompt-can-be-a-false-affordance__gaver-1991__ZF-20260817-FALSE-AFFORDANCE-017__from-chat.md",
+      "sha256": "b9def38c1ab574f9f5fb9bc71b8b4d43ca9af084c708fcf5cc434d5e659e6d02",
+      "bytes": 5405
+    },
+    {
+      "path": "_MD/018__the-prompt-may-be-a-plan-used-inside-action-not-a-script-execute__suchman-2006__ZF-20260817-PLAN-AS-RESOURCE-018__from-chat.md",
+      "sha256": "f3a0ecfe5d5a1e0ab535d6c5e28e8fd9fd3d1cbf7fda18aa6b1a826172836684",
+      "bytes": 5248
+    },
+    {
+      "path": "_MD/019__a-generated-surprise-can-change-the-goal-that-produced-it__schon-bennett-1996__ZF-20260817-SURPRISE-REFRAMES-ENDS-019__from-chat.md",
+      "sha256": "e670288968333eea7355897948bdbb0458156730f13bce84c72453700238906f",
+      "bytes": 5201
+    },
+    {
+      "path": "_MD/020__the-early-prompt-community-may-have-been-a-cognitive-system-not-__hutchins-2006__ZF-20260817-DISCORD-COGNITIVE-SYSTEM-020__from-chat.md",
+      "sha256": "cdc2c1fecd4ac22780e00c9dccf485002326343cb89bed821ed9b2bac1508a3b",
+      "bytes": 6094
+    },
+    {
+      "path": "_MD/021__a-generative-default-does-not-merely-express-taste-it-arranges-p__winner-1980__ZF-20260817-DEFAULTS-HAVE-POLITICS-021__from-chat.md",
+      "sha256": "0106140bcdd3e29ee76784a260e50e1ad79ba7571500dfcf08f039c6150695d2",
+      "bytes": 4921
+    },
+    {
+      "path": "_MD/022__the-model-becomes-creative-material-when-its-unintended-conseque__schon-bennett-1996__ZF-20260817-MATERIAL-TALKS-BACK-022__from-chat.md",
+      "sha256": "ea70ee0ee20780f5f3bc90e9a360e12a26d2bcce2284daf8f0ae669947bd4b52",
+      "bytes": 5550
+    },
+    {
+      "path": "_MOCS/001__MOC_PROMPT_MAGIC_CAUSALITY.txt",
+      "sha256": "efb4fca8caa482a6e9aa3e0afeeaf2882681ada20340652d3b1cc55c872ccb4f",
+      "bytes": 541
+    },
+    {
+      "path": "_MOCS/002__MOC_GENERATIVE_TRAJECTORY.txt",
+      "sha256": "40982051eb9c400f804863f7e7ea8700f320d4930f53a61fae2f7fc532a1e5f6",
+      "bytes": 910
+    },
+    {
+      "path": "_MOCS/003__MOC_SOCIAL_PROMPT_SYSTEM.txt",
+      "sha256": "b8a0986f216b9cd6d99f41b54d9682a2e8c9052656121cbaabb2fd7a50989b71",
+      "bytes": 578
+    },
+    {
+      "path": "_MOCS/004__MOC_PLATFORM_AESTHETIC_GOVERNANCE.txt",
+      "sha256": "86a5ef2e1c98fabc0ac037e8eccdd3aaabda6f6b33511188f4d6f3aafec41e0e",
+      "bytes": 403
+    },
+    {
+      "path": "_PROMPTS/SLIPCASE_v15.55-AM.txt",
+      "sha256": "a5ef0e2e3ea56463e25065f19e7313b4e9c8c569b8cceb1a3c5d9f05bd83598a",
+      "bytes": 20086
+    },
+    {
+      "path": "_RESOURCES/Midjourney_prompt_magic_archive_2022.md",
+      "sha256": "414e89f530a487a4da6bc40b9595d1f0db06379dd602d3e3b1e1f9f6c6f2e910",
+      "bytes": 49678
+    },
+    {
+      "path": "_SLIPCASE/ALIASES.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    {
+      "path": "_SLIPCASE/APPEARANCES.jsonl",
+      "sha256": "a088f558232b493cc9e8f95988a8e8e18b55053b80051e3e8b181bdc0c05e796",
+      "bytes": 6435
+    },
+    {
+      "path": "_SLIPCASE/NODES.jsonl",
+      "sha256": "158777a1e7add616204a815c2dd4da2b38c723097341de45e674416785c082b2",
+      "bytes": 18711
+    },
+    {
+      "path": "_SLIPCASE/RELATIONS.jsonl",
+      "sha256": "acc03a5c034bab55c82c1488d3a0e88500c515621e05b59bc5845b9850fa865e",
+      "bytes": 71794
+    },
+    {
+      "path": "_SLIPCASE/RESOURCES.jsonl",
+      "sha256": "9dfc56ed0663af6a48afebfc6f58c60c22a3dec0cdd341fa44700a2a5eee3a24",
+      "bytes": 5324
+    },
+    {
+      "path": "_SLIPCASE/VERIFICATION.txt",
+      "sha256": "3635980bbe65eae6b6e69cdb70372d327774baf7472663ff0367c92cdc58a9c2",
+      "bytes": 2471
+    },
+    {
+      "path": "index.html",
+      "sha256": "af67af9e68db41571a789858d908689b2a918b15e9f3c27c18b733b8b05607de",
+      "bytes": 261570
+    },
+    {
+      "path": "prompt-magic-generative-trajectory__2026-08-18.pdf",
+      "sha256": "ce339893212b6c73fe199034307a160d6f280dedf40a8c1399b280697ccf730d",
+      "bytes": 316198
+    },
+    {
+      "path": "prompt-magic-generative-trajectory__2026-08-18.tex",
+      "sha256": "fd37bc84d8b6955105eb1f7f17566fd1e6e9f7fadf7c1f661343505c0057b72a",
+      "bytes": 35167
+    },
+    {
+      "path": "prompt-magic-generative-trajectory__2026-08-18__ASSEMBLY_APPENDIX.txt",
+      "sha256": "b29e9ac01320eec263a7b8759053de5fad617d7f020296a593a20724999b26a1",
+      "bytes": 421
+    },
+    {
+      "path": "prompt-magic-generative-trajectory__2026-08-18__MAKING_HISTORY.txt",
+      "sha256": "9a28a8d256b2a68bf3af04b32cab7295bd90471a0c92d54d27269af03280205a",
+      "bytes": 2080
+    },
+    {
+      "path": "prompt-magic-generative-trajectory__2026-08-18__SOURCE_MAP.txt",
+      "sha256": "d0a9dbf039845f30d7d633afdb6c22319c47fb507a140a15b0a0a3f81142043d",
+      "bytes": 6250
+    },
+    {
+      "path": "prompt-magic-generative-trajectory__2026-08-18__references.bib",
+      "sha256": "2a191b83350c7ba2c618834ebba8481cc2bc63b1109b50dab8843b3898849705",
+      "bytes": 5914
+    },
+    {
+      "path": "rebuild.py",
+      "sha256": "8a4e6d5c10a6698d0aba50f878bfb59be16d25501af0ddcfd82f7014014f7a37",
+      "bytes": 699
+    }
+  ],
+  "file_count_excluding_manifest": 86,
+  "verification_status": "PASS"
+}

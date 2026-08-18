@@ -1,0 +1,27 @@
+REBUILD
+
+This package is self-describing.
+
+Evidence layer:
+  root *.txt zettels
+  _MD mirrors
+  ZETTELS.json / ZETTELS.jsonl
+
+Derived layer:
+  000__MAP.txt
+  000__BIBLIOGRAPHY.*
+  000__OPEN_EDGES.txt
+  NETWORK.*
+  _MOCS/
+  _ARRANGEMENTS/
+  paper + source map
+
+Verification invariants for this build are recorded in _SLIPCASE/VERIFY.txt.
+
+To recompile the paper in this package without BibTeX:
+  pdflatex -interaction=nonstopmode -halt-on-error the-subdivision-is-the-program__2026-08-18.tex
+  pdflatex -interaction=nonstopmode -halt-on-error the-subdivision-is-the-program__2026-08-18.tex
+  pdflatex -interaction=nonstopmode -halt-on-error the-subdivision-is-the-program__2026-08-18.tex
+
+The .bib file is preserved separately for bibliography reuse.
+The exact assembly prompt is SLIPCASE_FINAL_PROMPT.txt.
