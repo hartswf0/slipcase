@@ -293,6 +293,7 @@ html_template = r"""<!doctype html>
   --muted: #9CA3AF;
   --muted-dark: #6B7280;
   --pale: #E7EEFF;
+  --wash: #EFF4FF;
   --line: 1.5px;
   --border: #E5E7EB;
   --code-bg: #F3F4F6;
@@ -314,7 +315,7 @@ html, body {
   overscroll-behavior: none;
 }
 button, input, select { font: inherit; color: inherit; }
-button { border: 0; background: none; cursor: pointer; padding: 0; }
+button { border: 0; background: none; cursor: pointer; padding: 0; text-align: inherit; }
 button:focus-visible, input:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 
 #app {
@@ -325,7 +326,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--blue); outl
   flex-direction: column;
 }
 
-/* Loader */
+/* -- LOADER: The mark draws itself -- */
 #loader {
   position: fixed;
   inset: 0;
@@ -348,7 +349,7 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--blue); outl
 @keyframes rise { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fade { to { opacity: 1; } }
 
-/* Header */
+/* -- HEADER -- */
 header {
   flex: 0 0 auto;
   padding: calc(8px + var(--top)) 16px 8px;
@@ -452,7 +453,7 @@ header {
   border-color: var(--blue);
 }
 
-/* Nav Bar */
+/* -- METHODOLOGY TRIAD NAVIGATION (PRESERVE · RELATE · RETURN) -- */
 .methodology-bar {
   flex: 0 0 auto;
   height: 44px;
@@ -511,7 +512,7 @@ header {
   margin: 0 6px;
 }
 
-/* Sub-toolbar */
+/* -- SUB-TOOLBAR (Filter Chips for LINES) -- */
 .subtoolbar {
   flex: 0 0 auto;
   height: 36px;
@@ -545,7 +546,7 @@ header {
   border-color: var(--ink);
 }
 
-/* Viewport */
+/* -- MAIN STAGE -- */
 main {
   flex: 1 1 auto;
   position: relative;
@@ -564,7 +565,278 @@ main {
 .pane.active { display: block; }
 .pane.no-scroll { overflow: hidden; }
 
-/* 1. TABLE */
+/* =========================================================
+   1. READER VIEW (SLIPCASE V3 GESTURE-DRIVEN SCROLLING ENGINE)
+   ========================================================= */
+#readerStage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--field);
+  touch-action: pan-y;
+}
+.rPane {
+  position: absolute;
+  inset: 0;
+}
+@media(prefers-reduced-motion:no-preference){
+  .rPane { animation: in .18s ease; }
+  .rPane.fromRight { animation: inR .2s ease; }
+  .rPane.fromLeft { animation: inL .2s ease; }
+}
+@keyframes in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes inR { from { opacity: 0; transform: translateX(18px); } to { opacity: 1; transform: none; } }
+@keyframes inL { from { opacity: 0; transform: translateX(-18px); } to { opacity: 1; transform: none; } }
+
+/* Grid of cases */
+.rFieldGrid {
+  position: absolute;
+  inset: 0 0 26px 0;
+  padding: 18px 16px 6px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 12px;
+}
+@media(min-width:680px) { .rFieldGrid { grid-template-columns: repeat(3, 1fr); padding: 22px; gap: 14px; } }
+@media(min-width:1020px) { .rFieldGrid { grid-template-columns: repeat(4, 1fr); max-width: 1180px; left: 50%; transform: translateX(-50%); width: 100%; } }
+.rCaseCard {
+  position: relative;
+  background: var(--paper);
+  border: var(--line) solid var(--pale);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  min-height: 0;
+  text-align: center;
+  transition: border-color .12s ease;
+}
+.rCaseCard:hover, .rCaseCard:active { border-color: var(--blue); }
+.rCaseCard svg { width: min(56%, 106px); height: auto; }
+.rCaseId { font-family: var(--mono); font-size: 10px; letter-spacing: .08em; color: var(--blue); }
+.rCaseTopic { font-size: 11px; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; max-width: 100%; }
+.rCaseCount { font-family: var(--mono); font-size: 9px; color: var(--grey); letter-spacing: .06em; }
+.rHeldBadge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  background: var(--blue);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+.rDotRail {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.rDot { width: 5px; height: 5px; border: 1px solid var(--blue); background: var(--paper); }
+.rDot.on { background: var(--blue); }
+.rEmptyField { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--grey); font-family: var(--mono); font-size: 12px; letter-spacing: .06em; }
+
+/* READ: single scrolling zettel */
+.rReadScroll {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+.rDoc { max-width: 680px; margin: 0 auto; padding: 0 18px 90px; }
+.rDocHead {
+  position: sticky;
+  top: 0;
+  background: var(--field);
+  padding: 14px 0 10px;
+  border-bottom: var(--line) solid var(--pale);
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+.rDocId { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; color: var(--blue); white-space: nowrap; }
+.rDocWhere { font-family: var(--mono); font-size: 10px; color: var(--grey); letter-spacing: .08em; white-space: nowrap; }
+.rDocTags { font-family: var(--mono); font-size: 10px; color: var(--grey); letter-spacing: .06em; padding: 10px 0 2px; }
+
+/* Individual Slip in Reader */
+.rSlip {
+  position: relative;
+  margin: 14px 0;
+  padding: 12px 14px 13px 16px;
+  background: var(--paper);
+  border: var(--line) solid var(--pale);
+  border-radius: 6px;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+.rSlip::before {
+  content: "";
+  position: absolute;
+  left: -1.5px;
+  top: -1.5px;
+  bottom: -1.5px;
+  width: 3px;
+  background: transparent;
+  border-radius: 4px 0 0 4px;
+}
+.rSlip.on { background: var(--wash); border-color: var(--blue); }
+.rSlip.on::before { background: var(--blue); }
+.rSlip.hit { border-color: var(--blue); }
+.rfLabel {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: .14em;
+  color: var(--blue);
+  margin-bottom: 7px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+.rfLabel .rHeldMark { color: var(--blue); opacity: 0; font-size: 9.5px; letter-spacing: .1em; font-weight: 800; }
+.rSlip.on .rfLabel .rHeldMark { opacity: 1; }
+.rfBody { font-family: var(--serif); font-size: 17px; line-height: 1.55; white-space: pre-wrap; overflow-wrap: break-word; }
+.rSlip[data-kind="head"] .rfBody { font-family: var(--sans); font-weight: 650; letter-spacing: -.015em; font-size: 20px; line-height: 1.32; }
+.rSlip[data-kind="code"] .rfBody { font-family: var(--mono); font-size: 12px; line-height: 1.6; background: var(--field); padding: 10px 12px; margin: -2px -4px 0; border-radius: 4px; }
+.rCaseBar { position: absolute; top: 0; left: 0; height: 2px; background: var(--blue); z-index: 4; transition: width .2s ease; }
+
+/* Floating Tray Chip */
+#rChip {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(14px + var(--bottom));
+  z-index: 50;
+  height: 42px;
+  padding: 0 18px;
+  background: var(--blue);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .12em;
+  display: none;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 18px rgba(6,71,229,.32);
+  border-radius: 999px;
+}
+#rChip.show { display: flex; }
+#rChip .n {
+  background: #fff;
+  color: var(--blue);
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  border-radius: 999px;
+}
+@media(prefers-reduced-motion:no-preference){ #rChip.pulse { animation: pulse .28s ease; } }
+@keyframes pulse { 40% { transform: translateX(-50%) scale(1.07); } }
+
+/* Tray Drawer */
+#rShade {
+  position: fixed;
+  inset: 0;
+  background: rgba(17,19,24,.28);
+  z-index: 210;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s;
+}
+#rShade.show { opacity: 1; pointer-events: auto; }
+#rTray {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 220;
+  background: var(--paper);
+  border-top: var(--line) solid var(--blue);
+  max-height: 76vh;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(102%);
+  transition: transform .24s cubic-bezier(.3,.9,.3,1);
+  padding-bottom: var(--bottom);
+}
+#rTray.show { transform: none; }
+.rTrayHead {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: var(--line) solid var(--pale);
+}
+.rTrayTitle { font-family: var(--mono); font-size: 11px; font-weight: 850; letter-spacing: .14em; color: var(--blue); }
+.rTrayClear { font-family: var(--mono); font-size: 10px; letter-spacing: .1em; color: var(--grey); }
+.rTrayClear:hover { color: var(--blue); }
+.rTrayList { flex: 1 1 auto; overflow-y: auto; overscroll-behavior: contain; padding: 6px 0 4px; }
+.rtItem {
+  display: grid;
+  grid-template-columns: 26px 1fr 34px;
+  align-items: start;
+  gap: 6px;
+  padding: 9px 12px 9px 8px;
+  border-bottom: 1px solid var(--pale);
+  background: var(--paper);
+}
+.rtItem.drag { opacity: .35; }
+.rtHandle { width: 26px; padding-top: 3px; display: flex; flex-direction: column; gap: 3px; align-items: center; cursor: grab; touch-action: none; }
+.rtHandle i { display: block; width: 14px; height: 0; border-top: 1.5px solid var(--grey); }
+.rtBody { min-width: 0; text-align: left; }
+.rtMeta { font-family: var(--mono); font-size: 9.5px; letter-spacing: .1em; color: var(--blue); margin-bottom: 3px; font-weight: 700; }
+.rtText { font-family: var(--serif); font-size: 13px; line-height: 1.4; color: var(--ink); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.rtItem.open .rtText { display: block; -webkit-line-clamp: unset; white-space: pre-wrap; }
+.rtDrop { width: 34px; height: 26px; display: flex; align-items: center; justify-content: center; color: var(--grey); font-size: 16px; line-height: 1; }
+.rtDrop:hover { color: var(--blue); }
+.rTrayActs {
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 12px 16px calc(12px + var(--bottom));
+  border-top: var(--line) solid var(--pale);
+}
+.rTrayBtn {
+  height: 42px;
+  border: var(--line) solid var(--blue);
+  border-radius: 6px;
+  color: var(--blue);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rTrayBtn.filled { background: var(--blue); color: #fff; }
+mark { background: var(--pale); color: inherit; }
+
+/* =========================================================
+   2. TABLE VIEW (INFINITE 2D VOID SPATIAL WORKBENCH)
+   ========================================================= */
 #tableStage {
   position: absolute;
   inset: 0;
@@ -704,159 +976,9 @@ main {
   max-width: 44vw;
 }
 
-/* 2. FIELD VIEW */
-#fieldStage {
-  position: absolute;
-  inset: 0;
-  background: var(--field);
-  display: flex;
-  flex-direction: column;
-}
-.fieldViewWrap { flex: 1 1 auto; position: relative; overflow: hidden; }
-.fieldGrid {
-  position: absolute;
-  inset: 0;
-  padding: 16px 14px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 12px;
-}
-@media(min-width:680px) { .fieldGrid { grid-template-columns: repeat(3, 1fr); padding: 20px; gap: 14px; } }
-@media(min-width:1020px) { .fieldGrid { grid-template-columns: repeat(4, 1fr); max-width: 1180px; left: 50%; transform: translateX(-50%); width: 100%; } }
-.caseCard {
-  background: var(--paper);
-  border: 1.5px solid var(--pale);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 10px;
-  min-height: 0;
-  text-align: center;
-  transition: all .12s ease;
-}
-.caseCard:hover, .caseCard:active { border-color: var(--blue); box-shadow: 0 4px 14px rgba(6,71,229,.08); }
-.caseCard svg { width: min(58%, 96px); height: auto; flex: 0 1 auto; }
-.caseId { font-family: var(--mono); font-size: 9.5px; font-weight: 800; letter-spacing: .08em; color: var(--blue); }
-.caseTopic { font-size: 11px; font-weight: 700; line-height: 1.25; color: var(--ink); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; max-width: 100%; }
-.caseCount { font-family: var(--mono); font-size: 8.5px; color: var(--grey); letter-spacing: .06em; }
-.emptyField { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--grey); font-family: var(--mono); font-size: 11.5px; letter-spacing: .06em; }
-
-.slipWrap {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  padding: 24px 16px 14px;
-}
-.slip {
-  position: relative;
-  width: min(680px, 100%);
-  background: var(--paper);
-  border: 1.5px solid var(--blue);
-  border-radius: 10px 10px 0 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-}
-.slipTab {
-  position: absolute;
-  top: -15px;
-  left: 18px;
-  max-width: 70%;
-  background: var(--paper);
-  border: 1.5px solid var(--blue);
-  border-radius: 7px 7px 0 0;
-  border-bottom: 0;
-  padding: 4px 12px 7px;
-  font-family: var(--mono);
-  font-size: 9.5px;
-  font-weight: 800;
-  letter-spacing: .1em;
-  color: var(--blue);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.slipMeta {
-  flex: 0 0 auto;
-  padding: 14px 18px 10px;
-  border-bottom: 1.5px solid var(--pale);
-  font-family: var(--mono);
-  font-size: 9.5px;
-  letter-spacing: .06em;
-  color: var(--grey);
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-.slipMeta b { color: var(--blue); font-weight: 600; }
-.slipBody {
-  flex: 1 1 auto;
-  min-height: 0;
-  overflow: auto;
-  padding: 16px 18px 18px;
-  font-family: var(--serif);
-  font-size: 17.5px;
-  line-height: 1.52;
-  white-space: pre-wrap;
-  overflow-wrap: break-word;
-  scrollbar-width: thin;
-}
-.slip[data-kind="head"] .slipBody { font-family: var(--sans); font-weight: 650; letter-spacing: -.02em; font-size: 20px; line-height: 1.3; }
-.slip[data-kind="code"] .slipBody { font-family: var(--mono); font-size: 11.5px; line-height: 1.6; background: var(--field); }
-.slip.collected { background: var(--pale); }
-.slip.collected .slipBody { background: transparent; }
-
-.zone { position: absolute; top: 0; bottom: 0; width: 17%; z-index: 5; }
-.zone.prev { left: 0; }
-.zone.next { right: 0; }
-
-.fieldFooter {
-  flex: 0 0 auto;
-  padding: 8px 14px calc(8px + var(--bottom));
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 10px;
-  align-items: center;
-  border-top: 1.5px solid var(--pale);
-  background: var(--paper);
-  z-index: 10;
-}
-.navBtn {
-  height: 38px;
-  min-width: 52px;
-  border: 1.5px solid var(--pale);
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 0 12px;
-  font-family: var(--mono);
-  font-size: 9.5px;
-  font-weight: 800;
-  letter-spacing: .1em;
-  color: var(--ink);
-}
-.navBtn:disabled { opacity: .3; }
-.navBtn:not(:disabled):hover, .navBtn:not(:disabled):active { border-color: var(--blue); color: var(--blue); }
-.chev { width: 7px; height: 7px; border-left: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); flex: 0 0 auto; }
-.chev.r { transform: rotate(225deg); }
-.fpos { display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 0; }
-.fposLabel { font-family: var(--mono); font-size: 9.5px; letter-spacing: .12em; color: var(--ink); white-space: nowrap; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
-.fposLabel b { color: var(--blue); font-weight: 600; }
-.ticks { display: flex; gap: 4px; align-items: center; }
-.tick { width: 5px; height: 5px; border: 1px solid var(--blue); background: var(--paper); }
-.tick.on { background: var(--blue); }
-.factBtn { height: 38px; padding: 0 14px; border: 1.5px solid var(--blue); border-radius: 6px; color: var(--blue); font-family: var(--mono); font-size: 9.5px; font-weight: 800; letter-spacing: .1em; white-space: nowrap; }
-.factBtn.filled { background: var(--blue); color: var(--paper); }
-
-/* 3. LINES VIEW */
+/* =========================================================
+   3. LINES VIEW (ROW-BY-ROW INSPECTOR)
+   ========================================================= */
 .lines-container {
   max-width: 860px;
   margin: 0 auto;
@@ -949,7 +1071,7 @@ main {
 .stackMeta { font-family: var(--mono); font-size: 9px; color: var(--blue); font-weight: 800; letter-spacing: .08em; margin-bottom: 6px; text-transform: uppercase; }
 .stackText { font-family: var(--serif); font-size: 18.5px; line-height: 1.55; white-space: pre-wrap; }
 
-/* 4. RELATE */
+/* 4. RELATE: 3D FIELD, GRAPH, MATRIX */
 .three-pane-wrap, .graph-pane-wrap { width: 100%; height: 100%; position: relative; background: #FFFFFF; }
 #graphCanvas { width: 100%; height: 100%; display: block; }
 .three-hud, .graph-hud {
@@ -1022,7 +1144,7 @@ main {
 .matrix-case-name { font-size: 13px; font-weight: 800; }
 .matrix-case-counts { font-family: var(--mono); font-size: 9px; font-weight: 800; color: var(--muted-dark); white-space: nowrap; }
 
-/* 5. RETURN */
+/* 5. RETURN: PDFS, MAPS, PROMPTS */
 .pdf-wrap, .maps-wrap, .prompts-wrap { padding: 16px 16px calc(24px + var(--bottom)); max-width: 860px; margin: 0 auto; }
 .pdf-filter-bar, .maps-tabs, .poml-stepper { display: flex; gap: 6px; margin-bottom: 14px; overflow-x: auto; scrollbar-width: none; }
 .pdf-filter-bar::-webkit-scrollbar, .maps-tabs::-webkit-scrollbar, .poml-stepper::-webkit-scrollbar { display: none; }
@@ -1159,6 +1281,7 @@ main {
   position: fixed;
   z-index: 400;
   left: 50%;
+  transform: translateX(-50%);
   bottom: calc(76px + var(--bottom));
   transform: translateX(-50%);
   background: var(--ink);
@@ -1256,8 +1379,8 @@ main {
   <div class="methodology-bar" id="methodologyBar">
     <div class="nav-triad-group">
       <span class="nav-pillar-label">PRESERVE</span>
-      <button class="nav-tab-btn on" data-tab="table">TABLE</button>
-      <button class="nav-tab-btn" data-tab="field">FIELD</button>
+      <button class="nav-tab-btn on" data-tab="reader">READER</button>
+      <button class="nav-tab-btn" data-tab="table">TABLE</button>
       <button class="nav-tab-btn" data-tab="lines">LINES</button>
       <button class="nav-tab-btn" data-tab="maps">MAPS</button>
     </div>
@@ -1296,8 +1419,13 @@ main {
   <!-- VIEWPORT -->
   <main id="mainViewport">
     
-    <!-- 1. TABLE PANE -->
-    <div class="pane active no-scroll" id="pane-table">
+    <!-- 1. READER PANE (SLIPCASE V3 GESTURE-DRIVEN SCROLLING ENGINE) -->
+    <div class="pane active no-scroll" id="pane-reader">
+      <div id="readerStage"></div>
+    </div>
+
+    <!-- 2. TABLE PANE (INFINITE 2D SPATIAL WORKBENCH) -->
+    <div class="pane no-scroll" id="pane-table">
       <div id="tableStage">
         <div id="grain"></div>
         <div id="world"></div>
@@ -1324,24 +1452,6 @@ main {
         <div class="tgrp" id="selGrp" style="display:none">
           <button class="tbtn" id="expandBtn">EXPAND</button>
           <button class="tbtn" id="removeBtn">RETURN</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2. FIELD PANE -->
-    <div class="pane no-scroll" id="pane-field">
-      <div id="fieldStage">
-        <div class="fieldViewWrap" id="fieldStageInner"></div>
-        <div class="fieldFooter">
-          <button class="navBtn" id="fPrevBtn" aria-label="Previous"><span class="chev"></span><span id="fPrevLabel">PREV</span></button>
-          <div class="fpos">
-            <div class="fposLabel" id="fPosLabel">FIELD 1 / 1</div>
-            <div class="ticks" id="fTicks"></div>
-          </div>
-          <div style="display:flex;gap:6px">
-            <button class="factBtn" id="fActBtn">TRAY · 0</button>
-            <button class="navBtn" id="fNextBtn" aria-label="Next"><span id="fNextLabel">NEXT</span><span class="chev r"></span></button>
-          </div>
         </div>
       </div>
     </div>
@@ -1390,7 +1500,7 @@ main {
           <div class="graph-insp-desc" id="threeInspDesc">Contains cards and documents.</div>
           <div class="graph-insp-actions">
             <button class="deck-btn" id="threeInspLinesBtn">OPEN ZETTEL LINES &rarr;</button>
-            <button class="deck-btn" id="threeInspFieldBtn">OPEN IN FIELD &rarr;</button>
+            <button class="deck-btn" id="threeInspReaderBtn">OPEN IN READER &rarr;</button>
           </div>
         </div>
       </div>
@@ -1422,7 +1532,7 @@ main {
           <div class="graph-insp-desc" id="graphInspDesc">Details</div>
           <div class="graph-insp-actions">
             <button class="deck-btn" id="graphInspOpenBtn">INSPECT IN LINES &rarr;</button>
-            <button class="deck-btn" id="graphInspFieldBtn">OPEN IN FIELD &rarr;</button>
+            <button class="deck-btn" id="graphInspReaderBtn">OPEN IN READER &rarr;</button>
           </div>
         </div>
       </div>
@@ -1462,6 +1572,21 @@ main {
 
   </main>
 
+  <!-- FLOATING TRAY CHIP & DRAWER FOR READER -->
+  <button id="rChip" aria-label="Open tray"><span>TRAY</span><span class="n" id="rChipN">0</span></button>
+  <div id="rShade"></div>
+  <section id="rTray" role="dialog" aria-label="Tray">
+    <div class="rTrayHead">
+      <span class="rTrayTitle" id="rTrayTitle">TRAY</span>
+      <button class="rTrayClear" id="rTrayClear">CLEAR</button>
+    </div>
+    <div class="rTrayList" id="rTrayList"></div>
+    <div class="rTrayActs">
+      <button class="rTrayBtn" id="rCopyBtn">COPY ALL</button>
+      <button class="rTrayBtn filled" id="rExportBtn">EXPORT .MD</button>
+    </div>
+  </section>
+
   <!-- TABLE DRAWER -->
   <section id="drawer">
     <div class="dHead">
@@ -1471,7 +1596,7 @@ main {
     <div class="dBody" id="dBody"></div>
   </section>
 
-  <!-- Floating Selection Bar for LINES -->
+  <!-- Selection Bar for LINES -->
   <div class="selection" id="selection">
     <div class="selCount" id="selCount">0 selected</div>
     <button id="clearBtn">CLEAR</button>
@@ -1575,7 +1700,7 @@ function valueFor(n, f) {
   return (n.fields && n.fields[f]) || "";
 }
 
-let currentTab = "table";
+let currentTab = "reader";
 let selectedCaseIdx = -1;
 let lineFilter = "ALL";
 let pdfCategory = "ALL";
@@ -1609,8 +1734,8 @@ function setTab(tab) {
     subtoolbar.style.display = "none";
   }
 
+  if (tab === "reader") renderReader();
   if (tab === "table") applyTableView();
-  if (tab === "field") renderFieldView();
   if (tab === "maps") renderMaps();
   if (tab === "three") window.triggerThreeResize?.();
   if (tab === "graph") initGraphEngine();
@@ -1626,7 +1751,7 @@ $$(".nav-tab-btn").forEach(b => {
 $("#brandBtn").onclick = () => {
   selectedCaseIdx = -1;
   updateActiveCaseLabel();
-  setTab("table");
+  setTab("reader");
 };
 
 function updateActiveCaseLabel() {
@@ -1672,8 +1797,8 @@ window.selectCase = function(idx) {
   selectedCaseIdx = idx;
   updateActiveCaseLabel();
   $("#caseScrim").classList.remove("open");
+  if (currentTab === "reader") { readerView = "FIELD"; readerFieldPage = 0; renderReader(); }
   if (currentTab === "table") applyTableView();
-  if (currentTab === "field") { fieldViewMode = "FIELD"; fieldPage = 0; renderFieldView(); }
   if (currentTab === "lines") renderLines();
   if (currentTab === "maps") renderMaps();
   if (currentTab === "three") window.updateThreeFocus?.(idx);
@@ -1688,22 +1813,16 @@ $("#caseScrim").addEventListener("pointerdown", e => {
   if (e.target === $("#caseScrim")) $("#caseScrim").classList.remove("open");
 });
 
-/* TABLE ENGINE */
-const MAX_CARDS = 400;
-const MAX_VISIBLE = 180;
-const CARD_W = 280, CARD_H_EST = 230, CULL_PAD = 420;
-const ZOOM_MIN = 0.22, ZOOM_MAX = 2.4;
-const DRAG_SLOP = 5;
-const ROW_BAND = 140;
-const SCHEMA = "slipcase.table/1";
+/* =========================================================
+   1. READER ENGINE (SLIPCASE V3 GESTURES & SCROLLING)
+   ========================================================= */
+const LONG_PRESS_MS = 430;
+const MOVE_CANCEL_PX = 10;
+const SWIPE_PX = 56;
+const SWIPE_SLOP = 42;
+const MAX_DOTS = 14;
 
-let tableCards = [];
-let tableView = { x: 0, y: 0, z: 1 };
-let tableSelId = null, nextCardId = 1;
-const mountedTableCards = new Map();
-let tableGest = null;
-const tablePts = new Map();
-
+// Index notes for Reader & Table
 const KASTEN_CASES = [];
 const kastenById = new Map();
 
@@ -1719,6 +1838,316 @@ for (let i = 0; i < ALL_NOTES.length; i++) {
   KASTEN_CASES.push({ i, id: n.id, slips, low, case_idx: n.case_idx });
   kastenById.set(n.id, i);
 }
+
+let readerView = "FIELD"; // "FIELD" | "READ"
+let readerFiltered = KASTEN_CASES.map((_, k) => k);
+let readerFieldPage = 0, readerCaseK = 0, readerSlideDir = 0;
+let readerTray = []; // [{i, f}]
+let readerTrayOpen = false;
+
+const readerPageSize = () => innerWidth >= 1020 ? 12 : innerWidth >= 680 ? 9 : 6;
+const inReaderTray = (i, f) => readerTray.findIndex(t => t.i === i && t.f === f);
+const heldInReaderCase = i => readerTray.reduce((a, t) => a + (t.i === i ? 1 : 0), 0);
+
+function monolineCaseIcon(count) {
+  const n = Math.min(count, 5);
+  let s = "";
+  for (let k = 0; k < n; k++) {
+    const x = 20 + k * 7, y = 16 - k * 3.5;
+    s += `<rect x="${x}" y="${y}" width="34" height="40" rx="5" fill="#fff" stroke="#0647E5" stroke-width="2.5"/>`;
+  }
+  return `<svg viewBox="0 0 96 78" aria-hidden="true">${s}
+  <path d="M14 34 h68 v38 h-68 z" fill="#fff" stroke="#0647E5" stroke-width="2.5"/>
+  <rect x="38" y="48" width="20" height="11" fill="#fff" stroke="#0647E5" stroke-width="2.5"/></svg>`;
+}
+
+function hl(text, qTokens) {
+  let out = esc(text);
+  if (!qTokens || !qTokens.length) return out;
+  for (const t of qTokens) {
+    if (!t) continue;
+    const re = new RegExp(t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi");
+    out = out.replace(re, m => "\u0001" + m + "\u0002");
+  }
+  return out.replace(/\u0001/g, "<mark>").replace(/\u0002/g, "</mark>");
+}
+
+function renderReader(keepScroll) {
+  const activeKasten = (selectedCaseIdx === -1) 
+    ? KASTEN_CASES.map((_, k) => k) 
+    : KASTEN_CASES.map((c, k) => ({ c, k })).filter(x => x.c.case_idx === selectedCaseIdx).map(x => x.k);
+
+  const q = $("#search").value.trim().toLowerCase();
+  const qTokens = q ? q.split(/\s+/).filter(Boolean) : [];
+
+  readerFiltered = activeKasten.filter(k => {
+    if (!qTokens.length) return true;
+    return qTokens.every(t => KASTEN_CASES[k].low.includes(t));
+  });
+
+  const stage = $("#readerStage");
+
+  if (readerView === "FIELD") {
+    const ps = readerPageSize(), pages = Math.max(1, Math.ceil(readerFiltered.length / ps));
+    readerFieldPage = Math.min(Math.max(readerFieldPage, 0), pages - 1);
+    let html = "";
+    if (!readerFiltered.length) {
+      html = `<div class="rEmptyField">NOTHING IN THE FIELD MATCHES</div>`;
+    } else {
+      const s = readerFieldPage * ps, e = Math.min(s + ps, readerFiltered.length);
+      let cards = "";
+      for (let k = s; k < e; k++) {
+        const c = KASTEN_CASES[readerFiltered[k]], n = ALL_NOTES[c.i], h = heldInReaderCase(c.i);
+        cards += `
+          <button class="rCaseCard" data-k="${k}">
+            ${h ? `<span class="rHeldBadge">${h}</span>` : ""}
+            ${monolineCaseIcon(c.slips.length)}
+            <span class="rCaseId">${esc(n.id)}</span>
+            <span class="rCaseTopic">${esc(n.topic)} &middot; ${esc(n.type)}</span>
+            <span class="rCaseCount">${c.slips.length} SLIPS</span>
+          </button>
+        `;
+      }
+      let dots = "";
+      if (pages > 1 && pages <= MAX_DOTS) {
+        for (let p = 0; p < pages; p++) dots += `<span class="rDot${p === readerFieldPage ? " on" : ""}"></span>`;
+      }
+      html = `<div class="rFieldGrid">${cards}</div><div class="rDotRail">${dots}</div>`;
+    }
+    const cls = readerSlideDir > 0 ? "fromRight" : readerSlideDir < 0 ? "fromLeft" : "";
+    stage.innerHTML = `<div class="rPane ${cls}">${html}</div>`;
+    readerSlideDir = 0;
+  } 
+  else {
+    if (!readerFiltered.length) { readerView = "FIELD"; renderReader(); return; }
+    readerCaseK = Math.min(Math.max(readerCaseK, 0), readerFiltered.length - 1);
+    const c = KASTEN_CASES[readerFiltered[readerCaseK]], n = ALL_NOTES[c.i];
+    let body = "";
+    for (let s = 0; s < c.slips.length; s++) {
+      const slip = c.slips[s];
+      const kind = CODE_FIELD.test(slip.f) ? "code" : HEAD_FIELD.test(slip.f) ? "head" : "text";
+      const on = inReaderTray(c.i, slip.f) >= 0;
+      const hit = qTokens.length && qTokens.every(t => slip.text.toLowerCase().includes(t));
+      body += `
+        <div class="rSlip${on ? " on" : ""}${hit ? " hit" : ""}" data-s="${s}" data-kind="${kind}">
+          <div class="rfLabel"><span>${esc(slip.f)}</span><span class="rHeldMark">HELD</span></div>
+          <div class="rfBody">${hl(slip.text, qTokens)}</div>
+        </div>
+      `;
+    }
+    const pct = readerFiltered.length > 1 ? ((readerCaseK + 1) / readerFiltered.length * 100) : 100;
+    const cls = readerSlideDir > 0 ? "fromRight" : readerSlideDir < 0 ? "fromLeft" : "";
+    stage.innerHTML = `
+      <div class="rPane ${cls}">
+        <div class="rCaseBar" style="width:${pct}%"></div>
+        <div class="rReadScroll" id="rReadScroll">
+          <div class="rDoc">
+            <div class="rDocHead">
+              <span class="rDocId">${esc(n.id)}</span>
+              <span class="rDocWhere">${readerCaseK + 1} / ${readerFiltered.length}</span>
+            </div>
+            <div class="rDocTags">${esc(n.type)} &middot; ${esc(n.topic)} &middot; ${esc(n.case_name)}</div>
+            ${body}
+          </div>
+        </div>
+      </div>
+    `;
+    readerSlideDir = 0;
+    if (keepScroll != null) $("#rReadScroll").scrollTop = keepScroll;
+  }
+}
+
+function syncReaderChip(pulse) {
+  const chip = $("#rChip");
+  chip.classList.toggle("show", readerTray.length > 0);
+  $("#rChipN").textContent = readerTray.length;
+  if (pulse) {
+    chip.classList.remove("pulse");
+    void chip.offsetWidth;
+    chip.classList.add("pulse");
+  }
+  if (!readerTray.length && readerTrayOpen) closeReaderTray();
+}
+
+function toggleReaderHold(s) {
+  const c = KASTEN_CASES[readerFiltered[readerCaseK]], slip = c.slips[s], at = inReaderTray(c.i, slip.f);
+  const el = $("#readerStage").querySelector(`.rSlip[data-s="${s}"]`);
+  if (at >= 0) {
+    readerTray.splice(at, 1);
+    if (el) el.classList.remove("on");
+  } else {
+    readerTray.push({ i: c.i, f: slip.f });
+    if (el) el.classList.add("on");
+    if (navigator.vibrate) navigator.vibrate(12);
+  }
+  syncReaderChip(at < 0);
+  if (readerTrayOpen) renderReaderTray();
+}
+
+async function copyReaderSlip(s) {
+  const c = KASTEN_CASES[readerFiltered[readerCaseK]], slip = c.slips[s], n = ALL_NOTES[c.i];
+  try {
+    await navigator.clipboard.writeText(n.id + " — " + slip.f + "\n" + slip.text);
+    if (navigator.vibrate) navigator.vibrate(12);
+    toast("Copied " + slip.f);
+  } catch (e) {
+    toast("Copy unavailable");
+  }
+}
+
+function openReaderTray() {
+  readerTrayOpen = true;
+  renderReaderTray();
+  $("#rShade").classList.add("show");
+  $("#rTray").classList.add("show");
+}
+
+function closeReaderTray() {
+  readerTrayOpen = false;
+  $("#rShade").classList.remove("show");
+  $("#rTray").classList.remove("show");
+}
+
+function renderReaderTray() {
+  $("#rTrayTitle").textContent = "TRAY · " + readerTray.length + " SLIP" + (readerTray.length === 1 ? "" : "S");
+  let html = "";
+  for (let t = 0; t < readerTray.length; t++) {
+    const e = readerTray[t], n = ALL_NOTES[e.i];
+    html += `
+      <div class="rtItem" data-t="${t}">
+        <div class="rtHandle" data-h="${t}" aria-label="Reorder"><i></i><i></i><i></i></div>
+        <button class="rtBody" data-b="${t}"><div class="rtMeta">${esc(n.id)} — ${esc(e.f)}</div><div class="rtText">${esc(valueFor(n, e.f))}</div></button>
+        <button class="rtDrop" data-x="${t}" aria-label="Remove">&times;</button>
+      </div>
+    `;
+  }
+  $("#rTrayList").innerHTML = html;
+}
+
+function readerTrayText() {
+  return readerTray.map(e => ALL_NOTES[e.i].id + " — " + e.f + "\n" + valueFor(ALL_NOTES[e.i], e.f)).join("\n\n");
+}
+
+function readerTrayMarkdown() {
+  let out = "# SLIPCASE TRAY\n\n";
+  for (const e of readerTray) {
+    const n = ALL_NOTES[e.i];
+    out += "## " + n.id + " · " + e.f + "\n\n" + valueFor(n, e.f) + "\n\n---\n\n";
+  }
+  return out;
+}
+
+/* Reader Pointer Handlers */
+let readerPress = null;
+$("#readerStage").addEventListener("pointerdown", e => {
+  const slipEl = e.target.closest(".rSlip");
+  readerPress = { x: e.clientX, y: e.clientY, slipEl, long: false, moved: false, timer: 0 };
+  if (slipEl && readerView === "READ") {
+    readerPress.timer = setTimeout(() => {
+      if (readerPress && !readerPress.moved) {
+        readerPress.long = true;
+        copyReaderSlip(+slipEl.dataset.s);
+      }
+    }, LONG_PRESS_MS);
+  }
+});
+
+$("#readerStage").addEventListener("pointermove", e => {
+  if (!readerPress) return;
+  if (Math.hypot(e.clientX - readerPress.x, e.clientY - readerPress.y) > MOVE_CANCEL_PX) {
+    readerPress.moved = true;
+    clearTimeout(readerPress.timer);
+  }
+});
+
+$("#readerStage").addEventListener("pointerup", e => {
+  if (!readerPress) return;
+  clearTimeout(readerPress.timer);
+  const dx = e.clientX - readerPress.x, dy = e.clientY - readerPress.y, p = readerPress;
+  readerPress = null;
+
+  if (Math.abs(dx) >= SWIPE_PX && Math.abs(dy) < SWIPE_SLOP) {
+    const dir = dx < 0 ? 1 : -1;
+    if (readerView === "FIELD") {
+      const pages = Math.max(1, Math.ceil(readerFiltered.length / readerPageSize()));
+      if (readerFieldPage + dir >= 0 && readerFieldPage + dir < pages) {
+        readerFieldPage += dir;
+        readerSlideDir = dir;
+        renderReader();
+      }
+      return;
+    }
+    if (readerCaseK + dir >= 0 && readerCaseK + dir < readerFiltered.length) {
+      readerCaseK += dir;
+      readerSlideDir = dir;
+      renderReader();
+    }
+    return;
+  }
+  if (p.moved || p.long) return;
+
+  const card = e.target.closest(".rCaseCard");
+  if (card) {
+    readerCaseK = +card.dataset.k;
+    readerSlideDir = 1;
+    readerView = "READ";
+    renderReader();
+    return;
+  }
+  const slipEl = e.target.closest(".rSlip");
+  if (slipEl && readerView === "READ") toggleReaderHold(+slipEl.dataset.s);
+});
+
+$("#readerStage").addEventListener("pointercancel", () => {
+  if (readerPress) { clearTimeout(readerPress.timer); readerPress = null; }
+});
+$("#readerStage").addEventListener("contextmenu", e => {
+  if (e.target.closest(".rSlip")) e.preventDefault();
+});
+
+$("#rChip").onclick = openReaderTray;
+$("#rShade").onclick = closeReaderTray;
+$("#rTrayClear").onclick = () => { readerTray = []; syncReaderChip(false); renderReaderTray(); renderReader(); };
+$("#rCopyBtn").onclick = async () => {
+  try {
+    await navigator.clipboard.writeText(readerTrayText());
+    toast(`Copied ${readerTray.length} slips`);
+  } catch (e) { toast("Copy unavailable"); }
+};
+$("#rExportBtn").onclick = () => {
+  const blob = new Blob([readerTrayMarkdown()], { type: "text/markdown" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "slipcase-tray.md";
+  a.click();
+  URL.revokeObjectURL(a.href);
+  toast(`Exported ${readerTray.length} slips`);
+};
+
+$("#rTrayList").addEventListener("click", e => {
+  const x = e.target.closest("[data-x]");
+  if (x) { readerTray.splice(+x.dataset.x, 1); syncReaderChip(false); renderReaderTray(); renderReader(); return; }
+  const b = e.target.closest("[data-b]");
+  if (b) b.closest(".rtItem").classList.toggle("open");
+});
+
+/* =========================================================
+   2. TABLE ENGINE (INFINITE 2D VOID SPATIAL WORKBENCH)
+   ========================================================= */
+const MAX_CARDS = 400;
+const MAX_VISIBLE = 180;
+const CARD_W = 280, CARD_H_EST = 230, CULL_PAD = 420;
+const ZOOM_MIN = 0.22, ZOOM_MAX = 2.4;
+const DRAG_SLOP = 5;
+const ROW_BAND = 140;
+const SCHEMA = "slipcase.table/1";
+
+let tableCards = [];
+let tableView = { x: 0, y: 0, z: 1 };
+let tableSelId = null, nextCardId = 1;
+const mountedTableCards = new Map();
+let tableGest = null;
+const tablePts = new Map();
 
 const world = $("#world"), tableStage = $("#tableStage"), grain = $("#grain");
 
@@ -2052,13 +2481,6 @@ function tableStatus(msg) {
 
 let drawerCaseIdx = -1, drawerQueryTokens = [], drawerTimer = 0;
 
-function monolineCaseIcon(count) {
-  const n = Math.min(count, 5);
-  let s = "";
-  for (let i = 0; i < n; i++) s += `<rect x="${20 + i * 7}" y="${16 - i * 3.5}" width="34" height="40" rx="5" fill="#fff" stroke="#0647E5" stroke-width="2.5"/>`;
-  return `<svg viewBox="0 0 96 78" aria-hidden="true">${s}<path d="M14 34 h68 v38 h-68 z" fill="#fff" stroke="#0647E5" stroke-width="2.5"/><rect x="38" y="48" width="20" height="11" fill="#fff" stroke="#0647E5" stroke-width="2.5"/></svg>`;
-}
-
 function placedSet() {
   const s = new Set();
   for (let i = 0; i < tableCards.length; i++) s.add(tableCards[i].noteId + "|" + tableCards[i].f);
@@ -2151,189 +2573,9 @@ $("#dSearch").addEventListener("input", e => {
   }, 110);
 });
 
-/* FIELD ENGINE */
-let fieldViewMode = "FIELD";
-let fieldFilteredIndices = KASTEN_CASES.map((_, k) => k);
-let fieldPage = 0;
-let fieldOpenCaseK = 0, fieldSlipIdx = 0;
-let fieldTray = [];
-let fieldTrayIdx = 0;
-
-function fieldPageSize() { return innerWidth >= 1020 ? 12 : innerWidth >= 680 ? 9 : 6; }
-
-function renderFieldView() {
-  const activeKasten = (selectedCaseIdx === -1) 
-    ? KASTEN_CASES.map((_, k) => k) 
-    : KASTEN_CASES.map((c, k) => ({ c, k })).filter(x => x.c.case_idx === selectedCaseIdx).map(x => x.k);
-
-  const q = $("#search").value.trim().toLowerCase();
-  const qTokens = q ? q.split(/\s+/).filter(Boolean) : [];
-
-  fieldFilteredIndices = activeKasten.filter(k => {
-    if (!qTokens.length) return true;
-    return qTokens.every(t => KASTEN_CASES[k].low.includes(t));
-  });
-
-  const stage = $("#fieldStageInner");
-
-  if (fieldViewMode === "FIELD") {
-    const ps = fieldPageSize(), pages = Math.max(1, Math.ceil(fieldFilteredIndices.length / ps));
-    fieldPage = Math.min(Math.max(fieldPage, 0), pages - 1);
-    if (!fieldFilteredIndices.length) {
-      stage.innerHTML = `<div class="emptyField">NOTHING IN THE FIELD MATCHES</div>`;
-    } else {
-      const start = fieldPage * ps, end = Math.min(start + ps, fieldFilteredIndices.length);
-      let html = "";
-      for (let k = start; k < end; k++) {
-        const c = KASTEN_CASES[fieldFilteredIndices[k]], n = ALL_NOTES[c.i];
-        html += `
-          <button class="caseCard" data-k="${k}">
-            ${monolineCaseIcon(c.slips.length)}
-            <span class="caseId">${esc(n.id)}</span>
-            <span class="caseTopic">${esc(n.topic)} &middot; ${esc(n.type)}</span>
-            <span class="caseCount">${c.slips.length} SLIPS</span>
-          </button>
-        `;
-      }
-      stage.innerHTML = `<div class="fieldGrid">${html}</div>`;
-    }
-    $("#fPosLabel").innerHTML = `FIELD <b>${fieldFilteredIndices.length ? fieldPage + 1 : 0} / ${fieldFilteredIndices.length ? pages : 0}</b> &middot; ${fieldFilteredIndices.length} CASES`;
-    renderFieldTicks(fieldPage, pages);
-    $("#fPrevBtn").disabled = fieldPage <= 0;
-    $("#fNextBtn").disabled = fieldPage >= pages - 1;
-    $("#fPrevLabel").textContent = "PREV";
-    $("#fNextLabel").textContent = "NEXT";
-    $("#fActBtn").textContent = "TRAY · " + fieldTray.length;
-    $("#fActBtn").classList.toggle("filled", fieldTray.length > 0);
-  } 
-  else if (fieldViewMode === "SLIP") {
-    const c = KASTEN_CASES[fieldFilteredIndices[fieldOpenCaseK]], n = ALL_NOTES[c.i];
-    fieldSlipIdx = Math.min(Math.max(fieldSlipIdx, 0), c.slips.length - 1);
-    const slip = c.slips[fieldSlipIdx], held = inFieldTray(c.i, slip.f) >= 0;
-    const kind = CODE_FIELD.test(slip.f) ? "code" : HEAD_FIELD.test(slip.f) ? "head" : "text";
-
-    stage.innerHTML = `
-      <div class="slipWrap">
-        <article class="slip${held ? " collected" : ""}" data-kind="${kind}">
-          <div class="slipTab">${esc(slip.f)}</div>
-          <div class="slipMeta"><b>${esc(n.id)}</b><span>${esc(n.type)}</span><span>${esc(n.topic)}</span><span>${esc(n.case_name)}</span></div>
-          <div class="slipBody">${esc(slip.text)}</div>
-        </article>
-        <button class="zone prev" data-fnav="-1" aria-label="Previous slip"></button>
-        <button class="zone next" data-fnav="1" aria-label="Next slip"></button>
-      </div>
-    `;
-    $("#fPosLabel").innerHTML = `<b>${esc(n.id)}</b> &middot; SLIP <b>${fieldSlipIdx + 1} / ${c.slips.length}</b>`;
-    renderFieldTicks(fieldSlipIdx, c.slips.length);
-    $("#fPrevBtn").disabled = false;
-    $("#fNextBtn").disabled = false;
-    $("#fPrevLabel").textContent = "SLIP";
-    $("#fNextLabel").textContent = "SLIP";
-    $("#fActBtn").textContent = held ? "COLLECTED" : "COLLECT";
-    $("#fActBtn").classList.toggle("filled", held);
-  }
-  else if (fieldViewMode === "TRAY") {
-    if (!fieldTray.length) { fieldViewMode = "FIELD"; renderFieldView(); return; }
-    fieldTrayIdx = Math.min(Math.max(fieldTrayIdx, 0), fieldTray.length - 1);
-    const t = fieldTray[fieldTrayIdx], n = ALL_NOTES[t.i], c = KASTEN_CASES[t.i];
-    let slip = null;
-    for (let s = 0; s < c.slips.length; s++) if (c.slips[s].f === t.f) { slip = c.slips[s]; break; }
-    const kind = CODE_FIELD.test(slip.f) ? "code" : HEAD_FIELD.test(slip.f) ? "head" : "text";
-
-    stage.innerHTML = `
-      <div class="slipWrap">
-        <article class="slip collected" data-kind="${kind}">
-          <div class="slipTab">${esc(slip.f)}</div>
-          <div class="slipMeta"><b>${esc(n.id)}</b><span>${esc(n.type)}</span><span>${esc(n.topic)}</span></div>
-          <div class="slipBody">${esc(slip ? slip.text : "—")}</div>
-        </article>
-      </div>
-    `;
-    $("#fPosLabel").innerHTML = `TRAY &middot; SLIP <b>${fieldTrayIdx + 1} / ${fieldTray.length}</b>`;
-    renderFieldTicks(fieldTrayIdx, fieldTray.length);
-    $("#fPrevBtn").disabled = fieldTrayIdx <= 0;
-    $("#fNextBtn").disabled = fieldTrayIdx >= fieldTray.length - 1;
-    $("#fPrevLabel").textContent = "PREV";
-    $("#fNextLabel").textContent = "NEXT";
-    $("#fActBtn").textContent = "COPY ALL";
-    $("#fActBtn").classList.add("filled");
-  }
-}
-
-function inFieldTray(i, f) {
-  for (let t = 0; t < fieldTray.length; t++) if (fieldTray[t].i === i && fieldTray[t].f === f) return t;
-  return -1;
-}
-
-function renderFieldTicks(cur, total) {
-  const el = $("#fTicks");
-  if (total < 2 || total > 24) { el.innerHTML = ""; return; }
-  let html = "";
-  for (let i = 0; i < total; i++) html += `<span class="tick${i === cur ? " on" : ""}"></span>`;
-  el.innerHTML = html;
-}
-
-function navField(dir) {
-  if (fieldViewMode === "FIELD") {
-    fieldPage += dir;
-    renderFieldView();
-  } else if (fieldViewMode === "SLIP") {
-    const len = KASTEN_CASES[fieldFilteredIndices[fieldOpenCaseK]].slips.length;
-    fieldSlipIdx = (fieldSlipIdx + dir + len) % len;
-    renderFieldView();
-  } else {
-    fieldTrayIdx += dir;
-    renderFieldView();
-  }
-}
-
-function actField() {
-  if (fieldViewMode === "FIELD") {
-    if (fieldTray.length) { fieldViewMode = "TRAY"; fieldTrayIdx = 0; renderFieldView(); }
-    return;
-  }
-  if (fieldViewMode === "SLIP") {
-    const c = KASTEN_CASES[fieldFilteredIndices[fieldOpenCaseK]], slip = c.slips[fieldSlipIdx], at = inFieldTray(c.i, slip.f);
-    if (at >= 0) fieldTray.splice(at, 1);
-    else fieldTray.push({ i: c.i, f: slip.f });
-    renderFieldView();
-    return;
-  }
-  copyFieldTray();
-}
-
-async function copyFieldTray() {
-  let out = "";
-  for (let t = 0; t < fieldTray.length; t++) {
-    const e = fieldTray[t];
-    out += ALL_NOTES[e.i].id + " — " + e.f + "\n" + valueFor(ALL_NOTES[e.i], e.f) + "\n\n";
-  }
-  try {
-    await navigator.clipboard.writeText(out.trimEnd());
-    toast(`Copied ${fieldTray.length} slips`);
-  } catch (err) {
-    toast("Copy unavailable");
-  }
-}
-
-$("#fieldStageInner").addEventListener("click", e => {
-  const card = e.target.closest(".caseCard");
-  if (card) {
-    fieldOpenCaseK = +card.dataset.k;
-    fieldSlipIdx = 0;
-    fieldViewMode = "SLIP";
-    renderFieldView();
-    return;
-  }
-  const z = e.target.closest(".zone");
-  if (z) navField(+z.dataset.fnav);
-});
-
-$("#fPrevBtn").onclick = () => navField(-1);
-$("#fNextBtn").onclick = () => navField(1);
-$("#fActBtn").onclick = actField;
-
-/* LINES MODULE */
+/* =========================================================
+   3. LINES MODULE (ROW-BY-ROW INSPECTOR)
+   ========================================================= */
 function rowKey(id, field) { return id + "|||" + field; }
 function unpack(key) { const i = key.indexOf("|||"); return [key.slice(0,i), key.slice(i+3)]; }
 
@@ -2507,7 +2749,9 @@ $("#stackBtn").onclick = openStack;
 $("#stackBack").onclick = closeStack;
 $("#copyBtn").onclick = copySelectedLines;
 
-/* GRAPH ENGINE */
+/* =========================================================
+   4. GRAPH ENGINE
+   ========================================================= */
 let graphMode = "all";
 let graphAnimId = null, graphNodes = [], graphLinks = [];
 let graphTransform = { x: 0, y: 0, k: 1 };
@@ -2740,13 +2984,13 @@ function showGraphInspector(n) {
     $("#graphInspTitle").textContent = n.label;
     $("#graphInspDesc").textContent = `Workspace containing ${n.card_count} atomic zettel slips and ${n.pdf_count} research PDFs.`;
     $("#graphInspOpenBtn").onclick = () => { selectCase(n.case_idx); setTab("lines"); };
-    $("#graphInspFieldBtn").onclick = () => { selectCase(n.case_idx); setTab("field"); };
+    $("#graphInspReaderBtn").onclick = () => { selectCase(n.case_idx); setTab("reader"); };
   } else {
     $("#graphInspAccession").textContent = `SLIP · ${n.card_type} · ${n.topic}`;
     $("#graphInspTitle").textContent = n.label;
     $("#graphInspDesc").textContent = `Contained in slipcase #${n.case_idx + 1}.`;
     $("#graphInspOpenBtn").onclick = () => { selectCase(n.case_idx); setTab("lines"); };
-    $("#graphInspFieldBtn").onclick = () => { selectCase(n.case_idx); setTab("field"); };
+    $("#graphInspReaderBtn").onclick = () => { selectCase(n.case_idx); setTab("reader"); };
   }
 }
 
@@ -2791,7 +3035,7 @@ function renderMatrix() {
     clusterCases.forEach(c => {
       const idx = CASES_DATA.findIndex(x => x.id === c.id);
       html += `
-        <div class="matrix-case-row" onclick="selectCase(${idx}); setTab('field');">
+        <div class="matrix-case-row" onclick="selectCase(${idx}); setTab('reader');">
           <div class="matrix-case-accession">${esc(c.accession)}</div>
           <div class="matrix-case-name">${esc(c.name)}</div>
           <div class="matrix-case-counts">${c.card_count} SLIPS &middot; ${c.pdf_count} PDFS &rarr;</div>
@@ -3005,7 +3249,7 @@ window.downloadPromptFile = function() {
 
 /* SEARCH & SHORTCUTS */
 $("#search").addEventListener("input", () => {
-  if (currentTab === "field") { fieldPage = 0; renderFieldView(); }
+  if (currentTab === "reader") { readerFieldPage = 0; renderReader(); }
   if (currentTab === "lines") renderLines();
   if (currentTab === "pdfs") renderPdfs();
 });
@@ -3020,14 +3264,28 @@ document.addEventListener("keydown", e => {
     closePdfModal();
     closeGraphInspector();
     closeTableDrawer();
+    closeReaderTray();
     window.closeThreeInspector?.();
     $("#filterScrim").classList.remove("open");
     $("#caseScrim").classList.remove("open");
   }
-  if (currentTab === "field") {
-    if (e.key === "ArrowRight" || e.key === "j") navField(1);
-    if (e.key === "ArrowLeft" || e.key === "k") navField(-1);
-    if (e.key === "Enter" && fieldViewMode === "SLIP") actField();
+  if (currentTab === "reader") {
+    if (e.key === "t" && readerTray.length) { readerTrayOpen ? closeReaderTray() : openReaderTray(); }
+    const dir = e.key === "ArrowRight" || e.key === "j" ? 1 : e.key === "ArrowLeft" || e.key === "k" ? -1 : 0;
+    if (dir) {
+      if (readerView === "FIELD") {
+        const pages = Math.max(1, Math.ceil(readerFiltered.length / readerPageSize()));
+        if (readerFieldPage + dir >= 0 && readerFieldPage + dir < pages) {
+          readerFieldPage += dir;
+          readerSlideDir = dir;
+          renderReader();
+        }
+      } else if (readerCaseK + dir >= 0 && readerCaseK + dir < readerFiltered.length) {
+        readerCaseK += dir;
+        readerSlideDir = dir;
+        renderReader();
+      }
+    }
   }
   if (currentTab === "table") {
     if (e.key === "f") fitTable();
@@ -3074,8 +3332,9 @@ function toast(msg) {
   }, 950);
 })();
 
+syncReaderChip(false);
 updateActiveCaseLabel();
-setTab("table");
+setTab("reader");
 })();
 </script>
 
@@ -3288,7 +3547,7 @@ function initThree() {
     document.getElementById("threeInspTitle").textContent = c.name;
     document.getElementById("threeInspDesc").textContent = `Physical slipcase workspace holding ${c.card_count} zettels and ${c.pdf_count} research PDFs.`;
     document.getElementById("threeInspLinesBtn").onclick = () => { selectCase(cIdx); setTab("lines"); };
-    document.getElementById("threeInspFieldBtn").onclick = () => { selectCase(cIdx); setTab("field"); };
+    document.getElementById("threeInspReaderBtn").onclick = () => { selectCase(cIdx); setTab("reader"); };
   }
 
   window.closeThreeInspector = () => {
@@ -3323,4 +3582,4 @@ html_rendered = html_template.replace('/* DATA_CASES */', json.dumps(cases_data)
 with open(os.path.join(BASE_DIR, 'index.html'), 'w', encoding='utf-8') as f:
     f.write(html_rendered)
 
-print('Successfully re-indexed and wrote optimized index.html and slipcases.json.')
+print('Successfully re-indexed and wrote index.html with Reader v3, Table, Lines, 3D, Graph, Matrix, PDFs, Maps, and Prompts.')
