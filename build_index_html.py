@@ -918,10 +918,7 @@ mark { background: var(--pale); color: inherit; }
   line-height: 1.46;
   white-space: pre-wrap;
   overflow-wrap: break-word;
-  display: -webkit-box;
-  -webkit-line-clamp: 9;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  display: block;
 }
 .card.open .cBody { -webkit-line-clamp: unset; display: block; }
 .card[data-k="head"] .cBody { font-family: var(--sans); font-weight: 640; letter-spacing: -.015em; font-size: 14.5px; line-height: 1.34; }
@@ -1448,7 +1445,10 @@ mark { background: var(--pale); color: inherit; }
 
       <div class="table-bar" id="tableBotbar">
         <div class="tgrp">
-          <button class="tbtn key" id="drawerBtn">SLIPCASES</button>
+          <button class="tbtn key" id="launchAllTableBtn">LAUNCH ALL (1,244)</button>
+          <button class="tbtn" id="launchThemeTableBtn">BY THEMES</button>
+          <button class="tbtn" id="launchTypeTableBtn">BY FIELD TYPE</button>
+          <button class="tbtn" id="drawerBtn">DEAL CASE...</button>
           <button class="tbtn" id="readBtn">READ ORDER</button>
         </div>
         <div class="tgrp" id="selGrp" style="display:none">
@@ -2136,8 +2136,8 @@ $("#rTrayList").addEventListener("click", e => {
 /* =========================================================
    2. TABLE ENGINE (INFINITE 2D VOID SPATIAL WORKBENCH)
    ========================================================= */
-const MAX_CARDS = 400;
-const MAX_VISIBLE = 180;
+const MAX_CARDS = 3000;
+const MAX_VISIBLE = 2000;
 const CARD_W = 280, CARD_H_EST = 230, CULL_PAD = 420;
 const ZOOM_MIN = 0.22, ZOOM_MAX = 2.4;
 const DRAG_SLOP = 5;
@@ -2574,6 +2574,116 @@ $("#dSearch").addEventListener("input", e => {
     renderTableDrawer();
   }, 110);
 });
+
+function launchAllTable() {
+  world.innerHTML = "";
+  tableCards = [];
+  mountedTableCards.clear();
+  nextCardId = 1;
+
+  let col = 0;
+  for (let cIdx = 0; cIdx < KASTEN_CASES.length; cIdx++) {
+    const caseObj = KASTEN_CASES[cIdx];
+    const slips = caseObj.slips;
+    for (let s = 0; s < slips.length; s++) {
+      const posX = col * (CARD_W + 30);
+      const posY = s * 240;
+      tableCards.push({
+        id: nextCardId++,
+        noteId: caseObj.id,
+        f: slips[s].f,
+        x: posX,
+        y: posY,
+        open: true
+      });
+    }
+    col++;
+  }
+  cullTable();
+  fitTable();
+  tableStatus("LAUNCHED ALL 1,244 SLIPS ACROSS 31 SPATIAL COLUMNS");
+}
+
+function launchThemeTable() {
+  world.innerHTML = "";
+  tableCards = [];
+  mountedTableCards.clear();
+  nextCardId = 1;
+
+  const clusters = [
+    { title: "Prompt Semantics", match: /prompt|semantic|hidden|machinery/i },
+    { title: "Mycelium & Relational", match: /mycelium|sole|field|relational|freedom/i },
+    { title: "Deep Lineage", match: /lineage|curriculum|unlived|mastery|sovereignty/i },
+    { title: "Theory Lag & Casino", match: /theory|lag|casino|fountain|noise|sculptors/i },
+    { title: "Primitive Construction", match: /primitive|construction|house|language|suburb/i }
+  ];
+
+  clusters.forEach((clust, clustIdx) => {
+    let cardInClust = 0;
+    ALL_NOTES.forEach((n) => {
+      const blob = (n.title + " " + n.topic + " " + n.source).toLowerCase();
+      if (clust.match.test(blob) || clustIdx === 4) {
+        FIELD_ORDER.forEach((f) => {
+          if (valueFor(n, f)) {
+            const col = Math.floor(cardInClust / 6);
+            const row = cardInClust % 6;
+            const posX = clustIdx * 2400 + col * (CARD_W + 30);
+            const posY = row * 240;
+            tableCards.push({
+              id: nextCardId++,
+              noteId: n.id,
+              f: f,
+              x: posX,
+              y: posY,
+              open: true
+            });
+            cardInClust++;
+          }
+        });
+      }
+    });
+  });
+
+  cullTable();
+  fitTable();
+  tableStatus("LAUNCHED SLIPS INTO 5 THEMATIC CLUSTERS");
+}
+
+function launchTypeTable() {
+  world.innerHTML = "";
+  tableCards = [];
+  mountedTableCards.clear();
+  nextCardId = 1;
+
+  const targetFields = ["QUESTION", "PASSAGE", "RESEARCH OBJECT", "FORMAL SHIFT", "MECHANISM"];
+
+  targetFields.forEach((f, fIdx) => {
+    let row = 0;
+    ALL_NOTES.forEach((n) => {
+      if (valueFor(n, f)) {
+        const posX = fIdx * (CARD_W + 60);
+        const posY = row * 240;
+        tableCards.push({
+          id: nextCardId++,
+          noteId: n.id,
+          f: f,
+          x: posX,
+          y: posY,
+          open: true
+        });
+        row++;
+      }
+    });
+  });
+
+  cullTable();
+  fitTable();
+  tableStatus("LAUNCHED SLIPS BY FIELD TYPOLOGY");
+}
+
+if ($("#launchAllTableBtn")) $("#launchAllTableBtn").onclick = launchAllTable;
+if ($("#launchThemeTableBtn")) $("#launchThemeTableBtn").onclick = launchThemeTable;
+if ($("#launchTypeTableBtn")) $("#launchTypeTableBtn").onclick = launchTypeTable;
 
 /* =========================================================
    3. LINES MODULE (ROW-BY-ROW INSPECTOR)
