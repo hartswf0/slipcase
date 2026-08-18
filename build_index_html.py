@@ -280,8 +280,8 @@ html_template = r"""<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#F7F8FA">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#ffffff">
 <link rel="icon" type="image/png" href="slipcase.png">
 <title>SLIPCASE — Portable Research Field</title>
 <style>
@@ -291,52 +291,79 @@ html_template = r"""<!doctype html>
   --blue-soft: #E7EEFF;
   --blue-hover: #053bc2;
   --paper: #FFFFFF;
+  --field: #F7F8FA;
   --bg: #F7F8FA;
   --ink: #111318;
+  --grey: #9CA3AF;
   --muted: #9CA3AF;
   --muted-dark: #6B7280;
-  --line: #E5E7EB;
-  --line-dark: #D1D5DB;
+  --pale: #E7EEFF;
+  --line: 1.5px;
+  --border: #E5E7EB;
   --code-bg: #F3F4F6;
   --top: env(safe-area-inset-top);
   --bottom: env(safe-area-inset-bottom);
+  --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --serif: "Source Serif 4", ui-serif, Georgia, serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; margin: 0; padding: 0; }
 html, body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: var(--bg);
+  background: var(--paper);
   color: var(--ink);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--sans);
   -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
 }
 button, input, select { font: inherit; color: inherit; }
-button { border: 0; background: none; cursor: pointer; }
+button { border: 0; background: none; cursor: pointer; padding: 0; }
+button:focus-visible, input:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 
 #app {
   position: fixed;
   inset: 0;
-  background: var(--bg);
+  background: var(--paper);
   display: flex;
   flex-direction: column;
 }
 
-/* Master Header */
+/* -- LOADER: The mark draws itself, slips rise -- */
+#loader {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  transition: opacity .38s ease;
+}
+#loader.done { opacity: 0; pointer-events: none; }
+#loader svg { width: 132px; height: auto; }
+#loader .ln { fill: none; stroke: var(--blue); stroke-width: 2.4; stroke-linejoin: round; stroke-dasharray: 240; stroke-dashoffset: 240; animation: draw .62s ease forwards; }
+#loader .sl { fill: #fff; opacity: 0; animation: rise .5s ease forwards; }
+#loader .word { font-size: 11px; letter-spacing: .42em; color: var(--blue); text-transform: uppercase; opacity: 0; animation: fade .5s ease .5s forwards; font-weight: 600; }
+#loader .sub { font-family: var(--mono); font-size: 9px; letter-spacing: .14em; color: var(--grey); opacity: 0; animation: fade .5s ease .72s forwards; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes rise { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fade { to { opacity: 1; } }
+
+/* -- MASTER HEADER -- */
 header {
-  position: absolute;
-  z-index: 30;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: calc(62px + var(--top));
-  padding: var(--top) 16px 0;
+  flex: 0 0 auto;
+  padding: calc(8px + var(--top)) 16px 8px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 12px;
   align-items: center;
   background: var(--paper);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1.5px solid var(--pale);
+  z-index: 40;
 }
 .brand-group {
   display: flex;
@@ -345,8 +372,8 @@ header {
   cursor: pointer;
 }
 .brand-logo-svg {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   stroke: var(--blue);
   stroke-width: 1.6;
   fill: none;
@@ -356,17 +383,18 @@ header {
   flex-direction: column;
 }
 .brand-wordmark {
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 900;
-  letter-spacing: .14em;
+  letter-spacing: .16em;
   color: var(--blue);
   line-height: 1.1;
+  text-transform: uppercase;
 }
 .brand-subtitle {
-  font-size: 8px;
+  font-size: 7.5px;
   font-weight: 800;
   letter-spacing: .1em;
-  color: var(--muted-dark);
+  color: var(--grey);
   text-transform: uppercase;
   margin-top: 2px;
 }
@@ -374,47 +402,48 @@ header {
 .search-wrap {
   position: relative;
   width: 100%;
-  max-width: 520px;
+  max-width: 480px;
 }
 .search {
   width: 100%;
-  height: 40px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--bg);
-  padding: 0 32px 0 12px;
+  height: 38px;
+  border: 1.5px solid var(--pale);
+  border-radius: 6px;
+  background: var(--paper);
+  padding: 0 32px 0 11px;
   outline: 0;
-  font-size: 13px;
+  font-size: 12.5px;
+  font-family: var(--mono);
   color: var(--ink);
   transition: all .15s ease;
 }
 .search:focus {
   border-color: var(--blue);
-  background: var(--paper);
-  box-shadow: 0 0 0 3px var(--blue-soft);
+  box-shadow: 0 0 0 2px var(--pale);
 }
+.search::placeholder { color: var(--grey); }
 .search-shortcut {
   position: absolute;
   right: 10px;
-  top: 11px;
+  top: 10px;
   font-size: 10px;
-  font-family: ui-monospace, SFMono-Regular, monospace;
-  color: var(--muted);
+  font-family: var(--mono);
+  color: var(--grey);
   background: var(--paper);
-  border: 1px solid var(--line);
+  border: 1px solid var(--border);
   border-radius: 4px;
   padding: 1px 5px;
   pointer-events: none;
 }
 
 .accession-badge-btn {
-  height: 38px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--bg);
-  padding: 0 12px;
-  font-family: ui-monospace, SFMono-Regular, monospace;
-  font-size: 10px;
+  height: 36px;
+  border: 1.5px solid var(--pale);
+  border-radius: 6px;
+  background: var(--paper);
+  padding: 0 10px;
+  font-family: var(--mono);
+  font-size: 9.5px;
   font-weight: 800;
   letter-spacing: .06em;
   color: var(--blue);
@@ -424,26 +453,23 @@ header {
   white-space: nowrap;
 }
 .accession-badge-btn:hover {
-  background: var(--blue-soft);
+  background: var(--pale);
   border-color: var(--blue);
 }
 
-/* Master Triad Methodology Navigation (PRESERVE · RELATE · RETURN) */
+/* -- METHODOLOGY TRIAD NAVIGATION (PRESERVE · RELATE · RETURN) -- */
 .methodology-bar {
-  position: absolute;
-  z-index: 29;
-  left: 0;
-  right: 0;
-  top: calc(62px + var(--top));
-  height: 48px;
+  flex: 0 0 auto;
+  height: 44px;
   padding: 0 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: var(--paper);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1.5px solid var(--pale);
   overflow-x: auto;
   scrollbar-width: none;
+  z-index: 39;
 }
 .methodology-bar::-webkit-scrollbar { display: none; }
 
@@ -453,20 +479,21 @@ header {
   gap: 4px;
 }
 .nav-pillar-label {
-  font-size: 8.5px;
+  font-size: 8px;
   font-weight: 900;
-  letter-spacing: .12em;
-  color: var(--muted);
+  letter-spacing: .14em;
+  color: var(--grey);
   text-transform: uppercase;
-  margin-right: 6px;
-  padding-left: 4px;
+  margin-right: 4px;
+  padding-left: 2px;
 }
 .nav-tab-btn {
-  border: 1px solid transparent;
-  border-radius: 6px;
-  padding: 6px 11px;
-  font-size: 10px;
-  font-weight: 850;
+  border: 1.5px solid transparent;
+  border-radius: 5px;
+  padding: 5px 9px;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 800;
   letter-spacing: .06em;
   color: var(--muted-dark);
   text-transform: uppercase;
@@ -475,7 +502,7 @@ header {
 }
 .nav-tab-btn:hover {
   color: var(--ink);
-  background: var(--bg);
+  background: var(--field);
 }
 .nav-tab-btn.on {
   background: var(--blue);
@@ -484,36 +511,34 @@ header {
 }
 .nav-divider {
   width: 1px;
-  height: 18px;
-  background: var(--line);
-  margin: 0 8px;
+  height: 16px;
+  background: var(--pale);
+  margin: 0 6px;
 }
 
-/* Sub-toolbar (Filter Chips for LINES) */
+/* -- SUB-TOOLBAR (Filter Chips for LINES) -- */
 .subtoolbar {
-  position: absolute;
-  z-index: 28;
-  left: 0;
-  right: 0;
-  top: calc(110px + var(--top));
-  height: 38px;
+  flex: 0 0 auto;
+  height: 36px;
   padding: 0 16px;
-  display: flex;
+  display: none;
   align-items: center;
   gap: 5px;
   overflow-x: auto;
-  background: var(--bg);
-  border-bottom: 1px solid var(--line);
+  background: var(--field);
+  border-bottom: 1px solid var(--border);
   scrollbar-width: none;
+  z-index: 38;
 }
 .subtoolbar::-webkit-scrollbar { display: none; }
 .subchip {
   flex: 0 0 auto;
-  border: 1px solid var(--line);
+  border: 1px solid var(--border);
   border-radius: 4px;
   background: var(--paper);
-  padding: 4px 8px;
-  font-size: 8.5px;
+  padding: 3px 7px;
+  font-family: var(--mono);
+  font-size: 8px;
   font-weight: 850;
   letter-spacing: .05em;
   color: var(--muted-dark);
@@ -525,40 +550,356 @@ header {
   border-color: var(--ink);
 }
 
-/* Main Viewport */
+/* -- MAIN STAGE CONTAINER -- */
 main {
+  flex: 1 1 auto;
+  position: relative;
+  overflow: hidden;
+  background: var(--field);
+}
+.pane {
+  display: none;
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: calc(148px + var(--top));
-  bottom: calc(14px + var(--bottom));
-  left: 0;
-  right: 0;
+  inset: 0;
   overflow-y: auto;
-  background: var(--bg);
-  scrollbar-width: none;
+  scrollbar-width: thin;
 }
-main.top-short {
-  top: calc(110px + var(--top));
-}
-main::-webkit-scrollbar { display: none; }
-
-/* View Panes */
-.pane { display: none; width: 100%; height: 100%; }
 .pane.active { display: block; }
+.pane.no-scroll { overflow: hidden; }
 
 /* =========================================================
-   1. LINES MODE (ZETTEL LINES INSPECTOR)
+   1. TABLE VIEW (INFINITE 2D VOID SPATIAL WORKBENCH)
+   ========================================================= */
+#tableStage {
+  position: absolute;
+  inset: 0;
+  background: var(--paper);
+  touch-action: none;
+  overflow: hidden;
+  cursor: grab;
+}
+#tableStage.panning { cursor: grabbing; }
+#grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle at 1px 1px, rgba(6,71,229,.16) 1px, transparent 0);
+  background-repeat: repeat;
+}
+#world {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  transform-origin: 0 0;
+  will-change: transform;
+}
+.reg { position: absolute; pointer-events: none; }
+.reg i { position: absolute; background: var(--pale); }
+.reg .h { width: 34px; height: 1px; }
+.reg .v { width: 1px; height: 34px; }
+
+/* SLIP CARD on TABLE */
+.card {
+  position: absolute;
+  width: 280px;
+  background: var(--paper);
+  border: 1.5px solid var(--pale);
+  border-radius: 9px 9px 0 0;
+  box-shadow: 0 1px 0 rgba(17,19,24,.04);
+  display: flex;
+  flex-direction: column;
+  touch-action: none;
+  user-select: none;
+}
+.card.on { border-color: var(--blue); box-shadow: 0 6px 22px rgba(6,71,229,.14); }
+.card.drag { box-shadow: 0 14px 34px rgba(6,71,229,.20); }
+.card.landing { animation: land .34s cubic-bezier(.2,.9,.25,1); }
+@keyframes land { from { opacity: 0; transform: translateY(-16px) scale(.94); } to { opacity: 1; transform: none; } }
+.cTab {
+  position: absolute;
+  top: -14px;
+  left: 14px;
+  max-width: 74%;
+  background: var(--paper);
+  border: 1.5px solid var(--pale);
+  border-bottom: 0;
+  border-radius: 6px 6px 0 0;
+  padding: 4px 10px 7px;
+  font-family: var(--mono);
+  font-size: 8.5px;
+  letter-spacing: .1em;
+  color: var(--blue);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card.on .cTab { border-color: var(--blue); }
+.cMeta {
+  padding: 11px 13px 7px;
+  border-bottom: 1px solid var(--pale);
+  font-family: var(--mono);
+  font-size: 8.5px;
+  letter-spacing: .06em;
+  color: var(--grey);
+}
+.cMeta b { color: var(--blue); font-weight: 500; }
+.cBody {
+  padding: 11px 13px 13px;
+  font-family: var(--serif);
+  font-size: 13.5px;
+  line-height: 1.46;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card.open .cBody { -webkit-line-clamp: unset; display: block; }
+.card[data-k="head"] .cBody { font-family: var(--sans); font-weight: 640; letter-spacing: -.015em; font-size: 14.5px; line-height: 1.34; }
+.card[data-k="code"] .cBody { font-family: var(--mono); font-size: 10.5px; line-height: 1.55; background: var(--field); }
+
+/* Table Floating Toolbars */
+.table-bar {
+  position: absolute;
+  z-index: 60;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+#tableTopbar {
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  justify-content: space-between;
+}
+#tableBotbar {
+  bottom: calc(10px + var(--bottom));
+  left: 10px;
+  right: 10px;
+  justify-content: space-between;
+}
+.tgrp {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  background: rgba(255,255,255,.94);
+  backdrop-filter: blur(6px);
+  padding: 4px;
+  border: 1.5px solid var(--pale);
+  border-radius: 6px;
+}
+.tbtn {
+  height: 34px;
+  padding: 0 10px;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  color: var(--ink);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 4px;
+}
+.tbtn:hover, .tbtn:active { color: var(--blue); }
+.tbtn.key { background: var(--blue); color: var(--paper); }
+.tbtn.key:hover { color: var(--paper); }
+.tbtn:disabled { opacity: .32; }
+#tableStatus {
+  font-family: var(--mono);
+  font-size: 8.5px;
+  letter-spacing: .08em;
+  color: var(--grey);
+  padding: 0 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 44vw;
+}
+
+/* =========================================================
+   2. FIELD VIEW (NON-SCROLLING UNIT-PER-SCREEN & SLIP DECK)
+   ========================================================= */
+#fieldStage {
+  position: absolute;
+  inset: 0;
+  background: var(--field);
+  display: flex;
+  flex-direction: column;
+}
+.fieldViewWrap {
+  flex: 1 1 auto;
+  position: relative;
+  overflow: hidden;
+}
+.fieldGrid {
+  position: absolute;
+  inset: 0;
+  padding: 16px 14px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 12px;
+}
+@media(min-width:680px) {
+  .fieldGrid { grid-template-columns: repeat(3, 1fr); padding: 20px; gap: 14px; }
+}
+@media(min-width:1020px) {
+  .fieldGrid { grid-template-columns: repeat(4, 1fr); max-width: 1180px; left: 50%; transform: translateX(-50%); width: 100%; }
+}
+.caseCard {
+  background: var(--paper);
+  border: 1.5px solid var(--pale);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+  min-height: 0;
+  text-align: center;
+  transition: all .12s ease;
+}
+.caseCard:hover, .caseCard:active { border-color: var(--blue); box-shadow: 0 4px 14px rgba(6,71,229,.08); }
+.caseCard svg { width: min(58%, 96px); height: auto; flex: 0 1 auto; }
+.caseId { font-family: var(--mono); font-size: 9.5px; font-weight: 800; letter-spacing: .08em; color: var(--blue); }
+.caseTopic { font-size: 11px; font-weight: 700; line-height: 1.25; color: var(--ink); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; max-width: 100%; }
+.caseCount { font-family: var(--mono); font-size: 8.5px; color: var(--grey); letter-spacing: .06em; }
+.emptyField { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--grey); font-family: var(--mono); font-size: 11.5px; letter-spacing: .06em; }
+
+/* SLIP VIEW inside FIELD */
+.slipWrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 24px 16px 14px;
+}
+.slip {
+  position: relative;
+  width: min(680px, 100%);
+  background: var(--paper);
+  border: 1.5px solid var(--blue);
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+.slipTab {
+  position: absolute;
+  top: -15px;
+  left: 18px;
+  max-width: 70%;
+  background: var(--paper);
+  border: 1.5px solid var(--blue);
+  border-radius: 7px 7px 0 0;
+  border-bottom: 0;
+  padding: 4px 12px 7px;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  color: var(--blue);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.slipMeta {
+  flex: 0 0 auto;
+  padding: 14px 18px 10px;
+  border-bottom: 1.5px solid var(--pale);
+  font-family: var(--mono);
+  font-size: 9.5px;
+  letter-spacing: .06em;
+  color: var(--grey);
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.slipMeta b { color: var(--blue); font-weight: 600; }
+.slipBody {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  padding: 16px 18px 18px;
+  font-family: var(--serif);
+  font-size: 17.5px;
+  line-height: 1.52;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  scrollbar-width: thin;
+}
+.slip[data-kind="head"] .slipBody { font-family: var(--sans); font-weight: 650; letter-spacing: -.02em; font-size: 20px; line-height: 1.3; }
+.slip[data-kind="code"] .slipBody { font-family: var(--mono); font-size: 11.5px; line-height: 1.6; background: var(--field); }
+.slip.collected { background: var(--pale); }
+.slip.collected .slipBody { background: transparent; }
+
+/* Zone touch pagers */
+.zone { position: absolute; top: 0; bottom: 0; width: 17%; z-index: 5; }
+.zone.prev { left: 0; }
+.zone.next { right: 0; }
+
+/* Field Footer */
+.fieldFooter {
+  flex: 0 0 auto;
+  padding: 8px 14px calc(8px + var(--bottom));
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  align-items: center;
+  border-top: 1.5px solid var(--pale);
+  background: var(--paper);
+  z-index: 10;
+}
+.navBtn {
+  height: 38px;
+  min-width: 52px;
+  border: 1.5px solid var(--pale);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 12px;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  color: var(--ink);
+}
+.navBtn:disabled { opacity: .3; }
+.navBtn:not(:disabled):hover, .navBtn:not(:disabled):active { border-color: var(--blue); color: var(--blue); }
+.chev { width: 7px; height: 7px; border-left: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); flex: 0 0 auto; }
+.chev.r { transform: rotate(225deg); }
+.fpos { display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 0; }
+.fposLabel { font-family: var(--mono); font-size: 9.5px; letter-spacing: .12em; color: var(--ink); white-space: nowrap; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+.fposLabel b { color: var(--blue); font-weight: 600; }
+.ticks { display: flex; gap: 4px; align-items: center; }
+.tick { width: 5px; height: 5px; border: 1px solid var(--blue); background: var(--paper); }
+.tick.on { background: var(--blue); }
+.factBtn { height: 38px; padding: 0 14px; border: 1.5px solid var(--blue); border-radius: 6px; color: var(--blue); font-family: var(--mono); font-size: 9.5px; font-weight: 800; letter-spacing: .1em; white-space: nowrap; }
+.factBtn.filled { background: var(--blue); color: var(--paper); }
+
+/* =========================================================
+   3. LINES VIEW (ROW-BY-ROW INSPECTOR)
    ========================================================= */
 .lines-container {
   max-width: 860px;
   margin: 0 auto;
   background: var(--paper);
-  border-left: 1px solid var(--line);
-  border-right: 1px solid var(--line);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
   min-height: 100%;
 }
-.zgroup {
-  border-bottom: 8px solid var(--bg);
-}
+.zgroup { border-bottom: 8px solid var(--bg); }
 .zhead {
   position: sticky;
   top: 0;
@@ -566,46 +907,23 @@ main::-webkit-scrollbar { display: none; }
   background: rgba(255,255,255,.98);
   backdrop-filter: blur(12px);
   padding: 12px 16px 10px;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--border);
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 12px;
   align-items: start;
   cursor: pointer;
 }
-.zid {
-  font-family: ui-monospace, SFMono-Regular, monospace;
-  font-size: 9px;
-  font-weight: 850;
-  letter-spacing: .08em;
-  color: var(--blue);
-  margin-bottom: 3px;
-  text-transform: uppercase;
-}
-.ztitle {
-  font-size: 15px;
-  line-height: 1.25;
-  font-weight: 850;
-  letter-spacing: -.02em;
-}
-.ztype {
-  font-family: ui-monospace, SFMono-Regular, monospace;
-  font-size: 8.5px;
-  font-weight: 850;
-  color: var(--muted-dark);
-  border: 1px solid var(--line);
-  padding: 3px 6px;
-  border-radius: 4px;
-  background: var(--bg);
-  white-space: nowrap;
-}
+.zid { font-family: var(--mono); font-size: 9px; font-weight: 850; letter-spacing: .08em; color: var(--blue); margin-bottom: 3px; text-transform: uppercase; }
+.ztitle { font-size: 15px; line-height: 1.25; font-weight: 850; letter-spacing: -.02em; }
+.ztype { font-family: var(--mono); font-size: 8.5px; font-weight: 850; color: var(--muted-dark); border: 1px solid var(--border); padding: 3px 6px; border-radius: 4px; background: var(--bg); white-space: nowrap; }
 
 .lineRow {
   display: grid;
   grid-template-columns: 96px 1fr;
   gap: 14px;
   padding: 13px 16px;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--border);
   background: var(--paper);
   position: relative;
   user-select: none;
@@ -614,51 +932,15 @@ main::-webkit-scrollbar { display: none; }
 .lineRow:last-child { border-bottom: 0; }
 .lineRow.selected { background: var(--blue); color: #fff; }
 .lineRow.selected .fieldName { color: var(--blue-soft); }
-.fieldName {
-  font-family: ui-monospace, SFMono-Regular, monospace;
-  font-size: 8.5px;
-  line-height: 1.3;
-  font-weight: 900;
-  letter-spacing: .08em;
-  color: var(--muted-dark);
-  text-transform: uppercase;
-  padding-top: 3px;
-  word-break: break-word;
-}
-.lineText {
-  font-family: "Source Serif 4", ui-serif, Georgia, serif;
-  font-size: 16.5px;
-  line-height: 1.5;
-  white-space: pre-wrap;
-}
+.fieldName { font-family: var(--mono); font-size: 8.5px; line-height: 1.3; font-weight: 900; letter-spacing: .08em; color: var(--muted-dark); text-transform: uppercase; padding-top: 3px; word-break: break-word; }
+.lineText { font-family: var(--serif); font-size: 16.5px; line-height: 1.5; white-space: pre-wrap; }
 .lineRow[data-field="TITLE"] .lineText,
 .lineRow[data-field="QUESTION"] .lineText,
-.lineRow[data-field="DEEPER QUESTION"] .lineText {
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-  font-weight: 760;
-  letter-spacing: -.025em;
-}
-.lineRow[data-field="TITLE"] .lineText { font-size: 18px; line-height: 1.24; }
-.lineRow[data-field="QUESTION"] .lineText { font-size: 18.5px; line-height: 1.26; }
-.lineRow[data-field="DEEPER QUESTION"] .lineText { font-size: 17px; line-height: 1.28; }
-.lineRow.code .lineText {
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 12px;
-  line-height: 1.55;
-  background: var(--code-bg);
-  padding: 10px 12px;
-  border-radius: 6px;
-  overflow-x: auto;
-}
+.lineRow[data-field="DEEPER QUESTION"] .lineText { font-family: var(--sans); font-weight: 760; letter-spacing: -.025em; }
+.lineRow.code .lineText { font-family: var(--mono); font-size: 12px; line-height: 1.55; background: var(--code-bg); padding: 10px 12px; border-radius: 6px; overflow-x: auto; }
 .lineRow.selected.code .lineText { background: rgba(0,0,0,.25); color: #fff; }
 
-.empty {
-  padding: 60px 20px;
-  text-align: center;
-  color: var(--muted-dark);
-  font-size: 13.5px;
-  line-height: 1.6;
-}
+.empty { padding: 60px 20px; text-align: center; color: var(--muted-dark); font-size: 13.5px; line-height: 1.6; }
 
 /* Floating Selection Bar */
 .selection {
@@ -679,20 +961,11 @@ main::-webkit-scrollbar { display: none; }
   box-shadow: 0 12px 36px rgba(0,0,0,.2);
 }
 .selection.open { display: grid; }
-.selCount { font-size: 11.5px; font-weight: 800; letter-spacing: .05em; font-family: ui-monospace, monospace; }
-.selection button {
-  height: 36px;
-  padding: 0 12px;
-  border-radius: 6px;
-  background: #262930;
-  color: #fff;
-  font-size: 10px;
-  font-weight: 850;
-  letter-spacing: .06em;
-}
+.selCount { font-size: 11.5px; font-weight: 800; letter-spacing: .05em; font-family: var(--mono); }
+.selection button { height: 36px; padding: 0 12px; border-radius: 6px; background: #262930; color: #fff; font-size: 10px; font-weight: 850; letter-spacing: .06em; }
 .selection .primary { background: var(--blue); color: #fff; }
 
-/* Continuous Reading Stack Sheet */
+/* Stack Sheet (Continuous Line Reading) */
 .stack {
   position: absolute;
   z-index: 70;
@@ -704,557 +977,249 @@ main::-webkit-scrollbar { display: none; }
   flex-direction: column;
 }
 .stack.open { transform: translateY(0); }
-.stackHead {
-  height: calc(58px + var(--top));
-  padding: var(--top) 16px 0;
-  border-bottom: 1px solid var(--line);
-  display: grid;
-  grid-template-columns: 48px 1fr 48px;
-  align-items: center;
-  background: var(--paper);
-}
+.stackHead { height: calc(58px + var(--top)); padding: var(--top) 16px 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 48px 1fr 48px; align-items: center; background: var(--paper); }
 .stackHead button { height: 42px; font-size: 18px; font-weight: 900; }
-.stackHead div { text-align: center; font-size: 10.5px; font-weight: 850; color: var(--blue); letter-spacing: .08em; font-family: ui-monospace, monospace; }
-.stackScroll {
-  flex: 1;
-  overflow-y: auto;
-  padding: 16px 20px calc(24px + var(--bottom));
-  max-width: 800px;
-  margin: 0 auto;
-  width: 100%;
-}
-.stackItem {
-  padding: 18px 0;
-  border-bottom: 1px solid var(--line);
-}
-.stackMeta {
-  font-family: ui-monospace, SFMono-Regular, monospace;
-  font-size: 9px;
-  color: var(--blue);
-  font-weight: 800;
-  letter-spacing: .08em;
-  margin-bottom: 6px;
-  text-transform: uppercase;
-}
-.stackText {
-  font-family: "Source Serif 4", ui-serif, Georgia, serif;
-  font-size: 18.5px;
-  line-height: 1.55;
-  white-space: pre-wrap;
-}
+.stackHead div { text-align: center; font-size: 10.5px; font-weight: 850; color: var(--blue); letter-spacing: .08em; font-family: var(--mono); }
+.stackScroll { flex: 1; overflow-y: auto; padding: 16px 20px calc(24px + var(--bottom)); max-width: 800px; margin: 0 auto; width: 100%; }
+.stackItem { padding: 18px 0; border-bottom: 1px solid var(--border); }
+.stackMeta { font-family: var(--mono); font-size: 9px; color: var(--blue); font-weight: 800; letter-spacing: .08em; margin-bottom: 6px; text-transform: uppercase; }
+.stackText { font-family: var(--serif); font-size: 18.5px; line-height: 1.55; white-space: pre-wrap; }
 
 /* =========================================================
-   2. RELATE MODE: 3D SLIPCASE FIELD (THREE.JS ENGINE)
+   4. RELATE: 3D FIELD, GRAPH, MATRIX
    ========================================================= */
-.three-pane-wrap {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background: #FFFFFF;
-}
-#threeCanvas {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.three-hud {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background: rgba(255,255,255,.94);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 10px 14px;
-  box-shadow: 0 4px 16px rgba(0,0,0,.04);
-  font-family: ui-monospace, SFMono-Regular, monospace;
-  font-size: 10px;
-  pointer-events: none;
-  z-index: 10;
-}
-.three-hud-title {
-  font-weight: 900;
-  color: var(--blue);
-  letter-spacing: .08em;
-  margin-bottom: 3px;
-}
-.three-hud-meta {
-  color: var(--muted-dark);
-}
-.three-controls {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  z-index: 10;
-}
-.three-btn {
-  height: 32px;
-  padding: 0 10px;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  font-size: 9.5px;
-  font-weight: 850;
-  letter-spacing: .06em;
-  color: var(--ink);
-  box-shadow: 0 2px 8px rgba(0,0,0,.03);
-}
-.three-btn.active {
-  background: var(--blue);
-  color: #fff;
-  border-color: var(--blue);
-}
-
-.three-inspector-panel {
-  position: absolute;
-  bottom: 14px;
-  left: 14px;
-  right: 14px;
-  max-width: 480px;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 14px 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.1);
-  display: none;
-  z-index: 20;
-}
-.three-inspector-panel.open { display: block; }
-
-/* =========================================================
-   3. RELATE MODE: MASSIVE RELATIONAL GRAPH (CANVAS)
-   ========================================================= */
-.graph-pane-wrap {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background: #FAFAFC;
-}
-#graphCanvas {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.graph-hud {
+.three-pane-wrap, .graph-pane-wrap { width: 100%; height: 100%; position: relative; background: #FFFFFF; }
+#graphCanvas { width: 100%; height: 100%; display: block; }
+.three-hud, .graph-hud {
   position: absolute;
   top: 12px;
   left: 12px;
   background: rgba(255,255,255,.94);
   backdrop-filter: blur(10px);
-  border: 1px solid var(--line);
+  border: 1.5px solid var(--pale);
   border-radius: 8px;
   padding: 10px 14px;
   box-shadow: 0 4px 16px rgba(0,0,0,.04);
-  font-family: ui-monospace, SFMono-Regular, monospace;
-  font-size: 10px;
+  font-family: var(--mono);
+  font-size: 9.5px;
   pointer-events: none;
   z-index: 10;
 }
-.graph-hud-title {
-  font-weight: 900;
-  color: var(--blue);
-  letter-spacing: .08em;
-  margin-bottom: 4px;
-}
-.graph-hud-meta {
-  color: var(--muted-dark);
-}
-.graph-controls {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  z-index: 10;
-}
-.graph-btn {
+.three-hud-title, .graph-hud-title { font-weight: 900; color: var(--blue); letter-spacing: .08em; margin-bottom: 3px; }
+.three-hud-meta, .graph-hud-meta { color: var(--muted-dark); }
+.three-controls, .graph-controls { position: absolute; top: 12px; right: 12px; display: flex; flex-direction: column; gap: 6px; z-index: 10; }
+.three-btn, .graph-btn {
   height: 32px;
   padding: 0 10px;
   background: var(--paper);
-  border: 1px solid var(--line);
+  border: 1.5px solid var(--pale);
   border-radius: 6px;
-  font-size: 9.5px;
+  font-family: var(--mono);
+  font-size: 9px;
   font-weight: 850;
   letter-spacing: .06em;
   color: var(--ink);
-  box-shadow: 0 2px 8px rgba(0,0,0,.03);
 }
-.graph-btn.active {
-  background: var(--blue);
-  color: #fff;
-  border-color: var(--blue);
-}
+.three-btn.active, .graph-btn.active { background: var(--blue); color: #fff; border-color: var(--blue); }
 
-.graph-inspector-panel {
+.three-inspector-panel, .graph-inspector-panel {
   position: absolute;
   bottom: 12px;
   left: 12px;
   right: 12px;
   max-width: 480px;
   background: var(--paper);
-  border: 1px solid var(--line);
+  border: 1.5px solid var(--pale);
   border-radius: 10px;
   padding: 14px 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,.1);
   display: none;
   z-index: 20;
 }
-.graph-inspector-panel.open { display: block; }
-.graph-insp-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 6px;
-}
-.graph-insp-accession {
-  font-family: ui-monospace, monospace;
-  font-size: 9px;
-  font-weight: 850;
-  color: var(--blue);
-}
-.graph-insp-title {
-  font-size: 15px;
-  font-weight: 850;
-  line-height: 1.25;
-  margin-bottom: 8px;
-}
-.graph-insp-desc {
-  font-size: 12px;
-  color: var(--muted-dark);
-  line-height: 1.4;
-  margin-bottom: 10px;
-}
-.graph-insp-actions {
-  display: flex;
-  gap: 6px;
-}
+.three-inspector-panel.open, .graph-inspector-panel.open { display: block; }
+.graph-insp-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+.graph-insp-accession { font-family: var(--mono); font-size: 9px; font-weight: 850; color: var(--blue); }
+.graph-insp-title { font-size: 15px; font-weight: 850; line-height: 1.25; margin-bottom: 8px; }
+.graph-insp-desc { font-size: 12px; color: var(--muted-dark); line-height: 1.4; margin-bottom: 10px; }
+.graph-insp-actions { display: flex; gap: 6px; }
 
-/* =========================================================
-   4. RELATE MODE: NESTED MATRIX ("CASES OF CASES")
-   ========================================================= */
-.matrix-wrap {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 16px 16px calc(28px + var(--bottom));
-}
-.matrix-intro {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-left: 3px solid var(--blue);
-  border-radius: 8px;
-  padding: 14px 16px;
-  margin-bottom: 16px;
-}
-.matrix-intro-k {
-  font-family: ui-monospace, monospace;
-  font-size: 9px;
-  font-weight: 900;
-  color: var(--blue);
-  letter-spacing: .08em;
-  margin-bottom: 4px;
-}
-.matrix-intro-v {
-  font-size: 13.5px;
-  line-height: 1.5;
-  color: var(--ink);
-}
-
-.cluster-card {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  margin-bottom: 12px;
-  overflow: hidden;
-}
-.cluster-head {
-  padding: 12px 16px;
-  background: var(--bg);
-  border-bottom: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-}
-.cluster-title {
-  font-size: 13px;
-  font-weight: 900;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  color: var(--blue);
-}
-.cluster-meta {
-  font-family: ui-monospace, monospace;
-  font-size: 9.5px;
-  font-weight: 800;
-  color: var(--muted-dark);
-}
-.cluster-body {
-  display: flex;
-  flex-direction: column;
-}
-.matrix-case-row {
-  padding: 12px 16px;
-  border-bottom: 1px solid var(--line);
-  display: grid;
-  grid-template-columns: 140px 1fr auto;
-  gap: 12px;
-  align-items: center;
-  cursor: pointer;
-  transition: background .12s ease;
-}
+/* NESTED MATRIX */
+.matrix-wrap { max-width: 860px; margin: 0 auto; padding: 16px 16px calc(28px + var(--bottom)); }
+.matrix-intro { background: var(--paper); border: 1.5px solid var(--pale); border-left: 3px solid var(--blue); border-radius: 8px; padding: 14px 16px; margin-bottom: 16px; }
+.matrix-intro-k { font-family: var(--mono); font-size: 9px; font-weight: 900; color: var(--blue); letter-spacing: .08em; margin-bottom: 4px; }
+.matrix-intro-v { font-size: 13px; line-height: 1.5; color: var(--ink); }
+.cluster-card { background: var(--paper); border: 1.5px solid var(--pale); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+.cluster-head { padding: 12px 16px; background: var(--field); border-bottom: 1.5px solid var(--pale); display: flex; align-items: center; justify-content: space-between; cursor: pointer; }
+.cluster-title { font-size: 12px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; color: var(--blue); }
+.cluster-meta { font-family: var(--mono); font-size: 9px; font-weight: 800; color: var(--muted-dark); }
+.cluster-body { display: flex; flex-direction: column; }
+.matrix-case-row { padding: 12px 16px; border-bottom: 1px solid var(--pale); display: grid; grid-template-columns: 140px 1fr auto; gap: 12px; align-items: center; cursor: pointer; transition: background .12s ease; }
 .matrix-case-row:last-child { border-bottom: 0; }
 .matrix-case-row:hover { background: var(--blue-soft); }
-.matrix-case-accession {
-  font-family: ui-monospace, monospace;
-  font-size: 9px;
-  font-weight: 850;
-  color: var(--blue);
-}
-.matrix-case-name {
-  font-size: 13.5px;
-  font-weight: 800;
-}
-.matrix-case-counts {
-  font-family: ui-monospace, monospace;
-  font-size: 9px;
-  font-weight: 800;
-  color: var(--muted-dark);
-  white-space: nowrap;
-}
+.matrix-case-accession { font-family: var(--mono); font-size: 9px; font-weight: 850; color: var(--blue); }
+.matrix-case-name { font-size: 13px; font-weight: 800; }
+.matrix-case-counts { font-family: var(--mono); font-size: 9px; font-weight: 800; color: var(--muted-dark); white-space: nowrap; }
 
 /* =========================================================
-   5. FLIPPER MODE (TACTILE CARD DECK)
+   5. RETURN: PDFS, MAPS, PROMPTS
    ========================================================= */
-.flipper-wrap {
-  padding: 16px 16px calc(24px + var(--bottom));
-  max-width: 760px;
-  margin: 0 auto;
-}
-.deck-controls {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-.deck-btn {
-  height: 36px;
-  padding: 0 12px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: var(--paper);
-  font-size: 10px;
-  font-weight: 850;
-  letter-spacing: .06em;
-}
-.deck-btn:hover { background: var(--bg); }
-.deck-counter {
-  font-family: ui-monospace, monospace;
-  font-size: 10.5px;
-  font-weight: 850;
-  color: var(--blue);
-  letter-spacing: .06em;
-}
-.card-box {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 20px 18px;
-  box-shadow: 0 4px 16px rgba(0,0,0,.02);
-}
-.card-meta-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--line);
-}
-.card-id-tag {
-  font-family: ui-monospace, monospace;
-  font-size: 9.5px;
-  font-weight: 900;
-  letter-spacing: .08em;
-  color: var(--blue);
-}
-.card-type-tag {
-  font-family: ui-monospace, monospace;
-  font-size: 8.5px;
-  font-weight: 850;
-  color: var(--ink);
-  background: var(--bg);
-  border: 1px solid var(--line);
-  padding: 2px 6px;
-  border-radius: 4px;
-}
-.card-title-main {
-  font-size: 21px;
-  font-weight: 850;
-  line-height: 1.25;
-  letter-spacing: -.025em;
-  margin-bottom: 8px;
-}
-.card-source-main {
-  font-size: 12px;
-  color: var(--muted-dark);
-  line-height: 1.45;
-  margin-bottom: 14px;
-}
-.card-question-box {
-  background: var(--blue-soft);
-  border-left: 3px solid var(--blue);
-  padding: 12px 14px;
-  border-radius: 0 8px 8px 0;
-  margin-bottom: 14px;
-}
-.card-question-label {
-  font-family: ui-monospace, monospace;
-  font-size: 8.5px;
-  font-weight: 900;
-  color: var(--blue);
-  letter-spacing: .08em;
-  margin-bottom: 4px;
-}
-.card-question-text {
-  font-size: 16.5px;
-  font-weight: 750;
-  line-height: 1.35;
-  letter-spacing: -.02em;
-}
-.card-passage-box {
-  margin-bottom: 16px;
-  font-family: "Source Serif 4", ui-serif, Georgia, serif;
-  font-size: 17px;
-  line-height: 1.55;
-}
-.card-fields-accordion {
-  border-top: 1px solid var(--line);
-  padding-top: 14px;
-}
-.card-field-row {
-  margin-bottom: 12px;
-}
-.card-field-k {
-  font-family: ui-monospace, monospace;
-  font-size: 8.5px;
-  font-weight: 900;
-  color: var(--muted-dark);
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  margin-bottom: 3px;
-}
-.card-field-v {
-  font-size: 14px;
-  line-height: 1.48;
-}
+.pdf-wrap, .maps-wrap, .prompts-wrap { padding: 16px 16px calc(24px + var(--bottom)); max-width: 860px; margin: 0 auto; }
+.pdf-filter-bar, .maps-tabs, .poml-stepper { display: flex; gap: 6px; margin-bottom: 14px; overflow-x: auto; scrollbar-width: none; }
+.pdf-filter-bar::-webkit-scrollbar, .maps-tabs::-webkit-scrollbar, .poml-stepper::-webkit-scrollbar { display: none; }
+.pdf-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.pdf-card { background: var(--paper); border: 1.5px solid var(--pale); border-radius: 8px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
+.pdf-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.pdf-title { font-size: 14.5px; font-weight: 800; line-height: 1.28; letter-spacing: -.02em; }
+.pdf-case { font-family: var(--mono); font-size: 9px; font-weight: 850; color: var(--blue); margin-top: 4px; text-transform: uppercase; }
+.pdf-tag { font-family: var(--mono); font-size: 8.5px; font-weight: 900; letter-spacing: .06em; padding: 3px 6px; border-radius: 4px; white-space: nowrap; text-transform: uppercase; }
+.tag-paper { background: var(--blue-soft); color: var(--blue); }
+.tag-scan { background: var(--bg); color: var(--muted-dark); border: 1px solid var(--border); }
+.pdf-actions { display: flex; align-items: center; justify-content: space-between; padding-top: 10px; border-top: 1px solid var(--border); }
+.pdf-size { font-family: var(--mono); font-size: 9.5px; font-weight: 800; color: var(--muted-dark); }
+.pdf-btn-group { display: flex; gap: 6px; }
+.pdf-btn, .deck-btn { height: 32px; padding: 0 12px; border-radius: 6px; border: 1.5px solid var(--pale); background: var(--paper); font-family: var(--mono); font-size: 9px; font-weight: 850; letter-spacing: .06em; display: inline-flex; align-items: center; text-decoration: none; }
+.pdf-btn.primary, .deck-btn.primary { background: var(--blue); color: #fff; border-color: var(--blue); }
 
-/* =========================================================
-   6. PDF LIBRARY MODE (RETURN)
-   ========================================================= */
-.pdf-wrap {
-  padding: 16px 16px calc(24px + var(--bottom));
-  max-width: 860px;
-  margin: 0 auto;
-}
-.pdf-filter-bar {
-  display: flex;
-  gap: 6px;
-  margin-bottom: 14px;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-.pdf-filter-bar::-webkit-scrollbar { display: none; }
-.pdf-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-}
-.pdf-card {
+.doc-box { background: var(--paper); border: 1.5px solid var(--pale); border-radius: 8px; padding: 18px 16px; font-family: var(--mono); font-size: 12px; line-height: 1.6; white-space: pre-wrap; overflow-x: auto; }
+.doc-action-bar { display: flex; justify-content: flex-end; gap: 8px; margin-top: 10px; }
+
+/* PROMPTS */
+.poml-card { background: var(--paper); border: 1.5px solid var(--pale); border-radius: 12px; padding: 20px 18px; margin-bottom: 14px; }
+.poml-head-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+.poml-num { font-family: var(--mono); font-size: 10px; font-weight: 900; color: var(--blue); letter-spacing: .08em; }
+.poml-ver { font-family: var(--mono); font-size: 9px; font-weight: 850; color: var(--muted-dark); }
+.poml-title { font-size: 19px; font-weight: 850; line-height: 1.2; margin-bottom: 4px; }
+.poml-sub { font-size: 11px; color: var(--muted-dark); margin-bottom: 12px; text-transform: uppercase; letter-spacing: .06em; font-weight: 750; }
+.poml-say-box { background: var(--blue-soft); border-left: 3px solid var(--blue); padding: 10px 12px; border-radius: 0 6px 6px 0; margin-bottom: 12px; font-size: 13px; font-weight: 750; color: var(--blue); }
+.poml-desc { font-size: 13px; line-height: 1.5; color: var(--ink); margin-bottom: 14px; }
+.poml-contract-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+.poml-contract-col { background: var(--bg); padding: 8px 10px; border-radius: 6px; }
+.poml-contract-k { font-family: var(--mono); font-size: 8px; font-weight: 900; color: var(--muted-dark); letter-spacing: .08em; margin-bottom: 2px; }
+.poml-contract-v { font-size: 11px; line-height: 1.4; }
+.poml-actions-bar { display: flex; gap: 8px; }
+.poml-btn { height: 36px; padding: 0 14px; border-radius: 6px; border: 1.5px solid var(--pale); background: var(--paper); font-family: var(--mono); font-size: 9.5px; font-weight: 850; letter-spacing: .06em; }
+.poml-btn.primary { background: var(--blue); color: #fff; border-color: var(--blue); }
+.poml-code-box { font-family: var(--mono); font-size: 11px; line-height: 1.6; white-space: pre-wrap; background: var(--paper); border: 1.5px solid var(--pale); border-radius: 8px; padding: 16px; max-height: 480px; overflow-y: auto; }
+
+/* -- TABLE DRAWER: Lay out slips on the table -- */
+#drawer {
+  position: fixed;
+  z-index: 280;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 76vh;
   background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 14px 16px;
+  border-top: 1.5px solid var(--blue);
+  transform: translateY(102%);
+  transition: transform .26s cubic-bezier(.2,.85,.25,1);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  padding-bottom: var(--bottom);
 }
-.pdf-card-top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
-}
-.pdf-title {
-  font-size: 15px;
-  font-weight: 800;
-  line-height: 1.28;
-  letter-spacing: -.02em;
-}
-.pdf-case {
-  font-family: ui-monospace, monospace;
-  font-size: 9px;
-  font-weight: 850;
-  color: var(--blue);
-  margin-top: 4px;
-  text-transform: uppercase;
-}
-.pdf-tag {
-  font-family: ui-monospace, monospace;
-  font-size: 8.5px;
-  font-weight: 900;
-  letter-spacing: .06em;
-  padding: 3px 6px;
-  border-radius: 4px;
-  white-space: nowrap;
-  text-transform: uppercase;
-}
-.tag-paper { background: var(--blue-soft); color: var(--blue); }
-.tag-scan { background: var(--bg); color: var(--muted-dark); border: 1px solid var(--line); }
-
-.pdf-actions {
-  display: flex;
+#drawer.open { transform: translateY(0); }
+.dHead {
+  flex: 0 0 auto;
+  padding: 11px 12px;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 8px;
   align-items: center;
-  justify-content: space-between;
-  padding-top: 10px;
-  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--pale);
 }
-.pdf-size {
-  font-family: ui-monospace, monospace;
-  font-size: 9.5px;
-  font-weight: 800;
-  color: var(--muted-dark);
+.dSearch {
+  height: 36px;
+  border: 1.5px solid var(--pale);
+  background: var(--paper);
+  padding: 0 11px;
+  outline: 0;
+  min-width: 0;
+  font-family: var(--mono);
+  font-size: 12px;
 }
-.pdf-btn-group {
-  display: flex;
-  gap: 6px;
-}
-.pdf-btn {
-  height: 32px;
-  padding: 0 12px;
+.dSearch:focus { border-color: var(--blue); }
+.dSearch::placeholder { color: var(--grey); }
+.dBody { flex: 1 1 auto; overflow: auto; padding: 12px; scrollbar-width: thin; }
+.caseRow { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 10px; }
+.caseBtn {
+  border: 1.5px solid var(--pale);
+  background: var(--paper);
   border-radius: 6px;
-  border: 1px solid var(--line);
-  background: var(--bg);
-  font-size: 9.5px;
-  font-weight: 850;
-  letter-spacing: .06em;
-  display: inline-flex;
+  padding: 9px 6px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  text-decoration: none;
+  gap: 5px;
+  text-align: center;
 }
-.pdf-btn.primary {
-  background: var(--blue);
-  color: #fff;
-  border-color: var(--blue);
-}
+.caseBtn:hover, .caseBtn.on { border-color: var(--blue); }
+.caseBtn svg { width: 56px; height: auto; }
+.caseBtn .cid { font-family: var(--mono); font-size: 8.5px; letter-spacing: .06em; color: var(--blue); }
+.caseBtn .ctp { font-size: 9px; color: var(--grey); line-height: 1.2; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.fan { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--pale); }
+.fanHead { font-family: var(--mono); font-size: 9px; letter-spacing: .1em; color: var(--grey); margin-bottom: 9px; display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+.fanHead b { color: var(--blue); font-weight: 500; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { border: 1.5px solid var(--pale); background: var(--paper); padding: 8px 10px; font-family: var(--mono); font-size: 9px; letter-spacing: .07em; color: var(--ink); border-radius: 5px 5px 0 0; }
+.chip:hover { border-color: var(--blue); color: var(--blue); }
+.chip.placed { background: var(--pale); color: var(--blue); border-color: var(--pale); }
+.dEmpty { padding: 34px 10px; text-align: center; font-family: var(--mono); font-size: 11px; letter-spacing: .06em; color: var(--grey); }
 
-/* PDF READER MODAL */
-.pdf-modal {
+/* Modals & Scrims */
+.scrim { position: fixed; inset: 0; z-index: 200; background: rgba(17,19,24,.12); display: none; }
+.scrim.open { display: block; }
+.sheet {
   position: absolute;
-  z-index: 90;
+  left: 12px;
+  right: 12px;
+  bottom: calc(12px + var(--bottom));
+  background: var(--paper);
+  border: 1.5px solid var(--pale);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 18px 60px rgba(0,0,0,.16);
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+.sheetTitle { padding: 4px 6px 12px; font-family: var(--mono); font-size: 10px; font-weight: 900; color: var(--blue); letter-spacing: .08em; text-transform: uppercase; }
+.sheetScroll { overflow-y: auto; flex: 1; }
+.sheetGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
+.sheetGrid button { min-height: 42px; border-radius: 6px; background: var(--bg); font-family: var(--mono); font-size: 9.5px; font-weight: 800; padding: 6px 8px; text-align: center; border: 1px solid var(--border); }
+.sheetGrid button.on { background: var(--blue); color: #fff; border-color: var(--blue); }
+
+.caseList { display: flex; flex-direction: column; gap: 4px; }
+.caseRowBtn { padding: 10px 12px; border-radius: 6px; background: var(--bg); border: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; text-align: left; }
+.caseRowBtn.on { background: var(--blue); color: #fff; border-color: var(--blue); }
+.caseRowBtn.on .caseRowMeta, .caseRowBtn.on .caseRowAccession { color: var(--blue-soft); }
+.caseRowAccession { font-family: var(--mono); font-size: 8.5px; font-weight: 850; color: var(--blue); }
+.caseRowTitle { font-size: 12.5px; font-weight: 800; letter-spacing: -.01em; margin-top: 1px; }
+.caseRowMeta { font-family: var(--mono); font-size: 9px; font-weight: 800; color: var(--muted-dark); white-space: nowrap; }
+
+/* Toast */
+.toast {
+  position: fixed;
+  z-index: 400;
+  left: 50%;
+  bottom: calc(76px + var(--bottom));
+  transform: translateX(-50%);
+  background: var(--ink);
+  color: #fff;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 750;
+  display: none;
+  white-space: nowrap;
+  box-shadow: 0 6px 20px rgba(0,0,0,.2);
+}
+.toast.open { display: block; }
+
+/* PDF Reader Modal */
+.pdf-modal {
+  position: fixed;
+  z-index: 250;
   inset: 0;
   background: var(--paper);
   transform: translateY(104%);
@@ -1263,399 +1228,18 @@ main::-webkit-scrollbar { display: none; }
   flex-direction: column;
 }
 .pdf-modal.open { transform: translateY(0); }
-.pdf-modal-head {
-  height: calc(58px + var(--top));
-  padding: var(--top) 16px 0;
-  border-bottom: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  background: var(--paper);
-}
-.pdf-modal-title {
-  font-size: 13px;
-  font-weight: 850;
-  max-width: 50%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.pdf-frame-wrap {
-  flex: 1;
-  position: relative;
-  background: #525659;
-}
-.pdf-frame {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-.pdf-fallback-note {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  right: 12px;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 10px 14px;
-  font-size: 11px;
-  color: var(--muted-dark);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-}
+.pdf-modal-head { height: calc(54px + var(--top)); padding: var(--top) 16px 0; border-bottom: 1.5px solid var(--pale); display: flex; align-items: center; justify-content: space-between; gap: 12px; background: var(--paper); }
+.pdf-modal-title { font-size: 13px; font-weight: 850; max-width: 50%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pdf-frame-wrap { flex: 1; position: relative; background: #525659; }
+.pdf-frame { width: 100%; height: 100%; border: 0; }
+.pdf-fallback-note { position: absolute; bottom: 12px; left: 12px; right: 12px; background: var(--paper); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 11px; color: var(--muted-dark); display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 
-/* =========================================================
-   7. MAPS & STRUCTURAL DOCS MODE (PRESERVE)
-   ========================================================= */
-.maps-wrap {
-  padding: 16px 16px calc(24px + var(--bottom));
-  max-width: 860px;
-  margin: 0 auto;
-}
-.maps-tabs {
-  display: flex;
-  gap: 6px;
-  overflow-x: auto;
-  margin-bottom: 12px;
-  scrollbar-width: none;
-}
-.maps-tabs::-webkit-scrollbar { display: none; }
-.map-tab-btn {
-  flex: 0 0 auto;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: var(--paper);
-  padding: 6px 10px;
-  font-family: ui-monospace, monospace;
-  font-size: 9px;
-  font-weight: 850;
-  letter-spacing: .06em;
-  color: var(--muted-dark);
-  text-transform: uppercase;
-}
-.map-tab-btn.on {
-  background: var(--blue);
-  color: #fff;
-  border-color: var(--blue);
-}
-.doc-box {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 18px 16px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 12.5px;
-  line-height: 1.6;
-  white-space: pre-wrap;
-  overflow-x: auto;
-}
-.doc-action-bar {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  margin-top: 10px;
-}
-
-/* =========================================================
-   8. PROMPT OPERATOR MODE (RETURN - COOL RADIO)
-   ========================================================= */
-.prompts-wrap {
-  padding: 16px 16px calc(24px + var(--bottom));
-  max-width: 780px;
-  margin: 0 auto;
-}
-.poml-stepper {
-  display: flex;
-  gap: 6px;
-  overflow-x: auto;
-  margin-bottom: 14px;
-  scrollbar-width: none;
-}
-.poml-stepper::-webkit-scrollbar { display: none; }
-.poml-step-btn {
-  flex: 0 0 auto;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: var(--paper);
-  padding: 6px 10px;
-  font-family: ui-monospace, monospace;
-  font-size: 9.5px;
-  font-weight: 850;
-  letter-spacing: .06em;
-  color: var(--muted-dark);
-}
-.poml-step-btn.on {
-  background: var(--blue);
-  color: #fff;
-  border-color: var(--blue);
-}
-.poml-card {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 20px 18px;
-  margin-bottom: 14px;
-}
-.poml-head-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 6px;
-}
-.poml-num {
-  font-family: ui-monospace, monospace;
-  font-size: 10px;
-  font-weight: 900;
-  color: var(--blue);
-  letter-spacing: .08em;
-}
-.poml-ver {
-  font-family: ui-monospace, monospace;
-  font-size: 9.5px;
-  font-weight: 850;
-  color: var(--muted-dark);
-}
-.poml-title {
-  font-size: 20px;
-  font-weight: 850;
-  line-height: 1.2;
-  margin-bottom: 4px;
-}
-.poml-sub {
-  font-size: 12px;
-  color: var(--muted-dark);
-  margin-bottom: 12px;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  font-weight: 750;
-}
-.poml-say-box {
-  background: var(--blue-soft);
-  border-left: 3px solid var(--blue);
-  padding: 10px 12px;
-  border-radius: 0 6px 6px 0;
-  margin-bottom: 12px;
-  font-size: 13px;
-  font-weight: 750;
-  color: var(--blue);
-}
-.poml-desc {
-  font-size: 13.5px;
-  line-height: 1.5;
-  color: var(--ink);
-  margin-bottom: 14px;
-}
-.poml-contract-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  margin-bottom: 14px;
-}
-.poml-contract-col {
-  background: var(--bg);
-  padding: 8px 10px;
-  border-radius: 6px;
-}
-.poml-contract-k {
-  font-family: ui-monospace, monospace;
-  font-size: 8px;
-  font-weight: 900;
-  color: var(--muted-dark);
-  letter-spacing: .08em;
-  margin-bottom: 2px;
-}
-.poml-contract-v {
-  font-size: 11px;
-  line-height: 1.4;
-}
-.poml-actions-bar {
-  display: flex;
-  gap: 8px;
-}
-.poml-btn {
-  height: 36px;
-  padding: 0 14px;
-  border-radius: 6px;
-  border: 1px solid var(--line);
-  background: var(--paper);
-  font-size: 10px;
-  font-weight: 850;
-  letter-spacing: .06em;
-}
-.poml-btn.primary {
-  background: var(--blue);
-  color: #fff;
-  border-color: var(--blue);
-}
-.poml-code-box {
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 11.5px;
-  line-height: 1.6;
-  white-space: pre-wrap;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 16px;
-  max-height: 480px;
-  overflow-y: auto;
-}
-
-/* Modals & Scrims */
-.scrim {
-  position: absolute;
-  z-index: 80;
-  inset: 0;
-  background: rgba(17,19,24,.3);
-  display: none;
-}
-.scrim.open { display: block; }
-.sheet {
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: calc(12px + var(--bottom));
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 14px;
-  box-shadow: 0 18px 60px rgba(0,0,0,.16);
-  max-height: 80vh;
-  display: flex;
-  flex-direction: column;
-}
-.sheetTitle {
-  padding: 4px 6px 12px;
-  font-family: ui-monospace, monospace;
-  font-size: 10px;
-  font-weight: 900;
-  color: var(--blue);
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-.sheetScroll {
-  overflow-y: auto;
-  flex: 1;
-}
-.sheetGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 6px;
-}
-.sheetGrid button {
-  min-height: 42px;
-  border-radius: 6px;
-  background: var(--bg);
-  font-family: ui-monospace, monospace;
-  font-size: 9.5px;
-  font-weight: 800;
-  padding: 6px 8px;
-  text-align: center;
-  border: 1px solid var(--line);
-}
-.sheetGrid button.on {
-  background: var(--blue);
-  color: #fff;
-  border-color: var(--blue);
-}
-
-.caseList {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.caseRowBtn {
-  padding: 10px 12px;
-  border-radius: 6px;
-  background: var(--bg);
-  border: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-align: left;
-}
-.caseRowBtn.on {
-  background: var(--blue);
-  color: #fff;
-  border-color: var(--blue);
-}
-.caseRowBtn.on .caseRowMeta, .caseRowBtn.on .caseRowAccession {
-  color: var(--blue-soft);
-}
-.caseRowAccession {
-  font-family: ui-monospace, monospace;
-  font-size: 8.5px;
-  font-weight: 850;
-  color: var(--blue);
-}
-.caseRowTitle {
-  font-size: 12.5px;
-  font-weight: 800;
-  letter-spacing: -.01em;
-  margin-top: 1px;
-}
-.caseRowMeta {
-  font-family: ui-monospace, monospace;
-  font-size: 9px;
-  font-weight: 800;
-  color: var(--muted-dark);
-  white-space: nowrap;
-}
-
-/* Toast */
-.toast {
-  position: absolute;
-  z-index: 100;
-  left: 50%;
-  bottom: calc(76px + var(--bottom));
-  transform: translateX(-50%);
-  background: var(--ink);
-  color: #fff;
-  border-radius: 999px;
-  padding: 8px 16px;
-  font-size: 11px;
-  font-weight: 750;
-  display: none;
-  white-space: nowrap;
-  box-shadow: 0 6px 20px rgba(0,0,0,.2);
-}
-.toast.open { display: block; }
-
-/* Responsive adjustments */
 @media(min-width: 760px) {
-  header, .methodology-bar, .subtoolbar, main {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    width: min(880px, 100%);
-  }
-  .selection {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    width: 560px;
-  }
-  .sheet {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    width: 620px;
-  }
-  .lineRow {
-    grid-template-columns: 140px 1fr;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .zhead {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .pdf-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+  .pdf-grid { grid-template-columns: 1fr 1fr; }
+  .lineRow { grid-template-columns: 140px 1fr; padding-left: 20px; padding-right: 20px; }
+  .zhead { padding-left: 20px; padding-right: 20px; }
+  .selection { left: 50%; right: auto; transform: translateX(-50%); width: 560px; }
+  .sheet { left: 50%; right: auto; transform: translateX(-50%); width: 620px; }
 }
 </style>
 <script type="importmap">
@@ -1670,7 +1254,25 @@ main::-webkit-scrollbar { display: none; }
 <body>
 <div id="app">
 
-  <!-- Master Header -->
+  <!-- ANIMATED LOADER -->
+  <div id="loader">
+    <svg viewBox="0 0 96 78" aria-hidden="true">
+      <g>
+        <rect class="sl" x="20" y="16" width="34" height="40" rx="5" style="animation-delay:.18s"/>
+        <rect class="ln sl" x="20" y="16" width="34" height="40" rx="5" style="animation-delay:.18s;fill:none"/>
+        <rect class="sl" x="27" y="12.5" width="34" height="40" rx="5" style="animation-delay:.26s"/>
+        <rect class="ln sl" x="27" y="12.5" width="34" height="40" rx="5" style="animation-delay:.26s;fill:none"/>
+        <rect class="sl" x="34" y="9" width="34" height="40" rx="5" style="animation-delay:.34s"/>
+        <rect class="ln sl" x="34" y="9" width="34" height="40" rx="5" style="animation-delay:.34s;fill:none"/>
+      </g>
+      <path class="ln" d="M14 34 h68 v38 h-68 z" style="fill:#fff"/>
+      <rect class="ln" x="38" y="48" width="20" height="11" style="animation-delay:.3s"/>
+    </svg>
+    <div class="word">Slipcase</div>
+    <div class="sub" id="loadNote">PREPARING THE RESEARCH FIELD</div>
+  </div>
+
+  <!-- MASTER HEADER -->
   <header>
     <div class="brand-group" id="brandBtn">
       <svg class="brand-logo-svg" viewBox="0 0 24 24">
@@ -1693,12 +1295,13 @@ main::-webkit-scrollbar { display: none; }
     <button id="caseNavBtn" class="accession-badge-btn">ALL CASES (31)</button>
   </header>
 
-  <!-- Master Methodology Navigation (PRESERVE · RELATE · RETURN) -->
+  <!-- METHODOLOGY TRIAD NAVIGATION (PRESERVE · RELATE · RETURN) -->
   <div class="methodology-bar" id="methodologyBar">
     <div class="nav-triad-group">
       <span class="nav-pillar-label">PRESERVE</span>
-      <button class="nav-tab-btn on" data-tab="lines">LINES</button>
-      <button class="nav-tab-btn" data-tab="flipper">FLIPPER</button>
+      <button class="nav-tab-btn on" data-tab="table">TABLE</button>
+      <button class="nav-tab-btn" data-tab="field">FIELD</button>
+      <button class="nav-tab-btn" data-tab="lines">LINES</button>
       <button class="nav-tab-btn" data-tab="maps">MAPS</button>
     </div>
 
@@ -1720,7 +1323,7 @@ main::-webkit-scrollbar { display: none; }
     </div>
   </div>
 
-  <!-- Secondary Field Filters Bar for LINES mode -->
+  <!-- Sub-toolbar (Filter Chips for LINES) -->
   <div class="subtoolbar" id="linesSubtoolbar">
     <button class="subchip on" data-filter="ALL">ALL</button>
     <button class="subchip" data-filter="QUESTION">QUESTIONS</button>
@@ -1733,34 +1336,67 @@ main::-webkit-scrollbar { display: none; }
     <button class="subchip" id="moreFiltersBtn">FIELD FILTER...</button>
   </div>
 
-  <!-- Main Viewport -->
+  <!-- MAIN VIEWPORT -->
   <main id="mainViewport">
     
-    <!-- 1. LINES PANE (PRESERVE) -->
-    <div class="pane active" id="pane-lines">
+    <!-- 1. TABLE PANE (PRESERVE: INFINITE 2D SPATIAL WORKBENCH) -->
+    <div class="pane active no-scroll" id="pane-table">
+      <div id="tableStage">
+        <div id="grain"></div>
+        <div id="world"></div>
+      </div>
+
+      <div class="table-bar" id="tableTopbar">
+        <div class="tgrp">
+          <span class="brand-wordmark" style="font-size:10px;padding:0 6px;">TABLE</span>
+          <span id="tableStatus">—</span>
+        </div>
+        <div class="tgrp">
+          <button class="tbtn" id="fitBtn">FIT</button>
+          <button class="tbtn" id="saveBtn">SAVE</button>
+          <button class="tbtn" id="openBtn">OPEN</button>
+          <button class="tbtn" id="shareBtn">SHARE</button>
+        </div>
+      </div>
+
+      <div class="table-bar" id="tableBotbar">
+        <div class="tgrp">
+          <button class="tbtn key" id="drawerBtn">SLIPCASES</button>
+          <button class="tbtn" id="readBtn">READ ORDER</button>
+        </div>
+        <div class="tgrp" id="selGrp" style="display:none">
+          <button class="tbtn" id="expandBtn">EXPAND</button>
+          <button class="tbtn" id="removeBtn">RETURN</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. FIELD PANE (PRESERVE: NON-SCROLLING UNIT-PER-SCREEN & SLIP DECK) -->
+    <div class="pane no-scroll" id="pane-field">
+      <div id="fieldStage">
+        <div class="fieldViewWrap" id="fieldStageInner"></div>
+        <div class="fieldFooter">
+          <button class="navBtn" id="fPrevBtn" aria-label="Previous"><span class="chev"></span><span id="fPrevLabel">PREV</span></button>
+          <div class="fpos">
+            <div class="fposLabel" id="fPosLabel">FIELD 1 / 1</div>
+            <div class="ticks" id="fTicks"></div>
+          </div>
+          <div style="display:flex;gap:6px">
+            <button class="factBtn" id="fActBtn">TRAY · 0</button>
+            <button class="navBtn" id="fNextBtn" aria-label="Next"><span id="fNextLabel">NEXT</span><span class="chev r"></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. LINES PANE (PRESERVE: ROW-BY-ROW INSPECTOR) -->
+    <div class="pane" id="pane-lines">
       <div class="lines-container">
         <div id="table"></div>
       </div>
     </div>
 
-    <!-- 2. FLIPPER PANE (PRESERVE) -->
-    <div class="pane" id="pane-flipper">
-      <div class="flipper-wrap">
-        <div class="deck-controls">
-          <button class="deck-btn" id="prevCardBtn">&larr; PREV</button>
-          <div class="deck-counter" id="deckCounter">CARD 1 OF 1244</div>
-          <button class="deck-btn" id="nextCardBtn">NEXT &rarr;</button>
-        </div>
-        <div class="deck-controls" style="margin-top:-4px;">
-          <button class="deck-btn" id="toggleRawBtn">RAW TEXT</button>
-          <button class="deck-btn" id="copyCardBtn">COPY CARD &orarr;</button>
-          <button class="deck-btn" id="downloadCardBtn">DOWNLOAD .TXT &darr;</button>
-        </div>
-        <div id="cardBoxContainer" style="margin-top:10px;"></div>
-      </div>
-    </div>
-
-    <!-- 3. MAPS PANE (PRESERVE) -->
+    <!-- 4. MAPS PANE (PRESERVE) -->
     <div class="pane" id="pane-maps">
       <div class="maps-wrap">
         <div class="maps-tabs" id="mapsTabs"></div>
@@ -1772,8 +1408,8 @@ main::-webkit-scrollbar { display: none; }
       </div>
     </div>
 
-    <!-- 4. 3D SLIPCASE FIELD PANE (RELATE - THREE.JS) -->
-    <div class="pane" id="pane-three">
+    <!-- 5. 3D SLIPCASE FIELD PANE (RELATE - THREE.JS) -->
+    <div class="pane no-scroll" id="pane-three">
       <div class="three-pane-wrap">
         <div class="three-hud">
           <div class="three-hud-title">3D ORTHOGRAPHIC RESEARCH FIELD</div>
@@ -1797,14 +1433,14 @@ main::-webkit-scrollbar { display: none; }
           <div class="graph-insp-desc" id="threeInspDesc">Contains cards and documents.</div>
           <div class="graph-insp-actions">
             <button class="deck-btn" id="threeInspLinesBtn">OPEN ZETTEL LINES &rarr;</button>
-            <button class="deck-btn" id="threeInspFlipperBtn">OPEN CARD DECK &rarr;</button>
+            <button class="deck-btn" id="threeInspFieldBtn">OPEN IN FIELD &rarr;</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 5. MASSIVE GRAPH PANE (RELATE) -->
-    <div class="pane" id="pane-graph">
+    <!-- 6. MASSIVE GRAPH PANE (RELATE) -->
+    <div class="pane no-scroll" id="pane-graph">
       <div class="graph-pane-wrap">
         <div class="graph-hud">
           <div class="graph-hud-title">RELATIONAL FIELD GRAPH</div>
@@ -1829,13 +1465,13 @@ main::-webkit-scrollbar { display: none; }
           <div class="graph-insp-desc" id="graphInspDesc">Details</div>
           <div class="graph-insp-actions">
             <button class="deck-btn" id="graphInspOpenBtn">INSPECT IN LINES &rarr;</button>
-            <button class="deck-btn" id="graphInspFlipperBtn">OPEN IN FLIPPER &rarr;</button>
+            <button class="deck-btn" id="graphInspFieldBtn">OPEN IN FIELD &rarr;</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 6. NESTED MATRIX PANE (RELATE) -->
+    <!-- 7. NESTED MATRIX PANE (RELATE) -->
     <div class="pane" id="pane-matrix">
       <div class="matrix-wrap">
         <div class="matrix-intro">
@@ -1846,7 +1482,7 @@ main::-webkit-scrollbar { display: none; }
       </div>
     </div>
 
-    <!-- 7. PDF LIBRARY PANE (RETURN) -->
+    <!-- 8. PDF LIBRARY PANE (RETURN) -->
     <div class="pane" id="pane-pdfs">
       <div class="pdf-wrap">
         <div class="pdf-filter-bar">
@@ -1858,7 +1494,7 @@ main::-webkit-scrollbar { display: none; }
       </div>
     </div>
 
-    <!-- 8. PROMPT OPERATOR PANE (RETURN - COOL RADIO) -->
+    <!-- 9. PROMPT OPERATOR PANE (RETURN - COOL RADIO) -->
     <div class="pane" id="pane-prompts">
       <div class="prompts-wrap">
         <div class="poml-stepper" id="pomlStepper"></div>
@@ -1869,7 +1505,16 @@ main::-webkit-scrollbar { display: none; }
 
   </main>
 
-  <!-- Floating Selection Bar -->
+  <!-- TABLE DRAWER: Deals slips from all 31 cases onto the void -->
+  <section id="drawer">
+    <div class="dHead">
+      <input id="dSearch" class="dSearch" placeholder="Search 31 slipcases and 1,244 cards..." autocomplete="off">
+      <button class="tbtn" id="drawerClose">CLOSE</button>
+    </div>
+    <div class="dBody" id="dBody"></div>
+  </section>
+
+  <!-- Floating Selection Bar for LINES -->
   <div class="selection" id="selection">
     <div class="selCount" id="selCount">0 selected</div>
     <button id="clearBtn">CLEAR</button>
@@ -1907,16 +1552,6 @@ main::-webkit-scrollbar { display: none; }
     </div>
   </section>
 
-  <!-- Filter Modal Sheet -->
-  <div class="scrim" id="filterScrim">
-    <div class="sheet">
-      <div class="sheetTitle">SELECT FIELD FILTER</div>
-      <div class="sheetScroll">
-        <div class="sheetGrid" id="sheetGrid"></div>
-      </div>
-    </div>
-  </div>
-
   <!-- Case Switcher Sheet -->
   <div class="scrim" id="caseScrim">
     <div class="sheet">
@@ -1927,56 +1562,84 @@ main::-webkit-scrollbar { display: none; }
     </div>
   </div>
 
+  <!-- Filter Modal Sheet -->
+  <div class="scrim" id="filterScrim">
+    <div class="sheet">
+      <div class="sheetTitle">SELECT FIELD FILTER</div>
+      <div class="sheetScroll">
+        <div class="sheetGrid" id="sheetGrid"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scrim" id="drawerScrim"></div>
+  <input type="file" id="filePick" accept=".json,application/json" style="display:none">
+
   <!-- Toast Notification -->
   <div class="toast" id="toast"></div>
 
 </div>
 
-<!-- Primary Application Logic -->
+<!-- Primary Application Engine -->
 <script>
-/* Embedded Research Data */
-const CASES = /* DATA_CASES */;
+(()=>{
+"use strict";
+
+/* Embedded Datasets */
+const CASES_DATA = /* DATA_CASES */;
 const ALL_NOTES = /* DATA_NOTES */;
 const ALL_PDFS = /* DATA_PDFS */;
 const GRAPH = /* DATA_GRAPH */;
 const PROMPTS = /* DATA_PROMPTS */;
 
-const MAIN_FIELDS = [
+window.ZETTEL_DATA = ALL_NOTES;
+
+const FIELD_ORDER = [
   "TITLE","QUESTION","DEEPER QUESTION","PASSAGE","RESEARCH OBJECT","LOCAL MOVE",
   "SOURCE TERMS","WHAT BECAME STRANGE","MECHANISM","FORMAL SHIFT","SOURCE FORMALISM",
   "OUR FORMALIZATION","TENSION","MISSING","BOUNDARY","CITATION TRAIL","TEST",
   "PLATFORM","LINKS","BIBTEX","SOURCE"
 ];
 
-/* State Variables */
-let currentTab = "lines";
-let selectedCaseIdx = -1; // -1 means ALL CASES
+const CODE_FIELD = /FORMAL|BIBTEX|MECHANISM/;
+const HEAD_FIELD = /^(TITLE|QUESTION|DEEPER QUESTION)$/;
+
+const ESC = { "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" };
+const esc = s => String(s ?? "").replace(/[&<>"']/g, m => ESC[m]);
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+
+function valueFor(n, f) {
+  if (f === "TITLE") return n.title;
+  if (f === "SOURCE") return n.source;
+  if (f === "PASSAGE") return n.passage;
+  if (f === "TYPE") return n.type;
+  if (f === "QUESTION" && n.fields && n.fields["QUESTION"]) return n.fields["QUESTION"];
+  return (n.fields && n.fields[f]) || "";
+}
+
+/* Master State */
+let currentTab = "table";
+let selectedCaseIdx = -1; // -1 = ALL CASES
 let lineFilter = "ALL";
 let pdfCategory = "ALL";
-let currentCardIdx = 0;
 let currentPromptIdx = 0;
-let rawCardMode = false;
 let currentActiveDocKey = "";
 let selectedLines = new Set();
 let toastTimer = null;
 
-/* DOM Helpers */
-const $ = s => document.querySelector(s);
-const $$ = s => [...document.querySelectorAll(s)];
-const esc = s => String(s ?? "").replace(/[&<>"']/g, m => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[m]));
-
 function getActiveNotes() {
   if (selectedCaseIdx === -1) return ALL_NOTES;
-  return CASES[selectedCaseIdx]?.cards || [];
+  return CASES_DATA[selectedCaseIdx]?.cards || [];
 }
 
 function getActivePdfs() {
   if (selectedCaseIdx === -1) return ALL_PDFS;
-  return CASES[selectedCaseIdx]?.pdfs || [];
+  return CASES_DATA[selectedCaseIdx]?.pdfs || [];
 }
 
 /* =========================================================
-   1. NAVIGATION & METHODOLOGY TRIAD SWITCHING
+   1. NAVIGATION & METHODOLOGY SWITCHING
    ========================================================= */
 function setTab(tab) {
   currentTab = tab;
@@ -1984,26 +1647,23 @@ function setTab(tab) {
   $$(".pane").forEach(p => p.classList.remove("active"));
   const targetPane = $(`#pane-${tab}`);
   if (targetPane) targetPane.classList.add("active");
-  
+
   const subtoolbar = $("#linesSubtoolbar");
-  const mainVp = $("#mainViewport");
   if (tab === "lines") {
     subtoolbar.style.display = "flex";
-    mainVp.classList.remove("top-short");
     renderLines();
   } else {
     subtoolbar.style.display = "none";
-    mainVp.classList.add("top-short");
   }
 
-  if (tab === "flipper") renderFlipper();
+  if (tab === "table") applyTableView();
+  if (tab === "field") renderFieldView();
   if (tab === "maps") renderMaps();
   if (tab === "three") window.triggerThreeResize?.();
   if (tab === "graph") initGraphEngine();
   if (tab === "matrix") renderMatrix();
   if (tab === "pdfs") renderPdfs();
   if (tab === "prompts") renderPrompts();
-  window.scrollTo(0,0);
 }
 
 $$(".nav-tab-btn").forEach(b => {
@@ -2013,7 +1673,7 @@ $$(".nav-tab-btn").forEach(b => {
 $("#brandBtn").onclick = () => {
   selectedCaseIdx = -1;
   updateActiveCaseLabel();
-  setTab("lines");
+  setTab("table");
 };
 
 /* =========================================================
@@ -2024,7 +1684,7 @@ function updateActiveCaseLabel() {
     $("#caseNavBtn").textContent = "ALL CASES (31)";
     $("#pdfTabBtn").textContent = `PDFS (${ALL_PDFS.length})`;
   } else {
-    const c = CASES[selectedCaseIdx];
+    const c = CASES_DATA[selectedCaseIdx];
     const shortAcc = c.accession || `CASE ${selectedCaseIdx + 1}`;
     $("#caseNavBtn").textContent = shortAcc;
     $("#pdfTabBtn").textContent = `PDFS (${c.pdfs.length})`;
@@ -2042,7 +1702,7 @@ function openCaseModal() {
     </div>
   `;
 
-  CASES.forEach((c, idx) => {
+  CASES_DATA.forEach((c, idx) => {
     html += `
       <div class="caseRowBtn ${selectedCaseIdx === idx ? 'on' : ''}" onclick="selectCase(${idx})">
         <div>
@@ -2060,17 +1720,17 @@ function openCaseModal() {
 
 window.selectCase = function(idx) {
   selectedCaseIdx = idx;
-  currentCardIdx = 0;
   updateActiveCaseLabel();
   $("#caseScrim").classList.remove("open");
+  if (currentTab === "table") applyTableView();
+  if (currentTab === "field") { fieldViewMode = "FIELD"; fieldPage = 0; renderFieldView(); }
   if (currentTab === "lines") renderLines();
-  if (currentTab === "flipper") renderFlipper();
   if (currentTab === "maps") renderMaps();
   if (currentTab === "three") window.updateThreeFocus?.(idx);
   if (currentTab === "graph") initGraphEngine();
   if (currentTab === "matrix") renderMatrix();
   if (currentTab === "pdfs") renderPdfs();
-  toast(idx === -1 ? "Showing All 31 Slipcases" : `Switched to ${CASES[idx].accession}`);
+  toast(idx === -1 ? "Showing All 31 Slipcases" : `Switched to ${CASES_DATA[idx].accession}`);
 };
 
 $("#caseNavBtn").onclick = openCaseModal;
@@ -2079,22 +1739,665 @@ $("#caseScrim").addEventListener("pointerdown", e => {
 });
 
 /* =========================================================
-   3. LINES MODULE (ZETTEL LINES INSPECTOR)
+   3. TABLE ENGINE (INFINITE 2D VOID SPATIAL WORKBENCH)
+   ========================================================= */
+const MAX_CARDS = 400;
+const MAX_VISIBLE = 180;
+const CARD_W = 280, CARD_H_EST = 230, CULL_PAD = 420;
+const ZOOM_MIN = 0.22, ZOOM_MAX = 2.4;
+const DRAG_SLOP = 5;
+const ROW_BAND = 140;
+const SCHEMA = "slipcase.table/1";
+
+let tableCards = [];
+let tableView = { x: 0, y: 0, z: 1 };
+let tableSelId = null, nextCardId = 1;
+const mountedTableCards = new Map();
+let tableGest = null;
+const tablePts = new Map();
+
+// Kasten indexing for Table & Field
+const KASTEN_CASES = [];
+const kastenById = new Map();
+
+for (let i = 0; i < ALL_NOTES.length; i++) {
+  const n = ALL_NOTES[i], slips = [];
+  let low = (n.id + " " + n.type + " " + n.topic + " " + (n.symbol || "") + " " + n.case_name).toLowerCase();
+  for (const f of FIELD_ORDER) {
+    const v = valueFor(n, f);
+    if (!v) continue;
+    slips.push({ f, text: v });
+    low += " " + (f + " " + v).toLowerCase();
+  }
+  KASTEN_CASES.push({ i, id: n.id, slips, low, case_idx: n.case_idx });
+  kastenById.set(n.id, i);
+}
+
+const world = $("#world"), tableStage = $("#tableStage"), grain = $("#grain");
+
+function applyTableView() {
+  world.style.transform = `translate(${tableView.x}px,${tableView.y}px) scale(${tableView.z})`;
+  const g = Math.max(14, 26 * tableView.z);
+  grain.style.backgroundSize = g + "px " + g + "px";
+  grain.style.backgroundPosition = (tableView.x % g) + "px " + (tableView.y % g) + "px";
+  grain.style.opacity = tableView.z < 0.5 ? 0.35 : 0.75;
+  cullTable();
+}
+
+function screenToWorld(sx, sy) { return { x: (sx - tableView.x) / tableView.z, y: (sy - tableView.y) / tableView.z }; }
+function centerWorld() { return screenToWorld(innerWidth / 2, innerHeight / 2); }
+
+function createCardEl(c, n, slip) {
+  const kind = CODE_FIELD.test(c.f) ? "code" : HEAD_FIELD.test(c.f) ? "head" : "text";
+  const el = document.createElement("article");
+  el.className = "card landing" + (tableSelId === c.id ? " on" : "") + (c.open ? " open" : "");
+  el.dataset.id = c.id;
+  el.dataset.k = kind;
+  el.style.left = c.x + "px";
+  el.style.top = c.y + "px";
+  el.innerHTML = `<div class="cTab">${esc(c.f)}</div><div class="cMeta"><b>${esc(n.id)}</b> · ${esc(n.type)} · ${esc(n.topic)}</div><div class="cBody">${esc(slip ? slip.text : "—")}</div>`;
+  return el;
+}
+
+function slipOf(c) {
+  const ci = kastenById.get(c.noteId);
+  if (ci === undefined) return null;
+  const slips = KASTEN_CASES[ci].slips;
+  for (let s = 0; s < slips.length; s++) if (slips[s].f === c.f) return slips[s];
+  return null;
+}
+
+function cullTable() {
+  const x0 = -tableView.x / tableView.z - CULL_PAD, y0 = -tableView.y / tableView.z - CULL_PAD;
+  const x1 = (innerWidth - tableView.x) / tableView.z + CULL_PAD, y1 = (innerHeight - tableView.y) / tableView.z + CULL_PAD;
+  let shown = 0;
+  const keep = new Set();
+
+  for (let i = 0; i < tableCards.length; i++) {
+    const c = tableCards[i];
+    const vis = c.x + CARD_W > x0 && c.x < x1 && c.y + CARD_H_EST > y0 && c.y < y1;
+    if (!vis || shown >= MAX_VISIBLE) continue;
+    shown++;
+    keep.add(c.id);
+    if (mountedTableCards.has(c.id)) continue;
+    const ci = kastenById.get(c.noteId);
+    if (ci === undefined) continue;
+    const el = createCardEl(c, ALL_NOTES[ci], slipOf(c));
+    world.appendChild(el);
+    mountedTableCards.set(c.id, el);
+  }
+
+  for (const [id, el] of mountedTableCards) {
+    if (!keep.has(id)) {
+      el.remove();
+      mountedTableCards.delete(id);
+    }
+  }
+}
+
+function refreshTableCard(id) {
+  const el = mountedTableCards.get(id);
+  if (!el) return;
+  const c = tableCards.find(k => k.id === id);
+  if (!c) return;
+  el.classList.toggle("on", tableSelId === id);
+  el.classList.toggle("open", !!c.open);
+  el.style.left = c.x + "px";
+  el.style.top = c.y + "px";
+}
+
+function placeSlipOnTable(noteId, f, at) {
+  if (tableCards.length >= MAX_CARDS) { tableStatus("TABLE FULL — " + MAX_CARDS + " SLIPS"); return null; }
+  const c = { id: nextCardId++, noteId, f, x: Math.round(at.x), y: Math.round(at.y), open: false };
+  tableCards.push(c);
+  selectTableCard(c.id);
+  cullTable();
+  autosaveTable();
+  return c;
+}
+
+function dealCaseOnTable(ci) {
+  const c = KASTEN_CASES[ci];
+  if (!c) return;
+  const base = centerWorld();
+  let placed = 0;
+  const cap = Math.min(c.slips.length, MAX_CARDS - tableCards.length);
+  for (let s = 0; s < cap; s++) {
+    const col = Math.floor(s / 4), row = s % 4;
+    placeSlipOnTable(c.id, c.slips[s].f, { x: base.x - CARD_W / 2 + col * (CARD_W + 26), y: base.y - 200 + row * (CARD_H_EST + 22) });
+    placed++;
+  }
+  tableStatus("DEALT " + placed + " SLIPS · " + c.id);
+  closeTableDrawer();
+}
+
+function removeSelectedTableCard() {
+  if (tableSelId === null) return;
+  const i = tableCards.findIndex(c => c.id === tableSelId);
+  if (i < 0) return;
+  tableCards.splice(i, 1);
+  const el = mountedTableCards.get(tableSelId);
+  if (el) { el.remove(); mountedTableCards.delete(tableSelId); }
+  selectTableCard(null);
+  autosaveTable();
+  tableStatus("RETURNED TO THE CASE");
+}
+
+function selectTableCard(id) {
+  const prev = tableSelId;
+  tableSelId = id;
+  if (prev !== null) refreshTableCard(prev);
+  if (id !== null) refreshTableCard(id);
+  $("#selGrp").style.display = id === null ? "none" : "flex";
+  if (id !== null) {
+    const c = tableCards.find(k => k.id === id);
+    $("#expandBtn").textContent = c && c.open ? "COLLAPSE" : "EXPAND";
+  }
+}
+
+function toggleOpenTableCard() {
+  if (tableSelId === null) return;
+  const c = tableCards.find(k => k.id === tableSelId);
+  if (!c) return;
+  c.open = !c.open;
+  refreshTableCard(c.id);
+  $("#expandBtn").textContent = c.open ? "COLLAPSE" : "EXPAND";
+  autosaveTable();
+}
+
+/* Pointer Handlers for Table */
+tableStage.addEventListener("pointerdown", e => {
+  tablePts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  if (tablePts.size === 2) {
+    const it = [...tablePts.values()];
+    tableGest = { mode: "pinch", d0: Math.hypot(it[0].x - it[1].x, it[0].y - it[1].y), z0: tableView.z, cx: (it[0].x + it[1].x) / 2, cy: (it[0].y + it[1].y) / 2, vx: tableView.x, vy: tableView.y };
+    tableStage.classList.remove("panning");
+    return;
+  }
+  if (tablePts.size > 2) return;
+  const el = e.target.closest(".card");
+  if (el) {
+    const c = tableCards.find(k => k.id === +el.dataset.id);
+    if (!c) return;
+    tableGest = { mode: "card", id: c.id, el, sx: e.clientX, sy: e.clientY, ox: c.x, oy: c.y, moved: false };
+  } else {
+    tableGest = { mode: "pan", sx: e.clientX, sy: e.clientY, ox: tableView.x, oy: tableView.y, moved: false };
+    tableStage.classList.add("panning");
+  }
+  tableStage.setPointerCapture(e.pointerId);
+});
+
+tableStage.addEventListener("pointermove", e => {
+  if (!tablePts.has(e.pointerId)) return;
+  tablePts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  if (!tableGest) return;
+  if (tableGest.mode === "pinch") {
+    const it = [...tablePts.values()];
+    if (it.length < 2) return;
+    const d = Math.hypot(it[0].x - it[1].x, it[0].y - it[1].y);
+    if (tableGest.d0 <= 0) return;
+    const z = Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, tableGest.z0 * (d / tableGest.d0))), r = z / tableGest.z0;
+    tableView.z = z;
+    tableView.x = tableGest.cx - (tableGest.cx - tableGest.vx) * r;
+    tableView.y = tableGest.cy - (tableGest.cy - tableGest.vy) * r;
+    applyTableView();
+    return;
+  }
+  const dx = e.clientX - tableGest.sx, dy = e.clientY - tableGest.sy;
+  if (!tableGest.moved && Math.hypot(dx, dy) < DRAG_SLOP) return;
+  if (!tableGest.moved) {
+    tableGest.moved = true;
+    if (tableGest.mode === "card") tableGest.el.classList.add("drag");
+  }
+  if (tableGest.mode === "pan") {
+    tableView.x = tableGest.ox + dx;
+    tableView.y = tableGest.oy + dy;
+    applyTableView();
+  } else {
+    const c = tableCards.find(k => k.id === tableGest.id);
+    if (!c) return;
+    c.x = Math.round(tableGest.ox + dx / tableView.z);
+    c.y = Math.round(tableGest.oy + dy / tableView.z);
+    tableGest.el.style.left = c.x + "px";
+    tableGest.el.style.top = c.y + "px";
+  }
+});
+
+tableStage.addEventListener("pointerup", e => {
+  tablePts.delete(e.pointerId);
+  tableStage.classList.remove("panning");
+  if (!tableGest) return;
+  if (tableGest.mode === "card") {
+    tableGest.el.classList.remove("drag");
+    if (!tableGest.moved) selectTableCard(tableGest.id === tableSelId ? null : tableGest.id);
+    else autosaveTable();
+  } else if (tableGest.mode === "pan" && !tableGest.moved) {
+    selectTableCard(null);
+  }
+  tableGest = null;
+});
+
+tableStage.addEventListener("pointercancel", e => {
+  tablePts.delete(e.pointerId);
+  tableStage.classList.remove("panning");
+  tableGest = null;
+});
+
+tableStage.addEventListener("wheel", e => {
+  e.preventDefault();
+  if (e.ctrlKey || e.metaKey) {
+    const z = Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, tableView.z * Math.exp(-e.deltaY * 0.0016))), r = z / tableView.z;
+    tableView.x = e.clientX - (e.clientX - tableView.x) * r;
+    tableView.y = e.clientY - (e.clientY - tableView.y) * r;
+    tableView.z = z;
+  } else {
+    tableView.x -= e.deltaX;
+    tableView.y -= e.deltaY;
+  }
+  applyTableView();
+}, { passive: false });
+
+function fitTable() {
+  if (!tableCards.length) {
+    tableView = { x: innerWidth / 2 - 140, y: innerHeight / 2 - 120, z: 1 };
+    applyTableView();
+    tableStatus("EMPTY TABLE");
+    return;
+  }
+  let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+  for (let i = 0; i < tableCards.length; i++) {
+    const c = tableCards[i];
+    if (c.x < x0) x0 = c.x;
+    if (c.y < y0) y0 = c.y;
+    if (c.x + CARD_W > x1) x1 = c.x + CARD_W;
+    if (c.y + CARD_H_EST > y1) y1 = c.y + CARD_H_EST;
+  }
+  const pad = 70, w = x1 - x0 + pad * 2, h = y1 - y0 + pad * 2;
+  tableView.z = Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, Math.min(innerWidth / w, innerHeight / h)));
+  tableView.x = innerWidth / 2 - ((x0 + x1) / 2) * tableView.z;
+  tableView.y = innerHeight / 2 - ((y0 + y1) / 2) * tableView.z;
+  applyTableView();
+}
+
+function readingOrder() {
+  const out = tableCards.slice();
+  out.sort((a, b) => {
+    const ra = Math.floor(a.y / ROW_BAND), rb = Math.floor(b.y / ROW_BAND);
+    return ra !== rb ? ra - rb : a.x - b.x;
+  });
+  return out;
+}
+
+async function copyReadingOrder() {
+  if (!tableCards.length) { tableStatus("NOTHING ON THE TABLE"); return; }
+  const ord = readingOrder();
+  let out = "";
+  for (let i = 0; i < ord.length; i++) {
+    const c = ord[i], slip = slipOf(c);
+    out += c.noteId + " — " + c.f + "\n" + (slip ? slip.text : "") + "\n\n";
+  }
+  try {
+    await navigator.clipboard.writeText(out.trimEnd());
+    tableStatus("COPIED " + ord.length + " SLIPS IN ARRANGEMENT ORDER");
+  } catch (err) {
+    tableStatus("COPY UNAVAILABLE");
+  }
+}
+
+function boardData() { return { schema: SCHEMA, saved: new Date().toISOString(), view: tableView, cards: tableCards }; }
+function downloadFile(name, text, mime) {
+  const blob = new Blob([text], { type: mime || "application/json" });
+  const url = URL.createObjectURL(blob), a = document.createElement("a");
+  a.href = url; a.download = name; document.body.appendChild(a); a.click();
+  a.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function saveTableFile() {
+  const stamp = new Date().toISOString().slice(0, 10).replace(/-/g, "");
+  downloadFile("slipcase-table-" + stamp + ".json", JSON.stringify(boardData(), null, 1));
+  tableStatus("SAVED · " + tableCards.length + " SLIPS");
+}
+
+function loadTableBoard(obj) {
+  if (!obj || obj.schema !== SCHEMA || !Array.isArray(obj.cards)) return false;
+  const cap = Math.min(obj.cards.length, MAX_CARDS);
+  tableCards = []; nextCardId = 1;
+  for (let i = 0; i < cap; i++) {
+    const c = obj.cards[i];
+    if (!c || typeof c.noteId !== "string" || typeof c.f !== "string") continue;
+    tableCards.push({ id: nextCardId++, noteId: c.noteId, f: c.f, x: +c.x || 0, y: +c.y || 0, open: !!c.open });
+  }
+  if (obj.view && isFinite(obj.view.z)) tableView = { x: +obj.view.x || 0, y: +obj.view.y || 0, z: Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, +obj.view.z || 1)) };
+  for (const [, el] of mountedTableCards) el.remove();
+  mountedTableCards.clear(); selectTableCard(null); applyTableView();
+  return true;
+}
+
+function autosaveTable() {
+  try { localStorage.setItem("slipcase.table", JSON.stringify(boardData())); }
+  catch (err) {}
+}
+
+function restoreTable() {
+  try {
+    const raw = localStorage.getItem("slipcase.table");
+    return raw ? loadTableBoard(JSON.parse(raw)) : false;
+  } catch (err) { return false; }
+}
+
+function shareTableLink() {
+  if (!tableCards.length) { tableStatus("NOTHING TO SHARE"); return; }
+  try {
+    const packed = btoa(unescape(encodeURIComponent(JSON.stringify({ schema: SCHEMA, view: tableView, cards: tableCards.map(c => ({ noteId: c.noteId, f: c.f, x: c.x, y: c.y, open: c.open })) }))));
+    const url = location.origin + location.pathname + "#t=" + packed;
+    navigator.clipboard.writeText(url).then(
+      () => tableStatus("LINK COPIED · " + tableCards.length + " SLIPS"),
+      () => { location.hash = "t=" + url.split("#t=")[1]; tableStatus("LINK IN ADDRESS BAR"); }
+    );
+  } catch (err) { tableStatus("SHARE FAILED — USE SAVE"); }
+}
+
+let tableStatusTimer = 0;
+function tableStatus(msg) {
+  clearTimeout(tableStatusTimer);
+  $("#tableStatus").textContent = msg;
+  tableStatusTimer = setTimeout(() => { $("#tableStatus").textContent = tableCards.length ? tableCards.length + " SLIPS ON THE TABLE" : "EMPTY TABLE"; }, 2600);
+}
+
+/* -- TABLE DRAWER -- */
+let drawerCaseIdx = -1, drawerQueryTokens = [], drawerTimer = 0;
+
+function monolineCaseIcon(count) {
+  const n = Math.min(count, 5);
+  let s = "";
+  for (let i = 0; i < n; i++) s += `<rect x="${20 + i * 7}" y="${16 - i * 3.5}" width="34" height="40" rx="5" fill="#fff" stroke="#0647E5" stroke-width="2.5"/>`;
+  return `<svg viewBox="0 0 96 78" aria-hidden="true">${s}<path d="M14 34 h68 v38 h-68 z" fill="#fff" stroke="#0647E5" stroke-width="2.5"/><rect x="38" y="48" width="20" height="11" fill="#fff" stroke="#0647E5" stroke-width="2.5"/></svg>`;
+}
+
+function placedSet() {
+  const s = new Set();
+  for (let i = 0; i < tableCards.length; i++) s.add(tableCards[i].noteId + "|" + tableCards[i].f);
+  return s;
+}
+
+function renderTableDrawer() {
+  const visibleCases = (selectedCaseIdx === -1) ? KASTEN_CASES : KASTEN_CASES.filter(c => c.case_idx === selectedCaseIdx);
+  const shown = [];
+  for (let k = 0; k < visibleCases.length && shown.length < 80; k++) {
+    const c = visibleCases[k];
+    if (!drawerQueryTokens.length || drawerQueryTokens.every(t => c.low.includes(t))) shown.push(c);
+  }
+  let html = `<div class="caseRow">`;
+  for (let s = 0; s < shown.length; s++) {
+    const c = shown[s], n = ALL_NOTES[c.i];
+    const isCur = drawerCaseIdx === c.i;
+    html += `<button class="caseBtn${isCur ? " on" : ""}" data-c="${c.i}">${monolineCaseIcon(c.slips.length)}<span class="cid">${esc(n.id)}</span><span class="ctp">${esc(n.topic)}</span></button>`;
+  }
+  html += `</div>`;
+
+  if (drawerCaseIdx >= 0 && KASTEN_CASES[drawerCaseIdx]) {
+    const c = KASTEN_CASES[drawerCaseIdx], n = ALL_NOTES[c.i], held = placedSet();
+    html += `<div class="fan"><div class="fanHead"><span><b>${esc(n.id)}</b> · ${esc(n.type)} · ${c.slips.length} SLIPS</span><button class="tbtn" data-deal="1">DEAL ALL</button></div><div class="chips">`;
+    for (let s = 0; s < c.slips.length; s++) {
+      const on = held.has(c.id + "|" + c.slips[s].f);
+      html += `<button class="chip${on ? " placed" : ""}" data-f="${esc(c.slips[s].f)}">${esc(c.slips[s].f)}</button>`;
+    }
+    html += `</div></div>`;
+  }
+  $("#dBody").innerHTML = html || `<div class="dEmpty">NOTHING MATCHES</div>`;
+}
+
+$("#dBody").addEventListener("click", e => {
+  const cb = e.target.closest(".caseBtn");
+  if (cb) { drawerCaseIdx = +cb.dataset.c; renderTableDrawer(); return; }
+  if (e.target.closest("[data-deal]")) { dealCaseOnTable(drawerCaseIdx); return; }
+  const chip = e.target.closest(".chip");
+  if (chip && drawerCaseIdx >= 0) {
+    const c = KASTEN_CASES[drawerCaseIdx], base = centerWorld();
+    const jx = (Math.random() - 0.5) * 90, jy = (Math.random() - 0.5) * 70;
+    placeSlipOnTable(c.id, chip.dataset.f, { x: base.x - CARD_W / 2 + jx, y: base.y - CARD_H_EST / 2 + jy });
+    renderTableDrawer();
+    tableStatus("PLACED · " + chip.dataset.f);
+  }
+});
+
+function openTableDrawer() {
+  $("#drawer").classList.add("open");
+  $("#drawerScrim").classList.add("open");
+  renderTableDrawer();
+}
+
+function closeTableDrawer() {
+  $("#drawer").classList.remove("open");
+  $("#drawerScrim").classList.remove("open");
+}
+
+$("#drawerBtn").onclick = openTableDrawer;
+$("#drawerClose").onclick = closeTableDrawer;
+$("#drawerScrim").onclick = closeTableDrawer;
+$("#fitBtn").onclick = fitTable;
+$("#readBtn").onclick = copyReadingOrder;
+$("#saveBtn").onclick = saveTableFile;
+$("#shareBtn").onclick = shareTableLink;
+$("#expandBtn").onclick = toggleOpenTableCard;
+$("#removeBtn").onclick = removeSelectedTableCard;
+
+$("#openBtn").onclick = () => { $("#filePick").click(); };
+$("#filePick").addEventListener("change", e => {
+  const f = e.target.files && e.target.files[0];
+  if (!f) return;
+  const r = new FileReader();
+  r.onload = () => {
+    try {
+      const obj = JSON.parse(String(r.result));
+      if (loadTableBoard(obj)) { tableStatus("TABLE OPENED · " + tableCards.length + " SLIPS"); fitTable(); autosaveTable(); }
+      else tableStatus("NOT A VALID SLIPCASE TABLE FILE");
+    } catch (err) { tableStatus("NOT VALID JSON"); }
+  };
+  r.readAsText(f);
+});
+
+$("#dSearch").addEventListener("input", e => {
+  clearTimeout(drawerTimer);
+  drawerTimer = setTimeout(() => {
+    drawerQueryTokens = e.target.value.trim().toLowerCase().split(/\s+/).filter(Boolean).slice(0, 8);
+    drawerCaseIdx = -1;
+    renderTableDrawer();
+  }, 110);
+});
+
+/* =========================================================
+   4. FIELD ENGINE (NON-SCROLLING UNIT-PER-SCREEN & SLIP DECK)
+   ========================================================= */
+let fieldViewMode = "FIELD"; // "FIELD" | "SLIP" | "TRAY"
+let fieldFilteredIndices = KASTEN_CASES.map((_, k) => k);
+let fieldPage = 0;
+let fieldOpenCaseK = 0, fieldSlipIdx = 0;
+let fieldTray = []; // [{i, f}]
+let fieldTrayIdx = 0;
+
+function fieldPageSize() { return innerWidth >= 1020 ? 12 : innerWidth >= 680 ? 9 : 6; }
+
+function renderFieldView() {
+  const activeKasten = (selectedCaseIdx === -1) 
+    ? KASTEN_CASES.map((_, k) => k) 
+    : KASTEN_CASES.map((c, k) => ({ c, k })).filter(x => x.c.case_idx === selectedCaseIdx).map(x => x.k);
+
+  const q = $("#search").value.trim().toLowerCase();
+  const qTokens = q ? q.split(/\s+/).filter(Boolean) : [];
+
+  fieldFilteredIndices = activeKasten.filter(k => {
+    if (!qTokens.length) return true;
+    return qTokens.every(t => KASTEN_CASES[k].low.includes(t));
+  });
+
+  const stage = $("#fieldStageInner");
+
+  if (fieldViewMode === "FIELD") {
+    const ps = fieldPageSize(), pages = Math.max(1, Math.ceil(fieldFilteredIndices.length / ps));
+    fieldPage = Math.min(Math.max(fieldPage, 0), pages - 1);
+    if (!fieldFilteredIndices.length) {
+      stage.innerHTML = `<div class="emptyField">NOTHING IN THE FIELD MATCHES</div>`;
+    } else {
+      const start = fieldPage * ps, end = Math.min(start + ps, fieldFilteredIndices.length);
+      let html = "";
+      for (let k = start; k < end; k++) {
+        const c = KASTEN_CASES[fieldFilteredIndices[k]], n = ALL_NOTES[c.i];
+        html += `
+          <button class="caseCard" data-k="${k}">
+            ${monolineCaseIcon(c.slips.length)}
+            <span class="caseId">${esc(n.id)}</span>
+            <span class="caseTopic">${esc(n.topic)} &middot; ${esc(n.type)}</span>
+            <span class="caseCount">${c.slips.length} SLIPS</span>
+          </button>
+        `;
+      }
+      stage.innerHTML = `<div class="fieldGrid">${html}</div>`;
+    }
+    $("#fPosLabel").innerHTML = `FIELD <b>${fieldFilteredIndices.length ? fieldPage + 1 : 0} / ${fieldFilteredIndices.length ? pages : 0}</b> &middot; ${fieldFilteredIndices.length} CASES`;
+    renderFieldTicks(fieldPage, pages);
+    $("#fPrevBtn").disabled = fieldPage <= 0;
+    $("#fNextBtn").disabled = fieldPage >= pages - 1;
+    $("#fPrevLabel").textContent = "PREV";
+    $("#fNextLabel").textContent = "NEXT";
+    $("#fActBtn").textContent = "TRAY · " + fieldTray.length;
+    $("#fActBtn").classList.toggle("filled", fieldTray.length > 0);
+  } 
+  else if (fieldViewMode === "SLIP") {
+    const c = KASTEN_CASES[fieldFilteredIndices[fieldOpenCaseK]], n = ALL_NOTES[c.i];
+    fieldSlipIdx = Math.min(Math.max(fieldSlipIdx, 0), c.slips.length - 1);
+    const slip = c.slips[fieldSlipIdx], held = inFieldTray(c.i, slip.f) >= 0;
+    const kind = CODE_FIELD.test(slip.f) ? "code" : HEAD_FIELD.test(slip.f) ? "head" : "text";
+
+    stage.innerHTML = `
+      <div class="slipWrap">
+        <article class="slip${held ? " collected" : ""}" data-kind="${kind}">
+          <div class="slipTab">${esc(slip.f)}</div>
+          <div class="slipMeta"><b>${esc(n.id)}</b><span>${esc(n.type)}</span><span>${esc(n.topic)}</span><span>${esc(n.case_name)}</span></div>
+          <div class="slipBody">${esc(slip.text)}</div>
+        </article>
+        <button class="zone prev" data-fnav="-1" aria-label="Previous slip"></button>
+        <button class="zone next" data-fnav="1" aria-label="Next slip"></button>
+      </div>
+    `;
+    $("#fPosLabel").innerHTML = `<b>${esc(n.id)}</b> &middot; SLIP <b>${fieldSlipIdx + 1} / ${c.slips.length}</b>`;
+    renderFieldTicks(fieldSlipIdx, c.slips.length);
+    $("#fPrevBtn").disabled = false;
+    $("#fNextBtn").disabled = false;
+    $("#fPrevLabel").textContent = "SLIP";
+    $("#fNextLabel").textContent = "SLIP";
+    $("#fActBtn").textContent = held ? "COLLECTED" : "COLLECT";
+    $("#fActBtn").classList.toggle("filled", held);
+  }
+  else if (fieldViewMode === "TRAY") {
+    if (!fieldTray.length) { fieldViewMode = "FIELD"; renderFieldView(); return; }
+    fieldTrayIdx = Math.min(Math.max(fieldTrayIdx, 0), fieldTray.length - 1);
+    const t = fieldTray[fieldTrayIdx], n = ALL_NOTES[t.i], c = KASTEN_CASES[t.i];
+    let slip = null;
+    for (let s = 0; s < c.slips.length; s++) if (c.slips[s].f === t.f) { slip = c.slips[s]; break; }
+    const kind = CODE_FIELD.test(slip.f) ? "code" : HEAD_FIELD.test(slip.f) ? "head" : "text";
+
+    stage.innerHTML = `
+      <div class="slipWrap">
+        <article class="slip collected" data-kind="${kind}">
+          <div class="slipTab">${esc(slip.f)}</div>
+          <div class="slipMeta"><b>${esc(n.id)}</b><span>${esc(n.type)}</span><span>${esc(n.topic)}</span></div>
+          <div class="slipBody">${esc(slip ? slip.text : "—")}</div>
+        </article>
+      </div>
+    `;
+    $("#fPosLabel").innerHTML = `TRAY &middot; SLIP <b>${fieldTrayIdx + 1} / ${fieldTray.length}</b>`;
+    renderFieldTicks(fieldTrayIdx, fieldTray.length);
+    $("#fPrevBtn").disabled = fieldTrayIdx <= 0;
+    $("#fNextBtn").disabled = fieldTrayIdx >= fieldTray.length - 1;
+    $("#fPrevLabel").textContent = "PREV";
+    $("#fNextLabel").textContent = "NEXT";
+    $("#fActBtn").textContent = "COPY ALL";
+    $("#fActBtn").classList.add("filled");
+  }
+}
+
+function inFieldTray(i, f) {
+  for (let t = 0; t < fieldTray.length; t++) if (fieldTray[t].i === i && fieldTray[t].f === f) return t;
+  return -1;
+}
+
+function renderFieldTicks(cur, total) {
+  const el = $("#fTicks");
+  if (total < 2 || total > 24) { el.innerHTML = ""; return; }
+  let html = "";
+  for (let i = 0; i < total; i++) html += `<span class="tick${i === cur ? " on" : ""}"></span>`;
+  el.innerHTML = html;
+}
+
+function navField(dir) {
+  if (fieldViewMode === "FIELD") {
+    fieldPage += dir;
+    renderFieldView();
+  } else if (fieldViewMode === "SLIP") {
+    const len = KASTEN_CASES[fieldFilteredIndices[fieldOpenCaseK]].slips.length;
+    fieldSlipIdx = (fieldSlipIdx + dir + len) % len;
+    renderFieldView();
+  } else {
+    fieldTrayIdx += dir;
+    renderFieldView();
+  }
+}
+
+function actField() {
+  if (fieldViewMode === "FIELD") {
+    if (fieldTray.length) { fieldViewMode = "TRAY"; fieldTrayIdx = 0; renderFieldView(); }
+    return;
+  }
+  if (fieldViewMode === "SLIP") {
+    const c = KASTEN_CASES[fieldFilteredIndices[fieldOpenCaseK]], slip = c.slips[fieldSlipIdx], at = inFieldTray(c.i, slip.f);
+    if (at >= 0) fieldTray.splice(at, 1);
+    else fieldTray.push({ i: c.i, f: slip.f });
+    renderFieldView();
+    return;
+  }
+  copyFieldTray();
+}
+
+async function copyFieldTray() {
+  let out = "";
+  for (let t = 0; t < fieldTray.length; t++) {
+    const e = fieldTray[t];
+    out += ALL_NOTES[e.i].id + " — " + e.f + "\n" + valueFor(ALL_NOTES[e.i], e.f) + "\n\n";
+  }
+  try {
+    await navigator.clipboard.writeText(out.trimEnd());
+    toast(`Copied ${fieldTray.length} slips`);
+  } catch (err) {
+    toast("Copy unavailable");
+  }
+}
+
+$("#fieldStageInner").addEventListener("click", e => {
+  const card = e.target.closest(".caseCard");
+  if (card) {
+    fieldOpenCaseK = +card.dataset.k;
+    fieldSlipIdx = 0;
+    fieldViewMode = "SLIP";
+    renderFieldView();
+    return;
+  }
+  const z = e.target.closest(".zone");
+  if (z) navField(+z.dataset.fnav);
+});
+
+$("#fPrevBtn").onclick = () => navField(-1);
+$("#fNextBtn").onclick = () => navField(1);
+$("#fActBtn").onclick = actField;
+
+/* =========================================================
+   5. LINES MODULE (ROW-BY-ROW INSPECTOR)
    ========================================================= */
 function rowKey(id, field) { return id + "|||" + field; }
 function unpack(key) { const i = key.indexOf("|||"); return [key.slice(0,i), key.slice(i+3)]; }
 
-function valueFor(n, field) {
-  if (field === "TITLE") return n.title;
-  if (field === "SOURCE") return n.source;
-  if (field === "PASSAGE") return n.passage;
-  if (field === "TYPE") return n.type;
-  if (field === "QUESTION" && n.fields["QUESTION"]) return n.fields["QUESTION"];
-  return n.fields[field] ?? "";
-}
-
 function fieldsFor(n) {
-  if (lineFilter === "ALL") return MAIN_FIELDS.filter(f => valueFor(n, f));
+  if (lineFilter === "ALL") return FIELD_ORDER.filter(f => valueFor(n, f));
   if (lineFilter === "TYPE") return ["TYPE"];
   return valueFor(n, lineFilter) ? [lineFilter] : [];
 }
@@ -2109,12 +2412,10 @@ function renderLines() {
   const notes = getActiveNotes();
   const q = $("#search").value.trim().toLowerCase();
   let html = "";
-  let matchedCount = 0;
 
   notes.forEach(n => {
     const fields = fieldsFor(n).filter(f => lineMatches(n, f, q));
     if (!fields.length) return;
-    matchedCount++;
     html += `
       <section class="zgroup" data-zettel="${esc(n.id)}">
         <div class="zhead" onclick="selectWholeZettel('${esc(n.id)}')">
@@ -2128,7 +2429,7 @@ function renderLines() {
     fields.forEach(field => {
       const key = rowKey(n.id, field);
       const v = valueFor(n, field);
-      const code = /FORMAL|BIBTEX|MECHANISM/.test(field);
+      const code = CODE_FIELD.test(field);
       html += `
         <article class="lineRow ${selectedLines.has(key) ? 'selected' : ''} ${code ? 'code' : ''}" data-key="${esc(key)}" data-field="${esc(field)}">
           <div class="fieldName">${esc(field)}</div>
@@ -2168,20 +2469,12 @@ function bindLineRows() {
       clearTimeout(timer);
       if (!moved) toggleLine(row.dataset.key);
     });
-    row.addEventListener("contextmenu", e => {
-      e.preventDefault();
-      const [id] = unpack(row.dataset.key);
-      selectWholeZettel(id);
-    });
   });
 }
 
 function toggleLine(key) {
-  if (selectedLines.has(key)) {
-    selectedLines.delete(key);
-  } else {
-    selectedLines.add(key);
-  }
+  if (selectedLines.has(key)) selectedLines.delete(key);
+  else selectedLines.add(key);
   const el = $(`.lineRow[data-key="${CSS.escape(key)}"]`);
   if (el) el.classList.toggle("selected", selectedLines.has(key));
   updateSelectionUI();
@@ -2191,7 +2484,7 @@ window.selectWholeZettel = function(id) {
   const notes = getActiveNotes();
   const n = notes.find(x => x.id === id);
   if (!n) return;
-  const keys = MAIN_FIELDS.filter(f => valueFor(n, f)).map(f => rowKey(id, f));
+  const keys = FIELD_ORDER.filter(f => valueFor(n, f)).map(f => rowKey(id, f));
   const all = keys.every(k => selectedLines.has(k));
   keys.forEach(k => all ? selectedLines.delete(k) : selectedLines.add(k));
   renderLines();
@@ -2211,9 +2504,8 @@ function clearSelected() {
 
 function getSelectedItems() {
   const items = [];
-  const notes = ALL_NOTES;
-  notes.forEach(n => {
-    MAIN_FIELDS.forEach(field => {
+  ALL_NOTES.forEach(n => {
+    FIELD_ORDER.forEach(field => {
       const key = rowKey(n.id, field);
       if (selectedLines.has(key) && valueFor(n, field)) {
         items.push({ n, field, text: valueFor(n, field) });
@@ -2228,26 +2520,22 @@ function openStack() {
   $("#stackCount").textContent = `${items.length} LINES`;
   $("#stackScroll").innerHTML = items.map(x => `
     <article class="stackItem" data-field="${esc(x.field)}">
-      <div class="stackMeta">${esc(x.n.id)} &middot; ${esc(x.field)} &middot; ${esc(x.n.type)} &middot; ${esc(x.n.case_name)}</div>
+      <div class="stackMeta">${esc(x.n.id)} &middot; ${esc(x.field)} &middot; ${esc(x.n.type)}</div>
       <div class="stackText">${esc(x.text)}</div>
     </article>
   `).join("");
   $("#stack").classList.add("open");
 }
 
-function closeStack() {
-  $("#stack").classList.remove("open");
-}
+function closeStack() { $("#stack").classList.remove("open"); }
 
 async function copySelectedLines() {
   const items = getSelectedItems();
   const text = items.map(x => `${x.n.id} [${x.field}]\n${x.text}`).join("\n\n---\n\n");
   try {
     await navigator.clipboard.writeText(text);
-    toast("Selected lines copied to clipboard");
-  } catch(e) {
-    toast("Clipboard copy failed");
-  }
+    toast("Selected lines copied");
+  } catch(e) { toast("Clipboard copy failed"); }
 }
 
 function setLineFilter(f) {
@@ -2258,13 +2546,7 @@ function setLineFilter(f) {
 }
 
 function openFilterSheet() {
-  const opts = [
-    "ALL", "QUESTION", "DEEPER QUESTION", "PASSAGE", "RESEARCH OBJECT", 
-    "LOCAL MOVE", "WHAT BECAME STRANGE", "MECHANISM", "FORMAL SHIFT", 
-    "SOURCE FORMALISM", "OUR FORMALIZATION", "TENSION", "MISSING", 
-    "BOUNDARY", "TEST", "CITATION TRAIL", "PLATFORM", "LINKS", "BIBTEX", "TYPE", "SOURCE"
-  ];
-  $("#sheetGrid").innerHTML = opts.map(f => `
+  $("#sheetGrid").innerHTML = FIELD_ORDER.map(f => `
     <button class="${lineFilter === f ? 'on' : ''}" onclick="setLineFilter('${esc(f)}')">${esc(f)}</button>
   `).join("");
   $("#filterScrim").classList.add("open");
@@ -2285,17 +2567,13 @@ $("#stackBack").onclick = closeStack;
 $("#copyBtn").onclick = copySelectedLines;
 
 /* =========================================================
-   4. RELATE MODULE: MASSIVE GRAPH ENGINE (HTML5 CANVAS)
+   6. RELATE: MASSIVE GRAPH ENGINE (HTML5 CANVAS)
    ========================================================= */
 let graphMode = "all";
-let graphAnimId = null;
-let graphNodes = [];
-let graphLinks = [];
-let transform = { x: 0, y: 0, k: 1 };
-let isDraggingGraph = false;
-let dragStart = { x: 0, y: 0 };
-let hoveredNode = null;
-let selectedNode = null;
+let graphAnimId = null, graphNodes = [], graphLinks = [];
+let graphTransform = { x: 0, y: 0, k: 1 };
+let isDraggingGraph = false, graphDragStart = { x: 0, y: 0 };
+let hoveredNode = null, selectedNode = null;
 
 function initGraphEngine() {
   const canvas = $("#graphCanvas");
@@ -2311,16 +2589,13 @@ function initGraphEngine() {
   canvas.style.height = h + "px";
 
   buildGraphTopology(w, h);
-  
   if (graphAnimId) cancelAnimationFrame(graphAnimId);
   runGraphPhysics();
   bindGraphEvents(canvas);
 }
 
 function buildGraphTopology(w, h) {
-  const cx = w / 2;
-  const cy = h / 2;
-  
+  const cx = w / 2, cy = h / 2;
   const caseNodeMap = {};
   graphNodes = [];
   graphLinks = [];
@@ -2335,9 +2610,7 @@ function buildGraphTopology(w, h) {
       ...cn,
       x: cx + Math.cos(angle) * radius + (Math.random() - 0.5) * 40,
       y: cy + Math.sin(angle) * radius + (Math.random() - 0.5) * 40,
-      vx: 0,
-      vy: 0,
-      radius: 16
+      vx: 0, vy: 0, radius: 16
     };
     graphNodes.push(node);
     caseNodeMap[cn.id] = node;
@@ -2359,9 +2632,7 @@ function buildGraphTopology(w, h) {
         ...sn,
         x: pX + Math.cos(angle) * dist,
         y: pY + Math.sin(angle) * dist,
-        vx: 0,
-        vy: 0,
-        radius: 4.5
+        vx: 0, vy: 0, radius: 4.5
       };
       graphNodes.push(node);
       slipNodeMap[sn.id] = node;
@@ -2395,48 +2666,38 @@ function runGraphPhysics() {
 
   for (let i = 0; i < graphLinks.length; i++) {
     const l = graphLinks[i];
-    const dx = l.target.x - l.source.x;
-    const dy = l.target.y - l.source.y;
+    const dx = l.target.x - l.source.x, dy = l.target.y - l.source.y;
     const dist = Math.hypot(dx, dy) || 1;
     const targetDist = l.type === 'contains' ? 50 : l.type === 'case_bridge' ? 140 : 80;
     const force = (dist - targetDist) * 0.003;
-    const fx = (dx / dist) * force;
-    const fy = (dy / dist) * force;
-    l.source.vx += fx;
-    l.source.vy += fy;
-    l.target.vx -= fx;
-    l.target.vy -= fy;
+    const fx = (dx / dist) * force, fy = (dy / dist) * force;
+    l.source.vx += fx; l.source.vy += fy;
+    l.target.vx -= fx; l.target.vy -= fy;
   }
 
   for (let i = 0; i < graphNodes.length; i++) {
     const n1 = graphNodes[i];
     for (let j = i + 1; j < Math.min(graphNodes.length, i + 60); j++) {
       const n2 = graphNodes[j];
-      const dx = n2.x - n1.x;
-      const dy = n2.y - n1.y;
+      const dx = n2.x - n1.x, dy = n2.y - n1.y;
       const dist = Math.hypot(dx, dy) || 1;
       const minDist = n1.radius + n2.radius + 15;
       if (dist < minDist) {
         const force = (minDist - dist) * 0.04;
-        const fx = (dx / dist) * force;
-        const fy = (dy / dist) * force;
-        n1.vx -= fx;
-        n1.vy -= fy;
-        n2.vx += fx;
-        n2.vy += fy;
+        const fx = (dx / dist) * force, fy = (dy / dist) * force;
+        n1.vx -= fx; n1.vy -= fy;
+        n2.vx += fx; n2.vy += fy;
       }
     }
-    n1.x += n1.vx;
-    n1.y += n1.vy;
-    n1.vx *= 0.88;
-    n1.vy *= 0.88;
+    n1.x += n1.vx; n1.y += n1.vy;
+    n1.vx *= 0.88; n1.vy *= 0.88;
   }
 
   ctx.save();
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.scale(dpr, dpr);
-  ctx.translate(transform.x, transform.y);
-  ctx.scale(transform.k, transform.k);
+  ctx.translate(graphTransform.x, graphTransform.y);
+  ctx.scale(graphTransform.k, graphTransform.k);
 
   const q = $("#search").value.trim().toLowerCase();
 
@@ -2480,7 +2741,7 @@ function runGraphPhysics() {
     } else {
       ctx.fillStyle = isSelected ? "#0647E5" : isMatched ? "#111318" : "rgba(17,19,24,0.15)";
       ctx.fill();
-      if (transform.k > 1.2 || isHovered || isSelected) {
+      if (graphTransform.k > 1.2 || isHovered || isSelected) {
         ctx.font = "8px Inter, sans-serif";
         ctx.fillStyle = isMatched ? "#6B7280" : "rgba(107,114,128,0.2)";
         ctx.fillText(n.label.slice(0, 22), n.x + n.radius + 3, n.y + 2.5);
@@ -2496,26 +2757,26 @@ function bindGraphEvents(canvas) {
   let isDown = false;
   canvas.onmousedown = e => {
     isDown = true;
-    dragStart = { x: e.clientX - transform.x, y: e.clientY - transform.y };
+    graphDragStart = { x: e.clientX - graphTransform.x, y: e.clientY - graphTransform.y };
   };
   window.onmousemove = e => {
     if (!isDown) {
       const rect = canvas.getBoundingClientRect();
-      const mx = (e.clientX - rect.left - transform.x) / transform.k;
-      const my = (e.clientY - rect.top - transform.y) / transform.k;
+      const mx = (e.clientX - rect.left - graphTransform.x) / graphTransform.k;
+      const my = (e.clientY - rect.top - graphTransform.y) / graphTransform.k;
       hoveredNode = graphNodes.find(n => Math.hypot(n.x - mx, n.y - my) <= n.radius + 4) || null;
       canvas.style.cursor = hoveredNode ? "pointer" : "grab";
       return;
     }
-    transform.x = e.clientX - dragStart.x;
-    transform.y = e.clientY - dragStart.y;
+    graphTransform.x = e.clientX - graphDragStart.x;
+    graphTransform.y = e.clientY - graphDragStart.y;
   };
   window.onmouseup = () => { isDown = false; };
 
   canvas.onclick = e => {
     const rect = canvas.getBoundingClientRect();
-    const mx = (e.clientX - rect.left - transform.x) / transform.k;
-    const my = (e.clientY - rect.top - transform.y) / transform.k;
+    const mx = (e.clientX - rect.left - graphTransform.x) / graphTransform.k;
+    const my = (e.clientY - rect.top - graphTransform.y) / graphTransform.k;
     const clicked = graphNodes.find(n => Math.hypot(n.x - mx, n.y - my) <= n.radius + 4);
     if (clicked) {
       selectedNode = clicked;
@@ -2528,7 +2789,7 @@ function bindGraphEvents(canvas) {
   canvas.onwheel = e => {
     e.preventDefault();
     const factor = e.deltaY < 0 ? 1.1 : 0.9;
-    transform.k = Math.max(0.3, Math.min(4, transform.k * factor));
+    graphTransform.k = Math.max(0.3, Math.min(4, graphTransform.k * factor));
   };
 }
 
@@ -2539,27 +2800,14 @@ function showGraphInspector(n) {
     $("#graphInspAccession").textContent = `${n.accession} · ${n.meta_field}`;
     $("#graphInspTitle").textContent = n.label;
     $("#graphInspDesc").textContent = `Workspace containing ${n.card_count} atomic zettel slips and ${n.pdf_count} research PDFs.`;
-    $("#graphInspOpenBtn").onclick = () => {
-      selectCase(n.case_idx);
-      setTab("lines");
-    };
-    $("#graphInspFlipperBtn").onclick = () => {
-      selectCase(n.case_idx);
-      setTab("flipper");
-    };
+    $("#graphInspOpenBtn").onclick = () => { selectCase(n.case_idx); setTab("lines"); };
+    $("#graphInspFieldBtn").onclick = () => { selectCase(n.case_idx); setTab("field"); };
   } else {
     $("#graphInspAccession").textContent = `SLIP · ${n.card_type} · ${n.topic}`;
     $("#graphInspTitle").textContent = n.label;
     $("#graphInspDesc").textContent = `Contained in slipcase #${n.case_idx + 1}.`;
-    $("#graphInspOpenBtn").onclick = () => {
-      selectCase(n.case_idx);
-      setTab("lines");
-    };
-    $("#graphInspFlipperBtn").onclick = () => {
-      selectCase(n.case_idx);
-      currentCardIdx = n.card_idx || 0;
-      setTab("flipper");
-    };
+    $("#graphInspOpenBtn").onclick = () => { selectCase(n.case_idx); setTab("lines"); };
+    $("#graphInspFieldBtn").onclick = () => { selectCase(n.case_idx); setTab("field"); };
   }
 }
 
@@ -2578,19 +2826,19 @@ window.setGraphMode = function(mode) {
 };
 
 window.resetGraphView = function() {
-  transform = { x: 0, y: 0, k: 1 };
+  graphTransform = { x: 0, y: 0, k: 1 };
   initGraphEngine();
 };
 
 /* =========================================================
-   5. RELATE MODULE: NESTED MATRIX ("CASES OF CASES")
+   7. RELATE: NESTED MATRIX
    ========================================================= */
 function renderMatrix() {
   const container = $("#matrixClusterContainer");
   let html = "";
 
   for (const [clusterName, folderList] of Object.entries(GRAPH.meta_clusters)) {
-    const clusterCases = CASES.filter(c => folderList.includes(c.id));
+    const clusterCases = CASES_DATA.filter(c => folderList.includes(c.id));
     const totalSlips = clusterCases.reduce((acc, c) => acc + c.card_count, 0);
     const totalPdfs = clusterCases.reduce((acc, c) => acc + c.pdf_count, 0);
 
@@ -2604,9 +2852,9 @@ function renderMatrix() {
     `;
 
     clusterCases.forEach(c => {
-      const idx = CASES.findIndex(x => x.id === c.id);
+      const idx = CASES_DATA.findIndex(x => x.id === c.id);
       html += `
-        <div class="matrix-case-row" onclick="selectCase(${idx}); setTab('lines');">
+        <div class="matrix-case-row" onclick="selectCase(${idx}); setTab('field');">
           <div class="matrix-case-accession">${esc(c.accession)}</div>
           <div class="matrix-case-name">${esc(c.name)}</div>
           <div class="matrix-case-counts">${c.card_count} SLIPS &middot; ${c.pdf_count} PDFS &rarr;</div>
@@ -2621,129 +2869,7 @@ function renderMatrix() {
 }
 
 /* =========================================================
-   6. FLIPPER MODULE (TACTILE CARD DECK)
-   ========================================================= */
-function renderFlipper() {
-  const notes = getActiveNotes();
-  if (notes.length === 0) {
-    $("#cardBoxContainer").innerHTML = `<div class="empty">No cards available in this view.</div>`;
-    $("#deckCounter").textContent = "0 OF 0";
-    return;
-  }
-
-  if (currentCardIdx >= notes.length) currentCardIdx = 0;
-  if (currentCardIdx < 0) currentCardIdx = notes.length - 1;
-
-  const card = notes[currentCardIdx];
-  $("#deckCounter").textContent = `CARD ${currentCardIdx + 1} OF ${notes.length}`;
-
-  if (rawCardMode) {
-    $("#cardBoxContainer").innerHTML = `
-      <div class="card-box">
-        <div class="card-meta-bar">
-          <div class="card-id-tag">${esc(card.id)} &middot; RAW SOURCE</div>
-          <div class="card-type-tag">${esc(card.type)}</div>
-        </div>
-        <pre class="doc-box">${esc(card.raw)}</pre>
-      </div>
-    `;
-    return;
-  }
-
-  let fieldsHtml = "";
-  for (const [k, v] of Object.entries(card.fields)) {
-    if (k === "QUESTION") continue;
-    fieldsHtml += `
-      <div class="card-field-row">
-        <div class="card-field-k">${esc(k)}</div>
-        <div class="card-field-v">${esc(v)}</div>
-      </div>
-    `;
-  }
-
-  const qText = card.fields["QUESTION"] || card.title;
-
-  $("#cardBoxContainer").innerHTML = `
-    <div class="card-box">
-      <div class="card-meta-bar">
-        <div class="card-id-tag">${esc(card.id)} &middot; ${esc(card.case_name)}</div>
-        <div class="card-type-tag">${esc(card.type)}</div>
-      </div>
-      <div class="card-title-main">${esc(card.title)}</div>
-      ${card.source ? `<div class="card-source-main">${esc(card.source)}</div>` : ''}
-      
-      <div class="card-question-box">
-        <div class="card-question-label">CORE QUESTION</div>
-        <div class="card-question-text">${esc(qText)}</div>
-      </div>
-
-      ${card.passage ? `<div class="card-passage-box">${esc(card.passage)}</div>` : ''}
-
-      ${fieldsHtml ? `<div class="card-fields-accordion">${fieldsHtml}</div>` : ''}
-    </div>
-  `;
-}
-
-function nextCard() {
-  const notes = getActiveNotes();
-  if (notes.length === 0) return;
-  currentCardIdx = (currentCardIdx + 1) % notes.length;
-  renderFlipper();
-}
-
-function prevCard() {
-  const notes = getActiveNotes();
-  if (notes.length === 0) return;
-  currentCardIdx = (currentCardIdx - 1 + notes.length) % notes.length;
-  renderFlipper();
-}
-
-$("#nextCardBtn").onclick = nextCard;
-$("#prevCardBtn").onclick = prevCard;
-
-$("#toggleRawBtn").onclick = () => {
-  rawCardMode = !rawCardMode;
-  $("#toggleRawBtn").textContent = rawCardMode ? "FORMATTED" : "RAW TEXT";
-  renderFlipper();
-};
-
-$("#copyCardBtn").onclick = async () => {
-  const notes = getActiveNotes();
-  if (!notes[currentCardIdx]) return;
-  try {
-    await navigator.clipboard.writeText(notes[currentCardIdx].raw);
-    toast("Card text copied");
-  } catch(e) {
-    toast("Copy failed");
-  }
-};
-
-$("#downloadCardBtn").onclick = () => {
-  const notes = getActiveNotes();
-  if (!notes[currentCardIdx]) return;
-  const card = notes[currentCardIdx];
-  const blob = new Blob([card.raw], { type: "text/plain;charset=utf-8" });
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = `${card.id}.txt`;
-  a.click();
-  toast(`Downloaded ${card.id}.txt`);
-};
-
-/* Touch swipe for Flipper */
-let touchStartX = 0;
-let touchEndX = 0;
-$("#pane-flipper").addEventListener("touchstart", e => {
-  touchStartX = e.changedTouches[0].screenX;
-}, { passive: true });
-$("#pane-flipper").addEventListener("touchend", e => {
-  touchEndX = e.changedTouches[0].screenX;
-  if (touchEndX < touchStartX - 50) nextCard();
-  if (touchEndX > touchStartX + 50) prevCard();
-}, { passive: true });
-
-/* =========================================================
-   7. PDF LIBRARY & DUAL-ENGINE READER (RETURN)
+   8. RETURN: PDFS, MAPS, PROMPTS
    ========================================================= */
 function renderPdfs() {
   const pdfs = getActivePdfs();
@@ -2798,7 +2924,6 @@ window.openPdfModal = function(encodedRel, title) {
   $("#pdfModalExtBtn").href = rel;
   $("#pdfModalDlBtn").href = rel;
   $("#pdfFallbackBtn").href = rel;
-  
   $("#pdfObject").data = rel;
   $("#pdfIframe").src = rel;
   $("#pdfModal").classList.add("open");
@@ -2820,11 +2945,9 @@ $$(".pdf-filter-bar .subchip").forEach(b => {
   };
 });
 
-/* =========================================================
-   8. MAPS & STRUCTURAL DOCS MODULE (PRESERVE)
-   ========================================================= */
+/* MAPS */
 function renderMaps() {
-  const caseData = selectedCaseIdx === -1 ? CASES[0] : CASES[selectedCaseIdx];
+  const caseData = selectedCaseIdx === -1 ? CASES_DATA[0] : CASES_DATA[selectedCaseIdx];
   if (!caseData || !caseData.specials || Object.keys(caseData.specials).length === 0) {
     $("#mapsTabs").innerHTML = '';
     $("#mapDocContent").textContent = "No structural 000__* documents found for this slipcase.";
@@ -2852,18 +2975,16 @@ window.selectDocKey = function(k) {
 };
 
 $("#copyDocBtn").onclick = async () => {
-  const caseData = selectedCaseIdx === -1 ? CASES[0] : CASES[selectedCaseIdx];
+  const caseData = selectedCaseIdx === -1 ? CASES_DATA[0] : CASES_DATA[selectedCaseIdx];
   const docText = caseData?.specials?.[currentActiveDocKey] || "";
   try {
     await navigator.clipboard.writeText(docText);
-    toast("Document copied to clipboard");
-  } catch(e) {
-    toast("Copy failed");
-  }
+    toast("Document copied");
+  } catch(e) { toast("Copy failed"); }
 };
 
 $("#downloadDocBtn").onclick = () => {
-  const caseData = selectedCaseIdx === -1 ? CASES[0] : CASES[selectedCaseIdx];
+  const caseData = selectedCaseIdx === -1 ? CASES_DATA[0] : CASES_DATA[selectedCaseIdx];
   const docText = caseData?.specials?.[currentActiveDocKey] || "";
   const blob = new Blob([docText], { type: "text/plain;charset=utf-8" });
   const a = document.createElement("a");
@@ -2873,9 +2994,7 @@ $("#downloadDocBtn").onclick = () => {
   toast(`Downloaded ${currentActiveDocKey}`);
 };
 
-/* =========================================================
-   9. PROMPT OPERATOR MODULE (RETURN - COOL RADIO)
-   ========================================================= */
+/* PROMPTS */
 function renderPrompts() {
   $("#pomlStepper").innerHTML = PROMPTS.map((p, idx) => `
     <button class="poml-step-btn ${currentPromptIdx === idx ? 'on' : ''}" onclick="selectPrompt(${idx})">${p.num} ${esc(p.title)} ${esc(p.ver)}</button>
@@ -2928,9 +3047,7 @@ window.copyAndAdvancePrompt = async function() {
     toast(`Copied ${p.title} ${p.ver}`);
     currentPromptIdx = (currentPromptIdx + 1) % PROMPTS.length;
     renderPrompts();
-  } catch(e) {
-    toast("Copy failed");
-  }
+  } catch(e) { toast("Copy failed"); }
 };
 
 window.copyPromptText = async function() {
@@ -2938,9 +3055,7 @@ window.copyPromptText = async function() {
   try {
     await navigator.clipboard.writeText(p.text);
     toast(`Copied ${p.title} ${p.ver}`);
-  } catch(e) {
-    toast("Copy failed");
-  }
+  } catch(e) { toast("Copy failed"); }
 };
 
 window.downloadPromptFile = function() {
@@ -2954,15 +3069,16 @@ window.downloadPromptFile = function() {
 };
 
 /* =========================================================
-   10. GLOBAL SEARCH & KEYBOARD SHORTCUTS
+   9. GLOBAL SEARCH & KEYBOARD SHORTCUTS
    ========================================================= */
 $("#search").addEventListener("input", () => {
+  if (currentTab === "field") { fieldPage = 0; renderFieldView(); }
   if (currentTab === "lines") renderLines();
   if (currentTab === "pdfs") renderPdfs();
 });
 
 document.addEventListener("keydown", e => {
-  if (e.key === "/" && document.activeElement !== $("#search")) {
+  if (e.key === "/" && document.activeElement !== $("#search") && document.activeElement !== $("#dSearch")) {
     e.preventDefault();
     $("#search").focus();
   }
@@ -2970,13 +3086,20 @@ document.addEventListener("keydown", e => {
     closeStack();
     closePdfModal();
     closeGraphInspector();
+    closeTableDrawer();
     window.closeThreeInspector?.();
     $("#filterScrim").classList.remove("open");
     $("#caseScrim").classList.remove("open");
   }
-  if (currentTab === "flipper") {
-    if (e.key === "ArrowRight") nextCard();
-    if (e.key === "ArrowLeft") prevCard();
+  if (currentTab === "field") {
+    if (e.key === "ArrowRight" || e.key === "j") navField(1);
+    if (e.key === "ArrowLeft" || e.key === "k") navField(-1);
+    if (e.key === "Enter" && fieldViewMode === "SLIP") actField();
+  }
+  if (currentTab === "table") {
+    if (e.key === "f") fitTable();
+    if (e.key === "s" && (e.metaKey || e.ctrlKey)) { e.preventDefault(); saveTableFile(); }
+    if ((e.key === "Backspace" || e.key === "Delete") && tableSelId !== null) { e.preventDefault(); removeSelectedTableCard(); }
   }
   if (currentTab === "prompts") {
     if (e.key === "ArrowRight") { currentPromptIdx = (currentPromptIdx + 1) % PROMPTS.length; renderPrompts(); }
@@ -2991,9 +3114,37 @@ function toast(msg) {
   toastTimer = setTimeout(() => $("#toast").classList.remove("open"), 1400);
 }
 
-/* Initial Mount */
+/* Boot Table from Hash or Storage */
+(function bootTable() {
+  const reg = document.createElement("div");
+  reg.className = "reg";
+  reg.style.left = "-40px";
+  reg.style.top = "-40px";
+  reg.innerHTML = `<i class="h"></i><i class="v"></i>`;
+  world.appendChild(reg);
+
+  let restored = false;
+  if (location.hash.startsWith("#t=")) {
+    try {
+      restored = loadTableBoard(JSON.parse(decodeURIComponent(escape(atob(location.hash.slice(3))))));
+    } catch (err) {}
+  }
+  if (!restored && !restoreTable()) {
+    tableView = { x: innerWidth / 2 - 140, y: innerHeight / 2 - 120, z: 1 };
+  }
+  applyTableView();
+  $("#tableStatus").textContent = tableCards.length ? tableCards.length + " SLIPS ON THE TABLE" : "EMPTY TABLE";
+
+  setTimeout(() => {
+    $("#loader").classList.add("done");
+    setTimeout(() => { const l = $("#loader"); if (l) l.remove(); }, 420);
+    if (!tableCards.length) tableStatus("PRESS SLIPCASES TO LAY OUT SLIPS");
+  }, 950);
+})();
+
 updateActiveCaseLabel();
-setTab("lines");
+setTab("table");
+})();
 </script>
 
 <!-- Three.js 3D Orthographic Slipcase Field Module -->
@@ -3043,7 +3194,6 @@ function initThree() {
     const root = new THREE.Group();
     root.userData = { caseData };
 
-    // Box bottom, left, right, back, front
     root.add(outlinedBox(width, panel, depth, [0, panel / 2, 0]));
     root.add(outlinedBox(panel, height, depth, [-width / 2 + panel / 2, height / 2, 0]));
     root.add(outlinedBox(panel, height, depth, [width / 2 - panel / 2, height / 2, 0]));
@@ -3052,7 +3202,6 @@ function initThree() {
     const frontHeight = height * 0.68;
     root.add(outlinedBox(width, frontHeight, panel, [0, frontHeight / 2, depth / 2 - panel / 2]));
 
-    // Stepped slips
     const usableDepth = depth - slipInset * 2;
     const spacing = slips > 1 ? usableDepth / (slips - 1) : 0;
 
@@ -3080,13 +3229,14 @@ function initThree() {
     }
     caseMeshes = [];
 
+    const CASES_DATA = /* DATA_CASES */;
+
     if (threeViewMode === "all") {
-      // Arrange 31 slipcases in a structured archival grid
       const cols = 6;
       const spacingX = 3.2;
       const spacingZ = 2.8;
 
-      CASES.forEach((c, idx) => {
+      CASES_DATA.forEach((c, idx) => {
         const row = Math.floor(idx / cols);
         const col = idx % cols;
         const slipCount = Math.min(8, Math.max(3, Math.round(c.card_count / 10)));
@@ -3102,10 +3252,9 @@ function initThree() {
         collectionGroup.add(box);
         caseMeshes.push(box);
       });
-      controls.target.set(0, 0.8, 0);
+      controls?.target.set(0, 0.8, 0);
     } else {
-      // Focus on active case
-      const targetCase = selectedCaseIdx === -1 ? CASES[0] : CASES[selectedCaseIdx];
+      const targetCase = selectedCaseIdx === -1 ? CASES_DATA[0] : CASES_DATA[selectedCaseIdx];
       const slipCount = Math.min(10, Math.max(4, Math.round(targetCase.card_count / 8)));
       const box = createSlipcase({
         width: 2.4,
@@ -3118,7 +3267,7 @@ function initThree() {
       box.position.set(0, 0, 0);
       collectionGroup.add(box);
       caseMeshes.push(box);
-      controls.target.set(0, 0.8, 0);
+      controls?.target.set(0, 0.8, 0);
     }
   }
 
@@ -3178,7 +3327,6 @@ function initThree() {
     resize();
   };
 
-  // Raycasting on Click
   renderer.domElement.addEventListener("click", e => {
     const rect = renderer.domElement.getBoundingClientRect();
     mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
@@ -3194,7 +3342,8 @@ function initThree() {
       }
       if (topGroup.userData && topGroup.userData.caseData) {
         const c = topGroup.userData.caseData;
-        const cIdx = CASES.findIndex(x => x.id === c.id);
+        const CASES_DATA = /* DATA_CASES */;
+        const cIdx = CASES_DATA.findIndex(x => x.id === c.id);
         showThreeInspector(c, cIdx);
       }
     }
@@ -3206,14 +3355,8 @@ function initThree() {
     document.getElementById("threeInspAccession").textContent = `${c.accession} · ${c.meta_field}`;
     document.getElementById("threeInspTitle").textContent = c.name;
     document.getElementById("threeInspDesc").textContent = `Physical slipcase workspace holding ${c.card_count} zettels and ${c.pdf_count} research PDFs.`;
-    document.getElementById("threeInspLinesBtn").onclick = () => {
-      selectCase(cIdx);
-      setTab("lines");
-    };
-    document.getElementById("threeInspFlipperBtn").onclick = () => {
-      selectCase(cIdx);
-      setTab("flipper");
-    };
+    document.getElementById("threeInspLinesBtn").onclick = () => { selectCase(cIdx); setTab("lines"); };
+    document.getElementById("threeInspFieldBtn").onclick = () => { selectCase(cIdx); setTab("field"); };
   }
 
   window.closeThreeInspector = () => {
@@ -3248,4 +3391,4 @@ html_rendered = html_template.replace('/* DATA_CASES */', json.dumps(cases_data)
 with open(os.path.join(BASE_DIR, 'index.html'), 'w', encoding='utf-8') as f:
     f.write(html_rendered)
 
-print('Successfully re-indexed and wrote index.html and slipcases.json with 3D Field, Massive Graph & Relational Matrix.')
+print('Successfully re-indexed and wrote index.html and slipcases.json with Table, Field, Lines, 3D, Graph, Matrix, PDFs, Maps, and Prompts.')

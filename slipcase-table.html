@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#ffffff">
+<title>SLIPCASE — Table</title>
+<style>
+/* SLIPCASE TABLE
+   THEORY: <void> is the primary material. <slip> is laid on it by hand.
+   <arrangement> is the argument; reading order is derived from position, not stored.
+   Nothing scrolls. The table is infinite; the DOM is not. */
+:root{
+  --blue:#0647E5;--paper:#ffffff;--field:#F7F8FA;--ink:#111318;--grey:#9CA3AF;--pale:#E7EEFF;
+  --top:env(safe-area-inset-top);--bottom:env(safe-area-inset-bottom);
+  --sans:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Source Serif 4",ui-serif,Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--paper);color:var(--ink);font-family:var(--sans);overscroll-behavior:none}
+button,input{font:inherit;color:inherit}button{border:0;background:none;cursor:pointer;padding:0}
+button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+/* ── loader: the mark draws itself, slips rise ── */
+#loader{position:fixed;inset:0;z-index:200;background:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;transition:opacity .38s ease}
+#loader.done{opacity:0;pointer-events:none}
+#loader svg{width:132px;height:auto}
+#loader .ln{fill:none;stroke:var(--blue);stroke-width:2.4;stroke-linejoin:round;stroke-dasharray:240;stroke-dashoffset:240;animation:draw .62s ease forwards}
+#loader .sl{fill:#fff;opacity:0;animation:rise .5s ease forwards}
+#loader .word{font-size:11px;letter-spacing:.42em;color:var(--blue);text-transform:uppercase;opacity:0;animation:fade .5s ease .5s forwards}
+#loader .sub{font-family:var(--mono);font-size:9px;letter-spacing:.14em;color:var(--grey);opacity:0;animation:fade .5s ease .72s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes rise{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fade{to{opacity:1}}
+
+/* ── the void ── */
+#table{position:fixed;inset:0;background:var(--paper);touch-action:none;overflow:hidden;cursor:grab}
+#table.panning{cursor:grabbing}
+#grain{position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(circle at 1px 1px,rgba(6,71,229,.16) 1px,transparent 0);
+  background-repeat:repeat}
+#world{position:absolute;top:0;left:0;width:0;height:0;transform-origin:0 0;will-change:transform}
+/* registration marks at the origin — the sheet has a corner */
+.reg{position:absolute;pointer-events:none}
+.reg i{position:absolute;background:var(--pale)}
+.reg .h{width:34px;height:1px}.reg .v{width:1px;height:34px}
+
+/* ── slip cards ── */
+.card{position:absolute;width:280px;background:var(--paper);border:1.5px solid var(--pale);border-radius:9px 9px 0 0;
+  box-shadow:0 1px 0 rgba(17,19,24,.04);display:flex;flex-direction:column;touch-action:none;user-select:none}
+.card.on{border-color:var(--blue);box-shadow:0 6px 22px rgba(6,71,229,.14)}
+.card.drag{box-shadow:0 14px 34px rgba(6,71,229,.20)}
+.card.landing{animation:land .34s cubic-bezier(.2,.9,.25,1)}
+@keyframes land{from{opacity:0;transform:translateY(-16px) scale(.94)}to{opacity:1;transform:none}}
+.cTab{position:absolute;top:-14px;left:14px;max-width:74%;background:var(--paper);border:1.5px solid var(--pale);border-bottom:0;border-radius:6px 6px 0 0;padding:4px 10px 7px;font-family:var(--mono);font-size:8.5px;letter-spacing:.1em;color:var(--blue);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card.on .cTab{border-color:var(--blue)}
+.cMeta{padding:11px 13px 7px;border-bottom:1px solid var(--pale);font-family:var(--mono);font-size:8.5px;letter-spacing:.06em;color:var(--grey)}
+.cMeta b{color:var(--blue);font-weight:500}
+.cBody{padding:11px 13px 13px;font-family:var(--serif);font-size:13.5px;line-height:1.46;white-space:pre-wrap;overflow-wrap:break-word;
+  display:-webkit-box;-webkit-line-clamp:9;-webkit-box-orient:vertical;overflow:hidden}
+.card.open .cBody{-webkit-line-clamp:unset;display:block}
+.card[data-k="head"] .cBody{font-family:var(--sans);font-weight:640;letter-spacing:-.015em;font-size:14.5px;line-height:1.34}
+.card[data-k="code"] .cBody{font-family:var(--mono);font-size:10.5px;line-height:1.55;background:var(--field)}
+
+/* ── chrome ── */
+.bar{position:fixed;z-index:60;display:flex;gap:6px;align-items:center}
+#topbar{top:calc(9px + var(--top));left:10px;right:10px;justify-content:space-between}
+#botbar{bottom:calc(9px + var(--bottom));left:10px;right:10px;justify-content:space-between}
+.grp{display:flex;gap:6px;align-items:center;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);padding:4px;border:1.5px solid var(--pale)}
+.btn{height:36px;padding:0 11px;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;color:var(--ink);white-space:nowrap;display:flex;align-items:center;gap:6px}
+.btn:hover,.btn:active{color:var(--blue)}
+.btn.key{background:var(--blue);color:var(--paper)}
+.btn.key:hover{color:var(--paper)}
+.btn:disabled{opacity:.32}
+.wordmark{font-size:10px;letter-spacing:.38em;color:var(--blue);text-transform:uppercase;padding:0 10px;white-space:nowrap}
+#status{font-family:var(--mono);font-size:9px;letter-spacing:.08em;color:var(--grey);padding:0 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:44vw}
+
+/* ── case drawer ── */
+#drawer{position:fixed;z-index:80;left:0;right:0;bottom:0;max-height:74vh;background:var(--paper);border-top:1.5px solid var(--blue);
+  transform:translateY(102%);transition:transform .26s cubic-bezier(.2,.85,.25,1);display:flex;flex-direction:column;padding-bottom:var(--bottom)}
+#drawer.open{transform:translateY(0)}
+.dHead{flex:0 0 auto;padding:11px 12px;display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;border-bottom:1px solid var(--pale)}
+.dSearch{height:36px;border:1.5px solid var(--pale);background:var(--paper);padding:0 11px;outline:0;min-width:0;font-family:var(--mono);font-size:12px}
+.dSearch:focus{border-color:var(--blue)}
+.dSearch::placeholder{color:var(--grey)}
+.dBody{flex:1 1 auto;overflow:auto;padding:12px;scrollbar-width:thin}
+.caseRow{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px}
+.caseBtn{border:1.5px solid var(--pale);background:var(--paper);padding:9px 6px;display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center}
+.caseBtn:hover,.caseBtn.on{border-color:var(--blue)}
+.caseBtn svg{width:56px;height:auto}
+.caseBtn .cid{font-family:var(--mono);font-size:8.5px;letter-spacing:.06em;color:var(--blue)}
+.caseBtn .ctp{font-size:9px;color:var(--grey);line-height:1.2;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.fan{margin-top:12px;padding-top:12px;border-top:1px solid var(--pale)}
+.fanHead{font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:var(--grey);margin-bottom:9px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.fanHead b{color:var(--blue);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1.5px solid var(--pale);background:var(--paper);padding:8px 10px;font-family:var(--mono);font-size:9px;letter-spacing:.07em;color:var(--ink);border-radius:5px 5px 0 0}
+.chip:hover{border-color:var(--blue);color:var(--blue)}
+.chip.placed{background:var(--pale);color:var(--blue);border-color:var(--pale)}
+.dEmpty{padding:34px 10px;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--grey)}
+#scrim{position:fixed;inset:0;z-index:70;background:rgba(17,19,24,.10);display:none}
+#scrim.open{display:block}
+@media(prefers-reduced-motion:reduce){#drawer{transition:none}.card.landing{animation:none}#loader .ln,#loader .sl,#loader .word,#loader .sub{animation-duration:1ms}}
+</style>
+</head>
+<body>
+
+<div id="loader">
+  <svg viewBox="0 0 96 78" aria-hidden="true">
+    <g>
+      <rect class="sl" x="20" y="16" width="34" height="40" rx="5" style="animation-delay:.18s"/>
+      <rect class="ln sl" x="20" y="16" width="34" height="40" rx="5" style="animation-delay:.18s;fill:none"/>
+      <rect class="sl" x="27" y="12.5" width="34" height="40" rx="5" style="animation-delay:.26s"/>
+      <rect class="ln sl" x="27" y="12.5" width="34" height="40" rx="5" style="animation-delay:.26s;fill:none"/>
+      <rect class="sl" x="34" y="9" width="34" height="40" rx="5" style="animation-delay:.34s"/>
+      <rect class="ln sl" x="34" y="9" width="34" height="40" rx="5" style="animation-delay:.34s;fill:none"/>
+    </g>
+    <path class="ln" d="M14 34 h68 v38 h-68 z" style="fill:#fff"/>
+    <rect class="ln" x="38" y="48" width="20" height="11" style="animation-delay:.3s"/>
+  </svg>
+  <div class="word">Slipcase</div>
+  <div class="sub" id="loadNote">PREPARING THE TABLE</div>
+</div>
+
+<div id="table"><div id="grain"></div><div id="world"></div></div>
+
+<div class="bar" id="topbar">
+  <div class="grp"><span class="wordmark">Slipcase</span><span id="status">—</span></div>
+  <div class="grp">
+    <button class="btn" id="fitBtn">FIT</button>
+    <button class="btn" id="saveBtn">SAVE</button>
+    <button class="btn" id="openBtn">OPEN</button>
+    <button class="btn" id="shareBtn">SHARE</button>
+  </div>
+</div>
+
+<div class="bar" id="botbar">
+  <div class="grp">
+    <button class="btn key" id="drawerBtn">SLIPCASES</button>
+    <button class="btn" id="readBtn">READ ORDER</button>
+  </div>
+  <div class="grp" id="selGrp" style="display:none">
+    <button class="btn" id="expandBtn">EXPAND</button>
+    <button class="btn" id="removeBtn">RETURN</button>
+  </div>
+</div>
+
+<div id="scrim"></div>
+<section id="drawer">
+  <div class="dHead">
+    <input id="dSearch" class="dSearch" placeholder="search the kasten" autocomplete="off" aria-label="Search">
+    <button class="btn" id="loadKasten">LOAD KASTEN</button>
+    <button class="btn" id="drawerClose">CLOSE</button>
+  </div>
+  <div class="dBody" id="dBody"></div>
+</section>
+
+<input type="file" id="filePick" accept=".json,application/json" style="display:none">
+
+<script>
+/* fallback seed. Real use: define window.ZETTEL_DATA above, or press LOAD KASTEN
+   and pick a JSON file containing the notes array. */
+window.__SEED__=[
+{id:"Z-SEM-145",title:"NATURALIZE may work partly by THINNING: common sense suppresses the subordinate clauses that thick description restores.",type:"COUPLING",topic:"Common Sense",symbol:"Nt",
+source:"Clifford Geertz — “Common Sense as a Cultural System” — 1975 / 1983. Clifford Geertz — “Thick Description” — 1973. Gilbert Ryle — “The Thinking of Thoughts” — 1968.",
+passage:"[PARAPHRASE] Geertz names “thinness” as one stylistic quality of common sense: events are presented literally and simply, without elaborate complication. His thick-description argument, drawing on Ryle, moves in the opposite direction by recovering nested structures of intention, code, implication, parody, circumstance, and interpretation.",
+fields:{"RESEARCH OBJECT":"NATURALIZATION and THICKENING may systematically alter opposite properties of an interpretation.",
+"WHAT BECAME STRANGE":"“What obviously happened” often contains fewer visible interpretive steps than “what happened once its cultural conditions are reconstructed.” The appearance of direct access to reality may therefore be produced by deleting interpretive depth.",
+"QUESTION":"Is THINNING one mechanism by which NATURALNESS is manufactured?",
+"DEEPER QUESTION":"Can political or technical systems make interpretations appear objective by compressing away the relations required to produce them?",
+"FORMAL SHIFT":"<THICK INTERPRETATION I*> → [THIN] → [NATURALIZE] → <“JUST HOW THINGS ARE”>",
+"TENSION":"Some extremely thick narratives can also naturalize a worldview through overwhelming detail. Thickness therefore cannot be treated as automatically critical or denaturalizing.",
+"BOUNDARY":"THICKEN and NATURALIZE are not logical inverses. The proposed coupling is a research hypothesis.",
+"TEST":"Present one event in three descriptions: THIN, THICK, VERBOSE-THIN. Measure perceived obviousness, naturalness, certainty, contestability.",
+"PLATFORM":"[[Executable Semiotics Operator Algebra]]","LINKS":"[[Z-SEM-135]] [[Z-SEM-133]] [[Z-SEM-134]]"}},
+{id:"Z-GENE-148",title:"ACE is not the beginning of executable natural language: SHRDLU was already interpreting English commands into actions in 1971.",type:"GENEALOGY",topic:"Executable Language",symbol:"Sh",
+source:"Terry Winograd — Procedures as a Representation for Data in a Computer Program for Understanding Natural Language — 1971 — MIT Project MAC.",
+passage:"[PARAPHRASE] Winograd describes a system that interacts in English, answers questions, accepts information, resolves language using semantic information and discourse/world context, and executes commands affecting a modeled blocks world.",
+fields:{"RESEARCH OBJECT":"EXECUTABLE NATURAL-LANGUAGE COMMANDS predate controlled-English compilation by decades.",
+"WHAT BECAME STRANGE":"Attempto restricts THE LANGUAGE. SHRDLU instead restricts THE WORLD. Both make natural-language action possible by making some other part of the problem small enough to formalize.",
+"QUESTION":"Is the history of executable natural language primarily a history of WHERE designers place the restriction?",
+"DEEPER QUESTION":"What did LLMs change if both natural-language interpretation and command execution existed half a century earlier?",
+"FORMAL SHIFT":"ENGLISH → INTERPRETATION → [PLAN] → ACTION",
+"BOUNDARY":"Do not claim SHRDLU supported unrestricted natural-language action in an open environment.",
+"TEST":"Construct a genealogy table: SHRDLU, ACE, semantic parser, LLM agent — columns: LANGUAGE RESTRICTED? WORLD RESTRICTED? ONTOLOGY FIXED? ACTION SPACE FIXED?",
+"PLATFORM":"[[Genealogy of Executable Description]]","LINKS":"[[Z-ACE-139]] [[Z-ACE-138]] [[SHRDLU]]"}},
+{id:"Z-SEM-152",title:"Formal grammar constrains whether an output is well-formed, not whether it is the right interpretation.",type:"VALIDITY",topic:"Formalization",symbol:"Vf",
+source:"Saibo Geng, Martin Josifoski, Maxime Peyrard, Robert West — “Grammar-Constrained Decoding for Structured NLP Tasks without Finetuning” — 2023/2024 — §2.",
+passage:"[PARAPHRASE] Geng et al. define output spaces for structured NLP tasks using formal grammars and constrain model decoding so that generated outputs belong to those languages.",
+fields:{"RESEARCH OBJECT":"SYNTACTIC ADMISSIBILITY ≠ INTERPRETIVE CORRECTNESS.",
+"WHAT BECAME STRANGE":"Hard constraints can make a wrong ontology perfectly executable. Every output may be formally valid while the distinction that mattered culturally never existed in the grammar.",
+"QUESTION":"What kind of validation is required above grammar validity to test whether the formalization itself is faithful?",
+"DEEPER QUESTION":"Can a system detect that its constraint language lacks a distinction required by the case before it generates a formally valid but semantically false answer?",
+"OUR FORMALIZATION":"[OUR FORMALIZATION — NOT SOURCE SYNTAX]\nGCD guarantees:\ny ∈ L(G).\nIt cannot alone guarantee:\nMEANING(y) = intended_meaning\nor:\nONTOLOGY(G) is adequate.",
+"TENSION":"Formal guarantees feel epistemically strong because invalid possibilities are eliminated. But the strongest possible constraint can merely harden a bad representation.",
+"MISSING":"A REPRESENTATIONAL ADEQUACY TEST before constraint compilation.",
+"TEST":"Design a formally valid grammar for a social domain while deliberately omitting one known relevant category. Run constrained generation. Verify every output is syntactically valid while incapable of expressing the omitted distinction.",
+"PLATFORM":"[[Formalization Remainder]]","LINKS":"[[Z-SEM-142]] [[Z-SEMCOMP-150]] [[Validity ≠ Fidelity]]"}}
+];
+</script>
+
+<script>
+(()=>{
+"use strict";
+
+/* ── named ceilings ── */
+const MAX_CARDS=400;          // cards allowed on one table
+const MAX_VISIBLE=180;        // cards mounted in the DOM at once
+const CARD_W=280, CARD_H_EST=230, CULL_PAD=420;
+const ZOOM_MIN=0.22, ZOOM_MAX=2.4;
+const DRAG_SLOP=5;            // px before a press becomes a drag
+const ROW_BAND=140;           // world px band for deriving reading order
+const SHARE_MAX=7800;         // URL length before SAVE is required instead
+const SEARCH_DEBOUNCE_MS=110, MAX_QUERY_TOKENS=8;
+const STATUS_MS=2600, LOADER_MS=1000;
+const SCHEMA="slipcase.table/1";
+
+const FIELD_ORDER=["TITLE","SOURCE","PASSAGE","RESEARCH OBJECT","LOCAL MOVE","SOURCE TERMS","WHAT BECAME STRANGE","QUESTION","DEEPER QUESTION","MECHANISM","FORMAL SHIFT","SOURCE FORMALISM","OUR FORMALIZATION","TENSION","MISSING","BOUNDARY","CITATION TRAIL","TEST","PLATFORM","LINKS","BIBTEX"];
+const CODE_FIELD=/FORMAL|BIBTEX|MECHANISM/, HEAD_FIELD=/^(TITLE|QUESTION|DEEPER QUESTION)$/;
+
+const $=id=>document.getElementById(id);
+const ESC={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"};
+const esc=s=>String(s??"").replace(/[&<>"']/g,m=>ESC[m]);
+
+/* ── kasten ── */
+let notes=[], CASES=[], byId=new Map();
+function valueFor(n,f){if(f==="TITLE")return n.title;if(f==="SOURCE")return n.source;if(f==="PASSAGE")return n.passage;return (n.fields&&n.fields[f])||""}
+function indexKasten(arr){
+  notes=Array.isArray(arr)?arr:[];CASES=[];byId=new Map();
+  const cap=Math.min(notes.length,20000);          // bounded index
+  for(let i=0;i<cap;i++){
+    const n=notes[i],slips=[];
+    let low=(n.id+" "+n.type+" "+n.topic+" "+(n.symbol||"")).toLowerCase();
+    for(const f of FIELD_ORDER){
+      const v=valueFor(n,f);if(!v)continue;
+      slips.push({f,text:v});low+=" "+(f+" "+v).toLowerCase();
+    }
+    CASES.push({i,id:n.id,slips,low});
+    byId.set(n.id,i);
+  }
+}
+
+/* ── board state: the only thing worth saving ── */
+let cards=[];            // {id, noteId, f, x, y, open}
+let view={x:0,y:0,z:1};
+let selId=null, nextCardId=1;
+let persist=true;
+
+/* ── view transform ── */
+const world=$("world"), table=$("table"), grain=$("grain");
+function applyView(){
+  world.style.transform=`translate(${view.x}px,${view.y}px) scale(${view.z})`;
+  const g=Math.max(14,26*view.z);
+  grain.style.backgroundSize=g+"px "+g+"px";
+  grain.style.backgroundPosition=(view.x%g)+"px "+(view.y%g)+"px";
+  grain.style.opacity=view.z<0.5?0.35:0.75;
+  cull();
+}
+function screenToWorld(sx,sy){return {x:(sx-view.x)/view.z,y:(sy-view.y)/view.z}}
+function centerWorld(){return screenToWorld(innerWidth/2,innerHeight/2)}
+
+/* ── card mount / cull: DOM count is bounded by MAX_VISIBLE ── */
+const mounted=new Map();  // cardId -> element
+function cardHtml(c,n,slip){
+  const kind=CODE_FIELD.test(c.f)?"code":HEAD_FIELD.test(c.f)?"head":"text";
+  const el=document.createElement("article");
+  el.className="card landing"+(selId===c.id?" on":"")+(c.open?" open":"");
+  el.dataset.id=c.id;el.dataset.k=kind;
+  el.style.left=c.x+"px";el.style.top=c.y+"px";
+  el.innerHTML=`<div class="cTab">${esc(c.f)}</div><div class="cMeta"><b>${esc(n.id)}</b> · ${esc(n.type)}</div><div class="cBody">${esc(slip?slip.text:"—")}</div>`;
+  return el;
+}
+function slipOf(c){
+  const ci=byId.get(c.noteId);if(ci===undefined)return null;
+  const slips=CASES[ci].slips;
+  for(let s=0;s<slips.length;s++)if(slips[s].f===c.f)return slips[s];
+  return null;
+}
+function cull(){
+  const x0=-view.x/view.z-CULL_PAD, y0=-view.y/view.z-CULL_PAD;
+  const x1=(innerWidth-view.x)/view.z+CULL_PAD, y1=(innerHeight-view.y)/view.z+CULL_PAD;
+  let shown=0;
+  const keep=new Set();
+  for(let i=0;i<cards.length;i++){
+    const c=cards[i];
+    const vis=c.x+CARD_W>x0&&c.x<x1&&c.y+CARD_H_EST>y0&&c.y<y1;
+    if(!vis||shown>=MAX_VISIBLE)continue;
+    shown++;keep.add(c.id);
+    if(mounted.has(c.id))continue;
+    const ci=byId.get(c.noteId);if(ci===undefined)continue;
+    const el=cardHtml(c,notes[CASES[ci].i],slipOf(c));
+    world.appendChild(el);mounted.set(c.id,el);
+  }
+  for(const [id,el] of mounted){if(!keep.has(id)){el.remove();mounted.delete(id)}}
+}
+function refreshCard(id){
+  const el=mounted.get(id);if(!el)return;
+  const c=cards.find(k=>k.id===id);if(!c)return;
+  el.classList.toggle("on",selId===id);
+  el.classList.toggle("open",!!c.open);
+  el.style.left=c.x+"px";el.style.top=c.y+"px";
+}
+
+/* ── placing slips (the slipcase animation lives in .landing) ── */
+function placeSlip(noteId,f,at){
+  if(cards.length>=MAX_CARDS){status("TABLE FULL — "+MAX_CARDS+" SLIPS");return null}
+  const c={id:nextCardId++,noteId,f,x:Math.round(at.x),y:Math.round(at.y),open:false};
+  cards.push(c);select(c.id);cull();autosave();return c;
+}
+function dealCase(ci){
+  const c=CASES[ci];if(!c)return;
+  const base=centerWorld();
+  let placed=0;
+  const cap=Math.min(c.slips.length,MAX_CARDS-cards.length);
+  for(let s=0;s<cap;s++){
+    const col=Math.floor(s/4),row=s%4;
+    placeSlip(c.id,c.slips[s].f,{x:base.x-CARD_W/2+col*(CARD_W+26),y:base.y-200+row*(CARD_H_EST+22)});
+    placed++;
+  }
+  status("DEALT "+placed+" SLIPS · "+c.id);
+  closeDrawer();renderDrawer();
+}
+function removeSelected(){
+  if(selId===null)return;
+  const i=cards.findIndex(c=>c.id===selId);if(i<0)return;
+  cards.splice(i,1);
+  const el=mounted.get(selId);if(el){el.remove();mounted.delete(selId)}
+  select(null);autosave();status("RETURNED TO THE CASE");
+}
+function select(id){
+  const prev=selId;selId=id;
+  if(prev!==null)refreshCard(prev);
+  if(id!==null)refreshCard(id);
+  $("selGrp").style.display=id===null?"none":"flex";
+  if(id!==null){const c=cards.find(k=>k.id===id);$("expandBtn").textContent=c&&c.open?"COLLAPSE":"EXPAND"}
+}
+function toggleOpen(){
+  if(selId===null)return;
+  const c=cards.find(k=>k.id===selId);if(!c)return;
+  c.open=!c.open;refreshCard(c.id);
+  $("expandBtn").textContent=c.open?"COLLAPSE":"EXPAND";
+  autosave();
+}
+
+/* ── pointer: one handler set; pan, drag, pinch ── */
+const pts=new Map();
+let gest=null;        // {mode:'pan'|'card'|'pinch', ...}
+table.addEventListener("pointerdown",e=>{
+  pts.set(e.pointerId,{x:e.clientX,y:e.clientY});
+  if(pts.size===2){startPinch();return}
+  if(pts.size>2)return;
+  const el=e.target.closest(".card");
+  if(el){
+    const c=cards.find(k=>k.id===+el.dataset.id);if(!c)return;
+    gest={mode:"card",id:c.id,el,sx:e.clientX,sy:e.clientY,ox:c.x,oy:c.y,moved:false};
+  }else{
+    gest={mode:"pan",sx:e.clientX,sy:e.clientY,ox:view.x,oy:view.y,moved:false};
+    table.classList.add("panning");
+  }
+  table.setPointerCapture(e.pointerId);
+});
+function startPinch(){
+  const it=[...pts.values()];
+  gest={mode:"pinch",d0:Math.hypot(it[0].x-it[1].x,it[0].y-it[1].y),z0:view.z,
+    cx:(it[0].x+it[1].x)/2,cy:(it[0].y+it[1].y)/2,vx:view.x,vy:view.y};
+  table.classList.remove("panning");
+}
+table.addEventListener("pointermove",e=>{
+  if(!pts.has(e.pointerId))return;
+  pts.set(e.pointerId,{x:e.clientX,y:e.clientY});
+  if(!gest)return;
+  if(gest.mode==="pinch"){
+    const it=[...pts.values()];if(it.length<2)return;
+    const d=Math.hypot(it[0].x-it[1].x,it[0].y-it[1].y);
+    if(gest.d0<=0)return;
+    const z=clamp(gest.z0*(d/gest.d0),ZOOM_MIN,ZOOM_MAX),r=z/gest.z0;
+    view.z=z;
+    view.x=gest.cx-(gest.cx-gest.vx)*r;
+    view.y=gest.cy-(gest.cy-gest.vy)*r;
+    applyView();return;
+  }
+  const dx=e.clientX-gest.sx, dy=e.clientY-gest.sy;
+  if(!gest.moved&&Math.hypot(dx,dy)<DRAG_SLOP)return;
+  if(!gest.moved){gest.moved=true;if(gest.mode==="card")gest.el.classList.add("drag")}
+  if(gest.mode==="pan"){view.x=gest.ox+dx;view.y=gest.oy+dy;applyView()}
+  else{
+    const c=cards.find(k=>k.id===gest.id);if(!c)return;
+    c.x=Math.round(gest.ox+dx/view.z);c.y=Math.round(gest.oy+dy/view.z);
+    gest.el.style.left=c.x+"px";gest.el.style.top=c.y+"px";
+  }
+});
+function endPointer(e){
+  pts.delete(e.pointerId);
+  table.classList.remove("panning");
+  if(!gest)return;
+  if(gest.mode==="pinch"){gest=null;return}
+  if(gest.mode==="card"){
+    gest.el.classList.remove("drag");
+    if(!gest.moved)select(gest.id===selId?null:gest.id);else autosave();
+  }else if(!gest.moved)select(null);
+  gest=null;
+}
+table.addEventListener("pointerup",endPointer);
+table.addEventListener("pointercancel",endPointer);
+table.addEventListener("wheel",e=>{
+  e.preventDefault();
+  if(e.ctrlKey||e.metaKey){            /* pinch-zoom on a trackpad arrives as ctrl+wheel */
+    const z=clamp(view.z*Math.exp(-e.deltaY*0.0016),ZOOM_MIN,ZOOM_MAX),r=z/view.z;
+    view.x=e.clientX-(e.clientX-view.x)*r;view.y=e.clientY-(e.clientY-view.y)*r;view.z=z;
+  }else{view.x-=e.deltaX;view.y-=e.deltaY}
+  applyView();
+},{passive:false});
+function clamp(v,a,b){return v<a?a:v>b?b:v}
+
+/* ── fit: frame every card, or return to the origin when the table is empty ── */
+function fit(){
+  if(!cards.length){view={x:innerWidth/2-140,y:innerHeight/2-120,z:1};applyView();status("EMPTY TABLE");return}
+  let x0=Infinity,y0=Infinity,x1=-Infinity,y1=-Infinity;
+  for(let i=0;i<cards.length;i++){
+    const c=cards[i];
+    if(c.x<x0)x0=c.x;if(c.y<y0)y0=c.y;
+    if(c.x+CARD_W>x1)x1=c.x+CARD_W;if(c.y+CARD_H_EST>y1)y1=c.y+CARD_H_EST;
+  }
+  const pad=70,w=x1-x0+pad*2,h=y1-y0+pad*2;
+  view.z=clamp(Math.min(innerWidth/w,innerHeight/h),ZOOM_MIN,ZOOM_MAX);
+  view.x=innerWidth/2-((x0+x1)/2)*view.z;
+  view.y=innerHeight/2-((y0+y1)/2)*view.z;
+  applyView();
+}
+
+/* ── reading order: derived from arrangement, never stored ── */
+function readingOrder(){
+  const out=cards.slice();
+  out.sort((a,b)=>{
+    const ra=Math.floor(a.y/ROW_BAND),rb=Math.floor(b.y/ROW_BAND);
+    return ra!==rb?ra-rb:a.x-b.x;
+  });
+  return out;
+}
+async function copyReadingOrder(){
+  if(!cards.length){status("NOTHING ON THE TABLE");return}
+  const ord=readingOrder();let out="";
+  for(let i=0;i<ord.length;i++){
+    const c=ord[i],slip=slipOf(c);
+    out+=c.noteId+" — "+c.f+"\n"+(slip?slip.text:"")+"\n\n";
+  }
+  try{await navigator.clipboard.writeText(out.trimEnd());status("COPIED "+ord.length+" SLIPS IN ARRANGEMENT ORDER")}
+  catch(err){status("COPY UNAVAILABLE — USE SAVE")}
+}
+
+/* ── persistence: file is the contract; storage and URL are conveniences ── */
+function boardData(){return {schema:SCHEMA,saved:new Date().toISOString(),view,cards}}
+function download(name,text,mime){
+  const blob=new Blob([text],{type:mime||"application/json"});
+  const url=URL.createObjectURL(blob),a=document.createElement("a");
+  a.href=url;a.download=name;document.body.appendChild(a);a.click();
+  a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+function saveFile(){
+  const stamp=new Date().toISOString().slice(0,10).replace(/-/g,"");
+  download("slipcase-table-"+stamp+".json",JSON.stringify(boardData(),null,1));
+  status("SAVED · "+cards.length+" SLIPS");
+}
+function loadBoard(obj){
+  if(!obj||obj.schema!==SCHEMA||!Array.isArray(obj.cards))return false;
+  const cap=Math.min(obj.cards.length,MAX_CARDS);
+  cards=[];nextCardId=1;
+  for(let i=0;i<cap;i++){
+    const c=obj.cards[i];
+    if(!c||typeof c.noteId!=="string"||typeof c.f!=="string")continue;
+    cards.push({id:nextCardId++,noteId:c.noteId,f:c.f,x:+c.x||0,y:+c.y||0,open:!!c.open});
+  }
+  if(obj.view&&isFinite(obj.view.z))view={x:+obj.view.x||0,y:+obj.view.y||0,z:clamp(+obj.view.z||1,ZOOM_MIN,ZOOM_MAX)};
+  for(const [,el] of mounted)el.remove();
+  mounted.clear();select(null);applyView();
+  return true;
+}
+function autosave(){
+  if(!persist)return;
+  try{localStorage.setItem("slipcase.table",JSON.stringify(boardData()))}
+  catch(err){persist=false;status("SESSION ONLY — USE SAVE TO KEEP")}
+}
+function restore(){
+  if(!persist)return false;
+  try{
+    const raw=localStorage.getItem("slipcase.table");
+    return raw?loadBoard(JSON.parse(raw)):false;
+  }catch(err){persist=false;return false}
+}
+function shareLink(){
+  if(!cards.length){status("NOTHING TO SHARE");return}
+  let url;
+  try{
+    const packed=btoa(unescape(encodeURIComponent(JSON.stringify({schema:SCHEMA,view,cards:cards.map(c=>({noteId:c.noteId,f:c.f,x:c.x,y:c.y,open:c.open}))}))));
+    url=location.origin+location.pathname+"#t="+packed;
+  }catch(err){status("SHARE FAILED — USE SAVE");return}
+  if(url.length>SHARE_MAX){status("TOO LARGE FOR A LINK — USE SAVE");return}
+  navigator.clipboard.writeText(url).then(
+    ()=>status("LINK COPIED · "+cards.length+" SLIPS"),
+    ()=>{location.hash="t="+url.split("#t=")[1];status("LINK IN ADDRESS BAR")}
+  );
+}
+function readHash(){
+  if(!location.hash.startsWith("#t="))return false;
+  try{return loadBoard(JSON.parse(decodeURIComponent(escape(atob(location.hash.slice(3))))))}
+  catch(err){return false}
+}
+
+/* ── file input serves two jobs: board files and kasten files ── */
+let pickMode="board";
+function pick(mode){pickMode=mode;$("filePick").value="";$("filePick").click()}
+$("filePick").addEventListener("change",e=>{
+  const f=e.target.files&&e.target.files[0];if(!f)return;
+  const r=new FileReader();
+  r.onerror=()=>status("COULD NOT READ THE FILE");
+  r.onload=()=>{
+    let obj=null;
+    try{obj=JSON.parse(String(r.result))}catch(err){status("NOT VALID JSON");return}
+    if(pickMode==="kasten"){
+      const arr=Array.isArray(obj)?obj:(Array.isArray(obj.notes)?obj.notes:null);
+      if(!arr||!arr.length){status("NO NOTES ARRAY IN THAT FILE");return}
+      indexKasten(arr);renderDrawer();status("KASTEN LOADED · "+CASES.length+" CASES");cull();
+    }else{
+      if(loadBoard(obj)){status("TABLE OPENED · "+cards.length+" SLIPS");fit();autosave()}
+      else status("NOT A SLIPCASE TABLE FILE");
+    }
+  };
+  r.readAsText(f);
+});
+
+/* ── drawer ── */
+let qTokens=[],openCase=-1,dTimer=0;
+function caseIcon(count){
+  const n=Math.min(count,5);let s="";
+  for(let i=0;i<n;i++)s+=`<rect x="${20+i*7}" y="${16-i*3.5}" width="34" height="40" rx="5" fill="#fff" stroke="#0647E5" stroke-width="2.5"/>`;
+  return `<svg viewBox="0 0 96 78" aria-hidden="true">${s}<path d="M14 34 h68 v38 h-68 z" fill="#fff" stroke="#0647E5" stroke-width="2.5"/><rect x="38" y="48" width="20" height="11" fill="#fff" stroke="#0647E5" stroke-width="2.5"/></svg>`;
+}
+function matches(low){for(let t=0;t<qTokens.length;t++)if(!low.includes(qTokens[t]))return false;return true}
+function placedSet(){const s=new Set();for(let i=0;i<cards.length;i++)s.add(cards[i].noteId+"|"+cards[i].f);return s}
+function renderDrawer(){
+  if(!CASES.length){$("dBody").innerHTML=`<div class="dEmpty">NO KASTEN LOADED — PRESS LOAD KASTEN</div>`;return}
+  const shown=[];
+  for(let k=0;k<CASES.length&&shown.length<60;k++)if(!qTokens.length||matches(CASES[k].low))shown.push(k);
+  let html=`<div class="caseRow">`;
+  for(let s=0;s<shown.length;s++){
+    const c=CASES[shown[s]],n=notes[c.i];
+    html+=`<button class="caseBtn${openCase===shown[s]?" on":""}" data-c="${shown[s]}">${caseIcon(c.slips.length)}<span class="cid">${esc(n.id)}</span><span class="ctp">${esc(n.topic)}</span></button>`;
+  }
+  html+=`</div>`;
+  if(openCase>=0&&CASES[openCase]){
+    const c=CASES[openCase],n=notes[c.i],held=placedSet();
+    html+=`<div class="fan"><div class="fanHead"><span><b>${esc(n.id)}</b> · ${esc(n.type)} · ${c.slips.length} SLIPS</span><button class="btn" data-deal="1">DEAL ALL</button></div><div class="chips">`;
+    for(let s=0;s<c.slips.length;s++){
+      const on=held.has(c.id+"|"+c.slips[s].f);
+      html+=`<button class="chip${on?" placed":""}" data-f="${esc(c.slips[s].f)}">${esc(c.slips[s].f)}</button>`;
+    }
+    html+=`</div></div>`;
+  }
+  $("dBody").innerHTML=html||`<div class="dEmpty">NOTHING MATCHES</div>`;
+}
+$("dBody").addEventListener("click",e=>{
+  const cb=e.target.closest(".caseBtn");
+  if(cb){openCase=+cb.dataset.c;renderDrawer();return}
+  if(e.target.closest("[data-deal]")){dealCase(openCase);return}
+  const chip=e.target.closest(".chip");
+  if(chip&&openCase>=0){
+    const c=CASES[openCase],base=centerWorld();
+    const jx=(Math.random()-0.5)*90,jy=(Math.random()-0.5)*70;
+    placeSlip(c.id,chip.dataset.f,{x:base.x-CARD_W/2+jx,y:base.y-CARD_H_EST/2+jy});
+    renderDrawer();status("PLACED · "+chip.dataset.f);
+  }
+});
+function openDrawer(){$("drawer").classList.add("open");$("scrim").classList.add("open");renderDrawer()}
+function closeDrawer(){$("drawer").classList.remove("open");$("scrim").classList.remove("open")}
+
+/* ── status line ── */
+let statusTimer=0;
+function status(msg){
+  clearTimeout(statusTimer);
+  $("status").textContent=msg;
+  statusTimer=setTimeout(()=>{$("status").textContent=cards.length?cards.length+" SLIPS ON THE TABLE":"EMPTY TABLE"},STATUS_MS);
+}
+
+/* ── wiring ── */
+$("drawerBtn").addEventListener("click",openDrawer);
+$("drawerClose").addEventListener("click",closeDrawer);
+$("scrim").addEventListener("click",closeDrawer);
+$("loadKasten").addEventListener("click",()=>pick("kasten"));
+$("openBtn").addEventListener("click",()=>pick("board"));
+$("saveBtn").addEventListener("click",saveFile);
+$("shareBtn").addEventListener("click",shareLink);
+$("fitBtn").addEventListener("click",fit);
+$("readBtn").addEventListener("click",copyReadingOrder);
+$("expandBtn").addEventListener("click",toggleOpen);
+$("removeBtn").addEventListener("click",removeSelected);
+$("dSearch").addEventListener("input",e=>{
+  clearTimeout(dTimer);
+  dTimer=setTimeout(()=>{
+    qTokens=e.target.value.trim().toLowerCase().split(/\s+/).filter(Boolean).slice(0,MAX_QUERY_TOKENS);
+    openCase=-1;renderDrawer();
+  },SEARCH_DEBOUNCE_MS);
+});
+document.addEventListener("keydown",e=>{
+  if(e.target.tagName==="INPUT")return;
+  if(e.key==="Escape"){closeDrawer();select(null)}
+  else if(e.key==="f")fit();
+  else if(e.key==="s"&&(e.metaKey||e.ctrlKey)){e.preventDefault();saveFile()}
+  else if((e.key==="Backspace"||e.key==="Delete")&&selId!==null){e.preventDefault();removeSelected()}
+});
+addEventListener("resize",applyView);
+addEventListener("beforeunload",autosave);
+
+/* ── boot ── */
+(function boot(){
+  indexKasten(Array.isArray(window.ZETTEL_DATA)&&window.ZETTEL_DATA.length?window.ZETTEL_DATA:window.__SEED__);
+  // origin registration marks — the corner of the sheet
+  const reg=document.createElement("div");
+  reg.className="reg";reg.style.left="-40px";reg.style.top="-40px";
+  reg.innerHTML=`<i class="h"></i><i class="v"></i>`;
+  world.appendChild(reg);
+
+  const fromHash=readHash();
+  if(!fromHash&&!restore()){view={x:innerWidth/2-140,y:innerHeight/2-120,z:1}}
+  applyView();
+  $("status").textContent=cards.length?cards.length+" SLIPS ON THE TABLE":"EMPTY TABLE";
+  if(!persist)$("loadNote").textContent="SESSION ONLY";
+  setTimeout(()=>{
+    $("loader").classList.add("done");
+    setTimeout(()=>{const l=$("loader");if(l)l.remove()},420);
+    if(!cards.length)status("PRESS SLIPCASES TO LAY OUT SLIPS");
+  },LOADER_MS);
+})();
+})();
+</script>
+</body>
+</html>
