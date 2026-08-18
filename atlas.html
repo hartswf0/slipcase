@@ -1,0 +1,860 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="theme-color" content="#f5f2eb">
+    <title>Zettel Lines</title>
+    <style>
+        :root {
+            --bg: #f5f2eb;
+            --paper: #fffefa;
+            --ink: #171717;
+            --muted: #777168;
+            --line: #d9d4ca;
+            --blue: #2455ff;
+            --top: env(safe-area-inset-top);
+            --bottom: env(safe-area-inset-bottom)
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        html,
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif
+        }
+
+        button,
+        input {
+            font: inherit;
+            color: inherit
+        }
+
+        button {
+            border: 0;
+            background: none
+        }
+
+        #app {
+            position: fixed;
+            inset: 0;
+            background: var(--bg)
+        }
+
+        header {
+            position: absolute;
+            z-index: 30;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: calc(58px + var(--top));
+            padding: var(--top) 12px 0;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 8px;
+            align-items: center;
+            background: var(--bg)
+        }
+
+        .brand {
+            height: 42px;
+            font-size: 12px;
+            font-weight: 900
+        }
+
+        .search {
+            height: 42px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: var(--paper);
+            padding: 0 12px;
+            outline: 0;
+            min-width: 0;
+            font-size: 14px
+        }
+
+        .filterBtn {
+            height: 42px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: var(--paper);
+            padding: 0 11px;
+            font-size: 10px;
+            font-weight: 850;
+            letter-spacing: .06em
+        }
+
+        .toolbar {
+            position: absolute;
+            z-index: 29;
+            left: 0;
+            right: 0;
+            top: calc(58px + var(--top));
+            height: 44px;
+            padding: 0 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            overflow: auto;
+            background: var(--bg);
+            border-bottom: 1px solid var(--line);
+            scrollbar-width: none
+        }
+
+        .toolbar::-webkit-scrollbar {
+            display: none
+        }
+
+        .chip {
+            flex: 0 0 auto;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: var(--paper);
+            padding: 7px 10px;
+            font-size: 9px;
+            font-weight: 850;
+            letter-spacing: .06em;
+            color: var(--muted)
+        }
+
+        .chip.on {
+            background: var(--ink);
+            color: #fff;
+            border-color: var(--ink)
+        }
+
+        main {
+            position: absolute;
+            top: calc(102px + var(--top));
+            bottom: calc(14px + var(--bottom));
+            left: 0;
+            right: 0;
+            overflow: auto;
+            background: var(--paper);
+            scrollbar-width: none
+        }
+
+        main::-webkit-scrollbar {
+            display: none
+        }
+
+        .zgroup {
+            border-bottom: 7px solid var(--bg)
+        }
+
+        .zhead {
+            position: sticky;
+            top: 0;
+            z-index: 5;
+            background: rgba(255, 254, 250, .97);
+            backdrop-filter: blur(12px);
+            padding: 11px 12px 10px;
+            border-bottom: 1px solid var(--line);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 10px;
+            align-items: start
+        }
+
+        .zid {
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: .08em;
+            color: var(--muted);
+            margin-bottom: 3px
+        }
+
+        .ztitle {
+            font-size: 14px;
+            line-height: 1.18;
+            font-weight: 800;
+            letter-spacing: -.02em
+        }
+
+        .ztype {
+            font-size: 9px;
+            font-weight: 850;
+            color: var(--muted);
+            white-space: nowrap
+        }
+
+        .lineRow {
+            display: grid;
+            grid-template-columns: 78px 1fr;
+            gap: 12px;
+            padding: 13px 12px;
+            border-bottom: 1px solid #e8e3da;
+            background: var(--paper);
+            position: relative;
+            user-select: none
+        }
+
+        .lineRow:last-child {
+            border-bottom: 0
+        }
+
+        .lineRow.selected {
+            background: var(--ink);
+            color: #fff
+        }
+
+        .lineRow.selected .fieldName {
+            color: #bdb8af
+        }
+
+        .fieldName {
+            font-size: 8px;
+            line-height: 1.3;
+            font-weight: 900;
+            letter-spacing: .08em;
+            color: var(--muted);
+            text-transform: uppercase;
+            padding-top: 3px;
+            word-break: break-word
+        }
+
+        .lineText {
+            font-family: ui-serif, Georgia, serif;
+            font-size: 17px;
+            line-height: 1.48;
+            white-space: pre-wrap
+        }
+
+        .lineRow[data-field="TITLE"] .lineText,
+        .lineRow[data-field="QUESTION"] .lineText,
+        .lineRow[data-field="DEEPER QUESTION"] .lineText {
+            font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+            font-weight: 760;
+            letter-spacing: -.025em
+        }
+
+        .lineRow[data-field="TITLE"] .lineText {
+            font-size: 19px;
+            line-height: 1.22
+        }
+
+        .lineRow[data-field="QUESTION"] .lineText {
+            font-size: 20px;
+            line-height: 1.24
+        }
+
+        .lineRow[data-field="DEEPER QUESTION"] .lineText {
+            font-size: 18px;
+            line-height: 1.28
+        }
+
+        .lineRow[data-field="PASSAGE"] .lineText {
+            font-size: 18px
+        }
+
+        .lineRow.code .lineText {
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 12px;
+            line-height: 1.55;
+            background: #f2eee6;
+            padding: 10px;
+            border-radius: 10px;
+            overflow: auto
+        }
+
+        .lineRow.selected.code .lineText {
+            background: #272727
+        }
+
+        .empty {
+            padding: 50px 18px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 13px
+        }
+
+        .selection {
+            position: absolute;
+            z-index: 40;
+            left: 10px;
+            right: 10px;
+            bottom: calc(8px + var(--bottom));
+            min-height: 56px;
+            border-radius: 16px;
+            background: var(--ink);
+            color: #fff;
+            display: none;
+            grid-template-columns: 1fr auto auto;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 8px 7px 13px;
+            box-shadow: 0 14px 40px rgba(0, 0, 0, .18)
+        }
+
+        .selection.open {
+            display: grid
+        }
+
+        .selCount {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .05em
+        }
+
+        .selection button {
+            height: 40px;
+            padding: 0 12px;
+            border-radius: 11px;
+            background: #2a2a2a;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 850;
+            letter-spacing: .06em
+        }
+
+        .selection .primary {
+            background: #fff;
+            color: #111
+        }
+
+        .stack {
+            position: absolute;
+            z-index: 70;
+            inset: 0;
+            background: var(--paper);
+            transform: translateY(104%);
+            transition: transform .24s cubic-bezier(.2, .8, .2, 1);
+            display: flex;
+            flex-direction: column
+        }
+
+        .stack.open {
+            transform: translateY(0)
+        }
+
+        .stackHead {
+            height: calc(58px + var(--top));
+            padding: var(--top) 10px 0;
+            border-bottom: 1px solid var(--line);
+            display: grid;
+            grid-template-columns: 48px 1fr 48px;
+            align-items: center
+        }
+
+        .stackHead button {
+            height: 42px;
+            font-size: 20px
+        }
+
+        .stackHead div {
+            text-align: center;
+            font-size: 10px;
+            font-weight: 850;
+            color: var(--muted);
+            letter-spacing: .07em
+        }
+
+        .stackScroll {
+            flex: 1;
+            overflow: auto;
+            padding: 12px 14px calc(20px + var(--bottom))
+        }
+
+        .stackItem {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--line)
+        }
+
+        .stackMeta {
+            font-size: 8px;
+            color: var(--muted);
+            font-weight: 850;
+            letter-spacing: .08em;
+            margin-bottom: 6px
+        }
+
+        .stackText {
+            font-family: ui-serif, Georgia, serif;
+            font-size: 20px;
+            line-height: 1.48
+        }
+
+        .stackItem[data-field="QUESTION"] .stackText {
+            font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+            font-weight: 760;
+            letter-spacing: -.03em
+        }
+
+        .scrim {
+            position: absolute;
+            z-index: 80;
+            inset: 0;
+            background: rgba(20, 18, 15, .18);
+            display: none
+        }
+
+        .scrim.open {
+            display: block
+        }
+
+        .sheet {
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            bottom: calc(10px + var(--bottom));
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 8px;
+            box-shadow: 0 18px 60px rgba(0, 0, 0, .16)
+        }
+
+        .sheetTitle {
+            padding: 9px 10px;
+            font-size: 10px;
+            font-weight: 850;
+            color: var(--muted);
+            letter-spacing: .07em
+        }
+
+        .sheetGrid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 6px
+        }
+
+        .sheetGrid button {
+            min-height: 48px;
+            border-radius: 12px;
+            background: var(--bg);
+            font-size: 10px;
+            font-weight: 800
+        }
+
+        .sheetGrid button.on {
+            background: var(--ink);
+            color: #fff
+        }
+
+        .toast {
+            position: absolute;
+            z-index: 100;
+            left: 50%;
+            bottom: calc(76px + var(--bottom));
+            transform: translateX(-50%);
+            background: var(--ink);
+            color: #fff;
+            border-radius: 999px;
+            padding: 8px 12px;
+            font-size: 11px;
+            display: none;
+            white-space: nowrap
+        }
+
+        .toast.open {
+            display: block
+        }
+
+        @media(min-width:760px) {
+
+            header,
+            .toolbar,
+            main {
+                left: 50%;
+                right: auto;
+                transform: translateX(-50%);
+                width: min(820px, 100%)
+            }
+
+            .selection {
+                left: 50%;
+                right: auto;
+                transform: translateX(-50%);
+                width: 520px
+            }
+
+            .lineRow {
+                grid-template-columns: 120px 1fr;
+                padding-left: 18px;
+                padding-right: 18px
+            }
+
+            .zhead {
+                padding-left: 18px;
+                padding-right: 18px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <header><button class="brand">ZETTEL</button><input id="search" class="search" placeholder="Search lines"
+                autocomplete="off"><button id="filterBtn" class="filterBtn">ALL</button></header>
+        <div class="toolbar">
+            <button class="chip on" data-filter="ALL">ALL</button><button class="chip"
+                data-filter="QUESTION">QUESTIONS</button>
+            <button class="chip" data-filter="PASSAGE">PASSAGES</button><button class="chip"
+                data-filter="RESEARCH OBJECT">OBJECTS</button>
+            <button class="chip" data-filter="TYPE">TYPES</button><button class="chip"
+                data-filter="SOURCE">SOURCES</button>
+        </div>
+        <main id="table"></main>
+        <div class="selection" id="selection">
+            <div class="selCount" id="selCount">0 selected</div><button id="clearBtn">CLEAR</button><button
+                id="stackBtn" class="primary">READ</button>
+        </div>
+        <section class="stack" id="stack">
+            <div class="stackHead"><button id="stackBack">←</button>
+                <div id="stackCount">SELECTED</div><button id="copyBtn">⧉</button>
+            </div>
+            <div class="stackScroll" id="stackScroll"></div>
+        </section>
+        <div class="scrim" id="filterScrim">
+            <div class="sheet">
+                <div class="sheetTitle">SHOW</div>
+                <div class="sheetGrid" id="sheetGrid"></div>
+            </div>
+        </div>
+        <div class="toast" id="toast"></div>
+    </div>
+    <script>
+        (() => {
+            const notes = [
+                {
+                    id: "Z-SEM-143",
+                    title: "NATURALIZE is not one operation in Geertz: “of-courseness” belongs to a five-dimensional style of common sense.",
+                    type: "NATURALIZE", topic: "Common Sense", symbol: "Na",
+                    source: "Clifford Geertz — “Common Sense as a Cultural System” — 1975; reprinted in Local Knowledge — 1983 — pp. 85–92.",
+                    passage: "[PARAPHRASE] Geertz says common sense can be characterized less by invariant content than by recurrent stylistic qualities: naturalness, practicalness, thinness, immethodicalness, and accessibleness. These qualities are attributed to reality by common sense rather than simply discovered as properties already residing in things.",
+                    fields: {
+                        "RESEARCH OBJECT": "NATURALIZATION is one dimension of an EPISTEMIC STYLE.",
+                        "LOCAL MOVE": "The parent modeled NATURALIZE primarily as suppression of provenance.\n\nGeertz’s fuller account shows that common sense also makes an interpretation appear: obvious, practical, simple, non-specialist, available to anyone.",
+                        "SOURCE TERMS": "naturalness practicalness thinness immethodicalness accessibleness common sense cultural system reality style",
+                        "WHAT BECAME STRANGE": "A proposition can be historically constructed yet become powerful not merely because its origin disappears.\n\nIt also acquires a characteristic interface: “obvious,” “simple,” “what anyone can see,” “the sensible thing to do.”",
+                        "QUESTION": "Should NATURALIZE be decomposed into several operators rather than represented as provenance erasure alone?",
+                        "DEEPER QUESTION": "Which of Geertz’s five common-sense qualities most directly converts interpretation into action?",
+                        "MECHANISM": "interpretation I → cultural styling → I acquires naturalness / practicality / thinness / immethodicalness / accessibility → alternative interpretations become increasingly marked as: overcomplicated, impractical, esoteric, unnatural.",
+                        "FORMAL SHIFT": "<INTERPRETATION I> → [COMMON-SENSE STYLING] → <I AS OBVIOUS / PRACTICAL / SIMPLE / ACCESSIBLE> → <REDUCED PRESSURE TO REINTERPRET>",
+                        "SOURCE FORMALISM": "Geertz supplies five named “quasi-qualities” for the style of common sense. He supplies no algorithm relating them.",
+                        "OUR FORMALIZATION": "[OUR FORMALIZATION — NOT SOURCE SYNTAX]\nNATURALIZE(I) may be a vector transformation:\nN(I) = { naturalness ↑, practicalness ↑, thinness ↑, immethodicalness ↑, accessibleness ↑ }\nrather than:\nmutable(I) := false.",
+                        "TENSION": "[[Z-SEM-133]] correctly identifies provenance suppression as one effect. But Geertz suggests that what makes common sense powerful is also its POSITIVE PRESENTATIONAL FORM.",
+                        "MISSING": "The causal relations among the five qualities.\nDoes: THINNESS → NATURALNESS?\nDoes: ACCESSIBILITY → NATURALNESS?\nDoes: PRACTICALNESS → resistance to reconsideration?",
+                        "BOUNDARY": "The five-dimensional representation is OUR computational reconstruction. Geertz presents stylistic features, not independent state variables.",
+                        "CITATION TRAIL": "[[Z-SEM-133]] → Geertz’s five quasi-qualities → isolate NATURALNESS from THINNESS → test whether common-sense authority is produced by provenance loss or stylistic compression.",
+                        "TEST": "Take one contested interpretation and rewrite it in five variants, changing only: NATURALNESS, PRACTICALNESS, THINNESS, IMMETHODICALNESS, ACCESSIBILITY. Measure which alteration most strongly changes judgments that the claim is: obvious, true, actionable, not worth questioning.",
+                        "PLATFORM": "[[NATURALIZE]]",
+                        "LINKS": "[[Z-SEM-133]] [[Z-SEM-135]] [[Common Sense as Epistemic Style]]",
+                        "BIBTEX": "@article{geertz1975commonsense,\n  author = {Geertz, Clifford},\n  title = {Common Sense as a Cultural System},\n  journal = {The Antioch Review},\n  year = {1975},\n  volume = {33},\n  number = {1},\n  pages = {5--26}\n}"
+                    }
+                },
+                {
+                    id: "Z-SEM-144", title: "THICKEN can be tested through success and failure conditions: a thicker act-description changes what would count as accomplishing the act.",
+                    type: "THICKEN", topic: "Act Type", symbol: "Th",
+                    source: "Gilbert Ryle — “The Thinking of Thoughts: What Is ‘Le Penseur’ Doing?” — 1968; reprinted in Collected Papers, Volume 2 — 2009 — pp. 494–510. Julia Tanney — Foreword to Collected Papers, Volume 2 — 2009 — pp. xvi–xviii.",
+                    passage: "[PARAPHRASE] The Rylean wink differs from a twitch not merely because additional facts are known. Winking to signal has success and failure conditions involving an addressee, recognition of a code, uptake, and subsequent action. Parodying the wink and rehearsing the parody introduce still different success conditions.",
+                    fields: {
+                        "RESEARCH OBJECT": "THICKER ACT-TYPE → DIFFERENT COUNTERFACTUAL SUCCESS CONDITIONS.",
+                        "LOCAL MOVE": "[[Z-SEM-134]] defined THICKEN as inferential act-typing. Ryle adds an operational test: if the description truly identifies a different accomplishment, its conditions of success and failure should also change.",
+                        "SOURCE TERMS": "thin description thick description success failure code signal wink parody practice accomplishment",
+                        "WHAT BECAME STRANGE": "Thickness is not merely more explanatory metadata. A thick description changes the counterfactual space surrounding an act. The same eyelid movement can succeed or fail as: signal, parody, rehearsal under entirely different conditions.",
+                        "QUESTION": "Could THICKEN be operationalized as recovery of an act’s success/failure topology?",
+                        "DEEPER QUESTION": "Can two descriptions count as genuinely different act-types if all of their possible success and failure conditions are identical?",
+                        "MECHANISM": "observable movement e → candidate act A → recover purpose / code / recipient / circumstances → derive success conditions SC(A) → derive failure conditions FC(A) → distinguish A from rival act-types",
+                        "FORMAL SHIFT": "<OBSERVABLE e> → <ACT-TYPE A> → [RECOVER COUNTERFACTUAL CONDITIONS] → <SC(A), FC(A)>",
+                        "SOURCE FORMALISM": "Ryle’s examples distinguish accomplishment levels partly through different conditions under which winking, parodying, and practicing parodying succeed or fail. No mathematical formalism is supplied.",
+                        "OUR FORMALIZATION": "[OUR FORMALIZATION — NOT SOURCE SYNTAX]\nTHICKEN(e) returns candidate A such that:\nA = { observable, purpose, code, participants, SC, FC }\nA₁ ≠ A₂ when:\nSC(A₁) ≠ SC(A₂) or FC(A₁) ≠ FC(A₂).",
+                        "TENSION": "A culturally meaningful act may remain meaningful even when unsuccessful. Failure conditions therefore help identify the act but cannot define its entire meaning.",
+                        "MISSING": "How actors themselves determine which accomplishment level is relevant.",
+                        "BOUNDARY": "The success/failure formalization is our extraction from Ryle’s examples. Ryle does not present thick description as a formal verification procedure.",
+                        "CITATION TRAIL": "[[Z-SEM-134]] → Ryle’s success/failure conditions → accomplishment levels → speech-act felicity → counterfactual tests of thick interpretation.",
+                        "TEST": "Hold one physical action constant. Construct three candidate interpretations with different: PURPOSE, RECIPIENT, CODE. For each derive success/failure conditions. If the conditions cannot be distinguished, reject the proposed act-type distinction as insufficiently thick.",
+                        "PLATFORM": "[[THICKEN]]",
+                        "LINKS": "[[Z-SEM-134]] [[Z-PROMPT-049]] [[Counterfactual Thick Description]]",
+                        "BIBTEX": "@incollection{ryle1968thinking,\n  author = {Ryle, Gilbert},\n  title = {The Thinking of Thoughts: What Is `Le Penseur' Doing?},\n  booktitle = {Collected Papers, Volume 2: Collected Essays 1929--1968},\n  year = {2009},\n  publisher = {Routledge},\n  pages = {494--510},\n  note = {Originally delivered in 1968}\n}"
+                    }
+                },
+                {
+                    id: "Z-SEM-145", title: "NATURALIZE may work partly by THINNING: common sense suppresses the subordinate clauses that thick description restores.",
+                    type: "COUPLING", topic: "Common Sense", symbol: "Nt",
+                    source: "Clifford Geertz — “Common Sense as a Cultural System” — 1975 / 1983 — pp. 85–92. Clifford Geertz — “Thick Description: Toward an Interpretive Theory of Culture” — 1973 — pp. 6–10. Gilbert Ryle — “The Thinking of Thoughts” — 1968.",
+                    passage: "[PARAPHRASE] Geertz names “thinness” as one stylistic quality of common sense: events are presented literally and simply, without elaborate complication. His thick-description argument, drawing on Ryle, moves in the opposite direction by recovering nested structures of intention, code, implication, parody, circumstance, and interpretation.",
+                    fields: {
+                        "RESEARCH OBJECT": "NATURALIZATION and THICKENING may systematically alter opposite properties of an interpretation.",
+                        "LOCAL MOVE": "[[Z-SEM-135]] treated THICKEN and NATURALIZE as different dimensions. The sources reveal a stronger possible relation: common sense NATURALIZES partly by presenting interpretations THINLY. Thick description reopens exactly what common sense closes.",
+                        "SOURCE TERMS": "thinness naturalness thick description meaningful structures implication common sense literalness simplicity",
+                        "WHAT BECAME STRANGE": "“What obviously happened” often contains fewer visible interpretive steps than “what happened once its cultural conditions are reconstructed.” The appearance of direct access to reality may therefore be produced by deleting interpretive depth.",
+                        "QUESTION": "Is THINNING one mechanism by which NATURALNESS is manufactured?",
+                        "DEEPER QUESTION": "Can political or technical systems make interpretations appear objective by compressing away the relations required to produce them?",
+                        "MECHANISM": "historically situated interpretation → omit provenance → omit rival interpretations → omit subordinate relational clauses → present residue literally → interpretation appears natural/self-evident\n\nReverse direction:\nself-evident claim → recover omitted relations/history/rivals → THICKEN → claim reappears as contingent interpretation",
+                        "FORMAL SHIFT": "<THICK INTERPRETATION I*> → [THIN] → [NATURALIZE] → <“JUST HOW THINGS ARE”>",
+                        "SOURCE FORMALISM": "Geertz explicitly identifies THINNESS and NATURALNESS as separate stylistic qualities of common sense. Ryle/Geertz identify thick description with ascending levels of contextual and implication structure. The causal link between these is not supplied by the sources.",
+                        "OUR FORMALIZATION": "[OUR FORMALIZATION — NOT SOURCE SYNTAX]\nPossible coupling:\nTHIN(I) ↑ → NATURALNESS(I) ↑\nTHICKEN(I) → visible mediation ↑ → NATURALNESS(I) potentially ↓.",
+                        "TENSION": "Some extremely thick narratives can also naturalize a worldview through overwhelming detail. Thickness therefore cannot be treated as automatically critical or denaturalizing.",
+                        "MISSING": "Empirical evidence for the causal relation between: INTERPRETIVE THINNESS and PERCEIVED NATURALNESS.",
+                        "BOUNDARY": "THICKEN and NATURALIZE are not logical inverses. The proposed coupling is a research hypothesis.",
+                        "CITATION TRAIL": "[[Z-SEM-135]] → [[Z-SEM-133]] → [[Z-SEM-134]] → Geertzian thinness → test naturalization through interpretive compression.",
+                        "TEST": "Present one event in three descriptions: THIN: bare event claim. THICK: same claim plus provenance, actors, codes, history, and alternatives. VERBOSE-THIN: many irrelevant details but no interpretive relations. Measure perceived: obviousness, naturalness, certainty, contestability.",
+                        "PLATFORM": "[[Executable Semiotics Operator Algebra]]",
+                        "LINKS": "[[Z-SEM-135]] [[Z-SEM-133]] [[Z-SEM-134]] [[Naturalization Through Thinning]]",
+                        "BIBTEX": "@article{geertz1975commonsense,\n author={Geertz, Clifford}, title={Common Sense as a Cultural System}, journal={The Antioch Review}, year={1975}, volume={33}, number={1}, pages={5--26}}\n\n@inbook{geertz1973thick,\n author={Geertz, Clifford}, title={Thick Description: Toward an Interpretive Theory of Culture}, booktitle={The Interpretation of Cultures: Selected Essays}, year={1973}, publisher={Basic Books}, pages={3--30}}"
+                    }
+                },
+                {
+                    id: "Z-DRT-146", title: "A DRS update is not automatically a belief update: DRT inserts a semantic representation between discourse and truth.",
+                    type: "DISTINCTION", topic: "Representation", symbol: "Dr",
+                    source: "Hans Kamp, Josef van Genabith, Uwe Reyle — “Discourse Representation Theory” — 2011 — Handbook of Philosophical Logic, Vol. 15, pp. 125–394.",
+                    passage: "[PARAPHRASE] DRT assigns natural-language expressions discourse representation structures that function as logical forms or semantic representations. Those structures subsequently receive model-theoretic interpretation. DRT was motivated by incremental discourse understanding, but the representational structure and its truth in a model remain distinct stages.",
+                    fields: {
+                        "RESEARCH OBJECT": "DISCOURSE STATE ≠ BELIEF STATE.",
+                        "LOCAL MOVE": "[[Z-DRT-136]] identified DRT as a strong precedent for explicit state update. But calling that state “what the system believes” imports an additional epistemic commitment.",
+                        "SOURCE TERMS": "Discourse Representation Structure logical form semantic representation model-theoretic interpretation discourse referent condition dynamic semantics",
+                        "WHAT BECAME STRANGE": "A discourse representation can contain: “A dragon entered the laboratory.” without requiring the interpreter to believe that a dragon actually entered a laboratory. The representation records what discourse makes available for interpretation, reference, and inference under the discourse model.",
+                        "QUESTION": "What additional operation converts a discourse representation into an endorsed epistemic commitment?",
+                        "DEEPER QUESTION": "Should executable-semiotic systems separately represent: MENTIONED, REPRESENTED, ASSUMED, BELIEVED, KNOWN, AUTHORIZED?",
+                        "MECHANISM": "utterance u → semantic construction → DRS K → model-theoretic evaluation / discourse inference\n\nSeparate possible operation:\nK → epistemic assessment → BELIEF / REJECTION / SUSPENSION.",
+                        "FORMAL SHIFT": "UTTERANCE → DRS ≠ BELIEF",
+                        "SOURCE FORMALISM": "DRS: K = ⟨U_K, Con_K⟩ where the structure contains discourse referents and conditions whose satisfaction can be evaluated with respect to a model.",
+                        "OUR FORMALIZATION": "[OUR FORMALIZATION — NOT SOURCE SYNTAX]\nMODEL_OF should perhaps split into:\nREPRESENT(e) → K\nASSESS(K) → epistemic_status ∈ { entertained, assumed, believed, known, rejected }.",
+                        "TENSION": "Dynamic semantics often describes discourse context as information being accumulated. “Information” can tempt a slide from discourse commitment to psychological belief.",
+                        "MISSING": "A formal bridge from DRT-style discourse commitment to agent-specific epistemic attitudes.",
+                        "BOUNDARY": "A DRS is not by itself a verified psychological belief store or truth ledger.",
+                        "CITATION TRAIL": "[[Z-DRT-136]] → DRS as intermediate representation → model-theoretic interpretation → belief reports in DRT → separate REPRESENT from ENDORSE.",
+                        "TEST": "Feed a discourse system: A. “A dragon entered.” B. “Watson falsely believes that a dragon entered.” C. “Suppose a dragon entered.” D. “No dragon entered.” Determine whether a single state_update operator can preserve the distinct epistemic statuses without adding attitude or scope structure.",
+                        "PLATFORM": "[[Executable Semantics]]",
+                        "LINKS": "[[Z-DRT-136]] [[Z-SEM-131]] [[Representation ≠ Belief]]",
+                        "BIBTEX": "@incollection{kamp2011drt,\n author={Kamp, Hans and van Genabith, Josef and Reyle, Uwe}, title={Discourse Representation Theory}, booktitle={Handbook of Philosophical Logic}, year={2011}, volume={15}, pages={125--394}, publisher={Springer}}"
+                    }
+                },
+                {
+                    id: "Z-ACE-147", title: "ACE already moved formalism behind a natural-language-looking interface: users could remain at the English surface while logic executed underneath.",
+                    type: "INTERFACE", topic: "Executable Language", symbol: "Ac",
+                    source: "Norbert E. Fuchs, Uta Schwertel — “Reasoning in Attempto Controlled English” — 2003 — pp. 1–4.",
+                    passage: "[PARAPHRASE] Fuchs and Schwertel describe ACE as a controlled subset of English that is in fact a formal language with first-order-logic semantics. The Attempto system is deliberately designed so domain specialists can work entirely at the ACE level without having to use or inspect the internal logical representation. ACE input is translated into first-order representations, processed by theorem-proving/model-generation machinery, and results can be reported back in ACE.",
+                    fields: {
+                        "RESEARCH OBJECT": "HIDDEN FORMALISM BEHIND AN ENGLISH SURFACE predates generative AI.",
+                        "LOCAL MOVE": "[[Z-ACE-138]] emphasized that ACE purchases compilability by restricting English. A second shift is equally important: the user-facing notation and machine-facing representation are deliberately separated.",
+                        "SOURCE TERMS": "controlled subset formal language first-order logic domain specialists internal logic representation translate reasoning ACE",
+                        "WHAT BECAME STRANGE": "The claim that modern prompting uniquely moves code “behind” natural language has a substantial prehistory. ACE intentionally lets a user operate a formal reasoning system without writing its internal formal notation.",
+                        "QUESTION": "What does LLM prompting add to the older architecture: ENGLISH-LIKE SURFACE → HIDDEN FORMAL REPRESENTATION → EXECUTION?",
+                        "DEEPER QUESTION": "Is the decisive difference that ACE hides a DETERMINISTIC translation while LLM interfaces hide a PROBABILISTIC interpretation?",
+                        "MECHANISM": "ACE surface → deterministic parser → DRS/FOL → theorem prover/model generator → logical result → ACE rendering",
+                        "FORMAL SHIFT": "SURFACE → [HIDDEN TRANSLATION] → FORMAL REPRESENTATION → [REASON] → SURFACE",
+                        "SOURCE FORMALISM": "ACE text is translated into first-order representations. Reasoning is performed with first-order theorem proving/model generation. The system can return proofs and justifications at the ACE surface.",
+                        "OUR FORMALIZATION": "[OUR FORMALIZATION — NOT SOURCE SYNTAX]\nACE stack:\nSURFACE_NL_CONTROLLED → FORMAL_IR → REASONER → FORMAL_RESULT → SURFACE_NL_CONTROLLED.",
+                        "TENSION": "The interface resembles contemporary natural-language control. But ACE only achieves this because its accepted language and formal semantics are carefully bounded.",
+                        "MISSING": "A direct historical comparison among: ACE, natural-language database interfaces, semantic parsers, LLM tool calling.",
+                        "BOUNDARY": "ACE does not support unrestricted conversational English.",
+                        "CITATION TRAIL": "[[Z-ACE-138]] → Fuchs/Schwertel 2003 → hidden internal logic → natural-language surface as formal-system interface → compare with LLM natural-language front ends.",
+                        "TEST": "Give one task to: ACE, Prolog, LLM tool-call interface. Measure what formal knowledge the USER must supply versus what the SYSTEM supplies invisibly.",
+                        "PLATFORM": "[[Executable Natural Language]]",
+                        "LINKS": "[[Z-ACE-138]] [[Z-ACE-139]] [[Z-EXEC-128]] [[Formalism Behind the Interface]]",
+                        "BIBTEX": "@inproceedings{fuchs2003reasoning,\n author={Fuchs, Norbert E. and Schwertel, Uta}, title={Reasoning in Attempto Controlled English}, year={2003}}"
+                    }
+                },
+                {
+                    id: "Z-GENE-148", title: "ACE is not the beginning of executable natural language: SHRDLU was already interpreting English commands into actions in 1971.",
+                    type: "GENEALOGY", topic: "Executable Language", symbol: "Sh",
+                    source: "Terry Winograd — Procedures as a Representation for Data in a Computer Program for Understanding Natural Language — 1971 — MIT Project MAC / AI Laboratory Technical Report. Terry Winograd — “Understanding Natural Language” — Cognitive Psychology — 1972 — 3(1), pp. 1–191.",
+                    passage: "[PARAPHRASE] Winograd describes a system that interacts in English, answers questions, accepts information, resolves language using semantic information and discourse/world context, and executes commands affecting a modeled blocks world.",
+                    fields: {
+                        "RESEARCH OBJECT": "EXECUTABLE NATURAL-LANGUAGE COMMANDS predate controlled-English compilation by decades.",
+                        "LOCAL MOVE": "[[Z-ACE-139]] identified Attempto as a pre-LLM precedent for executable description. SHRDLU pushes the genealogy back to the early 1970s and reveals a different method of buying tractability.",
+                        "SOURCE TERMS": "normal English dialog executes commands semantic information context disambiguate world robot plans actions",
+                        "WHAT BECAME STRANGE": "Attempto restricts THE LANGUAGE. SHRDLU instead restricts THE WORLD. Both make natural-language action possible by making some other part of the problem small enough to formalize.",
+                        "QUESTION": "Is the history of executable natural language primarily a history of WHERE designers place the restriction?",
+                        "DEEPER QUESTION": "What did LLMs change if both natural-language interpretation and command execution existed half a century earlier?",
+                        "MECHANISM": "user English → parser → semantic/pragmatic interpretation → world model → planning/problem solving → simulated action → dialogue continuation",
+                        "FORMAL SHIFT": "ENGLISH → INTERPRETATION → [PLAN] → ACTION",
+                        "SOURCE FORMALISM": "SHRDLU combines: English grammar, semantic analysis, contextual interpretation, problem-solving/planning, a detailed restricted world model.",
+                        "OUR FORMALIZATION": "[OUR FORMALIZATION — NOT SOURCE SYNTAX]\nSHRDLU strategy:\nLANGUAGE_FREEDOM relatively ↑\nWORLD_SCOPE radically ↓.\n\nACE strategy:\nLANGUAGE_FREEDOM ↓\nWORLD/DOMAIN FORMALIZATION relatively ↑.",
+                        "TENSION": "SHRDLU’s “normal English” operates only relative to a highly restricted ontology and interaction domain. Its success therefore cannot be extrapolated to open-world natural language.",
+                        "MISSING": "A longitudinal map of which variable successive systems relaxed: LANGUAGE, WORLD, TASK, ONTOLOGY, ACTION SPACE, GRAMMAR.",
+                        "BOUNDARY": "Do not claim SHRDLU supported unrestricted natural-language action in an open environment.",
+                        "CITATION TRAIL": "[[Z-ACE-139]] → Winograd 1971 → blocks-world restriction → ACE 1995 → semantic parsers → LLMs → compare where formal restriction resides.",
+                        "TEST": "Construct a genealogy table: SHRDLU, ACE, semantic parser, LLM agent with columns: LANGUAGE RESTRICTED? WORLD RESTRICTED? ONTOLOGY FIXED? ACTION SPACE FIXED? PARSER HANDCRAFTED? INTERPRETATION PROBABILISTIC?",
+                        "PLATFORM": "[[Genealogy of Executable Description]]",
+                        "LINKS": "[[Z-ACE-139]] [[Z-ACE-138]] [[Z-EXEC-130]] [[SHRDLU]]",
+                        "BIBTEX": "@techreport{winograd1971procedures,\n author={Winograd, Terry}, title={Procedures as a Representation for Data in a Computer Program for Understanding Natural Language}, year={1971}, institution={MIT Project MAC}, number={MAC-TR-84}}\n\n@article{winograd1972understanding,\n author={Winograd, Terry}, title={Understanding Natural Language}, journal={Cognitive Psychology}, year={1972}, volume={3}, number={1}, pages={1--191}}"
+                    }
+                },
+                {
+                    id: "Z-ACTION-149", title: "SHRDLU makes the missing step after COMMAND explicit: execution depends on an engineered world model rich enough to decide what the command refers to and whether it can be done.",
+                    type: "ACTION", topic: "World Model", symbol: "Wm",
+                    source: "Terry Winograd — Procedures as a Representation for Data in a Computer Program for Understanding Natural Language — 1971.",
+                    passage: "[PARAPHRASE] Winograd’s system does not move directly from an imperative string to action. It integrates syntax, semantics, discourse context, general information about its restricted world, problem solving, plans, and knowledge of its own actions in order to decide what an utterance means and how to respond.",
+                    fields: {
+                        "RESEARCH OBJECT": "COMMAND EXECUTION requires a MODEL OF ACTIONABLE REALITY.",
+                        "LOCAL MOVE": "[[Z-ACE-141]] identified the gap: COMMAND representation → ??? → executed action. SHRDLU fills part of the gap: the system needs entities, relations, possible actions, preconditions, context, and planning machinery.",
+                        "SOURCE TERMS": "semantic information context world robot instructions plans actions physical knowledge problem solving",
+                        "WHAT BECAME STRANGE": "A command such as: “Put the red block on the blue one.” cannot execute merely because PUT is recognized as imperative force. The system must know: which block, which relation, what actions exist, whether the action is physically/legalistically possible, and how to produce it.",
+                        "QUESTION": "Should WORLD MODEL be a mandatory stage in executable semiotics between semantic command and action?",
+                        "DEEPER QUESTION": "What happens when modern LLM agents conceal this world model inside distributed learned representations plus external tool schemas?",
+                        "MECHANISM": "command → identify referents → construct intended relation → inspect world state → determine possible action sequence → execute → update world representation",
+                        "FORMAL SHIFT": "COMMAND → WORLD STATE → [PLAN] → ACTION → <WORLD'>",
+                        "SOURCE FORMALISM": "Winograd’s architecture includes an integrated grammar, semantic analysis, inference/problem solving, discourse context, and a detailed model of the blocks world.",
+                        "OUR FORMALIZATION": "[OUR FORMALIZATION — NOT SOURCE SYNTAX]\nEXECUTE(command) requires at minimum:\nREFERENTS + CURRENT_STATE + ACTION_MODEL + PRECONDITIONS + EFFECTS.",
+                        "TENSION": "Modern API agents sometimes appear not to need rich world models because tools encode much of this machinery externally. That may mean the world model has migrated into tool contracts and platform state rather than disappeared.",
+                        "MISSING": "A comparison between: SHRDLU WORLD MODEL and LLM AGENT TOOL SCHEMA / API STATE.",
+                        "BOUNDARY": "SHRDLU’s world representation works because its environment is small and deliberately formalized.",
+                        "CITATION TRAIL": "[[Z-ACE-141]] → Winograd 1971 → world model → planning → contemporary tool schemas → where actionable ontology now resides.",
+                        "TEST": "Take one command in: SHRDLU, a REST API, an LLM agent. For each inventory every fact that must already be machine-readable before execution can succeed.",
+                        "PLATFORM": "[[Executable Causality Boundary]]",
+                        "LINKS": "[[Z-ACE-141]] [[Z-GENE-148]] [[Z-EXEC-126]] [[World Model Before Action]]",
+                        "BIBTEX": "@techreport{winograd1971procedures,\n author={Winograd, Terry}, title={Procedures as a Representation for Data in a Computer Program for Understanding Natural Language}, year={1971}, institution={MIT Project MAC}, number={MAC-TR-84}}"
+                    }
+                },
+                {
+                    id: "Z-SEMCOMP-150", title: "The missing semantic compiler can itself be learned, but only after someone fixes the target logical language and supplies examples of what utterances are supposed to mean.",
+                    type: "COMPILER", topic: "Semantic Parsing", symbol: "Sc",
+                    source: "Luke S. Zettlemoyer, Michael Collins — “Learning to Map Sentences to Logical Form: Structured Classification with Probabilistic Categorial Grammars” — 2005 — UAI 2005, pp. 658–666.",
+                    passage: "[PARAPHRASE] Zettlemoyer and Collins formulate semantic parsing as learning mappings from natural-language sentences to lambda-calculus logical forms. Their algorithm receives training examples pairing sentences with logical expressions and induces a probabilistic categorial grammar together with a distribution over analyses.",
+                    fields: {
+                        "RESEARCH OBJECT": "LEARNED SEMANTIC COMPILATION still presupposes a TARGET ONTOLOGY.",
+                        "LOCAL MOVE": "[[Z-SEM-142]] identified the missing operation: culturally meaningful S → ??? → formal grammar G. Semantic parsing shows that the mapping itself need not be manually written rule by rule. It can be learned from examples.",
+                        "SOURCE TERMS": "natural language logical form lambda calculus learning algorithm grammar probabilistic categorial grammar syntactic analysis semantic analysis",
+                        "WHAT BECAME STRANGE": "Learning removes one human task: WRITE EVERY TRANSLATION RULE. But it leaves another untouched: DECIDE WHAT REPRESENTATION COUNTS AS THE MEANING.",
+                        "QUESTION": "Who chooses the target formal ontology into which natural language is “understood”?",
+                        "DEEPER QUESTION": "Could a system learn not only mappings into an ontology but also invent the ontology required by culturally thick distinctions?",
+                        "MECHANISM": "training pairs: (sentence, logical form) → induce lexicon/grammar + parameters → unseen sentence → candidate analyses → logical-form prediction",
+                        "FORMAL SHIFT": "NATURAL LANGUAGE → [LEARNED SEMANTIC PARSER] → LOGICAL FORM",
+                        "SOURCE FORMALISM": "The source maps sentences to lambda-calculus encodings using a learned probabilistic categorial grammar and a log-linear distribution over analyses.",
+                        "OUR FORMALIZATION": "[OUR FORMALIZATION — NOT SOURCE SYNTAX]\nLEARNED_COMPILER:\nf_θ : NL → L\nbut:\nL is supplied in advance.\nTherefore:\nLEARN(f) ≠ LEARN(ONTOLOGY).",
+                        "TENSION": "Large pretrained models appear able to create previously unseen representational schemas from instructions. But whether this is genuine ontology invention or recombination of learned representational conventions remains unresolved.",
+                        "MISSING": "A mechanism that can alter the TARGET REPRESENTATION LANGUAGE when existing categories fail to capture a culturally relevant distinction.",
+                        "BOUNDARY": "Semantic parsing proves that some natural-language-to-formal mappings can be learned. It does not solve unrestricted cultural interpretation.",
+                        "CITATION TRAIL": "[[Z-SEM-142]] → Zettlemoyer & Collins 2005 → learned semantic parsing → ontology matching → open-schema semantic parsing → ontology invention.",
+                        "TEST": "Give a semantic parser a domain in which an important distinction has no predicate in its target logical language. Determine whether failure appears as: wrong parse, unrepresentable meaning, forced category, or new-symbol invention.",
+                        "PLATFORM": "[[Semantic Compilation]]",
+                        "LINKS": "[[Z-SEM-142]] [[Z-ACE-140]] [[Z-AI-026]] [[Ontology Before Compilation]]",
+                        "BIBTEX": "@inproceedings{zettlemoyer2005learning,\n author={Zettlemoyer, Luke S. and Collins, Michael}, title={Learning to Map Sentences to Logical Form: Structured Classification with Probabilistic Categorial Grammars}, booktitle={Proceedings of the Twenty-First Conference on Uncertainty in Artificial Intelligence}, year={2005}, pages={658--666}}"
+                    }
+                },
+                {
+                    id: "Z-GENE-151", title: "Executable natural language repeatedly solves ambiguity by restricting something else: ACE restricts language, SHRDLU restricts world, grammar-constrained decoding restricts output.",
+                    type: "BOUNDARY", topic: "Executable Language", symbol: "Tb",
+                    source: "Terry Winograd — Procedures as a Representation for Data in a Computer Program for Understanding Natural Language — 1971. Norbert E. Fuchs, Uta Schwertel — “Reasoning in Attempto Controlled English” — 2003. Saibo Geng, Martin Josifoski, Maxime Peyrard, Robert West — “Grammar-Constrained Decoding for Structured NLP Tasks without Finetuning” — 2023/2024.",
+                    passage: "[PARAPHRASE] SHRDLU supports contextual English interaction and command execution inside a deliberately tiny formal world. ACE supports precise formal reasoning by restricting English to a controlled subset. Grammar-constrained decoding permits broad language-model inputs while guaranteeing output form by requiring a formal grammar defining the admissible output space.",
+                    fields: {
+                        "RESEARCH OBJECT": "TRACTABILITY HAS TO BE PAID FOR SOMEWHERE.",
+                        "LOCAL MOVE": "Three histories of executable natural language reveal three different places to put formal restriction.",
+                        "SOURCE TERMS": "context world controlled subset formal language first-order logic formal grammar output space grammar-constrained decoding",
+                        "WHAT BECAME STRANGE": "The apparent progression toward “unrestricted natural language computing” may actually be a migration of restriction: SHRDLU: restrict world. ACE: restrict user language. GCD: restrict generated output. LLM prompting without hard constraints: relax all three and accept probabilistic reliability.",
+                        "QUESTION": "Is there a conservation law of executable interpretation: greater openness in one layer demands stronger constraint, weaker guarantees, or more machinery somewhere else?",
+                        "DEEPER QUESTION": "Can a system simultaneously maximize: OPEN LANGUAGE, OPEN WORLD, OPEN ACTION SPACE, FORMAL GUARANTEE — or are these fundamentally competing desiderata?",
+                        "MECHANISM": "Strategy A: OPEN-ISH LANGUAGE + CLOSED WORLD → tractable interpretation.\nStrategy B: CONTROLLED LANGUAGE + FORMAL LOGIC → tractable interpretation.\nStrategy C: OPEN INPUT LANGUAGE + CLOSED OUTPUT GRAMMAR → guaranteed structural output.\nStrategy D: OPEN LANGUAGE + OPEN-ISH WORLD + OPEN OUTPUT → probabilistic interpretation.",
+                        "FORMAL SHIFT": "OPENNESS → [MOVE FORMAL BOUNDARY] → GUARANTEE",
+                        "SOURCE FORMALISM": "SHRDLU: restricted blocks-world semantics and action system. ACE: controlled English translated into first-order logic. GCD: formal grammar G defines valid output language; incremental parsing constrains generation to grammatically valid continuations.",
+                        "OUR FORMALIZATION": "[OUR FORMALIZATION — NOT SOURCE SYNTAX]\nCandidate design simplex:\nL = linguistic openness\nW = world openness\nA = action openness\nG = formal guarantee\nHypothesis: simultaneously maximizing L, W, A, G incurs rapidly increasing representational / validation cost.",
+                        "TENSION": "Modern foundation models appear to weaken the historical tradeoff substantially. But prompt injection, hallucination, semantic drift, and tool-validation requirements may be evidence that the cost has moved rather than vanished.",
+                        "MISSING": "A formal or empirical measure of: OPENNESS versus GUARANTEE across interface architectures.",
+                        "BOUNDARY": "No cited source proposes a conservation law. The sources provide three historically distinct architectures from which the hypothesis is induced.",
+                        "CITATION TRAIL": "[[Z-ACE-138]] → [[Z-ACE-139]] → [[Z-SEM-142]] → SHRDLU → ACE → grammar-constrained decoding → map where each system purchases tractability.",
+                        "TEST": "Benchmark identical tasks under four architectures: 1. unrestricted language + closed world 2. controlled language + open domain ontology 3. unrestricted language + constrained output 4. unrestricted language + unrestricted generation. Measure: task breadth, semantic ambiguity, failure rate, formal guarantee, engineering cost.",
+                        "PLATFORM": "[[Genealogy of Executable Description]]",
+                        "LINKS": "[[Z-ACE-138]] [[Z-ACE-139]] [[Z-ACE-140]] [[Z-SEM-142]] [[Z-GENE-148]] [[Tractability Boundary]]",
+                        "BIBTEX": "@techreport{winograd1971procedures, author={Winograd, Terry}, title={Procedures as a Representation for Data in a Computer Program for Understanding Natural Language}, year={1971}, institution={MIT Project MAC}, number={MAC-TR-84}}\n\n@inproceedings{fuchs2003reasoning, author={Fuchs, Norbert E. and Schwertel, Uta}, title={Reasoning in Attempto Controlled English}, year={2003}}\n\n@article{geng2023grammar, author={Geng, Saibo and Josifoski, Martin and Peyrard, Maxime and West, Robert}, title={Grammar-Constrained Decoding for Structured NLP Tasks without Finetuning}, journal={arXiv preprint arXiv:2305.13971}, year={2023}}"
+                    }
+                },
+                {
+                    id: "Z-SEM-152", title: "Formal grammar constrains whether an output is well-formed, not whether it is the right interpretation.",
+                    type: "VALIDITY", topic: "Formalization", symbol: "Vf",
+                    source: "Saibo Geng, Martin Josifoski, Maxime Peyrard, Robert West — “Grammar-Constrained Decoding for Structured NLP Tasks without Finetuning” — 2023/2024 — §2.",
+                    passage: "[PARAPHRASE] Geng et al. define output spaces for structured NLP tasks using formal grammars and constrain model decoding so that generated outputs belong to those languages. For tasks such as entity disambiguation or parsing, input-dependent grammars can limit outputs to structurally admissible alternatives.",
+                    fields: {
+                        "RESEARCH OBJECT": "SYNTACTIC ADMISSIBILITY ≠ INTERPRETIVE CORRECTNESS.",
+                        "LOCAL MOVE": "[[Z-SEM-142]] asks how a culturally meaningful MODEL_FOR could become a hard formal constraint. Even after that compiler exists, grammar-constrained decoding guarantees only that the generated representation satisfies the supplied formal language. It does not guarantee that the formal language captured the correct cultural interpretation.",
+                        "SOURCE TERMS": "formal grammar output space grammatically valid input-dependent grammar structured NLP constraint generation",
+                        "WHAT BECAME STRANGE": "Hard constraints can make a wrong ontology perfectly executable. Every output may be formally valid while the distinction that mattered culturally never existed in the grammar.",
+                        "QUESTION": "What kind of validation is required above grammar validity to test whether the formalization itself is faithful?",
+                        "DEEPER QUESTION": "Can a system detect that its constraint language lacks a distinction required by the case before it generates a formally valid but semantically false answer?",
+                        "MECHANISM": "interpretation → formal grammar G → constrained decoding → y ∈ L(G)\nBut correctness additionally requires:\nG adequately represents domain AND y corresponds to intended interpretation.",
+                        "FORMAL SHIFT": "INTERPRETATION → GRAMMAR → [CONSTRAIN] → VALID OUTPUT ≠ RIGHT INTERPRETATION",
+                        "SOURCE FORMALISM": "A formal grammar G defines an output language. Incremental parsing restricts generation to continuations compatible with G.",
+                        "OUR FORMALIZATION": "[OUR FORMALIZATION — NOT SOURCE SYNTAX]\nGCD guarantees:\ny ∈ L(G).\nIt cannot alone guarantee:\nMEANING(y) = intended_meaning\nor:\nONTOLOGY(G) is adequate.",
+                        "TENSION": "Formal guarantees feel epistemically strong because invalid possibilities are eliminated. But the strongest possible constraint can merely harden a bad representation.",
+                        "MISSING": "A REPRESENTATIONAL ADEQUACY TEST before constraint compilation.",
+                        "BOUNDARY": "Grammar-constrained decoding is designed to guarantee structural validity, not ethnographic, cultural, factual, or normative fidelity.",
+                        "CITATION TRAIL": "[[Z-SEM-142]] → grammar-constrained decoding → syntactic guarantee → ontology adequacy → formalization error → representation audit before execution.",
+                        "TEST": "Design a formally valid grammar for a social domain while deliberately omitting one known relevant category. Run constrained generation. Verify that every output is syntactically valid while systematically incapable of expressing the omitted distinction.",
+                        "PLATFORM": "[[Formalization Remainder]]",
+                        "LINKS": "[[Z-SEM-142]] [[Z-SEMCOMP-150]] [[Z-ACE-140]] [[Validity ≠ Fidelity]]",
+                        "BIBTEX": "@article{geng2023grammar,\n author={Geng, Saibo and Josifoski, Martin and Peyrard, Maxime and West, Robert}, title={Grammar-Constrained Decoding for Structured NLP Tasks without Finetuning}, journal={arXiv preprint arXiv:2305.13971}, year={2023}}"
+                    }
+                }
+            ];
+            const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+            const esc = s => String(s ?? "").replace(/[&<>"']/g, m => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[m]));
+            const MAIN_FIELDS = ["TITLE", "SOURCE", "PASSAGE", "RESEARCH OBJECT", "LOCAL MOVE", "SOURCE TERMS", "WHAT BECAME STRANGE", "QUESTION", "DEEPER QUESTION", "MECHANISM", "FORMAL SHIFT", "SOURCE FORMALISM", "OUR FORMALIZATION", "TENSION", "MISSING", "BOUNDARY", "CITATION TRAIL", "TEST", "PLATFORM", "LINKS", "BIBTEX"];
+            let filter = "ALL", selected = new Set(), toastTimer = null;
+            function rowKey(id, field) { return id + "|||" + field }
+            function unpack(key) { const i = key.indexOf("|||"); return [key.slice(0, i), key.slice(i + 3)] }
+            function valueFor(n, field) { if (field === "TITLE") return n.title; if (field === "SOURCE") return n.source; if (field === "PASSAGE") return n.passage; if (field === "TYPE") return n.type; return n.fields[field] ?? "" }
+            function fieldsFor(n) { if (filter === "ALL") return MAIN_FIELDS.filter(f => valueFor(n, f)); if (filter === "TYPE") return ["TYPE"]; return valueFor(n, filter) ? [filter] : [] }
+            function lineMatches(n, field, q) { if (!q) return true; const hay = [n.id, n.type, n.topic, field, valueFor(n, field)].join(" ").toLowerCase(); return q.split(/\s+/).every(t => hay.includes(t)) }
+            function render() {
+                const q = $("#search").value.trim().toLowerCase(); let html = "";
+                notes.forEach(n => {
+                    const fields = fieldsFor(n).filter(f => lineMatches(n, f, q)); if (!fields.length) return;
+                    html += `<section class="zgroup" data-zettel="${esc(n.id)}"><div class="zhead"><div><div class="zid">${esc(n.id)} · ${esc(n.topic)}</div><div class="ztitle">${esc(n.title)}</div></div><div class="ztype">${esc(n.type)}</div></div>`;
+                    fields.forEach(field => {
+                        const key = rowKey(n.id, field), v = valueFor(n, field), code = /FORMAL|BIBTEX|MECHANISM/.test(field);
+                        html += `<article class="lineRow${selected.has(key) ? ' selected' : ''}${code ? ' code' : ''}" data-key="${esc(key)}" data-field="${esc(field)}"><div class="fieldName">${esc(field)}</div><div class="lineText">${esc(v)}</div></article>`;
+                    }); html += `</section>`;
+                });
+                $("#table").innerHTML = html || `<div class="empty">No lines match.</div>`; bindRows(); updateSelection();
+            }
+            function bindRows() {
+                $$(".lineRow").forEach(row => {
+                    let timer = null, start = null, moved = false;
+                    row.addEventListener("pointerdown", e => { start = { x: e.clientX, y: e.clientY }; moved = false; timer = setTimeout(() => { if (!moved) { const [id] = unpack(row.dataset.key); selectWholeZettel(id); navigator.vibrate?.(12) } }, 470) });
+                    row.addEventListener("pointermove", e => { if (start && Math.hypot(e.clientX - start.x, e.clientY - start.y) > 8) { moved = true; clearTimeout(timer) } });
+                    row.addEventListener("pointerup", () => { clearTimeout(timer); if (!moved) toggle(row.dataset.key) });
+                    row.addEventListener("contextmenu", e => { e.preventDefault(); const [id] = unpack(row.dataset.key); selectWholeZettel(id) });
+                });
+            }
+            function toggle(key) { selected.has(key) ? selected.delete(key) : selected.add(key); const el = $(`.lineRow[data-key="${CSS.escape(key)}"]`); if (el) el.classList.toggle("selected", selected.has(key)); updateSelection() }
+            function selectWholeZettel(id) {
+                const n = notes.find(x => x.id === id); if (!n) return; const keys = MAIN_FIELDS.filter(f => valueFor(n, f)).map(f => rowKey(id, f)), all = keys.every(k => selected.has(k));
+                keys.forEach(k => all ? selected.delete(k) : selected.add(k)); render(); toast(all ? "Zettel cleared" : "Whole Zettel selected");
+            }
+            function updateSelection() { $("#selCount").textContent = selected.size + " selected"; $("#selection").classList.toggle("open", selected.size > 0) }
+            function clearSelected() { selected.clear(); render() }
+            function selectedItems() {
+                const items = []; notes.forEach(n => MAIN_FIELDS.forEach(field => { const key = rowKey(n.id, field); if (selected.has(key) && valueFor(n, field)) items.push({ n, field, text: valueFor(n, field) }) })); return items
+            }
+            function openStack() {
+                const items = selectedItems(); $("#stackCount").textContent = items.length + " LINES";
+                $("#stackScroll").innerHTML = items.map(x => `<article class="stackItem" data-field="${esc(x.field)}"><div class="stackMeta">${esc(x.n.id)} · ${esc(x.field)} · ${esc(x.n.type)}</div><div class="stackText">${esc(x.text)}</div></article>`).join("");
+                $("#stack").classList.add("open");
+            }
+            function closeStack() { $("#stack").classList.remove("open") }
+            async function copySelected() {
+                const text = selectedItems().map(x => `${x.n.id} — ${x.field}\n${x.text}`).join("\n\n");
+                try { await navigator.clipboard.writeText(text); toast("Selected lines copied") } catch (e) { toast("Copy unavailable") }
+            }
+            function setFilter(f) {
+                filter = f; $("#filterBtn").textContent = f === "ALL" ? "ALL" : f === "RESEARCH OBJECT" ? "OBJECTS" : f;
+                $$(".chip").forEach(b => b.classList.toggle("on", b.dataset.filter === f)); $("#filterScrim").classList.remove("open"); render();
+            }
+            function openFilter() {
+                const opts = ["ALL", "QUESTION", "PASSAGE", "RESEARCH OBJECT", "TYPE", "SOURCE", "LOCAL MOVE", "WHAT BECAME STRANGE", "DEEPER QUESTION", "MECHANISM", "FORMAL SHIFT", "TENSION", "MISSING", "BOUNDARY", "TEST", "BIBTEX"];
+                $("#sheetGrid").innerHTML = opts.map(f => `<button class="${filter === f ? 'on' : ''}" data-f="${esc(f)}">${esc(f)}</button>`).join("");
+                $$("#sheetGrid button").forEach(b => b.onclick = () => setFilter(b.dataset.f)); $("#filterScrim").classList.add("open");
+            }
+            function toast(msg) { clearTimeout(toastTimer); $("#toast").textContent = msg; $("#toast").classList.add("open"); toastTimer = setTimeout(() => $("#toast").classList.remove("open"), 1200) }
+            $("#search").addEventListener("input", render); $$(".chip").forEach(b => b.onclick = () => setFilter(b.dataset.filter)); $("#filterBtn").onclick = openFilter;
+            $("#filterScrim").addEventListener("pointerdown", e => { if (e.target === $("#filterScrim")) $("#filterScrim").classList.remove("open") });
+            $("#clearBtn").onclick = clearSelected; $("#stackBtn").onclick = openStack; $("#stackBack").onclick = closeStack; $("#copyBtn").onclick = copySelected;
+            document.addEventListener("keydown", e => { if (e.key === "Escape") { closeStack(); $("#filterScrim").classList.remove("open") } });
+            render();
+        })();
+    </script>
+</body>
+
+</html>
