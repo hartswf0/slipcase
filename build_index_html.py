@@ -744,7 +744,88 @@ main::-webkit-scrollbar { display: none; }
 }
 
 /* =========================================================
-   2. RELATE MODE: MASSIVE RELATIONAL GRAPH (CANVAS)
+   2. RELATE MODE: 3D SLIPCASE FIELD (THREE.JS ENGINE)
+   ========================================================= */
+.three-pane-wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #FFFFFF;
+}
+#threeCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.three-hud {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(255,255,255,.94);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.04);
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 10px;
+  pointer-events: none;
+  z-index: 10;
+}
+.three-hud-title {
+  font-weight: 900;
+  color: var(--blue);
+  letter-spacing: .08em;
+  margin-bottom: 3px;
+}
+.three-hud-meta {
+  color: var(--muted-dark);
+}
+.three-controls {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 10;
+}
+.three-btn {
+  height: 32px;
+  padding: 0 10px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 9.5px;
+  font-weight: 850;
+  letter-spacing: .06em;
+  color: var(--ink);
+  box-shadow: 0 2px 8px rgba(0,0,0,.03);
+}
+.three-btn.active {
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
+}
+
+.three-inspector-panel {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  max-width: 480px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  display: none;
+  z-index: 20;
+}
+.three-inspector-panel.open { display: block; }
+
+/* =========================================================
+   3. RELATE MODE: MASSIVE RELATIONAL GRAPH (CANVAS)
    ========================================================= */
 .graph-pane-wrap {
   width: 100%;
@@ -853,7 +934,7 @@ main::-webkit-scrollbar { display: none; }
 }
 
 /* =========================================================
-   3. RELATE MODE: NESTED MATRIX ("CASES OF CASES")
+   4. RELATE MODE: NESTED MATRIX ("CASES OF CASES")
    ========================================================= */
 .matrix-wrap {
   max-width: 860px;
@@ -946,7 +1027,7 @@ main::-webkit-scrollbar { display: none; }
 }
 
 /* =========================================================
-   4. FLIPPER MODE (TACTILE CARD DECK)
+   5. FLIPPER MODE (TACTILE CARD DECK)
    ========================================================= */
 .flipper-wrap {
   padding: 16px 16px calc(24px + var(--bottom));
@@ -1072,7 +1153,7 @@ main::-webkit-scrollbar { display: none; }
 }
 
 /* =========================================================
-   5. PDF LIBRARY MODE (RETURN)
+   6. PDF LIBRARY MODE (RETURN)
    ========================================================= */
 .pdf-wrap {
   padding: 16px 16px calc(24px + var(--bottom));
@@ -1228,7 +1309,7 @@ main::-webkit-scrollbar { display: none; }
 }
 
 /* =========================================================
-   6. MAPS & STRUCTURAL DOCS MODE (PRESERVE)
+   7. MAPS & STRUCTURAL DOCS MODE (PRESERVE)
    ========================================================= */
 .maps-wrap {
   padding: 16px 16px calc(24px + var(--bottom));
@@ -1280,7 +1361,7 @@ main::-webkit-scrollbar { display: none; }
 }
 
 /* =========================================================
-   7. PROMPT OPERATOR MODE (RETURN - COOL RADIO)
+   8. PROMPT OPERATOR MODE (RETURN - COOL RADIO)
    ========================================================= */
 .prompts-wrap {
   padding: 16px 16px calc(24px + var(--bottom));
@@ -1577,6 +1658,14 @@ main::-webkit-scrollbar { display: none; }
   }
 }
 </style>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three/examples/jsm/"
+  }
+}
+</script>
 </head>
 <body>
 <div id="app">
@@ -1617,6 +1706,7 @@ main::-webkit-scrollbar { display: none; }
 
     <div class="nav-triad-group">
       <span class="nav-pillar-label">RELATE</span>
+      <button class="nav-tab-btn" data-tab="three">3D FIELD</button>
       <button class="nav-tab-btn" data-tab="graph">MASSIVE GRAPH</button>
       <button class="nav-tab-btn" data-tab="matrix">NESTED MATRIX</button>
     </div>
@@ -1682,7 +1772,38 @@ main::-webkit-scrollbar { display: none; }
       </div>
     </div>
 
-    <!-- 4. MASSIVE GRAPH PANE (RELATE) -->
+    <!-- 4. 3D SLIPCASE FIELD PANE (RELATE - THREE.JS) -->
+    <div class="pane" id="pane-three">
+      <div class="three-pane-wrap">
+        <div class="three-hud">
+          <div class="three-hud-title">3D ORTHOGRAPHIC RESEARCH FIELD</div>
+          <div class="three-hud-meta" id="threeHudMeta">31 SLIPCASE BOXES &middot; STEPPED SLIPS &middot; CLICK TO INSPECT</div>
+        </div>
+
+        <div class="three-controls">
+          <button class="three-btn active" id="threeViewAllBtn" onclick="setThreeViewMode('all')">ALL 31 CASES</button>
+          <button class="three-btn" id="threeViewFocusBtn" onclick="setThreeViewMode('focus')">ACTIVE CASE</button>
+          <button class="three-btn" onclick="resetThreeCamera()">RESET ANGLE</button>
+        </div>
+
+        <div id="threeContainer" style="width:100%;height:100%;"></div>
+
+        <div class="three-inspector-panel" id="threeInspectorPanel">
+          <div class="graph-insp-head">
+            <span class="graph-insp-accession" id="threeInspAccession">SLP / FIELD</span>
+            <button onclick="closeThreeInspector()" style="font-size:12px;font-weight:900;">&times;</button>
+          </div>
+          <div class="graph-insp-title" id="threeInspTitle">Slipcase Title</div>
+          <div class="graph-insp-desc" id="threeInspDesc">Contains cards and documents.</div>
+          <div class="graph-insp-actions">
+            <button class="deck-btn" id="threeInspLinesBtn">OPEN ZETTEL LINES &rarr;</button>
+            <button class="deck-btn" id="threeInspFlipperBtn">OPEN CARD DECK &rarr;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. MASSIVE GRAPH PANE (RELATE) -->
     <div class="pane" id="pane-graph">
       <div class="graph-pane-wrap">
         <div class="graph-hud">
@@ -1714,7 +1835,7 @@ main::-webkit-scrollbar { display: none; }
       </div>
     </div>
 
-    <!-- 5. NESTED MATRIX PANE (RELATE) -->
+    <!-- 6. NESTED MATRIX PANE (RELATE) -->
     <div class="pane" id="pane-matrix">
       <div class="matrix-wrap">
         <div class="matrix-intro">
@@ -1725,7 +1846,7 @@ main::-webkit-scrollbar { display: none; }
       </div>
     </div>
 
-    <!-- 6. PDF LIBRARY PANE (RETURN) -->
+    <!-- 7. PDF LIBRARY PANE (RETURN) -->
     <div class="pane" id="pane-pdfs">
       <div class="pdf-wrap">
         <div class="pdf-filter-bar">
@@ -1737,7 +1858,7 @@ main::-webkit-scrollbar { display: none; }
       </div>
     </div>
 
-    <!-- 7. PROMPT OPERATOR PANE (RETURN - COOL RADIO) -->
+    <!-- 8. PROMPT OPERATOR PANE (RETURN - COOL RADIO) -->
     <div class="pane" id="pane-prompts">
       <div class="prompts-wrap">
         <div class="poml-stepper" id="pomlStepper"></div>
@@ -1811,8 +1932,8 @@ main::-webkit-scrollbar { display: none; }
 
 </div>
 
+<!-- Primary Application Logic -->
 <script>
-(()=>{
 /* Embedded Research Data */
 const CASES = /* DATA_CASES */;
 const ALL_NOTES = /* DATA_NOTES */;
@@ -1877,6 +1998,7 @@ function setTab(tab) {
 
   if (tab === "flipper") renderFlipper();
   if (tab === "maps") renderMaps();
+  if (tab === "three") window.triggerThreeResize?.();
   if (tab === "graph") initGraphEngine();
   if (tab === "matrix") renderMatrix();
   if (tab === "pdfs") renderPdfs();
@@ -1944,6 +2066,7 @@ window.selectCase = function(idx) {
   if (currentTab === "lines") renderLines();
   if (currentTab === "flipper") renderFlipper();
   if (currentTab === "maps") renderMaps();
+  if (currentTab === "three") window.updateThreeFocus?.(idx);
   if (currentTab === "graph") initGraphEngine();
   if (currentTab === "matrix") renderMatrix();
   if (currentTab === "pdfs") renderPdfs();
@@ -2164,7 +2287,7 @@ $("#copyBtn").onclick = copySelectedLines;
 /* =========================================================
    4. RELATE MODULE: MASSIVE GRAPH ENGINE (HTML5 CANVAS)
    ========================================================= */
-let graphMode = "all"; // "all", "cases", "bridges"
+let graphMode = "all";
 let graphAnimId = null;
 let graphNodes = [];
 let graphLinks = [];
@@ -2187,7 +2310,6 @@ function initGraphEngine() {
   canvas.style.width = w + "px";
   canvas.style.height = h + "px";
 
-  // Build physics graph nodes based on mode
   buildGraphTopology(w, h);
   
   if (graphAnimId) cancelAnimationFrame(graphAnimId);
@@ -2199,7 +2321,6 @@ function buildGraphTopology(w, h) {
   const cx = w / 2;
   const cy = h / 2;
   
-  // Case nodes positioned in circular clusters
   const caseNodeMap = {};
   graphNodes = [];
   graphLinks = [];
@@ -2223,7 +2344,6 @@ function buildGraphTopology(w, h) {
   });
 
   if (graphMode === "all" || graphMode === "bridges") {
-    // Filter slips if a specific case is selected
     const visibleSlips = (selectedCaseIdx === -1) 
       ? rawSlipNodes 
       : rawSlipNodes.filter(s => s.case_idx === selectedCaseIdx);
@@ -2247,7 +2367,6 @@ function buildGraphTopology(w, h) {
       slipNodeMap[sn.id] = node;
     });
 
-    // Links
     GRAPH.links.forEach(l => {
       const sNode = (l.type === 'contains') ? caseNodeMap[l.source] : slipNodeMap[l.source];
       const tNode = (l.type === 'case_bridge') ? caseNodeMap[l.target] : slipNodeMap[l.target];
@@ -2256,7 +2375,6 @@ function buildGraphTopology(w, h) {
       }
     });
   } else if (graphMode === "cases") {
-    // Cases of Cases links
     GRAPH.links.filter(l => l.type === 'case_bridge').forEach(l => {
       const sNode = caseNodeMap[l.source];
       const tNode = caseNodeMap[l.target];
@@ -2275,7 +2393,6 @@ function runGraphPhysics() {
   const ctx = canvas.getContext("2d");
   const dpr = window.devicePixelRatio || 1;
 
-  // Simple Spring-Embedder iteration
   for (let i = 0; i < graphLinks.length; i++) {
     const l = graphLinks[i];
     const dx = l.target.x - l.source.x;
@@ -2291,7 +2408,6 @@ function runGraphPhysics() {
     l.target.vy -= fy;
   }
 
-  // Node repulsion
   for (let i = 0; i < graphNodes.length; i++) {
     const n1 = graphNodes[i];
     for (let j = i + 1; j < Math.min(graphNodes.length, i + 60); j++) {
@@ -2310,14 +2426,12 @@ function runGraphPhysics() {
         n2.vy += fy;
       }
     }
-    // Damping
     n1.x += n1.vx;
     n1.y += n1.vy;
     n1.vx *= 0.88;
     n1.vy *= 0.88;
   }
 
-  // Render Frame
   ctx.save();
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.scale(dpr, dpr);
@@ -2326,7 +2440,6 @@ function runGraphPhysics() {
 
   const q = $("#search").value.trim().toLowerCase();
 
-  // Render Edges
   for (let i = 0; i < graphLinks.length; i++) {
     const l = graphLinks[i];
     ctx.beginPath();
@@ -2345,7 +2458,6 @@ function runGraphPhysics() {
     ctx.stroke();
   }
 
-  // Render Nodes
   for (let i = 0; i < graphNodes.length; i++) {
     const n = graphNodes[i];
     const isMatched = !q || (n.label && n.label.toLowerCase().includes(q));
@@ -2362,7 +2474,6 @@ function runGraphPhysics() {
       ctx.strokeStyle = "#FFFFFF";
       ctx.stroke();
 
-      // Case Label
       ctx.font = "bold 9.5px ui-monospace, monospace";
       ctx.fillStyle = isMatched ? "#111318" : "rgba(17,19,24,0.3)";
       ctx.fillText(n.accession || n.label.slice(0, 18), n.x + n.radius + 4, n.y + 3);
@@ -2389,7 +2500,6 @@ function bindGraphEvents(canvas) {
   };
   window.onmousemove = e => {
     if (!isDown) {
-      // Hit testing
       const rect = canvas.getBoundingClientRect();
       const mx = (e.clientX - rect.left - transform.x) / transform.k;
       const my = (e.clientY - rect.top - transform.y) / transform.k;
@@ -2860,6 +2970,7 @@ document.addEventListener("keydown", e => {
     closeStack();
     closePdfModal();
     closeGraphInspector();
+    window.closeThreeInspector?.();
     $("#filterScrim").classList.remove("open");
     $("#caseScrim").classList.remove("open");
   }
@@ -2883,7 +2994,244 @@ function toast(msg) {
 /* Initial Mount */
 updateActiveCaseLabel();
 setTab("lines");
-})();
+</script>
+
+<!-- Three.js 3D Orthographic Slipcase Field Module -->
+<script type="module">
+import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+
+const BLUE = 0x0647E5;
+const WHITE = 0xffffff;
+
+let scene, camera, renderer, controls, collectionGroup;
+let threeViewMode = "all";
+let raycaster, mouse;
+let caseMeshes = [];
+
+function initThree() {
+  const container = document.getElementById("threeContainer");
+  if (!container) return;
+
+  scene = new THREE.Scene();
+  scene.background = new THREE.Color(WHITE);
+
+  camera = new THREE.OrthographicCamera();
+  camera.position.set(7, 5, 9);
+  camera.lookAt(0, 0, 0);
+
+  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.setSize(container.clientWidth || 800, container.clientHeight || 600);
+  container.innerHTML = "";
+  container.appendChild(renderer.domElement);
+
+  const fillMaterial = new THREE.MeshBasicMaterial({ color: WHITE });
+  const edgeMaterial = new THREE.LineBasicMaterial({ color: BLUE, linewidth: 1.5 });
+
+  function outlinedBox(width, height, depth, position = [0, 0, 0]) {
+    const geometry = new THREE.BoxGeometry(width, height, depth);
+    const group = new THREE.Group();
+    const fill = new THREE.Mesh(geometry, fillMaterial);
+    const edges = new THREE.LineSegments(new THREE.EdgesGeometry(geometry), edgeMaterial);
+    group.add(fill, edges);
+    group.position.set(...position);
+    return group;
+  }
+
+  function createSlipcase({ width = 2, height = 1.5, depth = 1.5, slips = 5, slipHeight = 1.3, slipInset = 0.18, panel = 0.035, label = true, caseData = null } = {}) {
+    const root = new THREE.Group();
+    root.userData = { caseData };
+
+    // Box bottom, left, right, back, front
+    root.add(outlinedBox(width, panel, depth, [0, panel / 2, 0]));
+    root.add(outlinedBox(panel, height, depth, [-width / 2 + panel / 2, height / 2, 0]));
+    root.add(outlinedBox(panel, height, depth, [width / 2 - panel / 2, height / 2, 0]));
+    root.add(outlinedBox(width, height, panel, [0, height / 2, -depth / 2 + panel / 2]));
+
+    const frontHeight = height * 0.68;
+    root.add(outlinedBox(width, frontHeight, panel, [0, frontHeight / 2, depth / 2 - panel / 2]));
+
+    // Stepped slips
+    const usableDepth = depth - slipInset * 2;
+    const spacing = slips > 1 ? usableDepth / (slips - 1) : 0;
+
+    for (let i = 0; i < slips; i++) {
+      const z = -usableDepth / 2 + i * spacing;
+      const rise = (slips - i - 1) * 0.055;
+      const slip = outlinedBox(width * 0.76, slipHeight, 0.025, [0, height * 0.55 + rise, z]);
+      root.add(slip);
+    }
+
+    if (label) {
+      const labelPlate = outlinedBox(width * 0.30, height * 0.18, 0.02, [0, height * 0.32, depth / 2 + 0.016]);
+      root.add(labelPlate);
+    }
+
+    return root;
+  }
+
+  collectionGroup = new THREE.Group();
+  scene.add(collectionGroup);
+
+  function buildCollection() {
+    while (collectionGroup.children.length > 0) {
+      collectionGroup.remove(collectionGroup.children[0]);
+    }
+    caseMeshes = [];
+
+    if (threeViewMode === "all") {
+      // Arrange 31 slipcases in a structured archival grid
+      const cols = 6;
+      const spacingX = 3.2;
+      const spacingZ = 2.8;
+
+      CASES.forEach((c, idx) => {
+        const row = Math.floor(idx / cols);
+        const col = idx % cols;
+        const slipCount = Math.min(8, Math.max(3, Math.round(c.card_count / 10)));
+        const box = createSlipcase({
+          width: 2.0,
+          height: 1.45,
+          depth: 1.45,
+          slips: slipCount,
+          caseData: c
+        });
+        box.position.x = (col - (cols - 1) / 2) * spacingX;
+        box.position.z = (row - 2) * spacingZ;
+        collectionGroup.add(box);
+        caseMeshes.push(box);
+      });
+      controls.target.set(0, 0.8, 0);
+    } else {
+      // Focus on active case
+      const targetCase = selectedCaseIdx === -1 ? CASES[0] : CASES[selectedCaseIdx];
+      const slipCount = Math.min(10, Math.max(4, Math.round(targetCase.card_count / 8)));
+      const box = createSlipcase({
+        width: 2.4,
+        height: 1.7,
+        depth: 1.7,
+        slips: slipCount,
+        slipHeight: 1.5,
+        caseData: targetCase
+      });
+      box.position.set(0, 0, 0);
+      collectionGroup.add(box);
+      caseMeshes.push(box);
+      controls.target.set(0, 0.8, 0);
+    }
+  }
+
+  buildCollection();
+  collectionGroup.rotation.y = -0.12;
+
+  controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  controls.enablePan = true;
+  controls.minPolarAngle = Math.PI * 0.15;
+  controls.maxPolarAngle = Math.PI * 0.48;
+  controls.target.set(0, 0.8, 0);
+
+  raycaster = new THREE.Raycaster();
+  mouse = new THREE.Vector2();
+
+  function resize() {
+    const container = document.getElementById("threeContainer");
+    if (!container) return;
+    const w = container.clientWidth || 800;
+    const h = container.clientHeight || 600;
+    const aspect = w / h;
+    const viewHeight = threeViewMode === "all" ? 14 : 5.6;
+
+    camera.left = -viewHeight * aspect / 2;
+    camera.right = viewHeight * aspect / 2;
+    camera.top = viewHeight / 2;
+    camera.bottom = -viewHeight / 2;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize(w, h);
+  }
+
+  resize();
+  window.addEventListener("resize", resize);
+  window.triggerThreeResize = resize;
+
+  window.setThreeViewMode = mode => {
+    threeViewMode = mode;
+    document.querySelectorAll(".three-controls .three-btn").forEach(b => b.classList.remove("active"));
+    if (mode === "all") document.getElementById("threeViewAllBtn").classList.add("active");
+    if (mode === "focus") document.getElementById("threeViewFocusBtn").classList.add("active");
+    buildCollection();
+    resize();
+  };
+
+  window.updateThreeFocus = idx => {
+    if (threeViewMode === "focus") {
+      buildCollection();
+      resize();
+    }
+  };
+
+  window.resetThreeCamera = () => {
+    camera.position.set(7, 5, 9);
+    controls.target.set(0, 0.8, 0);
+    resize();
+  };
+
+  // Raycasting on Click
+  renderer.domElement.addEventListener("click", e => {
+    const rect = renderer.domElement.getBoundingClientRect();
+    mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+    mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObjects(collectionGroup.children, true);
+
+    if (intersects.length > 0) {
+      let topGroup = intersects[0].object;
+      while (topGroup.parent && topGroup.parent !== collectionGroup) {
+        topGroup = topGroup.parent;
+      }
+      if (topGroup.userData && topGroup.userData.caseData) {
+        const c = topGroup.userData.caseData;
+        const cIdx = CASES.findIndex(x => x.id === c.id);
+        showThreeInspector(c, cIdx);
+      }
+    }
+  });
+
+  function showThreeInspector(c, cIdx) {
+    const panel = document.getElementById("threeInspectorPanel");
+    panel.classList.add("open");
+    document.getElementById("threeInspAccession").textContent = `${c.accession} · ${c.meta_field}`;
+    document.getElementById("threeInspTitle").textContent = c.name;
+    document.getElementById("threeInspDesc").textContent = `Physical slipcase workspace holding ${c.card_count} zettels and ${c.pdf_count} research PDFs.`;
+    document.getElementById("threeInspLinesBtn").onclick = () => {
+      selectCase(cIdx);
+      setTab("lines");
+    };
+    document.getElementById("threeInspFlipperBtn").onclick = () => {
+      selectCase(cIdx);
+      setTab("flipper");
+    };
+  }
+
+  window.closeThreeInspector = () => {
+    document.getElementById("threeInspectorPanel").classList.remove("open");
+  };
+
+  function animate() {
+    requestAnimationFrame(animate);
+    controls.update();
+    renderer.render(scene, camera);
+  }
+
+  animate();
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  setTimeout(initThree, 100);
+});
 </script>
 </body>
 </html>
@@ -2900,4 +3248,4 @@ html_rendered = html_template.replace('/* DATA_CASES */', json.dumps(cases_data)
 with open(os.path.join(BASE_DIR, 'index.html'), 'w', encoding='utf-8') as f:
     f.write(html_rendered)
 
-print('Successfully re-indexed and wrote index.html and slipcases.json with Massive Graph & Relational Matrix.')
+print('Successfully re-indexed and wrote index.html and slipcases.json with 3D Field, Massive Graph & Relational Matrix.')
