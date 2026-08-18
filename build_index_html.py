@@ -1392,6 +1392,7 @@ mark { background: var(--pale); color: inherit; }
       <button class="nav-tab-btn" data-tab="three">3D FIELD</button>
       <button class="nav-tab-btn" data-tab="graph">MASSIVE GRAPH</button>
       <button class="nav-tab-btn" data-tab="matrix">NESTED MATRIX</button>
+      <a class="nav-tab-btn" href="map.html" target="_blank" style="text-decoration:none;">3D MAP &nearr;</a>
     </div>
 
     <div class="nav-divider"></div>
@@ -3582,4 +3583,19 @@ html_rendered = html_template.replace('/* DATA_CASES */', json.dumps(cases_data)
 with open(os.path.join(BASE_DIR, 'index.html'), 'w', encoding='utf-8') as f:
     f.write(html_rendered)
 
-print('Successfully re-indexed and wrote index.html with Reader v3, Table, Lines, 3D, Graph, Matrix, PDFs, Maps, and Prompts.')
+# Synchronize map.html with all_notes
+map_path = os.path.join(BASE_DIR, "map.html")
+if os.path.exists(map_path):
+    with open(map_path, "r", encoding="utf-8") as f:
+        map_content = f.read()
+    map_content = re.sub(r'\n?\s*<script>\s*window\.ZETTEL_DATA\s*=\s*\[.*?\];\s*</script>', '', map_content, flags=re.DOTALL)
+    data_script = f"\n    <script>\n    window.ZETTEL_DATA = {json.dumps(all_notes)};\n    </script>\n"
+    if "<script type=\"module\">" in map_content:
+        parts = map_content.split("<script type=\"module\">", 1)
+        map_content = parts[0] + data_script + "    <script type=\"module\">" + parts[1]
+    else:
+        map_content += data_script
+    with open(map_path, "w", encoding="utf-8") as f:
+        f.write(map_content)
+
+print('Successfully re-indexed and wrote index.html and map.html with Reader v3, Table, Lines, 3D Map, Graph, Matrix, PDFs, and Prompts.')

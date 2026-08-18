@@ -1,0 +1,5397 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>SLIPCASE — Field</title>
+
+    <style>
+        :root {
+            --blue: #0647E5;
+            --paper: #ffffff;
+            --field: #F7F8FA;
+            --ink: #111318;
+            --grey: #9CA3AF;
+            --pale: #E7EEFF;
+
+            --line: 1.5px;
+
+            --top: env(safe-area-inset-top);
+            --bottom: env(safe-area-inset-bottom);
+
+            --sans:
+                Inter,
+                ui-sans-serif,
+                system-ui,
+                -apple-system,
+                "Segoe UI",
+                sans-serif;
+
+            --serif:
+                "Source Serif 4",
+                ui-serif,
+                Georgia,
+                serif;
+
+            --mono:
+                "IBM Plex Mono",
+                ui-monospace,
+                SFMono-Regular,
+                Menlo,
+                monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html,
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: var(--sans);
+        }
+
+        button,
+        input {
+            font: inherit;
+            color: inherit;
+        }
+
+        button {
+            border: 0;
+            background: none;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        button:focus-visible,
+        input:focus-visible {
+            outline: 2px solid var(--blue);
+            outline-offset: 2px;
+        }
+
+        #app {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        /* ============================================================
+   HEADER
+   ============================================================ */
+
+        header {
+            flex: 0 0 auto;
+            padding:
+                calc(10px + var(--top)) 16px 10px;
+
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 14px;
+            align-items: center;
+
+            border-bottom:
+                var(--line) solid var(--pale);
+
+            background: var(--paper);
+            z-index: 100;
+        }
+
+        .wordmark {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: .42em;
+            color: var(--blue);
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+
+        .search {
+            height: 38px;
+
+            border:
+                var(--line) solid var(--pale);
+
+            background: var(--paper);
+            padding: 0 12px;
+            outline: 0;
+            min-width: 0;
+
+            font-size: 14px;
+            font-family: var(--mono);
+        }
+
+        .search::placeholder {
+            color: var(--grey);
+        }
+
+        .search:focus {
+            border-color: var(--blue);
+        }
+
+
+        /* ============================================================
+   STAGE
+
+   No document-level scroll.
+   Spatial state changes inside one fixed frame.
+   ============================================================ */
+
+        #stage {
+            flex: 1 1 auto;
+            position: relative;
+            overflow: hidden;
+            background: var(--field);
+            touch-action: none;
+        }
+
+
+        /* ============================================================
+   FIELD
+   ============================================================ */
+
+        .fieldGrid {
+            position: absolute;
+            inset: 0;
+
+            padding: 18px 16px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            grid-template-rows:
+                repeat(3, 1fr);
+
+            gap: 12px;
+        }
+
+        @media(min-width:680px) {
+            .fieldGrid {
+                grid-template-columns:
+                    repeat(3, 1fr);
+
+                padding: 22px;
+                gap: 14px;
+            }
+        }
+
+        @media(min-width:1020px) {
+            .fieldGrid {
+                grid-template-columns:
+                    repeat(4, 1fr);
+
+                max-width: 1180px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+            }
+        }
+
+        .caseCard {
+            background: var(--paper);
+
+            border:
+                var(--line) solid var(--pale);
+
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 8px;
+            padding: 10px;
+
+            min-height: 0;
+            text-align: center;
+        }
+
+        .caseCard:hover,
+        .caseCard:active {
+            border-color: var(--blue);
+        }
+
+        .caseCard svg {
+            width: min(58%, 110px);
+            height: auto;
+            flex: 0 1 auto;
+        }
+
+        .caseId {
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: .08em;
+            color: var(--blue);
+        }
+
+        .caseTopic {
+            font-size: 11px;
+            line-height: 1.25;
+            color: var(--ink);
+
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+
+            max-width: 100%;
+        }
+
+        .caseCount {
+            font-family: var(--mono);
+            font-size: 9px;
+            color: var(--grey);
+            letter-spacing: .06em;
+        }
+
+        .emptyField {
+            position: absolute;
+            inset: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: var(--grey);
+
+            font-family: var(--mono);
+            font-size: 12px;
+            letter-spacing: .06em;
+        }
+
+
+        /* ============================================================
+   CASE
+
+   The archive object.
+
+   Slips remain visibly inside their case.
+
+   normal:
+      compressed stack
+
+   fan:
+      visibly inspectable stack
+   ============================================================ */
+
+        .caseView {
+            position: absolute;
+            inset: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding:
+                44px 18px 28px;
+        }
+
+        .caseObject {
+            position: relative;
+
+            width: min(620px,
+                    calc(100vw - 40px));
+
+            height: min(560px,
+                    calc(100% - 22px));
+
+            perspective: 1200px;
+        }
+
+        .caseDeck {
+            position: absolute;
+
+            left: 50%;
+            top: 48%;
+
+            width: min(76vw, 430px);
+            height: min(60vh, 390px);
+
+            transform:
+                translate(-50%, -50%);
+        }
+
+        .caseSlip {
+            position: absolute;
+
+            left: 7%;
+            width: 86%;
+
+            height: min(300px,
+                    45vh);
+
+            border:
+                var(--line) solid var(--blue);
+
+            border-radius:
+                10px 10px 2px 2px;
+
+            background: var(--paper);
+
+            box-shadow:
+                0 4px 20px rgba(6, 71, 229, .025);
+
+            transform-origin:
+                50% 100%;
+
+            transition:
+                transform .22s ease,
+                top .22s ease,
+                left .22s ease,
+                opacity .16s ease;
+
+            text-align: left;
+            overflow: hidden;
+        }
+
+        .caseSlip:hover {
+            border-color: var(--blue);
+        }
+
+        .caseSlip.front {
+            box-shadow:
+                0 10px 32px rgba(6, 71, 229, .05);
+        }
+
+        .caseSlipTab {
+            position: absolute;
+
+            top: -1px;
+            left: 18px;
+
+            max-width: 72%;
+
+            padding:
+                7px 12px 8px;
+
+            border-left:
+                var(--line) solid var(--blue);
+
+            border-right:
+                var(--line) solid var(--blue);
+
+            border-bottom:
+                var(--line) solid var(--blue);
+
+            border-radius:
+                0 0 6px 6px;
+
+            background: var(--paper);
+
+            color: var(--blue);
+
+            font-family: var(--mono);
+            font-size: 9px;
+            letter-spacing: .09em;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .caseSlipText {
+            position: absolute;
+
+            left: 20px;
+            right: 20px;
+            top: 58px;
+
+            font-family: var(--serif);
+            font-size: 17px;
+            line-height: 1.42;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .caseSlipMeta {
+            position: absolute;
+
+            left: 20px;
+            bottom: 18px;
+
+            color: var(--grey);
+
+            font-family: var(--mono);
+            font-size: 9px;
+            letter-spacing: .05em;
+        }
+
+        .caseFront {
+            position: absolute;
+
+            z-index: 60;
+
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            height: 41%;
+
+            background: var(--paper);
+
+            border:
+                var(--line) solid var(--blue);
+
+            pointer-events: none;
+        }
+
+        .caseLabel {
+            position: absolute;
+
+            left: 50%;
+            top: 44%;
+
+            transform:
+                translate(-50%, -50%);
+
+            width: 82px;
+            height: 34px;
+
+            border:
+                var(--line) solid var(--blue);
+        }
+
+        .caseCaption {
+            position: absolute;
+
+            left: 50%;
+            bottom: -34px;
+
+            transform: translateX(-50%);
+
+            width: 100%;
+            text-align: center;
+
+            font-family: var(--mono);
+            font-size: 9px;
+            letter-spacing: .11em;
+            color: var(--grey);
+        }
+
+
+        /* ============================================================
+   SLIP / READ
+
+   Active slip retains visible stack memory behind it.
+   ============================================================ */
+
+        .slipWrap {
+            position: absolute;
+            inset: 0;
+
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+
+            padding:
+                38px 18px 16px;
+        }
+
+        .readStack {
+            position: absolute;
+
+            top: 28px;
+            left: 50%;
+
+            width: min(680px, calc(100% - 36px));
+            height: 60px;
+
+            transform:
+                translateX(-50%);
+
+            pointer-events: none;
+        }
+
+        .readGhost {
+            position: absolute;
+
+            left: 0;
+            right: 0;
+
+            height: 65px;
+
+            border:
+                var(--line) solid var(--blue);
+
+            border-radius:
+                10px 10px 0 0;
+
+            background: var(--paper);
+        }
+
+        .readGhost:nth-child(1) {
+            top: 0;
+            transform:
+                translateX(8px) scaleX(.975);
+        }
+
+        .readGhost:nth-child(2) {
+            top: 7px;
+            transform:
+                translateX(4px) scaleX(.988);
+        }
+
+        .readGhost:nth-child(3) {
+            top: 14px;
+        }
+
+        .slip {
+            position: relative;
+
+            z-index: 10;
+
+            width: min(680px, 100%);
+
+            background: var(--paper);
+
+            border:
+                var(--line) solid var(--blue);
+
+            border-radius:
+                10px 10px 0 0;
+
+            display: flex;
+            flex-direction: column;
+
+            min-height: 0;
+
+            transform-origin:
+                center center;
+        }
+
+        .slipTab {
+            position: absolute;
+
+            top: -15px;
+            left: 18px;
+
+            max-width: 70%;
+
+            background: var(--paper);
+
+            border:
+                var(--line) solid var(--blue);
+
+            border-radius:
+                7px 7px 0 0;
+
+            border-bottom: 0;
+
+            padding:
+                5px 14px 8px;
+
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: .1em;
+            color: var(--blue);
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .slipMeta {
+            flex: 0 0 auto;
+
+            padding:
+                16px 18px 10px;
+
+            border-bottom:
+                var(--line) solid var(--pale);
+
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: .06em;
+            color: var(--grey);
+
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .slipMeta b {
+            color: var(--blue);
+            font-weight: 500;
+        }
+
+        .slipBody {
+            flex: 1 1 auto;
+
+            min-height: 0;
+            overflow: auto;
+
+            padding:
+                16px 18px 18px;
+
+            font-family: var(--serif);
+            font-size: 18px;
+            line-height: 1.52;
+
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+
+            scrollbar-width: thin;
+        }
+
+        .slip[data-kind="head"] .slipBody {
+            font-family: var(--sans);
+            font-weight: 650;
+            letter-spacing: -.02em;
+            font-size: 21px;
+            line-height: 1.3;
+        }
+
+        .slip[data-kind="code"] .slipBody {
+            font-family: var(--mono);
+            font-size: 12px;
+            line-height: 1.6;
+            background: var(--field);
+        }
+
+        .slip.collected {
+            background: var(--pale);
+        }
+
+        .slip.collected .slipBody {
+            background: transparent;
+        }
+
+
+        /* invisible page zones */
+
+        .zone {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+
+            width: 14%;
+
+            z-index: 20;
+        }
+
+        .zone.prev {
+            left: 0;
+        }
+
+        .zone.next {
+            right: 0;
+        }
+
+
+        /* ============================================================
+   TABLE
+
+   Temporary working arrangement.
+
+   Not archival state.
+   ============================================================ */
+
+        .tableView {
+            position: absolute;
+            inset: 0;
+
+            overflow: hidden;
+
+            background:
+                var(--field);
+        }
+
+        .tableHeader {
+            position: absolute;
+
+            z-index: 200;
+
+            left: 14px;
+            top: 14px;
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            pointer-events: auto;
+        }
+
+        .tableTool {
+            min-height: 34px;
+
+            padding: 0 11px;
+
+            border:
+                var(--line) solid var(--pale);
+
+            background: rgba(255, 255, 255, .92);
+
+            color: var(--ink);
+
+            font-family: var(--mono);
+            font-size: 9px;
+            letter-spacing: .08em;
+        }
+
+        .tableTool:hover,
+        .tableTool.on {
+            border-color: var(--blue);
+            color: var(--blue);
+        }
+
+        .tableRelations {
+            position: absolute;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            pointer-events: none;
+
+            overflow: visible;
+
+            z-index: 1;
+        }
+
+        .tableRelation {
+            stroke: var(--blue);
+            stroke-width: 1.5;
+            fill: none;
+
+            opacity: .55;
+
+            vector-effect:
+                non-scaling-stroke;
+        }
+
+        .tableSlip {
+            position: absolute;
+
+            z-index: 10;
+
+            width: min(290px, 46vw);
+            height: 210px;
+
+            background: var(--paper);
+
+            border:
+                var(--line) solid var(--blue);
+
+            border-radius:
+                9px 9px 2px 2px;
+
+            cursor: grab;
+
+            user-select: none;
+
+            box-shadow:
+                0 5px 20px rgba(6, 71, 229, .025);
+
+            touch-action: none;
+        }
+
+        .tableSlip.dragging {
+            cursor: grabbing;
+
+            box-shadow:
+                0 14px 38px rgba(6, 71, 229, .09);
+        }
+
+        .tableSlip.pinned::after {
+            content: "";
+
+            position: absolute;
+
+            top: 10px;
+            right: 10px;
+
+            width: 7px;
+            height: 7px;
+
+            border-radius: 50%;
+
+            background: var(--blue);
+        }
+
+        .tableSlip.relateAnchor {
+            background: var(--pale);
+        }
+
+        .tableSlipTab {
+            position: absolute;
+
+            top: -1px;
+            left: 14px;
+
+            max-width: 64%;
+
+            padding:
+                6px 10px 7px;
+
+            border-left:
+                var(--line) solid var(--blue);
+
+            border-right:
+                var(--line) solid var(--blue);
+
+            border-bottom:
+                var(--line) solid var(--blue);
+
+            color: var(--blue);
+
+            font-family: var(--mono);
+            font-size: 8px;
+            letter-spacing: .09em;
+
+            background: var(--paper);
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .tableSlipBody {
+            position: absolute;
+
+            top: 42px;
+            left: 14px;
+            right: 14px;
+            bottom: 40px;
+
+            overflow: hidden;
+
+            font-family: var(--serif);
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .tableSlipFoot {
+            position: absolute;
+
+            left: 14px;
+            right: 14px;
+            bottom: 12px;
+
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+
+            color: var(--grey);
+
+            font-family: var(--mono);
+            font-size: 8px;
+            letter-spacing: .05em;
+        }
+
+
+        /* ============================================================
+   FOOTER
+   ============================================================ */
+
+        footer {
+            flex: 0 0 auto;
+
+            padding:
+                10px 14px calc(10px + var(--bottom));
+
+            display: grid;
+            grid-template-columns:
+                auto 1fr auto;
+
+            gap: 10px;
+            align-items: center;
+
+            border-top:
+                var(--line) solid var(--pale);
+
+            background: var(--paper);
+
+            z-index: 100;
+        }
+
+        .navBtn {
+            height: 40px;
+            min-width: 52px;
+
+            border:
+                var(--line) solid var(--pale);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 8px;
+
+            padding: 0 12px;
+
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: .1em;
+        }
+
+        .navBtn:disabled {
+            opacity: .3;
+        }
+
+        .navBtn:not(:disabled):hover,
+        .navBtn:not(:disabled):active {
+            border-color: var(--blue);
+            color: var(--blue);
+        }
+
+        .chev {
+            width: 8px;
+            height: 8px;
+
+            border-left:
+                var(--line) solid currentColor;
+
+            border-bottom:
+                var(--line) solid currentColor;
+
+            transform: rotate(45deg);
+
+            flex: 0 0 auto;
+        }
+
+        .chev.r {
+            transform: rotate(225deg);
+        }
+
+        .pos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            gap: 6px;
+            min-width: 0;
+        }
+
+        .posLabel {
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: .12em;
+
+            white-space: nowrap;
+            max-width: 100%;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .posLabel b {
+            color: var(--blue);
+            font-weight: 500;
+        }
+
+        .ticks {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+        }
+
+        .tick {
+            width: 5px;
+            height: 5px;
+
+            border:
+                1px solid var(--blue);
+
+            background: var(--paper);
+        }
+
+        .tick.on {
+            background: var(--blue);
+        }
+
+        .actBtn {
+            height: 40px;
+
+            padding: 0 14px;
+
+            border:
+                var(--line) solid var(--blue);
+
+            color: var(--blue);
+
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: .1em;
+
+            white-space: nowrap;
+        }
+
+        .actBtn.filled {
+            background: var(--blue);
+            color: var(--paper);
+        }
+
+
+        /* ============================================================
+   MOTION
+   ============================================================ */
+
+        @media(prefers-reduced-motion: no-preference) {
+
+            .fieldGrid,
+            .caseView,
+            .slipWrap,
+            .tableView {
+                animation:
+                    enter .16s ease;
+            }
+        }
+
+        @keyframes enter {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <header>
+
+            <button class="wordmark" id="homeBtn">
+                Slipcase
+            </button>
+
+            <input id="search" class="search" placeholder="search the field" autocomplete="off" aria-label="Search">
+
+        </header>
+
+
+        <div id="stage"></div>
+
+
+        <footer>
+
+            <button class="navBtn" id="prevBtn" aria-label="Previous">
+
+                <span class="chev"></span>
+
+                <span id="prevLabel">
+                    PREV
+                </span>
+
+            </button>
+
+
+            <div class="pos">
+
+                <div class="posLabel" id="posLabel"></div>
+
+                <div class="ticks" id="ticks"></div>
+
+            </div>
+
+
+            <div style="
+      display:flex;
+      gap:8px
+    ">
+
+                <button class="actBtn" id="actBtn"></button>
+
+
+                <button class="navBtn" id="nextBtn" aria-label="Next">
+
+                    <span id="nextLabel">
+                        NEXT
+                    </span>
+
+                    <span class="chev r"></span>
+
+                </button>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+
+    <!-- =========================================================
+     DATA
+
+     KEEP YOUR EXISTING DATA BLOCK HERE.
+
+     Supported contracts:
+
+     window.ZETTEL_DATA = [...]
+
+     OR
+
+     window.__FALLBACK__ = [...]
+     ========================================================= -->
+
+
+    <script>
+        (() => {
+
+            "use strict";
+
+
+            /* ============================================================
+               THEORY
+            
+               <archive position>
+               ≠
+               <working position>
+               ≠
+               <reading position>
+            
+            
+               FIELD
+                  [open]
+               CASE
+            
+               CASE
+                  [pull]
+               SLIP
+            
+               CASE
+                  [fan]
+               FAN
+            
+               FAN
+                  [spread]
+               TABLE
+            
+               TABLE
+                  [stack]
+                  [pin]
+                  [compare]
+                  [relate]
+            
+               ANY WORKING STATE
+                  [return]
+               ARCHIVE
+               ============================================================ */
+
+
+            /* ============================================================
+               CONFIGURATION
+               ============================================================ */
+
+            const MAX_TICKS = 24;
+
+            const SWIPE_PX = 48;
+
+            const SWIPE_SLOP = 64;
+
+            const SEARCH_DEBOUNCE_MS = 110;
+
+            const MAX_QUERY_TOKENS = 8;
+
+            const ICON_SLIPS_MAX = 5;
+
+            const STACK_DISTANCE = 82;
+
+            const TABLE_MARGIN = 18;
+
+            const FIELD_ORDER = [
+
+                "TITLE",
+
+                "SOURCE",
+
+                "PASSAGE",
+
+                "RESEARCH OBJECT",
+
+                "LOCAL MOVE",
+
+                "SOURCE TERMS",
+
+                "WHAT BECAME STRANGE",
+
+                "QUESTION",
+
+                "DEEPER QUESTION",
+
+                "MECHANISM",
+
+                "FORMAL SHIFT",
+
+                "SOURCE FORMALISM",
+
+                "OUR FORMALIZATION",
+
+                "TENSION",
+
+                "MISSING",
+
+                "BOUNDARY",
+
+                "CITATION TRAIL",
+
+                "TEST",
+
+                "PLATFORM",
+
+                "LINKS",
+
+                "BIBTEX"
+
+            ];
+
+
+            const CODE_FIELD =
+                /FORMAL|BIBTEX|MECHANISM/;
+
+
+            const HEAD_FIELD =
+                /^(TITLE|QUESTION|DEEPER QUESTION)$/;
+
+
+            /* ============================================================
+               DATA
+               ============================================================ */
+
+            const INLINE_NOTES = [];
+
+
+            const notes =
+
+                Array.isArray(
+                    window.ZETTEL_DATA
+                )
+
+                    &&
+
+                    window.ZETTEL_DATA.length
+
+                    ? window.ZETTEL_DATA
+
+                    : (
+                        window.__FALLBACK__
+                        ||
+                        INLINE_NOTES
+                    );
+
+
+            /* ============================================================
+               INDEX
+               ============================================================ */
+
+            const ESC = {
+
+                "&": "&amp;",
+
+                "<": "&lt;",
+
+                ">": "&gt;",
+
+                '"': "&quot;",
+
+                "'": "&#39;"
+
+            };
+
+
+            const esc = value =>
+
+                String(
+                    value ?? ""
+                ).replace(
+
+                    /[&<>"']/g,
+
+                    char => ESC[char]
+
+                );
+
+
+            function valueFor(
+                note,
+                field
+            ) {
+
+                if (
+                    field === "TITLE"
+                ) {
+                    return note.title;
+                }
+
+
+                if (
+                    field === "SOURCE"
+                ) {
+                    return note.source;
+                }
+
+
+                if (
+                    field === "PASSAGE"
+                ) {
+                    return note.passage;
+                }
+
+
+                return (
+                    note.fields
+                    &&
+                    note.fields[field]
+                ) || "";
+
+            }
+
+
+            /*
+              <Slipcase>
+              =
+              note
+              +
+              ordered slips
+            */
+
+            const CASES = [];
+
+
+            for (
+                let noteIndex = 0;
+                noteIndex < notes.length;
+                noteIndex++
+            ) {
+
+                const note =
+                    notes[noteIndex];
+
+
+                const slips = [];
+
+
+                let caseLow = (
+
+                    note.id
+                    + " "
+                    + note.type
+                    + " "
+                    + note.topic
+                    + " "
+                    + (
+                        note.symbol
+                        || ""
+                    )
+
+                ).toLowerCase();
+
+
+                for (
+                    const field
+                    of FIELD_ORDER
+                ) {
+
+                    const value =
+                        valueFor(
+                            note,
+                            field
+                        );
+
+
+                    if (!value) {
+                        continue;
+                    }
+
+
+                    const low = (
+
+                        field
+                        + " "
+                        + value
+
+                    ).toLowerCase();
+
+
+                    caseLow +=
+                        " "
+                        + low;
+
+
+                    slips.push({
+
+                        f: field,
+
+                        text: value,
+
+                        low
+
+                    });
+
+                }
+
+
+                CASES.push({
+
+                    i: noteIndex,
+
+                    slips,
+
+                    low: caseLow
+
+                });
+
+            }
+
+
+            /* ============================================================
+               STATE
+               ============================================================ */
+
+            let view =
+                "FIELD";
+
+            /*
+            
+              FIELD
+              CASE
+              SLIP
+              TABLE
+              TRAY
+            
+            */
+
+
+            let qTokens = [];
+
+
+            let filtered =
+                CASES.map(
+                    (_, index) => index
+                );
+
+
+            let fieldPage = 0;
+
+
+            /*
+              index into filtered[]
+            */
+
+            let caseK = 0;
+
+
+            /*
+              front / active slip
+              inside current case
+            */
+
+            let slipIdx = 0;
+
+
+            let caseFan = false;
+
+
+            /*
+              temporary collection
+            */
+
+            let tray = [];
+
+
+            let trayIdx = 0;
+
+
+            /*
+              TABLE state is deliberately ephemeral.
+            */
+
+            let tableItems = [];
+
+
+            /*
+              {
+                a:key,
+                b:key
+              }
+            */
+
+            let relations = [];
+
+
+            let relationMode = false;
+
+
+            let relationAnchor = null;
+
+
+            let tableZ = 20;
+
+
+            let searchTimer = 0;
+
+
+            /*
+              pointer-based swipe
+            */
+
+            let swipe = null;
+
+
+            /*
+              drag state for TABLE
+            */
+
+            let tableDrag = null;
+
+
+            /* ============================================================
+               DOM
+               ============================================================ */
+
+            const $ =
+                id =>
+                    document.getElementById(id);
+
+
+            const stage =
+                $("stage");
+
+
+            /* ============================================================
+               HELPERS
+               ============================================================ */
+
+            function pageSize() {
+
+                if (
+                    innerWidth >= 1020
+                ) {
+                    return 12;
+                }
+
+
+                if (
+                    innerWidth >= 680
+                ) {
+                    return 9;
+                }
+
+
+                return 6;
+
+            }
+
+
+            function match(low) {
+
+                for (
+                    let index = 0;
+                    index < qTokens.length;
+                    index++
+                ) {
+
+                    if (
+                        !low.includes(
+                            qTokens[index]
+                        )
+                    ) {
+                        return false;
+                    }
+
+                }
+
+
+                return true;
+
+            }
+
+
+            function currentCase() {
+
+                if (
+                    !filtered.length
+                ) {
+                    return null;
+                }
+
+
+                return CASES[
+                    filtered[caseK]
+                ];
+
+            }
+
+
+            function currentNote() {
+
+                const c =
+                    currentCase();
+
+
+                return c
+                    ? notes[c.i]
+                    : null;
+
+            }
+
+
+            function currentSlip() {
+
+                const c =
+                    currentCase();
+
+
+                if (!c) {
+                    return null;
+                }
+
+
+                return c.slips[
+                    slipIdx
+                ];
+
+            }
+
+
+            function slipKey(
+                noteIndex,
+                field
+            ) {
+
+                return (
+                    noteIndex
+                    + "::"
+                    + field
+                );
+
+            }
+
+
+            function inTray(
+                noteIndex,
+                field
+            ) {
+
+                for (
+                    let index = 0;
+                    index < tray.length;
+                    index++
+                ) {
+
+                    const item =
+                        tray[index];
+
+
+                    if (
+                        item.i === noteIndex
+                        &&
+                        item.f === field
+                    ) {
+                        return index;
+                    }
+
+                }
+
+
+                return -1;
+
+            }
+
+
+            /* ============================================================
+               ICON
+               ============================================================ */
+
+            function caseIcon(count) {
+
+                const number =
+                    Math.min(
+                        count,
+                        ICON_SLIPS_MAX
+                    );
+
+
+                let slips = "";
+
+
+                for (
+                    let index = 0;
+                    index < number;
+                    index++
+                ) {
+
+                    const x =
+                        20
+                        +
+                        index * 7;
+
+
+                    const y =
+                        16
+                        -
+                        index * 3.5;
+
+
+                    slips += `
+
+      <rect
+
+        x="${x}"
+
+        y="${y}"
+
+        width="34"
+
+        height="40"
+
+        rx="5"
+
+        fill="#fff"
+
+        stroke="#0647E5"
+
+        stroke-width="2.5"
+
+      />
+
+    `;
+
+                }
+
+
+                return `
+
+    <svg
+      viewBox="0 0 96 78"
+      aria-hidden="true"
+    >
+
+      ${slips}
+
+      <path
+
+        d="
+          M14 34
+          h68
+          v38
+          h-68
+          z
+        "
+
+        fill="#fff"
+
+        stroke="#0647E5"
+
+        stroke-width="2.5"
+
+      />
+
+
+      <rect
+
+        x="38"
+
+        y="48"
+
+        width="20"
+
+        height="11"
+
+        fill="#fff"
+
+        stroke="#0647E5"
+
+        stroke-width="2.5"
+
+      />
+
+    </svg>
+
+  `;
+
+            }
+
+
+            /* ============================================================
+               TICKS
+               ============================================================ */
+
+            function renderTicks(
+                current,
+                total
+            ) {
+
+                const element =
+                    $("ticks");
+
+
+                if (
+                    total < 2
+                    ||
+                    total > MAX_TICKS
+                ) {
+
+                    element.innerHTML = "";
+
+                    return;
+
+                }
+
+
+                let html = "";
+
+
+                for (
+                    let index = 0;
+                    index < total;
+                    index++
+                ) {
+
+                    html += `
+
+      <span
+        class="
+          tick
+          ${index === current
+                            ? "on"
+                            : ""
+                        }
+        "
+      ></span>
+
+    `;
+
+                }
+
+
+                element.innerHTML =
+                    html;
+
+            }
+
+
+            /* ============================================================
+               FIELD
+               ============================================================ */
+
+            function renderField() {
+
+                const size =
+                    pageSize();
+
+
+                const pages =
+                    Math.max(
+
+                        1,
+
+                        Math.ceil(
+                            filtered.length
+                            /
+                            size
+                        )
+
+                    );
+
+
+                fieldPage =
+                    Math.min(
+
+                        Math.max(
+                            fieldPage,
+                            0
+                        ),
+
+                        pages - 1
+
+                    );
+
+
+                if (
+                    !filtered.length
+                ) {
+
+                    stage.innerHTML = `
+
+      <div class="emptyField">
+
+        NOTHING IN THE FIELD MATCHES
+
+      </div>
+
+    `;
+
+                }
+
+                else {
+
+                    const start =
+                        fieldPage
+                        *
+                        size;
+
+
+                    const end =
+                        Math.min(
+
+                            start
+                            +
+                            size,
+
+                            filtered.length
+
+                        );
+
+
+                    let html = "";
+
+
+                    for (
+                        let k = start;
+                        k < end;
+                        k++
+                    ) {
+
+                        const c =
+                            CASES[
+                            filtered[k]
+                            ];
+
+
+                        const note =
+                            notes[c.i];
+
+
+                        html += `
+
+        <button
+
+          class="caseCard"
+
+          data-k="${k}"
+
+        >
+
+          ${caseIcon(
+                            c.slips.length
+                        )}
+
+          <span class="caseId">
+
+            ${esc(
+                            note.id
+                        )}
+
+          </span>
+
+
+          <span class="caseTopic">
+
+            ${esc(
+                            note.topic
+                        )}
+
+            ·
+
+            ${esc(
+                            note.type
+                        )}
+
+          </span>
+
+
+          <span class="caseCount">
+
+            ${c.slips.length}
+            SLIPS
+
+          </span>
+
+        </button>
+
+      `;
+
+                    }
+
+
+                    stage.innerHTML = `
+
+      <div class="fieldGrid">
+
+        ${html}
+
+      </div>
+
+    `;
+
+                }
+
+
+                $("posLabel").innerHTML = `
+
+    FIELD
+
+    <b>
+
+      ${filtered.length
+                        ? fieldPage + 1
+                        : 0
+                    }
+
+      /
+
+      ${filtered.length
+                        ? pages
+                        : 0
+                    }
+
+    </b>
+
+    ·
+
+    ${filtered.length}
+    CASES
+
+  `;
+
+
+                renderTicks(
+                    fieldPage,
+                    pages
+                );
+
+
+                $("prevBtn").disabled =
+                    fieldPage <= 0;
+
+
+                $("nextBtn").disabled =
+                    fieldPage >= pages - 1;
+
+
+                $("prevLabel").textContent =
+                    "PREV";
+
+
+                $("nextLabel").textContent =
+                    "NEXT";
+
+
+                $("actBtn").textContent =
+                    "TRAY · "
+                    + tray.length;
+
+
+                $("actBtn").classList.toggle(
+                    "filled",
+                    tray.length > 0
+                );
+
+            }
+
+
+            /* ============================================================
+               CASE
+            
+               <case>
+               contains
+               <ordered slips>
+            
+               slipIdx is the front slip.
+            
+               [thumb]
+               changes encounter order,
+               not archive order.
+               ============================================================ */
+
+            function renderCase() {
+
+                const c =
+                    currentCase();
+
+
+                if (!c) {
+
+                    toField();
+
+                    return;
+
+                }
+
+
+                const note =
+                    notes[c.i];
+
+
+                const count =
+                    c.slips.length;
+
+
+                slipIdx =
+                    (
+                        slipIdx
+                        +
+                        count
+                    )
+                    %
+                    count;
+
+
+                let slipsHTML = "";
+
+
+                for (
+                    let actualIndex = 0;
+                    actualIndex < count;
+                    actualIndex++
+                ) {
+
+                    /*
+                      encounter depth relative
+                      to current front slip
+                    */
+
+                    const depth =
+
+                        (
+                            actualIndex
+                            -
+                            slipIdx
+                            +
+                            count
+                        )
+
+                        %
+                        count;
+
+
+                    const slip =
+                        c.slips[
+                        actualIndex
+                        ];
+
+
+                    let top;
+
+                    let x;
+
+                    let scale;
+
+
+                    if (caseFan) {
+
+                        const visibleRange =
+                            Math.min(
+                                220,
+                                Math.max(
+                                    110,
+                                    count * 31
+                                )
+                            );
+
+
+                        top =
+                            4
+                            +
+                            (
+                                depth
+                                /
+                                Math.max(
+                                    1,
+                                    count - 1
+                                )
+                            )
+                            *
+                            visibleRange;
+
+
+                        x =
+                            depth * 1.5;
+
+
+                        scale =
+                            1
+                            -
+                            depth * .005;
+
+                    }
+
+                    else {
+
+                        top =
+                            depth * 10;
+
+
+                        x =
+                            depth * 2;
+
+
+                        scale =
+                            1
+                            -
+                            depth * .008;
+
+                    }
+
+
+                    const z =
+                        50
+                        -
+                        depth;
+
+
+                    const excerpt =
+
+                        String(
+                            slip.text
+                        )
+                            .replace(
+                                /\s+/g,
+                                " "
+                            )
+                            .slice(
+                                0,
+                                270
+                            );
+
+
+                    slipsHTML += `
+
+      <button
+
+        class="
+          caseSlip
+          ${depth === 0
+                            ? "front"
+                            : ""
+                        }
+        "
+
+        data-slip="${actualIndex}"
+
+        style="
+          top:${top}px;
+          left:calc(7% + ${x}px);
+          z-index:${z};
+          transform:
+            scale(${scale});
+        "
+
+      >
+
+        <span class="caseSlipTab">
+
+          ${esc(
+                            slip.f
+                        )}
+
+        </span>
+
+
+        <span class="caseSlipText">
+
+          ${esc(
+                            excerpt
+                        )}
+
+        </span>
+
+
+        <span class="caseSlipMeta">
+
+          ${esc(
+                            note.id
+                        )}
+
+          ·
+
+          ${actualIndex + 1}
+
+          /
+
+          ${count}
+
+        </span>
+
+      </button>
+
+    `;
+
+                }
+
+
+                stage.innerHTML = `
+
+    <section class="caseView">
+
+      <div class="caseObject">
+
+        <div class="caseDeck">
+
+          ${slipsHTML}
+
+
+          <div class="caseFront">
+
+            <div class="caseLabel"></div>
+
+          </div>
+
+        </div>
+
+
+        <div class="caseCaption">
+
+          ${caseFan
+                        ? "FAN · SELECT A SLIP OR SPREAD THE CASE"
+                        : "THUMB · CLICK FRONT SLIP TO READ"
+                    }
+
+        </div>
+
+      </div>
+
+    </section>
+
+  `;
+
+
+                $("posLabel").innerHTML = `
+
+    <b>
+      ${esc(
+                    note.id
+                )}
+    </b>
+
+    ·
+
+    CASE
+
+    ·
+
+    SLIP
+
+    <b>
+
+      ${slipIdx + 1}
+
+      /
+
+      ${count}
+
+    </b>
+
+  `;
+
+
+                renderTicks(
+                    slipIdx,
+                    count
+                );
+
+
+                $("prevBtn").disabled =
+                    false;
+
+
+                $("nextBtn").disabled =
+                    false;
+
+
+                $("prevLabel").textContent =
+                    "THUMB";
+
+
+                $("nextLabel").textContent =
+                    "THUMB";
+
+
+                $("actBtn").textContent =
+                    caseFan
+                        ? "SPREAD"
+                        : "FAN";
+
+
+                $("actBtn").classList.toggle(
+                    "filled",
+                    caseFan
+                );
+
+            }
+
+
+            /* ============================================================
+               READ / SLIP
+               ============================================================ */
+
+            function slipHtml(
+                note,
+                slip,
+                collected
+            ) {
+
+                const kind =
+
+                    CODE_FIELD.test(
+                        slip.f
+                    )
+
+                        ? "code"
+
+                        : HEAD_FIELD.test(
+                            slip.f
+                        )
+
+                            ? "head"
+
+                            : "text";
+
+
+                return `
+
+    <div class="slipWrap">
+
+      <div class="readStack">
+
+        <div class="readGhost"></div>
+
+        <div class="readGhost"></div>
+
+        <div class="readGhost"></div>
+
+      </div>
+
+
+      <article
+
+        class="
+          slip
+          ${collected
+                        ? "collected"
+                        : ""
+                    }
+        "
+
+        data-kind="${kind}"
+
+      >
+
+        <div class="slipTab">
+
+          ${esc(
+                        slip.f
+                    )}
+
+        </div>
+
+
+        <div class="slipMeta">
+
+          <b>
+
+            ${esc(
+                        note.id
+                    )}
+
+          </b>
+
+          <span>
+
+            ${esc(
+                        note.type
+                    )}
+
+          </span>
+
+          <span>
+
+            ${esc(
+                        note.topic
+                    )}
+
+          </span>
+
+        </div>
+
+
+        <div class="slipBody">
+
+          ${esc(
+                        slip.text
+                    )}
+
+        </div>
+
+      </article>
+
+
+      <button
+
+        class="zone prev"
+
+        data-nav="-1"
+
+        aria-label="Previous slip"
+
+      ></button>
+
+
+      <button
+
+        class="zone next"
+
+        data-nav="1"
+
+        aria-label="Next slip"
+
+      ></button>
+
+    </div>
+
+  `;
+
+            }
+
+
+            function renderSlip() {
+
+                const c =
+                    currentCase();
+
+
+                if (!c) {
+
+                    toField();
+
+                    return;
+
+                }
+
+
+                const note =
+                    notes[c.i];
+
+
+                slipIdx =
+                    Math.min(
+
+                        Math.max(
+                            slipIdx,
+                            0
+                        ),
+
+                        c.slips.length - 1
+
+                    );
+
+
+                const slip =
+                    c.slips[
+                    slipIdx
+                    ];
+
+
+                const held =
+                    inTray(
+                        c.i,
+                        slip.f
+                    )
+                    >=
+                    0;
+
+
+                stage.innerHTML =
+                    slipHtml(
+                        note,
+                        slip,
+                        held
+                    );
+
+
+                $("posLabel").innerHTML = `
+
+    <b>
+
+      ${esc(
+                    note.id
+                )}
+
+    </b>
+
+    ·
+
+    SLIP
+
+    <b>
+
+      ${slipIdx + 1}
+
+      /
+
+      ${c.slips.length}
+
+    </b>
+
+  `;
+
+
+                renderTicks(
+                    slipIdx,
+                    c.slips.length
+                );
+
+
+                $("prevBtn").disabled =
+                    false;
+
+
+                $("nextBtn").disabled =
+                    false;
+
+
+                $("prevLabel").textContent =
+                    "THUMB";
+
+
+                $("nextLabel").textContent =
+                    "THUMB";
+
+
+                $("actBtn").textContent =
+                    held
+                        ? "COLLECTED"
+                        : "COLLECT";
+
+
+                $("actBtn").classList.toggle(
+                    "filled",
+                    held
+                );
+
+            }
+
+
+            /* ============================================================
+               THUMB
+            
+               Active slip arcs away,
+               returns behind stack,
+               next slip becomes active.
+               ============================================================ */
+
+            function thumbSlip(direction) {
+
+                const c =
+                    currentCase();
+
+
+                if (
+                    !c
+                    ||
+                    !c.slips.length
+                ) {
+                    return;
+                }
+
+
+                const card =
+                    stage.querySelector(
+                        ".slip"
+                    );
+
+
+                const finish = () => {
+
+                    slipIdx =
+
+                        (
+                            slipIdx
+                            +
+                            direction
+                            +
+                            c.slips.length
+                        )
+
+                        %
+                        c.slips.length;
+
+
+                    renderSlip();
+
+                };
+
+
+                if (
+                    !card
+                    ||
+                    matchMedia(
+                        "(prefers-reduced-motion: reduce)"
+                    ).matches
+                ) {
+
+                    finish();
+
+                    return;
+
+                }
+
+
+                const side =
+                    direction > 0
+                        ? -1
+                        : 1;
+
+
+                card.animate(
+
+                    [
+
+                        {
+                            transform:
+                                "translate3d(0,0,0) rotate(0deg)",
+                            opacity: 1
+                        },
+
+                        {
+                            transform:
+                                `translate3d(${side * 46}px,-8px,22px)
+           rotate(${side * 2.5}deg)
+           scale(.995)`,
+                            opacity: .92,
+                            offset: .42
+                        },
+
+                        {
+                            transform:
+                                `translate3d(${side * 155}px,16px,-30px)
+           rotate(${side * 5}deg)
+           scale(.965)`,
+                            opacity: 0
+                        }
+
+                    ],
+
+                    {
+                        duration: 190,
+                        easing: "cubic-bezier(.25,.7,.25,1)"
+                    }
+
+                ).finished.then(
+                    finish
+                );
+
+            }
+
+
+            /*
+              CASE thumb uses same semantic operation:
+              encounter order changes,
+              archival order does not.
+            */
+
+            function thumbCase(direction) {
+
+                const c =
+                    currentCase();
+
+
+                if (
+                    !c
+                    ||
+                    !c.slips.length
+                ) {
+                    return;
+                }
+
+
+                const front =
+                    stage.querySelector(
+                        ".caseSlip.front"
+                    );
+
+
+                const finish = () => {
+
+                    slipIdx =
+
+                        (
+                            slipIdx
+                            +
+                            direction
+                            +
+                            c.slips.length
+                        )
+
+                        %
+                        c.slips.length;
+
+
+                    renderCase();
+
+                };
+
+
+                if (
+                    !front
+                    ||
+                    caseFan
+                    ||
+                    matchMedia(
+                        "(prefers-reduced-motion: reduce)"
+                    ).matches
+                ) {
+
+                    finish();
+
+                    return;
+
+                }
+
+
+                const side =
+                    direction > 0
+                        ? -1
+                        : 1;
+
+
+                front.animate(
+
+                    [
+
+                        {
+                            transform:
+                                "translate3d(0,0,0) rotate(0deg)"
+                        },
+
+                        {
+                            transform:
+                                `translate3d(${side * 70}px,-14px,30px)
+           rotate(${side * 4}deg)`
+                        },
+
+                        {
+                            transform:
+                                `translate3d(${side * 130}px,20px,-60px)
+           rotate(${side * 6}deg)`,
+                            opacity: .2
+                        }
+
+                    ],
+
+                    {
+                        duration: 180,
+                        easing: "ease-in-out"
+                    }
+
+                ).finished.then(
+                    finish
+                );
+
+            }
+
+
+            /* ============================================================
+               TABLE
+            
+               Working transforms only.
+            
+               Nothing here modifies:
+                 home case
+                 archive order
+               ============================================================ */
+
+            function makeTableItems() {
+
+                const c =
+                    currentCase();
+
+
+                if (!c) {
+                    return;
+                }
+
+
+                const rect =
+                    stage.getBoundingClientRect();
+
+
+                const width =
+                    Math.min(
+                        290,
+                        rect.width * .46
+                    );
+
+
+                const gapX =
+                    width + 34;
+
+
+                const gapY =
+                    238;
+
+
+                const columns =
+                    Math.max(
+
+                        1,
+
+                        Math.min(
+
+                            3,
+
+                            Math.floor(
+                                (
+                                    rect.width
+                                    -
+                                    TABLE_MARGIN * 2
+                                )
+                                /
+                                gapX
+                            )
+
+                        )
+
+                    );
+
+
+                const rows =
+                    Math.ceil(
+                        c.slips.length
+                        /
+                        columns
+                    );
+
+
+                const totalWidth =
+
+                    Math.min(
+                        columns,
+                        c.slips.length
+                    )
+                    *
+                    gapX
+                    -
+                    34;
+
+
+                const startX =
+
+                    Math.max(
+
+                        TABLE_MARGIN,
+
+                        (
+                            rect.width
+                            -
+                            totalWidth
+                        )
+                        /
+                        2
+
+                    );
+
+
+                const totalHeight =
+
+                    rows
+                    *
+                    gapY;
+
+
+                const startY =
+
+                    Math.max(
+
+                        66,
+
+                        (
+                            rect.height
+                            -
+                            totalHeight
+                        )
+                        /
+                        2
+
+                    );
+
+
+                tableItems =
+                    c.slips.map(
+
+                        (
+                            slip,
+                            index
+                        ) => {
+
+                            const column =
+                                index
+                                %
+                                columns;
+
+
+                            const row =
+                                Math.floor(
+                                    index
+                                    /
+                                    columns
+                                );
+
+
+                            return {
+
+                                key:
+                                    slipKey(
+                                        c.i,
+                                        slip.f
+                                    ),
+
+                                i: c.i,
+
+                                f: slip.f,
+
+                                slipIndex: index,
+
+                                x:
+                                    startX
+                                    +
+                                    column * gapX,
+
+                                y:
+                                    startY
+                                    +
+                                    row * gapY,
+
+                                z:
+                                    20
+                                    +
+                                    index,
+
+                                pinned: false,
+
+                                stack: null
+
+                            };
+
+                        }
+
+                    );
+
+
+                tableZ =
+                    20
+                    +
+                    tableItems.length;
+
+            }
+
+
+            function renderTable() {
+
+                if (
+                    !tableItems.length
+                ) {
+                    makeTableItems();
+                }
+
+
+                let cards = "";
+
+
+                for (
+                    const item
+                    of tableItems
+                ) {
+
+                    const note =
+                        notes[item.i];
+
+
+                    const c =
+                        CASES[item.i];
+
+
+                    const slip =
+                        c.slips[
+                        item.slipIndex
+                        ];
+
+
+                    const excerpt =
+
+                        String(
+                            slip.text
+                        )
+                            .replace(
+                                /\s+/g,
+                                " "
+                            )
+                            .slice(
+                                0,
+                                430
+                            );
+
+
+                    cards += `
+
+      <article
+
+        class="
+          tableSlip
+
+          ${item.pinned
+                            ? "pinned"
+                            : ""
+                        }
+
+          ${relationAnchor
+                            ===
+                            item.key
+                            ? "relateAnchor"
+                            : ""
+                        }
+        "
+
+        data-key="${esc(
+                            item.key
+                        )
+                        }"
+
+        style="
+          left:${item.x}px;
+          top:${item.y}px;
+          z-index:${item.z};
+        "
+
+      >
+
+        <div class="tableSlipTab">
+
+          ${esc(
+                            item.f
+                        )}
+
+        </div>
+
+
+        <div class="tableSlipBody">
+
+          ${esc(
+                            excerpt
+                        )}
+
+        </div>
+
+
+        <div class="tableSlipFoot">
+
+          <span>
+
+            ${esc(
+                            note.id
+                        )}
+
+          </span>
+
+          <span>
+
+            ${item.pinned
+                            ? "PINNED"
+                            : "DRAG"
+                        }
+
+          </span>
+
+        </div>
+
+      </article>
+
+    `;
+
+                }
+
+
+                stage.innerHTML = `
+
+    <section class="tableView">
+
+      <svg
+        class="tableRelations"
+        id="tableRelations"
+      ></svg>
+
+
+      <div class="tableHeader">
+
+        <button
+          class="
+            tableTool
+            ${relationMode
+                        ? "on"
+                        : ""
+                    }
+          "
+          data-table-action="RELATE"
+        >
+
+          RELATE
+
+        </button>
+
+
+        <button
+          class="tableTool"
+          data-table-action="COMPARE"
+        >
+
+          COMPARE PINS
+
+        </button>
+
+
+        <button
+          class="tableTool"
+          data-table-action="RESET"
+        >
+
+          RESET SPREAD
+
+        </button>
+
+      </div>
+
+
+      ${cards}
+
+    </section>
+
+  `;
+
+
+                $("posLabel").innerHTML = `
+
+    TABLE
+
+    ·
+
+    <b>
+
+      ${tableItems.length}
+
+      SLIPS
+
+    </b>
+
+    ·
+
+    ${relationMode
+                        ? "SELECT TWO TO RELATE"
+                        : "DRAG · DOUBLE CLICK TO PIN"
+                    }
+
+  `;
+
+
+                renderTicks(
+                    0,
+                    0
+                );
+
+
+                $("prevBtn").disabled =
+                    true;
+
+
+                $("nextBtn").disabled =
+                    true;
+
+
+                $("prevLabel").textContent =
+                    "—";
+
+
+                $("nextLabel").textContent =
+                    "—";
+
+
+                $("actBtn").textContent =
+                    "RETURN";
+
+
+                $("actBtn").classList.add(
+                    "filled"
+                );
+
+
+                requestAnimationFrame(
+                    drawRelations
+                );
+
+            }
+
+
+            /* ============================================================
+               RELATIONS
+               ============================================================ */
+
+            function findTableItem(key) {
+
+                return tableItems.find(
+                    item =>
+                        item.key === key
+                );
+
+            }
+
+
+            function relationExists(
+                a,
+                b
+            ) {
+
+                return relations.some(
+
+                    relation =>
+
+                        (
+                            relation.a === a
+                            &&
+                            relation.b === b
+                        )
+
+                        ||
+
+                        (
+                            relation.a === b
+                            &&
+                            relation.b === a
+                        )
+
+                );
+
+            }
+
+
+            function relateKeys(
+                a,
+                b
+            ) {
+
+                if (
+                    !a
+                    ||
+                    !b
+                    ||
+                    a === b
+                ) {
+                    return;
+                }
+
+
+                if (
+                    relationExists(
+                        a,
+                        b
+                    )
+                ) {
+                    return;
+                }
+
+
+                relations.push({
+                    a,
+                    b
+                });
+
+            }
+
+
+            function drawRelations() {
+
+                const svg =
+                    $("tableRelations");
+
+
+                if (!svg) {
+                    return;
+                }
+
+
+                const stageRect =
+                    stage.getBoundingClientRect();
+
+
+                const paths = [];
+
+
+                for (
+                    const relation
+                    of relations
+                ) {
+
+                    const aElement =
+                        stage.querySelector(
+                            `[data-key="${CSS.escape(
+                                relation.a
+                            )}"]`
+                        );
+
+
+                    const bElement =
+                        stage.querySelector(
+                            `[data-key="${CSS.escape(
+                                relation.b
+                            )}"]`
+                        );
+
+
+                    if (
+                        !aElement
+                        ||
+                        !bElement
+                    ) {
+                        continue;
+                    }
+
+
+                    const a =
+                        aElement.getBoundingClientRect();
+
+
+                    const b =
+                        bElement.getBoundingClientRect();
+
+
+                    const x1 =
+
+                        a.left
+                        -
+                        stageRect.left
+                        +
+                        a.width / 2;
+
+
+                    const y1 =
+
+                        a.top
+                        -
+                        stageRect.top
+                        +
+                        a.height / 2;
+
+
+                    const x2 =
+
+                        b.left
+                        -
+                        stageRect.left
+                        +
+                        b.width / 2;
+
+
+                    const y2 =
+
+                        b.top
+                        -
+                        stageRect.top
+                        +
+                        b.height / 2;
+
+
+                    const dx =
+                        x2 - x1;
+
+
+                    const control =
+                        Math.max(
+                            35,
+                            Math.abs(dx) * .3
+                        );
+
+
+                    paths.push(`
+
+      <path
+
+        class="tableRelation"
+
+        d="
+          M ${x1} ${y1}
+
+          C
+          ${x1 + control} ${y1},
+          ${x2 - control} ${y2},
+          ${x2} ${y2}
+        "
+
+      />
+
+    `);
+
+                }
+
+
+                svg.innerHTML =
+                    paths.join("");
+
+            }
+
+
+            /* ============================================================
+               STACK
+               ============================================================ */
+
+            function stackNearest(item) {
+
+                let closest =
+                    null;
+
+
+                let distance =
+                    Infinity;
+
+
+                for (
+                    const candidate
+                    of tableItems
+                ) {
+
+                    if (
+                        candidate === item
+                    ) {
+                        continue;
+                    }
+
+
+                    const dx =
+                        candidate.x
+                        -
+                        item.x;
+
+
+                    const dy =
+                        candidate.y
+                        -
+                        item.y;
+
+
+                    const d =
+                        Math.hypot(
+                            dx,
+                            dy
+                        );
+
+
+                    if (
+                        d < distance
+                    ) {
+
+                        distance = d;
+
+                        closest =
+                            candidate;
+
+                    }
+
+                }
+
+
+                if (
+                    !closest
+                    ||
+                    distance > STACK_DISTANCE
+                ) {
+
+                    item.stack =
+                        null;
+
+                    return;
+
+                }
+
+
+                item.stack =
+                    closest.key;
+
+
+                item.x =
+                    closest.x
+                    +
+                    14;
+
+
+                item.y =
+                    closest.y
+                    +
+                    14;
+
+
+                item.z =
+                    ++tableZ;
+
+            }
+
+
+            /* ============================================================
+               COMPARE
+            
+               Pinned slips are moved into a deliberate
+               side-by-side working arrangement.
+            
+               Still temporary.
+               ============================================================ */
+
+            function comparePinned() {
+
+                const pinned =
+                    tableItems.filter(
+                        item =>
+                            item.pinned
+                    );
+
+
+                if (
+                    pinned.length < 2
+                ) {
+
+                    $("posLabel").innerHTML = `
+
+      TABLE ·
+      <b>
+        PIN AT LEAST TWO SLIPS
+      </b>
+
+    `;
+
+                    return;
+
+                }
+
+
+                const rect =
+                    stage.getBoundingClientRect();
+
+
+                const cardWidth =
+                    Math.min(
+                        290,
+                        rect.width * .46
+                    );
+
+
+                const columns =
+                    Math.min(
+                        3,
+                        pinned.length
+                    );
+
+
+                const gap =
+                    22;
+
+
+                const total =
+
+                    columns
+                    *
+                    cardWidth
+                    +
+                    (
+                        columns - 1
+                    )
+                    *
+                    gap;
+
+
+                const startX =
+                    Math.max(
+                        14,
+                        (
+                            rect.width
+                            -
+                            total
+                        )
+                        /
+                        2
+                    );
+
+
+                pinned.forEach(
+                    (
+                        item,
+                        index
+                    ) => {
+
+                        const column =
+                            index
+                            %
+                            columns;
+
+
+                        const row =
+                            Math.floor(
+                                index
+                                /
+                                columns
+                            );
+
+
+                        item.x =
+                            startX
+                            +
+                            column
+                            *
+                            (
+                                cardWidth
+                                +
+                                gap
+                            );
+
+
+                        item.y =
+                            88
+                            +
+                            row * 232;
+
+
+                        item.z =
+                            ++tableZ;
+
+                    }
+                );
+
+
+                renderTable();
+
+            }
+
+
+            /* ============================================================
+               RESET WORKING ARRANGEMENT
+               ============================================================ */
+
+            function resetTable() {
+
+                relations = [];
+
+                relationAnchor =
+                    null;
+
+                relationMode =
+                    false;
+
+                makeTableItems();
+
+                renderTable();
+
+            }
+
+
+            /* ============================================================
+               TRAY
+               ============================================================ */
+
+            function renderTray() {
+
+                if (
+                    !tray.length
+                ) {
+
+                    view =
+                        "FIELD";
+
+                    renderField();
+
+                    return;
+
+                }
+
+
+                trayIdx =
+                    Math.min(
+
+                        Math.max(
+                            trayIdx,
+                            0
+                        ),
+
+                        tray.length - 1
+
+                    );
+
+
+                const held =
+                    tray[
+                    trayIdx
+                    ];
+
+
+                const note =
+                    notes[
+                    held.i
+                    ];
+
+
+                const c =
+                    CASES[
+                    held.i
+                    ];
+
+
+                const slip =
+                    c.slips.find(
+                        item =>
+                            item.f
+                            ===
+                            held.f
+                    );
+
+
+                stage.innerHTML =
+                    slipHtml(
+                        note,
+                        slip,
+                        true
+                    );
+
+
+                $("posLabel").innerHTML = `
+
+    TRAY
+
+    ·
+
+    SLIP
+
+    <b>
+
+      ${trayIdx + 1}
+
+      /
+
+      ${tray.length}
+
+    </b>
+
+  `;
+
+
+                renderTicks(
+                    trayIdx,
+                    tray.length
+                );
+
+
+                $("prevBtn").disabled =
+                    trayIdx <= 0;
+
+
+                $("nextBtn").disabled =
+                    trayIdx
+                    >=
+                    tray.length - 1;
+
+
+                $("prevLabel").textContent =
+                    "PREV";
+
+
+                $("nextLabel").textContent =
+                    "NEXT";
+
+
+                $("actBtn").textContent =
+                    "COPY ALL";
+
+
+                $("actBtn").classList.add(
+                    "filled"
+                );
+
+            }
+
+
+            /* ============================================================
+               MAIN RENDER
+               ============================================================ */
+
+            function render() {
+
+                if (
+                    view === "FIELD"
+                ) {
+
+                    renderField();
+
+                }
+
+                else if (
+                    view === "CASE"
+                ) {
+
+                    renderCase();
+
+                }
+
+                else if (
+                    view === "SLIP"
+                ) {
+
+                    renderSlip();
+
+                }
+
+                else if (
+                    view === "TABLE"
+                ) {
+
+                    renderTable();
+
+                }
+
+                else {
+
+                    renderTray();
+
+                }
+
+            }
+
+
+            /* ============================================================
+               NAVIGATION MORPHISMS
+               ============================================================ */
+
+            function nav(direction) {
+
+                if (
+                    view === "FIELD"
+                ) {
+
+                    fieldPage +=
+                        direction;
+
+
+                    renderField();
+
+                }
+
+                else if (
+                    view === "CASE"
+                ) {
+
+                    thumbCase(
+                        direction
+                    );
+
+                }
+
+                else if (
+                    view === "SLIP"
+                ) {
+
+                    thumbSlip(
+                        direction
+                    );
+
+                }
+
+                else if (
+                    view === "TRAY"
+                ) {
+
+                    trayIdx +=
+                        direction;
+
+
+                    renderTray();
+
+                }
+
+            }
+
+
+            function openCase(k) {
+
+                caseK =
+                    k;
+
+
+                slipIdx =
+                    0;
+
+
+                caseFan =
+                    false;
+
+
+                relationMode =
+                    false;
+
+
+                relationAnchor =
+                    null;
+
+
+                /*
+                  Search can land directly
+                  on first matching slip,
+                  but still enters CASE first.
+                */
+
+                if (
+                    qTokens.length
+                ) {
+
+                    const slips =
+                        CASES[
+                            filtered[k]
+                        ].slips;
+
+
+                    for (
+                        let index = 0;
+                        index < slips.length;
+                        index++
+                    ) {
+
+                        if (
+                            match(
+                                slips[index].low
+                            )
+                        ) {
+
+                            slipIdx =
+                                index;
+
+                            break;
+
+                        }
+
+                    }
+
+                }
+
+
+                view =
+                    "CASE";
+
+
+                renderCase();
+
+            }
+
+
+            function readSlip(
+                index = slipIdx
+            ) {
+
+                const c =
+                    currentCase();
+
+
+                if (!c) {
+                    return;
+                }
+
+
+                slipIdx =
+                    (
+                        index
+                        +
+                        c.slips.length
+                    )
+                    %
+                    c.slips.length;
+
+
+                view =
+                    "SLIP";
+
+
+                renderSlip();
+
+            }
+
+
+            function spreadCase() {
+
+                relationMode =
+                    false;
+
+
+                relationAnchor =
+                    null;
+
+
+                relations = [];
+
+
+                makeTableItems();
+
+
+                view =
+                    "TABLE";
+
+
+                renderTable();
+
+            }
+
+
+            function returnToCase() {
+
+                /*
+                  <working transforms>
+                  are discarded.
+              
+                  <archive structure>
+                  was never modified.
+                */
+
+                tableItems = [];
+
+                relations = [];
+
+                relationMode =
+                    false;
+
+                relationAnchor =
+                    null;
+
+                caseFan =
+                    false;
+
+                view =
+                    "CASE";
+
+                renderCase();
+
+            }
+
+
+            function toField() {
+
+                view =
+                    "FIELD";
+
+
+                caseFan =
+                    false;
+
+
+                tableItems = [];
+
+                relations = [];
+
+                relationMode =
+                    false;
+
+                relationAnchor =
+                    null;
+
+
+                renderField();
+
+            }
+
+
+            /* ============================================================
+               PRIMARY ACTION
+               ============================================================ */
+
+            function act() {
+
+                if (
+                    view === "FIELD"
+                ) {
+
+                    if (
+                        tray.length
+                    ) {
+
+                        view =
+                            "TRAY";
+
+
+                        trayIdx =
+                            0;
+
+
+                        renderTray();
+
+                    }
+
+
+                    return;
+
+                }
+
+
+                if (
+                    view === "CASE"
+                ) {
+
+                    if (
+                        caseFan
+                    ) {
+
+                        spreadCase();
+
+                    }
+
+                    else {
+
+                        caseFan =
+                            true;
+
+
+                        renderCase();
+
+                    }
+
+
+                    return;
+
+                }
+
+
+                if (
+                    view === "SLIP"
+                ) {
+
+                    const c =
+                        currentCase();
+
+
+                    const slip =
+                        currentSlip();
+
+
+                    if (
+                        !c
+                        ||
+                        !slip
+                    ) {
+                        return;
+                    }
+
+
+                    const at =
+                        inTray(
+                            c.i,
+                            slip.f
+                        );
+
+
+                    if (
+                        at >= 0
+                    ) {
+
+                        tray.splice(
+                            at,
+                            1
+                        );
+
+                    }
+
+                    else {
+
+                        tray.push({
+
+                            i: c.i,
+
+                            f: slip.f
+
+                        });
+
+                    }
+
+
+                    renderSlip();
+
+                    return;
+
+                }
+
+
+                if (
+                    view === "TABLE"
+                ) {
+
+                    returnToCase();
+
+                    return;
+
+                }
+
+
+                copyTray();
+
+            }
+
+
+            /* ============================================================
+               COPY TRAY
+               ============================================================ */
+
+            async function copyTray() {
+
+                let output = "";
+
+
+                for (
+                    const entry
+                    of tray
+                ) {
+
+                    output +=
+
+                        notes[entry.i].id
+
+                        + " — "
+
+                        + entry.f
+
+                        + "\n"
+
+                        + valueFor(
+                            notes[entry.i],
+                            entry.f
+                        )
+
+                        + "\n\n";
+
+                }
+
+
+                try {
+
+                    await navigator.clipboard
+                        .writeText(
+                            output.trimEnd()
+                        );
+
+
+                    $("posLabel").innerHTML = `
+
+      <b>
+
+        COPIED
+
+        ${tray.length}
+
+        SLIPS
+
+      </b>
+
+    `;
+
+                }
+
+                catch (error) {
+
+                    $("posLabel").innerHTML = `
+
+      <b>
+
+        COPY UNAVAILABLE
+
+      </b>
+
+    `;
+
+                }
+
+            }
+
+
+            /* ============================================================
+               CASE / SLIP CLICK
+               ============================================================ */
+
+            stage.addEventListener(
+
+                "click",
+
+                event => {
+
+                    const caseCard =
+                        event.target.closest(
+                            ".caseCard"
+                        );
+
+
+                    if (caseCard) {
+
+                        openCase(
+                            Number(
+                                caseCard.dataset.k
+                            )
+                        );
+
+                        return;
+
+                    }
+
+
+                    const caseSlip =
+                        event.target.closest(
+                            ".caseSlip"
+                        );
+
+
+                    if (
+                        caseSlip
+                        &&
+                        view === "CASE"
+                    ) {
+
+                        const index =
+                            Number(
+                                caseSlip.dataset.slip
+                            );
+
+
+                        /*
+                          In compressed case:
+                            selecting a rear slip
+                            brings it to front.
+                  
+                          Clicking the front slip
+                            pulls it into reading.
+                  
+                          In FAN:
+                            selecting any slip reads it.
+                        */
+
+                        if (
+                            caseFan
+                            ||
+                            index === slipIdx
+                        ) {
+
+                            readSlip(
+                                index
+                            );
+
+                        }
+
+                        else {
+
+                            slipIdx =
+                                index;
+
+
+                            renderCase();
+
+                        }
+
+
+                        return;
+
+                    }
+
+
+                    const zone =
+                        event.target.closest(
+                            ".zone"
+                        );
+
+
+                    if (zone) {
+
+                        nav(
+                            Number(
+                                zone.dataset.nav
+                            )
+                        );
+
+                        return;
+
+                    }
+
+
+                    const tableTool =
+                        event.target.closest(
+                            "[data-table-action]"
+                        );
+
+
+                    if (
+                        tableTool
+                        &&
+                        view === "TABLE"
+                    ) {
+
+                        const action =
+                            tableTool.dataset.tableAction;
+
+
+                        if (
+                            action === "RELATE"
+                        ) {
+
+                            relationMode =
+                                !relationMode;
+
+
+                            relationAnchor =
+                                null;
+
+
+                            renderTable();
+
+                        }
+
+
+                        else if (
+                            action === "COMPARE"
+                        ) {
+
+                            comparePinned();
+
+                        }
+
+
+                        else if (
+                            action === "RESET"
+                        ) {
+
+                            resetTable();
+
+                        }
+
+
+                        return;
+
+                    }
+
+
+                    const tableSlip =
+                        event.target.closest(
+                            ".tableSlip"
+                        );
+
+
+                    if (
+                        tableSlip
+                        &&
+                        view === "TABLE"
+                        &&
+                        relationMode
+                        &&
+                        !tableDrag
+                    ) {
+
+                        const key =
+                            tableSlip.dataset.key;
+
+
+                        if (
+                            !relationAnchor
+                        ) {
+
+                            relationAnchor =
+                                key;
+
+
+                            renderTable();
+
+                        }
+
+                        else {
+
+                            relateKeys(
+                                relationAnchor,
+                                key
+                            );
+
+
+                            relationAnchor =
+                                null;
+
+
+                            renderTable();
+
+                        }
+
+                    }
+
+                }
+
+            );
+
+
+            /* ============================================================
+               DOUBLE CLICK = PIN
+               ============================================================ */
+
+            stage.addEventListener(
+
+                "dblclick",
+
+                event => {
+
+                    if (
+                        view !== "TABLE"
+                    ) {
+                        return;
+                    }
+
+
+                    const element =
+                        event.target.closest(
+                            ".tableSlip"
+                        );
+
+
+                    if (!element) {
+                        return;
+                    }
+
+
+                    const item =
+                        findTableItem(
+                            element.dataset.key
+                        );
+
+
+                    if (!item) {
+                        return;
+                    }
+
+
+                    item.pinned =
+                        !item.pinned;
+
+
+                    item.z =
+                        ++tableZ;
+
+
+                    renderTable();
+
+                }
+
+            );
+
+
+            /* ============================================================
+               TABLE DRAG
+            
+               Only <working position> changes.
+               ============================================================ */
+
+            stage.addEventListener(
+
+                "pointerdown",
+
+                event => {
+
+                    const tableCard =
+                        event.target.closest(
+                            ".tableSlip"
+                        );
+
+
+                    if (
+                        view === "TABLE"
+                        &&
+                        tableCard
+                    ) {
+
+                        const key =
+                            tableCard.dataset.key;
+
+
+                        const item =
+                            findTableItem(
+                                key
+                            );
+
+
+                        if (!item) {
+                            return;
+                        }
+
+
+                        const rect =
+                            stage.getBoundingClientRect();
+
+
+                        tableDrag = {
+
+                            pointerId:
+                                event.pointerId,
+
+                            item,
+
+                            element:
+                                tableCard,
+
+                            offsetX:
+                                event.clientX
+                                -
+                                rect.left
+                                -
+                                item.x,
+
+                            offsetY:
+                                event.clientY
+                                -
+                                rect.top
+                                -
+                                item.y
+
+                        };
+
+
+                        item.z =
+                            ++tableZ;
+
+
+                        tableCard.style.zIndex =
+                            item.z;
+
+
+                        tableCard.classList.add(
+                            "dragging"
+                        );
+
+
+                        tableCard.setPointerCapture?.(
+                            event.pointerId
+                        );
+
+
+                        event.preventDefault();
+
+                        return;
+
+                    }
+
+
+                    /*
+                      swipe begins only outside
+                      table drag.
+                    */
+
+                    swipe = {
+
+                        x: event.clientX,
+
+                        y: event.clientY
+
+                    };
+
+                }
+
+            );
+
+
+            stage.addEventListener(
+
+                "pointermove",
+
+                event => {
+
+                    if (
+                        !tableDrag
+                        ||
+                        view !== "TABLE"
+                    ) {
+                        return;
+                    }
+
+
+                    const rect =
+                        stage.getBoundingClientRect();
+
+
+                    const element =
+                        tableDrag.element;
+
+
+                    const cardRect =
+                        element.getBoundingClientRect();
+
+
+                    const maxX =
+
+                        Math.max(
+
+                            TABLE_MARGIN,
+
+                            rect.width
+                            -
+                            cardRect.width
+                            -
+                            TABLE_MARGIN
+
+                        );
+
+
+                    const maxY =
+
+                        Math.max(
+
+                            60,
+
+                            rect.height
+                            -
+                            cardRect.height
+                            -
+                            TABLE_MARGIN
+
+                        );
+
+
+                    const x =
+
+                        Math.min(
+
+                            maxX,
+
+                            Math.max(
+
+                                TABLE_MARGIN,
+
+                                event.clientX
+                                -
+                                rect.left
+                                -
+                                tableDrag.offsetX
+
+                            )
+
+                        );
+
+
+                    const y =
+
+                        Math.min(
+
+                            maxY,
+
+                            Math.max(
+
+                                58,
+
+                                event.clientY
+                                -
+                                rect.top
+                                -
+                                tableDrag.offsetY
+
+                            )
+
+                        );
+
+
+                    tableDrag.item.x =
+                        x;
+
+
+                    tableDrag.item.y =
+                        y;
+
+
+                    element.style.left =
+                        x + "px";
+
+
+                    element.style.top =
+                        y + "px";
+
+
+                    drawRelations();
+
+                }
+
+            );
+
+
+            stage.addEventListener(
+
+                "pointerup",
+
+                event => {
+
+                    if (tableDrag) {
+
+                        const drag =
+                            tableDrag;
+
+
+                        tableDrag =
+                            null;
+
+
+                        drag.element.classList.remove(
+                            "dragging"
+                        );
+
+
+                        stackNearest(
+                            drag.item
+                        );
+
+
+                        renderTable();
+
+                        return;
+
+                    }
+
+
+                    if (!swipe) {
+                        return;
+                    }
+
+
+                    const dx =
+                        event.clientX
+                        -
+                        swipe.x;
+
+
+                    const dy =
+                        event.clientY
+                        -
+                        swipe.y;
+
+
+                    swipe =
+                        null;
+
+
+                    if (
+                        Math.abs(dx)
+                        >=
+                        SWIPE_PX
+
+                        &&
+
+                        Math.abs(dy)
+                        <
+                        SWIPE_SLOP
+                    ) {
+
+                        nav(
+                            dx < 0
+                                ? 1
+                                : -1
+                        );
+
+                    }
+
+                }
+
+            );
+
+
+            stage.addEventListener(
+
+                "pointercancel",
+
+                () => {
+
+                    tableDrag =
+                        null;
+
+
+                    swipe =
+                        null;
+
+                }
+
+            );
+
+
+            /* ============================================================
+               FOOTER
+               ============================================================ */
+
+            $("prevBtn")
+                .addEventListener(
+
+                    "click",
+
+                    () =>
+                        nav(-1)
+
+                );
+
+
+            $("nextBtn")
+                .addEventListener(
+
+                    "click",
+
+                    () =>
+                        nav(1)
+
+                );
+
+
+            $("actBtn")
+                .addEventListener(
+
+                    "click",
+
+                    act
+
+                );
+
+
+            $("homeBtn")
+                .addEventListener(
+
+                    "click",
+
+                    toField
+
+                );
+
+
+            /* ============================================================
+               KEYBOARD
+               ============================================================ */
+
+            document.addEventListener(
+
+                "keydown",
+
+                event => {
+
+                    if (
+                        event.target.tagName
+                        ===
+                        "INPUT"
+                    ) {
+                        return;
+                    }
+
+
+                    if (
+                        event.key === "ArrowRight"
+                        ||
+                        event.key === "j"
+                    ) {
+
+                        nav(1);
+
+                        return;
+
+                    }
+
+
+                    if (
+                        event.key === "ArrowLeft"
+                        ||
+                        event.key === "k"
+                    ) {
+
+                        nav(-1);
+
+                        return;
+
+                    }
+
+
+                    if (
+                        event.key === "Escape"
+                    ) {
+
+                        if (
+                            view === "SLIP"
+                        ) {
+
+                            view =
+                                "CASE";
+
+
+                            renderCase();
+
+                        }
+
+                        else if (
+                            view === "TABLE"
+                        ) {
+
+                            returnToCase();
+
+                        }
+
+                        else if (
+                            view === "CASE"
+                            ||
+                            view === "TRAY"
+                        ) {
+
+                            toField();
+
+                        }
+
+
+                        return;
+
+                    }
+
+
+                    if (
+                        event.key === "Enter"
+                    ) {
+
+                        if (
+                            view === "CASE"
+                        ) {
+
+                            readSlip();
+
+                        }
+
+                        else if (
+                            view === "SLIP"
+                        ) {
+
+                            act();
+
+                        }
+
+
+                        return;
+
+                    }
+
+
+                    if (
+                        event.key.toLowerCase()
+                        ===
+                        "f"
+
+                        &&
+
+                        view === "CASE"
+                    ) {
+
+                        caseFan =
+                            !caseFan;
+
+
+                        renderCase();
+
+                        return;
+
+                    }
+
+
+                    if (
+                        event.key.toLowerCase()
+                        ===
+                        "s"
+
+                        &&
+
+                        view === "CASE"
+                    ) {
+
+                        spreadCase();
+
+                        return;
+
+                    }
+
+
+                    if (
+                        event.key.toLowerCase()
+                        ===
+                        "r"
+
+                        &&
+
+                        view === "TABLE"
+                    ) {
+
+                        relationMode =
+                            !relationMode;
+
+
+                        relationAnchor =
+                            null;
+
+
+                        renderTable();
+
+                    }
+
+                }
+
+            );
+
+
+            /* ============================================================
+               SEARCH
+               ============================================================ */
+
+            $("search")
+                .addEventListener(
+
+                    "input",
+
+                    event => {
+
+                        clearTimeout(
+                            searchTimer
+                        );
+
+
+                        searchTimer =
+                            setTimeout(
+
+                                () => {
+
+                                    qTokens =
+
+                                        event.target.value
+
+                                            .trim()
+
+                                            .toLowerCase()
+
+                                            .split(/\s+/)
+
+                                            .filter(Boolean)
+
+                                            .slice(
+                                                0,
+                                                MAX_QUERY_TOKENS
+                                            );
+
+
+                                    filtered = [];
+
+
+                                    for (
+                                        let index = 0;
+                                        index < CASES.length;
+                                        index++
+                                    ) {
+
+                                        if (
+                                            !qTokens.length
+                                            ||
+                                            match(
+                                                CASES[index].low
+                                            )
+                                        ) {
+
+                                            filtered.push(
+                                                index
+                                            );
+
+                                        }
+
+                                    }
+
+
+                                    fieldPage =
+                                        0;
+
+
+                                    view =
+                                        "FIELD";
+
+
+                                    caseFan =
+                                        false;
+
+
+                                    tableItems = [];
+
+                                    relations = [];
+
+                                    relationMode =
+                                        false;
+
+                                    relationAnchor =
+                                        null;
+
+
+                                    render();
+
+                                },
+
+                                SEARCH_DEBOUNCE_MS
+
+                            );
+
+                    }
+
+                );
+
+
+            /* ============================================================
+               RESIZE
+            
+               Archive positions remain logical.
+            
+               TABLE working positions reset because
+               screen coordinate topology has changed.
+               ============================================================ */
+
+            addEventListener(
+
+                "resize",
+
+                () => {
+
+                    if (
+                        view === "FIELD"
+                    ) {
+
+                        renderField();
+
+                    }
+
+
+                    else if (
+                        view === "TABLE"
+                    ) {
+
+                        makeTableItems();
+
+                        renderTable();
+
+                    }
+
+                }
+
+            );
+
+
+            /* ============================================================
+               START
+               ============================================================ */
+
+            render();
+
+
+        })();
+    </script>
+
+</body>
+
+</html>
