@@ -266,6 +266,14 @@ graph_data = {
 }
 
 # Save standalone JSON dataset
+# --- computed archive totals (replaces hardcoded chrome counts) ---
+N_CARDS = len(all_notes)
+N_CASES = len(cases_data)
+N_PDFS  = sum(c.get('pdf_count', 0) for c in cases_data)
+N_LINKS = sum(len(n.get('links') or []) for n in all_notes)
+C_CARDS = f"{N_CARDS:,}"
+C_LINKS = f"{N_LINKS:,}"
+
 with open(os.path.join(BASE_DIR, 'slipcases.json'), 'w') as f:
     json.dump(cases_data, f, indent=2)
 
@@ -1365,11 +1373,11 @@ mark { background: var(--pale); color: inherit; }
     </div>
 
     <div class="search-wrap">
-      <input id="search" class="search" placeholder="Search 1,244 zettels, 124 PDFs, 5,083 relations" autocomplete="off">
+      <input id="search" class="search" placeholder="Search {C_CARDS} zettels, {N_PDFS} PDFs, {C_LINKS} relations" autocomplete="off">
       <span class="search-shortcut">/</span>
     </div>
 
-    <button id="caseNavBtn" class="accession-badge-btn">ALL CASES (31)</button>
+    <button id="caseNavBtn" class="accession-badge-btn">ALL CASES ({N_CASES})</button>
   </header>
 
   <!-- METHODOLOGY BAR (PRESERVE · RELATE · RETURN) -->
@@ -1445,7 +1453,7 @@ mark { background: var(--pale); color: inherit; }
 
       <div class="table-bar" id="tableBotbar">
         <div class="tgrp">
-          <button class="tbtn key" id="launchAllTableBtn">LAUNCH ALL (1,244)</button>
+          <button class="tbtn key" id="launchAllTableBtn">LAUNCH ALL ({C_CARDS})</button>
           <button class="tbtn" id="launchThemeTableBtn">BY THEMES</button>
           <button class="tbtn" id="launchTypeTableBtn">BY FIELD TYPE</button>
           <button class="tbtn" id="drawerBtn">DEAL CASE...</button>
@@ -1513,7 +1521,7 @@ mark { background: var(--pale); color: inherit; }
       <div class="graph-pane-wrap">
         <div class="graph-hud">
           <div class="graph-hud-title">RELATIONAL FIELD GRAPH</div>
-          <div class="graph-hud-meta" id="graphHudMeta">31 CASES &middot; 1,244 SLIPS &middot; 5,083 CROSS-LINKS</div>
+          <div class="graph-hud-meta" id="graphHudMeta">{N_CASES} CASES &middot; {C_CARDS} SLIPS &middot; {C_LINKS} CROSS-LINKS</div>
         </div>
 
         <div class="graph-controls">
@@ -1545,7 +1553,7 @@ mark { background: var(--pale); color: inherit; }
       <div class="matrix-wrap">
         <div class="matrix-intro">
           <div class="matrix-intro-k">CASES OF CASES &middot; SLIPS OF SLIPS &middot; RELATIONAL MATRIX</div>
-          <div class="matrix-intro-v">Multi-tiered archival taxonomy organizing 31 field slipcases into 5 meta-research clusters, exposing 5,083 cross-citations and 124 primary source documents.</div>
+          <div class="matrix-intro-v">Multi-tiered archival taxonomy organizing {N_CASES} field slipcases into 5 meta-research clusters, exposing {C_LINKS} cross-citations and {N_PDFS} primary source documents.</div>
         </div>
         <div id="matrixClusterContainer"></div>
       </div>
@@ -1592,7 +1600,7 @@ mark { background: var(--pale); color: inherit; }
   <!-- TABLE DRAWER -->
   <section id="drawer">
     <div class="dHead">
-      <input id="dSearch" class="dSearch" placeholder="Search 31 slipcases and 1,244 cards..." autocomplete="off">
+      <input id="dSearch" class="dSearch" placeholder="Search {N_CASES} slipcases and {C_CARDS} cards..." autocomplete="off">
       <button class="tbtn" id="drawerClose">CLOSE</button>
     </div>
     <div class="dBody" id="dBody"></div>
@@ -1758,7 +1766,7 @@ $("#brandBtn").onclick = () => {
 
 function updateActiveCaseLabel() {
   if (selectedCaseIdx === -1) {
-    $("#caseNavBtn").textContent = "ALL CASES (31)";
+    $("#caseNavBtn").textContent = "ALL CASES ({N_CASES})";
     $("#pdfTabBtn").textContent = `PDFS (${ALL_PDFS.length})`;
   } else {
     const c = CASES_DATA[selectedCaseIdx];
@@ -2601,7 +2609,7 @@ function launchAllTable() {
   }
   cullTable();
   fitTable();
-  tableStatus("LAUNCHED ALL 1,244 SLIPS ACROSS 31 SPATIAL COLUMNS");
+  tableStatus("LAUNCHED ALL {C_CARDS} SLIPS ACROSS {N_CASES} SPATIAL COLUMNS");
 }
 
 function launchThemeTable() {
@@ -3688,7 +3696,11 @@ html_rendered = html_template.replace('/* DATA_CASES */', json.dumps(cases_data)
                              .replace('/* DATA_NOTES */', json.dumps(all_notes)) \
                              .replace('/* DATA_PDFS */', json.dumps(all_pdfs)) \
                              .replace('/* DATA_GRAPH */', json.dumps(graph_data)) \
-                             .replace('/* DATA_PROMPTS */', json.dumps(prompts_data))
+                             .replace('/* DATA_PROMPTS */', json.dumps(prompts_data)) \
+                             .replace('{C_CARDS}', C_CARDS) \
+                             .replace('{C_LINKS}', C_LINKS) \
+                             .replace('{N_CASES}', str(N_CASES)) \
+                             .replace('{N_PDFS}', str(N_PDFS))
 
 # Write index.html to workspace
 with open(os.path.join(BASE_DIR, 'index.html'), 'w', encoding='utf-8') as f:
