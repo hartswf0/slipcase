@@ -89,4 +89,7 @@ if os.path.exists(box_path):
 # 5. Rebuild index.html and slipcase-reader-v3.html
 os.system(f"python3 {os.path.join(BASE_DIR, 'build_index_html.py')}")
 os.system(f"python3 {os.path.join(BASE_DIR, 'build_reader_v3.py')}")
+
+# 6. Rebuild pocket.html (phone reader) from the refreshed manifest
+os.system(f"python3 {os.path.join(BASE_DIR, 'build_pocket_html.py')}")
 print("All repository research instruments compiled and synchronized!")
