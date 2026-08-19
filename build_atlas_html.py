@@ -409,10 +409,10 @@ header {
     </div>
 
     <div class="search-wrap">
-      <input id="search" class="search" placeholder="Search 1,244 atomic slips..." autocomplete="off">
+      <input id="search" class="search" placeholder="Search 1,418 atomic slips..." autocomplete="off">
     </div>
 
-    <button id="drawerOpenBtn" class="accession-badge-btn">DEAL SLIPCASES (31)</button>
+    <button id="drawerOpenBtn" class="accession-badge-btn">DEAL SLIPCASES (32)</button>
   </header>
 
   <!-- CONTROL BAR -->

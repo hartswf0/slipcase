@@ -1377,6 +1377,7 @@ mark { background: var(--pale); color: inherit; }
       <span class="search-shortcut">/</span>
     </div>
 
+    <a href="pocket.html" class="accession-badge-btn" style="text-decoration:none;margin-right:6px" title="lightweight reader for phones">POCKET</a>
     <button id="caseNavBtn" class="accession-badge-btn">ALL CASES ({N_CASES})</button>
   </header>
 
