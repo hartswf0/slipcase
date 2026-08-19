@@ -1,0 +1,95 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{lmodern}
+\usepackage[margin=1.05in]{geometry}\usepackage{microtype}\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}\usepackage{parskip}
+\title{\textbf{Integrity Is Not Fidelity}\\[.35em]\large What an Audit Trail Cannot Record, and Why the Footnote Was Never Built to Try}
+\author{Watson Hartsoe}
+\date{2026-08-19 \quad\textemdash\quad Working Paper}
+\begin{document}\maketitle
+\begin{abstract}\noindent Transparency proposals for machine-assisted scholarship converge on the trail: judge a system not by the fluency of its answer but by the integrity of the path it took through the record. This paper argues that the proposal, as stated, replaces one unreliable indicator with another of exactly the same kind. A trail is a presented sequence, and a presented sequence is an arrangement rather than a history --- the category distinction Ryle drew between an argument and the inference that produced it. We separate two criteria the literature conflates: \emph{integrity}, decidable from the artifact, and \emph{fidelity}, the agreement of the reported order with the actual one. Integrity is what citation delivers, and Grafton's history shows it is what citation was built to deliver: forward verification and credit, never process reconstruction. Fidelity requires an apparatus scholarship has never had, and the engineering already exists --- an append-only, hash-chained log committed before the conclusion, deployed for certificates and never for reasoning. We close with a limit that no logging discipline removes: a trail records the path through a constituted space of options and cannot record the cut that constituted it. Cuts are visible only in contrast between differently-cut systems, which makes plurality of apparatus a condition of auditability rather than an economic preference.\end{abstract}
+\vspace{-.5em}\noindent\textbf{Keywords:} auditability, provenance, citation, transparency, pre-commitment, Certificate Transparency, agential cut, reasoning traces\par\vspace{1em}
+\section{The proposal and its defeater}
+The strongest available reform of machine-assisted scholarship replaces answer fluency with path integrity. Records have outpaced anyone's capacity to consult, connect, inherit or judge them; scholarship is trail-making rather than answer-extraction; and the governing question becomes whether a system can show not merely what it says but how its path through the record was built.
+
+The proposal has a defeater from the same intellectual neighbourhood. Ryle's separation of inference from argument forbids reading the finished shape of an argument backward into the activity that produced it: logical order is not discovery order, and a person comes to see something before they can state why it follows. A trail is a presented sequence in the genre of citation. Making it the criterion moves the fluency problem up one level and calls the move a solution.
+
+The defeat is not rhetorical. A system can reach a conclusion by any route, then retrieve sources that support it and arrange them in a defensible order. The resulting trail is complete, its links resolve, and every step checks out. It is also not a record of anything.
+
+\section{Two criteria}
+The conflation dissolves once two properties are separated.
+
+\emph{Integrity} holds when a trail is well-formed and its references resolve: the cited sources exist, say what they are said to say, and stand in the stated relation to the claim. Integrity is decidable by inspecting the artifact.
+
+\emph{Fidelity} holds when the reported sequence agrees with the sequence actually traversed. Fidelity is not decidable from the artifact at all, because both the faithful and the reconstructed trail present the same object.
+
+Path integrity as currently proposed buys the first and is silent about the second, while its ethical rationale --- show how the path was built --- requires the second. That gap is the paper's subject.
+
+\section{What citation was for}
+The natural reply is that scholarship has always demanded better and that machine systems are simply failing an existing standard. The history says otherwise.
+
+Grafton traces the footnote as an apparatus of proof and credit: a device by which historians made assertions verifiable against sources and established authority for their claims. Its form was shaped by disputes about reliability, not by any ambition to record how the historian worked.
+
+Both jobs the footnote performs are forward-facing. A reader can go to the source and check the claim; priority can be assigned. Neither requires that the citation record the order in which sources were consulted, and neither is compromised if the author found the decisive source last. Process fidelity is backward-facing, and the humanities have never had an apparatus for it --- because the author's competence was warranted socially, by position and peer judgement, rather than evidenced procedurally.
+
+This reframes the whole transparency programme. The demand for fidelity apparatus arrives exactly when the social warrant is withdrawn. It is a response to a credibility crisis rather than an epistemic advance, which predicts --- correctly, so far --- that it will be resisted most by those whose warrant remains intact.
+
+The practical consequence is that fidelity is not a repair to citation. It is a proposal for a second institution, and the sciences already built partial versions of it: the lab notebook, and preregistration.
+
+\section{The mechanism exists}
+Fidelity is an engineering property, not an epistemic impossibility, and the mechanism is deployed at scale for a structurally identical problem.
+
+Certificate Transparency addresses the case where a party's claim about what it did cannot be trusted on its own word. Entries are written to an append-only log whose Merkle structure makes retroactive alteration detectable by anyone, and inclusion proofs let a third party verify that a specific entry was logged at a specific point.
+
+The property that makes this work is \emph{ordering commitment}: the log fixes what was known when. Applied to reasoning, that is precisely the discovery-order question. The difference between an inference and an argument becomes, technically, whether the retrieval sequence was committed before or after the conclusion was emitted --- a timestamp problem rather than a hermeneutic one. Commit the sequence to a tamper-evident log before emission, publish the citations separately, and divergence becomes third-party detectable.
+
+Two limits deserve stating. Pre-commitment defeats retroactive editing and not staged performance: a system could pre-commit an ordered sequence that was itself generated to look like a search. And certificate logs work because a monitor ecosystem exists --- parties with an incentive to catch inconsistency. A reasoning log with no adversarial monitors would be attested and unexamined. The missing component is not the cryptography but the constituency.
+
+\section{The limit no log removes}
+Even a perfect fidelity apparatus leaves one operation unrecorded, and it is the consequential one.
+
+A trail is a path through a space of available options. A cut is what constituted that space --- what counted as an object, a category, a candidate at all. The trail can be complete and honest about every step while remaining silent about everything the cut excluded, and the exclusions leave no trace, because a trace is made of what was there.
+
+This is not a tooling gap. It follows from what a trace is. Auditability is the field's default remedy for almost everything --- provenance, logging, citation, model documentation --- and all of it audits \emph{within} a constituted space.
+
+The only apparent purchase is comparative. Run two differently-cut apparatuses over the same material and read the symmetric difference of their option spaces; the difference names exclusions that neither system's records could. Cuts are visible in contrast and never inside a single system.
+
+A political consequence follows that is usually filed elsewhere. If contrast is the only instrument, then plurality of apparatus is a precondition of auditability, and concentration is an epistemic harm distinct from the economic ones. Where one apparatus dominates there is nothing to contrast against, and its cut becomes invisible not through secrecy but through the absence of an alternative. Worse, systems trained on overlapping data under similar policies may be nominally plural and effectively single-cut --- so the quantity that matters is cut diversity, not vendor count, and nobody measures it.
+
+\section{What to build}
+The argument yields a short specification rather than a critique.
+
+Report integrity and fidelity separately, and never let a claim of the first pass for the second. Where fidelity is claimed, commit the retrieval sequence to an append-only log before emission and publish inclusion proofs. Name the monitor constituency, or concede that the log is decorative. And where a cut is at issue, do not promise that disclosure will reveal it; run the differential audit, and report how much contrast the available alternatives actually provide.
+
+\section{Limitations}
+Grafton's history concerns the footnote in historical scholarship; generalising to all citation practice, and to machine-generated citation, exceeds the source. Specific pagination was not verified for this paper, and the Certificate Transparency references are given at the level of the design rather than to specific sections.
+
+The counterfactual reading of the cut argument is not defeated here. An auditor with sufficient access could construct a wider option space internally --- held-out data, ablated policies, deliberately widened candidate sets --- and audit a single system against that construction rather than against a rival. Whether audit-access regimes grant such powers is an empirical question this paper does not settle, and it is the strongest available objection to the plurality conclusion.
+
+No divergence rates are reported. The claim that reported trails diverge from actual retrieval order is a prediction with a stated test, not a measurement.
+
+\section*{References}\small
+\begin{itemize}\setlength\itemsep{0pt}
+\item [author unrecorded]. Agential Worlds, Cybernetic Cuts. PROGRAMS/agential.json, after Barad. 2026. \texttt{[agential\_program]}
+\item [author unrecorded]. Inference-Against-Argument Engine. PROGRAMS/argue.json, program theory after Ryle, "Thinking and Inferring". 2026. \texttt{[argue\_program]}
+\item [author unrecorded]. Certificate Transparency. [UNVERIFIED] specific sections not verified in this forage. 2013. \texttt{[ct\_rfc6962]}
+\item Grafton, Anthony. The Footnote: A Curious History. Harvard University Press. 1997. \texttt{[grafton1997footnote]}
+\item Hartsoe, Watson. Operation Describe: Practice-Based Dissertation Framework. OPERATION DESCRIBE archive, PAPERS/operative-description-framework.md. 2026. \texttt{[hartsoe2026framework]}
+\item [author unrecorded]. THE\_MEMEX\_TEST. PROGRAMS/memex.json, after Bush. 2026. \texttt{[memex\_program]}
+\item [author unrecorded]. The Trail Is an Argument. Collision of PROGRAMS/memex.json and PROGRAMS/argue.json. 2026. \texttt{[pt021\_collision]}
+\end{itemize}\normalsize
+\appendix
+\section{Assembly instrument}
+The exact prompt that assembled this publication is preserved verbatim at
+\texttt{\_PROMPTS/ASSEMBLY\_PROMPT.txt} in the package and is embedded in \texttt{index.html}.
+It is not reproduced here for length. Schema: slipcase/15.55-AM.
+\section{Making history}
+See \texttt{integrity-is-not-fidelity\_\_MAKING\_HISTORY.txt} and \texttt{000\_\_MAKING\_HISTORY.txt}.
+Argument selection, section order and connective prose were produced by the model named there
+and were not reviewed by a second human reader before packaging.
+\section{Replication path}
+Open \texttt{index.html} from \texttt{file://}. Cards, sources, graph, ghosts and this paper are
+embedded. \texttt{000\_\_REBUILD.txt} states how to regenerate every derived view from the cards alone.
+\vfill\noindent\includegraphics[width=13mm]{MARK.svg}\\
+\footnotesize Working Paper \textperiodcentered{} AI-augmented research process.
+Evidence, prompts and making history preserved. Checkpoint SLIPCASE-OPERATION-DESCRIBE-20260819.
+\end{document}

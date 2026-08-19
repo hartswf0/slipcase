@@ -1,0 +1,91 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{lmodern}
+\usepackage[margin=1.05in]{geometry}\usepackage{microtype}\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}\usepackage{parskip}
+\title{\textbf{Read the Diff, Not the Mind}\\[.35em]\large Reversal as the Public Signature of Answerability}
+\author{Watson Hartsoe}
+\date{2026-08-19 \quad\textemdash\quad Working Paper}
+\begin{document}\maketitle
+\begin{abstract}\noindent Accounts that distinguish thinking from fluent production locate the difference in answerability: language becomes thought only when made answerable to memory, fact, criterion, correction and consequence. Most of those conditions are private, which appears to make the distinction unusable --- and worse, appears to conflict with the hermeneutic principle that meaning survives as inscribed public consequence rather than inward state. This paper resolves the conflict by relocating the evidence. Answerability has one public residue: \emph{reversal}, a change that withdraws a commitment the author previously made. Reversal is inscribed, countable, and available in any preserved revision chain. Three independent bodies of work converge on it. Genetic criticism has read revision dossiers for half a century and supplies both a method and a warning. Belief-revision logic shows why reversal is special: it is contraction, the operation natural language has no syntax for. And software engineering, having produced the theory that understanding is untransferable, built the one institution that preserves objections alongside the changes they caused. The humanities discarded the evidence software kept.\end{abstract}
+\vspace{-.5em}\noindent\textbf{Keywords:} revision, genetic criticism, avant-texte, belief revision, contraction, code review, answerability, provenance\par\vspace{1em}
+\section{The apparent contradiction}
+Two commitments sit in tension. The first holds that fluent language is not thought unless it has been made answerable --- to inward pressure, memory, intention, metaphor, fact, history, public criterion, correction and ethical consequence. The second, from the hermeneutics of inscribed action, holds that meaning does not live inside intention but survives as inscribed public consequence.
+
+Sort the nine answerability conditions by observability and the conflict becomes concrete. Public criterion and correction leave traces. Inward pressure, memory, intention, metaphor, fact, history and ethical consequence do not, or leave traces indistinguishable from their simulation. By the second commitment's own rule, seven of the nine are not candidates for study, and the assertion that a given production ``did not undergo struggle'' is asserted rather than shown.
+
+The eviction of intention from meaning was not a loss but a methodological achievement: it is what allowed the human sciences to read deeds instead of guessing at minds. Accepting it appears to cost the account of thinking. This paper argues the cost is avoidable, and that the mistake was looking for struggle in the finished artifact.
+
+\section{What genetic criticism already knows}
+A discipline has read revision as evidence since at least the early 1970s. Genetic criticism takes as its object not the finished work but the dossier of drafts, notes and corrections preceding it --- the \emph{avant-texte} --- and treats that dossier as a structured record of composition rather than as waste.
+
+The discipline supplies a method: classify variants by operation. Substitution swaps; expansion adds; deletion removes; reordering rearranges. Composition becomes an operation profile rather than a narrative of intent.
+
+It also supplies a warning the present argument must accept. Genetic criticism explicitly declines to read drafts as windows onto the mind, because variants underdetermine motives. The dossier shows what was done, not why. So the draft rescues struggle as a \emph{process} while confirming, rather than reversing, the eviction of intention. Any account that uses revision to smuggle inwardness back in has misused the method.
+
+\section{Why reversal is the diagnostic}
+Not all operations carry the same weight. Expansion adds; substitution swaps; reordering rearranges. Only reversal withdraws something the author previously committed to, and withdrawal is the one operation that requires a standard applied to one's own earlier choice. That is the correction condition, and it is countable.
+
+Belief-revision logic explains why reversal is structurally special. The AGM framework distinguishes three operations: expansion adds a sentence, revision adds while restoring consistency, and contraction removes a sentence without adding anything. Contraction is the difficult one --- which of several ways to give something up you take is not determined by logic alone.
+
+Natural language has no syntax for contraction. ``Disregard the previous instruction'' is an addition: it introduces a sentence about a sentence, and both remain available. An accumulating context is therefore a commitment set that can be contradicted but never reduced, and its inconsistency is structural rather than accidental. The only implemented contraction primitive is deletion of the context itself.
+
+This produces the paper's central asymmetry. The medium of instruction cannot contract. The medium of composition can, and records it. Struggle was always going to be invisible in prompts and legible in drafts.
+
+\section{The institution that kept the evidence}
+If reversal is the signature, the question becomes which practices preserve it. Here the expected answer is wrong.
+
+Scholarship discards drafts. A monograph resolves every claim to a citation --- high traceability --- and retains no record of the objections the author raised against themselves. Traceability and struggle are orthogonal, and scholarly practice optimises one and discards the other.
+
+Software engineering does both. Version control resolves every change to an author, a time and a diff. Code review preserves the objection that prompted a change, the response, and the resulting revision, linked together in the project's history. The objection is not summarised; it is retained next to the line it was raised against.
+
+The irony is worth stating plainly. The discipline that produced the theory that understanding is untransferable also built the best apparatus for inscribing answerability, and its own theoretical lineage never claimed the apparatus as evidence. Preserved disagreements about a text are the closest thing to an inscription of the shared theory that the text is a residue of.
+
+A serious objection follows. Review records objections that were \emph{raised}, which is a socially filtered subset of those that occurred. The author's own rejected attempts, made privately before submission, are absent --- and that is where most of the struggle the original account describes takes place. Review begins after it.
+
+\section{Counterfeit and propagation}
+Any public signature can be performed. A writer can stage self-correction rhetorically; a system can be trained to produce ``on reflection, no'' as a stylistic move. If reversal is countable, reversal is gameable, and the counterfeit problem returns one level down.
+
+There is a test. Genuine withdrawal has consequences: if a commitment is really given up, passages that depended on it must change too. A performed reversal is local and cosmetic. So the diagnostic is not the reversal but its \emph{propagation} --- and propagation is exactly the property that consequence-tracing benchmarks in structured knowledge systems are built to measure.
+
+This gives a two-part measure. Count reversals as a share of transitions in a revision chain; then, for each, check whether dependent passages were also revised. High reversal share with propagation is answerability. High reversal share without propagation is genre.
+
+\section{Why it matters beyond drafts}
+One consequence extends past composition. If withdrawal is hard to perform and harder to propagate, then credence installed by a description should be hard to withdraw as well --- and the experimental literature on retraction reports exactly that. Information explicitly corrected continues to influence judgement afterwards, even when the correction is accurately recalled.
+
+The structural reason is the same as the contraction problem. A claim is not stored as a single revisable token but distributed across the inferences it licensed. Updating the token leaves the inferences standing. Retraction is an addition, not a contraction, in minds as in contexts.
+
+That makes disclosure a partial remedy by construction, and it makes the operative variable the \emph{latency} of correction rather than its presence. Whether generated media should be labelled is not the interesting question. How fast, relative to how many inferences a viewer has already drawn, is.
+
+\section{Limitations}
+The identification of reversal as the signature is a proposal, not a finding. No reversal counts are reported here for any corpus, and no propagation test has been run.
+
+Genetic criticism's own scruple constrains the argument: reading revision as evidence of inward answerability is precisely the inference the discipline refuses for literary drafts, and this paper accepts that refusal while arguing the operation profile is nonetheless informative. Readers who want struggle to name something inward will find the account deflationary, and correctly so.
+
+The comparison between scholarly and software practice concerns preservation, not rigour. Nothing here shows that review histories aid reconstruction; that is the experiment the argument points to and does not report. And the retraction literature is invoked for verbal misinformation in experimental settings; extension to generated images crosses both modality and setting.
+
+\section*{References}\small
+\begin{itemize}\setlength\itemsep{0pt}
+\item Alchourr{\'o}n, Carlos E. and G{\"a}rdenfors, Peter and Makinson, David. On the Logic of Theory Change: Partial Meet Contraction and Revision Functions. Journal of Symbolic Logic. 1985. \texttt{[alchourron1985logic]}
+\item Bellemin-No{\"e}l, Jean. Le Texte et l'avant-texte: les brouillons d'un poème de Milosz. Larousse. 1972. \texttt{[bellemin1972texte]}
+\item [author unrecorded]. Version control and code review as an objection-preserving record. Practice description; no specific study claimed in this forage. 2026. \texttt{[code\_review\_practice]}
+\item [author unrecorded]. DESCRIPTIVE\_STRUGGLE\_ENGINE. PROGRAMS/dse.json. 2026. \texttt{[dse\_program]}
+\item Hartsoe, Watson. The Argument Is Not the Thought: Ryle, Inference, and the Myth of Inner Logic. OPERATION DESCRIBE archive, PAPERS/ryl-01.md. 2026. \texttt{[hartsoe2026ryle]}
+\item Johnson, Hollyn M. and Seifert, Colleen M.. Sourcing of discredited information in memory. Journal of Experimental Psychology: Learning, Memory, and Cognition. 1994. \texttt{[johnson1994sourcing]}
+\item [author unrecorded]. The Struggle Leaves No Trace. Collision of PROGRAMS/mot.json, PROGRAMS/tah.json and PROGRAMS/dse.json. 2026. \texttt{[pt023\_collision]}
+\end{itemize}\normalsize
+\appendix
+\section{Assembly instrument}
+The exact prompt that assembled this publication is preserved verbatim at
+\texttt{\_PROMPTS/ASSEMBLY\_PROMPT.txt} in the package and is embedded in \texttt{index.html}.
+It is not reproduced here for length. Schema: slipcase/15.55-AM.
+\section{Making history}
+See \texttt{read-the-diff\_\_MAKING\_HISTORY.txt} and \texttt{000\_\_MAKING\_HISTORY.txt}.
+Argument selection, section order and connective prose were produced by the model named there
+and were not reviewed by a second human reader before packaging.
+\section{Replication path}
+Open \texttt{index.html} from \texttt{file://}. Cards, sources, graph, ghosts and this paper are
+embedded. \texttt{000\_\_REBUILD.txt} states how to regenerate every derived view from the cards alone.
+\vfill\noindent\includegraphics[width=13mm]{MARK.svg}\\
+\footnotesize Working Paper \textperiodcentered{} AI-augmented research process.
+Evidence, prompts and making history preserved. Checkpoint SLIPCASE-OPERATION-DESCRIBE-20260819.
+\end{document}

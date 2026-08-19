@@ -1,0 +1,86 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{lmodern}
+\usepackage[margin=1.05in]{geometry}\usepackage{microtype}\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}\usepackage{parskip}
+\title{\textbf{The Trace Is Partly a Clock}\\[.35em]\large Compute, Scaffold, and the Missing Time Axis in Accounts of Operative Description}
+\author{Watson Hartsoe}
+\date{2026-08-19 \quad\textemdash\quad Working Paper}
+\begin{document}\maketitle
+\begin{abstract}\noindent The Rylean critique of reasoning traces is correct and is usually over-applied. Because logical order is not discovery order, a printed trace is an arrangement rather than a recording; but it does not follow that the trace is decorative, and the standard formulation of the critique conflates two separable functions. A trace supplies serial computation, through the number of steps taken, and semantic scaffolding, through the content of what is emitted. Ryle's argument bites on the second and has nothing to say about the first, because a person writing on paper gains no additional thinking steps from the paper's length. This disanalogy is architectural and runs opposite to the usual complaint: a machine trace is partly a \emph{clock}, and human arguments have no clock component. We develop the consequence that deliberation time --- tokens or passes on one side, response latency on the other --- is the only quantity in this area that is natively comparable across human and machine receivers without analogy, and we name a category that current outcome-only measures score as inert: the temporal operator, a description that changes how long a decision takes and not which decision is reached.\end{abstract}
+\vspace{-.5em}\noindent\textbf{Keywords:} chain of thought, reasoning traces, filler tokens, latency, deliberation, Ryle, interface friction, temporal operators\par\vspace{1em}
+\section{A correct critique, over-applied}
+Ryle's separation of inference from argument forbids a specific move: reading the finished shape of an argument backward into the activity that produced it. Someone comes to see something before they can state why it follows; the written argument is arranged for a reader, and its order is a genre convention.
+
+Applied to machine reasoning traces this is devastating against one claim --- that a printed trace is a transcript of an internal process --- and it is routinely stretched to support a second: that the trace is therefore decorative. The stretch does not follow, and the same accounts that make it often note, in the same sentence, that the emitted text conditions subsequent generation. A text that conditions what comes next is not decorative by any definition of the term that would do the critique's work.
+
+Something has to give, and what gives is the assumption that the trace is one thing.
+
+\section{Two functions}
+Emitting $n$ tokens before an answer does two separable things. It runs $n$ additional forward passes with the same weights. And it places $n$ tokens of content in the context, conditioning the distribution over what follows.
+
+Reports in this area indicate that inserting semantically empty tokens can improve performance on some tasks --- which, if it holds, isolates the first function from the second: additional passes do work independently of what is said.
+
+That splits the object. The genre convention that Ryle identifies is real and belongs to the second function. The first function has no analogue in human argument at all, because a longer page does not give a writer more thinking steps.
+
+The disanalogy therefore runs opposite to the usual complaint. The problem with the trace is not that it is a less faithful record than a human argument. It is that a machine trace is partly a clock, and calling it an argument imports a comparison in which time cannot be bought.
+
+\section{Purchasable deliberation}
+If length buys computation, then thinking time is purchasable in a way it never was for a writer, and a whole family of claims about improved reasoning may be describing hardware allocation in an epistemic vocabulary.
+
+The decomposition is cheap. Three arms at matched token counts --- genuine trace, semantically inert filler, and a permutation of the genuine trace --- estimate the compute component and the semantic component against a no-trace baseline. Filler isolates length; permutation isolates order and content.
+
+The expected pattern is that the compute component dominates on short-horizon and arithmetic tasks, while the semantic component dominates where the trace commits the system to a decomposition it then follows. Whichever way it falls, the number matters: any task family where filler matches a genuine trace is a family in which ``reasoning'' names a clock, and the appropriate comparison is not to argument but to giving a person more time.
+
+There is a live rival reading. Filler gains may be artifacts of particular training regimes that vanish with scale, in which case the trace is all scaffold and Ryle's critique applies undiluted. That is a straightforward empirical question, and it is not answered by more philosophical argument on either side.
+
+\section{The variable nobody records}
+Once time enters on the machine side, an omission on the other side becomes visible.
+
+Accounts of description-that-routes-action record \emph{which} action followed a description. None records how long it took. Yet the two receivers such accounts insist on unifying --- human operators reading interfaces, machine operators reading prompts --- both have a time to commitment, and it is the only quantity that is natively comparable between them without analogy. Tokens or passes on one side, seconds on the other, and the same construct: deliberation before commitment.
+
+This makes a neglected case measurable. Consider a description that raises an objection it cannot settle --- an instrument whose product is a suspended judgement rather than a reading. It does not redirect the receiver; it delays them. Under outcome-only measurement its effect is zero.
+
+Call it a temporal operator: a description with no outcome shift and a positive latency shift. The category has no name in these accounts and is scored as inert by their instruments, and it is exactly what interface friction and extended computation are both designed to produce.
+
+The design question then becomes sharp rather than rhetorical. Does induced deliberation improve the eventual decision, or merely postpone it? The measurement requires recording both the decision distribution and the time to commit under conditions differing only in the presence of an unsettleable objection, and it can be run identically on people and on systems.
+
+\section{Onset, persistence, decay}
+Adding a time axis exposes a second omission, and it is larger than the first.
+
+The unit of analysis in these accounts is a pair: a description and the route it produces. The pair is not time-indexed, yet every case in the area is. A system instruction's hold on behaviour decays as a conversation accumulates. A constraint on a generated sequence has an onset --- it takes some number of frames to be satisfied --- and can overshoot, as when an instruction for slowness produces stasis. A label's power to predict action decays over days.
+
+Three quantities follow and none is reported anywhere: settling time, half-life, and the residue left after a description is withdrawn. They are measurable with one estimator across three units --- turns, frames and days --- which is precisely the shared quantity that comparative claims in this area have lacked.
+
+Where a sequence is generated with conditioning on its own earlier parts, the descriptors of a transient response apply literally rather than by analogy: rise time, overshoot, settling time, steady-state error. If any case in this literature earns the cybernetic vocabulary it borrows, it is the moving-image case, which is usually treated as the least central.
+
+\section{Limitations}
+The filler-token results are invoked without retrieval. No specific studies, effect sizes or task families are cited, and the decomposition is proposed rather than performed; a reader should treat the compute component as a hypothesis with a cheap test attached.
+
+The temporal operator is a category, not an observation. No latency measurement is reported for any description in this area, and the claim that such descriptions exist rests on the structure of the case rather than on data.
+
+Nothing here shows that induced deliberation improves decisions. It shows that current instruments cannot tell, because they record destinations and not durations.
+
+\section*{References}\small
+\begin{itemize}\setlength\itemsep{0pt}
+\item [author unrecorded]. Inference-Against-Argument Engine. PROGRAMS/argue.json, program theory after Ryle, "Thinking and Inferring". 2026. \texttt{[argue\_program]}
+\item [author unrecorded]. Filler- and pause-token effects in chain-of-thought prompting. [UNVERIFIED] cluster of results referenced without retrieval; verify before citing. 2026. \texttt{[fillertokens\_unverified]}
+\item Hartsoe, Watson. ABC Cineosis and the Difference That Moves: Operative Description in Generated Moving-Image Worldtexts. OPERATION DESCRIBE archive, PAPERS/abc-cineosis-paper.md. 2026. \texttt{[hartsoe2026cineosis]}
+\item Shanahan, Murray and McDonell, Kyle and Reynolds, Laria. Role-Play with Large Language Models. Nature. 2023. \texttt{[shanahan2023roleplay]}
+\item [author unrecorded]. USE\_AGAINST\_MEANING. PROGRAMS/uam.json. 2026. \texttt{[uam\_program]}
+\end{itemize}\normalsize
+\appendix
+\section{Assembly instrument}
+The exact prompt that assembled this publication is preserved verbatim at
+\texttt{\_PROMPTS/ASSEMBLY\_PROMPT.txt} in the package and is embedded in \texttt{index.html}.
+It is not reproduced here for length. Schema: slipcase/15.55-AM.
+\section{Making history}
+See \texttt{the-trace-is-partly-a-clock\_\_MAKING\_HISTORY.txt} and \texttt{000\_\_MAKING\_HISTORY.txt}.
+Argument selection, section order and connective prose were produced by the model named there
+and were not reviewed by a second human reader before packaging.
+\section{Replication path}
+Open \texttt{index.html} from \texttt{file://}. Cards, sources, graph, ghosts and this paper are
+embedded. \texttt{000\_\_REBUILD.txt} states how to regenerate every derived view from the cards alone.
+\vfill\noindent\includegraphics[width=13mm]{MARK.svg}\\
+\footnotesize Working Paper \textperiodcentered{} AI-augmented research process.
+Evidence, prompts and making history preserved. Checkpoint SLIPCASE-OPERATION-DESCRIBE-20260819.
+\end{document}

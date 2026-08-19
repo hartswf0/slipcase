@@ -1,0 +1,44 @@
+# Arrangement — by connectedness
+
+The field read from its hubs outward.
+
+- **21** links — [[FORAGE-PT-019]] Path integrity is satisfiable by a system that logs a tidy path after the fact, so the criterion does not yet distinguish record from reconstruction
+- **20** links — [[FORAGE-PT-003]] Descriptive struggle names nine answerability conditions and only two of them are observable from outside
+- **20** links — [[FORAGE-PT-012]] Five of the apparatus's six operations are mechanical and the sixth is moral, and bundling them makes an ethical claim look like a technical finding
+- **19** links — [[FORAGE-PT-001]] "Indefinite" is the load-bearing word in concept possession, and it makes possession unverifiable by any finite test
+- **19** links — [[FORAGE-PT-016]] The practice theory ranks four things and demotes every transferable one, which makes it anti-documentation by construction
+- **18** links — [[FORAGE-PT-021]] The corpus's most operational criterion is refuted by the corpus's own category-mistake detector
+- **18** links — [[FORAGE-PT-023]] If meaning survives only as inscribed consequence, then descriptive struggle — being uninscribed — cannot be part of meaning at all
+- **18** links — [[FORAGE-PT-007]] The wink ladder makes thickness countable: each rung adds one intention *about* the rung below it
+- **18** links — [[FORAGE-PT-026]] Naur says the theory dies with the team and Calvino says the inventory and rules persist, which makes constraint the transferable part of an untransferable thing
+- **17** links — [[FORAGE-OD-024]] THE ONE ROUTING SYSTEM WITH COMPLETE LOGS, NO IRB, AND NO PLATFORM GATEKEEPER IS THE ARCHIVE ITSELF
+- **17** links — [[FORAGE-PT-008]] If depiction is measurement contact, then a representation whose projection rule is lost is not a bad model — it is not a model at all
+- **16** links — [[FORAGE-PT-025]] One instrument makes the human a substrate and another requires a party who can be held, and together they leave nobody accountable
+- **15** links — [[FORAGE-PT-011]] Reversing the arrow turns the human hand into a measuring instrument for machine description
+- **14** links — [[FORAGE-PT-002]] If logical order is not discovery order, then the *sequence* of a reasoning trace is a genre convention that nonetheless has causal force
+- **14** links — [[FORAGE-PT-022]] Struggle and traceability are two criteria of intellectual honesty that can each be satisfied perfectly while the other is absent
+- **14** links — [[FORAGE-PT-018]] Calling AI an *intensified* symbolic-control apparatus is a quantitative claim about a difference everyone else argues qualitatively — and no unit is given
+- **14** links — [[FORAGE-PT-005]] "Rescues" implies something arrives intact, and nothing specifies what survives inscription and what is destroyed by it
+- **14** links — [[FORAGE-PT-006]] The validation formula lists social time and rival readings as required inputs, so no interpretation made alone and immediately can be valid
+- **14** links — [[FORAGE-PT-027]] An audit trail records the path taken through what was available and can never record the cut that decided what was available
+- **13** links — [[FORAGE-OD-014]] AUTHORITY IS DECLARED NECESSARY FOR ROUTING AND THEN OMITTED FROM EVERY FORMALISM IN THE ARCHIVE
+- **13** links — [[FORAGE-PT-050]] The signature of answerability is reversal — a change that undoes a prior commitment rather than extending it
+- **12** links — [[FORAGE-OD-004]] ON CAPABLE MODELS THE TOOL NAME ALREADY CARRIES THE ROUTE AND THE DESCRIPTION ADDS ALMOST NOTHING
+- **12** links — [[FORAGE-OD-005]] DESCRIPTIONS BECOME OPERATIVE EXACTLY WHERE THE NAME STOPS BEING READABLE — CROSS-LINGUAL SELECTION RISES FROM 60% TO 93%
+- **12** links — [[FORAGE-OD-029]] GEERTZ'S CULTURE-AS-CONTROL-MECHANISM OPERATES OVER A LIFETIME AND THE ARCHIVE BORROWS IT FOR A MILLISECOND
+- **12** links — [[FORAGE-OD-023]] THE ARCHIVE'S MISSING NEGATIVE CASE IS ITS OWN BANNED-TERMS LIST, WHICH FAILED TO ROUTE WITHIN THIRTY SECONDS OF BEING WRITTEN
+- **12** links — [[FORAGE-OD-018]] THE ENCOUNTER TRACE CAN EVIDENCE ROUTING BUT NOT STEERING, AND THE ARCHIVE USES THE WORDS INTERCHANGEABLY
+- **12** links — [[FORAGE-OD-019]] DESCRIPTIONS DECAY, AND ONE DECAY RATE WOULD UNIFY ALL THREE OF THE ARCHIVE'S CASES
+- **12** links — [[FORAGE-DD-013]] The politics of inhabitation: affordances, and what the shield excludes (slavery, disease, famine)
+- **12** links — [[FORAGE-PT-020]] Inference is an event and possession is a disposition, so a system could accumulate achievements it never comes to possess
+- **12** links — [[FORAGE-PT-010]] Four of the five things an utterance becomes build structure; one of them changes structure, and prompts do not mark which is which
+- **12** links — [[FORAGE-PT-024]] The corpus contains two Geertzes because culture-as-program and action-after-the-event run on clocks eight orders of magnitude apart
+- **12** links — [[FORAGE-PT-015]] Commitment needs a party who can be held, so the design account it grounds cannot survive a substrate-agnostic operator
+- **12** links — [[FORAGE-PT-017]] If constraint enables generation rather than only limiting it, then removing constraints should *reduce* output variety — which is testable and counterintuitive
+- **12** links — [[FORAGE-PT-049]] Software engineering already occupies the quadrant scholarship left empty — it records the objection and its resolution together
+- **12** links — [[FORAGE-PT-053]] A prohibition constrains more per token than a description, which is why negative specification outperforms explanation as a handover medium
+- **12** links — [[FORAGE-PT-052]] The vacuum has a name and a literature — the moral crumple zone, where liability lands on an operator who lacked the discretion to prevent the outcome
+- **12** links — [[FORAGE-PT-046]] Fidelity requires an append-only hash-chained log committed before the conclusion, and the technology is deployed for certificates and never for reasoning
+- **11** links — [[FORAGE-OD-010]] THE MODEL ATTENDS TO THE CORRECT TOOL 80% OF THE TIME AND STILL PICKS THE WRONG ONE — SO THE ATTENTION-TAX FAILURE CONDITION IS THE WRONG FAILURE CONDITION
+- **11** links — [[FORAGE-OD-006]] THE ARCHIVE'S CHAPTER ONE PREDICTS THAT ITS CHAPTER THREE METHOD WILL FAIL ABOVE A THRESHOLD, AND PUBLISHED EVIDENCE CONFIRMS IT
+- **11** links — [[FORAGE-OD-020]] THE SLIPCASE CORPUS AND THE OPERATION DESCRIBE CORPUS RECORD THE SAME MISSING MECHANISM AND NEITHER KNOWS THE OTHER DID

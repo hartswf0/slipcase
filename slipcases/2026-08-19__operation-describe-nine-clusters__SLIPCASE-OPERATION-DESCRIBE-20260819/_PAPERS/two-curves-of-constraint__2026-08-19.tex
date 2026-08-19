@@ -1,0 +1,84 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{lmodern}
+\usepackage[margin=1.05in]{geometry}\usepackage{microtype}\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}\usepackage{parskip}
+\title{\textbf{Two Curves of Constraint}\\[.35em]\large Entropy, Surprisal, and Why the Best Handover Document Is Invisible to Its Author}
+\author{Watson Hartsoe}
+\date{2026-08-19 \quad\textemdash\quad Working Paper}
+\begin{document}\maketitle
+\begin{abstract}\noindent Calvino's axiom that constraint does not merely limit generation but enables and excludes it has been read as a paradox and treated as a slogan. This paper argues it names a real bifurcation and that the long-running disagreement it generates is a measurement error: two camps have been tracking two different quantities and each has taken the other to be denying its evidence. Constraint lowers the entropy of an output set and raises the pointwise surprisal of its members, because it forces sampling out of the highest-probability region while shrinking the admissible one. Both reports are correct. From the separation two practical results follow. First, the folk theory that constraint trades variety for control is true of entropy and false of surprisal, so ``how much constraint'' has an answer per generator rather than being a matter of taste. Second, and less expected, the same asymmetry shows why prohibitions specify an admissible region more efficiently than descriptions do: a negative specification sharpens a boundary in fewer tokens than a positive one characterises an interior. That makes the most valuable handover document the list of what not to do --- which is precisely the document experts fail to write, because its contents feel obvious to them.\end{abstract}
+\vspace{-.5em}\noindent\textbf{Keywords:} constraint, Oulipo, Calvino, entropy, surprisal, specification, prohibition, tacit knowledge, documentation\par\vspace{1em}
+\section{An axiom that looks like a paradox}
+The axiom states three things at once: constraint does not merely limit generation, constraint enables generation, constraint excludes generation. Read as a claim about a single quantity it is incoherent, which is why it circulates as a provocation rather than a hypothesis.
+
+Read as a claim about two quantities it is a prediction. If constraint both enables and excludes, then whatever it enables should rise and then fall as constraint increases, giving an interior maximum rather than a monotone trade-off.
+
+The Oulipian evidence supports the enabling half: form produces what freedom does not, and writers working under severe constraint report reaching material they could not otherwise reach. The generative-practice folk theory supports the limiting half: add constraints and outputs become more alike. The disagreement has persisted because the two halves are measured on different objects.
+
+\section{The separation}
+Information theory separates the two exactly.
+
+\emph{Entropy} is a property of a distribution: how varied the set of outputs is. \emph{Surprisal} is a property of an outcome: how improbable this particular output was under some reference distribution. They are not the same quantity and they need not move together.
+
+With no constraint, sampling concentrates near the mode. The set may be nominally varied while each member is individually unremarkable --- high entropy, low surprisal. Add constraint and the admissible region excludes the mode, so members become individually improbable while the set narrows: entropy falls, surprisal rises. Add much more and the region collapses; both fall.
+
+So the folk theory measures entropy and correctly reports a decrease. Oulipo cares about surprisal and correctly reports an increase. Nobody was wrong. The axiom's apparent paradox is the shadow of a conflation, and the interior maximum the axiom seems to predict appears only if ``variety'' is operationalised as requiring both quantities at once.
+
+This yields a sweep rather than an argument: for constraint count $k$, compute entropy over $N$ sampled outputs and mean pointwise surprisal of those outputs under a fixed reference. Two curves, opposite directions, and a crossing.
+
+\section{What the crossing might be}
+If interesting output requires enough variety to avoid repetition and enough improbability to avoid the obvious, then it lives near the crossing --- and the crossing is computable.
+
+That is either a useful design target or the reduction of taste to a curve intersection, and which it is depends on a fact not yet in evidence: whether human preference tracks the crossing rather than one quantity alone. Collecting interest ratings across the same sweep settles it. If ratings peak near the crossing, the curve has aesthetic content. If ratings track surprisal alone, then constraint was never about variety and the axiom should be restated as a claim about improbability only.
+
+The same shape governs a practical question elsewhere. Layered constraint stacks used as prompting method are conventionally treated as floors --- more layers, more control. If there is an interior optimum, the layer count is a parameter with a value per generator, and the counterintuitive corollary is that thin specification is optimal for weak receivers. Published results on adding short descriptive metadata to capable and to small systems are consistent with exactly that: modest gains for capable receivers, degradation for small ones as the longer input overwhelms their capacity to attend to the relevant part.
+
+\section{From constraint to specification}
+The second half of the axiom --- constraint \emph{excludes} --- has a consequence for documentation that the aesthetic debate obscures.
+
+Consider two ways to specify the same admissible region. A description picks out what is wanted and leaves the complement unaddressed. A prohibition removes a region and leaves everything else available. When the admissible region is large and irregular, as most design spaces are, enumerating exclusions is shorter than characterising an interior.
+
+Call the quantity constraint per token. The prediction is that prohibitions dominate where the admissible region is large and its complement is small and nameable, while descriptions dominate where the target is small and specific.
+
+The evidence that this is already how practice works is everywhere and unremarked. What actually holds a craft together is negative: lint rules, house prohibitions, review objections, the negative clause in a prompt. Meanwhile every documentation convention is positive --- style guides say what to do, specifications describe intended behaviour, explanations narrate rationale --- and the negative artifacts are treated as secondary to the positive documents they in fact govern.
+
+\section{The document that cannot be written}
+Put the efficiency result together with the transfer problem and something uncomfortable follows.
+
+The claim that understanding cannot be handed over rests on the observation that a competent stranger given the artifact and its documentation produces plausible changes the holder rejects. But if the transferable part of a practice is its exclusion set, then the standard handover package is the wrong document. It conveys purpose and omits boundary.
+
+And the exclusion set is systematically hard to elicit, for a reason that follows from expertise rather than from negligence. The more expert a practitioner, the smaller and more nameable their complement --- they know exactly the few things that must not happen --- and the larger the interior they cannot describe. Their prohibitions feel too obvious to write down. So the most valuable handover document is the one whose contents are invisible to its author, and eliciting it requires a method that surfaces what someone would never think to say.
+
+There is a counter-reading, and it is the strongest objection to the whole line. Prohibitions convey no purpose. A stranger equipped only with an exclusion set avoids errors while producing work that satisfies no goal: coherent and pointless, which may be worse than incoherent and aimed. The discriminating case is the task the exclusion set does not cover, where a prohibition list is silent and a rationale might extend --- which is the unbounded-demand problem arriving from the medium side.
+
+The likely resolution is that the two media do different jobs and both are needed, which is a duller conclusion than either camp wants and is testable in a single experiment: three handover conditions matched on token count --- rationale prose, positive specification, prohibition list --- then a covered task and an uncovered one.
+
+\section{Limitations}
+The entropy--surprisal separation is standard; its application here is a prediction from an axiom, not a finding. No joint sweep is reported, and no preference data exists to decide whether the crossing has aesthetic content.
+
+Negative-prompt practice is suggestive and is not evidence about human handover. No measurement of constraint per token is reported, and no method for eliciting tacit prohibitions is proposed beyond the observation that one is needed.
+
+The reading of Calvino's axiom as a two-quantity claim is ours. Whether it corresponds to what he meant by constraint enabling generation is an interpretation the source does not authorise, and the axiom may concern surprise to a reader rather than any property of an output set --- in which case the separation is correct and the attribution is not.
+
+\section*{References}\small
+\begin{itemize}\setlength\itemsep{0pt}
+\item Hartsoe, Watson. Attention-Tax Semiotics: Cybernetic Operator Pragmatics and the Constellation of Meaning. OPERATION DESCRIBE archive, PAPERS/attention-tax-semiotics.md. 2026. \texttt{[hartsoe2026attentiontax]}
+\item [author unrecorded]. Haunted Machine Criticism Engine. PROGRAMS/haunted.json, after Calvino. 2026. \texttt{[haunted\_program]}
+\item [author unrecorded]. Constraint Transfers Where Theory Does Not. Collision of PROGRAMS/theory.json and PROGRAMS/haunted.json. 2026. \texttt{[pt026\_collision]}
+\end{itemize}\normalsize
+\appendix
+\section{Assembly instrument}
+The exact prompt that assembled this publication is preserved verbatim at
+\texttt{\_PROMPTS/ASSEMBLY\_PROMPT.txt} in the package and is embedded in \texttt{index.html}.
+It is not reproduced here for length. Schema: slipcase/15.55-AM.
+\section{Making history}
+See \texttt{two-curves-of-constraint\_\_MAKING\_HISTORY.txt} and \texttt{000\_\_MAKING\_HISTORY.txt}.
+Argument selection, section order and connective prose were produced by the model named there
+and were not reviewed by a second human reader before packaging.
+\section{Replication path}
+Open \texttt{index.html} from \texttt{file://}. Cards, sources, graph, ghosts and this paper are
+embedded. \texttt{000\_\_REBUILD.txt} states how to regenerate every derived view from the cards alone.
+\vfill\noindent\includegraphics[width=13mm]{MARK.svg}\\
+\footnotesize Working Paper \textperiodcentered{} AI-augmented research process.
+Evidence, prompts and making history preserved. Checkpoint SLIPCASE-OPERATION-DESCRIBE-20260819.
+\end{document}

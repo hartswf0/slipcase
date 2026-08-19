@@ -1,0 +1,1681 @@
+{
+ "checkpoint": "SLIPCASE-OPERATION-DESCRIBE-20260819",
+ "schema": "slipcase/15.55-AM",
+ "date": "2026-08-19",
+ "researcher": "Watson Hartsoe",
+ "model": "Claude (Opus 4.8 / Fable 5), Claude Code",
+ "counts": {
+  "zettels": 174,
+  "md_mirrors": 174,
+  "root_cards": 174,
+  "relations": 866,
+  "ghosts": 109,
+  "papers": 9,
+  "files": 415
+ },
+ "identity_rule": "sha256 of exact payload bytes",
+ "pdf_status": "PENDING \u2014 no TeX engine present at build time",
+ "human_review": "NONE",
+ "files": {
+  "000__PROMPTS.txt": {
+   "bytes": 382,
+   "sha256": "8de47f6cb3cbc2ac2269cec41505f3c7df6bf0c03070ea0f8ad898f40e35b984"
+  },
+  "000__MAP.txt": {
+   "bytes": 5323,
+   "sha256": "d67493268342badf66be3c5e474f9f6c67a58896da13a3a4a050fd8abb7d4b9c"
+  },
+  "039__the-red-team-demands-the-archive-fix-its-unenforced-gove__hartsoe-2026__FORAGE-OD-039__from-operation-describe.txt": {
+   "bytes": 6228,
+   "sha256": "722853a80c37f9f0c82214c6c41a6c0a79dc3cbb614356caace1f46470a9cf66"
+  },
+  "012__the-archive-calls-chain-of-thought-decorative-in-one-cla__hartsoe-2026__FORAGE-OD-012__from-operation-describe.txt": {
+   "bytes": 6298,
+   "sha256": "c506ac1569b762f34a01dfb5270625d36a14a927c09cf4bc3d3d5a356ae06e8b"
+  },
+  "088__the-first-storyteller-was-a-machine-operator-literature__calvino-1986__FORAGE-PA-004__from-operation-describe.txt": {
+   "bytes": 5699,
+   "sha256": "2e222749a5cbf9abdb2aad8e46652888a6f0b4e9b41dd0338393fc8e57609f31"
+  },
+  "066__mitchell-s-imagetext-built-the-latent-space-as-the-compo__mitchell-1994__FORAGE-ZP-005__from-operation-describe.txt": {
+   "bytes": 5671,
+   "sha256": "8ee2e73685b97aa348010d05da10bf0bfc4184d151ac8131e7e7b1119c0cf385"
+  },
+  "033__the-archive-s-ryle-chapter-and-its-operator-definition-m__hartsoe-2026__FORAGE-OD-033__from-operation-describe.txt": {
+   "bytes": 6673,
+   "sha256": "a5b7f285990b661f5a3820449536dc946412f32d0ec75d73a1488e2b132b9c0f"
+  },
+  "131__reversing-the-arrow-turns-the-human-hand-into-a-measurin__eos-program__FORAGE-PT-011__from-operation-describe.txt": {
+   "bytes": 4030,
+   "sha256": "7c34e0bc6a24a64954373bf9623b4ca9834bc8d5e26f6812687707d98c68f928"
+  },
+  "065__krieger-s-natural-sign-inverted-platform-realism-as-nost__krieger-1992__FORAGE-ZP-004__from-operation-describe.txt": {
+   "bytes": 6335,
+   "sha256": "0c8c5ce5c076f9192b5876b61ece9337cdd9074c2146182024daa36bc2ffddec"
+  },
+  "051__the-archive-always-goes-first-thick-prompting-as-pressur__watson-2026__FORAGE-DD-003__from-operation-describe.txt": {
+   "bytes": 5946,
+   "sha256": "1d995e134e9297a23f26014e7c31c5982276a8682b5ac64a16908c903bc7fb97"
+  },
+  "104__opek-s-strongest-machinery-is-a-chiasmus-sequential-medi__opek-2026__FORAGE-PG-009__from-operation-describe.txt": {
+   "bytes": 6418,
+   "sha256": "cb86a862b4af6de3b376b7dfde236a4a0a1308fe45f92abb5c0ba1d8465c1aa0"
+  },
+  "093__bateson-s-circuit-at-the-prompt-box-the-loop-learns-even__bateson-1972__FORAGE-PA-009__from-operation-describe.txt": {
+   "bytes": 6776,
+   "sha256": "3a4ac66ff2af226f5326cbc9b38708998e7777a2ae00724f0cb43310317b0913"
+  },
+  "159__redistribution-implies-a-recipient-and-diffusion-implies__thompson-1980__FORAGE-PT-039__from-operation-describe.txt": {
+   "bytes": 5357,
+   "sha256": "166bffc16dfd29748733fd42be3ca646a24c34d2adb121ffff7c25669ec8a783"
+  },
+  "061__the-politics-of-inhabitation-affordances-and-what-the-sh__davis-2015__FORAGE-DD-013__from-operation-describe.txt": {
+   "bytes": 7264,
+   "sha256": "f65721fc1d15bbf147f2cc8370eb9ee5e5e5c3a285281c7cb56455a8084a965c"
+  },
+  "098__the-lifecycle-protocol-gives-theories-a-death-but-death__meta-2026__FORAGE-PG-003__from-operation-describe.txt": {
+   "bytes": 5222,
+   "sha256": "9974ae53a52e2d9ac52d54ce8f4e12034e3d090c8790b4f67232b0baf113909d"
+  },
+  "041__the-herbarium-is-the-archive-s-missing-ancestor-a-dried__ogilvie-2006__FORAGE-DX-001__from-operation-describe.txt": {
+   "bytes": 5996,
+   "sha256": "b0e5eac0ecf0d15579888ff5975e0963d23e176786acd9946d56f6517e841de6"
+  },
+  "105__seven-theories-across-all-four-lineages-independently-fo__dse-2026__FORAGE-PG-010__from-operation-describe.txt": {
+   "bytes": 6843,
+   "sha256": "c2d39185de6e09b5dfd349c213cb5b7f39156cace32c168bf1bdcc190bf9a950"
+  },
+  "137__if-constraint-enables-generation-rather-than-only-limiti__haunted-program__FORAGE-PT-017__from-operation-describe.txt": {
+   "bytes": 4017,
+   "sha256": "364bd295bdbc213e36e5d0badda37487cafef7df84f824f48bab85a81dee26e1"
+  },
+  "063__bajohr-s-operative-ekphrasis-the-text-image-collapse-is__bajohr-2024__FORAGE-ZP-002__from-operation-describe.txt": {
+   "bytes": 5811,
+   "sha256": "55540e6e8e7e78de4d0c72148411d35140422af5d4db2cfe8e98edae4a2c657d"
+  },
+  "031__on-a-hosted-api-the-description-under-test-is-never-alon__hartsoe-2026__FORAGE-OD-031__from-operation-describe.txt": {
+   "bytes": 5406,
+   "sha256": "dcd48c0a91c96a675bd5906cb2807132c5f4cebcd06bacfc3a502e6226e4261e"
+  },
+  "index.html": {
+   "bytes": 1529236,
+   "sha256": "af7ac9dac718f8a102a3a44c75792a714e9b1c16076f48cc1e6f04f73fe032a9"
+  },
+  "149__a-reasoning-trace-supplies-serial-compute-and-semantic-s__fillertokens-unverified__FORAGE-PT-029__from-operation-describe.txt": {
+   "bytes": 4486,
+   "sha256": "0d9b6c81440791b81acc8d233823968c917e552f8b3d368f3afb2d3ac8280883"
+  },
+  "025__a-law-with-a-numeric-threshold-and-no-measurement-proced__hartsoe-2026__FORAGE-OD-025__from-operation-describe.txt": {
+   "bytes": 5933,
+   "sha256": "1df9ec89cb11e971898da430de1a47c9091bf4c20a48eaa5e9ac416a21bae138"
+  },
+  "139__path-integrity-is-satisfiable-by-a-system-that-logs-a-ti__memex-program__FORAGE-PT-019__from-operation-describe.txt": {
+   "bytes": 4496,
+   "sha256": "e3e25c85b9561cf8266175a4abc6e8d25799cdfe20221c55f46e7a04d8f192f4"
+  },
+  "000__START_HERE.txt": {
+   "bytes": 837,
+   "sha256": "e274211b6a35132c84277d975e4863a2005f4ccf6dc1def43467a1b5a3219ba4"
+  },
+  "027__the-archive-holds-naur-as-an-ancestor-while-building-the__hartsoe-2026__FORAGE-OD-027__from-operation-describe.txt": {
+   "bytes": 7147,
+   "sha256": "d8981b2305d5e95f7630ce564c4a8dfea8a4ce644c00d1c86447017965e04de9"
+  },
+  "157__belief-revision-has-three-operations-and-natural-languag__alchourron-1985__FORAGE-PT-037__from-operation-describe.txt": {
+   "bytes": 4999,
+   "sha256": "74b26847c9719cc9f1e34d8b1ca56a6a412237dff783858ff7a12f25d0ea07a5"
+  },
+  "108__the-salt-water-test-consequence-propagation-is-the-proof__worldtext-formal-engine__FORAGE-WT-003__from-operation-describe.txt": {
+   "bytes": 5820,
+   "sha256": "2b7b84ef79c87391c959ac776f785b82dd1f82e6e700d7f7ec1d86553c5e7a09"
+  },
+  "074__latent-space-as-operative-quasi-place-place-ness-as-a-co__opdescribe-quasiplace202__FORAGE-LS-001__from-operation-describe.txt": {
+   "bytes": 5231,
+   "sha256": "b3a487ad4e144a6d9f87f5f3d8caad74f53b84ec0229daead9e3c69e3da8faf6"
+  },
+  "000__BIBLIOGRAPHY.html": {
+   "bytes": 77095,
+   "sha256": "81bb52a055c5fb6b6e57531a1f9f9d89129d24ba3f5bc90694d04e67dba18d83"
+  },
+  "067__thick-prompting-geertz-s-thick-description-as-structural__geertz-1973__FORAGE-ZP-006__from-operation-describe.txt": {
+   "bytes": 6721,
+   "sha256": "260e2c698dd95d3962ccce5bf41ed2a8c956c8d799fc076155ab8d323a1a8367"
+  },
+  "148__correct-is-the-only-verb-that-appears-in-both-the-posses__ryle-1949__FORAGE-PT-028__from-operation-describe.txt": {
+   "bytes": 4841,
+   "sha256": "37448485508fa57c496bc5dcc0b57616c73eb0e1f5c71542163e8ab63c46281f"
+  },
+  "016__the-archive-s-clearest-illustration-of-the-descriptive-i__hartsoe-2026__FORAGE-OD-016__from-operation-describe.txt": {
+   "bytes": 5747,
+   "sha256": "c85361402aac8fd11cf92ecdd4972122a7649bc2428b1d1b672a24a5f594f70b"
+  },
+  "095__641-love-stories-vs-samantha-s-641-loves-the-dataset-as__jonze-2013__FORAGE-PA-011__from-operation-describe.txt": {
+   "bytes": 6249,
+   "sha256": "04c7afb7adbb017a5513c27bb3c8b8743b754292d04f98931602ad5be850a0db"
+  },
+  "ZETTELS.txt": {
+   "bytes": 1018982,
+   "sha256": "cdad107a147007f9ae65d085549c8e9a960dbd9ceb21310369b8ab897ab83788"
+  },
+  "038__temporal-questions-are-a-plurality-not-a-majority-but-th__hartsoe-2026__FORAGE-OD-038__from-operation-describe.txt": {
+   "bytes": 7226,
+   "sha256": "1a636b2d500fbf48a76c50c203f321542129dc23377290ace59bf95dc7afe6a8"
+  },
+  "058__a-world-is-an-image-with-rules-memory-and-consequence-th__hartsoe-2026__FORAGE-DD-010__from-operation-describe.txt": {
+   "bytes": 5862,
+   "sha256": "177e96ee9266ba3fe15e441fdb5fa423fb64308f80bbb035ba71f1e3f9b111ec"
+  },
+  "081__surplus-realities-generated-worlds-carry-the-aesthetic-m__opdescribe-cosmos2026__FORAGE-LS-008__from-operation-describe.txt": {
+   "bytes": 5045,
+   "sha256": "9117eda33fdb05addf59789f86b869b184f308d14d02b79ae7a10f733e7be364"
+  },
+  "115__the-anomaly-of-return-same-worldness-is-decided-by-the-b__anomaly-of-return-2026__FORAGE-WT-010__from-operation-describe.txt": {
+   "bytes": 5959,
+   "sha256": "bf2533381b07623df002fc37312d69e5d3220b8bf262dd855023daedbf647e14"
+  },
+  "097__the-composition-protocol-licenses-ordered-sequences-and__meta-2026__FORAGE-PG-002__from-operation-describe.txt": {
+   "bytes": 4978,
+   "sha256": "fd67df4b734e84b729dc4d05e42067daa46dee07f206b62a8968f178069b8d08"
+  },
+  "118__the-control-surface-ten-hard-rules-nineteen-diagnostic-p__control-surface-2026__FORAGE-WT-013__from-operation-describe.txt": {
+   "bytes": 6151,
+   "sha256": "38f27f29f7b81e637bf77f21f177fcfb61d57127b5d93ee00aafa8e98fa2c542"
+  },
+  "138__calling-ai-an-intensified-symbolic-control-apparatus-is__thick-program__FORAGE-PT-018__from-operation-describe.txt": {
+   "bytes": 4235,
+   "sha256": "a97829e8b2570b2e959e7a1a9a15d24362f0b5b81a4edbb45a02b06aebbc29e2"
+  },
+  "163__naur-s-modification-test-and-ryle-s-transfer-test-are-th__naur-1985__FORAGE-PT-043__from-operation-describe.txt": {
+   "bytes": 4715,
+   "sha256": "9e84ff4bb7694a6cb87578b185169cf723ce341fa861c61dc1f7ac2285de732c"
+  },
+  "077__diffractive-optics-for-interpretability-a-three-way-taxo__opdescribe-protocol2026b__FORAGE-LS-004__from-operation-describe.txt": {
+   "bytes": 4561,
+   "sha256": "5e696690fb778c1e425ea735f02fb188e86900a96c542e1622e91d66e28f9bc9"
+  },
+  "085__three-poems-three-media-regimes-the-ladder-from-arrangem__bajohr-2024__FORAGE-PA-001__from-operation-describe.txt": {
+   "bytes": 5612,
+   "sha256": "003eefa9aafa1190fe4f6f50a9967ec236726152c48d484422d66c207db081a4"
+  },
+  "059__the-b-flix-loop-homeric-text-compiled-to-deterministic-d__hartsoe-2024__FORAGE-DD-011__from-operation-describe.txt": {
+   "bytes": 7162,
+   "sha256": "289a98f06bff05ea24df440cfc405d1dd06eea3d9e16f1bbf774513616bb8882"
+  },
+  "129__weakens-the-distinction-at-the-level-of-technical-substr__opek-program__FORAGE-PT-009__from-operation-describe.txt": {
+   "bytes": 3970,
+   "sha256": "d0faf2512f4cbf3046e0773228d957b2b2e1fcefd7e8ec4166fce822e07d7afa"
+  },
+  "167__paraphrase-sensitivity-is-already-a-measurement-of-carry__paraphrase-sensitivity-u__FORAGE-PT-047__from-operation-describe.txt": {
+   "bytes": 4861,
+   "sha256": "05a0711abbae45f78ecf9cc96b45fd85115258d1a8a221d9280d02f696346ad4"
+  },
+  "000__INDEX.txt": {
+   "bytes": 41355,
+   "sha256": "0452e17ae557822bf8724a927057173a6df27e5b71acaaa8443411748e98474d"
+  },
+  "NETWORK.html": {
+   "bytes": 75370,
+   "sha256": "ac39ceeb1376c3b8558c0e401e189ac34b095ef14884df4d7fcd345c7355a604"
+  },
+  "026__the-archive-built-a-730-line-feedback-log-to-satisfy-its__hartsoe-2026__FORAGE-OD-026__from-operation-describe.txt": {
+   "bytes": 6016,
+   "sha256": "ed0c44d734f0eab11d6eff5fdbf23c3269201a8eac757b9e5d4c07fc3bb80b1d"
+  },
+  "019__descriptions-decay-and-one-decay-rate-would-unify-all-th__shanahan-2023__FORAGE-OD-019__from-operation-describe.txt": {
+   "bytes": 6580,
+   "sha256": "c8808ad7c2b98935e58e18eb5d5cf8afd6574880c7e9193d2c782dfcf3e01270"
+  },
+  "029__geertz-s-culture-as-control-mechanism-operates-over-a-li__hartsoe-2026__FORAGE-OD-029__from-operation-describe.txt": {
+   "bytes": 6225,
+   "sha256": "e7a8b3e88d1c8922f38f6ff7cc61e71ab11146e7675f7c93be5436767d5f9667"
+  },
+  "087__the-multimodal-pictorial-third-text-and-image-as-two-ent__bajohr-2024__FORAGE-PA-003__from-operation-describe.txt": {
+   "bytes": 4918,
+   "sha256": "3feeeed6e12617e5b94095e3a07a1249b68576c2ae2bda558579b4a8aaf55aff"
+  },
+  "ZETTELS.jsonl": {
+   "bytes": 2630369,
+   "sha256": "6e9eeb7a7c3aafc83ed2aeb629ac56f7bcd2affdec519e516d508bebb66aaa5a"
+  },
+  "121__indefinite-is-the-load-bearing-word-in-concept-possessio__rcp-program__FORAGE-PT-001__from-operation-describe.txt": {
+   "bytes": 3803,
+   "sha256": "3219aeff117738b6ba1b2609024a421bfd31583ea0ca9ef0843ccc4dba098e63"
+  },
+  "114__titan-forge-five-stage-video-extraction-with-patch-trigg__titan-forge-2026__FORAGE-WT-009__from-operation-describe.txt": {
+   "bytes": 6282,
+   "sha256": "1635ce7608761d8a73082ef5083775239e84d8c059ec361e2d19d9f6bd76b7f1"
+  },
+  "092__generative-ai-as-cut-performing-apparatus-barad-s-agenti__barad-2007__FORAGE-PA-008__from-operation-describe.txt": {
+   "bytes": 6524,
+   "sha256": "66571ea8cef68cb43be7d23b93d5394e21894da97f38a5e6d6c64456f9ae91dc"
+  },
+  "110__the-drowned-parish-entry-a-world-as-four-constraint-kind__vertical-axis-2026__FORAGE-WT-005__from-operation-describe.txt": {
+   "bytes": 5582,
+   "sha256": "aefe4c67d429db296bc8593f6f9639b5941b5acabebf97d9baab4c9d94fe6035"
+  },
+  "082__synthetic-place-theory-seven-bound-elements-metastabilit__opdescribe-synthplace202__FORAGE-LS-009__from-operation-describe.txt": {
+   "bytes": 5386,
+   "sha256": "1b5344567fd6375601082c4fb1630adc2c975f8785fa58f382e6d291599fe821"
+  },
+  "111__the-riverbed-field-engine-six-hydrologic-dynamics-compil__riverbed-field-engine-20__FORAGE-WT-006__from-operation-describe.txt": {
+   "bytes": 6029,
+   "sha256": "7dce97c914a6c2aa8b844f33f263e5d866b358d5bae3731b7a1c45a2e3c9c1df"
+  },
+  "125__rescues-implies-something-arrives-intact-and-nothing-spe__mot-program__FORAGE-PT-005__from-operation-describe.txt": {
+   "bytes": 3471,
+   "sha256": "99e79b470a278ca8ef702beb4bf52e20c32de1b06ab930324358d11e44cfe0b8"
+  },
+  "070__the-v-m-c-mapping-ha-schmidhuber-s-vision-memory-control__ha-2018__FORAGE-ZP-009__from-operation-describe.txt": {
+   "bytes": 6857,
+   "sha256": "776a417440a4229486191c686a258d22c1ea8d12eeb7410a87f23872ff7c9537"
+  },
+  "080__latent-bricolage-and-epistemic-humility-legacy-spatial-t__opdescribe-bricolage2026__FORAGE-LS-007__from-operation-describe.txt": {
+   "bytes": 5176,
+   "sha256": "42f2fb996ac1facf3f44fce2ac11d21c8889a70258bf6793a499b1af4e655f6b"
+  },
+  "053__urn-vs-shield-two-governing-images-of-ekphrasis-and-less__lessing-1766__FORAGE-DD-005__from-operation-describe.txt": {
+   "bytes": 5551,
+   "sha256": "1822ce51ecbae8dab2dd5047cbeb67ac55b4b39a8a134429174f994e8ec6708a"
+  },
+  "000__RETURN_PATH.txt": {
+   "bytes": 962,
+   "sha256": "b281df9401fa922e49ef77b040599d6839576e5d28524c0b666a0d4b4af831c7"
+  },
+  "045__the-observer-declaration-converts-von-foerster-s-ethics__foerster-1992__FORAGE-DX-005__from-operation-describe.txt": {
+   "bytes": 6335,
+   "sha256": "fa61b6d1f70cfa7569f2c8f7d2b51eca8a615fdc4ba5a56f54c7c264aee259c7"
+  },
+  "158__repeated-successful-reference-shortens-the-description-s__clark-1986__FORAGE-PT-038__from-operation-describe.txt": {
+   "bytes": 5113,
+   "sha256": "c220c305998b5425c53f922447d15df5d1531eb005056c2191a9c4b5182e124b"
+  },
+  "046__the-ldraw-type-1-line-is-the-corpus-s-only-description-w__ldraw-1993__FORAGE-DX-006__from-operation-describe.txt": {
+   "bytes": 6863,
+   "sha256": "8556ebceff9e26e7ad5f3a8821eec40f58b15fb8769885376a3a89fadef9cc61"
+  },
+  "170__the-signature-of-answerability-is-reversal-a-change-that__dse-program__FORAGE-PT-050__from-operation-describe.txt": {
+   "bytes": 4811,
+   "sha256": "f67d7f393279ae17cabcea21789be7e76440ca50ec51d43ac4f3b150f9a79e29"
+  },
+  "021__the-archive-s-scale-case-violates-the-non-interference-a__viljoen-2021__FORAGE-OD-021__from-operation-describe.txt": {
+   "bytes": 5978,
+   "sha256": "682f6e298c6a2c9187c426fbea42a40ce8916efd7a516b60a902932ccad1e43f"
+  },
+  "091__computers-as-media-of-commitment-and-the-generative-retu__winograd-1986__FORAGE-PA-007__from-operation-describe.txt": {
+   "bytes": 6209,
+   "sha256": "e1af49676330f0851830dee9e19f1760a9f17b42be17d870303a122e85b71b17"
+  },
+  "152__legal-procedure-is-the-worked-multiply-traced-case-and-i__adversarial-procedure-un__FORAGE-PT-032__from-operation-describe.txt": {
+   "bytes": 5218,
+   "sha256": "5066f0afe9865419d22a88c2026aca91e30e24c87d424d6e5a2e639f846722ce"
+  },
+  "024__the-one-routing-system-with-complete-logs-no-irb-and-no__hartsoe-2026__FORAGE-OD-024__from-operation-describe.txt": {
+   "bytes": 6589,
+   "sha256": "97bf65b0955e8d2a9c0525616cb3117fdaac20959319f137eb44590dd839b873"
+  },
+  "049__the-latent-space-of-an-image-model-is-mitchell-s-imagete__bajohr-2024__FORAGE-DD-001__from-operation-describe.txt": {
+   "bytes": 5650,
+   "sha256": "02eab1d5b1d691395a341bf73d329306d570d85b0a8e547d215aff82220f8f49"
+  },
+  "096__the-corpus-s-first-law-is-an-ordering-constraint-on-arti__meta-2026__FORAGE-PG-001__from-operation-describe.txt": {
+   "bytes": 5374,
+   "sha256": "d220eef1f7820417e1c1cafbe92c40a84342854474d1e603ed540539d100f454"
+  },
+  "007__boosting-description-tokens-alone-with-the-name-excluded__chen-2026__FORAGE-OD-007__from-operation-describe.txt": {
+   "bytes": 4997,
+   "sha256": "e79cc32e9cb855b96db2211cf35ea869985b5ffeab53a8490e28e7ce6d709421"
+  },
+  "113__continuity-debt-a-three-debtor-economics-of-coherence-an__continuity-debt-2026__FORAGE-WT-008__from-operation-describe.txt": {
+   "bytes": 6178,
+   "sha256": "bfb56bc7de05fdd669c8b6c7736a8830c6481784114344b994f70fbdc30f8e5b"
+  },
+  "READER.html": {
+   "bytes": 1529216,
+   "sha256": "0e8f7a9c2822fde2063d7704e3ed666aae2ff0a4b175f7e98e5352f9f11220e3"
+  },
+  "034__a-description-that-is-never-acted-on-still-changes-which__wu-2026__FORAGE-OD-034__from-operation-describe.txt": {
+   "bytes": 6368,
+   "sha256": "c3a361fe09cf2299fab356975bf1bf25bc16e14a73183a42b86af6271b6f2165"
+  },
+  "146__naur-says-the-theory-dies-with-the-team-and-calvino-says__pt026-collision__FORAGE-PT-026__from-operation-describe.txt": {
+   "bytes": 5014,
+   "sha256": "44440e042b2de770a63e282523d389cec5ddeb7c2cbc881caf71cdaecb867aea"
+  },
+  "060__the-prompt-is-not-sovereign-control-signal-buried-law-an__wiener-1948__FORAGE-DD-012__from-operation-describe.txt": {
+   "bytes": 6352,
+   "sha256": "aa86852591c31cbecec2dacbfb26ce8052277e53d219a87ab4d0dfd653ce85e5"
+  },
+  "008__shuffling-the-tool-list-without-changing-a-single-word-d__huang-2024__FORAGE-OD-008__from-operation-describe.txt": {
+   "bytes": 5477,
+   "sha256": "522208ad3745512af6823cbc25537ed0f58fa7aa7ac92bac64505405118058aa"
+  },
+  "002__the-measure-the-archive-lacks-already-exists-as-a-single__wu-2026__FORAGE-OD-002__from-operation-describe.txt": {
+   "bytes": 5356,
+   "sha256": "bc6980dc157f85089cdf0d5beba1809e4acccd57e0d508fe22e1a4c221de3a25"
+  },
+  "147__an-audit-trail-records-the-path-taken-through-what-was-a__pt027-collision__FORAGE-PT-027__from-operation-describe.txt": {
+   "bytes": 4645,
+   "sha256": "fa51c4ea220128e039b6101dc5780189a059a3e50f5354762811ad5d6b3d556a"
+  },
+  "015__the-archive-promoted-the-case-with-the-best-experimental__hartsoe-2026__FORAGE-OD-015__from-operation-describe.txt": {
+   "bytes": 5247,
+   "sha256": "6fa46c5ca8fd6d5f8f7936fe4c5b8ef51ebbfd0baed8b29924ac6e5d64ce71c2"
+  },
+  "151__if-an-instrument-that-never-concludes-still-slows-the-op__uam-program__FORAGE-PT-031__from-operation-describe.txt": {
+   "bytes": 4387,
+   "sha256": "62a47617d58be0d804b44eb81f35a9a270b39baee152e3a8b86953439e913386"
+  },
+  "086__the-chiasmus-sequential-pragmatics-without-semantics-con__bajohr-2024__FORAGE-PA-002__from-operation-describe.txt": {
+   "bytes": 5322,
+   "sha256": "4ee955eb3ffb6ac60b823e27094ca03a229fd3020534c9a5a043060032bc4463"
+  },
+  "072__the-non-sovereign-prompt-system-prompts-as-the-constitut__hartsoe-bolter-v3-hidden__FORAGE-ZP-011__from-operation-describe.txt": {
+   "bytes": 6944,
+   "sha256": "af119fe1a87e6cb5a6ac2e49263de578448235bd21ef57803e5c44e2582165d4"
+  },
+  "075__the-autographic-audit-goodman-s-forgery-distinction-as-a__opdescribe-quasiplace202__FORAGE-LS-002__from-operation-describe.txt": {
+   "bytes": 5352,
+   "sha256": "0d6de59b172898fc821e56e3ef5e18e6ac34b8057271cea2ce2a5257d5072c86"
+  },
+  "166__fidelity-requires-an-append-only-hash-chained-log-commit__ct-rfc6962__FORAGE-PT-046__from-operation-describe.txt": {
+   "bytes": 5156,
+   "sha256": "1c7623b6582bea7fa8f512c052be0f3dbc38305972d255c4f5f148be9fac21aa"
+  },
+  "068__the-loop-is-the-operative-unit-the-image-is-feedback-not__hartsoe-bolter-v3-2026__FORAGE-ZP-007__from-operation-describe.txt": {
+   "bytes": 6559,
+   "sha256": "20df74db8ccdb75b61f34074363a0d2fb09774dc6bc5d1788251e69a42566b2e"
+  },
+  "048__ai-safety-is-the-linnaean-museum-and-jailbreaking-is-the__daston-1998__FORAGE-DX-008__from-operation-describe.txt": {
+   "bytes": 7755,
+   "sha256": "f91dffc72bd22e9cfbf5a9128957244ce38a8b28d624cd348fadeb671890e02e"
+  },
+  "135__commitment-needs-a-party-who-can-be-held-so-the-design-a__dac-program__FORAGE-PT-015__from-operation-describe.txt": {
+   "bytes": 4120,
+   "sha256": "c551847fd256b80d74704ff89385f6e71e4074ba17fee528b08b42edf6a907e7"
+  },
+  "018__the-encounter-trace-can-evidence-routing-but-not-steerin__hartsoe-2026__FORAGE-OD-018__from-operation-describe.txt": {
+   "bytes": 6156,
+   "sha256": "f0f96cc2c329f55a106ebd83070a4050090dd9096e81ba1c992d24aa0acfc200"
+  },
+  "169__software-engineering-already-occupies-the-quadrant-schol__code-review-practice__FORAGE-PT-049__from-operation-describe.txt": {
+   "bytes": 5076,
+   "sha256": "fbe5d541d07ce5d13909b9110795fb62eb3e036943b77e2e9783cefd0aff6a10"
+  },
+  "020__the-slipcase-corpus-and-the-operation-describe-corpus-re__hartsoe-2026__FORAGE-OD-020__from-operation-describe.txt": {
+   "bytes": 6044,
+   "sha256": "01fabc50a6e83f574ee2572650772e553d978444828776115156424f01aabca2"
+  },
+  "040__93-6-of-sources-unprocessed-82-7-of-links-orphaned-107-u__hartsoe-2026__FORAGE-OD-040__from-operation-describe.txt": {
+   "bytes": 7875,
+   "sha256": "e6740355e5936d6efbd3f044f4ffb33d9d30e43c2ad0fad3362acb8ec5c81f05"
+  },
+  "143__if-meaning-survives-only-as-inscribed-consequence-then-d__pt023-collision__FORAGE-PT-023__from-operation-describe.txt": {
+   "bytes": 4575,
+   "sha256": "3eed9e019ada75b8a66d4c21bb168debf2b21e7c8c9f9cfba44b6126d0256e49"
+  },
+  "056__war-is-the-plot-the-shield-is-the-counter-plot-macro-mic__taplin-1980__FORAGE-DD-008__from-operation-describe.txt": {
+   "bytes": 5992,
+   "sha256": "7b50faa6f9a7707f757366045b73c0bc8dc6821622e6cac62448892bf433d83f"
+  },
+  "ZETTELS.json": {
+   "bytes": 2651425,
+   "sha256": "961d068c84b22bf62999fab66ee2bee9fe547eddc8359919fb96d401c3aa8b44"
+  },
+  "112__epistemic-debt-and-the-fragile-expert-the-operator-side__epistemic-debt-2026__FORAGE-WT-007__from-operation-describe.txt": {
+   "bytes": 5848,
+   "sha256": "01e50db275ddbf08189349f68781b24baf612e3ae1cbeea96d5aed545feeff94"
+  },
+  "000__RESOURCES.txt": {
+   "bytes": 957,
+   "sha256": "ddef7a9d56f38c4d70160f1c09d2d3601a3a308531981f433687ca491f5cb3d2"
+  },
+  "043__the-latent-third-paper-stakes-the-paragone-s-resolution__louvel-2018__FORAGE-DX-003__from-operation-describe.txt": {
+   "bytes": 6460,
+   "sha256": "e6a571f644b7c58be57bb9d2729b6d0ad791fdb7576b552f867ebeef0b42d5a2"
+  },
+  "005__descriptions-become-operative-exactly-where-the-name-sto__wu-2026__FORAGE-OD-005__from-operation-describe.txt": {
+   "bytes": 5109,
+   "sha256": "ee3f9fbb3d3505d7d3f1a7f6afa8be99307cb3108bd27787c7908412bd3a4a1f"
+  },
+  "103__uam-forbids-what-rcp-asserts-and-tenne-implements-a-thre__uam-2026__FORAGE-PG-008__from-operation-describe.txt": {
+   "bytes": 6974,
+   "sha256": "43eb30ecbb19e744acbeb03aacdffe65884aab311dc2f8630788a2f7de6f179f"
+  },
+  "134__in-a-list-of-seven-interpretive-categories-factual-aura__crn-program__FORAGE-PT-014__from-operation-describe.txt": {
+   "bytes": 3863,
+   "sha256": "80eb33ae16aaede20c302b191ac440615c8df00ce700d722920eb5ad7552345e"
+  },
+  "156__a-learned-cross-modal-correspondence-is-a-projection-rul__opek-program__FORAGE-PT-036__from-operation-describe.txt": {
+   "bytes": 5191,
+   "sha256": "5e057222ceebbc8bc3eadb541ac8ba27508a4f16491194a508a7b47d48a8d585"
+  },
+  "122__if-logical-order-is-not-discovery-order-then-the-sequenc__argue-program__FORAGE-PT-002__from-operation-describe.txt": {
+   "bytes": 3786,
+   "sha256": "03cc30a33e214cad96def0787443974be0802ad0c79cc1ace260447f72c90052"
+  },
+  "001__the-central-metric-of-operative-description-subtracts-tw__hartsoe-2026__FORAGE-OD-001__from-operation-describe.txt": {
+   "bytes": 5284,
+   "sha256": "c00ee35f5334334f4387bb3f42be51e9a8ede925a2ce76739d41593898e5a4d7"
+  },
+  "000__OPEN_EDGES.txt": {
+   "bytes": 7834,
+   "sha256": "f1c105a9d8a2bb8de0925a0a021ed3ffaf6bc083b15f2a59acf8103ca09481c2"
+  },
+  "144__the-corpus-contains-two-geertzes-because-culture-as-prog__pt024-collision__FORAGE-PT-024__from-operation-describe.txt": {
+   "bytes": 4594,
+   "sha256": "6e97f498cb3bdf056a82d395e027fffa6ad99522134efbb618ddd1b975804d27"
+  },
+  "073__homer-as-generative-system-parry-lord-oral-formulaic-com__lord-1960__FORAGE-ZP-012__from-operation-describe.txt": {
+   "bytes": 7173,
+   "sha256": "aadc1eaf30b57ae09944fb137b73291628b2bd2b9d9d8afa7067ae048fe25885"
+  },
+  "090__breakdown-reveals-the-structure-of-use-the-broken-hammer__winograd-1986__FORAGE-PA-006__from-operation-describe.txt": {
+   "bytes": 5478,
+   "sha256": "804cfec1f0f4d78898aad1b93893801793f225623dde98785756092d115c0ac0"
+  },
+  "117__the-causal-worldtext-runtime-tripartite-raw-schema-wiki__causal-worldtext-runtime__FORAGE-WT-012__from-operation-describe.txt": {
+   "bytes": 6371,
+   "sha256": "4b71a1bd99e875a97d55ce150b5066744ac861790c246d87c83c5e5d039704ab"
+  },
+  "013__the-archive-s-operator-tuple-cannot-represent-an-operato__hartsoe-2026__FORAGE-OD-013__from-operation-describe.txt": {
+   "bytes": 5147,
+   "sha256": "40f631fb72939dc016fb06866d83d7851ddb57643704593e9fc5601ce29beb2e"
+  },
+  "CARDS.html": {
+   "bytes": 223234,
+   "sha256": "228ad1e359034a3c32d286de00c3faf6e54f7afcaae395fd64e63e1c2a7f0d85"
+  },
+  "044__hallucination-as-double-bind-the-corpus-s-one-mechanisti__bateson-1956__FORAGE-DX-004__from-operation-describe.txt": {
+   "bytes": 6795,
+   "sha256": "58f327c86fc13422b479df4cf5e415ca2d6f5190630b2f2d4cc552f7a8dfd4f3"
+  },
+  "000__BIBLIOGRAPHY.txt": {
+   "bytes": 74315,
+   "sha256": "4cfbe9084caa806433d2c830c855e8d4cbc4f5610674c740f628ac4e7a9dc440"
+  },
+  "078__three-field-devices-for-latent-terrain-synthetic-probes__opdescribe-protocol2026c__FORAGE-LS-005__from-operation-describe.txt": {
+   "bytes": 5243,
+   "sha256": "5d9baa35b79576d5006ab5dfd91a0a091001137ddba68f3606302261974c5ccf"
+  },
+  "064__the-concealment-genealogy-spitzer-heffernan-narrowed-ekp__webb-1999__FORAGE-ZP-003__from-operation-describe.txt": {
+   "bytes": 5989,
+   "sha256": "a55bf67c09892f7a672f658c93a18dc3fef3590ac10616c3c4222dd40038b6ea"
+  },
+  "042__the-bio-inference-paper-smuggles-one-falsifiable-claim-i__stephens-2010__FORAGE-DX-002__from-operation-describe.txt": {
+   "bytes": 6601,
+   "sha256": "c00502adce117a44954dea071b33527e9af42222718a3d543ea3066056eb1eeb"
+  },
+  "102__six-theories-type-prompt-six-incompatible-ways-instructi__crn-2026__FORAGE-PG-007__from-operation-describe.txt": {
+   "bytes": 6102,
+   "sha256": "38fee90bf64e592de93a9b7e83de9efa2ffbb1ced0f5b873fbc324ddfbb92dd9"
+  },
+  "006__the-archive-s-chapter-one-predicts-that-its-chapter-thre__hartsoe-2026__FORAGE-OD-006__from-operation-describe.txt": {
+   "bytes": 4974,
+   "sha256": "2c6754f919d70dce51ebe9df5990bd1ca17cf9ad21212ad9830158c58d6f55f8"
+  },
+  "140__inference-is-an-event-and-possession-is-a-disposition-so__pt020-collision__FORAGE-PT-020__from-operation-describe.txt": {
+   "bytes": 4270,
+   "sha256": "14ff09cc469091d336b9bc2a13f17ae6133d48d1888c70ff185061b4ce095eed"
+  },
+  "106__the-dapg-a-worldtext-is-a-typed-provenance-graph-with-se__worldtext-formal-engine__FORAGE-WT-001__from-operation-describe.txt": {
+   "bytes": 5228,
+   "sha256": "8d933557221066018bfc3982cf930e9f9d008f56744849f53e56dba2ee7116d6"
+  },
+  "054__a-nostalgia-for-the-natural-sign-platform-realism-as-the__krieger-1992__FORAGE-DD-006__from-operation-describe.txt": {
+   "bytes": 5993,
+   "sha256": "9d7d22aeb412fbb4086d3ac47beaa12fb0136fbd573ecc1ea30079e8afb6d90f"
+  },
+  "084__the-generated-exposure-as-natural-sign-smokefire-semioti__opdescribe-coherence2026__FORAGE-LS-011__from-operation-describe.txt": {
+   "bytes": 5834,
+   "sha256": "ca5e0fa5bf2242e5c9d89f7a579513f0104ca9e1636e420e5f7c2de5303b209c"
+  },
+  "032__the-archive-wrote-a-theory-of-measurement-by-projection__hartsoe-2026__FORAGE-OD-032__from-operation-describe.txt": {
+   "bytes": 6412,
+   "sha256": "6ff4b3257daf0b90eca0e0490f592a106872b50de5a96ebc7716aa70f6b7784e"
+  },
+  "047__the-generative-olog-toolkit-the-corpus-s-only-type-syste__spivak-2012__FORAGE-DX-007__from-operation-describe.txt": {
+   "bytes": 7782,
+   "sha256": "ec45a0cc93dc4c0f01d92e001b265f036627ae2d5c796c27ced09c318d207748"
+  },
+  "132__five-of-the-apparatus-s-six-operations-are-mechanical-an__agential-program__FORAGE-PT-012__from-operation-describe.txt": {
+   "bytes": 4286,
+   "sha256": "66a0b55ee256877a43495db7fc5137073b8c98dda1e34dcf2c3aefb59149fb76"
+  },
+  "133__tool-author-and-mirror-are-rejected-because-each-puts-ag__cyber-program__FORAGE-PT-013__from-operation-describe.txt": {
+   "bytes": 3747,
+   "sha256": "fd5b24ca23da3608c8bc4346fd8521adce5e34f59bdd697ed6115b42f516a523"
+  },
+  "161__disclosure-does-not-undo-credence-so-labelling-generated__johnson-1994__FORAGE-PT-041__from-operation-describe.txt": {
+   "bytes": 5112,
+   "sha256": "cc6eb8d26db5a2ac2d17a3b9e4c77f87368c14d9f99f8b5fd38a53ffcd6c8291"
+  },
+  "083__describing-is-generating-the-operative-observer-as-condi__opdescribe-synthplace202__FORAGE-LS-010__from-operation-describe.txt": {
+   "bytes": 5509,
+   "sha256": "9c1ebf4937afd623d0833deca96310915a11664aba90eaeacee45639cf8e68a7"
+  },
+  "NETWORK.svg": {
+   "bytes": 71991,
+   "sha256": "7a43cc6bc6c1043aa2a3368309509880592829baa9929cd96632d62d4130e281"
+  },
+  "173__a-prohibition-constrains-more-per-token-than-a-descripti__haunted-program__FORAGE-PT-053__from-operation-describe.txt": {
+   "bytes": 5061,
+   "sha256": "e768062794c260a316304d0dc6fe6c09e98d0d917b2cb44bfb1062056b4b1664"
+  },
+  "MARK.svg": {
+   "bytes": 459,
+   "sha256": "f24d736d0c76fa66a90aab5f61fccc64544554fb05ac7ed1a4f08d094d698a66"
+  },
+  "164__constraint-trades-output-set-entropy-for-pointwise-surpr__haunted-program__FORAGE-PT-044__from-operation-describe.txt": {
+   "bytes": 4587,
+   "sha256": "eda7eef5c2297ba6d4a02e41828d135c085eca3e5a239798085cf69e5c0b7331"
+  },
+  "165__service-work-supplies-the-unit-of-intensification-and-it__leidner-1993__FORAGE-PT-045__from-operation-describe.txt": {
+   "bytes": 5094,
+   "sha256": "51d9890622dc8dd9525df5f1833891e7cca4a4030a18241afe857bcbec1b1cb9"
+  },
+  "076__the-probe-as-non-neutral-apparatus-barad-s-agential-cut__opdescribe-protocol2026__FORAGE-LS-003__from-operation-describe.txt": {
+   "bytes": 4885,
+   "sha256": "748c43a275c3a4b37ff3ec9f42ff685cbe0ccaed6882ff54a0295d7ee37c3aeb"
+  },
+  "171__the-empty-middle-between-reading-a-wink-and-being-formed__clark-1986__FORAGE-PT-051__from-operation-describe.txt": {
+   "bytes": 5177,
+   "sha256": "541dddb50673b0dac8a05f61b29618ca78a9584f2806c702beccca5c0e153b8d"
+  },
+  "109__the-seven-failure-modes-a-complete-diagnostic-taxonomy-f__seven-failure-modes-2026__FORAGE-WT-004__from-operation-describe.txt": {
+   "bytes": 5582,
+   "sha256": "6f2f54a7712db4c4efbf13c1584c943d641f1ad1eea9b0d2837274fc7c5d8446"
+  },
+  "003__the-dissertation-s-falsification-condition-tests-a-rate__hartsoe-2026__FORAGE-OD-003__from-operation-describe.txt": {
+   "bytes": 4783,
+   "sha256": "f008f6685ff00f42d56ca5dcc1f8235e9aab109a697cdb72b927e3f5a8957554"
+  },
+  "089__the-ghost-is-the-remainder-the-machine-itself-produces__calvino-1986__FORAGE-PA-005__from-operation-describe.txt": {
+   "bytes": 4971,
+   "sha256": "ca5206b2f3c30175918c5e4321fb1448829c0a34b988648c3104b64ef5694dcd"
+  },
+  "035__what-motion-adds-is-a-settling-time-which-means-the-movi__hartsoe-2026__FORAGE-OD-035__from-operation-describe.txt": {
+   "bytes": 6106,
+   "sha256": "53ccdc0e019446947c2013f4a7ca08f968abc921037ad9bce0fd28c22ea8c7ec"
+  },
+  "023__the-archive-s-missing-negative-case-is-its-own-banned-te__hartsoe-2026__FORAGE-OD-023__from-operation-describe.txt": {
+   "bytes": 6817,
+   "sha256": "1b114435c6982cdb9897280389d7d878effa0af2abe493df89ad8563e3d34fbc"
+  },
+  "153__the-validation-formula-returns-for-shallow-traces-and-di__agreement-practice-unver__FORAGE-PT-033__from-operation-describe.txt": {
+   "bytes": 4965,
+   "sha256": "961fd3617a3e757f595337750abab52c76dbc34147fe31282516402d06984d5e"
+  },
+  "000__MAKING_HISTORY.txt": {
+   "bytes": 1998,
+   "sha256": "fe6fd3de66804270d113002cf8ab20b950b3266961a9197cd58b37eff07eab63"
+  },
+  "014__authority-is-declared-necessary-for-routing-and-then-omi__hartsoe-2026__FORAGE-OD-014__from-operation-describe.txt": {
+   "bytes": 5233,
+   "sha256": "43678307db821389edbe2b946c3f507fe7fb1e64c803127f92604f4ec58e4063"
+  },
+  "136__the-practice-theory-ranks-four-things-and-demotes-every__theory-program__FORAGE-PT-016__from-operation-describe.txt": {
+   "bytes": 4347,
+   "sha256": "ad7fb8bb34ab440cd617c79396b3cb40e02cc75433450d0855f836ea7689675f"
+  },
+  "107__four-typed-operations-ingest-query-lint-audit-and-the-l1__worldtext-formal-engine__FORAGE-WT-002__from-operation-describe.txt": {
+   "bytes": 5230,
+   "sha256": "49ca2571b705c07354721b3cb196c6a604c46409af8e24e9d5ee635d5a0b937e"
+  },
+  "055__the-vineyard-test-greek-language-prompting-and-the-gende__bolter-2026__FORAGE-DD-007__from-operation-describe.txt": {
+   "bytes": 6058,
+   "sha256": "a6371815380056a5705b1018dcfbd7b1a0444a06abda089607176f528eabf603"
+  },
+  "017__the-archive-s-ricoeur-chapter-contains-the-definitional__hartsoe-2026__FORAGE-OD-017__from-operation-describe.txt": {
+   "bytes": 5916,
+   "sha256": "1bd23659a11c6ea69b31cef6de0d55d8d26baa0322a80ff09e80a80e76edad48"
+  },
+  "010__the-model-attends-to-the-correct-tool-80-of-the-time-and__chen-2026__FORAGE-OD-010__from-operation-describe.txt": {
+   "bytes": 5370,
+   "sha256": "076c75ba2e3ae881fc41a8d2d4cf11aa76217be871dc4dfde74d5e20d4065649"
+  },
+  "099__four-child-theories-lack-the-mandatory-residual-human-th__meta-2026__FORAGE-PG-004__from-operation-describe.txt": {
+   "bytes": 5753,
+   "sha256": "27cd7b7f9f8a6c9fe0be1ace57a7a6a3cd2f6a8bf2c7d5621e9226f0ab416a80"
+  },
+  "037__every-unwritten-paper-in-this-archive-is-the-same-missin__hartsoe-2026__FORAGE-OD-037__from-operation-describe.txt": {
+   "bytes": 6612,
+   "sha256": "2554bf973dd955177c571eccc29b9d162a871de0fdcfc2eb82cc668130c3389f"
+  },
+  "155__perspective-is-a-projection-rule-with-a-datable-installa__panofsky-1927__FORAGE-PT-035__from-operation-describe.txt": {
+   "bytes": 4972,
+   "sha256": "d932c251f6c17ece9682a1c60e4557146d0c5ec4d57951a868f28faa96bc24ef"
+  },
+  "168__the-footnote-was-built-to-make-a-claim-checkable-and-to__grafton-1997__FORAGE-PT-048__from-operation-describe.txt": {
+   "bytes": 5167,
+   "sha256": "991bc91124492b4b97d8e3b330b6b019c5b166742ad4a59be122bb24076c32a9"
+  },
+  "052__homeric-oral-formulaic-composition-as-a-probabilistic-ge__lord-2018__FORAGE-DD-004__from-operation-describe.txt": {
+   "bytes": 5763,
+   "sha256": "e64afa7816087de77906d70ccd3a57bca2c3fe2dba2d4942b0713b111ad65ead"
+  },
+  "004__on-capable-models-the-tool-name-already-carries-the-rout__wu-2026__FORAGE-OD-004__from-operation-describe.txt": {
+   "bytes": 5040,
+   "sha256": "3480753d6b60b597fc423cd8ff2fae784acb00adacea2b46f992aeb3792c8ce0"
+  },
+  "011__if-routing-is-decided-at-readout-then-the-politics-of-de__hartsoe-2026__FORAGE-OD-011__from-operation-describe.txt": {
+   "bytes": 5011,
+   "sha256": "14ba6b66d269278ab0c813a89a45a29b5c98921d209550a59e09edd05ad0fd9a"
+  },
+  "127__the-wink-ladder-makes-thickness-countable-each-rung-adds__tda-program__FORAGE-PT-007__from-operation-describe.txt": {
+   "bytes": 3455,
+   "sha256": "769f8971c139b96b8fa783476acc6ea94597bde6561117195de78e5fe960d2d4"
+  },
+  "119__logical-types-and-the-second-order-cri-a-four-level-stac__recursive-epistemology-2__FORAGE-WT-014__from-operation-describe.txt": {
+   "bytes": 6338,
+   "sha256": "0ef7a8d79674b10fa1479cfe388c1ccbc4eef4317e5f87bc331f2fe951f7359a"
+  },
+  "128__if-depiction-is-measurement-contact-then-a-representatio__mmt-program__FORAGE-PT-008__from-operation-describe.txt": {
+   "bytes": 3755,
+   "sha256": "8904607b6bb0eba4fa4c9ede3164e9db4536909d080014dc56b05fc16c462a4e"
+  },
+  "123__descriptive-struggle-names-nine-answerability-conditions__dse-program__FORAGE-PT-003__from-operation-describe.txt": {
+   "bytes": 3823,
+   "sha256": "94ee609b2fd4001776972cd0f7cfb11d4562d67248bf54a5ffa9891744e53011"
+  },
+  "130__four-of-the-five-things-an-utterance-becomes-build-struc__tenne-program__FORAGE-PT-010__from-operation-describe.txt": {
+   "bytes": 3896,
+   "sha256": "86c73e0be8a7edcfb74a33b9885777be53f0204068c3ebdb0ea500a6f6923a9d"
+  },
+  "120__the-agential-cut-taxonomy-six-auditable-cut-levels-l0l5__agential-cuts-2026__FORAGE-WT-015__from-operation-describe.txt": {
+   "bytes": 6551,
+   "sha256": "9c481109547b30ab093531b5149456dd6c31b9e6453333a64901c4438b8f11f6"
+  },
+  "141__the-corpus-s-most-operational-criterion-is-refuted-by-th__pt021-collision__FORAGE-PT-021__from-operation-describe.txt": {
+   "bytes": 4476,
+   "sha256": "b1b7313e0ace2d72075d699b13160f2ded3cae6698f78c8fd3ff6f169e154aff"
+  },
+  "154__the-wink-ladder-has-a-top-after-all-and-it-is-set-by-how__mentalizing-ceiling-unve__FORAGE-PT-034__from-operation-describe.txt": {
+   "bytes": 4816,
+   "sha256": "aadc83a1dfc9eba7a4eca5bab29cb8b179dc76d664e2e148324c1a02224821a8"
+  },
+  "022__if-routing-reallocates-a-fixed-pool-then-every-operative__hartsoe-2026__FORAGE-OD-022__from-operation-describe.txt": {
+   "bytes": 5110,
+   "sha256": "1410c752cc57c7096d6f8db9b677225fe83fb373ee0eb8ad916814f43837568b"
+  },
+  "126__the-validation-formula-lists-social-time-and-rival-readi__tah-program__FORAGE-PT-006__from-operation-describe.txt": {
+   "bytes": 3553,
+   "sha256": "84d1c2cac188b4486ca58d66cd87627df1e059446e12ff81bdd43f6f4fce6591"
+  },
+  "145__one-instrument-makes-the-human-a-substrate-and-another-r__pt025-collision__FORAGE-PT-025__from-operation-describe.txt": {
+   "bytes": 4412,
+   "sha256": "2f9dfd9b2b47f90e977bb9d78bf63a9dc593af178b39da4f3eb0910f2af9e2f4"
+  },
+  "SLIPCASE-OPERATION-DESCRIBE-20260819__references.bib": {
+   "bytes": 33576,
+   "sha256": "3629673c0c1b36cc082aad16b113ae69d3c08bf581ef39574a806d9e91ec588e"
+  },
+  "069__the-shield-of-achilles-enters-as-the-model-not-the-examp__taplin-1980__FORAGE-ZP-008__from-operation-describe.txt": {
+   "bytes": 6656,
+   "sha256": "7afb4175e9cca9f4ce87cfcb96394952eb70d9589e3f4c30b76346297c0d98a1"
+  },
+  "160__the-positive-term-for-distribution-already-exists-no-sin__hutchins-1995__FORAGE-PT-040__from-operation-describe.txt": {
+   "bytes": 4943,
+   "sha256": "8d83c5b0ec652f22af4924d78fc05d891f53f606e9399f2c76f0a8d33ed9d26a"
+  },
+  "100__cyber-json-is-titled-agential-cybernetic-media-the-corpu__cyber-2026__FORAGE-PG-005__from-operation-describe.txt": {
+   "bytes": 6289,
+   "sha256": "f3872534d62f63e5c02c8ed24b14dc386adecc57dea24588f315d4614aecf3fd"
+  },
+  "094__geertz-at-the-prompt-interface-the-prompt-as-ritual-obje__geertz-1973__FORAGE-PA-010__from-operation-describe.txt": {
+   "bytes": 5888,
+   "sha256": "f262938257e088d90663c9b454d26f6765f01d7a58f974a6d24743c12bee28ba"
+  },
+  "174__if-cuts-are-visible-only-in-contrast-then-a-single-appar__agential-program__FORAGE-PT-054__from-operation-describe.txt": {
+   "bytes": 5041,
+   "sha256": "2fb5663a67983b8108b542b86f66dba560fa82687a6e3954a2a619ffa2f101b0"
+  },
+  "124__the-corpus-contains-one-instrument-built-to-withhold-ass__uam-program__FORAGE-PT-004__from-operation-describe.txt": {
+   "bytes": 3120,
+   "sha256": "fe1bc8ed59f3f48eb4030ccd2ca28aa540221fa17922b6b726c25f01bd8d8afc"
+  },
+  "150__a-century-old-discipline-already-reads-revision-as-evide__bellemin-1972__FORAGE-PT-030__from-operation-describe.txt": {
+   "bytes": 4746,
+   "sha256": "7e1d2fe340475a59a76959638dd03feb4e2e5970e2dacded6605b554d0edf9d6"
+  },
+  "062__the-core-thesis-and-its-mutation-word-to-image-is-alread__hartsoe-bolter-worldtext__FORAGE-ZP-001__from-operation-describe.txt": {
+   "bytes": 5929,
+   "sha256": "162df17e642ce7c27b5d8fe15694050f3a67ec50a7122977b358540c565fd5fa"
+  },
+  "028__every-case-in-the-archive-adds-a-description-and-none-re__hartsoe-2026__FORAGE-OD-028__from-operation-describe.txt": {
+   "bytes": 5450,
+   "sha256": "2aa546bffc058c1a3e857ab49e29990b8d522ba2ee9a1457b495cf0fa7aa1938"
+  },
+  "101__the-corpus-contains-two-geertzes-thick-json-types-cultur__thick-2026__FORAGE-PG-006__from-operation-describe.txt": {
+   "bytes": 6211,
+   "sha256": "9889e61e3ebbad1671b155dd99177c1eb03ee505b4b353e09327ff44624dd477"
+  },
+  "036__the-three-cases-are-said-to-share-a-mechanism-and-no-sha__hartsoe-2026__FORAGE-OD-036__from-operation-describe.txt": {
+   "bytes": 5214,
+   "sha256": "fe539b187ab91f0d04e80fcc134acd59697facafa82b6b62050e0f2c66d877b3"
+  },
+  "071__worldtext-defined-not-a-rival-term-for-world-model-but-t__moretti-1996__FORAGE-ZP-010__from-operation-describe.txt": {
+   "bytes": 7171,
+   "sha256": "499eeb245ca5fe6d2edbb7c624ef25fa7faf57c1648307e7ad00dbd3cb0a0495"
+  },
+  "030__classical-rhetoric-already-supplied-a-human-subject-test__webb-2009__FORAGE-OD-030__from-operation-describe.txt": {
+   "bytes": 6280,
+   "sha256": "dcee089eac31e581a2f2db30504969a43fcc6517ba1e48fd1d763f63d9ccc62e"
+  },
+  "142__struggle-and-traceability-are-two-criteria-of-intellectu__pt022-collision__FORAGE-PT-022__from-operation-describe.txt": {
+   "bytes": 4281,
+   "sha256": "c64949db78aa270148eb9d13c7f43ecd8c3f02a73a2a70821d132574a67f4f2e"
+  },
+  "009__the-position-effect-that-threatens-the-primary-case-is-t__hardt-2022__FORAGE-OD-009__from-operation-describe.txt": {
+   "bytes": 5270,
+   "sha256": "b32448ab58f33d20acb63f7afadb2d4fc85fe6072f12798aa559c5eab42ee717"
+  },
+  "172__the-vacuum-has-a-name-and-a-literature-the-moral-crumple__elish-2019__FORAGE-PT-052__from-operation-describe.txt": {
+   "bytes": 5383,
+   "sha256": "e2a9626bedb841e42ba958ce5b2a66f1a8b61c6545692fd4d24aeefb782302c0"
+  },
+  "050__thick-prompting-geertz-s-thick-description-transposed-to__geertz-1973__FORAGE-DD-002__from-operation-describe.txt": {
+   "bytes": 5756,
+   "sha256": "85351b374a0e8e8d11558f105c48f9d85e29f21fbf7eaf2dac16e316edfc3e00"
+  },
+  "079__the-four-masks-of-worlding-the-ethnographer-must-trade-t__opdescribe-protocol2026d__FORAGE-LS-006__from-operation-describe.txt": {
+   "bytes": 4636,
+   "sha256": "dc72c766cb2db29c4b4ee4c49024d2e6fa6a6f4250c17103ecaf199b4194f273"
+  },
+  "057__the-v-m-c-mapping-homer-s-shield-as-ha-schmidhuber-s-wor__ha-2018__FORAGE-DD-009__from-operation-describe.txt": {
+   "bytes": 6232,
+   "sha256": "bea77fec3b65b8079814975770703e8b1f8a06cc5ffcfada740b9367937b9bcf"
+  },
+  "162__agency-law-already-assigns-the-bearer-and-it-does-so-by__agency-doctrine-unverifi__FORAGE-PT-042__from-operation-describe.txt": {
+   "bytes": 5272,
+   "sha256": "298c5310362a01fd9b91ac25f41d3def194a1f8778fc01ef22622af9cf364ea0"
+  },
+  "116__exposure-as-natural-sign-generated-artifacts-are-vestige__exposure-as-natural-sign__FORAGE-WT-011__from-operation-describe.txt": {
+   "bytes": 6358,
+   "sha256": "fcc01a53eb6120f11b1c438ac84208b80c936da607789b1a1c602bfbe4e4b283"
+  },
+  "000__REBUILD.txt": {
+   "bytes": 1763,
+   "sha256": "b3e1f672fc20263bf56b541dbc3454564b46d6d9088fd94bf98bd833b6cc292f"
+  },
+  "_ARRANGEMENTS/nine-clusters.md": {
+   "bytes": 2149,
+   "sha256": "ea73175d9cb6b97e33c00cca5387393317421330b4fd160638abd11e0b062423"
+  },
+  "_ARRANGEMENTS/by-degree.md": {
+   "bytes": 6580,
+   "sha256": "dc168ae91bd2a1581f9d80a58f2acb6082253d4db852e31b79aca9efd3f9f6ae"
+  },
+  "_PROMPTS/ASSEMBLY_PROMPT.txt": {
+   "bytes": 4126,
+   "sha256": "901c896bdde197e93e9244ce9f034e4ab2e30e39bc3253327c0b7e1a58f27804"
+  },
+  "_PROMPTS/FORAGE_SCHEMA.txt": {
+   "bytes": 2082,
+   "sha256": "8059f09567516f4fa47fcda7ea3723fa96add8c5aef84091fd6dca13583f6458"
+  },
+  "_PROMPTS/CLUSTER_REQUEST.txt": {
+   "bytes": 970,
+   "sha256": "1f69cf88eaee227fd6b8aab57aee03e31b403017a26c106fe52f571274a5288f"
+  },
+  "_MD/027__the-archive-holds-naur-as-an-ancestor-while-building-the__hartsoe-2026__FORAGE-OD-027__from-operation-describe.md": {
+   "bytes": 7147,
+   "sha256": "d8981b2305d5e95f7630ce564c4a8dfea8a4ce644c00d1c86447017965e04de9"
+  },
+  "_MD/070__the-v-m-c-mapping-ha-schmidhuber-s-vision-memory-control__ha-2018__FORAGE-ZP-009__from-operation-describe.md": {
+   "bytes": 6857,
+   "sha256": "776a417440a4229486191c686a258d22c1ea8d12eeb7410a87f23872ff7c9537"
+  },
+  "_MD/008__shuffling-the-tool-list-without-changing-a-single-word-d__huang-2024__FORAGE-OD-008__from-operation-describe.md": {
+   "bytes": 5477,
+   "sha256": "522208ad3745512af6823cbc25537ed0f58fa7aa7ac92bac64505405118058aa"
+  },
+  "_MD/101__the-corpus-contains-two-geertzes-thick-json-types-cultur__thick-2026__FORAGE-PG-006__from-operation-describe.md": {
+   "bytes": 6211,
+   "sha256": "9889e61e3ebbad1671b155dd99177c1eb03ee505b4b353e09327ff44624dd477"
+  },
+  "_MD/034__a-description-that-is-never-acted-on-still-changes-which__wu-2026__FORAGE-OD-034__from-operation-describe.md": {
+   "bytes": 6368,
+   "sha256": "c3a361fe09cf2299fab356975bf1bf25bc16e14a73183a42b86af6271b6f2165"
+  },
+  "_MD/073__homer-as-generative-system-parry-lord-oral-formulaic-com__lord-1960__FORAGE-ZP-012__from-operation-describe.md": {
+   "bytes": 7173,
+   "sha256": "aadc1eaf30b57ae09944fb137b73291628b2bd2b9d9d8afa7067ae048fe25885"
+  },
+  "_MD/140__inference-is-an-event-and-possession-is-a-disposition-so__pt020-collision__FORAGE-PT-020__from-operation-describe.md": {
+   "bytes": 4270,
+   "sha256": "14ff09cc469091d336b9bc2a13f17ae6133d48d1888c70ff185061b4ce095eed"
+  },
+  "_MD/130__four-of-the-five-things-an-utterance-becomes-build-struc__tenne-program__FORAGE-PT-010__from-operation-describe.md": {
+   "bytes": 3896,
+   "sha256": "86c73e0be8a7edcfb74a33b9885777be53f0204068c3ebdb0ea500a6f6923a9d"
+  },
+  "_MD/037__every-unwritten-paper-in-this-archive-is-the-same-missin__hartsoe-2026__FORAGE-OD-037__from-operation-describe.md": {
+   "bytes": 6612,
+   "sha256": "2554bf973dd955177c571eccc29b9d162a871de0fdcfc2eb82cc668130c3389f"
+  },
+  "_MD/146__naur-says-the-theory-dies-with-the-team-and-calvino-says__pt026-collision__FORAGE-PT-026__from-operation-describe.md": {
+   "bytes": 5014,
+   "sha256": "44440e042b2de770a63e282523d389cec5ddeb7c2cbc881caf71cdaecb867aea"
+  },
+  "_MD/080__latent-bricolage-and-epistemic-humility-legacy-spatial-t__opdescribe-bricolage2026__FORAGE-LS-007__from-operation-describe.md": {
+   "bytes": 5176,
+   "sha256": "42f2fb996ac1facf3f44fce2ac11d21c8889a70258bf6793a499b1af4e655f6b"
+  },
+  "_MD/122__if-logical-order-is-not-discovery-order-then-the-sequenc__argue-program__FORAGE-PT-002__from-operation-describe.md": {
+   "bytes": 3786,
+   "sha256": "03cc30a33e214cad96def0787443974be0802ad0c79cc1ace260447f72c90052"
+  },
+  "_MD/064__the-concealment-genealogy-spitzer-heffernan-narrowed-ekp__webb-1999__FORAGE-ZP-003__from-operation-describe.md": {
+   "bytes": 5989,
+   "sha256": "a55bf67c09892f7a672f658c93a18dc3fef3590ac10616c3c4222dd40038b6ea"
+  },
+  "_MD/029__geertz-s-culture-as-control-mechanism-operates-over-a-li__hartsoe-2026__FORAGE-OD-029__from-operation-describe.md": {
+   "bytes": 6225,
+   "sha256": "e7a8b3e88d1c8922f38f6ff7cc61e71ab11146e7675f7c93be5436767d5f9667"
+  },
+  "_MD/100__cyber-json-is-titled-agential-cybernetic-media-the-corpu__cyber-2026__FORAGE-PG-005__from-operation-describe.md": {
+   "bytes": 6289,
+   "sha256": "f3872534d62f63e5c02c8ed24b14dc386adecc57dea24588f315d4614aecf3fd"
+  },
+  "_MD/054__a-nostalgia-for-the-natural-sign-platform-realism-as-the__krieger-1992__FORAGE-DD-006__from-operation-describe.md": {
+   "bytes": 5993,
+   "sha256": "9d7d22aeb412fbb4086d3ac47beaa12fb0136fbd573ecc1ea30079e8afb6d90f"
+  },
+  "_MD/039__the-red-team-demands-the-archive-fix-its-unenforced-gove__hartsoe-2026__FORAGE-OD-039__from-operation-describe.md": {
+   "bytes": 6228,
+   "sha256": "722853a80c37f9f0c82214c6c41a6c0a79dc3cbb614356caace1f46470a9cf66"
+  },
+  "_MD/102__six-theories-type-prompt-six-incompatible-ways-instructi__crn-2026__FORAGE-PG-007__from-operation-describe.md": {
+   "bytes": 6102,
+   "sha256": "38fee90bf64e592de93a9b7e83de9efa2ffbb1ced0f5b873fbc324ddfbb92dd9"
+  },
+  "_MD/090__breakdown-reveals-the-structure-of-use-the-broken-hammer__winograd-1986__FORAGE-PA-006__from-operation-describe.md": {
+   "bytes": 5478,
+   "sha256": "804cfec1f0f4d78898aad1b93893801793f225623dde98785756092d115c0ac0"
+  },
+  "_MD/055__the-vineyard-test-greek-language-prompting-and-the-gende__bolter-2026__FORAGE-DD-007__from-operation-describe.md": {
+   "bytes": 6058,
+   "sha256": "a6371815380056a5705b1018dcfbd7b1a0444a06abda089607176f528eabf603"
+  },
+  "_MD/002__the-measure-the-archive-lacks-already-exists-as-a-single__wu-2026__FORAGE-OD-002__from-operation-describe.md": {
+   "bytes": 5356,
+   "sha256": "bc6980dc157f85089cdf0d5beba1809e4acccd57e0d508fe22e1a4c221de3a25"
+  },
+  "_MD/155__perspective-is-a-projection-rule-with-a-datable-installa__panofsky-1927__FORAGE-PT-035__from-operation-describe.md": {
+   "bytes": 4972,
+   "sha256": "d932c251f6c17ece9682a1c60e4557146d0c5ec4d57951a868f28faa96bc24ef"
+  },
+  "_MD/040__93-6-of-sources-unprocessed-82-7-of-links-orphaned-107-u__hartsoe-2026__FORAGE-OD-040__from-operation-describe.md": {
+   "bytes": 7875,
+   "sha256": "e6740355e5936d6efbd3f044f4ffb33d9d30e43c2ad0fad3362acb8ec5c81f05"
+  },
+  "_MD/060__the-prompt-is-not-sovereign-control-signal-buried-law-an__wiener-1948__FORAGE-DD-012__from-operation-describe.md": {
+   "bytes": 6352,
+   "sha256": "aa86852591c31cbecec2dacbfb26ce8052277e53d219a87ab4d0dfd653ce85e5"
+  },
+  "_MD/111__the-riverbed-field-engine-six-hydrologic-dynamics-compil__riverbed-field-engine-20__FORAGE-WT-006__from-operation-describe.md": {
+   "bytes": 6029,
+   "sha256": "7dce97c914a6c2aa8b844f33f263e5d866b358d5bae3731b7a1c45a2e3c9c1df"
+  },
+  "_MD/115__the-anomaly-of-return-same-worldness-is-decided-by-the-b__anomaly-of-return-2026__FORAGE-WT-010__from-operation-describe.md": {
+   "bytes": 5959,
+   "sha256": "bf2533381b07623df002fc37312d69e5d3220b8bf262dd855023daedbf647e14"
+  },
+  "_MD/081__surplus-realities-generated-worlds-carry-the-aesthetic-m__opdescribe-cosmos2026__FORAGE-LS-008__from-operation-describe.md": {
+   "bytes": 5045,
+   "sha256": "9117eda33fdb05addf59789f86b869b184f308d14d02b79ae7a10f733e7be364"
+  },
+  "_MD/114__titan-forge-five-stage-video-extraction-with-patch-trigg__titan-forge-2026__FORAGE-WT-009__from-operation-describe.md": {
+   "bytes": 6282,
+   "sha256": "1635ce7608761d8a73082ef5083775239e84d8c059ec361e2d19d9f6bd76b7f1"
+  },
+  "_MD/003__the-dissertation-s-falsification-condition-tests-a-rate__hartsoe-2026__FORAGE-OD-003__from-operation-describe.md": {
+   "bytes": 4783,
+   "sha256": "f008f6685ff00f42d56ca5dcc1f8235e9aab109a697cdb72b927e3f5a8957554"
+  },
+  "_MD/124__the-corpus-contains-one-instrument-built-to-withhold-ass__uam-program__FORAGE-PT-004__from-operation-describe.md": {
+   "bytes": 3120,
+   "sha256": "fe1bc8ed59f3f48eb4030ccd2ca28aa540221fa17922b6b726c25f01bd8d8afc"
+  },
+  "_MD/065__krieger-s-natural-sign-inverted-platform-realism-as-nost__krieger-1992__FORAGE-ZP-004__from-operation-describe.md": {
+   "bytes": 6335,
+   "sha256": "0c8c5ce5c076f9192b5876b61ece9337cdd9074c2146182024daa36bc2ffddec"
+  },
+  "_MD/152__legal-procedure-is-the-worked-multiply-traced-case-and-i__adversarial-procedure-un__FORAGE-PT-032__from-operation-describe.md": {
+   "bytes": 5218,
+   "sha256": "5066f0afe9865419d22a88c2026aca91e30e24c87d424d6e5a2e639f846722ce"
+  },
+  "_MD/161__disclosure-does-not-undo-credence-so-labelling-generated__johnson-1994__FORAGE-PT-041__from-operation-describe.md": {
+   "bytes": 5112,
+   "sha256": "cc6eb8d26db5a2ac2d17a3b9e4c77f87368c14d9f99f8b5fd38a53ffcd6c8291"
+  },
+  "_MD/031__on-a-hosted-api-the-description-under-test-is-never-alon__hartsoe-2026__FORAGE-OD-031__from-operation-describe.md": {
+   "bytes": 5406,
+   "sha256": "dcd48c0a91c96a675bd5906cb2807132c5f4cebcd06bacfc3a502e6226e4261e"
+  },
+  "_MD/057__the-v-m-c-mapping-homer-s-shield-as-ha-schmidhuber-s-wor__ha-2018__FORAGE-DD-009__from-operation-describe.md": {
+   "bytes": 6232,
+   "sha256": "bea77fec3b65b8079814975770703e8b1f8a06cc5ffcfada740b9367937b9bcf"
+  },
+  "_MD/107__four-typed-operations-ingest-query-lint-audit-and-the-l1__worldtext-formal-engine__FORAGE-WT-002__from-operation-describe.md": {
+   "bytes": 5230,
+   "sha256": "49ca2571b705c07354721b3cb196c6a604c46409af8e24e9d5ee635d5a0b937e"
+  },
+  "_MD/022__if-routing-reallocates-a-fixed-pool-then-every-operative__hartsoe-2026__FORAGE-OD-022__from-operation-describe.md": {
+   "bytes": 5110,
+   "sha256": "1410c752cc57c7096d6f8db9b677225fe83fb373ee0eb8ad916814f43837568b"
+  },
+  "_MD/014__authority-is-declared-necessary-for-routing-and-then-omi__hartsoe-2026__FORAGE-OD-014__from-operation-describe.md": {
+   "bytes": 5233,
+   "sha256": "43678307db821389edbe2b946c3f507fe7fb1e64c803127f92604f4ec58e4063"
+  },
+  "_MD/076__the-probe-as-non-neutral-apparatus-barad-s-agential-cut__opdescribe-protocol2026__FORAGE-LS-003__from-operation-describe.md": {
+   "bytes": 4885,
+   "sha256": "748c43a275c3a4b37ff3ec9f42ff685cbe0ccaed6882ff54a0295d7ee37c3aeb"
+  },
+  "_MD/048__ai-safety-is-the-linnaean-museum-and-jailbreaking-is-the__daston-1998__FORAGE-DX-008__from-operation-describe.md": {
+   "bytes": 7755,
+   "sha256": "f91dffc72bd22e9cfbf5a9128957244ce38a8b28d624cd348fadeb671890e02e"
+  },
+  "_MD/012__the-archive-calls-chain-of-thought-decorative-in-one-cla__hartsoe-2026__FORAGE-OD-012__from-operation-describe.md": {
+   "bytes": 6298,
+   "sha256": "c506ac1569b762f34a01dfb5270625d36a14a927c09cf4bc3d3d5a356ae06e8b"
+  },
+  "_MD/020__the-slipcase-corpus-and-the-operation-describe-corpus-re__hartsoe-2026__FORAGE-OD-020__from-operation-describe.md": {
+   "bytes": 6044,
+   "sha256": "01fabc50a6e83f574ee2572650772e553d978444828776115156424f01aabca2"
+  },
+  "_MD/095__641-love-stories-vs-samantha-s-641-loves-the-dataset-as__jonze-2013__FORAGE-PA-011__from-operation-describe.md": {
+   "bytes": 6249,
+   "sha256": "04c7afb7adbb017a5513c27bb3c8b8743b754292d04f98931602ad5be850a0db"
+  },
+  "_MD/173__a-prohibition-constrains-more-per-token-than-a-descripti__haunted-program__FORAGE-PT-053__from-operation-describe.md": {
+   "bytes": 5061,
+   "sha256": "e768062794c260a316304d0dc6fe6c09e98d0d917b2cb44bfb1062056b4b1664"
+  },
+  "_MD/094__geertz-at-the-prompt-interface-the-prompt-as-ritual-obje__geertz-1973__FORAGE-PA-010__from-operation-describe.md": {
+   "bytes": 5888,
+   "sha256": "f262938257e088d90663c9b454d26f6765f01d7a58f974a6d24743c12bee28ba"
+  },
+  "_MD/138__calling-ai-an-intensified-symbolic-control-apparatus-is__thick-program__FORAGE-PT-018__from-operation-describe.md": {
+   "bytes": 4235,
+   "sha256": "a97829e8b2570b2e959e7a1a9a15d24362f0b5b81a4edbb45a02b06aebbc29e2"
+  },
+  "_MD/172__the-vacuum-has-a-name-and-a-literature-the-moral-crumple__elish-2019__FORAGE-PT-052__from-operation-describe.md": {
+   "bytes": 5383,
+   "sha256": "e2a9626bedb841e42ba958ce5b2a66f1a8b61c6545692fd4d24aeefb782302c0"
+  },
+  "_MD/139__path-integrity-is-satisfiable-by-a-system-that-logs-a-ti__memex-program__FORAGE-PT-019__from-operation-describe.md": {
+   "bytes": 4496,
+   "sha256": "e3e25c85b9561cf8266175a4abc6e8d25799cdfe20221c55f46e7a04d8f192f4"
+  },
+  "_MD/093__bateson-s-circuit-at-the-prompt-box-the-loop-learns-even__bateson-1972__FORAGE-PA-009__from-operation-describe.md": {
+   "bytes": 6776,
+   "sha256": "3a4ac66ff2af226f5326cbc9b38708998e7777a2ae00724f0cb43310317b0913"
+  },
+  "_MD/131__reversing-the-arrow-turns-the-human-hand-into-a-measurin__eos-program__FORAGE-PT-011__from-operation-describe.md": {
+   "bytes": 4030,
+   "sha256": "7c34e0bc6a24a64954373bf9623b4ca9834bc8d5e26f6812687707d98c68f928"
+  },
+  "_MD/143__if-meaning-survives-only-as-inscribed-consequence-then-d__pt023-collision__FORAGE-PT-023__from-operation-describe.md": {
+   "bytes": 4575,
+   "sha256": "3eed9e019ada75b8a66d4c21bb168debf2b21e7c8c9f9cfba44b6126d0256e49"
+  },
+  "_MD/136__the-practice-theory-ranks-four-things-and-demotes-every__theory-program__FORAGE-PT-016__from-operation-describe.md": {
+   "bytes": 4347,
+   "sha256": "ad7fb8bb34ab440cd617c79396b3cb40e02cc75433450d0855f836ea7689675f"
+  },
+  "_MD/013__the-archive-s-operator-tuple-cannot-represent-an-operato__hartsoe-2026__FORAGE-OD-013__from-operation-describe.md": {
+   "bytes": 5147,
+   "sha256": "40f631fb72939dc016fb06866d83d7851ddb57643704593e9fc5601ce29beb2e"
+  },
+  "_MD/061__the-politics-of-inhabitation-affordances-and-what-the-sh__davis-2015__FORAGE-DD-013__from-operation-describe.md": {
+   "bytes": 7264,
+   "sha256": "f65721fc1d15bbf147f2cc8370eb9ee5e5e5c3a285281c7cb56455a8084a965c"
+  },
+  "_MD/038__temporal-questions-are-a-plurality-not-a-majority-but-th__hartsoe-2026__FORAGE-OD-038__from-operation-describe.md": {
+   "bytes": 7226,
+   "sha256": "1a636b2d500fbf48a76c50c203f321542129dc23377290ace59bf95dc7afe6a8"
+  },
+  "_MD/092__generative-ai-as-cut-performing-apparatus-barad-s-agenti__barad-2007__FORAGE-PA-008__from-operation-describe.md": {
+   "bytes": 6524,
+   "sha256": "66571ea8cef68cb43be7d23b93d5394e21894da97f38a5e6d6c64456f9ae91dc"
+  },
+  "_MD/159__redistribution-implies-a-recipient-and-diffusion-implies__thompson-1980__FORAGE-PT-039__from-operation-describe.md": {
+   "bytes": 5357,
+   "sha256": "166bffc16dfd29748733fd42be3ca646a24c34d2adb121ffff7c25669ec8a783"
+  },
+  "_MD/135__commitment-needs-a-party-who-can-be-held-so-the-design-a__dac-program__FORAGE-PT-015__from-operation-describe.md": {
+   "bytes": 4120,
+   "sha256": "c551847fd256b80d74704ff89385f6e71e4074ba17fee528b08b42edf6a907e7"
+  },
+  "_MD/030__classical-rhetoric-already-supplied-a-human-subject-test__webb-2009__FORAGE-OD-030__from-operation-describe.md": {
+   "bytes": 6280,
+   "sha256": "dcee089eac31e581a2f2db30504969a43fcc6517ba1e48fd1d763f63d9ccc62e"
+  },
+  "_MD/174__if-cuts-are-visible-only-in-contrast-then-a-single-appar__agential-program__FORAGE-PT-054__from-operation-describe.md": {
+   "bytes": 5041,
+   "sha256": "2fb5663a67983b8108b542b86f66dba560fa82687a6e3954a2a619ffa2f101b0"
+  },
+  "_MD/142__struggle-and-traceability-are-two-criteria-of-intellectu__pt022-collision__FORAGE-PT-022__from-operation-describe.md": {
+   "bytes": 4281,
+   "sha256": "c64949db78aa270148eb9d13c7f43ecd8c3f02a73a2a70821d132574a67f4f2e"
+  },
+  "_MD/033__the-archive-s-ryle-chapter-and-its-operator-definition-m__hartsoe-2026__FORAGE-OD-033__from-operation-describe.md": {
+   "bytes": 6673,
+   "sha256": "a5b7f285990b661f5a3820449536dc946412f32d0ec75d73a1488e2b132b9c0f"
+  },
+  "_MD/019__descriptions-decay-and-one-decay-rate-would-unify-all-th__shanahan-2023__FORAGE-OD-019__from-operation-describe.md": {
+   "bytes": 6580,
+   "sha256": "c8808ad7c2b98935e58e18eb5d5cf8afd6574880c7e9193d2c782dfcf3e01270"
+  },
+  "_MD/117__the-causal-worldtext-runtime-tripartite-raw-schema-wiki__causal-worldtext-runtime__FORAGE-WT-012__from-operation-describe.md": {
+   "bytes": 6371,
+   "sha256": "4b71a1bd99e875a97d55ce150b5066744ac861790c246d87c83c5e5d039704ab"
+  },
+  "_MD/021__the-archive-s-scale-case-violates-the-non-interference-a__viljoen-2021__FORAGE-OD-021__from-operation-describe.md": {
+   "bytes": 5978,
+   "sha256": "682f6e298c6a2c9187c426fbea42a40ce8916efd7a516b60a902932ccad1e43f"
+  },
+  "_MD/047__the-generative-olog-toolkit-the-corpus-s-only-type-syste__spivak-2012__FORAGE-DX-007__from-operation-describe.md": {
+   "bytes": 7782,
+   "sha256": "ec45a0cc93dc4c0f01d92e001b265f036627ae2d5c796c27ced09c318d207748"
+  },
+  "_MD/046__the-ldraw-type-1-line-is-the-corpus-s-only-description-w__ldraw-1993__FORAGE-DX-006__from-operation-describe.md": {
+   "bytes": 6863,
+   "sha256": "8556ebceff9e26e7ad5f3a8821eec40f58b15fb8769885376a3a89fadef9cc61"
+  },
+  "_MD/052__homeric-oral-formulaic-composition-as-a-probabilistic-ge__lord-2018__FORAGE-DD-004__from-operation-describe.md": {
+   "bytes": 5763,
+   "sha256": "e64afa7816087de77906d70ccd3a57bca2c3fe2dba2d4942b0713b111ad65ead"
+  },
+  "_MD/074__latent-space-as-operative-quasi-place-place-ness-as-a-co__opdescribe-quasiplace202__FORAGE-LS-001__from-operation-describe.md": {
+   "bytes": 5231,
+   "sha256": "b3a487ad4e144a6d9f87f5f3d8caad74f53b84ec0229daead9e3c69e3da8faf6"
+  },
+  "_MD/068__the-loop-is-the-operative-unit-the-image-is-feedback-not__hartsoe-bolter-v3-2026__FORAGE-ZP-007__from-operation-describe.md": {
+   "bytes": 6559,
+   "sha256": "20df74db8ccdb75b61f34074363a0d2fb09774dc6bc5d1788251e69a42566b2e"
+  },
+  "_MD/009__the-position-effect-that-threatens-the-primary-case-is-t__hardt-2022__FORAGE-OD-009__from-operation-describe.md": {
+   "bytes": 5270,
+   "sha256": "b32448ab58f33d20acb63f7afadb2d4fc85fe6072f12798aa559c5eab42ee717"
+  },
+  "_MD/108__the-salt-water-test-consequence-propagation-is-the-proof__worldtext-formal-engine__FORAGE-WT-003__from-operation-describe.md": {
+   "bytes": 5820,
+   "sha256": "2b7b84ef79c87391c959ac776f785b82dd1f82e6e700d7f7ec1d86553c5e7a09"
+  },
+  "_MD/162__agency-law-already-assigns-the-bearer-and-it-does-so-by__agency-doctrine-unverifi__FORAGE-PT-042__from-operation-describe.md": {
+   "bytes": 5272,
+   "sha256": "298c5310362a01fd9b91ac25f41d3def194a1f8778fc01ef22622af9cf364ea0"
+  },
+  "_MD/091__computers-as-media-of-commitment-and-the-generative-retu__winograd-1986__FORAGE-PA-007__from-operation-describe.md": {
+   "bytes": 6209,
+   "sha256": "e1af49676330f0851830dee9e19f1760a9f17b42be17d870303a122e85b71b17"
+  },
+  "_MD/043__the-latent-third-paper-stakes-the-paragone-s-resolution__louvel-2018__FORAGE-DX-003__from-operation-describe.md": {
+   "bytes": 6460,
+   "sha256": "e6a571f644b7c58be57bb9d2729b6d0ad791fdb7576b552f867ebeef0b42d5a2"
+  },
+  "_MD/127__the-wink-ladder-makes-thickness-countable-each-rung-adds__tda-program__FORAGE-PT-007__from-operation-describe.md": {
+   "bytes": 3455,
+   "sha256": "769f8971c139b96b8fa783476acc6ea94597bde6561117195de78e5fe960d2d4"
+  },
+  "_MD/072__the-non-sovereign-prompt-system-prompts-as-the-constitut__hartsoe-bolter-v3-hidden__FORAGE-ZP-011__from-operation-describe.md": {
+   "bytes": 6944,
+   "sha256": "af119fe1a87e6cb5a6ac2e49263de578448235bd21ef57803e5c44e2582165d4"
+  },
+  "_MD/071__worldtext-defined-not-a-rival-term-for-world-model-but-t__moretti-1996__FORAGE-ZP-010__from-operation-describe.md": {
+   "bytes": 7171,
+   "sha256": "499eeb245ca5fe6d2edbb7c624ef25fa7faf57c1648307e7ad00dbd3cb0a0495"
+  },
+  "_MD/156__a-learned-cross-modal-correspondence-is-a-projection-rul__opek-program__FORAGE-PT-036__from-operation-describe.md": {
+   "bytes": 5191,
+   "sha256": "5e057222ceebbc8bc3eadb541ac8ba27508a4f16491194a508a7b47d48a8d585"
+  },
+  "_MD/089__the-ghost-is-the-remainder-the-machine-itself-produces__calvino-1986__FORAGE-PA-005__from-operation-describe.md": {
+   "bytes": 4971,
+   "sha256": "ca5206b2f3c30175918c5e4321fb1448829c0a34b988648c3104b64ef5694dcd"
+  },
+  "_MD/032__the-archive-wrote-a-theory-of-measurement-by-projection__hartsoe-2026__FORAGE-OD-032__from-operation-describe.md": {
+   "bytes": 6412,
+   "sha256": "6ff4b3257daf0b90eca0e0490f592a106872b50de5a96ebc7716aa70f6b7784e"
+  },
+  "_MD/119__logical-types-and-the-second-order-cri-a-four-level-stac__recursive-epistemology-2__FORAGE-WT-014__from-operation-describe.md": {
+   "bytes": 6338,
+   "sha256": "0ef7a8d79674b10fa1479cfe388c1ccbc4eef4317e5f87bc331f2fe951f7359a"
+  },
+  "_MD/132__five-of-the-apparatus-s-six-operations-are-mechanical-an__agential-program__FORAGE-PT-012__from-operation-describe.md": {
+   "bytes": 4286,
+   "sha256": "66a0b55ee256877a43495db7fc5137073b8c98dda1e34dcf2c3aefb59149fb76"
+  },
+  "_MD/017__the-archive-s-ricoeur-chapter-contains-the-definitional__hartsoe-2026__FORAGE-OD-017__from-operation-describe.md": {
+   "bytes": 5916,
+   "sha256": "1bd23659a11c6ea69b31cef6de0d55d8d26baa0322a80ff09e80a80e76edad48"
+  },
+  "_MD/129__weakens-the-distinction-at-the-level-of-technical-substr__opek-program__FORAGE-PT-009__from-operation-describe.md": {
+   "bytes": 3970,
+   "sha256": "d0faf2512f4cbf3046e0773228d957b2b2e1fcefd7e8ec4166fce822e07d7afa"
+  },
+  "_MD/085__three-poems-three-media-regimes-the-ladder-from-arrangem__bajohr-2024__FORAGE-PA-001__from-operation-describe.md": {
+   "bytes": 5612,
+   "sha256": "003eefa9aafa1190fe4f6f50a9967ec236726152c48d484422d66c207db081a4"
+  },
+  "_MD/067__thick-prompting-geertz-s-thick-description-as-structural__geertz-1973__FORAGE-ZP-006__from-operation-describe.md": {
+   "bytes": 6721,
+   "sha256": "260e2c698dd95d3962ccce5bf41ed2a8c956c8d799fc076155ab8d323a1a8367"
+  },
+  "_MD/058__a-world-is-an-image-with-rules-memory-and-consequence-th__hartsoe-2026__FORAGE-DD-010__from-operation-describe.md": {
+   "bytes": 5862,
+   "sha256": "177e96ee9266ba3fe15e441fdb5fa423fb64308f80bbb035ba71f1e3f9b111ec"
+  },
+  "_MD/099__four-child-theories-lack-the-mandatory-residual-human-th__meta-2026__FORAGE-PG-004__from-operation-describe.md": {
+   "bytes": 5753,
+   "sha256": "27cd7b7f9f8a6c9fe0be1ace57a7a6a3cd2f6a8bf2c7d5621e9226f0ab416a80"
+  },
+  "_MD/171__the-empty-middle-between-reading-a-wink-and-being-formed__clark-1986__FORAGE-PT-051__from-operation-describe.md": {
+   "bytes": 5177,
+   "sha256": "541dddb50673b0dac8a05f61b29618ca78a9584f2806c702beccca5c0e153b8d"
+  },
+  "_MD/066__mitchell-s-imagetext-built-the-latent-space-as-the-compo__mitchell-1994__FORAGE-ZP-005__from-operation-describe.md": {
+   "bytes": 5671,
+   "sha256": "8ee2e73685b97aa348010d05da10bf0bfc4184d151ac8131e7e7b1119c0cf385"
+  },
+  "_MD/079__the-four-masks-of-worlding-the-ethnographer-must-trade-t__opdescribe-protocol2026d__FORAGE-LS-006__from-operation-describe.md": {
+   "bytes": 4636,
+   "sha256": "dc72c766cb2db29c4b4ee4c49024d2e6fa6a6f4250c17103ecaf199b4194f273"
+  },
+  "_MD/109__the-seven-failure-modes-a-complete-diagnostic-taxonomy-f__seven-failure-modes-2026__FORAGE-WT-004__from-operation-describe.md": {
+   "bytes": 5582,
+   "sha256": "6f2f54a7712db4c4efbf13c1584c943d641f1ad1eea9b0d2837274fc7c5d8446"
+  },
+  "_MD/004__on-capable-models-the-tool-name-already-carries-the-rout__wu-2026__FORAGE-OD-004__from-operation-describe.md": {
+   "bytes": 5040,
+   "sha256": "3480753d6b60b597fc423cd8ff2fae784acb00adacea2b46f992aeb3792c8ce0"
+  },
+  "_MD/025__a-law-with-a-numeric-threshold-and-no-measurement-proced__hartsoe-2026__FORAGE-OD-025__from-operation-describe.md": {
+   "bytes": 5933,
+   "sha256": "1df9ec89cb11e971898da430de1a47c9091bf4c20a48eaa5e9ac416a21bae138"
+  },
+  "_MD/051__the-archive-always-goes-first-thick-prompting-as-pressur__watson-2026__FORAGE-DD-003__from-operation-describe.md": {
+   "bytes": 5946,
+   "sha256": "1d995e134e9297a23f26014e7c31c5982276a8682b5ac64a16908c903bc7fb97"
+  },
+  "_MD/141__the-corpus-s-most-operational-criterion-is-refuted-by-th__pt021-collision__FORAGE-PT-021__from-operation-describe.md": {
+   "bytes": 4476,
+   "sha256": "b1b7313e0ace2d72075d699b13160f2ded3cae6698f78c8fd3ff6f169e154aff"
+  },
+  "_MD/087__the-multimodal-pictorial-third-text-and-image-as-two-ent__bajohr-2024__FORAGE-PA-003__from-operation-describe.md": {
+   "bytes": 4918,
+   "sha256": "3feeeed6e12617e5b94095e3a07a1249b68576c2ae2bda558579b4a8aaf55aff"
+  },
+  "_MD/059__the-b-flix-loop-homeric-text-compiled-to-deterministic-d__hartsoe-2024__FORAGE-DD-011__from-operation-describe.md": {
+   "bytes": 7162,
+   "sha256": "289a98f06bff05ea24df440cfc405d1dd06eea3d9e16f1bbf774513616bb8882"
+  },
+  "_MD/082__synthetic-place-theory-seven-bound-elements-metastabilit__opdescribe-synthplace202__FORAGE-LS-009__from-operation-describe.md": {
+   "bytes": 5386,
+   "sha256": "1b5344567fd6375601082c4fb1630adc2c975f8785fa58f382e6d291599fe821"
+  },
+  "_MD/011__if-routing-is-decided-at-readout-then-the-politics-of-de__hartsoe-2026__FORAGE-OD-011__from-operation-describe.md": {
+   "bytes": 5011,
+   "sha256": "14ba6b66d269278ab0c813a89a45a29b5c98921d209550a59e09edd05ad0fd9a"
+  },
+  "_MD/084__the-generated-exposure-as-natural-sign-smokefire-semioti__opdescribe-coherence2026__FORAGE-LS-011__from-operation-describe.md": {
+   "bytes": 5834,
+   "sha256": "ca5e0fa5bf2242e5c9d89f7a579513f0104ca9e1636e420e5f7c2de5303b209c"
+  },
+  "_MD/149__a-reasoning-trace-supplies-serial-compute-and-semantic-s__fillertokens-unverified__FORAGE-PT-029__from-operation-describe.md": {
+   "bytes": 4486,
+   "sha256": "0d9b6c81440791b81acc8d233823968c917e552f8b3d368f3afb2d3ac8280883"
+  },
+  "_MD/041__the-herbarium-is-the-archive-s-missing-ancestor-a-dried__ogilvie-2006__FORAGE-DX-001__from-operation-describe.md": {
+   "bytes": 5996,
+   "sha256": "b0e5eac0ecf0d15579888ff5975e0963d23e176786acd9946d56f6517e841de6"
+  },
+  "_MD/116__exposure-as-natural-sign-generated-artifacts-are-vestige__exposure-as-natural-sign__FORAGE-WT-011__from-operation-describe.md": {
+   "bytes": 6358,
+   "sha256": "fcc01a53eb6120f11b1c438ac84208b80c936da607789b1a1c602bfbe4e4b283"
+  },
+  "_MD/083__describing-is-generating-the-operative-observer-as-condi__opdescribe-synthplace202__FORAGE-LS-010__from-operation-describe.md": {
+   "bytes": 5509,
+   "sha256": "9c1ebf4937afd623d0833deca96310915a11664aba90eaeacee45639cf8e68a7"
+  },
+  "_MD/007__boosting-description-tokens-alone-with-the-name-excluded__chen-2026__FORAGE-OD-007__from-operation-describe.md": {
+   "bytes": 4997,
+   "sha256": "e79cc32e9cb855b96db2211cf35ea869985b5ffeab53a8490e28e7ce6d709421"
+  },
+  "_MD/170__the-signature-of-answerability-is-reversal-a-change-that__dse-program__FORAGE-PT-050__from-operation-describe.md": {
+   "bytes": 4811,
+   "sha256": "f67d7f393279ae17cabcea21789be7e76440ca50ec51d43ac4f3b150f9a79e29"
+  },
+  "_MD/049__the-latent-space-of-an-image-model-is-mitchell-s-imagete__bajohr-2024__FORAGE-DD-001__from-operation-describe.md": {
+   "bytes": 5650,
+   "sha256": "02eab1d5b1d691395a341bf73d329306d570d85b0a8e547d215aff82220f8f49"
+  },
+  "_MD/056__war-is-the-plot-the-shield-is-the-counter-plot-macro-mic__taplin-1980__FORAGE-DD-008__from-operation-describe.md": {
+   "bytes": 5992,
+   "sha256": "7b50faa6f9a7707f757366045b73c0bc8dc6821622e6cac62448892bf433d83f"
+  },
+  "_MD/148__correct-is-the-only-verb-that-appears-in-both-the-posses__ryle-1949__FORAGE-PT-028__from-operation-describe.md": {
+   "bytes": 4841,
+   "sha256": "37448485508fa57c496bc5dcc0b57616c73eb0e1f5c71542163e8ab63c46281f"
+  },
+  "_MD/105__seven-theories-across-all-four-lineages-independently-fo__dse-2026__FORAGE-PG-010__from-operation-describe.md": {
+   "bytes": 6843,
+   "sha256": "c2d39185de6e09b5dfd349c213cb5b7f39156cace32c168bf1bdcc190bf9a950"
+  },
+  "_MD/062__the-core-thesis-and-its-mutation-word-to-image-is-alread__hartsoe-bolter-worldtext__FORAGE-ZP-001__from-operation-describe.md": {
+   "bytes": 5929,
+   "sha256": "162df17e642ce7c27b5d8fe15694050f3a67ec50a7122977b358540c565fd5fa"
+  },
+  "_MD/078__three-field-devices-for-latent-terrain-synthetic-probes__opdescribe-protocol2026c__FORAGE-LS-005__from-operation-describe.md": {
+   "bytes": 5243,
+   "sha256": "5d9baa35b79576d5006ab5dfd91a0a091001137ddba68f3606302261974c5ccf"
+  },
+  "_MD/088__the-first-storyteller-was-a-machine-operator-literature__calvino-1986__FORAGE-PA-004__from-operation-describe.md": {
+   "bytes": 5699,
+   "sha256": "2e222749a5cbf9abdb2aad8e46652888a6f0b4e9b41dd0338393fc8e57609f31"
+  },
+  "_MD/110__the-drowned-parish-entry-a-world-as-four-constraint-kind__vertical-axis-2026__FORAGE-WT-005__from-operation-describe.md": {
+   "bytes": 5582,
+   "sha256": "aefe4c67d429db296bc8593f6f9639b5941b5acabebf97d9baab4c9d94fe6035"
+  },
+  "_MD/104__opek-s-strongest-machinery-is-a-chiasmus-sequential-medi__opek-2026__FORAGE-PG-009__from-operation-describe.md": {
+   "bytes": 6418,
+   "sha256": "cb86a862b4af6de3b376b7dfde236a4a0a1308fe45f92abb5c0ba1d8465c1aa0"
+  },
+  "_MD/050__thick-prompting-geertz-s-thick-description-transposed-to__geertz-1973__FORAGE-DD-002__from-operation-describe.md": {
+   "bytes": 5756,
+   "sha256": "85351b374a0e8e8d11558f105c48f9d85e29f21fbf7eaf2dac16e316edfc3e00"
+  },
+  "_MD/144__the-corpus-contains-two-geertzes-because-culture-as-prog__pt024-collision__FORAGE-PT-024__from-operation-describe.md": {
+   "bytes": 4594,
+   "sha256": "6e97f498cb3bdf056a82d395e027fffa6ad99522134efbb618ddd1b975804d27"
+  },
+  "_MD/154__the-wink-ladder-has-a-top-after-all-and-it-is-set-by-how__mentalizing-ceiling-unve__FORAGE-PT-034__from-operation-describe.md": {
+   "bytes": 4816,
+   "sha256": "aadc83a1dfc9eba7a4eca5bab29cb8b179dc76d664e2e148324c1a02224821a8"
+  },
+  "_MD/120__the-agential-cut-taxonomy-six-auditable-cut-levels-l0l5__agential-cuts-2026__FORAGE-WT-015__from-operation-describe.md": {
+   "bytes": 6551,
+   "sha256": "9c481109547b30ab093531b5149456dd6c31b9e6453333a64901c4438b8f11f6"
+  },
+  "_MD/164__constraint-trades-output-set-entropy-for-pointwise-surpr__haunted-program__FORAGE-PT-044__from-operation-describe.md": {
+   "bytes": 4587,
+   "sha256": "eda7eef5c2297ba6d4a02e41828d135c085eca3e5a239798085cf69e5c0b7331"
+  },
+  "_MD/113__continuity-debt-a-three-debtor-economics-of-coherence-an__continuity-debt-2026__FORAGE-WT-008__from-operation-describe.md": {
+   "bytes": 6178,
+   "sha256": "bfb56bc7de05fdd669c8b6c7736a8830c6481784114344b994f70fbdc30f8e5b"
+  },
+  "_MD/023__the-archive-s-missing-negative-case-is-its-own-banned-te__hartsoe-2026__FORAGE-OD-023__from-operation-describe.md": {
+   "bytes": 6817,
+   "sha256": "1b114435c6982cdb9897280389d7d878effa0af2abe493df89ad8563e3d34fbc"
+  },
+  "_MD/112__epistemic-debt-and-the-fragile-expert-the-operator-side__epistemic-debt-2026__FORAGE-WT-007__from-operation-describe.md": {
+   "bytes": 5848,
+   "sha256": "01e50db275ddbf08189349f68781b24baf612e3ae1cbeea96d5aed545feeff94"
+  },
+  "_MD/069__the-shield-of-achilles-enters-as-the-model-not-the-examp__taplin-1980__FORAGE-ZP-008__from-operation-describe.md": {
+   "bytes": 6656,
+   "sha256": "7afb4175e9cca9f4ce87cfcb96394952eb70d9589e3f4c30b76346297c0d98a1"
+  },
+  "_MD/128__if-depiction-is-measurement-contact-then-a-representatio__mmt-program__FORAGE-PT-008__from-operation-describe.md": {
+   "bytes": 3755,
+   "sha256": "8904607b6bb0eba4fa4c9ede3164e9db4536909d080014dc56b05fc16c462a4e"
+  },
+  "_MD/096__the-corpus-s-first-law-is-an-ordering-constraint-on-arti__meta-2026__FORAGE-PG-001__from-operation-describe.md": {
+   "bytes": 5374,
+   "sha256": "d220eef1f7820417e1c1cafbe92c40a84342854474d1e603ed540539d100f454"
+  },
+  "_MD/166__fidelity-requires-an-append-only-hash-chained-log-commit__ct-rfc6962__FORAGE-PT-046__from-operation-describe.md": {
+   "bytes": 5156,
+   "sha256": "1c7623b6582bea7fa8f512c052be0f3dbc38305972d255c4f5f148be9fac21aa"
+  },
+  "_MD/145__one-instrument-makes-the-human-a-substrate-and-another-r__pt025-collision__FORAGE-PT-025__from-operation-describe.md": {
+   "bytes": 4412,
+   "sha256": "2f9dfd9b2b47f90e977bb9d78bf63a9dc593af178b39da4f3eb0910f2af9e2f4"
+  },
+  "_MD/126__the-validation-formula-lists-social-time-and-rival-readi__tah-program__FORAGE-PT-006__from-operation-describe.md": {
+   "bytes": 3553,
+   "sha256": "84d1c2cac188b4486ca58d66cd87627df1e059446e12ff81bdd43f6f4fce6591"
+  },
+  "_MD/045__the-observer-declaration-converts-von-foerster-s-ethics__foerster-1992__FORAGE-DX-005__from-operation-describe.md": {
+   "bytes": 6335,
+   "sha256": "fa61b6d1f70cfa7569f2c8f7d2b51eca8a615fdc4ba5a56f54c7c264aee259c7"
+  },
+  "_MD/063__bajohr-s-operative-ekphrasis-the-text-image-collapse-is__bajohr-2024__FORAGE-ZP-002__from-operation-describe.md": {
+   "bytes": 5811,
+   "sha256": "55540e6e8e7e78de4d0c72148411d35140422af5d4db2cfe8e98edae4a2c657d"
+  },
+  "_MD/077__diffractive-optics-for-interpretability-a-three-way-taxo__opdescribe-protocol2026b__FORAGE-LS-004__from-operation-describe.md": {
+   "bytes": 4561,
+   "sha256": "5e696690fb778c1e425ea735f02fb188e86900a96c542e1622e91d66e28f9bc9"
+  },
+  "_MD/010__the-model-attends-to-the-correct-tool-80-of-the-time-and__chen-2026__FORAGE-OD-010__from-operation-describe.md": {
+   "bytes": 5370,
+   "sha256": "076c75ba2e3ae881fc41a8d2d4cf11aa76217be871dc4dfde74d5e20d4065649"
+  },
+  "_MD/086__the-chiasmus-sequential-pragmatics-without-semantics-con__bajohr-2024__FORAGE-PA-002__from-operation-describe.md": {
+   "bytes": 5322,
+   "sha256": "4ee955eb3ffb6ac60b823e27094ca03a229fd3020534c9a5a043060032bc4463"
+  },
+  "_MD/153__the-validation-formula-returns-for-shallow-traces-and-di__agreement-practice-unver__FORAGE-PT-033__from-operation-describe.md": {
+   "bytes": 4965,
+   "sha256": "961fd3617a3e757f595337750abab52c76dbc34147fe31282516402d06984d5e"
+  },
+  "_MD/028__every-case-in-the-archive-adds-a-description-and-none-re__hartsoe-2026__FORAGE-OD-028__from-operation-describe.md": {
+   "bytes": 5450,
+   "sha256": "2aa546bffc058c1a3e857ab49e29990b8d522ba2ee9a1457b495cf0fa7aa1938"
+  },
+  "_MD/018__the-encounter-trace-can-evidence-routing-but-not-steerin__hartsoe-2026__FORAGE-OD-018__from-operation-describe.md": {
+   "bytes": 6156,
+   "sha256": "f0f96cc2c329f55a106ebd83070a4050090dd9096e81ba1c992d24aa0acfc200"
+  },
+  "_MD/168__the-footnote-was-built-to-make-a-claim-checkable-and-to__grafton-1997__FORAGE-PT-048__from-operation-describe.md": {
+   "bytes": 5167,
+   "sha256": "991bc91124492b4b97d8e3b330b6b019c5b166742ad4a59be122bb24076c32a9"
+  },
+  "_MD/001__the-central-metric-of-operative-description-subtracts-tw__hartsoe-2026__FORAGE-OD-001__from-operation-describe.md": {
+   "bytes": 5284,
+   "sha256": "c00ee35f5334334f4387bb3f42be51e9a8ede925a2ce76739d41593898e5a4d7"
+  },
+  "_MD/169__software-engineering-already-occupies-the-quadrant-schol__code-review-practice__FORAGE-PT-049__from-operation-describe.md": {
+   "bytes": 5076,
+   "sha256": "fbe5d541d07ce5d13909b9110795fb62eb3e036943b77e2e9783cefd0aff6a10"
+  },
+  "_MD/137__if-constraint-enables-generation-rather-than-only-limiti__haunted-program__FORAGE-PT-017__from-operation-describe.md": {
+   "bytes": 4017,
+   "sha256": "364bd295bdbc213e36e5d0badda37487cafef7df84f824f48bab85a81dee26e1"
+  },
+  "_MD/151__if-an-instrument-that-never-concludes-still-slows-the-op__uam-program__FORAGE-PT-031__from-operation-describe.md": {
+   "bytes": 4387,
+   "sha256": "62a47617d58be0d804b44eb81f35a9a270b39baee152e3a8b86953439e913386"
+  },
+  "_MD/150__a-century-old-discipline-already-reads-revision-as-evide__bellemin-1972__FORAGE-PT-030__from-operation-describe.md": {
+   "bytes": 4746,
+   "sha256": "7e1d2fe340475a59a76959638dd03feb4e2e5970e2dacded6605b554d0edf9d6"
+  },
+  "_MD/024__the-one-routing-system-with-complete-logs-no-irb-and-no__hartsoe-2026__FORAGE-OD-024__from-operation-describe.md": {
+   "bytes": 6589,
+   "sha256": "97bf65b0955e8d2a9c0525616cb3117fdaac20959319f137eb44590dd839b873"
+  },
+  "_MD/123__descriptive-struggle-names-nine-answerability-conditions__dse-program__FORAGE-PT-003__from-operation-describe.md": {
+   "bytes": 3823,
+   "sha256": "94ee609b2fd4001776972cd0f7cfb11d4562d67248bf54a5ffa9891744e53011"
+  },
+  "_MD/157__belief-revision-has-three-operations-and-natural-languag__alchourron-1985__FORAGE-PT-037__from-operation-describe.md": {
+   "bytes": 4999,
+   "sha256": "74b26847c9719cc9f1e34d8b1ca56a6a412237dff783858ff7a12f25d0ea07a5"
+  },
+  "_MD/035__what-motion-adds-is-a-settling-time-which-means-the-movi__hartsoe-2026__FORAGE-OD-035__from-operation-describe.md": {
+   "bytes": 6106,
+   "sha256": "53ccdc0e019446947c2013f4a7ca08f968abc921037ad9bce0fd28c22ea8c7ec"
+  },
+  "_MD/160__the-positive-term-for-distribution-already-exists-no-sin__hutchins-1995__FORAGE-PT-040__from-operation-describe.md": {
+   "bytes": 4943,
+   "sha256": "8d83c5b0ec652f22af4924d78fc05d891f53f606e9399f2c76f0a8d33ed9d26a"
+  },
+  "_MD/158__repeated-successful-reference-shortens-the-description-s__clark-1986__FORAGE-PT-038__from-operation-describe.md": {
+   "bytes": 5113,
+   "sha256": "c220c305998b5425c53f922447d15df5d1531eb005056c2191a9c4b5182e124b"
+  },
+  "_MD/163__naur-s-modification-test-and-ryle-s-transfer-test-are-th__naur-1985__FORAGE-PT-043__from-operation-describe.md": {
+   "bytes": 4715,
+   "sha256": "9e84ff4bb7694a6cb87578b185169cf723ce341fa861c61dc1f7ac2285de732c"
+  },
+  "_MD/098__the-lifecycle-protocol-gives-theories-a-death-but-death__meta-2026__FORAGE-PG-003__from-operation-describe.md": {
+   "bytes": 5222,
+   "sha256": "9974ae53a52e2d9ac52d54ce8f4e12034e3d090c8790b4f67232b0baf113909d"
+  },
+  "_MD/015__the-archive-promoted-the-case-with-the-best-experimental__hartsoe-2026__FORAGE-OD-015__from-operation-describe.md": {
+   "bytes": 5247,
+   "sha256": "6fa46c5ca8fd6d5f8f7936fe4c5b8ef51ebbfd0baed8b29924ac6e5d64ce71c2"
+  },
+  "_MD/106__the-dapg-a-worldtext-is-a-typed-provenance-graph-with-se__worldtext-formal-engine__FORAGE-WT-001__from-operation-describe.md": {
+   "bytes": 5228,
+   "sha256": "8d933557221066018bfc3982cf930e9f9d008f56744849f53e56dba2ee7116d6"
+  },
+  "_MD/165__service-work-supplies-the-unit-of-intensification-and-it__leidner-1993__FORAGE-PT-045__from-operation-describe.md": {
+   "bytes": 5094,
+   "sha256": "51d9890622dc8dd9525df5f1833891e7cca4a4030a18241afe857bcbec1b1cb9"
+  },
+  "_MD/167__paraphrase-sensitivity-is-already-a-measurement-of-carry__paraphrase-sensitivity-u__FORAGE-PT-047__from-operation-describe.md": {
+   "bytes": 4861,
+   "sha256": "05a0711abbae45f78ecf9cc96b45fd85115258d1a8a221d9280d02f696346ad4"
+  },
+  "_MD/042__the-bio-inference-paper-smuggles-one-falsifiable-claim-i__stephens-2010__FORAGE-DX-002__from-operation-describe.md": {
+   "bytes": 6601,
+   "sha256": "c00502adce117a44954dea071b33527e9af42222718a3d543ea3066056eb1eeb"
+  },
+  "_MD/133__tool-author-and-mirror-are-rejected-because-each-puts-ag__cyber-program__FORAGE-PT-013__from-operation-describe.md": {
+   "bytes": 3747,
+   "sha256": "fd5b24ca23da3608c8bc4346fd8521adce5e34f59bdd697ed6115b42f516a523"
+  },
+  "_MD/118__the-control-surface-ten-hard-rules-nineteen-diagnostic-p__control-surface-2026__FORAGE-WT-013__from-operation-describe.md": {
+   "bytes": 6151,
+   "sha256": "38f27f29f7b81e637bf77f21f177fcfb61d57127b5d93ee00aafa8e98fa2c542"
+  },
+  "_MD/147__an-audit-trail-records-the-path-taken-through-what-was-a__pt027-collision__FORAGE-PT-027__from-operation-describe.md": {
+   "bytes": 4645,
+   "sha256": "fa51c4ea220128e039b6101dc5780189a059a3e50f5354762811ad5d6b3d556a"
+  },
+  "_MD/044__hallucination-as-double-bind-the-corpus-s-one-mechanisti__bateson-1956__FORAGE-DX-004__from-operation-describe.md": {
+   "bytes": 6795,
+   "sha256": "58f327c86fc13422b479df4cf5e415ca2d6f5190630b2f2d4cc552f7a8dfd4f3"
+  },
+  "_MD/016__the-archive-s-clearest-illustration-of-the-descriptive-i__hartsoe-2026__FORAGE-OD-016__from-operation-describe.md": {
+   "bytes": 5747,
+   "sha256": "c85361402aac8fd11cf92ecdd4972122a7649bc2428b1d1b672a24a5f594f70b"
+  },
+  "_MD/097__the-composition-protocol-licenses-ordered-sequences-and__meta-2026__FORAGE-PG-002__from-operation-describe.md": {
+   "bytes": 4978,
+   "sha256": "fd67df4b734e84b729dc4d05e42067daa46dee07f206b62a8968f178069b8d08"
+  },
+  "_MD/121__indefinite-is-the-load-bearing-word-in-concept-possessio__rcp-program__FORAGE-PT-001__from-operation-describe.md": {
+   "bytes": 3803,
+   "sha256": "3219aeff117738b6ba1b2609024a421bfd31583ea0ca9ef0843ccc4dba098e63"
+  },
+  "_MD/026__the-archive-built-a-730-line-feedback-log-to-satisfy-its__hartsoe-2026__FORAGE-OD-026__from-operation-describe.md": {
+   "bytes": 6016,
+   "sha256": "ed0c44d734f0eab11d6eff5fdbf23c3269201a8eac757b9e5d4c07fc3bb80b1d"
+  },
+  "_MD/036__the-three-cases-are-said-to-share-a-mechanism-and-no-sha__hartsoe-2026__FORAGE-OD-036__from-operation-describe.md": {
+   "bytes": 5214,
+   "sha256": "fe539b187ab91f0d04e80fcc134acd59697facafa82b6b62050e0f2c66d877b3"
+  },
+  "_MD/134__in-a-list-of-seven-interpretive-categories-factual-aura__crn-program__FORAGE-PT-014__from-operation-describe.md": {
+   "bytes": 3863,
+   "sha256": "80eb33ae16aaede20c302b191ac440615c8df00ce700d722920eb5ad7552345e"
+  },
+  "_MD/125__rescues-implies-something-arrives-intact-and-nothing-spe__mot-program__FORAGE-PT-005__from-operation-describe.md": {
+   "bytes": 3471,
+   "sha256": "99e79b470a278ca8ef702beb4bf52e20c32de1b06ab930324358d11e44cfe0b8"
+  },
+  "_MD/075__the-autographic-audit-goodman-s-forgery-distinction-as-a__opdescribe-quasiplace202__FORAGE-LS-002__from-operation-describe.md": {
+   "bytes": 5352,
+   "sha256": "0d6de59b172898fc821e56e3ef5e18e6ac34b8057271cea2ce2a5257d5072c86"
+  },
+  "_MD/103__uam-forbids-what-rcp-asserts-and-tenne-implements-a-thre__uam-2026__FORAGE-PG-008__from-operation-describe.md": {
+   "bytes": 6974,
+   "sha256": "43eb30ecbb19e744acbeb03aacdffe65884aab311dc2f8630788a2f7de6f179f"
+  },
+  "_MD/006__the-archive-s-chapter-one-predicts-that-its-chapter-thre__hartsoe-2026__FORAGE-OD-006__from-operation-describe.md": {
+   "bytes": 4974,
+   "sha256": "2c6754f919d70dce51ebe9df5990bd1ca17cf9ad21212ad9830158c58d6f55f8"
+  },
+  "_MD/053__urn-vs-shield-two-governing-images-of-ekphrasis-and-less__lessing-1766__FORAGE-DD-005__from-operation-describe.md": {
+   "bytes": 5551,
+   "sha256": "1822ce51ecbae8dab2dd5047cbeb67ac55b4b39a8a134429174f994e8ec6708a"
+  },
+  "_MD/005__descriptions-become-operative-exactly-where-the-name-sto__wu-2026__FORAGE-OD-005__from-operation-describe.md": {
+   "bytes": 5109,
+   "sha256": "ee3f9fbb3d3505d7d3f1a7f6afa8be99307cb3108bd27787c7908412bd3a4a1f"
+  },
+  "_MOCS/unbounded-demand.md": {
+   "bytes": 2807,
+   "sha256": "3859881fd0073fce4e12d7c341c30d8bf9eee91e5e074b80eae435a792f420cb"
+  },
+  "_MOCS/plurality-has-been-priced.md": {
+   "bytes": 1662,
+   "sha256": "2e55f292246fa4da62726aaa79f7bf796fac8de4660e033924fcb2d45777da77"
+  },
+  "_MOCS/alignment-is-projection.md": {
+   "bytes": 2340,
+   "sha256": "70a69daa2e4385a67e7f22e4182e1ab19bb0e3f305a3e687142a50c39f2b8614"
+  },
+  "_MOCS/integrity-is-not-fidelity.md": {
+   "bytes": 2305,
+   "sha256": "28542177c3d3acec4f4ed817d53fc622f7fb5b5b64deae9503a96775df0d9aff"
+  },
+  "_MOCS/the-bearer.md": {
+   "bytes": 2807,
+   "sha256": "4bb55caccf51d78a94fc8ba44d02a006826bc07a33c1381e1f0f830959c5c537"
+  },
+  "_MOCS/the-trace-is-partly-a-clock.md": {
+   "bytes": 1972,
+   "sha256": "9e5be23e6425446fb6dcab0bc49265821c6bb5cec1593582c4f980009701a8a7"
+  },
+  "_MOCS/thickness-has-a-shape.md": {
+   "bytes": 2851,
+   "sha256": "65eba31650c260da8f4beb92385997b174140d59c8e5e661f6c2e15218f110b4"
+  },
+  "_MOCS/two-curves-of-constraint.md": {
+   "bytes": 1777,
+   "sha256": "4ac1bd95587a4721ca759629048d973413aa9bab5d1363eba03c8f6cc90a1209"
+  },
+  "_MOCS/read-the-diff.md": {
+   "bytes": 2402,
+   "sha256": "4e98427a7d261e7e526b0e5d35d12a56c9dd12de04b6608a3e6ab2432f4396ff"
+  },
+  "_PAPERS/alignment-is-projection__MAKING_HISTORY.txt": {
+   "bytes": 1344,
+   "sha256": "df51958b11aed1febedd61dc8c6bb8c364d35fef08c1387bc9c3272ef2cb6de0"
+  },
+  "_PAPERS/read-the-diff__2026-08-19.tex": {
+   "bytes": 12223,
+   "sha256": "3556b770e402da12cd730f548d4112025b885fc1ef016a7bb632deb16b3138b5"
+  },
+  "_PAPERS/read-the-diff__SOURCE_MAP.txt": {
+   "bytes": 4693,
+   "sha256": "d0f0cc7b911ff9a45b9bcca2b9f876511b75b66fed4010c09765fc8e4404a3ca"
+  },
+  "_PAPERS/the-bearer__SOURCE_MAP.txt": {
+   "bytes": 5246,
+   "sha256": "7bf52082c8bc07899baed71a47d49af07e97f534084d0d10520ff47af5552c36"
+  },
+  "_PAPERS/the-bearer__2026-08-19.tex": {
+   "bytes": 12053,
+   "sha256": "623f82ddc43cd8ce541bba97b7681da6d970810e32a0694920a3f62d9d41a173"
+  },
+  "_PAPERS/unbounded-demand__MAKING_HISTORY.txt": {
+   "bytes": 1337,
+   "sha256": "8d5a1663bb1eafa770c80b531c1abae7877aff28e54432541cce76e1a2678bfa"
+  },
+  "_PAPERS/alignment-is-projection__SOURCE_MAP.txt": {
+   "bytes": 4071,
+   "sha256": "20c32b3f93e186a209f14dae61dad79780ad9b28e85a00e5a2111971e4499bba"
+  },
+  "_PAPERS/alignment-is-projection__2026-08-19.tex": {
+   "bytes": 12856,
+   "sha256": "036f6bfc5622832cb2426fb78388b8c2662e8f8fd501370977d85d708da210ea"
+  },
+  "_PAPERS/integrity-is-not-fidelity__SOURCE_MAP.txt": {
+   "bytes": 4101,
+   "sha256": "e6e378f4ca25fef42aa9f2b3bc52d1ac9eaf6af28f244eee82b3993f97fe5957"
+  },
+  "_PAPERS/integrity-is-not-fidelity__2026-08-19.tex": {
+   "bytes": 12359,
+   "sha256": "c1d95eb25280b1dc927f68f09c12aee862df3a64203357a2c0d3f72bbc252608"
+  },
+  "_PAPERS/integrity-is-not-fidelity__MAKING_HISTORY.txt": {
+   "bytes": 1346,
+   "sha256": "528daace0d6066179b00b9a03ce59d6c5496fe4862ec857f2909ecbae305b0cd"
+  },
+  "_PAPERS/two-curves-of-constraint__SOURCE_MAP.txt": {
+   "bytes": 3179,
+   "sha256": "c4fe22bf7cc71ec6b46b8af87741bef0f863ab34a30025b69c877414a4fa0d75"
+  },
+  "_PAPERS/two-curves-of-constraint__2026-08-19.tex": {
+   "bytes": 11159,
+   "sha256": "4ff03d540a53c7461d269ec7aa5602d04e53880b5fd4a0180db972a551bfbf2f"
+  },
+  "_PAPERS/unbounded-demand__SOURCE_MAP.txt": {
+   "bytes": 5091,
+   "sha256": "bb3fc13908300152102acb2073b4cf83514a19bd466d869da4ee9bab62907b02"
+  },
+  "_PAPERS/thickness-has-a-shape__MAKING_HISTORY.txt": {
+   "bytes": 1342,
+   "sha256": "238bc49ec31d98a6095e59bbbde2b3ac046ab80fbef9dd16fb97d98a27f820bf"
+  },
+  "_PAPERS/unbounded-demand__2026-08-19.tex": {
+   "bytes": 13685,
+   "sha256": "a1fa53d937fdb7f647a119b485ac2fdbfa0bcc938430315a18043aefaa690a5c"
+  },
+  "_PAPERS/read-the-diff__MAKING_HISTORY.txt": {
+   "bytes": 1334,
+   "sha256": "60928c6990c0a60ef62e8b96dbebcef15407345867e0836e2b07df763c828540"
+  },
+  "_PAPERS/the-trace-is-partly-a-clock__MAKING_HISTORY.txt": {
+   "bytes": 1348,
+   "sha256": "06b1e7c0aa5f09bbc38806188e3c1cdce917a6f81ed36603fe2b8b07fd2be300"
+  },
+  "_PAPERS/the-bearer__MAKING_HISTORY.txt": {
+   "bytes": 1331,
+   "sha256": "9586983e2bf0af980dcc4dc5534d052c16058ada34e11d1b6adc33844afe7dc3"
+  },
+  "_PAPERS/plurality-has-been-priced__MAKING_HISTORY.txt": {
+   "bytes": 1346,
+   "sha256": "8f6ca18014eb160e4e8ac16bcd6f3223455497a4eddc0ca69137cac3264f93b9"
+  },
+  "_PAPERS/the-trace-is-partly-a-clock__SOURCE_MAP.txt": {
+   "bytes": 3500,
+   "sha256": "230446fc6000920c5698e62432cd56f30849244d1bb8b42208b3ef87109a9e0a"
+  },
+  "_PAPERS/the-trace-is-partly-a-clock__2026-08-19.tex": {
+   "bytes": 10640,
+   "sha256": "c144dd602dd1ddcef54b5fc8eac09b2825305110ad8069984ea60fa6d0812c49"
+  },
+  "_PAPERS/plurality-has-been-priced__SOURCE_MAP.txt": {
+   "bytes": 3288,
+   "sha256": "23f775ee79d0cf9e1273c52003eabf1af7b356f59e046566af3e187eaa082447"
+  },
+  "_PAPERS/plurality-has-been-priced__2026-08-19.tex": {
+   "bytes": 11030,
+   "sha256": "234413ea0c9845c3b82a6645376cd51d9c2a27384630ef7620552977e405c1f8"
+  },
+  "_PAPERS/thickness-has-a-shape__SOURCE_MAP.txt": {
+   "bytes": 5425,
+   "sha256": "28e90797e9f9a0cd0880c77c542ca6d71a47b7fbb50059c8bc37f6e111d030e6"
+  },
+  "_PAPERS/thickness-has-a-shape__2026-08-19.tex": {
+   "bytes": 13617,
+   "sha256": "dce0d5a4c60486d1ed7165d791447ec755286c1cb9d5693d6e29df1214df4558"
+  },
+  "_PAPERS/two-curves-of-constraint__MAKING_HISTORY.txt": {
+   "bytes": 1345,
+   "sha256": "751619dacf3dad05e562931d968931c0ca22bb32d42fec17b04a2a5be676fd5b"
+  },
+  "_SLIPCASE/ALIASES.json": {
+   "bytes": 2,
+   "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+  },
+  "_SLIPCASE/APPEARANCES.jsonl": {
+   "bytes": 87737,
+   "sha256": "47dfccef7bbc5c0cef84085539c22b3b5d81b6443b0a7d6efe2d9228dcfff1c9"
+  },
+  "_SLIPCASE/RELATIONS.jsonl": {
+   "bytes": 278935,
+   "sha256": "843fff39ae30aafccc1a8e4ec91f6944f6d9043f59bfde18e143bfbf26ac21f7"
+  },
+  "_SLIPCASE/RESOURCES.jsonl": {
+   "bytes": 1313,
+   "sha256": "1488702ce8c265462ff639b6646127d5cee6f1c90ff12d02d67c155294b514a6"
+  },
+  "_SLIPCASE/NODES.jsonl": {
+   "bytes": 141805,
+   "sha256": "92ce4d8dc8c8dc86d36804363e5b706c00addd3ab6b50331f3d92308f664cbca"
+  }
+ }
+}

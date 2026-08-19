@@ -1,0 +1,25 @@
+000__REBUILD.txt
+======================================================================
+
+The cards are sufficient. Every other file in this package is derived.
+
+1. EVIDENCE      the 174 root *.txt cards (and their identical _MD mirrors).
+2. PARSE         each card is a flat FIELD: value record. Fields, in order:
+                 ID TITLE SOURCE PASSAGE 'RESEARCH OBJECT' 'LOCAL MOVE' 'SOURCE TERMS'
+                 'WHAT BECAME STRANGE' QUESTION 'DEEPER QUESTION' MECHANISM 'FORMAL SHIFT'
+                 'SOURCE FORMALISM' 'OUR FORMALIZATION' TENSION MISSING BOUNDARY
+                 'CITATION TRAIL' TEST PLATFORM LINKS BIBTEX  (+ optional 'SOURCE URL')
+                 Two layouts occur: 'FIELD:' then value on following lines, and
+                 'FIELD: value' on one line. A parser must accept both.
+3. IDENTITY      sha256 of the exact payload bytes. Not the filename, title, order or ID.
+4. GRAPH         every [[ADDRESS]] in any field is a relation. PLATFORM -> MEMBER_OF,
+                 LINKS -> LINKS_TO, anything else -> WIKILINKS_TO. Resolve conservatively:
+                 exact ID, then exact unique title, else GHOST. Never fuzzy-match.
+5. BIBLIOGRAPHY  parse every @entry in BIBTEX. Classify UNIQUE / SHARED.
+6. VIEWS         index.html, READER.html, NETWORK.*, CARDS.html, 000__* are all rebuildable
+                 from steps 1-5. Delete any of them and the field survives.
+7. PAPERS        _PAPERS/*.tex are interpretation. They are not evidence and may be discarded
+                 without loss to the field. Compile with pdflatex if an engine is available.
+
+MERGE RULE: merge on exact payload sha256 only. Never on filename, title, order, ID or
+citekey. Preserve every appearance, ghost, ambiguity and conflict; rerun resolution.

@@ -1,0 +1,71 @@
+unbounded-demand__SOURCE_MAP.txt — SLIPCASE-OPERATION-DESCRIBE-20260819
+======================================================================
+PAPER CLAIM -> ZETTEL -> SOURCE -> CITEKEY
+
+Cluster members admitted to this paper:
+
+  FORAGE-PT-001  (card 121)
+    title : "Indefinite" is the load-bearing word in concept possession, and it makes possession unverifiable by any finite test
+    source: PROGRAMS/rcp.json — RYLEAN_CONCEPT_POSSESSION_ENGINE, <CORE_CLAIM> — source: Gilbert Ryle, "Thinking Thoughts and Having Concepts"
+    citekey: rcp_program
+    sha256: 3219aeff117738b6ba1b2609024a421bfd31583ea0ca9ef0843ccc4dba098e63
+
+  FORAGE-PT-016  (card 136)
+    title : The practice theory ranks four things and demotes every transferable one, which makes it anti-documentation by construction
+    source: PROGRAMS/theory.json — NAUR_EHN_MUSASHI_SOFTWARE_PRACTICE_ENGINE, <core_claim>
+    citekey: theory_program
+    sha256: ad7fb8bb34ab440cd617c79396b3cb40e02cc75433450d0855f836ea7689675f
+
+  FORAGE-PT-043  (card 163)
+    title : Naur's modification test and Ryle's transfer test are the same test, and both are unbounded for the same reason
+    source: PROGRAMS/theory.json (modification without breaking coherence) read against PROGRAMS/rcp.json (mastery across an indefinite task field); Naur, "Programming as Theory Building" (1985) and Ryle, The Concept of Mind (1949) [UNVERIFIED pagination]
+    citekey: naur1985programming
+    sha256: 9e84ff4bb7694a6cb87578b185169cf723ce341fa861c61dc1f7ac2285de732c
+
+  FORAGE-PT-020  (card 140)
+    title : Inference is an event and possession is a disposition, so a system could accumulate achievements it never comes to possess
+    source: Collision of PROGRAMS/argue.json (inference as achievement) with PROGRAMS/rcp.json (possession as mastery across an indefinite field); the pairing is registered in PROGRAMS/meta.json <cross_references>
+    citekey: pt020_collision
+    sha256: 14ff09cc469091d336b9bc2a13f17ae6133d48d1888c70ff185061b4ce095eed
+
+  FORAGE-PT-026  (card 146)
+    title : Naur says the theory dies with the team and Calvino says the inventory and rules persist, which makes constraint the transferable part of an untransferable thing
+    source: Collision of PROGRAMS/theory.json (program theory as living possession, text as residue) with PROGRAMS/haunted.json (narrative from a finite inventory under combination rules)
+    citekey: pt026_collision
+    sha256: 44440e042b2de770a63e282523d389cec5ddeb7c2cbc881caf71cdaecb867aea
+
+  FORAGE-PT-028  (card 148)
+    title : "Correct" is the only verb that appears in both the possession battery and the struggle conditions, and the only one requiring an internal standard
+    source: Gilbert Ryle, The Concept of Mind (1949), ch. II on knowing-how and the criteria of competence; read against PROGRAMS/rcp.json six-verb battery and PROGRAMS/dse.json nine answerability conditions
+    citekey: ryle1949concept
+    sha256: 37448485508fa57c496bc5dcc0b57616c73eb0e1f5c71542163e8ab63c46281f
+
+  FORAGE-PT-040  (card 160)
+    title : The positive term for distribution already exists — no single component holds the whole representation — and it makes Naur and Hutchins the same claim
+    source: Edwin Hutchins, Cognition in the Wild (MIT Press, 1995), the ship-navigation analysis [UNVERIFIED pagination]; read against PROGRAMS/cyber.json seven-verb characterisation and PROGRAMS/theory.json shared theory
+    citekey: hutchins1995cognition
+    sha256: 8d83c5b0ec652f22af4924d78fc05d891f53f606e9399f2c76f0a8d33ed9d26a
+
+  FORAGE-PT-047  (card 167)
+    title : Paraphrase sensitivity is already a measurement of carry-over, and it is evidence for the third profile
+    source: Robustness-to-paraphrase and prompt-sensitivity results in language-model evaluation — performance varying across semantically equivalent phrasings of the same item [UNVERIFIED for specific studies and effect sizes]; read against [[FORAGE-PT-020]]
+    citekey: paraphrase_sensitivity_unverified
+    sha256: 05a0711abbae45f78ecf9cc96b45fd85115258d1a8a221d9280d02f696346ad4
+
+  FORAGE-OD-033  (card 033)
+    title : THE ARCHIVE'S RYLE CHAPTER AND ITS OPERATOR DEFINITION MAKE OPPOSITE CLAIMS ABOUT WHETHER UNDERSTANDING MATTERS
+    source: Watson Hartsoe — PAPERS/operation-describe-label-01.md §6 "The Operator: Substrate-Agnostic Processors" against PAPERS/ryl-01.md (abstract and §1) — 2026
+    citekey: hartsoe2026ryle
+    sha256: a5b7f285990b661f5a3820449536dc946412f32d0ec75d73a1488e2b132b9c0f
+
+Ghost / unadmitted members referenced by this cluster:
+  none
+
+COMPILER claims (connective prose not traceable to a single card):
+  - the identification of two literatures as making one claim (each paper's convergence section)
+  - all cross-cluster junction statements
+  - all proposed formalizations, marked in-card as OUR FORMALIZATION
+
+CITATION CHECK: every citekey above is present in SLIPCASE-OPERATION-DESCRIBE-20260819__references.bib.
+VERIFICATION: entries whose BibTeX note contains UNVERIFIED were not checked against the work.
+No quotation in any paper is attributed to a page number.

@@ -1,0 +1,99 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{lmodern}
+\usepackage[margin=1.05in]{geometry}\usepackage{microtype}\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}\usepackage{parskip}
+\title{\textbf{The Unbounded Demand}\\[.35em]\large Why Concept Possession and Program Comprehension Are One Unmeasurable Thing}
+\author{Watson Hartsoe}
+\date{2026-08-19 \quad\textemdash\quad Working Paper}
+\begin{document}\maketitle
+\begin{abstract}\noindent Two traditions with no shared citations converge on the same criterion for knowing something: the capacity to handle a case nobody supplied. Gilbert Ryle defines concept possession as operational mastery across an \emph{indefinite} task field; Peter Naur defines program comprehension as the capacity to modify a system without destroying its coherence. This paper argues that these are not analogous criteria but one criterion, and that its shared structure has a consequence neither tradition draws: the criterion can be disconfirmed by a single failure and confirmed by no number of successes. From this asymmetry three results follow. First, benchmark evaluation cannot establish possession, not because benchmarks are poorly built but because they are finite. Second, the eight verbs the two traditions use to characterise competence reduce to one diagnostic and seven displays. Third, a measurable proxy exists and is not reported: the item-level correlation of success across semantically equivalent presentations. We close by identifying the one domain where the criterion can actually be run --- designed artifacts with a living author who can adjudicate coherence --- and by noting that the criterion is unrunnable in exactly the domains where competence claims are most contested.\end{abstract}
+\vspace{-.5em}\noindent\textbf{Keywords:} concept possession, tacit knowledge, program comprehension, transfer, evaluation, dispositions, Ryle, Naur\par\vspace{1em}
+\section{The convergence}
+Ryle's account of having a concept is deflationary and operational. A concept is not an inner object, an image, a private episode or a semantic brick; it is a factor in use, and to possess one is to exhibit \emph{operational mastery across an indefinite task field}. The question ``what inner item is present?'' is replaced by ``what can the actor now do, recognise, infer, explain, correct and transfer?''
+
+Naur's account of programming is deflationary in the same way and about a different object. Software development is not artifact production but shared theory building under change. The program text is a residue; documentation is a residue; method is a tool; generated code is a candidate artifact. What matters is the living possession that lets a team explain, justify, modify and teach the system.
+
+The two accounts are usually filed apart --- one in philosophy of mind, one in software engineering --- and neither cites the other. Read together, the operative words align exactly. Ryle's field is \emph{indefinite}; Naur's change is \emph{unanticipated}. Both criteria demand correct performance on an item the tester did not supply, and both are silent about how many supplied items would suffice, because on both accounts no number would.
+
+That convergence is itself evidence. A demand that arises independently from ordinary-language philosophy and from industrial software practice, from different premises and with different examples, is more likely to be tracking a real distinction than a demand invented once.
+
+\section{The asymmetry}
+If the task field is not enumerable, the logic of the criterion is fixed. A single systematic failure on an in-field item refutes possession. Any finite set of successes leaves the unsampled remainder untouched and licenses no inference about it. Possession is therefore disconfirmable and not confirmable --- an evaluative structure with no positive terminus.
+
+This is not a complaint about rigour. It is a statement about what kind of predicate ``possesses the concept'' is. Compare a claim of the form ``this function is total''. No finite test suite establishes it; a single counterexample destroys it. The parallel is exact, and in software the response was not to test harder but to change the object: prove properties, or narrow the claim to a specified domain.
+
+Neither tradition took that step. Ryle's readers continued to treat the six verbs as a battery, and Naur's readers continued to treat comprehension as a property teams either have or lack. The step available now is the software one: either narrow the claim to a stated domain --- possession \emph{over this specified field} --- or find a proxy whose relation to the unbounded criterion can be argued.
+
+\section{One diagnostic, seven displays}
+The two traditions supply eight verbs between them: do, recognise, infer, explain, correct, transfer, justify, modify. They are not of equal standing.
+
+Explanation and justification can be produced fluently by an actor with no possession at all; this is the whole force of the fluency critique that recurs across the surrounding literature. Doing, recognising and inferring are scoreable on supplied items and therefore inherit the finiteness problem without adding anything. Teaching is explanation with an audience.
+
+Two verbs survive. \emph{Transfer} and \emph{modify} are the same verb under two descriptions --- perform correctly where nothing was supplied --- and they are the unbounded criterion itself rather than a test of it.
+
+One verb is different in kind. \emph{Correct} is the only item on either list that requires the actor to hold a standard against which its own output can be found wanting. It is also, and this is not a coincidence, the only element of the answerability conditions in the neighbouring account of descriptive struggle that leaves a public trace. Correction is where an internal criterion becomes externally visible, which makes it the one place the unbounded criterion touches evidence.
+
+The consequence for measurement is sharp. Self-correction cannot be demonstrated by success, because an actor that does not err has no occasion to correct, and an actor corrected from outside has shown nothing about itself. The diagnostic requires \emph{self-produced} error plus \emph{unprompted} repair --- a condition no fixed test set creates, because fixed test sets reward not erring.
+
+\section{The proxy nobody reports}
+A measurable proxy for carry-over already exists in evaluation practice and is discarded as noise.
+
+If an actor possesses a concept, a rephrasing of a problem is the same problem. Sensitivity to semantically equivalent paraphrase is therefore a direct estimate of the item-level correlation of success across presentations --- call it $\rho$. Evaluation research routinely observes such sensitivity and reports mean performance with a spread, averaging away precisely the quantity that separates a disposition from a sequence of unrelated achievements.
+
+Three profiles fall out of two statistics. A possessor shows high mean and high $\rho$. A bluffer shows low mean, low $\rho$ and high fluency. A third profile --- high mean, low $\rho$, high fluency --- is an actor that succeeds repeatedly and accumulates nothing: genuine achievements with no disposition formed. Neither tradition has a name for it, and current reporting cannot see it, because the mean is the same as the possessor's.
+
+That third profile matters because it redirects the fluency critique. The worry is usually that output outruns thought. If $\rho$ is low while accuracy is high, the situation is stranger: thought occurs and does not stick, leaving nothing behind to be mastered.
+
+\section{Where the criterion can be run}
+The criterion needs an adjudicator. Someone must be able to say whether a response to an unsupplied item is coherent with the system it extends.
+
+Designed artifacts have one. A codebase has maintainers who can judge whether a modification preserves the theory; a constructed world has an author who can rule on whether an addition belongs. Here the criterion is runnable: hand a competent stranger the residues only, pose a modification task the residues do not cover, and have the holder score the result blind.
+
+Practices have no adjudicator. Where a concept belongs to a community rather than an author, there is no one whose ruling settles whether a novel application was correct, and disagreement about the application is indistinguishable from disagreement about the concept. The unbounded criterion has no ground truth there.
+
+This asymmetry is the paper's practical conclusion, and it inverts the usual order of confidence. Claims about human conceptual competence, which feel secure, rest on a criterion that cannot be scored. Claims about a system's grasp of a designed artifact, which feel speculative, rest on one that can. The software case is not the analogy; it is the only place the test exists.
+
+\section{Distribution, not ineffability}
+One further consequence deserves stating, because it offers a cheaper explanation than either tradition provides for why transfer fails.
+
+Naur's pessimism is usually read as a claim about ineffability: understanding is the kind of thing that cannot be written down. There is an alternative. If the working representation of a system is held by no single participant --- spread across people, instruments and procedures, in the manner Hutchins describes for ship navigation --- then handover fails for a structural reason rather than a mysterious one. You cannot transmit what nobody holds.
+
+On that reading, Naur's living possession and Hutchins' distributed cognition are one claim in two vocabularies, and the criterion for distribution is checkable: separate the components and ask each to reconstruct the working representation alone. Failure by all of them establishes distribution. Success by any of them locates a holder and collapses the case to a tool relation.
+
+The two literatures do not cite each other. Their convergence is the same kind of evidence as Ryle's with Naur's, and it suggests the transfer problem is a fact about how work is organised rather than about the limits of language.
+
+\section{Limitations}
+The convergence argued here is structural. Neither Ryle nor Naur discusses the other's object, and neither would necessarily accept the collapse; the identity is our reading and is exposed to the objection that a designed artifact with an author is simply a different kind of thing from a concept held in a practice.
+
+The paraphrase-sensitivity literature is invoked here at the level of a recurring qualitative finding. Specific studies, effect sizes and the item-level correlation itself were not retrieved for this paper, and $\rho$ is proposed as computable from existing data rather than reported. A competing reading survives: low $\rho$ may indicate brittle retrieval of an intact capacity rather than absence of the capacity, and the discriminating condition --- whether an uninformative hint restores performance --- has not been run.
+
+Nothing here establishes any actor's profile. The paper's claim is that the discriminating statistic is cheap, available, and not reported.
+
+\section*{References}\small
+\begin{itemize}\setlength\itemsep{0pt}
+\item Hartsoe, Watson. The Argument Is Not the Thought: Ryle, Inference, and the Myth of Inner Logic. OPERATION DESCRIBE archive, PAPERS/ryl-01.md. 2026. \texttt{[hartsoe2026ryle]}
+\item Hutchins, Edwin. Cognition in the Wild. MIT Press. 1995. \texttt{[hutchins1995cognition]}
+\item Naur, Peter. Programming as Theory Building. Microprocessing and Microprogramming. 1985. \texttt{[naur1985programming]}
+\item [author unrecorded]. Paraphrase and prompt-format sensitivity in language-model evaluation. [UNVERIFIED] no specific study or effect size verified in this forage. 2026. \texttt{[paraphrase\_sensitivity\_unverified]}
+\item [author unrecorded]. Achievement Against Possession. Collision of PROGRAMS/argue.json and PROGRAMS/rcp.json, cross-reference declared in PROGRAMS/meta.json. 2026. \texttt{[pt020\_collision]}
+\item [author unrecorded]. Constraint Transfers Where Theory Does Not. Collision of PROGRAMS/theory.json and PROGRAMS/haunted.json. 2026. \texttt{[pt026\_collision]}
+\item [author unrecorded]. RYLEAN\_CONCEPT\_POSSESSION\_ENGINE. PROGRAMS/rcp.json, program theory after Ryle, "Thinking Thoughts and Having Concepts". 2026. \texttt{[rcp\_program]}
+\item Ryle, Gilbert. The Concept of Mind. Hutchinson. 1949. \texttt{[ryle1949concept]}
+\item [author unrecorded]. NAUR\_EHN\_MUSASHI\_SOFTWARE\_PRACTICE\_ENGINE. PROGRAMS/theory.json. 2026. \texttt{[theory\_program]}
+\end{itemize}\normalsize
+\appendix
+\section{Assembly instrument}
+The exact prompt that assembled this publication is preserved verbatim at
+\texttt{\_PROMPTS/ASSEMBLY\_PROMPT.txt} in the package and is embedded in \texttt{index.html}.
+It is not reproduced here for length. Schema: slipcase/15.55-AM.
+\section{Making history}
+See \texttt{unbounded-demand\_\_MAKING\_HISTORY.txt} and \texttt{000\_\_MAKING\_HISTORY.txt}.
+Argument selection, section order and connective prose were produced by the model named there
+and were not reviewed by a second human reader before packaging.
+\section{Replication path}
+Open \texttt{index.html} from \texttt{file://}. Cards, sources, graph, ghosts and this paper are
+embedded. \texttt{000\_\_REBUILD.txt} states how to regenerate every derived view from the cards alone.
+\vfill\noindent\includegraphics[width=13mm]{MARK.svg}\\
+\footnotesize Working Paper \textperiodcentered{} AI-augmented research process.
+Evidence, prompts and making history preserved. Checkpoint SLIPCASE-OPERATION-DESCRIBE-20260819.
+\end{document}

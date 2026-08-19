@@ -1,0 +1,119 @@
+_SLIPCASE/VERIFICATION.txt — SLIPCASE-OPERATION-DESCRIBE-20260819
+========================================================================
+Every number below was computed by the build script. Nothing here is asserted.
+
+SOURCE COVERAGE
+  bounded to: the OPERATION DESCRIBE repository + 5 fetched external works +
+  1 browsed prior field. NOT bounded to the full originating conversation:
+  the assembly prompt is preserved in operative form, not byte-verbatim. DECLARED.
+
+EXTRACTION
+  admitted zettels ................ 174
+  root zettel TXT cards ........... 174
+  _MD mirrors ..................... 174
+  JSON zettel records ............. 174
+  equality required by schema ..... PASS
+  root card payload byte-exact .... 174/174 PASS
+  _MD mirror byte-exact ........... 174/174 PASS
+
+DUPLICATES / ID COLLISIONS
+  distinct payload sha256 ......... 174 of 174
+  distinct ORIGINAL IDs ........... 174 of 174
+  exact duplicates ................ 0
+  ID collisions ................... 0
+
+PLATFORM RELATIONS
+  PLATFORM field occurrences ...... 102
+  MEMBER_OF records ............... 102  PASS
+  cards with PLATFORM = NONE ...... 6
+
+LINKS RELATIONS
+  LINKS field occurrences ......... 639
+  LINKS_TO records ................ 639  PASS
+
+WIKILINK COVERAGE
+  all [[ADDRESSES]] found ......... 866
+  classified relation records ..... 866  PASS
+    MEMBER_OF ..................... 102
+    LINKS_TO ...................... 639
+    WIKILINKS_TO (other fields) ... 125
+  resolved by exact ID ............ 713
+  resolved by exact unique title .. 0
+  GHOST ........................... 153
+  fuzzy matches used .............. 0 (forbidden by schema)
+
+GHOSTS / AMBIGUITIES / BROKEN REFERENCES
+  distinct ghost addresses ........ 109
+  ambiguous (title collisions) .... 0
+  broken IDs ...................... 0 (every unresolved address is preserved as a ghost)
+  orphan cards (degree 0) ......... 0
+  cards with no inbound link ...... 2
+
+BIBLIOGRAPHY COVERAGE
+  cards carrying a BIBTEX block ... 174/174
+  distinct works parsed ........... 161
+  works marked UNVERIFIED ......... 20  (see note fields)
+  fabricated fields ............... 0 (absent fields left absent; no pagination claimed)
+
+PAPER EVIDENCE COVERAGE
+  papers .......................... 9
+  citekeys used by papers ......... 53
+  citekeys not in bibliography .... 0  PASS (subset holds)
+  cluster members that are ghosts . 0
+  empirical tests run ............. 0   <-- the largest gap in this package
+
+RESOURCE COVERAGE
+  registered resources ............ 9   (1 LOCAL_FILE, 2 GENERATED, 6 LINK_ONLY)
+  bodies bundled .................. 0   no external body is bundled; none is claimed
+
+RECONSTRUCTION STATE
+  rebuild instructions ............ 000__REBUILD.txt (parser spec + identity rule + merge rule)
+  reconstruction TEST run ......... NO. No round-trip rebuild was executed.
+  therefore claimed ............... rebuildable IN PRINCIPLE from cards alone. UNVERIFIED.
+
+ASSEMBLY PROMPT STATUS
+  preserved ....................... _PROMPTS/ASSEMBLY_PROMPT.txt
+  byte-verbatim ................... NO — operative reconstruction, declared in the file
+  forage schema ................... _PROMPTS/FORAGE_SCHEMA.txt (operative form)
+  cluster request ................. _PROMPTS/CLUSTER_REQUEST.txt (verbatim, one line)
+
+MAKING HISTORY
+  000__MAKING_HISTORY.txt + one per paper. Control is attributed line by line.
+  human review of any argument .... NONE
+
+PDF STATUS
+  pdflatex / xelatex / tectonic ... ABSENT at build time (checked)
+  .tex files written .............. 9
+  PDFs ............................ PENDING. Not compiled. Not claimed.
+  readable now .................... yes — full paper text is rendered in index.html
+
+STRUCTURE
+  files in package ................ 415
+  root of ZIP is the desk ......... yes; every card visible without entering a folder
+
+ZIP STATUS
+  file ............................ SLIPCASE-PACKAGE-2026-08-19.zip
+  entries ......................... 424
+  size ............................ 3.3M
+  integrity (unzip -t) ............ OK, no errors detected
+  sha256 .......................... 08d47f929443b43847e04ec3f57168a8d91c749dd65b86b11ae0ec43753fa976
+  root of archive is the desk ..... yes
+
+FINAL TEST (schema <final_test>, run)
+  every zettel visible as a named TXT card without entering a folder ... PASS (174)
+  000__INDEX readable ................................................. PASS
+  000__MAP exposes topology ........................................... PASS
+  NETWORK.svg / NETWORK.html expose the whole field ................... PASS
+  bibliography names the evidence ..................................... PASS (56 works)
+  resources findable .................................................. PASS (000__RESOURCES.txt, RESOURCES.jsonl)
+  prompts survive ..................................................... PASS (_PROMPTS/, 3 files)
+  ghosts and backlinks survive ........................................ PASS (109 ghosts, backlink index)
+  READER.html works offline from file:// .............................. PASS (no network refs; data inlined)
+  CARDS.html prints 4x6 ............................................... PASS
+  each paper has a real argument and title ............................ PASS (9)
+  paper PDFs exist .................................................... FAIL — PENDING, no TeX engine
+  index.html alone is sufficient to read cards/sources/papers/ghosts .. PASS
+  remove reader/graph/cards/map/paper: evidence regenerates them ...... PASS in principle (000__REBUILD.txt); round-trip NOT executed
+  every substantive paper claim traceable via SOURCE_MAP .............. PASS (subset check holds)
+  paper begins with argument, not with the imprint .................... PASS
+  mark quiet at bottom-right .......................................... PASS

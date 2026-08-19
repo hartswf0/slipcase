@@ -1,0 +1,59 @@
+integrity-is-not-fidelity__SOURCE_MAP.txt — SLIPCASE-OPERATION-DESCRIBE-20260819
+======================================================================
+PAPER CLAIM -> ZETTEL -> SOURCE -> CITEKEY
+
+Cluster members admitted to this paper:
+
+  FORAGE-PT-019  (card 139)
+    title : Path integrity is satisfiable by a system that logs a tidy path after the fact, so the criterion does not yet distinguish record from reconstruction
+    source: PROGRAMS/memex.json — THE_MEMEX_TEST, <Initial Interpretation>, <governing_question>, <thesis>, after Vannevar Bush
+    citekey: memex_program
+    sha256: e3e25c85b9561cf8266175a4abc6e8d25799cdfe20221c55f46e7a04d8f192f4
+
+  FORAGE-PT-021  (card 141)
+    title : The corpus's most operational criterion is refuted by the corpus's own category-mistake detector
+    source: Collision of PROGRAMS/memex.json (path integrity as the criterion) with PROGRAMS/argue.json (logical order is not discovery order)
+    citekey: pt021_collision
+    sha256: b1b7313e0ace2d72075d699b13160f2ded3cae6698f78c8fd3ff6f169e154aff
+
+  FORAGE-PT-046  (card 166)
+    title : Fidelity requires an append-only hash-chained log committed before the conclusion, and the technology is deployed for certificates and never for reasoning
+    source: Certificate Transparency as a deployed append-only, publicly auditable log using Merkle tree structures (RFC 6962 and successors) [UNVERIFIED for specific section references]; read against PROGRAMS/memex.json path integrity
+    citekey: ct_rfc6962
+    sha256: 1c7623b6582bea7fa8f512c052be0f3dbc38305972d255c4f5f148be9fac21aa
+
+  FORAGE-PT-048  (card 168)
+    title : The footnote was built to make a claim checkable and to assign credit, never to make a process visible — so demanding fidelity of citation misreads the institution
+    source: Anthony Grafton, The Footnote: A Curious History (Harvard University Press, 1997) [UNVERIFIED pagination]; read against PROGRAMS/memex.json path integrity and [[FORAGE-PT-021]]
+    citekey: grafton1997footnote
+    sha256: 991bc91124492b4b97d8e3b330b6b019c5b166742ad4a59be122bb24076c32a9
+
+  FORAGE-PT-054  (card 174)
+    title : If cuts are visible only in contrast, then a single apparatus is unauditable by construction and market concentration is an epistemic condition
+    source: [[FORAGE-PT-027]] (the cut is unauditable) developed with differential testing as the comparative method; read against PROGRAMS/agential.json and PROGRAMS/memex.json
+    citekey: agential_program
+    sha256: 2fb5663a67983b8108b542b86f66dba560fa82687a6e3954a2a619ffa2f101b0
+
+  FORAGE-PT-002  (card 122)
+    title : If logical order is not discovery order, then the *sequence* of a reasoning trace is a genre convention that nonetheless has causal force
+    source: PROGRAMS/argue.json — <Initial_Interpretation>, after Gilbert Ryle, "Thinking and Inferring"
+    citekey: argue_program
+    sha256: 03cc30a33e214cad96def0787443974be0802ad0c79cc1ace260447f72c90052
+
+  FORAGE-OD-018  (card 018)
+    title : THE ENCOUNTER TRACE CAN EVIDENCE ROUTING BUT NOT STEERING, AND THE ARCHIVE USES THE WORDS INTERCHANGEABLY
+    source: Watson Hartsoe — PAPERS/operative-description-framework.md §8 (controlled vocabulary, "Steering") and §9 (contribution architecture); PAPERS/abc-cineosis-paper.md §4 (the encounter trace ⟨A, B, C, R, A'⟩); against PAPERS/ricoeur.md §III "The Death of Naive Intention" — 2026
+    citekey: hartsoe2026framework
+    sha256: f0f96cc2c329f55a106ebd83070a4050090dd9096e81ba1c992d24aa0acfc200
+
+Ghost / unadmitted members referenced by this cluster:
+  none
+
+COMPILER claims (connective prose not traceable to a single card):
+  - the identification of two literatures as making one claim (each paper's convergence section)
+  - all cross-cluster junction statements
+  - all proposed formalizations, marked in-card as OUR FORMALIZATION
+
+CITATION CHECK: every citekey above is present in SLIPCASE-OPERATION-DESCRIBE-20260819__references.bib.
+VERIFICATION: entries whose BibTeX note contains UNVERIFIED were not checked against the work.
+No quotation in any paper is attributed to a page number.

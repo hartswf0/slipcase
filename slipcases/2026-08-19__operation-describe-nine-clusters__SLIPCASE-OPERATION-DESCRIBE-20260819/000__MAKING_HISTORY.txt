@@ -1,0 +1,38 @@
+000__MAKING_HISTORY.txt
+======================================================================
+
+WHO   researcher : Watson Hartsoe (whartsoe3@gatech.edu)
+      model      : Claude (Opus 4.8 / Fable 5), Claude Code
+      date       : 2026-08-19
+
+ORIGIN
+  Cards were foraged from the OPERATION DESCRIBE repository during one extended session:
+  36 papers in PAPERS/, 65 syntheses in worldtext/, 19 program theories in PROGRAMS/,
+  COSMIC_LAW.md, worldtext/atlas.md and chronicle.md, 16 .docx deep-research reports,
+  and the prior SLIPCASE field at hartswf0.github.io/slipcase (read via browser).
+  Four arXiv papers and one Nature paper were fetched and quoted during the session.
+  Six regional forage agents ran in parallel; all six terminated early on a usage-credit
+  limit after writing their cards to disk and before writing their reports.
+
+CONTROL
+  Source selection ......... model, from the researcher's repository and named URL
+  Cluster definition ....... model (nine clusters derived from graph junctions)
+  Paper arguments .......... model
+  Titles, structure, prose . model
+  Graph resolutions ........ deterministic script; conservative, no fuzzy matching
+  Visual design ............ model
+  Schema ................... researcher (slipcase/15.55-AM and the forage schemas)
+
+UNTOUCHED
+  All 174 zettel payloads are byte-exact. No archived payload was edited to add a
+  SOURCE URL, fix a field, or serve a derived view. Preserved prompts are verbatim.
+
+VERIFIED (computed with tools, not asserted)
+  card count · payload SHA-256 · _MD mirror parity · JSON record parity
+  relation counts by type · wikilink classification · ghost enumeration
+  bibliography extraction · paper citekey subset check · ZIP integrity
+
+UNVERIFIED (nobody checked)
+  the content of every source not fetched during the session; all pagination;
+  every empirical prediction in every paper; PDF rendering; and any human review
+  of any argument in this package. This is not 'AI-assisted'; it is the above.

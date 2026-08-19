@@ -1,0 +1,45 @@
+PRIME ZETTEL FORAGE — RECURSIVE INQUIRY (schema 3.1) + GRAPH FORAGE (4.0)
+======================================================================
+
+The schema that produced every card in this field, preserved in operative form.
+
+INVARIANT
+  ZETTEL is a recursive type.  FORAGE(ZETTEL) -> ZETTEL[]
+  Every child uses exactly the same field names, order and conventions.
+  NEVER add PARENT:, PROVENANCE:, CHILD:, ANSWERS:, STATUS: or any new field.
+  A child must be able to become a parent without rewriting.
+
+FIELD ORDER (invariant, 22 fields)
+  ID · TITLE · SOURCE · PASSAGE · RESEARCH OBJECT · LOCAL MOVE · SOURCE TERMS ·
+  WHAT BECAME STRANGE · QUESTION · DEEPER QUESTION · MECHANISM · FORMAL SHIFT ·
+  SOURCE FORMALISM · OUR FORMALIZATION · TENSION · MISSING · BOUNDARY ·
+  CITATION TRAIL · TEST · PLATFORM · LINKS · BIBTEX
+  If a field has no useful content, write NONE.
+
+LIVE EDGES (what a forage follows)
+  QUESTION · DEEPER QUESTION · TENSION · MISSING · BOUNDARY · CITATION TRAIL · TEST
+
+LINEAGE
+  Ancestry is preserved using only existing fields: LINKS carries [[PARENT-ID]];
+  CITATION TRAIL may begin from the parent. SOURCE is provenance of evidence;
+  LINKS/CITATION TRAIL are provenance of inquiry.
+
+OPPOSITION
+  The parent is provisional evidence, not inherited truth. Similarity is not
+  influence. Chronology is not causation. Formal resemblance is not genealogy.
+  Execution is not fidelity. If two readings survive, preserve both in TENSION
+  and make TEST seek the smallest discriminating evidence.
+
+PROVENANCE MARKERS
+  [QUOTE] [PARAPHRASE] [OUR INFERENCE] [UNVERIFIED]
+  [OUR FORMALIZATION — NOT SOURCE SYNTAX]
+  Never invent quotations, page numbers, citations, dates, equations, syntax,
+  algorithms, historical influence or bibliographic fields.
+
+ADMISSION
+  Emit a child only if it changes the research state. Never emit a child whose
+  main result is "the parent is correct".
+
+RECURSION
+  parent.TEST -> evidence -> child.WHAT BECAME STRANGE -> child.QUESTION ->
+  child.TEST -> next child.   Do not close the research tree.

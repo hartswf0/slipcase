@@ -1,0 +1,92 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{lmodern}
+\usepackage[margin=1.05in]{geometry}\usepackage{microtype}\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}\usepackage{parskip}
+\title{\textbf{The Bearer}\\[.35em]\large Why Responsibility Diffuses, Where It Lands, and What Scripting Has to Do with It}
+\author{Watson Hartsoe}
+\date{2026-08-19 \quad\textemdash\quad Working Paper}
+\begin{document}\maketitle
+\begin{abstract}\noindent Critical accounts of generative systems commonly list \emph{redistributing responsibility} among the operations such systems perform. This paper argues that the word is wrong and that its wrongness has consequences. Redistribution is conservative: it moves a quantity from one holder to another. What the evidence describes is dissipation --- a quantity that ceases to be held --- and the mechanism was named in political theory in 1980 as the problem of many hands, decades before the systems now credited with producing it. But dissipation is not the end state. Two further bodies of work show where the quantity goes. Agency law already assigns a bearer, the principal, and fails only at a specific joint: its scope-of-authority test is intention-laden and has no content for an agent that cannot understand instructions. And Elish's moral crumple zone shows that in practice blame concentrates on whichever human stands nearest the failure, regardless of their capacity to have prevented it. We connect this to a literature on scripted service labour that supplies the missing unit of measurement, and conclude that every proposal to add a human for oversight manufactures a crumple zone unless it also adds discretion.\end{abstract}
+\vspace{-.5em}\noindent\textbf{Keywords:} responsibility gap, many hands, agency law, moral crumple zone, scripted labour, accountability, automation, discretion\par\vspace{1em}
+\section{A word doing the wrong work}
+A recurring characterisation of generative systems runs: not a neutral tool but an apparatus that performs cuts, completes circuits, compresses archives, simulates worlds, modulates attention, and redistributes responsibility.
+
+Five of those six are things a system does. The sixth is not. Cutting, circuit-completion, compression, simulation and attention-modulation are operations with technical referents. Redistributing responsibility is something that happens to people: it requires institutions, expectations and answerability, none of which the system contains. The list's rhetorical momentum carries the sixth item in on the strength of the five, and the effect is that an ethical claim acquires the appearance of a technical finding.
+
+The correction is not to drop the item but to get its verb right, because the wrong verb points at the wrong remedy.
+
+\section{Dissipation, dated 1980}
+Thompson's problem of many hands describes what happens when an outcome results from the contributions of many officials: each contribution is individually too small or too mediated to ground responsibility, and the result is that no one is held --- not that responsibility passes to someone else.
+
+The structure is general. For a decision chain with $n$ contributors, let each contributor's causal share be $s_i$ and let $\theta$ be the threshold at which ascription becomes warranted. Dissipation occurs when $\max_i s_i < \theta$. Adding a system increments $n$ and lowers every share. The prediction is that the gap widens with chain length independently of whether any link is automated.
+
+This dates the phenomenon well before the apparatus vocabulary and makes generative systems one more hand rather than a novel cause. It also identifies the variable that matters --- chain length and the documentation of each handoff --- and that variable is procedural and unglamorous, which may be why accounts that prefer the machine as culprit do not reach for it.
+
+There is a serious rival. Matthias argues that learning systems differ in kind, because their behaviour is not predictable by the deployer; the share is not merely small but unforeseeable, which defeats ascription in a new way. The two readings are separable: compare cases where the automated link was predictable against cases where it was not, and see whether gaps of the same size appear in both.
+
+\section{The institution that already assigns a bearer}
+The responsibility-gap literature is usually framed as a novel problem. Doctrinally, much of it is settled.
+
+Agency law holds that when an agent acts within authority the principal is bound and answerable, regardless of the agent's own standing. Employer liability extends the same logic. The question ``has an obligation ever been enforced against a software system?'' is therefore misdirected. Obligations run to principals, not to instruments, and the deployer is the bearer.
+
+The doctrine fails at one joint, and it is the interesting one. Whether an act falls within \emph{scope of authority} depends on what the agent was reasonably given to understand. A system has no understanding to be reasonable about. So either every act is inside authority by construction --- the deployer owns all outcomes --- or the concept does no work. The doctrine's discriminating machinery goes idle, and the practical result is unlimited deployer liability or none.
+
+Three regimes are available. \emph{Strict}: the deployer bears everything and scope is undefined. \emph{Enumerated}: authority is an explicit permission list and anything outside it is unauthorised. \emph{Intentional}: the classical test, inapplicable. Current practice appears to run strict by default while writing documents that read as though the intentional test applied.
+
+\section{Where it actually lands}
+Dissipation and doctrine together predict that nobody is held or that the deployer is. Neither matches the observed pattern, and Elish's account explains why.
+
+In automated systems the human operator can become a component that absorbs responsibility for failures of the wider system, taking blame for outcomes they had little practical capacity to control --- a moral crumple zone, named by analogy with the part of a car designed to absorb impact.
+
+This resolves the accountability vacuum in the worst available way. Separate three roles: the \textsc{author} who originates a description, the \textsc{executor} who realises it, and the \textsc{bearer} who has standing and can be held. Classical practice fuses all three. Automation splits author from executor and leaves bearer attached to the executor \emph{by proximity rather than by authority}.
+
+The executor's lack of discretion --- the very fact that should excuse them --- is what placed them in the position of absorbing the impact. The safety rationale for putting a human near the system is what supplies the sink.
+
+\section{The unit, measured in 1993}
+If the argument is that people increasingly execute descriptions they did not author, the claim needs a unit. One exists, and it predates the systems in question.
+
+Leidner's study of interactive service work examines settings where interaction itself is scripted --- counter service, insurance sales --- and asks how far employers can specify not only tasks but words, tone and affect. The object is the script: an explicit symbolic specification of conduct with measurable coverage.
+
+Scripting coverage is the unit. Split it: coverage of \emph{task} versus coverage of \emph{persona}. Leidner's finding is that scripting becomes contested precisely where it reaches identity --- workers accept task scripts and resist scripts specifying who they must appear to be. Intensification therefore has a threshold rather than a slope.
+
+A worker speaking a generated script is the crumple zone in its most ordinary form: author elsewhere, execution here, bearer here by proximity. And one feature of generative scripting defeats the resistance Leidner documented. Her workers resisted scripts that were recognisable as external and uniform. A script generated to fit the individual interaction may not be recognisable as a script at all.
+
+\section{What follows}
+The argument converts a critique into two requirements.
+
+First, every oversight requirement should be paired with a discretion requirement. ``A human shall review'' without specified time, information and authority to refuse is a specification for a crumple zone, and the pairing is cheap to write.
+
+Second, deployment documents should state which authority regime they are in. If the regime is strict, say so; if enumerated, publish the permission list. Documents that perform an intentional scope test for a non-understanding agent are not merely imprecise --- they position the nearest human to absorb what the test cannot allocate.
+
+\section{Limitations}
+Thompson writes about public officials, Matthias about learning automata, Elish about a small number of cautionary cases in human-robot interaction, and Leidner about two American service settings in the early 1990s. None addresses generative systems, and each transfer is ours. Pagination was not verified for any of these sources in preparing this paper, and the legal discussion is a reading of doctrinal structure, not a claim about any jurisdiction's holdings.
+
+The central empirical claim --- that observed blame tracks proximity rather than discretion --- is stated as a prediction with a coding protocol, not as a measurement. A competing reading survives and is more actionable: proximity may dominate only where authority is ambiguous, in which case the crumple zone is a symptom of poor specification rather than a structural inevitability, and better documents would fix it.
+
+\section*{References}\small
+\begin{itemize}\setlength\itemsep{0pt}
+\item [author unrecorded]. Agency, scope of authority and respondeat superior. [UNVERIFIED] no jurisdiction, statute or holding verified in this forage. 2026. \texttt{[agency\_doctrine\_unverified]}
+\item [author unrecorded]. Agential Worlds, Cybernetic Cuts. PROGRAMS/agential.json, after Barad. 2026. \texttt{[agential\_program]}
+\item [author unrecorded]. Design After Cognitivism. PROGRAMS/dac.json, after Winograd and Flores. 2026. \texttt{[dac\_program]}
+\item Elish, Madeleine Clare. Moral Crumple Zones: Cautionary Tales in Human-Robot Interaction. Engaging Science, Technology, and Society. 2019. \texttt{[elish2019moral]}
+\item Hartsoe, Watson. Due-Diligence Answers: Operative Description. OPERATION DESCRIBE archive, PAPERS/operation-describe-label-01.md. 2026. \texttt{[hartsoe2026diligenceanswers]}
+\item Leidner, Robin. Fast Food, Fast Talk: Service Work and the Routinization of Everyday Life. University of California Press. 1993. \texttt{[leidner1993fast]}
+\item [author unrecorded]. Substrate Without a Bearer. Collision of PROGRAMS/eos.json and PROGRAMS/dac.json. 2026. \texttt{[pt025\_collision]}
+\item Thompson, Dennis F.. Moral Responsibility of Public Officials: The Problem of Many Hands. American Political Science Review. 1980. \texttt{[thompson1980many]}
+\end{itemize}\normalsize
+\appendix
+\section{Assembly instrument}
+The exact prompt that assembled this publication is preserved verbatim at
+\texttt{\_PROMPTS/ASSEMBLY\_PROMPT.txt} in the package and is embedded in \texttt{index.html}.
+It is not reproduced here for length. Schema: slipcase/15.55-AM.
+\section{Making history}
+See \texttt{the-bearer\_\_MAKING\_HISTORY.txt} and \texttt{000\_\_MAKING\_HISTORY.txt}.
+Argument selection, section order and connective prose were produced by the model named there
+and were not reviewed by a second human reader before packaging.
+\section{Replication path}
+Open \texttt{index.html} from \texttt{file://}. Cards, sources, graph, ghosts and this paper are
+embedded. \texttt{000\_\_REBUILD.txt} states how to regenerate every derived view from the cards alone.
+\vfill\noindent\includegraphics[width=13mm]{MARK.svg}\\
+\footnotesize Working Paper \textperiodcentered{} AI-augmented research process.
+Evidence, prompts and making history preserved. Checkpoint SLIPCASE-OPERATION-DESCRIBE-20260819.
+\end{document}

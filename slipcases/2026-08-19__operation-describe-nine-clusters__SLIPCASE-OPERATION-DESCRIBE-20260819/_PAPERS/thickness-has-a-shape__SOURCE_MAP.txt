@@ -1,0 +1,71 @@
+thickness-has-a-shape__SOURCE_MAP.txt — SLIPCASE-OPERATION-DESCRIBE-20260819
+======================================================================
+PAPER CLAIM -> ZETTEL -> SOURCE -> CITEKEY
+
+Cluster members admitted to this paper:
+
+  FORAGE-PT-007  (card 127)
+    title : The wink ladder makes thickness countable: each rung adds one intention *about* the rung below it
+    source: PROGRAMS/tda.json — THICK_DESCRIPTION_AFTER_THE_EVENT, <PURPOSE> and the wink rules
+    citekey: tda_program
+    sha256: 769f8971c139b96b8fa783476acc6ea94597bde6561117195de78e5fe960d2d4
+
+  FORAGE-PT-033  (card 153)
+    title : The validation formula returns for shallow traces and diverges for deep ones, so it works exactly where it is least needed
+    source: Inter-annotator agreement practice in corpus annotation, where reliability coefficients are computed and reported as a precondition for analysis [UNVERIFIED for specific coefficients and thresholds]; read against PROGRAMS/tah.json validation formula and PROGRAMS/tda.json wink ladder
+    citekey: agreement_practice_unverified
+    sha256: 961fd3617a3e757f595337750abab52c76dbc34147fe31282516402d06984d5e
+
+  FORAGE-PT-034  (card 154)
+    title : The wink ladder has a top after all, and it is set by how many orders of intentionality a reader can hold
+    source: Higher-order intentionality research reporting a limit on how many nested mental states people can track, associated with Robin Dunbar's mentalizing work [UNVERIFIED — specific studies, order counts and effect sizes not retrieved]; read against PROGRAMS/tda.json wink rules
+    citekey: mentalizing_ceiling_unverified
+    sha256: aadc83a1dfc9eba7a4eca5bab29cb8b179dc76d664e2e148324c1a02224821a8
+
+  FORAGE-PT-038  (card 158)
+    title : Repeated successful reference shortens the description, so thickness is a signature of unestablished reference rather than of good description
+    source: Referential communication research — Robert Krauss and Sidney Weinheimer on reference shortening over repeated trials (1960s); Herbert Clark and Deanna Wilkes-Gibbs, "Referring as a collaborative process", Cognition (1986), on conceptual pacts [UNVERIFIED pagination]; read against PROGRAMS/eos.json rendering loop
+    citekey: clark1986referring
+    sha256: c220c305998b5425c53f922447d15df5d1531eb005056c2191a9c4b5182e124b
+
+  FORAGE-PT-051  (card 171)
+    title : The empty middle between reading a wink and being formed by a culture is occupied by pacts — locally negotiated conventions with a lifespan
+    source: [[FORAGE-PT-024]] (the timescale gap) and [[FORAGE-PT-038]] (conceptual pacts, after Clark and Wilkes-Gibbs 1986); read against PROGRAMS/thick.json and PROGRAMS/tda.json
+    citekey: clark1986referring
+    sha256: 541dddb50673b0dac8a05f61b29618ca78a9584f2806c702beccca5c0e153b8d
+
+  FORAGE-PT-024  (card 144)
+    title : The corpus contains two Geertzes because culture-as-program and action-after-the-event run on clocks eight orders of magnitude apart
+    source: Collision of PROGRAMS/thick.json (culture is an extra-genetic instruction system) with PROGRAMS/tda.json (how meaningful action survives the event); pairing registered in PROGRAMS/meta.json <cross_references> as "tda.json <-> thick.json"
+    citekey: pt024_collision
+    sha256: 6e97f498cb3bdf056a82d395e027fffa6ad99522134efbb618ddd1b975804d27
+
+  FORAGE-PT-018  (card 138)
+    title : Calling AI an *intensified* symbolic-control apparatus is a quantitative claim about a difference everyone else argues qualitatively — and no unit is given
+    source: PROGRAMS/thick.json — THICK_PROGRAMMING v2.0, <Initial_Interpretation>, after Clifford Geertz
+    citekey: thick_program
+    sha256: a97829e8b2570b2e959e7a1a9a15d24362f0b5b81a4edbb45a02b06aebbc29e2
+
+  FORAGE-OD-030  (card 030)
+    title : CLASSICAL RHETORIC ALREADY SUPPLIED A HUMAN-SUBJECT TEST FOR DESCRIPTIVE POWER AND THE ARCHIVE USES ENARGEIA ONLY AS AN ADJECTIVE
+    source: Watson Hartsoe — PAPERS/seed-candidates-ch02.md (ancestral_thinkers, key_vocabularies) and PAPERS/imagetext-to-worldtext-clean.md §2.1 "The Ancient Definition" — 2026, invoking Ruth Webb, Ekphrasis, Imagination and Persuasion in Ancient Rhetorical Theory and Practice (2009)
+    citekey: webb2009ekphrasis
+    sha256: dcee089eac31e581a2f2db30504969a43fcc6517ba1e48fd1d763f63d9ccc62e
+
+  FORAGE-DX-002  (card 042)
+    title : THE BIO-INFERENCE PAPER SMUGGLES ONE FALSIFIABLE CLAIM INTO ITS METAPHOR STACK: HASSON'S NEURAL COUPLING AS THE MEASURE OF THICK PROMPTING
+    source: drive-download deep-research corpus — "Bio-Inference: The Novel as a Zero-Shot Prompt for the Human Latent Space" §§2.4, 3.4, Table 1 — 2026; invoking Uri Hasson's speaker–listener neural coupling work
+    citekey: stephens2010speaker
+    sha256: c00502adce117a44954dea071b33527e9af42222718a3d543ea3066056eb1eeb
+
+Ghost / unadmitted members referenced by this cluster:
+  none
+
+COMPILER claims (connective prose not traceable to a single card):
+  - the identification of two literatures as making one claim (each paper's convergence section)
+  - all cross-cluster junction statements
+  - all proposed formalizations, marked in-card as OUR FORMALIZATION
+
+CITATION CHECK: every citekey above is present in SLIPCASE-OPERATION-DESCRIBE-20260819__references.bib.
+VERIFICATION: entries whose BibTeX note contains UNVERIFIED were not checked against the work.
+No quotation in any paper is attributed to a page number.

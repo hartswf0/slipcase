@@ -1,0 +1,94 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}\usepackage{lmodern}
+\usepackage[margin=1.05in]{geometry}\usepackage{microtype}\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}\usepackage{parskip}
+\title{\textbf{Alignment Is Projection}\\[.35em]\large The Modality Gap Is Not the Counterevidence to Collapse; It Is Its Precondition}
+\author{Watson Hartsoe}
+\date{2026-08-19 \quad\textemdash\quad Working Paper}
+\begin{document}\maketitle
+\begin{abstract}\noindent A prominent claim about multimodal systems holds that they do not translate text into image but route both through a shared semantics, thereby weakening the inherited text/image distinction \emph{at the level of technical substrate}. This paper takes the claim's own commitment to substrate seriously and argues that it defeats itself in its current form while suggesting a stronger replacement. A learned cross-modal correspondence is not a merged space; it is a disciplined arrangement that lets one system be laid against another and tested --- which is a projection rule in the sense recovered from the Tractatus by model-and-measure readings. Under that description a persistent separation between text and image representations stops being an embarrassment and becomes the precondition: a projection between identical spaces is the identity map and does no work. We support the reframing with a historical case in which a projection rule was demonstrably installed rather than discovered --- linear perspective, on Panofsky's account a symbolic convention that had to be taught and enforced --- and with a limiting case in which description executes under a complete and unforgiving projection, the LDraw file format, where a singular transformation matrix is the only formally defined death of a described object. Two consequences follow: the paragone did not dissolve but migrated into geometry, and prompt brittleness across model versions is projection drift rather than a robustness defect.\end{abstract}
+\vspace{-.5em}\noindent\textbf{Keywords:} ekphrasis, paragone, modality gap, multimodal models, projection, Panofsky, perspective, Tractatus, representation\par\vspace{1em}
+\section{A substrate claim invites a substrate test}
+The strongest version of the collapse thesis is admirably exposed. It does not say that words and pictures feel closer together, or that a cultural boundary has softened. It says that multimodal systems route text and image through shared artificial semantics, and that the inherited distinction is weakened at the level of technical substrate.
+
+Claims about substrate are checkable by people who have never read Lessing. If text and image are genuinely routed through one semantics, their representations should not remain separable; and if they do remain separable while cross-modal retrieval succeeds, then what has been achieved is not fusion but correspondence.
+
+The thesis has an escape hatch --- \emph{weakening} admits of degrees --- and the hatch is what makes it unfalsifiable as stated. No magnitude is specified at which weakening would count, and no measurement is proposed. This paper closes the hatch by supplying a different vocabulary in which the same mechanism becomes a positive claim rather than a hedged one.
+
+\section{The vocabulary already in the field}
+A separate line of work rewrites Wittgenstein's picture theory as a workshop practice. The instruction is: do not ask how a proposition looks like the world; ask what disciplined arrangement lets one system be laid against another and tested. Representation becomes projection plus contact rather than resemblance.
+
+That account has a consequence usually treated as incidental: depiction is a \emph{maintained capacity}. A model represents only while its rule of projection is held by someone. A technical drawing whose conventions are forgotten still shows lines and no longer measures anything, and nothing in the visible artifact records whether its rule is still in force.
+
+Now apply the vocabulary to contrastive multimodal training. Text goes to one region, images to another; alignment training learns a correspondence such that paired items can be compared. That is not a merger. It is exactly a disciplined arrangement for laying one system against another --- a projection rule, learned rather than taught, but with the same structure and the same maintenance requirement.
+
+The two accounts describe one mechanism. One calls it fusion, the other calls it measurement, and only the second yields quantities.
+
+\section{Why the gap is the precondition}
+Under the projection description, the persistence of a separation between modalities inverts its evidential role.
+
+A projection rule relates two things. If the text region and the image region were identical, the correspondence between them would be the identity map, and it would do no work: there would be nothing to lay against anything. The usefulness of cross-modal retrieval depends on there being two spaces and a non-trivial map between them.
+
+So the collapse thesis is embarrassed by exactly the finding its stronger replacement requires. Its own best formulation is the one it currently denies: text and image remain distinct and are related by a learned, trainable, revisable rule.
+
+This makes the disagreement measurable rather than interpretive. Track the residual separation between modality centroids across model generations alongside retrieval performance. Fusion predicts the separation tends toward zero. Projection predicts it stays positive while the interesting variables become invertibility --- what is recoverable going back --- and drift.
+
+\section{A projection rule with a date}
+The projection account gains a great deal from a case where a rule was installed rather than lost, and the history of images supplies one.
+
+On Panofsky's reading, linear perspective is not the discovery of how vision works but a historically specific symbolic construction --- something adopted, taught and enforced, against which earlier and later pictorial systems are different constructions rather than failures.
+
+What perspective installs is measurability. From a perspectival image a trained reader can recover positions and distances by applying the construction in reverse; from a hieratic image they cannot. That capacity arrived at a particular time, with treatises and workshops behind it, and for most of the history of images the rule that would make them measurable did not exist --- and nobody experienced this as a lack.
+
+The case cuts both ways, and the cut is worth preserving. If perspective approximates the actual optics of projection, then its adoption was constrained by physics rather than freely conventional, and not all projection rules are equally available. Panofsky's conventionalism is contested on precisely this point. What survives either reading is the structural claim: a pictorial system is measurable only relative to a rule that someone holds, and that rule has a history.
+
+\section{The limiting case: projection with a death condition}
+At the far end from perspective sits a case where the projection is complete, machine-executed, and unforgiving.
+
+The LDraw file format specifies a scene in text. A single line carries a command identifier, a colour, three coordinates, a nine-element transformation matrix, and a sub-file reference --- the entire existence of a component in a scene. A compiler reads it and instantiates the object.
+
+Two failure conditions are exactly defined. If the file reference does not resolve, the object does not appear. If the transformation matrix is singular, the part collapses into degenerate geometry. This is, so far as this field contains anything comparable, the only formally defined death of a described object: a determinant of zero.
+
+The case matters for two reasons. First, it shows that description-that-executes is not a metaphor imported from rhetoric; it has been in industrial use since 1993. Second, it supplies the missing benchmark for the whole family of claims about executable description --- take natural-language scene descriptions, have a system emit the format, render, and score validity and fidelity against annotated intent, with a decomposable error taxonomy of degenerate transforms, unresolved references, wrong geometry and wrong semantics.
+
+The honest cost is that this purity removes everything the rhetorical tradition cared about. There is no vividness in a transformation matrix and no audience to be brought before the eyes. Calling a CAD format absolute ekphrasis surrenders the tradition the project began from. The productive conclusion is that the object of study lies between the two poles --- in the translation loss between implicit meaning and explicit geometry --- rather than at either.
+
+\section{Two consequences}
+First, the paragone. Under the projection reading the word-and-image rivalry did not dissolve; it migrated. What was a dispute in criticism becomes a distance in a representation space, and the agonistic reading wins on the machine's own terrain rather than the irenic one. That is a stronger and more original claim than collapse, and it is measurable.
+
+Second, brittleness. If the correspondence is a projection rule, it is the kind of thing that can drift. A model update changes the rule. A prompt written for one version is then a description under a projection no longer in force --- which reframes prompt brittleness from a robustness defect into a projection-maintenance problem, and predicts that the most fragile prompts are those relying most heavily on the correspondence rather than on lexical anchors.
+
+There is also an instrument here. If human renderers are given machine-authored descriptions and asked to draw, the spread across their renderings measures how tightly the description constrains a scene. Ancient rhetoric judged vividness by asking whether the hearer became a spectator; watching them draw is the same criterion with a physical output and is considerably harder to fake.
+
+\section{Limitations}
+No gap measurements are reported here. The modality-gap literature is invoked at the level of a recurring reported finding and was not retrieved for this paper; the central empirical claim is a prediction with a stated protocol.
+
+Panofsky is a contested art-historical thesis, and pagination was not verified. Using him to license a general claim that projection rules are conventional would overstate a disputed source, which is why the argument is framed to survive either reading.
+
+The LDraw failure semantics are stated from a specification description rather than from testing; whether a singular matrix produces an error or a zero-volume render should be checked against the current specification before the benchmark is built. And a measured collapse or persistence in one architecture family would license claims about that substrate only, not about ekphrasis in general.
+
+\section*{References}\small
+\begin{itemize}\setlength\itemsep{0pt}
+\item [author unrecorded]. ELEPHANT\_OS. PROGRAMS/eos.json. 2026. \texttt{[eos\_program]}
+\item {Jessiman, James and the LDraw.org community}. LDraw File Format Specification. Type 1 line syntax; verify failure semantics against current spec. 1993. \texttt{[ldraw1993spec]}
+\item Louvel, Liliane. The Pictorial Third: An Essay Into Intermedial Criticism. Routledge. 2018. \texttt{[louvel2018pictorial]}
+\item [author unrecorded]. MODEL\_MEASURE\_TRACTATUS. PROGRAMS/mmt.json. 2026. \texttt{[mmt\_program]}
+\item [author unrecorded]. OPERATIVE\_EKPHRASIS\_AFTER\_AI. PROGRAMS/opek.json. 2026. \texttt{[opek\_program]}
+\item Panofsky, Erwin. Die Perspektive als "symbolische Form". [UNVERIFIED] pagination and translation not verified in this forage. 1927. \texttt{[panofsky1927perspektive]}
+\end{itemize}\normalsize
+\appendix
+\section{Assembly instrument}
+The exact prompt that assembled this publication is preserved verbatim at
+\texttt{\_PROMPTS/ASSEMBLY\_PROMPT.txt} in the package and is embedded in \texttt{index.html}.
+It is not reproduced here for length. Schema: slipcase/15.55-AM.
+\section{Making history}
+See \texttt{alignment-is-projection\_\_MAKING\_HISTORY.txt} and \texttt{000\_\_MAKING\_HISTORY.txt}.
+Argument selection, section order and connective prose were produced by the model named there
+and were not reviewed by a second human reader before packaging.
+\section{Replication path}
+Open \texttt{index.html} from \texttt{file://}. Cards, sources, graph, ghosts and this paper are
+embedded. \texttt{000\_\_REBUILD.txt} states how to regenerate every derived view from the cards alone.
+\vfill\noindent\includegraphics[width=13mm]{MARK.svg}\\
+\footnotesize Working Paper \textperiodcentered{} AI-augmented research process.
+Evidence, prompts and making history preserved. Checkpoint SLIPCASE-OPERATION-DESCRIBE-20260819.
+\end{document}
