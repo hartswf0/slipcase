@@ -2,7 +2,13 @@ import os, glob, json, re
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# 1. Load slipcases dataset
+# 0. Regenerate the manifest FIRST.
+# slipcases.json is derived from the slipcases/ folders by build_index_html.py.
+# It must be rebuilt before anything reads it, or every viewer downstream is
+# one ingest behind. (This step also writes index.html.)
+os.system(f"python3 {os.path.join(BASE_DIR, 'build_index_html.py')}")
+
+# 1. Load the freshly regenerated dataset
 with open(os.path.join(BASE_DIR, "slipcases.json"), "r", encoding="utf-8") as f:
     cases_data = json.load(f)
 
@@ -34,7 +40,7 @@ if os.path.exists(map02_path):
 
     with open(map02_path, "w", encoding="utf-8") as f:
         f.write(new_content)
-    print("Updated map-02.html with 1,244 cards.")
+    print(f"Updated map-02.html with {len(all_notes):,} cards.")
 
 # 4. Update box.html with tactile click/haptic, hidden search, and clean WYSIWYG flow
 box_path = os.path.join(BASE_DIR, "box.html")
@@ -84,10 +90,9 @@ if os.path.exists(box_path):
 
     with open(box_path, "w", encoding="utf-8") as f:
         f.write(new_content)
-    print("Updated box.html with 1,244 cards, zero-typing tactile clicks, and clean flow.")
+    print(f"Updated box.html with {len(all_notes):,} cards, zero-typing tactile clicks, and clean flow.")
 
-# 5. Rebuild index.html and slipcase-reader-v3.html
-os.system(f"python3 {os.path.join(BASE_DIR, 'build_index_html.py')}")
+# 5. Rebuild slipcase-reader-v3.html (index.html was written in step 0)
 os.system(f"python3 {os.path.join(BASE_DIR, 'build_reader_v3.py')}")
 
 # 6. Rebuild pocket.html (phone reader) from the refreshed manifest
