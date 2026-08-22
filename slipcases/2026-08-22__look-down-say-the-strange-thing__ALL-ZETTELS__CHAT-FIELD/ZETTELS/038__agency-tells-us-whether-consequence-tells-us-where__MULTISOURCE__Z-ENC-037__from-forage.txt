@@ -1,0 +1,114 @@
+ZETTEL
+
+ID:
+Z-ENC-037
+
+TITLE:
+AGENCY TELLS US WHETHER; NEGOTIATED CONSEQUENCE TELLS US WHERE: one supported action can receive different answers from different parts of an interactive narrative.
+
+SOURCE:
+COLLISION: Wardrip-Fruin et al. 2009; Koenitz 2010; ATTUNE / FIGURES Cass transcript 2026.
+SOURCE URL: https://doi.org/10.26503/dl.v2009i1.369 ; https://doi.org/10.1007/978-3-642-16638-9_22 ; LOCAL:_RESOURCES/cass-transcript.md
+
+PASSAGE:
+[PARAPHRASE] Relational agency already treats action as a player-system relation. System-process IDN theory already moves analysis away from a fixed narrative product. The Cass transcript adds a narrower anomaly: the same open linguistic action can be taken up in discourse while being resisted as character belief, world fact, evidence, memory, or runtime state.
+
+RESEARCH OBJECT:
+JURISDICTION OF CONSEQUENCE
+
+LOCAL MOVE:
+Rebuild the paper's north star without attacking a straw version of agency. Negotiated consequence becomes a second-order description of where a supported interaction changes the system rather than a replacement for agency itself.
+
+SOURCE TERMS:
+agency
+computational model
+system
+process
+user interaction
+discourse
+belief
+world fact
+evidence
+memory
+runtime
+
+WHAT BECAME STRANGE:
+Two encounters can both support the participant's action and therefore both sustain agency, while producing different worlds because the action is granted authority in different state domains.
+
+QUESTION:
+Is jurisdiction of consequence a stable comparative unit across interactive drama, conversational testimony, generative characters, and immersive narrative?
+
+DEEPER QUESTION:
+What minimum state decomposition is needed before the concept stops being metaphor and becomes an operational analytic instrument?
+
+MECHANISM:
+PARTICIPANT ACTION
+-> SYSTEM TAKES ACTION UP
+-> CONSEQUENCE ASSIGNED BY JURISDICTION
+-> CHANGE / RESISTANCE / UNKNOWN / TERMINATION
+
+FORMAL SHIFT:
+<supported action>
+-> [relational agency]
+-> <interaction occurs>
+-> [jurisdictional analysis]
+-> <where the interaction changes or fails to change the work>
+
+SOURCE FORMALISM:
+Wardrip-Fruin et al. supply the relational agency account. Koenitz supplies the system/process foregrounding. The Cass transcript supplies observed distinctions among local acknowledgement, rejected world facts, preserved evidentiary gaps, memory anomalies, and infrastructural termination.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+For user action u, define a consequence profile K(u) over state domains D = {discourse, belief, world, plot, memory, evidence, runtime}. Each domain records whether u changes state, is resisted, remains unknown, is not evidenced, or terminates the interaction.
+
+TENSION:
+The decomposition may overfit Cass. Some interactive systems do not expose separable belief, evidence, or memory domains, and different designs may require different jurisdictions.
+
+MISSING:
+Repeated controlled runs and cross-system comparisons that show whether consequence profiles reveal distinctions not captured by existing agency or narrative-state descriptions.
+
+BOUNDARY:
+This is an analytic reconstruction. It does not claim that FIGURES internally implements seven explicit state stores or that every IDN requires the same domains.
+
+CITATION TRAIL:
+[[Z-ENC-022]]
+[[Z-ENC-035]]
+[[Z-ENC-036]]
+-> collision
+-> JURISDICTION OF CONSEQUENCE
+
+TEST:
+Run the same five prompts across Cass, a retrieval-only testimony system, a branching interactive drama, and a reactive VR character. Compare consequence profiles before assigning global labels such as more or less agency.
+
+PLATFORM:
+[[NEGOTIATED CONSEQUENCE]]
+
+LINKS:
+[[Z-ENC-022]]
+[[Z-ENC-035]]
+[[Z-ENC-036]]
+[[Z-ENC-018]]
+[[Z-ENC-019]]
+[[Z-ENC-020]]
+
+BIBTEX:
+@inproceedings{WardripFruinEtAl2009Agency,
+  author = {Noah Wardrip-Fruin and Michael Mateas and Steven Dow and Serdar Sali},
+  title = {Agency Reconsidered},
+  booktitle = {Proceedings of DiGRA 2009 Conference: Breaking New Ground: Innovation in Games, Play, Practice and Theory},
+  year = {2009},
+  publisher = {DiGRA},
+  doi = {10.26503/dl.v2009i1.369}
+}
+
+@inproceedings{Koenitz2010Framework,
+  author = {Hartmut Koenitz},
+  title = {Towards a Theoretical Framework for Interactive Digital Narrative},
+  booktitle = {Interactive Storytelling: Third Joint Conference on Interactive Digital Storytelling, ICIDS 2010},
+  series = {Lecture Notes in Computer Science},
+  volume = {6432},
+  pages = {176--185},
+  year = {2010},
+  publisher = {Springer},
+  doi = {10.1007/978-3-642-16638-9_22}
+}
