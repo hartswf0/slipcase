@@ -1,0 +1,100 @@
+ZETTEL
+
+ID:
+Z-ENC-036
+
+TITLE:
+SYSTEM AND PROCESS BEFORE PRODUCT: interactive digital narrative already relocates analysis from a fixed text to the user-system process.
+
+SOURCE:
+Hartmut Koenitz - "Towards a Theoretical Framework for Interactive Digital Narrative" - ICIDS 2010 - pp. 176-185.
+SOURCE URL: https://doi.org/10.1007/978-3-642-16638-9_22
+
+PASSAGE:
+[PARAPHRASE] Koenitz argues that applying theories of non-digital narrative to interactive narrative is problematic because digital affordances alter their assumptions. His framework foregrounds the digital system and the process of user interaction over a product-centered view inherited from legacy media.
+
+RESEARCH OBJECT:
+SYSTEM-PROCESS FOREGROUNDING
+
+LOCAL MOVE:
+Correct the genealogy of the 360/chat analogy. The important move is not that chat suddenly turns a fixed text into an interaction. IDN theory already treats narrative as a system and process. The new question is what becomes newly difficult when natural language turns the user's contribution into an open semantic address.
+
+SOURCE TERMS:
+interactive digital narrative
+system
+process
+user interaction
+legacy media
+protostory
+narrative design
+narrative vectors
+
+WHAT BECAME STRANGE:
+The paper's 360 comparison works best as a narrow account of where selection is relocated, not as a general claim that older media theory sees narratives only as fixed products.
+
+QUESTION:
+What does open natural-language address add to a system-process account of interactive narrative?
+
+DEEPER QUESTION:
+Does conversational generation require a representation of multiple consequence jurisdictions because one utterance can enter several parts of the system at once?
+
+MECHANISM:
+DIGITAL NARRATIVE SYSTEM
++
+USER INTERACTION PROCESS
+-> NARRATIVE INSTANTIATION / EXPERIENCE
+
+FORMAL SHIFT:
+<legacy-media product>
+-> [foreground system and process]
+-> <interactive narrative>
+-> [open semantic address]
+-> <need to locate consequence across state domains>
+
+SOURCE FORMALISM:
+Koenitz proposes system and process as foregrounded analytic terms and introduces protostory, narrative design, and narrative vectors as concepts for interactive storytelling theory.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Conversation adds a high-dimensional address channel to the user-system process. The analytic problem becomes not only which narrative vector is followed, but which internal jurisdiction is permitted to change when the utterance is interpreted.
+
+TENSION:
+The jurisdictional model may be expressible inside existing system-process theory without requiring a new umbrella concept. Negotiated consequence must therefore remain a local analytic tool unless further cases show that existing vocabulary obscures a recurrent distinction.
+
+MISSING:
+A closer reading of Koenitz's later account of narrative vectors, system, process, and instantiation against the Cass transcript.
+
+BOUNDARY:
+Koenitz does not discuss LLMs, generative conversational characters, or the Cass system.
+
+CITATION TRAIL:
+[[Z-ENC-013]]
+[[Z-ENC-022]]
+-> Koenitz 2010
+-> system and process
+-> conversational jurisdiction as narrower question
+
+TEST:
+Recode the Cass transcript using Koenitz's system/process vocabulary alone. Mark every turn that still requires an extra distinction among discourse, belief, world fact, evidence, memory, or infrastructure.
+
+PLATFORM:
+[[INTERACTIVE DIGITAL NARRATIVE THEORY]]
+
+LINKS:
+[[Z-ENC-013]]
+[[Z-ENC-022]]
+[[Z-ENC-035]]
+
+BIBTEX:
+@inproceedings{Koenitz2010Framework,
+  author = {Hartmut Koenitz},
+  title = {Towards a Theoretical Framework for Interactive Digital Narrative},
+  booktitle = {Interactive Storytelling: Third Joint Conference on Interactive Digital Storytelling, ICIDS 2010},
+  series = {Lecture Notes in Computer Science},
+  volume = {6432},
+  pages = {176--185},
+  year = {2010},
+  publisher = {Springer},
+  doi = {10.1007/978-3-642-16638-9_22},
+  url = {https://doi.org/10.1007/978-3-642-16638-9_22}
+}

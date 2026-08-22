@@ -1,0 +1,9 @@
+CHAT ARCHIVE BOUNDARY — 2026-08-22
+
+This field preserves every conversation artifact that was available as a mounted file in the active ChatGPT runtime when this accession was assembled: all recovered Z-ENC zettels, whole-deck text, graph data, prompts/control files, raw pasted transcript/prompt files, source maps, paper sources, the latest paper PDF, and available screenshots.
+
+A verbatim platform-level export of the entire ChatGPT message stream was not exposed to the assistant as a file or connector resource. Therefore this accession does NOT claim to be a byte-exact full-chat export. Earlier zettels whose exact original card payloads were unavailable remain explicitly marked RECONSTRUCTED. No such marker was removed.
+
+The prior generated Slipcase ZIP checkpoints existed in the runtime and their names/sizes/SHA-256 values are recorded under _CHECKPOINTS/. Their paper and zettel text contents were recovered into this field. The binary checkpoint ZIPs themselves are not duplicated here because the GitHub connector used for this accession has text/blob payload constraints; the latest final paper PDF is included directly.
+
+The research field remains resumable from the individual cards and sources in this folder.

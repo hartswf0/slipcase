@@ -1,0 +1,96 @@
+ZETTEL
+
+ID:
+Z-ENC-035
+
+TITLE:
+AGENCY WAS ALREADY RELATIONAL: the strongest prior theory does not equate agency with unlimited player freedom.
+
+SOURCE:
+Noah Wardrip-Fruin, Michael Mateas, Steven Dow, Serdar Sali - "Agency Reconsidered" - DiGRA 2009.
+SOURCE URL: https://doi.org/10.26503/dl.v2009i1.369
+
+PASSAGE:
+[PARAPHRASE] Wardrip-Fruin and colleagues reject agency as free will. They define it as a phenomenon involving both player and game, arising when the actions a player desires are among those supported by the work's computational model, and vice versa.
+
+RESEARCH OBJECT:
+RELATIONAL AGENCY AS PRIOR ART
+
+LOCAL MOVE:
+Pressure [[Z-ENC-022]]. The paper cannot claim that interactive narrative theory generally treats agency as unrestricted sovereignty. A major lineage already moved agency away from free will and toward the relation between player desire, interface expectation, and computational possibility.
+
+SOURCE TERMS:
+agency
+player
+game
+computational model
+desired actions
+supported actions
+expectation
+improvisational
+
+WHAT BECAME STRANGE:
+The useful contribution is no longer "replace agency with negotiated consequence." The harder question is what agency still bundles once a single utterance can be supported in discourse, rejected as world fact, preserved as unknown, and stopped by infrastructure.
+
+QUESTION:
+What distinction does negotiated consequence make that relational agency does not already make?
+
+DEEPER QUESTION:
+Can two interactions support comparable agency while distributing consequence across different narrative jurisdictions?
+
+MECHANISM:
+PLAYER DESIRE
+-> AVAILABLE / SUGGESTED ACTION
+-> COMPUTATIONAL MODEL SUPPORT
+-> EXPERIENCE OF AGENCY
+
+FORMAL SHIFT:
+<agency as player freedom>
+-> [Wardrip-Fruin et al. relational correction]
+-> <agency as player-system relation>
+-> [our remaining problem]
+-> <location of consequence inside that relation>
+
+SOURCE FORMALISM:
+The source defines agency relationally in terms of desired actions and actions supported by an underlying computational model. It also treats audience expectation, interface, and the improvisational character of agency as design concerns.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Agency asks whether an intended action is supported in the player-system relation. Negotiated consequence asks which state domains are changed, resisted, or left unresolved after that action is taken up.
+
+TENSION:
+If negotiated consequence only restates the fit between desire and computational support, the new construct is unnecessary. It survives only if jurisdictional consequence distinguishes cases that relational agency treats alike.
+
+MISSING:
+A direct comparison of Cass consequence profiles with the categories used in "Agency Reconsidered," including examples where agency remains high but consequence lands in different state domains.
+
+BOUNDARY:
+This source concerns games and playable media. It does not discuss LLM conversational systems or the specific jurisdictional decomposition proposed here.
+
+CITATION TRAIL:
+[[Z-ENC-022]]
+-> Wardrip-Fruin et al. 2009
+-> relational agency
+-> location of consequence as remaining opening
+
+TEST:
+Construct two conversational cases in which the participant's desired action is supported in both, but one changes character belief while the other changes only discourse. If existing agency theory cannot discriminate them without additional state description, the new distinction earns work to do.
+
+PLATFORM:
+[[NEGOTIATED CONSEQUENCE]]
+
+LINKS:
+[[Z-ENC-022]]
+[[Z-ENC-025]]
+[[Z-ENC-027]]
+
+BIBTEX:
+@inproceedings{WardripFruinEtAl2009Agency,
+  author = {Noah Wardrip-Fruin and Michael Mateas and Steven Dow and Serdar Sali},
+  title = {Agency Reconsidered},
+  booktitle = {Proceedings of DiGRA 2009 Conference: Breaking New Ground: Innovation in Games, Play, Practice and Theory},
+  year = {2009},
+  publisher = {DiGRA},
+  doi = {10.26503/dl.v2009i1.369},
+  url = {https://doi.org/10.26503/dl.v2009i1.369}
+}

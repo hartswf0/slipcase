@@ -1,0 +1,123 @@
+ZETTEL
+
+ID:
+Z-ENC-038
+
+TITLE:
+FREEDOM OF ADDRESS IS NOT AUTHORITY OVER CONSEQUENCE: an open interface tells us what a participant may attempt, not which part of a system must change.
+
+SOURCE:
+COLLISION: Wardrip-Fruin et al. 2009; Koenitz 2010; Eitzen 2021; ATTUNE / FIGURES Cass transcript 2026.
+SOURCE URL: https://doi.org/10.26503/dl.v2009i1.369 ; https://doi.org/10.1007/978-3-642-16638-9_22 ; https://doi.org/10.6092/issn.2280-9481/12212 ; LOCAL:_RESOURCES/cass-transcript.md
+
+PASSAGE:
+[PARAPHRASE] Relational agency already locates action between participant desire and computational support. System-process accounts of interactive narrative already treat interaction as more than a property of a finished text. The Cass transcript supplies a smaller distinction: a participant can be free to introduce an utterance while different parts of the encounter accept, resist, preserve, or terminate its consequence. Eitzen's account of 360 documentary supplies a parallel case in which freedom of orientation does not confer authority over recorded events.
+
+RESEARCH OBJECT:
+ADDRESS / CONSEQUENCE SPLIT
+
+LOCAL MOVE:
+Compress the larger negotiated-consequence argument into the smallest distinction that still travels across conversational agents, interactive narrative, testimony systems, games, and immersive media. Do not claim a replacement for agency. Ask one narrower question after an action is supported: where did it acquire force?
+
+SOURCE TERMS:
+agency
+computational model
+system
+process
+interaction
+orientation
+address
+world fact
+evidence
+memory
+runtime
+
+WHAT BECAME STRANGE:
+An interface can be extremely open at the point of entry while remaining highly selective about what the participant is authorized to change. Openness and consequence therefore need not rise together.
+
+QUESTION:
+Does separating freedom of address from location of consequence reveal useful differences among systems that otherwise appear equally interactive?
+
+DEEPER QUESTION:
+What is the minimum description of consequence needed to compare unlike media without imposing one universal state model on all of them?
+
+MECHANISM:
+PARTICIPANT ATTEMPT
+-> SYSTEM UPTAKE
+-> LOCATION OF CONSEQUENCE
+-> CHANGE / RESISTANCE / UNKNOWN / TERMINATION
+
+FORMAL SHIFT:
+<open action space>
+-> [participant addresses system]
+-> <action is taken up>
+-> [consequence is distributed]
+-> <some parts change; others do not>
+
+SOURCE FORMALISM:
+Wardrip-Fruin et al. supply a relational account of agency. Koenitz foregrounds system and process in interactive digital narrative. Eitzen describes viewer orientation in 360 documentary without corresponding causal control over recorded events. The Cass transcript records cases in which discourse changes while belief, world fact, evidence, memory, or runtime behaves differently.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+For an action u, record A(u) = whether the participant may attempt it and L(u) = the set of locations in which it produces an observable consequence. The distinction is useful when A(u) is broad but L(u) varies by action and by system.
+
+TENSION:
+Existing relational accounts of agency may already contain much of this distinction. The seed earns a separate name only if location-of-consequence analysis makes comparisons or failures visible that a global agency judgment leaves obscure.
+
+MISSING:
+Repeated controlled runs and cross-system comparisons using the same probes.
+
+BOUNDARY:
+This is a comparative analytic distinction, not a claim that every system contains explicit stores for belief, world, evidence, memory, or runtime. The relevant locations may differ by medium and implementation.
+
+CITATION TRAIL:
+[[Z-ENC-037]]
+-> reduce the claim
+-> [[Z-ENC-022]]
+-> Cass transcript
+-> Eitzen 2021
+-> ADDRESS / CONSEQUENCE SPLIT
+
+TEST:
+Use the same five small probes across a generative character, a retrieval-based testimony system, an interactive drama, and a 360 or reactive immersive work. Record what the participant may attempt and where each attempt changes the encounter. Keep the distinction only if it reveals differences that a single agency score does not.
+
+PLATFORM:
+[[NEGOTIATED CONSEQUENCE]]
+[[ENCOUNTER]]
+
+LINKS:
+[[Z-ENC-037]]
+[[Z-ENC-022]]
+[[Z-ENC-023]]
+[[Z-ENC-034]]
+
+BIBTEX:
+@inproceedings{WardripFruinEtAl2009Agency,
+  author = {Noah Wardrip-Fruin and Michael Mateas and Steven Dow and Serdar Sali},
+  title = {Agency Reconsidered},
+  booktitle = {Proceedings of DiGRA 2009 Conference: Breaking New Ground: Innovation in Games, Play, Practice and Theory},
+  year = {2009},
+  publisher = {DiGRA},
+  doi = {10.26503/dl.v2009i1.369}
+}
+
+@inproceedings{Koenitz2010Framework,
+  author = {Hartmut Koenitz},
+  title = {Towards a Theoretical Framework for Interactive Digital Narrative},
+  booktitle = {Interactive Storytelling: Third Joint Conference on Interactive Digital Storytelling, ICIDS 2010},
+  series = {Lecture Notes in Computer Science},
+  volume = {6432},
+  pages = {176--185},
+  year = {2010},
+  publisher = {Springer},
+  doi = {10.1007/978-3-642-16638-9_22}
+}
+
+@article{Eitzen2021VRDocumentary,
+  author = {Dirk Eitzen},
+  title = {The Problems and Potentials of VR for Documentary Storytelling},
+  journal = {Cinergie},
+  number = {19},
+  year = {2021},
+  doi = {10.6092/issn.2280-9481/12212}
+}
