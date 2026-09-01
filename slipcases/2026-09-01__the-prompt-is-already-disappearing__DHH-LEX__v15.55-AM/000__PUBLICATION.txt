@@ -8,6 +8,11 @@ DATE PUSHED: 2026-09-01
 SOURCE PACKAGE: the-prompt-is-already-disappearing__slipcase-15.55-AM__2026-08-31.zip
 SOURCE PACKAGE SHA-256: 37501383dd9fdb4850313235d22f1e000e58f93ca8825e3ce16a79fd318f47fd
 PDF SHA-256: 69c4ebf3d1d4c59017ca701554f4898f64b37541e577b6c07c60181915e79d31
-TEXT WORKSPACE: canonical cards, mirrors, bibliography, prompts, graph state, reader, paper source, and verification preserved in this directory.
-BINARY RECEIPTS: hashes above identify the generated ZIP/PDF even when a connector cannot transmit binary bytes.
+
+GITHUB PROJECTION
+This branch preserves the 13 canonical root zettel cards plus publication metadata, source map, making history, open edges, field map, bibliography/reference material, rebuild notes, and verification receipts committed as UTF-8 text.
+
+LOCAL GENERATED PACKAGE
+The full generated ZIP also contains the PDF, offline reader, graph, printable cards, HTML capsule, mirrors, JSON/JSONL state, SVG, and other derived views. The GitHub connector write surface used in this run does not accept local binary files directly, so those binary/large derived artifacts are identified here by verified hashes and are not claimed present in this branch unless separately listed.
+
 RETURN PATH: 000__RETURN_PATH.txt
