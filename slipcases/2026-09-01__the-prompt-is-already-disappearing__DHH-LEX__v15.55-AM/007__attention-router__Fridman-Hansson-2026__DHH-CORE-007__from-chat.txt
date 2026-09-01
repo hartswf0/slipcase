@@ -1,0 +1,138 @@
+ZETTEL
+
+ID:
+DHH-CORE-007
+
+TITLE:
+Once agents become parallel, the IDE stops being primarily an editor and becomes an interrupt scheduler for human judgment.
+
+SOURCE:
+David Heinemeier Hansson and Lex Fridman — Lex Fridman Podcast #501 — 2026 — parallel-agent workflow; 02:43:27.
+
+PASSAGE:
+[QUOTE]
+“I found that the human in the loop is the limit here.”
+
+RESEARCH OBJECT:
+DHH's sixteen-thread setup changes the HCI problem.
+
+The scarce resource is no longer typing speed or code production.
+
+It is moments of human judgment.
+
+LOCAL MOVE:
+He goes from:
+one coding thread
+to
+many agents
+to
+notifications
+to
+automated review
+to
+daily summaries containing only decisions that supposedly require him.
+
+SOURCE TERMS:
+threads
+parallel
+needs something
+decision
+human in the loop
+limit
+automated systems
+ready to go
+close
+
+WHAT BECAME STRANGE:
+The prompt box becomes secondary.
+
+The central interface question becomes:
+
+What deserves to interrupt the human?
+
+QUESTION:
+What is the correct scheduler for a human supervising many asynchronous intelligent processes?
+
+DEEPER QUESTION:
+Should agentic IDEs optimize human attention the way operating systems optimize CPU time?
+
+MECHANISM:
+human dispatches many tasks
+→ agents work independently
+→ routine work resolves automatically
+→ uncertainty / irreversible choice / completion generates interrupt
+→ human handles selected interrupt
+→ execution resumes
+
+FORMAL SHIFT:
+<CODE EDITOR>
+→ <PARALLEL AGENT WORKSPACE>
+→ [INTERRUPT ROUTING]
+→ <HUMAN DECISION>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Agent capacity:
+A = Σ throughput(agentᵢ)
+
+Human decision capacity:
+H = fixed
+
+As A >> H:
+
+optimization target shifts from increasing A
+to reducing and prioritizing calls on H.
+
+TENSION:
+Running more agents initially feels like acceleration.
+
+Eventually the acceleration manufactures its own bottleneck: the human.
+
+MISSING:
+A priority model distinguishing:
+security,
+uncertainty,
+taste,
+irreversibility,
+cost,
+routine completion,
+and genuine need for human judgment.
+
+BOUNDARY:
+DHH's current workflow still contains substantial human intervention.
+
+The trajectory suggests exception-based supervision, not proof of its eventual elimination.
+
+CITATION TRAIL:
+Supervisory control.
+Human interruptibility.
+Attention management.
+Air-traffic control.
+Exception-based management.
+Mixed-initiative systems.
+
+TEST:
+Replace chronological agent notifications with risk- and uncertainty-ranked interventions.
+
+Measure throughput and decision quality, not number of agent tasks completed.
+
+PLATFORM:
+[[human attention as scarce compute]]
+
+LINKS:
+[[agentic IDE]]
+[[exception routing]]
+[[human bottleneck]]
+
+BIBTEX:
+@misc{fridman_hansson_2026_core7,
+  author = {Fridman, Lex and Heinemeier Hansson, David},
+  title = {DHH: Future of Programming, AI, Agentic Engineering, Vibe Coding \& Linux},
+  year = {2026},
+  howpublished = {Lex Fridman Podcast, Episode 501},
+  url = {https://youtu.be/NYFGCESmikA}
+}
