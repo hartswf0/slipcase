@@ -1,0 +1,52 @@
+name: Ingest Governability Slipcase 2026-08-31
+
+on:
+  push:
+    paths:
+      - '_INGEST/GOVERNABILITY-2026-08-31-A/READY'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ingest:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Reconstruct and verify field
+        shell: bash
+        run: |
+          set -euo pipefail
+          INGEST="_INGEST/GOVERNABILITY-2026-08-31-A"
+          TARGET="slipcases/2026-08-31__the-governor-is-outside-the-model__GOVERNABILITY-2026-08-31-A"
+          rm -rf "$TARGET"
+          mkdir -p "$TARGET"
+          cat "$INGEST"/text/part-*.b64 | base64 -d > /tmp/governability-field.tar.gz
+          echo "ea2a9368fe758ef0ec806bbc05de28daf7b3eb0d401863a4f7b8f0a6cb25c36e  /tmp/governability-field.tar.gz" | sha256sum -c -
+          tar -xzf /tmp/governability-field.tar.gz -C "$TARGET"
+          cat "$INGEST"/pdf/part-*.b64 | base64 -d > "$TARGET/the-governor-is-outside-the-model__2026-08-31.pdf"
+          echo "05a3131e5b4647a2429ee9d1f77b7b7e1ac51dbe08cb85693d7a6fd873074e67  $TARGET/the-governor-is-outside-the-model__2026-08-31.pdf" | sha256sum -c -
+          {
+            echo "github_ingest_verified: true"
+            echo "checkpoint: GOVERNABILITY-2026-08-31-A"
+            echo "source_text_tar_sha256: ea2a9368fe758ef0ec806bbc05de28daf7b3eb0d401863a4f7b8f0a6cb25c36e"
+            echo "paper_pdf_sha256: 05a3131e5b4647a2429ee9d1f77b7b7e1ac51dbe08cb85693d7a6fd873074e67"
+          } > "$TARGET/_SLIPCASE/GITHUB_INGEST.txt"
+      - name: Commit native field
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET="slipcases/2026-08-31__the-governor-is-outside-the-model__GOVERNABILITY-2026-08-31-A"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$TARGET"
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "add governability representational control planes slipcase"
+          git push
