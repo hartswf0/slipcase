@@ -1,0 +1,86 @@
+name: Ingest Prompting Is Thinking Slipcase 2026-09-01
+
+on:
+  push:
+    paths:
+      - '_INGEST/PROMPTING-IS-THINKING-2026-09-01/READY'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ingest:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reconstruct and verify source field
+        shell: bash
+        run: |
+          set -euo pipefail
+          INGEST="_INGEST/PROMPTING-IS-THINKING-2026-09-01"
+          TARGET="slipcases/2026-09-01__prompting-is-thinking__prompting-is-thinking-20260901"
+          ARCHIVE_SHA="18554196a63400f0059ca5257a6651b83b9505658d47c0cbbc8ab2d83e8aa05b"
+
+          cat "$INGEST"/source/part-*.b64 | base64 -d > /tmp/prompting-is-thinking-source.tar.gz
+          echo "$ARCHIVE_SHA  /tmp/prompting-is-thinking-source.tar.gz" | sha256sum -c -
+
+          rm -rf "$TARGET"
+          mkdir -p "$TARGET"
+          tar -xzf /tmp/prompting-is-thinking-source.tar.gz -C "$TARGET"
+
+      - name: Compile paper and create portable zip
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET="slipcases/2026-09-01__prompting-is-thinking__prompting-is-thinking-20260901"
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lmodern poppler-utils zip
+          cd "$TARGET"
+          echo "9e0ebe63b4385d1d44a97e8f9129ef487b4f01a4627ac317269f16d07fc2a57f  prompting_is_thinking__2026-09-01.tex" | sha256sum -c -
+          pdflatex -interaction=nonstopmode -halt-on-error prompting_is_thinking__2026-09-01.tex >/tmp/pit-latex-1.log
+          pdflatex -interaction=nonstopmode -halt-on-error prompting_is_thinking__2026-09-01.tex >/tmp/pit-latex-2.log
+          test -s prompting_is_thinking__2026-09-01.pdf
+          PDF_SHA="$(sha256sum prompting_is_thinking__2026-09-01.pdf | awk '{print $1}')"
+          PDF_PAGES="$(pdfinfo prompting_is_thinking__2026-09-01.pdf | awk '/^Pages:/ {print $2}')"
+          mkdir -p _SLIPCASE
+          {
+            echo "github_ingest_verified: true"
+            echo "checkpoint: prompting-is-thinking-20260901"
+            echo "source_archive_sha256: 18554196a63400f0059ca5257a6651b83b9505658d47c0cbbc8ab2d83e8aa05b"
+            echo "source_tex_sha256: 9e0ebe63b4385d1d44a97e8f9129ef487b4f01a4627ac317269f16d07fc2a57f"
+            echo "github_compiled_pdf_sha256: $PDF_SHA"
+            echo "github_compiled_pdf_pages: $PDF_PAGES"
+            echo "target: $TARGET"
+            echo "note: PDF rebuilt on GitHub Actions from preserved TeX; source checkpoint verified before compilation."
+          } > _SLIPCASE/GITHUB_INGEST.txt
+          rm -f prompting_is_thinking_slipcase.zip
+          zip -qr /tmp/prompting_is_thinking_slipcase.zip . -x 'prompting_is_thinking_slipcase.zip'
+          mv /tmp/prompting_is_thinking_slipcase.zip ./prompting_is_thinking_slipcase.zip
+          echo "github_generated_zip_sha256: $(sha256sum prompting_is_thinking_slipcase.zip | awk '{print $1}')" >> _SLIPCASE/GITHUB_INGEST.txt
+
+      - name: Rebuild Slipcase readers and indexes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 build_all.py
+
+      - name: Commit native field and rebuilt desk
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET="slipcases/2026-09-01__prompting-is-thinking__prompting-is-thinking-20260901"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$TARGET" index.html slipcases.json map.html atlas.html map-02.html box.html slipcase-reader-v3.html pocket.html || true
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "add prompting is thinking slipcase"
+          git pull --rebase origin main
+          git push origin HEAD:main
