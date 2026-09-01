@@ -1,0 +1,128 @@
+ZETTEL
+
+ID:
+DHH-CORE-006
+
+TITLE:
+Basecamp exposes the failure class agent benchmarks routinely miss: every change can look acceptable while the system gets worse.
+
+SOURCE:
+David Heinemeier Hansson and Lex Fridman — Lex Fridman Podcast #501 — 2026 — Basecamp 5 discussion, approximately 00:15–00:18.
+
+PASSAGE:
+[QUOTE]
+The PRs “individually perhaps could have been justified” but “taken all together, destroyed the architecture of the system.”
+
+RESEARCH OBJECT:
+This is one of the most serious pieces of evidence in the interview.
+
+The failure is not inside a patch.
+
+It is produced by composition over time.
+
+LOCAL MOVE:
+37signals lets designers generate working features with agents.
+
+Local success accumulates into global architectural failure.
+
+SOURCE TERMS:
+individually
+taken all together
+destroyed the architecture
+cohesive
+coherent
+clean up
+
+WHAT BECAME STRANGE:
+Per-task correctness cannot establish long-horizon software quality.
+
+QUESTION:
+What must an agent represent about the trajectory of a system, rather than the current task, to prevent architectural drift?
+
+DEEPER QUESTION:
+Is architecture primarily a constraint on sequences of acceptable transformations?
+
+MECHANISM:
+A₀
+→ acceptable patch
+→ acceptable patch
+→ acceptable patch
+→ ...
+→ incoherent Aₙ
+
+No single patch must be obviously wrong.
+
+FORMAL SHIFT:
+<LOCALLY VALID CHANGE>
+→ <SEQUENCE OF VALID CHANGES>
+→ [COMPOSITION]
+→ <GLOBAL FAILURE>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+∀i:
+acceptable(pᵢ | Aᵢ) = true
+
+does not imply:
+
+acceptable(Aₙ) = true
+
+The missing object is a long-horizon invariant.
+
+TENSION:
+This sharply qualifies “don't tell the agent how.”
+
+Procedural prescription may become unnecessary while architectural constraints become more important.
+
+The useful distinction is:
+
+do not prescribe the route;
+do preserve the invariants.
+
+MISSING:
+A machine-readable representation of:
+proportion,
+cohesion,
+duplication,
+concept count,
+dependency direction,
+and architectural intent.
+
+BOUNDARY:
+The episode is DHH's report of internal Basecamp work; the actual patch sequence is not supplied here.
+
+CITATION TRAIL:
+Architectural drift.
+Software erosion.
+Technical debt.
+Local versus global optimization.
+Invariant preservation.
+Long-horizon agents.
+
+TEST:
+Run twenty agent-generated changes against a mature system.
+
+Evaluate each change locally and the final system globally.
+
+Then add explicit architectural invariants and repeat.
+
+PLATFORM:
+[[architecture after agentic implementation]]
+
+LINKS:
+[[locally right globally wrong]]
+[[long-horizon invariants]]
+[[vibe coding boundary]]
+
+BIBTEX:
+@misc{fridman_hansson_2026_core6,
+  author = {Fridman, Lex and Heinemeier Hansson, David},
+  title = {DHH: Future of Programming, AI, Agentic Engineering, Vibe Coding \& Linux},
+  year = {2026},
+  howpublished = {Lex Fridman Podcast, Episode 501},
+  url = {https://youtu.be/NYFGCESmikA}
+}
