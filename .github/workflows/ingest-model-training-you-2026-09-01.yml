@@ -18,30 +18,51 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Reconstruct and verify field
+      - name: Reconstruct and verify text field
         shell: bash
         run: |
           set -euo pipefail
           INGEST="_INGEST/MODEL-TRAINING-YOU-2026-09-01"
           TARGET="slipcases/2026-09-01__the-model-is-training-you__MODEL-TRAINING-YOU-2026-09-01"
-          ZIP_SHA="f471c6c3fdfc35490d04bef7f5a4b21cdcac83d6b2629e22b14d8fc78d15e8b3"
+          TEXT_SHA="a2838661d8c3d64dad179f752543677d80f638f1173dd7ab8c9f8579dd83fac0"
 
-          cat "$INGEST"/zip/part-*.b64 | base64 -d > /tmp/model-training-you-slipcase.zip
-          echo "$ZIP_SHA  /tmp/model-training-you-slipcase.zip" | sha256sum -c -
+          cat "$INGEST"/text/part-*.b64 | base64 -d > /tmp/model-training-you-text.tar.gz
+          echo "$TEXT_SHA  /tmp/model-training-you-text.tar.gz" | sha256sum -c -
 
           rm -rf "$TARGET" /tmp/model-training-you-unpack
           mkdir -p "$TARGET" /tmp/model-training-you-unpack
-          unzip -q /tmp/model-training-you-slipcase.zip -d /tmp/model-training-you-unpack
+          tar -xzf /tmp/model-training-you-text.tar.gz -C /tmp/model-training-you-unpack
           cp -a /tmp/model-training-you-unpack/slipcase_stronger_essay/. "$TARGET"/
-          cp /tmp/model-training-you-slipcase.zip "$TARGET/the-model-is-training-you__slipcase.zip"
 
-          mkdir -p "$TARGET/_SLIPCASE"
+      - name: Compile paper PDF from preserved TeX
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET="slipcases/2026-09-01__the-model-is-training-you__MODEL-TRAINING-YOU-2026-09-01"
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lmodern zip
+          cd "$TARGET"
+          pdflatex -interaction=nonstopmode -halt-on-error the-model-is-training-you__2026-09-01.tex >/tmp/model-training-you-latex-1.log
+          pdflatex -interaction=nonstopmode -halt-on-error the-model-is-training-you__2026-09-01.tex >/tmp/model-training-you-latex-2.log
+          test -s the-model-is-training-you__2026-09-01.pdf
+          PDF_SHA="$(sha256sum the-model-is-training-you__2026-09-01.pdf | awk '{print $1}')"
+          PDF_PAGES="$(pdfinfo the-model-is-training-you__2026-09-01.pdf 2>/dev/null | awk '/^Pages:/ {print $2}' || true)"
+          mkdir -p _SLIPCASE
           {
             echo "github_ingest_verified: true"
             echo "checkpoint: MODEL-TRAINING-YOU-2026-09-01"
-            echo "package_sha256: $ZIP_SHA"
+            echo "source_text_tar_sha256: a2838661d8c3d64dad179f752543677d80f638f1173dd7ab8c9f8579dd83fac0"
+            echo "github_compiled_pdf_sha256: $PDF_SHA"
+            echo "github_compiled_pdf_pages: ${PDF_PAGES:-UNVERIFIED}"
             echo "target: $TARGET"
-          } > "$TARGET/_SLIPCASE/GITHUB_INGEST.txt"
+            echo "note: PDF was rebuilt on GitHub Actions from the preserved TeX; byte identity with the earlier local PDF is not claimed."
+          } > _SLIPCASE/GITHUB_INGEST.txt
+
+          rm -f /tmp/the-model-is-training-you__slipcase.zip
+          zip -qr /tmp/the-model-is-training-you__slipcase.zip . -x 'the-model-is-training-you__slipcase.zip'
+          mv /tmp/the-model-is-training-you__slipcase.zip ./the-model-is-training-you__slipcase.zip
+          ZIP_SHA="$(sha256sum the-model-is-training-you__slipcase.zip | awk '{print $1}')"
+          echo "github_generated_zip_sha256: $ZIP_SHA" >> _SLIPCASE/GITHUB_INGEST.txt
 
       - name: Rebuild Slipcase readers and indexes
         shell: bash
@@ -62,4 +83,5 @@ jobs:
             exit 0
           fi
           git commit -m "add the model is training you slipcase"
-          git push
+          git pull --rebase origin main
+          git push origin HEAD:main
