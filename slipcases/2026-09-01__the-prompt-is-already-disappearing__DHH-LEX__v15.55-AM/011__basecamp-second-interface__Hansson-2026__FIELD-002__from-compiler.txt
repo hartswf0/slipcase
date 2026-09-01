@@ -1,0 +1,94 @@
+ZETTEL
+
+ID:
+FIELD-002
+
+TITLE:
+Basecamp's agent interface is an API, CLI, and skill before it is a conversation.
+
+SOURCE:
+David Heinemeier Hansson — Basecamp becomes agent accessible — 2026.
+
+SOURCE URL:
+https://world.hey.com/dhh/basecamp-becomes-agent-accessible-3ae6b949
+
+PASSAGE:
+[PARAPHRASE]
+DHH says 37signals revamped Basecamp's API, created a CLI, and wrapped both in a skill that teaches agents how to use the system; he also calls the filesystem a memory implant that lets agents learn between prompts.
+
+RESEARCH OBJECT:
+Agent accessibility requires designing a second interface for software: one addressed to an interpreter that can read procedural documentation and invoke tools.
+
+LOCAL MOVE:
+The source turns agent integration from a chat feature into an interface architecture.
+
+SOURCE TERMS:
+API
+CLI
+skill
+file system
+memory implant
+agent accessible
+
+WHAT BECAME STRANGE:
+A product can become easier to prompt without changing its human GUI.
+
+QUESTION:
+Should agent accessibility become a software quality analogous to API quality or accessibility for human users?
+
+DEEPER QUESTION:
+What makes a system legible enough that an unfamiliar agent can safely infer how to act?
+
+MECHANISM:
+product capability
+→ expose operations through API/CLI
+→ teach conventions through skill
+→ persist state in filesystem
+→ agent composes operations from natural-language intent
+
+FORMAL SHIFT:
+<HUMAN GUI>
+→ <AGENT-ADDRESSABLE OPERATION SURFACE>
+→ [MODEL INTERPRETATION]
+→ <PRODUCT ACTION>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Agent affordance = operation exposure + discoverability + instruction + feedback.
+
+TENSION:
+Making operations easy for agents also increases the importance of permission boundaries and audit trails.
+
+MISSING:
+A standard for testing agent-legibility and safe discoverability.
+
+BOUNDARY:
+The post describes Basecamp's design direction but does not independently benchmark agents before and after the interface changes.
+
+CITATION TRAIL:
+API usability.
+End-user development.
+Executable documentation.
+Agent tools.
+
+TEST:
+Give unfamiliar agents equivalent tasks against GUI-only, API-only, and API+CLI+skill versions of the same product.
+
+PLATFORM:
+[[software that teaches its agents]]
+
+LINKS:
+[[agent-facing interface]]
+[[distributed prompt]]
+[[machine-legible software]]
+
+BIBTEX:
+@misc{hansson2026basecampagent,
+  author = {Heinemeier Hansson, David},
+  title = {Basecamp becomes agent accessible},
+  year = {2026},
+  url = {https://world.hey.com/dhh/basecamp-becomes-agent-accessible-3ae6b949}
+}
