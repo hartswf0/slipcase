@@ -1,0 +1,68 @@
+VERIFICATION — MODEL-TRAINING-YOU-2026-09-01
+
+SOURCE COVERAGE
+- 16 bibliography entries compiled in the paper source/reference file.
+- Key source metadata checked against current public records during assembly.
+- Full prior conversation source coverage: UNVERIFIED / OUT OF BOUND for this bounded paper-focused package.
+
+EXTRACTION
+- No external user file extraction was required for the essay build.
+
+DUPLICATES / ID COLLISIONS
+- Zettel deck not programmatically reconstructed in this bounded package; duplicate/id-collision audit: NOT RUN.
+
+PLATFORM RELATIONS / LINKS / WIKILINK COVERAGE / GHOSTS
+- Full graph compilation: NOT RUN for this bounded paper-focused package.
+- Source map preserves the consequential zettel addresses used by the paper.
+
+BIBLIOGRAPHY COVERAGE
+- In-text citations compile to visible author-year citations.
+- Reference section present in PDF.
+- Source bibliography file retained as slipcase__references.bib.
+
+RESOURCE COVERAGE
+- Sources are represented by bibliographic citations/URLs; no copyrighted source bodies were bundled.
+
+RECONSTRUCTION STATE
+- Paper can be rebuilt from the .tex with pdflatex alone because the visible bibliography is embedded in the LaTeX source.
+- Separate .bib retained for portability and later bibliography tooling.
+
+PAPER EVIDENCE COVERAGE
+- SOURCE_MAP distinguishes sourced claims from compiler synthesis and lists evidence limits.
+
+ASSEMBLY PROMPT STATUS
+- Bounded essay instruction preserved in _PROMPTS/essay_assembly_prompt.txt.
+- Full SLIPCASE v15.55-AM instrument remains in originating conversation and was not programmatically exported; exact full-prompt preservation in this package: UNVERIFIED.
+
+MAKING HISTORY
+- Present: the-model-is-training-you__MAKING_HISTORY.txt
+
+PDF STATUS
+- COMPILED: YES
+- PAGES: 10
+- ENCRYPTED: NO
+- FONTS: EMBEDDED
+- VISUAL QA: rendered all 10 pages at 150 DPI and inspected as a complete contact sheet; no clipping, overlap, missing text, or broken glyphs observed.
+- CITATION QA: no undefined citations in final compile; reference text extracted successfully.
+- PDF SHA-256: dfd37f33a805fe6b3c2126aae7e85e915cdca34494b181ecc8663000636b6bda
+
+SOURCE STATUS
+- TEX SHA-256: eaeccf987dbe655bbc16e4b7de61d5f38855e18a1bf10a7f35b5de46553d5eb0
+- BIB SHA-256: 33b00f040434f7c986d5faea793240397768c4557d3eaf813467703949d06769
+
+ZIP STATUS
+- PENDING until package step.
+
+STRUCTURE
+- index.html
+- 000__START_HERE.txt
+- 000__RETURN_PATH.txt
+- 000__OPEN_EDGES.txt
+- MARK.svg
+- paper PDF/TEX/source map/making history/assembly appendix
+- references.bib
+- _PROMPTS/
+- _SLIPCASE/
+
+ZIP VERIFIED: YES
+ZIP SHA-256: 735cce0ccca7c102308219de88bdae97ff431f2ea9c6a724f4c0b7b1af5cb7d5

@@ -1,0 +1,295 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{ragged2e}
+\usepackage{booktabs}
+\usepackage{array}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black,pdfauthor={Watson Hartsoe},pdftitle={The Model Is Training You}}
+\setstretch{1.08}
+\setlength{\parskip}{0.45em}
+\setlength{\parindent}{1.15em}
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.55em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small The Model Is Training You}
+\fancyhead[R]{\small Working Paper}
+\fancyfoot[C]{\small \thepage}
+\renewcommand{\headrulewidth}{0.35pt}
+\newcommand{\term}[1]{\textit{#1}}
+\newcommand{\strong}[1]{\textbf{#1}}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries The Model Is Training You\\[0.35em]}
+{\large Prompt Engineering as a Discipline of Legibility}\par
+\vspace{1.0em}
+{\normalsize Watson Hartsoe}\par
+\vspace{0.25em}
+{\small Working Paper · AI-augmented research process · September 2026}
+\end{center}
+
+\vspace{0.9em}
+\noindent\textbf{Abstract.}
+The easiest way to make an AI system look intelligent is to change the world until its inputs fit. Contemporary prompt practice is usually described as a method for controlling language models: decompose the task, declare a role, expose context, constrain output, add tools, convert judgment into a rubric, and route the result through an agent graph. These techniques often work. Their success can hide a second operation. They make people, institutions, evidence, and problems increasingly legible to the machine. Drawing on Scott's account of administrative legibility, Bowker and Star's work on classification, Geertz on thick description, Suchman and Garfinkel on situated and tacit coordination, Star on boundary objects, and empirical work on prompt sensitivity, long-context use, cultural bias, and creative homogenization, this essay argues that prompt engineering should be studied as representational governance. A prompt does not simply tell a model what to do. It decides which features of a situation can become computationally visible and which are pushed into a remainder. The central danger is therefore subtler than model error: organizations may reorganize themselves around machine-readable categories and then misrecognize compatibility as understanding. The constructive alternative developed here is \term{reversible legibility}: harden representations enough to act, while preserving raw evidence, rejected alternatives, local vocabularies, provenance, and a route for reopening the categories themselves. The research question shifts from ``Which prompt performs best?'' toward ``What did the world have to become for this performance to occur?''
+
+\vspace{0.5em}
+\noindent\textbf{Keywords:} prompting; legibility; human--AI interaction; classification; boundary objects; cultural alignment; situated action; AI governance
+
+\section{The Performance Trick We Are Underestimating}
+
+The easiest way to make an AI system look intelligent is to change the world until its inputs fit.
+
+That sentence names a performance trick hiding inside a great deal of contemporary AI practice. When a language model fails on an open-ended problem, competent users rarely leave the problem untouched. They rewrite it. They separate background from instruction, convert uncertainty into named fields, define an output schema, enumerate tools, specify a role, provide examples, decompose the task into stages, add a verifier, and introduce stop conditions. If the system still fails, the surrounding workflow changes. A human takes over one step. A database is normalized. A policy is converted into a checklist. A case becomes a record. A judgment becomes a score.
+
+Eventually the system works better. The improvement is real. Yet the standard story gives the model nearly all of the credit. We say that prompting elicited a capability, that an agent learned to use tools, or that a workflow made the model more reliable. Those descriptions leave out an equally consequential transformation: \strong{the human environment has been reformatted into a machine-addressable form}.
+
+Prompt research already contains clues that the causal story is stranger than its popular vocabulary suggests. Reynolds and McDonell argue that few-shot examples can sometimes function by locating a capability acquired during pretraining rather than teaching a procedure in context \citep{reynolds2021prompt}. Sclar and colleagues show that meaning-preserving prompt-format changes can produce very large performance swings, including a reported spread of 76 accuracy points for one evaluated model \citep{sclar2024format}. Liu and colleagues demonstrate that information can be present in a long context yet used very differently depending on where it appears \citep{liu2024lost}. These findings are usually read as properties of language models. They are also warnings about our explanations. A successful prompt is not a transparent account of why an output happened.
+
+The harder implication follows. Once people discover formats that work, those formats migrate outward. Templates become team standards. Evaluation rubrics become product requirements. Agent graphs become organizational diagrams. Structured outputs become databases. Interfaces begin to request only the distinctions that downstream automation can consume. Repetition makes these arrangements look ordinary. The prompt stops appearing as an intervention and starts appearing as the natural shape of the task.
+
+That is where prompt engineering becomes theoretically interesting. Its strongest effects may arrive after the model call, in the slow redesign of what humans learn to present as a valid problem.
+
+\section{Prompting as Legibility Work}
+
+James C. Scott gives us a vocabulary for seeing this transformation. His account of state simplification begins from a practical constraint: complex local worlds exceed the view of a centralized actor. Administration selects features that can be standardized, compared, counted, and manipulated. Scott's compact formulation is severe: ``Certain forms of knowledge and control require a narrowing of vision'' \citep{scott1998seeing}. The narrowing can be useful. It creates legibility. It can also tempt the administrator to confuse a map built for intervention with the world itself.
+
+Prompting repeats the same structural move at a smaller scale. Consider the now-familiar instruction architecture:
+
+\begin{quote}
+ROLE · GOAL · CONTEXT · CONSTRAINTS · TOOLS · OUTPUT FORMAT · EVALUATION CRITERIA
+\end{quote}
+
+Each label helps. Each label also partitions the situation. A field called \texttt{GOAL} assumes that the goal can be separated from the process through which it is discovered. A \texttt{CONTEXT} field places some information around the instruction while quietly classifying other information as irrelevant. A \texttt{TOOLS} block decides what actions count as tool use. A rubric identifies dimensions that can be scored. A JSON schema admits values that fit its keys and rejects the rest. Language-model programming systems such as LMQL make this shift explicit by moving some control from natural-language persuasion into scripting, control flow, and output constraints \citep{beurerkellner2023lmql}. This is technically powerful. It also exposes what prompt folklore often hides: every increase in enforceability requires a representational decision.
+
+Bowker and Star's work on classification is useful here because it refuses the fantasy of neutral categories. They write that ``each standard and each category valorizes some point of view and silences another'' \citep{bowkerstar1999sorting}. Their claim is not a plea to abolish classification. Classification is unavoidable infrastructure. The demand is more exacting: inspect who or what becomes easy to see, what becomes residual, and how an initially contingent distinction disappears into routine use.
+
+Prompt schemas deserve the same treatment. We should ask three questions of every format. What has an explicit slot? What remains relevant but lacks a stable slot? What becomes difficult to express because the representation has no place for it? Call these the visible, the residual, and the silenced. A benchmark can improve across the visible dimensions while the residual grows.
+
+That possibility changes how we read ``better prompting.'' A higher score may reflect improved model reasoning. It may reflect a better interface to a latent capability. It may reflect a task that has been simplified into a form the system already handles. Often all three processes occur together. Current evaluations rarely separate them.
+
+\section{Better Output Can Mean a Smaller World}
+
+Clifford Geertz offers a second warning. Thick description is frequently misremembered as lavish description: more context, more detail, more tokens. His wink-and-twitch discussion makes a sharper distinction. A rich inventory of visible motion does not tell us whether an eyelid movement is a twitch, a wink, a parody, or a rehearsal. The difference lives in a ``stratified hierarchy of meaningful structures'' through which actions are produced and interpreted \citep{geertz1973thick}. The problem is relational and interpretive rather than volumetric.
+
+This distinction cuts directly against a common instinct in prompt design. When an AI system misunderstands an unfamiliar practice, the repair is often ``add context.'' That can work. It can also yield an impressively detailed misdescription. More context does not guarantee that the relevant social distinction has been represented. The system may instead pull the case toward a familiar prior and produce a smooth answer whose fluency hides the translation failure.
+
+Empirical work on cultural alignment makes this risk concrete. Tao and colleagues compared outputs from several GPT-family models with nationally representative values data and found default responses culturally closer to English-speaking and Protestant European profiles. Their country-specific cultural prompts improved measured alignment for many countries, though the intervention did not work uniformly \citep{tao2024cultural}. The result should be read in both directions. Context can steer a model away from a default. The need for that steering reveals the presence of the default in the first place.
+
+The critical distinction is therefore between \term{translation} and \term{normalization}. Translation makes an unfamiliar organization intelligible while preserving consequential differences. Normalization makes the unfamiliar easier to process by moving it toward the system's existing categories. The output may become clearer in both cases. Only one preserves the original difference.
+
+Geertz's later distinction between experience-near and experience-distant concepts adds an architectural clue \citep{geertz1974native}. Local vocabulary and analytic vocabulary perform different work. A system that compresses one into the other can erase the discrepancy that interpretation needs. The strongest interface would preserve both: the actor's description, the analyst's representation, and the trace of what changed while crossing between them.
+
+This is where the familiar/strange problem becomes practical. AI interfaces should make their own categories strange enough to inspect while making unfamiliar cases legible without assimilating them. We currently do the reverse with alarming frequency. The interface stays familiar. The world is forced to become familiar to it.
+
+\section{The Prompt Is a Weak Causal Story}
+
+Prompt culture loves a heroic artifact: the master prompt, the system instruction, the agent constitution, the carefully tuned chain. The artifact is legible to us, so it becomes the natural place to assign authorship. A strong output appears, and the prompt is credited with producing it.
+
+Lucy Suchman's critique of plans helps expose the weakness in that story. She argues that plans are resources for situated action rather than strong determinants of its course \citep{suchman1987plans}. Her point arose from human-machine communication, but the methodological lesson travels well: a representation of intended action can look far more complete after success than it was during execution. Retrospective narratives suppress the local repairs, contingencies, and environmental responses that actually carried the process forward.
+
+A language-model workflow contains many such hidden contributors. Pretraining supplies dispositions and latent capabilities. The model version changes what cues work. Prompt position alters access to context \citep{liu2024lost}. Formatting can produce large swings without semantic change \citep{sclar2024format}. Retrieval systems decide which evidence becomes available. Tool schemas determine which actions can be called. Sampling introduces variation. Human evaluators discard failed outputs, edit intermediate results, and choose the winner. Even the act of showing one final artifact erases the failed neighborhood around it.
+
+This weakens a great deal of prompt mythology. A long prompt can read like a theory while functioning mostly as an address into pretrained behavior. A ritualistic phrase can work on one model and fail on another. A beautifully specified procedure can be causally secondary to the examples surrounding it. A chain can succeed because a human quietly repaired the state between nodes.
+
+None of this makes prompts trivial. It makes prompt attribution an empirical problem. Hold the prompt fixed and vary the model, retrieval source, tool availability, context position, and sampling. Then hold the surrounding system fixed and ablate prompt sections. The resulting effect sizes tell a more credible story than reading causal power directly from the prose.
+
+That test has an uncomfortable social analogue. Hold the model fixed and vary how much the organization changes itself to accommodate the model. If performance rises primarily as the organization becomes more standardized, the system has not simply learned the organization. The organization has learned the system.
+
+\section{Formatting the Human}
+
+This is the claim AI practitioners are least prepared to hear: \strong{a substantial share of progress in human--AI interaction may come from training humans and institutions into forms that current models can process reliably}.
+
+The training is informal, distributed, and easy to mistake for skill. Users learn to write requests in the idiom that produces good completions. Teams learn to break work into agent-sized units. Organizations discover that certain databases, naming conventions, and approval flows are easier to automate. Teachers adapt assignments to AI-visible evidence. Researchers reshape qualitative records into fields an extraction pipeline can consume. Customer-service operations convert messy conversations into intent taxonomies. The machine does not need to issue an order. Successful use supplies the reinforcement.
+
+Prompt engineering is therefore a discipline in both senses of the word. It is a technical field. It also disciplines representation. The most reusable patterns survive because they produce predictable machine behavior, and that survival gives their categories institutional weight.
+
+Edward Sapir's comparative linguistic method offers a useful estrangement technique. He argued that understanding unfamiliar forms of expression requires dismantling the apparent inevitability of familiar ones \citep{sapir1921language}. Applied here, the method asks us to stop treating \texttt{ROLE}, \texttt{GOAL}, \texttt{MEMORY}, \texttt{PLAN}, \texttt{TOOL}, and \texttt{CRITIQUE} as self-evident units. They are design decisions. Different prompt media force different distinctions into view. XML privileges named hierarchy. JSON privileges typed key-value structure. dialogue privileges turns and roles. code privileges explicit operations and state. graph orchestration privileges nodes, edges, routing, and intermediate artifacts.
+
+The representational medium does not simply express the task after the task exists. It participates in producing what the task can become.
+
+This becomes politically sharper when the same forms spread across a population. Moon, Green, and Kushlev report that each additional human-written college-admissions essay contributed more new ideas than each additional GPT-4 essay in their studies, with the diversity gap widening as the collection grew; prompt and parameter modifications did not eliminate the collective gap they measured \citep{moon2025homogenizing}. One should not generalize that result beyond its tested setting. Its scale shift is still crucial. Individual outputs can look novel while a population of outputs converges.
+
+The same risk applies to problems themselves. A million users can produce personalized prompts while learning the same hidden grammar of what counts as a valid request. Surface variety rises. Structural variety contracts.
+
+\section{Why Perfect Explicitness Breaks}
+
+The obvious response is to demand better specification. Add fields. Add context. Add clarifying questions. Replace soft instructions with hard constraints. In many settings that is exactly the right move. Yet a universal preference for explicitness mistakes how ordinary coordination works.
+
+Harold Garfinkel's clarification experiments made this visible by turning everyday conversation into a small social disaster. Participants were instructed to demand explicit clarification of commonplace remarks. Ordinary utterances that would normally pass without friction became difficult to sustain \citep{garfinkel1967studies}. The experiment exposes how much social interaction relies on background expectancies, repair, and practical tolerance for underspecification.
+
+AI systems often treat ambiguity as technical debt. Some ambiguity deserves that treatment. A medication dose, bank transfer, destructive shell command, or legal filing should trigger demanding checks. Other ambiguities belong to exploratory activity in which the user is still discovering what they mean. Premature formalization can freeze a provisional distinction before the work has earned it.
+
+Suchman's situated-action argument reaches the same pressure point from another direction. Plans acquire their usefulness partly by leaving local details unspecified until action encounters them \citep{suchman1987plans}. An interface that requires every contingency before execution can force users to fabricate certainty. The structured record becomes clean because the uncertainty has been displaced into the user's guesses.
+
+This suggests a better criterion than ``be explicit.'' Ask about consequence and reversibility. High-cost, irreversible actions deserve hard structure and interruption. Exploratory, revisable actions can tolerate wider interpretive latitude. The interface should clarify when divergent interpretations would produce meaningfully different and costly outcomes. Elsewhere, it should let the work breathe.
+
+The distinction also gives prompt research a way out of the sterile debate between natural language and programming. Natural language is valuable because it can carry ambiguity, local vocabulary, and emergent goals. Programming and constrained decoding are valuable because they can guarantee structural properties. The design question concerns where the boundary moves during an interaction.
+
+\section{The Domain Learns the AI}
+
+A mature technological field usually asks how a new system will adapt to existing practice. Generative AI has inverted that relationship with unusual speed. Adoption often proceeds by redesigning practice around the system's affordances before the system has demonstrated deep understanding of the practice.
+
+The examples are easy to recognize because they arrive as sensible product decisions. Standardize the intake form so extraction works. Replace prose with a controlled vocabulary so the agent routes correctly. Split a job into explicit stages so the model can plan. Add structured metadata so retrieval improves. Turn local judgment into a rubric so evaluation can scale. Restrict the output space so downstream automation stops breaking.
+
+Every one of those changes may be justified. Their accumulation produces a new institutional environment whose internal forms were selected partly for compatibility with language models. Once embedded, the direction of adaptation disappears. New users encounter the AI-compatible workflow as ordinary procedure.
+
+Scott's analysis of legibility predicts the epistemic hazard: an intervention can begin by simplifying a world and end by reshaping the world to fit the simplification \citep{scott1998seeing}. Bowker and Star show how classifications sink into infrastructure until their origins become difficult to see \citep{bowkerstar1999sorting}. Prompt engineering joins these mechanisms to an unusually persuasive feedback loop: the simplified form often produces an immediate, measurable performance gain.
+
+Benchmarks then certify the arrangement. The model looks smarter because the environment has become easier to parse. Users look more competent because they have learned to speak the interface's language. The residual becomes invisible because it no longer enters the test.
+
+This does not imply that machine-readable structure is corrupt. The stronger claim is methodological. We need to measure the environmental adaptation alongside the model adaptation. Every deployment evaluation should ask: Which new fields, categories, workflows, naming conventions, and restrictions had to be introduced before the system performed well? Which preexisting practices became harder to express? Which kinds of cases now require exception handling? Which local judgments were converted into fixed labels? Which users carry the burden of translation?
+
+Without that ledger, rising performance can conceal a shrinking domain.
+
+\section{Reversible Legibility}
+
+Critique is cheap if the only alternative is to celebrate mess. Real systems must act. Transactions need schemas. Tools need signatures. Safety checks need thresholds. Compilation needs syntax. Shared work needs conventions. The relevant design challenge is how to gain legibility without allowing a useful representation to harden into unquestioned ontology.
+
+Susan Leigh Star's later reflection on boundary objects supplies a strong clue. She emphasizes a dynamic between relatively ill-structured shared arrangements and more tailored, well-structured local uses, warning that this architecture is often reduced to the simpler slogan of interpretive flexibility \citep{star2010boundary}. The original boundary-object work with James Griesemer likewise shows coordination across heterogeneous social worlds without requiring complete consensus \citep{stargriesemer1989boundary}.
+
+From that lineage, we can derive a design principle for AI systems: \term{reversible legibility}. A representation may harden when execution requires it, but the system preserves a path back toward the evidence and uncertainty from which the structure was derived.
+
+Reversible legibility has concrete requirements. Raw evidence remains reachable from extracted fields. A summary retains links to the passages it compresses. A classification records who or what produced it and under which version of the schema. A structured field can be reopened into free description. Local vocabulary is stored beside normalized vocabulary rather than overwritten. Rejected alternatives survive long enough to inspect. Agent traces retain consequential branch points instead of only the winning trajectory. Unknown cases can remain residual without being silently coerced into the nearest class. Schema changes are versioned, and previous conclusions can be rerun against the revised representation.
+
+This architecture creates a different notion of quality. A brittle system asks users to choose another value inside the existing box. A reversible system lets them contest the box itself.
+
+The proposal also clarifies the role of productive estrangement. Shklovsky's account of defamiliarization describes a deliberate interruption of automatic recognition so perception can become difficult enough to notice again \citep{shklovsky1965art}. That technique belongs in AI interface design, selectively. Categories that have become effortless deserve moments of friction. Show the source beneath the summary. Show the neighboring alternative beside the selected output. Show what the schema could not encode. Show when a tool call depended on a classification made three stages earlier. Make the interface's own ontology visible at the moments when users have enough evidence to question it.
+
+Then let the system return to action. Permanent estrangement is useless. Permanent familiarity is dangerous. Reversible legibility alternates between them.
+
+\section{A Research Program With Teeth}
+
+The argument above should survive contact with experiments. Five tests would change the state of the field more than another catalog of prompt tips.
+
+\textbf{First, measure environmental adaptation.} For a real deployment, record the workflow before AI integration and after stable adoption. Count new schemas, required fields, controlled vocabularies, decompositions, exception categories, and human translation steps. Compare performance gains against the amount of organizational restructuring. A system that requires massive environmental normalization deserves a different capability claim from one that performs within the original practice.
+
+\textbf{Second, run a remainder audit.} Take one task through progressively stricter representations: open conversation, templated prompt, typed schema, hard orchestration. At each transition, identify information that lacks a destination, user statements that must be reformulated, choices that become impossible, and new assumptions inserted by the schema. Report these losses beside accuracy and latency.
+
+\textbf{Third, test prompt causality by intervention.} Hold the prompt constant while varying model, context position, retrieval corpus, tool state, sampling, and evaluator selection. Then hold those variables stable and ablate prompt components. This extends the methodological caution already motivated by task-location accounts, prompt-format sensitivity, and long-context position effects \citep{reynolds2021prompt,sclar2024format,liu2024lost}.
+
+\textbf{Fourth, distinguish translation from normalization.} For culturally or professionally situated tasks, compare default prompting, a generic identity label, experience-near local vocabulary, and source-grounded local evidence. Evaluate whether the model preserves distinctions recognized by informed participants or replaces them with smoother dominant-language categories. Tao and colleagues establish that cultural framing can systematically move model outputs; the next question is which form of movement counts as fidelity \citep{tao2024cultural}.
+
+\textbf{Fifth, test reversibility.} Introduce an anomaly that the current schema cannot represent. Compare a conventional pipeline against one that preserves source evidence, residual categories, rejected interpretations, schema provenance, and versioned reprocessing. Measure whether users can detect the anomaly, trace why it was excluded, revise the representation, and propagate the correction through earlier outputs.
+
+These tests would force prompt research to report a broader object. Model performance would remain central. So would the transformation imposed on the human side of the interface.
+
+\section{Conclusion: Preserve the Remainder}
+
+Prompt engineering began with an attractive image: natural language gives ordinary people a direct control surface for powerful models. The image remains partly true. It has become incomplete.
+
+The modern prompt is surrounded by schemas, roles, rubrics, tools, agent graphs, memory stores, validators, retrievers, and execution policies. These devices improve reliability by making selected aspects of a situation explicit and actionable. That success creates a blind spot. We learn to see the task through the representation that makes the machine work.
+
+The result can be a peculiar form of technological progress. The model improves. The user improves at prompting. The organization improves its data hygiene. The workflow becomes measurable. The benchmark rises. Meanwhile, local categories disappear, uncertainty is resolved too early, exceptions become ``edge cases,'' and practices that resist formalization drift outside the system's field of view.
+
+The most consequential training set may therefore be the one we rarely name: us.
+
+Every time users learn the phrasing a model rewards, every time a team restructures work into agent-compatible stages, every time a field replaces ambiguous practice with machine-readable categories, the environment moves toward the model. Some of that movement is productive standardization. Some of it is a loss of expressive and institutional variety. We currently lack the instrumentation to tell the difference.
+
+Reversible legibility offers a concrete standard. Structure what must be structured. Preserve the source from which the structure was made. Keep local vocabularies beside normalized ones. Retain consequential alternatives. Version the categories. Give anomalies somewhere to live. Let users reopen a field into evidence and reopen a schema into argument.
+
+Then change the central evaluation question.
+
+Do not ask only whether the model completed the task.
+
+Ask what the task had to become before the model could complete it.
+
+If that transformation remains visible, AI systems can become easier to use without quietly shrinking the worlds they enter. If it disappears, benchmark progress may continue while the domain itself learns to speak in the machine's accent.
+
+\begin{thebibliography}{99}
+
+\bibitem[Bowker and Star(1999)]{bowkerstar1999sorting}
+Bowker, G. C., and Star, S. L. (1999).
+\newblock \emph{Sorting Things Out: Classification and Its Consequences}.
+\newblock MIT Press. doi:10.7551/mitpress/6352.001.0001.
+
+\bibitem[Beurer-Kellner et~al.(2023)]{beurerkellner2023lmql}
+Beurer-Kellner, L., Fischer, M., and Vechev, M. (2023).
+\newblock Prompting Is Programming: A Query Language for Large Language Models.
+\newblock \emph{Proceedings of the ACM on Programming Languages}, 7(PLDI), 1946--1969. doi:10.1145/3591300.
+
+\bibitem[Garfinkel(1967)]{garfinkel1967studies}
+Garfinkel, H. (1967).
+\newblock \emph{Studies in Ethnomethodology}.
+\newblock Prentice-Hall.
+
+\bibitem[Geertz(1973)]{geertz1973thick}
+Geertz, C. (1973).
+\newblock Thick Description: Toward an Interpretive Theory of Culture.
+\newblock In \emph{The Interpretation of Cultures}, 3--30. Basic Books.
+
+\bibitem[Geertz(1974)]{geertz1974native}
+Geertz, C. (1974).
+\newblock ``From the Native's Point of View'': On the Nature of Anthropological Understanding.
+\newblock \emph{Bulletin of the American Academy of Arts and Sciences}, 28(1), 26--45. doi:10.2307/3822971.
+
+\bibitem[Liu et~al.(2024)]{liu2024lost}
+Liu, N. F., Lin, K., Hewitt, J., Paranjape, A., Bevilacqua, M., Petroni, F., and Liang, P. (2024).
+\newblock Lost in the Middle: How Language Models Use Long Contexts.
+\newblock \emph{Transactions of the Association for Computational Linguistics}, 12, 157--173. doi:10.1162/tacl\_a\_00638.
+
+\bibitem[Moon et~al.(2025)]{moon2025homogenizing}
+Moon, K., Green, A. E., and Kushlev, K. (2025).
+\newblock Homogenizing Effect of Large Language Models (LLMs) on Creative Diversity: An Empirical Comparison of Human and ChatGPT Writing.
+\newblock \emph{Computers in Human Behavior: Artificial Humans}, 6, 100207. doi:10.1016/j.chbah.2025.100207.
+
+\bibitem[Reynolds and McDonell(2021)]{reynolds2021prompt}
+Reynolds, L., and McDonell, K. (2021).
+\newblock Prompt Programming for Large Language Models: Beyond the Few-Shot Paradigm.
+\newblock arXiv:2102.07350. \url{https://arxiv.org/abs/2102.07350}.
+
+\bibitem[Sapir(1921)]{sapir1921language}
+Sapir, E. (1921).
+\newblock \emph{Language: An Introduction to the Study of Speech}.
+\newblock Harcourt, Brace and Company.
+
+\bibitem[Sclar et~al.(2024)]{sclar2024format}
+Sclar, M., Choi, Y., Tsvetkov, Y., and Suhr, A. (2024).
+\newblock Quantifying Language Models' Sensitivity to Spurious Features in Prompt Design or: How I Learned to Start Worrying about Prompt Formatting.
+\newblock \emph{International Conference on Learning Representations (ICLR)}.
+\newblock \url{https://proceedings.iclr.cc/paper_files/paper/2024/hash/6c0e99d736da621403018ca7b32b1a4d-Abstract-Conference.html}.
+
+\bibitem[Scott(1998)]{scott1998seeing}
+Scott, J. C. (1998).
+\newblock \emph{Seeing Like a State: How Certain Schemes to Improve the Human Condition Have Failed}.
+\newblock Yale University Press.
+
+\bibitem[Shklovsky(1965)]{shklovsky1965art}
+Shklovsky, V. (1965 [1917]).
+\newblock Art as Technique.
+\newblock In L. T. Lemon and M. J. Reis (eds.), \emph{Russian Formalist Criticism: Four Essays}. University of Nebraska Press.
+
+\bibitem[Star(2010)]{star2010boundary}
+Star, S. L. (2010).
+\newblock This is Not a Boundary Object: Reflections on the Origin of a Concept.
+\newblock \emph{Science, Technology, \& Human Values}, 35(5), 601--617. doi:10.1177/0162243910377624.
+
+\bibitem[Star and Griesemer(1989)]{stargriesemer1989boundary}
+Star, S. L., and Griesemer, J. R. (1989).
+\newblock Institutional Ecology, `Translations' and Boundary Objects: Amateurs and Professionals in Berkeley's Museum of Vertebrate Zoology, 1907--39.
+\newblock \emph{Social Studies of Science}, 19(3), 387--420. doi:10.1177/030631289019003001.
+
+\bibitem[Suchman(1987)]{suchman1987plans}
+Suchman, L. A. (1987).
+\newblock \emph{Plans and Situated Actions: The Problem of Human-Machine Communication}.
+\newblock Cambridge University Press.
+
+\bibitem[Tao et~al.(2024)]{tao2024cultural}
+Tao, Y., Viberg, O., Baker, R. S., and Kizilcec, R. F. (2024).
+\newblock Cultural Bias and Cultural Alignment of Large Language Models.
+\newblock \emph{PNAS Nexus}, 3(9), pgae346. doi:10.1093/pnasnexus/pgae346.
+
+\end{thebibliography}
+
+\end{document}
