@@ -1,0 +1,105 @@
+ZETTEL
+
+ID:
+FIELD-004
+
+TITLE:
+Naur's theory-building account becomes more, not less, important when agents own implementation.
+
+SOURCE:
+Peter Naur — Programming as Theory Building — 1985; David Heinemeier Hansson and Lex Fridman — Lex Fridman Podcast #501 — 2026.
+
+SOURCE URL:
+https://doi.org/10.1016/0165-6074(85)90032-8
+https://lexfridman.com/dhh-2-transcript/
+
+PASSAGE:
+[PARAPHRASE]
+Naur argues that programming's primary aim is the programmer's theory of how a problem is solved through program execution, rather than the production of program text alone. DHH's 2026 practice delegates increasing amounts of program text while retaining concern for architecture, proportion, desired behavior, and long-horizon coherence.
+
+RESEARCH OBJECT:
+Agentic programming may separate the programmer's theory from the programmer's authorship of source code.
+
+LOCAL MOVE:
+The collision reframes DHH's apparent departure from programming craft as a migration of theory into other representational surfaces.
+
+SOURCE TERMS:
+theory building
+architecture
+shape
+proportions
+cohesive
+coherent
+
+WHAT BECAME STRANGE:
+If source-code authorship disappears while theory remains, code was never the sole container of programming knowledge.
+
+QUESTION:
+Where does a programmer's theory live when an agent writes most implementation?
+
+DEEPER QUESTION:
+Can architecture, tests, skills, examples, benchmarks, and critique carry enough theory for long-lived modification?
+
+MECHANISM:
+human problem theory
+→ persistent constraints / evaluations / environment
+→ agent implementation
+→ consequences
+→ theory revision
+
+FORMAL SHIFT:
+<THEORY EMBODIED THROUGH HANDWRITTEN CODE>
+→ <THEORY DISTRIBUTED ACROSS ENVIRONMENT + JUDGMENT>
+→ [AGENT IMPLEMENTATION]
+→ <PROGRAM EVOLUTION>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Theory is treated as a set of causal expectations and invariants sufficient to judge and redirect program evolution.
+
+TENSION:
+Some programming knowledge may be inseparable from implementation practice; delegating code can weaken the very theory needed for future judgment.
+
+MISSING:
+Longitudinal evidence about whether black-box agentic authors retain adequate system theory over years.
+
+BOUNDARY:
+Naur did not write about AI agents. The relation is an analytical collision, not a claim of influence.
+
+CITATION TRAIL:
+Programming as theory building.
+Tacit knowledge.
+Architectural knowledge.
+Distributed cognition.
+
+TEST:
+Compare maintainers who read generated implementation with maintainers who interact only through behavior and architecture over repeated modifications.
+
+PLATFORM:
+[[programming after the prompt]]
+
+LINKS:
+[[long-horizon invariants]]
+[[selective opacity in agentic programming]]
+[[the distributed prompt]]
+
+BIBTEX:
+@article{naur1985theory,
+  author = {Naur, Peter},
+  title = {Programming as theory building},
+  journal = {Microprocessing and Microprogramming},
+  volume = {15},
+  number = {5},
+  pages = {253--261},
+  year = {1985},
+  doi = {10.1016/0165-6074(85)90032-8}
+}
+@misc{fridman_hansson_2026_field4,
+  author = {Fridman, Lex and Heinemeier Hansson, David},
+  title = {DHH: Future of Programming, AI, Agentic Engineering, Vibe Coding \& Linux},
+  year = {2026},
+  url = {https://lexfridman.com/dhh-2-transcript/}
+}
