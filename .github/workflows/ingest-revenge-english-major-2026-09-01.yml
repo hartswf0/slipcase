@@ -1,0 +1,101 @@
+name: Ingest Revenge of the English Major Slipcase 2026-09-01
+
+on:
+  push:
+    paths:
+      - '_INGEST/REVENGE-ENGLISH-MAJOR-2026-09-01/READY'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ingest:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reconstruct and verify source field
+        shell: bash
+        run: |
+          set -euo pipefail
+          INGEST="_INGEST/REVENGE-ENGLISH-MAJOR-2026-09-01"
+          TARGET="slipcases/2026-09-01__revenge-english-major__revenge-english-major-20260901"
+          ARCHIVE_SHA="aa9b144007e74d9a21f0f95b93da21e9771c34cdebc8cfa98bbbea1934470e75"
+
+          cat "$INGEST"/source/part-*.b64 | base64 -d > /tmp/revenge-english-major-source.tar.gz
+          echo "$ARCHIVE_SHA  /tmp/revenge-english-major-source.tar.gz" | sha256sum -c -
+
+          rm -rf "$TARGET"
+          mkdir -p "$TARGET"
+          tar -xzf /tmp/revenge-english-major-source.tar.gz -C "$TARGET"
+
+          # Recreate exact Markdown mirrors from immutable root payloads.
+          mkdir -p "$TARGET/_MD"
+          find "$TARGET" -maxdepth 1 -type f -name '*__from-*.txt' -print0 | sort -z | while IFS= read -r -d '' f; do
+            b="$(basename "$f" .txt)"
+            cp "$f" "$TARGET/_MD/$b.md"
+          done
+
+          test "$(find "$TARGET" -maxdepth 1 -type f -name '*__from-*.txt' | wc -l)" -eq 109
+          test "$(find "$TARGET/_MD" -maxdepth 1 -type f -name '*.md' | wc -l)" -eq 109
+
+      - name: Compile paper and create portable zip
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET="slipcases/2026-09-01__revenge-english-major__revenge-english-major-20260901"
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq texlive-xetex texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended fonts-dejavu-core fonts-inter poppler-utils zip
+          cd "$TARGET"
+          echo "0a0263f27f87ad484e54c736e7153b1f099a2e83c24e8b442996974c6cc895f7  revenge-of-the-english-major__2026-09-01.tex" | sha256sum -c -
+          xelatex -interaction=nonstopmode -halt-on-error revenge-of-the-english-major__2026-09-01.tex >/tmp/revenge-latex-1.log
+          xelatex -interaction=nonstopmode -halt-on-error revenge-of-the-english-major__2026-09-01.tex >/tmp/revenge-latex-2.log
+          test -s revenge-of-the-english-major__2026-09-01.pdf
+          PDF_SHA="$(sha256sum revenge-of-the-english-major__2026-09-01.pdf | awk '{print $1}')"
+          PDF_PAGES="$(pdfinfo revenge-of-the-english-major__2026-09-01.pdf | awk '/^Pages:/ {print $2}')"
+          test "$PDF_PAGES" -ge 15
+          mkdir -p _SLIPCASE
+          {
+            echo "github_ingest_verified: true"
+            echo "checkpoint: revenge-english-major-20260901"
+            echo "source_archive_sha256: aa9b144007e74d9a21f0f95b93da21e9771c34cdebc8cfa98bbbea1934470e75"
+            echo "source_tex_sha256: 0a0263f27f87ad484e54c736e7153b1f099a2e83c24e8b442996974c6cc895f7"
+            echo "original_local_pdf_sha256: 3bf328cc6b39c51759b8c8d6ef9f211919c412194b7e980c8e00c1c98be261d7"
+            echo "original_portable_zip_sha256: 2f3b954cd7c6b35fd25a747967596e76ca4192ab9d20bcd9c4a39339f1227da3"
+            echo "github_compiled_pdf_sha256: $PDF_SHA"
+            echo "github_compiled_pdf_pages: $PDF_PAGES"
+            echo "root_zettels: $(find . -maxdepth 1 -type f -name '*__from-*.txt' | wc -l)"
+            echo "md_mirrors: $(find _MD -maxdepth 1 -type f -name '*.md' | wc -l)"
+            echo "target: $TARGET"
+            echo "note: PDF rebuilt on GitHub Actions from preserved TeX; immutable root payloads and source archive verified before compilation."
+          } > _SLIPCASE/GITHUB_INGEST.txt
+          rm -f revenge-english-major-slipcase.zip
+          zip -qr /tmp/revenge-english-major-slipcase.zip . -x 'revenge-english-major-slipcase.zip'
+          mv /tmp/revenge-english-major-slipcase.zip ./revenge-english-major-slipcase.zip
+          echo "github_generated_zip_sha256: $(sha256sum revenge-english-major-slipcase.zip | awk '{print $1}')" >> _SLIPCASE/GITHUB_INGEST.txt
+
+      - name: Rebuild Slipcase readers and indexes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 build_all.py
+
+      - name: Commit native field and rebuilt desk
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET="slipcases/2026-09-01__revenge-english-major__revenge-english-major-20260901"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$TARGET" index.html slipcases.json map.html atlas.html map-02.html box.html slipcase-reader-v3.html pocket.html || true
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "add revenge of the english major slipcase"
+          git pull --rebase origin main
+          git push origin HEAD:main
