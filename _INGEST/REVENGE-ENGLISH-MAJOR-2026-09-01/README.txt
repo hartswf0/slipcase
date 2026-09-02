@@ -3,7 +3,7 @@ REVENGE OF THE ENGLISH MAJOR — SLIPCASE INGEST
 checkpoint: revenge-english-major-20260901
 source_archive: revenge_source_ingest.tar.gz
 source_archive_sha256: aa9b144007e74d9a21f0f95b93da21e9771c34cdebc8cfa98bbbea1934470e75
-parts: 7
+parts: 42
 part_encoding: base64 of tar.gz; concatenate in lexical order
 source_scope: 109 immutable root zettel cards, paper source/text/source-map, bibliography, prompts, MOCs/arrangements, original recovered resources, and _SLIPCASE graph/provenance/verification state. Generated HTML/PDF surfaces are rebuilt on GitHub.
 original_portable_zip_sha256: 2f3b954cd7c6b35fd25a747967596e76ca4192ab9d20bcd9c4a39339f1227da3
