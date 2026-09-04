@@ -1,0 +1,129 @@
+ZETTEL
+
+ID:
+DHH-CORE-001
+
+TITLE:
+The prompt got smaller because the program around the prompt got bigger.
+
+SOURCE:
+David Heinemeier Hansson and Lex Fridman — Lex Fridman Podcast #501 — 2026 — 00:56:14–00:58:13.
+
+PASSAGE:
+[QUOTE]
+“The agent not only needed far less human instruction, it was actually being damaged by overly prescriptive humans.”
+
+RESEARCH OBJECT:
+The strongest idea in the conversation is not “use shorter prompts.”
+
+DHH simultaneously describes:
+AGENTS.md,
+skills,
+repository conventions,
+tests,
+tool access,
+CLI structure,
+source code,
+and persistent project context.
+
+The task prompt becomes vague because the durable instructions have moved elsewhere.
+
+LOCAL MOVE:
+DHH removes procedural detail from the conversational prompt while retaining procedural detail in the environment.
+
+SOURCE TERMS:
+AGENTS.md
+skills
+system prompt
+overly prescriptive
+vague
+context
+tools
+harness
+
+WHAT BECAME STRANGE:
+Prompt length is a terrible measure of how specified the interaction is.
+
+A three-word request inside a deeply instrumented repository may contain more effective instruction than a 3,000-word standalone prompt.
+
+QUESTION:
+Where does the prompt actually end?
+
+DEEPER QUESTION:
+Should prompting be studied as the distribution of specification across utterance, repository, tools, tests, history, and environment rather than as the wording of one message?
+
+MECHANISM:
+recurring instruction
+→ encode as persistent environment
+→ agent inherits it automatically
+→ human stops repeating procedure
+→ conversational prompt becomes smaller
+
+FORMAL SHIFT:
+<INSTRUCTION IN PROMPT>
+→ <INSTRUCTION DISTRIBUTED ACROSS ENVIRONMENT>
+→ [AGENT RECOVERS RELEVANT CONSTRAINTS]
+→ <ACTION>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Effective prompt:
+
+P* =
+utterance
++ repository
++ skills
++ tools
++ tests
++ state
++ history
+
+The novelty is not prompt compression.
+
+It is specification migration.
+
+TENSION:
+“Get out of the model's way” sounds like removing structure.
+
+Their own practice instead relocates structure into places the model can discover when needed.
+
+MISSING:
+A vocabulary for specifications that are neither prompt nor program but actively shape model action.
+
+BOUNDARY:
+This does not show that instructions are obsolete.
+
+It shows that repeatedly verbalizing them may be obsolete.
+
+CITATION TRAIL:
+Situated action.
+Distributed cognition.
+Configuration as code.
+Executable documentation.
+Agent environments.
+
+TEST:
+Hold the same vague prompt constant while progressively adding repository instructions, tools, tests, and skills.
+
+Observe where capability actually appears.
+
+PLATFORM:
+[[the distributed prompt]]
+
+LINKS:
+[[specification migration]]
+[[prompt environment]]
+[[agent legibility]]
+
+BIBTEX:
+@misc{fridman_hansson_2026_core1,
+  author = {Fridman, Lex and Heinemeier Hansson, David},
+  title = {DHH: Future of Programming, AI, Agentic Engineering, Vibe Coding \& Linux},
+  year = {2026},
+  howpublished = {Lex Fridman Podcast, Episode 501},
+  url = {https://youtu.be/NYFGCESmikA}
+}
