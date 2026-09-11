@@ -8,6 +8,7 @@ on:
       - 'slipcases/**'
       - 'build_index_html.py'
       - 'build_heads.py'
+      - 'refine_heads.py'
   workflow_dispatch:
 
 permissions:
@@ -77,6 +78,7 @@ jobs:
           set -euo pipefail
           python3 build_index_html.py
           python3 build_heads.py
+          python3 refine_heads.py
 
           python3 - <<'PY'
           from pathlib import Path
@@ -164,11 +166,11 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A README.md build_index_html.py build_heads.py heads-pdf-map.json heads-pdf-map.txt heads-pdf-map.html slipcases index.html slipcases.json map.html atlas.html map-02.html box.html slipcase-reader-v3.html pocket.html
+          git add -A README.md build_index_html.py build_heads.py refine_heads.py heads-pdf-map.json heads-pdf-map.txt heads-pdf-map.html slipcases index.html slipcases.json map.html atlas.html map-02.html box.html slipcase-reader-v3.html pocket.html
           if git diff --cached --quiet; then
             echo 'Canonical HEAD corpus already synchronized.'
             exit 0
           fi
-          git commit -m 'add 38 canonical head zettels and map 126 PDFs'
+          git commit -m 'refine source-grounded head zettels and rebuild head map'
           git pull --rebase origin main
           git push origin HEAD:main
