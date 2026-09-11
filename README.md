@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>Preserve &middot; Relate &middot; Return</strong><br>
-  <em>A self-contained, mobile-first research console, zettel lines inspector, slipcard flipper, PDF reader, and prompt operator across 31 field slipcases.</em>
+  <em>A self-contained, mobile-first research console, zettel lines inspector, slipcard flipper, PDF reader, and prompt operator across 38 field slipcases.</em>
 </p>
 
 ---
@@ -15,7 +15,7 @@
 
 **SLIPCASE** is an offline-capable, zero-dependency research desk and portable capsule designed for mobile devices and desktop environments. It unifies five core research faculties into a single fast, responsive interface (`index.html`):
 
-1. **[LINES] Zettel Lines Inspector**: Complete atomic breakdown of all **1,537 zettel cards** into structured, selectable field rows (`QUESTION`, `DEEPER QUESTION`, `PASSAGE`, `RESEARCH OBJECT`, `LOCAL MOVE`, `MECHANISM`, `FORMAL SHIFT`, `BIBTEX`, etc.) with multi-line selection, continuous reading stack, and clipboard export.
+1. **[LINES] Zettel Lines Inspector**: Complete atomic breakdown of all **1,189 zettel cards** into structured, selectable field rows (`QUESTION`, `DEEPER QUESTION`, `PASSAGE`, `RESEARCH OBJECT`, `LOCAL MOVE`, `MECHANISM`, `FORMAL SHIFT`, `BIBTEX`, etc.) with multi-line selection, continuous reading stack, and clipboard export.
 2. **[FLIPPER] Tactile Card Deck**: Touch-swipe enabled card deck flipper with formatted/raw source toggles, core question callouts, and one-tap payload export.
 3. **[PDFS] Research PDF Library & Dual Reader**: Curated library of **126 primary research PDFs** (compiled papers and source scans) with instant search, category filtering, embedded preview, and direct fullscreen tab breakouts (`&nearr;`).
 4. **[MAPS] Case Inspector & Structural Field Maps**: Instant inspection of derived structural documents (`000__START_HERE.txt`, `000__MAP.txt`, `000__BIBLIOGRAPHY.txt` / `.bib`, `000__LINEAGE.txt`, `000__OPEN_EDGES.txt`, `000__MAKING_HISTORY.txt`).
@@ -30,9 +30,9 @@
 |                        SLIPCASE RESEARCH DESK                          |
 +-----------------+------------------+-----------------+-----------------+
 | [LINES]         | [FLIPPER]        | [PDFS]          | [MAPS] & PROMPT |
-| Structured Rows | Tactile Card     | 124 Curated     | Structural Maps |
+| Structured Rows | Tactile Card     | 126 Curated     | Structural Maps |
 | Multi-Select    | Raw / Parsed     | Dual-Engine     | 8 POML Tools    |
-| Stack Reader    | Touch Swipe      | Direct Open     | 31 Workspaces   |
+| Stack Reader    | Touch Swipe      | Direct Open     | 38 Workspaces   |
 +-----------------+------------------+-----------------+-----------------+
 ```
 
@@ -43,13 +43,13 @@
 - **Reading Stack Sheet**: Slide-up continuous reading flow for all selected lines with one-tap clipboard copy (`&orarr;`).
 
 ### 2. Tactile Card Deck Flipper
-- **Workspace Navigation**: Switch between all 31 slipcases or browse global decks.
+- **Workspace Navigation**: Switch between all 38 slipcases or browse global decks.
 - **Mobile Touch Swipe**: Swipe left/right on touchscreens to flip cards naturally.
 - **Raw / Parsed Mode**: Toggle between typography and exact monospace `.txt` source.
 - **Direct Export**: One-tap card copy or download as standalone `.txt` file.
 
 ### 3. Mobile PDF Library & Reader
-- **124 Research PDFs**: Access compiled working papers, preprints, and archival scans.
+- **126 Research PDFs**: Access compiled working papers, preprints, and archival scans.
 - **Category Filter**: Filter between *Compiled Papers* and *Source / Archival Scans*.
 - **Dual-Engine Reading**: Embedded preview modal plus direct `OPEN PDF &nearr;` links guaranteed to work in all desktop and mobile sandboxes.
 
@@ -81,45 +81,45 @@
 
 | # | Workspace / Case | Slips | PDFs | Field Docs |
 |---|---|---:|---:|---:|
-| 01 | `2026-08-17__prompt-semantics-hidden-machinery__SES-20260817-234319-a5ef0e2e` | 25 | 1 | 10 |
-| 02 | `2026-08-17__slipcase__mycelium-sole-field__v15.55-AM (1)` | 21 | 3 | 11 |
-| 03 | `2026-08-17__the-shop-makes-the-prompt__SLIPCASE-20260817-AIACS-01` | 51 | 11 | 11 |
-| 04 | `2026-08-18__martina-deferred-specification__FINAL-SLIPCASE` | 55 | 2 | 13 |
-| 05 | `2026-08-18__prompt-battles-smackdown__PB-SC-20260818-4D1C1A7BD0__slipcase` | 35 | 4 | 11 |
-| 06 | `2026-08-18__what-can-you-still-reopen__16-zettels__FINAL` | 27 | 4 | 11 |
-| 07 | `2026-08-18__what-kind-of-thing-is-the-model__Andrew__FULL__v15.55-AM` | 74 | 1 | 10 |
-| 08 | `2026-08-19__operation-describe-nine-clusters__SLIPCASE-OPERATION-DESCRIBE-20260819` | 186 | 0 | 12 |
-| 09 | `2026-08-21__when-meaning-gets-to-work__CULTUREOS-20260821-1443` | 10 | 0 | 10 |
-| 10 | `2026-08-22__floor-bee-blank-box__CHAT-PAPER-ZETTEL-FIELD` | 1 | 0 | 1 |
+| 01 | `2026-08-17__prompt-semantics-hidden-machinery__SES-20260817-234319-a5ef0e2e` | 15 | 1 | 10 |
+| 02 | `2026-08-17__slipcase__mycelium-sole-field__v15.55-AM (1)` | 10 | 3 | 11 |
+| 03 | `2026-08-17__the-shop-makes-the-prompt__SLIPCASE-20260817-AIACS-01` | 40 | 11 | 11 |
+| 04 | `2026-08-18__martina-deferred-specification__FINAL-SLIPCASE` | 42 | 2 | 13 |
+| 05 | `2026-08-18__prompt-battles-smackdown__PB-SC-20260818-4D1C1A7BD0__slipcase` | 24 | 4 | 11 |
+| 06 | `2026-08-18__what-can-you-still-reopen__16-zettels__FINAL` | 16 | 4 | 11 |
+| 07 | `2026-08-18__what-kind-of-thing-is-the-model__Andrew__FULL__v15.55-AM` | 64 | 1 | 10 |
+| 08 | `2026-08-19__operation-describe-nine-clusters__SLIPCASE-OPERATION-DESCRIBE-20260819` | 174 | 0 | 12 |
+| 09 | `2026-08-21__when-meaning-gets-to-work__CULTUREOS-20260821-1443` | 0 | 0 | 10 |
+| 10 | `2026-08-22__floor-bee-blank-box__CHAT-PAPER-ZETTEL-FIELD` | 0 | 0 | 1 |
 | 11 | `2026-08-22__floor-bee-hidden-menu__CHAT-FIELD` | 1 | 1 | 0 |
-| 12 | `2026-08-22__look-down-say-the-strange-thing__ALL-ZETTELS__CHAT-FIELD` | 49 | 0 | 10 |
-| 13 | `2026-09-01__the-model-is-training-you__MODEL-TRAINING-YOU-2026-09-01` | 3 | 1 | 3 |
-| 14 | `2026-09-01__the-prompt-is-already-disappearing__DHH-LEX__v15.55-AM` | 21 | 0 | 8 |
-| 15 | `FINAL_SLIPCASE__Mastery_Without_Sovereignty__ALL_ZETTELS__2026-08-18` | 43 | 4 | 12 |
-| 16 | `HOUSE_LANGUAGE_SUBURB_SLIPCASE_2026-08-18` | 10 | 2 | 10 |
-| 17 | `SLIPCASE_13.1__2026-08-17__the-unlived-curriculum` | 31 | 6 | 11 |
-| 18 | `SLIPCASE_AFTER_SURPRISE_FINAL_2026-08-18` | 161 | 4 | 10 |
-| 19 | `SLIPCASE_DEEP_LINEAGE_2026-08-18` | 122 | 13 | 10 |
-| 20 | `SLIPCASE__PROMOTION_FIELD__2026-08-18__74d74484bfdd` | 34 | 1 | 10 |
-| 21 | `SLIPCASE__theory-lag__20260818T030003-0400` | 39 | 2 | 14 |
-| 22 | `THE_HUT__FINAL_FIELD__2026-08-18` | 1 | 1 | 1 |
-| 23 | `YELMO_FINAL__all-zettels-and-paper` | 29 | 3 | 10 |
-| 24 | `black-mountain-structured-openness__SCF-20260818-BMC-004__v15.55-AM__FINAL` | 33 | 3 | 10 |
-| 25 | `house-language__FULL-FINAL__2026-08-18` | 12 | 4 | 12 |
-| 26 | `house_language_many_mansions_2026-08-18` | 10 | 1 | 10 |
+| 12 | `2026-08-22__look-down-say-the-strange-thing__ALL-ZETTELS__CHAT-FIELD` | 39 | 0 | 10 |
+| 13 | `2026-09-01__the-model-is-training-you__MODEL-TRAINING-YOU-2026-09-01` | 0 | 1 | 3 |
+| 14 | `2026-09-01__the-prompt-is-already-disappearing__DHH-LEX__v15.55-AM` | 13 | 0 | 8 |
+| 15 | `FINAL_SLIPCASE__Mastery_Without_Sovereignty__ALL_ZETTELS__2026-08-18` | 31 | 4 | 12 |
+| 16 | `HOUSE_LANGUAGE_SUBURB_SLIPCASE_2026-08-18` | 0 | 2 | 10 |
+| 17 | `SLIPCASE_13.1__2026-08-17__the-unlived-curriculum` | 20 | 6 | 11 |
+| 18 | `SLIPCASE_AFTER_SURPRISE_FINAL_2026-08-18` | 151 | 4 | 10 |
+| 19 | `SLIPCASE_DEEP_LINEAGE_2026-08-18` | 112 | 13 | 10 |
+| 20 | `SLIPCASE__PROMOTION_FIELD__2026-08-18__74d74484bfdd` | 24 | 1 | 10 |
+| 21 | `SLIPCASE__theory-lag__20260818T030003-0400` | 25 | 2 | 14 |
+| 22 | `THE_HUT__FINAL_FIELD__2026-08-18` | 0 | 1 | 1 |
+| 23 | `YELMO_FINAL__all-zettels-and-paper` | 19 | 3 | 10 |
+| 24 | `black-mountain-structured-openness__SCF-20260818-BMC-004__v15.55-AM__FINAL` | 23 | 3 | 10 |
+| 25 | `house-language__FULL-FINAL__2026-08-18` | 0 | 4 | 12 |
+| 26 | `house_language_many_mansions_2026-08-18` | 0 | 1 | 10 |
 | 27 | `how_is_this_gonna_be_screwed_up_20260817` | 0 | 1 | 0 |
-| 28 | `primitive_construction_slipcase_20260818` | 10 | 1 | 10 |
-| 29 | `prompt-forward-slipcase-2026-08-18` | 100 | 1 | 10 |
-| 30 | `prompt-magic-generative-trajectory__2026-08-18` | 32 | 1 | 10 |
-| 31 | `prompt-practices__FINAL__2026-08-18` | 39 | 3 | 12 |
-| 32 | `safe-relational-freedom-field__2026-08-18__a5ef0e2e` | 56 | 8 | 11 |
-| 33 | `slipcase-intro__2026-08-18__082152Z` | 30 | 1 | 10 |
-| 34 | `slipcase_final_20260818` | 50 | 8 | 11 |
-| 35 | `slipcase_noise_of_sculptors_2026-08-17_2254` | 41 | 20 | 11 |
+| 28 | `primitive_construction_slipcase_20260818` | 0 | 1 | 10 |
+| 29 | `prompt-forward-slipcase-2026-08-18` | 90 | 1 | 10 |
+| 30 | `prompt-magic-generative-trajectory__2026-08-18` | 22 | 1 | 10 |
+| 31 | `prompt-practices__FINAL__2026-08-18` | 27 | 3 | 12 |
+| 32 | `safe-relational-freedom-field__2026-08-18__a5ef0e2e` | 45 | 8 | 11 |
+| 33 | `slipcase-intro__2026-08-18__082152Z` | 20 | 1 | 10 |
+| 34 | `slipcase_final_20260818` | 39 | 8 | 11 |
+| 35 | `slipcase_noise_of_sculptors_2026-08-17_2254` | 30 | 20 | 11 |
 | 36 | `slipcase_ontology_build` | 0 | 4 | 0 |
-| 37 | `the-casino-in-the-fountain__slipcase-v15.55-AM__156066d527d3__2026-08-17T203217-0400` | 43 | 2 | 10 |
-| 38 | `the-prompt-keeps-disappearing__FINAL-SLIPCASE-15.55-AM__2026-08-18` | 52 | 4 | 12 |
-| **Total** | **38 Field Slipcases** | **1,537 Slips** | **126 PDFs** | **348 Docs** |
+| 37 | `the-casino-in-the-fountain__slipcase-v15.55-AM__156066d527d3__2026-08-17T203217-0400` | 33 | 2 | 10 |
+| 38 | `the-prompt-keeps-disappearing__FINAL-SLIPCASE-15.55-AM__2026-08-18` | 40 | 4 | 12 |
+| **Total** | **38 Field Slipcases** | **1,189 Slips** | **126 PDFs** | **348 Docs** |
 
 ---
 
