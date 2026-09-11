@@ -1,0 +1,3 @@
+# Appendix C. Method and Provenance Boundary
+
+The paper is a derived interpretation of the research field, not immutable evidence. The 23 ADMITTED cards above are preserved from exact current-chat payloads in the SLIPCASE checkpoint. The 66 PARTIAL cards are represented only by recovered IDs and titles in the checkpoint and are therefore used as inquiry addresses, not as direct-quotation evidence. Where the essay makes source claims, it relies on cited primary or established secondary works rather than reconstructing missing card prose. The complete machine-readable field is preserved in `ZETTELS.json` and `ZETTELS.jsonl` in the accompanying slipcase.

@@ -1,0 +1,12 @@
+REBUILD
+
+Inside the field:
+1. Read 000__START_HERE.txt.
+2. Concatenate paper/*.md in lexical order for the manuscript source.
+3. Use paper/13 for the all-89 concordance and paper/15 for the provenance boundary.
+4. Preserve ADMITTED/PARTIAL distinction; never synthesize missing PARTIAL payloads.
+5. Build the paper against when-meaning-gets-to-work__references.bib.
+
+After merging this field into hartswf0/slipcase:
+6. From repository root run: python3 build_all.py
+7. Confirm the new workspace appears in index, box, map, map-02, atlas, reader-v3, and pocket outputs.
