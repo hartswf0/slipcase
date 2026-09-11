@@ -26,10 +26,14 @@ jobs:
         run: |
           set -euo pipefail
           FLOOR='slipcases/2026-08-22__floor-bee-blank-box__CHAT-PAPER-ZETTEL-FIELD'
-          if [ -f "$FLOOR/UNPACK_TEXT_PAYLOAD.py" ] && [ ! -f "$FLOOR/_LINEAGE/ZETTELS.txt" ]; then
+          if [ -f "$FLOOR/_LINEAGE/ZETTELS.txt" ]; then
+            echo 'Floor Bee lineage payload already unpacked.'
+          elif [ -f "$FLOOR/_PAYLOAD/part-013.b64" ]; then
             python3 "$FLOOR/UNPACK_TEXT_PAYLOAD.py"
+          else
+            echo 'Floor Bee payload is an incomplete archive projection; preserving it without reconstruction.'
           fi
-          if [ -f "$FLOOR/REHYDRATE.py" ]; then
+          if [ -f "$FLOOR/_LINEAGE/ZETTELS.txt" ] && [ -f "$FLOOR/REHYDRATE.py" ]; then
             python3 "$FLOOR/REHYDRATE.py"
           fi
 
