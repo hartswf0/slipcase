@@ -165,8 +165,17 @@ for folder_idx, folder in enumerate(folders):
         all_pdfs.append(p_obj)
         
     # Text cards
-    card_name_re = re.compile(r'^(?!000__)\d{3}__.*\.txt$', re.IGNORECASE)
-    txt_files = sorted([f for f in glob.glob(f'{w}/*.txt') if card_name_re.match(os.path.basename(f))])
+    non_card_root_txt = {
+        'the-model-is-training-you__ASSEMBLY_APPENDIX.txt',
+        'the-model-is-training-you__MAKING_HISTORY.txt',
+        'the-model-is-training-you__SOURCE_MAP.txt',
+        'the-prompt-is-already-disappearing__2026-08-31_SOURCE_MAP.txt',
+    }
+    txt_files = sorted([
+        f for f in glob.glob(f'{w}/*.txt')
+        if not os.path.basename(f).startswith('000__')
+        and os.path.basename(f) not in non_card_root_txt
+    ])
     case_notes = []
     for tf in txt_files:
         card = parse_card_file(tf, folder, clean_name, folder_idx, card_global_idx)
