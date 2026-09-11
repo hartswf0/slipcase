@@ -7,6 +7,7 @@ on:
       - '.github/workflows/normalize-slipcase.yml'
       - 'slipcases/**'
       - 'build_index_html.py'
+      - 'build_heads.py'
   workflow_dispatch:
 
 permissions:
@@ -68,22 +69,36 @@ jobs:
               try: zdir.rmdir()
               except OSError: pass
           print(f'normalized nested cards: moved={moved}, duplicate-copies-removed={deduped}')
+          PY
 
-          p = Path('build_index_html.py')
-          s = p.read_text()
-          old_broad = "txt_files = sorted([f for f in glob.glob(f'{w}/*.txt') if not os.path.basename(f).startswith('000__')])"
-          numeric = "card_name_re = re.compile(r'^\\d{3}__.*\\.txt$', re.IGNORECASE)\n    txt_files = sorted([f for f in glob.glob(f'{w}/*.txt') if card_name_re.match(os.path.basename(f))])"
-          numeric_no_000 = "card_name_re = re.compile(r'^(?!000__)\\d{3}__.*\\.txt$', re.IGNORECASE)\n    txt_files = sorted([f for f in glob.glob(f'{w}/*.txt') if card_name_re.match(os.path.basename(f))])"
-          canonical = "non_card_root_txt = {\n        'the-model-is-training-you__ASSEMBLY_APPENDIX.txt',\n        'the-model-is-training-you__MAKING_HISTORY.txt',\n        'the-model-is-training-you__SOURCE_MAP.txt',\n        'the-prompt-is-already-disappearing__2026-08-31_SOURCE_MAP.txt',\n    }\n    txt_files = sorted([\n        f for f in glob.glob(f'{w}/*.txt')\n        if not os.path.basename(f).startswith('000__')\n        and os.path.basename(f) not in non_card_root_txt\n    ])"
-          for candidate in (numeric_no_000, numeric, old_broad):
-              if candidate in s:
-                  s = s.replace(candidate, canonical, 1)
-                  p.write_text(s)
-                  print('card discovery normalized: legacy root-TXT convention plus explicit paper-apparatus exclusions')
-                  break
-          else:
-              if canonical not in s:
-                  raise SystemExit('build_index_html.py card-discovery rule changed unexpectedly; refusing an unsafe patch')
+      - name: Pre-index corpus and synthesize canonical HEAD layer
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 build_index_html.py
+          python3 build_heads.py
+
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+
+          cases = json.loads(Path('slipcases.json').read_text())
+          graph = json.loads(Path('heads-pdf-map.json').read_text())
+          heads = graph['heads']
+          pdfs = graph['pdfs']
+          counts = graph['counts']
+
+          assert len(heads) == len(cases), (len(heads), len(cases))
+          assert len(pdfs) == sum(len(c.get('pdfs', [])) for c in cases)
+          assert counts['ownership_edges'] == len(pdfs)
+
+          for i, case in enumerate(cases, 1):
+              p = Path('slipcases') / case['folder'] / f'000A__HEAD__FIELD-{i:03d}.txt'
+              assert p.exists(), f'missing HEAD: {p}'
+
+          home = [p.get('home_head') for p in pdfs]
+          assert all(home), 'orphan PDF without home HEAD'
+          print(f"HEAD invariant verified: {len(heads)} heads, {len(pdfs)} PDFs, {counts['ownership_edges']} ownership edges")
           PY
 
       - name: Rebuild every generated research surface
@@ -101,10 +116,12 @@ jobs:
           import json, re
 
           cases = json.loads(Path('slipcases.json').read_text())
+          head_map = json.loads(Path('heads-pdf-map.json').read_text())
           n_cases = len(cases)
           n_cards = sum(len(c.get('cards', [])) for c in cases)
           n_pdfs = sum(len(c.get('pdfs', [])) for c in cases)
           n_docs = sum(len(c.get('specials', {})) for c in cases)
+          n_heads = head_map['counts']['heads']
 
           p = Path('README.md')
           s = p.read_text()
@@ -115,6 +132,13 @@ jobs:
           s = re.sub(r'\| \d+ Workspaces\s+\|', f'| {n_cases} Workspaces   |', s, count=1)
           s = re.sub(r'Switch between all \d+ slipcases', f'Switch between all {n_cases} slipcases', s, count=1)
           s = re.sub(r'\*\*[\d,]+ Research PDFs\*\*: Access', f'**{n_pdfs:,} Research PDFs**: Access', s, count=1)
+
+          heads_note = f'**HEAD layer:** {n_heads} canonical HEAD ZETTELs, one per field, mapped to all {n_pdfs} PDFs in `heads-pdf-map.html` / `.json` / `.txt`.'
+          marker = '\n---\n\n## Architecture & Layout'
+          if '**HEAD layer:**' in s:
+              s = re.sub(r'\*\*HEAD layer:\*\*.*?\n', heads_note + '\n', s, count=1)
+          elif marker in s:
+              s = s.replace(marker, '\n\n' + heads_note + marker, 1)
 
           rows = []
           for i,c in enumerate(cases, 1):
@@ -131,20 +155,20 @@ jobs:
           if n != 1:
               raise SystemExit('README slipcase table boundary not found')
           p.write_text(s)
-          print(f'canonical ledger: cases={n_cases} cards={n_cards} pdfs={n_pdfs} docs={n_docs}')
+          print(f'canonical ledger: cases={n_cases} heads={n_heads} cards={n_cards} pdfs={n_pdfs} docs={n_docs}')
           PY
 
-      - name: Commit canonical corpus and rebuilt desk
+      - name: Commit canonical HEAD corpus, map, and rebuilt desk
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A README.md build_index_html.py slipcases index.html slipcases.json map.html atlas.html map-02.html box.html slipcase-reader-v3.html pocket.html
+          git add -A README.md build_index_html.py build_heads.py heads-pdf-map.json heads-pdf-map.txt heads-pdf-map.html slipcases index.html slipcases.json map.html atlas.html map-02.html box.html slipcase-reader-v3.html pocket.html
           if git diff --cached --quiet; then
-            echo 'Canonical corpus already synchronized.'
+            echo 'Canonical HEAD corpus already synchronized.'
             exit 0
           fi
-          git commit -m 'restore legacy card discovery and rebuild canonical corpus'
+          git commit -m 'add 38 canonical head zettels and map 126 PDFs'
           git pull --rebase origin main
           git push origin HEAD:main
