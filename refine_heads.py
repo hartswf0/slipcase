@@ -85,7 +85,13 @@ for h in mapping['heads']:
 html_path = ROOT / 'heads-pdf-map.html'
 html = html_path.read_text(encoding='utf-8')
 data_js = json.dumps(mapping, separators=(',', ':')).replace('</', '<\\/')
-html, n = re.subn(r'const D=.*?;const heads=', 'const D=' + data_js + ';const heads=', html, count=1, flags=re.S)
+html, n = re.subn(
+    r'const D=.*?;const heads=',
+    lambda _m: 'const D=' + data_js + ';const heads=',
+    html,
+    count=1,
+    flags=re.S,
+)
 if n != 1:
     raise SystemExit('could not locate embedded HEAD map data in heads-pdf-map.html')
 html_path.write_text(html, encoding='utf-8')
