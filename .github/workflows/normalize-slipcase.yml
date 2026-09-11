@@ -1,0 +1,137 @@
+name: Normalize canonical SLIPCASE
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/normalize-slipcase.yml'
+      - 'slipcases/**'
+      - 'build_index_html.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  normalize:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Recover archived cards and normalize card placement
+        shell: bash
+        run: |
+          set -euo pipefail
+          FLOOR='slipcases/2026-08-22__floor-bee-blank-box__CHAT-PAPER-ZETTEL-FIELD'
+          if [ -f "$FLOOR/UNPACK_TEXT_PAYLOAD.py" ] && [ ! -f "$FLOOR/_LINEAGE/ZETTELS.txt" ]; then
+            python3 "$FLOOR/UNPACK_TEXT_PAYLOAD.py"
+          fi
+          if [ -f "$FLOOR/REHYDRATE.py" ]; then
+            python3 "$FLOOR/REHYDRATE.py"
+          fi
+
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, re
+
+          root = Path('slipcases')
+          moved = 0
+          deduped = 0
+          for case in root.iterdir():
+              if not case.is_dir():
+                  continue
+              zdir = case / 'ZETTELS'
+              if not zdir.exists():
+                  continue
+              for src in sorted(zdir.rglob('*.txt')):
+                  if not re.match(r'^\d{3}__.*\.txt$', src.name, re.I):
+                      continue
+                  dst = case / src.name
+                  if dst.exists():
+                      if hashlib.sha256(dst.read_bytes()).digest() != hashlib.sha256(src.read_bytes()).digest():
+                          raise SystemExit(f'card collision with different payload: {src} -> {dst}')
+                      src.unlink()
+                      deduped += 1
+                  else:
+                      src.replace(dst)
+                      moved += 1
+              for d in sorted([p for p in zdir.rglob('*') if p.is_dir()], reverse=True):
+                  try: d.rmdir()
+                  except OSError: pass
+              try: zdir.rmdir()
+              except OSError: pass
+          print(f'normalized nested cards: moved={moved}, duplicate-copies-removed={deduped}')
+
+          p = Path('build_index_html.py')
+          s = p.read_text()
+          old = "txt_files = sorted([f for f in glob.glob(f'{w}/*.txt') if not os.path.basename(f).startswith('000__')])"
+          new = "card_name_re = re.compile(r'^\\d{3}__.*\\.txt$', re.IGNORECASE)\n    txt_files = sorted([f for f in glob.glob(f'{w}/*.txt') if card_name_re.match(os.path.basename(f))])"
+          if old in s:
+              s = s.replace(old, new, 1)
+              p.write_text(s)
+              print('patched card discovery: numeric canonical card filenames only')
+          elif new not in s:
+              raise SystemExit('build_index_html.py card-discovery rule changed unexpectedly; refusing an unsafe patch')
+          PY
+
+      - name: Rebuild every generated research surface
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 build_all.py
+
+      - name: Synchronize README corpus ledger
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, re
+
+          cases = json.loads(Path('slipcases.json').read_text())
+          n_cases = len(cases)
+          n_cards = sum(len(c.get('cards', [])) for c in cases)
+          n_pdfs = sum(len(c.get('pdfs', [])) for c in cases)
+          n_docs = sum(len(c.get('specials', {})) for c in cases)
+
+          p = Path('README.md')
+          s = p.read_text()
+          s = re.sub(r'across \*\*\d+ field slipcases\*\*', f'across **{n_cases} field slipcases**', s, count=1)
+          s = re.sub(r'Complete atomic breakdown of all \*\*[\d,]+ zettel cards\*\*', f'Complete atomic breakdown of all **{n_cards:,} zettel cards**', s, count=1)
+          s = re.sub(r'Curated library of \*\*[\d,]+ primary research PDFs\*\*', f'Curated library of **{n_pdfs:,} primary research PDFs**', s, count=1)
+
+          rows = []
+          for i,c in enumerate(cases, 1):
+              name = c.get('folder') or c.get('id') or c.get('name','')
+              rows.append(f"| {i:02d} | `{name}` | {len(c.get('cards', []))} | {len(c.get('pdfs', []))} | {len(c.get('specials', {}))} |")
+          table = (
+              f"## {n_cases} Included Slipcases\n\n"
+              "| # | Workspace / Case | Slips | PDFs | Field Docs |\n"
+              "|---|---|---:|---:|---:|\n" +
+              "\n".join(rows) +
+              f"\n| **Total** | **{n_cases} Field Slipcases** | **{n_cards:,} Slips** | **{n_pdfs:,} PDFs** | **{n_docs:,} Docs** |\n\n---\n\n"
+          )
+          s, n = re.subn(r'## \d+ Included Slipcases\n.*?\n---\n\n(?=## Getting Started)', table, s, count=1, flags=re.S)
+          if n != 1:
+              raise SystemExit('README slipcase table boundary not found')
+          p.write_text(s)
+          print(f'canonical ledger: cases={n_cases} cards={n_cards} pdfs={n_pdfs} docs={n_docs}')
+          PY
+
+      - name: Commit canonical corpus and rebuilt desk
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A README.md build_index_html.py slipcases index.html slipcases.json map.html atlas.html map-02.html box.html slipcase-reader-v3.html pocket.html
+          if git diff --cached --quiet; then
+            echo 'Canonical corpus already synchronized.'
+            exit 0
+          fi
+          git commit -m 'normalize all canonical slipcase cards and rebuild corpus'
+          git pull --rebase origin main
+          git push origin HEAD:main
