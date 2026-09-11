@@ -1,0 +1,85 @@
+
+Old-style detailed prompting often puts precision into the method: use this library, modify this class, create these functions, follow these steps. DHH's later practice moves precision toward outcomes and protected invariants. The prompt can be sparse on procedure while remaining severe about success.
+
+This is where his Basecamp failure becomes essential. Earlier in 2026, 37signals let designers use agents to implement features in a substantial existing codebase. DHH says many individual pull requests looked defensible while their cumulative effect damaged the system's architecture. The failure lived between patches. Local success did not preserve global coherence (Fridman and Hansson 2026).
+
+That episode saves "be vague" from becoming another prompting superstition. Procedural detail can be wasteful while architectural invariants remain load-bearing. A strong agentic system needs to distinguish constraints that encode an obsolete human route from constraints that protect a long-horizon property of the system.
+
+For a sequence of patches `p1 ... pn`, each patch can appear acceptable relative to the current state and still produce an unacceptable final architecture. Local evaluation does not compose automatically. The missing artifact is an explicit representation of what must remain true across many changes: dependency direction, concept count, boundaries, naming logic, performance envelopes, security properties, or other project-specific commitments.
+
+Peter Naur argued in 1985 that programming should be understood as theory building: the central achievement of programmers is not the text of the program but a theory of how the problem is solved through program execution (Naur 1985). DHH's transition creates a provocative extension. If agents increasingly own implementation, the human-held theory does not vanish. Some of it migrates into architecture, tests, repository guidance, examples, benchmarks, and critique. The live research question is how much of a programmer's theory can become environmental structure without collapsing into a giant prescriptive prompt.
+
+# 5. The new IDE is an attention router
+
+The workflow changes again once one agent becomes many. DHH describes moving from one terminal session to several panes, then multiple machines, then roughly sixteen concurrent threads. The obvious gain is throughput. The less obvious result is a new bottleneck: him.
+
+An agent works for a while, then reaches a question, a review point, an ambiguity, or completion. DHH wants an interface that signals when his judgment is needed. Later in the conversation he says directly that "the human in the loop is the limit" and describes more automated systems that process issues and pull requests, then send him a compact set of recommendations about what is ready, what should close, and where a decision remains (Fridman and Hansson 2026).
+
+That is a different picture of an IDE. The traditional editor keeps the human continuously engaged because human keystrokes are producing the implementation. A multi-agent environment allocates human attention intermittently. Its central job becomes deciding which machine process deserves a scarce cognitive interrupt.
+
+Operating systems solved an analogous problem for processors by scheduling competing work. Agentic development now needs an attention scheduler for people. A security escalation, an irreversible destructive action, an aesthetic choice, a routine test failure, and a completed low-risk task should not occupy the same queue. A mature agentic interface will rank interventions by consequence, uncertainty, reversibility, cost, and the unique value of human judgment.
+
+This also clarifies why chat is a poor final metaphor for agents. Chat encourages waiting. DHH and Fridman discuss agents working inside Basecamp as coworkers with asynchronous to-dos and cards. Once the agent can keep working, the conversational turn is no longer the natural unit of coordination. Work queues, events, state, and exceptions fit better.
+
+The endpoint is not necessarily zero humans. It is **decision-shaped human presence**: people appear where the system cannot responsibly substitute inference for preference, authorization, accountability, or a still-tacit architectural theory.
+
+# 6. Adobe and the death of feature parity
+
+The Adobe discussion becomes sharper when read through this architecture. Fridman asks why established products such as Photoshop and Premiere have not suddenly accelerated. DHH first points away from code. Large organizations can be bottlenecked by human communication, approvals, product decisions, vision, and taste. Making implementation cheaper does little when implementation was not the limiting factor (Fridman and Hansson 2026).
+
+Then he makes the more radical move: "What if we all just build our own 5%?"
+
+This attacks a deep assumption of software competition. A traditional Premiere competitor has to confront Premiere as a product: years of accumulated features, codecs, color workflows, plugins, export formats, performance tuning, collaboration behavior, and professional edge cases. An agentic personal tool can begin from a different unit: the actual workflow of one editor.
+
+Let `F` denote the full capability set of a mature application and `Fu` the subset a particular user appears to need. If the cost of implementing `Fu` falls far enough, the user no longer needs a universal replacement for `F`. Different users can peel away different slices.
+
+DHH's Omawrite is a clean demonstration at small scale. He wanted a narrow writing experience, asked an agent for a Qt/C++ application, refused to read the C++, iterated through use, and abandoned Typora within days. Omawrite now exists as a standalone repository and ships by default with Omarchy Quattro (Omacom Contributors 2026). Its incompleteness relative to a mature writing application is part of the design. It is complete relative to the behavior DHH wanted.
+
+The difficult part arrives in the invisible 95 percent. The features a user sees are not the same as the infrastructure the user's workflow depends on. A professional video editor's apparent subset can rest on color science, codecs, cache behavior, interchange formats, GPU paths, file recovery, plugin compatibility, and dozens of conditions that rarely become explicit until they fail. Agentic personal software therefore needs **dependency discovery**, not only feature imitation.
+
+That gives the Adobe critique a testable form. Shadow one professional editor. Record the actual workflow. Ask agents to rebuild only that workflow on Linux. The experiment succeeds only when real projects can be opened, completed, exported, reopened months later, exchanged with collaborators, and recovered after failures. A convincing personal 5% must include the dependency closure of the visible 5%.
+
+If agents can do that, software markets change without anyone building "the new Adobe." The universal application loses its privileged status as the natural unit of software.
+
+# 7. Programming after the prompt
+
+DHH initially resists calling vibe coding "programming" because programming, for him, implies loops, variables, conditions, and direct understanding of programming-language primitives. Later he casually says he has been programming in English. The contradiction is useful. It exposes two definitions that used to coincide.
+
+One definition identifies programming with manipulating an executable formal representation. The other identifies programming with intentionally shaping computational behavior. For most of software history, a person who did the second at high fidelity usually had to do the first. Agents pry those activities apart.
+
+English does not become executable in the way Ruby is executable. A sentence becomes operative because it is received by a model inside a harness with tools, permissions, state, tests, memory, and a world it can change. The same sentence sent to a text-only chatbot, a coding agent with a repository, and an operating-system agent with root access describes three very different acts.
+
+So the durable research object is not natural language as a replacement programming language. It is **the arrangement that gives natural language operational force**.
+
+The prompt starts to disappear under this arrangement. Some instructions move backward into durable environment design. Some move forward into observable objectives. Some emerge only after the first artifact exists. Some are generated automatically from crashes or tests. Some appear as human evaluations such as "too complicated" or "the proportions are wrong." And many future actions may start from events rather than any fresh human sentence.
+
+Omarchy's crash diagnosis already shows this possibility. The operating system watches structured crash data, raises a notification, and can hand the failure to the default agent together with a diagnostic skill. The person does not need to describe the stack trace or even know what failed. Runtime state compiles itself into an agent task (Omarchy Contributors 2026d). The computer begins to author prompts about its own condition.
+
+At that point "prompt engineering" becomes an awkward name for the work. The consequential design questions sit elsewhere:
+
+- What state is exposed to the agent?
+- Which knowledge persists outside the current conversation?
+- Which invariants are encoded and where?
+- Which operations are reversible?
+- How are candidate alternatives generated?
+- Which objective is measured?
+- What event should trigger autonomous work?
+- Which decisions demand human interruption?
+- What must the system remember across many locally successful changes?
+
+Those are programming questions, interface questions, organizational questions, and governance questions at once.
+
+# 8. The wager
+
+DHH and Fridman are right to feel that something larger than faster code generation has happened. Their own examples give a more exact description of the shift.
+
+The task prompt is becoming less like a tiny program and more like a temporary aperture into a larger computational situation. The durable program increasingly includes the conditions that let an agent interpret the aperture: repository structure, skills, tools, tests, state, benchmarks, reversible components, and histories. Human language supplies goals, metaphors, critique, permission, and dissatisfaction. The agent fills procedural gaps. Running artifacts return evidence. The person changes their mind. The next instruction begins from that changed state.
+
+This arrangement explains why expertise can sometimes hinder agent work and remain indispensable elsewhere. A programmer who dictates an obsolete method can trap a stronger solver. The same programmer may be the only person capable of seeing architectural drift across twenty individually plausible changes. Less procedural control and stronger invariant control can coexist.
+
+It explains why "be vague" can be rigorous. Vagueness about method can sit inside exact objectives, rich context, tight tests, and easy rollback.
+
+It explains why differential evaluation feels so powerful. Implementation has become cheap enough that tacit preference can be interrogated through executable contrasts rather than translated into a specification before anyone has seen the thing.
+
+And it explains why the future IDE may look less like a better text editor than a cockpit for exceptions. When execution becomes abundant, the scarce operation is deciding what deserves a human.
+

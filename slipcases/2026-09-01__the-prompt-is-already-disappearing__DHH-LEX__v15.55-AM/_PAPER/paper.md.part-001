@@ -1,0 +1,85 @@
+---
+title: "The Prompt Is Already Disappearing"
+subtitle: "Programming after the standalone instruction"
+author: "Watson Hartsoe"
+date: "August 31, 2026"
+abstract: |
+  David Heinemeier Hansson's reversal on AI programming is easy to narrate as a sudden conversion: in 2024 he treated AI as a superb junior programmer, in May 2025 he said he would rather retire than permanently hand AI the keyboard, in January 2026 he promoted coding agents to production collaborators, and by August he described himself as programming in English. That chronology hides the more useful technical change. The prompt itself is losing its status as a self-contained unit of control. In the agent systems DHH and Lex Fridman describe and build, specification migrates into repositories, skills, command-line tools, tests, runtime state, benchmarks, and reversible artifacts. The human utterance can therefore become shorter, vaguer, and more evaluative without the overall system becoming less structured. This paper develops the "distributed prompt" as a way to describe that shift. It argues that agentic programming is moving toward four coupled operations: environmental specification, artifact-mediated inquiry, objective-guided search, and exception-routed human judgment. The result is neither English replacing code nor prompt engineering becoming a new permanent craft. It is a change in where programming knowledge resides and when human attention enters the loop.
+keywords:
+  - AI agents
+  - programming
+  - prompting
+  - end-user development
+  - distributed cognition
+  - human-AI interaction
+  - software architecture
+  - malleable systems
+---
+
+# 1. A programmer changes his mind
+
+In December 2024 David Heinemeier Hansson described AI as a "superb junior programmer": encyclopedic about syntax and APIs, yet prone to bad premises, needless dependencies, and architectural dead ends. His warning was precise. A weak premise could survive local implementation work and only reveal its damage after considerable effort. The senior programmer's job was to see the premise before the code hardened around it (Hansson 2024).
+
+Five months later he was still defending the keyboard. In *Coding should be a vibe!* he wrote that he had no interest in giving up writing code and would "retire before permanently handing it the keyboard to drive the code" (Hansson 2025). His objection was not nostalgia alone. Ruby had already solved the problem that made many programmers want to flee implementation: the language made programming pleasurable. Why exchange a beautiful craft for project management over machine output?
+
+By January 2026 the position had broken open. Agents, he wrote, now controlled terminals, ran tests, searched documentation, and used web services through skills written in plain English. The discontinuity came from intelligence joined to tools. He was ready to "promote" them from tutors and assistants to collaborators capable of production-grade contributions, although he still rejected claims that they could responsibly write nearly all professional code while preserving quality and cohesion (Hansson 2026a).
+
+Eight months later, sitting across from Lex Fridman, he crossed the line his earlier essays had defended. He described major Omarchy work written entirely by agents, a C++ writing application whose implementation he intentionally refused to inspect, and an operating-system workflow in which human effort had moved toward direction, comparison, architectural judgment, and final decisions. Near the end of the conversation he said the new programming language was English (Fridman and Hansson 2026).
+
+The reversal is real, but "the models got better" leaves too much unexplained. Better at what, inside what arrangement, and why did better models make some forms of human instruction actively worse? The answer is visible in the systems around DHH's prompts. As the task-level prompt gets thinner, the surrounding computational environment gets thicker. Repositories carry instructions. Skills teach agents local procedures. Command-line tools expose actions. Tests and benchmarks return consequences. Source trees supply context. Runtime events can initiate agent work without a person describing the failure. Plugins make experiments reversible. Parallel agents convert the human from code producer into an interrupt handler.
+
+That architecture suggests a stronger claim: **the prompt is already disappearing as a standalone object.** What replaces it is a distributed arrangement of intent, persistent specification, executable state, and feedback. English sits at the front of that arrangement, but English alone does surprisingly little.
+
+# 2. The prompt got smaller because the system around it got bigger
+
+One of the sharpest moments in the Fridman conversation arrives when DHH discusses the fashion for enormous `AGENTS.md` and `CLAUDE.md` files. He recounts a claim from Claude Code's Boris Cherny that newer models needed dramatically less system instruction and could be harmed by excessive human prescription. Fridman recognizes the same change in his own practice: the skill he is learning is to avoid overspecifying and to get out of the model's way. DHH pushes further. State the problem, perhaps only the fuzzy idea. Let the agent decide the route (Fridman and Hansson 2026).
+
+Read literally, this can sound like an argument against specification. Omarchy's repository gives the opposite impression.
+
+The Quattro branch has an `AGENTS.md` that specifies Bash style, command naming, privilege boundaries, testing expectations, commit behavior, and a map of deeper task guides. Specialized agent skills explain how to change installation scripts, shell components, migrations, visual behavior, and acceptance tests. Omarchy also ships a general skill describing where configuration lives, which commands control which subsystems, and how an agent should customize a built-in component without editing canonical source. A local request can be vague because the system has already arranged a large body of durable knowledge where an agent can recover it (Omarchy Contributors 2026a; 2026b).
+
+The same pattern appears in Basecamp. In March 2026 DHH announced that 37signals had made Basecamp "agent accessible" by revamping the API, creating a CLI, and wrapping both in a skill that teaches agents how to use them. He singled out the file system as a memory implant that lets agents learn between prompts (Hansson 2026b). The interface for AI was therefore not a magical sentence. It was an API, a CLI, a skill, filesystem state, and the model that could traverse them.
+
+A useful name for this is the **distributed prompt**. Let the human's immediate utterance be `P`, repository instructions `R`, skills `S`, available tools `T`, tests `V`, runtime state `E`, and interaction history `H`. The operative instruction is closer to
+
+`P* = P + R + S + T + V + E + H`
+
+than to the text typed into a chat box.
+
+As agents improve, the size of `P` can shrink while the informational and operational density of `P*` grows. That resolves an apparent contradiction in DHH's advice. "Be vague" does not mean "remove structure." It means stop restating procedure that a capable agent can infer from a well-formed environment. The distinction is between *local prescription* and *persistent conditions of action*.
+
+This is close to a classic insight from distributed cognition: useful cognitive work is often spread across people, representations, tools, and the environment rather than contained inside one head (Hutchins 1995). Agentic programming adds an unusual twist. The environment is now deliberately written so a nonhuman actor can read it and act through it. Documentation becomes executable pedagogy. CLI design becomes agent-interface design. A clean filesystem and a specific error message can become more useful precisely because the immediate reader is a model rather than a novice person.
+
+DHH's phrase "programming in English" captures the changed experience at the keyboard. It undersells the architecture that makes the experience work.
+
+# 3. From specification to probe
+
+The conversation's most generative line is not about English. DHH tells Fridman: "Be as vague as you can to manifest something, then interact with the something." His reasoning comes through Agile development: people routinely fail to know what software should do until they encounter a working version. Agents compress implementation enough that this old iterative insight changes scale. An artifact that once cost a team weeks can now arrive before the user's intention has settled (Fridman and Hansson 2026).
+
+That changes the role of the first generated program. It no longer has to be the answer. It can be an instrument for finding the question.
+
+Suppose a user begins with an incomplete preference state `h0`. A prompt produces artifact `a0`. Using `a0` changes the user's state: a control feels wrong, a sequence suddenly seems unnecessary, a visual treatment exposes a hidden preference, or an omitted capability becomes obvious. The next prompt is written by a different human state, `h1`. The loop is therefore not simply a model improving a program:
+
+`h0 -> p0 -> a0 -> use(a0) -> h1 -> p1 -> a1 ...`
+
+The artifact teaches the user how to ask.
+
+Donald Schoen described professional design as a reflective conversation with a situation: practitioners act, encounter consequences, and reframe what they are doing in response (Schoen 1983). DHH's agent practice makes that cycle cheap enough to become the ordinary control loop for software. Steven Dow and colleagues provide a complementary clue. In experiments on parallel prototyping, designers who produced multiple alternatives in parallel generated more divergent work and achieved better results than designers who refined one version serially (Dow et al. 2010). Fridman independently describes building pages that present several implementations so he can vote on what he likes. DHH calls the human operation "differential evaluation."
+
+There is a serious design problem hiding inside that happy loop. The human only compares what the generator chooses to show. If a model samples three candidates from a much larger possibility space, the apparent sovereignty of human taste begins after an earlier act of curation. The generator chooses the menu; the user chooses dinner.
+
+This makes candidate-set construction a first-class agentic design problem. A useful system needs ways to vary different dimensions, jump away from local refinements, and let the user reject the entire set. "None of these" is not a convenience button. It is protection against a search process that converts its own sampling bias into the user's apparent preference.
+
+The idea becomes especially powerful when alternatives are cheap to instantiate and cheap to undo. Omarchy's shell plugin model lets a user clone a built-in component into a personal plugin directory, edit the clone, observe hot-reloaded changes, and return to the built-in implementation by removing the clone (Omarchy Contributors 2026c). Malleability here rests on reversibility. A person can afford to discover desire through action because the system keeps the cost of recovery low.
+
+The practical principle is stronger than "prototype early." **Generate to learn, compare to discriminate, and preserve a path back.**
+
+# 4. Precision moves from method to objective
+
+DHH's obsession with installation speed gives the vague-prompt thesis a useful counterexample. He is not vague about everything. He becomes fanatically precise about the outcome: two minutes, then one minute, then lower. What he stops prescribing is the route.
+
+Agents explore the implementation space. They preload packages while the person answers setup questions. They parallelize work. They shrink packages. They change compression. They inspect the difference between what a package includes and what Omarchy actually uses. The human keeps a target visible and judges the trade-offs; the agents search for transformations that move the metric (Fridman and Hansson 2026).
+
+This resembles search-based software engineering, where software problems are formulated as search over a space of candidate solutions under an objective or fitness function (Harman and Jones 2001). Modern agents make that relationship conversational and far more general. The human can say "make the installer faster without hollowing out the system," then let an agent inspect code, run benchmarks, alter packages, and measure the next result.
+
+The important shift is the location of precision.

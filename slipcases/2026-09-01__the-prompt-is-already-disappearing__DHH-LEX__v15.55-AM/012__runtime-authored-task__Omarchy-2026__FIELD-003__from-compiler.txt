@@ -1,0 +1,95 @@
+ZETTEL
+
+ID:
+FIELD-003
+
+TITLE:
+Omarchy's crash watcher turns runtime state into an agent task before the user writes a prompt.
+
+SOURCE:
+Omarchy Contributors — Omarchy Manual: AI — quattro branch — 2026.
+
+SOURCE URL:
+https://github.com/omacom/omarchy/blob/quattro/manual/17-ai.md
+
+PASSAGE:
+[PARAPHRASE]
+Omarchy watches systemd-coredump. A process crash can raise a notification that hands the crash to the default agent together with a diagnose-crash skill, which guides investigation of the core dump and whether the failure should be reported upstream.
+
+RESEARCH OBJECT:
+The initiating description of a task can be compiled from telemetry rather than authored by a person.
+
+LOCAL MOVE:
+The system converts an event into structured context plus a procedure.
+
+SOURCE TERMS:
+systemd-coredump
+process crashed
+default agent
+diagnose-crash skill
+core dump
+report upstream
+
+WHAT BECAME STRANGE:
+A future with more agents may contain fewer human-authored prompts precisely because software can describe its own failures.
+
+QUESTION:
+What other user requests can be replaced by event-to-context compilation?
+
+DEEPER QUESTION:
+Does prompt engineering give way to trigger design when systems can construct their own tasks from state?
+
+MECHANISM:
+runtime event
+→ capture structured state
+→ attach diagnostic skill
+→ invoke agent
+→ investigate
+→ ask human only for consequential decision
+
+FORMAL SHIFT:
+<HUMAN DESCRIBES FAILURE>
+→ <SYSTEM CAPTURES FAILURE STATE>
+→ [AGENT DIAGNOSIS]
+→ <REPAIR / REPORT DECISION>
+
+SOURCE FORMALISM:
+The Omarchy manual names systemd-coredump, `omarchy agent crash <pid>`, crash capture controls, per-program muting, and the diagnose-crash skill.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+P_event = compile(event, state, skill).
+
+TENSION:
+Automatic task construction can encode the wrong context or omit causal signals outside the captured subsystem.
+
+MISSING:
+Confidence, provenance, and escalation semantics for system-authored tasks.
+
+BOUNDARY:
+The watcher diagnoses crashes; it does not establish autonomous repair as a general property of Omarchy.
+
+CITATION TRAIL:
+Autonomic computing.
+Observability.
+Event-condition-action systems.
+Self-healing software.
+
+TEST:
+Compare user-authored bug descriptions with telemetry-compiled crash tasks on time-to-diagnosis and missing-context rate.
+
+PLATFORM:
+[[the computer as prompt author]]
+
+LINKS:
+[[runtime-generated prompts]]
+[[distributed prompt]]
+[[exception routing]]
+
+BIBTEX:
+@misc{omarchy2026ai,
+  author = {{Omarchy Contributors}},
+  title = {Omarchy Manual: AI},
+  year = {2026},
+  url = {https://github.com/omacom/omarchy/blob/quattro/manual/17-ai.md}
+}

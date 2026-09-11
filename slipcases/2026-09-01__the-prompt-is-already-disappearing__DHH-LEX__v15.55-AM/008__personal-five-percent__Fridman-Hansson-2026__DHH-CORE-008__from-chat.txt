@@ -1,0 +1,127 @@
+ZETTEL
+
+ID:
+DHH-CORE-008
+
+TITLE:
+Adobe's real threat is not an AI-built Adobe clone; it is the destruction of the universal application as the unit of software.
+
+SOURCE:
+David Heinemeier Hansson and Lex Fridman — Lex Fridman Podcast #501 — 2026 — 00:22:40 onward.
+
+PASSAGE:
+[QUOTE]
+“What if we all just build our own 5%?”
+
+RESEARCH OBJECT:
+This is the most disruptive part of the Adobe discussion.
+
+DHH does not need one person to rebuild all of Photoshop, Premiere, Typora, or Office.
+
+He needs the implementation cost of one person's actually-used workflow to fall below the cost of tolerating the incumbent.
+
+LOCAL MOVE:
+He replaces feature parity with personal sufficiency.
+
+SOURCE TERMS:
+5%
+functionality that I need
+one user
+frustrations
+Premiere
+Typora
+rewrite
+
+WHAT BECAME STRANGE:
+A product can lose without being replaced.
+
+Its users can peel away different subsets until the assumption that everyone needs the same giant application stops holding.
+
+QUESTION:
+Does cheap agentic implementation turn software markets from competition among products into competition between products and personal workflows?
+
+DEEPER QUESTION:
+What happens to Adobe's moat if every expert user can encode twenty years of irritation directly into a bespoke tool?
+
+MECHANISM:
+large generalized product
+→ user actually inhabits narrow workflow
+→ agent makes workflow cheap to reproduce
+→ personalized substitute emerges
+→ dependency on generalized product weakens
+
+FORMAL SHIFT:
+<APPLICATION AS INDIVISIBLE PRODUCT>
+→ <PERSONAL WORKFLOW SUBSET>
+→ [AGENT REIMPLEMENTATION]
+→ <BESPOKE SOFTWARE>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+F = full application capability
+
+Fᵤ = capabilities user u actually requires
+
+Traditional competitor must approximate:
+F
+
+Agentic personal software only needs:
+Fᵤ
+
+If cost(Fᵤ) collapses, feature completeness stops being the relevant barrier.
+
+TENSION:
+The “unused 95%” often contains invisible infrastructure required by the visible 5%:
+codecs,
+color management,
+file compatibility,
+GPU pipelines,
+plugins,
+crash recovery,
+collaboration.
+
+Visible features and required substrate are not the same set.
+
+MISSING:
+A method for discovering the true dependency closure of a user's 5%.
+
+BOUNDARY:
+Omawrite makes the thesis plausible for a small writing tool.
+
+Premiere and Photoshop are much harder stress tests.
+
+CITATION TRAIL:
+End-user development.
+Personal software.
+Situated software.
+Feature bloat.
+Platform economics.
+Switching costs.
+
+TEST:
+Shadow one professional Premiere user for a month.
+
+Rebuild only their actual workflow.
+
+The experiment ends only when real projects can be completed, reopened, exported, repaired, and exchanged—not when the interface looks similar.
+
+PLATFORM:
+[[software after the universal application]]
+
+LINKS:
+[[the personal five percent]]
+[[Adobe unbundling]]
+[[agentic end-user development]]
+
+BIBTEX:
+@misc{fridman_hansson_2026_core8,
+  author = {Fridman, Lex and Heinemeier Hansson, David},
+  title = {DHH: Future of Programming, AI, Agentic Engineering, Vibe Coding \& Linux},
+  year = {2026},
+  howpublished = {Lex Fridman Podcast, Episode 501},
+  url = {https://youtu.be/NYFGCESmikA}
+}

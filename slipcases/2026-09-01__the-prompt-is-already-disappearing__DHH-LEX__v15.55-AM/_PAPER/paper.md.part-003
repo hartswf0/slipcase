@@ -1,0 +1,85 @@
+A useful successor to prompt engineering would therefore study **how intent is distributed across an agentic system**. Call it distributed prompting, environment programming, or something plainer that has not arrived yet. The name can wait. The architecture is already here.
+
+The most interesting test is brutally practical. Take the same capable model and the same three-sentence human request. Put it first in an empty directory. Then put it in a repository with source, tests, `AGENTS.md`, skills, tools, runtime telemetry, reversible sandboxes, and a benchmark. If the second system produces radically stronger work, the difference did not live in the English sentence.
+
+That difference is where programming is moving.
+
+# Limitations and unresolved territory
+
+The evidence here is unusually rich in working artifacts but narrow in provenance. DHH is describing his own practice, his own products, and his own rapidly changing frontier. Several claims in the podcast - especially model comparisons and reported internal outcomes - remain experiential unless the underlying traces are published. The Basecamp architectural regression is important precisely because the public conversation does not expose the full PR sequence needed to audit it.
+
+The argument also draws heavily from software because software is cheap to execute, copy, test, and revert. Agentic practice will look different where actions touch money, health, physical infrastructure, legal status, or irreversible external systems. The ability to "bumble" productively depends on bounded consequences and reliable recovery.
+
+Finally, distributed specification can hide as easily as it can help. When behavior emerges from prompts, skills, source, histories, tool defaults, model priors, and runtime state, causal inspection becomes harder. A short prompt can look simple while carrying an enormous invisible inheritance. Any serious agentic engineering discipline will need provenance tools that show which instruction, artifact, event, or environmental assumption shaped an action.
+
+# Conclusion
+
+A year ago the argument was whether AI could write code worth keeping. DHH's current practice has already moved to a different question: how should a person arrange a world in which code can be generated, tested, revised, diagnosed, and discarded faster than the person can think through every implementation?
+
+The answer emerging from Omarchy and the Fridman conversation is neither a giant prompt nor a new priesthood of prompt engineers. It is a distributed system for interpretation. Put stable knowledge in the environment. Expose tools cleanly. Preserve architectural invariants. Ask for outcomes without dictating every route. Generate artifacts before desire has fully crystallized. Compare alternatives. Make experiments reversible. Route only consequential uncertainty back to the human.
+
+Once those pieces are present, the human can type less because the computer has more to stand on.
+
+And once that happens, the prompt begins to disappear.
+
+# References
+
+Dow, Steven P., Alana Glassco, Jonathan Kass, Melissa Schwarz, Daniel L. Schwartz, and Scott R. Klemmer. 2010. "Parallel Prototyping Leads to Better Design Results, More Divergence, and Increased Self-Efficacy." *ACM Transactions on Computer-Human Interaction* 17 (4), Article 18. https://doi.org/10.1145/1879831.1879836.
+
+Fridman, Lex, and David Heinemeier Hansson. 2025. "DHH: Future of Programming, AI, Ruby on Rails, Productivity & Parenting." *Lex Fridman Podcast* 474. https://lexfridman.com/?p=6262.
+
+Fridman, Lex, and David Heinemeier Hansson. 2026. "DHH: Future of Programming, AI, Agentic Engineering, Vibe Coding & Linux." *Lex Fridman Podcast* 501. https://lexfridman.com/dhh-2-transcript/.
+
+Hansson, David Heinemeier. 2024. "The Premise Trap." December 16. https://world.hey.com/dhh/the-premise-trap-924b8cd9.
+
+Hansson, David Heinemeier. 2025. "Coding Should Be a Vibe!" May 13. https://world.hey.com/dhh/coding-should-be-a-vibe-50908f49.
+
+Hansson, David Heinemeier. 2026a. "Promoting AI Agents." January 7. https://world.hey.com/dhh/promoting-ai-agents-3ee04945.
+
+Hansson, David Heinemeier. 2026b. "Basecamp Becomes Agent Accessible." March 25. https://world.hey.com/dhh/basecamp-becomes-agent-accessible-3ae6b949.
+
+Hansson, David Heinemeier. 2026c. "The Malleable Computer." April 15. https://world.hey.com/dhh/the-malleable-computer-7c187a9b.
+
+Hansson, David Heinemeier. 2026d. "Endless Execution." August 9. https://world.hey.com/dhh/endless-execution-4157e065.
+
+Harman, Mark, and Bryan F. Jones. 2001. "Search-Based Software Engineering." *Information and Software Technology* 43 (14): 833-839. https://doi.org/10.1016/S0950-5849(01)00189-6.
+
+Hutchins, Edwin. 1995. *Cognition in the Wild*. Cambridge, MA: MIT Press. https://doi.org/10.7551/mitpress/1881.001.0001.
+
+Naur, Peter. 1985. "Programming as Theory Building." *Microprocessing and Microprogramming* 15 (5): 253-261. https://doi.org/10.1016/0165-6074(85)90032-8.
+
+Omacom Contributors. 2026. "Omawrite: The Essence of Writing." GitHub repository. https://github.com/omacom/omawrite.
+
+Omarchy Contributors. 2026a. "AGENTS.md." Quattro branch. https://github.com/omacom/omarchy/blob/quattro/AGENTS.md.
+
+Omarchy Contributors. 2026b. "Omarchy Skill." Quattro branch. https://github.com/omacom/omarchy/blob/quattro/default/omarchy-skill/SKILL.md.
+
+Omarchy Contributors. 2026c. "Shell Plugins." Omarchy Manual, Quattro branch. https://github.com/omacom/omarchy/blob/quattro/manual/32-shell-plugins.md.
+
+Omarchy Contributors. 2026d. "AI." Omarchy Manual, Quattro branch. https://github.com/omacom/omarchy/blob/quattro/manual/17-ai.md.
+
+Schoen, Donald A. 1983. *The Reflective Practitioner: How Professionals Think in Action*. New York: Basic Books.
+
+# Appendix A — Assembly Instrument
+
+This working paper was assembled under the researcher-supplied **SLIPCASE — PORTABLE RESEARCH FIELD, version 15.55-AM** instrument in the active conversation. The instrument requires preservation of evidence, prompts, graph structure, making history, reconstruction state, and a paper whose argument remains distinct from the archive that supports it.
+
+The current chat message was available to the model as active instruction but was not exposed to the file-building runtime as a byte-addressable source file. The package therefore does **not** manufacture a falsely "exact" local copy. `_PROMPTS/CURRENT_ASSEMBLY_PROMPT_RECEIPT.txt` records that boundary. Two older prompt artifacts retrieved from the researcher's Library are preserved verbatim under `_PROMPTS/` with their actual contents and must not be mistaken for the current version.
+
+# Appendix B — Making History
+
+**PROVIDED.** The active conversation supplied the Lex Fridman / DHH transcript, the PRIME ZETTEL FORAGE protocol, the research direction, and the current SLIPCASE assembly instrument.
+
+**PRESERVED.** Nine immediately preceding DHH-CORE zettels are preserved as immutable payload cards and exact Markdown mirrors. Earlier zettel IDs and titles whose exact payload bytes were unavailable to the packaging runtime are retained as PARTIAL rather than reconstructed.
+
+**RETRIEVED.** Public DHH essays, Lex Fridman transcripts, Omarchy and Omawrite repository documentation, and scholarly sources were checked during the research pass. Link-only public resources remain link-only unless a local copy is explicitly registered.
+
+**DERIVED.** The thesis, connective argument, four FIELD cards, graph resolutions, MOCs, arrangements, reader, network, source map, and this paper are derived interpretations. They remain revisable and do not become evidence by inclusion in the package.
+
+**VERIFIED.** Structural counts, card hashes, mirrors, PDF rendering, and ZIP integrity are computed during packaging. Public claims are limited to the sources actually inspected. Private Basecamp development history described in the podcast remains unverified beyond the speakers' account.
+
+# Appendix C — Replication Path
+
+Open `index.html` for the sendable offline capsule. It embeds the admitted card payloads, bibliography, paper text, open edges, source map, making history, and rebuild instructions without requiring a server or network connection. `READER.html` provides the card desk; `NETWORK.html` and `NETWORK.svg` expose the compiled field; `000__RETURN_PATH.txt` identifies the checkpoint; `_SLIPCASE/MANIFEST.json` records file hashes.
+
+To rebuild the derived field, begin from the root zettel TXT payloads and their `_MD/` mirrors, recompute their SHA-256 identities, regenerate `ZETTELS.json`, then recompile literal PLATFORM and LINKS relations without fuzzy matching. The paper's claim-to-evidence path is recorded in `the-prompt-is-already-disappearing__2026-08-31_SOURCE_MAP.txt`. New findings should become new cards rather than edits to preserved payloads.

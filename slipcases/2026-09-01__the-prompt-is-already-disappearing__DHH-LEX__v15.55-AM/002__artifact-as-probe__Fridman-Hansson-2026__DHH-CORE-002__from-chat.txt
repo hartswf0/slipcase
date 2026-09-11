@@ -1,0 +1,113 @@
+ZETTEL
+
+ID:
+DHH-CORE-002
+
+TITLE:
+The first generated program is not the answer; it is an instrument for discovering the question.
+
+SOURCE:
+David Heinemeier Hansson and Lex Fridman — Lex Fridman Podcast #501 — 2026 — 00:58:13–00:59:18.
+
+PASSAGE:
+[QUOTE]
+“Be as vague as you can to manifest something, then interact with the something.”
+
+RESEARCH OBJECT:
+This is stronger than “iterate.”
+
+DHH changes the epistemic role of implementation.
+
+Implementation used to follow knowing what should be built.
+
+Here implementation helps produce that knowledge.
+
+LOCAL MOVE:
+He turns cheap software generation into a method of inquiry.
+
+SOURCE TERMS:
+manifest
+interact
+discover
+what you really want
+play with it
+bumble
+
+WHAT BECAME STRANGE:
+A prompt can succeed by producing an artifact the user rejects.
+
+If the rejection reveals previously unavailable preference, the artifact performed useful work.
+
+QUESTION:
+Should agentic software be evaluated partly by how much it teaches its user about the unresolved problem?
+
+DEEPER QUESTION:
+What kinds of artifacts maximize preference discovery rather than immediate satisfaction?
+
+MECHANISM:
+fuzzy desire
+→ provisional manifestation
+→ use
+→ surprise / dislike / attraction
+→ newly articulable distinction
+→ next manifestation
+
+FORMAL SHIFT:
+<REQUIREMENT>
+→ <PROVISIONAL ARTIFACT>
+→ [EXPERIENCE]
+→ <NEW REQUIREMENT>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+H₀ = human state before artifact
+
+A₀ = G(prompt₀)
+
+H₁ = interact(H₀, A₀)
+
+prompt₁ = articulate(H₁)
+
+The loop changes the human, not only the program.
+
+TENSION:
+This also means generated artifacts can manufacture preference by prematurely narrowing the imaginable design space.
+
+MISSING:
+A theory of which manifestations are maximally informative.
+
+BOUNDARY:
+Cheap, reversible software makes this especially powerful.
+
+The mechanism weakens when experiments are dangerous, costly, or irreversible.
+
+CITATION TRAIL:
+Prototyping as inquiry.
+Research through design.
+Reflection-in-action.
+Preference construction.
+Design probes.
+
+TEST:
+Compare a system optimizing for “best first answer” with one deliberately generating artifacts chosen to discriminate among uncertain user preferences.
+
+PLATFORM:
+[[artifact as epistemic probe]]
+
+LINKS:
+[[prompt as probe]]
+[[preference discovery]]
+[[differential evaluation]]
+
+BIBTEX:
+@misc{fridman_hansson_2026_core2,
+  author = {Fridman, Lex and Heinemeier Hansson, David},
+  title = {DHH: Future of Programming, AI, Agentic Engineering, Vibe Coding \& Linux},
+  year = {2026},
+  howpublished = {Lex Fridman Podcast, Episode 501},
+  url = {https://youtu.be/NYFGCESmikA}
+}

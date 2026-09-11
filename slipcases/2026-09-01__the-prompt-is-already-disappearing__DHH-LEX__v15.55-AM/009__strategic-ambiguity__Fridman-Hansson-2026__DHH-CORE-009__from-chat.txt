@@ -1,0 +1,126 @@
+ZETTEL
+
+ID:
+DHH-CORE-009
+
+TITLE:
+Natural-language ambiguity is not replacing formal precision; it is choosing where interpretation happens.
+
+SOURCE:
+Lex Fridman and David Heinemeier Hansson — Lex Fridman Podcast #501 — 2026 — 04:02:28–04:05:51.
+
+PASSAGE:
+[PARAPHRASE]
+Lex proposes “strategic use of ambiguity”: express style, metaphor, and direction without specifying implementation. DHH agrees and argues that nondeterminism is central rather than defective.
+
+RESEARCH OBJECT:
+Their strongest prompting idea is not “English is a programming language.”
+
+It is that natural language can intentionally leave interpretive work undone.
+
+A programming language pushes ambiguity toward zero before execution.
+
+Their prompting practice sometimes preserves ambiguity specifically so the agent must resolve it.
+
+LOCAL MOVE:
+Lex treats poetic compression as high-bandwidth guidance.
+
+DHH links the resulting interpretive freedom to nondeterministic variation.
+
+SOURCE TERMS:
+ambiguity
+metaphor
+style
+interpretation
+high bandwidth
+temperature
+not deterministic
+same prompt
+
+WHAT BECAME STRANGE:
+Ordinary specification theory treats unresolved interpretation as a defect.
+
+Here unresolved interpretation is part of the control strategy.
+
+QUESTION:
+How much intent can be preserved while deliberately refusing to specify its execution?
+
+DEEPER QUESTION:
+Can we distinguish productive ambiguity from simple missing information?
+
+MECHANISM:
+human supplies semantically rich but incomplete expression
+→ several plausible completions remain
+→ agent resolves under context
+→ one completion becomes concrete
+→ human judges it
+→ subsequent language reduces or redirects the ambiguity
+
+FORMAL SHIFT:
+<REMOVE AMBIGUITY BEFORE EXECUTION>
+→ <PRESERVE CONTROLLED AMBIGUITY>
+→ [INTELLIGENT INTERPRETATION]
+→ <CONCRETE VARIANT>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Good prompt ≠ interpretation count of 1.
+
+Possible target:
+
+1 < |I(P)| < uncontrolled
+
+where I(P) is the set of plausible interpretations consistent with the desired semantic region.
+
+TENSION:
+Nondeterminism is not equivalent to creativity.
+
+Random errors are nondeterministic too.
+
+The important variable is whether variation remains inside an intelligible intention envelope.
+
+MISSING:
+A measurable distinction among:
+ambiguity,
+underspecification,
+metaphor,
+stochasticity,
+contradiction,
+and procedural freedom.
+
+BOUNDARY:
+This is a strong hypothesis from practice, not yet a demonstrated general principle.
+
+CITATION TRAIL:
+Poetics of ambiguity.
+Pragmatics.
+Underspecification.
+Interpretive flexibility.
+Stochastic design.
+Mixed-initiative creation.
+
+TEST:
+Hold underlying design intention constant while varying only how much procedural interpretation the prompt leaves open.
+
+Map where novelty rises without intent collapsing.
+
+PLATFORM:
+[[prompting between poetry and programming]]
+
+LINKS:
+[[strategic ambiguity]]
+[[interpretation as computation]]
+[[intention envelope]]
+
+BIBTEX:
+@misc{fridman_hansson_2026_core9,
+  author = {Fridman, Lex and Heinemeier Hansson, David},
+  title = {DHH: Future of Programming, AI, Agentic Engineering, Vibe Coding \& Linux},
+  year = {2026},
+  howpublished = {Lex Fridman Podcast, Episode 501},
+  url = {https://youtu.be/NYFGCESmikA}
+}

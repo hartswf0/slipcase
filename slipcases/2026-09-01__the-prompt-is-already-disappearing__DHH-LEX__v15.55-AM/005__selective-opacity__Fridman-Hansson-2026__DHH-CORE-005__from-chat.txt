@@ -1,0 +1,132 @@
+ZETTEL
+
+ID:
+DHH-CORE-005
+
+TITLE:
+Omawrite separates authorship of behavior from comprehension of implementation.
+
+SOURCE:
+David Heinemeier Hansson and Lex Fridman — Lex Fridman Podcast #501 — 2026 — 00:53:58 onward.
+
+PASSAGE:
+[QUOTE]
+“This is 100% a black box.”
+
+RESEARCH OBJECT:
+DHH intentionally builds Omawrite without reading its C++ implementation.
+
+That makes the application an experiment in something sharper than vibe coding:
+
+Can a person author computational behavior while refusing access to the representation implementing it?
+
+LOCAL MOVE:
+He evaluates the program as a user with strong opinions about the desired artifact rather than as a C++ programmer.
+
+SOURCE TERMS:
+black box
+user
+C++
+opinions
+how software should work
+experiment
+
+WHAT BECAME STRANGE:
+Programming has historically fused two forms of knowledge:
+
+knowing what behavior should exist
+and
+knowing how that behavior is represented computationally.
+
+Omawrite intentionally splits them.
+
+QUESTION:
+Can authorship survive the loss of implementation legibility?
+
+DEEPER QUESTION:
+What evidence replaces source comprehension when the generated implementation is treated as opaque?
+
+MECHANISM:
+desired behavior
+→ natural-language direction
+→ opaque implementation
+→ running artifact
+→ use
+→ behavioral criticism
+→ revision
+
+FORMAL SHIFT:
+<AUTHOR WRITES REPRESENTATION>
+→ <AUTHOR STEERS BEHAVIOR>
+→ [AGENT OWNS REPRESENTATION]
+→ <AUTHOR ACCEPTS / REJECTS CONSEQUENCE>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Verification moves between surfaces:
+
+source
+→ tests
+→ behavior
+→ external review
+→ consequence
+
+The human need not inspect every surface for every component.
+
+TENSION:
+DHH does not use this method everywhere.
+
+He still reads critical code and worries about architecture.
+
+So the actual contribution is not “code doesn't need review.”
+
+It is selective opacity.
+
+MISSING:
+A rule deciding what may safely become black-box.
+
+Likely variables:
+reversibility,
+blast radius,
+security,
+observability,
+testability,
+number of users.
+
+BOUNDARY:
+Omawrite supports black-box development for a small personal application.
+
+It gives no warrant for blindly accepting security-critical or shared infrastructure.
+
+CITATION TRAIL:
+Black-box testing.
+End-user programming.
+Software assurance.
+Trust calibration.
+Programming by example.
+
+TEST:
+Classify components by consequence and selectively remove source inspection.
+
+Find where behavioral verification stops being sufficient.
+
+PLATFORM:
+[[selective opacity in agentic programming]]
+
+LINKS:
+[[black-box programming]]
+[[behavioral authorship]]
+[[verification surface]]
+
+BIBTEX:
+@misc{fridman_hansson_2026_core5,
+  author = {Fridman, Lex and Heinemeier Hansson, David},
+  title = {DHH: Future of Programming, AI, Agentic Engineering, Vibe Coding \& Linux},
+  year = {2026},
+  howpublished = {Lex Fridman Podcast, Episode 501},
+  url = {https://youtu.be/NYFGCESmikA}
+}

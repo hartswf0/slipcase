@@ -1,0 +1,119 @@
+ZETTEL
+
+ID:
+DHH-CORE-003
+
+TITLE:
+Differential evaluation gives the human choice only after the agent has chosen what can be chosen.
+
+SOURCE:
+David Heinemeier Hansson and Lex Fridman — Lex Fridman Podcast #501 — 2026 — 00:59:21 onward.
+
+PASSAGE:
+[QUOTE]
+“Differential evaluation. You give me three options, I pick one of them.”
+
+RESEARCH OBJECT:
+This initially sounds like a strong account of human agency:
+
+agent generates;
+human chooses.
+
+But the more consequential selection may occur one step earlier.
+
+Someone—or some model—decides which three possibilities become visible.
+
+LOCAL MOVE:
+DHH identifies selection as the human comparative advantage.
+
+The hidden operation is candidate-set construction.
+
+SOURCE TERMS:
+three options
+pick
+taste
+snap judgments
+gut
+differential evaluation
+
+WHAT BECAME STRANGE:
+Perfect taste cannot recover an alternative that was never generated.
+
+QUESTION:
+Who has more design power: the actor choosing among three candidates or the actor deciding which three candidates exist?
+
+DEEPER QUESTION:
+Does agentic design require a theory of candidate-set politics?
+
+MECHANISM:
+huge possibility space
+→ agent samples three candidates
+→ human compares
+→ winner conditions subsequent generation
+→ unexplored regions disappear further from the trajectory
+
+FORMAL SHIFT:
+<POSSIBILITY SPACE>
+→ <AGENT-CURATED CHOICE SET>
+→ [HUMAN SELECTION]
+→ <SEARCH TRAJECTORY>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Ω = possible designs
+
+G(Ω) = {a,b,c}
+
+H({a,b,c}) = b
+
+The human can control H perfectly while G still governs what is thinkable.
+
+TENSION:
+DHH's account foregrounds human taste.
+
+The architecture gives the generator agenda-setting power.
+
+MISSING:
+NONE OF THESE.
+SHOW ME SOMETHING FARTHER AWAY.
+VARY A DIFFERENT DIMENSION.
+
+These are not convenience features. They are mechanisms for resisting generator capture.
+
+BOUNDARY:
+The passage demonstrates comparative selection.
+
+It does not demonstrate representative exploration of the design space.
+
+CITATION TRAIL:
+Choice architecture.
+Active preference elicitation.
+Interactive evolutionary computation.
+Agenda setting.
+Design galleries.
+
+TEST:
+Hold evaluator and goal constant while varying only candidate-generation strategy.
+
+Test whether users develop different apparent preferences from different menus.
+
+PLATFORM:
+[[the politics of the candidate set]]
+
+LINKS:
+[[differential evaluation]]
+[[generator sovereignty]]
+[[taste as search signal]]
+
+BIBTEX:
+@misc{fridman_hansson_2026_core3,
+  author = {Fridman, Lex and Heinemeier Hansson, David},
+  title = {DHH: Future of Programming, AI, Agentic Engineering, Vibe Coding \& Linux},
+  year = {2026},
+  howpublished = {Lex Fridman Podcast, Episode 501},
+  url = {https://youtu.be/NYFGCESmikA}
+}

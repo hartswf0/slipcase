@@ -1,0 +1,115 @@
+ZETTEL
+
+ID:
+FIELD-001
+
+TITLE:
+DHH's reversal tracks a change in the action substrate, not merely a change in his attitude toward generated code.
+
+SOURCE:
+David Heinemeier Hansson — The Premise Trap — 2024; Coding should be a vibe! — 2025; Promoting AI agents — 2026.
+
+SOURCE URL:
+https://world.hey.com/dhh/the-premise-trap-924b8cd9
+https://world.hey.com/dhh/coding-should-be-a-vibe-50908f49
+https://world.hey.com/dhh/promoting-ai-agents-3ee04945
+
+PASSAGE:
+[PARAPHRASE]
+In December 2024 DHH describes AI as a superb junior whose premises and architecture require senior correction. In May 2025 he says he would rather retire than permanently hand AI the keyboard. In January 2026 he says agents came alive partly because models improved but more because terminal control, tests, web search, and skills let them apply intelligence through tools.
+
+RESEARCH OBJECT:
+The discontinuity in DHH's practice is partly architectural: the model becomes coupled to an action-and-verification loop.
+
+LOCAL MOVE:
+The source sequence relocates the unit of comparison from generated code to an agent plus harness.
+
+SOURCE TERMS:
+premise trap
+keyboard
+tools
+terminal
+running tests
+skills
+autonomous powers
+production-grade contributions
+
+WHAT BECAME STRANGE:
+A chronology that looks like a change of opinion can instead be read as the appearance of a different technical object.
+
+QUESTION:
+Which capabilities attributed to better models actually arise from model-harness composition?
+
+DEEPER QUESTION:
+What would DHH's 2026 workflow look like if the same models were returned to the chat-only environment he used in 2024?
+
+MECHANISM:
+model intelligence
++ filesystem
++ terminal
++ tests
++ web/documentation
++ skills
+→ autonomous action
+→ observable consequences
+→ self-correction
+→ acceptable contribution
+
+FORMAL SHIFT:
+<TEXT GENERATOR>
+→ <MODEL + ACTION SUBSTRATE>
+→ [ACT / VERIFY / REVISE]
+→ <WORKING CHANGE>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Capability(agent) = f(model, tools, state, feedback, persistence).
+
+TENSION:
+Model quality also changed sharply. The sources do not isolate causal contribution between model intelligence and harness design.
+
+MISSING:
+A controlled replay across historical harnesses with fixed models.
+
+BOUNDARY:
+The chronology supports a change in the operative system, not a quantitative attribution of how much came from model versus harness.
+
+CITATION TRAIL:
+Agent architectures.
+Tool use.
+Software agents.
+Human-computer interaction histories of programming environments.
+
+TEST:
+Run one current model under chat-only, repository-only, and full tool-using harness conditions on the same task.
+
+PLATFORM:
+[[the distributed prompt]]
+
+LINKS:
+[[agent harness]]
+[[specification migration]]
+[[verification loop]]
+
+BIBTEX:
+@misc{hansson2024premise,
+  author = {Heinemeier Hansson, David},
+  title = {The Premise Trap},
+  year = {2024},
+  url = {https://world.hey.com/dhh/the-premise-trap-924b8cd9}
+}
+@misc{hansson2025vibe,
+  author = {Heinemeier Hansson, David},
+  title = {Coding should be a vibe!},
+  year = {2025},
+  url = {https://world.hey.com/dhh/coding-should-be-a-vibe-50908f49}
+}
+@misc{hansson2026promoting,
+  author = {Heinemeier Hansson, David},
+  title = {Promoting AI agents},
+  year = {2026},
+  url = {https://world.hey.com/dhh/promoting-ai-agents-3ee04945}
+}

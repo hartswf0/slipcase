@@ -1,0 +1,18 @@
+PAPER SOURCE ASSEMBLY
+
+Canonical local source: paper.md
+SHA-256: dd1d88934eb29341bf844b6a5a45bd86e7aca96f7c6df17059553dacb08566d0
+
+GitHub UTF-8 projection preserves the paper as three ordered chunks:
+1. paper.md.part-001
+2. paper.md.part-002
+3. paper.md.part-003
+
+Reconstruct:
+cat paper.md.part-001 paper.md.part-002 paper.md.part-003 > paper.md
+sha256sum paper.md
+
+Expected SHA-256:
+dd1d88934eb29341bf844b6a5a45bd86e7aca96f7c6df17059553dacb08566d0
+
+If the reconstructed hash differs, treat the GitHub paper projection as non-exact and consult the generated package receipt in ../000__PUBLICATION.txt.

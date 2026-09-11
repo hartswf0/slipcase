@@ -1,0 +1,121 @@
+ZETTEL
+
+ID:
+DHH-CORE-004
+
+TITLE:
+The install-time experiment shows that precision can move from method to objective.
+
+SOURCE:
+David Heinemeier Hansson and Lex Fridman — Lex Fridman Podcast #501 — 2026 — Omarchy installation-speed discussion.
+
+PASSAGE:
+[PARAPHRASE]
+DHH fixes an increasingly aggressive outcome—eventually sub-minute installation—and lets agents repeatedly search for ways to improve it: preloading while the user types, parallel work, package reduction, stronger compression, and other implementation changes.
+
+RESEARCH OBJECT:
+“Be vague” does not mean abandoning precision.
+
+DHH is extremely precise about what success means while becoming less prescriptive about how success is achieved.
+
+LOCAL MOVE:
+He replaces a plan with an objective.
+
+SOURCE TERMS:
+one minute
+12 seconds
+keep pushing
+preload
+parallel
+shrink
+speed
+auto research
+
+WHAT BECAME STRANGE:
+A one-number prompt can exert tighter control over an outcome than a page of implementation instructions while leaving vastly more freedom over means.
+
+QUESTION:
+Is the most powerful agentic prompt sometimes an objective function rather than a description?
+
+DEEPER QUESTION:
+What human expertise moves into choosing measurements once implementation search is delegated?
+
+MECHANISM:
+choose measurable outcome
+→ agent proposes intervention
+→ system executes
+→ benchmark
+→ preserve improvement
+→ repeat
+
+FORMAL SHIFT:
+<PROCEDURE>
+→ <OBJECTIVE>
+→ [AGENT SEARCH]
+→ <MEASURED IMPROVEMENT>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Human chooses:
+
+f(x)
+
+Agent searches:
+
+argmin / argmax f(x)
+
+subject to protected constraints C.
+
+The crucial human work becomes:
+choosing f
+and
+defining C.
+
+TENSION:
+A single metric can destroy everything it does not measure.
+
+DHH partly escapes this because he refuses the obvious optimization of stripping Omarchy into a barren minimal system.
+
+MISSING:
+The protected invariants around the metric.
+
+BOUNDARY:
+Install time is unusually measurable.
+
+“Make a great application” cannot be compressed into the same kind of scalar without severe loss.
+
+CITATION TRAIL:
+Search-based software engineering.
+Goodhart's law.
+Auto-tuning.
+Optimization.
+Benchmark-driven design.
+
+TEST:
+Compare:
+detailed implementation prompt,
+objective-only prompt,
+objective + protected invariants.
+
+Watch where agent search discovers solutions humans did not anticipate.
+
+PLATFORM:
+[[objective as prompt]]
+
+LINKS:
+[[precision without prescription]]
+[[agent search]]
+[[metric-guided programming]]
+
+BIBTEX:
+@misc{fridman_hansson_2026_core4,
+  author = {Fridman, Lex and Heinemeier Hansson, David},
+  title = {DHH: Future of Programming, AI, Agentic Engineering, Vibe Coding \& Linux},
+  year = {2026},
+  howpublished = {Lex Fridman Podcast, Episode 501},
+  url = {https://youtu.be/NYFGCESmikA}
+}
