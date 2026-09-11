@@ -71,19 +71,19 @@ jobs:
 
           p = Path('build_index_html.py')
           s = p.read_text()
-          broad = "txt_files = sorted([f for f in glob.glob(f'{w}/*.txt') if not os.path.basename(f).startswith('000__')])"
-          intermediate = "card_name_re = re.compile(r'^\\d{3}__.*\\.txt$', re.IGNORECASE)\n    txt_files = sorted([f for f in glob.glob(f'{w}/*.txt') if card_name_re.match(os.path.basename(f))])"
-          final = "card_name_re = re.compile(r'^(?!000__)\\d{3}__.*\\.txt$', re.IGNORECASE)\n    txt_files = sorted([f for f in glob.glob(f'{w}/*.txt') if card_name_re.match(os.path.basename(f))])"
-          if broad in s:
-              s = s.replace(broad, final, 1)
-              p.write_text(s)
-              print('patched card discovery: canonical numeric card files, excluding 000 apparatus')
-          elif intermediate in s:
-              s = s.replace(intermediate, final, 1)
-              p.write_text(s)
-              print('patched card discovery: excluded 000 structural documents')
-          elif final not in s:
-              raise SystemExit('build_index_html.py card-discovery rule changed unexpectedly; refusing an unsafe patch')
+          old_broad = "txt_files = sorted([f for f in glob.glob(f'{w}/*.txt') if not os.path.basename(f).startswith('000__')])"
+          numeric = "card_name_re = re.compile(r'^\\d{3}__.*\\.txt$', re.IGNORECASE)\n    txt_files = sorted([f for f in glob.glob(f'{w}/*.txt') if card_name_re.match(os.path.basename(f))])"
+          numeric_no_000 = "card_name_re = re.compile(r'^(?!000__)\\d{3}__.*\\.txt$', re.IGNORECASE)\n    txt_files = sorted([f for f in glob.glob(f'{w}/*.txt') if card_name_re.match(os.path.basename(f))])"
+          canonical = "non_card_root_txt = {\n        'the-model-is-training-you__ASSEMBLY_APPENDIX.txt',\n        'the-model-is-training-you__MAKING_HISTORY.txt',\n        'the-model-is-training-you__SOURCE_MAP.txt',\n        'the-prompt-is-already-disappearing__2026-08-31_SOURCE_MAP.txt',\n    }\n    txt_files = sorted([\n        f for f in glob.glob(f'{w}/*.txt')\n        if not os.path.basename(f).startswith('000__')\n        and os.path.basename(f) not in non_card_root_txt\n    ])"
+          for candidate in (numeric_no_000, numeric, old_broad):
+              if candidate in s:
+                  s = s.replace(candidate, canonical, 1)
+                  p.write_text(s)
+                  print('card discovery normalized: legacy root-TXT convention plus explicit paper-apparatus exclusions')
+                  break
+          else:
+              if canonical not in s:
+                  raise SystemExit('build_index_html.py card-discovery rule changed unexpectedly; refusing an unsafe patch')
           PY
 
       - name: Rebuild every generated research surface
@@ -111,10 +111,10 @@ jobs:
           s = re.sub(r'across \d+ field slipcases', f'across {n_cases} field slipcases', s, count=1)
           s = re.sub(r'Complete atomic breakdown of all \*\*[\d,]+ zettel cards\*\*', f'Complete atomic breakdown of all **{n_cards:,} zettel cards**', s, count=1)
           s = re.sub(r'Curated library of \*\*[\d,]+ primary research PDFs\*\*', f'Curated library of **{n_pdfs:,} primary research PDFs**', s, count=1)
-          s = re.sub(r'\| 124 Curated\s+\|', f'| {n_pdfs:,} Curated     |', s, count=1)
-          s = re.sub(r'\| 31 Workspaces\s+\|', f'| {n_cases} Workspaces   |', s, count=1)
+          s = re.sub(r'\| [\d,]+ Curated\s+\|', f'| {n_pdfs:,} Curated     |', s, count=1)
+          s = re.sub(r'\| \d+ Workspaces\s+\|', f'| {n_cases} Workspaces   |', s, count=1)
           s = re.sub(r'Switch between all \d+ slipcases', f'Switch between all {n_cases} slipcases', s, count=1)
-          s = re.sub(r'\*\*\d+ Research PDFs\*\*: Access', f'**{n_pdfs:,} Research PDFs**: Access', s, count=1)
+          s = re.sub(r'\*\*[\d,]+ Research PDFs\*\*: Access', f'**{n_pdfs:,} Research PDFs**: Access', s, count=1)
 
           rows = []
           for i,c in enumerate(cases, 1):
@@ -145,6 +145,6 @@ jobs:
             echo 'Canonical corpus already synchronized.'
             exit 0
           fi
-          git commit -m 'normalize canonical zettel count and rebuild corpus'
+          git commit -m 'restore legacy card discovery and rebuild canonical corpus'
           git pull --rebase origin main
           git push origin HEAD:main
