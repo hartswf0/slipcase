@@ -165,7 +165,8 @@ for folder_idx, folder in enumerate(folders):
         all_pdfs.append(p_obj)
         
     # Text cards
-    txt_files = sorted([f for f in glob.glob(f'{w}/*.txt') if not os.path.basename(f).startswith('000__')])
+    card_name_re = re.compile(r'^\d{3}__.*\.txt$', re.IGNORECASE)
+    txt_files = sorted([f for f in glob.glob(f'{w}/*.txt') if card_name_re.match(os.path.basename(f))])
     case_notes = []
     for tf in txt_files:
         card = parse_card_file(tf, folder, clean_name, folder_idx, card_global_idx)
