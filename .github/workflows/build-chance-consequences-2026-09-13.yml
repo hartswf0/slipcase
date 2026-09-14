@@ -1,10 +1,11 @@
-name: Build Chance and Consequences paper
+name: Build Chance and Consequences papers
 
 on:
   push:
     branches: [main]
     paths:
       - 'slipcases/2026-09-13__chance-and-consequences__NOLAN-HOMER__SLIPCASE/chance_and_consequences_short.tex'
+      - 'slipcases/2026-09-13__chance-and-consequences__NOLAN-HOMER__SLIPCASE/_SOURCE_PARTS/**'
       - '.github/workflows/build-chance-consequences-2026-09-13.yml'
   workflow_dispatch:
 
@@ -12,7 +13,7 @@ permissions:
   contents: write
 
 jobs:
-  build-paper:
+  build-papers:
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
@@ -23,31 +24,49 @@ jobs:
       - name: Install TeX
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-fonts-recommended
+          sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-xetex fonts-libertinus lmodern
 
-      - name: Compile compact cited paper
+      - name: Reconstruct source variants and compile papers
         shell: bash
         run: |
           set -euo pipefail
           CASE='slipcases/2026-09-13__chance-and-consequences__NOLAN-HOMER__SLIPCASE'
           cd "$CASE"
+          if compgen -G '_SOURCE_PARTS/cited.*' > /dev/null; then
+            cat _SOURCE_PARTS/cited.* > chance_and_consequences_cited.tex
+          fi
+          if compgen -G '_SOURCE_PARTS/original.*' > /dev/null; then
+            cat _SOURCE_PARTS/original.* > chance-and-consequences__2026-09-13.tex
+          fi
           pdflatex -interaction=nonstopmode -halt-on-error chance_and_consequences_short.tex
           pdflatex -interaction=nonstopmode -halt-on-error chance_and_consequences_short.tex
           cp chance_and_consequences_short.pdf chance_and_consequences_shorter.pdf
+          xelatex -interaction=nonstopmode -halt-on-error chance_and_consequences_cited.tex
+          xelatex -interaction=nonstopmode -halt-on-error chance_and_consequences_cited.tex
+          pdflatex -interaction=nonstopmode -halt-on-error chance-and-consequences__2026-09-13.tex
+          pdflatex -interaction=nonstopmode -halt-on-error chance-and-consequences__2026-09-13.tex
           rm -f *.aux *.log *.out *.toc
 
-      - name: Commit generated PDFs
+      - name: Commit reconstructed sources and generated PDFs
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           CASE='slipcases/2026-09-13__chance-and-consequences__NOLAN-HOMER__SLIPCASE'
-          git add "$CASE/chance_and_consequences_short.pdf" "$CASE/chance_and_consequences_shorter.pdf"
+          git add "$CASE/chance_and_consequences_short.pdf" \
+                  "$CASE/chance_and_consequences_shorter.pdf" \
+                  "$CASE/chance_and_consequences_cited.tex" \
+                  "$CASE/chance_and_consequences_cited.pdf" \
+                  "$CASE/chance-and-consequences__2026-09-13.tex" \
+                  "$CASE/chance-and-consequences__2026-09-13.pdf"
+          if [ -d "$CASE/_SOURCE_PARTS" ]; then
+            git rm -r "$CASE/_SOURCE_PARTS"
+          fi
           if git diff --cached --quiet; then
-            echo 'Paper PDFs already current.'
+            echo 'Paper artifacts already current.'
             exit 0
           fi
-          git commit -m 'build compact chance and consequences paper'
+          git commit -m 'build all chance and consequences paper variants'
           git pull --rebase origin main
           git push origin HEAD:main
