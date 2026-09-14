@@ -1,0 +1,151 @@
+ZETTEL
+
+ID:
+Z-OD-102
+
+TITLE:
+The poem changes causal regime four times: reading, designing, verifying, then stopping consequences
+
+SOURCE:
+Homer — Odyssey 1–24.
+The Oxford Critical Guide to Homer’s Odyssey — Joel P. Christensen, ed. — 2025.
+Alexander C. Loney — The Ethics of Revenge and the Meanings of the Odyssey — 2019.
+
+PASSAGE:
+NONE
+
+RESEARCH OBJECT:
+The 24-book poem may be organized by transformations in what characters do with consequences.
+
+LOCAL MOVE:
+BOOKS 1–12:
+READ CONSEQUENCE.
+
+Agents encounter warnings, failures, prophecies, divine interventions, and outcomes whose causes must be understood.
+
+BOOKS 13–22:
+DESIGN CONSEQUENCE.
+
+Athena and Odysseus manipulate disguise, information, signs, tests, weapons, doors, and timing to produce a desired terminal state.
+
+BOOK 23:
+VERIFY CONTINUITY.
+
+Penelope determines whether the victorious agent is genuinely continuous with the husband who left twenty years earlier and whether their relation can resume.
+
+BOOK 24:
+STOP CONSEQUENCE.
+
+The slaughter becomes a new antecedent for revenge and requires an externally imposed stopping rule.
+
+SOURCE TERMS:
+ἀτασθαλία
+μῆτις
+σῆμα
+τίσις
+ἔκλησις
+νόστος
+
+WHAT BECAME STRANGE:
+The poem does not have one “theory of consequence.”
+
+It successively changes the operation applied to consequence:
+
+INTERPRET
+→ ENGINEER
+→ AUTHENTICATE
+→ TERMINATE.
+
+QUESTION:
+Is this operational progression a better description of the Odyssey’s architecture than wanderings / return / revenge?
+
+DEEPER QUESTION:
+Does Odysseus’s education fail if he becomes excellent at engineering consequences without learning how to stop them?
+
+MECHANISM:
+Phase I:
+outcome → explanation.
+
+Phase II:
+desired outcome → backwards plan.
+
+Phase III:
+claimed identity → verification against history.
+
+Phase IV:
+completed revenge → recursion → stopping rule.
+
+FORMAL SHIFT:
+<CAUSAL OPACITY>
+→ <CAUSAL CONTROL>
+→ [CAUSAL VERIFICATION]
+→ <CAUSAL CLOSURE>
+
+SOURCE FORMALISM:
+No source presents this four-phase architecture explicitly.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+ODYSSEY:
+
+READ(E)
+→ DESIGN(E)
+→ VERIFY(agent/history)
+→ STOP(E→Eₙ₊₁).
+
+TENSION:
+The phases overlap heavily: prophecy continues after Book 13, planning occurs before it, recognition pervades the entire poem, and revenge structures begin in Book 1.
+
+MISSING:
+A book-by-book quantitative test of dominant operation.
+
+BOUNDARY:
+This is a structural hypothesis, not a source claim.
+
+CITATION TRAIL:
+[[Z-OD-073]]
+[[Z-OD-078]]
+[[Z-OD-081]]
+[[Z-OD-083]]
+[[Z-OD-087]]
+→ whole-poem operational recoding
+
+TEST:
+Assign every significant scene exactly one primary operation:
+
+READ
+DESIGN
+VERIFY
+STOP
+
+plus optional secondary operations.
+
+Plot counts by book.
+
+If a phase transition appears near Books 13, 23, and 24 without being forced, the architecture gains support.
+
+PLATFORM:
+[[odyssey-operational-architecture]]
+
+LINKS:
+[[Z-OD-073]]
+[[Z-OD-078]]
+[[Z-OD-081]]
+[[Z-OD-083]]
+[[Z-OD-087]]
+
+BIBTEX:
+@book{Christensen2025OxfordOdyssey,
+  editor    = {Christensen, Joel P.},
+  title     = {The Oxford Critical Guide to Homer's Odyssey},
+  year      = {2025},
+  publisher = {Oxford University Press}
+}
+
+@book{Loney2019Ethics,
+  author    = {Loney, Alexander C.},
+  title     = {The Ethics of Revenge and the Meanings of the Odyssey},
+  year      = {2019},
+  publisher = {Oxford University Press}
+}

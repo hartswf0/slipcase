@@ -1,0 +1,53 @@
+name: Build Chance and Consequences paper
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'slipcases/2026-09-13__chance-and-consequences__NOLAN-HOMER__SLIPCASE/chance_and_consequences_short.tex'
+      - '.github/workflows/build-chance-consequences-2026-09-13.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-paper:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install TeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-fonts-recommended
+
+      - name: Compile compact cited paper
+        shell: bash
+        run: |
+          set -euo pipefail
+          CASE='slipcases/2026-09-13__chance-and-consequences__NOLAN-HOMER__SLIPCASE'
+          cd "$CASE"
+          pdflatex -interaction=nonstopmode -halt-on-error chance_and_consequences_short.tex
+          pdflatex -interaction=nonstopmode -halt-on-error chance_and_consequences_short.tex
+          cp chance_and_consequences_short.pdf chance_and_consequences_shorter.pdf
+          rm -f *.aux *.log *.out *.toc
+
+      - name: Commit generated PDFs
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          CASE='slipcases/2026-09-13__chance-and-consequences__NOLAN-HOMER__SLIPCASE'
+          git add "$CASE/chance_and_consequences_short.pdf" "$CASE/chance_and_consequences_shorter.pdf"
+          if git diff --cached --quiet; then
+            echo 'Paper PDFs already current.'
+            exit 0
+          fi
+          git commit -m 'build compact chance and consequences paper'
+          git pull --rebase origin main
+          git push origin HEAD:main

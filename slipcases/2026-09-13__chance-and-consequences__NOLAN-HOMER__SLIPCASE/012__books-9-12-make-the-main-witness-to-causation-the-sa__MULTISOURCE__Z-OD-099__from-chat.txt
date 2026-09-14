@@ -1,0 +1,128 @@
+ZETTEL
+
+ID:
+Z-OD-099
+
+TITLE:
+Books 9–12 make the main witness to causation the same person whose responsibility is under dispute
+
+SOURCE:
+Homer — Odyssey 9–12.
+Elizabeth Minchin — “Book 12” — The Oxford Critical Guide to Homer’s Odyssey — 2025 — pp. 158–168.
+Alexander C. Loney — 2015.
+
+PASSAGE:
+[PARAPHRASE]
+Odysseus narrates the Wanderings himself to the Phaeacians. Recent scholarship emphasizes both the authority and self-conscious craft of his first-person narrative and the impossibility of independently establishing the “truth” of the adventures; Loney separately interrogates Odysseus’s presentation of responsibility for the companions.
+
+RESEARCH OBJECT:
+The causal archive of the Wanderings is controlled by an interested survivor.
+
+LOCAL MOVE:
+The person supplying:
+
+warnings,
+crew speeches,
+his own motives,
+divine communications,
+and causal sequence
+
+is also:
+
+commander,
+sole survivor,
+beneficiary of the story,
+and object of possible blame.
+
+SOURCE TERMS:
+ἀπόλογοι
+ἀοιδός
+ἀτασθαλία
+ἑταῖροι
+storytelling
+
+WHAT BECAME STRANGE:
+Coding the Wanderings directly as events hides the most important metadata:
+
+SOURCE = ODYSSEUS.
+
+A causal edge such as:
+
+CREW DISOBEYED → CREW DIED
+
+is not delivered by a neutral recorder.
+
+QUESTION:
+How should causal coding represent interested narration?
+
+DEEPER QUESTION:
+Can the poem simultaneously authorize Odysseus as storyteller and invite suspicion about the causal account he provides?
+
+MECHANISM:
+multi-agent event
+→ all other witnesses die
+→ survivor narrates
+→ selects speech, antecedents, and motives
+→ audience reconstructs causality from survivor-controlled archive.
+
+FORMAL SHIFT:
+<EVENT>
+→ <SOLE-SURVIVOR TESTIMONY>
+→ [NARRATIVE SELECTION]
+→ <AVAILABLE CAUSAL GRAPH>
+
+SOURCE FORMALISM:
+Book 12’s recent critical guide explicitly foregrounds Odysseus’s self-awareness as storyteller, narrative authority, purpose in self-presentation, and problems concerning the truth of his tale.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Every coded edge from Books 9–12 should include:
+
+EDGE_SOURCE = Odysseus
+CORROBORATION = narrator / god / none
+SELF_INTEREST = possible
+ALTERNATIVE_WITNESS = mostly absent.
+
+TENSION:
+The external narrator’s proem independently attributes the companions’ deaths to their own ἀτασθαλίαι, partially corroborating Odysseus.
+
+MISSING:
+Which causal claims in the Apologoi receive external-narrator confirmation.
+
+BOUNDARY:
+Interested testimony is not false testimony.
+
+CITATION TRAIL:
+[[Z-OD-073]]
+[[Z-OD-077]]
+[[Z-OD-087]]
+→ Odyssey 9–12
+→ self-conscious storyteller
+→ causal-source metadata
+
+TEST:
+Annotate every causal edge in Books 9–12 with:
+WHO ASSERTS IT?
+WHO COULD CONTEST IT?
+DOES THE EXTERNAL NARRATOR CONFIRM IT?
+DOES ANOTHER CHARACTER CONTRADICT IT?
+
+PLATFORM:
+[[causal-provenance]]
+
+LINKS:
+[[Z-OD-073]]
+[[Z-OD-077]]
+[[Z-OD-087]]
+
+BIBTEX:
+@incollection{Minchin2025Book12,
+  author    = {Minchin, Elizabeth},
+  title     = {Book 12},
+  booktitle = {The Oxford Critical Guide to Homer's Odyssey},
+  editor    = {Christensen, Joel P.},
+  pages     = {158--168},
+  year      = {2025},
+  publisher = {Oxford University Press}
+}

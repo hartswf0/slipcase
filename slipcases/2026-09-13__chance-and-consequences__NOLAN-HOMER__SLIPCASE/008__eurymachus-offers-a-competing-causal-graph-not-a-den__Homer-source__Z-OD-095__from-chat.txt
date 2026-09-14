@@ -1,0 +1,128 @@
+ZETTEL
+
+ID:
+Z-OD-095
+
+TITLE:
+Eurymachus offers a competing causal graph, not a denial of wrongdoing
+
+SOURCE:
+Homer — Odyssey 22.42–67.
+
+PASSAGE:
+[PARAPHRASE]
+Eurymachus concedes that the suitors have done wrong but argues that Antinous was αἴτιος of the whole enterprise. Antinous is already dead. Eurymachus therefore proposes monetary and material repayment by the survivors. Odysseus refuses.
+
+RESEARCH OBJECT:
+Responsibility disputes can concern causal partition and remedy rather than factual innocence.
+
+LOCAL MOVE:
+EURYMACHUS does not say:
+
+nothing happened.
+
+He says:
+
+wrong happened;
+Antinous initiated it;
+the initiator has received death;
+the remainder can be compensated economically.
+
+ODYSSEUS rejects all three stopping claims.
+
+SOURCE TERMS:
+αἴτιος
+ἀποτίνω
+κτήματα
+θάνατος
+ἀτασθαλία
+
+WHAT BECAME STRANGE:
+The slaughter contains a genuine dispute over causal granularity.
+
+If Antinous is the primary causal organizer, the other suitors can be modeled as secondary participants.
+
+Odysseus instead treats participation as sufficient for terminal liability.
+
+QUESTION:
+When may responsibility propagate from a principal organizer to all participants?
+
+DEEPER QUESTION:
+Does collective consequence require a theory of causal contribution, complicity, membership, or merely shared benefit?
+
+MECHANISM:
+group wrongdoing
+→ internal differentiation
+→ defendant identifies principal cause
+→ proposes proportional remedy
+→ claimant rejects partition
+→ uniform lethal consequence.
+
+FORMAL SHIFT:
+<DIFFERENT DEGREES OF CONTRIBUTION>
+→ <SINGLE GROUP CATEGORY>
+→ [REJECTED PARTITION]
+→ <COMMON TERMINAL PUNISHMENT>
+
+SOURCE FORMALISM:
+Eurymachus explicitly calls Antinous responsible for the whole and offers compensation; Odysseus explicitly refuses compensation until all suitors pay for their transgression.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Possible causal model:
+
+Contribution(Antinous) > Contribution(Eurymachus) > Contribution(minor suitor).
+
+Punishment model:
+
+Punishment(all suitors) = death.
+
+Therefore:
+
+Punishment is not obviously proportional to causal contribution.
+
+TENSION:
+Eurymachus is pleading for his life and has strong incentive to minimize collective responsibility.
+
+MISSING:
+A complete behavioral profile of each named suitor.
+
+BOUNDARY:
+The speech does not establish Antinous as objectively sole cause.
+
+CITATION TRAIL:
+[[Z-OD-080]]
+[[Z-RC-040]]
+[[Z-RC-060]]
+→ Odyssey 22
+→ αἴτιος
+→ collective causal partition
+
+TEST:
+Assign every named suitor separate scores for:
+
+INITIATION
+MATERIAL BENEFIT
+VIOLENCE
+MURDER PLOT
+INSULT
+WARNING IGNORED
+ATTEMPTED MODERATION.
+
+Compare those scores with identical terminal punishment.
+
+PLATFORM:
+[[collective-responsibility]]
+
+LINKS:
+[[Z-OD-080]]
+[[Z-RC-040]]
+[[Z-RC-060]]
+
+BIBTEX:
+@misc{HomerOdyssey22Eurymachus,
+  author = {Homer},
+  title  = {Odyssey 22.42--67},
+  note   = {Greek epic}
+}

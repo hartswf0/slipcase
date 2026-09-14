@@ -1,0 +1,128 @@
+ZETTEL
+
+ID:
+Z-OD-089
+
+TITLE:
+Recognition splits causal proof from relational restoration
+
+SOURCE:
+Bruno Currie — “Recognizing Odysseus, reading Penelope: the anagnōrisis in the 23rd book of the Odyssey” — Journal of Hellenic Studies 142 — 2022/2023 — pp. 1–29.
+Homer — Odyssey 23.1–230.
+
+PASSAGE:
+[PARAPHRASE]
+Currie distinguishes recognizing who a person is from acknowledging that person and from restoring the emotional relation appropriate to them. The scar can provide adequate identity evidence, while the bed operates on the deeper level of the unique marital relationship.
+
+RESEARCH OBJECT:
+Proof of causal continuity is insufficient for reunion.
+
+LOCAL MOVE:
+The scar answers:
+
+IS THIS ODYSSEUS?
+
+The bed answers something closer to:
+
+IS THIS STILL THE PERSON WITH WHOM I SHARE THIS WORLD?
+
+SOURCE TERMS:
+ἀναγνώρισις
+σῆμα
+γιγνώσκω
+λέχος
+scar
+bed
+
+WHAT BECAME STRANGE:
+Our previous coding treated recognition as causal verification:
+
+past event
+→ durable trace
+→ identity confirmed.
+
+But Book 23 requires another transition:
+
+identity confirmed
+→ relationship reactivated.
+
+The second cannot be reduced to evidentiary certainty.
+
+QUESTION:
+What kind of information restores a relation rather than merely identifying a person?
+
+DEEPER QUESTION:
+Can causal history prove persistence of identity while remaining unable to prove persistence of obligation, intimacy, or trust?
+
+MECHANISM:
+identity evidence
+→ cognitive recognition
+→ private relational sign
+→ emotional attunement
+→ reunion.
+
+FORMAL SHIFT:
+<CAUSAL PROOF OF IDENTITY>
+→ <ACKNOWLEDGMENT>
+→ [RELATIONAL RECOGNITION]
+→ <RESTORED BOND>
+
+SOURCE FORMALISM:
+Currie distinguishes conscious recognition, outward acknowledgment, proof-oriented σήματα, and signs that restore emotional bonds.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+IdentityContinuity(X) = verified
+
+does not entail:
+
+RelationshipContinuity(X,Y) = restored.
+
+The second requires information that is not merely public evidence but relationship-specific history.
+
+TENSION:
+Currie argues Penelope recognizes Odysseus substantially earlier than the conventional bed-test reading assumes, which would make the bed less an identity test than a relational operation.
+
+MISSING:
+Whether Penelope’s bed maneuver is best classified as:
+TEST,
+PERFORMANCE,
+PROVOCATION,
+or
+RELATIONAL RE-SYNCHRONIZATION.
+
+BOUNDARY:
+Recognition scholarship does not establish a general theory of causation.
+
+CITATION TRAIL:
+[[Z-OD-081]]
+→ Currie
+→ σῆμα as proof versus relational sign
+→ identity continuity versus relational continuity
+
+TEST:
+Recode every Odyssey recognition scene with separate fields:
+
+IDENTITY KNOWN
+IDENTITY ACKNOWLEDGED
+TRUST RESTORED
+EMOTIONAL BOND RESTORED
+COORDINATED ACTION ENABLED.
+
+PLATFORM:
+[[recognition-beyond-proof]]
+
+LINKS:
+[[Z-OD-081]]
+[[Z-OD-087]]
+
+BIBTEX:
+@article{Currie2022Recognizing,
+  author  = {Currie, Bruno},
+  title   = {Recognizing Odysseus, Reading Penelope: The Anagnōrisis in the 23rd Book of the Odyssey},
+  journal = {The Journal of Hellenic Studies},
+  volume  = {142},
+  pages   = {1--29},
+  year    = {2022}
+}

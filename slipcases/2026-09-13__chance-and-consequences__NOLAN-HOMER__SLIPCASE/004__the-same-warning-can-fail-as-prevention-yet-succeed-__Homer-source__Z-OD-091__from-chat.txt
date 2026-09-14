@@ -1,0 +1,118 @@
+ZETTEL
+
+ID:
+Z-OD-091
+
+TITLE:
+The same warning can fail as prevention yet succeed later as evidence
+
+SOURCE:
+Homer — Odyssey 2.145–176 and 24.450–471.
+
+PASSAGE:
+[PARAPHRASE]
+In Book 2 Halitherses interprets Zeus’s eagles and warns that disaster is approaching the suitors. The warning is rejected. In Book 24 the same Halitherses tells the bereaved Ithacans that they themselves bear responsibility because they previously refused his and Mentor’s attempts to restrain their sons.
+
+RESEARCH OBJECT:
+A failed prospective warning survives as retrospective evidence.
+
+LOCAL MOVE:
+BOOK 2:
+
+warning
+→ rejection
+→ no prevention.
+
+BOOK 24:
+
+same warning remembered
+→ cited as evidence
+→ prior ignorance no longer available as defense.
+
+SOURCE TERMS:
+ὄρνις
+μαντεύομαι
+πείθω
+ἀτασθαλία
+Halitherses
+
+WHAT BECAME STRANGE:
+Failure does not make a warning inert.
+
+A warning can remain causally dormant and later re-enter the system as evidence about what actors could have known.
+
+QUESTION:
+Does warning have a temporal afterlife independent of whether anyone obeys it?
+
+DEEPER QUESTION:
+Can an utterance change responsibility decades or books later without changing the original behavior at all?
+
+MECHANISM:
+warning W at t₀
+→ W ignored
+→ event E
+→ retrospective dispute at t₁
+→ W retrieved
+→ ignorance claim weakened.
+
+FORMAL SHIFT:
+<FAILED WARNING>
+→ <STORED PUBLIC MEMORY>
+→ [REACTIVATION]
+→ <RETROSPECTIVE ANSWERABILITY>
+
+SOURCE FORMALISM:
+Halitherses appears at both stages: first as interpreter of the omen and later as witness to the community’s earlier refusal to intervene.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+BehavioralEffect(W,t₀) = 0.
+
+EvidentiaryEffect(W,t₁) > 0.
+
+Therefore:
+
+Effect(W) cannot be measured only at utterance time.
+
+TENSION:
+Book 24’s Halitherses attributes responsibility not only to the dead suitors but to their parents and community for failing to restrain them, expanding rather than merely recalling blame.
+
+MISSING:
+Whether other failed warnings similarly migrate into retrospective evidence later in the poem.
+
+BOUNDARY:
+The episode does not establish that the earlier warning was understood as certain.
+
+CITATION TRAIL:
+[[Z-OD-074]]
+[[Z-OD-086]]
+[[Z-OD-083]]
+→ Halitherses Book 2
+→ Halitherses Book 24
+→ failed warning as stored evidence
+
+TEST:
+For every failed warning, search later books for explicit recollection of it.
+
+Code whether it later functions as:
+BLAME EVIDENCE,
+PROPHECY VALIDATION,
+CHARACTERIZATION,
+or
+NO LONGER MATTERS.
+
+PLATFORM:
+[[warning-afterlife]]
+
+LINKS:
+[[Z-OD-074]]
+[[Z-OD-086]]
+[[Z-OD-083]]
+
+BIBTEX:
+@misc{HomerHalitherses,
+  author = {Homer},
+  title  = {Odyssey 2.145--176 and 24.450--471},
+  note   = {Greek epic}
+}

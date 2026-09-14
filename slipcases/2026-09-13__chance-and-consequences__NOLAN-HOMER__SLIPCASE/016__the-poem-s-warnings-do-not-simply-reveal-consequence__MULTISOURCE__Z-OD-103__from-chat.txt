@@ -1,0 +1,126 @@
+ZETTEL
+
+ID:
+Z-OD-103
+
+TITLE:
+The poem’s warnings do not simply reveal consequences; they help build the moral case that makes later violence readable as justice
+
+SOURCE:
+Miguel Herrero de Jáuregui — “Book 20” — The Oxford Critical Guide to Homer’s Odyssey — 2025 — pp. 255–267.
+Alexander C. Loney — The Ethics of Revenge and the Meanings of the Odyssey — 2019 — Chapter 4.
+
+PASSAGE:
+[PARAPHRASE]
+Recent Book 20 scholarship describes the poet as laying the grounds for moral justification of Odysseus’s vengeance through escalating contrasts and signs. Loney likewise argues that warnings receive extraordinary emphasis in the revenge narrative against the suitors.
+
+RESEARCH OBJECT:
+Narrative can construct the conditions under which an outcome will later count as deserved.
+
+LOCAL MOVE:
+Repeated warnings do at least three things:
+
+offer opportunities to stop,
+characterize recipients who ignore them,
+and accumulate evidence for the later audience that violence is not arbitrary.
+
+SOURCE TERMS:
+warning
+ἀτασθαλία
+τίσις
+σῆμα
+justice
+
+WHAT BECAME STRANGE:
+Warnings operate on two audiences:
+
+DIEGETIC:
+the suitors.
+
+EXTRADIEGETIC:
+the poem’s audience.
+
+Even when they fail to change suitor behavior, they can change audience judgment of the massacre.
+
+QUESTION:
+Is the primary successful recipient of some warnings actually the audience?
+
+DEEPER QUESTION:
+Can moral justification be engineered narratively by repeatedly displaying rejected alternatives?
+
+MECHANISM:
+warning in story
+→ character ignores warning
+→ audience records available alternative
+→ transgression continues
+→ later punishment appears less arbitrary.
+
+FORMAL SHIFT:
+<WARNING TO CHARACTER>
+→ <CHARACTER REFUSAL>
+→ [AUDIENCE EVIDENCE ACCUMULATION]
+→ <JUSTIFIABLE-SEEMING CONSEQUENCE>
+
+SOURCE FORMALISM:
+The Oxford Book 20 guide explicitly describes the poet’s effort to lay grounds for moral justification of vengeance; Loney foregrounds the warning stage in the revenge narrative.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Warning has dual outputs:
+
+BehavioralEffect_on_character
+
+and
+
+JustificatoryEffect_on_audience.
+
+These can diverge:
+
+BehavioralEffect ≈ 0
+while
+JustificatoryEffect > 0.
+
+TENSION:
+Loney argues that despite this program, the poem leaves substantial ethical reasons to question the slaughter.
+
+MISSING:
+Whether warning density correlates with moments of especially severe violence.
+
+BOUNDARY:
+Narrative justification does not entail ethical justification.
+
+CITATION TRAIL:
+[[Z-OD-086]]
+[[Z-OD-096]]
+[[Z-OD-092]]
+→ Book 20 moral groundwork
+→ Loney warning structure
+→ audience-facing consequence
+
+TEST:
+For each warning, annotate two responses:
+
+RECIPIENT RESPONSE
+AUDIENCE JUSTIFICATION FUNCTION.
+
+Then test whether the second function increases as Book 22 approaches.
+
+PLATFORM:
+[[warning-as-audience-evidence]]
+
+LINKS:
+[[Z-OD-086]]
+[[Z-OD-096]]
+[[Z-OD-092]]
+
+BIBTEX:
+@incollection{Herrero2025Book20,
+  author    = {Herrero de J{\'a}uregui, Miguel},
+  title     = {Book 20},
+  booktitle = {The Oxford Critical Guide to Homer's Odyssey},
+  editor    = {Christensen, Joel P.},
+  pages     = {255--267},
+  year      = {2025},
+  publisher = {Oxford University Press}
+}

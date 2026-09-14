@@ -1,0 +1,129 @@
+ZETTEL
+
+ID:
+Z-OD-092
+
+TITLE:
+Halitherses’ second warning finally changes behavior, so warning failure is conditional rather than structural
+
+SOURCE:
+Homer — Odyssey 24.450–471.
+
+PASSAGE:
+[PARAPHRASE]
+After the massacre Halitherses warns the Ithacans not to attack Odysseus lest they draw further evil upon themselves. More than half of the assembly immediately abandon the retaliatory expedition; the rest follow Eupeithes and die or are stopped.
+
+RESEARCH OBJECT:
+The poem contains a controlled contrast in which the same seer is ignored early and obeyed late.
+
+LOCAL MOVE:
+BOOK 2:
+Halitherses warns.
+Audience ignores.
+Predicted destruction occurs.
+
+BOOK 24:
+Halitherses warns.
+Majority obeys.
+They exit the new revenge sequence.
+
+SOURCE TERMS:
+Halitherses
+πείθω
+κακόν
+τίσις
+assembly
+
+WHAT BECAME STRANGE:
+The poem does not teach that warnings inevitably fail.
+
+It asks what conditions make the same kind of warning actionable.
+
+After the massacre the evidence environment has changed:
+the earlier prophecy has been vindicated,
+bodies are visible,
+and Halitherses has accumulated epistemic authority.
+
+QUESTION:
+What changed between Book 2 and Book 24 that converted warning into action?
+
+DEEPER QUESTION:
+Does causal knowledge become behaviorally effective only after sufficient consequences have already occurred?
+
+MECHANISM:
+W₁
++ weak credibility / high confidence of audience
+→ ignored.
+
+W₁ fulfilled
+→ source credibility updated.
+
+W₂ from same interpreter
++ visible catastrophe
+→ majority compliance.
+
+FORMAL SHIFT:
+<WARNING WITHOUT ESTABLISHED AUTHORITY>
+→ <FULFILLED CONSEQUENCE>
+→ [UPDATED TRUST]
+→ <WARNING THAT CHANGES ACTION>
+
+SOURCE FORMALISM:
+Book 24 explicitly says more than half of the assembly depart after Halitherses’ speech.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Trust(Halitherses,t₂)
+>
+Trust(Halitherses,t₀)
+
+because:
+
+Prediction₁ → Fulfilled.
+
+Therefore:
+
+P(obey Warning₂)
+>
+P(obey Warning₁).
+
+TENSION:
+Those who obey may act from fear rather than genuine causal learning.
+
+MISSING:
+Whether the poem marks explicit recognition that Halitherses had been correct before.
+
+BOUNDARY:
+This does not prove Bayesian updating as an ancient cognitive model.
+
+CITATION TRAIL:
+[[Z-OD-086]]
+[[Z-OD-091]]
+→ Book 24 assembly
+→ majority departure
+→ warning efficacy after validated prophecy
+
+TEST:
+Compare all repeat interpreters of signs:
+Halitherses,
+Theoclymenus,
+Athena,
+Tiresias.
+
+Ask whether fulfilled earlier predictions alter later compliance.
+
+PLATFORM:
+[[learning-from-consequence]]
+
+LINKS:
+[[Z-OD-086]]
+[[Z-OD-091]]
+[[Z-OD-085]]
+
+BIBTEX:
+@misc{HomerOdyssey24Halitherses,
+  author = {Homer},
+  title  = {Odyssey 24.450--471},
+  note   = {Greek epic}
+}

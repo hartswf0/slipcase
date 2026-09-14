@@ -1,0 +1,76 @@
+VERIFICATION — chance-consequences-2026-09-13
+
+SOURCE COVERAGE
+Admitted exact frontier zettels: 17
+Earlier linked research objects represented as ghosts: 19
+Boundary: larger chat research tree exists but is not falsely reconstructed.
+
+EXTRACTION
+Root immutable card TXT files: 17
+_MD exact mirrors: 17
+JSON zettel records: 17
+Invariant root TXT = _MD mirrors = JSON records: PASS
+
+DUPLICATES / ID COLLISIONS
+Exact payload duplicates: 0
+ID collisions among admitted cards: 0
+
+PLATFORM RELATIONS
+PLATFORM occurrences / MEMBER_OF records: 17
+Platform nodes: 17
+
+LINKS RELATIONS
+LINKS occurrences / LINKS_TO records: 56
+Ghost nodes created by unresolved exact IDs: 19
+Concept nodes: 0
+
+WIKILINK COVERAGE
+PLATFORM and LINKS fields are compiled. Wikilinks in prose outside those fields were not separately expanded in this checkpoint. STATE: PARTIAL.
+
+GHOSTS / AMBIGUITIES / BROKEN REFERENCES
+Ghost IDs: 19
+Ambiguous resolutions: 0 detected under exact-ID rules.
+Broken parent IDs are preserved as ghosts, not silently matched.
+
+BIBLIOGRAPHY COVERAGE
+Paper citekeys: 7
+Compiled .bib citekeys: 8
+Paper citekeys subset of .bib: PASS
+Missing paper citekeys: NONE
+
+RESOURCE COVERAGE
+Registered resources: 9
+Local snapshots: 0
+LINK_ONLY receipts: 9
+
+RECONSTRUCTION STATE
+index.html embeds admitted card payloads, resource receipts, paper text, source map, and prompt-status receipt. Reconstruction of earlier ghost cards requires exact retrieval from originating chat.
+
+PAPER EVIDENCE COVERAGE
+Source map exists: chance-and-consequences__SOURCE_MAP.txt
+Compiler connective claims explicitly marked COMPILER in source map.
+
+ASSEMBLY PROMPT STATUS
+PARTIAL / UNVERIFIED. Full prompt not falsely reconstructed; see _PROMPTS receipt.
+
+MAKING HISTORY
+000__MAKING_HISTORY.txt and paper making-history file exist.
+
+PDF STATUS
+Compiled: PASS
+Page count: 10
+Rendered for inspection: PASS, 10 pages rendered.
+Visual inspection: first page and references page checked; no clipping or missing glyphs observed.
+TeX log remaining overfull box: minor 8.9pt line warning; rendered page visually within readable margin.
+
+ZIP STATUS
+Created: /mnt/data/chance_consequences_slipcase_2026-09-13.zip
+Integrity test: PASS
+
+STRUCTURE
+Nodes: 53
+Relations including backlinks: 146
+Zettel nodes: 17
+Platform nodes: 17
+Concept nodes: 0
+Ghost nodes: 19

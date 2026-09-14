@@ -1,0 +1,143 @@
+ZETTEL
+
+ID:
+Z-OD-088
+
+TITLE:
+Causal readability in the Odyssey is defeasible: even an explicit interpretation does not compel belief
+
+SOURCE:
+Homer — Odyssey 19.535–581 — archaic Greek epic.
+Olga Levaniouk — “Book 19” — The Oxford Critical Guide to Homer’s Odyssey — 2025 — pp. 241–254.
+
+PASSAGE:
+[PARAPHRASE]
+Penelope’s dream contains its own interpretation: the eagle identifies the geese as the suitors and itself as Odysseus returning to destroy them. The disguised Odysseus insists that the dream admits no alternative interpretation. Penelope nevertheless invokes the gates of horn and ivory and refuses certainty.
+
+RESEARCH OBJECT:
+A sign can be semantically explicit without becoming epistemically binding.
+
+LOCAL MOVE:
+The sequence removes several ordinary sources of ambiguity:
+
+the dream presents an image,
+the eagle explains the image,
+Odysseus confirms the explanation.
+
+Penelope still reserves the possibility that the entire sign-system is deceptive.
+
+SOURCE TERMS:
+ὄνειρος
+κέρας
+ἐλέφας
+τελέω
+σήματα
+γιγνώσκω
+
+WHAT BECAME STRANGE:
+Causal readability is not equivalent to interpretability.
+
+The poem can supply:
+
+SIGN
++
+INTERPRETATION
++
+INTERPRETER
+
+and still leave:
+
+BELIEF
+
+underdetermined.
+
+QUESTION:
+What additional operation turns an interpretable sign into warranted action?
+
+DEEPER QUESTION:
+Does the Odyssey value interpretive caution precisely because signs can be perfectly legible and still false?
+
+MECHANISM:
+event/sign
+→ candidate meaning
+→ explicit interpretation
+→ credibility assessment
+→ acceptance / suspension
+→ possible action.
+
+FORMAL SHIFT:
+<LEGIBLE SIGN>
+→ <PROPOSITION ABOUT FUTURE>
+→ [CREDIBILITY TEST]
+→ <BELIEF OR SUSPENSION>
+
+SOURCE FORMALISM:
+Penelope explicitly distinguishes two classes of dreams:
+those whose words fail in fulfillment and those that bring true things to completion.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Readable(S) = true
+
+does not entail:
+
+True(S) = true
+
+and does not entail:
+
+Believe(agent,S) = true.
+
+A causal sign therefore requires at least:
+
+interpretability
++
+source reliability
++
+world correspondence.
+
+TENSION:
+Penelope may already suspect or recognize Odysseus, in which case her skepticism may itself be strategic rather than epistemic.
+
+MISSING:
+A way to distinguish genuine uncertainty from performed uncertainty in Penelope’s speech.
+
+BOUNDARY:
+The passage does not supply a general Homeric theory of evidence.
+
+CITATION TRAIL:
+[[Z-OD-087]]
+[[Z-OD-079]]
+[[Z-OD-081]]
+→ Odyssey 19 dream
+→ gates of horn and ivory
+→ defeasible causal signs
+
+TEST:
+Collect every interpreted sign in the Odyssey and code separately:
+
+INTERPRETATION AVAILABLE?
+INTERPRETATION EXPLICIT?
+INTERPRETER TRUSTED?
+RECIPIENT BELIEVES?
+RECIPIENT ACTS?
+PREDICTION FULFILLED?
+
+PLATFORM:
+[[causal-readability]]
+
+LINKS:
+[[Z-OD-087]]
+[[Z-OD-079]]
+[[Z-OD-081]]
+
+BIBTEX:
+@incollection{Levaniouk2025Book19,
+  author    = {Levaniouk, Olga},
+  title     = {Book 19},
+  booktitle = {The Oxford Critical Guide to Homer's Odyssey},
+  editor    = {Christensen, Joel P.},
+  year      = {2025},
+  pages     = {241--254},
+  publisher = {Oxford University Press}
+}

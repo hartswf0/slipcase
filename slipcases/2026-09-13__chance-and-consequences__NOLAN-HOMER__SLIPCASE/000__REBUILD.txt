@@ -1,0 +1,11 @@
+REBUILD
+
+1. Keep root zettel .txt payloads immutable.
+2. Run build_slipcase.py to regenerate mirrors, JSON, graph, reader, and manifest.
+3. Compile chance-and-consequences__2026-09-13.tex with latexmk -pdf.
+4. Render the PDF with the PDF skill render script and inspect pages.
+5. Update _SLIPCASE/VERIFICATION.txt from computed counts and hashes.
+6. Recreate ZIP and run unzip -t.
+
+IMPORTANT
+The originating chat contains earlier zettels not admitted here because the build runtime has no raw transcript-export interface. Do not reconstruct those payloads from summaries. Retrieve exact text from the originating chat before admitting them.
