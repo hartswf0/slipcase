@@ -1,0 +1,20 @@
+CHECKPOINT NAME: Chance and Consequences
+CHECKPOINT ID: chance-consequences-2026-09-13
+SCHEMA VERSION: SLIPCASE-15.55-AM
+PACKAGE NAME: chance_consequences_slipcase_2026-09-13.zip
+RESEARCHER: Watson Hartsoe
+DATE: 2026-09-13
+REJOIN PHRASE: Rejoin chance-consequences-2026-09-13 and continue from causal executability.
+
+CONSEQUENTIAL FILES
+chance-and-consequences__2026-09-13.pdf
+chance-and-consequences__2026-09-13.tex
+chance-and-consequences__SOURCE_MAP.txt
+READER.html
+NETWORK.html
+ZETTELS.txt
+_SLIPCASE/MANIFEST.json
+
+REBUILD
+Run: python3 build_slipcase.py
+Then compile the TeX file and rerun verification/ZIP packaging.

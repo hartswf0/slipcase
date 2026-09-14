@@ -1,0 +1,130 @@
+ZETTEL
+
+ID:
+Z-OD-093
+
+TITLE:
+Amphinomus separates foreknowledge from escape
+
+SOURCE:
+Homer — Odyssey 18.125–157.
+Celsiana Warwick — “Book 18” — The Oxford Critical Guide to Homer’s Odyssey — 2025 — pp. 231–240.
+
+PASSAGE:
+[PARAPHRASE]
+Odysseus warns Amphinomus that the returning master is near and that the suitors will not separate from him without bloodshed. Amphinomus departs the conversation with foreboding, yet the narrator immediately states that Athena binds him to die by Telemachus’s spear.
+
+RESEARCH OBJECT:
+An actor can correctly receive a warning without thereby acquiring a viable path out of its consequence.
+
+LOCAL MOVE:
+The normal warning model assumes:
+
+KNOWLEDGE
+→ POSSIBLE BEHAVIOR CHANGE.
+
+Amphinomus produces:
+
+KNOWLEDGE
+→ FOREBODING
+→ NO ESCAPE.
+
+SOURCE TERMS:
+δαίμων
+κῆρ
+Ἀθήνη
+αἷμα
+φράζομαι
+
+WHAT BECAME STRANGE:
+Foreknowledge can become cruel surplus information.
+
+If the outcome remains closed, warning no longer functions primarily as guidance.
+
+It becomes experience of approaching consequence.
+
+QUESTION:
+When does warning stop being an affordance and become merely tragic consciousness?
+
+DEEPER QUESTION:
+Can foreknowledge increase suffering without increasing agency?
+
+MECHANISM:
+warning
+→ recipient understands danger
+→ recipient anticipates outcome
+→ higher-order divine/narrative constraint
+→ same terminal event.
+
+FORMAL SHIFT:
+<IGNORANCE>
+→ <CORRECT ANTICIPATION>
+→ [NO EFFECTIVE EXIT]
+→ <KNOWN CONSEQUENCE>
+
+SOURCE FORMALISM:
+The narrator explicitly juxtaposes Amphinomus’s foreboding with Athena’s determination that he die at Telemachus’s hand.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Knowledge(C) ↑
+
+while
+
+Controllable(C) ≈ 0.
+
+Thus:
+
+EpistemicAgency ≠ PracticalAgency.
+
+TENSION:
+The narrator does not show Amphinomus making a serious attempt to leave; divine binding and human inertia remain difficult to disentangle.
+
+MISSING:
+What “Athena set him in bonds” entails at the level of practical alternatives.
+
+BOUNDARY:
+The scene cannot decide the modern free-will question.
+
+CITATION TRAIL:
+[[Z-OD-079]]
+[[Z-OD-086]]
+[[Z-RC-047]]
+→ Amphinomus
+→ warning received
+→ Athena’s binding
+→ knowledge without escape
+
+TEST:
+Search the Odyssey for recipients who:
+BELIEVE A WARNING
+but
+FAIL TO ALTER OUTCOME.
+
+Then distinguish:
+REFUSAL,
+INABILITY,
+DELAY,
+DIVINE CONSTRAINT,
+and
+NO AVAILABLE EXIT.
+
+PLATFORM:
+[[foreknowledge-without-control]]
+
+LINKS:
+[[Z-OD-079]]
+[[Z-OD-086]]
+[[Z-RC-047]]
+
+BIBTEX:
+@incollection{Warwick2025Book18,
+  author    = {Warwick, Celsiana},
+  title     = {Book 18},
+  booktitle = {The Oxford Critical Guide to Homer's Odyssey},
+  editor    = {Christensen, Joel P.},
+  pages     = {231--240},
+  year      = {2025},
+  publisher = {Oxford University Press}
+}

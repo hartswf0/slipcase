@@ -1,0 +1,130 @@
+ZETTEL
+
+ID:
+Z-OD-097
+
+TITLE:
+τίσις is not merely a consequence; it is a narrative that selects an offense, victim, avenger, and equivalence
+
+SOURCE:
+Alexander C. Loney — The Ethics of Revenge and the Meanings of the Odyssey — 2019 — Chapters 1–3.
+
+PASSAGE:
+[PARAPHRASE]
+Loney treats tisis as negative reciprocity with temporal, calculative, and adjudicative dimensions and then explicitly analyzes tisis in the Odyssey as a narrative form. Different vengeance narratives can manipulate these structures and illuminate one another ironically.
+
+RESEARCH OBJECT:
+Retributive consequence requires narrative assembly.
+
+LOCAL MOVE:
+A death does not become τίσις merely because it follows an injury.
+
+A tisis account must specify:
+
+WHAT WAS THE PRIOR OFFENSE?
+WHO WAS HARMED?
+WHO MAY REPAY?
+WHAT COUNTS AS EQUIVALENT?
+WHEN IS THE DEBT COMPLETE?
+
+SOURCE TERMS:
+τίσις
+τίνω
+ἀποτίνω
+reciprocity
+temporality
+calculation
+
+WHAT BECAME STRANGE:
+“Consequence” sounds event-like.
+
+τίσις is story-like.
+
+It needs antecedent selection and moral roles.
+
+The same physical killing can therefore belong to incompatible narratives:
+
+JUST REPAYMENT
+or
+NEW OFFENSE.
+
+QUESTION:
+Is vengeance causal because of what physically precedes it, or because a community accepts a particular narrative linking the acts?
+
+DEEPER QUESTION:
+Who possesses authority to stabilize one revenge narrative when several valid sequences overlap?
+
+MECHANISM:
+event₀
+→ remembered injury
+→ narrative role assignment
+→ equivalence calculation
+→ retaliatory event₁
+→ event₁ becomes available to rival narrative.
+
+FORMAL SHIFT:
+<PHYSICAL EVENT SEQUENCE>
+→ <ROLE-ASSIGNED STORY>
+→ [TISIS CLASSIFICATION]
+→ <AUTHORIZED RETALIATION>
+
+SOURCE FORMALISM:
+Loney explicitly calls tisis a narrative and emphasizes temporality, calculation, and judgment in negative reciprocity.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+TisisNarrative =
+{
+Offense,
+Offender,
+Victim,
+Avenger,
+Debt,
+Repayment,
+Judge,
+StoppingCondition
+}
+
+Without these roles:
+event sequence ≠ necessarily tisis.
+
+TENSION:
+The narrative framing may not be arbitrary; social norms can constrain which tisis stories are plausible.
+
+MISSING:
+What institutional or communal processes in Homeric society authorize the “judge” role when Zeus is absent.
+
+BOUNDARY:
+Narrativity does not make vengeance merely fictional.
+
+CITATION TRAIL:
+[[Z-OD-082]]
+[[Z-OD-083]]
+[[Z-OD-085]]
+[[Z-OD-096]]
+→ Loney Chapters 1–3
+→ tisis as narrative
+→ consequence as authorized story
+
+TEST:
+Encode every revenge plot in the Odyssey with the eight fields above.
+
+Then invert offender/victim roles and test whether a rival coherent tisis narrative becomes possible.
+
+PLATFORM:
+[[tisis-as-causal-narrative]]
+
+LINKS:
+[[Z-OD-082]]
+[[Z-OD-083]]
+[[Z-OD-085]]
+[[Z-OD-096]]
+
+BIBTEX:
+@book{Loney2019Ethics,
+  author    = {Loney, Alexander C.},
+  title     = {The Ethics of Revenge and the Meanings of the Odyssey},
+  year      = {2019},
+  publisher = {Oxford University Press}
+}

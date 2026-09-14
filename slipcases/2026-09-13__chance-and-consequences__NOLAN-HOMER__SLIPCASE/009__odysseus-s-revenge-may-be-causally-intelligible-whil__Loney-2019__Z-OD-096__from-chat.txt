@@ -1,0 +1,127 @@
+ZETTEL
+
+ID:
+Z-OD-096
+
+TITLE:
+Odysseus’s revenge may be causally intelligible while remaining disproportionate
+
+SOURCE:
+Alexander C. Loney — The Ethics of Revenge and the Meanings of the Odyssey — 2019 — Chapter 4, pp. 119–170.
+Homer — Odyssey 22.
+
+PASSAGE:
+[PARAPHRASE]
+Loney argues that the poem works extensively to justify the slaughter, especially through warnings and the suitors’ destructive feasting, while simultaneously leaving an asymmetry between their accomplished offenses and the forms of punishment they receive.
+
+RESEARCH OBJECT:
+DESERVED CONSEQUENCE and PROPORTIONATE CONSEQUENCE are different judgments.
+
+LOCAL MOVE:
+The poem can successfully establish:
+
+THE SUITORS ARE NOT INNOCENT.
+
+That does not automatically establish:
+
+EVERY SUITOR DESERVES THIS EXACT DEATH.
+
+SOURCE TERMS:
+τίσις
+ἀτασθαλία
+feasting
+adultery
+murder
+punishment
+
+WHAT BECAME STRANGE:
+Causal readability can justify the existence of a response without determining its magnitude.
+
+“You caused harm” does not contain a scale for:
+HOW MUCH REPAYMENT?
+
+QUESTION:
+Where does the quantity of consequence come from?
+
+DEEPER QUESTION:
+Is the central ethical instability of τίσις not identifying the offender but calculating equivalence?
+
+MECHANISM:
+offense identified
+→ responsibility established
+→ repayment demanded
+→ equivalence judgment
+→ punishment.
+
+FORMAL SHIFT:
+<CAUSAL RESPONSIBILITY>
+→ <DEBT>
+→ [CALCULATION OF REPAYMENT]
+→ <PUNISHMENT MAGNITUDE>
+
+SOURCE FORMALISM:
+Loney’s analysis of archaic tisis foregrounds calculation, temporality, and the identity of the agent who decides whether negative reciprocity is equivalent.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Responsibility(x,H) = true
+
+does not entail:
+
+Punishment(x) = H.
+
+A second function is necessary:
+
+Punishment =
+f(
+harm,
+status,
+reciprocity rule,
+judge,
+narrative framing
+).
+
+TENSION:
+The suitors also plot Telemachus’s death and violate broader norms beyond eating and courting; offense severity cannot be reduced to consumption alone.
+
+MISSING:
+A line-by-line separation between crimes planned, attempted, and completed.
+
+BOUNDARY:
+Loney argues for ethical multivalence, not that the suitors are innocent.
+
+CITATION TRAIL:
+[[Z-OD-080]]
+[[Z-OD-082]]
+[[Z-OD-095]]
+→ Loney Chapter 4
+→ offense/punishment asymmetry
+→ calculation of tisis
+
+TEST:
+Create separate columns for every suitor offense:
+
+COMPLETED
+ATTEMPTED
+PLANNED
+THREATENED
+ATTRIBUTED BY NARRATOR.
+
+Then test which category the punishment reciprocates.
+
+PLATFORM:
+[[proportionality-of-consequence]]
+
+LINKS:
+[[Z-OD-080]]
+[[Z-OD-082]]
+[[Z-OD-095]]
+
+BIBTEX:
+@book{Loney2019Ethics,
+  author    = {Loney, Alexander C.},
+  title     = {The Ethics of Revenge and the Meanings of the Odyssey},
+  year      = {2019},
+  publisher = {Oxford University Press}
+}
