@@ -1,0 +1,73 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.05in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black,pdfauthor={Watson Hartsoe},pdftitle={Chance and Consequences}}
+\setstretch{1.08}
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0.25em}
+\setlength{\headheight}{14pt}
+\titleformat{\section}{\large\bfseries}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Chance and Consequences}
+\rhead{Working Paper}
+\cfoot{\thepage\ / \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.25pt}
+\Urlmuskip=0mu plus 1mu\relax
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries Chance and Consequences}\par
+\vspace{0.25em}
+{\large Reading Causality in Christopher Nolan's \textit{The Odyssey} and Homer}\par
+\vspace{0.8em}
+Watson Hartsoe\par
+\vspace{0.2em}
+\textit{Working Paper · AI-augmented research process}\par
+\textit{Evidence, prompts, and making history preserved in the accompanying SLIPCASE checkpoint.}\par
+\vspace{1em}
+\end{center}
+
+\begin{abstract}
+Christopher Nolan's \textit{The Odyssey} gives Athena a question that seems to divide the world neatly: ``When you watch your men die, do you see chance or consequence?'' The scene does not remain neat for long. Odysseus answers consequence and immediately translates consequence into personal failure. Athena attacks that translation. The starving crew then interrupts the metaphysical discussion with the material conditions of its choice. This essay argues that the scene compresses, and deliberately distorts, a much larger causal problem in Homer. The Homeric \textit{Odyssey} has no single concept corresponding to the film's opposition. It distributes causal intelligibility across allotment, divine action, reckless conduct, warning, blame, repayment, signs, narration, recognition, and forgetting. Read across all twenty-four books, consequence is not merely what follows an action. It is what becomes readable, attributable, actionable, repayable, and finally stoppable. Nolan modernizes this structure by turning Homeric disputes about divine and human causation inward, into Odysseus's pathological assumption that leadership makes him the sovereign author of every outcome. The film's strongest answer is therefore neither chance nor consequence. It is answerability without sovereignty: action matters, but no actor owns the whole causal field.
+\end{abstract}
+
+\noindent\textbf{Keywords:} Odyssey; Christopher Nolan; Homer; causation; chance; responsibility; tisis; warning; memory
+
+\section{A Question That Breaks as Soon as It Is Asked}
+
+Late in Nolan's \textit{The Odyssey}, Athena confronts Odysseus after the destruction of his crew. He has again complained that the gods do not communicate in forms mortals can understand. Earlier, Athena had answered the same complaint by pointing to thunder, fire, clouds, birds, and moving water. Now she points to suffering. Then she asks: ``When you watch your men die, do you see chance or consequence?'' \citep{Nolan2026Subtitles}. Odysseus chooses consequence, but his answer immediately adds something Athena did not ask for. He sees his failure. He led the men; therefore their deaths belong to him. Athena challenges the inference. Their deaths might mark their failures. When Odysseus appeals again to leadership, she recursively applies his own rule and asks who led him. The scene then makes its strangest move. Instead of completing an abstract argument about causation, Athena asks why Odysseus does not want to go home.
+
+That sequence defines Nolan's film more precisely than the apparent binary does. The scene is not asking whether events have causes. It is asking what Odysseus does when causes exceed him. He repeatedly converts causal participation into sovereign authorship. Because he issued commands, chose routes, withheld information, designed the Trojan Horse, survived where others died, and watched his decisions propagate, he treats himself as the terminal node of the causal graph. Athena does not tell him that nothing was his responsibility. She attacks the stopping rule by which every chain ends at Odysseus.
+
+The film immediately prevents this from becoming a clean doctrine. Eurylochus interrupts with hunger. The crew ran out of food. Odysseus insists that he warned them; the men answer that they chose drowning over starvation \citep{Nolan2026Subtitles}. The philosophical scene is therefore invaded by calories, bodies, weather, elapsed time, and a shrinking action set. Nolan first offers an opposition between chance and consequence, then splits consequence into at least four questions: What caused the deaths? What did the men know? What alternatives did they actually possess? Who is entitled to claim the outcome as a failure?
+
+Homer makes those questions harder still. The noun \textit{tyche}, the later Greek word commonly translated as chance or fortune, does not occur in Homer; Esther Eidinow notes that Homer instead has the verbal family of \textit{tunchanein} while the personified or common noun \textit{Tyche} belongs to a later conceptual history \citep{Eidinow2011Luck}. Nor does Homer possess one neutral word corresponding to modern ``consequence.'' The poem distributes the terrain among \textit{moira} and \textit{moros} for allotted portion or doom, \textit{atē} for destructive error or derangement, \textit{atasthalia} for culpable or reckless conduct, \textit{aitios} for causal or blame-bearing responsibility, and \textit{tisis} for repayment or vengeance. Nolan's binary is therefore not a translation of a Homeric binary. It is a compression. Its usefulness begins when the compression fails.
+
+\section{The Odyssey Opens by Arguing About Attribution}
+
+The Homeric poem begins with an answer before its wanderings have been narrated. Odysseus struggles to preserve his companions, but they perish through their own \textit{atasthalia}. A few lines later Zeus complains that mortals are quick to blame the gods for suffering they bring upon themselves. Aegisthus is his test case. He was warned not to kill Agamemnon or take his wife, knew that Orestes would exact vengeance, acted anyway, and then ``paid the full price'' \citep{HomerMurray1919}.
+
+This opening is often read as a program of moral responsibility, and with reason. Alexander Loney shows how \textit{atasthalia} links knowledge of destructive consequences with culpable action and how this vocabulary organizes the poem's account of the companions and the suitors \citep{Loney2015Eurykleia,Loney2019Ethics}. Yet the poem does not preserve Zeus's attribution as an uncontested master key. Eurylochus later uses the same vocabulary against Odysseus, blaming the commander for companions lost at the Cyclops's cave. The same deaths can therefore be inserted into rival causal stories. The narrator says the crew destroyed itself. Eurylochus can say Odysseus destroyed them. Odysseus himself repeatedly narrates how he tried to save them. Gods intervene. Hunger constrains. Warnings arrive. Orders fail. The causal field is plural before a later interpreter selects the edge that will carry blame.
+
+Nolan reverses Zeus's complaint in a revealing way. Homer's Zeus objects to excessive externalization: mortals say the gods caused everything. Nolan's Odysseus commits the inverse error: he says that he caused everything. The direction changes, but the structure remains monocausal. Both explanations convert a crowded causal field into one sovereign author. The film's modern psychological vocabulary of guilt thus does not simply replace Homeric theology. It internalizes the same attribution problem.
+
+This is why Athena's recursive question matters. If Odysseus is wholly responsible because he led the crew, then the rule must continue upward. Who led Odysseus? The gods who warned him? The war that put him at sea? The men who resisted his orders? The circumstances he did not choose? The question does not absolve him. It makes sole authorship impossible without making agency disappear. A commander can be one cause without being the cause of everything that follows.
+
+\section{Warning Changes an Action Before It Happens}
+
+The most important causal technology in the \textit{Odyssey} may be warning. Warnings do not merely describe a future. They alter what an agent knows before acting. That changes how the later act can be classified. Zeus's Aegisthus is blameworthy in part because Hermes warned him. The crew is repeatedly told not to touch the cattle of Helios. The suitors receive omens, prophecies, admonitions, examples, and direct threats long before Book 22. A future consequence is represented inside the present, where it can become part of deliberation.
+
+Loney's work makes this mechanism especially clear. Foreknowledge is central to the poem's use of \textit{atasthalia}: an agent does the destructive thing despite knowing what it is likely to produce \citep{Loney2015Eurykleia}. But this creates an unexpected problem. A warning that fails as prevention can succeed as evidence. Halitherses interprets Zeus's eagles in Book 2 and warns the Ithacans about the approaching destruction of the suitors. The warning is rejected. In Book 24, after the suitors are dead, Halitherses recalls the community's earlier refusal to restrain its sons. The utterance that did not alter behavior at the time has acquired a second life as evidence that ignorance was not complete.

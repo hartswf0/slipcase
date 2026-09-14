@@ -1,0 +1,93 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.02in]{geometry}
+\usepackage{fontspec}
+\setmainfont{Libertinus Serif}
+\setsansfont{Libertinus Sans}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{enumitem}
+\usepackage{footmisc}
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+\hypersetup{
+  pdftitle={Chance and Consequences: What Athena's Question Reveals About The Odyssey},
+  pdfauthor={Watson Hartsoe},
+  pdfsubject={Homer, Christopher Nolan, chance, consequence, responsibility},
+  pdfkeywords={Odyssey, Homer, Christopher Nolan, causation, chance, responsibility, tisis, warning}
+}
+\setstretch{1.09}
+\setlength{\parindent}{1.25em}
+\setlength{\parskip}{0.32em}
+\setlength{\headheight}{14pt}
+\titleformat{\section}{\large\bfseries\sffamily}{\thesection}{0.65em}{}
+\titleformat{\subsection}{\normalsize\bfseries\sffamily}{\thesubsection}{0.55em}{}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small\sffamily Chance and Consequences}
+\rhead{\small\sffamily Working Paper}
+\cfoot{\small\sffamily \thepage\ / \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.25pt}
+\newcommand{\Od}{\textit{Odyssey}}
+\newcommand{\film}{\textit{The Odyssey}}
+\newcommand{\term}[1]{\textit{#1}}
+\newcommand{\primary}[1]{\textup{#1}}
+\renewcommand{\footnotelayout}{\setstretch{1.0}\small}
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries Chance and Consequences}\par
+\vspace{0.25em}
+{\large What Athena's Question Reveals About \textit{The Odyssey}}\par
+\vspace{0.8em}
+Watson Hartsoe\par
+\vspace{0.25em}
+\textit{Working Paper}\par
+\vspace{0.9em}
+\rule{0.62\linewidth}{0.35pt}\par
+\vspace{0.8em}
+\begin{minipage}{0.88\linewidth}
+\small
+\textbf{Abstract.} Christopher Nolan's 2026 \film{} gives Athena a compact question: when Odysseus watches his men die, does he see chance or consequence? Odysseus answers ``consequence'' and immediately converts that answer into ``my failure.'' This essay argues that the second move, not the binary itself, is the scene's real problem. Homer does not organize the \Od{} around an opposition between chance and consequence. The common noun \term{tyche}, later Greek for fortune or chance, does not occur in the Homeric epics; Homer instead distributes causal and moral work across terms and situations involving allotment, destructive error, reckless conduct, blame, warning, repayment, signs, recognition, hunger, divine action, and memory. Reading several episodes closely---the Cyclops, Scylla, the cattle of Helios, the suitors, recognition, and the final revenge---shows that the poem repeatedly separates causal contribution from total authorship. Nolan compresses these distributed problems into Odysseus's guilt. Athena's intervention does not make him innocent. It asks him to relinquish the fantasy that leadership makes him sovereign over every consequence. The sharper category is responsibility without sovereignty: our actions enter causal worlds that they change but do not own.
+\end{minipage}
+\end{center}
+
+\vspace{0.7em}
+\noindent\textbf{Keywords:} Homer; Christopher Nolan; \textit{Odyssey}; chance; consequence; responsibility; \textit{atasthalia}; \textit{tisis}; memory
+
+\section{The second sentence is the problem}
+
+Athena's question sounds like a thesis statement. Odysseus has just discovered his crew eating the cattle of the Sun. Athena follows him back toward the ship and reminds him that Tiresias, Circe, and the gods all warned him. Odysseus protests that the gods do not speak in ways human beings understand. Athena answers with pain, blood, and death, then asks: ``When you watch your men die, do you see chance or consequence?'' Odysseus replies: ``I see consequence. I see my failure.''\footnote{Christopher Nolan, \film{} (2026), Apollo's Island sequence, approximately 1:48:58--1:49:21 in the circulating English subtitle files. The two quoted exchanges total fewer than twenty-five words. I cross-checked the wording against a publicly circulating screenplay text and multiple independently timed subtitle transcriptions. The online screenplay's official publication status is not established, so this essay treats the released-film subtitle agreement as the stronger receipt.}
+
+The first sentence does not entail the second. To call a death a consequence is to connect it to something that came before. To call it \emph{my failure} selects one antecedent, one agent, and one moral owner. Odysseus moves from causal relation to personal authorship in a breath. Athena attacks that movement. What if the deaths mark the men's failures? Odysseus answers that he led them. Athena asks: who led you?
+
+The scene matters because Athena never tells him the deaths were chance. Nor does she tell him he bears no responsibility. She challenges the rule by which leadership becomes the terminal cause of everything below it. If a leader is responsible for all actions of the led, the rule can be applied recursively. Odysseus too was led, warned, constrained, deceived, opposed, and acted upon. The causal chain will not stop simply because his guilt wants it to stop.
+
+Then Nolan makes the scene less tidy. Eurylochus cuts across the argument with hunger. The men ran out of food. Odysseus insists that he warned them. The crew's answer is brutal: they decided they would rather drown than starve. Seconds later, the wind drops and Odysseus announces, ``now's our chance.''\footnote{The repeated use of ``chance'' occurs within the same Apollo's Island sequence. This matters because the word changes function: Athena uses \emph{chance} retrospectively, as a possible description of why deaths occurred; Odysseus uses it prospectively, as an opportunity for action.} The supposed opposite of consequence has already become the condition for the next consequence.
+
+That lexical slip is a clue. Nolan's binary is powerful because the film almost immediately makes it inadequate.
+
+\section{Homer does not give us Nolan's binary}
+
+There is a simple historical reason not to read ``chance or consequence'' back into Homer as if it translated a native opposition. The common noun \term{tyche}, later a central Greek word for luck, fortune, or chance, does not appear in Homer. Eidinow notes that Homer has the verbal family \term{tunchanein}, ``to happen'' or ``to hit upon,'' but not the noun/personification that becomes increasingly prominent in later Greek thought \citep[p.~45]{Eidinow2011}. Ancient grammarians noticed the same absence: one scholion could say, in effect, that Homer does not know the word \term{tyche} even though he knows the kinds of events later readers describe with it \citep{Grethlein2021Chance}.
+
+Nor does Homer have one neutral term corresponding to English \emph{consequence}. The poem distributes the work across different vocabularies and narrative situations. \term{Moira} and \term{moros} can name an allotted portion or doom. \term{Ate} can name destructive blindness or error. \term{Atasthalia} marks behavior that is not merely foolish but culpably reckless, especially when an agent acts despite warning. \term{Aitios} can identify the one responsible or to blame. \term{Tisis} is not neutral aftermath at all: it is repayment, vengeance, the return of harm for harm. The English pair ``chance / consequence'' compresses distinctions Homer keeps distributed.
+
+This does not make Nolan's question anachronistic in any trivial sense. Adaptations are allowed to think in their own vocabulary. The compression is interesting because it places in one sentence a problem that Homer disperses across twenty-four books: how does an event become readable as the result of action rather than merely something that happened? And once it becomes readable, who gets to claim it, blame it, repay it, or stop it?
+
+The poem asks those questions from its opening lines. The narrator says Odysseus tried to save his companions, but they perished through their own \term{atasthalia} (Od. 1.6--9). Zeus then complains that mortals blame the gods for suffering they bring upon themselves. His example is Aegisthus: Hermes warned him not to kill Agamemnon or take his wife; Aegisthus acted anyway; Orestes later exacted repayment (Od. 1.32--43). Loney shows how strongly this pattern of warning, foreknowledge, transgression, and vengeance organizes the poem's moral vocabulary \citep[pp.~52--74]{Loney2015}.
+
+Yet Homer immediately makes any simple doctrine unstable. In Book 10, Eurylochus uses the same language of reckless folly against Odysseus: companions died, he says, through \emph{this man's} \term{atasthalia} (Od. 10.437). The proem can blame the companions. Eurylochus can blame their commander. Odysseus can remember himself trying to save them. The gods can intervene. The weather can close routes. The crew can refuse orders. The poem does not erase those competing causal descriptions.
+
+Nolan turns that distributed dispute inward. Homer's Zeus objects to mortals who say, in effect, \emph{the gods did this to us}. Nolan's Odysseus says the inverse: \emph{I did this to them}. The direction changes, but both explanations want one sovereign author.
+
+\section{Warnings do more than predict}
+
+The cattle of Helios make this clearest. Odysseus's men do not arrive at Thrinakia ignorant. Tiresias has warned Odysseus that harming the cattle will destroy the ship and crew (Od. 11.104--15). Circe repeats the warning (Od. 12.127--41). Odysseus tells the men and makes them swear not to touch the animals (Od. 12.271--304). For a long time they obey.
