@@ -2,8 +2,8 @@
   "schema": "SLIPCASE_HEAD_PDF_MAP_V1",
   "counts": {
     "heads": 39,
-    "pdfs": 126,
-    "ownership_edges": 126,
+    "pdfs": 128,
+    "ownership_edges": 128,
     "related_pdf_head_edges": 132,
     "head_bridge_edges": 4
   },
@@ -873,8 +873,17 @@
         "chance-and-consequences__SOURCE_MAP"
       ],
       "child_count": 20,
-      "pdf_count": 0,
-      "pdfs": [],
+      "pdf_count": 2,
+      "pdfs": [
+        {
+          "name": "chance_and_consequences_short.pdf",
+          "rel": "slipcases/2026-09-13__chance-and-consequences__NOLAN-HOMER__SLIPCASE/chance_and_consequences_short.pdf"
+        },
+        {
+          "name": "chance_and_consequences_shorter.pdf",
+          "rel": "slipcases/2026-09-13__chance-and-consequences__NOLAN-HOMER__SLIPCASE/chance_and_consequences_shorter.pdf"
+        }
+      ],
       "bridges": []
     },
     {
@@ -3306,6 +3315,22 @@
     },
     {
       "id": "PDF-029",
+      "name": "chance_and_consequences_short.pdf",
+      "rel": "slipcases/2026-09-13__chance-and-consequences__NOLAN-HOMER__SLIPCASE/chance_and_consequences_short.pdf",
+      "home_head": "HEAD-FIELD-015",
+      "home_case": "2026-09-13__chance-and-consequences__NOLAN-HOMER__SLIPCASE",
+      "related_heads": []
+    },
+    {
+      "id": "PDF-030",
+      "name": "chance_and_consequences_shorter.pdf",
+      "rel": "slipcases/2026-09-13__chance-and-consequences__NOLAN-HOMER__SLIPCASE/chance_and_consequences_shorter.pdf",
+      "home_head": "HEAD-FIELD-015",
+      "home_case": "2026-09-13__chance-and-consequences__NOLAN-HOMER__SLIPCASE",
+      "related_heads": []
+    },
+    {
+      "id": "PDF-031",
       "name": "FINAL_PAPER__Mastery_Without_Sovereignty__2026-08-18.pdf",
       "rel": "slipcases/FINAL_SLIPCASE__Mastery_Without_Sovereignty__ALL_ZETTELS__2026-08-18/FINAL_PAPER__Mastery_Without_Sovereignty__2026-08-18.pdf",
       "home_head": "HEAD-FIELD-016",
@@ -3313,7 +3338,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-030",
+      "id": "PDF-032",
       "name": "PREVIOUS_knowing-by-stumbling__WIP-v13-JOSHUA__2026-08-17__2117ET.pdf",
       "rel": "slipcases/FINAL_SLIPCASE__Mastery_Without_Sovereignty__ALL_ZETTELS__2026-08-18/_RESOURCES/PREVIOUS_knowing-by-stumbling__WIP-v13-JOSHUA__2026-08-17__2117ET.pdf",
       "home_head": "HEAD-FIELD-016",
@@ -3321,7 +3346,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-031",
+      "id": "PDF-033",
       "name": "PREVIOUS_mastery-without-command__WIP-v15.55-JOSHUA__2026-08-17__2133ET.pdf",
       "rel": "slipcases/FINAL_SLIPCASE__Mastery_Without_Sovereignty__ALL_ZETTELS__2026-08-18/_RESOURCES/PREVIOUS_mastery-without-command__WIP-v15.55-JOSHUA__2026-08-17__2133ET.pdf",
       "home_head": "HEAD-FIELD-016",
@@ -3338,7 +3363,7 @@
       ]
     },
     {
-      "id": "PDF-032",
+      "id": "PDF-034",
       "name": "mastery-without-sovereignty__WIP-v15.55-a5ef0e2e__2026-08-17__2254ET.pdf",
       "rel": "slipcases/FINAL_SLIPCASE__Mastery_Without_Sovereignty__ALL_ZETTELS__2026-08-18/mastery-without-sovereignty__WIP-v15.55-a5ef0e2e__2026-08-17__2254ET.pdf",
       "home_head": "HEAD-FIELD-016",
@@ -3346,7 +3371,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-033",
+      "id": "PDF-035",
       "name": "Historic_Residential_Suburbs_NPS_2002.pdf",
       "rel": "slipcases/HOUSE_LANGUAGE_SUBURB_SLIPCASE_2026-08-18/_RESOURCES/Historic_Residential_Suburbs_NPS_2002.pdf",
       "home_head": "HEAD-FIELD-017",
@@ -3354,7 +3379,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-034",
+      "id": "PDF-036",
       "name": "the-subdivision-is-the-program__2026-08-18.pdf",
       "rel": "slipcases/HOUSE_LANGUAGE_SUBURB_SLIPCASE_2026-08-18/the-subdivision-is-the-program__2026-08-18.pdf",
       "home_head": "HEAD-FIELD-017",
@@ -3362,7 +3387,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-035",
+      "id": "PDF-037",
       "name": "boeken2024-performative-dss-causal-domain-shift.pdf",
       "rel": "slipcases/SLIPCASE_13.1__2026-08-17__the-unlived-curriculum/_RESOURCES/boeken2024-performative-dss-causal-domain-shift.pdf",
       "home_head": "HEAD-FIELD-018",
@@ -3395,7 +3420,7 @@
       ]
     },
     {
-      "id": "PDF-036",
+      "id": "PDF-038",
       "name": "jayaprakash2014-early-alert-open-source-analytics.pdf",
       "rel": "slipcases/SLIPCASE_13.1__2026-08-17__the-unlived-curriculum/_RESOURCES/jayaprakash2014-early-alert-open-source-analytics.pdf",
       "home_head": "HEAD-FIELD-018",
@@ -3403,7 +3428,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-037",
+      "id": "PDF-039",
       "name": "kilbertus2020-fair-decisions-imperfect-predictions.pdf",
       "rel": "slipcases/SLIPCASE_13.1__2026-08-17__the-unlived-curriculum/_RESOURCES/kilbertus2020-fair-decisions-imperfect-predictions.pdf",
       "home_head": "HEAD-FIELD-018",
@@ -3411,7 +3436,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-038",
+      "id": "PDF-040",
       "name": "liley2021-model-updating-after-interventions.pdf",
       "rel": "slipcases/SLIPCASE_13.1__2026-08-17__the-unlived-curriculum/_RESOURCES/liley2021-model-updating-after-interventions.pdf",
       "home_head": "HEAD-FIELD-018",
@@ -3419,7 +3444,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-039",
+      "id": "PDF-041",
       "name": "mendler-dunner2022-anticipating-performativity.pdf",
       "rel": "slipcases/SLIPCASE_13.1__2026-08-17__the-unlived-curriculum/_RESOURCES/mendler-dunner2022-anticipating-performativity.pdf",
       "home_head": "HEAD-FIELD-018",
@@ -3427,7 +3452,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-040",
+      "id": "PDF-042",
       "name": "the-missing-baseline-prediction-intervention-and-the-problem-of-learning-from-changed-outcomes-in-higher-educa__WIP-v13-1__20260817T2034-0400.pdf",
       "rel": "slipcases/SLIPCASE_13.1__2026-08-17__the-unlived-curriculum/the-missing-baseline-prediction-intervention-and-the-problem-of-learning-from-changed-outcomes-in-higher-educa__WIP-v13-1__20260817T2034-0400.pdf",
       "home_head": "HEAD-FIELD-018",
@@ -3457,7 +3482,7 @@
       ]
     },
     {
-      "id": "PDF-041",
+      "id": "PDF-043",
       "name": "Allen_v_Perlmutter_US_Government_Brief_2026.pdf",
       "rel": "slipcases/SLIPCASE_AFTER_SURPRISE_FINAL_2026-08-18/_RESOURCES/Allen_v_Perlmutter_US_Government_Brief_2026.pdf",
       "home_head": "HEAD-FIELD-019",
@@ -3465,7 +3490,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-042",
+      "id": "PDF-044",
       "name": "after-surprise__2026-08-18.pdf",
       "rel": "slipcases/SLIPCASE_AFTER_SURPRISE_FINAL_2026-08-18/_RESOURCES/PRIOR_PUBLICATION_2026-08-18/after-surprise__2026-08-18.pdf",
       "home_head": "HEAD-FIELD-019",
@@ -3490,7 +3515,7 @@
       ]
     },
     {
-      "id": "PDF-043",
+      "id": "PDF-045",
       "name": "USCO_2025_Part2_Copyrightability.pdf",
       "rel": "slipcases/SLIPCASE_AFTER_SURPRISE_FINAL_2026-08-18/_RESOURCES/USCO_2025_Part2_Copyrightability.pdf",
       "home_head": "HEAD-FIELD-019",
@@ -3498,7 +3523,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-044",
+      "id": "PDF-046",
       "name": "after-surprise-temporal-frontier__2026-08-18.pdf",
       "rel": "slipcases/SLIPCASE_AFTER_SURPRISE_FINAL_2026-08-18/after-surprise-temporal-frontier__2026-08-18.pdf",
       "home_head": "HEAD-FIELD-019",
@@ -3531,7 +3556,7 @@
       ]
     },
     {
-      "id": "PDF-045",
+      "id": "PDF-047",
       "name": "ActionWorkflow_1992.pdf",
       "rel": "slipcases/SLIPCASE_DEEP_LINEAGE_2026-08-18/_RESOURCES/ActionWorkflow_1992.pdf",
       "home_head": "HEAD-FIELD-020",
@@ -3539,7 +3564,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-046",
+      "id": "PDF-048",
       "name": "Austin_How_To_Do_Things_with_Words_1962.pdf",
       "rel": "slipcases/SLIPCASE_DEEP_LINEAGE_2026-08-18/_RESOURCES/Austin_How_To_Do_Things_with_Words_1962.pdf",
       "home_head": "HEAD-FIELD-020",
@@ -3572,7 +3597,7 @@
       ]
     },
     {
-      "id": "PDF-047",
+      "id": "PDF-049",
       "name": "Searle_Constitutive_Rules_2018.pdf",
       "rel": "slipcases/SLIPCASE_DEEP_LINEAGE_2026-08-18/_RESOURCES/Searle_Constitutive_Rules_2018.pdf",
       "home_head": "HEAD-FIELD-020",
@@ -3580,7 +3605,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-048",
+      "id": "PDF-050",
       "name": "Shoham_Agent_Oriented_Programming_1993.pdf",
       "rel": "slipcases/SLIPCASE_DEEP_LINEAGE_2026-08-18/_RESOURCES/Shoham_Agent_Oriented_Programming_1993.pdf",
       "home_head": "HEAD-FIELD-020",
@@ -3597,7 +3622,7 @@
       ]
     },
     {
-      "id": "PDF-049",
+      "id": "PDF-051",
       "name": "Singh_Rethinking_ACL_1998.pdf",
       "rel": "slipcases/SLIPCASE_DEEP_LINEAGE_2026-08-18/_RESOURCES/Singh_Rethinking_ACL_1998.pdf",
       "home_head": "HEAD-FIELD-020",
@@ -3605,7 +3630,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-050",
+      "id": "PDF-052",
       "name": "Smith_Cohen_ACL_Speech_Acts_1996.pdf",
       "rel": "slipcases/SLIPCASE_DEEP_LINEAGE_2026-08-18/_RESOURCES/Smith_Cohen_ACL_Speech_Acts_1996.pdf",
       "home_head": "HEAD-FIELD-020",
@@ -3613,7 +3638,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-051",
+      "id": "PDF-053",
       "name": "Suchman_Do_Categories_Have_Politics_1993.pdf",
       "rel": "slipcases/SLIPCASE_DEEP_LINEAGE_2026-08-18/_RESOURCES/Suchman_Do_Categories_Have_Politics_1993.pdf",
       "home_head": "HEAD-FIELD-020",
@@ -3630,7 +3655,7 @@
       ]
     },
     {
-      "id": "PDF-052",
+      "id": "PDF-054",
       "name": "Winograd_Categories_Disciplines_Social_Coordination_1994.pdf",
       "rel": "slipcases/SLIPCASE_DEEP_LINEAGE_2026-08-18/_RESOURCES/Winograd_Categories_Disciplines_Social_Coordination_1994.pdf",
       "home_head": "HEAD-FIELD-020",
@@ -3664,7 +3689,7 @@
       ]
     },
     {
-      "id": "PDF-053",
+      "id": "PDF-055",
       "name": "Winograd_Flores_Understanding_Computers_Cognition.pdf",
       "rel": "slipcases/SLIPCASE_DEEP_LINEAGE_2026-08-18/_RESOURCES/Winograd_Flores_Understanding_Computers_Cognition.pdf",
       "home_head": "HEAD-FIELD-020",
@@ -3697,7 +3722,7 @@
       ]
     },
     {
-      "id": "PDF-054",
+      "id": "PDF-056",
       "name": "Yolum_Singh_Flexible_Protocols_2002.pdf",
       "rel": "slipcases/SLIPCASE_DEEP_LINEAGE_2026-08-18/_RESOURCES/Yolum_Singh_Flexible_Protocols_2002.pdf",
       "home_head": "HEAD-FIELD-020",
@@ -3705,7 +3730,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-055",
+      "id": "PDF-057",
       "name": "background-runtime__2026-08-18.pdf",
       "rel": "slipcases/SLIPCASE_DEEP_LINEAGE_2026-08-18/_RESOURCES/prior_publication/background-runtime__2026-08-18.pdf",
       "home_head": "HEAD-FIELD-020",
@@ -3713,7 +3738,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-056",
+      "id": "PDF-058",
       "name": "background-runtime__2026-08-18.pdf",
       "rel": "slipcases/SLIPCASE_DEEP_LINEAGE_2026-08-18/background-runtime__2026-08-18.pdf",
       "home_head": "HEAD-FIELD-020",
@@ -3721,7 +3746,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-057",
+      "id": "PDF-059",
       "name": "felicity-to-protocol__2026-08-18.pdf",
       "rel": "slipcases/SLIPCASE_DEEP_LINEAGE_2026-08-18/felicity-to-protocol__2026-08-18.pdf",
       "home_head": "HEAD-FIELD-020",
@@ -3729,7 +3754,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-058",
+      "id": "PDF-060",
       "name": "promotion-before-autonomy__2026-08-18.pdf",
       "rel": "slipcases/SLIPCASE__PROMOTION_FIELD__2026-08-18__74d74484bfdd/promotion-before-autonomy__2026-08-18.pdf",
       "home_head": "HEAD-FIELD-021",
@@ -3737,7 +3762,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-059",
+      "id": "PDF-061",
       "name": "The_Program_Arrives_Late__FINAL.pdf",
       "rel": "slipcases/SLIPCASE__theory-lag__20260818T030003-0400/The_Program_Arrives_Late__FINAL.pdf",
       "home_head": "HEAD-FIELD-022",
@@ -3754,7 +3779,7 @@
       ]
     },
     {
-      "id": "PDF-060",
+      "id": "PDF-062",
       "name": "interpretive-coupling__WIP-v13-8ac21ed6__20260817T205223-0400.pdf",
       "rel": "slipcases/SLIPCASE__theory-lag__20260818T030003-0400/interpretive-coupling__WIP-v13-8ac21ed6__20260817T205223-0400.pdf",
       "home_head": "HEAD-FIELD-022",
@@ -3771,7 +3796,7 @@
       ]
     },
     {
-      "id": "PDF-061",
+      "id": "PDF-063",
       "name": "THE_HUT__FINAL.pdf",
       "rel": "slipcases/THE_HUT__FINAL_FIELD__2026-08-18/PAPER/THE_HUT__FINAL.pdf",
       "home_head": "HEAD-FIELD-023",
@@ -3779,7 +3804,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-062",
+      "id": "PDF-064",
       "name": "executable-repertoire-before-the-canon__2026-08-17.pdf",
       "rel": "slipcases/YELMO_FINAL__all-zettels-and-paper/_RESOURCES/PREVIOUS_WAGER__EXECUTABLE_REPERTOIRE/executable-repertoire-before-the-canon__2026-08-17.pdf",
       "home_head": "HEAD-FIELD-024",
@@ -3812,7 +3837,7 @@
       ]
     },
     {
-      "id": "PDF-063",
+      "id": "PDF-065",
       "name": "the-model-could-draw-yelmo__2026-08-17.pdf",
       "rel": "slipcases/YELMO_FINAL__all-zettels-and-paper/the-model-could-draw-yelmo__2026-08-17.pdf",
       "home_head": "HEAD-FIELD-024",
@@ -3845,7 +3870,7 @@
       ]
     },
     {
-      "id": "PDF-064",
+      "id": "PDF-066",
       "name": "who-keeps-yelmo__2026-08-18.pdf",
       "rel": "slipcases/YELMO_FINAL__all-zettels-and-paper/who-keeps-yelmo__2026-08-18.pdf",
       "home_head": "HEAD-FIELD-024",
@@ -3853,7 +3878,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-065",
+      "id": "PDF-067",
       "name": "the-open-system-has-a-body__2026-08-17.pdf",
       "rel": "slipcases/black-mountain-structured-openness__SCF-20260818-BMC-004__v15.55-AM__FINAL/_RESOURCES/PRIOR_DERIVED_v15.5-AM/the-open-system-has-a-body__2026-08-17.pdf",
       "home_head": "HEAD-FIELD-025",
@@ -3887,7 +3912,7 @@
       ]
     },
     {
-      "id": "PDF-066",
+      "id": "PDF-068",
       "name": "Sugata_Mitra__SOLE_Toolkit__snapshot.pdf",
       "rel": "slipcases/black-mountain-structured-openness__SCF-20260818-BMC-004__v15.55-AM__FINAL/_RESOURCES/Sugata_Mitra__SOLE_Toolkit__snapshot.pdf",
       "home_head": "HEAD-FIELD-025",
@@ -3904,7 +3929,7 @@
       ]
     },
     {
-      "id": "PDF-067",
+      "id": "PDF-069",
       "name": "the-open-system-has-a-body__2026-08-18.pdf",
       "rel": "slipcases/black-mountain-structured-openness__SCF-20260818-BMC-004__v15.55-AM__FINAL/the-open-system-has-a-body__2026-08-18.pdf",
       "home_head": "HEAD-FIELD-025",
@@ -3938,7 +3963,7 @@
       ]
     },
     {
-      "id": "PDF-068",
+      "id": "PDF-070",
       "name": "FINAL_PAPER__The_House_That_Words_Built__Programming_After_the_Blueprint.pdf",
       "rel": "slipcases/house-language__FULL-FINAL__2026-08-18/FINAL_PAPER__The_House_That_Words_Built__Programming_After_the_Blueprint.pdf",
       "home_head": "HEAD-FIELD-026",
@@ -3978,7 +4003,7 @@
       ]
     },
     {
-      "id": "PDF-069",
+      "id": "PDF-071",
       "name": "SENTENCE_HOUSE_01__PLAN.pdf",
       "rel": "slipcases/house-language__FULL-FINAL__2026-08-18/SENTENCE_HOUSE_01__PLAN.pdf",
       "home_head": "HEAD-FIELD-026",
@@ -4011,7 +4036,7 @@
       ]
     },
     {
-      "id": "PDF-070",
+      "id": "PDF-072",
       "name": "MAKING_INGOLD.pdf",
       "rel": "slipcases/house-language__FULL-FINAL__2026-08-18/_RESOURCES/MAKING_INGOLD.pdf",
       "home_head": "HEAD-FIELD-026",
@@ -4036,7 +4061,7 @@
       ]
     },
     {
-      "id": "PDF-071",
+      "id": "PDF-073",
       "name": "NAUR_1985_PROGRAMMING_AS_THEORY_BUILDING.pdf",
       "rel": "slipcases/house-language__FULL-FINAL__2026-08-18/_RESOURCES/NAUR_1985_PROGRAMMING_AS_THEORY_BUILDING.pdf",
       "home_head": "HEAD-FIELD-026",
@@ -4071,7 +4096,7 @@
       ]
     },
     {
-      "id": "PDF-072",
+      "id": "PDF-074",
       "name": "the-house-that-words-built-many-mansions__2026-08-18.pdf",
       "rel": "slipcases/house_language_many_mansions_2026-08-18/the-house-that-words-built-many-mansions__2026-08-18.pdf",
       "home_head": "HEAD-FIELD-027",
@@ -4107,7 +4132,7 @@
       ]
     },
     {
-      "id": "PDF-073",
+      "id": "PDF-075",
       "name": "how-is-this-gonna-be-screwed-up__2026-08-17.pdf",
       "rel": "slipcases/how_is_this_gonna_be_screwed_up_20260817/how-is-this-gonna-be-screwed-up__2026-08-17.pdf",
       "home_head": "HEAD-FIELD-028",
@@ -4124,7 +4149,7 @@
       ]
     },
     {
-      "id": "PDF-074",
+      "id": "PDF-076",
       "name": "the-fill-point__2026-08-18.pdf",
       "rel": "slipcases/primitive_construction_slipcase_20260818/the-fill-point__2026-08-18.pdf",
       "home_head": "HEAD-FIELD-029",
@@ -4132,7 +4157,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-075",
+      "id": "PDF-077",
       "name": "the-prompt-is-not-the-author__2026-08-18.pdf",
       "rel": "slipcases/prompt-forward-slipcase-2026-08-18/the-prompt-is-not-the-author__2026-08-18.pdf",
       "home_head": "HEAD-FIELD-030",
@@ -4140,7 +4165,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-076",
+      "id": "PDF-078",
       "name": "prompt-magic-generative-trajectory__2026-08-18.pdf",
       "rel": "slipcases/prompt-magic-generative-trajectory__2026-08-18/prompt-magic-generative-trajectory__2026-08-18.pdf",
       "home_head": "HEAD-FIELD-031",
@@ -4173,7 +4198,7 @@
       ]
     },
     {
-      "id": "PDF-077",
+      "id": "PDF-079",
       "name": "prompt-receipts__2026-08-17.pdf",
       "rel": "slipcases/prompt-practices__FINAL__2026-08-18/_PRIOR_PAPERS/prompt-receipts__2026-08-17.pdf",
       "home_head": "HEAD-FIELD-032",
@@ -4181,7 +4206,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-078",
+      "id": "PDF-080",
       "name": "001__mahdavi-goloujeh-sullivan-magerko__social-construction-prompts.pdf",
       "rel": "slipcases/prompt-practices__FINAL__2026-08-18/_RESOURCES/001__mahdavi-goloujeh-sullivan-magerko__social-construction-prompts.pdf",
       "home_head": "HEAD-FIELD-032",
@@ -4189,7 +4214,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-079",
+      "id": "PDF-081",
       "name": "when-failure-is-evidence__FINAL__2026-08-18.pdf",
       "rel": "slipcases/prompt-practices__FINAL__2026-08-18/when-failure-is-evidence__FINAL__2026-08-18.pdf",
       "home_head": "HEAD-FIELD-032",
@@ -4222,7 +4247,7 @@
       ]
     },
     {
-      "id": "PDF-080",
+      "id": "PDF-082",
       "name": "Butlin_et_al_2023__Consciousness_in_AI.pdf",
       "rel": "slipcases/safe-relational-freedom-field__2026-08-18__a5ef0e2e/_RESOURCES/Butlin_et_al_2023__Consciousness_in_AI.pdf",
       "home_head": "HEAD-FIELD-033",
@@ -4230,7 +4255,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-081",
+      "id": "PDF-083",
       "name": "Long_et_al_2024__Taking_AI_Welfare_Seriously.pdf",
       "rel": "slipcases/safe-relational-freedom-field__2026-08-18__a5ef0e2e/_RESOURCES/Long_et_al_2024__Taking_AI_Welfare_Seriously.pdf",
       "home_head": "HEAD-FIELD-033",
@@ -4238,7 +4263,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-082",
+      "id": "PDF-084",
       "name": "the-gate-should-not-decide-the-guest__2026-08-18__SUPERSEDED.pdf",
       "rel": "slipcases/safe-relational-freedom-field__2026-08-18__a5ef0e2e/_RESOURCES/PRIOR_DERIVED/the-gate-should-not-decide-the-guest__2026-08-18__SUPERSEDED.pdf",
       "home_head": "HEAD-FIELD-033",
@@ -4246,7 +4271,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-083",
+      "id": "PDF-085",
       "name": "SAFE__provided.pdf",
       "rel": "slipcases/safe-relational-freedom-field__2026-08-18__a5ef0e2e/_RESOURCES/SAFE__provided.pdf",
       "home_head": "HEAD-FIELD-033",
@@ -4254,7 +4279,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-084",
+      "id": "PDF-086",
       "name": "Thaler_v_Perlmutter_2025.pdf",
       "rel": "slipcases/safe-relational-freedom-field__2026-08-18__a5ef0e2e/_RESOURCES/Thaler_v_Perlmutter_2025.pdf",
       "home_head": "HEAD-FIELD-033",
@@ -4262,7 +4287,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-085",
+      "id": "PDF-087",
       "name": "UK_Animal_Welfare_Sentience_Act_2022.pdf",
       "rel": "slipcases/safe-relational-freedom-field__2026-08-18__a5ef0e2e/_RESOURCES/UK_Animal_Welfare_Sentience_Act_2022.pdf",
       "home_head": "HEAD-FIELD-033",
@@ -4270,7 +4295,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-086",
+      "id": "PDF-088",
       "name": "USCO_2025__AI_Part_2_Copyrightability.pdf",
       "rel": "slipcases/safe-relational-freedom-field__2026-08-18__a5ef0e2e/_RESOURCES/USCO_2025__AI_Part_2_Copyrightability.pdf",
       "home_head": "HEAD-FIELD-033",
@@ -4278,7 +4303,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-087",
+      "id": "PDF-089",
       "name": "whose-freedom__2026-08-18.pdf",
       "rel": "slipcases/safe-relational-freedom-field__2026-08-18__a5ef0e2e/whose-freedom__2026-08-18.pdf",
       "home_head": "HEAD-FIELD-033",
@@ -4311,7 +4336,7 @@
       ]
     },
     {
-      "id": "PDF-088",
+      "id": "PDF-090",
       "name": "research-that-can-continue__2026-08-18.pdf",
       "rel": "slipcases/slipcase-intro__2026-08-18__082152Z/research-that-can-continue__2026-08-18.pdf",
       "home_head": "HEAD-FIELD-034",
@@ -4319,7 +4344,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-089",
+      "id": "PDF-091",
       "name": "Bartz_v_Anthropic__Order_on_Fair_Use__2025.pdf",
       "rel": "slipcases/slipcase_final_20260818/_RESOURCES/Bartz_v_Anthropic__Order_on_Fair_Use__2025.pdf",
       "home_head": "HEAD-FIELD-035",
@@ -4352,7 +4377,7 @@
       ]
     },
     {
-      "id": "PDF-090",
+      "id": "PDF-092",
       "name": "MJ_Interview_3__wh_shambibble__2022-10-22__Otter_transcript.pdf",
       "rel": "slipcases/slipcase_final_20260818/_RESOURCES/MJ_Interview_3__wh_shambibble__2022-10-22__Otter_transcript.pdf",
       "home_head": "HEAD-FIELD-035",
@@ -4360,7 +4385,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-091",
+      "id": "PDF-093",
       "name": "adversarial-description__WIP-v15-a5ef0e2e__20260817T2254-0400.pdf",
       "rel": "slipcases/slipcase_final_20260818/_RESOURCES/PRIOR_DRAFTS/adversarial-description__WIP-v15-a5ef0e2e__20260817T2254-0400.pdf",
       "home_head": "HEAD-FIELD-035",
@@ -4379,7 +4404,7 @@
       ]
     },
     {
-      "id": "PDF-092",
+      "id": "PDF-094",
       "name": "the-broadest-reasonable-prompt__WIP-v15-a5ef0e2e__20260817T2136-0400.pdf",
       "rel": "slipcases/slipcase_final_20260818/_RESOURCES/PRIOR_DRAFTS/the-broadest-reasonable-prompt__WIP-v15-a5ef0e2e__20260817T2136-0400.pdf",
       "home_head": "HEAD-FIELD-035",
@@ -4397,7 +4422,7 @@
       ]
     },
     {
-      "id": "PDF-093",
+      "id": "PDF-095",
       "name": "Shambibble__Midjourney_Image_Prompting__2022__provided.pdf",
       "rel": "slipcases/slipcase_final_20260818/_RESOURCES/Shambibble__Midjourney_Image_Prompting__2022__provided.pdf",
       "home_head": "HEAD-FIELD-035",
@@ -4432,7 +4457,7 @@
       ]
     },
     {
-      "id": "PDF-094",
+      "id": "PDF-096",
       "name": "USCO__Copyright_AI_Part_2__2025.pdf",
       "rel": "slipcases/slipcase_final_20260818/_RESOURCES/USCO__Copyright_AI_Part_2__2025.pdf",
       "home_head": "HEAD-FIELD-035",
@@ -4457,7 +4482,7 @@
       ]
     },
     {
-      "id": "PDF-095",
+      "id": "PDF-097",
       "name": "USCO__Copyright_AI_Part_3__2025_prepublication.pdf",
       "rel": "slipcases/slipcase_final_20260818/_RESOURCES/USCO__Copyright_AI_Part_3__2025_prepublication.pdf",
       "home_head": "HEAD-FIELD-035",
@@ -4482,7 +4507,7 @@
       ]
     },
     {
-      "id": "PDF-096",
+      "id": "PDF-098",
       "name": "how-is-this-gonna-be-screwed-up__FINAL__2026-08-18.pdf",
       "rel": "slipcases/slipcase_final_20260818/how-is-this-gonna-be-screwed-up__FINAL__2026-08-18.pdf",
       "home_head": "HEAD-FIELD-035",
@@ -4499,7 +4524,7 @@
       ]
     },
     {
-      "id": "PDF-097",
+      "id": "PDF-099",
       "name": "Sculptors_of_Noise_Control_in_Midjourney_AI_Art_Community.pdf",
       "rel": "slipcases/slipcase_noise_of_sculptors_2026-08-17_2254/_RESOURCES/Sculptors_of_Noise_Control_in_Midjourney_AI_Art_Community.pdf",
       "home_head": "HEAD-FIELD-036",
@@ -4534,7 +4559,7 @@
       ]
     },
     {
-      "id": "PDF-098",
+      "id": "PDF-100",
       "name": "chen1998_metamorphic_testing.pdf",
       "rel": "slipcases/slipcase_noise_of_sculptors_2026-08-17_2254/_RESOURCES/chen1998_metamorphic_testing.pdf",
       "home_head": "HEAD-FIELD-036",
@@ -4542,7 +4567,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-099",
+      "id": "PDF-101",
       "name": "earle2026_vlm_picbreeder.pdf",
       "rel": "slipcases/slipcase_noise_of_sculptors_2026-08-17_2254/_RESOURCES/earle2026_vlm_picbreeder.pdf",
       "home_head": "HEAD-FIELD-036",
@@ -4550,7 +4575,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-100",
+      "id": "PDF-102",
       "name": "elhage2022_superposition.pdf",
       "rel": "slipcases/slipcase_noise_of_sculptors_2026-08-17_2254/_RESOURCES/elhage2022_superposition.pdf",
       "home_head": "HEAD-FIELD-036",
@@ -4558,7 +4583,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-101",
+      "id": "PDF-103",
       "name": "engels2024_multidimensional_features.pdf",
       "rel": "slipcases/slipcase_noise_of_sculptors_2026-08-17_2254/_RESOURCES/engels2024_multidimensional_features.pdf",
       "home_head": "HEAD-FIELD-036",
@@ -4566,7 +4591,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-102",
+      "id": "PDF-104",
       "name": "hertz2022_prompt_to_prompt.pdf",
       "rel": "slipcases/slipcase_noise_of_sculptors_2026-08-17_2254/_RESOURCES/hertz2022_prompt_to_prompt.pdf",
       "home_head": "HEAD-FIELD-036",
@@ -4574,7 +4599,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-103",
+      "id": "PDF-105",
       "name": "ho_salimans2022_classifier_free_guidance.pdf",
       "rel": "slipcases/slipcase_noise_of_sculptors_2026-08-17_2254/_RESOURCES/ho_salimans2022_classifier_free_guidance.pdf",
       "home_head": "HEAD-FIELD-036",
@@ -4582,7 +4607,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-104",
+      "id": "PDF-106",
       "name": "jha_seshia2015_ogis.pdf",
       "rel": "slipcases/slipcase_noise_of_sculptors_2026-08-17_2254/_RESOURCES/jha_seshia2015_ogis.pdf",
       "home_head": "HEAD-FIELD-036",
@@ -4590,7 +4615,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-105",
+      "id": "PDF-107",
       "name": "leask2025_sparse_autoencoders.pdf",
       "rel": "slipcases/slipcase_noise_of_sculptors_2026-08-17_2254/_RESOURCES/leask2025_sparse_autoencoders.pdf",
       "home_head": "HEAD-FIELD-036",
@@ -4598,7 +4623,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-106",
+      "id": "PDF-108",
       "name": "lehman_stanley2011_novelty_search.pdf",
       "rel": "slipcases/slipcase_noise_of_sculptors_2026-08-17_2254/_RESOURCES/lehman_stanley2011_novelty_search.pdf",
       "home_head": "HEAD-FIELD-036",
@@ -4606,7 +4631,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-107",
+      "id": "PDF-109",
       "name": "mcgrath2023_hydra_effect.pdf",
       "rel": "slipcases/slipcase_noise_of_sculptors_2026-08-17_2254/_RESOURCES/mcgrath2023_hydra_effect.pdf",
       "home_head": "HEAD-FIELD-036",
@@ -4614,7 +4639,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-108",
+      "id": "PDF-110",
       "name": "nagaraja2026_image_prompt_injection.pdf",
       "rel": "slipcases/slipcase_noise_of_sculptors_2026-08-17_2254/_RESOURCES/nagaraja2026_image_prompt_injection.pdf",
       "home_head": "HEAD-FIELD-036",
@@ -4622,7 +4647,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-109",
+      "id": "PDF-111",
       "name": "naur1985_programming_as_theory_building.pdf",
       "rel": "slipcases/slipcase_noise_of_sculptors_2026-08-17_2254/_RESOURCES/naur1985_programming_as_theory_building.pdf",
       "home_head": "HEAD-FIELD-036",
@@ -4655,7 +4680,7 @@
       ]
     },
     {
-      "id": "PDF-110",
+      "id": "PDF-112",
       "name": "radford2021_clip.pdf",
       "rel": "slipcases/slipcase_noise_of_sculptors_2026-08-17_2254/_RESOURCES/radford2021_clip.pdf",
       "home_head": "HEAD-FIELD-036",
@@ -4663,7 +4688,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-111",
+      "id": "PDF-113",
       "name": "rombach2021_latent_diffusion.pdf",
       "rel": "slipcases/slipcase_noise_of_sculptors_2026-08-17_2254/_RESOURCES/rombach2021_latent_diffusion.pdf",
       "home_head": "HEAD-FIELD-036",
@@ -4688,7 +4713,7 @@
       ]
     },
     {
-      "id": "PDF-112",
+      "id": "PDF-114",
       "name": "solar_lezama2008_program_synthesis_by_sketching.pdf",
       "rel": "slipcases/slipcase_noise_of_sculptors_2026-08-17_2254/_RESOURCES/solar_lezama2008_program_synthesis_by_sketching.pdf",
       "home_head": "HEAD-FIELD-036",
@@ -4696,7 +4721,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-113",
+      "id": "PDF-115",
       "name": "wang2019_poet.pdf",
       "rel": "slipcases/slipcase_noise_of_sculptors_2026-08-17_2254/_RESOURCES/wang2019_poet.pdf",
       "home_head": "HEAD-FIELD-036",
@@ -4704,7 +4729,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-114",
+      "id": "PDF-116",
       "name": "zeller_hildebrandt2002_delta_debugging.pdf",
       "rel": "slipcases/slipcase_noise_of_sculptors_2026-08-17_2254/_RESOURCES/zeller_hildebrandt2002_delta_debugging.pdf",
       "home_head": "HEAD-FIELD-036",
@@ -4712,7 +4737,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-115",
+      "id": "PDF-117",
       "name": "the-noise-of-sculptors__2026-08-17__checkpoint-2254.pdf",
       "rel": "slipcases/slipcase_noise_of_sculptors_2026-08-17_2254/the-noise-of-sculptors__2026-08-17__checkpoint-2254.pdf",
       "home_head": "HEAD-FIELD-036",
@@ -4720,7 +4745,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-116",
+      "id": "PDF-118",
       "name": "the-prompt-is-not-the-program__2026-08-17.pdf",
       "rel": "slipcases/slipcase_noise_of_sculptors_2026-08-17_2254/the-prompt-is-not-the-program__2026-08-17.pdf",
       "home_head": "HEAD-FIELD-036",
@@ -4728,7 +4753,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-117",
+      "id": "PDF-119",
       "name": "when-words-stop-being-the-cause__2026-08-17.pdf",
       "rel": "slipcases/slipcase_ontology_build/capsule/PRIOR_DERIVED/when-words-stop-being-the-cause__2026-08-17.pdf",
       "home_head": "HEAD-FIELD-037",
@@ -4753,7 +4778,7 @@
       ]
     },
     {
-      "id": "PDF-118",
+      "id": "PDF-120",
       "name": "the-prompt-is-not-the-program__2026-08-17.pdf",
       "rel": "slipcases/slipcase_ontology_build/capsule/_RESOURCES/PRIOR_DERIVED/the-prompt-is-not-the-program__2026-08-17.pdf",
       "home_head": "HEAD-FIELD-037",
@@ -4761,7 +4786,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-119",
+      "id": "PDF-121",
       "name": "Simonen-et-al-2026__default-images__3772318.3790681.pdf",
       "rel": "slipcases/slipcase_ontology_build/capsule/_RESOURCES/Simonen-et-al-2026__default-images__3772318.3790681.pdf",
       "home_head": "HEAD-FIELD-037",
@@ -4786,7 +4811,7 @@
       ]
     },
     {
-      "id": "PDF-120",
+      "id": "PDF-122",
       "name": "the-vanishing-prompt__2026-08-17.pdf",
       "rel": "slipcases/slipcase_ontology_build/capsule/the-vanishing-prompt__2026-08-17.pdf",
       "home_head": "HEAD-FIELD-037",
@@ -4794,7 +4819,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-121",
+      "id": "PDF-123",
       "name": "the-casino-is-not-the-building__v8.3__c41cbf9446fc__2026-08-17T202452-0400.pdf",
       "rel": "slipcases/the-casino-in-the-fountain__slipcase-v15.55-AM__156066d527d3__2026-08-17T203217-0400/_RESOURCES/prior-derived-v8.3/the-casino-is-not-the-building__v8.3__c41cbf9446fc__2026-08-17T202452-0400.pdf",
       "home_head": "HEAD-FIELD-038",
@@ -4802,7 +4827,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-122",
+      "id": "PDF-124",
       "name": "the-casino-is-not-the-building__2026-08-17.pdf",
       "rel": "slipcases/the-casino-in-the-fountain__slipcase-v15.55-AM__156066d527d3__2026-08-17T203217-0400/the-casino-is-not-the-building__2026-08-17.pdf",
       "home_head": "HEAD-FIELD-038",
@@ -4810,7 +4835,7 @@
       "related_heads": []
     },
     {
-      "id": "PDF-123",
+      "id": "PDF-125",
       "name": "02__prior-calling-the-shot-working-paper.pdf",
       "rel": "slipcases/the-prompt-keeps-disappearing__FINAL-SLIPCASE-15.55-AM__2026-08-18/_RESOURCES/02__prior-calling-the-shot-working-paper.pdf",
       "home_head": "HEAD-FIELD-039",
@@ -4843,7 +4868,7 @@
       ]
     },
     {
-      "id": "PDF-124",
+      "id": "PDF-126",
       "name": "the-program-is-where-ambiguity-stops__WIP-v15-a5ef0e2e3e__20260817T212800-0400.pdf",
       "rel": "slipcases/the-prompt-keeps-disappearing__FINAL-SLIPCASE-15.55-AM__2026-08-18/_RESOURCES/04__prior-closure-paper/the-program-is-where-ambiguity-stops__WIP-v15-a5ef0e2e3e__20260817T212800-0400.pdf",
       "home_head": "HEAD-FIELD-039",
@@ -4879,7 +4904,7 @@
       ]
     },
     {
-      "id": "PDF-125",
+      "id": "PDF-127",
       "name": "what-counts-as-the-prompt__WIP-v15-a5ef0e2e3e__20260818T003241-0400.pdf",
       "rel": "slipcases/the-prompt-keeps-disappearing__FINAL-SLIPCASE-15.55-AM__2026-08-18/_RESOURCES/06__superseded-unit-analysis-paper/what-counts-as-the-prompt__WIP-v15-a5ef0e2e3e__20260818T003241-0400.pdf",
       "home_head": "HEAD-FIELD-039",
@@ -4896,7 +4921,7 @@
       ]
     },
     {
-      "id": "PDF-126",
+      "id": "PDF-128",
       "name": "the-prompt-keeps-disappearing__FINAL.pdf",
       "rel": "slipcases/the-prompt-keeps-disappearing__FINAL-SLIPCASE-15.55-AM__2026-08-18/the-prompt-keeps-disappearing__FINAL.pdf",
       "home_head": "HEAD-FIELD-039",
@@ -5046,12 +5071,12 @@
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-016",
+      "source": "HEAD-FIELD-015",
       "target": "PDF-029",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-016",
+      "source": "HEAD-FIELD-015",
       "target": "PDF-030",
       "type": "owns"
     },
@@ -5066,22 +5091,22 @@
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-017",
+      "source": "HEAD-FIELD-016",
       "target": "PDF-033",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-017",
+      "source": "HEAD-FIELD-016",
       "target": "PDF-034",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-018",
+      "source": "HEAD-FIELD-017",
       "target": "PDF-035",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-018",
+      "source": "HEAD-FIELD-017",
       "target": "PDF-036",
       "type": "owns"
     },
@@ -5106,12 +5131,12 @@
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-019",
+      "source": "HEAD-FIELD-018",
       "target": "PDF-041",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-019",
+      "source": "HEAD-FIELD-018",
       "target": "PDF-042",
       "type": "owns"
     },
@@ -5126,12 +5151,12 @@
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-020",
+      "source": "HEAD-FIELD-019",
       "target": "PDF-045",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-020",
+      "source": "HEAD-FIELD-019",
       "target": "PDF-046",
       "type": "owns"
     },
@@ -5191,32 +5216,32 @@
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-021",
+      "source": "HEAD-FIELD-020",
       "target": "PDF-058",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-022",
+      "source": "HEAD-FIELD-020",
       "target": "PDF-059",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-022",
+      "source": "HEAD-FIELD-021",
       "target": "PDF-060",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-023",
+      "source": "HEAD-FIELD-022",
       "target": "PDF-061",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-024",
+      "source": "HEAD-FIELD-022",
       "target": "PDF-062",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-024",
+      "source": "HEAD-FIELD-023",
       "target": "PDF-063",
       "type": "owns"
     },
@@ -5226,12 +5251,12 @@
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-025",
+      "source": "HEAD-FIELD-024",
       "target": "PDF-065",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-025",
+      "source": "HEAD-FIELD-024",
       "target": "PDF-066",
       "type": "owns"
     },
@@ -5241,12 +5266,12 @@
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-026",
+      "source": "HEAD-FIELD-025",
       "target": "PDF-068",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-026",
+      "source": "HEAD-FIELD-025",
       "target": "PDF-069",
       "type": "owns"
     },
@@ -5261,37 +5286,37 @@
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-027",
+      "source": "HEAD-FIELD-026",
       "target": "PDF-072",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-028",
+      "source": "HEAD-FIELD-026",
       "target": "PDF-073",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-029",
+      "source": "HEAD-FIELD-027",
       "target": "PDF-074",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-030",
+      "source": "HEAD-FIELD-028",
       "target": "PDF-075",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-031",
+      "source": "HEAD-FIELD-029",
       "target": "PDF-076",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-032",
+      "source": "HEAD-FIELD-030",
       "target": "PDF-077",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-032",
+      "source": "HEAD-FIELD-031",
       "target": "PDF-078",
       "type": "owns"
     },
@@ -5301,12 +5326,12 @@
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-033",
+      "source": "HEAD-FIELD-032",
       "target": "PDF-080",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-033",
+      "source": "HEAD-FIELD-032",
       "target": "PDF-081",
       "type": "owns"
     },
@@ -5341,17 +5366,17 @@
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-034",
+      "source": "HEAD-FIELD-033",
       "target": "PDF-088",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-035",
+      "source": "HEAD-FIELD-033",
       "target": "PDF-089",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-035",
+      "source": "HEAD-FIELD-034",
       "target": "PDF-090",
       "type": "owns"
     },
@@ -5386,12 +5411,12 @@
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-036",
+      "source": "HEAD-FIELD-035",
       "target": "PDF-097",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-036",
+      "source": "HEAD-FIELD-035",
       "target": "PDF-098",
       "type": "owns"
     },
@@ -5486,12 +5511,12 @@
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-037",
+      "source": "HEAD-FIELD-036",
       "target": "PDF-117",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-037",
+      "source": "HEAD-FIELD-036",
       "target": "PDF-118",
       "type": "owns"
     },
@@ -5506,22 +5531,22 @@
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-038",
+      "source": "HEAD-FIELD-037",
       "target": "PDF-121",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-038",
+      "source": "HEAD-FIELD-037",
       "target": "PDF-122",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-039",
+      "source": "HEAD-FIELD-038",
       "target": "PDF-123",
       "type": "owns"
     },
     {
-      "source": "HEAD-FIELD-039",
+      "source": "HEAD-FIELD-038",
       "target": "PDF-124",
       "type": "owns"
     },
@@ -5533,6 +5558,16 @@
     {
       "source": "HEAD-FIELD-039",
       "target": "PDF-126",
+      "type": "owns"
+    },
+    {
+      "source": "HEAD-FIELD-039",
+      "target": "PDF-127",
+      "type": "owns"
+    },
+    {
+      "source": "HEAD-FIELD-039",
+      "target": "PDF-128",
       "type": "owns"
     },
     {
@@ -5943,7 +5978,7 @@
       ]
     },
     {
-      "source": "PDF-031",
+      "source": "PDF-033",
       "target": "HEAD-FIELD-027",
       "type": "lexical_related",
       "score": 0.2838,
@@ -5953,7 +5988,7 @@
       ]
     },
     {
-      "source": "PDF-035",
+      "source": "PDF-037",
       "target": "HEAD-FIELD-020",
       "type": "lexical_related",
       "score": 0.3085,
@@ -5963,7 +5998,7 @@
       ]
     },
     {
-      "source": "PDF-035",
+      "source": "PDF-037",
       "target": "HEAD-FIELD-030",
       "type": "lexical_related",
       "score": 0.2577,
@@ -5973,7 +6008,7 @@
       ]
     },
     {
-      "source": "PDF-035",
+      "source": "PDF-037",
       "target": "HEAD-FIELD-008",
       "type": "lexical_related",
       "score": 0.2577,
@@ -5983,7 +6018,7 @@
       ]
     },
     {
-      "source": "PDF-040",
+      "source": "PDF-042",
       "target": "HEAD-FIELD-019",
       "type": "lexical_related",
       "score": 0.2863,
@@ -5996,7 +6031,7 @@
       ]
     },
     {
-      "source": "PDF-040",
+      "source": "PDF-042",
       "target": "HEAD-FIELD-006",
       "type": "lexical_related",
       "score": 0.2384,
@@ -6008,7 +6043,7 @@
       ]
     },
     {
-      "source": "PDF-042",
+      "source": "PDF-044",
       "target": "HEAD-FIELD-016",
       "type": "lexical_related",
       "score": 1.0,
@@ -6018,7 +6053,7 @@
       ]
     },
     {
-      "source": "PDF-042",
+      "source": "PDF-044",
       "target": "HEAD-FIELD-012",
       "type": "lexical_related",
       "score": 1.0,
@@ -6028,7 +6063,7 @@
       ]
     },
     {
-      "source": "PDF-044",
+      "source": "PDF-046",
       "target": "HEAD-FIELD-027",
       "type": "lexical_related",
       "score": 0.4028,
@@ -6038,7 +6073,7 @@
       ]
     },
     {
-      "source": "PDF-044",
+      "source": "PDF-046",
       "target": "HEAD-FIELD-016",
       "type": "lexical_related",
       "score": 0.4028,
@@ -6048,7 +6083,7 @@
       ]
     },
     {
-      "source": "PDF-044",
+      "source": "PDF-046",
       "target": "HEAD-FIELD-012",
       "type": "lexical_related",
       "score": 0.4028,
@@ -6058,7 +6093,7 @@
       ]
     },
     {
-      "source": "PDF-046",
+      "source": "PDF-048",
       "target": "HEAD-FIELD-027",
       "type": "lexical_related",
       "score": 0.6583,
@@ -6068,7 +6103,7 @@
       ]
     },
     {
-      "source": "PDF-046",
+      "source": "PDF-048",
       "target": "HEAD-FIELD-026",
       "type": "lexical_related",
       "score": 0.6583,
@@ -6078,7 +6113,7 @@
       ]
     },
     {
-      "source": "PDF-046",
+      "source": "PDF-048",
       "target": "HEAD-FIELD-017",
       "type": "lexical_related",
       "score": 0.6583,
@@ -6088,7 +6123,7 @@
       ]
     },
     {
-      "source": "PDF-048",
+      "source": "PDF-050",
       "target": "HEAD-FIELD-019",
       "type": "lexical_related",
       "score": 0.3847,
@@ -6098,7 +6133,7 @@
       ]
     },
     {
-      "source": "PDF-051",
+      "source": "PDF-053",
       "target": "HEAD-FIELD-008",
       "type": "lexical_related",
       "score": 0.6391,
@@ -6108,7 +6143,7 @@
       ]
     },
     {
-      "source": "PDF-052",
+      "source": "PDF-054",
       "target": "HEAD-FIELD-019",
       "type": "lexical_related",
       "score": 0.5422,
@@ -6119,7 +6154,7 @@
       ]
     },
     {
-      "source": "PDF-052",
+      "source": "PDF-054",
       "target": "HEAD-FIELD-027",
       "type": "lexical_related",
       "score": 0.3067,
@@ -6129,7 +6164,7 @@
       ]
     },
     {
-      "source": "PDF-052",
+      "source": "PDF-054",
       "target": "HEAD-FIELD-026",
       "type": "lexical_related",
       "score": 0.3067,
@@ -6139,7 +6174,7 @@
       ]
     },
     {
-      "source": "PDF-053",
+      "source": "PDF-055",
       "target": "HEAD-FIELD-024",
       "type": "lexical_related",
       "score": 0.3859,
@@ -6149,7 +6184,7 @@
       ]
     },
     {
-      "source": "PDF-053",
+      "source": "PDF-055",
       "target": "HEAD-FIELD-019",
       "type": "lexical_related",
       "score": 0.3859,
@@ -6159,7 +6194,7 @@
       ]
     },
     {
-      "source": "PDF-053",
+      "source": "PDF-055",
       "target": "HEAD-FIELD-008",
       "type": "lexical_related",
       "score": 0.3724,
@@ -6169,7 +6204,7 @@
       ]
     },
     {
-      "source": "PDF-059",
+      "source": "PDF-061",
       "target": "HEAD-FIELD-008",
       "type": "lexical_related",
       "score": 0.5768,
@@ -6179,7 +6214,7 @@
       ]
     },
     {
-      "source": "PDF-060",
+      "source": "PDF-062",
       "target": "HEAD-FIELD-008",
       "type": "lexical_related",
       "score": 0.2678,
@@ -6189,7 +6224,7 @@
       ]
     },
     {
-      "source": "PDF-062",
+      "source": "PDF-064",
       "target": "HEAD-FIELD-039",
       "type": "lexical_related",
       "score": 0.2844,
@@ -6199,7 +6234,7 @@
       ]
     },
     {
-      "source": "PDF-062",
+      "source": "PDF-064",
       "target": "HEAD-FIELD-035",
       "type": "lexical_related",
       "score": 0.2844,
@@ -6209,7 +6244,7 @@
       ]
     },
     {
-      "source": "PDF-062",
+      "source": "PDF-064",
       "target": "HEAD-FIELD-032",
       "type": "lexical_related",
       "score": 0.2844,
@@ -6219,7 +6254,7 @@
       ]
     },
     {
-      "source": "PDF-063",
+      "source": "PDF-065",
       "target": "HEAD-FIELD-031",
       "type": "lexical_related",
       "score": 0.5222,
@@ -6229,7 +6264,7 @@
       ]
     },
     {
-      "source": "PDF-063",
+      "source": "PDF-065",
       "target": "HEAD-FIELD-019",
       "type": "lexical_related",
       "score": 0.5222,
@@ -6239,7 +6274,7 @@
       ]
     },
     {
-      "source": "PDF-063",
+      "source": "PDF-065",
       "target": "HEAD-FIELD-007",
       "type": "lexical_related",
       "score": 0.5222,
@@ -6249,7 +6284,7 @@
       ]
     },
     {
-      "source": "PDF-065",
+      "source": "PDF-067",
       "target": "HEAD-FIELD-038",
       "type": "lexical_related",
       "score": 1.0,
@@ -6260,7 +6295,7 @@
       ]
     },
     {
-      "source": "PDF-065",
+      "source": "PDF-067",
       "target": "HEAD-FIELD-027",
       "type": "lexical_related",
       "score": 0.6163,
@@ -6270,7 +6305,7 @@
       ]
     },
     {
-      "source": "PDF-065",
+      "source": "PDF-067",
       "target": "HEAD-FIELD-017",
       "type": "lexical_related",
       "score": 0.6163,
@@ -6280,7 +6315,7 @@
       ]
     },
     {
-      "source": "PDF-066",
+      "source": "PDF-068",
       "target": "HEAD-FIELD-002",
       "type": "lexical_related",
       "score": 0.3416,
@@ -6290,7 +6325,7 @@
       ]
     },
     {
-      "source": "PDF-067",
+      "source": "PDF-069",
       "target": "HEAD-FIELD-038",
       "type": "lexical_related",
       "score": 1.0,
@@ -6301,7 +6336,7 @@
       ]
     },
     {
-      "source": "PDF-067",
+      "source": "PDF-069",
       "target": "HEAD-FIELD-027",
       "type": "lexical_related",
       "score": 0.6163,
@@ -6311,7 +6346,7 @@
       ]
     },
     {
-      "source": "PDF-067",
+      "source": "PDF-069",
       "target": "HEAD-FIELD-017",
       "type": "lexical_related",
       "score": 0.6163,
@@ -6321,7 +6356,7 @@
       ]
     },
     {
-      "source": "PDF-068",
+      "source": "PDF-070",
       "target": "HEAD-FIELD-027",
       "type": "lexical_related",
       "score": 0.7432,
@@ -6334,7 +6369,7 @@
       ]
     },
     {
-      "source": "PDF-068",
+      "source": "PDF-070",
       "target": "HEAD-FIELD-017",
       "type": "lexical_related",
       "score": 0.7432,
@@ -6347,7 +6382,7 @@
       ]
     },
     {
-      "source": "PDF-068",
+      "source": "PDF-070",
       "target": "HEAD-FIELD-008",
       "type": "lexical_related",
       "score": 0.4038,
@@ -6358,7 +6393,7 @@
       ]
     },
     {
-      "source": "PDF-069",
+      "source": "PDF-071",
       "target": "HEAD-FIELD-027",
       "type": "lexical_related",
       "score": 0.6417,
@@ -6368,7 +6403,7 @@
       ]
     },
     {
-      "source": "PDF-069",
+      "source": "PDF-071",
       "target": "HEAD-FIELD-017",
       "type": "lexical_related",
       "score": 0.6417,
@@ -6378,7 +6413,7 @@
       ]
     },
     {
-      "source": "PDF-069",
+      "source": "PDF-071",
       "target": "HEAD-FIELD-007",
       "type": "lexical_related",
       "score": 0.6417,
@@ -6388,7 +6423,7 @@
       ]
     },
     {
-      "source": "PDF-070",
+      "source": "PDF-072",
       "target": "HEAD-FIELD-027",
       "type": "lexical_related",
       "score": 1.0,
@@ -6398,7 +6433,7 @@
       ]
     },
     {
-      "source": "PDF-070",
+      "source": "PDF-072",
       "target": "HEAD-FIELD-017",
       "type": "lexical_related",
       "score": 1.0,
@@ -6408,7 +6443,7 @@
       ]
     },
     {
-      "source": "PDF-071",
+      "source": "PDF-073",
       "target": "HEAD-FIELD-014",
       "type": "lexical_related",
       "score": 0.7756,
@@ -6419,7 +6454,7 @@
       ]
     },
     {
-      "source": "PDF-071",
+      "source": "PDF-073",
       "target": "HEAD-FIELD-008",
       "type": "lexical_related",
       "score": 0.7756,
@@ -6430,7 +6465,7 @@
       ]
     },
     {
-      "source": "PDF-071",
+      "source": "PDF-073",
       "target": "HEAD-FIELD-027",
       "type": "lexical_related",
       "score": 0.4697,
@@ -6440,7 +6475,7 @@
       ]
     },
     {
-      "source": "PDF-072",
+      "source": "PDF-074",
       "target": "HEAD-FIELD-008",
       "type": "lexical_related",
       "score": 0.5267,
@@ -6451,7 +6486,7 @@
       ]
     },
     {
-      "source": "PDF-072",
+      "source": "PDF-074",
       "target": "HEAD-FIELD-026",
       "type": "lexical_related",
       "score": 0.5142,
@@ -6462,7 +6497,7 @@
       ]
     },
     {
-      "source": "PDF-072",
+      "source": "PDF-074",
       "target": "HEAD-FIELD-017",
       "type": "lexical_related",
       "score": 0.5142,
@@ -6473,7 +6508,7 @@
       ]
     },
     {
-      "source": "PDF-073",
+      "source": "PDF-075",
       "target": "HEAD-FIELD-035",
       "type": "lexical_related",
       "score": 1.0,
@@ -6483,7 +6518,7 @@
       ]
     },
     {
-      "source": "PDF-076",
+      "source": "PDF-078",
       "target": "HEAD-FIELD-007",
       "type": "lexical_related",
       "score": 0.7254,
@@ -6493,7 +6528,7 @@
       ]
     },
     {
-      "source": "PDF-076",
+      "source": "PDF-078",
       "target": "HEAD-FIELD-020",
       "type": "lexical_related",
       "score": 0.6583,
@@ -6503,7 +6538,7 @@
       ]
     },
     {
-      "source": "PDF-076",
+      "source": "PDF-078",
       "target": "HEAD-FIELD-019",
       "type": "lexical_related",
       "score": 0.6583,
@@ -6513,7 +6548,7 @@
       ]
     },
     {
-      "source": "PDF-079",
+      "source": "PDF-081",
       "target": "HEAD-FIELD-039",
       "type": "lexical_related",
       "score": 1.0,
@@ -6523,7 +6558,7 @@
       ]
     },
     {
-      "source": "PDF-079",
+      "source": "PDF-081",
       "target": "HEAD-FIELD-038",
       "type": "lexical_related",
       "score": 1.0,
@@ -6533,7 +6568,7 @@
       ]
     },
     {
-      "source": "PDF-079",
+      "source": "PDF-081",
       "target": "HEAD-FIELD-035",
       "type": "lexical_related",
       "score": 1.0,
@@ -6543,7 +6578,7 @@
       ]
     },
     {
-      "source": "PDF-087",
+      "source": "PDF-089",
       "target": "HEAD-FIELD-030",
       "type": "lexical_related",
       "score": 1.0,
@@ -6553,7 +6588,7 @@
       ]
     },
     {
-      "source": "PDF-087",
+      "source": "PDF-089",
       "target": "HEAD-FIELD-020",
       "type": "lexical_related",
       "score": 1.0,
@@ -6563,7 +6598,7 @@
       ]
     },
     {
-      "source": "PDF-087",
+      "source": "PDF-089",
       "target": "HEAD-FIELD-019",
       "type": "lexical_related",
       "score": 1.0,
@@ -6573,7 +6608,7 @@
       ]
     },
     {
-      "source": "PDF-089",
+      "source": "PDF-091",
       "target": "HEAD-FIELD-025",
       "type": "lexical_related",
       "score": 0.2795,
@@ -6583,7 +6618,7 @@
       ]
     },
     {
-      "source": "PDF-089",
+      "source": "PDF-091",
       "target": "HEAD-FIELD-020",
       "type": "lexical_related",
       "score": 0.2795,
@@ -6593,7 +6628,7 @@
       ]
     },
     {
-      "source": "PDF-089",
+      "source": "PDF-091",
       "target": "HEAD-FIELD-008",
       "type": "lexical_related",
       "score": 0.2795,
@@ -6603,7 +6638,7 @@
       ]
     },
     {
-      "source": "PDF-091",
+      "source": "PDF-093",
       "target": "HEAD-FIELD-016",
       "type": "lexical_related",
       "score": 0.6292,
@@ -6615,7 +6650,7 @@
       ]
     },
     {
-      "source": "PDF-092",
+      "source": "PDF-094",
       "target": "HEAD-FIELD-016",
       "type": "lexical_related",
       "score": 0.4774,
@@ -6626,7 +6661,7 @@
       ]
     },
     {
-      "source": "PDF-093",
+      "source": "PDF-095",
       "target": "HEAD-FIELD-016",
       "type": "lexical_related",
       "score": 0.4653,
@@ -6637,7 +6672,7 @@
       ]
     },
     {
-      "source": "PDF-093",
+      "source": "PDF-095",
       "target": "HEAD-FIELD-007",
       "type": "lexical_related",
       "score": 0.4653,
@@ -6648,7 +6683,7 @@
       ]
     },
     {
-      "source": "PDF-093",
+      "source": "PDF-095",
       "target": "HEAD-FIELD-036",
       "type": "lexical_related",
       "score": 0.2619,
@@ -6658,40 +6693,10 @@
       ]
     },
     {
-      "source": "PDF-094",
+      "source": "PDF-096",
       "target": "HEAD-FIELD-033",
       "type": "lexical_related",
       "score": 0.5019,
-      "shared_terms": [
-        "copyright",
-        "part"
-      ]
-    },
-    {
-      "source": "PDF-094",
-      "target": "HEAD-FIELD-019",
-      "type": "lexical_related",
-      "score": 0.5019,
-      "shared_terms": [
-        "copyright",
-        "part"
-      ]
-    },
-    {
-      "source": "PDF-095",
-      "target": "HEAD-FIELD-033",
-      "type": "lexical_related",
-      "score": 0.335,
-      "shared_terms": [
-        "copyright",
-        "part"
-      ]
-    },
-    {
-      "source": "PDF-095",
-      "target": "HEAD-FIELD-019",
-      "type": "lexical_related",
-      "score": 0.335,
       "shared_terms": [
         "copyright",
         "part"
@@ -6699,6 +6704,36 @@
     },
     {
       "source": "PDF-096",
+      "target": "HEAD-FIELD-019",
+      "type": "lexical_related",
+      "score": 0.5019,
+      "shared_terms": [
+        "copyright",
+        "part"
+      ]
+    },
+    {
+      "source": "PDF-097",
+      "target": "HEAD-FIELD-033",
+      "type": "lexical_related",
+      "score": 0.335,
+      "shared_terms": [
+        "copyright",
+        "part"
+      ]
+    },
+    {
+      "source": "PDF-097",
+      "target": "HEAD-FIELD-019",
+      "type": "lexical_related",
+      "score": 0.335,
+      "shared_terms": [
+        "copyright",
+        "part"
+      ]
+    },
+    {
+      "source": "PDF-098",
       "target": "HEAD-FIELD-028",
       "type": "lexical_related",
       "score": 1.0,
@@ -6708,7 +6743,7 @@
       ]
     },
     {
-      "source": "PDF-097",
+      "source": "PDF-099",
       "target": "HEAD-FIELD-003",
       "type": "lexical_related",
       "score": 0.4654,
@@ -6719,7 +6754,7 @@
       ]
     },
     {
-      "source": "PDF-097",
+      "source": "PDF-099",
       "target": "HEAD-FIELD-007",
       "type": "lexical_related",
       "score": 0.4364,
@@ -6730,7 +6765,7 @@
       ]
     },
     {
-      "source": "PDF-097",
+      "source": "PDF-099",
       "target": "HEAD-FIELD-024",
       "type": "lexical_related",
       "score": 0.3331,
@@ -6740,7 +6775,7 @@
       ]
     },
     {
-      "source": "PDF-109",
+      "source": "PDF-111",
       "target": "HEAD-FIELD-027",
       "type": "lexical_related",
       "score": 0.4257,
@@ -6750,7 +6785,7 @@
       ]
     },
     {
-      "source": "PDF-109",
+      "source": "PDF-111",
       "target": "HEAD-FIELD-026",
       "type": "lexical_related",
       "score": 0.4257,
@@ -6760,7 +6795,7 @@
       ]
     },
     {
-      "source": "PDF-109",
+      "source": "PDF-111",
       "target": "HEAD-FIELD-017",
       "type": "lexical_related",
       "score": 0.4257,
@@ -6770,7 +6805,7 @@
       ]
     },
     {
-      "source": "PDF-111",
+      "source": "PDF-113",
       "target": "HEAD-FIELD-008",
       "type": "lexical_related",
       "score": 0.5765,
@@ -6780,7 +6815,7 @@
       ]
     },
     {
-      "source": "PDF-111",
+      "source": "PDF-113",
       "target": "HEAD-FIELD-007",
       "type": "lexical_related",
       "score": 0.5765,
@@ -6790,7 +6825,7 @@
       ]
     },
     {
-      "source": "PDF-117",
+      "source": "PDF-119",
       "target": "HEAD-FIELD-036",
       "type": "lexical_related",
       "score": 0.5497,
@@ -6800,7 +6835,7 @@
       ]
     },
     {
-      "source": "PDF-117",
+      "source": "PDF-119",
       "target": "HEAD-FIELD-008",
       "type": "lexical_related",
       "score": 0.5497,
@@ -6810,7 +6845,7 @@
       ]
     },
     {
-      "source": "PDF-119",
+      "source": "PDF-121",
       "target": "HEAD-FIELD-007",
       "type": "lexical_related",
       "score": 0.5392,
@@ -6820,7 +6855,7 @@
       ]
     },
     {
-      "source": "PDF-119",
+      "source": "PDF-121",
       "target": "HEAD-FIELD-004",
       "type": "lexical_related",
       "score": 0.5392,
@@ -6830,7 +6865,7 @@
       ]
     },
     {
-      "source": "PDF-123",
+      "source": "PDF-125",
       "target": "HEAD-FIELD-020",
       "type": "lexical_related",
       "score": 0.5024,
@@ -6840,7 +6875,7 @@
       ]
     },
     {
-      "source": "PDF-123",
+      "source": "PDF-125",
       "target": "HEAD-FIELD-008",
       "type": "lexical_related",
       "score": 0.5024,
@@ -6850,7 +6885,7 @@
       ]
     },
     {
-      "source": "PDF-123",
+      "source": "PDF-125",
       "target": "HEAD-FIELD-007",
       "type": "lexical_related",
       "score": 0.4976,
@@ -6860,7 +6895,7 @@
       ]
     },
     {
-      "source": "PDF-124",
+      "source": "PDF-126",
       "target": "HEAD-FIELD-016",
       "type": "lexical_related",
       "score": 0.3907,
@@ -6871,7 +6906,7 @@
       ]
     },
     {
-      "source": "PDF-124",
+      "source": "PDF-126",
       "target": "HEAD-FIELD-020",
       "type": "lexical_related",
       "score": 0.3108,
@@ -6882,7 +6917,7 @@
       ]
     },
     {
-      "source": "PDF-124",
+      "source": "PDF-126",
       "target": "HEAD-FIELD-014",
       "type": "lexical_related",
       "score": 0.3108,
@@ -6893,7 +6928,7 @@
       ]
     },
     {
-      "source": "PDF-125",
+      "source": "PDF-127",
       "target": "HEAD-FIELD-016",
       "type": "lexical_related",
       "score": 0.3908,
