@@ -1,0 +1,95 @@
+name: Ingest Real Prompter Grounded Slipcase 2026-09-14
+
+on:
+  push:
+    paths:
+      - '_INGEST/REAL-PROMPTER-2026-09-14/READY'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ingest:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reconstruct and verify Real Prompter field
+        shell: bash
+        run: |
+          set -euo pipefail
+          INGEST="_INGEST/REAL-PROMPTER-2026-09-14"
+          TARGET="slipcases/2026-09-14__will-the-real-prompter-please-stand-up__REAL-PROMPTER__v15.55-AM"
+          TAR_SHA="7367274adeb3df90871049b8f458e94ae0ec9b8c536b116959ce5222f24a02af"
+
+          echo "$TAR_SHA  $INGEST/real-prompter-full-text.tar.gz" | sha256sum -c -
+          rm -rf "$TARGET" /tmp/real-prompter-unpack
+          mkdir -p "$TARGET" /tmp/real-prompter-unpack
+          tar -xzf "$INGEST/real-prompter-full-text.tar.gz" -C /tmp/real-prompter-unpack
+          cp -a /tmp/real-prompter-unpack/real-prompter-slipcase/. "$TARGET"/
+
+      - name: Rebuild paper PDFs from preserved sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET="slipcases/2026-09-14__will-the-real-prompter-please-stand-up__REAL-PROMPTER__v15.55-AM"
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq pandoc texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lmodern poppler-utils
+          cd "$TARGET"
+
+          if [ -f will-the-real-prompter-please-stand-up__2026-09-14.tex ]; then
+            pdflatex -interaction=nonstopmode -halt-on-error will-the-real-prompter-please-stand-up__2026-09-14.tex >/tmp/real-prompter-latex-1.log
+            pdflatex -interaction=nonstopmode -halt-on-error will-the-real-prompter-please-stand-up__2026-09-14.tex >/tmp/real-prompter-latex-2.log
+          fi
+
+          if [ -f will-the-real-prompter-please-stand-up__2026-09-14-grounded.md ]; then
+            pandoc will-the-real-prompter-please-stand-up__2026-09-14-grounded.md \
+              --from markdown --pdf-engine=pdflatex \
+              -V geometry:margin=1in \
+              -V fontsize=11pt \
+              -o will-the-real-prompter-please-stand-up__2026-09-14-grounded.pdf
+          fi
+
+          mkdir -p _SLIPCASE
+          {
+            echo "github_ingest_verified: true"
+            echo "checkpoint: REAL-PROMPTER-2026-09-14"
+            echo "schema: v15.55-AM"
+            echo "source_text_tar_sha256: 7367274adeb3df90871049b8f458e94ae0ec9b8c536b116959ce5222f24a02af"
+            echo "target: $TARGET"
+            echo "note: Text/source field was preserved from the grounded package; binary PDFs were rebuilt on GitHub Actions from preserved TeX/Markdown, so byte identity with local PDFs is not claimed."
+          } > _SLIPCASE/GITHUB_INGEST.txt
+
+          for PDF in will-the-real-prompter-please-stand-up__2026-09-14.pdf will-the-real-prompter-please-stand-up__2026-09-14-grounded.pdf; do
+            if [ -s "$PDF" ]; then
+              SHA="$(sha256sum "$PDF" | awk '{print $1}')"
+              PAGES="$(pdfinfo "$PDF" 2>/dev/null | awk '/^Pages:/ {print $2}' || true)"
+              echo "$PDF sha256=$SHA pages=${PAGES:-UNVERIFIED}" >> _SLIPCASE/GITHUB_INGEST.txt
+            fi
+          done
+
+      - name: Rebuild Slipcase readers and indexes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 build_all.py
+
+      - name: Commit Real Prompter field and rebuilt desk
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET="slipcases/2026-09-14__will-the-real-prompter-please-stand-up__REAL-PROMPTER__v15.55-AM"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$TARGET" index.html slipcases.json map.html atlas.html map-02.html box.html slipcase-reader-v3.html pocket.html || true
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "add grounded Real Prompter slipcase"
+          git pull --rebase origin main
+          git push origin HEAD:main
