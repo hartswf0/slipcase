@@ -1,0 +1,111 @@
+name: Ingest Prompting Metis Slipcase 2026-09-15
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '_INGEST/PROMPTING-METIS-2026-09-15/READY'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ingest:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reconstruct and verify Prompting Metis field
+        shell: bash
+        run: |
+          set -euo pipefail
+          INGEST="_INGEST/PROMPTING-METIS-2026-09-15"
+          TARGET="slipcases/2026-09-15__steering-not-specifying__PROMPTING-METIS__v15.55-AM"
+          ARCHIVE_SHA="a0ed7e65400622755bbdf837b4517bf9fad9ce8b95001d5fdbd392de5931d1a9"
+
+          cat "$INGEST"/source-*.b64 | base64 -d > /tmp/prompting-metis-source.tar.xz
+          echo "$ARCHIVE_SHA  /tmp/prompting-metis-source.tar.xz" | sha256sum -c -
+
+          rm -rf "$TARGET" /tmp/prompting-metis-unpack
+          mkdir -p "$TARGET" /tmp/prompting-metis-unpack
+          tar -xJf /tmp/prompting-metis-source.tar.xz -C /tmp/prompting-metis-unpack
+          cp -a /tmp/prompting-metis-unpack/slipcase_prompting_metis_2026-09-15/. "$TARGET"/
+
+          SOURCE_FILES="$(find "$TARGET" -type f | wc -l | tr -d ' ')"
+          test "$SOURCE_FILES" = "70"
+
+      - name: Rebuild and verify working paper PDF
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET="slipcases/2026-09-15__steering-not-specifying__PROMPTING-METIS__v15.55-AM"
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lmodern poppler-utils
+          cd "$TARGET"
+
+          pdflatex -interaction=nonstopmode -halt-on-error steering-not-specifying__2026-09-15.tex >/tmp/prompting-metis-latex-1.log
+          pdflatex -interaction=nonstopmode -halt-on-error steering-not-specifying__2026-09-15.tex >/tmp/prompting-metis-latex-2.log
+          test -s steering-not-specifying__2026-09-15.pdf
+
+          PDF_SHA="$(sha256sum steering-not-specifying__2026-09-15.pdf | awk '{print $1}')"
+          PDF_BYTES="$(wc -c < steering-not-specifying__2026-09-15.pdf | tr -d ' ')"
+          PDF_PAGES="$(pdfinfo steering-not-specifying__2026-09-15.pdf | awk '/^Pages:/ {print $2}')"
+          test -n "$PDF_PAGES"
+
+          PDF_SHA="$PDF_SHA" PDF_BYTES="$PDF_BYTES" python3 - <<'PY'
+          import json, os
+          path = '_SLIPCASE/MANIFEST.json'
+          data = json.load(open(path, encoding='utf-8'))
+          for item in data.get('files', []):
+              if item.get('path') == 'steering-not-specifying__2026-09-15.pdf':
+                  item['sha256'] = os.environ['PDF_SHA']
+                  item['bytes'] = int(os.environ['PDF_BYTES'])
+                  break
+          else:
+              raise SystemExit('PDF manifest entry missing')
+          with open(path, 'w', encoding='utf-8') as f:
+              json.dump(data, f, ensure_ascii=False, indent=2)
+              f.write('\n')
+          PY
+
+          mkdir -p _SLIPCASE
+          {
+            echo "github_ingest_verified: true"
+            echo "checkpoint: PROMPTING-METIS-2026-09-15"
+            echo "schema: v15.55-AM"
+            echo "source_archive_sha256: a0ed7e65400622755bbdf837b4517bf9fad9ce8b95001d5fdbd392de5931d1a9"
+            echo "source_archive_format: tar.xz reconstructed from five base64 source chunks"
+            echo "source_file_count_before_pdf: 70"
+            echo "target: $TARGET"
+            echo "paper_pdf_sha256: $PDF_SHA"
+            echo "paper_pdf_bytes: $PDF_BYTES"
+            echo "paper_pdf_pages: $PDF_PAGES"
+            echo "note: The 70-file source field is archive-hash verified. The paper PDF is rebuilt on GitHub from preserved TeX, then its manifest entry is updated to the rebuilt binary."
+          } > _SLIPCASE/GITHUB_INGEST.txt
+
+      - name: Rebuild Slipcase readers and indexes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 build_all.py
+
+      - name: Commit Prompting Metis field and rebuilt desk
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET="slipcases/2026-09-15__steering-not-specifying__PROMPTING-METIS__v15.55-AM"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$TARGET" index.html slipcases.json map.html atlas.html map-02.html box.html slipcase-reader-v3.html pocket.html || true
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "add Prompting Metis steering slipcase"
+          git pull --rebase origin main
+          git push origin HEAD:main
