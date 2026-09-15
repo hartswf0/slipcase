@@ -1,0 +1,11 @@
+REBUILD
+
+1. Read _PROMPTS/SLIPCASE__ASSEMBLY_PROMPT.txt.
+2. Read 000__START_HERE.txt and 000__RETURN_PATH.txt.
+3. Treat root zettel TXT files as derived cards; do not silently rewrite them.
+4. Machine state lives in ZETTELS.jsonl and _SLIPCASE/*.jsonl.
+5. Recompile the paper from steering-not-specifying__2026-09-15.tex using the adjacent PROMPTING-METIS-2026-09-15__references.bib.
+6. Recompute hashes after any mutation.
+7. Preserve previous payloads; corrections become new cards.
+
+BOUNDARY: this package is a current-field compilation, not a complete dissertation archive.

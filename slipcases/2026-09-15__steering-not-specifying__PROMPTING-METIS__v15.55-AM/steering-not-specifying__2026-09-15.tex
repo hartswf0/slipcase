@@ -1,0 +1,138 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{parskip}
+\setlength{\parindent}{0pt}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black}
+\title{Steering, Not Specifying:\\M\^etis and the Praxis of Prompting in Unstable Human--AI Systems}
+\author{Watson Hartsoe}
+\date{Working Paper --- 15 September 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Prompting is often analyzed as if the prompt were a compact specification: a text issued by a human, interpreted by a model, and realized as an output. That picture fits poorly with contemporary generative systems. Identical strings acquire different operational capacities when models, system instructions, tools, interfaces, and world states change. Users therefore do not merely specify outcomes; they steer processes whose behavior becomes knowable only through interaction. This paper develops a praxis-oriented account of prompting around that mismatch. Wittgenstein's builder's language locates linguistic meaning in organized activity rather than in the inscription alone. Bolt's \emph{Put That There} shows deictic language becoming executable only through coordinated speech, gesture, spatial context, and feedback. Knowles and Tenney's \emph{House of Dust} shows generated description becoming a score for material and social realization without containing its own implementation. Suchman, Sch\"on, Anscombe, Naur, and Bijker each dislodge a different version of the same mistake: that plans, texts, intentions, programs, or artifacts carry their practical identity by themselves. Detienne and Vernant's account of \emph{m\^etis} supplies a positive vocabulary for what replaces that mistake: intelligence exercised in shifting circumstances through timing, perception, adaptation, and recovery. I argue that the unit of skilled prompting is not the isolated prompt but the corrective loop. This reframing also yields an account of responsibility without sovereignty: actors need not control every condition to become answerable for how they interpret consequences and choose the next move.
+\end{abstract}
+
+\textbf{Keywords:} prompting; human--AI interaction; m\^etis; situated action; language-games; reflection-in-action; generative AI; praxis
+
+\section{The wrong picture of the prompt}
+A familiar picture of prompting begins with an intention, compresses that intention into a string, sends the string to a model, and evaluates whether the returned artifact matches the intended result. The picture is attractive because it gives analysis a clean object. The prompt can be copied, counted, optimized, benchmarked, or taught as a unit of technique. It also preserves a familiar theory of agency: the human specifies; the machine executes.
+
+The trouble is that the visible string does not remain operationally identical as the system around it changes. A short instruction that once elicited explanatory prose may, in another interface, invoke browsing, write code, alter files, generate images, call tools, or initiate a chain of agentic operations. Even when the characters are unchanged, the interpreter, hidden instructions, available actions, context, interface, and represented world may differ. Textual identity therefore does not guarantee operational identity. Treating the prompt as the stable object mistakes the inscription for the larger arrangement in which the inscription can do something.
+
+This is not merely a reliability problem. If variation were noise around an otherwise stable technical object, a better model could in principle shrink the difference. But the contemporary term \emph{prompt} names several different objects at once: an instruction, conversational turn, specification, creative material, jailbreak, system directive, image, gesture, agent objective, or even a workflow. Bijker's account of sociotechnical change is useful here because it refuses to read technological history as the progressive refinement of an artifact whose identity was fixed from the beginning \citep{bijker1995}. Early bicycles were interpreted through different problems and social groups before particular configurations achieved closure. The analogy does not predict that prompting will converge on one ``safety bicycle.'' It diagnoses the present condition: the object has not stabilized enough to justify theories that begin by assuming we already know where the prompt is.
+
+The central claim of this paper is consequently stronger than ``prompts are ambiguous'' or ``models are stochastic.'' A prompt is one move inside a situated practice. Prompting is the practice. Skilled prompting cannot be located in the opening string alone because the relevant intelligence appears in what happens after the system answers back.
+
+\section{From command to language-game}
+Wittgenstein's builder's language provides a deliberately small case in which words acquire a practical role. A builder calls for a block, pillar, slab, or beam; an assistant brings what has been learned for that call. The later discussion names the whole of language and the action into which it is woven a language-game \citep{wittgenstein2009}. The example does not prove that all language is command. Its value here is narrower. The utterance does not contain a full operational specification of its own use. The work of the word depends on an organized practice: roles, materials, training, expectations, success conditions, and a situation in which the response is recognizable as going on correctly.
+
+This distinction becomes unusually concrete in Richard Bolt's \emph{Put That There}. The phrase ``put that there'' is radically underspecified as text. In the system, however, speech and pointing converge on a graphical world. The demonstratives become economical because gesture and visible spatial context help resolve reference \citep{bolt1980}. MIT's retrospective project description emphasizes that the system assumed speech recognition would not be perfectly accurate and therefore relied on redundant input channels, contextual interpretation, feedback, and easy correction \citep{mitputthatthere}. The practical achievement is not a sentence that somehow contains an executable command. It is a coupling in which words, gesture, spatial state, recognizers, feedback, and permitted operations make the utterance actionable.
+
+That coupling exposes a limit in the command model of prompting. If the action is attributed wholly to the words, the machinery that makes reference possible disappears. If the machinery is treated as mere implementation detail, the analysis loses the very conditions under which the words acquire operational meaning. For generative systems, those hidden conditions are not peripheral. Model release, system message, tool permissions, retrieved context, memory, interface state, and world representation can each change what the same inscription can do.
+
+The useful research question is therefore not simply, ``What does this prompt mean?'' It is: \emph{What has to be in place for these words to become this operation?}
+
+\section{Description as score: House of Dust}
+Alison Knowles and James Tenney's \emph{The House of Dust} gives this question a different historical form. Knowles prepared lists describing materials, sites or situations, light sources, and inhabitants. Tenney translated the combinatorial procedure into FORTRAN, generating quatrains that proposed possible houses. One of the resulting descriptions was subsequently taken up as the basis for a built structure and a social setting \citep{houseofdust1967}.
+
+The importance of the example is not that a computer ``designed a house.'' That formulation erases almost everything interesting. The generated description did not specify dimensions, structural calculations, wall thicknesses, fabrication sequence, openings, circulation, or the institutional work required to build and occupy a place. The description functioned instead as a score. Its incompleteness did not prevent realization because architects, builders, materials, sites, permissions, and inhabitants supplied practices through which the score could be interpreted.
+
+This is a precursor to a problem that becomes more consequential in generative systems. Description can now enter computational chains that produce code, images, three-dimensional assets, simulations, tool calls, and machine-readable instructions. Yet it remains a mistake to collapse the whole chain into a magical arrow from words to world. \emph{House of Dust} makes the missing middle visible. Description becomes operative only by recruiting interpreters and practices that are not contained in the sentence itself.
+
+The term \emph{WORLDTEXT} can be made precise at this point. It should not mean that language possesses autonomous world-making power. It names a feedback condition in which descriptions enter machinery capable of altering a represented or material environment, and the changed environment becomes the condition for subsequent description. The operative sequence is not ``word to world'' but description, interpretation, operation, consequence, perception, and renewed description.
+
+\section{The pathology of the perfect prompt}
+Prompt engineering frequently imagines success as the removal of this middle. A sufficiently precise instruction is supposed to make the model behave deterministically enough that situated correction becomes unnecessary. When the result diverges, two explanations dominate: the user wrote a bad prompt, or the model behaved randomly. These positions appear opposed, but they preserve the same underlying theory. Successful agency would mean complete specification; failure is either inadequate specification or noise.
+
+Suchman's critique of plan-centered accounts of purposeful action offers a direct alternative. Plans can project action and make it accountable without prescribing every situated detail. Their prescriptive relation to actual conduct is inherently incomplete; practical activity supplies what plans leave open \citep{suchman2007}. This does not make plans irrelevant. It relocates them inside the activity they help organize.
+
+The same relocation is needed for prompts. A prompt can establish a direction, constraint, expectation, or local operation. It need not determine the entire trajectory in order to be useful. Conversely, the fact that a prompt does not determine the trajectory does not render the interaction arbitrary. The central object becomes the sequence by which the user perceives consequences, distinguishes what changed, revises a description, and acts again.
+
+This is why the ideal of the perfect prompt is pathological as a theory of practice. It treats the disappearance of correction as the sign of expertise. Yet in uncertain systems, correction is where expertise becomes observable.
+
+\section{M\^etis: intelligence because the world moves}
+Detienne and Vernant's study of Greek \emph{m\^etis} supplies a language for intelligence under precisely these conditions. Their examples concern a world of movement, multiplicity, ambiguity, reversals, and shifting circumstances. The helmsman is exemplary because winds are not eliminated by knowledge. Skill consists in acting with and against changing conditions so that a course can still be made \citep{detienne1978}.
+
+The relevance to prompting is not that users should become mythic tricksters. The useful distinction is between intelligence conceived as possession of the correct rule in advance and intelligence conceived as adaptation within a situation whose outcome remains unsettled. In the second case, uncertainty is not merely a defect surrounding action. It is the condition that makes a certain kind of practical intelligence necessary.
+
+The navigation model can be stated simply. Chance names conditions the actor did not choose. Consequence names what follows from actions taken within those conditions. M\^etis names a capacity to distinguish the two well enough to continue acting. This avoids two symmetrical errors. The sovereign error says: I was the captain, therefore everything that happened expresses my control. The stochastic alibi says: I did not control the storm, therefore what happened cannot implicate my agency. Navigation occupies the middle. The actor is inside the event, neither outside it as sufficient author nor absent from it as a mere victim of randomness.
+
+For human--AI interaction, this yields a different criterion of competence. The good navigator is not the person whose commands make the world obey. The good navigator observes what actually happened and alters the next action accordingly.
+
+\section{The corrective loop as the unit of skill}
+Sch\"on's account of reflection-in-action gives a complementary vocabulary. Professional knowing often remains tacit until a situation produces surprise, uncertainty, or instability. Reflection occurs within action as the practitioner notices the mismatch between expectation and consequence and experiments with the situation \citep{schon1983}. Breakdown is therefore not simply evidence of failure. It can expose the practical theory by which the actor has been proceeding.
+
+Naur makes a parallel argument about programming. The program text is not the primary possession that allows a program to be explained, modified, and carried forward. Programmers build a theory of the matters at hand and of how execution addresses them; the limitations of a text-production view become especially visible when unexpected behavior or changing demands require modification \citep{naur1985}. The analogy to prompting should not be overstated: a prompt is not a program in the ordinary technical sense. But Naur helps identify the same mistake at another level. Text does not exhaust the practical knowledge required to go on.
+
+Taken together, these accounts suggest that the unit of skilled prompting is the corrective loop:
+
+\begin{center}
+\textsc{describe $\rightarrow$ act $\rightarrow$ observe $\rightarrow$ redescribe $\rightarrow$ act again}
+\end{center}
+
+The loop is not valuable merely because iteration improves outputs. Its epistemic role is more basic. Each consequence reveals something about the actual coupled system: what the model attends to, what the tool can change, which references resolve, which constraints bind, which assumptions fail, and which actions remain available. The next prompt is written from a different world than the previous one.
+
+This perspective changes evaluation. Instead of asking only whether an initial instruction generated the target, we can ask how quickly consequential state becomes visible, whether the actor can diagnose the divergence, how reversible the action is, and whether the interface preserves enough provenance to support a competent next move. Systems that hide state may make isolated outputs look impressive while making sustained practice brittle.
+
+\section{Action under a description and responsibility without sovereignty}
+Uncertainty raises a problem of responsibility. If an outcome emerges from human instruction, model inference, stochastic sampling, retrieved context, tool execution, and environmental conditions, who acted? A simple causal partition is unlikely to settle the question because the same event can be relevant under several descriptions.
+
+Anscombe's \emph{Intention} is useful precisely because it distinguishes descriptions under which an action is intentional from other descriptions that may be true of the same bodily event \citep{anscombe1957}. For generative interaction, an event might be described as ``the output after my prompt,'' ``the result of sampling,'' ``a tool side effect,'' ``an error I did not anticipate,'' or ``a result I noticed and chose to preserve.'' These descriptions can all pick out aspects of the same unfolding event without assigning the same practical significance.
+
+The crucial temporal fact is that descriptions can change as consequences become visible. Initial uncertainty may excuse what could not reasonably have been known. It does not automatically excuse the decision to continue once a harmful or erroneous trajectory becomes legible. Responsibility therefore need not require sovereignty over the whole causal chain. It can attach to situated opportunities for recognition, interruption, repair, and continuation.
+
+This reframes a common human--AI question. Instead of asking only ``Who caused the result?'' we can ask: What did the actor see the situation as? What information was available? What action remained possible? What did the actor do next? The questions neither dissolve agency into the system nor pretend that the user commanded every relevant cause.
+
+\section{A praxis-oriented research program}
+A praxis-oriented study of prompting should therefore perturb the coupling rather than isolate the sentence. Hold wording constant and change the model. Hold model constant and change tools. Hold tools constant and change interface or world state. Expose what the user can perceive, what remains hidden, and what forms of correction become possible. The aim is not to prove that prompts are unstable; that is already observable. The aim is to determine how practical agency is assembled under instability.
+
+Three research questions follow.
+
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Operation:} How does a linguistic prompt become an operation when its effects depend on changing configurations of models, contexts, tools, interfaces, and worlds?
+\item \textbf{Praxis:} What forms of practical intelligence allow people to continue acting effectively when the consequences of prompting cannot be fully specified in advance?
+\item \textbf{Responsibility:} How should agency and responsibility be understood when an outcome is simultaneously a consequence of human action and of conditions the human did not control?
+\end{enumerate}
+
+These questions support constructive research rather than a purely interpretive program. A capability arena can make a consequence public: a house stands, an object moves, a character responds, a drawing changes, a tool call alters a file. The arena becomes theoretically useful when it also makes repair visible. What did the system do? What could the actor see? What changed in the next move? The artifact is not a demonstration after the theory; it is an instrument for producing the conditions under which the theory can fail.
+
+\section{Conclusion}
+Prompt research inherits a seductive picture: language on one side, execution on the other, and a prompt functioning as the specification that crosses the boundary. The historical and philosophical materials assembled here repeatedly disrupt that picture. Wittgenstein places meaning inside activity. Bolt makes reference depend on multimodal situated context. Knowles and Tenney show generated description becoming a score only through interpretation and construction. Suchman places plans inside situated activity rather than above it. Sch\"on makes surprise a site of practical reflection. Naur distinguishes program text from the theory that allows programmers to continue. Anscombe shows why the same event does not carry one exhaustive description of action. Bijker warns against assuming that the technological object has already stabilized. Detienne and Vernant name the practical intelligence required when circumstances continue to move.
+
+The resulting thesis is compact: \textbf{prompting is steering, not specifying}. The prompt is a move, not the container of the practice. The characteristic competence of prompting is therefore not the production of a perfect initial instruction but the ability to recover an adequate next move from what actually happened. The characteristic ethical problem is not whether the user controlled every condition but how the user acted once consequences and disturbances became visible.
+
+This account does not celebrate uncertainty. Some uncertainty is needless opacity, poor interface design, hidden state, or unaccountable automation. A praxis-oriented theory makes those distinctions easier to see because it asks what the actor can perceive and do at each moment. The wager is that human--AI interaction becomes more intelligible when we stop searching for agency inside the prompt and instead follow the course: words, interpretation, operation, consequence, perception, and the next move.
+
+\begin{thebibliography}{10}
+\bibitem[Anscombe(1957)]{anscombe1957} Anscombe, G. E. M. \emph{Intention}. Blackwell, 1957.
+\bibitem[Bijker(1995)]{bijker1995} Bijker, Wiebe E. \emph{Of Bicycles, Bakelites, and Bulbs: Toward a Theory of Sociotechnical Change}. MIT Press, 1995.
+\bibitem[Bolt(1980)]{bolt1980} Bolt, Richard A. ``Put-that-there: Voice and Gesture at the Graphics Interface.'' \emph{Proceedings of SIGGRAPH '80}, pp. 262--270, ACM, 1980. DOI: 10.1145/800250.807503.
+\bibitem[Detienne and Vernant(1978)]{detienne1978} Detienne, Marcel, and Jean-Pierre Vernant. \emph{Cunning Intelligence in Greek Culture and Society}. Harvester Press, 1978.
+\bibitem[Knowles and Tenney(1967)]{houseofdust1967} Knowles, Alison, and James Tenney. \emph{The House of Dust}. Computer-generated poem and subsequent built structures, 1967. Project history: \url{https://reframingthehouseofdust.com/about/}.
+\bibitem[MIT Media Lab(1982)]{mitputthatthere} MIT Media Lab. ``Put-that-there: Voice and gesture at the graphics interface.'' Project description, 1982. \url{https://www.media.mit.edu/publications/put-that-there-voice-and-gesture-at-the-graphics-interface/}.
+\bibitem[Naur(1985)]{naur1985} Naur, Peter. ``Programming as Theory Building.'' \emph{Microprocessing and Microprogramming} 15(5):253--261, 1985. DOI: 10.1016/0165-6074(85)90032-8.
+\bibitem[Schön(1983)]{schon1983} Schön, Donald A. \emph{The Reflective Practitioner: How Professionals Think in Action}. Basic Books, 1983.
+\bibitem[Suchman(2007)]{suchman2007} Suchman, Lucy A. \emph{Human-Machine Reconfigurations: Plans and Situated Actions}, 2nd ed. Cambridge University Press, 2007.
+\bibitem[Wittgenstein(2009)]{wittgenstein2009} Wittgenstein, Ludwig. \emph{Philosophical Investigations}, 4th ed., edited by P. M. S. Hacker and Joachim Schulte. Wiley-Blackwell, 2009.
+\end{thebibliography}
+
+\appendix
+\section{Assembly instrument}
+The exact Slipcase assembly prompt is preserved at \texttt{\_PROMPTS/SLIPCASE\_\_ASSEMBLY\_PROMPT.txt}. This paper is a derived interpretation and is not evidence.
+
+\section{Making history}
+Evidence was bounded to the user-provided research excerpts visible in the current conversation, the supplied Slipcase assembly instrument, and the external sources listed in the compiled bibliography. The paper's central synthesis, structure, connective prose, and research-question formulation were produced during this compilation. No claim of comprehensive dissertation-archive coverage or human review is made.
+
+\section{Replication path}
+Open \texttt{index.html} for the sendable capsule. Use \texttt{000\_\_RETURN\_PATH.txt} to rejoin the package. Root TXT cards preserve the current zettel deck; \texttt{ZETTELS.jsonl} and \texttt{\_SLIPCASE/RELATIONS.jsonl} provide machine-readable state.
+
+\end{document}
