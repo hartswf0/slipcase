@@ -314,3 +314,89 @@ becoming visible when its consequences exceed the tolerance of the task.
 
 # 8. Engelbart: when the list becomes a manipulable computational object
 
+Douglas Engelbart's shopping list in the 1968 NLS demonstration is often
+folded into a general story about hypertext. Engelbart's own
+retrospective description is more specific: the temporary shopping list
+was the beginning of demonstrating ways of 'structuring ideas.' NLS
+allowed items to become statements and branches that could be moved,
+grouped, subordinated, clipped by level, truncated, filtered, and
+displayed through different views (Engelbart and English 1968; Engelbart
+1986). The crucial shift is not simply from paper to screen. It is from
+externally visible structure to machine-addressable structure.
+
+A handwritten list can be reordered, crossed off, and grouped. NLS adds
+an ontology of manipulable entities and operations. A branch can be
+moved as a branch. A view can be recomputed from underlying structure
+without destroying it. The user's conceptual distinction becomes legible
+to the computer as state. This is why Engelbart's example belongs next
+to the philosophical shopping lists without being reduced to them: it
+materializes a new layer of operational consequence.
+
+The important unit in NLS is therefore not the static list but the
+sequence of representational transformations. Engelbart and English
+describe skilled users changing views rapidly to suit immediate needs.
+Reading and editing are coupled in what the paper calls
+'study-manipulate.' The user studies a structure, alters it, sees a new
+view, and acts again. The interface turns representation into a
+recurrent boundary between interpretation and operation.
+
+For contemporary prompting, this suggests a design principle. Natural
+language may be most valuable at moments when the desired transformation
+is difficult to parameterize in advance. Once an object has acquired
+explicit state, direct manipulation can be better than repeatedly
+describing deterministic changes in prose. 'Make a weekly dinner plan
+under $100' is a plausible language move. Changing quantity 2 to
+quantity 3 is not improved by forcing the user to phrase it as a
+sentence. Engelbart's shopping list points toward mixed operative
+surfaces in which language constructs or deforms structures and widgets
+expose stable state.
+
+# 9. From chat to artifact: the list as a model for agentic UI
+
+Recent shopping-agent interfaces make this old problem newly concrete.
+DoorDash's 2026 engineering account of Ask DoorDash describes an
+evolution from conversational result carousels toward a persistent
+shopping-list artifact. The artifact, rather than the chat transcript,
+is treated as authoritative application state; low-ambiguity edits such
+as quantity changes, removals, and swaps can be made directly, while the
+agent receives a reduced representation when judgment is needed
+(Shillington and Wei 2026). The case should not be generalized from one
+company implementation, but its architectural move is revealing.
+
+The shopping list solves a problem that chat creates. Conversation is
+excellent at negotiating underspecified intent, but weak as a durable
+representation of current task state. A transcript forces users and
+models to reconstruct which requests remain active, which proposals have
+been superseded, and what was actually committed. A list externalizes
+those distinctions.
+
+The same system also separates the proposed shopping list from the cart.
+This produces a useful transaction boundary: language can generate a
+candidate future; direct manipulation can revise it; only an explicit
+commit operation moves the proposal into consequential purchase state.
+Anscombe's practical representation thus acquires a modern UI nuance.
+Between words and world there can be a reversible proposal layer.
+
+This intermediate state matters beyond shopping. Generative systems
+increasingly operate in domains where a model can modify files, scenes,
+calendars, code, messages, or physical devices. The relevant design
+question is not simply whether the system can act. It is which state
+transitions should remain proposals, which should be directly
+manipulable, which can be automatic, and which require explicit
+commitment. The shopping list provides a compact laboratory for these
+distinctions because ordinary practice already contains goals,
+substitutions, state updates, incomplete order, and a recognizable
+completion condition.
+
+# 10. Toward an operative humanities
+
+The shopping list suggests a methodological program for the humanities.
+Ordinary textual forms are often classified by content, rhetoric, genre,
+or representation. An operative humanities adds another set of
+questions. What state does this form presuppose? What changes when
+someone uses it? Which operators are explicit and which are supplied by
+convention? What background competence is required? What does the
+artifact externalize? What does the environment contribute? Where is
+mismatch repaired? Which transitions are reversible? When does a mark
+become a commitment?
+
