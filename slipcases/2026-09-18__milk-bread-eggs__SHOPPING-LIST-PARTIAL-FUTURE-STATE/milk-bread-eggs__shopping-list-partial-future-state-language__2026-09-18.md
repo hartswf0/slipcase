@@ -481,3 +481,88 @@ directly manipulable by a computer. Contemporary agent interfaces show
 why conversation alone still needs durable state and commitment
 boundaries.
 
+Taken together, these sources support a precise claim. A shopping list
+is a partial future-state language. It specifies some of what should
+become true while leaving open much of how, where, when, and sometimes
+whether that future will be realized. Its operational power comes from a
+loop among inscription, competence, environment, state, and repair. The
+list is neither merely descriptive nor fully executable. It is a compact
+coordination surface between words and world.
+
+That modest object enlarges the problem of prompting. The important
+transition is not from inert language to magical language that acts.
+Human cultures have long made lists, plans, recipes, scores, maps,
+contracts, and descriptions that organize action. The computational
+change lies in the architectures that now infer missing operations,
+transform representations at high speed, and carry proposed futures
+across commitment boundaries. The humanities can study those
+architectures without abandoning its strongest resources: close
+attention to use, genre, practice, context, interpretation, labor, and
+form. The shopping list is small enough to make the mechanism visible.
+
+# References
+
+Anscombe, G. E. M. 1957. Intention. Oxford: Basil Blackwell.
+
+Askehave, Inger, and John M. Swales. 2001. 'Genre Identification and
+Communicative Purpose: A Problem and a Possible Solution.' Applied
+Linguistics 22 (2): 195-212. https://doi.org/10.1093/applin/22.2.195.
+
+Block, Lauren G., and Vicki G. Morwitz. 1999. 'Shopping Lists as an
+External Memory Aid for Grocery Shopping: Influences on List Writing and
+List Fulfillment.' Journal of Consumer Psychology 8 (4): 343-375.
+https://doi.org/10.1207/S15327663JCP0804_01.
+
+Conein, Bernard, and Eric Jacopin. 1996. 'Projected Plans and Situated
+Activity: Inventory of Objects and Workspace.' In Embodied Cognition and
+Action: Papers from the AAAI Fall Symposium, Technical Report FS-96-02,
+24-26. AAAI Press.
+
+Engelbart, Douglas C. 1986. 'Workstation History and the Augmented
+Knowledge Workshop.' In Proceedings of the ACM Conference on the History
+of Personal Workstations, 73-83.
+
+Engelbart, Douglas C., and William K. English. 1968. 'A Research Center
+for Augmenting Human Intellect.' In Proceedings of the 1968 Fall Joint
+Computer Conference, 395-410.
+
+Furniss, Dominic, and Ann Blandford. 2006. 'Understanding Emergency
+Medical Dispatch in Terms of Distributed Cognition: A Case Study.'
+Ergonomics 49 (12-13): 1174-1203.
+https://doi.org/10.1080/00140130600612663.
+
+Goody, Jack. 1977. The Domestication of the Savage Mind. Cambridge:
+Cambridge University Press.
+
+Hyland, Lewis, Andy Crabtree, Joel E. Fischer, James Colley, and
+Carolina Fuentes. 2018. '“What Do You Want for Dinner?” - Need
+Anticipation and the Design of Proactive Technologies for the Home.'
+Computer Supported Cooperative Work 27: 917-946.
+https://doi.org/10.1007/s10606-018-9314-4.
+
+Kirsh, David. 1995. 'The Intelligent Use of Space.' Artificial
+Intelligence 73 (1-2): 31-68.
+https://doi.org/10.1016/0004-3702(94)00017-U.
+
+Lave, Jean, Michael Murtaugh, and Olivia de la Rocha. 1984. 'The
+Dialectic of Arithmetic in Grocery Shopping.' In Everyday Cognition: Its
+Development in Social Context, edited by Barbara Rogoff and Jean Lave,
+67-94. Cambridge, MA: Harvard University Press.
+
+Millikan, Ruth Garrett. 1995. 'Pushmi-Pullyu Representations.'
+Philosophical Perspectives 9: 185-200. https://doi.org/10.2307/2214217.
+
+Searle, John R. 1975. 'A Taxonomy of Illocutionary Acts.' In Language,
+Mind, and Knowledge, edited by Keith Gunderson, 344-369. Minneapolis:
+University of Minnesota Press.
+
+Shillington, Noah, and Hong Tai Wei. 2026. 'Building Ask DoorDash (Part
+5): A Grounded Interface for Shopping Agents.' DoorDash Engineering,
+August 27, 2026.
+
+Suchman, Lucy A. 1987. Plans and Situated Actions: The Problem of
+Human-Machine Communication. Cambridge: Cambridge University Press.
+
+Wittgenstein, Ludwig. 1953. Philosophical Investigations. Translated by
+G. E. M. Anscombe. Oxford: Basil Blackwell.
+
