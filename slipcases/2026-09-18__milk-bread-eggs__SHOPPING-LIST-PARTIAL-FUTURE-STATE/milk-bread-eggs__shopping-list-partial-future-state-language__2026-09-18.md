@@ -77,3 +77,78 @@ sparse language becomes consequential.
 
 # 2. Wittgenstein: the operation is not in the words alone
 
+Wittgenstein opens Philosophical Investigations with a scene of
+shopping. A person sends another to a shop with a slip whose marks
+specify a number, a color, and apples. The shopkeeper locates the
+relevant drawer, consults a color sample, counts, and selects.
+Wittgenstein's question is not how a hidden semantic object inside the
+word mechanically causes these acts. He redirects attention to use: this
+is what is done with the signs in the practice (Wittgenstein 1953, §1).
+The apparently simple inscription works because the actor already
+inhabits a system of techniques, distinctions, objects, and
+expectations.
+
+That observation matters for computational interfaces because it changes
+where executability is located. If the shopping slip were a
+self-sufficient program, each necessary operation would have to be
+recoverable from its inscription. It is not. The slip does not explain
+counting, color matching, what counts as an apple, why a shopkeeper
+should satisfy the request, or where the relevant objects are. The
+sequence is executable only relative to background competence and an
+environment in which the terms have practical purchase. The visible
+string is the tip of an operational iceberg.
+
+Wittgenstein later makes the role of use even harder to reduce to
+linguistic surface form. In §21 he asks us to imagine the same words
+serving as a report in one case and an order in another. The difference
+can survive even when tone and expression are held constant. What
+distinguishes the utterances is the role they play in the language-game.
+This supplies an important warning for interface design. Classifying a
+string as operative from grammar alone will fail whenever role is
+supplied by interaction history, institutional setting, or the state of
+a task.
+
+Section 23 widens the field further. Among Wittgenstein's heterogeneous
+language-games are giving orders and obeying them, describing objects,
+reporting events, and constructing an object from a description or
+drawing. This last case is especially important for generative media.
+Description already participates in making long before contemporary
+text-to-image or text-to-3D systems. What has changed is not the
+discovery that descriptions can guide construction, but the speed,
+scale, and delegation of the interpretive machinery between description
+and constructed result. Operative language should therefore not be
+defined by the fantasy that words have only recently begun to act. The
+better question is what kind of apparatus now receives them, what that
+apparatus assumes, and what part of the practical world it can change.
+
+# 3. Anscombe: a future-state representation is a norm of correction
+
+G. E. M. Anscombe's famous shopping-list example supplies a second
+distinction. In Intention, she asks us to compare the shopper's list
+with a detective's record of what the shopper purchases. The
+inscriptions may correspond item for item. Their practical relation to
+events differs. If the shopper departs from the intended list, the error
+can lie in the performance; if the detective's record departs from what
+actually happens, the error lies in the record (Anscombe 1957, §32).
+Later speech-act theory would redescribe this contrast as opposing
+'directions of fit,' but Anscombe's own diagnostic is more concrete:
+when representation and event diverge, which side is to be corrected?
+
+This is a powerful way to characterize a partial future state. A list
+becomes practical not because it somehow ceases to represent, but
+because it establishes a norm under which future activity can be
+evaluated. 'Milk' on the list is not merely a proposition about milk. It
+makes the absence of milk at the end of shopping potentially count as
+unfinished business. The list participates in the definition of success.
+
+But Anscombe's example should not be simplified into an unconditional
+words-to-world arrow. She explicitly qualifies the contrast. A list
+itself can be badly formed; circumstances can change; an item may no
+longer be obtainable; judgment can be revised. This caveat becomes
+critical for interactive systems. When a generated action does not match
+a prompt, there are at least three possible failures: execution failed
+to realize a valid specification; the system misunderstood the
+specification; or the specification should itself change in light of the
+world. A usable operative interface needs a repair policy, not merely an
+execution engine.
+
