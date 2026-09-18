@@ -230,3 +230,87 @@ and the arrangement of the store (Lave, Murtaugh, and de la Rocha 1984).
 The world is not a passive container in which the list executes. The
 world's organization participates in determining sequence.
 
+This yields a useful way to state the spatiotemporal problem. A
+conventional shopping list specifies membership better than order. It
+says which conditions should eventually become true, while leaving many
+permutations acceptable. Store layout, current position, crowding,
+perishability, personal habit, and opportunity convert this partially
+ordered set into a trajectory. The natural temporal grammar of shopping
+is therefore not simply first/then. It is closer to: accomplish these
+goals, opportunistically, under spatial constraints, while keeping track
+of what remains.
+
+# 6. Three lists at once: future, present, and past
+
+Conein and Jacopin make this distributed structure unusually explicit.
+In their account of projected plans and workspace, shopping can be
+understood through three external representations: the written list of
+objects still to obtain; the store's spatial arrangement of available
+objects; and the accumulated contents of the cart, which provide a
+material trace of what has already been collected (Conein and Jacopin
+1996). The activity is organized across prospective, present, and
+retrospective representations.
+
+Distributed-cognition work makes a related point at the level of one
+artifact. Furniss and Blandford use the shopping list as an example of
+coordinated cognitive resources. Its items can function as goals. If the
+items are ordered according to pickup sequence, the same artifact can
+function as a plan. If collected items are crossed off, it can display
+current state (Furniss and Blandford 2006). A tiny mark changes the
+representational role of the object.
+
+This is a direct bridge to user-interface design. A useful task surface
+often needs to distinguish at least three questions: What is wanted?
+What is available or relevant now? What has already happened? Chat
+interfaces tend to flatten these into a transcript. A shopping list
+makes their separation visible. The checkbox is especially instructive.
+Checking off 'milk' is neither ordinary linguistic description nor mere
+decoration. It is a low-cost state transition that changes what deserves
+attention next.
+
+The result is a minimal state machine hidden in an everyday genre. OPEN
+-> DONE is one state change. Reordering supplies a tentative temporal
+relation. Location binding adds spatial grounding. Substitution changes
+the referent while preserving a higher-level goal. Deleting an item
+revises the desired future. Adding an item during the trip records a
+newly discovered goal. None of these operations requires the list to
+become a full program. They make explicit exactly those parts of
+activity for which external state is useful, while leaving the rest to
+situated judgment.
+
+# 7. Specifically vague: why sparse language can be better language
+
+A further complication appears when we ask what a list item actually
+denotes. Ethnomethodological work on household grocery practices finds
+that entries are often 'specifically vague.' A household member may
+write 'beans' because members already know which beans, what quantity,
+and under what circumstances the item is needed. The written entry is
+sparse because local competence is rich (Hyland et al. 2018). To an
+outsider or a product database, the same token is under-specified.
+
+This reverses a common assumption in interface design. More explicit
+language is not always better language. A form that forces brand, size,
+SKU, quantity, store, and substitution policy may increase machine
+addressability while increasing human attention cost. The right amount
+of specification depends on how much world is shared between writer and
+interpreter.
+
+Hyland and colleagues also show that the list is temporally distributed
+before the shopping trip begins. Physical lists are often positioned in
+high-throughput household locations where a disappearing item can
+occasion an immediate mark. The list is written across a week by
+encounters with a changing material environment. Its placement is part
+of its semantics. A digital list that is accessible everywhere but
+absent at the moment an empty container is noticed can be less situated
+than a scrap of paper fixed to the refrigerator.
+
+This matters for AI because model context can mimic household
+familiarity while also hiding its uncertainty. If an assistant has seen
+a year's purchases, 'beans' may become resolvable without clarification.
+But silent resolution creates a new responsibility: the system must know
+when its inferred referent is stable enough to act. The goal is not
+maximal explicitness. It is calibrated shared context, with ambiguity
+becoming visible when its consequences exceed the tolerance of the task.
+
+# 8. Engelbart: when the list becomes a manipulable computational object
+
