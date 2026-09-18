@@ -152,3 +152,81 @@ specification; or the specification should itself change in light of the
 world. A usable operative interface needs a repair policy, not merely an
 execution engine.
 
+The later philosophical afterlife of the shopping list makes this even
+clearer. Searle generalizes Anscombe's contrast into direction of fit as
+part of a finite taxonomy of illocutionary acts (Searle 1975). Millikan
+begins from the same example and proposes 'pushmi-pullyu'
+representations that can simultaneously describe and direct (Millikan
+1995). The history is useful because it reveals that practical language
+cannot always be placed cleanly on one side of a representational
+divide. A generative prompt such as 'a red house beside the river' can
+describe a candidate world and direct a system to realize one at the
+same time. The operative humanities needs to preserve this hybridity
+rather than force every artifact into either description or command.
+
+# 4. Suchman: the list says how shopping should turn out, not how shopping happens
+
+Lucy Suchman's Plans and Situated Actions makes the shopping list an
+explicit objection to treating plans as descriptions of action. Her user
+of an expert-help system is placed in the shopper's position:
+instructions can be consulted for what to do next, for deciding when
+activity is complete, or for retrospectively explaining action. Yet, as
+Suchman observes, the shopping list does not describe the practical
+organization of shopping itself: finding objects, choosing aisles,
+comparing brands, or handling the local circumstances that determine the
+next move (Suchman 1987, 73). It says how the activity is to turn out.
+
+This distinction is the center of the paper. A shopping list is
+operational without being procedural. That combination is easily missed
+because computing inherited strong models in which successful execution
+means faithful traversal of an explicit instruction sequence. The
+shopping case separates target from trajectory. It externalizes a set of
+desired changes while leaving the route open.
+
+The distinction can be written schematically. Let G be a set of goals
+encoded by the list. Let W be the current world, including locations,
+inventory, obstacles, prices, social conventions, and available
+substitutions. Let S_t be the shopper's current state, including
+position, acquired items, and remaining goals. A competent next action
+is not a function of G alone. It depends on G, W, and S_t, and may alter
+G itself. The operative loop is therefore not LIST -> EXECUTE. It is
+LIST + WORLD + ACTOR -> LOCALLY RESOLVE -> ACT -> UPDATE -> REVISE.
+
+This helps distinguish a shopping list from code without demoting it to
+mere reminder. Suchman does not argue that plans are useless. She argues
+against identifying the structure of the representation with the
+structure of situated activity. That is precisely the mistake prompt
+discourse risks when it treats a successful output as proof that a
+natural-language prompt contained a complete program. The more capable
+the interpreter, the less procedure the user needs to state. Apparent
+linguistic executability can therefore increase because the interpreter
+absorbs more of the missing work.
+
+# 5. Goody and Lave: the list is spatiotemporal before it is digital
+
+Jack Goody gives the shopping list a different operational character. In
+his analysis of literacy and lists, the shopping list is more than a
+record of needed objects: writing makes items visually separable and
+rearrangeable. They can be grouped according to source of supply and
+thereby used to construct a future schedule in space and time (Goody
+1977). The order of marks on paper can anticipate the order of bodily
+movement.
+
+This is already a small form of spatial computation. Reordering does not
+change the set of desired groceries. It changes the cost structure of
+future action. Kirsh later develops a broader account of the intelligent
+use of space, arguing that arrangements can simplify choice, simplify
+perception, or simplify internal computation (Kirsh 1995). A list sorted
+by aisle does cognitive work because it aligns an external
+representation with the topology of the environment. The shopper no
+longer has to repeatedly search the whole store for the next noun.
+
+Jean Lave, Michael Murtaugh, and Olivia de la Rocha radicalize this
+spatial account by describing the supermarket itself as something like
+an 'ultimate grocery list': a materially ordered field of independently
+obtainable objects. A particular shopping route emerges through
+articulation between two structures, the shopper's purchase intentions
+and the arrangement of the store (Lave, Murtaugh, and de la Rocha 1984).
+The world is not a passive container in which the list executes. The
+world's organization participates in determining sequence.
+
