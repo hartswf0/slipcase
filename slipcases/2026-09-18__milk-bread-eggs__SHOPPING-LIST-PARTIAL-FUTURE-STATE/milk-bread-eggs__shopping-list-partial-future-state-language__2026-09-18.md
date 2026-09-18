@@ -400,3 +400,84 @@ artifact externalize? What does the environment contribute? Where is
 mismatch repaired? Which transitions are reversible? When does a mark
 become a commitment?
 
+This approach does not turn every cultural artifact into software. Its
+value depends on preserving the difference between formal execution and
+practical uptake. Suchman's objection remains decisive: the instruction
+is not the activity. Wittgenstein prevents us from locating use inside
+the string alone. Anscombe prevents us from treating mismatch as a
+neutral comparison. Lave prevents us from treating environment as a
+container. Engelbart shows what changes when relations become
+computationally explicit. The point of 'operative' is not to collapse
+these distinctions but to follow them through actual state changes.
+
+The shopping list is especially productive because it is structurally
+modest. It has no need for grand claims about performativity to
+demonstrate consequential language. A noun can be enough. The work
+occurs in the coupling. A list item recruits household knowledge, store
+topology, bodily movement, attention, memory, prices, product
+availability, conventions of substitution, and a norm of completion. Its
+sparse form makes those dependencies easier to see.
+
+This also reframes prompting. A prompt is often evaluated as though the
+text were the primary technical object and the model's output the
+response. The shopping-list model asks us to inspect the whole loop:
+prior state, representation, role, environment, operations, current
+state, repair, and commitment. Prompt engineering then becomes only one
+part of a larger representational design problem. The crucial artifact
+may be the persistent world the prompt creates, the controls through
+which that world can be inspected and changed, or the rules governing
+how it can affect anything beyond itself.
+
+# 11. The shopping-list benchmark
+
+A practical consequence is to treat the shopping list as a benchmark
+object for human-computer communication. It is simple enough to
+implement yet rich enough to expose differences among interaction
+paradigms. A serious test would hold goals constant while varying how
+they are represented and executed: paper list; checklist; hierarchy;
+map-bound list; context-aware route; chat assistant; artifact-centered
+agent. The comparison should not ask only which system finishes fastest.
+It should ask where ambiguity resides, who resolves it, how state is
+represented, how recovery works, and whether users can tell what the
+system currently believes the task to be.
+
+One minimal task language follows from the sources reviewed here: ADD
+GOAL; REMOVE GOAL; GROUND REFERENT; BIND LOCATION; REORDER; SELECT NEXT;
+SUBSTITUTE; MARK DONE; REVISE GOAL; COMMIT. This is not proposed as a
+universal grammar of action. It is a diagnostic scaffold. Each operator
+names a distinction ordinary shopping makes available. A
+natural-language system can then be tested for which operations
+genuinely benefit from language and which become safer, faster, or more
+intelligible as explicit state changes.
+
+The benchmark also makes visible a central tradeoff in AI interfaces.
+Greater inferential capability can reduce the amount of language
+required from users. It can resolve 'beans,' infer likely substitutions,
+calculate a route, or propose a basket. But every inferred operation
+moves work from the visible representation into the interpreter. The
+human gains convenience while potentially losing inspectability. The
+question is not whether inference is good or bad. It is which hidden
+decisions need to be surfaced because they bear on consequence,
+identity, cost, or revision.
+
+A shopping-list benchmark therefore asks a deceptively difficult
+question: how little can the user say while still remaining able to
+understand and redirect what the system is doing? That is a better
+measure of operative language than textual completeness.
+
+# 12. Conclusion: language specifies a partial future
+
+The shopping list begins as a handful of nouns and ends as a changed
+distribution of objects in the world. The distance between those states
+is the phenomenon. Wittgenstein shows why the operation cannot be found
+in the marks alone. Anscombe shows that a practical representation
+establishes a norm under which future performance can be corrected.
+Suchman shows that the norm does not contain the activity that satisfies
+it. Goody, Lave, and Kirsh show how inscription and space reorganize one
+another. Conein and Jacopin, and Furniss and Blandford, show how goals,
+environment, history, plan, and current state can be distributed across
+artifacts. Engelbart shows what happens when those relations become
+directly manipulable by a computer. Contemporary agent interfaces show
+why conversation alone still needs durable state and commitment
+boundaries.
+
