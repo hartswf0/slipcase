@@ -17,12 +17,12 @@
 
 1. **[LINES] Zettel Lines Inspector**: Complete atomic breakdown of all **1,599 zettel cards** into structured, selectable field rows (`QUESTION`, `DEEPER QUESTION`, `PASSAGE`, `RESEARCH OBJECT`, `LOCAL MOVE`, `MECHANISM`, `FORMAL SHIFT`, `BIBTEX`, etc.) with multi-line selection, continuous reading stack, and clipboard export.
 2. **[FLIPPER] Tactile Card Deck**: Touch-swipe enabled card deck flipper with formatted/raw source toggles, core question callouts, and one-tap payload export.
-3. **[PDFS] Research PDF Library & Dual Reader**: Curated library of **132 primary research PDFs** (compiled papers and source scans) with instant search, category filtering, embedded preview, and direct fullscreen tab breakouts (`&nearr;`).
+3. **[PDFS] Research PDF Library & Dual Reader**: Curated library of **133 primary research PDFs** (compiled papers and source scans) with instant search, category filtering, embedded preview, and direct fullscreen tab breakouts (`&nearr;`).
 4. **[MAPS] Case Inspector & Structural Field Maps**: Instant inspection of derived structural documents (`000__START_HERE.txt`, `000__MAP.txt`, `000__BIBLIOGRAPHY.txt` / `.bib`, `000__LINEAGE.txt`, `000__OPEN_EDGES.txt`, `000__MAKING_HISTORY.txt`).
 5. **[PROMPTS] Prompt Operator Console**: The complete **Cool Radio** suite of 8 structured POML research instruments (`FORAGE 3.0`, `FORAGE 3.1`, `FORAGE 4.0`, `SLIPCASE 9.0`, `SLIPCASE 13.1`, `SLIPCASE 15.0`, `SLIPCASE 15.55-AM`, and `OPERATIONAL PRAGMATIST`) with one-tap copy-and-advance and `.poml` downloads.
 
 
-**HEAD layer:** 44 canonical HEAD ZETTELs, one per field, mapped to all 132 PDFs in `heads-pdf-map.html` / `.json` / `.txt`.
+**HEAD layer:** 44 canonical HEAD ZETTELs, one per field, mapped to all 133 PDFs in `heads-pdf-map.html` / `.json` / `.txt`.
 ---
 
 ## Architecture & Layout
@@ -32,7 +32,7 @@
 |                        SLIPCASE RESEARCH DESK                          |
 +-----------------+------------------+-----------------+-----------------+
 | [LINES]         | [FLIPPER]        | [PDFS]          | [MAPS] & PROMPT |
-| Structured Rows | Tactile Card     | 132 Curated     | Structural Maps |
+| Structured Rows | Tactile Card     | 133 Curated     | Structural Maps |
 | Multi-Select    | Raw / Parsed     | Dual-Engine     | 8 POML Tools    |
 | Stack Reader    | Touch Swipe      | Direct Open     | 44 Workspaces   |
 +-----------------+------------------+-----------------+-----------------+
@@ -51,7 +51,7 @@
 - **Direct Export**: One-tap card copy or download as standalone `.txt` file.
 
 ### 3. Mobile PDF Library & Reader
-- **132 Research PDFs**: Access compiled working papers, preprints, and archival scans.
+- **133 Research PDFs**: Access compiled working papers, preprints, and archival scans.
 - **Category Filter**: Filter between *Compiled Papers* and *Source / Archival Scans*.
 - **Dual-Engine Reading**: Embedded preview modal plus direct `OPEN PDF &nearr;` links guaranteed to work in all desktop and mobile sandboxes.
 
@@ -99,7 +99,7 @@
 | 14 | `2026-09-01__the-prompt-is-already-disappearing__DHH-LEX__v15.55-AM` | 14 | 0 | 8 |
 | 15 | `2026-09-13__chance-and-consequences__NOLAN-HOMER__SLIPCASE` | 21 | 2 | 12 |
 | 16 | `2026-09-15__steering-not-specifying__PROMPTING-METIS__v15.55-AM` | 21 | 1 | 10 |
-| 17 | `2026-09-18__language-under-constraint__OPERATIVE-HUMANITIES` | 1 | 0 | 0 |
+| 17 | `2026-09-18__language-under-constraint__OPERATIVE-HUMANITIES` | 1 | 1 | 0 |
 | 18 | `2026-09-18__milk-bread-eggs__SHOPPING-LIST-PARTIAL-FUTURE-STATE` | 1 | 0 | 3 |
 | 19 | `2026-09-21__prompt-does-not-contain-its-own-force__SLIPCASE-PROMPT-LANGUAGE-GAME-20260921` | 23 | 2 | 10 |
 | 20 | `2026-09-22__the-prompt-is-not-a-genre__PROMPT-GAMES-WORLDTEXT` | 23 | 1 | 8 |
@@ -127,7 +127,7 @@
 | 42 | `slipcase_ontology_build` | 1 | 4 | 0 |
 | 43 | `the-casino-in-the-fountain__slipcase-v15.55-AM__156066d527d3__2026-08-17T203217-0400` | 38 | 2 | 10 |
 | 44 | `the-prompt-keeps-disappearing__FINAL-SLIPCASE-15.55-AM__2026-08-18` | 43 | 4 | 12 |
-| **Total** | **44 Field Slipcases** | **1,599 Slips** | **132 PDFs** | **391 Docs** |
+| **Total** | **44 Field Slipcases** | **1,599 Slips** | **133 PDFs** | **391 Docs** |
 
 ---
 
