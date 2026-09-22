@@ -1,0 +1,71 @@
+name: Ingest AI Media Event Governance Slipcase 2026-09-21
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_INGEST/AI-MEDIA-EVENT-GOVERNANCE-2026-09-21/READY'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ingest:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reconstruct and verify field
+        shell: bash
+        run: |
+          set -euo pipefail
+          INGEST='_INGEST/AI-MEDIA-EVENT-GOVERNANCE-2026-09-21'
+          TARGET='slipcases/2026-09-21__ai-media-event-governance__AI-MEDIA-EVENT-GOVERNANCE-20260921'
+          PAYLOAD_SHA='0177a37da2b04882d2ba9c8ed6f7e7c5633d98937a5c3337b876dd028c0eeb15'
+          ORIGINAL_ZIP_SHA='afc0441efda990f56bf353d8787f322fea898c49e48ffb48530986843b4ee875'
+          ORIGINAL_CAPSULE_SHA='764e897f6e313a9db40fa2335a66a61b7342f858d2928b5883a94411898af0c4'
+          ORIGINAL_PAPER_SHA='5cebf1cc108e3c7cd0b52f5a5d44a76ba6bf88ab40d686cb73b2b5dd02cf8590'
+          export TARGET PAYLOAD_SHA ORIGINAL_ZIP_SHA ORIGINAL_CAPSULE_SHA ORIGINAL_PAPER_SHA
+
+          cat "$INGEST"/payload-*.part | base64 --decode > /tmp/ai-media-event-governance.tar.xz
+          echo "$PAYLOAD_SHA  /tmp/ai-media-event-governance.tar.xz" | sha256sum -c -
+          test ! -e "$TARGET"
+          mkdir -p "$TARGET"
+          tar -xJf /tmp/ai-media-event-governance.tar.xz -C "$TARGET"
+          python3 "$TARGET/_SLIPCASE/GITHUB_RECONSTRUCT.py"
+
+          test "$(find "$TARGET" -maxdepth 1 -type f -name '[0-9][0-9][0-9]__*.txt' ! -name '000__*' | wc -l | tr -d ' ')" = '62'
+          test "$(find "$TARGET/_MD" -type f -name '*.md' | wc -l | tr -d ' ')" = '62'
+          echo "$ORIGINAL_PAPER_SHA  $TARGET/the-artifact-is-not-the-act__2026-09-21.pdf" | sha256sum -c -
+          python3 -m zipfile -t "$TARGET/SLIPCASE_AI_MEDIA_EVENT_GOVERNANCE_20260921__GITHUB.zip"
+
+      - name: Rebuild canonical repository surfaces and HEAD layer
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET='slipcases/2026-09-21__ai-media-event-governance__AI-MEDIA-EVENT-GOVERNANCE-20260921'
+          export TARGET
+          python3 build_index_html.py
+          python3 build_heads.py
+          python3 refine_heads.py
+          python3 build_all.py
+          python3 "$TARGET/_SLIPCASE/GITHUB_RECONSTRUCT.py"
+          python3 "$TARGET/_SLIPCASE/GITHUB_UPDATE_README.py"
+
+      - name: Commit field and rebuilt desk
+        shell: bash
+        run: |
+          set -euo pipefail
+          INGEST='_INGEST/AI-MEDIA-EVENT-GOVERNANCE-2026-09-21'
+          TARGET='slipcases/2026-09-21__ai-media-event-governance__AI-MEDIA-EVENT-GOVERNANCE-20260921'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm -r "$INGEST"
+          git add "$TARGET" README.md index.html slipcases.json map.html atlas.html map-02.html box.html slipcase-reader-v3.html pocket.html heads-pdf-map.json heads-pdf-map.txt heads-pdf-map.html
+          git commit -m 'add AI media event governance slipcase'
+          git pull --rebase origin main
+          git push origin HEAD:main
