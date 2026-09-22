@@ -1,0 +1,262 @@
+name: Ingest Prompt Language-Game Slipcase 2026-09-21
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_INGEST/PROMPT-LANGUAGE-GAME-2026-09-21/READY'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ingest:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reconstruct field from standalone replication capsule
+        shell: bash
+        run: |
+          set -euo pipefail
+          INGEST="_INGEST/PROMPT-LANGUAGE-GAME-2026-09-21"
+          export TARGET="slipcases/2026-09-21__prompt-does-not-contain-its-own-force__SLIPCASE-PROMPT-LANGUAGE-GAME-20260921"
+          INDEX_SHA="67bab994862d27fc8a4a3de7b2a79eff87c9242aec0787390c1900afebf56433"
+          SOURCE_PDF_SHA="4c052bf059979673e22d530fc868330d970ed0ab59d25e5006b5cd3c069b05ac"
+
+          cat "$INGEST"/index-*.part > /tmp/prompt-language-game-index.html
+          echo "$INDEX_SHA  /tmp/prompt-language-game-index.html" | sha256sum -c -
+
+          rm -rf "$TARGET"
+          mkdir -p "$TARGET"
+
+          python3 - <<'PY'
+          import base64, hashlib, json, os, pathlib, re, shutil
+
+          target = pathlib.Path(os.environ["TARGET"])
+          target.mkdir(parents=True, exist_ok=True)
+          text = pathlib.Path("/tmp/prompt-language-game-index.html").read_text(encoding="utf-8")
+          shutil.copy2("/tmp/prompt-language-game-index.html", target / "index.html")
+
+          a = text.index("const D=") + len("const D=")
+          b = text.index(";let mode=", a)
+          d = json.loads(text[a:b])
+
+          # Immutable card payloads and mirrors.
+          md = target / "_MD"
+          md.mkdir()
+          for card in d["cards"]:
+              payload = card["payload"]
+              got = hashlib.sha256(payload.encode("utf-8")).hexdigest()
+              if got != card["sha256"]:
+                  raise SystemExit(f"card hash mismatch: {card['id']}")
+              (target / card["filename"]).write_text(payload, encoding="utf-8")
+              (md / pathlib.Path(card["filename"]).with_suffix(".md").name).write_text(payload, encoding="utf-8")
+
+          # Zettel deck views.
+          (target / "ZETTELS.json").write_text(json.dumps(d["cards"], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          with (target / "ZETTELS.jsonl").open("w", encoding="utf-8") as f:
+              for card in d["cards"]:
+                  f.write(json.dumps(card, ensure_ascii=False) + "\n")
+          with (target / "ZETTELS.txt").open("w", encoding="utf-8") as f:
+              for i, card in enumerate(d["cards"], 1):
+                  if i > 1:
+                      f.write("\n\n" + "="*78 + "\n\n")
+                  f.write(card["payload"])
+
+          # MOCs and arrangement.
+          (target / "_MOCS").mkdir()
+          for name, body in d["mocs"].items():
+              (target / "_MOCS" / name).write_text(body, encoding="utf-8")
+          (target / "_ARRANGEMENTS").mkdir()
+          for name, body in d["arrangements"].items():
+              (target / "_ARRANGEMENTS" / name).write_text(body, encoding="utf-8")
+
+          # Prompts.
+          (target / "_PROMPTS").mkdir()
+          prompt_names = {
+              "PRIME ZETTEL FORAGE 3.0": "PRIME_ZETTEL_FORAGE_3_0.txt",
+              "PRIME ZETTEL FORAGE RECURSIVE 3.1": "PRIME_ZETTEL_FORAGE_RECURSIVE_3_1.txt",
+              "SLIPCASE ASSEMBLY PROMPT 15.55-AM": "SLIPCASE_ASSEMBLY_PROMPT_15_55_AM.txt",
+          }
+          for label, body in d["prompts"].items():
+              name = prompt_names.get(label, re.sub(r"[^A-Za-z0-9._-]+", "_", label) + ".txt")
+              (target / "_PROMPTS" / name).write_text(body, encoding="utf-8")
+          (target / "000__PROMPTS.txt").write_text(
+              "PROMPTS\n\n" + "\n".join(f"- {k}" for k in d["prompts"]) + "\n",
+              encoding="utf-8",
+          )
+
+          # Exact source PDF embedded in the standalone capsule.
+          m = re.search(r'<script id="source-pdf-b64"[^>]*>(.*?)</script>', text, re.S)
+          if not m:
+              raise SystemExit("embedded source PDF not found")
+          source_pdf = base64.b64decode(m.group(1).strip())
+          got = hashlib.sha256(source_pdf).hexdigest()
+          expected = "4c052bf059979673e22d530fc868330d970ed0ab59d25e5006b5cd3c069b05ac"
+          if got != expected:
+              raise SystemExit(f"source PDF hash mismatch: {got}")
+          resources_dir = target / "_RESOURCES"
+          resources_dir.mkdir()
+          (resources_dir / d["source_pdf_meta"]["name"]).write_bytes(source_pdf)
+
+          # Paper preserved in capsule.
+          paper = d["paper"]
+          pdf_name = paper["pdf_name"]
+          (target / pdf_name).write_bytes(base64.b64decode(paper["pdf_b64"]))
+          stem = pdf_name[:-4]
+          (target / f"{stem}.tex").write_text(paper["tex"], encoding="utf-8")
+          base_slug = stem.rsplit("__", 1)[0]
+          (target / f"{base_slug}__SOURCE_MAP.txt").write_text(paper["source_map"], encoding="utf-8")
+          (target / f"{base_slug}__MAKING_HISTORY.txt").write_text(paper["making_history"], encoding="utf-8")
+          (target / f"{base_slug}__ASSEMBLY_APPENDIX.txt").write_text(paper["assembly_appendix"], encoding="utf-8")
+
+          # Core field documents carried by the capsule.
+          docs = {
+              "000__RETURN_PATH.txt": d["return_path"],
+              "000__MAKING_HISTORY.txt": d["making_history"],
+              "000__REBUILD.txt": d["rebuild"],
+              "000__BIBLIOGRAPHY.txt": d["bibliography_text"],
+              "000__OPEN_EDGES.txt": d["open_edges"],
+              "000__MAP.txt": d["map_text"],
+          }
+          for name, body in docs.items():
+              (target / name).write_text(body, encoding="utf-8")
+
+          # Bibliography extracted from immutable cards.
+          seen = set()
+          bibs = []
+          for card in d["cards"]:
+              bib = card["fields"].get("BIBTEX", "").strip()
+              if bib and bib not in seen:
+                  seen.add(bib); bibs.append(bib)
+          bib_text = (
+              "% checkpoint: " + d["checkpoint"] + "\n"
+              "% package: reconstructed from standalone index.html capsule\n"
+              "% schema: v15.55-AM\n"
+              "% RETURN PATH: 000__RETURN_PATH.txt\n\n"
+              + "\n\n".join(bibs) + "\n"
+          )
+          (target / "slipcase-20260921__references.bib").write_text(bib_text, encoding="utf-8")
+          (target / "000__BIBLIOGRAPHY.html").write_text(
+              "<!doctype html><meta charset='utf-8'><title>Bibliography</title><pre>"
+              + d["bibliography_text"].replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
+              + "</pre>", encoding="utf-8")
+
+          # Resource receipts.
+          with (target / "000__RESOURCES.txt").open("w", encoding="utf-8") as f:
+              f.write("RESOURCES\n\n")
+              for r in d["resources"]:
+                  f.write(f"NAME: {r.get('name')}\nTYPE: {r.get('type')}\nSTATE: {r.get('state')}\nURL: {r.get('url') or 'NONE'}\nLOCAL COPY: {r.get('local_copy') or 'NONE'}\n\n")
+
+          # Graph and machine-readable state.
+          slip = target / "_SLIPCASE"
+          slip.mkdir()
+          def write_jsonl(path, rows):
+              with path.open("w", encoding="utf-8") as f:
+                  for row in rows:
+                      f.write(json.dumps(row, ensure_ascii=False) + "\n")
+          write_jsonl(slip / "NODES.jsonl", d["nodes"])
+          write_jsonl(slip / "RELATIONS.jsonl", d["relations"])
+          write_jsonl(slip / "RESOURCES.jsonl", d["resources"])
+          appearances = [
+              {"card": c["filename"], "original_id": c["id"], "order": c["order"], "origin": "conversation-visible-latest-forage-batch"}
+              for c in d["cards"]
+          ]
+          write_jsonl(slip / "APPEARANCES.jsonl", appearances)
+          (slip / "ALIASES.json").write_text("{}\n", encoding="utf-8")
+          (slip / "ORIGINAL_MANIFEST.json").write_text(json.dumps(d["manifest"], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          (slip / "VERIFICATION.txt").write_text(
+              d["verification"] + "\n\nGITHUB RECONSTRUCTION\n"
+              "Standalone index.html capsule hash verified before reconstruction.\n"
+              "18 card payload hashes verified.\n"
+              "Embedded source PDF SHA-256 verified.\n",
+              encoding="utf-8",
+          )
+          (slip / "reconstruct_cards.py").write_text(d["reconstruct_script"], encoding="utf-8")
+          (target / "NETWORK.svg").write_text(d["network_svg"], encoding="utf-8")
+
+          # Quiet, low-chrome HTML views sufficient for field-local inspection.
+          cards_html = "<!doctype html><meta charset='utf-8'><title>Cards</title><style>body{font:16px system-ui;max-width:850px;margin:auto;padding:24px}article{break-after:page;border:1px solid #bbb;padding:20px;margin:20px 0;white-space:pre-wrap}</style>"
+          cards_html += "".join("<article>" + c["payload"].replace("&","&amp;").replace("<","&lt;").replace(">","&gt;") + "</article>" for c in d["cards"])
+          (target / "CARDS.html").write_text(cards_html, encoding="utf-8")
+          (target / "NETWORK.html").write_text("<!doctype html><meta charset='utf-8'><title>Network</title>" + d["network_svg"], encoding="utf-8")
+
+          # Start/index docs.
+          counts = d["manifest"].get("counts", {})
+          (target / "000__START_HERE.txt").write_text(
+              f"SLIPCASE — PORTABLE RESEARCH FIELD\n\nCHECKPOINT: {d['checkpoint']}\nCHECKPOINT ID: {d['checkpoint_id']}\nSCHEMA: v15.55-AM\nDATE: 2026-09-21\n\n"
+              f"ADMITTED ZETTELS: {len(d['cards'])}\nNODES: {len(d['nodes'])}\nRELATIONS: {len(d['relations'])}\nRESOURCES: {len(d['resources'])}\n\n"
+              "This GitHub copy was reconstructed from the exact standalone replication capsule index.html.\n"
+              "See _SLIPCASE/GITHUB_INGEST.txt for reconstruction provenance.\n",
+              encoding="utf-8",
+          )
+
+          # Fresh manifest for the GitHub-reconstructed tree (the original manifest is retained separately).
+          entries = []
+          for p in sorted(target.rglob("*")):
+              if not p.is_file() or p.name == "MANIFEST.json":
+                  continue
+              rel = p.relative_to(target).as_posix()
+              data = p.read_bytes()
+              entries.append({"path": rel, "bytes": len(data), "sha256": hashlib.sha256(data).hexdigest()})
+          manifest = {
+              "checkpoint": d["checkpoint"],
+              "checkpoint_id": d["checkpoint_id"],
+              "schema": "v15.55-AM",
+              "package": target.name,
+              "date": "2026-09-21",
+              "hash_algorithm": "sha256",
+              "reconstruction_source": "exact standalone index.html replication capsule",
+              "files": entries,
+          }
+          (slip / "MANIFEST.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+          files = sorted(p.relative_to(target).as_posix() for p in target.rglob("*") if p.is_file())
+          (target / "000__INDEX.txt").write_text("INDEX\n\n" + "\n".join(files) + "\n", encoding="utf-8")
+          print(f"reconstructed {len(files)+1} files in {target}")
+          PY
+
+          test "$(find "$TARGET" -maxdepth 1 -type f -name '0*.txt' | wc -l | tr -d ' ')" -ge 18
+          test "$(find "$TARGET/_MD" -type f | wc -l | tr -d ' ')" = "18"
+          test "$(find "$TARGET" -maxdepth 1 -type f -name '*.txt' | grep -c '__from-conversation-visible-latest-forage-batch.txt')" = "18"
+          echo "$SOURCE_PDF_SHA  $TARGET/_RESOURCES/What Is a Prompt A Language-Game (the meme cut).pdf" | sha256sum -c -
+
+          {
+            echo "github_ingest_verified: true"
+            echo "checkpoint: SLIPCASE-PROMPT-LANGUAGE-GAME-20260921"
+            echo "checkpoint_id: slipcase-20260921-prompt-language-game-partial-18"
+            echo "schema: v15.55-AM"
+            echo "reconstruction_source: exact standalone replication capsule index.html"
+            echo "index_sha256: $INDEX_SHA"
+            echo "source_pdf_sha256: $SOURCE_PDF_SHA"
+            echo "admitted_zettels: 18"
+            echo "target: $TARGET"
+            echo "note: immutable card payload hashes and embedded source PDF were verified during reconstruction"
+          } > "$TARGET/_SLIPCASE/GITHUB_INGEST.txt"
+
+      - name: Rebuild master Slipcase desk
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 build_all.py
+
+      - name: Commit field and rebuilt desk
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET="slipcases/2026-09-21__prompt-does-not-contain-its-own-force__SLIPCASE-PROMPT-LANGUAGE-GAME-20260921"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$TARGET" index.html slipcases.json map.html atlas.html map-02.html box.html slipcase-reader-v3.html pocket.html || true
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "add prompt language-game slipcase"
+          git pull --rebase origin main
+          git push origin HEAD:main
