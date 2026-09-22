@@ -1,0 +1,39 @@
+name: Build Operative Humanities PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'slipcases/2026-09-18__language-under-constraint__OPERATIVE-HUMANITIES/Language_Under_Constraint_Operative_Humanities_FINAL.md'
+      - 'slipcases/2026-09-18__language-under-constraint__OPERATIVE-HUMANITIES/build_pdf.py'
+      - '.github/workflows/build-operative-humanities-pdf.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF dependency
+        run: python -m pip install --disable-pip-version-check reportlab
+      - name: Build PDF
+        run: python slipcases/2026-09-18__language-under-constraint__OPERATIVE-HUMANITIES/build_pdf.py
+      - name: Commit generated PDF
+        run: |
+          git config user.name "slipcase-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add slipcases/2026-09-18__language-under-constraint__OPERATIVE-HUMANITIES/Language_Under_Constraint_Operative_Humanities_FINAL.pdf
+          if git diff --cached --quiet; then
+            echo "PDF unchanged"
+          else
+            git commit -m "build Language Under Constraint PDF"
+            git push origin HEAD:main
+          fi
