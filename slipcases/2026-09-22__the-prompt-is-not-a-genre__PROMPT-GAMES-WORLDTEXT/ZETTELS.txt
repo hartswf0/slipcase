@@ -1,0 +1,1484 @@
+===== 001 | 001__the-prompt-box-creates-a-false-linguistic-genus__SELFSOURCE-2026__PROMPT-GENRE-20260922-001__from-working-paper.txt =====
+
+ZETTEL
+
+ID:
+PROMPT-GENRE-20260922-001
+
+TITLE:
+The prompt box creates a false linguistic genus
+
+SOURCE:
+Watson Hartsoe, The Prompt Is Not a Genre: Language Games, Operative Ekphrasis, and Worldtext, Working Paper, 22 September 2026.
+
+SOURCE URL:
+https://github.com/hartswf0/slipcase/blob/main/slipcases/2026-09-22__the-prompt-is-not-a-genre__PROMPT-GAMES-WORLDTEXT/the-prompt-is-not-a-genre__2026-09-22.pdf
+
+PASSAGE:
+[OUR SYNTHESIS]\nCommands, questions, scores, commissions, edits, probes, constraints, and conversations now enter through one rectangular field and are all named prompts.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]\nPROMPT IS AN INTERFACE CATEGORY BEFORE IT IS A LINGUISTIC GENRE.
+
+LOCAL MOVE:
+Use Ryle's category-mistake caution to separate the name of the input widget from the practice that gives an utterance force.
+
+SOURCE TERMS:
+prompt; interface category; language game; aperture
+
+WHAT BECAME STRANGE:
+The same UI can conceal different executors, success conditions, worlds, and evidentiary standards.
+
+QUESTION:
+What does the word prompt hide when a single interface accepts heterogeneous linguistic acts?
+
+DEEPER QUESTION:
+Can a history of prompting be written as a history of interfaces collapsing previously separate language games?
+
+MECHANISM:
+A common input surface induces users and researchers to nominalize distinct practices as one object.
+
+FORMAL SHIFT:
+SAME_STRING_SURFACE does not imply SAME_OPERATION.
+
+SOURCE FORMALISM:
+[OUR SYNTHESIS — NOT SOURCE FORMALISM]
+
+OUR FORMALIZATION:
+PROMPT_SURFACE = UNION(instruction, score, query, probe, edit, commission, conversation, constraint, plan, performance, gesture, program).
+
+TENSION:
+The shared surface also creates genuinely new hybrid practices, so interface accident does not mean historical insignificance.
+
+MISSING:
+Comparative empirical study of the same utterance routed through different interaction regimes.
+
+BOUNDARY:
+This card states the working paper's argument; it is not independent evidence.
+
+CITATION TRAIL:
+Ryle category caution -> prompt box -> heterogeneous games -> interface category.
+
+TEST:
+Present identical text in several systems with different rules and compare what counts as a successful continuation.
+
+PLATFORM:
+Prompting; language games; interface theory; operative humanities
+
+LINKS:
+[[PROMPT-GENRE-20260922-002]]
+[[PROMPT-GENRE-20260922-005]]
+[[PROMPT-GENRE-20260922-016]]
+
+BIBTEX:
+@unpublished{hartsoe2026promptgenre,
+  author={Hartsoe, Watson},
+  title={The Prompt Is Not a Genre: Language Games, Operative Ekphrasis, and Worldtext},
+  note={Working Paper},
+  year={2026}
+}
+
+===== 002 | 002__a-thin-string-can-ride-on-a-thick-operative-structure__WITTGENSTEIN-1953__PROMPT-GENRE-20260922-002__from-working-paper.txt =====
+
+ZETTEL
+
+ID:
+PROMPT-GENRE-20260922-002
+
+TITLE:
+A thin string can ride on a thick operative structure
+
+SOURCE:
+Ludwig Wittgenstein, Philosophical Investigations, 4th ed., 1953/2009, §§2, 7.
+
+SOURCE URL:
+https://plato.stanford.edu/entries/wittgenstein/
+
+PASSAGE:
+[PARAPHRASE]\nIn the builder's language-game, calls such as block, pillar, slab, and beam work within an already organized activity between builder and assistant.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]\nLEXICAL THINNESS CAN COEXIST WITH OPERATIVE THICKNESS.
+
+LOCAL MOVE:
+Move prompt theory away from the isolated text string toward the practice that supplies roles, objects, permissions, and expected continuations.
+
+SOURCE TERMS:
+language-game; builder; slab; use
+
+WHAT BECAME STRANGE:
+The builder does not verbalize the ontology, permissions, or worksite state because the game carries them.
+
+QUESTION:
+How little language is needed when the game supplies the missing structure?
+
+DEEPER QUESTION:
+Which parts of modern prompt verbosity compensate for absent shared state rather than genuine linguistic complexity?
+
+MECHANISM:
+Established practice externalizes assumptions that would otherwise have to be stated in the utterance.
+
+FORMAL SHIFT:
+THIN(move) + THICK(game) -> EXECUTABLE_CONTINUATION.
+
+SOURCE FORMALISM:
+[PARAPHRASE]\nMeaning is approached through use within language-games rather than by treating words as independently self-sufficient labels.
+
+OUR FORMALIZATION:
+Effective input = move + inherited game state.
+
+TENSION:
+LLM interfaces often lack a stable shared practice, forcing users to restate what a worksite would ordinarily carry.
+
+MISSING:
+Operational comparison of minimal commands in persistent versus stateless environments.
+
+BOUNDARY:
+Wittgenstein is not writing about prompting or AI.
+
+CITATION TRAIL:
+Wittgenstein builder -> Slab! -> situated continuation -> prompt as move.
+
+TEST:
+Hold the requested action constant; compare the token burden with and without persistent roles, objects, and state.
+
+PLATFORM:
+Wittgenstein; prompting; situated language
+
+LINKS:
+[[PROMPT-GENRE-20260922-003]]
+[[PROMPT-GENRE-20260922-018]]
+
+BIBTEX:
+@book{wittgenstein2009philosophical,
+  author={Wittgenstein, Ludwig},
+  title={Philosophical Investigations},
+  edition={4},
+  publisher={Wiley-Blackwell},
+  year={2009}
+}
+
+===== 003 | 003__prompt-engineering-can-be-game-construction-rather-than-string-elaborati__WITTGENSTEIN-1953__PROMPT-GENRE-20260922-003__from-working-paper.txt =====
+
+ZETTEL
+
+ID:
+PROMPT-GENRE-20260922-003
+
+TITLE:
+Prompt engineering can be game construction rather than string elaboration
+
+SOURCE:
+Ludwig Wittgenstein, Philosophical Investigations, 4th ed., 1953/2009, §§2, 7.
+
+SOURCE URL:
+https://plato.stanford.edu/entries/wittgenstein/
+
+PASSAGE:
+[OUR INFERENCE FROM SOURCE]\nIf the activity already fixes roles, objects, permissions, and expected continuations, the utterance itself can remain short.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]\nBETTER PROMPTING MAY REQUIRE BUILDING THE CONDITIONS OF USE, NOT WRITING MORE WORDS.
+
+LOCAL MOVE:
+Reframe prompt engineering as interface and world design.
+
+SOURCE TERMS:
+game construction; state; role; permission; ontology
+
+WHAT BECAME STRANGE:
+Long prompts often compensate for missing structure but cannot reliably replace it.
+
+QUESTION:
+Which prompt failures should be repaired in the surrounding game rather than in the prose?
+
+DEEPER QUESTION:
+Can prompt quality be measured partly by how much structure moves out of repeated language and into inspectable state?
+
+MECHANISM:
+External state and enforced rules reduce the burden placed on natural-language specification.
+
+FORMAL SHIFT:
+MORE_TEXT is not necessarily MORE_CONTROL.
+
+SOURCE FORMALISM:
+[NO SOURCE FORMALISM]
+
+OUR FORMALIZATION:
+CONTROL = f(game structure, state visibility, enforcement, test), not f(token count) alone.
+
+TENSION:
+Moving structure out of language may reduce flexibility and exploratory discovery.
+
+MISSING:
+Design patterns for deciding which constraints belong in prose, schema, direct manipulation, or runtime enforcement.
+
+BOUNDARY:
+This is a Hartsoe inference from the builder's game, not a claim made by Wittgenstein.
+
+CITATION TRAIL:
+Slab! -> operative thickness -> game construction -> thick prompting.
+
+TEST:
+Rewrite a long prompt as a short move inside a stateful interface; compare reliability and edit cost.
+
+PLATFORM:
+Prompt engineering; HCI; language games
+
+LINKS:
+[[PROMPT-GENRE-20260922-002]]
+[[PROMPT-GENRE-20260922-006]]
+[[PROMPT-GENRE-20260922-018]]
+
+BIBTEX:
+@book{wittgenstein2009philosophical,
+  author={Wittgenstein, Ludwig},
+  title={Philosophical Investigations},
+  edition={4},
+  publisher={Wiley-Blackwell},
+  year={2009}
+}
+
+===== 004 | 004__shrdlu-makes-language-operative-by-engineering-the-world-first__WINOGRAD-1972__PROMPT-GENRE-20260922-004__from-working-paper.txt =====
+
+ZETTEL
+
+ID:
+PROMPT-GENRE-20260922-004
+
+TITLE:
+SHRDLU makes language operative by engineering the world first
+
+SOURCE:
+Terry Winograd, "Understanding Natural Language," Cognitive Psychology 3(1), 1972.
+
+SOURCE URL:
+https://www.sciencedirect.com/science/article/pii/0010028572900023
+
+PASSAGE:
+[PARAPHRASE]\nWinograd's system answers questions, executes commands, and accepts information in English within a deliberately modeled blocks-world domain.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]\nRELIABLE NATURAL-LANGUAGE ACTION CAN DEPEND ON PRIOR WORLD CLOSURE.
+
+LOCAL MOVE:
+Use SHRDLU as the opposite pole from general-purpose chat: narrow world, strong reference.
+
+SOURCE TERMS:
+microworld; blocks world; language understanding; planning
+
+WHAT BECAME STRANGE:
+The apparent naturalness of the command depends on an unusually explicit ontology, planner, memory, and action space.
+
+QUESTION:
+How much world engineering is hidden behind a short successful command?
+
+DEEPER QUESTION:
+What is the modern equivalent of the blocks world when prompts act over files, code, CAD, or physical tools?
+
+MECHANISM:
+A bounded domain limits candidate referents and legal actions, making ambiguity and consequence tractable.
+
+FORMAL SHIFT:
+ENGINEER_WORLD_FIRST -> COMPACT_OPERATIVE_LANGUAGE.
+
+SOURCE FORMALISM:
+[PARAPHRASE]\nThe language system is tied to a detailed model of the domain it discusses.
+
+OUR FORMALIZATION:
+Prompt = compact address into ontology + planner + memory + action space.
+
+TENSION:
+Closure buys reliability by excluding the open-ended background of ordinary human activity.
+
+MISSING:
+Comparative map from contemporary tool schemas and sandboxes to classic microworld closure.
+
+BOUNDARY:
+SHRDLU's domain is deliberately narrow; its success should not be generalized to unrestricted natural language.
+
+CITATION TRAIL:
+Winograd -> blocks world -> grounded command -> world-first prompting.
+
+TEST:
+Vary domain closure while holding command wording constant; measure reference and action failures.
+
+PLATFORM:
+SHRDLU; grounded language; world models
+
+LINKS:
+[[PROMPT-GENRE-20260922-005]]
+[[PROMPT-GENRE-20260922-012]]
+
+BIBTEX:
+@article{winograd1972understanding,
+  author={Winograd, Terry},
+  title={Understanding Natural Language},
+  journal={Cognitive Psychology},
+  volume={3},
+  number={1},
+  pages={1--191},
+  year={1972},
+  doi={10.1016/0010-0285(72)90002-3}
+}
+
+===== 005 | 005__the-prompt-can-be-larger-than-its-transcript__BOLT-1980__PROMPT-GENRE-20260922-005__from-working-paper.txt =====
+
+ZETTEL
+
+ID:
+PROMPT-GENRE-20260922-005
+
+TITLE:
+The prompt can be larger than its transcript
+
+SOURCE:
+Richard A. Bolt, "Put-That-There: Voice and Gesture at the Graphics Interface," SIGGRAPH, 1980.
+
+SOURCE URL:
+https://www.media.mit.edu/speech/papers/1980/bolt_SIGGRAPH80_put-that-there.pdf
+
+PASSAGE:
+[PARAPHRASE]\nPut-That-There combines speech with pointing and display context so pronouns can refer economically to visible objects and destinations.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]\nTHE EFFECTIVE PROMPT INCLUDES SITUATED, MULTIMODAL STATE THAT MAY NOT APPEAR IN THE TEXT TRANSCRIPT.
+
+LOCAL MOVE:
+Make deixis a central counterexample to text-only prompt analysis.
+
+SOURCE TERMS:
+deixis; gesture; pointing; context; reference
+
+WHAT BECAME STRANGE:
+Remove the gesture and shared screen state and the phrase 'put that there' loses its referents.
+
+QUESTION:
+What must be archived to reconstruct a prompt when the string alone is insufficient?
+
+DEEPER QUESTION:
+How should provenance systems represent cursor, mask, gaze, viewport, selection, attached media, prior turns, and tool state?
+
+MECHANISM:
+Speech supplies a relation while gesture binds variables to entities already present in the field.
+
+FORMAL SHIFT:
+TRANSCRIPT(P) is a strict subset of EFFECTIVE_INPUT(P).
+
+SOURCE FORMALISM:
+[PARAPHRASE]\nVoice and gesture are interpreted together against the graphical situation.
+
+OUR FORMALIZATION:
+P_effective = text + gesture + selected referent + scene state + interaction history.
+
+TENSION:
+Richer context makes interaction economical but makes later reconstruction harder.
+
+MISSING:
+Standard archival representation for multimodal prompt state.
+
+BOUNDARY:
+Put-That-There is a graphics interface, not a generative AI system.
+
+CITATION TRAIL:
+Bolt -> deixis -> transcript insufficiency -> situated prompt.
+
+TEST:
+Replay the same transcript with different gesture traces and show divergent valid interpretations.
+
+PLATFORM:
+Deixis; multimodal HCI; prompting
+
+LINKS:
+[[PROMPT-GENRE-20260922-001]]
+[[PROMPT-GENRE-20260922-006]]
+[[PROMPT-GENRE-20260922-018]]
+
+BIBTEX:
+@inproceedings{bolt1980put,
+  author={Bolt, Richard A.},
+  title={Put-That-There: Voice and Gesture at the Graphics Interface},
+  booktitle={Proceedings of SIGGRAPH 1980},
+  pages={262--270},
+  year={1980}
+}
+
+===== 006 | 006__thick-prompting-means-more-of-the-situation-not-more-adjectives__RYLE-GEERTZ__PROMPT-GENRE-20260922-006__from-working-paper.txt =====
+
+ZETTEL
+
+ID:
+PROMPT-GENRE-20260922-006
+
+TITLE:
+Thick prompting means more of the situation, not more adjectives
+
+SOURCE:
+Gilbert Ryle, "The Thinking of Thoughts: What Is 'Le Penseur' Doing?", 1968/2009. Clifford Geertz, The Interpretation of Cultures, 1973.
+
+SOURCE URL:
+https://books.google.com/books/about/The_Interpretation_Of_Cultures.html?id=Vn74xQEACAAJ
+
+PASSAGE:
+[PARAPHRASE]\nRyle's twitch/wink distinction and Geertz's thick description show that physically similar events can be different acts because intention, code, audience, and situation differ.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]\nTHICK PROMPTING = MORE OF THE SITUATION, NOT MERELY MORE DESCRIPTION.
+
+LOCAL MOVE:
+Separate contextual thickness from florid specification.
+
+SOURCE TERMS:
+thin description; thick description; wink; context; situation
+
+WHAT BECAME STRANGE:
+A longer prompt can remain thin if it adds surface detail without specifying the relations that make the act intelligible.
+
+QUESTION:
+Which contextual relations make an intended continuation legible?
+
+DEEPER QUESTION:
+Can thickness be operationalized without forcing users to verbalize context that an interface could carry directly?
+
+MECHANISM:
+The same observable behavior acquires different force under different codes, roles, histories, and success conditions.
+
+FORMAL SHIFT:
+THICKNESS != TOKEN_COUNT.
+
+SOURCE FORMALISM:
+[PARAPHRASE]\nInterpretive adequacy requires reconstructing structures of significance, not merely recording physical behavior.
+
+OUR FORMALIZATION:
+THICK_PROMPT = move + relevant world + relations + roles + invariants + evidence.
+
+TENSION:
+Over-explication can destroy useful latitude and turn a score into a brittle specification.
+
+MISSING:
+A clause-level method for distinguishing situational context from decorative descriptive detail.
+
+BOUNDARY:
+Ryle and Geertz do not propose a method called thick prompting; the term is Hartsoe's extension.
+
+CITATION TRAIL:
+Ryle twitch/wink -> Geertz thick description -> thick prompting.
+
+TEST:
+Compare prompts matched for length but differing in situational structure; evaluate controllability and interpretability.
+
+PLATFORM:
+Anthropology; thick description; prompting
+
+LINKS:
+[[PROMPT-GENRE-20260922-005]]
+[[PROMPT-GENRE-20260922-007]]
+[[PROMPT-GENRE-20260922-018]]
+
+BIBTEX:
+@incollection{ryle2009thinking,
+  author={Ryle, Gilbert},
+  title={The Thinking of Thoughts: What Is 'Le Penseur' Doing?},
+  booktitle={Collected Papers, Volume 2},
+  publisher={Routledge},
+  year={2009}
+}
+
+@book{geertz1973interpretation,
+  author={Geertz, Clifford},
+  title={The Interpretation of Cultures},
+  publisher={Basic Books},
+  year={1973}
+}
+
+===== 007 | 007__move-game-situation-executor-test-is-a-diagnostic-for-prompt-force__SELFSOURCE-2026__PROMPT-GENRE-20260922-007__from-working-paper.txt =====
+
+ZETTEL
+
+ID:
+PROMPT-GENRE-20260922-007
+
+TITLE:
+Move game situation executor test is a diagnostic for prompt force
+
+SOURCE:
+Watson Hartsoe, The Prompt Is Not a Genre: Language Games, Operative Ekphrasis, and Worldtext, Working Paper, 22 September 2026.
+
+SOURCE URL:
+https://github.com/hartswf0/slipcase/blob/main/slipcases/2026-09-22__the-prompt-is-not-a-genre__PROMPT-GAMES-WORLDTEXT/the-prompt-is-not-a-genre__2026-09-22.pdf
+
+PASSAGE:
+[OUR SYNTHESIS]\nPrompt failures can be separated by asking what move was made, what game made it an act, what situation supplied state, what executor was entitled to continue it, and what test judged adequacy.
+
+RESEARCH OBJECT:
+[OUR FORMALIZATION]\nPROMPT = MOVE + GAME + SITUATION + EXECUTOR + TEST.
+
+LOCAL MOVE:
+Turn the paper's heterogeneous examples into a reusable analytic instrument.
+
+SOURCE TERMS:
+move; game; situation; executor; test
+
+WHAT BECAME STRANGE:
+Many apparent wording failures are actually mismatches in executor authority, state, or evaluation.
+
+QUESTION:
+At which component did a failed prompt interaction actually break?
+
+DEEPER QUESTION:
+Can the tuple predict which interface intervention will outperform a text rewrite?
+
+MECHANISM:
+The diagnostic distributes operative force across the interaction rather than localizing it in the sentence.
+
+FORMAL SHIFT:
+P* = <M,G,S,E,T>.
+
+SOURCE FORMALISM:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+OUR FORMALIZATION:
+adequacy(output) is evaluated relative to T under G and S, not by linguistic plausibility alone.
+
+TENSION:
+The five terms are analytic conveniences, not a complete ontology.
+
+MISSING:
+Validation across diverse prompt tasks and multimodal systems.
+
+BOUNDARY:
+Derived by Hartsoe from the paper's comparative cases.
+
+CITATION TRAIL:
+builder + SHRDLU + Put-That-There + thick description -> five-part diagnostic.
+
+TEST:
+Code failures across a corpus by component; test whether repairs targeted to that component outperform prompt-only edits.
+
+PLATFORM:
+Prompt theory; HCI; diagnostics
+
+LINKS:
+[[PROMPT-GENRE-20260922-001]]
+[[PROMPT-GENRE-20260922-006]]
+[[PROMPT-GENRE-20260922-017]]
+
+BIBTEX:
+@unpublished{hartsoe2026promptgenre,
+  author={Hartsoe, Watson},
+  title={The Prompt Is Not a Genre: Language Games, Operative Ekphrasis, and Worldtext},
+  note={Working Paper},
+  year={2026}
+}
+
+===== 008 | 008__a-prompt-can-function-as-a-score-without-becoming-a-program__HARREN-2025__PROMPT-GENRE-20260922-008__from-working-paper.txt =====
+
+ZETTEL
+
+ID:
+PROMPT-GENRE-20260922-008
+
+TITLE:
+A prompt can function as a score without becoming a program
+
+SOURCE:
+Natilee Harren, "George Brecht: Drip Music (Drip Event) (1959–62), from Water Yam (1963)," The Scores Project, Getty Research Institute, 2025.
+
+SOURCE URL:
+https://www.getty.edu/publications/scores/06/commentary/
+
+PASSAGE:
+[PARAPHRASE]\nBrecht's event scores preserve identity across materially different performances; open realization does not eliminate operational constraint.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]\nOPERATIVE LANGUAGE CAN BE BINDING WITHOUT EXHAUSTIVELY DETERMINING THE RESULT.
+
+LOCAL MOVE:
+Use score-based art to block the reduction of prompts to programs.
+
+SOURCE TERMS:
+score; realization; invariance; latitude; performance
+
+WHAT BECAME STRANGE:
+Variability can be intended rather than an execution error.
+
+QUESTION:
+What must remain invariant across admissible realizations of a prompt?
+
+DEEPER QUESTION:
+When does increased specificity improve control, and when does it destroy the productive latitude of the medium?
+
+MECHANISM:
+The score specifies constraints or relations while delegating other decisions to performer and situation.
+
+FORMAL SHIFT:
+VALID(y_i, S) can hold for many non-identical y_i.
+
+SOURCE FORMALISM:
+[PARAPHRASE]\nEvent scores support multiple realizations while retaining continuity as a work.
+
+OUR FORMALIZATION:
+PROGRAM asks for exact execution; SCORE asks for invariant relations across a family of executions.
+
+TENSION:
+Some prompt clauses are program-like while others are score-like inside the same request.
+
+MISSING:
+Clause-level classification of invariants versus deliberate latitude.
+
+BOUNDARY:
+Brecht is not writing about generative AI.
+
+CITATION TRAIL:
+Brecht -> open score -> prompt variability -> non-programmatic operation.
+
+TEST:
+Ask raters to identify intended invariants and latitude before generation, then evaluate outputs against both.
+
+PLATFORM:
+Fluxus; score; generative systems
+
+LINKS:
+[[PROMPT-GENRE-20260922-009]]
+[[PROMPT-GENRE-20260922-014]]
+
+BIBTEX:
+@misc{harren2025brecht,
+  author={Harren, Natilee},
+  title={George Brecht: Drip Music (Drip Event) (1959--62), from Water Yam (1963)},
+  publisher={Getty Research Institute},
+  year={2025},
+  url={https://www.getty.edu/publications/scores/06/commentary/}
+}
+
+===== 009 | 009__a-house-of-dust-turns-generated-description-into-inhabitable-consequence__CALARTS-2009__PROMPT-GENRE-20260922-009__from-working-paper.txt =====
+
+ZETTEL
+
+ID:
+PROMPT-GENRE-20260922-009
+
+TITLE:
+A House of Dust turns generated description into inhabitable consequence
+
+SOURCE:
+California Institute of the Arts, "Alison Knowles, James Tenney and the House of Dust at CalArts," 2009; related CalArts account, 2018.
+
+SOURCE URL:
+https://blog.calarts.edu/2009/09/10/alison-knowles-james-tenney-and-the-house-of-dust-at-calarts/
+
+PASSAGE:
+[PARAPHRASE]\nKnowles and Tenney used FORTRAN-based chance operations with lists of materials, sites, light sources, and inhabitants to generate a poem of houses; one generated quatrain was subsequently realized as an inhabitable structure at CalArts.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]\nVOCABULARY -> COMPUTATIONAL PERMUTATION -> POEM -> ARCHITECTURE -> SOCIAL SITUATION.
+
+LOCAL MOVE:
+Provide a pre-LLM bridge where generated text crosses into spatial realization without pretending that the text fully determines the result.
+
+SOURCE TERMS:
+House of Dust; FORTRAN; permutation; architecture; realization
+
+WHAT BECAME STRANGE:
+The description is neither merely commentary nor a complete construction program.
+
+QUESTION:
+What kind of operative object is a generated description that organizes a field of realizable relations?
+
+DEEPER QUESTION:
+Which contemporary prompt practices repeat this score-to-space relation rather than program-to-output execution?
+
+MECHANISM:
+Combinatorial text supplies relational constraints that human construction and later inhabitation elaborate.
+
+FORMAL SHIFT:
+TEXT_GENERATION -> MATERIAL_REALIZATION -> SOCIAL_FEEDBACK.
+
+SOURCE FORMALISM:
+[PARAPHRASE]\nThe project links generated quatrains to a built House of Dust and subsequent performances/teaching.
+
+OUR FORMALIZATION:
+Operativity can propagate through multiple executors rather than one compiler.
+
+TENSION:
+The built house is an interpretation, not a deterministic decode of the poem.
+
+MISSING:
+Comparative study of how different executors would realize the same generated quatrain.
+
+BOUNDARY:
+CalArts accounts document the project history; the operative-ekphrasis reading is Hartsoe's.
+
+CITATION TRAIL:
+score -> generated poem -> built house -> social world.
+
+TEST:
+Give the same House of Dust stanza to multiple human or computational builders and compare preserved relations.
+
+PLATFORM:
+Generative art; architecture; operative description
+
+LINKS:
+[[PROMPT-GENRE-20260922-008]]
+[[PROMPT-GENRE-20260922-010]]
+
+BIBTEX:
+@misc{calarts2009houseofdust,
+  author={{California Institute of the Arts}},
+  title={Alison Knowles, James Tenney and the House of Dust at CalArts},
+  year={2009},
+  url={https://blog.calarts.edu/2009/09/10/alison-knowles-james-tenney-and-the-house-of-dust-at-calarts/}
+}
+
+===== 010 | 010__operative-ekphrasis-begins-when-description-enters-an-execution-relation__HOMER-MITCHELL__PROMPT-GENRE-20260922-010__from-working-paper.txt =====
+
+ZETTEL
+
+ID:
+PROMPT-GENRE-20260922-010
+
+TITLE:
+Operative ekphrasis begins when description enters an execution relation
+
+SOURCE:
+Homer, Iliad, Book 18, Shield of Achilles episode. W. J. T. Mitchell, Picture Theory: Essays on Verbal and Visual Representation, 1994.
+
+SOURCE URL:
+https://www.perseus.tufts.edu/hopper/text?doc=Hom.%20Il.%2018
+
+PASSAGE:
+[OUR SYNTHESIS FROM SOURCES]\nThe Shield of Achilles supplies a canonical description repeatedly reconstructed by later artists and makers; image-text theory complicates any clean separation between verbal and visual representation.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]\nOPERATIVE EKPHRASIS = DESCRIPTION THAT PARTICIPATES IN CONSTRUCTING, MODIFYING, OR NAVIGATING WHAT IT DESCRIBES.
+
+LOCAL MOVE:
+Name the threshold where descriptive content crosses into an apparatus of realization.
+
+SOURCE TERMS:
+ekphrasis; Shield of Achilles; imagetext; realization
+
+WHAT BECAME STRANGE:
+Description can be neither mere depiction nor direct command yet still organize material or computational production.
+
+QUESTION:
+When does description stop being only representational and become part of the operation that produces its object?
+
+DEEPER QUESTION:
+What conditions distinguish operative ekphrasis from ordinary vivid description or imperative control?
+
+MECHANISM:
+Descriptive relations are mapped by an interpreter into an operational substrate whose result can be inspected.
+
+FORMAL SHIFT:
+DESCRIPTION -> INTERPRETER -> OPERATIONAL_SUBSTRATE -> RESULT.
+
+SOURCE FORMALISM:
+[NO SOURCE FORMALISM]
+
+OUR FORMALIZATION:
+Operative ekphrasis requires descriptive content plus an execution relation; vividness alone is insufficient.
+
+TENSION:
+A generated output can invite retrospective rationalization unless the description exposes challengeable relations.
+
+MISSING:
+Boundary cases between ekphrasis, specification, instruction, and score.
+
+BOUNDARY:
+The term operative ekphrasis is Hartsoe's; Homer and Mitchell do not use it.
+
+CITATION TRAIL:
+Homeric shield -> imagetext -> executable description -> operative ekphrasis.
+
+TEST:
+For candidate cases, identify which descriptive relations are mapped into which operational substrate and how compliance is inspected.
+
+PLATFORM:
+Ekphrasis; visual studies; operative humanities
+
+LINKS:
+[[PROMPT-GENRE-20260922-009]]
+[[PROMPT-GENRE-20260922-011]]
+[[PROMPT-GENRE-20260922-015]]
+
+BIBTEX:
+@book{homeriliad18,
+  author={Homer},
+  title={Iliad, Book 18},
+  note={Shield of Achilles episode}
+}
+
+@book{mitchell1994picture,
+  author={Mitchell, W. J. T.},
+  title={Picture Theory: Essays on Verbal and Visual Representation},
+  publisher={University of Chicago Press},
+  year={1994}
+}
+
+===== 011 | 011__operation-describe-requires-a-return-path-from-result-to-description__SELFSOURCE-2026__PROMPT-GENRE-20260922-011__from-working-paper.txt =====
+
+ZETTEL
+
+ID:
+PROMPT-GENRE-20260922-011
+
+TITLE:
+Operation Describe requires a return path from result to description
+
+SOURCE:
+Watson Hartsoe, The Prompt Is Not a Genre: Language Games, Operative Ekphrasis, and Worldtext, Working Paper, 22 September 2026.
+
+SOURCE URL:
+https://github.com/hartswf0/slipcase/blob/main/slipcases/2026-09-22__the-prompt-is-not-a-genre__PROMPT-GAMES-WORLDTEXT/the-prompt-is-not-a-genre__2026-09-22.pdf
+
+PASSAGE:
+[OUR SYNTHESIS]\nWithout a return path, any generated result can be narrated after the fact as satisfying the description.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]\nDESCRIPTION -> INTERPRETATION -> WORLD/ARTIFACT -> EVIDENCE -> REVISION.
+
+LOCAL MOVE:
+Turn operative ekphrasis from a one-way 'words become things' story into an inspectable correspondence loop.
+
+SOURCE TERMS:
+Operation Describe; evidence; revision; return path; correspondence
+
+WHAT BECAME STRANGE:
+Execution alone is not enough; inspectability is what prevents retrospective storytelling from masquerading as control.
+
+QUESTION:
+What evidence does the resulting world return to the description that produced it?
+
+DEEPER QUESTION:
+Which interfaces make the correction loop visible rather than silently regenerating?
+
+MECHANISM:
+A declared relation is instantiated, exposed, compared with evidence, and revised.
+
+FORMAL SHIFT:
+D_n -> I -> W_n -> E_n -> D_(n+1).
+
+SOURCE FORMALISM:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+OUR FORMALIZATION:
+Operativity becomes method when the world can contradict the description.
+
+TENSION:
+Some artistic practices intentionally resist fixed compliance criteria.
+
+MISSING:
+Formal vocabulary for correspondence under open-ended score-like realization.
+
+BOUNDARY:
+Operation Describe is a Hartsoe research construct illustrated by the paper's cases.
+
+CITATION TRAIL:
+operative ekphrasis -> inspectable result -> evidence -> revision.
+
+TEST:
+Require a pre-generation called shot, preserve intermediate states, and record whether revision follows observed mismatch.
+
+PLATFORM:
+Operation Describe; correspondence; iterative systems
+
+LINKS:
+[[PROMPT-GENRE-20260922-010]]
+[[PROMPT-GENRE-20260922-012]]
+[[PROMPT-GENRE-20260922-014]]
+
+BIBTEX:
+@unpublished{hartsoe2026promptgenre,
+  author={Hartsoe, Watson},
+  title={The Prompt Is Not a Genre: Language Games, Operative Ekphrasis, and Worldtext},
+  note={Working Paper},
+  year={2026}
+}
+
+===== 012 | 012__world-models-give-language-somewhere-concrete-to-fail__WONG-2023__PROMPT-GENRE-20260922-012__from-working-paper.txt =====
+
+ZETTEL
+
+ID:
+PROMPT-GENRE-20260922-012
+
+TITLE:
+World models give language somewhere concrete to fail
+
+SOURCE:
+Lionel Wong et al., "From Word Models to World Models: Translating from Natural Language to the Probabilistic Language of Thought," 2023.
+
+SOURCE URL:
+https://arxiv.org/abs/2306.12672
+
+PASSAGE:
+[PARAPHRASE]\nWong and colleagues map natural-language utterances into probabilistic programs and explore how language can construct generative world models that support inference.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]\nA WORLD MODEL ADDS RESISTANCE: THE RESULT CAN VIOLATE GEOMETRY, CAUSAL STRUCTURE, OR OTHER EXPLICIT RELATIONS.
+
+LOCAL MOVE:
+Shift evaluation from discourse plausibility toward consequences in an executable model.
+
+SOURCE TERMS:
+word model; world model; probabilistic language of thought; simulation
+
+WHAT BECAME STRANGE:
+When downstream reasoning happens in an explicit world representation, language can be wrong in ways that fluent prose alone may not expose.
+
+QUESTION:
+What new failure modes become visible when text is grounded in an executable model?
+
+DEEPER QUESTION:
+How much of prompting's apparent unreliability is actually the absence of a substrate that can veto language?
+
+MECHANISM:
+Natural language populates or modifies variables and relations in a generative model whose consequences are then computed.
+
+FORMAL SHIFT:
+WORD -> MODEL -> CONSEQUENCE -> TEST.
+
+SOURCE FORMALISM:
+[PARAPHRASE]\nRational meaning construction translates natural language into probabilistic programs supporting generative modeling and inference.
+
+OUR FORMALIZATION:
+World resistance is epistemically valuable because it localizes failure.
+
+TENSION:
+Explicit models can be wrong, incomplete, or over-closed just as microworlds can.
+
+MISSING:
+Methods for comparing world-model error with language-model error across the same task.
+
+BOUNDARY:
+The paper does not claim that this architecture proves human-like understanding.
+
+CITATION TRAIL:
+Wong/Tenenbaum -> probabilistic program -> world model -> veto.
+
+TEST:
+Compare text-only answers with answers forced through an explicit simulator on tasks with checkable physical or causal consequences.
+
+PLATFORM:
+World models; probabilistic programming; grounding
+
+LINKS:
+[[PROMPT-GENRE-20260922-004]]
+[[PROMPT-GENRE-20260922-011]]
+[[PROMPT-GENRE-20260922-013]]
+
+BIBTEX:
+@article{wong2023wordworld,
+  author={Wong, Lionel and Grand, Gabriel and Lew, Alexander K. and Goodman, Noah D. and Mansinghka, Vikash K. and Andreas, Jacob and Tenenbaum, Joshua B.},
+  title={From Word Models to World Models: Translating from Natural Language to the Probabilistic Language of Thought},
+  journal={arXiv preprint arXiv:2306.12672},
+  year={2023},
+  url={https://arxiv.org/abs/2306.12672}
+}
+
+===== 013 | 013__an-inspectable-intermediate-representation-can-witness-correspondence__SELFSOURCE-2026__PROMPT-GENRE-20260922-013__from-working-paper.txt =====
+
+ZETTEL
+
+ID:
+PROMPT-GENRE-20260922-013
+
+TITLE:
+An inspectable intermediate representation can witness correspondence
+
+SOURCE:
+Watson Hartsoe, The Prompt Is Not a Genre: Language Games, Operative Ekphrasis, and Worldtext, Working Paper, 22 September 2026.
+
+SOURCE URL:
+https://github.com/hartswf0/slipcase/blob/main/slipcases/2026-09-22__the-prompt-is-not-a-genre__PROMPT-GAMES-WORLDTEXT/the-prompt-is-not-a-genre__2026-09-22.pdf
+
+PASSAGE:
+[PROJECT CASE — OUR DESCRIPTION]\nIn WAG, natural-language descriptions are routed through LDraw text and explicit 3D geometry before generated imagery and motion.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]\nTHE INTERMEDIATE REPRESENTATION IS A WITNESS BETWEEN INTENTION AND SYNTHESIS.
+
+LOCAL MOVE:
+Use WAG as a case study in separating structural correspondence from generative surface completion.
+
+SOURCE TERMS:
+WAG; LDraw; geometry; intermediate representation; witness
+
+WHAT BECAME STRANGE:
+When structure and surface are fused in one probabilistic request, error provenance becomes hard to locate.
+
+QUESTION:
+Which intermediate state lets us tell whether failure occurred in reference, geometry, style, or synthesis?
+
+DEEPER QUESTION:
+Can witness representations become a general method for prompt accountability across code, music, film, and spatial systems?
+
+MECHANISM:
+The description is compiled into a deterministic or inspectable substrate before probabilistic synthesis adds latitude.
+
+FORMAL SHIFT:
+WORDS -> STRUCTURE -> SYNTHESIS, with TEST(STRUCTURE) before SYNTHESIS.
+
+SOURCE FORMALISM:
+[PROJECT FORMALIZATION]
+
+OUR FORMALIZATION:
+A witness state makes some errors localizable before later generative stages obscure them.
+
+TENSION:
+Intermediate representations can narrow discovery and impose their own ontology.
+
+MISSING:
+Cross-domain comparison of witness representations and their control/discovery tradeoffs.
+
+BOUNDARY:
+WAG is a case study/illustration of the argument, not independent proof.
+
+CITATION TRAIL:
+word-to-world -> LDraw witness -> visible correspondence -> repair.
+
+TEST:
+Deliberately inject structural and stylistic errors at separate stages and test whether users can correctly locate the failure.
+
+PLATFORM:
+WAG; LDraw; spatial prompting; correspondence
+
+LINKS:
+[[PROMPT-GENRE-20260922-012]]
+[[PROMPT-GENRE-20260922-014]]
+[[PROMPT-GENRE-20260922-015]]
+
+BIBTEX:
+@unpublished{hartsoe2026promptgenre,
+  author={Hartsoe, Watson},
+  title={The Prompt Is Not a Genre: Language Games, Operative Ekphrasis, and Worldtext},
+  note={Working Paper},
+  year={2026}
+}
+
+===== 014 | 014__calling-the-shot-makes-correspondence-challengeable__SELFSOURCE-2026__PROMPT-GENRE-20260922-014__from-working-paper.txt =====
+
+ZETTEL
+
+ID:
+PROMPT-GENRE-20260922-014
+
+TITLE:
+Calling the shot makes correspondence challengeable
+
+SOURCE:
+Watson Hartsoe, The Prompt Is Not a Genre: Language Games, Operative Ekphrasis, and Worldtext, Working Paper, 22 September 2026.
+
+SOURCE URL:
+https://github.com/hartswf0/slipcase/blob/main/slipcases/2026-09-22__the-prompt-is-not-a-genre__PROMPT-GAMES-WORLDTEXT/the-prompt-is-not-a-genre__2026-09-22.pdf
+
+PASSAGE:
+[OUR SYNTHESIS]\nA prompt with no declared challengeable relations can always be accepted retrospectively after seeing the output.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]\nCALLING THE SHOT TURNS GENERATION INTO A VISIBLE WAGER.
+
+LOCAL MOVE:
+Make pre-declared relations central to evaluation without demanding complete determinacy.
+
+SOURCE TERMS:
+called shot; correspondence; invariants; post hoc acceptance
+
+WHAT BECAME STRANGE:
+Surprise and beauty can be useful while still providing almost no evidence that intended relations were controlled.
+
+QUESTION:
+Which relations were declared before generation and can therefore be falsified afterward?
+
+DEEPER QUESTION:
+How can open-ended scores preserve surprise while still making selected invariants testable?
+
+MECHANISM:
+Precommitment separates intended correspondence from retrospective interpretation.
+
+FORMAL SHIFT:
+DECLARE(R) before GENERATE(Y); then TEST(R,Y).
+
+SOURCE FORMALISM:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+OUR FORMALIZATION:
+Correspondence need not be one-to-one; only selected relations need be challengeable.
+
+TENSION:
+Over-specifying the called shot can turn exploratory generation into brittle drafting.
+
+MISSING:
+Metrics for partial correspondence that respect deliberate latitude.
+
+BOUNDARY:
+This is a methodological proposal from the working paper and project practice.
+
+CITATION TRAIL:
+score invariants + Operation Describe + WAG witness -> called shot.
+
+TEST:
+Record invariant declarations before generation and blind-score outputs against them.
+
+PLATFORM:
+Method; correspondence; evaluation
+
+LINKS:
+[[PROMPT-GENRE-20260922-008]]
+[[PROMPT-GENRE-20260922-011]]
+[[PROMPT-GENRE-20260922-013]]
+[[PROMPT-GENRE-20260922-017]]
+
+BIBTEX:
+@unpublished{hartsoe2026promptgenre,
+  author={Hartsoe, Watson},
+  title={The Prompt Is Not a Genre: Language Games, Operative Ekphrasis, and Worldtext},
+  note={Working Paper},
+  year={2026}
+}
+
+===== 015 | 015__worldtext-makes-language-and-a-persistent-world-mutually-addressable__MITCHELL-HARTSOE__PROMPT-GENRE-20260922-015__from-working-paper.txt =====
+
+ZETTEL
+
+ID:
+PROMPT-GENRE-20260922-015
+
+TITLE:
+Worldtext makes language and a persistent world mutually addressable
+
+SOURCE:
+W. J. T. Mitchell, Picture Theory: Essays on Verbal and Visual Representation, 1994. Extended by Hartsoe working paper.
+
+SOURCE URL:
+https://press.uchicago.edu/ucp/books/book/chicago/P/bo3683962.html
+
+PASSAGE:
+[OUR SYNTHESIS]\nImagetext names the entanglement of words and images; worldtext extends the problem to language coupled with a persistent, operable world that can be addressed again.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]\nWORLDTEXT = LANGUAGE <-> PERSISTENT OPERABLE WORLD.
+
+LOCAL MOVE:
+Move beyond text-to-image and text-to-3D toward recursive address and revision.
+
+SOURCE TERMS:
+imagetext; worldtext; persistence; addressability; recursion
+
+WHAT BECAME STRANGE:
+A generated scene becomes qualitatively different when later language can refer back to stable identities and relations inside it.
+
+QUESTION:
+What persistence is necessary for a generated environment to become a worldtext rather than a one-shot output?
+
+DEEPER QUESTION:
+How do identity, viewpoint, spatial relation, history, and state need to persist for language to remain referential?
+
+MECHANISM:
+The world preserves addressable entities and relations; later utterances modify them; resulting state feeds the next move.
+
+FORMAL SHIFT:
+TEXT_n -> WORLD_n -> TEXT_(n+1) -> WORLD_(n+1).
+
+SOURCE FORMALISM:
+[NO SOURCE FORMALISM]
+
+OUR FORMALIZATION:
+Worldtext is recursion across representational and operational states, not merely multimodality.
+
+TENSION:
+Persistence can constrain generative freedom and can harden accidental early choices.
+
+MISSING:
+Minimal persistence contract for worldtext systems.
+
+BOUNDARY:
+Worldtext is Hartsoe's proposed extension; Mitchell's imagetext does not imply this computational architecture.
+
+CITATION TRAIL:
+Mitchell imagetext -> operative ekphrasis -> persistent world -> worldtext.
+
+TEST:
+Attempt multi-turn references to entities, relations, and viewpoints after intervening edits; measure identity and relation preservation.
+
+PLATFORM:
+Worldtext; imagetext; spatial media
+
+LINKS:
+[[PROMPT-GENRE-20260922-010]]
+[[PROMPT-GENRE-20260922-013]]
+[[PROMPT-GENRE-20260922-016]]
+
+BIBTEX:
+@book{mitchell1994picture,
+  author={Mitchell, W. J. T.},
+  title={Picture Theory: Essays on Verbal and Visual Representation},
+  publisher={University of Chicago Press},
+  year={1994}
+}
+
+@unpublished{hartsoe2026promptgenre,
+  author={Hartsoe, Watson},
+  title={The Prompt Is Not a Genre: Language Games, Operative Ekphrasis, and Worldtext},
+  note={Working Paper},
+  year={2026}
+}
+
+===== 016 | 016__a-chat-session-can-change-language-games-without-changing-interfaces__SELFSOURCE-2026__PROMPT-GENRE-20260922-016__from-working-paper.txt =====
+
+ZETTEL
+
+ID:
+PROMPT-GENRE-20260922-016
+
+TITLE:
+A chat session can change language games without changing interfaces
+
+SOURCE:
+Watson Hartsoe, The Prompt Is Not a Genre: Language Games, Operative Ekphrasis, and Worldtext, Working Paper, 22 September 2026.
+
+SOURCE URL:
+https://github.com/hartswf0/slipcase/blob/main/slipcases/2026-09-22__the-prompt-is-not-a-genre__PROMPT-GAMES-WORLDTEXT/the-prompt-is-not-a-genre__2026-09-22.pdf
+
+PASSAGE:
+[OUR SYNTHESIS]\nA user may begin with a query, turn the answer into a plan, convert the plan into code, edit the code, constrain the output, and finally perform the system live while the interface remains a chat window.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]\nTHE RESEARCH OBJECT IS THE TRACK CHANGE: WHEN DO THE RULES OF THE INTERACTION BECOME DIFFERENT RULES?
+
+LOCAL MOVE:
+Shift from static prompt classification toward transitions among language games.
+
+SOURCE TERMS:
+drift; track change; query; plan; program; edit; constraint; performance
+
+WHAT BECAME STRANGE:
+The interface can remain visually constant while the criteria of a valid move change beneath it.
+
+QUESTION:
+At which turn did the interaction stop being one game and become another?
+
+DEEPER QUESTION:
+Can game drift be detected from changes in executor, allowable actions, or evaluation criteria rather than from wording alone?
+
+MECHANISM:
+Sequential interaction accumulates commitments and artifacts that alter what later utterances can do.
+
+FORMAL SHIFT:
+G_t != G_(t+1) while UI_t = UI_(t+1).
+
+SOURCE FORMALISM:
+[OUR FORMALIZATION]
+
+OUR FORMALIZATION:
+Language-game identity is provisional and can be discovered through response and repair.
+
+TENSION:
+Games may overlap rather than switch cleanly.
+
+MISSING:
+Annotation protocol for multi-label game drift across long human-AI sessions.
+
+BOUNDARY:
+The twelve-game switchyard is an analytic model, not a natural taxonomy.
+
+CITATION TRAIL:
+interface category -> heterogeneous games -> session drift -> track change.
+
+TEST:
+Annotate turn-level executor, state, and success criteria; identify transitions and inter-rater agreement.
+
+PLATFORM:
+Language games; conversation; prompt drift
+
+LINKS:
+[[PROMPT-GENRE-20260922-001]]
+[[PROMPT-GENRE-20260922-015]]
+[[PROMPT-GENRE-20260922-017]]
+
+BIBTEX:
+@unpublished{hartsoe2026promptgenre,
+  author={Hartsoe, Watson},
+  title={The Prompt Is Not a Genre: Language Games, Operative Ekphrasis, and Worldtext},
+  note={Working Paper},
+  year={2026}
+}
+
+===== 017 | 017__prompting-is-negotiation-over-correspondence__SELFSOURCE-2026__PROMPT-GENRE-20260922-017__from-working-paper.txt =====
+
+ZETTEL
+
+ID:
+PROMPT-GENRE-20260922-017
+
+TITLE:
+Prompting is negotiation over correspondence
+
+SOURCE:
+Watson Hartsoe, The Prompt Is Not a Genre: Language Games, Operative Ekphrasis, and Worldtext, Working Paper, 22 September 2026.
+
+SOURCE URL:
+https://github.com/hartswf0/slipcase/blob/main/slipcases/2026-09-22__the-prompt-is-not-a-genre__PROMPT-GAMES-WORLDTEXT/the-prompt-is-not-a-genre__2026-09-22.pdf
+
+PASSAGE:
+[OUR SYNTHESIS]\nAcross commands, scores, edits, models, and world-building, the common structure is not command or conversation but an iterative negotiation over which relations the continuation must preserve.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]\nPROMPTING = NEGOTIATION OVER CORRESPONDENCE.
+
+LOCAL MOVE:
+Provide the paper's strongest common denominator without erasing differences among games.
+
+SOURCE TERMS:
+negotiation; correspondence; continuation; adequacy; repair
+
+WHAT BECAME STRANGE:
+The executor can contribute interpretation, the user can constrain without total control, and the world can resist both.
+
+QUESTION:
+Which party owns which decision, and which relations are negotiable versus invariant?
+
+DEEPER QUESTION:
+Can prompt failures be redescribed as ownership conflicts over decisions rather than as model misunderstanding?
+
+MECHANISM:
+A user offers an operative description; an executor continues it under a game; evidence exposes mismatch; later moves renegotiate adequacy.
+
+FORMAL SHIFT:
+D -> EXECUTE_G -> EVIDENCE -> NEGOTIATE -> D'.
+
+SOURCE FORMALISM:
+[OUR FORMALIZATION]
+
+OUR FORMALIZATION:
+Correspondence is selective and revisable rather than a naive one-to-one copy relation.
+
+TENSION:
+Not every creative use needs predeclared correspondence; some prompting is exploratory probe or play.
+
+MISSING:
+Empirical typology of negotiation patterns across deterministic and score-like systems.
+
+BOUNDARY:
+This is the working paper's synthesis, not a quoted source claim.
+
+CITATION TRAIL:
+five-part diagnostic + score + Operation Describe + worldtext -> negotiation over correspondence.
+
+TEST:
+Log explicit and implicit invariant negotiations across repair turns; compare with final acceptance criteria.
+
+PLATFORM:
+Prompt theory; correspondence; negotiation
+
+LINKS:
+[[PROMPT-GENRE-20260922-007]]
+[[PROMPT-GENRE-20260922-014]]
+[[PROMPT-GENRE-20260922-016]]
+[[PROMPT-GENRE-20260922-018]]
+
+BIBTEX:
+@unpublished{hartsoe2026promptgenre,
+  author={Hartsoe, Watson},
+  title={The Prompt Is Not a Genre: Language Games, Operative Ekphrasis, and Worldtext},
+  note={Working Paper},
+  year={2026}
+}
+
+===== 018 | 018__a-richer-game-can-make-a-thinner-utterance-sufficient__WITTGENSTEIN-BOLT__PROMPT-GENRE-20260922-018__from-working-paper.txt =====
+
+ZETTEL
+
+ID:
+PROMPT-GENRE-20260922-018
+
+TITLE:
+A richer game can make a thinner utterance sufficient
+
+SOURCE:
+Ludwig Wittgenstein, Philosophical Investigations, 4th ed., 1953/2009, §§2, 7. Richard A. Bolt, "Put-That-There: Voice and Gesture at the Graphics Interface," SIGGRAPH, 1980. Hartsoe synthesis.
+
+SOURCE URL:
+https://www.media.mit.edu/speech/papers/1980/bolt_SIGGRAPH80_put-that-there.pdf
+
+PASSAGE:
+[OUR SYNTHESIS]\nThe builder's 'Slab!' and Bolt's 'Put that there' both achieve economy because roles, referents, and allowable continuations live in the surrounding game.
+
+RESEARCH OBJECT:
+[OUR INFERENCE]\nTHICK PROMPTING IS COMPATIBLE WITH LESS TEXT.
+
+LOCAL MOVE:
+Prevent 'thick prompting' from becoming a recipe for prompt bloat.
+
+SOURCE TERMS:
+economy; shared state; deixis; game richness; prompt length
+
+WHAT BECAME STRANGE:
+A sophisticated interface can make the best prompt shorter by carrying context through state and gesture.
+
+QUESTION:
+What should the interface know so the user does not have to say it?
+
+DEEPER QUESTION:
+Can prompt quality improve while visible token count falls?
+
+MECHANISM:
+Persistent state, direct reference, enforced constraints, and feedback move context out of repeated prose.
+
+FORMAL SHIFT:
+RICHER_GAME -> LOWER_REQUIRED_LEXICAL_LOAD.
+
+SOURCE FORMALISM:
+[NO SOURCE FORMALISM]
+
+OUR FORMALIZATION:
+Thickness belongs to the interaction, not the string.
+
+TENSION:
+Hidden context can also make systems opaque and hard to reproduce.
+
+MISSING:
+Measures balancing linguistic economy against provenance and reconstructability.
+
+BOUNDARY:
+This is a cross-case synthesis; neither Wittgenstein nor Bolt makes this prompt-design claim.
+
+CITATION TRAIL:
+Slab! + Put That There -> thick interaction -> thin utterance.
+
+TEST:
+Compare task success, token count, and reconstructability across text-only versus stateful/deictic interfaces.
+
+PLATFORM:
+Prompt economy; HCI; thick prompting
+
+LINKS:
+[[PROMPT-GENRE-20260922-002]]
+[[PROMPT-GENRE-20260922-005]]
+[[PROMPT-GENRE-20260922-006]]
+[[PROMPT-GENRE-20260922-017]]
+
+BIBTEX:
+@book{wittgenstein2009philosophical,
+  author={Wittgenstein, Ludwig},
+  title={Philosophical Investigations},
+  edition={4},
+  publisher={Wiley-Blackwell},
+  year={2009}
+}
+
+@inproceedings{bolt1980put,
+  author={Bolt, Richard A.},
+  title={Put-That-There: Voice and Gesture at the Graphics Interface},
+  booktitle={Proceedings of SIGGRAPH 1980},
+  pages={262--270},
+  year={1980}
+}
+
+@unpublished{hartsoe2026promptgenre,
+  author={Hartsoe, Watson},
+  title={The Prompt Is Not a Genre: Language Games, Operative Ekphrasis, and Worldtext},
+  note={Working Paper},
+  year={2026}
+}

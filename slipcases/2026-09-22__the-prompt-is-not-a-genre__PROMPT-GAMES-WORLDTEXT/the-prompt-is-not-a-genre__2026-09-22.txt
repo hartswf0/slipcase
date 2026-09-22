@@ -1,0 +1,164 @@
+THE PROMPT IS NOT A GENRE
+Language Games, Operative Ekphrasis, and Worldtext
+Watson Hartsoe
+Georgia Institute of Technology | Working Paper | 22 September 2026
+
+ABSTRACT
+Contemporary interfaces place commands, questions, scores, commissions, edits, probes, constraints, and conversations behind the same rectangular text field and call each input a prompt. This paper argues that the apparent unity is misleading. A prompt is not a new genre of language but a surface category produced by an interface that collapses historically distinct language games into a common aperture. The operative force of an utterance resides not in the string alone but in an execution relation among a move, a game, a situation, an executor, and a test of adequacy. Wittgenstein's builder's game, Winograd's SHRDLU, Bolt's Put-That-There, Ryle and Geertz's thick description, Fluxus event scores, the Shield of Achilles, and recent work translating natural language into probabilistic world models each isolate a different part of this relation. From these cases I develop two linked concepts. Thick prompting means supplying more of the situation, not merely more adjectives. Operative ekphrasis names descriptions that enter an apparatus capable of constructing, modifying, or navigating what they describe. The resulting shift from imagetext to worldtext makes description recursive: language changes a structured world, the world returns evidence, and that evidence conditions the next linguistic move. Prompting, on this account, is best understood as negotiation over correspondence.
+
+Keywords: prompting; language games; thick description; ekphrasis; world models; human-computer interaction; worldtext
+
+1. The Rectangle and the Category Error
+
+Draw a circle. The four words can be an order issued to a drawing system, a unit test for a graphics model, a score that invites interpretation, a probe of geometric competence, a commission to an illustrator, a live performance cue, or the opening move in a negotiation over what counts as a circle. The string is stable. The activity is not. Yet contemporary AI interfaces routinely receive all of these moves through one field labeled with some variant of Enter your prompt. The rectangular input surface makes heterogeneous practices look like members of a single linguistic species.
+
+This paper takes that visual and institutional fact seriously. The prompt is not, I argue, a new genre of language. It is better understood as an interface category that has forced historically distinct language games to share an aperture. The category is useful at the level of product design: a system needs a place where a user supplies input. It becomes misleading when the name of the input widget is allowed to stand in for a theory of the linguistic act. A question submitted to a retrieval system, a constraint supplied to a generator, a natural-language edit request, a score for a performer, and a command grounded in a spatial scene do not acquire force in the same way. Their success conditions differ, their executors differ, the relevant world differs, and the evidence by which we judge them differs.
+
+The temptation is grammatical. Because the noun prompt exists, we search for the thing it names. Ryle's work on category mistakes offers a useful caution: a set of coordinated practices can be misconstrued as an additional object simply because grammar encourages us to nominalize it (Ryle 1968/2009). Here the mistake is not that prompts are unreal. It is that the shared surface can hide the practices that make a particular utterance operative. The research question therefore changes. Instead of asking What is the prompt? in isolation, we should ask: what game gives these words their force, what situation makes them interpretable, who or what is entitled to execute them, and what event would count as success or failure?
+
+2. 'Slab!': Meaning as a Competent Continuation
+
+Wittgenstein's builder's game gives the problem its smallest useful form. In the opening sections of Philosophical Investigations, a builder calls out words such as block, pillar, slab, and beam, and an assistant brings the corresponding stone. The example is radical precisely because almost nothing is said about definitions. The word works because there is already an activity, a division of roles, a stock of objects, and an expected continuation. 'Slab!' is not first interpreted as a proposition and then separately converted into action. Its use is internal to a practice (Wittgenstein 1953/2009, Secs. 2, 7).
+
+Prompting becomes easier to theorize if we start here rather than with the text box. A linguistic move can be thin in lexical content and thick in operative structure. The builder does not need to specify the ontology of masonry, the assistant's permissions, the coordinate system of the worksite, or the fact that the stone should be brought rather than merely described. The game carries those conditions. Conversely, when the game is absent, additional text often compensates badly for missing structure. A long prompt can still fail because the participants do not share a world, because the executor has no authority to perform the requested operation, or because no test distinguishes success from a plausible-looking continuation.
+
+This reframes prompt engineering. The central problem is not simply how to make strings more explicit. It is how to establish or recover the practical conditions under which an utterance can count as a move. The prompt box obscures this because it visually isolates the words from the game. A builder's shout has a worksite around it. A contemporary text field often presents language as though the string itself carried the full burden of reference, permission, state, memory, and evaluation.
+
+3. SHRDLU: Language Made Operative by Closing the World
+
+Terry Winograd's SHRDLU made natural language operational by doing almost the opposite of today's general-purpose chat systems. It radically restricted the world. In the published account, Winograd describes a system that answers questions, executes commands, and accepts information in interactive English dialogue. The design rests on an explicit claim: a computer cannot deal reasonably with language unless it can understand the subject it is discussing; accordingly, SHRDLU is given a detailed model of a particular domain (Winograd 1972). The famous blocks world is not scenery behind the language system. It is part of the language system's conditions of possibility.
+
+A command such as Pick up the big red block succeeds because color, size, blockhood, spatial relations, grasping, and the available actions of the simulated arm are all already represented in the microworld. Ambiguity can be detected because the scene contains a finite set of candidates. Plans can be executed because the world supports a small repertoire of operations. The language is effective because the system's world model is narrow enough to make reference and consequence tractable.
+
+SHRDLU therefore supplies a first limit case for prompting: a prompt can operate when the world has been engineered first. The apparent naturalness of the command depends on an unnatural amount of prior closure. That does not diminish the achievement. It reveals the hidden work required for language to acquire reliable consequences. The command is not self-sufficient. It is a compact address into an ontology, a planner, a memory, and an action space.
+
+4. Put That There: The Prompt Is Larger Than Its Transcript
+
+Richard Bolt's Put-That-There makes the complementary point. Instead of closing meaning into a lexical channel, the system deliberately distributes reference across speech, pointing, display state, and feedback. The MIT project allowed a user to build and modify a graphical database by speaking while gesturing at a large screen. Its designers emphasized context-sensitive interpretation and the way simultaneous pointing permits ordinary pronouns to work economically (Bolt 1980; Bolt, Schmandt, and Hulteen 1982). 'Put that there' is powerful because the words do not need to carry the referents.
+
+For prompt theory this example is decisive. The transcript is insufficient. Remove the pointing gesture, the display, and the shared history of the scene, and the utterance collapses. 'That' and 'there' are not defective prompt words that need to be replaced by longer noun phrases. They are indexical moves whose economy depends on a situation shared across modalities. The prompt is larger than the string.
+
+Modern multimodal systems make this ordinary again: a user circles an object, points a camera, selects a paragraph, drags a file, or says 'make that less aggressive.' The system's effective input includes masks, cursor positions, viewport state, attached media, prior turns, tool affordances, and often hidden system instructions. Treating only the visible sentence as the prompt is therefore analytically incomplete. The relevant unit is the situated move.
+
+5. From Thin Description to Thick Prompting
+
+Ryle's distinction between a twitch and a wink gives a vocabulary for this incompleteness. At the thinnest descriptive level, two eyelid contractions may be physically indistinguishable. Yet a conspiratorial wink has an intended recipient, an understood code, and success and failure conditions that a twitch lacks (Ryle 1968/2009). Geertz adopts this example in 'Thick Description' to show that cultural analysis cannot stop at surface behavior; the task is to reconstruct the structures of meaning through which an act becomes intelligible (Geertz 1973).
+
+The lesson for prompting is frequently misunderstood. Thick description does not mean piling on adjectives. Likewise, thick prompting should not mean converting 'make a house' into a florid paragraph about an exquisitely weathered Scandinavian cottage. Thickness concerns the situation that makes an action what it is. A thick prompt makes more of that situation available: the world in force, the relevant relations, the roles of participants, the permitted operations, the invariants that must survive, and the evidence by which the continuation will be assessed.
+
+THICK PROMPTING = more of the situation, not merely more description.
+
+This suggests a provisional analytic tuple: move, game, situation, executor, test. The move is the immediate linguistic or multimodal act. The game establishes what sort of act it is. The situation supplies state, referents, histories, and constraints. The executor is the agent or apparatus entitled and able to continue the act. The test specifies what counts as an adequate continuation. These terms are not a formal ontology of all prompting. They are a diagnostic against the tendency to locate every failure in wording.
+
+6. A Prompt Can Be a Score
+
+The strongest objection to treating prompts as programs comes from score-based art. George Brecht's event scores are short textual specifications whose identity survives radically different performances. Getty's account of Drip Music describes a form that is open-ended in language yet maintains continuity across realizations: the score can be instantiated by different performers, materials, contexts, and durations while remaining recognizably the same work (Harren 2025). A score does not have to determine every state transition to be operational.
+
+That difference matters for generative systems. If a prompt is modeled exclusively as a program, variability appears as error. If it is modeled as a score, variability can be intentional while invariants remain binding. The evaluative question changes from Did the machine reproduce the specified output? to What must remain stable across admissible realizations, and what has deliberately been left alive? This is often closer to how artists, designers, directors, and composers actually use generative models.
+
+Alison Knowles and James Tenney's A House of Dust extends the score into space. In 1967, Tenney used FORTRAN-based chance operations with Knowles's lists of materials, sites, light sources, and inhabitants to generate a poem of houses. Knowles then translated one generated quatrain into an inhabitable structure that hosted performances and teaching at CalArts (CalArts 2009, 2018). The chain is unusually explicit: vocabulary becomes computational permutation; permutation becomes poem; poem becomes architecture; architecture becomes a social situation. The description does not uniquely determine the house, yet it is more than commentary on the house. It organizes a field of realizable relations.
+
+Scores expose an important continuum between command and invitation. They show that operative language can be binding without being exhaustive. Contemporary prompts occupy many points on this continuum, and their failures often come from confusion about which regime is intended. A user may expect program-like invariance from a system operating score-like, or may overconstrain a generative situation until the latitude that made the medium useful disappears.
+
+7. Operative Ekphrasis: When Description Enters an Apparatus
+
+Ekphrasis provides a much older genealogy for description that solicits realization. The Shield of Achilles in Book 18 of the Iliad is a canonical case: a verbal account of an object so elaborately specified that later artists and craftsmen repeatedly attempted to give it physical form. The British Museum notes that such reconstructions extend back to Roman times; John Flaxman's nineteenth-century design is one especially vivid example (British Museum 2019). The object is absent from ordinary inspection yet continually reappears through acts of reading, imagining, drawing, modeling, and making.
+
+Traditional ekphrasis is often discussed as a verbal representation that makes a visual object present to the imagination. Mitchell's work on image-text relations complicates any clean division between visible and readable media, treating image and text as mutually implicated representational practices (Mitchell 1994). Contemporary generative systems introduce another twist. A description can now be passed to an apparatus that returns not only another representation but an editable model, a program, a spatial scene, a tool action, or a navigable environment.
+
+I call this operative ekphrasis: description that participates in constructing, modifying, or navigating what it describes. The term should be kept narrow. Not every vivid description is operative, and not every command is ekphrastic. The useful cases are those in which descriptive content crosses into an execution relation. The sentence names qualities or relations of a possible world; an interpreter maps those relations into an operational substrate; a material or computational result is exposed; and the result can be inspected against the description.
+
+This last condition is essential. Without a return path from result to description, operative language becomes indistinguishable from retrospective storytelling. The system can always produce something and the user can always narrate why it counts. Operation Describe therefore requires a loop: description, interpretation, world or artifact, evidence, revision. The operation is not a spell that turns words into reality. It is an iterative apparatus for making correspondence inspectable.
+
+8. From Word Models to World Models
+
+Recent technical work makes a related distinction explicit. Wong and colleagues' From Word Models to World Models proposes 'rational meaning construction,' mapping natural-language utterances into a probabilistic language of thought that can support generative world modeling and Bayesian inference (Wong et al. 2023). Their examples combine language models with probabilistic programs and extend the architecture with physics simulators, graphics engines, and planning algorithms. Most relevant here, the paper asks how language can drive the construction of world models themselves.
+
+This line of work should not be treated as proof that large language models possess human-like understanding, nor does operative humanities need that stronger claim. Its importance is architectural. The natural-language string becomes one layer in a composite system whose reasoning depends on an explicit executable representation of a world. Meaning is not exhausted by next-word continuation because downstream operations take place in a model with variables, causal structure, and testable consequences.
+
+The movement from word model to world model also clarifies what is missing in many prompt practices. A text-only exchange may remain word-to-word: the output is judged by plausibility within discourse. When a prompt is grounded through geometry, simulation, code, retrieval, measurement, or a physical actuator, another criterion appears. The world can veto the language. A block intersects another block; a robot fails to grasp; a citation cannot be found; a model violates a geometric constraint; a rendered camera does not occupy the position the description required. Such resistance is epistemically valuable because it gives the prompt somewhere to fail.
+
+9. Correspondence as Method: WAG and the Visible Intermediate
+
+My own projects treat this architecture as a set of case studies rather than as proofs. In the WAG (Words Assemble Geometry) pipeline, natural-language descriptions are routed through LDraw text and explicit three-dimensional geometry before generated imagery and motion are produced. The purpose of the intermediate representation is not simply technical convenience. It makes structural correspondence visible. Positions, colors, orientations, and part relations can be inspected before a generative model fills in texture, lighting, style, or motion. A viewer can see where the description became geometry and where later synthesis added latitude.
+
+This changes the authoring problem. A conventional image prompt often combines structure and surface in one probabilistic request. When the result is wrong, it can be difficult to say whether the failure lies in reference, composition, style, model bias, or random sampling. By separating structure from synthesis, WAG makes some errors localizable. The geometry can fail before the image model is invoked. Conversely, the geometry can be correct while the generative image departs from the intended surface. The intermediate representation becomes a witness.
+
+The same principle animates the Operative Builder Trace, which stages description as a visible wager against a reference and records repair rather than hiding it. HALFWORLD similarly treats character, scene, score, and world as addressable structures instead of reducing the work to a final frame. These systems are illustrations of an argument, not standalone products: language becomes more accountable when the apparatus exposes the states through which it passes and preserves a route from outcome back to intention.
+
+Correspondence here does not mean a naive one-to-one theory of representation. The score cases already show why such a theory would be too rigid. Correspondence means that an operative description declares enough relations for some aspects of the result to be challenged. A prompt without challengeable relations can produce surprise, beauty, and useful association, but it is difficult to treat its success as anything more than post hoc acceptance. Calling the shot matters.
+
+10. From Imagetext to Worldtext
+
+Mitchell's term imagetext names the entanglement of words and images and helps resist the idea that verbal and visual representation inhabit separate territories (Mitchell 1994). Contemporary world-making systems suggest a further object of study. In a worldtext, language and an operable world become mutually addressable. Text can alter the world, and the world can return evidence that changes the next text. The important shift is therefore not text-to-image, or even text-to-3D, but recursion across representational and operational states.
+
+Worldtext can include a game world, a CAD model, a film scene graph, a probabilistic program, a musical score, or a physical workspace. What matters is that the world persists enough to be referred to again. 'Move that chair behind me' only becomes a worldtext operation if there is a chair with identity, a relation called behind, a viewpoint from which the relation can be tested, and a subsequent state in which the speaker can check what happened. Persistence turns language from one-shot generation into situated revision.
+
+This also reveals why conversation is an incomplete metaphor for contemporary human-AI interaction. Some turns are conversational, but others are edits, programs, queries, scores, plans, or gestures. A single session can drift among these games. The user may begin by asking a question, turn the answer into a plan, convert the plan into code, edit the code, constrain the output, and finally perform the resulting system live. The interface remains a chat window while the operative game changes beneath it. The research object is therefore not only the category of prompt but the track change: when do the rules of the interaction become different rules?
+
+11. Prompting as Negotiation over Correspondence
+
+The strongest common denominator across these cases is not command, generation, conversation, or programming. It is negotiation over correspondence. The user offers an operative description; an executor produces a continuation under some game; the result supplies evidence; and subsequent moves renegotiate what counts as adequate. This negotiation may be cooperative or adversarial, explicit or tacit, deterministic or score-like. It can happen between a human and a model, between a composer and performer, between a designer and constraint solver, or between a description and the recalcitrance of a material world.
+
+This account preserves a role for agency without imagining total control. A prompt can constrain without exhausting the result. An executor can contribute interpretation without becoming sovereign. A world can resist both sides. In practice, many failures of prompting are failures to specify which party owns which decision. The user believes a relation is invariant while the model treats it as stylistic latitude; the system treats a suggestion as a hard rule; a retrieval request is answered as generation; an edit regenerates unauthorized parts of an artifact; a plan is elaborated indefinitely because no fact in the world is permitted to kill it.
+
+The five-part diagnostic - move, game, situation, executor, test - makes those mismatches visible. It does not require every interface to display five fields. Indeed, the best interfaces may make the structure implicit through direct manipulation, persistent state, selection, spatial reference, and immediate feedback. Put-That-There succeeded partly because the user did not have to verbalize the entire situation. Thick prompting is therefore compatible with less text. A richer game can make a thinner utterance sufficient.
+
+12. Limits and Open Edges
+
+Three limits matter. First, 'interface accident' should not be read as a dismissal of the prompt concept. Shared interfaces create real new practices. Once queries, edits, commissions, code generation, and multimodal gestures coexist in one conversational surface, users learn to combine them in ways that older media separated. The category is historically consequential even if it is theoretically heterogeneous.
+
+Second, language-game analysis should not become a new rigid taxonomy. The twelve games used in the accompanying presentation - instruction, score, program, plan, query, probe, gesture, commission, conversation, edit, constraint, performance - are ideal types for comparison. Real interactions drift. The same utterance may function simultaneously as instruction and probe; a commission can become an edit; a constraint can become a score when latitude is intentionally reopened. Classification should remain revisable because the operative relation is often discovered through the response.
+
+Third, operative ekphrasis names a threshold, not a triumph. The fact that language can drive code, geometry, simulation, or world generation does not guarantee reliable correspondence. On the contrary, operationalization makes failure more concrete. If description is connected to a world, the world can refuse the description. That refusal is not an embarrassment to hide. It is the condition that lets prompting become a method rather than a style of asking.
+
+13. Conclusion: Ask What Game Gives the Words Their Force
+
+The modern prompt box encourages a simple picture: a user writes text; a model interprets it; an output appears. The history assembled here suggests a more demanding picture. 'Slab!' works because a worksite and role structure make it a move. SHRDLU works because the world is closed enough for language to refer and act. Put-That-There works because reference is distributed across voice, gesture, display, and feedback. Thick description shows that the observable string does not exhaust the act. Event scores show that operative language can constrain without determining. Ekphrasis shows description repeatedly soliciting realization. Probabilistic world models show language entering explicit executable substrates. Contemporary spatial systems make those substrates interactive and persistent.
+
+A prompt, then, is not best understood as a special kind of sentence. It is an operational description offered as a move inside a language game to an interpreter capable of producing a continuation whose adequacy can be judged. Its force does not reside in the words alone. It is distributed across the game, the situation, the executor, and the test.
+
+PROMPT = MOVE + GAME + SITUATION + EXECUTOR + TEST
+
+This definition changes what it means to improve prompting. The goal is not necessarily to write longer or more ornate instructions. Often the better intervention is to expose state, narrow an ontology, point instead of name, introduce an inspectable intermediate representation, declare an invariant, allow a world to veto a plan, or build a test that makes correspondence visible. In that sense, prompting belongs as much to interface design, rhetoric, anthropology, programming languages, performance, and visual studies as it does to natural-language processing.
+
+The sovereign question is therefore not What is the prompt? but What game gives these words their force? Once that question is asked, the rectangle on the screen stops looking like a neutral container for text. It becomes a switchyard in which different histories of language are being routed into executable relations with worlds.
+
+References
+
+Bolt, Richard A. 1980. "Put-That-There: Voice and Gesture at the Graphics Interface." Proceedings of SIGGRAPH 1980, 262-270. ACM. https://www.media.mit.edu/speech/papers/1980/bolt_SIGGRAPH80_put-that-there.pdf
+
+Bolt, Richard A., Chris Schmandt, and Eric A. Hulteen. 1982. "Put-that-there: Voice and Gesture at the Graphics Interface." MIT Media Lab publication record. https://www.media.mit.edu/publications/put-that-there-voice-and-gesture-at-the-graphics-interface/
+
+British Museum. 2019. The Shield of Achilles, exhibition guide for Troy: Myth and Reality. https://www.britishmuseum.org/sites/default/files/2019-12/Large%20print%20guide_Troy.pdf
+
+California Institute of the Arts. 2009. "Alison Knowles, James Tenney and the House of Dust at CalArts." https://blog.calarts.edu/2009/09/10/alison-knowles-james-tenney-and-the-house-of-dust-at-calarts/
+
+California Institute of the Arts. 2018. "Alison Knowles' House of Dust to Be Celebrated with CalArts Performances and REDCAT Symposium." https://blog.calarts.edu/2018/03/16/alison-knowles-house-of-dust-to-be-celebrated-with-calarts-performances-and-redcat-symposium/
+
+Geertz, Clifford. 1973. The Interpretation of Cultures: Selected Essays. New York: Basic Books. https://books.google.com/books/about/The_Interpretation_Of_Cultures.html?id=Vn74xQEACAAJ
+
+Harren, Natilee. 2025. "George Brecht: Drip Music (Drip Event) (1959-62), from Water Yam (1963)." The Scores Project, Getty Research Institute. https://www.getty.edu/publications/scores/06/commentary/
+
+Homer. Iliad, Book 18. Shield of Achilles episode. https://www.perseus.tufts.edu/hopper/text?doc=Hom.%20Il.%2018
+
+Mitchell, W. J. T. 1994. Picture Theory: Essays on Verbal and Visual Representation. Chicago: University of Chicago Press. https://press.uchicago.edu/ucp/books/book/chicago/P/bo3683962.html
+
+Ryle, Gilbert. 1968/2009. "The Thinking of Thoughts: What Is 'Le Penseur' Doing?" In Collected Papers, vol. 2. London: Routledge. https://plato.stanford.edu/entries/ryle/
+
+Winograd, Terry. 1972. "Understanding Natural Language." Cognitive Psychology 3(1): 1-191. doi:10.1016/0010-0285(72)90002-3. https://www.sciencedirect.com/science/article/pii/0010028572900023
+
+Wittgenstein, Ludwig. 1953/2009. Philosophical Investigations. 4th ed. Wiley-Blackwell. https://plato.stanford.edu/entries/wittgenstein/
+
+Wong, Lionel, Gabriel Grand, Alexander K. Lew, Noah D. Goodman, Vikash K. Mansinghka, Jacob Andreas, and Joshua B. Tenenbaum. 2023. "From Word Models to World Models: Translating from Natural Language to the Probabilistic Language of Thought." arXiv:2306.12672. https://arxiv.org/abs/2306.12672
+
+Project Case Studies and Research Artifacts
+
+Operative Builder Trace: https://hartswf0.github.io/gunnars-depot.html/operative-builder-trace.html
+HALFWORLD index: https://hartswf0.github.io/halfworld/halfworld-index.html
+Odyssey Halfworld: https://hartswf0.github.io/odyssey-halfworld/index.html
+WAGYO video: https://www.youtube.com/watch?v=yZ_IZS9_pfI
+AI Made Super Mario N64: https://www.youtube.com/watch?v=h-OGQ_dDJ4c
+Centaur Box Experiment: https://www.youtube.com/watch?v=hdTEJSyZahs
+
+Working Paper | AI-augmented research process. Evidence, prompts, and making history preserved in the associated research field.
