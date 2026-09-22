@@ -1,0 +1,7 @@
+MOC: [[possibility-space-of-prompting]]
+Members: 1
+
+016. Solar-Lezama Notes That a Buggy Stencil Can Still Produce the Correct Answer—Only More Slowly
+    ID: 20260921-stencil-can-return-the-right-answer-for-the-wrong-computation
+    WHAT BECAME STRANGE: A verifier can certify the wrong thing if it observes only the final state. More verification does not necessarily improve correspondence; the tested variable must be the one that actually matters.
+    DEEPER QUESTION: Should prompt tests specify not only acceptable outcomes but acceptable paths, resource costs, dependencies, provenance, and state transitions?

@@ -1,0 +1,52 @@
+SOURCE MAP · The Prompt Does Not Contain Its Own Force
+Checkpoint: SLIPCASE-PROMPT-LANGUAGE-GAME-20260921
+Paper: prompt-does-not-contain-its-own-force__2026-09-21.tex/.pdf
+
+Rule: PAPER CLAIM -> ZETTEL -> SOURCE -> CITEKEY. COMPILER marks connective synthesis not stated verbatim by a source.
+
+C01 -> [[20260921-bolt-medium-is-executed-without-being-said]] -> Richard A. Bolt, “Put-that-there” (1980) -> bolt1980put
+C02 -> [[20260921-ostension-controls-an-object-without-possessing-its-name]]; [[20260921-shrdlu-says-what-it-thinks-it-means-before-moving]]; [[20260921-react-thought-is-externally-inert-but-future-causally-active]] -> Bolt 1980; Winograd 1971; Yao et al. 2023 -> bolt1980put; winograd1971procedures; yao2023react
+C03 -> COMPILER synthesis from C01/C02 plus [[20260921-put-that-there-effective-accuracy-includes-repairability]] -> Bolt 1980/1982; Winograd 1971; ReAct -> bolt1980put; bolt1982put; winograd1971procedures; yao2023react
+C04 -> [[20260921-clever-hans-word-reading-goes-from-all-correct-to-none]]; [[20260921-stencil-can-return-the-right-answer-for-the-wrong-computation]]; [[20260921-ashby-bicycle-and-aircraft-do-not-have-the-same-control-dimensionality]] -> Pfungst 1911; Solar-Lezama et al. 2007; Ashby 1956 -> pfungst1911clever; solarlezama2007sketching; ashby1956introduction
+C05 -> [[20260921-bolt-medium-is-executed-without-being-said]] -> Bolt 1980 -> bolt1980put
+C06 -> COMPILER extension of [[20260921-bolt-medium-is-executed-without-being-said]] -> Bolt 1980 -> bolt1980put
+C07 -> [[20260921-ostension-controls-an-object-without-possessing-its-name]] -> Bolt 1980 -> bolt1980put
+C08 -> [[20260921-brick-pencil-changes-the-size-of-thoughts-on-paper]] -> Engelbart 1962 -> engelbart1962augmenting
+C09 -> [[20260921-quote-changes-the-fate-of-the-insides]] -> McCarthy 1960 -> mccarthy1960recursive
+C10 -> [[20260921-react-thought-is-externally-inert-but-future-causally-active]] -> Yao et al. 2023 -> yao2023react
+C11 -> COMPILER extension of [[20260921-react-thought-is-externally-inert-but-future-causally-active]] -> ReAct -> yao2023react
+C12 -> COMPILER design inference grounded in [[20260921-quote-changes-the-fate-of-the-insides]] -> McCarthy 1960 -> mccarthy1960recursive
+C13 -> [[20260921-shrdlu-says-what-it-thinks-it-means-before-moving]] -> Winograd 1971 -> winograd1971procedures
+C14 -> [[20260921-shrdlu-says-what-it-thinks-it-means-before-moving]] -> Winograd 1971 -> winograd1971procedures
+C15 -> [[20260921-shrdlu-new-noun-acquires-construction-consequences]] -> Winograd 1971 -> winograd1971procedures
+C16 -> [[20260921-sketchpad-copy-operation-installs-a-rule-that-you-never-see]] -> Sutherland 1963 -> sutherland1963sketchpad
+C17 -> [[20260921-sketchpad-arrowhead-has-fixed-identity-and-flexible-tail]] -> Sutherland 1963 -> sutherland1963sketchpad
+C18 -> [[20260921-clever-hans-word-reading-goes-from-all-correct-to-none]] -> Pfungst 1911 -> pfungst1911clever
+C19 -> COMPILER experimental implication from [[20260921-clever-hans-word-reading-goes-from-all-correct-to-none]] -> Pfungst 1911 -> pfungst1911clever
+C20 -> [[20260921-stencil-can-return-the-right-answer-for-the-wrong-computation]] -> Solar-Lezama et al. 2007 -> solarlezama2007sketching
+C21 -> COMPILER limitation preserved from [[20260921-stencil-can-return-the-right-answer-for-the-wrong-computation]] TENSION/BOUNDARY -> Solar-Lezama et al. 2007 -> solarlezama2007sketching
+C22 -> [[20260921-put-that-there-effective-accuracy-includes-repairability]] -> Bolt, Schmandt, Hulteen 1982 -> bolt1982put
+C23 -> [[20260921-put-that-there-has-continuous-and-discrete-tests-before-action]] -> Bolt 1980 -> bolt1980put
+C24 -> COMPILER testable hypothesis from [[20260921-put-that-there-effective-accuracy-includes-repairability]] -> Bolt et al. 1982 -> bolt1982put
+C25 -> COMPILER design extension from [[20260921-put-that-there-has-continuous-and-discrete-tests-before-action]] -> Bolt 1980 -> bolt1980put
+C26 -> [[20260921-ashby-bicycle-and-aircraft-do-not-have-the-same-control-dimensionality]] -> Ashby 1956 -> ashby1956introduction
+C27 -> COMPILER application of [[20260921-ashby-bicycle-and-aircraft-do-not-have-the-same-control-dimensionality]] -> Ashby 1956 -> ashby1956introduction
+C28 -> COMPILER synthesis of [[20260921-ashby-bicycle-and-aircraft-do-not-have-the-same-control-dimensionality]]; [[20260921-ostension-controls-an-object-without-possessing-its-name]]; [[20260921-sketchpad-copy-operation-installs-a-rule-that-you-never-see]]; [[20260921-put-that-there-has-continuous-and-discrete-tests-before-action]] -> Ashby 1956; Bolt 1980; Sutherland 1963 -> ashby1956introduction; bolt1980put; sutherland1963sketchpad
+C29 -> [[20260921-naur-documentation-contained-the-answer-but-not-the-seeing]] -> Naur 1985 -> naur1985programming
+C30 -> COMPILER extension of [[20260921-naur-documentation-contained-the-answer-but-not-the-seeing]] -> Naur 1985 -> naur1985programming
+C31 -> [[20260921-tex-version-zero-seven-existed-as-a-retracted-belief]] -> Knuth, Literate Programming / TeX error log -> knuth1992literate
+C32 -> [[20260921-wittgenstein-removes-competition-before-he-removes-winning]] -> Wittgenstein PI §66 -> wittgenstein1953philosophical
+C33 -> COMPILER method derived from [[20260921-wittgenstein-removes-competition-before-he-removes-winning]] TEST -> Wittgenstein 1953 -> wittgenstein1953philosophical
+C34 -> COMPILER limitation grounded across all admitted cards; principal boundary card [[20260921-wittgenstein-removes-competition-before-he-removes-winning]] -> Wittgenstein 1953 -> wittgenstein1953philosophical
+C35 -> COMPILER instrumentation proposal from [[20260921-bolt-medium-is-executed-without-being-said]] -> Bolt 1980 -> bolt1980put
+C36 -> COMPILER instrumentation proposal from [[20260921-put-that-there-has-continuous-and-discrete-tests-before-action]]; [[20260921-shrdlu-says-what-it-thinks-it-means-before-moving]] -> Bolt 1980; Winograd 1971 -> bolt1980put; winograd1971procedures
+C37 -> COMPILER instrumentation proposal from [[20260921-react-thought-is-externally-inert-but-future-causally-active]] -> Yao et al. 2023 -> yao2023react
+C38 -> COMPILER instrumentation proposal from [[20260921-stencil-can-return-the-right-answer-for-the-wrong-computation]] -> Solar-Lezama et al. 2007 -> solarlezama2007sketching
+C39 -> COMPILER instrumentation proposal from [[20260921-put-that-there-effective-accuracy-includes-repairability]] -> Bolt et al. 1982 -> bolt1982put
+C40 -> COMPILER archival implication from [[20260921-naur-documentation-contained-the-answer-but-not-the-seeing]]; [[20260921-tex-version-zero-seven-existed-as-a-retracted-belief]] -> Naur 1985; Knuth 1992 -> naur1985programming; knuth1992literate
+C41 -> COMPILER limitation using BOUNDARY fields across cited zettels -> all corresponding citekeys
+C42 -> COMPILER unresolved representation problem from MISSING/BOUNDARY fields in [[20260921-bolt-medium-is-executed-without-being-said]]; [[20260921-react-thought-is-externally-inert-but-future-causally-active]]; [[20260921-sketchpad-arrowhead-has-fixed-identity-and-flexible-tail]] -> bolt1980put; yao2023react; sutherland1963sketchpad
+C43 -> COMPILER unresolved interface-overload problem from TENSION fields in [[20260921-put-that-there-effective-accuracy-includes-repairability]]; [[20260921-sketchpad-copy-operation-installs-a-rule-that-you-never-see]]; [[20260921-stencil-can-return-the-right-answer-for-the-wrong-computation]] -> bolt1982put; sutherland1963sketchpad; solarlezama2007sketching
+C44 -> COMPILER open category question from [[20260921-ostension-controls-an-object-without-possessing-its-name]]; [[20260921-wittgenstein-removes-competition-before-he-removes-winning]] -> bolt1980put; wittgenstein1953philosophical
+C45 -> COMPILER synthesis; each sentence traces to the corresponding cards C01/C09/C13/C16/C10/C18/C20/C26/C29 -> bolt1980put; mccarthy1960recursive; winograd1971procedures; sutherland1963sketchpad; yao2023react; pfungst1911clever; solarlezama2007sketching; ashby1956introduction; naur1985programming
+C46 -> COMPILER conclusion supported by the full paper trail; principal card [[20260921-bolt-medium-is-executed-without-being-said]] plus commitment/repair cards -> bolt1980put; winograd1971procedures; yao2023react; bolt1982put

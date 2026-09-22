@@ -1,0 +1,113 @@
+VERIFICATION · SLIPCASE-PROMPT-LANGUAGE-GAME-20260921
+
+SOURCE COVERAGE
+  admitted zettels: 18
+  zettels with SOURCE field: 18
+  zettels with SOURCE URL visible in payload: 18
+  zettels with BibTeX: 18
+  unique compiled citekeys: 14
+  source deck local copy: PRESENT · 41 pages
+  boundary: 18 latest complete zettels are admitted. Earlier parent zettels referenced in this visible research chain are preserved as GHOST addresses because their exact immutable payloads were not re-exported into the tool workspace for this run. This package does not claim complete-chat capture.
+
+EXTRACTION
+  raw admitted payloads: 18
+  root zettel TXT files: 18
+  _MD mirrors: 18
+  JSON zettel records: 18
+  exact card/mirror/hash mismatches: 0
+  equality requirement: PASS
+
+DUPLICATES / ID COLLISIONS
+  exact payload duplicates: 0
+  original ID collisions: 0
+
+PLATFORM RELATIONS
+  PLATFORM occurrences: 18
+  MEMBER_OF records: 18
+  invariant: PASS
+
+LINKS RELATIONS
+  LINKS occurrences: 72
+  LINKS_TO records: 72
+  invariant: PASS
+
+WIKILINK COVERAGE
+  all [[ADDRESS]] occurrences: 108
+  WIKILINKS_TO records: 108
+  invariant: PASS
+
+GHOSTS / AMBIGUITIES / BROKEN REFERENCES
+  distinct ghosts: 18
+  raw inbound [[ADDRESS]] occurrences resolving to ghosts: 36
+  ambiguous resolutions: 0
+  fuzzy matching attempted: NO
+  note: unresolved earlier-parent IDs remain deliberate GHOST nodes rather than guessed resolutions.
+
+BIBLIOGRAPHY COVERAGE
+  statuses: {'UNIQUE': 11, 'SHARED': 3}
+  compiled citekeys: 14
+  paper citekeys: 13
+  paper citekeys subset of compiled bibliography: PASS
+  paper citekeys missing from bibliography: []
+  compiled works not cited by current paper: ['pask1971comment']
+
+RESOURCE COVERAGE
+  registered resources: 22
+  states: {'LOCAL_FILE': 1, 'PASTED': 3, 'LINK_ONLY': 18}
+  local source PDFs: 1
+  pasted prompt resources: 3
+  LINK_ONLY resources: 18
+
+RECONSTRUCTION STATE
+  reconstruct_cards.py: PRESENT
+  reconstruction test: PASS · 18 cards reconstructed from ZETTELS.json; SHA-256 verified; byte mismatches against immutable root cards: 0.
+
+PAPER EVIDENCE COVERAGE
+  source-map claim records: 46
+  TeX claim markers: 46
+  missing source-map claim IDs: []
+  orphan source-map claim IDs: []
+  claim-map completeness: PASS
+
+ASSEMBLY PROMPT STATUS
+  exact assembly prompt: _PROMPTS/SLIPCASE_ASSEMBLY_PROMPT_15_55_AM.txt · PRESENT
+  exact recursive forage prompt: _PROMPTS/PRIME_ZETTEL_FORAGE_RECURSIVE_3_1.txt · PRESENT
+  exact original forage prompt: _PROMPTS/PRIME_ZETTEL_FORAGE_3_0.txt · PRESENT
+  prompt SHA-256: {"PRIME_ZETTEL_FORAGE_3_0.txt": "edc19c6e7c956d3b2fa74d478e38057356cf5a45e85ae2ae027b34aa199779b7", "PRIME_ZETTEL_FORAGE_RECURSIVE_3_1.txt": "7156564e118db743162a9441f5a1efae3b9956ea91959c4cea45a1d67f650e01", "SLIPCASE_ASSEMBLY_PROMPT_15_55_AM.txt": "5a7f8fff761f4445e58ae323557c83c483630c25acdd5d086068df1eec949e01"}
+
+MAKING HISTORY
+  000__MAKING_HISTORY.txt: PRESENT
+  paper making history: PRESENT
+  immutable card payloads modified by compiler: NO (hash/mirror audit PASS)
+
+PDF STATUS
+  paper PDF: PRESENT · 13 pages
+  render verification: 13 pages rendered
+  visually inspected pages: 1, 8, 11, 13
+  clipping / broken-glyph failures observed in inspected pages: NONE
+  final compile citation/reference errors: NONE observed in compile audit
+  final overfull boxes: NONE observed in compile audit
+  minor underfull boxes: 2 observed in compile audit
+
+OFFLINE HTML STATUS
+  index.html: self-contained capsule with embedded card/prompt/graph/paper data and embedded local source PDF bytes
+  active JavaScript syntax check with node --check: PASS
+  headless Chromium smoke test in this container: INCONCLUSIVE / TIME-LIMITED due browser-process environment noise; no claim of full browser-runtime verification.
+  READER.html / NETWORK.html / CARDS.html: generated for file:// use; not independently browser-runtime-tested in this run.
+
+ZIP STATUS
+  final archive path: /mnt/data/SLIPCASE_PROMPT_LANGUAGE_GAME_20260921.zip
+  zip root layout: research-desk files at archive root (no enclosing package directory)
+  unzip integrity test: PASS (final archive retested after verification update)
+
+STRUCTURE
+  required listed artifacts missing: []
+  _MOCS entries: 18
+  _ARRANGEMENTS entries: 1
+  structure status: PASS
+
+
+GITHUB RECONSTRUCTION
+Standalone index.html capsule hash verified before reconstruction.
+18 card payload hashes verified.
+Embedded source PDF SHA-256 verified.

@@ -1,0 +1,20 @@
+REBUILD · SLIPCASE-PROMPT-LANGUAGE-GAME-20260921
+
+1. Evidence identity
+   - Root TXT card body is immutable payload.
+   - _MD mirror must match the root card byte-for-byte.
+   - SHA-256 in ZETTELS.json is the payload machine identity.
+
+2. Minimal reconstruction
+   python _SLIPCASE/reconstruct_cards.py ZETTELS.json <destination>
+   This recreates root cards and _MD mirrors from embedded JSON payloads and verifies hashes.
+
+3. Full derived rebuild
+   _SLIPCASE/build_slipcase.py is the compiler used for this run. It expects the raw admitted-zettel batch and supplied resources described in MAKING HISTORY.
+   Because index.html embeds all admitted payloads, prompts, metadata, and the uploaded PDF as a downloadable data URL, the evidence set can be recovered from the single HTML capsule even without the original conversation.
+
+4. Merge
+   Merge by exact payload SHA-256 only. Do not merge by title, filename, original ID, or citekey. Preserve appearances and unresolved ghosts.
+
+5. Return
+   See 000__RETURN_PATH.txt.

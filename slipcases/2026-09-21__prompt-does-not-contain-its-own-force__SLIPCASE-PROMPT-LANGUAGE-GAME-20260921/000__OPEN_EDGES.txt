@@ -1,0 +1,117 @@
+OPEN EDGES · SLIPCASE-PROMPT-LANGUAGE-GAME-20260921
+
+These are extracted from immutable cards; no edge is closed by compilation.
+
+001 20260921-bolt-medium-is-executed-without-being-said
+  QUESTION: Should correspondence between prompt and result be evaluated parameter by parameter according to who or what supplied each value?
+  DEEPER QUESTION: Can a generated artifact be accompanied by a provenance map that distinguishes explicitly stated, gesturally supplied, contextually inferred, defaulted, retrieved, and autonomously chosen properties?
+  MISSING: A provenance representation for generated properties that are not clean arguments to an explicit constructor.
+  TEST: Instrument a world-building command so every resulting property is labeled EXPLICIT, POINTED, DEFAULTED, INFERRED, RETRIEVED, or MODEL-CHOSEN. Compare that map with what users believe they specified.
+
+002 20260921-brick-pencil-changes-the-size-of-thoughts-on-paper
+  QUESTION: Which recognizable prompt forms are morphological traces of friction in current model interfaces rather than stable strategies for describing tasks?
+  DEEPER QUESTION: Could prompt corpora be read archaeologically, with verbosity, headings, repetition, capitalization, delimiters, and defensive constraints treated as traces of the failures users were compensating for?
+  MISSING: Prompt conventions with recoverable first appearances tied to particular historical failure modes.
+  TEST: Take archived prompt guides from several model generations. Identify conventions that rise after a known failure becomes salient and decline when that failure is technically reduced.
+
+003 20260921-quote-changes-the-fate-of-the-insides
+  QUESTION: What is the smallest prompt-system analogue of an outer QUOTE operator that can guarantee that an instruction-shaped string remains non-operative?
+  DEEPER QUESTION: Could natural-language systems separate content from execution authority by attaching a typed outer mode that cannot itself be overridden by instructions inside the quoted material?
+  MISSING: Architectures in which execution status is carried outside the model-readable string and enforced downstream.
+  TEST: Compare four containment methods for instruction-shaped content: quotation marks, textual “do not execute” instruction, structured role metadata, and an executor-enforced inert-content type. Attempt identical injection attacks against each.
+
+004 20260921-shrdlu-new-noun-acquires-construction-consequences
+  QUESTION: How much novelty in a user-defined prompt concept comes from the definition itself versus the executor’s pre-existing vocabulary of executable relations?
+  DEEPER QUESTION: Can a system detect when a requested new concept is compositionally buildable from its existing world ontology and when the definition requires genuinely new primitives?
+  MISSING: A test distinguishing compositional reuse from apparent concept acquisition produced by latent statistical associations.
+  TEST: Teach a world system two invented categories: one exactly composable from existing predicates and one requiring an unavailable relation such as FLEXES-WITHOUT-BREAKING. Ask it to classify, construct, repair, and explain instances of each.
+
+005 20260921-tex-version-zero-seven-existed-as-a-retracted-belief
+  QUESTION: Should an evolving prompt system assign persistent identities to retracted configurations so later researchers can cite the failed theory they embodied?
+  DEEPER QUESTION: What should versioning mean when two configurations have identical active text but differ because one comes before a failed intervention and the other after its retraction?
+  MISSING: Admission rules determining which failed configurations deserve stable archival identity.
+  TEST: When a prompt change is reverted, require a RETRACTED version object containing old configuration, triggering evidence, reason for retraction, and later reproducer. Test whether future maintainers avoid independently rediscovering the same false fix.
+
+006 20260921-shrdlu-says-what-it-thinks-it-means-before-moving
+  QUESTION: Which model commitments are important enough to surface as “By X, I assume you mean Y” before acting?
+  DEEPER QUESTION: Can an agent expose interpretations selectively only when alternative bindings would produce materially different world consequences?
+  MISSING: A consequence-sensitive threshold determining when clarification or interpretation display is worth interrupting execution.
+  TEST: Introduce ambiguities with low-, medium-, and high-cost alternative interpretations. Compare always-confirm, never-confirm, and consequence-triggered confirmation policies.
+
+007 20260921-put-that-there-effective-accuracy-includes-repairability
+  QUESTION: Should prompt-system quality be measured partly by error detection latency and repair distance rather than only first-pass task success?
+  DEEPER QUESTION: Can an interaction system with a less accurate model outperform a more accurate model because it externalizes misunderstandings earlier and supports cheaper correction?
+  MISSING: A measurement protocol balancing first-pass accuracy, repair latency, correction effort, and interruption burden.
+  TEST: Compare two builders: stronger model with opaque execution versus weaker model with explicit reference/action previews and one-tap repair. Measure completed-task correctness and total correction cost.
+
+008 20260921-ostension-controls-an-object-without-possessing-its-name
+  QUESTION: How much prompting difficulty comes from forcing users to convert perceptual identification into verbal description before the machine can act?
+  DEEPER QUESTION: When a world is directly addressable, should natural language describe relations and intentions while pointing, selection, and object identity carry reference?
+  MISSING: Interfaces that smoothly shift between ostension for existing things and description for not-yet-existing things.
+  TEST: Give users an unfamiliar 3D assembly with system-generated part names hidden. Compare text-only control against direct selection + short relational language for modification tasks.
+
+009 20260921-sketchpad-copy-operation-installs-a-rule-that-you-never-see
+  QUESTION: How can a generative interface show that an operation installed a persistent rule when the immediate rendered world looks almost unchanged?
+  DEEPER QUESTION: What visual grammar distinguishes “I changed this object once” from “I changed the future behavior of this object”?
+  MISSING: Interaction forms for revealing latent rules on demand without permanently saturating the scene.
+  TEST: Create two visually identical pairs of beams: one manually made equal once, one constrained equal persistently. Hide all metadata, then ask users to predict effects of dragging one beam. Add progressively richer rule visualization and repeat.
+
+010 20260921-naur-documentation-contained-the-answer-but-not-the-seeing
+  QUESTION: What does a prompt-system maintainer need beyond documentation in order to recognize that a new failure is structurally the same as an earlier one?
+  DEEPER QUESTION: Can a harness preserve not only solutions and explanations but the similarity judgments that caused builders to treat two superficially different failures as instances of one mechanism?
+  MISSING: Evidence distinguishing genuinely internalized theory from excellent retrieval over a structured case archive.
+  TEST: Give maintainers a novel failure whose mechanism is documented under very different surface symptoms. Compare plain documentation, semantic retrieval of analogous cases, and direct apprenticeship from an experienced builder.
+
+011 20260921-musicolour-silence-changes-the-machine
+  QUESTION: In stateful prompt systems, which variables continue changing while the user is not issuing prompts?
+  DEEPER QUESTION: Should time itself be represented as an operative component of a language-game when memory decay, caches, environment state, model updates, external data, or adaptive thresholds make delay consequential?
+  MISSING: A taxonomy of time-sensitive state in contemporary agent systems: expiration, decay, asynchronous world change, background tool activity, and system updates.
+  TEST: Issue an identical follow-up instruction after delays of 0 seconds, 1 minute, 1 hour, and 1 day in systems with external state. Log every state change occurring during the interval.
+
+012 20260921-sketchpad-arrowhead-has-fixed-identity-and-flexible-tail
+  QUESTION: Should worldtext identity attach independently to components, relations, materials, roles, and histories rather than to whole scene objects?
+  DEEPER QUESTION: Can a user say “keep the character the same but change the costume” only if the system represents identity at multiple nested scopes?
+  MISSING: Methods for inferring likely identity scope from ordinary language without forcing users to manipulate an ontology manually.
+  TEST: Create a character object with separately persistent face, body, clothing, pose, and scene role. Test instructions such as “same person, different clothes,” “same outfit, different person,” and “copy the pose only.”
+
+013 20260921-react-thought-is-externally-inert-but-future-causally-active
+  QUESTION: How many distinct state spaces must be tracked before the causal status of an agent output can be described accurately?
+  DEEPER QUESTION: Could a supposedly non-executing prompt still be operational if it modifies memory, planning state, retrieved context, rankings, or future action probabilities?
+  MISSING: A causal-state inventory for actual agent runtimes rather than a binary action/thought label.
+  TEST: Run identical agent trajectories while selectively preventing thought text from entering subsequent context. Measure which downstream actions change despite identical external observations.
+
+014 20260921-ashby-bicycle-and-aircraft-do-not-have-the-same-control-dimensionality
+  QUESTION: How many independent essential variables does a particular agent deployment actually require its supervisor to keep within bounds?
+  DEEPER QUESTION: Does the human-control problem become impossible at some dimensionality unless regulation is hierarchically delegated to lower-level automated controllers?
+  MISSING: Empirical methods for discovering rather than merely declaring an agent system’s essential variables.
+  TEST: For one agent, build oversight interfaces with one aggregate indicator, three decomposed essential variables, and ten decomposed variables. Inject failures affecting individual dimensions and measure detection and correction.
+
+015 20260921-clever-hans-word-reading-goes-from-all-correct-to-none
+  QUESTION: What AI capabilities currently appear to belong to the evaluated model but disappear when task-relevant state is removed from surrounding components?
+  DEEPER QUESTION: Can capability attribution be experimentally decomposed by systematically varying who or what in the total evaluation system possesses the answer-relevant information?
+  MISSING: Evaluation designs using genuinely post-training secrets or freshly generated target states so prior model exposure can be excluded.
+  TEST: Generate a novel hidden spatial arrangement after model training. Run conditions where wrapper, grader, human proctor, or no pre-commit component knows the target mapping. Compare performance while preserving the visible task.
+
+016 20260921-stencil-can-return-the-right-answer-for-the-wrong-computation
+  QUESTION: What properties of a generated artifact or agent trajectory remain invisible to a verifier that scores only terminal success?
+  DEEPER QUESTION: Should prompt tests specify not only acceptable outcomes but acceptable paths, resource costs, dependencies, provenance, and state transitions?
+  MISSING: A principled distinction between process properties that express genuine intent and process properties that should remain open to discovery.
+  TEST: For the same WAG construction, create one verifier checking only final geometry and another checking geometry plus illegal intermediate intersections, part count, attachment validity, and construction sequence. Search for outputs that pass one but fail the other.
+
+017 20260921-put-that-there-has-continuous-and-discrete-tests-before-action
+  QUESTION: Should prompt-system traces distinguish continuously varying evidence from discrete commitment events?
+  DEEPER QUESTION: Can correspondence be made easier to debug by showing the exact instant at which ambiguous evidence becomes a binding that downstream operations must obey?
+  MISSING: Architectures that expose when provisional model interpretations become executor commitments.
+  TEST: Build a gesture-plus-language builder that records a time-aligned stream of hand pose, recognized words, provisional referents, committed bindings, and world operations. Inject errors at each time layer.
+
+018 20260921-wittgenstein-removes-competition-before-he-removes-winning
+  QUESTION: What is the prompt equivalent of moving from competitive game → patience → child-with-ball: a sequence that removes one supposedly essential prompt property at each step?
+  DEEPER QUESTION: Can the five-term definition MOVE + GAME + SITUATION + EXECUTOR + TEST be pressure-tested through minimal pairs rather than through unrelated counterexamples?
+  MISSING: Well-designed minimal pairs where only one claimed component changes while the rest of the interaction remains materially comparable.
+  TEST: Construct five pairs:
+1. explicit verifier / no explicit verifier;
+2. text instruction / gesture instruction;
+3. stochastic model / deterministic program;
+4. persistent world / one-shot output;
+5. user move / autonomously initiated action.
+Ask practitioners which side of each pair they call prompting and why.

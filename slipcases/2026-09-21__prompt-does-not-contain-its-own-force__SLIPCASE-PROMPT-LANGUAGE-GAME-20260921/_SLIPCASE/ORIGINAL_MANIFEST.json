@@ -1,0 +1,484 @@
+{
+  "checkpoint": "SLIPCASE-PROMPT-LANGUAGE-GAME-20260921",
+  "checkpoint_id": "slipcase-20260921-prompt-language-game-partial-18",
+  "schema": "15.55-AM",
+  "package": "SLIPCASE_PROMPT_LANGUAGE_GAME_20260921",
+  "date": "2026-09-21",
+  "hash_algorithm": "SHA-256",
+  "scope_note": "All package files except index.html and _SLIPCASE/MANIFEST.json are hashed here. Those two are excluded to avoid self-referential manifest embedding in the sendable index capsule.",
+  "counts": {
+    "admitted_zettels": 18,
+    "manifest_hashed_files": 93,
+    "nodes": 146,
+    "relations": 432,
+    "resources": 22,
+    "ghosts": 18
+  },
+  "files": [
+    {
+      "path": "000__BIBLIOGRAPHY.html",
+      "bytes": 8893,
+      "sha256": "4e103115afae1cd85a14a0eb139d31fa6e3946d87d723a8fff54302377f4b616"
+    },
+    {
+      "path": "000__BIBLIOGRAPHY.txt",
+      "bytes": 8309,
+      "sha256": "1da68c882edffce3c9463ee421bf58e8a5d704f4331c3b38e237ef456c4dc7d6"
+    },
+    {
+      "path": "000__INDEX.txt",
+      "bytes": 4027,
+      "sha256": "2c9dc1e096ad85f2ae9f6e67ae462f9680a6ed9176721e43970f212e12214c49"
+    },
+    {
+      "path": "000__MAKING_HISTORY.txt",
+      "bytes": 1689,
+      "sha256": "b2e2513475e85015186ce15db6e3b2b018447ce712d7fba698eb6a08bd9917e0"
+    },
+    {
+      "path": "000__MAP.txt",
+      "bytes": 5740,
+      "sha256": "99c76c3d1213d3f53db22aaf28dff1f80e785adbeecf14975f540c0aff313667"
+    },
+    {
+      "path": "000__OPEN_EDGES.txt",
+      "bytes": 13757,
+      "sha256": "88b3d34f682a5e63e81e18fafbc3bb84061c95018598ed1d507cc9ecea0ab16c"
+    },
+    {
+      "path": "000__PROMPTS.txt",
+      "bytes": 432,
+      "sha256": "ca3f17beeefa94c24d5d324bc0ef5d4ef2220da7dda8597da657fd7575bc54da"
+    },
+    {
+      "path": "000__REBUILD.txt",
+      "bytes": 1024,
+      "sha256": "ff92d6337ee12b4a276db40d9e55b6760f853074016bdcc5f5f7d136159bc580"
+    },
+    {
+      "path": "000__RESOURCES.txt",
+      "bytes": 7126,
+      "sha256": "557af8cfc0483fea836fc1503f2a72a381d2dad00c491d65fbfc86f6a6827e9a"
+    },
+    {
+      "path": "000__RETURN_PATH.txt",
+      "bytes": 753,
+      "sha256": "835c8395509c8c84c6b8fb8c332964bbe1b22fb7341009eeee67016fc4253a27"
+    },
+    {
+      "path": "000__START_HERE.txt",
+      "bytes": 972,
+      "sha256": "f80445ca634e351bc781125a9dc474fb9cbdbaca2cd5ed4c40259b2da293ee2e"
+    },
+    {
+      "path": "001__create-a-blue-square-there-also-creates-medium-even-though__bolt-1980__20260921-bolt-medium-is-executed-without-being-said__from-conversation-visible-latest-forage-batch.txt",
+      "bytes": 4089,
+      "sha256": "2ab766ba6c4c01d9e18f331fa588b4f74ef93db53fcdc2faaeb629bfa0dce7b4"
+    },
+    {
+      "path": "002__under-time-pressure-engelbarts-brick-pencil-did-not-merely__engelbart-1962__20260921-brick-pencil-changes-the-size-of-thoughts-on-paper__from-conversation-visible-latest-forage-batch.txt",
+      "bytes": 3580,
+      "sha256": "d359e69252bb56f46932631756a719b7c4177b34ffe5d83a3c56ca96e6249cd3"
+    },
+    {
+      "path": "003__in-lisp-the-inner-expression-can-stay-identical-while-one__mccarthy-1960__20260921-quote-changes-the-fate-of-the-insides__from-conversation-visible-latest-forage-batch.txt",
+      "bytes": 3633,
+      "sha256": "1dc588bff570df380f0b5673a240ca43ca8ddee9c2e5c27bb38e0a3317c166be"
+    },
+    {
+      "path": "004__steeple-becomes-more-than-a-new-word-only-because-existing__winograd-1971__20260921-shrdlu-new-noun-acquires-construction-consequences__from-conversation-visible-latest-forage-batch.txt",
+      "bytes": 4145,
+      "sha256": "5a59331707a25dca4f4497f4a3dbda82911b3fc673bd9bbf98b7bfdef3405d06"
+    },
+    {
+      "path": "005__tex-0-7-is-historically-real-even-though-knuth-withdrew-bo__knuth-1992__20260921-tex-version-zero-seven-existed-as-a-retracted-belief__from-conversation-visible-latest-forage-batch.txt",
+      "bytes": 3831,
+      "sha256": "4d4cf3616c077c444ceb93e0a4ad1e729224a68f90018af7b2592ab3e2158c82"
+    },
+    {
+      "path": "006__shrdlu-did-not-silently-resolve-it-it-announced-the-bindin__winograd-1971__20260921-shrdlu-says-what-it-thinks-it-means-before-moving__from-conversation-visible-latest-forage-batch.txt",
+      "bytes": 3727,
+      "sha256": "4b246fdbfa7c146cc6e0db43795365663cace0d2bd091db5d8df8e1234fa15bc"
+    },
+    {
+      "path": "007__bolts-system-could-become-more-useful-without-making-the-s__bolt-1982__20260921-put-that-there-effective-accuracy-includes-repairability__from-conversation-visible-latest-forage-batch.txt",
+      "bytes": 3882,
+      "sha256": "9f7573c489540019ac455c2789acbec6abd302e273aa13b4f90e9cc6b5018eb8"
+    },
+    {
+      "path": "008__a-user-can-operate-on-a-computational-object-while-lacking__bolt-1980__20260921-ostension-controls-an-object-without-possessing-its-name__from-conversation-visible-latest-forage-batch.txt",
+      "bytes": 3530,
+      "sha256": "25ad40421dc90f1a2eed6a1c36c3dff2a469e36306844abf40838f629d724b76"
+    },
+    {
+      "path": "009__one-of-sketchpads-copied-lines-can-disappear-immediately-w__sutherland-1963__20260921-sketchpad-copy-operation-installs-a-rule-that-you-never-see__from-conversation-visible-latest-forage-batch.txt",
+      "bytes": 3834,
+      "sha256": "b7fa27fb6cadc46b511288b2e20bce413345c1e3fa08682995ae4bdda1f8e8a1"
+    },
+    {
+      "path": "010__group-bs-documentation-already-described-the-relevant-comp__naur-1985__20260921-naur-documentation-contained-the-answer-but-not-the-seeing__from-conversation-visible-latest-forage-batch.txt",
+      "bytes": 3834,
+      "sha256": "613cbd51340f06f227f15a1bcd4649019b453a5a7fbfa339e1b9e882dc326d50"
+    },
+    {
+      "path": "011__in-musicolour-doing-nothing-did-not-leave-the-system-in-th__pask-1971__20260921-musicolour-silence-changes-the-machine__from-conversation-visible-latest-forage-batch.txt",
+      "bytes": 3574,
+      "sha256": "d9ca0ccfd5fae02a0fe7bba18b020b0c158c5411db27b9a51348e039fdd3dcb0"
+    },
+    {
+      "path": "012__sketchpad-could-make-one-visible-object-half-instance-and__sutherland-1963__20260921-sketchpad-arrowhead-has-fixed-identity-and-flexible-tail__from-conversation-visible-latest-forage-batch.txt",
+      "bytes": 3725,
+      "sha256": "d130d8aba3366d743cf3ab92f6107fcc9200da4c1edab7f5cb8b48dbb8dbf3a2"
+    },
+    {
+      "path": "013__reacts-thought-does-not-change-the-environment-yet-it-chan__yao-2023__20260921-react-thought-is-externally-inert-but-future-causally-active__from-conversation-visible-latest-forage-batch.txt",
+      "bytes": 3834,
+      "sha256": "69d76320555b95b6c277a06969e51a3e3f5a92117a7d17ad6950b09248f7cb98"
+    },
+    {
+      "path": "014__ashbys-bicycle-rider-regulates-mainly-one-angle-his-automa__ashby-1956__20260921-ashby-bicycle-and-aircraft-do-not-have-the-same-control-dimensionality__from-conversation-visible-latest-forage-batch.txt",
+      "bytes": 3955,
+      "sha256": "26e4919b82b119fd117775146ca5b0f98ff08a65fe29392aecd1f45e60f19fb1"
+    },
+    {
+      "path": "015__hanss-reading-fell-from-100-percent-to-zero-when-the-quest__pfungst-1911__20260921-clever-hans-word-reading-goes-from-all-correct-to-none__from-conversation-visible-latest-forage-batch.txt",
+      "bytes": 4076,
+      "sha256": "026db814345fb806db0eb5c9edadcf0c94b6160abf56586edc5ec8202e6065d0"
+    },
+    {
+      "path": "016__solar-lezama-notes-that-a-buggy-stencil-can-still-produce__solar-lezama-2007__20260921-stencil-can-return-the-right-answer-for-the-wrong-computation__from-conversation-visible-latest-forage-batch.txt",
+      "bytes": 4049,
+      "sha256": "ce17124e7b0ce41c45832a83e0587d56d0bdb280b46ee961fcdd8bf1e31f21fe"
+    },
+    {
+      "path": "017__put-that-there-tests-pointing-continuously-but-reference-c__bolt-1980__20260921-put-that-there-has-continuous-and-discrete-tests-before-action__from-conversation-visible-latest-forage-batch.txt",
+      "bytes": 3931,
+      "sha256": "8acb5787102fff580d9432ecc54dc5efc3eac196ad0f0921b283689f120218db"
+    },
+    {
+      "path": "018__patience-removes-the-opponent-the-childs-ball-removes-winn__wittgenstein-1953__20260921-wittgenstein-removes-competition-before-he-removes-winning__from-conversation-visible-latest-forage-batch.txt",
+      "bytes": 4162,
+      "sha256": "db232ce85285b3f6df8d0715ec384c11919148c11a14bf703d7f30898a07ce19"
+    },
+    {
+      "path": "CARDS.html",
+      "bytes": 19652,
+      "sha256": "390fba88e7f19499f76555bfbda571f4bfcce65eec49e970531e3eeb7613f952"
+    },
+    {
+      "path": "MARK.pdf",
+      "bytes": 1260,
+      "sha256": "441011e59ef794c0f276b0b0224224024e4de25020fcd1ebaedde4fb73fe9193"
+    },
+    {
+      "path": "MARK.svg",
+      "bytes": 338,
+      "sha256": "e2645a265a85a88740cffd081a595c616d7f2a78c469da972a1648ad0f613797"
+    },
+    {
+      "path": "NETWORK.html",
+      "bytes": 499,
+      "sha256": "17d260f0cb4e91223d7d5fdcabd3df575828a56bed1bdb9b76d823f78986c756"
+    },
+    {
+      "path": "NETWORK.svg",
+      "bytes": 18808,
+      "sha256": "11b6c096f7eba73312ff263f7b5f91cd455536d2ec9cf00c1c7b7209b8181e83"
+    },
+    {
+      "path": "READER.html",
+      "bytes": 421688,
+      "sha256": "81e7d7e1ee5632dea849e761b8f442f8c449e7d03d4b4f4b82b3c4f631135774"
+    },
+    {
+      "path": "ZETTELS.json",
+      "bytes": 159432,
+      "sha256": "7fbdcd37545b036b8fe2c0dc426006cdf286ad6d96aa831d80ff04bf8527f8cf"
+    },
+    {
+      "path": "ZETTELS.jsonl",
+      "bytes": 156244,
+      "sha256": "a3999c95b3d5c40e43241e278cd3640de496f219601d98e3fdc408e0808cfd27"
+    },
+    {
+      "path": "ZETTELS.txt",
+      "bytes": 73338,
+      "sha256": "32ef5d0d6242c021fee2e2829483e198636a73324b1286e96fa9429bb6feedce"
+    },
+    {
+      "path": "_ARRANGEMENTS/distributed-specification-commitment-repair.txt",
+      "bytes": 2324,
+      "sha256": "be4e30355ddbeb035cef3c87a8f9195499ac7f4823eba858d27b393c0d54dc5f"
+    },
+    {
+      "path": "_MD/001__create-a-blue-square-there-also-creates-medium-even-though__bolt-1980__20260921-bolt-medium-is-executed-without-being-said__from-conversation-visible-latest-forage-batch.md",
+      "bytes": 4089,
+      "sha256": "2ab766ba6c4c01d9e18f331fa588b4f74ef93db53fcdc2faaeb629bfa0dce7b4"
+    },
+    {
+      "path": "_MD/002__under-time-pressure-engelbarts-brick-pencil-did-not-merely__engelbart-1962__20260921-brick-pencil-changes-the-size-of-thoughts-on-paper__from-conversation-visible-latest-forage-batch.md",
+      "bytes": 3580,
+      "sha256": "d359e69252bb56f46932631756a719b7c4177b34ffe5d83a3c56ca96e6249cd3"
+    },
+    {
+      "path": "_MD/003__in-lisp-the-inner-expression-can-stay-identical-while-one__mccarthy-1960__20260921-quote-changes-the-fate-of-the-insides__from-conversation-visible-latest-forage-batch.md",
+      "bytes": 3633,
+      "sha256": "1dc588bff570df380f0b5673a240ca43ca8ddee9c2e5c27bb38e0a3317c166be"
+    },
+    {
+      "path": "_MD/004__steeple-becomes-more-than-a-new-word-only-because-existing__winograd-1971__20260921-shrdlu-new-noun-acquires-construction-consequences__from-conversation-visible-latest-forage-batch.md",
+      "bytes": 4145,
+      "sha256": "5a59331707a25dca4f4497f4a3dbda82911b3fc673bd9bbf98b7bfdef3405d06"
+    },
+    {
+      "path": "_MD/005__tex-0-7-is-historically-real-even-though-knuth-withdrew-bo__knuth-1992__20260921-tex-version-zero-seven-existed-as-a-retracted-belief__from-conversation-visible-latest-forage-batch.md",
+      "bytes": 3831,
+      "sha256": "4d4cf3616c077c444ceb93e0a4ad1e729224a68f90018af7b2592ab3e2158c82"
+    },
+    {
+      "path": "_MD/006__shrdlu-did-not-silently-resolve-it-it-announced-the-bindin__winograd-1971__20260921-shrdlu-says-what-it-thinks-it-means-before-moving__from-conversation-visible-latest-forage-batch.md",
+      "bytes": 3727,
+      "sha256": "4b246fdbfa7c146cc6e0db43795365663cace0d2bd091db5d8df8e1234fa15bc"
+    },
+    {
+      "path": "_MD/007__bolts-system-could-become-more-useful-without-making-the-s__bolt-1982__20260921-put-that-there-effective-accuracy-includes-repairability__from-conversation-visible-latest-forage-batch.md",
+      "bytes": 3882,
+      "sha256": "9f7573c489540019ac455c2789acbec6abd302e273aa13b4f90e9cc6b5018eb8"
+    },
+    {
+      "path": "_MD/008__a-user-can-operate-on-a-computational-object-while-lacking__bolt-1980__20260921-ostension-controls-an-object-without-possessing-its-name__from-conversation-visible-latest-forage-batch.md",
+      "bytes": 3530,
+      "sha256": "25ad40421dc90f1a2eed6a1c36c3dff2a469e36306844abf40838f629d724b76"
+    },
+    {
+      "path": "_MD/009__one-of-sketchpads-copied-lines-can-disappear-immediately-w__sutherland-1963__20260921-sketchpad-copy-operation-installs-a-rule-that-you-never-see__from-conversation-visible-latest-forage-batch.md",
+      "bytes": 3834,
+      "sha256": "b7fa27fb6cadc46b511288b2e20bce413345c1e3fa08682995ae4bdda1f8e8a1"
+    },
+    {
+      "path": "_MD/010__group-bs-documentation-already-described-the-relevant-comp__naur-1985__20260921-naur-documentation-contained-the-answer-but-not-the-seeing__from-conversation-visible-latest-forage-batch.md",
+      "bytes": 3834,
+      "sha256": "613cbd51340f06f227f15a1bcd4649019b453a5a7fbfa339e1b9e882dc326d50"
+    },
+    {
+      "path": "_MD/011__in-musicolour-doing-nothing-did-not-leave-the-system-in-th__pask-1971__20260921-musicolour-silence-changes-the-machine__from-conversation-visible-latest-forage-batch.md",
+      "bytes": 3574,
+      "sha256": "d9ca0ccfd5fae02a0fe7bba18b020b0c158c5411db27b9a51348e039fdd3dcb0"
+    },
+    {
+      "path": "_MD/012__sketchpad-could-make-one-visible-object-half-instance-and__sutherland-1963__20260921-sketchpad-arrowhead-has-fixed-identity-and-flexible-tail__from-conversation-visible-latest-forage-batch.md",
+      "bytes": 3725,
+      "sha256": "d130d8aba3366d743cf3ab92f6107fcc9200da4c1edab7f5cb8b48dbb8dbf3a2"
+    },
+    {
+      "path": "_MD/013__reacts-thought-does-not-change-the-environment-yet-it-chan__yao-2023__20260921-react-thought-is-externally-inert-but-future-causally-active__from-conversation-visible-latest-forage-batch.md",
+      "bytes": 3834,
+      "sha256": "69d76320555b95b6c277a06969e51a3e3f5a92117a7d17ad6950b09248f7cb98"
+    },
+    {
+      "path": "_MD/014__ashbys-bicycle-rider-regulates-mainly-one-angle-his-automa__ashby-1956__20260921-ashby-bicycle-and-aircraft-do-not-have-the-same-control-dimensionality__from-conversation-visible-latest-forage-batch.md",
+      "bytes": 3955,
+      "sha256": "26e4919b82b119fd117775146ca5b0f98ff08a65fe29392aecd1f45e60f19fb1"
+    },
+    {
+      "path": "_MD/015__hanss-reading-fell-from-100-percent-to-zero-when-the-quest__pfungst-1911__20260921-clever-hans-word-reading-goes-from-all-correct-to-none__from-conversation-visible-latest-forage-batch.md",
+      "bytes": 4076,
+      "sha256": "026db814345fb806db0eb5c9edadcf0c94b6160abf56586edc5ec8202e6065d0"
+    },
+    {
+      "path": "_MD/016__solar-lezama-notes-that-a-buggy-stencil-can-still-produce__solar-lezama-2007__20260921-stencil-can-return-the-right-answer-for-the-wrong-computation__from-conversation-visible-latest-forage-batch.md",
+      "bytes": 4049,
+      "sha256": "ce17124e7b0ce41c45832a83e0587d56d0bdb280b46ee961fcdd8bf1e31f21fe"
+    },
+    {
+      "path": "_MD/017__put-that-there-tests-pointing-continuously-but-reference-c__bolt-1980__20260921-put-that-there-has-continuous-and-discrete-tests-before-action__from-conversation-visible-latest-forage-batch.md",
+      "bytes": 3931,
+      "sha256": "8acb5787102fff580d9432ecc54dc5efc3eac196ad0f0921b283689f120218db"
+    },
+    {
+      "path": "_MD/018__patience-removes-the-opponent-the-childs-ball-removes-winn__wittgenstein-1953__20260921-wittgenstein-removes-competition-before-he-removes-winning__from-conversation-visible-latest-forage-batch.md",
+      "bytes": 4162,
+      "sha256": "db232ce85285b3f6df8d0715ec384c11919148c11a14bf703d7f30898a07ce19"
+    },
+    {
+      "path": "_MOCS/agentic-prompting.txt",
+      "bytes": 619,
+      "sha256": "4a24c4e7d52f2baddcac44c0095b2d7c9aa8409f985537f3f60fa832dab931c3"
+    },
+    {
+      "path": "_MOCS/distributed-capability.txt",
+      "bytes": 557,
+      "sha256": "97afc933574cfc7169180bd69e5d93acd9befae6836a5ffd7c71424c8fa08fe7"
+    },
+    {
+      "path": "_MOCS/evaluation-as-language-game.txt",
+      "bytes": 657,
+      "sha256": "5c74fcd15f9e9f69151bc5d1c481f383794cb52563858af5f675848b7bb2e1e7"
+    },
+    {
+      "path": "_MOCS/genealogy-of-prompting.txt",
+      "bytes": 688,
+      "sha256": "4f9e7a0aeb9493d65e00258fc5b132cb6ff3ab4c0593188fff1151329a8ba7ea"
+    },
+    {
+      "path": "_MOCS/inspectable-pipeline.txt",
+      "bytes": 546,
+      "sha256": "70c39337f777d6cf20d545f4eec4b29f5c189bd5bb8bd5858aaab5d0bc945475"
+    },
+    {
+      "path": "_MOCS/managed-dependency.txt",
+      "bytes": 613,
+      "sha256": "10c28614693049f1f141d800053c4ce2f831791dea48c3b9f41bb5fd3a51bfd2"
+    },
+    {
+      "path": "_MOCS/operative-ekphrasis.txt",
+      "bytes": 604,
+      "sha256": "b8c5c88c76862c8cc7a52f0e9ee0d6f13130251a981f76c6ae2236d77b3bc6a4"
+    },
+    {
+      "path": "_MOCS/possibility-space-of-prompting.txt",
+      "bytes": 620,
+      "sha256": "f62658de42e5c747b875cc89d833a8a1c8c5c13aa9950cd80066f77a823937e8"
+    },
+    {
+      "path": "_MOCS/practice-before-procedure.txt",
+      "bytes": 636,
+      "sha256": "5af66160c1084d4b28d8a7294d3badab837b141368b189836feb2687c2b5109a"
+    },
+    {
+      "path": "_MOCS/prompt-box.txt",
+      "bytes": 672,
+      "sha256": "56869bef201ce91ee2795962d60763d96b844d49581c5d10a84a7d1f888c4295"
+    },
+    {
+      "path": "_MOCS/prompt-comparison.txt",
+      "bytes": 694,
+      "sha256": "a738f1eb6717bd46cceb91dae9b77494dc5bbeb6db082a35034575140bbc4d95"
+    },
+    {
+      "path": "_MOCS/prompt-harness.txt",
+      "bytes": 638,
+      "sha256": "a4ea9ff4f242ee2dd4a6571b5953bcca03084367e382eb64aa161f2652fc2f64"
+    },
+    {
+      "path": "_MOCS/prompt-knowledge.txt",
+      "bytes": 646,
+      "sha256": "9a864c258a1c7b629bd46fef5eba12396ecda6264ac62922ab9b92731e9a5d4c"
+    },
+    {
+      "path": "_MOCS/prompt-stabilization.txt",
+      "bytes": 587,
+      "sha256": "4a0354ed0b378b3b848d2c4abf5a2c5a98f6e327f70a4c9ce2541dc5334c88bd"
+    },
+    {
+      "path": "_MOCS/prompting-as-language-game.txt",
+      "bytes": 650,
+      "sha256": "c5d8c23de007d4bc9830f10e1ecfb4f54c567ed039d5b3bd6c0084788c529873"
+    },
+    {
+      "path": "_MOCS/text-code-aspect.txt",
+      "bytes": 634,
+      "sha256": "820800570372784da696d89cccc6cb1edf26cfcd9de45c8cece8e1202f4ad2da"
+    },
+    {
+      "path": "_MOCS/working-definition-of-prompt.txt",
+      "bytes": 625,
+      "sha256": "69115437157c9f1b9fb341e564e362eedf44e6253459befa39209b858e19f33a"
+    },
+    {
+      "path": "_MOCS/worldtext.txt",
+      "bytes": 552,
+      "sha256": "9a63bac2933d9261f9e47ccb0df3072069e88d5a9f94fafb1cc29388112c8ca9"
+    },
+    {
+      "path": "_PROMPTS/PRIME_ZETTEL_FORAGE_3_0.txt",
+      "bytes": 11404,
+      "sha256": "edc19c6e7c956d3b2fa74d478e38057356cf5a45e85ae2ae027b34aa199779b7"
+    },
+    {
+      "path": "_PROMPTS/PRIME_ZETTEL_FORAGE_RECURSIVE_3_1.txt",
+      "bytes": 6403,
+      "sha256": "7156564e118db743162a9441f5a1efae3b9956ea91959c4cea45a1d67f650e01"
+    },
+    {
+      "path": "_PROMPTS/SLIPCASE_ASSEMBLY_PROMPT_15_55_AM.txt",
+      "bytes": 20085,
+      "sha256": "5a7f8fff761f4445e58ae323557c83c483630c25acdd5d086068df1eec949e01"
+    },
+    {
+      "path": "_RESOURCES/What Is a Prompt A Language-Game (the meme cut).pdf",
+      "bytes": 12912659,
+      "sha256": "4c052bf059979673e22d530fc868330d970ed0ab59d25e5006b5cd3c069b05ac"
+    },
+    {
+      "path": "_SLIPCASE/ALIASES.json",
+      "bytes": 3,
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "path": "_SLIPCASE/APPEARANCES.jsonl",
+      "bytes": 4451,
+      "sha256": "abaad9896633d6056a4ddd52d6d43ae1348700b672def9850c269107542a8865"
+    },
+    {
+      "path": "_SLIPCASE/NODES.jsonl",
+      "bytes": 29790,
+      "sha256": "1c96ab75c4021694b5238bd1ca0e184ef26d4beb16c60e2c46eb7b9cdeb02497"
+    },
+    {
+      "path": "_SLIPCASE/RELATIONS.jsonl",
+      "bytes": 214805,
+      "sha256": "b41fa7e9a8b45941a1c63a613f92843800d94a3840f3ddc4cee475e090186404"
+    },
+    {
+      "path": "_SLIPCASE/RESOURCES.jsonl",
+      "bytes": 8950,
+      "sha256": "256ed6f551026f63f329143b0aa6f5c0ea26419e57c8d9ed11ae5a65ae0777ba"
+    },
+    {
+      "path": "_SLIPCASE/VERIFICATION.txt",
+      "bytes": 4243,
+      "sha256": "2cc621be65cb85c16cf9b4213ad404392880a53fd1c8e4edcb28b06f8352aa74"
+    },
+    {
+      "path": "_SLIPCASE/build_slipcase.py",
+      "bytes": 35042,
+      "sha256": "0bbabb3db3ebc13669fa236e3c52ae0350e46d3f73328fa217a3d2cc28d68fd3"
+    },
+    {
+      "path": "_SLIPCASE/reconstruct_cards.py",
+      "bytes": 572,
+      "sha256": "5de4c76cc6680fac0ec6be7bc949aed87bbc89308d5607e31778b9982c37003c"
+    },
+    {
+      "path": "prompt-does-not-contain-its-own-force__2026-09-21.pdf",
+      "bytes": 99203,
+      "sha256": "2a039e02504b1fcf9bf2b0306e4dcd5ea785a005102276672c074ffbd0d1b715"
+    },
+    {
+      "path": "prompt-does-not-contain-its-own-force__2026-09-21.tex",
+      "bytes": 36002,
+      "sha256": "230133d6ea97d317fbd2155073755560859b8b410ea0f4fbb22a325d844a20af"
+    },
+    {
+      "path": "prompt-does-not-contain-its-own-force__ASSEMBLY_APPENDIX.txt",
+      "bytes": 501,
+      "sha256": "2759e224b5d571a5f16aed22d7d1104a3814d04cd5242d42c2c69e2ffaf08000"
+    },
+    {
+      "path": "prompt-does-not-contain-its-own-force__MAKING_HISTORY.txt",
+      "bytes": 1656,
+      "sha256": "7443a1f39335caf2ccd90fadbb1c18e27c0718b7d0f48dfe8e1b4765f79158ee"
+    },
+    {
+      "path": "prompt-does-not-contain-its-own-force__SOURCE_MAP.txt",
+      "bytes": 8234,
+      "sha256": "807f0ffcc93f3f17460f27b8562231170094741fbea786c753e553280886e870"
+    },
+    {
+      "path": "slipcase-20260921__references.bib",
+      "bytes": 3640,
+      "sha256": "6eaf686f6c0a2bcfb9605c2aefa54a5f21362565d9374f0921ee09aee217f875"
+    }
+  ]
+}
