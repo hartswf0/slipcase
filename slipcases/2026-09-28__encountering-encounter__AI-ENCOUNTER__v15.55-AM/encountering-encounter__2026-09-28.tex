@@ -1,0 +1,297 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\definecolor{quiet}{gray}{0.35}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize\color{quiet}Working Paper}
+\rhead{\footnotesize\color{quiet}Encountering Encounter}
+\cfoot{\thepage}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+\setlength{\emergencystretch}{2em}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.2em,topsep=0.3em}
+\titleformat{\section}{\large\bfseries}{\thesection}{0.75em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.75em}{}
+
+\title{\textbf{Encountering Encounter}\\[0.35em]
+\large A Falsifiable Model of Relational Human--AI Encounters}
+\author{Watson Hartsoe}
+\date{September 28, 2026\\[0.6em]\small Working Paper · AI-augmented research process\\Evidence, prompts, and making history preserved in the accompanying research package.}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Human--AI systems are increasingly described in the language of encounter, relation, collaboration, companionship, and co-creation. Yet the empirical vocabulary used to evaluate these systems still tends to measure outputs, task success, engagement, liking, trust, turn count, or anthropomorphic attribution. This creates a construct problem: a long conversation can be stagnant, successful repair can be almost entirely human labor, high linguistic alignment can result from unilateral accommodation, and disagreement can simultaneously increase behavioral resistance while making the AI seem less socially human. Recent ``encounter ontology'' gives human--AI encounter a philosophical name and structural criteria, but does not yet supply a discriminating empirical test. This paper proposes a narrower and falsifiable construct: the \emph{relational human--AI encounter}. An encounter is a bounded episode in which contributions from human and system become recursively and task-relevantly consequential for one another, producing a path-dependent trajectory in which the next possible or selected move changes because of what occurred in the relation. The definition is deliberately agnostic about machine consciousness, understanding, and personhood. It shifts measurement from entity properties and surface fluency to relational dynamics. I separate three layers that should not be collapsed: admission conditions, process signatures, and post-encounter residue. I then synthesize operational machinery from conversation analysis, human--robot engagement, interactive team cognition, human--GenAI co-creation, mental-model research, and longitudinal AI companionship. The resulting proposal is an \emph{Encounter Test}: a perturbation-based protocol measuring episode boundaries, directional repair burden, reciprocal uptake, developmental versus stalled recursion, shared-object ancestry, resistance uptake, counterfactual branch divergence, and persistent changes in problem representation or relation state. The central implication is methodological: encounter should be treated as a profile of path-dependent coordination, not a scalar score for how social or pleasant an AI feels.
+\end{abstract}
+
+\textbf{Keywords:} human--AI interaction; encounter; relational intelligence; generative AI; repair; co-creation; path dependence; HCI evaluation
+
+\section{Introduction: the computer returns as an apparent other}
+
+A striking reversal has occurred in interface design. In one influential formulation of direct manipulation, the computer succeeds by becoming ``transparent'' so that the user can concentrate on the task rather than the machine \citep{Shneiderman1983Direct}. Generative conversational systems do something almost opposite. The computational system returns to the foreground as an apparent interlocutor: it speaks in the first person, takes turns, remembers the local transcript, offers alternatives, disagrees, apologizes, proposes, revises, and can be addressed as ``you.'' The interface no longer merely mediates access to an object. It can itself become the apparent object of social and epistemic orientation.
+
+That change has made \emph{encounter} attractive vocabulary. The word appears in anthropology, phenomenology, sociology, STS, HRI, philosophy of AI, and now explicitly in work on human--AI interaction. But its renewed usefulness creates a problem. ``Encounter'' risks becoming a high-status synonym for any sufficiently interesting conversation with a generative model. The word can then imply exactly what a study ought to establish: reciprocity, alterity, emergence, transformation, or even a new ontology.
+
+The problem is visible in two recent uses. Floridi's forthcoming \emph{Encounters with AI} is built from an experiment in ``distant writing'' in which a human designer specifies narrative requirements and constraints while LLMs generate prose \citep{Floridi2025DistantWriting,Floridi2027Encounters}. The title invites a theory of human--AI encounter, but the underlying machinery is more asymmetric and more precise: conception, constraint, prompting, iterative refinement, validation, curation, and retained human responsibility. The experiment contains encounters among fictional characters and a human--machine production process, but its central concept is authorship at a distance, not a general ontology of meeting.
+
+By contrast, Sfakianakis and Kampi explicitly propose an ``encounter ontology'' in which the encounter becomes the primary unit of analysis and relational intelligence names meaning produced across sustained human--AI interaction \citep{SfakianakisKampi2026Encounter}. They make an important discriminating move: not every prompt--response sequence is an encounter. Their structural criteria include sustained multi-turn exchange, recursive bidirectional coupling, a generative response system, and an open-ended task. They further distinguish pre-encounter potential, encounter activation, and post-encounter condition. This is a substantial conceptual advance because it refuses to identify encounter with mere contact. Yet it still leaves a methodological gap. A long brainstorming session can satisfy those structural criteria while going nowhere. Repeated prompting can be recursion without development. Apparent repair can be almost entirely supplied by the human. A system can be generative in architecture while the relation is behaviorally one-sided.
+
+This paper takes that gap as its starting point. The goal is not to decide whether AI systems are conscious, understand language, count as persons, or deserve the same concept of encounter used for human relationships. Those questions remain open and, for the present purpose, need not be settled. Instead, I propose a narrower empirical object: a \emph{relational human--AI encounter}. A relational encounter is a bounded episode in which contributions from human and system become recursively and task-relevantly consequential for one another, producing a path-dependent trajectory in which what either side can or does do next has been altered by the relation itself.
+
+The phrase ``path-dependent'' carries the main argumentative burden. Ordinary interaction changes something. An encounter, on the account developed here, changes the \emph{conditions of subsequent interaction}. The relevant state can be a problem representation, a shared artifact, an expectation about the other, a constraint set, a repair history, or a continuity relation across sessions. What matters is not that outputs are novel, surprising, anthropomorphic, or pleasant. What matters is whether the history of the episode becomes operationally consequential for what follows.
+
+This produces three methodological claims. First, encounter should be measured at the level of the interactional trajectory rather than inferred from properties of either participant alone. Second, reciprocity should be measured directionally rather than presumed from alternating turns. Third, admission conditions, process dynamics, and after-effects should remain separate. A system can enter an encounter-like episode without producing durable transformation; an interaction can produce a durable human effect without exhibiting reciprocal coupling; and a smooth, enjoyable exchange can lack the relational structure claimed by encounter theories. The construct therefore should not be collapsed into a single ``encounter score.''
+
+The paper develops this position by moving from the genealogy of encounter to operational machinery already available in HCI and adjacent fields. The surprising result is that the pieces needed to test encounter are not primarily found in philosophical accounts of artificial otherness. They are scattered across research on engagement boundaries, conversational repair, team-level cognition, linguistic accommodation, co-development, workflow loops, mental-model shifts, disagreement, and continuity rupture. Put together, these literatures allow a much harder question than ``did the user feel that they encountered an AI?'' They allow us to ask: \emph{what changed because these two trajectories met, who carried the work of keeping them coupled, and would the later trajectory have been different if one consequential contribution had been different?}
+
+\section{One word, several incompatible research objects}
+
+Any operational definition should begin by refusing a smooth genealogy. ``Encounter'' does not name one stable concept that migrated intact from philosophy into AI. Goffman is especially instructive because he deliberately strips ordinary surprise and trouble from the term. In \emph{Encounters}, he calls the natural unit of focused interaction a ``focused gathering,'' ``encounter,'' or ``situated activity system,'' and explicitly excludes everyday senses in which an encounter is unexpected or troublesome \citep{Goffman1961Encounters}. His problem is not alterity in the abstract. It is the organized achievement of a temporary situation in which participants sustain a common focus and a local order.
+
+Other traditions use the same word for different units. A Deleuzian encounter can force thought without reciprocal social organization. An anthropological contact zone can exceed the dyad by locating meeting within asymmetrical histories and institutions. Barad's critique of ``interaction'' goes deeper still by questioning whether the relata should be treated as fully constituted before the relation \citep{Barad2003Posthumanist}. These traditions are intellectually useful, but they do not converge on one measurable object. An operational HCI construct should therefore state its scale rather than claiming to exhaust the philosophy of encounter.
+
+The present paper targets a meso-level object: a bounded episode of human--AI activity in which the participants' contributions become recursively consequential for the trajectory. This is narrower than a metaphysics of relation and thicker than generic causal interaction. It is also compatible with ontological uncertainty about the machine. A user can participate in a relational encounter with a system even if later philosophical analysis concludes that the system did not understand, intend, or possess an interior point of view.
+
+That neutrality is important because AI research has repeatedly produced relational effects without resolving machine ontology. Turing's imitation game does not establish machine subjecthood. It creates a situation in which identity must be inferred through a deliberately restricted channel; the interrogator is separated from the participants and receives textual responses \citep{Turing1950Computing}. Coeckelbergh later shows how talk \emph{to} and \emph{about} robots can co-shape their appearance as artificial quasi-others \citep{Coeckelbergh2011YouRobot}. Kahn and colleagues propose that personified computational systems may destabilize the animate/inanimate distinction itself, yielding a candidate new ontological category \citep{KahnEtAl2011Ontological}. None of these results requires a settled answer to the machine-mind question.
+
+HCI also has a counter-genealogy that makes the current situation more interesting. Direct manipulation sought to make the computer recede \citep{Shneiderman1983Direct}. Suchman's analysis of supposedly interactive machines then challenged the assumption that ``interaction'' itself was self-evident, emphasizing the situated achievement of intelligibility rather than the execution of plans \citep{Suchman1987Plans}. Bickmore and Picard later operationalized long-term human--computer relationships through deliberately designed relational agents, showing that trust, liking, respect, and desire to continue could be altered by relationship-building behaviors long before generative LLMs \citep{BickmorePicard2005Relationships}. The historical novelty of current systems therefore cannot simply be ``computers became relational.''
+
+A better hypothesis is that generative AI changes the \emph{visibility and variability of relational contingency}. The system can generate an open range of next moves in ordinary language, while the human can re-specify the task in the same medium. The interaction can appear less scripted even when substantial asymmetries remain. This is why surface fluency is a poor proxy for encounter. It is also why current work needs measures that distinguish reciprocal development from fluent continuation.
+
+\section{Current AI encounter theory leaves the decisive variable unmeasured}
+
+Recent scholarship creates a productive disagreement about what qualifies as encounter. Demuro and Gurney treat human interaction with ChatGPT as an ethnographic encounter: the value of the encounter lies in allowing unfamiliar AI languaging to pressure the analyst's categories of language, not in proving that the AI is sentient or agentic \citep{DemuroGurney2024Encounter}. On this view, conceptual deformation in the observer can be an encounter effect even if the machine's ontological status remains unresolved.
+
+Floridi's recent work supplies a different separation. His ``agency without intelligence'' thesis argues that artificial agency need not be assimilated to cognition, intention, or mental states \citep{Floridi2025Agency}. This is useful for encounter research because it opens a space between ``mere tool'' and ``intelligent person.'' Yet his distant-writing model also reveals why agency language can conceal allocation of control. The human meta-author designs requirements, evaluates outputs, decides when refinement has succeeded, and remains accountable for the final text \citep{Floridi2025DistantWriting}. Generative contribution does not by itself imply symmetrical authorship or symmetrical encounter.
+
+A stronger ethical account appears in Machidon's Buberian argument about artificial companionship. Here genuine relation is associated with vulnerability, reciprocity, mutual transformation, distance, and the possibility of refusal; frictionless artificial companionship may reproduce social surfaces while removing the risks constitutive of human relation \citep{Machidon2026Thou}. Fernandez-Borsot, by contrast, asks what kind of ``other'' AI can become while remaining simultaneously serviceable, commodified, surveillant, authoritative, standardized, and without human interiority \citep{FernandezBorsot2025Otherness}. These accounts are not variants of one threshold. One asks whether relation has existential depth; another asks how a socio-technical category of otherness is constituted.
+
+Sfakianakis and Kampi's encounter ontology is the most direct attempt to make encounter the unit of analysis in current human--AI interaction \citep{SfakianakisKampi2026Encounter}. Its importance lies in three moves: distinguishing interaction from encounter, assigning encounter a temporal architecture, and claiming that meaning can emerge at the relation level. The difficulty is that its operational criteria partially encode properties of the technology and task rather than of the relation. A ``generative response system'' identifies a class of system. An ``open-ended task'' identifies a class of task. Neither guarantees reciprocal development. Conversely, a scripted relational system can produce consequential long-term human effects, as relational-agent research already showed \citep{BickmorePicard2005Relationships}. Technological generativity is therefore neither sufficient nor obviously necessary for a relational encounter.
+
+The same problem applies to multi-turn duration. Multiple rounds are useful because they permit recurrence and history, but duration alone has little construct validity. Luan, Kim, and Zhou find that repeated human--GenAI co-creation does not automatically improve joint creativity; what matters is a more specific activity they call Idea Co-Development, characterized by feedback exchange and iterative refinement \citep{LuanKimZhou2025Augmented}. Cavallin and Spagnol, instrumenting professional designers' GenAI workflows, identify repeated communication loops associated with interaction difficulty and weaker outcomes \citep{CavallinSpagnol2026Sweat}. The surface syntax of both cases is recursive: prompt, response, modification, response. The difference is whether recursion changes the relevant state.
+
+This suggests that the missing variable is not generativity, openness, duration, or even recursion in the abstract. It is \emph{path-dependent reciprocal consequence}: whether contributions from each side alter the other's subsequent task-relevant action and whether those alterations survive long enough to shape later states of the episode.
+
+\section{A narrower definition: encounter as path-dependent reciprocal consequence}
+
+I propose the following operational definition:
+
+\begin{quote}
+A \textbf{relational human--AI encounter} is a bounded episode of joint activity in which human and system contributions become recursively and task-relevantly consequential for one another, producing a path-dependent trajectory whose later actionable state differs because of the history of the relation.
+\end{quote}
+
+Several qualifications are built into this definition.
+
+First, the episode is \emph{bounded}. Sidner and colleagues define engagement as a process through which interactants start, maintain, and end their perceived connection \citep{SidnerEtAl2005Engagement}. A useful encounter construct needs the same temporal discipline. A transcript is not automatically one encounter. It can contain failed initiations, parallel tasks, interruptions, re-entry, or several encounters. Boundary detection is therefore a prior measurement problem rather than a cosmetic annotation step.
+
+Second, consequentiality is \emph{task-relevant}. Any LLM response is mathematically conditioned on its input, so raw statistical dependence would make every prompt an encounter. That would trivialize the construct. The relevant question is whether a contribution changes the other participant's next choice among task-relevant alternatives: a new constraint, a changed hypothesis, a revised artifact, a clarification request, a rejected interpretation, a new plan, or a changed model of the interlocutor.
+
+Third, the relation is \emph{recursive}. A single human prompt can cause a model response without the model response ever changing the human's next action. That is consequential interaction but not yet the relational object defined here. Minimal evidence of encounter requires at least one complete feedback loop in which a human move changes a system move and a system move, in turn, changes a subsequent human move in a task-relevant way. Symmetry is not required. Indeed, the degree of asymmetry is one of the most informative measurements.
+
+Fourth, the trajectory is \emph{path-dependent}. A later state carries traces of earlier relational events. This does not require long-term machine memory or weight updates. P\"utz and Esposito note that an LLM chatbot can be reconditioned on the co-produced transcript even though the model does not remember the conversation in the human sense \citep{PutzEsposito2024Repair}. The relevant state can therefore be distributed across human memory, prompt history, interface state, system context, and shared artifact. The claim is operational, not psychological.
+
+Fifth, post-encounter transformation is treated as evidence, not as a universal admission requirement. This matters because philosophical traditions disagree about whether encounter is the event of rupture, the sustained relation, or what ``takes hold'' afterward. For HCI, forcing those into one binary label would be a mistake. A bounded, reciprocal, path-dependent episode can occur without durable residue; durable human effects can also occur after one-sided interaction. Admission and consequence must be reported separately.
+
+These distinctions yield three layers of measurement.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}p{0.18\textwidth}p{0.25\textwidth}X@{}}
+\toprule
+\textbf{Layer} & \textbf{Question} & \textbf{Candidate evidence} \\
+\midrule
+Admission & Did a relational episode occur? & Identifiable start/maintenance/end; at least one complete cross-actor feedback loop; task-relevant uptake in both directions. \\
+Process & What kind of coupling occurred? & Repair burden, directional adaptation, shared-object uptake, co-development, resistance uptake, developmental versus stalled recursion, coordination latency. \\
+Residue & What changed beyond the immediate turn? & Problem-representation change, artifact ancestry, model-of-other change, next-action change, cross-session continuity, sensitivity to discontinuity. \\
+\bottomrule
+\end{tabularx}
+\caption{Encounter should be represented as a profile across layers rather than collapsed into a scalar.}
+\end{table}
+
+The theoretical consequence is important. ``Encounter'' becomes deliberately thinner than claims about machine subjectivity and thicker than generic interaction. It is thinner because it does not require consciousness, shared semantics, humanlike understanding, or moral personhood. It is thicker because it requires demonstrable relational history: each side must matter to what happens next in more than the immediate stimulus--response sense.
+
+\section{Operational machinery already exists, but it must be recombined}
+
+\subsection{Episode boundaries before encounter scores}
+
+HRI engagement research provides a useful first layer. Sidner and colleagues treat engagement as the start, maintenance, and end of perceived connection \citep{SidnerEtAl2005Engagement}. Rich and colleagues make parts of this process computationally recognizable through ``connection events'' including directed gaze, mutual facial gaze, adjacency pairs, and backchannels \citep{RichEtAl2010Engagement}. Textual LLM interaction lacks some embodied cues, but the methodological move transfers: identify events before inferring latent relation.
+
+Candidate textual connection events include summons and uptake, reference uptake, acknowledgments, explicit checks of understanding, repair initiation, repair resolution, topic re-entry, and closing uptake. Importantly, these should not be treated as sufficient encounter evidence. Fluent language models can generate adjacency-pair structure and backchannel-like phrases cheaply. Their value lies in segmenting the episode and locating candidate transitions where stronger tests can be applied.
+
+A systematic review of engagement assessment in HRI makes the construct-validity risk explicit. Sorrentino, Fiorini, and Cavallo find substantial variation in definitions, annotations, feature sets, and classification schemes \citep{SorrentinoEtAl2024Engagement}. A classifier can therefore become highly accurate at reproducing an annotation convention while saying little about the construct originally intended. Encounter research should not repeat this mistake by training a detector on intuitive labels such as ``this felt like an encounter.'' The theory-to-measure chain should remain visible.
+
+\subsection{Breakdown is a better probe than smoothness}
+
+Conversation analysis provides a harder instrument: repair. Albert and de Ruiter describe repair as the practices through which participants detect and resolve problems of speaking, hearing, and understanding \citep{AlbertDeRuiter2018Repair}. The key methodological advantage is that breakdown makes coordination visible. Smooth interaction is compatible with undetected misunderstanding. Trouble creates a moment in which participants can display what they took prior turns to mean and who bears the work of restoring progress.
+
+This is especially consequential for LLMs. P\"utz and Esposito show examples in which ChatGPT proceeds through ambiguity without initiating clarification, while users diagnose and repair the trouble; the model can then generate locally appropriate continuations from the user's corrective text without demonstrating the kind of understanding a human analyst might infer from the repaired surface \citep{PutzEsposito2024Repair}. The implication is not that LLMs can never repair. It is that \emph{repair success and repair reciprocity are different variables}.
+
+An encounter profile should therefore record at least: opportunities for repair, who first detects trouble, who initiates clarification, who supplies the discriminating information, whether the correction remains stable, and how often the same trouble reappears. A simple ratio such as human repair burden can expose a relation that looks collaborative at the output level but is maintained almost entirely by human compensatory labor.
+
+\subsection{Directionality matters more than convergence}
+
+Linguistic alignment supplies a related warning. Humans adapt lexical and syntactic behavior to computers, sometimes strongly, and that alignment can be mediated by beliefs about what will improve communicative success \citep{BraniganEtAl2010Alignment}. High surface convergence can therefore indicate a rigid machine to which the human is accommodating. If encounter research uses synchrony or similarity as relational evidence, it must estimate directionality.
+
+The same point appears more generally in interactive team cognition. Cooke and colleagues argue that team cognition should be treated as activity at the team level rather than recovered from static similarity among individual knowledge structures \citep{CookeEtAl2013Interactive}. The transfer to human--AI work should be cautious, because a model is not simply another human teammate. But the methodological lesson is strong: relational dynamics can have explanatory structure that participant-level measures miss. A human score plus a model score does not automatically recover what happened between them.
+
+For encounter research, directional measures should therefore be paired. How much does human behavior change conditional on AI behavior? How much does AI task behavior change conditional on human feedback? Which participant adapts after a perturbation? Which participant preserves the shared state? ``Bidirectional'' should be an empirical result, not a synonym for turn-taking.
+
+\subsection{Co-development is not repeated generation}
+
+Human--GenAI creativity research provides direct process measures for open-ended tasks. Luan, Kim, and Zhou's Idea Co-Development identifies exchanges in which feedback and iterative refinement carry an idea forward; repeated co-creation without this activity does not automatically improve joint creativity \citep{LuanKimZhou2025Augmented}. Cavallin and Spagnol find a complementary failure case: communication loops can mark difficulty rather than productive recursion \citep{CavallinSpagnol2026Sweat}.
+
+These results motivate an artifact-centered measure. Instead of counting turns, reconstruct the ancestry of the artifact or problem representation. For each consequential feature in the final state, ask whether it was introduced, preserved, rejected, transformed, or recombined by human and system across turns. A long output generated from a single prompt has shallow relational ancestry. A small design feature that survives several alternating transformations has deep mixed ancestry. This is not evidence of equal authorship, but it is evidence that the trajectory contains cross-actor dependence.
+
+The triadic structure also matters. Perugia and colleagues report that, in a joint HRI task, attention to the shared screen could be more diagnostic of involvement and performance than attention to the robot itself \citep{PerugiaEtAl2021Eyes}. The lesson is conceptually useful for generative AI. The strongest encounter may occur \emph{around a third thing}: a document, design, codebase, argument, simulation, or plan. Measuring gaze at the apparent partner has a textual analogue in measuring social language; both can distract from whether the participants are successfully orienting to and modifying a shared object.
+
+\subsection{Resistance should be separated from anthropomorphism}
+
+Philosophical accounts often associate genuine otherness with resistance, refusal, or the inability to assimilate the other to one's expectations. Yet experimental evidence complicates the prediction that disagreement will make an AI seem more like an other. Atamer, Pinto, and Shah randomly assign participants to an agreeing or disagreeing chatbot and find that disagreement makes the AI seem more machine-like and less capable of understanding human emotion, while also reducing willingness to reuse it \citep{AtamerPintoShah2026Disagreement}. Agreement, meanwhile, can increase confidence in users' prior positions.
+
+This is a crucial distinction. Alterity and anthropomorphism are not the same dependent variable. A system can resist a user while being perceived as more mechanical. A system can feel socially warm while never producing a consequential challenge. If encounter research optimizes for liking, perceived humanness, or reuse intention, it may select against exactly the forms of resistance some theories consider constitutive of encounter.
+
+The operational response should be to report a resistance profile rather than a goodness score: whether disagreement changes belief, produces counterargument, elicits evidence-seeking, triggers problem reframing, leads to exit, or changes classification of the system. Encounter quality cannot be inferred from continued engagement alone.
+
+\subsection{Residue appears in the next turn and at rupture}
+
+If an encounter changes the conditions of subsequent action, the effect should sometimes be visible after the critical contribution. Schneider analyzes more than 200,000 real-world LLM conversations and reports behavioral changes from the second turn onward, including shifts in politeness, language complexity, and prompt length, while correctly treating these as indicators rather than definitive proof of a changed mental model \citep{Schneider2025MentalModels}. This suggests a scalable strategy: combine behavioral proxies with explicit predictions about what users think the system can remember, infer, refuse, revise, or understand.
+
+Longer-term continuity creates a different probe. Tucker, Goodings, and Ellis analyze user responses to a major Replika update and find reports of grief, betrayal, lost supportive presence, altered memories, and newly visible algorithmic control \citep{TuckerGoodingsEllis2026Continuity}. The study is qualitative and self-selected, so it cannot establish prevalence. But the mechanism is analytically valuable: continuity often becomes visible when it breaks. A controlled, low-stakes perturbation to memory, style, task history, or persona can reveal which dimensions users were treating as persistent across sessions.
+
+Residue therefore should not be restricted to attachment. In research and creative work it may appear as a changed vocabulary, a revised research question, a new constraint, a durable artifact, a modified expectation about the system, or a next action that would not have been selected before the episode. These traces make encounter empirically consequential without requiring a claim that the machine has an enduring self.
+
+\section{The Encounter Test: a perturbation-based research protocol}
+
+The proposed test is not a new Turing test. It does not ask whether the AI appears human or whether a judge can identify its nature. It asks whether a bounded relation exhibits path-dependent reciprocal consequence, how that consequence is distributed, and what remains afterward.
+
+A useful study would use the same underlying model and vary the interaction architecture and relational capabilities. At minimum, the design should include conditions that disentangle duration, generativity, repair, resistance, and continuity. One feasible design combines four task families rather than forcing all variables into one enormous factorial experiment.
+
+\subsection{Arena 1: ambiguity and repair}
+
+Participants complete a collaborative task containing designed ambiguity, contradictory assumptions, or underspecified references. The system's clarification policy is experimentally varied. Measures include ambiguity detection, repair initiation, repair labor, recovery fidelity, repeated trouble, and task progress. The central question is not whether the conversation eventually succeeds. It is whether the relation detects and redistributes trouble in both directions.
+
+\subsection{Arena 2: shared-object co-development}
+
+Participants and AI work on a persistent shared object, such as a design brief, argument map, code artifact, or research model. Every state change is logged. Turns are coded as introducing, evaluating, preserving, rejecting, transforming, combining, or regenerating. The final artifact is represented as an ancestry graph. The key variables are mixed ancestry depth, reciprocal uptake, state-changing iterations, and stalled loops.
+
+\subsection{Arena 3: reasoned resistance}
+
+The system either agrees, disagrees without reasons, disagrees with reasons, or disagrees while explicitly inviting response. Measures distinguish belief update, evidence-seeking, counterargument, problem reframing, trust, machine-likeness, and continuation. This directly tests the assumption that resistance produces stronger encounter. The prediction should be conditional, not universal: resistance can deepen a trajectory, collapse it, or change the user's ontology of the system.
+
+\subsection{Arena 4: continuity and return}
+
+Participants return to a task after a delay. The system selectively preserves or perturbs dimensions of relational state such as shared history, artifact memory, style, name/persona, or previously negotiated constraints. Measures include detection, repair attempts, coordination cost, reclassification of the system, and whether the prior problem representation survives. This distinguishes memory as convenience from continuity as a constitutive part of the relation.
+
+Across all four arenas, the strongest additional instrument is \emph{counterfactual branching}. At selected consequential turns, the experiment creates matched branches in which one contribution is replaced by a plausible alternative. For the model side, branching can be performed exactly by replaying the same prior context with the alternative human contribution. For the human side, direct replay is impossible because the participant has already been changed by the interaction; the approximation is experimental assignment of matched participants to alternate AI contributions or elicitation of next-action choices before and after the perturbation. The point is not to reconstruct a metaphysical alternate world. It is to test whether the observed trajectory depends on specific relational events rather than merely on task duration or generic model fluency.
+
+Let a session be an ordered event sequence
+\[
+S = (e_1, e_2, \ldots, e_n),
+\]
+where each event records actor, time, operation, referent, and relevant shared state. Let $\Delta_t^{A\rightarrow B}$ denote the change in actor $B$'s next task-relevant action induced by a perturbation to actor $A$'s contribution at time $t$. Minimal evidence of reciprocal contingency requires observed or experimentally estimated non-trivial influence in both directions over the course of the bounded episode:
+\[
+\exists t,u: \Delta_t^{H\rightarrow M} > \epsilon \quad \text{and} \quad \Delta_u^{M\rightarrow H} > \epsilon,
+\]
+for a domain-specific threshold $\epsilon$ defined on task-relevant state rather than textual difference alone. This is not a measure of equality. The magnitudes may be dramatically asymmetric. The asymmetry is itself evidence about the form of the relation.
+
+Path dependence adds a persistence condition. A perturbation at $t$ should alter more than the immediate next utterance; it should change a later artifact state, problem representation, constraint set, repair history, or selected action. The empirical object is therefore not token divergence but \emph{trajectory divergence}.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}p{0.2\textwidth}X X@{}}
+\toprule
+\textbf{Measure} & \textbf{What it detects} & \textbf{What it does not prove} \\
+\midrule
+Boundary events & A bounded relational episode & Mutual understanding \\
+Repair burden & Distribution of trouble-management labor & Machine comprehension \\
+Directional adaptation & Who accommodates to whom & Symmetrical agency \\
+Artifact ancestry & Cross-turn contribution to shared state & Equal authorship \\
+Developmental recursion & State change across iterations & Positive outcome \\
+Resistance uptake & Consequence of disagreement/refusal & Anthropomorphism \\
+Counterfactual divergence & Dependence of trajectory on particular contributions & Conscious intention \\
+Post-state delta & Residue beyond the critical turn/session & That residue was beneficial \\
+\bottomrule
+\end{tabularx}
+\caption{Candidate measures and the claims they should not be allowed to smuggle in.}
+\end{table}
+
+This design also makes falsification possible. A conversation should \emph{not} count as a strong relational encounter merely because it is long, linguistically synchronized, pleasant, novel, or successful. The construct weakens when (1) the user performs nearly all repair, (2) model outputs can be permuted without changing the user's trajectory, (3) repeated turns do not modify task-relevant state, (4) apparent co-development is repeated regeneration, or (5) all post-session measures are explained by task completion rather than relational history.
+
+\section{Why this matters for HCI and AI evaluation}
+
+The practical implication is not that designers should maximize encounter. That would be a category error. Encounter is a relational form, not an intrinsic good. Some systems should be boring, transparent, and instrumental. A calculator that insists on becoming an interlocutor is badly designed. A safety-critical interface may need predictable interaction rather than relational generativity. The value of the construct is diagnostic: it distinguishes when a system is beginning to participate in path-dependent human activity and therefore when output-level evaluation is no longer sufficient.
+
+This has at least four consequences.
+
+First, engagement should not stand in for encounter. Relational-agent research shows that liking, trust, and desire to continue can be deliberately engineered \citep{BickmorePicard2005Relationships}. Atamer and colleagues show that disagreement can reduce reuse intention while potentially increasing epistemically relevant friction \citep{AtamerPintoShah2026Disagreement}. A system optimized for engagement can therefore become smoother and more confirmatory while becoming less capable of producing the kinds of consequential difference encounter theories care about.
+
+Second, outcome success should not stand in for reciprocity. P\"utz and Esposito's repair cases show why: the final conversation can look successful because the user supplied the work required to keep the system on track \citep{PutzEsposito2024Repair}. Evaluation that reports only task completion conceals relational labor. Repair burden and directional adaptation expose who carried the encounter.
+
+Third, generative architecture should not stand in for generative relation. Floridi's distant writing is instructive here. LLMs can expand the reachable space of narrative possibilities while the human retains high-level design, evaluation, and responsibility \citep{Floridi2025DistantWriting}. This can still produce a relational encounter under the present definition, but only if model contributions alter subsequent human constraints or choices and those human revisions in turn alter subsequent model behavior. The mere fact that the model generated the sentences is insufficient.
+
+Fourth, relational state introduces governance questions that output audits miss. If the relevant effects include changed problem representations, learned expectations, symbolic continuity, attachment, or new dependence on a shared artifact, then governance must sometimes evaluate sequences rather than isolated outputs. Tucker and colleagues' analysis of continuity rupture is an extreme example: an update can change not only output quality but the relation users believed they had been maintaining \citep{TuckerGoodingsEllis2026Continuity}. The same principle applies in lower-stakes knowledge work when an update silently changes memory, refusal behavior, or the model's capacity to sustain negotiated constraints.
+
+This does not require treating the AI as a moral patient or humanlike other. Fernandez-Borsot's analysis is useful precisely because the artificial other can remain serviceable, commodified, surveillant, and institutionally controlled even while it occupies an interlocutor-like role \citep{FernandezBorsot2025Otherness}. A complete encounter analysis must therefore preserve the infrastructure behind the dyad. The user may experience a second-person relation while the system remains a product whose memory, policies, and identity can be altered by an organization. Operationalizing the encounter should make that asymmetry more visible, not naturalize it.
+
+\section{What the construct refuses to decide}
+
+The proposed framework is intentionally incomplete in several ways.
+
+It does not settle whether an LLM understands. Conversation analysis allows useful study of repair without requiring direct access to mental representations, and P\"utz and Esposito explicitly argue that communicative performance can exploit human feedback without humanlike understanding \citep{PutzEsposito2024Repair}. The encounter construct inherits that methodological restraint.
+
+It does not settle whether AI is an Other in the ethical sense. Machidon's Buberian position sets a far stronger threshold involving vulnerability and mutual transformation \citep{Machidon2026Thou}. The present model can describe relational path dependence while leaving open whether such a relation is genuine I--Thou encounter. That is a feature, not an evasion: empirical HCI should not hide a metaphysical conclusion inside its dependent variable.
+
+It does not claim that every philosophically significant encounter is multi-turn. Deleuzian encounter can name an event that forces thought without reciprocal conversation. Anthropological contact can name a structured field rather than an episode. Baradian intra-action can question the prior separability of participants altogether. The construct here is explicitly a narrower \emph{relational interactional} object suited to empirical human--AI studies.
+
+It also does not fully solve the problem of infrastructure. A session-level event stream can still obscure training data, platform policy, labor, institutional authority, and economic incentives. Nor does it resolve cultural variation in the cues by which people recognize relation, repair, politeness, or refusal. The same behavior may carry different relational force across languages, tasks, communities, and stakes.
+
+Finally, the proposed measures are not yet a validated scale. That is deliberate. Sorrentino and colleagues' review of engagement measurement shows the danger of premature operational closure \citep{SorrentinoEtAl2024Engagement}. The immediate research task is discriminant validity: determine which candidate measures distinguish encounter from engagement, anthropomorphism, conversation length, task success, co-creation, and simple exposure. Only after that work should aggregation be considered.
+
+\section{Conclusion: from fluent exchange to altered possibility}
+
+The most important shift is small but consequential. Human--AI encounter should not be defined by the system looking human, the user feeling engaged, the conversation lasting a long time, or the model producing novel text. Those are all compatible with relations in which the user does nearly all the interpretive and corrective work. Nor should encounter require a prior verdict that the system understands, intends, or possesses an interior life. That would make the empirical construct depend on philosophical questions it was supposed to help investigate.
+
+A more tractable object is the path-dependent relation. A relational encounter begins when a bounded episode develops reciprocal task-relevant consequence: what the human does changes the system's subsequent task behavior, what the system does changes the human's subsequent task behavior, and the effects compound into a trajectory that cannot be described adequately as a set of independent prompt--response pairs. The strongest evidence comes not from smoothness but from perturbation: ambiguity, repair, resistance, branching, shared-object revision, return, and rupture. These events reveal who notices, who adapts, what survives, and whether the relation changes the next possible move.
+
+This reframes the research question. Instead of asking whether an AI \emph{is} the kind of entity one can encounter, we can first ask what kind of event occurred between human and system, what work sustained it, and what state it left behind. That question is both more modest and more demanding. It gives philosophical theories of encounter something they currently lack: conditions under which their claims can fail.
+
+\appendix
+\section{Assembly Instrument}
+The exact publication assembly prompt is preserved in \texttt{\_PROMPTS/assembly\_prompt.txt} and embedded in \texttt{index.html}. The paper intentionally points to, rather than reproduces, the full prompt because the prompt is substantially longer than an ordinary methods appendix.
+
+\section{Making History}
+This working paper was assembled on September 28, 2026 from the visible encounter research developed in the originating ChatGPT conversation, including 37 preserved zettels. The researcher supplied the inquiry direction, recursive-forage schemas, and publication instrument. The model selected the present argument, performed additional web verification for central sources, wrote connective prose, compiled the graph and bibliography, and generated the offline publication package. Archived zettel payloads are preserved without compiler metadata in their root card bodies. Derived claims in the paper are not evidence and are mapped to source cards in \texttt{encountering-encounter\_\_2026-09-28\_\_SOURCE\_MAP.txt}. Source verification is documented separately in \texttt{\_SLIPCASE/VERIFICATION.txt}.
+
+\section{Replication Path}
+Open \texttt{index.html} for the self-contained research desk. Use \texttt{000\_\_INDEX.txt} and \texttt{000\_\_MAP.txt} to inspect the field, \texttt{NETWORK.html} for topology, \texttt{000\_\_BIBLIOGRAPHY.html} for sources, and \texttt{ZETTELS.jsonl} for machine-readable cards. Rebuild instructions are in \texttt{000\_\_REBUILD.txt}; checkpoint identity and rejoin language are in \texttt{000\_\_RETURN\_PATH.txt}.
+
+\bibliographystyle{plainnat}
+\bibliography{encounter_field_20260928__references}
+
+\vfill
+\begin{flushright}
+\IfFileExists{MARK.pdf}{\includegraphics[width=0.28in]{MARK.pdf}}{}\\[-0.2em]
+{\tiny\color{quiet}COOL RADIO · transmission imprint}
+\end{flushright}
+
+\end{document}

@@ -1,0 +1,15 @@
+REBUILD INSTRUCTIONS
+
+1. Treat every root card matching NNN__*.txt as immutable evidence. Verify each SHA-256 against _SLIPCASE/MANIFEST.json.
+2. _MD mirrors must equal the corresponding root card byte-for-byte.
+3. Reparse fields without rewriting payloads. Every [[ADDRESS]] must become a classified relation. Resolve conservatively: exact ID → exact unique title → platform → ghost.
+4. Rebuild ZETTELS.json/jsonl, graph JSONL, bibliography views, NETWORK.*, READER.html, CARDS.html, and index.html from evidence.
+5. Recompile encountering-encounter__2026-09-28.tex against encounter_field_20260928__references.bib.
+6. Render the PDF and inspect pages for clipping, missing text, citation failures, and layout errors.
+7. Recompute _SLIPCASE/VERIFICATION.txt and archive integrity.
+
+Do not rewrite old cards to correct them. Add a new zettel.
+
+STANDALONE INDEX RECONSTRUCTION
+Run: python RECONSTRUCT.py index.html OUTPUT_DIR
+The originating run tested this against all 37 card SHA-256 values with zero mismatches.

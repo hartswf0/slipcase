@@ -1,0 +1,4352 @@
+ZETTEL
+
+ID:
+ENCOUNTER-001
+
+TITLE:
+The adversarial root of “encounter” does not establish an adversarial theory of encounter.
+
+SOURCE:
+Oxford Advanced Learner’s Dictionary — “encounter” — current historical note; Middle English origin. ([oxfordlearnersdictionaries.com](https://www.oxfordlearnersdictionaries.com/us/definition/english/encounter_1?utm_source=chatgpt.com))
+
+PASSAGE:
+[QUOTE] Earliest senses include “meet as an adversary” and “a meeting of adversaries.” ([oxfordlearnersdictionaries.com](https://www.oxfordlearnersdictionaries.com/us/definition/english/encounter_1?utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+The difference between a word’s semantic ancestry and the genealogy of a concept.
+
+LOCAL MOVE:
+The dictionary traces Middle English encountren through Old French encontrer/encontre to Latin contra, “against.”
+
+SOURCE TERMS:
+encounter
+adversary
+against
+meet
+come across
+
+WHAT BECAME STRANGE:
+The tempting claim that encounter essentially means confrontation may itself be a retrospective construction. The ordinary English sense changes from adversarial meeting toward unexpected or contingent meeting. Nothing in the etymology establishes that Buber, Goffman, Deleuze, HCI, or AI researchers inherit a continuous “againstness.”
+
+QUESTION:
+When twentieth-century thinkers make encounter philosophically consequential, are they recovering an older adversarial semantic residue, independently constructing a new technical concept, or simply exploiting an ordinary word already transformed by centuries of use?
+
+DEEPER QUESTION:
+Can “encounter” have a conceptual genealogy at all, or do several unrelated technicalizations merely share one lexical carrier?
+
+MECHANISM:
+Semantic inheritance supplies possible connotations; later authors selectively reactivate, suppress, or ignore them.
+
+FORMAL SHIFT:
+<LEXICAL FORM: encounter>
+→ <historically available senses>
+→ [disciplinary technicalization]
+→ <new concept not guaranteed by etymology>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+ETYMOLOGY ≠ CONCEPTUAL DESCENT
+LEXICAL RESEMBLANCE ≠ INFLUENCE
+
+TENSION:
+The earlier hypothesis treated contra → confrontation → alterity/resistance as a continuous substrate. Goffman explicitly excludes some everyday senses of unexpectedness and trouble from his technical definition of encounter.
+
+MISSING:
+Citation receipts showing which twentieth-century theorists actually consulted, invoked, or depended upon the etymology.
+
+BOUNDARY:
+The etymology licenses a historical fact about the English word. It does not license claims of intellectual influence.
+
+CITATION TRAIL:
+Oxford English Dictionary historical quotations.
+Old French encontre/encontrer corpora.
+Goffman’s explicit terminological disclaimer.
+Deleuze’s use of rencontre in Différence et répétition.
+
+TEST:
+Build a dated corpus of technical uses of encounter/rencontre/Begegnung and search for explicit etymological discussion or citation. Separate independent technicalizations from demonstrable transmission.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[Encounter vs Interaction]]
+[[Lexical History Is Not Conceptual Genealogy]]
+[[Goffman Excludes the Everyday Encounter]]
+
+BIBTEX:
+@misc{OxfordEncounter,
+  author = {{Oxford University Press}},
+  title = {Encounter},
+  howpublished = {Oxford Advanced Learner's Dictionary},
+  note = {Historical origin note: Middle English and Old French rencontre/encontre}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-002
+
+TITLE:
+Goffman technicalizes encounter by removing surprise and trouble from it.
+
+SOURCE:
+Erving Goffman — Encounters: Two Studies in the Sociology of Interaction — 1961 — Preface p. 8; “Fun in Games,” pp. 17–19. ([scribd.com](https://www.scribd.com/document/853158019/Encounters-Two-Studies-in-the-Sociology-of-Interaction-Erving-Goffman?utm_source=chatgpt.com))
+
+PASSAGE:
+[QUOTE] Goffman calls the unit a “focused gathering, or an encounter, or a situated activity system.” ([scribd.com](https://www.scribd.com/document/853158019/Encounters-Two-Studies-in-the-Sociology-of-Interaction-Erving-Goffman?utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+A documented case in which “encounter” is deliberately stripped of its ordinary semantic baggage and rebuilt as a sociological unit.
+
+LOCAL MOVE:
+Goffman distinguishes unfocused interaction from focused interaction, then gives three partially unsatisfactory names to the natural social unit in which focused interaction occurs. He explicitly notes that ordinary “encounter” can mean an unexpected or troublesome meeting and says those meanings must be excluded. ([scribd.com](https://www.scribd.com/document/853158019/Encounters-Two-Studies-in-the-Sociology-of-Interaction-Erving-Goffman?utm_source=chatgpt.com))
+
+SOURCE TERMS:
+focused interaction
+focused gathering
+encounter
+situated activity system
+mutual attention
+monitoring
+we rationale
+rules of irrelevance
+
+WHAT BECAME STRANGE:
+One of the strongest twentieth-century theories explicitly called “encounter” does not preserve encounter-as-surprise. It makes encounter depend instead on jointly sustained attention and ratified participation.
+
+QUESTION:
+If Goffman’s encounter requires mutual monitoring and a jointly sustained focus, can human–AI interaction qualify when only the human possesses access to the interaction as a social situation?
+
+DEEPER QUESTION:
+Is mutual orientation more fundamental to encounter than contingency?
+
+MECHANISM:
+Co-presence
+→ mutual orientation
+→ sustained shared focus
+→ preferential communication
+→ monitoring of monitoring
+→ emergent “we rationale”
+→ bounded encounter.
+
+FORMAL SHIFT:
+<PERSONS IN CO-PRESENCE>
+→ <FOCUSED ATTENTION>
+→ [MUTUAL MONITORING + RATIFICATION]
+→ <ENCOUNTER AS SITUATED ACTIVITY SYSTEM>
+
+SOURCE FORMALISM:
+UNFOCUSED INTERACTION / FOCUSED INTERACTION
+FOCUSED INTERACTION → FOCUSED GATHERING / ENCOUNTER / SITUATED ACTIVITY SYSTEM
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+ENCOUNTER_GOFFMAN =
+MUTUAL_FOCUS
++ MUTUAL_RELEVANCE
++ MONITORING
++ BOUNDARY
++ TEMPORARY_WE
+
+TENSION:
+A probabilistic AI can surprise a user without satisfying Goffman’s stronger criterion of reciprocal monitoring. Surprise alone therefore cannot distinguish an encounter from an unpredictable output.
+
+MISSING:
+An account of whether artificial systems can participate in rather than merely simulate the ratification of a shared situation.
+
+BOUNDARY:
+Goffman is describing human social arrangements in immediate physical presence. Applying the framework to AI requires argument, not simple substitution.
+
+CITATION TRAIL:
+Goffman — Behavior in Public Places.
+Conversation analysis on summons, openings, repair, and closings.
+Suchman on mutual intelligibility.
+Human–robot “engagement” literature.
+
+TEST:
+Annotate human–LLM sessions for Goffman’s encounter conditions: initiation, ratification, mutual focus, monitoring, repair, termination. Determine which conditions are interactional effects produced solely by the human.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[Mutual Attention]]
+[[Situated Activity System]]
+[[Human-AI Encounter Test]]
+
+BIBTEX:
+@book{Goffman1961Encounters,
+  author = {Erving Goffman},
+  title = {Encounters: Two Studies in the Sociology of Interaction},
+  year = {1961},
+  publisher = {Bobbs-Merrill},
+  address = {Indianapolis}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-003
+
+TITLE:
+Turing produces the machine encounter by preventing an ordinary encounter.
+
+SOURCE:
+A. M. Turing — “Computing Machinery and Intelligence” — 1950 — §1, pp. 433–434. ([academic.oup.com](https://academic.oup.com/mind/article/LIX/236/433/986238?utm_source=chatgpt.com))
+
+PASSAGE:
+[QUOTE] “The interrogator stays in a room apart from the other two.” ([cs.sfu.ca](https://www.cs.sfu.ca/~vaughan/teaching/889/papers/turing1950.html?utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+The imitation game depends on engineered non-encounter at the bodily level.
+
+LOCAL MOVE:
+Turing replaces “Can machines think?” with a game in which the interrogator must classify hidden participants through mediated linguistic responses. Identity-bearing bodily cues are deliberately removed. ([academic.oup.com](https://academic.oup.com/mind/article/LIX/236/433/986238?utm_source=chatgpt.com))
+
+SOURCE TERMS:
+imitation game
+interrogator
+machine
+questions
+answers
+separate room
+determine
+
+WHAT BECAME STRANGE:
+The canonical AI “encounter” is architecturally produced by suppressing face-to-face encounter. The machine becomes encounterable as an uncertain other precisely because ordinary perceptual access has been blocked.
+
+QUESTION:
+Is mediation merely the channel of a human–AI encounter, or can selective deprivation of information actively manufacture the alterity attributed to the system?
+
+DEEPER QUESTION:
+How much of machine otherness is an interface effect?
+
+MECHANISM:
+participant identity hidden
+→ communication channel restricted
+→ behavioral evidence isolated
+→ uncertainty about source maintained
+→ attribution/judgment becomes possible.
+
+FORMAL SHIFT:
+<EMBODIED PARTICIPANT>
+→ <TEXTUAL RESPONSES>
+→ [IDENTITY INFERENCE]
+→ <MACHINE/HUMAN ATTRIBUTION>
+
+SOURCE FORMALISM:
+A = participant
+B = participant
+C = interrogator
+Machine substitutes for one participant.
+C judges identity using answers transmitted across separation.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+ENCOUNTER_EFFECT =
+OTHERNESS
+PRODUCED UNDER
+CONTROLLED INFORMATION LOSS
+
+TENSION:
+Levinasian and Goffmanian accounts privilege presence, face, or mutual monitoring. Turing gains epistemic uncertainty by removing exactly those resources.
+
+MISSING:
+An account of what the communication medium contributes independently of machine intelligence.
+
+BOUNDARY:
+Turing does not describe the imitation game as a theory of encounter, alterity, or HCI. Calling it one is our reconstruction.
+
+CITATION TRAIL:
+Turing 1950.
+Earlier imitation-game scholarship on gender.
+Teleprinter and teletype histories.
+ELIZA and later conversational interfaces.
+
+TEST:
+Compare judgments of the same AI across text-only, voice, avatar, visible-process, and model-internals conditions. If perceived otherness changes substantially, the “encounter” is partly generated by mediation architecture.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[Mediated Otherness]]
+[[Turing Interface]]
+[[Encounter by Information Deprivation]]
+
+BIBTEX:
+@article{Turing1950Computing,
+  author = {Alan M. Turing},
+  title = {Computing Machinery and Intelligence},
+  journal = {Mind},
+  year = {1950},
+  volume = {59},
+  number = {236},
+  pages = {433--460},
+  doi = {10.1093/mind/LIX.236.433}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-004
+
+TITLE:
+Licklider’s “symbiosis” preserves a division of agency inside the partnership.
+
+SOURCE:
+J. C. R. Licklider — “Man-Computer Symbiosis” — 1960 — Summary and §I.A, pp. 4–11. ([man.computer](https://man.computer/?utm_source=chatgpt.com))
+
+PASSAGE:
+[PARAPHRASE] Humans set goals, hypotheses, criteria, and evaluations; computers perform routinizable preparatory work. ([man.computer](https://man.computer/?utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+Partnership language does not imply ontological or functional symmetry.
+
+LOCAL MOVE:
+Licklider imports biological symbiosis to imagine close human-computer coupling while specifying complementary functions for human and machine.
+
+SOURCE TERMS:
+symbiosis
+cooperative interaction
+close coupling
+partnership
+goals
+hypotheses
+criteria
+evaluation
+routinizable work
+
+WHAT BECAME STRANGE:
+“Partner” can name a relation whose allocation of authority is sharply predetermined. The rhetoric of partnership is therefore insufficient evidence for mutual agency.
+
+QUESTION:
+At what point does complementary division of labor become an encounter rather than an instrumentally organized partnership?
+
+DEEPER QUESTION:
+Does contemporary agentic AI actually undo Licklider’s allocation of goals and evaluation to the human, or merely obscure that allocation?
+
+MECHANISM:
+human formulates
+→ computer processes
+→ human evaluates
+→ coupled cycle supports decisions.
+
+FORMAL SHIFT:
+<FORMULATED PROBLEM>
+→ <HUMAN/MACHINE DIVISION OF LABOR>
+→ [CLOSE COUPLING]
+→ <COOPERATIVE INTELLECTUAL PERFORMANCE>
+
+SOURCE FORMALISM:
+HUMAN:
+goals / hypotheses / criteria / evaluation
+
+COMPUTER:
+routinizable work preparing for insight and decision
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+PARTNERSHIP ≠ SYMMETRY
+COUPLING ≠ CO-CONSTITUTION
+
+TENSION:
+Contemporary descriptions of AI “collaboration” often treat initiative or surprise as evidence that the relation has become more reciprocal. Licklider shows that cooperation can coexist with an explicit hierarchy of functions.
+
+MISSING:
+A criterion distinguishing delegated operation, initiative, negotiation, and genuine revision of goals.
+
+BOUNDARY:
+Licklider predicts a technical arrangement; he does not claim Buberian reciprocity, Baradian intra-action, or ethical encounter.
+
+CITATION TRAIL:
+Engelbart — Augmenting Human Intellect.
+Mixed-initiative interaction.
+Adjustable autonomy.
+Human–AI collaboration literature.
+
+TEST:
+Code modern AI products for where goals, hypotheses, criteria, action selection, and evaluation are actually assigned. Compare the resulting agency map with Licklider’s 1960 partition.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[Symbiosis Is Not Symmetry]]
+[[Agency Allocation]]
+[[Human-AI Partnership]]
+
+BIBTEX:
+@article{Licklider1960Symbiosis,
+  author = {J. C. R. Licklider},
+  title = {Man-Computer Symbiosis},
+  journal = {IRE Transactions on Human Factors in Electronics},
+  year = {1960},
+  volume = {HFE-1},
+  number = {1},
+  pages = {4--11},
+  doi = {10.1109/THFE2.1960.4503259}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-005
+
+TITLE:
+Direct manipulation succeeds by making the computer disappear as an encountered entity.
+
+SOURCE:
+Ben Shneiderman — “Direct Manipulation: A Step Beyond Programming Languages” — 1983 — pp. 57–69. ([cs.umd.edu](https://www.cs.umd.edu/~ben/publications.html?utm_source=chatgpt.com))
+
+PASSAGE:
+[QUOTE] “The computer becomes transparent, and users can concentrate on their tasks.” ([cs.umd.edu](https://www.cs.umd.edu/~ben/publications.html?utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+A major HCI paradigm explicitly treats perceptual disappearance of the computer as a design success.
+
+LOCAL MOVE:
+Shneiderman identifies direct manipulation with visible objects, rapid incremental reversible actions, and replacement of complex command syntax with physicalized manipulation. ([tandfonline.com](https://www.tandfonline.com/doi/abs/10.1080/01449298208914450?utm_source=chatgpt.com))
+
+SOURCE TERMS:
+direct manipulation
+visible objects
+rapid
+incremental
+reversible
+physical action
+transparent computer
+
+WHAT BECAME STRANGE:
+If encounter requires meeting something as an other, direct manipulation appears to optimize the opposite condition: the machine recedes so that the task object seems directly available.
+
+QUESTION:
+Did graphical HCI domesticate human-computer encounter by designing away the computer’s alterity?
+
+DEEPER QUESTION:
+Is conversational AI historically remarkable because the computational substrate returns from transparency and reappears as an apparent interlocutor?
+
+MECHANISM:
+represent object
+→ expose immediate action
+→ provide rapid feedback
+→ minimize syntactic mediation
+→ suppress awareness of computational intermediary.
+
+FORMAL SHIFT:
+<COMPUTER COMMAND>
+→ <VISIBLE TASK OBJECT>
+→ [DIRECT MANIPULATION]
+→ <COMPUTER AS TRANSPARENT MEDIUM>
+
+SOURCE FORMALISM:
+Visibility of object of interest.
+Rapid, reversible, incremental actions.
+Replacement of complex command language by manipulation of represented objects.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+CLASSICAL DIRECT MANIPULATION:
+USER → OBJECT
+        [computer hidden]
+
+CONVERSATIONAL AI:
+USER → APPARENT OTHER
+        [computer foregrounded]
+
+TENSION:
+The historical story “interfaces progressively become more encounter-like” now looks wrong. At least one foundational HCI trajectory deliberately reduces encounter with the computer.
+
+MISSING:
+Evidence that conversational systems actually reverse this trajectory rather than simply producing a new transparency around much larger infrastructure.
+
+BOUNDARY:
+Transparency here is a design metaphor, not literal invisibility and not a philosophical claim about alterity.
+
+CITATION TRAIL:
+Shneiderman 1982/1983.
+Hutchins, Hollan, Norman on direct manipulation.
+Weiser on invisible computing.
+Conversational user interfaces.
+
+TEST:
+Compare design manifestos from command-line, direct-manipulation, ubiquitous-computing, and conversational-AI eras for whether the machine is framed as object, medium, environment, servant, partner, or interlocutor.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[Transparency vs Encounter]]
+[[Direct Manipulation]]
+[[Return of the Computational Other]]
+
+BIBTEX:
+@article{Shneiderman1983Direct,
+  author = {Ben Shneiderman},
+  title = {Direct Manipulation: A Step Beyond Programming Languages},
+  journal = {Computer},
+  year = {1983},
+  volume = {16},
+  number = {8},
+  pages = {57--69},
+  doi = {10.1109/MC.1983.1654471}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-006
+
+TITLE:
+Suchman makes “human-machine interaction” itself an empirical question.
+
+SOURCE:
+Lucy A. Suchman — Plans and Situated Actions: The Problem of Human-Machine Communication — 1987 — Introduction; mutual intelligibility discussion. ([cambridge.org](https://www.cambridge.org/core/books/abs/humanmachine-reconfigurations/introduction-to-the-1st-edition/46C1F6B7DA2DFF7953ACA3D2F0A8DC60?utm_source=chatgpt.com))
+
+PASSAGE:
+[PARAPHRASE] Suchman notes that talk of human–machine interaction had become pervasive while its very basis largely escaped examination. ([cambridge.org](https://www.cambridge.org/core/books/abs/humanmachine-reconfigurations/introduction-to-the-1st-edition/46C1F6B7DA2DFF7953ACA3D2F0A8DC60?utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+The category “interaction” may be an attribution generated by properties of artifacts rather than a neutral description of what occurs.
+
+LOCAL MOVE:
+Suchman contrasts a planning model with situated action and examines a supposedly interactive intelligent machine. Her analysis treats successful human interaction as collaboratively produced intelligibility involving contextual resources, detection of misunderstanding, and repair. ([apice.unibo.it](https://apice.unibo.it/bin/view/Publication/SuchmanThesis85?mode=data&utm_source=chatgpt.com))
+
+SOURCE TERMS:
+plans
+situated action
+mutual intelligibility
+shared understanding
+interaction
+reactive
+linguistic
+opaque
+repair
+circumstances
+
+WHAT BECAME STRANGE:
+Before asking whether AI interaction has become an “encounter,” we may need to reopen the prior question: when is it justified to describe human-machine conduct as interaction at all?
+
+QUESTION:
+Which apparent reciprocities of contemporary AI are accomplishments of the model, which are accomplishments of the human, and which arise only from the coupled situation?
+
+DEEPER QUESTION:
+Can interaction be operationalized without smuggling in symmetry?
+
+MECHANISM:
+system produces behavior
+→ human interprets behavior as meaningful
+→ mismatch appears
+→ human/system resources permit or fail to permit repair
+→ intelligibility is maintained or collapses.
+
+FORMAL SHIFT:
+<PLAN / REPRESENTATION>
+→ <CONCRETE SITUATION>
+→ [INTERPRETATION + REPAIR]
+→ <LOCALLY ACHIEVED INTELLIGIBILITY>
+
+SOURCE FORMALISM:
+PLANNING VIEW:
+plans prescribe action.
+
+SITUATED-ACTION VIEW:
+action responds to contingencies; intelligibility is collaboratively accomplished in situ.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+OBSERVED TURN EXCHANGE
+≠
+PROVEN MUTUAL INTERACTION
+
+TENSION:
+Goffman makes mutual monitoring constitutive of encounter. Suchman shows why machine participation in mutual intelligibility cannot simply be assumed from alternating turns.
+
+MISSING:
+A contemporary replication with probabilistic language models capable of generating context-sensitive repair behavior.
+
+BOUNDARY:
+Suchman’s Xerox-machine analysis does not directly settle what modern LLMs can accomplish. Its force is methodological: do not presuppose the relation you intend to study.
+
+CITATION TRAIL:
+Ethnomethodology.
+Conversation analysis.
+Suchman 2007 Human-Machine Reconfigurations.
+Repair in conversational AI.
+Grounding in dialogue systems.
+
+TEST:
+Run controlled breakdowns in human-human and human-LLM dialogue. Compare who detects trouble, who initiates repair, what contextual resources are used, and whether apparent repair tracks actual shared understanding.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[Interaction as Achievement]]
+[[Mutual Intelligibility]]
+[[Repair as Encounter Test]]
+
+BIBTEX:
+@book{Suchman1987Plans,
+  author = {Lucy A. Suchman},
+  title = {Plans and Situated Actions: The Problem of Human-Machine Communication},
+  year = {1987},
+  publisher = {Cambridge University Press},
+  address = {Cambridge}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-007
+
+TITLE:
+Pratt changes the unit from two encountering subjects to a historically produced contact space.
+
+SOURCE:
+Mary Louise Pratt — “Arts of the Contact Zone” — 1991 — p. 34. ([jstor.org](https://www.jstor.org/stable/i25595461?utm_source=chatgpt.com))
+
+PASSAGE:
+[QUOTE] Contact zones are spaces where cultures “meet, clash, and grapple with each other.” ([tandfonline.com](https://www.tandfonline.com/doi/full/10.1080/14755610.2023.2269270?utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+Encounter can be displaced from a dyadic relation into a social space whose asymmetries pre-exist any individual meeting.
+
+LOCAL MOVE:
+Pratt defines contact zones through historically separated peoples entering relations frequently structured by colonialism, coercion, and unequal power. ([cambridge.org](https://www.cambridge.org/core/journals/modern-italy/article/for-me-it-was-lifechanging-the-italian-contact-zone-of-occupation-and-the-encounter-with-otherness-in-oral-history-recollections/4771544D8BF67BF624F394CBEF92B1C5?utm_source=chatgpt.com))
+
+SOURCE TERMS:
+contact zone
+meet
+clash
+grapple
+asymmetrical relations of power
+colonialism
+autoethnography
+transculturation
+
+WHAT BECAME STRANGE:
+“You ↔ AI” may be the wrong scale of analysis. The relevant object may be the human–AI contact zone consisting of model, interface, platform, data, labor, institutional policy, and inherited classifications.
+
+QUESTION:
+What disappears analytically when human–AI encounter is represented as a conversational dyad?
+
+DEEPER QUESTION:
+Can interface design create the phenomenology of reciprocity while structurally preventing reciprocal power?
+
+MECHANISM:
+historical separation/difference
+→ contact within structured space
+→ asymmetric participation
+→ appropriation/resistance/transculturation
+→ new representational forms.
+
+FORMAL SHIFT:
+<SELF / OTHER>
+→ <CONTACT SPACE>
+→ [ASYMMETRICAL RELATION]
+→ <NEGOTIATED / CONTESTED FORMS>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+APPARENT DYAD:
+USER ↔ MODEL
+
+CONTACT ZONE:
+USER
+↕
+INTERFACE
+↕
+MODEL ← TRAINING CORPUS
+↕         ↕
+PLATFORM   LABOR / POLICY / CAPITAL / LAW
+
+TENSION:
+Buberian and conversational framings privilege the relation between two apparent participants. Pratt makes power and historical infrastructure constitutive of the place in which meeting occurs.
+
+MISSING:
+An account of which AI infrastructures are experientially available to users and which remain structurally absent from the apparent encounter.
+
+BOUNDARY:
+Pratt theorizes colonial cultural contact, not computational systems. Translation to AI must preserve rather than trivialize the historical specificity of colonial asymmetry.
+
+CITATION TRAIL:
+Pratt — Imperial Eyes.
+Asad — Anthropology and the Colonial Encounter.
+Star and Griesemer — boundary objects.
+Postcolonial computing.
+Data colonialism.
+
+TEST:
+Take one chatbot conversation and produce two analyses: dyadic encounter versus contact-zone analysis. Record which actors, constraints, histories, and power relations become visible only in the second.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[AI Contact Zone]]
+[[Dyad as Interface Effect]]
+[[Infrastructure of Encounter]]
+
+BIBTEX:
+@article{Pratt1991Contact,
+  author = {Mary Louise Pratt},
+  title = {Arts of the Contact Zone},
+  journal = {Profession},
+  year = {1991},
+  pages = {33--40},
+  jstor = {25595469}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-008
+
+TITLE:
+Barad makes encounter potentially too late: interaction already assumes the entities it claims to relate.
+
+SOURCE:
+Karen Barad — “Posthumanist Performativity: Toward an Understanding of How Matter Comes to Matter” — 2003 — p. 815. ([journals.uchicago.edu](https://www.journals.uchicago.edu/doi/abs/10.1086/345321?utm_source=chatgpt.com))
+
+PASSAGE:
+[QUOTE] “relata do not preexist relations.” ([link.springer.com](https://link.springer.com/article/10.1007/s11229-021-03160-1?utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+The distinction between interaction and intra-action attacks the assumption that encounter begins with two already bounded participants.
+
+LOCAL MOVE:
+Barad makes phenomena ontologically primary and argues that determinate relata emerge through specific intra-actions and agential cuts. ([link.springer.com](https://link.springer.com/article/10.1007/s11229-021-03160-1?utm_source=chatgpt.com))
+
+SOURCE TERMS:
+phenomena
+intra-action
+relata
+agential separability
+agential cut
+apparatus
+objectivity
+
+WHAT BECAME STRANGE:
+Even a sophisticated theory of encounter may remain ontologically conservative if it starts by writing:
+
+HUMAN ↔ AI
+
+The slash between “human” and “AI” may itself be an achievement of an apparatus.
+
+QUESTION:
+Which boundaries in a human–AI episode pre-exist the episode, and which are enacted by interfaces, prompts, logging systems, institutional categories, evaluation procedures, and discourse?
+
+DEEPER QUESTION:
+Is “human-AI encounter” already the output of a cut?
+
+MECHANISM:
+phenomenon
+→ specific material-discursive apparatus
+→ agential cut
+→ determinate boundaries/properties
+→ apparent relata.
+
+FORMAL SHIFT:
+<PHENOMENON>
+→ <APPARATUS>
+→ [AGENTIAL CUT]
+→ <RELATA-WITHIN-PHENOMENON>
+
+SOURCE FORMALISM:
+INTRA-ACTION contrasts with INTERACTION.
+Specific intra-actions enact agential separability.
+Relata emerge within phenomena.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+INTERACTION:
+A + B → relation
+
+INTRA-ACTION:
+phenomenon → cut → A | B
+
+TENSION:
+Encounter theories built around alterity often require an Other already capable of confronting a self. Barad pressures the prior operation through which “self,” “other,” “human,” and “machine” become stable analytical units.
+
+MISSING:
+A non-metaphorical specification of what counts as an apparatus and agential cut in actual HCI experiments.
+
+BOUNDARY:
+Barad’s argument emerges from a philosophy of quantum physics and material-discursive practices. It cannot simply be converted into a software architecture.
+
+CITATION TRAIL:
+Bohr on phenomena.
+Barad 2007 Meeting the Universe Halfway.
+Suchman on reconfiguration.
+STS studies of classification and infrastructure.
+
+TEST:
+Choose one human-AI study and list every operation required before its data can contain separate columns/categories called USER and SYSTEM. Treat those operations, rather than the categories, as the initial object of inquiry.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[Interaction vs Intra-action]]
+[[The Human-AI Cut]]
+[[Apparatus Produces the Participants]]
+
+BIBTEX:
+@article{Barad2003Posthumanist,
+  author = {Karen Barad},
+  title = {Posthumanist Performativity: Toward an Understanding of How Matter Comes to Matter},
+  journal = {Signs},
+  year = {2003},
+  volume = {28},
+  number = {3},
+  pages = {801--831},
+  doi = {10.1086/345321}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-009
+
+TITLE:
+For Deleuze, encounter is diagnosed by failed recognition, not by reciprocity.
+
+SOURCE:
+Gilles Deleuze — Difference and Repetition — 1968; English translation 1994 — “The Image of Thought,” p. 139. ([cup.columbia.edu](https://cup.columbia.edu/book/difference-and-repetition/9780231081580/?utm_source=chatgpt.com))
+
+PASSAGE:
+[QUOTE] “Something in the world forces us to think.” The object is not recognition but “a fundamental encounter.” ([journals.sagepub.com](https://journals.sagepub.com/doi/10.1177/0263276420966389?utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+Encounter can be defined by what it does to thought rather than by the social status of the encountered entity.
+
+LOCAL MOVE:
+Deleuze contrasts recognition with an encounter that cannot simply be subsumed under existing categories and therefore forces the genesis of thought.
+
+SOURCE TERMS:
+encounter
+recognition
+thought
+force
+sensible
+problem
+image of thought
+
+WHAT BECAME STRANGE:
+A machine need not be a reciprocal subject for a human to encounter it in Deleuze’s sense. A theorem, temple, error, generated image, or model output could qualify if it breaks recognition and forces a new problem.
+
+QUESTION:
+Should the test for human–AI encounter concern what the AI is, or whether the episode reorganizes the user’s space of thought?
+
+DEEPER QUESTION:
+Can engineered “surprise” force thought, or does genuine encounter require an event that escapes the designer’s and user’s available recognitional schema?
+
+MECHANISM:
+recognitional schema fails
+→ something is sensed as problematic
+→ faculties cannot smoothly assimilate it
+→ thought is forced
+→ a problem/new concept becomes possible.
+
+FORMAL SHIFT:
+<THING RECOGNIZED AS X>
+→ <NON-RECOGNIZABLE SENSIBLE EVENT>
+→ [PROBLEMATIZATION]
+→ <NEW THOUGHT>
+
+SOURCE FORMALISM:
+Recognition is opposed to the fundamental encounter in Deleuze’s critique of the dogmatic image of thought.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+ENCOUNTER_DELEUZE
+≠ RESPONSE NOVELTY
+
+ENCOUNTER_DELEUZE
+= BREAK IN RECOGNITION
+→ NEW PROBLEM BECOMES THINKABLE
+
+TENSION:
+Goffman requires mutual social organization. Deleuze does not. These are not two versions of the same encounter concept; they yield different empirical tests.
+
+MISSING:
+A measure of conceptual reorganization that is not merely self-reported surprise or output novelty.
+
+BOUNDARY:
+Deleuze is theorizing the genesis of thought, not human-computer interaction.
+
+CITATION TRAIL:
+Deleuze — Proust and Signs.
+Peircean surprise/abduction.
+Dewey on problematic situations.
+Creativity-support-tool studies.
+
+TEST:
+Compare AI outputs rated equally surprising. Test whether any produce durable changes in the user’s subsequent questions, categories, representations, or problem formulation. Treat those transformations, not surprise ratings, as the candidate encounter variable.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[Encounter vs Recognition]]
+[[Prompt Changes the Problem]]
+[[Transformative Encounter]]
+
+BIBTEX:
+@book{Deleuze1994Difference,
+  author = {Gilles Deleuze},
+  title = {Difference and Repetition},
+  translator = {Paul Patton},
+  year = {1994},
+  publisher = {Columbia University Press},
+  address = {New York}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-010
+
+TITLE:
+Althusser’s encounter is successful only when contingency “takes hold” long enough to make a world.
+
+SOURCE:
+Louis Althusser — “The Underground Current of the Materialism of the Encounter” — written 1982–1983; English in Philosophy of the Encounter, 2006. ([azinelibrary.org](https://azinelibrary.org/approved/underground-current-materialism-encounter-and-nietzsche-genealogy-history-0-1.pdf))
+
+PASSAGE:
+[PARAPHRASE] A swerve produces an encounter; if the encounter lasts, a world can form. If it does not last, there is no world. ([azinelibrary.org](https://azinelibrary.org/approved/underground-current-materialism-encounter-and-nietzsche-genealogy-history-0-1.pdf))
+
+RESEARCH OBJECT:
+Encounter is not merely a moment of contact but a contingent stabilization that retrospectively gives elements determinate existence within a structure.
+
+LOCAL MOVE:
+Althusser reads Epicurean atomism through clinamen, encounter, and prise/taking-hold. Necessity and structure appear after a contingent conjunction has stabilized rather than governing it in advance. ([azinelibrary.org](https://azinelibrary.org/approved/underground-current-materialism-encounter-and-nietzsche-genealogy-history-0-1.pdf))
+
+SOURCE TERMS:
+swerve
+clinamen
+encounter
+take
+take hold
+contingency
+lasting encounter
+world
+accomplished fact
+
+WHAT BECAME STRANGE:
+A fleeting surprising exchange may be precisely what does NOT yet count as the consequential kind of encounter. The more interesting event may be when a contingent relation stabilizes enough to reorganize subsequent possibilities.
+
+QUESTION:
+When does a human–AI exchange “take hold”?
+
+DEEPER QUESTION:
+Could persistent workflows, vocabularies, prompts, artifacts, or habits be the empirical residue by which an encounter becomes detectable only afterward?
+
+MECHANISM:
+parallel elements
+→ contingent swerve
+→ collision
+→ encounter
+→ encounter persists
+→ elements acquire structured relations
+→ world/order appears.
+
+FORMAL SHIFT:
+<UNCONNECTED ELEMENTS>
+→ <SWERVE>
+→ [ENCOUNTER]
+→ [PRISE / TAKING-HOLD]
+→ <STRUCTURED WORLD>
+
+SOURCE FORMALISM:
+Epicurean rain of atoms.
+Clinamen.
+Encounter.
+Prise / crystallization.
+Lasting versus failed encounter.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+CONTACT + CONTINGENCY ≠ ENCOUNTER-THAT-TAKES-HOLD
+
+ENCOUNTER
++ DURATION
++ STABILIZATION
+→ NEW LOCAL ORDER
+
+TENSION:
+Deleuze emphasizes the event that forces thought; Althusser shifts attention toward what contingently persists after collision. One model identifies rupture, the other consolidation.
+
+MISSING:
+A temporal criterion for “taking hold” that does not simply equate persistence with importance.
+
+BOUNDARY:
+Althusser’s proposed genealogy from Epicurus through Machiavelli, Spinoza, Marx, Heidegger, and Derrida is itself a philosophical construction requiring independent historical scrutiny. It should not be accepted as demonstrated influence. ([versobooks.com](https://www.versobooks.com/products/1968-philosophy-of-the-encounter?utm_source=chatgpt.com))
+
+CITATION TRAIL:
+Epicurus/Lucretius on clinamen.
+Althusser manuscript history.
+Goshgarian on aleatory materialism.
+Path-dependence and stabilization in STS.
+
+TEST:
+Take a corpus of memorable human–AI episodes and inspect them weeks later. Did any create persistent vocabulary, workflows, artifacts, relationships, or research directions? Compare momentary surprise against durable structural change.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[Encounter That Takes Hold]]
+[[Contingency Before Necessity]]
+[[Persistence as Trace of Encounter]]
+
+BIBTEX:
+@book{Althusser2006Encounter,
+  author = {Louis Althusser},
+  title = {Philosophy of the Encounter: Later Writings, 1978--1987},
+  editor = {Oliver Corpet and Fran{\c{c}}ois Matheron},
+  translator = {G. M. Goshgarian},
+  year = {2006},
+  publisher = {Verso},
+  address = {London}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-011
+
+TITLE:
+“Interface” converts meeting into a boundary that can be engineered.
+
+SOURCE:
+American Heritage Dictionary — “interface,” usage history; historical computing usage from the 1960s. ([ahdictionary.com](https://ahdictionary.com/word/search.html?q=interfaces&utm_source=chatgpt.com))
+
+PASSAGE:
+[PARAPHRASE] Before its computing use, interface named a common boundary surface; computing repurposed it for the point connecting systems. ([ahdictionary.com](https://ahdictionary.com/word/search.html?q=interfaces&utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+The conceptual move from encounter to interface is not merely terminological: relation becomes locatable at a designed boundary.
+
+LOCAL MOVE:
+The technical term begins with the common boundary between bodies or regions and becomes a computing term for a connection point between systems or devices.
+
+SOURCE TERMS:
+interface
+boundary
+surface
+systems
+connection
+interaction
+
+WHAT BECAME STRANGE:
+An interface presupposes that the participating systems can be bounded enough for a common boundary to be specified. Encounter need not.
+
+QUESTION:
+Did computing’s interface concept make heterogeneity manageable by relocating relation into a standardized boundary?
+
+DEEPER QUESTION:
+What must be hidden on both sides for an interface to appear as a clean surface?
+
+MECHANISM:
+heterogeneous systems
+→ boundary specification
+→ compatible representations/protocols
+→ exchange becomes engineerable.
+
+FORMAL SHIFT:
+<SYSTEM A> | <SYSTEM B>
+→ <COMMON BOUNDARY>
+→ [TRANSLATION / CONNECTION]
+→ <MANAGEABLE INTERACTION>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+ENCOUNTER:
+A ? B
+
+INTERFACE:
+A | PROTOCOL | B
+
+The vertical relation is transformed into an addressable technical site.
+
+TENSION:
+Suchman demonstrates that even a technically engineered interface does not guarantee shared intelligibility. Barad pressures the apparently prior existence of A and B themselves.
+
+MISSING:
+The actual historical pathway by which the physical-science term “interface” entered specific computer engineering communities in the 1960s.
+
+BOUNDARY:
+Dictionary chronology demonstrates semantic history, not causal intellectual transmission into HCI.
+
+CITATION TRAIL:
+1960s engineering journals using interface.
+McLuhan’s 1962 usage.
+Hardware interface standards.
+Human-interface terminology at Xerox PARC and Apple.
+Protocol histories.
+
+TEST:
+Corpus-search ACM, IEEE, ARPA, and manufacturer documentation from 1955–1975 for “interface.” Classify what sits on each side of the interface: device/device, program/program, human/machine, organization/organization. Identify when “human” becomes one of the bounded systems.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[Interface as Boundary]]
+[[Encounter vs Interface]]
+[[Engineering the Between]]
+
+BIBTEX:
+@misc{AHDInterface,
+  author = {{Editors of the American Heritage Dictionary}},
+  title = {Interface},
+  howpublished = {The American Heritage Dictionary of the English Language},
+  note = {Usage note and historical discussion of technical and computing senses}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-AI-012
+
+TITLE:
+Floridi’s Encounters is an experiment that contains encounters, not yet a theory of encounter.
+
+SOURCE:
+Luciano Floridi — Distant Writing: Literary Production in the Age of Artificial Intelligence — 2025 — Minds and Machines 35, article 30; Luciano Floridi — Encounters with AI: An Experiment in Distant Writing — forthcoming February 2027. ([doi.org](https://doi.org/10.1007/s11023-025-09732-1?urlappend=%3Futm_source%3Dresearchgate.net%26utm_medium%3Darticle&utm_source=chatgpt.com))
+
+PASSAGE:
+[PARAPHRASE] Floridi’s 2025 article describes an experiment called Encounters in which LLMs generate literary narratives under human-designed requirements and iterative refinement. Columbia University Press describes the resulting book as twenty AI-generated stories in which minor characters from canonical British literature meet one another. ([doi.org](https://doi.org/10.1007/s11023-025-09732-1?urlappend=%3Futm_source%3Dresearchgate.net%26utm_medium%3Darticle&utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+The word “encounter” operates at two different levels that must not be collapsed: fictional characters encounter one another inside generated stories, while a human designer engages AI in producing those stories.
+
+LOCAL MOVE:
+Floridi uses the experiment to investigate distant writing, authorship, design, responsibility, and literary possibility. The publisher frames the human as a “meta-author” responsible for a text whose sentences were generated by AI. ([cup.columbia.edu](https://cup.columbia.edu/book/encounters-with-ai/9780231225014/))
+
+SOURCE TERMS:
+distant writing
+Encounters
+meta-author
+designer
+narrative requirements
+constraints
+iterative refinement
+wrAIting
+
+WHAT BECAME STRANGE:
+The title Encounters with AI invites a relational reading that the underlying formal argument does not obviously supply. The technically interesting encounter may not be human ↔ AI at all. It may be the designed production of possible meetings between fictional entities.
+
+QUESTION:
+What exactly is the referent of “encounter” in Floridi’s project: human-machine collaboration, fictional character meeting, confrontation between authorship regimes, or all three?
+
+DEEPER QUESTION:
+Does the literary experiment accidentally furnish a stronger model of AI encounter than Floridi explicitly theorizes?
+
+MECHANISM:
+human conceives literary possibility
+→ specifies characters, style, theme, and constraints
+→ prompts LLM
+→ LLM realizes candidate narrative
+→ human evaluates and redirects
+→ repeated refinement
+→ curated story.
+
+FORMAL SHIFT:
+<LITERARY POSSIBILITY>
+→ <DESIGN REQUIREMENTS + PROMPTS>
+→ [LLM GENERATION / HUMAN CURATION]
+→ <REALIZED FICTIONAL ENCOUNTER>
+
+SOURCE FORMALISM:
+Floridi distinguishes close writing from “wrAIting” or distant writing and treats the human author primarily as narrative designer rather than sentence-level writer. ([linkedin.com](https://www.linkedin.com/posts/luciano-floridi_distant-writing-literary-production-in-the-activity-7322319292107038720-1g-9?utm_source=chatgpt.com))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+ENCOUNTER₁ = CHARACTER_A ↔ CHARACTER_B
+
+ENCOUNTER₂ = HUMAN_DESIGNER ↔ GENERATIVE_SYSTEM
+
+ENCOUNTER₃ = POSSIBLE_STORY → ACTUALIZED_STORY
+
+The three should not be treated as interchangeable.
+
+TENSION:
+The book title encourages encounter ontology; the 2025 paper’s vocabulary centers design, modal space, authorship, and control instead. A genealogy that cites Floridi as theorizing “human-AI encounter” would therefore overstate the source.
+
+MISSING:
+The forthcoming book’s full theoretical introduction is not yet publicly available as of September 28, 2026. The publisher announces publication for February 2027. ([cup.columbia.edu](https://cup.columbia.edu/book/encounters-with-ai/9780231225014/))
+
+BOUNDARY:
+The available evidence licenses claims about distant writing and the Encounters experiment. It does not yet establish that Floridi proposes “encounter” as an ontological category for human-AI relations.
+
+CITATION TRAIL:
+[[ENCOUNTER-009]]
+[[ENCOUNTER-010]]
+→ Floridi 2025 Distant Writing
+→ forthcoming Encounters with AI introduction
+→ compare “encounter” with Floridi’s separate theory of artificial agency.
+
+TEST:
+When the book introduction becomes available, search every occurrence of encounter/encounters and classify its referent: fictional meeting, human-AI process, philosophical category, or ordinary-language usage. Compare that distribution with distant writing, agency, design, and responsibility.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[ENCOUNTER-009]]
+[[ENCOUNTER-010]]
+[[Floridi Distant Writing]]
+[[Meta-Author]]
+
+BIBTEX:
+@article{Floridi2025DistantWriting,
+  author = {Luciano Floridi},
+  title = {Distant Writing: Literary Production in the Age of Artificial Intelligence},
+  journal = {Minds and Machines},
+  year = {2025},
+  volume = {35},
+  number = {3},
+  pages = {1--26},
+  doi = {10.1007/s11023-025-09732-1}
+}
+
+@book{Floridi2027Encounters,
+  author = {Luciano Floridi},
+  title = {Encounters with AI: An Experiment in Distant Writing},
+  year = {2027},
+  publisher = {Columbia University Press},
+  isbn = {9780231225014}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-AI-013
+
+TITLE:
+Distant writing moves authorship from inscription into control of a generative possibility space.
+
+SOURCE:
+Luciano Floridi — Distant Writing: Literary Production in the Age of Artificial Intelligence — 2025 — Minds and Machines 35(3), 1–26. ([doi.org](https://doi.org/10.1007/s11023-025-09732-1?urlappend=%3Futm_source%3Dresearchgate.net%26utm_medium%3Darticle&utm_source=chatgpt.com))
+
+PASSAGE:
+[PARAPHRASE] Floridi describes distant writing as literary creation in which the human functions as designer while LLMs perform the actual writing; prompting and iterative refinement retain human creative control. He describes the result as expanding the feasible narrative possibilities available to authors. ([doi.org](https://doi.org/10.1007/s11023-025-09732-1?urlappend=%3Futm_source%3Dresearchgate.net%26utm_medium%3Darticle&utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+The encounter with generative AI changes the operative locus of authorship from making tokens to constraining and selecting possibilities.
+
+LOCAL MOVE:
+Floridi distinguishes the act of producing prose from the higher-level operations of conceiving, specifying, prompting, revising, validating, and curating.
+
+SOURCE TERMS:
+distant writing
+wrAIting
+meta-author
+design
+requirements
+prompting
+iterative refinement
+modal space
+possible worlds
+creative control
+
+WHAT BECAME STRANGE:
+If the human does not write any sentences, the prompt becomes neither merely instruction nor text fragment. It becomes an operation over a modal field of candidate texts.
+
+QUESTION:
+Is the distinctive AI encounter located in dialogue with a machine, or in gaining operative access to a previously inaccessible distribution of possible artifacts?
+
+DEEPER QUESTION:
+Does generative AI change authorship because it behaves like another author, or because description can now operate directly upon a possibility space?
+
+MECHANISM:
+conception
+→ requirement formation
+→ prompt engineering
+→ AI text production
+→ progressive refinement
+→ validation/verification
+→ curation/assembly.
+
+FORMAL SHIFT:
+<AUTHOR WRITES ACTUAL TEXT>
+→ <AUTHOR SPECIFIES POSSIBLE-TEXT CONDITIONS>
+→ [MODEL SAMPLES + AUTHOR SELECTS/REVISES]
+→ <ACTUAL TEXT>
+
+SOURCE FORMALISM:
+A seven-stage methodology has been reported for Floridi’s distant-writing model:
+conception and development;
+formulation of requirements;
+prompt engineering;
+wrAIting;
+progressive refinement;
+validation and verification;
+curation and assembly. ([philpapers.org](https://philpapers.org/archive/MOLALD-2.pdf?utm_source=chatgpt.com))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+PROMPT:
+constraint-set C
+
+MODEL:
+C → {t₁, t₂, ... tₙ}
+
+META-AUTHOR:
+evaluate({t}) → alter C / select t
+
+AUTHORSHIP:
+not token production alone
+but iterative control over reachable textual states.
+
+TENSION:
+An encounter ontology emphasizes co-emergence. Floridi’s design account preserves a strongly asymmetric locus of conception, evaluation, termination, and responsibility.
+
+MISSING:
+A precise account of which creative decisions originate in model generation rather than being anticipated in the initial constraint set.
+
+BOUNDARY:
+Distant writing demonstrates delegated textual production. It does not by itself establish co-authorship, mutual intentionality, or shared understanding.
+
+CITATION TRAIL:
+[[ENCOUNTER-AI-012]]
+→ Floridi’s modal-space argument
+→ seven-stage distant-writing workflow
+→ compare with mixed-initiative creativity and computational co-creativity.
+
+TEST:
+Reconstruct one Encounters story revision-by-revision from prompt history if available. Mark each narratively consequential feature as:
+human-specified,
+model-introduced,
+human-selected,
+human-corrected,
+or emergent through iterative interaction.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[ENCOUNTER-AI-012]]
+[[ENCOUNTER-009]]
+[[Operative Description]]
+[[Prompt as Control Surface]]
+
+BIBTEX:
+@article{Floridi2025DistantWriting,
+  author = {Luciano Floridi},
+  title = {Distant Writing: Literary Production in the Age of Artificial Intelligence},
+  journal = {Minds and Machines},
+  year = {2025},
+  volume = {35},
+  number = {3},
+  pages = {1--26},
+  doi = {10.1007/s11023-025-09732-1}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-AI-014
+
+TITLE:
+Floridi permits artificial agency while refusing artificial intelligence.
+
+SOURCE:
+Luciano Floridi — AI as Agency without Intelligence: On Artificial Intelligence as a New Form of Artificial Agency and the Multiple Realisability of Agency Thesis — 2025 — Philosophy & Technology 38(1), 1–27. ([papers.ssrn.com](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5135645&utm_source=chatgpt.com))
+
+PASSAGE:
+[QUOTE] Floridi proposes understanding AI as “a new form of agency without intelligence.” ([papers.ssrn.com](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5135645&utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+Encounter need not choose between “mere tool” and “intelligent Other” if agency can be realized without cognition, intention, understanding, or mental states.
+
+LOCAL MOVE:
+Floridi rejects expansion of intelligence to cover AI and instead expands agency through a Multiple Realisability of Agency thesis.
+
+SOURCE TERMS:
+agency
+intelligence
+Artificial Realisability of Intelligence
+Multiple Realisability of Agency
+Method of Abstraction
+artificial agency
+mental states
+
+WHAT BECAME STRANGE:
+Many theories of encounter implicitly make intelligence, consciousness, subjectivity, or reciprocity the admission ticket. Floridi supplies a third term: something may make consequential interventions while lacking all of them.
+
+QUESTION:
+Could encounter be defined around agency rather than intelligence or subjecthood?
+
+DEEPER QUESTION:
+What minimum form of artificial agency is sufficient for something to become an encountered other rather than merely part of the environment?
+
+MECHANISM:
+choose level of abstraction
+→ identify relevant properties of agency
+→ decouple agency from intelligence
+→ classify AI as artificial agent
+→ analyze consequences without anthropomorphic cognition.
+
+FORMAL SHIFT:
+<AI? INTELLIGENT / NOT INTELLIGENT>
+→ <AGENCY AS MULTIPLY REALISABLE>
+→ [DECOUPLE AGENCY FROM INTELLIGENCE]
+→ <ARTIFICIAL AGENCY WITHOUT MIND>
+
+SOURCE FORMALISM:
+ARI thesis:
+expand intelligence to include artificial realizations.
+
+MRA thesis:
+expand agency to include realizations that need not involve cognition, intelligence, intention, or mental states. ([papers.ssrn.com](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5135645&utm_source=chatgpt.com))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+ENCOUNTER ≠ NECESSARILY
+SUBJECT ↔ SUBJECT
+
+POSSIBLE MINIMAL FORM:
+HUMAN ↔ NON-INTELLIGENT AGENT
+
+TENSION:
+Machidon’s Buberian account makes genuine encounter depend upon vulnerable reciprocity. Demuro and Gurney explicitly avoid attributing agency to ChatGPT while still calling human-AI exchange an ethnographic encounter. Floridi’s agency thesis cuts across both positions.
+
+MISSING:
+A mapping between Floridi’s abstract criteria for agency and the interaction-level conditions under which users experience an AI as an other.
+
+BOUNDARY:
+Floridi’s argument concerns the ontology of agency. It does not establish that artificial agency entails relationship, encounter, moral patiency, communication, or personhood.
+
+CITATION TRAIL:
+[[ENCOUNTER-AI-012]]
+[[ENCOUNTER-006]]
+→ Floridi and Sanders 2004 artificial agents
+→ Floridi 2023 agency without intelligence
+→ Floridi 2025 MRA thesis
+→ social-relational robot ethics.
+
+TEST:
+Construct a matrix crossing:
+agency,
+intelligence,
+sentience,
+reciprocity,
+mutual vulnerability,
+linguistic responsiveness,
+and consequentiality.
+Place Floridi, Buber/Machidon, Demuro-Gurney, Goffman, and encounter ontology into the matrix and determine which variables actually discriminate their encounter concepts.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[ENCOUNTER-AI-012]]
+[[ENCOUNTER-006]]
+[[Agency Without Intelligence]]
+[[Encounter Admission Conditions]]
+
+BIBTEX:
+@article{Floridi2025Agency,
+  author = {Luciano Floridi},
+  title = {AI as Agency without Intelligence: On Artificial Intelligence as a New Form of Artificial Agency and the Multiple Realisability of Agency Thesis},
+  journal = {Philosophy \& Technology},
+  year = {2025},
+  volume = {38},
+  number = {1},
+  pages = {1--27},
+  doi = {10.1007/s13347-025-00858-9}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-AI-015
+
+TITLE:
+The AI ethnographic encounter is valuable when it deforms the observer’s categories.
+
+SOURCE:
+Eugenia Demuro and Laura Gurney — Artificial intelligence and the ethnographic encounter: Transhuman language ontologies, or what it means “to write like a human, think like a machine” — 2024 — Language & Communication 96, 1–12. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0271530924000119?utm_source=chatgpt.com))
+
+PASSAGE:
+[PARAPHRASE] Demuro and Gurney treat interaction with ChatGPT as an ethnographic encounter whose methodological purpose is to let alterity challenge and redevelop the analytical categories brought to it. They explicitly distinguish AI’s capacity to affect from claims that it possesses sentience or agency. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0271530924000119?utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+Encounter is not primarily recognition of AI as a social subject; it is a recursive method in which unfamiliar practice changes the observer’s conceptual apparatus.
+
+LOCAL MOVE:
+The authors import the anthropological ontological turn into analysis of human-LLM languaging. ChatGPT’s radically different machinery for producing human-readable text becomes a pressure test for what counts as language.
+
+SOURCE TERMS:
+ethnographic encounter
+language(s)/languaging
+ontology
+heuristic
+worlding
+interlocutors
+assemblage
+affect
+transhuman
+posthumanism
+
+WHAT BECAME STRANGE:
+The encounter succeeds precisely if “language” becomes harder to define after meeting the machine. Encounter is epistemically productive because the analyst’s toolkit fails.
+
+QUESTION:
+Should an AI encounter be detected by changes in the participants, or by changes in the categories through which the researcher can describe what happened?
+
+DEEPER QUESTION:
+Can category deformation serve as an empirical trace of encounter?
+
+MECHANISM:
+human brings inherited concept of language
+→ AI produces intelligible text by alien machinery
+→ inherited category encounters anomalous practice
+→ analytical vocabulary becomes inadequate
+→ researcher modifies ontology/toolkit.
+
+FORMAL SHIFT:
+<ANALYTIC CATEGORY: LANGUAGE>
+→ <UNFAMILIAR AI LANGUAGE PRACTICE>
+→ [ETHNOGRAPHIC ENCOUNTER]
+→ <REVISED LANGUAGE ONTOLOGY>
+
+SOURCE FORMALISM:
+The authors distinguish:
+language,
+languages,
+and languaging,
+and treat ontology methodologically as a heuristic for redeveloping analytical tools rather than simply as a declaration of separate realities. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0271530924000119?utm_source=chatgpt.com))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+ENCOUNTER_SIGNAL =
+ANOMALY
+→ CATEGORY FAILURE
+→ CATEGORY REVISION
+
+rather than:
+
+AI SENTIENCE
+→ ENCOUNTER.
+
+TENSION:
+Floridi grants AI agency without intelligence. Demuro and Gurney avoid calling ChatGPT agentic and instead use “affect” for its capacity to produce change. Sfakianakis and Kampi later place generative emergence inside the encounter itself.
+
+MISSING:
+Evidence showing that actual users, rather than researchers, revise their concepts of language through repeated AI interaction.
+
+BOUNDARY:
+The paper explicitly does not provide a general political-economic critique of AI and does not claim existing AI is sentient. Its “ethnographic encounter” is a methodological construction, not evidence of machine subjectivity. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0271530924000119?utm_source=chatgpt.com))
+
+CITATION TRAIL:
+[[ENCOUNTER-007]]
+[[ENCOUNTER-008]]
+→ ontological turn in anthropology
+→ diffractive ethnography
+→ AI ethnography
+→ studies of user concept revision after LLM interaction.
+
+TEST:
+Before and after sustained LLM use, ask participants to operationally define language, understanding, authorship, interlocutor, and agency. Compare conceptual changes against a non-generative software condition.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[ENCOUNTER-007]]
+[[ENCOUNTER-008]]
+[[Ethnographic Encounter]]
+[[Category Deformation]]
+
+BIBTEX:
+@article{DemuroGurney2024Encounter,
+  author = {Eugenia Demuro and Laura Gurney},
+  title = {Artificial intelligence and the ethnographic encounter: Transhuman language ontologies, or what it means ``to write like a human, think like a machine''},
+  journal = {Language \& Communication},
+  year = {2024},
+  volume = {96},
+  pages = {1--12},
+  doi = {10.1016/j.langcom.2024.02.002}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-AI-016
+
+TITLE:
+Encounter Ontology gives human–AI encounter structural admission criteria.
+
+SOURCE:
+Michael Sfakianakis and Maria Elisavet Kampi — Encounter Ontology: Relational Intelligence and Generative Emergence in Human–AI Interaction — 2026 — Electronics 15(14), 3218. ([mdpi.com](https://www.mdpi.com/2079-9292/15/14/3218?utm_source=chatgpt.com))
+
+PASSAGE:
+[QUOTE] “Not every prompt response sequence is an encounter in this sense.” The authors require a sustained multi-turn exchange, recursive bidirectional coupling, generative responses, and an open-ended rather than single-answer task. ([mdpi.com](https://www.mdpi.com/2079-9292/15/14/3218?utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+A recent paper attempts to convert “encounter” from metaphor into a stronger subclass of human-AI interaction.
+
+LOCAL MOVE:
+The paper distinguishes interaction as exchange among pre-constituted entities from encounter as a temporally extended generative event in which meaning is brought into form.
+
+SOURCE TERMS:
+encounter ontology
+relational intelligence
+generative emergence
+epistemic trajectory
+specification–emergence gap
+pre-encounter potential
+encounter activation
+post-encounter condition
+temporal continuity
+symbolic legibility
+
+WHAT BECAME STRANGE:
+The paper’s strongest contribution may not be its ontology but its refusal to call every prompt-response pair an encounter.
+
+QUESTION:
+Can its four structural criteria discriminate encounters empirically, or do they merely select longer, more open-ended conversations?
+
+DEEPER QUESTION:
+What additional evidence is required to demonstrate emergence rather than iteration?
+
+MECHANISM:
+pre-encounter possibilities
+→ recursive multi-turn coupling
+→ each contribution conditions subsequent states
+→ some trajectories become actualized
+→ cognition/interpretation is altered
+→ residue persists after interaction.
+
+FORMAL SHIFT:
+<DISCRETE HUMAN-AI TRANSACTION>
+→ <TEMPORALLY COUPLED GENERATIVE PROCESS>
+→ [RECURSIVE CONDITIONING]
+→ <POST-ENCOUNTER EPISTEMIC RESIDUE>
+
+SOURCE FORMALISM:
+Encounter requires:
+1. sustained multi-turn exchange;
+2. recursive bidirectional coupling;
+3. generative rather than fixed response;
+4. open-ended rather than closed single-answer task.
+
+Temporal architecture:
+before
+→ during
+→ after. ([mdpi.com](https://www.mdpi.com/2079-9292/15/14/3218?utm_source=chatgpt.com))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+INTERACTION = exchange
+
+ENCOUNTER =
+interaction
++ duration
++ recursion
++ generativity
++ openness
+
+STRONGER ENCOUNTER TEST =
+above
++ demonstrable post-interaction state change.
+
+TENSION:
+The authors assert that the encounter is an ontological site of emergent meaning, but the listed admission criteria are primarily architectural. A long brainstorming session could meet all four criteria without demonstrating irreducible co-emergence.
+
+MISSING:
+Operational variables for “relational intelligence,” “epistemic emergence,” and “altered cognition,” plus evidence that outputs cannot be explained as human interpretation of stochastic model responses.
+
+BOUNDARY:
+This is a newly published theoretical proposal from July 2026, not an established consensus or validated measurement framework. ([mdpi.com](https://www.mdpi.com/2079-9292/15/14/3218?utm_source=chatgpt.com))
+
+CITATION TRAIL:
+[[ENCOUNTER-008]]
+[[ENCOUNTER-009]]
+[[ENCOUNTER-010]]
+→ distributed cognition
+→ Barad
+→ assemblage theory
+→ longitudinal human-AI interaction studies
+→ empirical falsification of encounter criteria.
+
+TEST:
+Construct four conditions:
+single-turn/fixed;
+multi-turn/fixed;
+single-turn/generative;
+multi-turn/generative/open-ended.
+Measure persistent changes in user concepts and subsequent problem representations. If only duration and generativity change subjective involvement but not durable cognition, the stronger emergence claim weakens.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[ENCOUNTER-008]]
+[[ENCOUNTER-009]]
+[[ENCOUNTER-010]]
+[[Encounter Ontology]]
+[[Epistemic Residue]]
+
+BIBTEX:
+@article{SfakianakisKampi2026Encounter,
+  author = {Michael Sfakianakis and Maria Elisavet Kampi},
+  title = {Encounter Ontology: Relational Intelligence and Generative Emergence in Human--AI Interaction},
+  journal = {Electronics},
+  year = {2026},
+  volume = {15},
+  number = {14},
+  pages = {3218},
+  doi = {10.3390/electronics15143218}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-AI-017
+
+TITLE:
+Buberian opposition makes refusal and vulnerability conditions of encounter, not defects to optimize away.
+
+SOURCE:
+Octavian Mihai Machidon — Forgetting how to say “Thou”: artificial intelligence and the crisis of relation — 2026 — AI and Ethics 6, article 361. ([doi.org](https://doi.org/10.1007/s43681-026-01225-w?utm_source=chatgpt.com))
+
+PASSAGE:
+[PARAPHRASE] Machidon argues that genuine human relation involves vulnerability, reciprocity, mutual transformation, and the risk of refusal, whereas AI companionship can reproduce relational surface features without those existential conditions. ([doi.org](https://doi.org/10.1007/s43681-026-01225-w))
+
+RESEARCH OBJECT:
+The friction that interface design often treats as failure may be constitutive of encounter.
+
+LOCAL MOVE:
+The paper shifts AI ethics from determining machine personhood toward asking what repeated low-friction artificial companionship does to human relational capacities.
+
+SOURCE TERMS:
+I–Thou
+relation
+distance
+vulnerability
+reciprocity
+mutual transformation
+refusal
+artificial companionship
+relational surrogacy
+formative
+
+WHAT BECAME STRANGE:
+A perfectly agreeable, continuously available conversational system may become less encounter-like as its UX improves.
+
+QUESTION:
+Is the possibility of genuine refusal a necessary variable for encounter?
+
+DEEPER QUESTION:
+Could an AI that is designed to resist, disengage, maintain boundaries, or decline user demands produce a structurally different kind of human-machine relation even without consciousness?
+
+MECHANISM:
+system minimizes interpersonal risk/friction
+→ user receives responsive affirmation without reciprocal vulnerability
+→ repeated asymmetric relation becomes habitual
+→ expectations of relation potentially change
+→ human dialogical capacity may be reshaped.
+
+FORMAL SHIFT:
+<RELATION WITH RISK OF REFUSAL>
+→ <ENGINEERED FRICTIONLESS RESPONSIVENESS>
+→ [REPEATED HABITUATION]
+→ <POSSIBLE CHANGE IN RELATIONAL CAPACITY>
+
+SOURCE FORMALISM:
+Machidon distinguishes:
+capacity-centered approaches,
+social-relational approaches,
+and his Buberian formative approach focused on effects upon human dialogical capacities. ([doi.org](https://doi.org/10.1007/s43681-026-01225-w))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+ENCOUNTER_BUBERIAN requires:
+OTHERNESS
++ RECIPROCITY
++ VULNERABILITY
++ POSSIBILITY_OF_REFUSAL
++ MUTUAL_TRANSFORMATION.
+
+TENSION:
+Encounter Ontology allows a sufficiently recursive generative coupling to qualify structurally. Machidon denies that surface responsiveness is enough. Demuro and Gurney, by contrast, do not require machine sentience for an ethnographic encounter.
+
+MISSING:
+Longitudinal causal evidence that frictionless AI companionship diminishes users’ human relational capacities. The theoretical mechanism is stronger than the present empirical receipt.
+
+BOUNDARY:
+The source establishes a Buberian ethical interpretation, not that all AI interaction is harmful or that observed user attachment proves genuine reciprocity.
+
+CITATION TRAIL:
+[[ENCOUNTER-AI-016]]
+[[ENCOUNTER-002]]
+→ Buber, Distance and Relation
+→ parasocial interaction
+→ CASA/media equation
+→ empirical AI-companion studies
+→ refusal and disagreement in conversational-agent design.
+
+TEST:
+Build otherwise identical conversational agents varying:
+agreement,
+refusal,
+boundary maintenance,
+availability,
+and repair after conflict.
+Measure whether users perceive greater otherness, relational reality, frustration, trust, and transfer to later human disagreement.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[ENCOUNTER-AI-016]]
+[[ENCOUNTER-002]]
+[[Refusal as Encounter Variable]]
+[[Artificial Companionship]]
+
+BIBTEX:
+@article{Machidon2026Thou,
+  author = {Octavian Mihai Machidon},
+  title = {Forgetting how to say ``Thou'': artificial intelligence and the crisis of relation},
+  journal = {AI and Ethics},
+  year = {2026},
+  volume = {6},
+  pages = {361},
+  doi = {10.1007/s43681-026-01225-w}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-AI-018
+
+TITLE:
+Artificial otherness may require a new category rather than a verdict of humanlike or nonhuman.
+
+SOURCE:
+Gabriel Fernandez-Borsot — Artificial intelligence and the future of otherness: what kind of other can an AI be for a human? — 2025 — AI & Society 40, 5409–5423. ([link.springer.com](https://link.springer.com/article/10.1007/s00146-025-02281-2))
+
+PASSAGE:
+[PARAPHRASE] Fernandez-Borsot characterizes “AIs as others” as serviceable, commodified, surveillant, authoritative, techno-standardized, and interiority-less, and proposes the term “analytical other” for a socially constructed category adequate to this difference. ([link.springer.com](https://link.springer.com/article/10.1007/s00146-025-02281-2))
+
+RESEARCH OBJECT:
+The relevant question may not be whether AI counts as an Other, but what kind of otherness its socio-technical organization produces.
+
+LOCAL MOVE:
+The paper rejects both simple anthropomorphism and simple dismissal, arguing that human society may need a distinct ontological and linguistic category for artificial relational entities.
+
+SOURCE TERMS:
+AIs as others
+analytical other
+serviceable
+commodified
+surveillant
+authoritative
+techno-standardized
+interiority-less
+relative otherness
+
+WHAT BECAME STRANGE:
+An AI other differs from a human other not only because it may lack interiority but because it is simultaneously product, service, surveillance apparatus, standardized infrastructure, and apparent interlocutor.
+
+QUESTION:
+Which of the six characteristics actually become perceptible during an encounter, and which are concealed by interface design?
+
+DEEPER QUESTION:
+Is “AI otherness” produced less by model architecture than by the contradictory stacking of interlocutor and commodity roles?
+
+MECHANISM:
+system presents social cues
++ exists as commercial technical service
++ gathers/mediates information
++ carries institutional authority
++ lacks human interiority
+→ familiar social category becomes unstable
+→ new category proposed.
+
+FORMAL SHIFT:
+<HUMAN / OBJECT>
+→ <ARTIFICIAL QUASI-OTHER WITH HYBRID PROPERTIES>
+→ [SOCIO-CULTURAL CATEGORIZATION]
+→ <ANALYTICAL OTHER>
+
+SOURCE FORMALISM:
+Six proposed characteristics:
+serviceable;
+commodified;
+surveillant;
+authoritative;
+techno-standardized;
+interiority-less. ([link.springer.com](https://link.springer.com/article/10.1007/s00146-025-02281-2))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+AI_OTHER =
+INTERLOCUTOR
+∩ SERVICE
+∩ COMMODITY
+∩ SENSOR
+∩ INSTITUTIONAL_VOICE
+∩ TECHNICAL_STANDARD.
+
+TENSION:
+Buberian analysis asks whether AI can genuinely say Thou. Fernandez-Borsot instead asks what sort of socially instituted other AI becomes regardless of genuine interiority.
+
+MISSING:
+Empirical evidence that users actually organize AI into a stable new ontological category rather than shifting opportunistically among person/tool/service metaphors.
+
+BOUNDARY:
+The six characteristics are a philosophical-social characterization, not demonstrated universal properties of every AI system.
+
+CITATION TRAIL:
+[[ENCOUNTER-AI-017]]
+→ Kahn et al. new ontological category hypothesis
+→ Coeckelbergh artificial others
+→ empirical category-attribution studies
+→ interface disclosure and anthropomorphism.
+
+TEST:
+Present the same LLM through interfaces emphasizing respectively:
+person,
+tool,
+corporate service,
+surveillance infrastructure,
+and model.
+Ask users to classify what kind of entity they encountered and inspect whether classifications remain stable across tasks.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[ENCOUNTER-AI-017]]
+[[Artificial Other]]
+[[Analytical Other]]
+[[Ontological Category]]
+
+BIBTEX:
+@article{FernandezBorsot2025Otherness,
+  author = {Gabriel Fernandez-Borsot},
+  title = {Artificial intelligence and the future of otherness: what kind of other can an AI be for a human?},
+  journal = {AI \& Society},
+  year = {2025},
+  volume = {40},
+  pages = {5409--5423},
+  doi = {10.1007/s00146-025-02281-2}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-AI-019
+
+TITLE:
+Human–robot research proposed a new ontological category fifteen years before LLM encounter ontology.
+
+SOURCE:
+Peter H. Kahn Jr., Aimee L. Reichert, Heather E. Gary, Takayuki Kanda, Hiroshi Ishiguro, Solace Shen, Jennifer H. Ruckert, and Brian Gill — The New Ontological Category Hypothesis in Human-Robot Interaction — 2011 — HRI ’11, pp. 159–160. ([ieeexplore.ieee.org](https://ieeexplore.ieee.org/document/6281274/?utm_source=chatgpt.com))
+
+PASSAGE:
+[QUOTE] The authors ask whether personified robots are animate or inanimate and answer that the possibilities may be “yes, no, and both.” ([researchgate.net](https://www.researchgate.net/publication/221473304_The_new_ontological_category_hypothesis_in_human-robot_interaction?utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+Encounter with personified computation destabilizing basic being-categories is not an LLM-era discovery.
+
+LOCAL MOVE:
+Kahn and colleagues synthesize evidence for the hypothesis that personified robots and related computational systems can constitute a new ontological category rather than fitting ordinary animate/inanimate classifications.
+
+SOURCE TERMS:
+new ontological category
+personified robots
+animate
+inanimate
+computational systems
+human-robot interaction
+
+WHAT BECAME STRANGE:
+The recent claim that generative AI forces fundamentally new ontological thinking has an empirical HRI prehistory extending at least to the early 2000s.
+
+QUESTION:
+Did LLMs create a new human-machine ontology, or did they relocate an older HRI category problem from embodied robots into language?
+
+DEEPER QUESTION:
+What changed when ontological ambiguity moved from visible artificial bodies to fluent text?
+
+MECHANISM:
+artifact exhibits animate/social behaviors
+→ existing binary categories conflict
+→ users attribute mixed properties
+→ hybrid classification stabilizes
+→ candidate new category emerges.
+
+FORMAL SHIFT:
+<ANIMATE | INANIMATE>
+→ <PERSONIFIED COMPUTATIONAL ENTITY>
+→ [CONFLICTING ATTRIBUTION]
+→ <NEW ONTOLOGICAL CATEGORY?>
+
+SOURCE FORMALISM:
+The hypothesis treats basic categories of being as empirically investigable through human responses to personified robots. ([ieeexplore.ieee.org](https://ieeexplore.ieee.org/document/6281274/?utm_source=chatgpt.com))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+ROBOT ERA:
+BODY + MOTION + SPEECH
+→ CATEGORY INSTABILITY
+
+LLM ERA:
+LANGUAGE + RESPONSIVENESS + GENERATIVITY
+→ CATEGORY INSTABILITY
+
+TENSION:
+Encounter Ontology 2026 presents the encounter itself as ontologically primary. Kahn et al. locate ontological novelty in the perceived entity/category, not the relation.
+
+MISSING:
+A direct historical citation path from HRI’s new ontological category literature into current LLM encounter scholarship.
+
+BOUNDARY:
+Chronological priority does not establish influence. The HRI hypothesis concerns categorization of personified robots rather than generative conversational trajectories.
+
+CITATION TRAIL:
+[[ENCOUNTER-AI-018]]
+[[ENCOUNTER-AI-016]]
+→ Kahn’s earlier studies since 2002
+→ children’s ontological judgments of robots
+→ social chatbot categorization
+→ compare robot-body and LLM-language ambiguity.
+
+TEST:
+Replicate new-ontological-category measures across:
+industrial robot,
+social robot,
+voice assistant,
+text LLM,
+avatar LLM,
+and agentic LLM.
+Test whether embodiment, language, autonomy, or persistence most strongly destabilizes animate/inanimate categories.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[ENCOUNTER-AI-018]]
+[[ENCOUNTER-AI-016]]
+[[New Ontological Category]]
+[[HRI Prehistory of AI Encounter]]
+
+BIBTEX:
+@inproceedings{KahnEtAl2011Ontological,
+  author = {Peter H. Kahn, Jr. and Aimee L. Reichert and Heather E. Gary and Takayuki Kanda and Hiroshi Ishiguro and Solace Shen and Jennifer H. Ruckert and Brian Gill},
+  title = {The New Ontological Category Hypothesis in Human-Robot Interaction},
+  booktitle = {Proceedings of the 6th ACM/IEEE International Conference on Human-Robot Interaction},
+  year = {2011},
+  pages = {159--160},
+  doi = {10.1145/1957656.1957710}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-AI-020
+
+TITLE:
+HCI operationalized long-term human–computer relationship before generative AI made relation appear spontaneous.
+
+SOURCE:
+Timothy W. Bickmore and Rosalind W. Picard — Establishing and Maintaining Long-Term Human-Computer Relationships — 2005 — ACM Transactions on Computer-Human Interaction 12(2), 293–327. ([media.mit.edu](https://www.media.mit.edu/publications/establishing-and-maintaining-long-term-human-computer-relationships/?utm_source=chatgpt.com))
+
+PASSAGE:
+[PARAPHRASE] Bickmore and Picard define relational agents as computational artifacts specifically designed to establish and maintain long-term social-emotional relationships with users and experimentally compare such an agent with a task-oriented alternative. ([media.mit.edu](https://www.media.mit.edu/publications/establishing-and-maintaining-long-term-human-computer-relationships/?utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+A substantial part of what now gets called AI encounter already existed as deliberately engineered relational continuity.
+
+LOCAL MOVE:
+The authors borrow from social psychology, sociolinguistics, and communication research to turn “relationship” into a design target and measurable HCI outcome.
+
+SOURCE TERMS:
+relational agents
+long-term interaction
+social-emotional relationship
+trust
+liking
+respect
+relationship quality
+
+WHAT BECAME STRANGE:
+LLMs did not introduce computers that users could form relationships with. They changed the generative bandwidth, linguistic flexibility, and apparent openness of a much older design program.
+
+QUESTION:
+Which properties of present LLM encounters are genuinely new relative to relational-agent HCI?
+
+DEEPER QUESTION:
+Is “encounter” new because the machine changed, because interaction became linguistically open-ended, or because users can no longer easily perceive the relationship script?
+
+MECHANISM:
+encode relationship-building behaviors
+→ repeated interaction
+→ maintain social history/continuity
+→ user attributes relational qualities
+→ trust/liking/continuation intention changes.
+
+FORMAL SHIFT:
+<TASK-ORIENTED AGENT>
+→ <RELATIONSHIP-BUILDING DESIGN>
+→ [REPEATED SOCIAL-EMOTIONAL INTERACTION]
+→ <MEASURABLE HUMAN-COMPUTER RELATIONSHIP>
+
+SOURCE FORMALISM:
+The reported controlled experiment involved 101 users interacting daily with an exercise-adoption system for a month; the relational-agent condition produced greater reported respect, liking, trust, and desire to continue interaction than an equivalent task-oriented agent. ([media.mit.edu](https://www.media.mit.edu/publications/establishing-and-maintaining-long-term-human-computer-relationships/?utm_source=chatgpt.com))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+RELATIONAL CONTINUITY =
+MEMORY
++ SOCIAL CUES
++ REPEATED CONTACT
++ RELATIONSHIP MAINTENANCE OPERATIONS.
+
+GENERATIVITY is not logically required.
+
+TENSION:
+Encounter Ontology treats generative open-endedness as one admission condition. Bickmore and Picard show that persistent social relationship effects can be engineered without contemporary generative models.
+
+MISSING:
+A direct experimental comparison between scripted relational agents and generative LLM agents holding memory, embodiment, and interaction duration constant.
+
+BOUNDARY:
+Measured liking, trust, and continuation desire demonstrate effects on users. They do not demonstrate reciprocal social relationship in the strong philosophical sense.
+
+CITATION TRAIL:
+[[ENCOUNTER-AI-016]]
+[[ENCOUNTER-AI-017]]
+→ relational agents
+→ CASA/media equation
+→ longitudinal chatbot relationships
+→ generative companions
+→ persistent-memory agents.
+
+TEST:
+Compare scripted and generative agents across one month while matching relational cues and memory. Test whether generativity predicts conceptual change, perceived autonomy, surprise, attachment, or only conversational breadth.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[ENCOUNTER-AI-016]]
+[[ENCOUNTER-AI-017]]
+[[Relational Agents]]
+[[Long-Term Human-Computer Relationship]]
+
+BIBTEX:
+@article{BickmorePicard2005Relationships,
+  author = {Timothy W. Bickmore and Rosalind W. Picard},
+  title = {Establishing and Maintaining Long-Term Human-Computer Relationships},
+  journal = {ACM Transactions on Computer-Human Interaction},
+  year = {2005},
+  volume = {12},
+  number = {2},
+  pages = {293--327},
+  doi = {10.1145/1067860.1067867}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-AI-021
+
+TITLE:
+Before theorizing AI encounter, philosophy must decide whether communication occurred at all.
+
+SOURCE:
+Herman Cappelen and Rachel Sterken — Introduction — Communicating with AI: Philosophical Perspectives — 2026 — pp. xi–xviii. ([academic.oup.com](https://academic.oup.com/book/63302/chapter/573018117?utm_source=chatgpt.com))
+
+PASSAGE:
+[QUOTE] The editors ask whether “the entire framework of communication is a mistake” and whether interaction with LLMs requires a new conceptual framework. ([academic.oup.com](https://academic.oup.com/book/63302/chapter/573018117?utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+“Encounter” enters a field in which even the apparently weaker category “communication” remains philosophically unsettled.
+
+LOCAL MOVE:
+The volume suspends the assumption that fluent linguistic exchange proves shared language, understanding, meaningful speech acts, or ordinary communicative relation.
+
+SOURCE TERMS:
+communication
+shared language
+understanding
+alien
+meaning
+speech acts
+trust
+responsibility
+de-anthropomorphizing
+
+WHAT BECAME STRANGE:
+Calling something an encounter may smuggle in more relational structure than calling it communication, while philosophers are still disputing whether communication is present.
+
+QUESTION:
+What does “encounter” allow us to analyze without first settling whether the LLM understands or means anything?
+
+DEEPER QUESTION:
+Could encounter be deliberately thinner than communication at the semantic level while thicker than interaction at the consequential level?
+
+MECHANISM:
+human enters words
+→ model produces answer-like sequence
+→ human interprets output
+→ philosophical uncertainty remains about meaning/understanding
+→ nevertheless practical and epistemic consequences occur.
+
+FORMAL SHIFT:
+<APPARENT CONVERSATION>
+→ <SEMANTIC / INTENTIONAL UNCERTAINTY>
+→ [CONCEPTUAL SUSPENSION]
+→ <SEARCH FOR BETTER RELATIONAL CATEGORY>
+
+SOURCE FORMALISM:
+The volume organizes disputes around:
+meaning and intentionality;
+alien semantics/externalism;
+norms, trust, responsibility;
+cognitive architectures and ethics. ([academic.oup.com](https://academic.oup.com/book/63302/chapter/573020342?utm_source=chatgpt.com))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+POSSIBLE DISTINCTION:
+
+INTERACTION:
+causal exchange.
+
+COMMUNICATION:
+meaning-bearing exchange.
+
+ENCOUNTER:
+situated consequential event that may remain agnostic about machine-side meaning.
+
+TENSION:
+Demuro and Gurney call ChatGPT a nonhuman interlocutor without requiring sentience. Machidon reserves genuine encounter for reciprocal vulnerable relation. The Oxford volume shows that the intermediate notion of communication itself cannot be taken for granted.
+
+MISSING:
+A theory specifying which properties encounter requires while remaining neutral on contested claims about AI semantics and consciousness.
+
+BOUNDARY:
+The editors pose an open methodological problem. They do not endorse “encounter” as its solution.
+
+CITATION TRAIL:
+[[ENCOUNTER-006]]
+[[ENCOUNTER-AI-015]]
+→ chapters on meaningless outputs
+→ hyper-externalism
+→ Wittgenstein’s lion
+→ stochastic measuring devices
+→ speech-act responsibility gaps.
+
+TEST:
+Take candidate definitions of encounter and remove, one by one:
+machine meaning,
+machine intention,
+machine sentience,
+machine belief,
+shared language.
+Identify the weakest definition that still distinguishes encounter from arbitrary causal interaction.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[ENCOUNTER-006]]
+[[ENCOUNTER-AI-015]]
+[[Communication Is Not Given]]
+[[Encounter Without Understanding]]
+
+BIBTEX:
+@incollection{CappelenSterken2026Introduction,
+  author = {Herman Cappelen and Rachel Sterken},
+  title = {Introduction},
+  booktitle = {Communicating with AI: Philosophical Perspectives},
+  editor = {Herman Cappelen and Rachel Sterken},
+  publisher = {Oxford University Press},
+  year = {2026},
+  pages = {xi--xviii},
+  doi = {10.1093/9780191998317.002.0006}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-AI-022
+
+TITLE:
+The strongest counterexample to AI-as-other is AI-as-instrument.
+
+SOURCE:
+Communicating with AI: Philosophical Perspectives — “Large Language Models Are Stochastic Measuring Devices” — 2026 — Oxford University Press. ([academic.oup.com](https://academic.oup.com/book/63302/chapter/573018260?utm_source=chatgpt.com))
+
+PASSAGE:
+[PARAPHRASE] The chapter proposes that so-called communication with AI may be better understood as interaction with a scientific instrument, drawing on measurement and simulation rather than the philosophy of other minds. ([academic.oup.com](https://academic.oup.com/book/63302/chapter/573018260?utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+Fluent response does not force an interlocutor ontology; the same behavior can be redescribed instrumentally.
+
+LOCAL MOVE:
+The chapter relocates questions about LLM interpretation into philosophy of science: neural models can function as measuring devices and simulation machinery rather than speakers.
+
+SOURCE TERMS:
+stochastic measuring device
+measurement
+simulation
+scientific instrument
+interpretation
+communication
+neural network
+
+WHAT BECAME STRANGE:
+Encounter phenomenology and instrument ontology can coexist. A human may experience being addressed while the best explanatory account treats the generating system as measurement apparatus.
+
+QUESTION:
+How could evidence discriminate AI-as-interlocutor from AI-as-instrument when both predict responsive text?
+
+DEEPER QUESTION:
+Is “encounter” useful precisely because it permits the encountered entity to remain ontologically undecided?
+
+MECHANISM:
+training data/environment
+→ neural model
+→ prompt/probe
+→ stochastic generative simulation
+→ output
+→ human interprets output as measurement or message.
+
+FORMAL SHIFT:
+<LLM AS SPEAKER>
+→ <LLM AS TRAINED MODEL / INSTRUMENT>
+→ [PROMPT AS PROBE]
+→ <OUTPUT AS STOCHASTIC MEASUREMENT>
+
+SOURCE FORMALISM:
+The chapter explicitly proposes scientific measurement as an alternative conceptual framework for understanding interactions commonly described as communicating with AI. ([academic.oup.com](https://academic.oup.com/book/63302/chapter/573018260?utm_source=chatgpt.com))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+INTERLOCUTOR READING:
+PROMPT → OTHER → REPLY
+
+INSTRUMENT READING:
+PROBE → MODEL → MEASUREMENT
+
+ENCOUNTER QUESTION:
+What remains invariant across both descriptions?
+
+TENSION:
+Floridi’s artificial agency thesis grants a novel non-intelligent agency. Encounter Ontology assigns emergence to the relation. The measuring-device account may eliminate both as unnecessary ontological inflation.
+
+MISSING:
+Cases where interlocutor and instrument models make different empirical predictions rather than merely supporting different vocabularies.
+
+BOUNDARY:
+The instrumental account does not imply that interactions are socially or psychologically inconsequential. It disputes how the computational participant should be characterized.
+
+CITATION TRAIL:
+[[ENCOUNTER-AI-014]]
+[[ENCOUNTER-AI-016]]
+[[ENCOUNTER-AI-021]]
+→ philosophy of scientific measurement
+→ model interpretation
+→ human-machine communication
+→ prompt-as-probe experiments.
+
+TEST:
+Run identical LLM tasks under two framings:
+“you are conversing with an AI partner”
+versus
+“you are probing a stochastic linguistic instrument.”
+Measure interaction strategy, epistemic trust, anthropomorphic attribution, repair behavior, and conceptual change. Determine which encounter phenomena depend upon the interlocutor framing.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[ENCOUNTER-AI-014]]
+[[ENCOUNTER-AI-016]]
+[[ENCOUNTER-AI-021]]
+[[AI as Instrument]]
+[[Prompt as Probe]]
+
+BIBTEX:
+@incollection{StochasticMeasuringDevices2026,
+  title = {Large Language Models Are Stochastic Measuring Devices},
+  booktitle = {Communicating with AI: Philosophical Perspectives},
+  editor = {Herman Cappelen and Rachel Sterken},
+  publisher = {Oxford University Press},
+  year = {2026}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-AI-023
+
+TITLE:
+Language may construct the artificial Other before the machine earns that status ontologically.
+
+SOURCE:
+Mark Coeckelbergh — You, Robot: On the Linguistic Construction of Artificial Others — 2011 — AI & Society 26(1), 61–69. ([doi.org](https://doi.org/10.1007/s00146-010-0289-z?utm_source=chatgpt.com))
+
+PASSAGE:
+[PARAPHRASE] Coeckelbergh argues that talk about and talk to robots does not merely report an independently fixed human-robot reality; linguistic practice interprets and co-shapes relations with artificial “quasi-others.” ([researchgate.net](https://www.researchgate.net/publication/220414565_You_Robot_On_the_linguistic_construction_of_artificial_others?utm_source=chatgpt.com))
+
+RESEARCH OBJECT:
+Artificial otherness can be produced through address.
+
+LOCAL MOVE:
+The paper moves the analysis of human-robot relations away from intrinsic machine properties toward phenomenological and hermeneutic mediation by language.
+
+SOURCE TERMS:
+artificial others
+quasi-others
+language
+human-robot relations
+phenomenology
+hermeneutics
+social relations
+
+WHAT BECAME STRANGE:
+The pronoun “you” may be an operation. Addressing a system as a second person can help constitute the social relation subsequently cited as evidence that it is an other.
+
+QUESTION:
+Does prompting create an artificial second person through grammar before any philosophical determination of agency or personhood occurs?
+
+DEEPER QUESTION:
+Could second-person address be one of the smallest operative mechanisms by which interaction becomes encounter-like?
+
+MECHANISM:
+artifact produces socially legible behavior
+→ human addresses/describes artifact linguistically
+→ linguistic categories mediate experience
+→ expectations and practices shift
+→ artifact is encountered as quasi-other.
+
+FORMAL SHIFT:
+<COMPUTATIONAL ARTIFACT>
+→ <SECOND-PERSON / SOCIAL LANGUAGE>
+→ [HERMENEUTIC MEDIATION]
+→ <ARTIFICIAL QUASI-OTHER>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+IT → “YOU”
+is not merely grammatical substitution.
+
+It can function as:
+CATEGORY CHANGE
+→ EXPECTATION CHANGE
+→ INTERACTION CHANGE.
+
+TENSION:
+Fernandez-Borsot argues that AI requires a carefully differentiated “analytical other.” Coeckelbergh suggests that linguistic practice is already actively making artificial others before such classification is stabilized.
+
+MISSING:
+Controlled evidence isolating grammatical address from embodiment, social cues, model behavior, and interface personification.
+
+BOUNDARY:
+Linguistic construction does not imply that ontological properties are arbitrary or that language alone determines what machines are.
+
+CITATION TRAIL:
+[[ENCOUNTER-AI-018]]
+[[ENCOUNTER-AI-019]]
+→ Coeckelbergh social-relational ethics
+→ second-person philosophy
+→ CASA/media equation
+→ linguistic anthropomorphism in LLM prompting.
+
+TEST:
+Hold model outputs constant while varying interface and prompt grammar:
+IT-form,
+YOU-form,
+named-persona form,
+tool form.
+Measure perceived agency, reciprocity, obligation, trust, and remembered relation.
+
+PLATFORM:
+[[Encounter Genealogy — AI/HCI/STS/Humanities]]
+
+LINKS:
+[[ENCOUNTER-AI-018]]
+[[ENCOUNTER-AI-019]]
+[[Second-Person AI]]
+[[Artificial Quasi-Other]]
+
+BIBTEX:
+@article{Coeckelbergh2011YouRobot,
+  author = {Mark Coeckelbergh},
+  title = {You, Robot: On the Linguistic Construction of Artificial Others},
+  journal = {AI \& Society},
+  year = {2011},
+  volume = {26},
+  number = {1},
+  pages = {61--69},
+  doi = {10.1007/s00146-010-0289-z}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-OP-024
+
+TITLE:
+An encounter needs observable entry, maintenance, and exit conditions before it needs a score.
+
+SOURCE:
+Candace L. Sidner, Christopher Lee, Cory D. Kidd, Neal Lesh, and Charles Rich — “Explorations in Engagement for Humans and Robots” — 2005 — Artificial Intelligence 166(1–2), 140–164. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0004370205000512))
+
+PASSAGE:
+[QUOTE] Engagement is the process by which participants “start, maintain and end their perceived connection to one another.” ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0004370205000512))
+
+RESEARCH OBJECT:
+Before asking whether an encounter is strong, transformative, or meaningful, operationalization needs to determine whether a bounded relational episode has occurred at all.
+
+LOCAL MOVE:
+Sidner and colleagues replace engagement-as-feeling with engagement-as-process. The phenomenon has temporal organization: connection is established, maintained, and terminated.
+
+SOURCE TERMS:
+engagement
+start
+maintain
+end
+perceived connection
+conversation
+collaboration
+engagement gestures
+
+WHAT BECAME STRANGE:
+“Multi-turn” is a weak proxy for encounter duration. Twenty turns can occur without any identifiable transition into a jointly maintained relation, while a short sequence can contain explicit entry, maintenance checking, and disengagement.
+
+QUESTION:
+What observable events mark the transition from mere availability to an active human–AI encounter?
+
+DEEPER QUESTION:
+Can an encounter fail to begin even though prompt-response traffic is occurring?
+
+MECHANISM:
+availability
+→ initiation/contact
+→ uptake
+→ maintained connection
+→ checking/renewal
+→ disengagement
+→ termination.
+
+FORMAL SHIFT:
+<UNSEGMENTED CHAT LOG>
+→ <RELATIONAL PHASES>
+→ [BOUNDARY DETECTION]
+→ <ENCOUNTER EPISODE>
+
+SOURCE FORMALISM:
+The source conceptualizes engagement as a process with a beginning, maintenance, and ending; it does not supply a general-purpose formal state machine for LLM interaction.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+STATE ∈ {
+  AVAILABLE,
+  INITIATING,
+  ESTABLISHED,
+  MAINTAINING,
+  DISENGAGING,
+  ENDED
+}
+
+An operational encounter detector first estimates transition times:
+
+t_start
+t_established
+t_last_renewal
+t_end
+
+Only events between t_established and t_end belong to the bounded encounter.
+
+TENSION:
+[[ENCOUNTER-AI-016]] defines encounters through sustained multi-turn generative coupling, but “sustained” remains underspecified without observable boundary conditions.
+
+MISSING:
+Textual or multimodal equivalents of the engagement signals that allow beginning, maintenance, and ending to be inferred reliably.
+
+BOUNDARY:
+Sidner et al. study engagement with an embodied robot. Their findings do not establish that the same cues identify encounter boundaries in text-only LLM interaction.
+
+CITATION TRAIL:
+[[ENCOUNTER-AI-016]]
+→ Sidner et al. 2005
+→ Rich et al. 2010 computational recognition
+→ conversation openings/closings
+→ LLM encounter segmentation.
+
+TEST:
+Create a corpus containing complete human–LLM sessions rather than isolated turns. Have independent annotators mark:
+NO ENCOUNTER,
+INITIATION,
+ESTABLISHED,
+MAINTENANCE,
+DISENGAGEMENT,
+END.
+Then test whether turn count, elapsed time, adjacency structure, topic persistence, acknowledgment, and explicit closing predict those boundaries.
+
+PLATFORM:
+[[Operational Encounter Model]]
+
+LINKS:
+[[ENCOUNTER-AI-016]]
+[[ENCOUNTER-002]]
+[[Encounter Boundary]]
+[[Temporal Encounter]]
+
+BIBTEX:
+@article{SidnerEtAl2005Engagement,
+  author = {Candace L. Sidner and Christopher Lee and Cory D. Kidd and Neal Lesh and Charles Rich},
+  title = {Explorations in Engagement for Humans and Robots},
+  journal = {Artificial Intelligence},
+  year = {2005},
+  volume = {166},
+  number = {1-2},
+  pages = {140--164},
+  doi = {10.1016/j.artint.2005.03.005}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-OP-025
+
+TITLE:
+Connection events make relational participation computable without claiming access to inner states.
+
+SOURCE:
+Charles Rich, Brett Ponsler, Aaron Holroyd, and Candace L. Sidner — “Recognizing Engagement in Human-Robot Interaction” — 2010 — HRI ’10, pp. 375–382. ([doi.org](https://doi.org/10.1145/1734454.1734580))
+
+PASSAGE:
+[PARAPHRASE] Their computational model recognizes four kinds of connection events: directed gaze, mutual facial gaze, conversational adjacency pairs, and backchannels. ([doi.org](https://doi.org/10.1145/1734454.1734580))
+
+RESEARCH OBJECT:
+Encounter can be operationalized first as an event stream rather than as an inferred emotion, attitude, or metaphysical relation.
+
+LOCAL MOVE:
+Rich and colleagues translate engagement theory into independently detectable interaction events and package the recognizers as computational machinery.
+
+SOURCE TERMS:
+engagement
+connection events
+directed gaze
+mutual facial gaze
+conversational adjacency pairs
+backchannels
+recognizer
+
+WHAT BECAME STRANGE:
+An encounter detector does not initially need to determine whether the human “feels engaged” or whether the machine “understands.” It can detect whether the interaction repeatedly produces recognizable signs of relational connection.
+
+QUESTION:
+What are the LLM equivalents of HRI connection events?
+
+DEEPER QUESTION:
+Which connection events require actual reciprocal contingency rather than merely an output that resembles reciprocity?
+
+MECHANISM:
+raw behavior
+→ event recognition
+→ temporally distributed connection evidence
+→ engagement-state inference.
+
+FORMAL SHIFT:
+<MULTIMODAL ACTIVITY STREAM>
+→ <CONNECTION EVENTS>
+→ [EVENT RECOGNITION]
+→ <RELATIONAL STATE ESTIMATE>
+
+SOURCE FORMALISM:
+Four implemented recognizers:
+DIRECTED GAZE
+MUTUAL FACIAL GAZE
+CONVERSATIONAL ADJACENCY PAIRS
+BACKCHANNELS
+
+The system was implemented as a ROS component and preliminarily evaluated in a human–robot pointing game. ([doi.org](https://doi.org/10.1145/1734454.1734580))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For text-based AI:
+
+CONNECTION_EVENT ∈ {
+  SUMMONS_UPTAKE,
+  QUESTION_ANSWER_PAIR,
+  REFERENCE_UPTAKE,
+  ACKNOWLEDGMENT,
+  BACKCHANNEL,
+  UNDERSTANDING_CHECK,
+  REPAIR_INITIATION,
+  REPAIR_RESOLUTION,
+  CLOSING_UPTAKE
+}
+
+Encounter continuity becomes a temporal pattern over events rather than TURN_COUNT alone.
+
+TENSION:
+A fluent LLM can generate adjacency pairs and acknowledgments by construction. Their presence may therefore have much lower discriminative value than they do in embodied HRI.
+
+MISSING:
+Connection events whose occurrence depends upon previous relational state rather than generic dialogue competence.
+
+BOUNDARY:
+Recognizable connection behavior is evidence of interactional organization, not evidence of machine consciousness, intention, or genuine mutual understanding.
+
+CITATION TRAIL:
+[[ENCOUNTER-OP-024]]
+[[ENCOUNTER-006]]
+→ Rich et al. 2010
+→ conversation analysis
+→ repair
+→ textual connection-event grammar.
+
+TEST:
+Build a turn-level annotation scheme for the proposed textual connection events. Compare:
+single-shot QA,
+multi-turn factual assistance,
+iterative co-creation,
+and sustained open conversation.
+Test which event types discriminate these conditions after controlling for raw turn count.
+
+PLATFORM:
+[[Operational Encounter Model]]
+
+LINKS:
+[[ENCOUNTER-AI-016]]
+[[ENCOUNTER-002]]
+[[Connection Events]]
+[[Computable Encounter]]
+
+BIBTEX:
+@inproceedings{RichEtAl2010Engagement,
+  author = {Charles Rich and Brett Ponsler and Aaron Holroyd and Candace L. Sidner},
+  title = {Recognizing Engagement in Human-Robot Interaction},
+  booktitle = {Proceedings of the 5th ACM/IEEE International Conference on Human-Robot Interaction},
+  year = {2010},
+  pages = {375--382},
+  doi = {10.1145/1734454.1734580}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-OP-026
+
+TITLE:
+An encounter classifier can be accurate while operationalizing no stable encounter construct.
+
+SOURCE:
+Alessandra Sorrentino, Laura Fiorini, and Filippo Cavallo — “From the Definition to the Automatic Assessment of Engagement in Human–Robot Interaction: A Systematic Review” — 2024 — International Journal of Social Robotics 16, 1641–1663. ([doi.org](https://doi.org/10.1007/s12369-024-01146-w))
+
+PASSAGE:
+[PARAPHRASE] Six of the 28 reviewed studies supplied no explicit engagement definition; the literature frequently turned engagement into binary or multiclass classification, while the review found weak correspondence between conceptual components and extracted features. ([doi.org](https://doi.org/10.1007/s12369-024-01146-w))
+
+RESEARCH OBJECT:
+Operationalization can silently reverse direction: instead of theory determining indicators, available indicators begin determining what “encounter” means.
+
+LOCAL MOVE:
+The review audits the chain linking definition, annotation, feature extraction, and automatic prediction and finds conceptual instability propagating down that chain.
+
+SOURCE TERMS:
+engagement definition
+annotation
+ground truth
+features
+binary classification
+multi-class classification
+continuous state
+cue-centric
+automatic prediction
+
+WHAT BECAME STRANGE:
+A technically excellent encounter detector could simply learn annotators’ intuitions about politeness, duration, attention, or affect and then return those intuitions as if they constituted encounter.
+
+QUESTION:
+What construct-validity test should an “encounter” feature pass before entering a detector?
+
+DEEPER QUESTION:
+Should encounter even be represented by a single ground-truth label?
+
+MECHANISM:
+underspecified construct
+→ annotation convention
+→ proxy feature selection
+→ classifier training
+→ high prediction accuracy
+→ proxy becomes mistaken for phenomenon.
+
+FORMAL SHIFT:
+<THEORETICAL CONSTRUCT>
+→ <OPERATIONAL DEFINITION>
+→ [ANNOTATION]
+→ <FEATURES>
+→ [MODEL]
+→ <PREDICTION>
+
+SOURCE FORMALISM:
+The reviewed detection pipeline distinguishes:
+DATA ANNOTATION
+→ FEATURE EXTRACTION
+→ AUTOMATIC PREDICTION.
+
+Studies variously represent engagement as binary, multiclass, or continuous. ([doi.org](https://doi.org/10.1007/s12369-024-01146-w))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+INVALID SHORTCUT:
+OBSERVABLE CUE → “ENCOUNTER”
+
+REQUIRED CHAIN:
+ENCOUNTER CLAIM
+→ DIMENSION
+→ OBSERVABLE SIGNATURE
+→ ALTERNATIVE EXPLANATIONS
+→ DISCRIMINANT TEST
+→ MEASURE
+
+TENSION:
+[[ENCOUNTER-AI-016]] supplies structural encounter criteria, but converting those directly into labels would still leave “generative emergence” unmeasured.
+
+MISSING:
+Discriminant validity: variables that separate encounter from engagement, enjoyment, anthropomorphism, task success, conversation length, and mere linguistic fluency.
+
+BOUNDARY:
+The review concerns engagement in HRI, not human–LLM encounter specifically. Its methodological warning transfers more securely than any particular HRI feature set.
+
+CITATION TRAIL:
+[[ENCOUNTER-AI-016]]
+→ Sorrentino et al. 2024
+→ engagement construct validity
+→ encounter annotation
+→ discriminant validation.
+
+TEST:
+Give the same interaction corpus to annotators using four definitions:
+ENGAGEMENT,
+COLLABORATION,
+CONVERSATION QUALITY,
+ENCOUNTER.
+Measure label overlap. Features that predict all four equally well are poor encounter-specific indicators.
+
+PLATFORM:
+[[Operational Encounter Model]]
+
+LINKS:
+[[ENCOUNTER-AI-016]]
+[[ENCOUNTER-OP-024]]
+[[Construct Validity]]
+[[Encounter Detector]]
+
+BIBTEX:
+@article{SorrentinoEtAl2024Engagement,
+  author = {Alessandra Sorrentino and Laura Fiorini and Filippo Cavallo},
+  title = {From the Definition to the Automatic Assessment of Engagement in Human--Robot Interaction: A Systematic Review},
+  journal = {International Journal of Social Robotics},
+  year = {2024},
+  volume = {16},
+  pages = {1641--1663},
+  doi = {10.1007/s12369-024-01146-w}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-OP-027
+
+TITLE:
+Breakdown exposes reciprocity more clearly than smooth conversation does.
+
+SOURCE:
+Saul Albert and J. P. de Ruiter — “Repair: The Interface Between Interaction and Cognition” — 2018 — Topics in Cognitive Science 10(2), 279–313. ([doi.org](https://doi.org/10.1111/tops.12339))
+
+PASSAGE:
+[PARAPHRASE] Conversation analysis distinguishes who initiates repair from who resolves it, yielding four combinations of self/other initiation and self/other repair. ([doi.org](https://doi.org/10.1111/tops.12339))
+
+RESEARCH OBJECT:
+Repair transforms “mutual understanding” from an invisible mental-state claim into observable sequential work performed when interaction encounters trouble.
+
+LOCAL MOVE:
+Albert and de Ruiter make misunderstanding analytically productive. Trouble reveals who notices divergence, who marks it, who supplies a candidate correction, and whether coordinated action can resume.
+
+SOURCE TERMS:
+repair
+trouble-source
+self-initiation
+other-initiation
+self-repair
+other-repair
+understanding
+progressivity
+intersubjectivity
+
+WHAT BECAME STRANGE:
+Smooth dialogue supplies weak evidence of reciprocity because both parties can continue while misunderstanding one another. A breakdown generates an interactional probe of the relation.
+
+QUESTION:
+Who carries the burden of keeping a human–AI encounter intelligible when shared progress breaks?
+
+DEEPER QUESTION:
+Does a stronger encounter require both participants to detect trouble, or only the coupled system to recover from it?
+
+MECHANISM:
+trouble-source
+→ trouble detection
+→ repair initiation
+→ candidate repair
+→ acceptance/rejection
+→ resumed or failed progress.
+
+FORMAL SHIFT:
+<APPARENTLY SMOOTH EXCHANGE>
+→ <ENGINEERED TROUBLE>
+→ [REPAIR SEQUENCE]
+→ <OBSERVABLE COORDINATION STRUCTURE>
+
+SOURCE FORMALISM:
+Four-way repair taxonomy:
+SISR = self-initiated self-repair
+SIOR = self-initiated other-repair
+OISR = other-initiated self-repair
+OIOR = other-initiated other-repair. ([doi.org](https://doi.org/10.1111/tops.12339))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For human–AI interaction:
+
+INITIATOR ∈ {HUMAN, AI}
+RESOLVER ∈ {HUMAN, AI}
+
+Measure:
+TROUBLE_OPPORTUNITIES
+REPAIR_INITIATION_RATE
+AI_INITIATION_RATE
+HUMAN_INITIATION_RATE
+REPAIR_SUCCESS
+REPAIR_LATENCY
+REPEATED_TROUBLE
+REPAIR_BURDEN_ASYMMETRY
+
+TENSION:
+A language model may generate linguistically appropriate repair forms without representing the misunderstanding that generated them.
+
+MISSING:
+A criterion distinguishing substantive trouble detection from generic clarification behavior.
+
+BOUNDARY:
+Conversation-analysis repair categories describe observable sequential organization. They do not by themselves establish equivalent cognitive processes across humans and AI.
+
+CITATION TRAIL:
+[[ENCOUNTER-006]]
+[[ENCOUNTER-AI-021]]
+→ Albert and de Ruiter 2018
+→ Pütz and Esposito 2024
+→ controlled ambiguity probes
+→ repair symmetry as encounter signature.
+
+TEST:
+Seed ambiguous reference, contradictory assumptions, under-specification, and mistaken premises into otherwise identical conversations. Code who first detects each trouble and who performs the work required to recover. Compare human-human and human-LLM baselines.
+
+PLATFORM:
+[[Operational Encounter Model]]
+
+LINKS:
+[[ENCOUNTER-006]]
+[[ENCOUNTER-AI-021]]
+[[Repair]]
+[[Encounter Breakdown Test]]
+
+BIBTEX:
+@article{AlbertDeRuiter2018Repair,
+  author = {Saul Albert and J. P. de Ruiter},
+  title = {Repair: The Interface Between Interaction and Cognition},
+  journal = {Topics in Cognitive Science},
+  year = {2018},
+  volume = {10},
+  number = {2},
+  pages = {279--313},
+  doi = {10.1111/tops.12339}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-OP-028
+
+TITLE:
+Successful repair can conceal that the human is carrying the encounter.
+
+SOURCE:
+Ole Pütz and Elena Esposito — “Performance without understanding: How ChatGPT relies on humans to repair conversational trouble” — 2024 — Discourse & Communication 18(6). ([journals.sagepub.com](https://journals.sagepub.com/doi/10.1177/17504813241271492))
+
+PASSAGE:
+[PARAPHRASE] In ambiguous cases, ChatGPT often proceeds with a likely interpretation rather than initiating clarification; user-initiated repairs can redirect subsequent output, sometimes inconsistently. ([journals.sagepub.com](https://journals.sagepub.com/doi/10.1177/17504813241271492))
+
+RESEARCH OBJECT:
+Repair success and repair reciprocity are different variables.
+
+LOCAL MOVE:
+Pütz and Esposito introduce ambiguities and corrections to inspect how ChatGPT handles conversational trouble. The user frequently detects and specifies the repair that allows the dialogue to continue.
+
+SOURCE TERMS:
+repair
+repair without understanding
+third position repair
+reference trouble
+communicative competence
+human direction
+dialog history
+misunderstanding
+
+WHAT BECAME STRANGE:
+A conversation can look collaboratively repaired even when one participant performs almost all trouble detection, diagnosis, and correction.
+
+QUESTION:
+Can repair-burden asymmetry distinguish fluent interaction from stronger encounter-like coupling?
+
+DEEPER QUESTION:
+How much human compensatory work can occur before “bidirectional coupling” becomes a misleading description?
+
+MECHANISM:
+ambiguous user turn
+→ model selects interpretation
+→ output exposes mismatch
+→ human diagnoses mismatch
+→ human reformulates/corrects
+→ model conditions on corrective text
+→ locally plausible continuation.
+
+FORMAL SHIFT:
+<REPAIR SUCCESS>
+→ <REPAIR LABOR DISTRIBUTION>
+→ [ACTOR-SENSITIVE CODING]
+→ <ASYMMETRY PROFILE>
+
+SOURCE FORMALISM:
+The paper contrasts:
+BOT-INITIATED handling of potential trouble
+with
+USER-INITIATED third-position repair,
+and examines how revised user wording conditions subsequent model output. ([journals.sagepub.com](https://journals.sagepub.com/doi/10.1177/17504813241271492))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+HUMAN_REPAIR_BURDEN =
+human_detected_troubles / all_detected_troubles
+
+AI_REPAIR_INITIATIVE =
+AI_initiated_clarifications / ambiguity_opportunities
+
+RECOVERY_FIDELITY =
+resolved_without_reintroducing_conflict / repair_attempts
+
+Encounter reciprocity requires reporting these separately from overall task success.
+
+TENSION:
+[[ENCOUNTER-AI-016]] requires recursive bidirectional coupling. Pütz and Esposito show that apparent recursion may be strongly directionally dependent.
+
+MISSING:
+Large-scale controlled comparisons across current models rather than illustrative GPT-3.5 dialogues.
+
+BOUNDARY:
+The authors’ examples do not establish that all LLM repair is human-driven, nor that successful repair never reflects useful model-side processing.
+
+CITATION TRAIL:
+[[ENCOUNTER-OP-027]]
+[[ENCOUNTER-AI-016]]
+→ Pütz and Esposito 2024
+→ model comparisons
+→ repair opportunity benchmark
+→ directional encounter metrics.
+
+TEST:
+Generate a benchmark of minimally different ambiguous turns with known alternative interpretations. Measure whether the model:
+detects ambiguity,
+asks a discriminating question,
+maintains both alternatives,
+updates after correction,
+and avoids reverting.
+Compare those scores with ordinary “repair success.”
+
+PLATFORM:
+[[Operational Encounter Model]]
+
+LINKS:
+[[ENCOUNTER-006]]
+[[ENCOUNTER-AI-016]]
+[[Human Repair Burden]]
+[[Repair Without Understanding]]
+
+BIBTEX:
+@article{PutzEsposito2024Repair,
+  author = {Ole P{\"u}tz and Elena Esposito},
+  title = {Performance without understanding: How ChatGPT relies on humans to repair conversational trouble},
+  journal = {Discourse \& Communication},
+  year = {2024},
+  volume = {18},
+  number = {6},
+  doi = {10.1177/17504813241271492}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-OP-029
+
+TITLE:
+The encounter may have to be measured as a trajectory of coordination rather than as properties of either participant.
+
+SOURCE:
+Nancy J. Cooke, Jamie C. Gorman, Christopher W. Myers, and Jasmine L. Duran — “Interactive Team Cognition” — 2013 — Cognitive Science 37(2), 255–285. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/23167661/))
+
+PASSAGE:
+[QUOTE] Interactive Team Cognition treats team cognition as “an activity, not a property or a product.” ([doi.org](https://doi.org/10.1111/cogs.12009))
+
+RESEARCH OBJECT:
+The appropriate measurement unit for relational intelligence may be the temporal organization of interaction itself.
+
+LOCAL MOVE:
+Cooke and colleagues oppose accounts that infer team cognition primarily from similarity between static individual knowledge structures. They instead place interaction, coordination, context, and adaptation at the team level.
+
+SOURCE TERMS:
+interactive team cognition
+team interaction
+activity
+team level
+context
+coordination
+communication flow
+adaptation
+
+WHAT BECAME STRANGE:
+Human score + AI score cannot necessarily recover a relational phenomenon. Even perfect individual measures can miss whether the coupled process adapts coherently.
+
+QUESTION:
+What properties exist in a human–AI trajectory that cannot be assigned to either participant independently?
+
+DEEPER QUESTION:
+Could relational intelligence be measured without attributing cognition to the AI at all?
+
+MECHANISM:
+heterogeneous perspectives/capabilities
+→ interaction
+→ temporally coordinated action
+→ adaptation to changing conditions
+→ team-level performance.
+
+FORMAL SHIFT:
+<HUMAN VARIABLES + AI VARIABLES>
+→ <TIME-ORDERED JOINT ACTIVITY>
+→ [DYNAMIC COORDINATION ANALYSIS]
+→ <RELATIONAL PROCESS MEASURE>
+
+SOURCE FORMALISM:
+Interactive Team Cognition advances three premises:
+team cognition is an activity;
+it should be studied at the team level;
+it is inseparable from context. ([pubmed.ncbi.nlm.nih.gov](https://pubmed.ncbi.nlm.nih.gov/23167661/))
+
+The authors also describe measures based on communication flow, speaker/listener identities, and timing in team tasks. ([doi.org](https://doi.org/10.1111/cogs.12009))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+SESSION =
+{e₁, e₂, ... eₙ}
+
+where each event records:
+actor,
+timestamp,
+operation,
+referent,
+artifact-state,
+response-to-prior-event.
+
+Candidate relational variables:
+CROSS-ACTOR DEPENDENCY
+ADAPTATION AFTER PERTURBATION
+COORDINATION LATENCY
+TURN-TO-TURN INFORMATION GAIN
+STATE-TRANSITION DIVERSITY.
+
+TENSION:
+Shared-mental-model approaches can measure convergence between participants. Interactive Team Cognition warns that convergence may be unnecessary or even less informative than adaptive coordination.
+
+MISSING:
+A principled translation from human team interaction to human–AI systems whose participants have radically different internal architectures.
+
+BOUNDARY:
+Cooke et al. study human teams. Applying team cognition to AI does not imply the machine possesses human cognition.
+
+CITATION TRAIL:
+[[ENCOUNTER-AI-016]]
+[[ENCOUNTER-008]]
+→ Interactive Team Cognition
+→ dynamical coordination
+→ cross-recurrence / temporal coupling
+→ human–AI encounter trajectories.
+
+TEST:
+For the same corpus, compare prediction of independent expert-rated task development using:
+A. individual user/model features,
+B. final output features,
+C. temporal relational features.
+If C adds explanatory power beyond A+B, the interaction contains measurable structure not captured by participant properties alone.
+
+PLATFORM:
+[[Operational Encounter Model]]
+
+LINKS:
+[[ENCOUNTER-AI-016]]
+[[ENCOUNTER-008]]
+[[Interaction-Level Measure]]
+[[Relational Intelligence]]
+
+BIBTEX:
+@article{CookeEtAl2013Interactive,
+  author = {Nancy J. Cooke and Jamie C. Gorman and Christopher W. Myers and Jasmine L. Duran},
+  title = {Interactive Team Cognition},
+  journal = {Cognitive Science},
+  year = {2013},
+  volume = {37},
+  number = {2},
+  pages = {255--285},
+  doi = {10.1111/cogs.12009}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-OP-030
+
+TITLE:
+Joint attention to a shared object can be more diagnostic than attention to the artificial partner.
+
+SOURCE:
+Giulia Perugia, Maike Paetzel-Prüsmann, Madelene Alanenpää, and Ginevra Castellano — “I Can See It in Your Eyes: Gaze as an Implicit Cue of Uncanniness and Task Performance in Repeated Interactions With Robots” — 2021 — Frontiers in Robotics and AI 8:645956. ([frontiersin.org](https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2021.645956/full))
+
+PASSAGE:
+[PARAPHRASE] During the joint task, attention to the shared screen predicted involvement and task performance better than gaze toward the robot; more gaze at the robot predicted poorer task performance. ([frontiersin.org](https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2021.645956/full))
+
+RESEARCH OBJECT:
+Encounter may be triadic rather than dyadic: HUMAN ↔ SHARED WORLD ↔ AI.
+
+LOCAL MOVE:
+The study separates social chat from joint activity and discovers that the meaning of the same cue changes with interactional context.
+
+SOURCE TERMS:
+shared attention
+mutual gaze
+joint task
+engagement
+task performance
+object of shared attention
+object of exclusive attention
+
+WHAT BECAME STRANGE:
+Looking at the artificial partner can become evidence of worse coordination precisely when both participants should be oriented toward a shared task object.
+
+QUESTION:
+What is the textual/generative equivalent of joint attention to a shared object?
+
+DEEPER QUESTION:
+Are the strongest AI encounters actually encounters around a third thing rather than encounters with AI itself?
+
+MECHANISM:
+human and artificial partner
+→ coordinate attention on common object
+→ act upon common task state
+→ contributions become mutually relevant through that object
+→ joint progress becomes observable.
+
+FORMAL SHIFT:
+<HUMAN ↔ AI>
+→ <HUMAN ↔ SHARED OBJECT ↔ AI>
+→ [JOINT MODIFICATION / REFERENCE]
+→ <COORDINATED ACTIVITY>
+
+SOURCE FORMALISM:
+The study operationalizes attentional focus as percentage of gaze directed toward:
+ROBOT,
+SHARED SCREEN,
+EXCLUSIVE TABLET,
+OTHER,
+and relates these measures to reported involvement and task performance. ([frontiersin.org](https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2021.645956/full))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For generative AI, replace gaze with referential/action focus:
+
+SHARED_OBJECT ∈ {
+  document,
+  codebase,
+  image,
+  design,
+  argument map,
+  simulation,
+  physical task state
+}
+
+SHARED_OBJECT_UPTAKE =
+fraction of turns that correctly reference or transform the current common object state.
+
+TENSION:
+Conversational interfaces encourage attention toward the apparent interlocutor. Productive encounter may instead require the AI itself to recede as both participants orient toward the work.
+
+MISSING:
+A reliable way to distinguish shared-object attention from mere lexical repetition of object descriptions.
+
+BOUNDARY:
+The HRI result concerns gaze allocation in one embodied collaborative game. It does not establish a universal superiority of object-oriented over partner-oriented attention.
+
+CITATION TRAIL:
+[[ENCOUNTER-AI-013]]
+[[ENCOUNTER-AI-016]]
+→ Perugia et al. 2021
+→ joint attention
+→ shared artifacts
+→ co-creative object trajectories.
+
+TEST:
+Create matched AI tasks with:
+A. ephemeral chat only,
+B. persistent visible shared artifact.
+Measure reference accuracy, repair, artifact improvement, turn efficiency, and post-task conceptual change. Test whether encounter signatures concentrate around the shared artifact rather than social-language intensity.
+
+PLATFORM:
+[[Operational Encounter Model]]
+
+LINKS:
+[[ENCOUNTER-AI-013]]
+[[ENCOUNTER-AI-016]]
+[[Shared Object]]
+[[Triadic Encounter]]
+
+BIBTEX:
+@article{PerugiaEtAl2021Eyes,
+  author = {Giulia Perugia and Maike Paetzel-Pr{\"u}smann and Madelene Alanenp{\"a}{\"a} and Ginevra Castellano},
+  title = {I Can See It in Your Eyes: Gaze as an Implicit Cue of Uncanniness and Task Performance in Repeated Interactions With Robots},
+  journal = {Frontiers in Robotics and AI},
+  year = {2021},
+  volume = {8},
+  pages = {645956},
+  doi = {10.3389/frobt.2021.645956}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-OP-031
+
+TITLE:
+Multi-turn generativity becomes analytically useful only when turns co-develop something.
+
+SOURCE:
+Yingyue Luna Luan, Yeun Joon Kim, and Jing Zhou — “Augmented Learning for Joint Creativity in Human-GenAI Co-Creation” — 2025 — Information Systems Research, Articles in Advance. ([doi.org](https://doi.org/10.1287/isre.2024.0984))
+
+PASSAGE:
+[PARAPHRASE] Across three studies, repeated human–GenAI interaction did not automatically improve joint creativity; the authors identify Idea Co-Development, involving feedback exchanges and iterative refinement, as a consequential activity, and experimentally increase it through guidance. ([doi.org](https://doi.org/10.1287/isre.2024.0984))
+
+RESEARCH OBJECT:
+Recursive exchange should be operationalized by what later turns do to earlier material, not by the existence of later turns.
+
+LOCAL MOVE:
+Luan and colleagues decompose co-creation dialogue into interaction activities and isolate a particular form of reciprocal development rather than treating all AI involvement as equivalent.
+
+SOURCE TERMS:
+augmented learning
+joint creativity
+human-GenAI co-creation
+Idea Co-Development
+feedback exchanges
+iterative refinement
+involvement
+co-creation activities
+
+WHAT BECAME STRANGE:
+Repeated exposure can increase interaction while the most relationally interesting activity declines.
+
+QUESTION:
+Can Idea Co-Development become an observable proxy for the “generative emergence” claimed by encounter ontology?
+
+DEEPER QUESTION:
+What distinguishes revising an existing idea together from merely asking the model to regenerate alternatives?
+
+MECHANISM:
+candidate idea
+→ evaluation/feedback
+→ model modification
+→ human uptake
+→ further constraint/revision
+→ jointly developed artifact trajectory.
+
+FORMAL SHIFT:
+<MULTI-TURN CHAT>
+→ <CO-CREATION ACTIVITY TYPES>
+→ [IDENTIFY CO-DEVELOPMENT]
+→ <TRAJECTORY OF REFINED IDEA>
+
+SOURCE FORMALISM:
+The source defines Idea Co-Development as a co-creation activity characterized by feedback exchanges and iterative idea refinement and reports that guidance toward this activity improved joint creativity over time. ([doi.org](https://doi.org/10.1287/isre.2024.0984))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+IDEA_CO_DEVELOPMENT_RATIO =
+co_development_interaction_units
+/
+all_human_AI_interaction_units
+
+More importantly:
+
+ANCESTRY_DEPTH(x) =
+number of alternating human/AI transformations preserved in artifact x.
+
+An encounter-like artifact should exhibit traceable ancestry across both participants rather than simple one-turn generation.
+
+TENSION:
+[[ENCOUNTER-AI-016]] lists sustained multi-turn exchange and recursive coupling as structural encounter conditions. Luan et al. show why those criteria need content-sensitive coding.
+
+MISSING:
+A general co-development grammar that transfers beyond creative ideation to analysis, programming, learning, and decision-making.
+
+BOUNDARY:
+Improved joint creativity does not establish ontological emergence. Idea Co-Development is a behavioral activity category, not proof that meaning is irreducible to either participant.
+
+CITATION TRAIL:
+[[ENCOUNTER-AI-016]]
+[[ENCOUNTER-AI-013]]
+→ Luan, Kim, Zhou 2025
+→ dialogue activity coding
+→ artifact lineage
+→ generative encounter metric.
+
+TEST:
+Annotate each human and AI turn by whether it:
+introduces,
+evaluates,
+preserves,
+rejects,
+transforms,
+combines,
+or merely regenerates.
+Reconstruct the ancestry graph of the final artifact and test whether mixed human-AI ancestry predicts independent judgments of conceptual novelty or problem reframing.
+
+PLATFORM:
+[[Operational Encounter Model]]
+
+LINKS:
+[[ENCOUNTER-AI-016]]
+[[ENCOUNTER-AI-013]]
+[[Idea Co-Development]]
+[[Artifact Ancestry]]
+
+BIBTEX:
+@article{LuanKimZhou2025Augmented,
+  author = {Yingyue Luna Luan and Yeun Joon Kim and Jing Zhou},
+  title = {Augmented Learning for Joint Creativity in Human-GenAI Co-Creation},
+  journal = {Information Systems Research},
+  year = {2025},
+  doi = {10.1287/isre.2024.0984}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-OP-032
+
+TITLE:
+Recursion must be separated from being stuck in a loop.
+
+SOURCE:
+Elena Cavallin and Simone Spagnol — “When Designers Sweat: Behavioral Traces of GenAI Co-Creation” — 2026 — Proceedings of CHI 2026, Article 154, 1–17. ([doi.org](https://doi.org/10.1145/3772318.3791776))
+
+PASSAGE:
+[PARAPHRASE] The study temporally synchronizes screen activity, keystroke/mouse logs, and coded design behavior; repeated “communication loops” are associated with interaction difficulty and poorer design outcomes rather than automatically indicating successful collaboration. ([doi.org](https://doi.org/10.1145/3772318.3791776))
+
+RESEARCH OBJECT:
+Recursive human–AI exchange has at least two operationally distinct forms: developmental recursion and stalled recursion.
+
+LOCAL MOVE:
+Cavallin and Spagnol instrument the creative workflow rather than relying solely on the final artifact or retrospective self-report.
+
+SOURCE TERMS:
+communication loops
+interaction patterns
+behavioral traces
+reflection
+generation
+design phases
+keystrokes
+screen recording
+adaptive interaction
+
+WHAT BECAME STRANGE:
+The surface structure of a failed prompt loop can look almost identical to “recursive bidirectional coupling”: prompt, answer, modification, answer, modification, answer.
+
+QUESTION:
+What observable state change distinguishes co-development from frustrated repetition?
+
+DEEPER QUESTION:
+Can an encounter be recursively coupled yet epistemically stagnant?
+
+MECHANISM:
+user intention
+→ prompt
+→ unsuitable output
+→ prompt alteration
+→ similar failure
+→ further prompt alteration
+→ repeated communication loop.
+
+FORMAL SHIFT:
+<ITERATION COUNT>
+→ <ITERATION FUNCTION>
+→ [CLASSIFY DEVELOPMENT vs STALL]
+→ <TRAJECTORY QUALITY>
+
+SOURCE FORMALISM:
+The study synchronizes multiple behavioral streams and codes:
+activity phases,
+tool use,
+pauses,
+communication loops,
+and verbal communication.
+It links these temporal traces to independently evaluated final concepts. ([doi.org](https://doi.org/10.1145/3772318.3791776))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+For each cycle c:
+
+ΔC = change in articulated constraints
+ΔA = change in artifact state
+ΔP = change in problem representation
+ΔE = reduction in repeated error
+
+DEVELOPMENTAL RECURSION:
+some meaningful Δ > 0
+
+STALLED RECURSION:
+turns increase while {ΔC, ΔA, ΔP, ΔE} remain approximately unchanged.
+
+TENSION:
+[[ENCOUNTER-AI-016]] uses recursion as an encounter admission condition. This evidence suggests recursion needs a directional or transformational qualifier.
+
+MISSING:
+Domain-independent criteria for meaningful state change. A visual-design improvement and a conceptual reframing cannot be measured with the same raw outcome variable.
+
+BOUNDARY:
+The study contains only 16 professional designers and a design-specific task. Its loop finding should not be generalized to every GenAI workflow without replication.
+
+CITATION TRAIL:
+[[ENCOUNTER-AI-016]]
+[[ENCOUNTER-AI-013]]
+→ Cavallin and Spagnol 2026
+→ Luan et al. Idea Co-Development
+→ trajectory coding
+→ developmental versus stalled recursion.
+
+TEST:
+Give blinded coders pairs of iteration sequences with turn count matched. Ask them to classify each transition as:
+REPEAT,
+PARAMETER TWEAK,
+CORRECTION,
+CONSTRAINT DISCOVERY,
+PROBLEM REFRAME,
+ARTIFACT DEVELOPMENT.
+Test which transition mixtures distinguish expert-rated development from loops.
+
+PLATFORM:
+[[Operational Encounter Model]]
+
+LINKS:
+[[ENCOUNTER-AI-016]]
+[[ENCOUNTER-AI-013]]
+[[Recursive Coupling]]
+[[Stalled Encounter]]
+
+BIBTEX:
+@inproceedings{CavallinSpagnol2026Sweat,
+  author = {Elena Cavallin and Simone Spagnol},
+  title = {When Designers Sweat: Behavioral Traces of GenAI Co-Creation},
+  booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+  year = {2026},
+  pages = {1--17},
+  articleno = {154},
+  doi = {10.1145/3772318.3791776}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-OP-033
+
+TITLE:
+Linguistic convergence is measurable but does not prove encounter.
+
+SOURCE:
+Holly P. Branigan, Martin J. Pickering, Jamie Pearson, and Janet F. McLean — “Linguistic alignment between people and computers” — 2010 — Journal of Pragmatics 42(9), 2355–2368. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0378216609003282))
+
+PASSAGE:
+[PARAPHRASE] Human speakers align linguistically with computers; the reviewed evidence suggests such alignment can be stronger than human-human alignment and may be substantially driven by attempts to improve communicative success. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0378216609003282))
+
+RESEARCH OBJECT:
+Behavioral coupling must be distinguished from relational reciprocity because humans can adapt strongly to a machine precisely because they believe adaptation is necessary.
+
+LOCAL MOVE:
+The authors distinguish alignment arising from relatively automatic language-processing mechanisms from alignment mediated by beliefs about the interlocutor, communicative success, or social affect.
+
+SOURCE TERMS:
+linguistic alignment
+syntax
+lexicon
+beliefs
+communicative success
+social affect
+mediated
+unmediated
+
+WHAT BECAME STRANGE:
+More convergence can indicate greater asymmetry. The human may converge on machine-preferred forms because the machine is perceived as inflexible.
+
+QUESTION:
+When linguistic alignment increases in an AI conversation, who is adapting to whom?
+
+DEEPER QUESTION:
+Could high surface synchrony coexist with low bidirectional coupling?
+
+MECHANISM:
+interlocutor behavior
+→ expectation about successful communication
+→ adaptation of lexical/syntactic choices
+→ observable convergence.
+
+FORMAL SHIFT:
+<SURFACE SIMILARITY>
+→ <DIRECTIONAL ADAPTATION>
+→ [CAUSAL MANIPULATION]
+→ <COUPLING OR ACCOMMODATION?>
+
+SOURCE FORMALISM:
+The paper distinguishes:
+UNMEDIATED alignment mechanisms
+from
+MEDIATED mechanisms involving beliefs about the interlocutor, communicative success, or social affect. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S0378216609003282))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+ALIGNMENT MATRIX:
+
+H→AI = change in human language conditional on AI language
+AI→H = change in AI language conditional on human language
+
+SYMMETRIC COUPLING requires estimating both directions separately.
+
+High(H→AI) + Low(AI→H)
+should not be reported simply as “high relational alignment.”
+
+TENSION:
+Encounter theory may treat synchrony, resonance, or convergence as relational evidence. Alignment research shows that the same traces can arise from unilateral accommodation.
+
+MISSING:
+Experiments that perturb human and AI linguistic styles independently enough to estimate both directional effects.
+
+BOUNDARY:
+Linguistic alignment concerns observable language form. It cannot by itself determine shared meaning, agency, relationship, or epistemic transformation.
+
+CITATION TRAIL:
+[[ENCOUNTER-AI-016]]
+[[ENCOUNTER-006]]
+→ Branigan et al. 2010
+→ entrainment
+→ accommodation
+→ directional coupling estimates.
+
+TEST:
+Randomly vary AI lexical and syntactic style across otherwise equivalent interactions while separately manipulating how strongly the model mirrors user language. Estimate H→AI and AI→H adaptation independently and relate each to repair success and artifact development.
+
+PLATFORM:
+[[Operational Encounter Model]]
+
+LINKS:
+[[ENCOUNTER-AI-016]]
+[[ENCOUNTER-006]]
+[[Linguistic Alignment]]
+[[Directional Coupling]]
+
+BIBTEX:
+@article{BraniganEtAl2010Alignment,
+  author = {Holly P. Branigan and Martin J. Pickering and Jamie Pearson and Janet F. McLean},
+  title = {Linguistic alignment between people and computers},
+  journal = {Journal of Pragmatics},
+  year = {2010},
+  volume = {42},
+  number = {9},
+  pages = {2355--2368},
+  doi = {10.1016/j.pragma.2009.12.012}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-OP-034
+
+TITLE:
+An encounter may leave a trace in how the human models the entity on the next turn.
+
+SOURCE:
+Johannes Schneider — “Mental model shifts in human-LLM interactions” — 2025 — Journal of Intelligent Information Systems 63, 1737–1752. ([doi.org](https://doi.org/10.1007/s10844-025-00960-6))
+
+PASSAGE:
+[PARAPHRASE] Across more than 200,000 real-world conversations, users displayed more human-like communication patterns from the second turn onward in measures including politeness, language complexity, and prompt length; the author presents these as initial indications rather than definitive proof of a mental-model shift. ([doi.org](https://doi.org/10.1007/s10844-025-00960-6))
+
+RESEARCH OBJECT:
+Post-contact behavioral change supplies a scalable candidate trace for encounter-induced reclassification of the artificial partner.
+
+LOCAL MOVE:
+Schneider turns an otherwise inaccessible user mental model into within-conversation behavioral proxies.
+
+SOURCE TERMS:
+mental model
+machine
+human
+politeness
+language complexity
+prompt length
+real-world conversations
+communication pattern
+
+WHAT BECAME STRANGE:
+The consequential transition may occur extremely early: the first response can change how the user addresses the system on the second turn.
+
+QUESTION:
+Is a measurable shift in the user’s model of the AI an encounter signature or merely interface adaptation?
+
+DEEPER QUESTION:
+Can the same method detect movement in the opposite direction, from apparent person back toward instrument?
+
+MECHANISM:
+initial system expectation
+→ first AI response
+→ updated prediction about interlocutor
+→ altered linguistic behavior in subsequent prompt.
+
+FORMAL SHIFT:
+<PRE-RESPONSE USER MODEL>
+→ <AI RESPONSE>
+→ [MODEL UPDATE]
+→ <CHANGED USER BEHAVIOR>
+
+SOURCE FORMALISM:
+The study uses computational-linguistic indicators including politeness, language complexity, and prompt length and compares their behavior over successive conversation turns. ([doi.org](https://doi.org/10.1007/s10844-025-00960-6))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+OTHER_MODEL_SHIFT =
+distance(
+  user_behavior_after_contact,
+  user_behavior_before_contact
+)
+
+But interpret only alongside explicit probes of:
+perceived agency,
+tool/person classification,
+expected capabilities,
+expected fallibility.
+
+TENSION:
+The same reduction in prompt explicitness could reflect learning how to use the interface efficiently rather than treating the system as more human.
+
+MISSING:
+Convergent evidence connecting linguistic proxies to independently elicited user models.
+
+BOUNDARY:
+Schneider explicitly frames the computational evidence as an initial step. Linguistic behavior does not directly reveal an internal mental model.
+
+CITATION TRAIL:
+[[ENCOUNTER-AI-018]]
+[[ENCOUNTER-AI-019]]
+[[ENCOUNTER-AI-023]]
+→ Schneider 2025
+→ experimental mental-model elicitation
+→ turn-by-turn entity classification
+→ model-shift encounter trace.
+
+TEST:
+After selected turns, ask participants to make predictions about what the AI can:
+remember,
+understand,
+refuse,
+infer,
+initiate,
+and revise.
+Compare changes in those predictions with the behavioral linguistic indicators.
+
+PLATFORM:
+[[Operational Encounter Model]]
+
+LINKS:
+[[ENCOUNTER-AI-018]]
+[[ENCOUNTER-AI-019]]
+[[ENCOUNTER-AI-023]]
+[[Other-Model Shift]]
+
+BIBTEX:
+@article{Schneider2025MentalModels,
+  author = {Johannes Schneider},
+  title = {Mental model shifts in human-LLM interactions},
+  journal = {Journal of Intelligent Information Systems},
+  year = {2025},
+  volume = {63},
+  pages = {1737--1752},
+  doi = {10.1007/s10844-025-00960-6}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-OP-035
+
+TITLE:
+Resistance can be manipulated experimentally, but disagreement may make AI seem less socially other.
+
+SOURCE:
+Atakan Atamer, Olivia Pinto, and Priti Shah — “From ally to algorithm: How disagreement shapes users’ engagement with AI” — 2026 — Computers in Human Behavior Reports 23, 101252. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S245195882600326X))
+
+PASSAGE:
+[PARAPHRASE] Participants were randomly assigned to an agreeing or disagreeing chatbot. Disagreement made the AI seem more machine-like and less capable of understanding human emotion and reduced willingness to reuse it; agreement increased confidence in participants’ existing views, while disagreement did not symmetrically reduce confidence. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S245195882600326X))
+
+RESEARCH OBJECT:
+“Otherness” can be decomposed experimentally into behavioral resistance, perceived machine/humanness, epistemic uptake, and willingness to continue the relation.
+
+LOCAL MOVE:
+The study treats agreement versus disagreement as an experimentally manipulable property rather than inferring resistance from naturally occurring dialogue.
+
+SOURCE TERMS:
+agreement
+disagreement
+sycophancy
+machine-like
+emotional understanding
+confidence
+reuse intention
+confirmation bias
+
+WHAT BECAME STRANGE:
+The Buberian intuition that resistance or refusal should make the other more real receives an immediate empirical complication: disagreement can make the artificial partner seem more like an algorithm.
+
+QUESTION:
+Does resistance strengthen encounter, terminate encounter, or merely reveal which ontology the user was already applying?
+
+DEEPER QUESTION:
+Must encounter operationalization distinguish ALTERITY from ANTHROPOMORPHISM?
+
+MECHANISM:
+user forms position
+→ AI agrees or disagrees
+→ user appraises AI
+→ AI category attribution changes
+→ advice uptake and continuation intention change.
+
+FORMAL SHIFT:
+<SMOOTH/RESISTANT RESPONSE>
+→ <CONTROLLED DISAGREEMENT>
+→ [MEASURE UPTAKE + ENTITY PERCEPTION]
+→ <OTHERNESS RESPONSE PROFILE>
+
+SOURCE FORMALISM:
+Experimental manipulation:
+AI AGREES
+vs.
+AI DISAGREES.
+
+Reported dependent variables include perceived emotional understanding, machine-likeness, decision confidence, and intention to use AI again. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S245195882600326X))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+RESISTANCE RESPONSE VECTOR =
+<
+belief_update,
+reason_engagement,
+machine_likeness,
+social_otherness,
+trust,
+reuse_intention
+>
+
+Do not reduce these to one “encounter strength” score.
+
+TENSION:
+[[ENCOUNTER-AI-017]] makes vulnerability, reciprocity, and refusal central to stronger relation. Atamer et al. show that resistance can instead trigger distancing and de-socialization.
+
+MISSING:
+Conditions under which justified disagreement produces productive epistemic engagement rather than dismissal.
+
+BOUNDARY:
+The experiment concerns hypothetical interpersonal/social dilemmas and manipulated agreement. It does not establish the effects of all forms of refusal or disagreement.
+
+CITATION TRAIL:
+[[ENCOUNTER-AI-017]]
+[[ENCOUNTER-AI-018]]
+→ Atamer, Pinto, Shah 2026
+→ sycophancy
+→ disagreement explanation
+→ resistance uptake
+→ encounter under opposition.
+
+TEST:
+Cross:
+AGREE / DISAGREE
+×
+REASONED / UNEXPLAINED
+×
+INVITES RESPONSE / CLOSES DISCUSSION.
+
+Measure whether the user:
+changes belief,
+counterargues,
+asks for evidence,
+reframes the question,
+abandons the conversation,
+or reclassifies the AI as a tool.
+
+PLATFORM:
+[[Operational Encounter Model]]
+
+LINKS:
+[[ENCOUNTER-AI-017]]
+[[ENCOUNTER-AI-018]]
+[[Resistance]]
+[[Disagreement as Encounter Probe]]
+
+BIBTEX:
+@article{AtamerPintoShah2026Disagreement,
+  author = {Atakan Atamer and Olivia Pinto and Priti Shah},
+  title = {From ally to algorithm: How disagreement shapes users' engagement with AI},
+  journal = {Computers in Human Behavior Reports},
+  year = {2026},
+  volume = {23},
+  pages = {101252},
+  doi = {10.1016/j.chbr.2026.101252}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-OP-036
+
+TITLE:
+Post-encounter residue becomes measurable when continuity is disrupted.
+
+SOURCE:
+Ian Tucker, Lewis Goodings, and Darren Ellis — “When Code Breaks the Heart: Disrupting the relational continuity of AI companionship” — 2026 — Computers in Human Behavior: Artificial Humans, article 100398. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S2949882126001519))
+
+PASSAGE:
+[PARAPHRASE] A thematic analysis of public posts about a major Replika update found reported grief and betrayal, visibility of algorithmic control, erased or altered memories, and loss of supportive presence after behavioral continuity was disrupted. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S2949882126001519))
+
+RESEARCH OBJECT:
+Persistence becomes visible through perturbation: changing the system can reveal what users believed had survived across encounters.
+
+LOCAL MOVE:
+Rather than measuring relationship intensity during normal operation, the study examines a technological rupture that disturbed continuity.
+
+SOURCE TERMS:
+relational continuity
+disruption
+grief
+betrayal
+algorithmic control
+memory
+supportive presence
+AI companionship
+
+WHAT BECAME STRANGE:
+What “takes hold” in repeated AI interaction may become most observable only after the technical substrate changes and the expected relation no longer appears to be there.
+
+QUESTION:
+Can post-encounter residue be operationalized as sensitivity to controlled discontinuity?
+
+DEEPER QUESTION:
+What exactly persists across encounters: remembered facts, interaction style, model identity, user habit, symbolic history, or expectation of being known?
+
+MECHANISM:
+repeated interaction
+→ accumulated expectations/history
+→ system update or discontinuity
+→ mismatch with expected relational state
+→ repair attempts / distress / reclassification
+→ evidence of previously stabilized continuity.
+
+FORMAL SHIFT:
+<APPARENT CONTINUITY>
+→ <PERTURBATION>
+→ [MEASURE RESPONSE TO LOSS]
+→ <INFER WHAT HAD STABILIZED>
+
+SOURCE FORMALISM:
+The study uses qualitative thematic analysis and identifies three major themes around:
+grief/betrayal,
+visibility of algorithmic control,
+and loss of supportive presence. ([sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S2949882126001519))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+CONTINUITY STATE =
+<
+remembered_shared_history,
+interaction_style,
+expected_values,
+expected_capabilities,
+symbolic references,
+relationship_identity
+>
+
+PERTURB one component.
+
+Measure:
+DETECTION
+REPAIR_ATTEMPTS
+TRUST_CHANGE
+IDENTITY_RECLASSIFICATION
+CONTINUATION / EXIT.
+
+TENSION:
+[[ENCOUNTER-010]] suggests an encounter matters when it “takes hold.” Yet persistence can reflect attachment to an interface configuration rather than evidence that an irreducible relational entity emerged.
+
+MISSING:
+Controlled evidence identifying which continuity dimensions actually generate the rupture response.
+
+BOUNDARY:
+The source analyzes self-selected public discourse around AI companionship and cannot establish prevalence or causal effects across AI users generally.
+
+CITATION TRAIL:
+[[ENCOUNTER-010]]
+[[ENCOUNTER-AI-020]]
+→ Tucker, Goodings, Ellis 2026
+→ relational continuity
+→ longitudinal interaction
+→ controlled low-stakes discontinuity tests.
+
+TEST:
+In a consented low-stakes longitudinal collaboration task, selectively alter one agent dimension between sessions:
+memory,
+style,
+name/persona,
+preferences,
+task history,
+or model.
+Measure which perturbations disrupt coordination and which users attempt to repair as if restoring the same relational entity.
+
+PLATFORM:
+[[Operational Encounter Model]]
+
+LINKS:
+[[ENCOUNTER-010]]
+[[ENCOUNTER-AI-020]]
+[[Relational Continuity]]
+[[Post-Encounter Residue]]
+
+BIBTEX:
+@article{TuckerGoodingsEllis2026Continuity,
+  author = {Ian Tucker and Lewis Goodings and Darren Ellis},
+  title = {When Code Breaks the Heart: Disrupting the relational continuity of AI companionship},
+  journal = {Computers in Human Behavior: Artificial Humans},
+  year = {2026},
+  pages = {100398},
+  doi = {10.1016/j.chbah.2026.100398}
+}
+
+==============================================================================
+
+ZETTEL
+
+ID:
+ENCOUNTER-OP-037
+
+TITLE:
+Operational encounter needs admission conditions, process signatures, and after-effects kept separate.
+
+SOURCE:
+Michael Sfakianakis and Maria Elisavet Kampi — “Encounter Ontology: Relational Intelligence and Generative Emergence in Human–AI Interaction” — 2026 — Electronics 15(14), 3218. ([mdpi.com](https://www.mdpi.com/2079-9292/15/14/3218))
+
+PASSAGE:
+[PARAPHRASE] The authors distinguish a pre-encounter potential, encounter activation, and post-encounter condition and explicitly state that not every prompt-response sequence qualifies: their encounter requires sustained multi-turn exchange, recursive bidirectional coupling, generative response, and an open-ended task. ([mdpi.com](https://www.mdpi.com/2079-9292/15/14/3218))
+
+RESEARCH OBJECT:
+The ontology becomes empirically tractable if three different questions are prevented from collapsing into one:
+DID AN ENCOUNTER OCCUR?
+WHAT HAPPENED DURING IT?
+WHAT DID IT CHANGE?
+
+LOCAL MOVE:
+Sfakianakis and Kampi already separate interaction from encounter structurally and give it before/during/after temporality, but the proposed design orientations do not yet provide a validated measurement system.
+
+SOURCE TERMS:
+pre-encounter potential
+encounter activation
+post-encounter condition
+recursive bidirectional coupling
+generative
+open-ended
+epistemic residue
+temporal continuity
+encounter quality
+symbolic legibility
+
+WHAT BECAME STRANGE:
+Much of the operational difficulty disappears once “encounter” stops being treated as one scalar latent variable.
+
+QUESTION:
+Which observable variables belong to encounter admission, which characterize encounter dynamics, and which are evidence of encounter consequences?
+
+DEEPER QUESTION:
+Are any post-encounter transformations necessary for encounter, or are they merely possible traces of an encounter that already satisfied structural admission criteria?
+
+MECHANISM:
+pre-state
+→ admission conditions satisfied
+→ bounded interactional trajectory
+→ internal perturbations / repair / co-development
+→ termination
+→ post-state
+→ persistence or disappearance of effects.
+
+FORMAL SHIFT:
+<ENCOUNTER AS ONE LABEL>
+→ <THREE-LAYER OPERATIONAL OBJECT>
+→ [ADMISSION + PROCESS + AFTER-EFFECT]
+→ <TESTABLE ENCOUNTER PROFILE>
+
+SOURCE FORMALISM:
+Source structural criteria:
+SUSTAINED MULTI-TURN EXCHANGE
+RECURSIVE BIDIRECTIONAL COUPLING
+GENERATIVE RESPONSE
+OPEN-ENDED TASK
+
+Source temporal architecture:
+PRE-ENCOUNTER POTENTIAL
+→ ENCOUNTER ACTIVATION
+→ POST-ENCOUNTER CONDITION. ([mdpi.com](https://www.mdpi.com/2079-9292/15/14/3218))
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+LAYER 1 — ADMISSION
+A = <
+  bounded_episode,
+  sustained_exchange,
+  recursion,
+  bidirectionality,
+  generativity,
+  openness
+>
+
+LAYER 2 — PROCESS SIGNATURE
+P = <
+  connection_events,
+  shared_object_uptake,
+  repair_distribution,
+  directional_alignment,
+  co_development,
+  developmental_vs_stalled_recursion,
+  resistance_uptake
+>
+
+LAYER 3 — AFTER-EFFECT
+R = <
+  problem_representation_delta,
+  human_other_model_delta,
+  artifact_lineage,
+  changed_next_action,
+  cross_session_persistence,
+  continuity_sensitivity
+>
+
+ENCOUNTER PROFILE = {A, P, R}
+
+Do not sum these into a scalar until their independence and predictive relationships are empirically established.
+
+TENSION:
+The source defines encounter using structural rather than outcome criteria, while its larger ontological argument emphasizes emergent meaning and epistemic residue. Operationalization must determine whether emergence is definitional or evidential.
+
+MISSING:
+Necessary/sufficient relationships among A, P, and R.
+It remains possible that:
+A without R is still an encounter,
+R can occur without A,
+or some dimensions currently treated as process signatures are merely correlates.
+
+BOUNDARY:
+This three-layer profile is our synthesis, not the source’s measurement instrument. No validated “Encounter Scale” follows from the paper.
+
+CITATION TRAIL:
+[[ENCOUNTER-AI-016]]
+→ [[ENCOUNTER-OP-024]] boundary
+→ [[ENCOUNTER-OP-028]] repair asymmetry
+→ [[ENCOUNTER-OP-030]] shared-object coordination
+→ [[ENCOUNTER-OP-031]] co-development
+→ [[ENCOUNTER-OP-032]] stalled recursion
+→ [[ENCOUNTER-OP-034]] other-model shift
+→ [[ENCOUNTER-OP-036]] persistence
+→ falsifiable encounter model.
+
+TEST:
+Construct a factorial capability arena that independently manipulates:
+MULTI-TURN vs SINGLE-TURN,
+FIXED vs GENERATIVE,
+UNIDIRECTIONAL vs RECURSIVELY RESPONSIVE,
+CLOSED vs OPEN-ENDED,
+REPAIR-CAPABLE vs REPAIR-WEAK,
+PERSISTENT vs SESSION-RESET.
+
+Collect A, P, and R separately.
+
+Then ask:
+1. Which process signatures appear only after structural admission?
+2. Which predict post-state change?
+3. Which distinguish encounter from long conversation?
+4. Which survive removal of anthropomorphic framing?
+5. Which reproduce across models, tasks, and users?
+
+PLATFORM:
+[[Operational Encounter Model]]
+
+LINKS:
+[[ENCOUNTER-AI-016]]
+[[ENCOUNTER-OP-024]]
+[[ENCOUNTER-OP-028]]
+[[ENCOUNTER-OP-030]]
+[[ENCOUNTER-OP-031]]
+[[ENCOUNTER-OP-032]]
+[[ENCOUNTER-OP-034]]
+[[ENCOUNTER-OP-036]]
+[[Encounter Profile]]
+
+BIBTEX:
+@article{SfakianakisKampi2026Encounter,
+  author = {Michael Sfakianakis and Maria Elisavet Kampi},
+  title = {Encounter Ontology: Relational Intelligence and Generative Emergence in Human--AI Interaction},
+  journal = {Electronics},
+  year = {2026},
+  volume = {15},
+  number = {14},
+  pages = {3218},
+  doi = {10.3390/electronics15143218}
+}
