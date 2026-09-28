@@ -32,18 +32,18 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lmodern librsvg2-bin zip >/dev/null
 
-      - name: Build paper and mark PDFs
+      - name: Build mark and paper PDFs
         run: |
           set -euo pipefail
           TARGET="slipcases/2026-09-28__encountering-encounter__AI-ENCOUNTER__v15.55-AM"
           cd "$TARGET"
-          pdflatex -interaction=nonstopmode -halt-on-error encountering-encounter__2026-09-28.tex >/tmp/encounter-pdflatex-1.log
-          bibtex encountering-encounter__2026-09-28 >/tmp/encounter-bibtex.log
-          pdflatex -interaction=nonstopmode -halt-on-error encountering-encounter__2026-09-28.tex >/tmp/encounter-pdflatex-2.log
-          pdflatex -interaction=nonstopmode -halt-on-error encountering-encounter__2026-09-28.tex >/tmp/encounter-pdflatex-3.log
           rsvg-convert -f pdf -o MARK.pdf MARK.svg
-          test -s encountering-encounter__2026-09-28.pdf
           test -s MARK.pdf
+          pdflatex -interaction=nonstopmode -halt-on-error encountering-encounter__2026-09-28.tex >/tmp/encounter-pdflatex-1.log || { cat /tmp/encounter-pdflatex-1.log; exit 1; }
+          bibtex encountering-encounter__2026-09-28 >/tmp/encounter-bibtex.log || { cat /tmp/encounter-bibtex.log; exit 1; }
+          pdflatex -interaction=nonstopmode -halt-on-error encountering-encounter__2026-09-28.tex >/tmp/encounter-pdflatex-2.log || { cat /tmp/encounter-pdflatex-2.log; exit 1; }
+          pdflatex -interaction=nonstopmode -halt-on-error encountering-encounter__2026-09-28.tex >/tmp/encounter-pdflatex-3.log || { cat /tmp/encounter-pdflatex-3.log; exit 1; }
+          test -s encountering-encounter__2026-09-28.pdf
 
       - name: Finalize verification and field ZIP
         run: |
