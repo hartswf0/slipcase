@@ -26,6 +26,7 @@ jobs:
           TARGET="slipcases/2026-09-28__encountering-encounter__AI-ENCOUNTER__v15.55-AM"
           echo "9fe104eab98e66956b3887eeb9b5ccd9661637116cb7441cdc03025875d57113  $INGEST/index.html" | sha256sum -c -
           python3 "$INGEST/ingest_encounter.py" "$INGEST/index.html" "$TARGET" "$INGEST"
+          python3 "$INGEST/dedupe_bib.py" "$TARGET/ZETTELS.json" "$TARGET/encounter_field_20260928__references.bib"
 
       - name: Install document build tools
         run: |
@@ -49,7 +50,7 @@ jobs:
         run: |
           set -euo pipefail
           TARGET="slipcases/2026-09-28__encountering-encounter__AI-ENCOUNTER__v15.55-AM"
-          python3 -c "from pathlib import Path; p=Path('$TARGET'); files=sorted(x.relative_to(p).as_posix() for x in p.rglob('*') if x.is_file()); (p/'000__INDEX.txt').write_text('INDEX\\n\\n'+'\\n'.join(files)+'\\n',encoding='utf-8'); (p/'_SLIPCASE'/'VERIFICATION.txt').write_text('GITHUB VERIFICATION\\n\\nADMITTED ZETTELS: 37\\nROOT CARD TXT: 37\\n_MD MIRRORS: 37\\nCAPSULE SHA-256: 9fe104eab98e66956b3887eeb9b5ccd9661637116cb7441cdc03025875d57113\\nORIGINAL LOCAL ZIP SHA-256 RECEIPT: 29c318381f496313f6284908a71ede8c193da77249b02cf33490bcc111d1a024\\nPDF STATUS: built from preserved TeX source on GitHub\\nZIP STATUS: verified below\\n',encoding='utf-8')"
+          python3 -c "from pathlib import Path; p=Path('$TARGET'); files=sorted(x.relative_to(p).as_posix() for x in p.rglob('*') if x.is_file()); (p/'000__INDEX.txt').write_text('INDEX\\n\\n'+'\\n'.join(files)+'\\n',encoding='utf-8'); (p/'_SLIPCASE'/'VERIFICATION.txt').write_text('GITHUB VERIFICATION\\n\\nADMITTED ZETTELS: 37\\nROOT CARD TXT: 37\\n_MD MIRRORS: 37\\nUNIQUE BIBTEX CITEKEYS: 36\\nCAPSULE SHA-256: 9fe104eab98e66956b3887eeb9b5ccd9661637116cb7441cdc03025875d57113\\nORIGINAL LOCAL ZIP SHA-256 RECEIPT: 29c318381f496313f6284908a71ede8c193da77249b02cf33490bcc111d1a024\\nPDF STATUS: built from preserved TeX source on GitHub\\nZIP STATUS: verified below\\n',encoding='utf-8')"
           rm -f "_INGEST/ENCOUNTERING-ENCOUNTER-2026-09-28/encounter_slipcase_20260928__github-reconstructed.zip"
           (cd slipcases && zip -qr "../_INGEST/ENCOUNTERING-ENCOUNTER-2026-09-28/encounter_slipcase_20260928__github-reconstructed.zip" "2026-09-28__encountering-encounter__AI-ENCOUNTER__v15.55-AM")
           unzip -t "_INGEST/ENCOUNTERING-ENCOUNTER-2026-09-28/encounter_slipcase_20260928__github-reconstructed.zip" >/dev/null
