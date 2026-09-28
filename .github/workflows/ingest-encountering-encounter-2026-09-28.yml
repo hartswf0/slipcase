@@ -26,6 +26,7 @@ jobs:
           TARGET="slipcases/2026-09-28__encountering-encounter__AI-ENCOUNTER__v15.55-AM"
           echo "9fe104eab98e66956b3887eeb9b5ccd9661637116cb7441cdc03025875d57113  $INGEST/index.html" | sha256sum -c -
           python3 "$INGEST/ingest_encounter.py" "$INGEST/index.html" "$TARGET" "$INGEST"
+          python3 "$INGEST/restore_capture.py" "$TARGET/ZETTELS.json" "$TARGET/_RESOURCES/originating_zettel_capture_fenced.txt"
           python3 "$INGEST/dedupe_bib.py" "$TARGET/ZETTELS.json" "$TARGET/encounter_field_20260928__references.bib"
 
       - name: Install document build tools
