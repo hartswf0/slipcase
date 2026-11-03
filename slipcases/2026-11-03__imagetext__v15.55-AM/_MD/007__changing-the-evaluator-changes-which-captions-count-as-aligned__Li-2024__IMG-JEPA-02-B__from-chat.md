@@ -1,0 +1,77 @@
+ZETTEL
+
+ID:
+IMG-JEPA-02-B
+
+TITLE:
+Changing the evaluator changes which captions count as aligned
+
+SOURCE:
+Xianhang Li et al. — What If We Recaption Billions of Web Images with LLaMA-3? — 2024 arXiv preprint — §4.2
+
+PASSAGE:
+[QUOTE] “our recaptioned content performs just comparably to the original captions (49.57 vs. 50.43).”
+[QUOTE] “the LongCLIP score of our newly generated caption impressively attains 89.91”
+
+RESEARCH OBJECT:
+A reversal in caption ranking when the evaluator changes from CLIP-Large to LongCLIP-Large.
+
+LOCAL MOVE:
+The authors evaluate the same recaptioning intervention with two vision–language scorers. Under LongCLIP, the reported score for original captions is 10.09.
+
+SOURCE TERMS:
+Semantic similarity, CLIP-large, LongCLIP-Large, recaptioned content.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] The new caption may contain more visible facts. It also has a form that the second evaluator was specifically adapted to process. The score alone cannot separate those advantages.
+
+QUESTION:
+Does LongCLIP reward an additional true visual claim more than an equally long false claim?
+
+DEEPER QUESTION:
+Can a single image–text score tell us whether the added words are supported by the image or whether the text supplies information of its own?
+
+MECHANISM:
+The scorers encode the image and caption and evaluate similarity. Changing the scorer changes the representation through which additional caption material can affect the score.
+
+FORMAL SHIFT:
+<Fixed image and competing captions> → <scorer-specific embeddings> → [similarity scoring] → <caption ranking that depends on the scorer>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+NONE
+
+TENSION:
+[OUR INFERENCE] One explanation is that LongCLIP can register genuinely supported detail that standard CLIP misses. Another is that it favors properties of longer recaptions even when their added claims are unsupported.
+
+MISSING:
+An evaluation that varies the truth of an added claim independently of caption length and phrasing.
+
+BOUNDARY:
+The reported scores compare scorers and caption sets. They do not identify the contribution of any particular visual claim, and their numerical scales cannot be compared directly across scorers.
+
+CITATION TRAIL:
+[[IMG-JEPA-02]] → Recap-DataComp evaluation in §4.2 → LongCLIP, reference [76].
+
+TEST:
+Write two length-matched extensions of the same short caption. Change one visible relation in the second extension from true to false, such as inside to outside. Test both scorers on whether they prefer the true extension. Repeat with the same relation placed early and late.
+
+PLATFORM:
+[[Evaluating Imagetext]]
+
+LINKS:
+[[IMG-JEPA-02]]
+[[Evaluator Dependence]]
+[[Visual Claim Verification]]
+
+BIBTEX:
+@misc{li2024recaption,
+  author = {Li, Xianhang and Tu, Haoqin and Hui, Mude and Wang, Zeyu and Zhao, Bingchen and Xiao, Junfei and Ren, Sucheng and Mei, Jieru and Liu, Qing and Zheng, Huangjie and Zhou, Yuyin and Xie, Cihang},
+  title = {What If We Recaption Billions of Web Images with {LLaMA-3}?},
+  year = {2024},
+  eprint = {2406.08478},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/pdf/2406.08478}
+}

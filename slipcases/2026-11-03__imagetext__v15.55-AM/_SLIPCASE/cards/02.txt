@@ -1,0 +1,76 @@
+ZETTEL
+
+ID: IMG-JEPA-02
+
+TITLE:
+A second description can inherit the first description’s omissions
+
+SOURCE:
+Randall Balestriero and Yann LeCun — Proving and Improving the Platonic Representation Hypothesis with JEPAs — 2026 — Appendix B, Table 7, §7
+
+PASSAGE:
+[PARAPHRASE] At the 2.24M-image scale, alt-text paired with a text-only paraphrase scores .060 on WIT, against .055 for corrupted views of alt-text alone and .107 for the set using alt-text and two LLaVA recaptions. The recaptions carry information from prior image–text training.
+
+RESEARCH OBJECT:
+Whether a second text comes from looking at the image again or from rewriting the first text.
+
+LOCAL MOVE:
+Table 7 varies both the available descriptions and the rule for drawing positive views.
+
+SOURCE TERMS:
+Alt-text, recaption, paraphrase, good views, bad views, scene-explained fraction.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] Thick prompting can accumulate many sentences while remaining dependent on a single act of seeing. Conversely, two captions written by the same image model may repeat a learned convention even when both are produced from pixels.
+
+QUESTION:
+When a caption introduces a detail absent from the first description, how do we tell a fresh observation from a shared captioning convention?
+
+DEEPER QUESTION:
+How much of measured alignment comes from access to visible evidence, and how much from learning what caption writers tend to mention?
+
+MECHANISM:
+A paraphraser receives the first description. An image captioner receives visual evidence and brings its own training priors. Those are different routes for a detail to enter the second text.
+
+FORMAL SHIFT:
+<Caption or photograph> → <input to a second describer> → [paraphrase or recaption] → <different evidence available for positive pairing>
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Log each description’s parent evidence: pixels, earlier text, or both. Independently mark whether each newly introduced claim is visible, contradicted, or undecidable from the image.
+
+TENSION:
+The caption source matters even under the paper’s bad-view rule. At the 50M-image scale, the two LLaVA recaptions with bad views score .092 on WIT, against .056 for alt-text with bad views.
+
+MISSING:
+A control that separates independent access to pixels from captioner conventions and differences in literalness.
+
+BOUNDARY:
+Table 7 supports effects of both data and view construction. Its rows do not isolate a causal effect of independent looking.
+
+CITATION TRAIL:
+Recap-DataComp, cited as [34], and the LLaVA caption provenance discussed in §7.
+
+TEST:
+For the same Shield of Achilles stills, collect one text-only paraphrase, one image-only description by a fresh observer, and one image-only description from a second captioner. Blindly verify every detail absent from the first text against the image. Count supported discoveries and repeated unsupported additions separately.
+
+PLATFORM:
+[[Thick Prompting as Method]]
+
+LINKS:
+[[Caption Provenance]]
+[[Inherited Omission]]
+[[Independent Looking]]
+
+BIBTEX:
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}

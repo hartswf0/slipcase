@@ -1,0 +1,55 @@
+IMG-JEPA-01
+What does an imagetext experiment take as its unit of sameness: the image, the depicted event, or the relation a reader is asked to notice?
+Take one staged dispute photographed from several angles and a second dispute staged with the same blocking. Compare grouping by image ID, event ID, and blocking. Hold out one camera angle. Ask which grouping retrieves the same event and which retrieves the same composition.
+
+IMG-JEPA-02
+When a caption introduces a detail absent from the first description, how do we tell a fresh observation from a shared captioning convention?
+For the same Shield of Achilles stills, collect one text-only paraphrase, one image-only description by a fresh observer, and one image-only description from a second captioner. Blindly verify every detail absent from the first text against the image. Count supported discoveries and repeated unsupported additions separately.
+
+IMG-JEPA-03
+Can an imagetext critic recognize the same depicted event across views while remaining sensitive to the requested view?
+Render the same dispute overhead and at eye level. Use both versions with “a dispute before elders,” then score both against “a dispute before elders seen directly overhead.” A critic passes if it preserves event identity in the first comparison and detects the wrong view in the second.
+
+IMG-JEPA-04
+Which parts of an imagetext can be reconstructed from the image, and which only become determinate when the text is present?
+Generate matched-seed pairs for “blood-price” and “unpaid debt,” holding staging and style instructions fixed. Test blind image-only judgments, then repeat with the captions swapped. Include a visible inside/outside edit to check that the same viewers can detect a renderable distinction.
+
+IMG-JEPA-05
+Does caption consensus remove hallucinated detail, or does it suppress accurate details that the decoder seldom names?
+Use one candidate pool per image and apply both selectors to that same pool. Choose images with a rare but visible detail. Have readers mark supported rare details and unsupported additions independently of caption fluency. Check whether the selectors trade one error for the other.
+
+IMG-JEPA-02-A
+At a fixed word budget, does moving a visible detail to the beginning of the source description change whether that detail contributes to measured alignment?
+Swap the first and last blocks of each description without changing any wording. Run the same short and long summary prompts on both orders. Compare which propositions survive and whether changes in visual coverage track the alignment score.
+
+IMG-JEPA-02-B
+Does LongCLIP reward an additional true visual claim more than an equally long false claim?
+Write two length-matched extensions of the same short caption. Change one visible relation in the second extension from true to false, such as inside to outside. Test both scorers on whether they prefer the true extension. Repeat with the same relation placed early and late.
+
+IMG-JEPA-05-A
+Can changing the learned constant alter which visual fact the caption foregrounds while the image features, mapper, and language model stay fixed?
+Freeze a trained ClipCap transformer mapper and its decoder. Fit separate constants on the same training images with people-first and objects-first captions. Swap only the constant at inference. On held-out images, score sentence openings and supported visual propositions separately.
+
+IMG-JEPA-04-A
+When is a good caption a good description for a particular person?
+Write two length-matched descriptions of each Shield image, one identifying the narrative and one locating the figures. Have one group retrieve the image among distractors and another reconstruct its blocking from text alone. Compare caption rankings across the tasks.
+
+IMG-JEPA-02-B-A
+When does a recaption describe the photographed thing more accurately while describing the published imagetext less adequately?
+Take one identical photograph published on two pages under different, verifiable sponsorships. Compare literal recaptions with page-aware descriptions. Test scene retrieval and publication attribution separately. Include a case where the sponsor is visible in the image to test whether the two tasks can coincide.
+
+IMG-JEPA-05-A-A
+Can the captioner distinguish resemblance, depiction, and physical presence when the same nouns fit all three?
+Compare a sheep-shaped cake, a cake with a printed sheep, and a plain cake beside a toy sheep. Score noun recognition and relation recognition separately. Repeat with the same Shield scene embossed on metal, printed on a poster, and staged by actors. Ask whether each caption tells the reader where the depicted figures exist.
+
+IMG-JEPA-04-A-A
+Can a description become more exact by omitting a true feature?
+Use one image and two tasks: identify it among alternatives, then reconstruct one spatial relation. Compare a sparse accurate caption, a detailed caption with one false claim, and a caption that omits the diagnostic relation. Ask which caption is best under each task and which error causes each reversal.
+
+IMG-JEPA-03-A
+When a prompt says “make the figure look proportionate from below,” what should a caption critic check: the dimensions of the figure or the appearance from below?
+Make two renders from below: one of a proportionate figure and one of a figure whose upper body has been enlarged to compensate for perspective. Render each again from eye level. Ask critics to evaluate separately whether the head is oversized and whether it looks oversized from below. Record whether their judgments follow the object or the view.
+
+IMG-JEPA-01-A
+When text and image align, what evidence distinguishes independent access to a scene from descent through the same representational artifact?
+Photograph a staged scene from two angles. Pair one caption with the first photograph from which it was written, and obtain another description from a witness or second camera. Keep the pairs separate. Test which details transfer to a held-out view, especially details visible in only one original view.

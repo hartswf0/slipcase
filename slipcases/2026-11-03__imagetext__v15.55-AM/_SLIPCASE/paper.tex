@@ -1,0 +1,70 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.05in]{geometry}
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\setmainfont{Latin Modern Roman}
+\title{What a Caption Answers To\\\large Imagetext and the Limits of Cross-Modal Alignment}
+\author{Prepared for Watson Hartsoe by Codex}
+\date{Working Paper · AI-augmented research process · 3 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A caption can retrieve the right image while misdescribing its subject. It can describe the subject accurately while failing to identify the published work. These are consequences of giving a description different things to answer to. Reading a recent result on joint-embedding predictive architectures alongside W. J. T. Mitchell and Plato, this paper argues that positive pairing operationalizes one criterion of sameness. The resulting geometry can support captioning, while leaving several questions about description open: what warrants a claim, what level of representation it concerns, and what it enables a reader to see. An intervention that holds nouns and image identity fixed while varying one relation makes these differences empirically tractable.
+\end{abstract}
+\noindent\textbf{Keywords} imagetext, description, ekphrasis, captioning, positive pairs, visual evidence
+
+\section{A cake with a sheep in it}
+A sheep-shaped cake presents a small problem for a captioner. The words \emph{cake} and \emph{sheep} can both be appropriate even though only one names the physical object. The same nouns can also describe an ordinary cake beside a toy sheep, or a cake whose icing bears a picture of a sheep. In each case the relation decides what the reader should imagine. Balestriero and LeCun mention the sheep-shaped cake among unusual photographs for which extra decoder pretraining sometimes helps \cite{balestriero2026platonic}. Their report provides a reason to investigate the distinction. It supplies neither the caption produced for that image nor a controlled comparison of these cases.
+
+This paper argues that a criterion for relating image and text must specify what the description answers to. It might answer to the identity of a photograph, the visual evidence for a claim, the page in which the photograph appears, or a reader’s task. A positive-pair graph can encode a decision about one of these targets. Its success is substantive, but each additional target calls for separate evidence. The cake is useful because object identity, representational level, and the reader’s reconstruction can vary while the nouns stay fixed.
+
+\section{How the pairing rule enters the result}
+Huh et al. name their hypothesis through the cave analogy. Their figure also allows a description to descend from an existing measurement or arise through another route to the event \cite{huh2024platonic}. This distinction matters before any geometry is estimated. A second caption written from the same photograph can record details the first missed. Its evidentiary ancestry still differs from that of a description made from a second camera angle. Both may be legitimate positive views for a particular objective.
+
+Balestriero and LeCun make the pairing distribution central. In their idealized spectral setting, an injective rendering lets the learning objective be written on world states. Shared positives make the encoders minimize the same objective, and uniqueness up to rotation supplies the conclusion. Their treatment of mismatched kernels makes alignment depend on how those kernels differ and on the spectral separation of the learned directions. Their experiments use LeJEPA, and the paper explicitly distinguishes the experimental setup from the exact hypotheses of the theorem \cite{balestriero2026platonic}.
+
+What counts as a positive is therefore a choice with consequences. Grouping descriptions by image ID can make sense for retrieving photographs. The same grouping would leave untested whether a sentence distinguishes a staged event from another event with nearly identical blocking. Consider a scene filmed from two angles and a second scene restaged from the first camera position. An event-based criterion favors the first pairing. A composition-based criterion might favor the second. Both use the same observations. Changing the criterion changes the relation the model has a reason to learn.
+
+The text provenance experiments illustrate the point without resolving it. At the 2.24 million-image scale in Table 7, pairing alt-text with a text-only paraphrase yields .060 on WIT, versus .055 for corrupted views of alt-text and .107 for positives using alt-text and two image-derived recaptions. The recaptions have a route back to the photograph and also inherit prior vision–language training. The experiment changes what the model reads as well as how it pairs some of that material. It gives no isolated estimate of independent looking. An image-derived recaption and a witness's account may both improve on an earlier sentence, for different reasons.
+
+\section{What becomes evidence when the unit changes}
+Mitchell's imagetext gives a reason to change the unit of analysis from the photograph to the composite in which it appears \cite{mitchell1994beyond}. Balestriero and LeCun use recurring brand names to illustrate how wording can create links across depicted scenes. A brand name can nevertheless be exactly what distinguishes two publications of the same photograph. A caption saying whose advertisement this is may be warranted by the surrounding page while being undecidable from the isolated image. Replacing it with a literal account of pixels may improve one description and impair the other.
+
+There are three practical cases. A logo may be visible in the image. A sponsor may be identified by accompanying text. A model may supply a plausible sponsor without either form of evidence. An isolated image–caption similarity score gives no reliable account of those three routes. An annotated imagetext could instead preserve both the clause and its warrant. This also explains why simply asking whether a recaption adds information is insufficient. More words can supply newly observed details, restore page context, or invent a connection. Li et al.'s reversal between CLIP-Large and LongCLIP-Large scores for original and recaptioned material gives a concrete reason to test added claims separately from aggregate scoring \cite{li2024recaption}.
+
+Plato's \emph{Cratylus} supplies an older pressure on completeness. Socrates asks what a perfect duplicate of Cratylus would be and gets the answer that there would be two Cratyluses. He then permits some divergence in the correctness of names and sentences \cite{platoCratylusHoran}. The modern application is limited but sharp. Description requires selection, so accuracy cannot be assessed by counting departures from exhaustive duplication. A brief description of a shield can correctly tell a reader that figures are embossed on metal while leaving their identities open. A more expansive account can give every figure a name and still move the action off the shield into the space around it.
+
+\section{Description for someone}
+In \emph{Ekphrasis and the Other}, Mitchell places a speaker between the object and an addressee. Description participates in what the addressee is led to see \cite{mitchell1994ekphrasis}. The distinction between a cake and the figure it presents has an analogous practical consequence. A cake decorator may need to know whether the sheep is modeled in three dimensions or printed on icing. Someone finding a specific photograph may need only a rare phrase that retrieves it. To establish that these purposes diverge, both audiences need to be represented in the experiment.
+
+The sculpture in Plato's \emph{Sophist} makes the spectator's position especially consequential. The maker can alter distant proportions so the work appears proportionate from below \cite{platoSophistJowett}. A description of the object's measurements and a description of its appearance from below can therefore be simultaneously correct and different. This has a direct consequence for operative ekphrasis. A generative instruction to make a figure \emph{look} proportionate from below can license a change to the figure. A critic that ignores angle to preserve event identity may then discard exactly the feature that would show whether the instruction succeeded.
+
+The same reasoning separates generation from recovery. Changing a prompt may alter the distribution of renders. Even if a classifier detects that change, a person may still be unable to recover its meaning from the image. A contrast between a blood-price and an unpaid debt in the Shield scene might alter lighting or spacing without making the stakes readable. The complete imagetext can supply the stakes in words. The central empirical question is which of these effects occurred.
+
+\section{A test that can discriminate}
+Start with three artifacts: a sheep-shaped cake, a cake with a sheep printed on it, and a cake beside a toy sheep. Match lighting and framing, then collect a second view of each. Write candidate captions with the same central nouns and vary the relation. Include captions that are true but underspecified, and false captions that name both items. Ask a retrieval model to select the matching image. Ask independent readers to classify the physical bearer, the represented figure, and the relation using only the caption. Compare results when they see the image and caption together. For each visible claim record agreement with independently inspected photographs, including cases that a single photograph leaves undecidable.
+
+The competing possibilities are specific. An embedding may separate the three relations under a controlled candidate set. If so, the claim that similarity discards relational information would be weakened. It may instead retrieve the correct object category while repeatedly confusing where the sheep exists. A third possibility is that the encoder can distinguish the relations but decoding or candidate selection removes the distinction. Comparing a forced-choice embedding score with captions decoded from the same features localizes that failure. The JEPA captioner's reported comparison between consensus and nearest-embedding selection motivates this last test, while ClipCap supplies a useful architectural precedent for separating visual conditioning from language decoding \cite{balestriero2026platonic,mokady2021clipcap}.
+
+\section{Conclusion}
+The useful question for imagetext is which agreement a description produces, for whom, and against what evidence. Positive-pair training supplies a precise intervention on one kind of agreement. Describing a representational artifact introduces further decisions about its bearer, its figure, and the audience who needs to tell them apart. The proposed tests have not been run. Their point is to make it possible for the caption, the critic, or the argument to be wrong in different and identifiable ways.
+
+\begin{thebibliography}{9}
+\bibitem{balestriero2026platonic} Balestriero, Randall, and Yann LeCun. 2026. \emph{Proving and Improving the Platonic Representation Hypothesis with JEPAs}. arXiv:2610.39302v1.
+\bibitem{huh2024platonic} Huh, Minyoung, Brian Cheung, Tongzhou Wang, and Phillip Isola. 2024. \emph{The Platonic Representation Hypothesis}. arXiv:2405.07987.
+\bibitem{li2024recaption} Li, Xianhang, et al. 2024. \emph{What If We Recaption Billions of Web Images with LLaMA-3?} arXiv:2406.08478.
+\bibitem{mitchell1994beyond} Mitchell, W. J. T. 1994. Beyond Comparison: Picture, Text, and Method. \emph{Interfaces} 5:13--38. The notation discussed here is from the \emph{Picture Theory} version, p. 89 n. 9.
+\bibitem{mitchell1994ekphrasis} Mitchell, W. J. T. 1994. Ekphrasis and the Other. In \emph{Picture Theory}. University of Chicago Press.
+\bibitem{mokady2021clipcap} Mokady, Ron, Amir Hertz, and Amit H. Bermano. 2021. \emph{ClipCap: CLIP Prefix for Image Captioning}. arXiv:2111.09734.
+\bibitem{platoCratylusHoran} Plato. \emph{Cratylus}, 432b--433a. Translated by David Horan.
+\bibitem{platoSophistJowett} Plato. \emph{Sophist}, 235d--236c. Translated by Benjamin Jowett.
+\end{thebibliography}
+\appendix
+\section{Assembly instrument}
+See the assembly appendix in the accompanying Imagetext Slipcase. It records the capture status of the originating prompts.
+\section{Making history}
+The researcher supplied the questions and assembly instrument. Codex transcribed visible cards and selected the argument, tests, and prose. The paper is an unreviewed critical synthesis. It reports no new experimental results.
+\section{Replication path}
+Checkpoint \texttt{imagetext-2026-11-03}. Open \texttt{index.html}, inspect the source map and hashes, and use the embedded reconstruction instructions. Rejoin phrase: What a caption answers to.
+\end{document}

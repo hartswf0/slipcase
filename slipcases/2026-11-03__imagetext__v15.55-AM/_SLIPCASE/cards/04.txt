@@ -1,0 +1,76 @@
+ZETTEL
+
+ID: IMG-JEPA-04
+
+TITLE:
+A prompt can change an image without making its meaning recoverable
+
+SOURCE:
+Randall Balestriero and Yann LeCun — Proving and Improving the Platonic Representation Hypothesis with JEPAs — 2026 — §2.1, Appendix A.2, §7
+
+PASSAGE:
+[PARAPHRASE] The proof uses the inverse of each injective rendering on its image. This lets the authors rewrite the objective over observations as an objective over world states. The limitations section identifies lossy real modalities as a departure from that setup.
+
+RESEARCH OBJECT:
+The difference between a prompt detail having a visual effect and a viewer being able to infer that detail.
+
+LOCAL MOVE:
+Injectivity supplies recoverability in the formal model before learning begins.
+
+SOURCE TERMS:
+Injective rendering, left inverse, world state, population objective.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] Changing “blood-price” to “unpaid debt” could systematically alter a generator’s lighting or blocking while leaving the dispute’s stakes undecidable to viewers. There could be a causal effect without a readable sign of its cause.
+
+QUESTION:
+Which parts of an imagetext can be reconstructed from the image, and which only become determinate when the text is present?
+
+DEEPER QUESTION:
+If a classifier recovers the prompt change from lighting but human readers cannot identify the stakes, what exactly has crossed modalities?
+
+MECHANISM:
+A prompt intervention can shift the distribution of outputs. Recovering the intervention from a particular image requires evidence that distinguishes it from competing prompts. The text can supply the distinction directly in the combined imagetext.
+
+FORMAL SHIFT:
+<Prompt contrast> → <distributions of rendered images> → [blind discrimination] → <estimate of what the image makes recoverable>
+
+SOURCE FORMALISM:
+The source uses x = g_m(z), with a left inverse on the range of g_m. It gives no model of prompt interventions.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Record three results separately: whether outputs change under a prompt edit, whether viewers infer the edited detail from pixels, and whether adding the text changes their reading.
+
+TENSION:
+A failed inference can indicate that the generator ignored the phrase, that it encoded the difference through an incidental visual cue, or that the stakes properly remain in the verbal part of the imagetext. Those readings require different evidence.
+
+MISSING:
+The viewer and the prompt intervention as explicit variables in the paper’s setup.
+
+BOUNDARY:
+The theorem does not imply that a generated image is invertible to its prompt, or that an apparent prompt match identifies what caused the image.
+
+CITATION TRAIL:
+The proof’s change-of-variables step in Appendix A.2 and the lossy-modality limitation in §7.
+
+TEST:
+Generate matched-seed pairs for “blood-price” and “unpaid debt,” holding staging and style instructions fixed. Test blind image-only judgments, then repeat with the captions swapped. Include a visible inside/outside edit to check that the same viewers can detect a renderable distinction.
+
+PLATFORM:
+[[Imagetext and Operative Ekphrasis]]
+
+LINKS:
+[[Shield of Achilles]]
+[[Causal Fidelity]]
+[[Semantic Recoverability]]
+
+BIBTEX:
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}

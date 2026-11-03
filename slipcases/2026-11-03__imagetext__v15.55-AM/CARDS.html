@@ -1,0 +1,1613 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Print cards</title><style>
+:root{color-scheme:light;background:#f6f3eb;color:#202522;font:16px/1.5 system-ui,sans-serif}body{max-width:1120px;margin:0 auto;padding:1.2rem}h1,h2,h3{font-family:Georgia,serif;line-height:1.15}h1{font-size:clamp(2rem,6vw,4rem);margin:.25em 0}header{border-bottom:1px solid #a8aaa0;padding-bottom:1rem}small{color:#565d55}a{color:#20534b}button,input{font:inherit;border:1px solid #8e978c;background:#fffef9;color:inherit;padding:.35rem .55rem}button{cursor:pointer}button:hover,button:focus{background:#e4ece5}nav,.actions{display:flex;gap:.4rem;flex-wrap:wrap;margin:.8rem 0}pre{font:inherit;white-space:pre-wrap;overflow-wrap:anywhere}article,.panel{background:#fffef9;border:1px solid #c5c6ba;padding:1.15rem;margin:.65rem 0}li{margin:.3rem 0}.deck{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:.6rem}.deck button{text-align:left;min-height:4rem}.pair{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}.pair>*{min-width:0}footer{text-align:right;margin-top:2rem}details{margin:.6rem 0}#search{width:min(90%,36rem)}.wide{overflow:auto}@media(max-width:650px){.pair{grid-template-columns:1fr}body{padding:.75rem}} 
+</style><style>.sheet{width:3.5in;min-height:5.45in;padding:.22in;background:white;margin:12px auto;border:1px solid #999}.sheet pre{font:7pt/1.25 monospace;margin:.09in 0}.sheet small{font:7pt system-ui}@page{size:4in 6in;margin:.24in}@media print{header,footer{display:none}body{padding:0;margin:0}.sheet{border:0;min-height:0;padding:0;margin:0;break-after:page}.sheet:last-child{break-after:auto}}</style><header><small>imagetext-2026-11-03 · 000__RETURN_PATH.txt</small><h1>Print cards</h1></header><section class="sheet"><small>IMG-JEPA-01 · 1/3 · imagetext-2026-11-03</small><pre>ZETTEL
+
+ID: IMG-JEPA-01
+
+TITLE:
+The positive-pair graph defines what counts as the same scene
+
+SOURCE:
+Randall Balestriero and Yann LeCun — Proving and Improving
+the Platonic Representation Hypothesis with JEPAs — 2026 —
+§§2.1–2.3, Figure 3, §7
+
+PASSAGE:
+[PARAPHRASE] In the spectral setting, the learned directions
+come from the graph that positive pairs draw on world states.
+Exact agreement requires shared positives and uniqueness up
+to rotation. When the graphs differ, the bound depends on
+their mismatch and on the spectral gap.
+
+RESEARCH OBJECT:
+The rule for pairing observations as a prior about which
+differences matter.
+
+LOCAL MOVE:
+The proof rewrites each modality’s learning objective on the
+same state space.
+
+SOURCE TERMS:
+Positive-pair distribution, world kernel, injective
+rendering, spectral gap.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] On Flickr, descriptions are grouped by
+photograph. The photograph supplies an address for the scene
+before the text encoder learns anything. Grouping by
+photographed event instead would change the learning problem.
+
+QUESTION:
+What does an imagetext experiment take as its unit of
+sameness: the image, the depicted event, or the relation a
+reader is asked to notice?
+
+DEEPER QUESTION:
+Can two descriptions of different images form a better pair</pre></section><section class="sheet"><small>IMG-JEPA-01 · 2/3 · imagetext-2026-11-03</small><pre>for studying composition than two descriptions of the same
+image?
+
+MECHANISM:
+Changing the pair rule changes the graph. Under the paper’s
+spectral objective, this can change which distinctions
+survive in the leading embedding directions.
+
+FORMAL SHIFT:
+&lt;Observations&gt; → &lt;weighted edges between states&gt; → [spectral
+embedding] → &lt;geometry of learned similarities&gt;
+
+SOURCE FORMALISM:
+Kπ = D^(-1/2) Π D^(-1/2), where Π represents the positive-
+pair distribution and D = diag(p). With second-order anti-
+collapse and a spectral gap, the solution is determined by
+the leading nonconstant eigenspace, up to rotation.
+
+OUR FORMALIZATION:
+NONE
+
+TENSION:
+The proof requires a specified relation among states. In
+imagetext analysis, deciding whether two views depict the
+same event can itself be an interpretive judgment.
+
+MISSING:
+A test that varies the grouping rule while holding the actual
+images and texts fixed.
+
+BOUNDARY:
+The spectral result supplies a sufficient condition for
+alignment under its assumptions. The paper leaves uniqueness
+under LeJEPA’s full-distribution constraint open.
+
+CITATION TRAIL:
+Laplacian eigenmaps and spectral contrastive learning, both
+cited in §2.1.
+
+TEST:
+Take one staged dispute photographed from several angles and
+a second dispute staged with the same blocking. Compare
+grouping by image ID, event ID, and blocking. Hold out one
+camera angle. Ask which grouping retrieves the same event and</pre></section><section class="sheet"><small>IMG-JEPA-01 · 3/3 · imagetext-2026-11-03</small><pre>which retrieves the same composition.
+
+PLATFORM:
+[[Imagetext as a Unit of Analysis]]
+
+LINKS:
+[[Positive Pair Provenance]]
+[[Scene Identity]]
+[[Composition Across Images]]
+
+BIBTEX:
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation
+Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}</pre></section><section class="sheet"><small>IMG-JEPA-02 · 1/3 · imagetext-2026-11-03</small><pre>ZETTEL
+
+ID: IMG-JEPA-02
+
+TITLE:
+A second description can inherit the first description’s
+omissions
+
+SOURCE:
+Randall Balestriero and Yann LeCun — Proving and Improving
+the Platonic Representation Hypothesis with JEPAs — 2026 —
+Appendix B, Table 7, §7
+
+PASSAGE:
+[PARAPHRASE] At the 2.24M-image scale, alt-text paired with a
+text-only paraphrase scores .060 on WIT, against .055 for
+corrupted views of alt-text alone and .107 for the set using
+alt-text and two LLaVA recaptions. The recaptions carry
+information from prior image–text training.
+
+RESEARCH OBJECT:
+Whether a second text comes from looking at the image again
+or from rewriting the first text.
+
+LOCAL MOVE:
+Table 7 varies both the available descriptions and the rule
+for drawing positive views.
+
+SOURCE TERMS:
+Alt-text, recaption, paraphrase, good views, bad views,
+scene-explained fraction.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] Thick prompting can accumulate many sentences
+while remaining dependent on a single act of seeing.
+Conversely, two captions written by the same image model may
+repeat a learned convention even when both are produced from
+pixels.
+
+QUESTION:
+When a caption introduces a detail absent from the first
+description, how do we tell a fresh observation from a shared
+captioning convention?
+</pre></section><section class="sheet"><small>IMG-JEPA-02 · 2/3 · imagetext-2026-11-03</small><pre>DEEPER QUESTION:
+How much of measured alignment comes from access to visible
+evidence, and how much from learning what caption writers
+tend to mention?
+
+MECHANISM:
+A paraphraser receives the first description. An image
+captioner receives visual evidence and brings its own
+training priors. Those are different routes for a detail to
+enter the second text.
+
+FORMAL SHIFT:
+&lt;Caption or photograph&gt; → &lt;input to a second describer&gt; →
+[paraphrase or recaption] → &lt;different evidence available for
+positive pairing&gt;
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Log each description’s parent evidence: pixels, earlier text,
+or both. Independently mark whether each newly introduced
+claim is visible, contradicted, or undecidable from the
+image.
+
+TENSION:
+The caption source matters even under the paper’s bad-view
+rule. At the 50M-image scale, the two LLaVA recaptions with
+bad views score .092 on WIT, against .056 for alt-text with
+bad views.
+
+MISSING:
+A control that separates independent access to pixels from
+captioner conventions and differences in literalness.
+
+BOUNDARY:
+Table 7 supports effects of both data and view construction.
+Its rows do not isolate a causal effect of independent
+looking.
+
+CITATION TRAIL:
+Recap-DataComp, cited as [34], and the LLaVA caption
+provenance discussed in §7.</pre></section><section class="sheet"><small>IMG-JEPA-02 · 3/3 · imagetext-2026-11-03</small><pre>
+TEST:
+For the same Shield of Achilles stills, collect one text-only
+paraphrase, one image-only description by a fresh observer,
+and one image-only description from a second captioner.
+Blindly verify every detail absent from the first text
+against the image. Count supported discoveries and repeated
+unsupported additions separately.
+
+PLATFORM:
+[[Thick Prompting as Method]]
+
+LINKS:
+[[Caption Provenance]]
+[[Inherited Omission]]
+[[Independent Looking]]
+
+BIBTEX:
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation
+Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}</pre></section><section class="sheet"><small>IMG-JEPA-03 · 1/3 · imagetext-2026-11-03</small><pre>ZETTEL
+
+ID: IMG-JEPA-03
+
+TITLE:
+Viewpoint can be nuisance in a caption and instruction in a
+prompt
+
+SOURCE:
+Randall Balestriero and Yann LeCun — Proving and Improving
+the Platonic Representation Hypothesis with JEPAs — 2026 —
+§2.3
+
+PASSAGE:
+[QUOTE] “It is a nuisance only for alignment”
+
+RESEARCH OBJECT:
+A variable whose status changes when language moves from
+describing an image to directing its production.
+
+LOCAL MOVE:
+The authors distinguish the state a modality shares with
+others from observation-specific variation. They explicitly
+acknowledge that a camera-acting world model would need its
+viewpoint.
+
+SOURCE TERMS:
+State, nuisance, viewpoint, independent nuisances, alignment.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] An image encoder can benefit from treating
+two camera angles as equivalent for scene recognition. A
+prompt critic applying that same equivalence could reward a
+generator for ignoring an explicit camera instruction.
+
+QUESTION:
+Can an imagetext critic recognize the same depicted event
+across views while remaining sensitive to the requested view?
+
+DEEPER QUESTION:
+Who decides which details should survive alignment when the
+language itself selects what matters visually?
+
+MECHANISM:</pre></section><section class="sheet"><small>IMG-JEPA-03 · 2/3 · imagetext-2026-11-03</small><pre>The positive-pair rule resamples viewpoint in the source
+model. A prompt such as “seen directly overhead” instead
+makes viewpoint a target whose value must affect the rendered
+image.
+
+FORMAL SHIFT:
+&lt;Camera angle&gt; → &lt;nuisance for scene recognition or
+constraint for generation&gt; → [ignore or discriminate] →
+&lt;different judgments of the same image pair&gt;
+
+SOURCE FORMALISM:
+In §2.3, observations are g_m(z, ν). Good views draw
+independent nuisance variables ν and ν′; corruptions of one
+observation share its nuisance.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Keep separate labels for event identity and prompt-constraint
+satisfaction. The same image pair may match on one and differ
+on the other.
+
+TENSION:
+A critic that strongly preserves camera geometry may mistake
+a viewpoint change for an event change. A critic that
+suppresses it may miss a visible prompt violation.
+
+MISSING:
+Instruction-conditioned evidence about which differences the
+critic should ignore.
+
+BOUNDARY:
+The paper’s nuisance analysis describes an alignment
+objective. Applying it to prompt compliance is an inference
+about a different task.
+
+CITATION TRAIL:
+§2.3’s explicit camera-acting example and §3.3’s tests of
+video frames as image views.
+
+TEST:
+Render the same dispute overhead and at eye level. Use both
+versions with “a dispute before elders,” then score both
+against “a dispute before elders seen directly overhead.” A
+critic passes if it preserves event identity in the first</pre></section><section class="sheet"><small>IMG-JEPA-03 · 3/3 · imagetext-2026-11-03</small><pre>comparison and detects the wrong view in the second.
+
+PLATFORM:
+[[Operative Ekphrasis]]
+
+LINKS:
+[[Cinepromptography]]
+[[Conditional Fidelity]]
+[[Scene Identity]]
+
+BIBTEX:
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation
+Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}</pre></section><section class="sheet"><small>IMG-JEPA-04 · 1/3 · imagetext-2026-11-03</small><pre>ZETTEL
+
+ID: IMG-JEPA-04
+
+TITLE:
+A prompt can change an image without making its meaning
+recoverable
+
+SOURCE:
+Randall Balestriero and Yann LeCun — Proving and Improving
+the Platonic Representation Hypothesis with JEPAs — 2026 —
+§2.1, Appendix A.2, §7
+
+PASSAGE:
+[PARAPHRASE] The proof uses the inverse of each injective
+rendering on its image. This lets the authors rewrite the
+objective over observations as an objective over world
+states. The limitations section identifies lossy real
+modalities as a departure from that setup.
+
+RESEARCH OBJECT:
+The difference between a prompt detail having a visual effect
+and a viewer being able to infer that detail.
+
+LOCAL MOVE:
+Injectivity supplies recoverability in the formal model
+before learning begins.
+
+SOURCE TERMS:
+Injective rendering, left inverse, world state, population
+objective.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] Changing “blood-price” to “unpaid debt” could
+systematically alter a generator’s lighting or blocking while
+leaving the dispute’s stakes undecidable to viewers. There
+could be a causal effect without a readable sign of its
+cause.
+
+QUESTION:
+Which parts of an imagetext can be reconstructed from the
+image, and which only become determinate when the text is
+present?
+</pre></section><section class="sheet"><small>IMG-JEPA-04 · 2/3 · imagetext-2026-11-03</small><pre>DEEPER QUESTION:
+If a classifier recovers the prompt change from lighting but
+human readers cannot identify the stakes, what exactly has
+crossed modalities?
+
+MECHANISM:
+A prompt intervention can shift the distribution of outputs.
+Recovering the intervention from a particular image requires
+evidence that distinguishes it from competing prompts. The
+text can supply the distinction directly in the combined
+imagetext.
+
+FORMAL SHIFT:
+&lt;Prompt contrast&gt; → &lt;distributions of rendered images&gt; →
+[blind discrimination] → &lt;estimate of what the image makes
+recoverable&gt;
+
+SOURCE FORMALISM:
+The source uses x = g_m(z), with a left inverse on the range
+of g_m. It gives no model of prompt interventions.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Record three results separately: whether outputs change under
+a prompt edit, whether viewers infer the edited detail from
+pixels, and whether adding the text changes their reading.
+
+TENSION:
+A failed inference can indicate that the generator ignored
+the phrase, that it encoded the difference through an
+incidental visual cue, or that the stakes properly remain in
+the verbal part of the imagetext. Those readings require
+different evidence.
+
+MISSING:
+The viewer and the prompt intervention as explicit variables
+in the paper’s setup.
+
+BOUNDARY:
+The theorem does not imply that a generated image is
+invertible to its prompt, or that an apparent prompt match
+identifies what caused the image.
+
+CITATION TRAIL:</pre></section><section class="sheet"><small>IMG-JEPA-04 · 3/3 · imagetext-2026-11-03</small><pre>The proof’s change-of-variables step in Appendix A.2 and the
+lossy-modality limitation in §7.
+
+TEST:
+Generate matched-seed pairs for “blood-price” and “unpaid
+debt,” holding staging and style instructions fixed. Test
+blind image-only judgments, then repeat with the captions
+swapped. Include a visible inside/outside edit to check that
+the same viewers can detect a renderable distinction.
+
+PLATFORM:
+[[Imagetext and Operative Ekphrasis]]
+
+LINKS:
+[[Shield of Achilles]]
+[[Causal Fidelity]]
+[[Semantic Recoverability]]
+
+BIBTEX:
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation
+Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}</pre></section><section class="sheet"><small>IMG-JEPA-05 · 1/3 · imagetext-2026-11-03</small><pre>ZETTEL
+
+ID: IMG-JEPA-05
+
+TITLE:
+The caption closest to the image embedding did not improve
+decoding
+
+SOURCE:
+Randall Balestriero and Yann LeCun — Proving and Improving
+the Platonic Representation Hypothesis with JEPAs — 2026 —
+§5.1 and appendix passage “Scaling the captioner”
+
+PASSAGE:
+[PARAPHRASE] The authors generate several captions and select
+one by its agreement with the others under an n-gram
+similarity rule. Selecting the beam candidate closest to the
+rotated image embedding in text-JEPA space does not help.
+Additional decoder pretraining improves decoding of true
+caption embeddings without improving Flickr or COCO transfer.
+
+RESEARCH OBJECT:
+A split between geometry that makes captioning possible and a
+selection rule that produces a good caption.
+
+LOCAL MOVE:
+The paper fits a map between frozen embedding spaces, then
+uses a separately trained language decoder and an explicit
+candidate selection procedure.
+
+SOURCE TERMS:
+Rotated image embedding, soft prompt, consensus decoding,
+minimum Bayes risk, CIDEr.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] The caption that most resembles other
+plausible captions can win even when a rarer caption
+preserves the detail that makes this image singular.
+
+QUESTION:
+Does caption consensus remove hallucinated detail, or does it
+suppress accurate details that the decoder seldom names?
+
+DEEPER QUESTION:</pre></section><section class="sheet"><small>IMG-JEPA-05 · 2/3 · imagetext-2026-11-03</small><pre>What would count as a good caption when the purpose is to
+direct attention toward a difficult feature rather than to
+agree with typical descriptions?
+
+MECHANISM:
+The pipeline maps vision features into text-embedding space,
+projects the resulting vector into soft-prompt tokens, and
+decodes language. The consensus rule rewards lexical
+agreement among candidates, so a detail’s chance of surviving
+selection depends partly on how often other samples mention
+it.
+
+FORMAL SHIFT:
+&lt;Image features&gt; → &lt;mapped text embedding&gt; → [soft-prompt
+decoding and candidate selection] → &lt;one caption&gt;
+
+SOURCE FORMALISM:
+The scaled decoder projects an embedding to ten Qwen2.5 input
+embeddings through a two-layer MLP. Consensus compares 32
+sampled captions and one greedy caption using CIDEr-style
+n-gram similarity without document frequencies.
+
+OUR FORMALIZATION:
+NONE
+
+TENSION:
+The paper reports a useful decoding choice under its
+evaluation. Whether that choice favors generic descriptions
+at the expense of rare visible details remains an open
+empirical question.
+
+MISSING:
+Feature-level judgments of the winning caption and the
+candidates it displaced.
+
+BOUNDARY:
+The result does not establish that consensus systematically
+erases details or that embedding similarity generally fails
+as a caption critic.
+
+CITATION TRAIL:
+ClipCap for the soft-prompt projection and reference [27] for
+minimum Bayes risk decoding.
+</pre></section><section class="sheet"><small>IMG-JEPA-05 · 3/3 · imagetext-2026-11-03</small><pre>TEST:
+Use one candidate pool per image and apply both selectors to
+that same pool. Choose images with a rare but visible detail.
+Have readers mark supported rare details and unsupported
+additions independently of caption fluency. Check whether the
+selectors trade one error for the other.
+
+PLATFORM:
+[[Imagetext and the Captioning Apparatus]]
+
+LINKS:
+[[Decoder Prior]]
+[[Visual Specificity]]
+[[Consensus Captioning]]
+
+BIBTEX:
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation
+Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}</pre></section><section class="sheet"><small>IMG-JEPA-02-A · 1/3 · imagetext-2026-11-03</small><pre>ZETTEL
+
+ID:
+IMG-JEPA-02-A
+
+TITLE:
+Caption density begins with a rule about what to keep
+
+SOURCE:
+Minyoung Huh, Brian Cheung, Tongzhou Wang, and Phillip Isola
+— The Platonic Representation Hypothesis — 2024 — Appendix E
+
+PASSAGE:
+[QUOTE] “especially information from the start of the
+original description.”
+[QUOTE] “the alignment score also improves as caption length
+increases.”
+
+RESEARCH OBJECT:
+The ordering of details in the parent description as a
+variable in caption-density experiments.
+
+LOCAL MOVE:
+The authors vary the requested word budget for summaries of
+an existing description. Their prompt also gives early
+details priority.
+
+SOURCE TERMS:
+Caption density, granularity, salient visual information,
+alignment score.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] A longer summary may align better partly
+because it restores details previously excluded by an
+instruction that privileges the beginning. The caption’s
+order can determine which parts of the image become available
+for alignment.
+
+QUESTION:
+At a fixed word budget, does moving a visible detail to the
+beginning of the source description change whether that
+detail contributes to measured alignment?
+
+DEEPER QUESTION:</pre></section><section class="sheet"><small>IMG-JEPA-02-A · 2/3 · imagetext-2026-11-03</small><pre>If two equally accurate captions rank different aspects of
+one image as salient, which caption should a critic prefer?
+
+MECHANISM:
+A text-only model compresses a description under a word
+budget and a positional preference. The alignment measurement
+happens downstream of that selection.
+
+FORMAL SHIFT:
+&lt;Ordered full description&gt; → &lt;word budget and priority
+instruction&gt; → [summarization] → &lt;caption used for alignment
+measurement&gt;
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+NONE
+
+TENSION:
+[OUR INFERENCE] The length effect could reflect broader
+coverage of the image, or recovery of particular details
+systematically excluded at shorter budgets. Both could be
+present.
+
+MISSING:
+An order intervention that keeps the image, source
+propositions, and word budget fixed.
+
+BOUNDARY:
+Appendix E’s reported length effect does not isolate the
+effect of ordering or of the instruction to favor the
+beginning.
+
+CITATION TRAIL:
+[[IMG-JEPA-02]] → Huh et al., Appendix E → Urbanek et al.’s
+Densely Captioned Images dataset and its description
+hierarchy.
+
+TEST:
+Swap the first and last blocks of each description without
+changing any wording. Run the same short and long summary
+prompts on both orders. Compare which propositions survive
+and whether changes in visual coverage track the alignment</pre></section><section class="sheet"><small>IMG-JEPA-02-A · 3/3 · imagetext-2026-11-03</small><pre>score.
+
+PLATFORM:
+[[Thick Prompting as Method]]
+
+LINKS:
+[[IMG-JEPA-02]]
+[[Caption Order]]
+[[Salience in Imagetext]]
+
+BIBTEX:
+@misc{huh2024platonic,
+  author = {Huh, Minyoung and Cheung, Brian and Wang,
+Tongzhou and Isola, Phillip},
+  title = {The Platonic Representation Hypothesis},
+  year = {2024},
+  eprint = {2405.07987},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2405.07987}
+}</pre></section><section class="sheet"><small>IMG-JEPA-02-B · 1/3 · imagetext-2026-11-03</small><pre>ZETTEL
+
+ID:
+IMG-JEPA-02-B
+
+TITLE:
+Changing the evaluator changes which captions count as
+aligned
+
+SOURCE:
+Xianhang Li et al. — What If We Recaption Billions of Web
+Images with LLaMA-3? — 2024 arXiv preprint — §4.2
+
+PASSAGE:
+[QUOTE] “our recaptioned content performs just comparably to
+the original captions (49.57 vs. 50.43).”
+[QUOTE] “the LongCLIP score of our newly generated caption
+impressively attains 89.91”
+
+RESEARCH OBJECT:
+A reversal in caption ranking when the evaluator changes from
+CLIP-Large to LongCLIP-Large.
+
+LOCAL MOVE:
+The authors evaluate the same recaptioning intervention with
+two vision–language scorers. Under LongCLIP, the reported
+score for original captions is 10.09.
+
+SOURCE TERMS:
+Semantic similarity, CLIP-large, LongCLIP-Large, recaptioned
+content.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] The new caption may contain more visible
+facts. It also has a form that the second evaluator was
+specifically adapted to process. The score alone cannot
+separate those advantages.
+
+QUESTION:
+Does LongCLIP reward an additional true visual claim more
+than an equally long false claim?
+
+DEEPER QUESTION:
+Can a single image–text score tell us whether the added words</pre></section><section class="sheet"><small>IMG-JEPA-02-B · 2/3 · imagetext-2026-11-03</small><pre>are supported by the image or whether the text supplies
+information of its own?
+
+MECHANISM:
+The scorers encode the image and caption and evaluate
+similarity. Changing the scorer changes the representation
+through which additional caption material can affect the
+score.
+
+FORMAL SHIFT:
+&lt;Fixed image and competing captions&gt; → &lt;scorer-specific
+embeddings&gt; → [similarity scoring] → &lt;caption ranking that
+depends on the scorer&gt;
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+NONE
+
+TENSION:
+[OUR INFERENCE] One explanation is that LongCLIP can register
+genuinely supported detail that standard CLIP misses. Another
+is that it favors properties of longer recaptions even when
+their added claims are unsupported.
+
+MISSING:
+An evaluation that varies the truth of an added claim
+independently of caption length and phrasing.
+
+BOUNDARY:
+The reported scores compare scorers and caption sets. They do
+not identify the contribution of any particular visual claim,
+and their numerical scales cannot be compared directly across
+scorers.
+
+CITATION TRAIL:
+[[IMG-JEPA-02]] → Recap-DataComp evaluation in §4.2 →
+LongCLIP, reference [76].
+
+TEST:
+Write two length-matched extensions of the same short
+caption. Change one visible relation in the second extension
+from true to false, such as inside to outside. Test both</pre></section><section class="sheet"><small>IMG-JEPA-02-B · 3/3 · imagetext-2026-11-03</small><pre>scorers on whether they prefer the true extension. Repeat
+with the same relation placed early and late.
+
+PLATFORM:
+[[Evaluating Imagetext]]
+
+LINKS:
+[[IMG-JEPA-02]]
+[[Evaluator Dependence]]
+[[Visual Claim Verification]]
+
+BIBTEX:
+@misc{li2024recaption,
+  author = {Li, Xianhang and Tu, Haoqin and Hui, Mude and
+Wang, Zeyu and Zhao, Bingchen and Xiao, Junfei and Ren,
+Sucheng and Mei, Jieru and Liu, Qing and Zheng, Huangjie and
+Zhou, Yuyin and Xie, Cihang},
+  title = {What If We Recaption Billions of Web Images with
+{LLaMA-3}?},
+  year = {2024},
+  eprint = {2406.08478},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/pdf/2406.08478}
+}</pre></section><section class="sheet"><small>IMG-JEPA-05-A · 1/3 · imagetext-2026-11-03</small><pre>ZETTEL
+
+ID:
+IMG-JEPA-05-A
+
+TITLE:
+An image-derived prefix also adapts the decoder to a
+captioning task
+
+SOURCE:
+Ron Mokady, Amir Hertz, and Amit H. Bermano — ClipCap: CLIP
+Prefix for Image Captioning — 2021 — §3.3
+
+PASSAGE:
+[QUOTE] “The constant has a dual role, first, to retrieve
+meaningful information from CLIP embedding through the multi-
+head attention.”
+
+RESEARCH OBJECT:
+The learned constant supplied alongside the image embedding
+in ClipCap’s frozen-decoder variant.
+
+LOCAL MOVE:
+The authors give the transformer mapper both an image-
+dependent input and a learned constant. They assign the
+constant a role in extracting information and a role in
+adapting the frozen language model to the new data.
+
+SOURCE TERMS:
+Visual encoding, learned constant input, multi-head
+attention, fixed language model.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] The ancestor of the JEPA captioner’s soft-
+prompt technique makes two jobs visible at once. A prefix can
+help determine which facts reach the decoder and what kind of
+sentence the decoder tends to produce.
+
+QUESTION:
+Can changing the learned constant alter which visual fact the
+caption foregrounds while the image features, mapper, and
+language model stay fixed?
+
+DEEPER QUESTION:</pre></section><section class="sheet"><small>IMG-JEPA-05-A · 2/3 · imagetext-2026-11-03</small><pre>When a caption starts with a person, an object, or an action,
+how much of that choice comes from the image and how much
+comes from how the decoder was taught to describe images?
+
+MECHANISM:
+In this ClipCap variant, the transformer processes the visual
+encoding together with a learned constant. The resulting
+prefix conditions the frozen language model’s next-token
+generation.
+
+FORMAL SHIFT:
+&lt;CLIP image embedding plus learned constant&gt; → &lt;transformer-
+generated prefix&gt; → [frozen language-model decoding] →
+&lt;caption&gt;
+
+SOURCE FORMALISM:
+§3.3 specifies the two transformer inputs. §3.4 specifies
+autoregressive decoding conditioned on the visual prefix.
+
+OUR FORMALIZATION:
+NONE
+
+TENSION:
+[OUR INFERENCE] The constant may mostly steer caption style,
+or it may also change which visible distinctions reliably
+reach the output. A fluent caption can result in either case.
+
+MISSING:
+A controlled intervention on the constant that distinguishes
+a change in phrasing from a change in which visible
+propositions appear.
+
+BOUNDARY:
+This mechanism belongs to ClipCap’s frozen-decoder
+transformer variant. The JEPA paper’s scaled captioner uses a
+two-layer MLP and a fine-tuned Qwen2.5 decoder. The cited
+connection is prefix conditioning.
+
+CITATION TRAIL:
+[[IMG-JEPA-05]] → ClipCap §3.3 → Li and Liang’s prefix-tuning
+work, cited in ClipCap §3.2.
+
+TEST:
+Freeze a trained ClipCap transformer mapper and its decoder.</pre></section><section class="sheet"><small>IMG-JEPA-05-A · 3/3 · imagetext-2026-11-03</small><pre>Fit separate constants on the same training images with
+people-first and objects-first captions. Swap only the
+constant at inference. On held-out images, score sentence
+openings and supported visual propositions separately.
+
+PLATFORM:
+[[Imagetext and the Captioning Apparatus]]
+
+LINKS:
+[[IMG-JEPA-05]]
+[[Soft Prompt Conditioning]]
+[[Caption Genre]]
+
+BIBTEX:
+@misc{mokady2021clipcap,
+  author = {Mokady, Ron and Hertz, Amir and Bermano, Amit
+H.},
+  title = {{ClipCap}: {CLIP} Prefix for Image Captioning},
+  year = {2021},
+  eprint = {2111.09734},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/pdf/2111.09734}
+}</pre></section><section class="sheet"><small>IMG-JEPA-04-A · 1/3 · imagetext-2026-11-03</small><pre>ZETTEL
+
+ID:
+IMG-JEPA-04-A
+
+TITLE:
+Description has an addressee that alignment has no place for
+
+SOURCE:
+W. J. T. Mitchell — Ekphrasis and the Other — 1994 — §18
+Randall Balestriero and Yann LeCun — Proving and Improving
+the Platonic Representation Hypothesis with JEPAs — 2026 —
+§§3 and 5.1
+
+PASSAGE:
+[QUOTE — Mitchell] “the relation of the speaker and the
+audience or addressee of the ekphrasis”
+
+RESEARCH OBJECT:
+The addressee as a variable in deciding what a description
+should do.
+
+LOCAL MOVE:
+Mitchell inserts a third position into the encounter between
+a describer and a depicted object. The description goes to
+someone whose reception is part of the event.
+
+SOURCE TERMS:
+Addressee, ekphrastic hope, description, ventriloquism.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] The JEPA captioner makes the image-to-
+sentence step executable. Mitchell’s next step happens in
+reception. A sentence can retrieve the correct photograph
+while leaving a reader unable to imagine the relation for
+which the photograph was described.
+
+QUESTION:
+When is a good caption a good description for a particular
+person?
+
+DEEPER QUESTION:
+Can an imagetext work depend on giving one reader something
+to notice that another reader already sees?</pre></section><section class="sheet"><small>IMG-JEPA-04-A · 2/3 · imagetext-2026-11-03</small><pre>
+MECHANISM:
+In the JEPA evaluation, a candidate can succeed by ranking
+its associated image or caption above alternatives. In
+Mitchell’s account, a description also mediates between the
+depicted object and a listener or reader. What the reader
+already knows changes what the description can accomplish.
+
+FORMAL SHIFT:
+NONE
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Evaluate the same image–description pair on two axes. Measure
+whether it identifies the image among alternatives and
+whether it helps a specified reader recover a specified
+relation.
+
+TENSION:
+A caption that names Achilles may distinguish a Shield image
+in an archive. A caption that locates the elders relative to
+the disputants may better enable a reader to reconstruct its
+composition. The two tasks can favor different sentences.
+
+MISSING:
+A recipient, a purpose for describing, and evidence of what
+the recipient came to see.
+
+BOUNDARY:
+The comparison brings Mitchell’s account of reception to the
+JEPA evaluation. It establishes no line of influence between
+the authors.
+
+CITATION TRAIL:
+[[IMG-JEPA-04]] → Mitchell §18 on the ekphrastic triangle →
+§§21 onward on cups and shields.
+
+TEST:
+Write two length-matched descriptions of each Shield image,
+one identifying the narrative and one locating the figures.
+Have one group retrieve the image among distractors and</pre></section><section class="sheet"><small>IMG-JEPA-04-A · 3/3 · imagetext-2026-11-03</small><pre>another reconstruct its blocking from text alone. Compare
+caption rankings across the tasks.
+
+PLATFORM:
+[[Imagetext as an Addressed Act]]
+
+LINKS:
+[[IMG-JEPA-04]]
+[[Ekphrastic Triangle]]
+[[Description for Whom]]
+
+BIBTEX:
+@incollection{mitchell1994ekphrasis,
+  author = {Mitchell, W. J. T.},
+  title = {Ekphrasis and the Other},
+  booktitle = {Picture Theory: Essays on Verbal and Visual
+Representation},
+  publisher = {University of Chicago Press},
+  year = {1994},
+  url = {https://complit.utoronto.ca/wp-
+content/uploads/COL1000-Week11-Nov25_WJT_Mitchell.pdf}
+}
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation
+Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}</pre></section><section class="sheet"><small>IMG-JEPA-02-B-A · 1/4 · imagetext-2026-11-03</small><pre>ZETTEL
+
+ID:
+IMG-JEPA-02-B-A
+
+TITLE:
+A detail that crosses scenes can belong to the composite work
+
+SOURCE:
+Randall Balestriero and Yann LeCun — Proving and Improving
+the Platonic Representation Hypothesis with JEPAs — 2026 —
+§2.3 and Appendix B, Table 7
+W. J. T. Mitchell — Beyond Comparison: Picture, Text, and
+Method — 1994 — Picture Theory, p. 89 n. 9, as reprinted in
+his introduction to The Future of Text and Image
+
+PASSAGE:
+[QUOTE — Balestriero and LeCun] “alt-texts sharing a brand
+name”
+[QUOTE — Mitchell] “composite, synthetic works (or concepts)
+that combine image and text”
+
+RESEARCH OBJECT:
+A brand name that connects photographs of different scenes
+and also connects each photograph to the page on which it
+appears.
+
+LOCAL MOVE:
+The JEPA paper uses a repeated brand name to illustrate how
+overlapping text corruptions can create links across scenes.
+Mitchell’s imagetext shifts the unit of analysis to the work
+made by combining the verbal and visual materials.
+
+SOURCE TERMS:
+Alt-text, nuisance, induced world kernel, imagetext.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] The same word can be a shortcut for matching
+photographs and an indispensable part of understanding how a
+photograph is published. Removing it could make the text a
+better view of the pictured scene while making it a poorer
+account of the page.
+
+QUESTION:</pre></section><section class="sheet"><small>IMG-JEPA-02-B-A · 2/4 · imagetext-2026-11-03</small><pre>When does a recaption describe the photographed thing more
+accurately while describing the published imagetext less
+adequately?
+
+DEEPER QUESTION:
+Should a visible logo, a merchant name supplied by the page,
+and a merchant name hallucinated by the captioner count as
+three different kinds of evidence?
+
+MECHANISM:
+In the paper’s example, shared wording can cause corruptions
+of texts from distinct scenes to overlap. In a published
+composite, wording can intentionally connect distinct scenes
+through sponsorship, authorship, or a series title. The
+visible pixels can remain identical across those contexts.
+
+FORMAL SHIFT:
+&lt;Photograph embedded in a page&gt; → &lt;image ID and associated
+text strings&gt; → [caption replacement or positive pairing] →
+&lt;different relations become available to the encoder&gt;
+
+SOURCE FORMALISM:
+The induced world kernel gives the probability that a
+positive pair joins observations of two specified states.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Give each phrase separate provenance labels for pixel
+evidence and page evidence. Keep unsupported claims distinct
+from supported claims that require the page.
+
+TENSION:
+Table 7 favors different caption mixtures on Flickr retrieval
+and WIT alignment. That difference makes the target worth
+specifying. It does not explain whether the difference comes
+from literalness, caption genre, or another property of the
+data.
+
+MISSING:
+The original page as evidence alongside the isolated image
+and its text fields.
+
+BOUNDARY:
+The brand example illustrates an alignment mechanism. It</pre></section><section class="sheet"><small>IMG-JEPA-02-B-A · 3/4 · imagetext-2026-11-03</small><pre>cannot establish that a given brand term is irrelevant to the
+artifact or that alt-text ordinarily functions as a public
+caption.
+
+CITATION TRAIL:
+[[IMG-JEPA-02-B]] → JEPA §2.3 on the brand-name example →
+Mitchell’s distinction among imagetext, image-text, and
+image/text.
+
+TEST:
+Take one identical photograph published on two pages under
+different, verifiable sponsorships. Compare literal
+recaptions with page-aware descriptions. Test scene retrieval
+and publication attribution separately. Include a case where
+the sponsor is visible in the image to test whether the two
+tasks can coincide.
+
+PLATFORM:
+[[The Published Imagetext]]
+
+LINKS:
+[[IMG-JEPA-02-B]]
+[[IMG-JEPA-01]]
+[[Scene Versus Page]]
+[[Description Provenance]]
+
+BIBTEX:
+@article{mitchell1994beyond,
+  author = {Mitchell, W. J. T.},
+  title = {Beyond Comparison: Picture, Text and Method},
+  journal = {Interfaces},
+  volume = {5},
+  pages = {13--38},
+  year = {1994},
+  doi = {10.3406/inter.1994.932},
+  note = {The quoted Picture Theory note is reproduced in
+Mitchell&#x27;s introduction to The Future of Text and Image},
+  url = {https://www.cambridgescholars.com/resources/pdfs/978
+-1-4438-3640-1-sample.pdf}
+}
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation
+Hypothesis with {JEPAs}},</pre></section><section class="sheet"><small>IMG-JEPA-02-B-A · 4/4 · imagetext-2026-11-03</small><pre>  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}</pre></section><section class="sheet"><small>IMG-JEPA-05-A-A · 1/3 · imagetext-2026-11-03</small><pre>ZETTEL
+
+ID:
+IMG-JEPA-05-A-A
+
+TITLE:
+A sheep-shaped cake puts the object and its depiction in the
+same frame
+
+SOURCE:
+Randall Balestriero and Yann LeCun — Proving and Improving
+the Platonic Representation Hypothesis with JEPAs — 2026 —
+appendix passage “Scaling the captioner”
+W. J. T. Mitchell — Ekphrasis and the Other — 1994 — §21
+
+PASSAGE:
+[QUOTE — Balestriero and LeCun] “a cake shaped like a sheep”
+[QUOTE — Mitchell] “utilitarian objects that happen to have
+ornamental or symbolic visual representations attached to
+them”
+
+RESEARCH OBJECT:
+An artifact that resembles one thing while being another,
+photographed for captioning.
+
+LOCAL MOVE:
+The JEPA authors mention the sheep-shaped cake in a
+qualitative report about additional decoder pretraining.
+Mitchell uses artifacts such as cups and shields to locate
+early ekphrastic objects within practices of making and use.
+
+SOURCE TERMS:
+Recaptions, decoder, ornamental or symbolic visual
+representations, ekphrastic objects.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] A caption for the cake may need to
+distinguish three things: the photograph, the object
+photographed, and the figure the object presents. A caption
+can name both cake and sheep while still getting their
+relation wrong.
+
+QUESTION:
+Can the captioner distinguish resemblance, depiction, and</pre></section><section class="sheet"><small>IMG-JEPA-05-A-A · 2/3 · imagetext-2026-11-03</small><pre>physical presence when the same nouns fit all three?
+
+DEEPER QUESTION:
+When a model calls something a sheep, is it describing what
+is present in the photographed space or what an artifact in
+that space represents?
+
+MECHANISM:
+The vision encoder supplies features to a mapped embedding.
+The decoder turns those features into a sentence. An object-
+level description must assign different roles to the visible
+material and to the figure it resembles or depicts.
+
+FORMAL SHIFT:
+&lt;Photograph of a representational artifact&gt; → &lt;visual
+embedding and mapped text embedding&gt; → [caption decoding] →
+&lt;a sentence that may preserve or collapse representational
+levels&gt;
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Use separate labels for the physical bearer, the represented
+figure, and the relation between them. For example, cake /
+sheep / shaped like differs from cake / sheep / printed on
+and cake / sheep / next to.
+
+TENSION:
+The paper reports that extra pretraining helps some unusual
+examples without improving Flickr or COCO transfer. The
+reported example could indicate better recognition of an
+uncommon artifact or better description of its
+representational structure.
+
+MISSING:
+The specific candidate captions and a controlled comparison
+that keeps the named objects fixed while changing their
+relation.
+
+BOUNDARY:
+The authors’ phrase identifies an example. It is not a
+transcript of the model’s caption or a quantified result</pre></section><section class="sheet"><small>IMG-JEPA-05-A-A · 3/3 · imagetext-2026-11-03</small><pre>about representational nesting.
+
+CITATION TRAIL:
+[[IMG-JEPA-05-A]] → the JEPA appendix’s qualitative example →
+Mitchell §21 on the objects of ekphrasis → the Shield as an
+artifact bearing scenes.
+
+TEST:
+Compare a sheep-shaped cake, a cake with a printed sheep, and
+a plain cake beside a toy sheep. Score noun recognition and
+relation recognition separately. Repeat with the same Shield
+scene embossed on metal, printed on a poster, and staged by
+actors. Ask whether each caption tells the reader where the
+depicted figures exist.
+
+PLATFORM:
+[[Imagetext and Representational Nesting]]
+
+LINKS:
+[[IMG-JEPA-05-A]]
+[[Shield of Achilles]]
+[[Bearer and Depicted Figure]]
+[[Description of a Representation]]
+
+BIBTEX:
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation
+Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}
+@incollection{mitchell1994ekphrasis,
+  author = {Mitchell, W. J. T.},
+  title = {Ekphrasis and the Other},
+  booktitle = {Picture Theory: Essays on Verbal and Visual
+Representation},
+  publisher = {University of Chicago Press},
+  year = {1994},
+  url = {https://complit.utoronto.ca/wp-
+content/uploads/COL1000-Week11-Nov25_WJT_Mitchell.pdf}
+}</pre></section><section class="sheet"><small>IMG-JEPA-04-A-A · 1/3 · imagetext-2026-11-03</small><pre>ZETTEL
+
+ID:
+IMG-JEPA-04-A-A
+
+TITLE:
+An image must leave something out to remain an image
+
+SOURCE:
+Plato — Cratylus — 432b–433a — translated by David Horan
+
+PASSAGE:
+[QUOTE] “Would there then be Cratylus and his image, or would
+there be two Cratyluses?”
+
+RESEARCH OBJECT:
+Omission as a condition of representation, with a separate
+question about which omissions count as errors.
+
+LOCAL MOVE:
+Socrates imagines a god reproducing Cratylus down to his
+interior, warmth, motion, soul, and intelligence. Cratylus
+accepts that the result would be two Cratyluses. Socrates
+uses this concession to reopen what correctness can mean for
+an image, then carries the argument into names and sentences.
+
+SOURCE TERMS:
+Image, imitation, correctness, name, impression.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] The question for imagetext is more exact than
+how much of the object can survive translation. Some
+differences make the description usable as a description.
+Others remove the very feature it was meant to bring forward.
+Counting omissions treats those cases alike.
+
+QUESTION:
+Can a description become more exact by omitting a true
+feature?
+
+DEEPER QUESTION:
+Does correctness belong to the description by itself, or to
+what a reader can do with that description in a particular
+situation?</pre></section><section class="sheet"><small>IMG-JEPA-04-A-A · 2/3 · imagetext-2026-11-03</small><pre>
+MECHANISM:
+Socrates first tests complete resemblance by asking what kind
+of thing it would produce. He then allows that a name or
+sentence can contain an unsuitable element and still name or
+speak of its object. Identifying what the description
+concerns and judging how well it describes it become
+separable acts.
+
+FORMAL SHIFT:
+NONE
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+For each description, distinguish reference, accuracy of
+individual claims, and adequacy for the reader’s task. Score
+each independently.
+
+TENSION:
+A sparse description may identify the right image while
+omitting a crucial relation. A detailed description with one
+false claim may still let the reader reconstruct the scene
+more accurately. A single alignment score can rank either one
+first.
+
+MISSING:
+A criterion for deciding which omissions matter before
+comparing descriptions.
+
+BOUNDARY:
+The doubling argument concerns complete duplication. The JEPA
+theorem concerns alignment of embeddings up to rotation under
+specified assumptions. The comparison opens a question about
+selective representation without equating the two kinds of
+sameness.
+
+CITATION TRAIL:
+[[IMG-JEPA-04-A]] → Cratylus 432b–433a → Mitchell’s account
+of the addressee in Ekphrasis and the Other §18.
+
+TEST:</pre></section><section class="sheet"><small>IMG-JEPA-04-A-A · 3/3 · imagetext-2026-11-03</small><pre>Use one image and two tasks: identify it among alternatives,
+then reconstruct one spatial relation. Compare a sparse
+accurate caption, a detailed caption with one false claim,
+and a caption that omits the diagnostic relation. Ask which
+caption is best under each task and which error causes each
+reversal.
+
+PLATFORM:
+[[Correctness of Description]]
+
+LINKS:
+[[IMG-JEPA-04-A]]
+[[IMG-JEPA-04]]
+[[Omission as Selection]]
+[[Reference Versus Adequacy]]
+
+BIBTEX:
+@book{platoCratylusHoran,
+  author = {Plato},
+  title = {Cratylus},
+  translator = {Horan, David},
+  note = {Stephanus 432b--433a},
+  url =
+{https://www.platonicfoundation.org/media/2025/06/platos-
+cratylus-english-translation-by-david-horan.pdf}
+}</pre></section><section class="sheet"><small>IMG-JEPA-03-A · 1/3 · imagetext-2026-11-03</small><pre>ZETTEL
+
+ID:
+IMG-JEPA-03-A
+
+TITLE:
+A correction to the object can be a distortion from another
+viewpoint
+
+SOURCE:
+Plato — Sophist — 235d–236c — translated by Benjamin Jowett
+Randall Balestriero and Yann LeCun — Proving and Improving
+the Platonic Representation Hypothesis with JEPAs — 2026 —
+§2.3
+
+PASSAGE:
+[QUOTE — Plato, Jowett translation] “make only the
+proportions which appear to be beautiful, disregarding the
+real ones.”
+
+RESEARCH OBJECT:
+The large sculpture whose proportions are altered for the
+spectator’s position.
+
+LOCAL MOVE:
+The Stranger distinguishes likeness-making from appearance-
+making. A maker can enlarge distant parts so they look
+proportionate from below. The passage presents this as
+abandoning true proportions, even though the alteration is
+what gives the intended spectator a proportionate appearance.
+
+SOURCE TERMS:
+Likeness-making, appearances, proportions, position of the
+spectator, viewpoint, nuisance.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] In JEPA §2.3, viewpoint can vary across
+observations of a fixed object. In the sculpture example, the
+maker alters the object in anticipation of the viewpoint.
+What the spectator can see helps determine what gets made.
+
+QUESTION:
+When a prompt says “make the figure look proportionate from
+below,” what should a caption critic check: the dimensions of</pre></section><section class="sheet"><small>IMG-JEPA-03-A · 2/3 · imagetext-2026-11-03</small><pre>the figure or the appearance from below?
+
+DEEPER QUESTION:
+Could two images agree on a visible relation precisely
+because the objects they depict differ?
+
+MECHANISM:
+Geometry and viewing position jointly determine apparent
+proportions. A maker can change one to compensate for the
+other. A verbal description can specify either the
+construction or the desired appearance, and those
+instructions can call for different objects.
+
+FORMAL SHIFT:
+&lt;Object proportions and spectator position&gt; → &lt;projected
+proportions&gt; → [alter the object for the intended view] →
+&lt;appearance that may cease to match from another position&gt;
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Label a description’s target as object geometry, projected
+appearance from a specified view, or appearance across views.
+
+TENSION:
+The Stranger’s classification gives priority to actual
+proportions. A description written for the person standing
+below the sculpture could be correct about appearance while
+being wrong if read as a statement about dimensions.
+
+MISSING:
+A way for the critic to tell which level the words specify
+before it scores a match.
+
+BOUNDARY:
+Plato gives an example of making appearances, with no claim
+about learned invariance. The connection to the JEPA nuisance
+variable is an analytical comparison.
+
+CITATION TRAIL:
+[[IMG-JEPA-03]] → JEPA §2.3 on viewpoint → Sophist 235d–236c
+→ Republic X 598a–b on the couch seen from different</pre></section><section class="sheet"><small>IMG-JEPA-03-A · 3/3 · imagetext-2026-11-03</small><pre>positions.
+
+TEST:
+Make two renders from below: one of a proportionate figure
+and one of a figure whose upper body has been enlarged to
+compensate for perspective. Render each again from eye level.
+Ask critics to evaluate separately whether the head is
+oversized and whether it looks oversized from below. Record
+whether their judgments follow the object or the view.
+
+PLATFORM:
+[[Viewpoint and Description]]
+
+LINKS:
+[[IMG-JEPA-03]]
+[[Likeness and Appearance]]
+[[Cinepromptography]]
+[[Spectator Position]]
+
+BIBTEX:
+@book{platoSophistJowett,
+  author = {Plato},
+  title = {Sophist},
+  translator = {Jowett, Benjamin},
+  note = {Stephanus 235d--236c},
+  url = {https://en.wikisource.org/wiki/Sophist_(Jowett)}
+}
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation
+Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}</pre></section><section class="sheet"><small>IMG-JEPA-01-A · 1/4 · imagetext-2026-11-03</small><pre>ZETTEL
+
+ID:
+IMG-JEPA-01-A
+
+TITLE:
+The cave analogy leaves open who made the shadows agree
+
+SOURCE:
+Minyoung Huh, Brian Cheung, Tongzhou Wang, and Phillip Isola
+— The Platonic Representation Hypothesis — 2024 — §1, Figure
+1, §4.1 and note 4
+Randall Balestriero and Yann LeCun — Proving and Improving
+the Platonic Representation Hypothesis with JEPAs — 2026 —
+§§2.1–2.3, §7
+
+PASSAGE:
+[QUOTE — Huh et al.] “The training data for our algorithms
+are shadows on the cave wall”
+[QUOTE — Huh et al.] “the joint distribution of observation
+indices is itself the platonic reality.”
+
+RESEARCH OBJECT:
+Two readings of the latent state in the paper that supplies
+the JEPA paper’s term “Platonic.”
+
+LOCAL MOVE:
+Huh et al. explicitly invoke Plato’s cave in their
+introduction. Their formal setup later allows an event to be
+an index for observations without further physical meaning.
+Note 4 entertains a statistical reading of what counts as
+reality.
+
+SOURCE TERMS:
+Platonic representation, observation, event, joint
+distribution, positive-pair distribution.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] A photograph and its machine-written caption
+can agree because the caption was produced from that very
+photograph. That agreement can be real and useful while
+leaving open whether a second camera or witness would support
+the same account.
+</pre></section><section class="sheet"><small>IMG-JEPA-01-A · 2/4 · imagetext-2026-11-03</small><pre>QUESTION:
+When text and image align, what evidence distinguishes
+independent access to a scene from descent through the same
+representational artifact?
+
+DEEPER QUESTION:
+If an image generates its own descriptions and those
+descriptions later supervise another model, which part of the
+resulting agreement belongs to the photographed event and
+which part belongs to the image’s circulation?
+
+MECHANISM:
+Huh et al.’s Figure 1 allows a description to be produced
+from an existing measurement or mediated by a different
+measurement. The JEPA study’s recaptioned corpus gives the
+first path a concrete implementation. The text encoder can
+train without pixel inputs while its examples still carry
+information derived from pixels.
+
+FORMAL SHIFT:
+&lt;Scene&gt; → &lt;one photograph or independently obtained views&gt; →
+[captioning and pairing] → &lt;agreement with different
+evidentiary histories&gt;
+
+SOURCE FORMALISM:
+Huh et al. model observations as bijective deterministic
+functions of discrete events in §4.1. Balestriero and LeCun
+model positive pairs as a distribution over world states in
+§2.1.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+For each positive pair, record the nearest common source:
+event, photograph, or prior description. Evaluate on held-out
+evidence produced before the descriptions can influence it.
+
+TENSION:
+Reading A treats cross-modal agreement as evidence of
+recovery of a shared event. Reading B treats it as recovery
+of structure already stabilized by the photograph and its
+captions. An evaluation built around the same photographs can
+support both readings.
+
+MISSING:</pre></section><section class="sheet"><small>IMG-JEPA-01-A · 3/4 · imagetext-2026-11-03</small><pre>A benchmark in which the description must answer to an
+observation outside its own production chain.
+
+BOUNDARY:
+The genealogy verified here is the original PRH paper’s
+explicit citation of Plato’s cave. The claim about shared
+representational ancestry is a proposed test of alignment
+evidence.
+
+CITATION TRAIL:
+[[IMG-JEPA-01]] → Huh et al. §1 and §4.1 note 4 → Plato’s
+Republic VII → the Nettleship reading cited in the note.
+
+TEST:
+Photograph a staged scene from two angles. Pair one caption
+with the first photograph from which it was written, and
+obtain another description from a witness or second camera.
+Keep the pairs separate. Test which details transfer to a
+held-out view, especially details visible in only one
+original view.
+
+PLATFORM:
+[[Genealogy of the Platonic Representation Hypothesis]]
+
+LINKS:
+[[IMG-JEPA-01]]
+[[IMG-JEPA-02]]
+[[Independent Observation]]
+[[Imagetext Provenance]]
+
+BIBTEX:
+@misc{huh2024platonic,
+  author = {Huh, Minyoung and Cheung, Brian and Wang,
+Tongzhou and Isola, Phillip},
+  title = {The Platonic Representation Hypothesis},
+  year = {2024},
+  eprint = {2405.07987},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2405.07987}
+}
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation
+Hypothesis with {JEPAs}},</pre></section><section class="sheet"><small>IMG-JEPA-01-A · 4/4 · imagetext-2026-11-03</small><pre>  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}</pre></section><footer><svg xmlns="http://www.w3.org/2000/svg" width="32" viewBox="0 0 48 48"><g fill="none" stroke="#666" stroke-width="2"><path d="M18 17a10 10 0 0 1 13 14M12 12a17 17 0 0 1 25 22"/></g><circle fill="#666" cx="23" cy="25" r="2"/></svg></footer></html>

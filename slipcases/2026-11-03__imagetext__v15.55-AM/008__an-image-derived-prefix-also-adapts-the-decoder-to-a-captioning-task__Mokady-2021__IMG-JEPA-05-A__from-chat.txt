@@ -1,0 +1,76 @@
+ZETTEL
+
+ID:
+IMG-JEPA-05-A
+
+TITLE:
+An image-derived prefix also adapts the decoder to a captioning task
+
+SOURCE:
+Ron Mokady, Amir Hertz, and Amit H. Bermano — ClipCap: CLIP Prefix for Image Captioning — 2021 — §3.3
+
+PASSAGE:
+[QUOTE] “The constant has a dual role, first, to retrieve meaningful information from CLIP embedding through the multi-head attention.”
+
+RESEARCH OBJECT:
+The learned constant supplied alongside the image embedding in ClipCap’s frozen-decoder variant.
+
+LOCAL MOVE:
+The authors give the transformer mapper both an image-dependent input and a learned constant. They assign the constant a role in extracting information and a role in adapting the frozen language model to the new data.
+
+SOURCE TERMS:
+Visual encoding, learned constant input, multi-head attention, fixed language model.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] The ancestor of the JEPA captioner’s soft-prompt technique makes two jobs visible at once. A prefix can help determine which facts reach the decoder and what kind of sentence the decoder tends to produce.
+
+QUESTION:
+Can changing the learned constant alter which visual fact the caption foregrounds while the image features, mapper, and language model stay fixed?
+
+DEEPER QUESTION:
+When a caption starts with a person, an object, or an action, how much of that choice comes from the image and how much comes from how the decoder was taught to describe images?
+
+MECHANISM:
+In this ClipCap variant, the transformer processes the visual encoding together with a learned constant. The resulting prefix conditions the frozen language model’s next-token generation.
+
+FORMAL SHIFT:
+<CLIP image embedding plus learned constant> → <transformer-generated prefix> → [frozen language-model decoding] → <caption>
+
+SOURCE FORMALISM:
+§3.3 specifies the two transformer inputs. §3.4 specifies autoregressive decoding conditioned on the visual prefix.
+
+OUR FORMALIZATION:
+NONE
+
+TENSION:
+[OUR INFERENCE] The constant may mostly steer caption style, or it may also change which visible distinctions reliably reach the output. A fluent caption can result in either case.
+
+MISSING:
+A controlled intervention on the constant that distinguishes a change in phrasing from a change in which visible propositions appear.
+
+BOUNDARY:
+This mechanism belongs to ClipCap’s frozen-decoder transformer variant. The JEPA paper’s scaled captioner uses a two-layer MLP and a fine-tuned Qwen2.5 decoder. The cited connection is prefix conditioning.
+
+CITATION TRAIL:
+[[IMG-JEPA-05]] → ClipCap §3.3 → Li and Liang’s prefix-tuning work, cited in ClipCap §3.2.
+
+TEST:
+Freeze a trained ClipCap transformer mapper and its decoder. Fit separate constants on the same training images with people-first and objects-first captions. Swap only the constant at inference. On held-out images, score sentence openings and supported visual propositions separately.
+
+PLATFORM:
+[[Imagetext and the Captioning Apparatus]]
+
+LINKS:
+[[IMG-JEPA-05]]
+[[Soft Prompt Conditioning]]
+[[Caption Genre]]
+
+BIBTEX:
+@misc{mokady2021clipcap,
+  author = {Mokady, Ron and Hertz, Amir and Bermano, Amit H.},
+  title = {{ClipCap}: {CLIP} Prefix for Image Captioning},
+  year = {2021},
+  eprint = {2111.09734},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/pdf/2111.09734}
+}

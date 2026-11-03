@@ -1,0 +1,75 @@
+ZETTEL
+
+ID: IMG-JEPA-05
+
+TITLE:
+The caption closest to the image embedding did not improve decoding
+
+SOURCE:
+Randall Balestriero and Yann LeCun — Proving and Improving the Platonic Representation Hypothesis with JEPAs — 2026 — §5.1 and appendix passage “Scaling the captioner”
+
+PASSAGE:
+[PARAPHRASE] The authors generate several captions and select one by its agreement with the others under an n-gram similarity rule. Selecting the beam candidate closest to the rotated image embedding in text-JEPA space does not help. Additional decoder pretraining improves decoding of true caption embeddings without improving Flickr or COCO transfer.
+
+RESEARCH OBJECT:
+A split between geometry that makes captioning possible and a selection rule that produces a good caption.
+
+LOCAL MOVE:
+The paper fits a map between frozen embedding spaces, then uses a separately trained language decoder and an explicit candidate selection procedure.
+
+SOURCE TERMS:
+Rotated image embedding, soft prompt, consensus decoding, minimum Bayes risk, CIDEr.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] The caption that most resembles other plausible captions can win even when a rarer caption preserves the detail that makes this image singular.
+
+QUESTION:
+Does caption consensus remove hallucinated detail, or does it suppress accurate details that the decoder seldom names?
+
+DEEPER QUESTION:
+What would count as a good caption when the purpose is to direct attention toward a difficult feature rather than to agree with typical descriptions?
+
+MECHANISM:
+The pipeline maps vision features into text-embedding space, projects the resulting vector into soft-prompt tokens, and decodes language. The consensus rule rewards lexical agreement among candidates, so a detail’s chance of surviving selection depends partly on how often other samples mention it.
+
+FORMAL SHIFT:
+<Image features> → <mapped text embedding> → [soft-prompt decoding and candidate selection] → <one caption>
+
+SOURCE FORMALISM:
+The scaled decoder projects an embedding to ten Qwen2.5 input embeddings through a two-layer MLP. Consensus compares 32 sampled captions and one greedy caption using CIDEr-style n-gram similarity without document frequencies.
+
+OUR FORMALIZATION:
+NONE
+
+TENSION:
+The paper reports a useful decoding choice under its evaluation. Whether that choice favors generic descriptions at the expense of rare visible details remains an open empirical question.
+
+MISSING:
+Feature-level judgments of the winning caption and the candidates it displaced.
+
+BOUNDARY:
+The result does not establish that consensus systematically erases details or that embedding similarity generally fails as a caption critic.
+
+CITATION TRAIL:
+ClipCap for the soft-prompt projection and reference [27] for minimum Bayes risk decoding.
+
+TEST:
+Use one candidate pool per image and apply both selectors to that same pool. Choose images with a rare but visible detail. Have readers mark supported rare details and unsupported additions independently of caption fluency. Check whether the selectors trade one error for the other.
+
+PLATFORM:
+[[Imagetext and the Captioning Apparatus]]
+
+LINKS:
+[[Decoder Prior]]
+[[Visual Specificity]]
+[[Consensus Captioning]]
+
+BIBTEX:
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}
