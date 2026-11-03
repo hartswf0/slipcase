@@ -1,0 +1,7 @@
+DENNING-2026-11-03 · 000__RETURN_PATH.txt
+Restore the full published tree from index.html via Recover ZIP. Add the original index.html to the extracted folder.
+For verified extraction use: python _SLIPCASE/rebuild.py /path/to/index.html /path/to/empty-directory
+For independent recompilation from inputs: python _SLIPCASE/build.py /path/to/new-empty-directory /path/to/output
+Recompilation requires Python 3.9+, XeLaTeX, Poppler (pdfinfo), BibTeX, and the fonts/packages declared by the manuscript.
+Inputs accompany build.py. Do not edit existing card payloads in place. Add an appearance and a new payload for amendments.
+For merge, deduplicate exact payload hashes only. Retain appearances, original IDs, variant citekeys, and unresolved addresses. Recompute edges.

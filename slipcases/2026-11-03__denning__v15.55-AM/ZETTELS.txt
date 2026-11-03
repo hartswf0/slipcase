@@ -1,0 +1,1270 @@
+
+
+=== 001__Positive-Sum-Rivalry__Porter-2008__ZF-MGMT-001__from-forage.txt ===
+
+ZETTEL
+
+ID:
+ZF-MGMT-001
+
+TITLE:
+Porter gives customer needs a role in expanding the market
+
+SOURCE:
+Michael E. Porter — The Five Competitive Forces That Shape Strategy — 2008 — “Rivalry Among Existing Competitors.”
+Steve Denning — Why Business Schools And Consulting Firms Are Adding So Little Value — 2026 — §4.
+
+PASSAGE:
+[QUOTE — Porter] “Such competition can not only support higher average profitability but also expand the industry, as the needs of more customer groups are better met.”
+[QUOTE — Denning] “there is no mechanism for systematically raising the value delivered to customers.”
+
+RESEARCH OBJECT:
+The difference between a mechanism for better serving customer segments and a routine for discovering what customers will need next.
+
+LOCAL MOVE:
+Porter identifies an exception to zero-sum rivalry. Denning asks whether the framework can make continuous improvement an operating practice.
+
+SOURCE TERMS:
+“positive sum”; “customer segments”; “average profitability”; “systematically.”
+
+WHAT BECAME STRANGE:
+The text used to indict Five Forces for dividing an existing pie explicitly allows competition to expand it. The disagreement shifts to how managers would repeatedly find and act on unmet needs.
+
+QUESTION:
+Does Porter’s account of differentiated rivalry help managers discover neglected needs, or does it explain the benefits once firms have already identified them?
+
+DEEPER QUESTION:
+Where does the capacity to learn enter a framework organized around industry structure?
+
+MECHANISM:
+[PARAPHRASE] Firms tailor different mixes of price, features, services, or products to different customer segments. Better coverage of those needs can expand the industry and support higher average profitability.
+
+FORMAL SHIFT:
+Customer segments with different needs → differentiated offers → [firms compete on different dimensions] → possible market expansion.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+NONE
+
+TENSION:
+Porter explains a way customer needs can be better met. Denning’s narrower challenge concerns a recurring process for sensing, testing, and revising what firms deliver.
+
+MISSING:
+An explicit update rule linking observed customer outcomes to the next change in the offer.
+
+BOUNDARY:
+The passage establishes that Porter recognizes positive-sum rivalry. It leaves the comparative effectiveness of Five Forces as a management practice open.
+
+CITATION TRAIL:
+Read Porter’s Paccar example under “Positioning the Company” for the operating practices that sustain a differentiated offer.
+
+TEST:
+Give two teams the same unfamiliar market case. Ask each to specify its next customer observation, decision owner, and revision trigger. Give one team Porter’s article and the other a customer-discovery protocol. Compare the resulting decision sequences.
+
+PLATFORM:
+[[Strategy as a learning process]]
+
+LINKS:
+[[Customer benefit as a means or an end]]
+[[Five Forces as diagnosis]]
+[[Value creation and value capture]]
+
+BIBTEX:
+@article{porter2008five,
+  author = {Porter, Michael E.},
+  title = {The Five Competitive Forces That Shape Strategy},
+  journal = {Harvard Business Review},
+  year = {2008},
+  url = {https://hbr.org/2008/01/the-five-competitive-forces-that-shape-strategy}
+}
+
+=== 002__The-Next-Windfall__Acemoglu-et-al-2022__ZF-MGMT-002__from-forage.txt ===
+
+ZETTEL
+
+ID:
+ZF-MGMT-002
+
+TITLE:
+A new CEO can change who shares in the next windfall
+
+SOURCE:
+Daron Acemoglu, Alex Xi He, and Daniel le Maire — Eclipse of Rent-Sharing — NBER working paper issued 2022, forthcoming journal version — abstract.
+
+PASSAGE:
+[QUOTE] “Exploiting exogenous export shocks, we establish that a key mechanism for these wage effects is changes in rent-sharing practices”
+
+RESEARCH OBJECT:
+The response of worker pay to a favorable demand shock after a leadership change.
+
+LOCAL MOVE:
+The authors use export shocks to examine how gains are distributed, moving from a wage outcome to a candidate mechanism.
+
+SOURCE TERMS:
+“business degree”; “exogenous export shocks”; “rent-sharing practices”; “labor share.”
+
+WHAT BECAME STRANGE:
+A management appointment can change the rule by which workers participate in gains. A snapshot of wages alone can miss that change.
+
+QUESTION:
+Which pay-setting decision weakens the transmission of favorable demand shocks into wages?
+
+DEEPER QUESTION:
+How much of the difference travels through classroom instruction, manager selection, or the board’s mandate at appointment?
+
+MECHANISM:
+[PARAPHRASE] The authors link wage effects to changes in rent-sharing after business managers take over. They present shareholder-value prioritization as a suggested explanation.
+
+FORMAL SHIFT:
+Export-demand shock → comparison of wage responses across manager types → [estimate shock-to-wage transmission] → evidence on rent-sharing.
+
+SOURCE FORMALISM:
+The abstract describes an instrumental-variable strategy using board composition at appointment and a separate analysis exploiting export shocks.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX] Separate the change in baseline pay after appointment from the change in how strongly pay responds to favorable demand.
+
+TENSION:
+The wage evidence puts pressure on management practices. Marquis’s curriculum argument requires a further link from educational exposure to those practices.
+
+MISSING:
+A trace from a specific curricular exposure to a specific pay-setting decision, with evidence about the board’s mandate.
+
+BOUNDARY:
+The reported estimates concern CEO business-degree status and firm outcomes in the US and Denmark. They leave the contribution of any individual course or doctrine unresolved.
+
+CITATION TRAIL:
+Follow the published article’s supplemental appendix and the working paper’s export-shock specifications.
+
+TEST:
+In one documented succession, examine compensation rules and board instructions before and after appointment. Look for a change to bonuses, bargaining, or wage progression that would predict a smaller worker share of the next comparable demand gain.
+
+PLATFORM:
+[[Management education and the distribution of gains]]
+
+LINKS:
+[[Selection versus instruction]]
+[[Board mandate]]
+[[Value creation and value capture]]
+
+BIBTEX:
+@techreport{acemoglu2022eclipse,
+  author = {Acemoglu, Daron and He, Alex Xi and le Maire, Daniel},
+  title = {Eclipse of Rent-Sharing: The Effects of Managers' Business Education on Wages and the Labor Share in the US and Denmark},
+  institution = {National Bureau of Economic Research},
+  number = {29874},
+  year = {2022},
+  doi = {10.3386/w29874},
+  note = {Forthcoming American Economic Review abstract quoted. Journal DOI 10.1257/aer.20231640}
+}
+
+=== 003__The-Investment-Hurdle__Koller-et-al-2026__ZF-MGMT-003__from-forage.txt ===
+
+ZETTEL
+
+ID:
+ZF-MGMT-003
+
+TITLE:
+A customer outcome can appear in the argument and still lose the investment decision
+
+SOURCE:
+Tim Koller, Whitney Zimmerman, and Andy West — Why you can’t separate strategy from value—and vice versa — 2026 — response to the question about AI.
+Steve Denning — Why Business Schools And Consulting Firms Are Adding So Little Value — 2026 — §3.
+
+PASSAGE:
+[QUOTE — Koller] “It allows you to innovate faster, perhaps provide better customer service, lower your manufacturing costs, your distribution costs, and so on.”
+[QUOTE — Denning] “with (so far) no mention of the customer.”
+
+RESEARCH OBJECT:
+The difference between mentioning customer benefit and giving it independent weight in capital allocation.
+
+LOCAL MOVE:
+Koller lists better service among the effects AI can enable, then frames competitive differentiation in terms of returns on capital or revenue growth.
+
+SOURCE TERMS:
+“customer service”; “differentiate”; “return on capital”; “grow my revenues faster.”
+
+WHAT BECAME STRANGE:
+The authors’ interview supplies the missing word while leaving open whether the customer has any standing when the financial case weakens.
+
+QUESTION:
+Would the framework fund a measurable customer improvement whose expected financial return stays below the hurdle rate?
+
+DEEPER QUESTION:
+Can a customer outcome function as a commitment, a constraint, or a decision criterion when it cannot be converted into a credible revenue forecast?
+
+MECHANISM:
+[OUR INFERENCE] A project’s customer effects may enter a capital-allocation decision through projected retention, growth, pricing, or cost. Whether those effects can independently justify approval remains open.
+
+FORMAL SHIFT:
+Customer improvement → forecast business effects → [apply investment criteria] → approve, redesign, or reject.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX] Hold risk, cost, and financial return constant across two projects. Vary the customer outcome and observe whether the ranking changes.
+
+TENSION:
+Denning addresses the book’s public framing. The interview is a separate artifact. It establishes that customer service enters the authors’ account while leaving its decision weight unresolved.
+
+MISSING:
+A worked case in which a customer outcome and a financial hurdle point toward opposite decisions.
+
+BOUNDARY:
+The interview supports a distinction between rhetorical presence and decision authority. It leaves the book’s full allocation rules and client practice open.
+
+CITATION TRAIL:
+Compare the book’s capital-allocation examples with the authors’ public interview. Search for rejected or redesigned projects as well as approved ones.
+
+TEST:
+Find one below-hurdle project approved for a documented customer outcome. Check whether the outcome carried independent weight or whether the team revised its financial projections before approval.
+
+PLATFORM:
+[[What counts as value in a decision]]
+
+LINKS:
+[[Customer benefit as a means or an end]]
+[[Capital-allocation vetoes]]
+[[Metrics as decision rules]]
+
+BIBTEX:
+@misc{koller2026strategyauthortalks,
+  author = {Koller, Tim and Zimmerman, Whitney and West, Andy},
+  title = {Why You Can't Separate Strategy from Value---and Vice Versa},
+  year = {2026},
+  organization = {McKinsey \& Company},
+  note = {Interview with Roberta Fusaro},
+  url = {https://www.mckinsey.com/featured-insights/mckinsey-on-books/author-talks-why-you-cant-separate-strategy-from-value-and-vice-versa}
+}
+
+=== 004__Signature-on-the-Deck__Denning-2026__ZF-MGMT-004__from-forage.txt ===
+
+ZETTEL
+
+ID:
+ZF-MGMT-004
+
+TITLE:
+A consulting firm can change which proposal gets approved without changing the proposal
+
+SOURCE:
+Steve Denning — Why Business Schools And Consulting Firms Are Adding So Little Value — 2026 — §6.
+
+PASSAGE:
+[QUOTE] “for legitimacy and political cover”
+
+RESEARCH OBJECT:
+The effect of consultant attribution on approval when the recommendation itself is held constant.
+
+LOCAL MOVE:
+Denning gives a reason to hire consultants that operates through the organization’s approval process.
+
+SOURCE TERMS:
+“legitimacy”; “political cover”; “surge analytical capacity”; “proprietary benchmarks.”
+
+WHAT BECAME STRANGE:
+A deck can look analytically redundant and still perform consequential work. Its signature can change who feels able to authorize the decision.
+
+QUESTION:
+At which approval step does outside endorsement change what an executive can get through?
+
+DEEPER QUESTION:
+When does the signature convey credible verification, and when does it redistribute blame for a decision already favored internally?
+
+MECHANISM:
+[OUR INFERENCE] An internal proposal stalls. An outside firm endorses it. Reviewers revise their belief in the analysis, their exposure if it fails, or both. The proposal clears the gate.
+
+FORMAL SHIFT:
+Internal proposal → externally attributed recommendation → [approval review] → possible change in approval or accountability.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX] Separate three effects: a change to the recommendation, a change to confidence in its evidence, and a change to who expects to answer for failure.
+
+TENSION:
+The same unchanged recommendation could reflect independent corroboration or a purchase of cover. Approval alone cannot distinguish them.
+
+MISSING:
+Versioned recommendations, the review sequence, and evidence of what persuaded the reviewer who had been blocking the decision.
+
+BOUNDARY:
+Denning proposes a motive. The passage leaves its prevalence and its effect on decision quality unresolved.
+
+CITATION TRAIL:
+Follow the internal proposal, procurement brief, consultant deliverable, and approval minutes for one engagement.
+
+TEST:
+Find an engagement where the recommendation survives intact. Compare the objection recorded before the engagement with the rationale recorded at approval. Code whether new evidence, independent verification, or shifted accountability addressed the objection.
+
+PLATFORM:
+[[Consulting as organizational authorization]]
+
+LINKS:
+[[Decision rights]]
+[[Evidence versus endorsement]]
+[[Business school–consultancy interlock]]
+
+BIBTEX:
+@misc{denning2026businessschools,
+  author = {Denning, Steve},
+  title = {Why Business Schools And Consulting Firms Are Adding So Little Value},
+  year = {2026},
+  month = nov,
+  howpublished = {Forbes},
+  url = {https://www.forbes.com/sites/stevedenning/2026/11/02/why-business-schools-and-consulting-firms-are-adding-so-little-value/}
+}
+
+=== 005__Enablement-and-Exit__Denning-2026__ZF-MGMT-005__from-forage.txt ===
+
+ZETTEL
+
+ID:
+ZF-MGMT-005
+
+TITLE:
+An investor return cannot distinguish customer enablement from customer dependence
+
+SOURCE:
+Steve Denning — Why Business Schools And Consulting Firms Are Adding So Little Value — 2026 — §§5, 8.
+
+PASSAGE:
+[QUOTE] “extraordinary 10-year total returns”
+
+RESEARCH OBJECT:
+The use of investor returns as evidence for a management model defined by customer outcomes.
+
+LOCAL MOVE:
+Denning places observed investor returns alongside his account of customer enablement and long-term reinvestment at selected firms.
+
+SOURCE TERMS:
+“customer enablement”; “long-term reinvestment”; “customer outcomes”; “10-year total returns.”
+
+WHAT BECAME STRANGE:
+A product can expand what a customer is able to do while increasing what it costs that customer to leave. Both changes can support the same investor return.
+
+QUESTION:
+In one named firm, what evidence would distinguish repeat purchasing driven by better outcomes from repeat purchasing driven by switching costs?
+
+DEEPER QUESTION:
+Can enablement today produce dependence tomorrow through the same investment in training, integrations, or accumulated workflows?
+
+MECHANISM:
+[OUR INFERENCE] Adoption builds useful capabilities and firm-specific knowledge. Customers gain from using the product, while the cost of rebuilding those capabilities elsewhere can rise. Retention can reflect both effects.
+
+FORMAL SHIFT:
+Investor return → candidate operating explanations → [compare task outcomes and ability to switch] → evidence separating benefit from dependence.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX] Track three outcomes independently: performance on the customer’s task, cost to preserve that performance after switching, and investor return.
+
+TENSION:
+Customer enablement and bargaining power can coexist inside a single product decision. The stock-return figure supplies no way to apportion their contributions.
+
+MISSING:
+Customer-level task outcomes, switching costs, and a comparable group facing different switching conditions.
+
+BOUNDARY:
+The selected firms generate hypotheses about operating practices. Their returns leave the causal contribution of those practices and their transferability unresolved.
+
+CITATION TRAIL:
+Pair Porter’s discussion of switching costs with product migration records and customer procurement decisions for one firm Denning names.
+
+TEST:
+Find a change that lowered the cost of switching for some customers while leaving core functionality stable. Compare retention and task performance for affected customers and a comparable unaffected group.
+
+PLATFORM:
+[[Customer value and right of exit]]
+
+LINKS:
+[[Customer benefit as a means or an end]]
+[[Complementary assets]]
+[[Value creation and value capture]]
+
+BIBTEX:
+@misc{denning2026businessschools,
+  author = {Denning, Steve},
+  title = {Why Business Schools And Consulting Firms Are Adding So Little Value},
+  year = {2026},
+  month = nov,
+  howpublished = {Forbes},
+  url = {https://www.forbes.com/sites/stevedenning/2026/11/02/why-business-schools-and-consulting-firms-are-adding-so-little-value/}
+}
+
+=== 006__The-Paid-Alibi__Graeber-2018__ZF-MGMT-006__from-opposition.txt ===
+
+ZETTEL
+
+ID:
+ZF-MGMT-006
+
+TITLE:
+The deck can be bullshit and still earn every dollar of its fee
+
+SOURCE:
+David Graeber — Bullshit Jobs: A Theory — 2018 — final working definition.
+Steve Denning — Why Business Schools And Consulting Firms Are Adding So Little Value — 2026 — §6.
+
+PASSAGE:
+[QUOTE — Graeber] “the employee feels obliged to pretend that this is not the case”
+[QUOTE — Denning] “for legitimacy and political cover”
+
+RESEARCH OBJECT:
+A deliverable that fails its stated purpose and succeeds at protecting its buyer.
+
+LOCAL MOVE:
+Graeber makes compelled pretense part of the definition. Denning identifies a reason the executive might be satisfied with work the analyst privately considers a sham.
+
+SOURCE TERMS:
+“pretend”; “legitimacy”; “political cover.”
+
+WHAT BECAME STRANGE:
+A repeat client can be evidence that the hidden service is excellent. The analyst sold an independent judgment in public and supplied an alibi in private.
+
+QUESTION:
+What happens to the engagement when the analyst’s best-supported answer contradicts the sponsor’s preferred decision?
+
+DEEPER QUESTION:
+Who inside the engagement can say what the client is really buying without jeopardizing the contract or their job?
+
+MECHANISM:
+[OUR INFERENCE] The buyer commissions ostensibly open analysis. The team learns which conclusions can survive review. The final deck gives a prior decision the appearance of having been independently reached.
+
+FORMAL SHIFT:
+Predetermined decision → apparently open inquiry → [filter findings through sponsor review] → signed endorsement.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX] Score an engagement separately on whether findings changed the decision, whether attribution changed its defensibility, and whether staff felt obliged to misrepresent the work.
+
+TENSION:
+An independent review can genuinely confirm the prior decision. The decisive distinction is whether the reviewers had permission and practical means to reach the opposite result.
+
+MISSING:
+The original brief, discarded findings, review comments, and private accounts from the people who did the work.
+
+BOUNDARY:
+One foreclosed engagement supports a claim about that assignment. Graeber’s job-level diagnosis requires evidence about the employee’s role and the pretense it demands.
+
+CITATION TRAIL:
+Graeber’s final working definition and “Box-tickers.” Denning §6. Follow the statement of work into redlines, board minutes, and analyst interviews.
+
+TEST:
+Find one analytically material result that cut against the sponsor’s preference. Trace whether it reached the decision packet intact and whether anyone could act on it.
+
+PLATFORM:
+[[Consulting as organizational authorization]]
+
+LINKS:
+[[Compelled pretense]]
+[[Evidence versus endorsement]]
+[[The buyer of the alibi]]
+
+BIBTEX:
+@book{graeber2018bullshit,
+  author = {Graeber, David},
+  title = {Bullshit Jobs: A Theory},
+  year = {2018},
+  publisher = {Simon \& Schuster},
+  url = {https://www.simonandschuster.biz/books/Bullshit-Jobs/David-Graeber/9781501143335}
+}
+
+=== 007__Who-Can-Reverse-It__Davies__ZF-MGMT-007__from-opposition.txt ===
+
+ZETTEL
+
+ID:
+ZF-MGMT-007
+
+TITLE:
+Everybody can sign the decision and nobody can reverse it
+
+SOURCE:
+Dan Davies — Taming the Unaccountability Machine — “The unaccountability machine.”
+
+PASSAGE:
+[QUOTE] “the feedback link is broken between the consequences of decisions and the body responsible for making them”
+
+RESEARCH OBJECT:
+The path from a documented harm to someone with authority to change the decision that caused it.
+
+LOCAL MOVE:
+Davies locates the failure in the return path from consequences to decision authority.
+
+SOURCE TERMS:
+“accountability sinks”; “feedback link”; “blank contractual wall.”
+
+WHAT BECAME STRANGE:
+A decision can leave an immaculate audit trail and still be practically unappealable. Every signature can establish that someone performed their assigned step while leaving the affected person without a route to correction.
+
+QUESTION:
+When a worker challenges a consultant-designed staffing cut using evidence of harm, where does the evidence stop moving?
+
+DEEPER QUESTION:
+Who designed the jurisdictional boundaries that let every participant give a locally accurate reason why the decision belongs somewhere else?
+
+MECHANISM:
+[OUR INFERENCE] The consultant points to the client’s sign-off. The executive points to the approved benchmark. HR points to policy. The appeal closes because each participant can explain their own step and none accepts the power to reopen the whole decision.
+
+FORMAL SHIFT:
+Harm → complaint → [route through limited mandates] → case closure or authorized reconsideration.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX] Draw a directed path from the affected person to a role able to receive the original evidence, reopen the case, and amend the rule for future cases. Mark where any of those powers disappears.
+
+TENSION:
+Dividing responsibilities can make decisions more accountable when escalation has a real endpoint. The same organizational chart can support either result.
+
+MISSING:
+Appeal records, actual override rights, and evidence that a successful appeal can change the rule as well as the individual outcome.
+
+BOUNDARY:
+The staffing example is a hypothetical application of Davies. Delay or multiple handoffs alone establish friction. The stronger claim requires a broken route to corrective authority.
+
+CITATION TRAIL:
+Davies’s discussion of outsourcing and democratic feedback. Follow a consulting recommendation into the client’s delegation matrix and appeals procedure.
+
+TEST:
+Take one upheld complaint. Check who heard it, who could change the individual outcome, and who could change the next decision. A reasoned reopening by an empowered owner defeats the strong sink diagnosis for that route.
+
+PLATFORM:
+[[Accountability as a feedback path]]
+
+LINKS:
+[[Formal approval versus corrective authority]]
+[[The appeal that changes the rule]]
+[[Consulting as organizational authorization]]
+
+BIBTEX:
+@misc{daviesTaming,
+  author = {Davies, Dan},
+  title = {Taming the Unaccountability Machine},
+  howpublished = {Niskanen Center},
+  url = {https://hypertext.niskanencenter.org/p/taming-the-unaccountability-machine}
+}
+
+=== 008__The-Flak-Catcher__Graeber__ZF-MGMT-008__from-opposition.txt ===
+
+ZETTEL
+
+ID:
+ZF-MGMT-008
+
+TITLE:
+The complaint handler is cheaper than fixing what people complain about
+
+SOURCE:
+David Graeber — The Rise of Bullshit Jobs — interview with Suzi Weissman — university carpenter example.
+
+PASSAGE:
+[QUOTE] “Be a flak-catcher, effectively.”
+
+RESEARCH OBJECT:
+A worker paid to receive the anger created by a capacity decision they lack authority to change.
+
+LOCAL MOVE:
+Graeber’s anecdote puts an apologetic intermediary between a broken shelf and a university with insufficient repair capacity.
+
+SOURCE TERMS:
+“flak-catcher”; “duct-taper”; “carpenter.”
+
+WHAT BECAME STRANGE:
+The intermediary may be excellent at helping people and still make the underlying failure easier for management to live with. Their competence can be what keeps the problem below the threshold for intervention.
+
+QUESTION:
+Does complaint handling reduce the underlying failure rate or mainly reduce the chance that the person who controls capacity has to encounter it?
+
+DEEPER QUESTION:
+Does the organization count complaints as evidence of a capacity shortfall or as work items to close?
+
+MECHANISM:
+[OUR INFERENCE] Understaffing produces repeated failures. A coordinator absorbs the resulting complaints. Management receives a count of closed tickets while the same failure keeps recurring.
+
+FORMAL SHIFT:
+Recurring failure → complaint queue → [acknowledge and close] → lower reported backlog with possible persistence of the failure.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX] Track complaint closure, recurrence of the underlying problem, and whether the budget owner received evidence of recurrence.
+
+TENSION:
+A coordinator can aggregate incidents and make the case for capacity that an individual user could never make. That role becomes a sensor if someone with authority must act on what it detects.
+
+MISSING:
+What the coordinator escalated, who could authorize another hire, and how recurrence entered the budget process.
+
+BOUNDARY:
+Graeber gives an anecdote and a staffing counterfactual. Applying Davies requires separate evidence that the organizational arrangement intercepted corrective feedback.
+
+CITATION TRAIL:
+Graeber’s interview on duct-tapers. Davies’s section “Control and communication.” Follow raw tickets into capacity reviews.
+
+TEST:
+Trace three repetitions of the same failure. If the handler closed each ticket and no record of recurrence reached the budget owner, inspect who chose the reporting rule and whether that rule can be challenged.
+
+PLATFORM:
+[[Labor that absorbs the consequences of management]]
+
+LINKS:
+[[Accountability as a feedback path]]
+[[Complaint closure versus problem resolution]]
+[[Useful work inside a broken system]]
+
+BIBTEX:
+@misc{graeberRiseBullshitJobs,
+  author = {Graeber, David},
+  title = {The Rise of Bullshit Jobs},
+  note = {Interview by Suzi Weissman},
+  url = {https://davidgraeber.org/interviews/the-rise-of-bullshit-jobs/}
+}
+
+=== 009__The-Absent-Sequel__Denning-2026__ZF-MGMT-009__from-opposition.txt ===
+
+ZETTEL
+
+ID:
+ZF-MGMT-009
+
+TITLE:
+The MBA case can end exactly where accountability begins
+
+SOURCE:
+Steve Denning — Why Business Schools And Consulting Firms Are Adding So Little Value — 2026 — opening discussion of the case method.
+Dan Davies — Taming the Unaccountability Machine — “Control and communication.”
+
+PASSAGE:
+[QUOTE — Denning] “the vantage point of a single top executive”
+[QUOTE — Davies] “the decided-upon”
+
+RESEARCH OBJECT:
+Whether a teaching case gives people subject to a decision any power to reopen it.
+
+LOCAL MOVE:
+Denning describes a restriction of viewpoint. Davies adds a separate question about whether the people living with a decision can communicate what the decision-maker’s model discarded.
+
+SOURCE TERMS:
+“case method”; “single top executive”; “the decided-upon.”
+
+WHAT BECAME STRANGE:
+A case can include moving testimony from workers and customers and still give them no standing. Their voices can become more material for the executive to interpret while the executive retains every decision right.
+
+QUESTION:
+What happens if students must design the appeal that could overturn their own recommendation?
+
+DEEPER QUESTION:
+Does the exercise train managers to exercise judgment, or to treat other people’s judgment as data they alone are entitled to weigh?
+
+MECHANISM:
+[OUR INFERENCE] The case packet fixes what enters as evidence. The assignment hands the student a decision right. The exercise ends at recommendation, so consequences and appeals fall outside the graded task.
+
+FORMAL SHIFT:
+Organizational conflict → bounded executive case → [choose and defend a decision] → grade issued before the consequences arrive.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX] Give a second group the same case plus a later harm report from an affected actor. Grade whether that actor can trigger review, introduce new evidence, and secure a binding revision.
+
+TENSION:
+A focused executive case can be a legitimate exercise in decision-making under pressure. Repetition and grading determine whether the omitted feedback becomes a durable lesson.
+
+MISSING:
+Actual case packets, grading rubrics, sequels, and evidence of how graduates transfer the exercise to work.
+
+BOUNDARY:
+The pasted article describes a tendency. Whether any particular course teaches unaccountability turns on its instructional design and assessment.
+
+CITATION TRAIL:
+Read an original teaching case with its instructor guide and any follow-up case. Locate the last moment at which an affected actor can change the outcome.
+
+TEST:
+Compare two versions of the same case. Both include affected actors’ testimony. Only one gives those actors a binding right to trigger review. Check whether students change their original decision or merely add sympathetic language.
+
+PLATFORM:
+[[The management classroom as a model of decision rights]]
+
+LINKS:
+[[Standing versus representation]]
+[[Accountability as a feedback path]]
+[[The absent sequel]]
+
+BIBTEX:
+@misc{denning2026businessschools,
+  author = {Denning, Steve},
+  title = {Why Business Schools And Consulting Firms Are Adding So Little Value},
+  year = {2026},
+  month = nov,
+  howpublished = {Forbes},
+  url = {https://www.forbes.com/sites/stevedenning/2026/11/02/why-business-schools-and-consulting-firms-are-adding-so-little-value/}
+}
+
+=== 010__Dissent-in-the-Denominator__Graeber__ZF-MGMT-010__from-opposition.txt ===
+
+ZETTEL
+
+ID:
+ZF-MGMT-010
+
+TITLE:
+The dashboard can give dissent a place to die
+
+SOURCE:
+David Graeber — ‘I had to guard an empty room’: the rise of the pointless job — “Box-tickers.”
+Dan Davies — Taming the Unaccountability Machine — “Control and communication.”
+Steve Denning — Why Business Schools And Consulting Firms Are Adding So Little Value — 2026 — §§5, 7–8.
+
+PASSAGE:
+[QUOTE — Graeber] “allow an organisation to be able to claim it is doing something that, in fact, it is not doing”
+[QUOTE — Denning] “metrics focused on customer outcomes”
+
+RESEARCH OBJECT:
+A metric that certifies customer-centeredness while discarding the evidence that could force a change.
+
+LOCAL MOVE:
+Graeber asks what an organization can claim because a document exists. Davies asks what gets lost as information is made manageable. Together they put Denning’s proposed outcome metrics under pressure.
+
+SOURCE TERMS:
+“box-tickers”; “customer outcomes”; “the decided-upon.”
+
+WHAT BECAME STRANGE:
+A team can replace a margin target with a customer outcome target and preserve the same decision architecture. Whoever defines the denominator still decides whose experience is admissible.
+
+QUESTION:
+Can people excluded from the metric introduce evidence that compels the organization to change the service or the metric?
+
+DEEPER QUESTION:
+Who gets counted after they give up, leave, or fail to get through the front door?
+
+MECHANISM:
+[OUR INFERENCE] The dashboard includes completed journeys. The users most impeded by the process disappear before measurement. Staff produce evidence of improved outcomes for the remaining group. Leadership treats that improvement as permission to scale.
+
+FORMAL SHIFT:
+Attempted use → eligible measured cases → [aggregate recorded outcomes] → performance claim.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX] Recompute the metric for everyone who attempted to use the service. Keep abandonment, refusal, and unknown outcomes visible as separate categories.
+
+TENSION:
+A dashboard can reveal failure when it preserves exceptions and links them to review. The same instrument can hide failure when excluded people have no standing to contest its categories.
+
+MISSING:
+Denominator rules, abandoned journeys, cases coded out of scope, and the authority that can change those definitions.
+
+BOUNDARY:
+This is a test of Denning’s proposed paradigm. It establishes no measurement practice at any of his named firms.
+
+CITATION TRAIL:
+Follow one customer outcome claim back through the dashboard specification, source data, complaint records, and the decision made from it.
+
+TEST:
+Rebuild one celebrated outcome metric with abandoned cases visible. Take one material discrepancy to the metric owner. Observe whether it can alter the published claim or the decision made from it.
+
+PLATFORM:
+[[Customer value and the right to contradict the metric]]
+
+LINKS:
+[[The absent denominator]]
+[[Box-ticking as evidence production]]
+[[Standing versus representation]]
+
+BIBTEX:
+@misc{graeberPointlessJob,
+  author = {Graeber, David},
+  title = {`I had to guard an empty room': the rise of the pointless job},
+  url = {https://davidgraeber.org/articles/i-had-to-guard-an-empty-room/}
+}
+
+=== 011__The-Change-Order__Davies__ZF-MGMT-011__from-opposition.txt ===
+
+ZETTEL
+
+ID:
+ZF-MGMT-011
+
+TITLE:
+The consultant can get paid again when the specification fails
+
+SOURCE:
+Dan Davies — Taming the Unaccountability Machine — discussion immediately preceding “The unaccountability machine.”
+
+PASSAGE:
+[QUOTE] “future ‘changes of specification’ can be billed at the full hourly rate.”
+
+RESEARCH OBJECT:
+The price difference between winning the initial contract and repairing an inadequate specification.
+
+LOCAL MOVE:
+Davies identifies an incentive for a vendor with better foresight to bid low at entry and earn more when the agreement has to change.
+
+SOURCE TERMS:
+“changes of specification”; “full hourly rate”; “cognitive deficit.”
+
+WHAT BECAME STRANGE:
+A bad specification can look like a procurement win at award and become a source of repeat revenue after award. The buyer can meet its savings target at the exact moment it commits to an expensive dependency.
+
+QUESTION:
+Which foreseeable uncertainties did the vendor leave outside the base scope, and who later paid to bring them in?
+
+DEEPER QUESTION:
+Does repeated outsourcing erode the buyer’s ability to detect the next under-specified bid?
+
+MECHANISM:
+[PARAPHRASE] The better-informed party can price the initial contract aggressively and bill subsequent changes at higher rates. [OUR INFERENCE] If the buyer also loses internal expertise, it may become less able to specify or contest the next engagement.
+
+FORMAL SHIFT:
+Uncertain operating need → fixed bid specification → [price later deviations separately] → cheap award with potentially expensive adaptation.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX] Classify change orders by whether the need was unforeseeable, disclosed before award, or reasonably inferable from information available to the vendor.
+
+TENSION:
+Paid adaptation can be a sensible response to genuine uncertainty. The harder case is a recurring, foreseeable omission that one side is systematically better positioned to price.
+
+MISSING:
+Bid assumptions, pre-award questions, change orders, margins, and evidence of the buyer’s internal capacity over time.
+
+BOUNDARY:
+This mechanism comes from Davies’s discussion of public contracting. Its application to private strategy engagements requires contract-level evidence.
+
+CITATION TRAIL:
+Davies’s citation to Mariana Mazzucato and Rosie Collington’s The Big Con. Follow one original bid and its change-order history.
+
+TEST:
+Pick the costliest change order. Look for the same requirement in pre-award communications or prior engagements. Compare who knew, who could have specified it, and who profited when it resurfaced.
+
+PLATFORM:
+[[Outsourcing and the loss of institutional capacity]]
+
+LINKS:
+[[The price of adaptation]]
+[[Who owns the specification]]
+[[Accountability as a feedback path]]
+
+BIBTEX:
+@misc{daviesTaming,
+  author = {Davies, Dan},
+  title = {Taming the Unaccountability Machine},
+  howpublished = {Niskanen Center},
+  url = {https://hypertext.niskanencenter.org/p/taming-the-unaccountability-machine}
+}
+
+=== 012__Patient-Shareholder-Value__Amazon-1997__ZF-MGMT-012__from-recursion.txt ===
+
+ZETTEL
+
+ID:
+ZF-MGMT-012
+
+TITLE:
+Amazon puts customer obsession inside a shareholder-value strategy
+
+SOURCE:
+Amazon.com — 1997 Letter to Shareholders — “It’s All About the Long Term” and the investment principles that follow.
+Steve Denning — Why Business Schools And Consulting Firms Are Adding So Little Value — 2026 — §5.
+
+PASSAGE:
+[QUOTE — Amazon] “We believe that a fundamental measure of our success will be the shareholder value we create over the long term.”
+[PARAPHRASE] The same letter commits Amazon to relentless customer focus, investing for market leadership, abandoning programs with inadequate returns, and prioritizing the present value of future cash flows over the appearance of accounting results.
+
+RESEARCH OBJECT:
+A firm Denning presents as evidence of a new paradigm explicitly links customer benefit, market leadership, and shareholder value in one investment logic.
+
+LOCAL MOVE:
+The letter tells investors how management expects to make money and asks them to decide whether they can tolerate the path to getting there.
+
+SOURCE TERMS:
+“shareholder value”; “market leadership”; “future cash flows”; “acceptable returns.”
+
+WHAT BECAME STRANGE:
+Denning’s contrast bundles together two variables that Amazon separates: who ultimately benefits from the strategy and how long management is willing to wait. Amazon’s letter gives customer benefit a central operational role while declaring a long-run financial measure of success.
+
+QUESTION:
+Which Amazon decision would a patient shareholder-value maximizer reject and a customer-first executive approve?
+
+DEEPER QUESTION:
+Does investor tolerance for delayed payoffs buy management freedom to serve customers, or freedom to pursue dominance by serving customers exceptionally well at an early stage?
+
+MECHANISM:
+[PARAPHRASE] Amazon expects better customer experiences to build market leadership. Management expects leadership to improve the economics of the business over time. Investors are asked to judge investments on that horizon.
+
+FORMAL SHIFT:
+Customer improvement → expected market leadership → [evaluate long-run investment return] → scale or discontinue.
+
+SOURCE FORMALISM:
+The letter specifies present value of future cash flows as a decision criterion in a stated tradeoff. It supplies no cash-flow model for a named project.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX] Compare decisions where customer outcomes and expected long-run financial returns point in opposite directions. Choices where both improve are compatible with both accounts.
+
+TENSION:
+Reading A: The change Denning identifies concerns management’s operating method and investment horizon. Amazon supports that reading. Reading B: The change displaces shareholder value as the ultimate criterion. Amazon’s stated doctrine puts that reading under pressure.
+
+MISSING:
+A decision made under explicit conflict between durable customer benefit and expected long-run shareholder return, with contemporaneous evidence of how management resolved it.
+
+BOUNDARY:
+The letter establishes Amazon’s stated doctrine in 1997. It leaves actual project decisions, later policy, and outcomes for workers or sellers open.
+
+CITATION TRAIL:
+[[ZF-MGMT-003]] → Amazon’s 1997 investment principles → subsequent shareholder letters and contemporaneous investment explanations for a named customer program.
+
+TEST:
+Select one launched and one discontinued customer-facing program. Use contemporary disclosures to distinguish expected financial losses from temporary losses and strategic option value. Code a conflict only where management itself expected the financial downside to persist.
+
+PLATFORM:
+[[Customer benefit as a means or an end]]
+
+LINKS:
+[[ZF-MGMT-003]]
+[[ZF-MGMT-005]]
+[[Patient shareholder value]]
+
+BIBTEX:
+@misc{amazon1997shareholderletter,
+  author = {{Amazon.com}},
+  title = {1997 Letter to Shareholders},
+  year = {1997},
+  note = {Reprinted with the 2001 shareholder letter},
+  url = {https://ir.aboutamazon.com/files/doc_financials/annual/2001_shareholderLetter.pdf}
+}
+
+=== 013__Pricing-the-Gain__McKinsey-2000__ZF-MGMT-013__from-recursion.txt ===
+
+ZETTEL
+
+ID:
+ZF-MGMT-013
+
+TITLE:
+McKinsey had a way to price customer benefit decades before the alleged break
+
+SOURCE:
+McKinsey & Company — Delivering Value to Customers — 2000 — discussion of economic value to the customer.
+Steve Denning — Why Business Schools And Consulting Firms Are Adding So Little Value — 2026 — §3.
+
+PASSAGE:
+[QUOTE — McKinsey] “quantify the additional value a product brings to customers above what they already receive from their present suppliers.”
+[PARAPHRASE] McKinsey’s retrospective traces customer price–value models to its own staff papers from 1979 and 1981.
+
+RESEARCH OBJECT:
+A consulting instrument that makes the customer’s improvement legible as a quantity the seller can use.
+
+LOCAL MOVE:
+The article makes the customer’s existing supplier a baseline for evaluating the benefit of switching. It then connects the value proposition to the price charged to a segment.
+
+SOURCE TERMS:
+“economic value to the customer”; “present suppliers”; “value proposition”; “customer segment.”
+
+WHAT BECAME STRANGE:
+Customer benefit has a history inside the very consultancy Denning casts as the carrier of an older paradigm. Putting that benefit into a model opens a further question: how much of the improvement is the model designed to leave with the customer?
+
+QUESTION:
+When the model finds additional customer value, does management change the product, the price, or the share of the gain it intends to keep?
+
+DEEPER QUESTION:
+Did this customer-centered vocabulary coexist with finance-led governance because it gave the seller a better way to calculate what it could capture?
+
+MECHANISM:
+[OUR INFERENCE] A supplier estimates the customer’s gain relative to an existing offer. The estimate can guide redesign or show how far price can rise before the customer loses the incentive to switch. The same evidence supports both operations.
+
+FORMAL SHIFT:
+Existing supplier and proposed offer → quantified difference in customer value → [inform design or pricing] → revised offer and division of gains.
+
+SOURCE FORMALISM:
+The article supplies a comparative baseline and a price–value framework. The alternative uses of that estimate are separated here for analysis.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX] Record incremental customer benefit before price, incremental price, and the residual benefit to the customer. Track which of the three the recommendation seeks to increase.
+
+TENSION:
+The historical source pressures a story about when consultancies discovered customer value. Denning’s stronger claim can survive as a claim about which decision criteria routinely win in practice.
+
+MISSING:
+Original staff papers and a client engagement that shows whether the model shifted engineering investment, pricing, or both.
+
+BOUNDARY:
+The retrospective establishes a published consulting lineage. It leaves the prevalence and influence of that lineage inside McKinsey and among its clients unresolved.
+
+CITATION TRAIL:
+[[ZF-MGMT-001]] and [[ZF-MGMT-003]] → McKinsey’s retrospective → its cited 1979 equipment model and Harvey Golub and Jane Henry’s 1981 “Market strategy and the price-value model.”
+
+TEST:
+Recover one worked recommendation and vary only the estimated customer benefit. Observe which output changes first: the product specification, target price, or expected margin.
+
+PLATFORM:
+[[Genealogies of customer value]]
+
+LINKS:
+[[ZF-MGMT-001]]
+[[ZF-MGMT-003]]
+[[Value creation and value capture]]
+
+BIBTEX:
+@misc{mckinsey2000delivering,
+  author = {{McKinsey \& Company}},
+  title = {Delivering Value to Customers},
+  year = {2000},
+  url = {https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/delivering-value-to-customers}
+}
+
+=== 014__The-Limited-Assortment__Costco-2025__ZF-MGMT-014__from-recursion.txt ===
+
+ZETTEL
+
+ID:
+ZF-MGMT-014
+
+TITLE:
+Costco makes customer value by refusing to serve some customer preferences
+
+SOURCE:
+Costco Wholesale Corporation — 2025 Form 10-K — Item 1, “General.”
+Steve Denning — Why Business Schools And Consulting Firms Are Adding So Little Value — 2026 — §§5 and 7.
+
+PASSAGE:
+[QUOTE — Costco] “We seek to limit most items to fast-selling models, sizes, and colors.”
+[PARAPHRASE] Costco links a restricted assortment and low prices to volume and rapid inventory turnover. It identifies purchasing, distribution, and reduced handling as ways the model supports lower merchandise margins.
+
+RESEARCH OBJECT:
+The customer requests a business must decline to preserve its customer promise.
+
+LOCAL MOVE:
+Costco explains its economics through a deliberate assortment constraint. A smaller set of items is part of how the company can afford the offer it makes to members.
+
+SOURCE TERMS:
+“fast-selling”; “limited selection”; “rapid inventory turnover”; “gross margins.”
+
+WHAT BECAME STRANGE:
+The firm may have to disappoint a customer asking for more choice to protect low prices for the membership. Learning what customers want and deciding which wants the business can afford to serve are different operations.
+
+QUESTION:
+At what point does adding a locally desired item weaken the value members get from the system as a whole?
+
+DEEPER QUESTION:
+Where does the cost of the restricted assortment land among members whose needs fit the fast-selling sizes and members whose needs regularly fall outside them?
+
+MECHANISM:
+[OUR INFERENCE] Restricting variants can concentrate purchasing volume and reduce handling. The resulting savings can support lower prices. Members who cannot find a suitable variant may have to spend additional time or money elsewhere.
+
+FORMAL SHIFT:
+Competing assortment requests → item economics and member needs → [retain or exclude a variant] → changes in price, availability, and shopping burden.
+
+SOURCE FORMALISM:
+The filing defines gross margin as net sales less merchandise costs. Its account of assortment, volume, turnover, and operating efficiency is qualitative.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX] Measure the customer effect of adding or removing a variant through basket price, failed shopping trips, and spending elsewhere. Break out households whose requirements are affected.
+
+TENSION:
+Denning emphasizes continuous adaptation. Costco describes a stable constraint that can make selective adaptation valuable. The two can coexist, but a generic instruction to deliver more of what customers want cannot resolve a conflict between breadth and price.
+
+MISSING:
+A documented assortment decision with internal item economics and independent evidence about shoppers who could not complete the intended purchase.
+
+BOUNDARY:
+The filing describes Costco’s model. It leaves the causal effect of assortment limits and the distribution of gains across members to be tested.
+
+CITATION TRAIL:
+[[ZF-MGMT-010]] → Costco’s 10-K description of assortment → dated item additions or removals and shopping records that include trips ending without purchase.
+
+TEST:
+Find one removed variant. Compare basket costs and completion rates before and after removal for households that depended on it and households that did not. Check whether the reported performance metric registers the first group.
+
+PLATFORM:
+[[Customer value and the right to contradict the metric]]
+
+LINKS:
+[[ZF-MGMT-005]]
+[[ZF-MGMT-010]]
+[[Customer value through strategic refusal]]
+
+BIBTEX:
+@misc{costco2025form10k,
+  author = {{Costco Wholesale Corporation}},
+  title = {Annual Report on Form 10-K for the Fiscal Year Ended August 31, 2025},
+  year = {2025},
+  url = {https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm}
+}
+
+=== 015__Who-Enters-the-Loop__Denning-2010__ZF-MGMT-015__from-recursion.txt ===
+
+ZETTEL
+
+ID:
+ZF-MGMT-015
+
+TITLE:
+Denning’s earlier model can hear the client without hearing the people affected
+
+SOURCE:
+Stephen Denning — What Is Radical Management? — 2010 — opening Total Attorneys example, author-hosted version.
+Dan Davies — Taming the Unaccountability Machine — “Control and communication.”
+
+PASSAGE:
+[QUOTE — Denning] “At the end of each cycle, the work is demonstrated to clients”
+[PARAPHRASE] Denning reports that client feedback enters the next cycle. Davies asks whether people living with the consequences of decisions can communicate what standardized representations leave out.
+
+RESEARCH OBJECT:
+The membership rule for a working feedback loop.
+
+LOCAL MOVE:
+Denning’s earlier account supplies an operating mechanism missing from his 2026 examples: demonstrate work, solicit feedback, and feed it into the next cycle. Davies shifts attention to who can enter that cycle.
+
+SOURCE TERMS:
+“clients”; “cycles”; “feedback”; “the decided-upon.”
+
+WHAT BECAME STRANGE:
+A service can get better at satisfying the purchasing client while becoming harder for others to live with. In a legal-services workflow, the firm purchasing the software, the worker using it, and the person whose case passes through it can have different complaints and unequal access to the team.
+
+QUESTION:
+Who can get a backlog item changed when the paying client likes the feature and someone downstream bears the cost?
+
+DEEPER QUESTION:
+Can a loop that increases responsiveness to the purchaser also increase organizational ignorance about everyone the purchaser can speak for?
+
+MECHANISM:
+[OUR INFERENCE] The purchaser sees the demonstration and submits feedback. The team reprioritizes work against that feedback. Harm experienced elsewhere may remain invisible if the affected person lacks direct access or standing to trigger review.
+
+FORMAL SHIFT:
+Product demonstration → admitted feedback → [reprioritize the next cycle] → revised service for the people represented in the loop.
+
+SOURCE FORMALISM:
+Denning describes cross-functional teams, prioritized work in cycles, demonstrations to clients, and incorporation of feedback. The account supplies no adjudication rule for conflicting feedback.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX] For each affected role, record access to the demonstration, ability to submit evidence, authority to trigger review, and power to reverse a release.
+
+TENSION:
+The paying client can be an effective proxy when its interests and downstream users’ interests align. The decisive case is a documented conflict in which the proxy has reason to suppress or discount the signal.
+
+MISSING:
+A demonstration roster, raw feedback, and a backlog decision where the purchaser’s preference conflicts with evidence from a worker or service recipient.
+
+BOUNDARY:
+Denning reports a client feedback loop. The legal-services conflict is a test case. The source does not establish that Total Attorneys excluded any particular group.
+
+CITATION TRAIL:
+[[ZF-MGMT-009]] and [[ZF-MGMT-010]] → Denning’s 2010 operating example → the roles present at a demonstration and the records of whose feedback changed the next cycle.
+
+TEST:
+Trace one workflow change from demo through release and subsequent complaint. Identify whether a person outside the purchaser’s organization could introduce evidence, trigger review, and get a harmful feature changed.
+
+PLATFORM:
+[[Accountability as a feedback path]]
+
+LINKS:
+[[ZF-MGMT-007]]
+[[ZF-MGMT-009]]
+[[ZF-MGMT-010]]
+[[Purchaser versus affected person]]
+
+BIBTEX:
+@misc{denning2010radical,
+  author = {Denning, Stephen},
+  title = {What Is Radical Management?},
+  year = {2010},
+  note = {Author-hosted version. A variant appeared in Strategy \& Leadership},
+  url = {https://www.stevedenning.com/Documents/what-is-radical-management-aug-2-2010.pdf}
+}
+
+=== 016__The-Advisor-Crossing__Denning__ZF-MGMT-016__from-recursion.txt ===
+
+ZETTEL
+
+ID:
+ZF-MGMT-016
+
+TITLE:
+Denning’s own client list crosses the divide his argument depends on
+
+SOURCE:
+Steve Denning — About — public professional biography.
+Steve Denning — Why Business Schools And Consulting Firms Are Adding So Little Value — 2026 — §§6–7.
+
+PASSAGE:
+[QUOTE — Denning biography] “His clients have included”
+[PARAPHRASE] The list includes McKinsey as well as Microsoft and Netflix, two firms Denning uses as exemplars of the customer-value paradigm. In Forbes, Denning says leading customer-value firms often rely less on the major consultancies for core strategy.
+
+RESEARCH OBJECT:
+The engagement as the unit of analysis for an argument drawn around whole institutions.
+
+LOCAL MOVE:
+Denning’s biography names professional relationships across both sides of his distinction. It gives no dates, scopes, deliverables, or decision rights for those relationships.
+
+SOURCE TERMS:
+“clients”; “core strategy”; “rely less”; “radical management.”
+
+WHAT BECAME STRANGE:
+The same person can sell management advice to a consultancy and to the companies offered as evidence that the consultancy’s model is obsolete. A client list proves contact and leaves open what actually crossed the boundary.
+
+QUESTION:
+Which kinds of external advice do exemplar firms buy, and which decisions do they retain the capacity to make and revise themselves?
+
+DEEPER QUESTION:
+Does the dividing line run between firms, or between engagements that build the client’s judgment and engagements that sell a decision the client can hide behind?
+
+MECHANISM:
+[OUR INFERENCE] External advice can supply evidence, teach a method, confer cover, or take over a decision process. Its organizational effect depends on who owns the model afterward, who can challenge it, and who can act when it fails.
+
+FORMAL SHIFT:
+Firm–advisor relationship → engagement scope and decision rights → [classify the work performed] → evidence of learning, dependency, authorization, or some combination.
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX] For each engagement, record who framed the question, who could reject the recommendation, who retained the working materials, and who handled post-decision evidence.
+
+TENSION:
+Reading A: A common advisor can carry practices across a porous institutional boundary. Reading B: Speaking or training work can coexist with substantial differences in who controls core strategy. The biography leaves both readings alive.
+
+MISSING:
+Engagement scopes and a comparison group for “rely less.” The client list supplies neither.
+
+BOUNDARY:
+The overlap does not establish that Denning advised any named firm on core strategy, that McKinsey adopted his approach, or that the professional relationship affected his article.
+
+CITATION TRAIL:
+[[ZF-MGMT-006]] and [[ZF-MGMT-011]] → Denning’s public client list → dated event programs, statements of work, and accounts from the people who owned the resulting decisions.
+
+TEST:
+Recover one documented engagement on each side of the divide. Classify both using the same criteria. Then seek one engagement at an exemplar firm where an outside advisor owned a decision model the client could not independently revise. That case would sharpen what “rely less” has to mean.
+
+PLATFORM:
+[[Business school–consultancy interlock]]
+
+LINKS:
+[[ZF-MGMT-006]]
+[[ZF-MGMT-007]]
+[[ZF-MGMT-011]]
+[[Consulting as capability transfer]]
+
+BIBTEX:
+@misc{denningAbout,
+  author = {Denning, Steve},
+  title = {About},
+  howpublished = {Leadership Storytelling by Steve Denning},
+  url = {https://stevedenning.com/about/}
+}
