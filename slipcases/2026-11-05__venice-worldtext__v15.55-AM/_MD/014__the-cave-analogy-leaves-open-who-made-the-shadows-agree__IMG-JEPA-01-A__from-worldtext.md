@@ -1,0 +1,88 @@
+ZETTEL
+
+ID:
+IMG-JEPA-01-A
+
+TITLE:
+The cave analogy leaves open who made the shadows agree
+
+SOURCE:
+Minyoung Huh, Brian Cheung, Tongzhou Wang, and Phillip Isola — The Platonic Representation Hypothesis — 2024 — §1, Figure 1, §4.1 and note 4
+Randall Balestriero and Yann LeCun — Proving and Improving the Platonic Representation Hypothesis with JEPAs — 2026 — §§2.1–2.3, §7
+
+PASSAGE:
+[QUOTE — Huh et al.] “The training data for our algorithms are shadows on the cave wall”
+[QUOTE — Huh et al.] “the joint distribution of observation indices is itself the platonic reality.”
+
+RESEARCH OBJECT:
+Two readings of the latent state in the paper that supplies the JEPA paper’s term “Platonic.”
+
+LOCAL MOVE:
+Huh et al. explicitly invoke Plato’s cave in their introduction. Their formal setup later allows an event to be an index for observations without further physical meaning. Note 4 entertains a statistical reading of what counts as reality.
+
+SOURCE TERMS:
+Platonic representation, observation, event, joint distribution, positive-pair distribution.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] A photograph and its machine-written caption can agree because the caption was produced from that very photograph. That agreement can be real and useful while leaving open whether a second camera or witness would support the same account.
+
+QUESTION:
+When text and image align, what evidence distinguishes independent access to a scene from descent through the same representational artifact?
+
+DEEPER QUESTION:
+If an image generates its own descriptions and those descriptions later supervise another model, which part of the resulting agreement belongs to the photographed event and which part belongs to the image’s circulation?
+
+MECHANISM:
+Huh et al.’s Figure 1 allows a description to be produced from an existing measurement or mediated by a different measurement. The JEPA study’s recaptioned corpus gives the first path a concrete implementation. The text encoder can train without pixel inputs while its examples still carry information derived from pixels.
+
+FORMAL SHIFT:
+<Scene> → <one photograph or independently obtained views> → [captioning and pairing] → <agreement with different evidentiary histories>
+
+SOURCE FORMALISM:
+Huh et al. model observations as bijective deterministic functions of discrete events in §4.1. Balestriero and LeCun model positive pairs as a distribution over world states in §2.1.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+For each positive pair, record the nearest common source: event, photograph, or prior description. Evaluate on held-out evidence produced before the descriptions can influence it.
+
+TENSION:
+Reading A treats cross-modal agreement as evidence of recovery of a shared event. Reading B treats it as recovery of structure already stabilized by the photograph and its captions. An evaluation built around the same photographs can support both readings.
+
+MISSING:
+A benchmark in which the description must answer to an observation outside its own production chain.
+
+BOUNDARY:
+The genealogy verified here is the original PRH paper’s explicit citation of Plato’s cave. The claim about shared representational ancestry is a proposed test of alignment evidence.
+
+CITATION TRAIL:
+[[IMG-JEPA-01]] → Huh et al. §1 and §4.1 note 4 → Plato’s Republic VII → the Nettleship reading cited in the note.
+
+TEST:
+Photograph a staged scene from two angles. Pair one caption with the first photograph from which it was written, and obtain another description from a witness or second camera. Keep the pairs separate. Test which details transfer to a held-out view, especially details visible in only one original view.
+
+PLATFORM:
+[[Genealogy of the Platonic Representation Hypothesis]]
+
+LINKS:
+[[IMG-JEPA-01]]
+[[IMG-JEPA-02]]
+[[Independent Observation]]
+[[Imagetext Provenance]]
+
+BIBTEX:
+@misc{huh2024platonic,
+  author = {Huh, Minyoung and Cheung, Brian and Wang, Tongzhou and Isola, Phillip},
+  title = {The Platonic Representation Hypothesis},
+  year = {2024},
+  eprint = {2405.07987},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2405.07987}
+}
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}

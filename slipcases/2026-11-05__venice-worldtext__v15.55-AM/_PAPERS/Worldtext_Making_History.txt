@@ -1,0 +1,25 @@
+WORLDTEXT · NOVEMBER 2026
+Making history and return path
+
+PROVIDED: Worldtext paper request, SLIPCASE assembly instrument, and
+Bajohr lecture transcript. The operative-description discussion and zettels
+in the conversation supplied analytical leads.
+
+RETRIEVED: Current Worldtext experiment dossiers, chapter atlas, and
+proposal notes. Primary published and event sources are linked in the
+paper's references. The dossier is the provenance for reported tests.
+
+DERIVED: A standalone conceptual working paper with three main design
+cases, adjacent comparisons, a method, and a section-level source map.
+The manuscript credits Hartsoe and Bolter's related research project.
+
+VERIFICATION: The manuscript was compiled with pdfLaTeX, text extracted,
+and rendered pages inspected. Earlier prototype tests are distinguished
+from source inspection and proposed follow-up comparisons.
+
+REBUILD: From this directory, run pdflatex Worldtext.tex twice.
+Worldtext.md is the editable Pandoc input. To regenerate the TeX, run
+pandoc Worldtext.md --standalone -o Worldtext.tex. The sources remain
+addressable through references and Worldtext_Source_Map.txt. The supplied
+assembly instrument is preserved byte for byte in this package. This
+package contains manuscript material rather than a reconstructed card archive.

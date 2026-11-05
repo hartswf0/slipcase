@@ -1,0 +1,3150 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Venice and Worldtext Cards</title>
+<style>body{max-width:72rem;margin:auto;padding:1.5rem;color:#202322;background:#f9f8f3;font:16px/1.55 system-ui}h1,h2{font-family:Georgia,serif}a{color:#16554d}details{border-top:1px solid #d4d7ce;padding:.65rem 0}summary{cursor:pointer;font-weight:650}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit}input{box-sizing:border-box;width:min(100%,35rem);padding:.6rem;font:inherit}li{margin:.2rem 0}.quiet{color:#505753}@media print{body{padding:0}}</style>
+<h1>Venice and Worldtext Cards</h1><style>@media print{@page{size:4in 6in;margin:.22in}article{break-before:page}pre{font:8pt/1.25 monospace}}</style><article><h2>IMG-JEPA-01 · The positive-pair graph defines what counts as the same scene</h2><pre>ZETTEL
+
+ID: IMG-JEPA-01
+
+TITLE:
+The positive-pair graph defines what counts as the same scene
+
+SOURCE:
+Randall Balestriero and Yann LeCun — Proving and Improving the Platonic Representation Hypothesis with JEPAs — 2026 — §§2.1–2.3, Figure 3, §7
+
+PASSAGE:
+[PARAPHRASE] In the spectral setting, the learned directions come from the graph that positive pairs draw on world states. Exact agreement requires shared positives and uniqueness up to rotation. When the graphs differ, the bound depends on their mismatch and on the spectral gap.
+
+RESEARCH OBJECT:
+The rule for pairing observations as a prior about which differences matter.
+
+LOCAL MOVE:
+The proof rewrites each modality’s learning objective on the same state space.
+
+SOURCE TERMS:
+Positive-pair distribution, world kernel, injective rendering, spectral gap.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] On Flickr, descriptions are grouped by photograph. The photograph supplies an address for the scene before the text encoder learns anything. Grouping by photographed event instead would change the learning problem.
+
+QUESTION:
+What does an imagetext experiment take as its unit of sameness: the image, the depicted event, or the relation a reader is asked to notice?
+
+DEEPER QUESTION:
+Can two descriptions of different images form a better pair for studying composition than two descriptions of the same image?
+
+MECHANISM:
+Changing the pair rule changes the graph. Under the paper’s spectral objective, this can change which distinctions survive in the leading embedding directions.
+
+FORMAL SHIFT:
+&lt;Observations&gt; → &lt;weighted edges between states&gt; → [spectral embedding] → &lt;geometry of learned similarities&gt;
+
+SOURCE FORMALISM:
+Kπ = D^(-1/2) Π D^(-1/2), where Π represents the positive-pair distribution and D = diag(p). With second-order anti-collapse and a spectral gap, the solution is determined by the leading nonconstant eigenspace, up to rotation.
+
+OUR FORMALIZATION:
+NONE
+
+TENSION:
+The proof requires a specified relation among states. In imagetext analysis, deciding whether two views depict the same event can itself be an interpretive judgment.
+
+MISSING:
+A test that varies the grouping rule while holding the actual images and texts fixed.
+
+BOUNDARY:
+The spectral result supplies a sufficient condition for alignment under its assumptions. The paper leaves uniqueness under LeJEPA’s full-distribution constraint open.
+
+CITATION TRAIL:
+Laplacian eigenmaps and spectral contrastive learning, both cited in §2.1.
+
+TEST:
+Take one staged dispute photographed from several angles and a second dispute staged with the same blocking. Compare grouping by image ID, event ID, and blocking. Hold out one camera angle. Ask which grouping retrieves the same event and which retrieves the same composition.
+
+PLATFORM:
+[[Imagetext as a Unit of Analysis]]
+
+LINKS:
+[[Positive Pair Provenance]]
+[[Scene Identity]]
+[[Composition Across Images]]
+
+BIBTEX:
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}</pre></article><article><h2>IMG-JEPA-02 · A second description can inherit the first description’s omissions</h2><pre>ZETTEL
+
+ID: IMG-JEPA-02
+
+TITLE:
+A second description can inherit the first description’s omissions
+
+SOURCE:
+Randall Balestriero and Yann LeCun — Proving and Improving the Platonic Representation Hypothesis with JEPAs — 2026 — Appendix B, Table 7, §7
+
+PASSAGE:
+[PARAPHRASE] At the 2.24M-image scale, alt-text paired with a text-only paraphrase scores .060 on WIT, against .055 for corrupted views of alt-text alone and .107 for the set using alt-text and two LLaVA recaptions. The recaptions carry information from prior image–text training.
+
+RESEARCH OBJECT:
+Whether a second text comes from looking at the image again or from rewriting the first text.
+
+LOCAL MOVE:
+Table 7 varies both the available descriptions and the rule for drawing positive views.
+
+SOURCE TERMS:
+Alt-text, recaption, paraphrase, good views, bad views, scene-explained fraction.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] Thick prompting can accumulate many sentences while remaining dependent on a single act of seeing. Conversely, two captions written by the same image model may repeat a learned convention even when both are produced from pixels.
+
+QUESTION:
+When a caption introduces a detail absent from the first description, how do we tell a fresh observation from a shared captioning convention?
+
+DEEPER QUESTION:
+How much of measured alignment comes from access to visible evidence, and how much from learning what caption writers tend to mention?
+
+MECHANISM:
+A paraphraser receives the first description. An image captioner receives visual evidence and brings its own training priors. Those are different routes for a detail to enter the second text.
+
+FORMAL SHIFT:
+&lt;Caption or photograph&gt; → &lt;input to a second describer&gt; → [paraphrase or recaption] → &lt;different evidence available for positive pairing&gt;
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Log each description’s parent evidence: pixels, earlier text, or both. Independently mark whether each newly introduced claim is visible, contradicted, or undecidable from the image.
+
+TENSION:
+The caption source matters even under the paper’s bad-view rule. At the 50M-image scale, the two LLaVA recaptions with bad views score .092 on WIT, against .056 for alt-text with bad views.
+
+MISSING:
+A control that separates independent access to pixels from captioner conventions and differences in literalness.
+
+BOUNDARY:
+Table 7 supports effects of both data and view construction. Its rows do not isolate a causal effect of independent looking.
+
+CITATION TRAIL:
+Recap-DataComp, cited as [34], and the LLaVA caption provenance discussed in §7.
+
+TEST:
+For the same Shield of Achilles stills, collect one text-only paraphrase, one image-only description by a fresh observer, and one image-only description from a second captioner. Blindly verify every detail absent from the first text against the image. Count supported discoveries and repeated unsupported additions separately.
+
+PLATFORM:
+[[Thick Prompting as Method]]
+
+LINKS:
+[[Caption Provenance]]
+[[Inherited Omission]]
+[[Independent Looking]]
+
+BIBTEX:
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}</pre></article><article><h2>IMG-JEPA-03 · Viewpoint can be nuisance in a caption and instruction in a prompt</h2><pre>ZETTEL
+
+ID: IMG-JEPA-03
+
+TITLE:
+Viewpoint can be nuisance in a caption and instruction in a prompt
+
+SOURCE:
+Randall Balestriero and Yann LeCun — Proving and Improving the Platonic Representation Hypothesis with JEPAs — 2026 — §2.3
+
+PASSAGE:
+[QUOTE] “It is a nuisance only for alignment”
+
+RESEARCH OBJECT:
+A variable whose status changes when language moves from describing an image to directing its production.
+
+LOCAL MOVE:
+The authors distinguish the state a modality shares with others from observation-specific variation. They explicitly acknowledge that a camera-acting world model would need its viewpoint.
+
+SOURCE TERMS:
+State, nuisance, viewpoint, independent nuisances, alignment.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] An image encoder can benefit from treating two camera angles as equivalent for scene recognition. A prompt critic applying that same equivalence could reward a generator for ignoring an explicit camera instruction.
+
+QUESTION:
+Can an imagetext critic recognize the same depicted event across views while remaining sensitive to the requested view?
+
+DEEPER QUESTION:
+Who decides which details should survive alignment when the language itself selects what matters visually?
+
+MECHANISM:
+The positive-pair rule resamples viewpoint in the source model. A prompt such as “seen directly overhead” instead makes viewpoint a target whose value must affect the rendered image.
+
+FORMAL SHIFT:
+&lt;Camera angle&gt; → &lt;nuisance for scene recognition or constraint for generation&gt; → [ignore or discriminate] → &lt;different judgments of the same image pair&gt;
+
+SOURCE FORMALISM:
+In §2.3, observations are g_m(z, ν). Good views draw independent nuisance variables ν and ν′; corruptions of one observation share its nuisance.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Keep separate labels for event identity and prompt-constraint satisfaction. The same image pair may match on one and differ on the other.
+
+TENSION:
+A critic that strongly preserves camera geometry may mistake a viewpoint change for an event change. A critic that suppresses it may miss a visible prompt violation.
+
+MISSING:
+Instruction-conditioned evidence about which differences the critic should ignore.
+
+BOUNDARY:
+The paper’s nuisance analysis describes an alignment objective. Applying it to prompt compliance is an inference about a different task.
+
+CITATION TRAIL:
+§2.3’s explicit camera-acting example and §3.3’s tests of video frames as image views.
+
+TEST:
+Render the same dispute overhead and at eye level. Use both versions with “a dispute before elders,” then score both against “a dispute before elders seen directly overhead.” A critic passes if it preserves event identity in the first comparison and detects the wrong view in the second.
+
+PLATFORM:
+[[Operative Ekphrasis]]
+
+LINKS:
+[[Cinepromptography]]
+[[Conditional Fidelity]]
+[[Scene Identity]]
+
+BIBTEX:
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}</pre></article><article><h2>IMG-JEPA-04 · A prompt can change an image without making its meaning recoverable</h2><pre>ZETTEL
+
+ID: IMG-JEPA-04
+
+TITLE:
+A prompt can change an image without making its meaning recoverable
+
+SOURCE:
+Randall Balestriero and Yann LeCun — Proving and Improving the Platonic Representation Hypothesis with JEPAs — 2026 — §2.1, Appendix A.2, §7
+
+PASSAGE:
+[PARAPHRASE] The proof uses the inverse of each injective rendering on its image. This lets the authors rewrite the objective over observations as an objective over world states. The limitations section identifies lossy real modalities as a departure from that setup.
+
+RESEARCH OBJECT:
+The difference between a prompt detail having a visual effect and a viewer being able to infer that detail.
+
+LOCAL MOVE:
+Injectivity supplies recoverability in the formal model before learning begins.
+
+SOURCE TERMS:
+Injective rendering, left inverse, world state, population objective.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] Changing “blood-price” to “unpaid debt” could systematically alter a generator’s lighting or blocking while leaving the dispute’s stakes undecidable to viewers. There could be a causal effect without a readable sign of its cause.
+
+QUESTION:
+Which parts of an imagetext can be reconstructed from the image, and which only become determinate when the text is present?
+
+DEEPER QUESTION:
+If a classifier recovers the prompt change from lighting but human readers cannot identify the stakes, what exactly has crossed modalities?
+
+MECHANISM:
+A prompt intervention can shift the distribution of outputs. Recovering the intervention from a particular image requires evidence that distinguishes it from competing prompts. The text can supply the distinction directly in the combined imagetext.
+
+FORMAL SHIFT:
+&lt;Prompt contrast&gt; → &lt;distributions of rendered images&gt; → [blind discrimination] → &lt;estimate of what the image makes recoverable&gt;
+
+SOURCE FORMALISM:
+The source uses x = g_m(z), with a left inverse on the range of g_m. It gives no model of prompt interventions.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Record three results separately: whether outputs change under a prompt edit, whether viewers infer the edited detail from pixels, and whether adding the text changes their reading.
+
+TENSION:
+A failed inference can indicate that the generator ignored the phrase, that it encoded the difference through an incidental visual cue, or that the stakes properly remain in the verbal part of the imagetext. Those readings require different evidence.
+
+MISSING:
+The viewer and the prompt intervention as explicit variables in the paper’s setup.
+
+BOUNDARY:
+The theorem does not imply that a generated image is invertible to its prompt, or that an apparent prompt match identifies what caused the image.
+
+CITATION TRAIL:
+The proof’s change-of-variables step in Appendix A.2 and the lossy-modality limitation in §7.
+
+TEST:
+Generate matched-seed pairs for “blood-price” and “unpaid debt,” holding staging and style instructions fixed. Test blind image-only judgments, then repeat with the captions swapped. Include a visible inside/outside edit to check that the same viewers can detect a renderable distinction.
+
+PLATFORM:
+[[Imagetext and Operative Ekphrasis]]
+
+LINKS:
+[[Shield of Achilles]]
+[[Causal Fidelity]]
+[[Semantic Recoverability]]
+
+BIBTEX:
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}</pre></article><article><h2>IMG-JEPA-05 · The caption closest to the image embedding did not improve decoding</h2><pre>ZETTEL
+
+ID: IMG-JEPA-05
+
+TITLE:
+The caption closest to the image embedding did not improve decoding
+
+SOURCE:
+Randall Balestriero and Yann LeCun — Proving and Improving the Platonic Representation Hypothesis with JEPAs — 2026 — §5.1 and appendix passage “Scaling the captioner”
+
+PASSAGE:
+[PARAPHRASE] The authors generate several captions and select one by its agreement with the others under an n-gram similarity rule. Selecting the beam candidate closest to the rotated image embedding in text-JEPA space does not help. Additional decoder pretraining improves decoding of true caption embeddings without improving Flickr or COCO transfer.
+
+RESEARCH OBJECT:
+A split between geometry that makes captioning possible and a selection rule that produces a good caption.
+
+LOCAL MOVE:
+The paper fits a map between frozen embedding spaces, then uses a separately trained language decoder and an explicit candidate selection procedure.
+
+SOURCE TERMS:
+Rotated image embedding, soft prompt, consensus decoding, minimum Bayes risk, CIDEr.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] The caption that most resembles other plausible captions can win even when a rarer caption preserves the detail that makes this image singular.
+
+QUESTION:
+Does caption consensus remove hallucinated detail, or does it suppress accurate details that the decoder seldom names?
+
+DEEPER QUESTION:
+What would count as a good caption when the purpose is to direct attention toward a difficult feature rather than to agree with typical descriptions?
+
+MECHANISM:
+The pipeline maps vision features into text-embedding space, projects the resulting vector into soft-prompt tokens, and decodes language. The consensus rule rewards lexical agreement among candidates, so a detail’s chance of surviving selection depends partly on how often other samples mention it.
+
+FORMAL SHIFT:
+&lt;Image features&gt; → &lt;mapped text embedding&gt; → [soft-prompt decoding and candidate selection] → &lt;one caption&gt;
+
+SOURCE FORMALISM:
+The scaled decoder projects an embedding to ten Qwen2.5 input embeddings through a two-layer MLP. Consensus compares 32 sampled captions and one greedy caption using CIDEr-style n-gram similarity without document frequencies.
+
+OUR FORMALIZATION:
+NONE
+
+TENSION:
+The paper reports a useful decoding choice under its evaluation. Whether that choice favors generic descriptions at the expense of rare visible details remains an open empirical question.
+
+MISSING:
+Feature-level judgments of the winning caption and the candidates it displaced.
+
+BOUNDARY:
+The result does not establish that consensus systematically erases details or that embedding similarity generally fails as a caption critic.
+
+CITATION TRAIL:
+ClipCap for the soft-prompt projection and reference [27] for minimum Bayes risk decoding.
+
+TEST:
+Use one candidate pool per image and apply both selectors to that same pool. Choose images with a rare but visible detail. Have readers mark supported rare details and unsupported additions independently of caption fluency. Check whether the selectors trade one error for the other.
+
+PLATFORM:
+[[Imagetext and the Captioning Apparatus]]
+
+LINKS:
+[[Decoder Prior]]
+[[Visual Specificity]]
+[[Consensus Captioning]]
+
+BIBTEX:
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}</pre></article><article><h2>IMG-JEPA-02-A · Caption density begins with a rule about what to keep</h2><pre>ZETTEL
+
+ID:
+IMG-JEPA-02-A
+
+TITLE:
+Caption density begins with a rule about what to keep
+
+SOURCE:
+Minyoung Huh, Brian Cheung, Tongzhou Wang, and Phillip Isola — The Platonic Representation Hypothesis — 2024 — Appendix E
+
+PASSAGE:
+[QUOTE] “especially information from the start of the original description.”
+[QUOTE] “the alignment score also improves as caption length increases.”
+
+RESEARCH OBJECT:
+The ordering of details in the parent description as a variable in caption-density experiments.
+
+LOCAL MOVE:
+The authors vary the requested word budget for summaries of an existing description. Their prompt also gives early details priority.
+
+SOURCE TERMS:
+Caption density, granularity, salient visual information, alignment score.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] A longer summary may align better partly because it restores details previously excluded by an instruction that privileges the beginning. The caption’s order can determine which parts of the image become available for alignment.
+
+QUESTION:
+At a fixed word budget, does moving a visible detail to the beginning of the source description change whether that detail contributes to measured alignment?
+
+DEEPER QUESTION:
+If two equally accurate captions rank different aspects of one image as salient, which caption should a critic prefer?
+
+MECHANISM:
+A text-only model compresses a description under a word budget and a positional preference. The alignment measurement happens downstream of that selection.
+
+FORMAL SHIFT:
+&lt;Ordered full description&gt; → &lt;word budget and priority instruction&gt; → [summarization] → &lt;caption used for alignment measurement&gt;
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+NONE
+
+TENSION:
+[OUR INFERENCE] The length effect could reflect broader coverage of the image, or recovery of particular details systematically excluded at shorter budgets. Both could be present.
+
+MISSING:
+An order intervention that keeps the image, source propositions, and word budget fixed.
+
+BOUNDARY:
+Appendix E’s reported length effect does not isolate the effect of ordering or of the instruction to favor the beginning.
+
+CITATION TRAIL:
+[[IMG-JEPA-02]] → Huh et al., Appendix E → Urbanek et al.’s Densely Captioned Images dataset and its description hierarchy.
+
+TEST:
+Swap the first and last blocks of each description without changing any wording. Run the same short and long summary prompts on both orders. Compare which propositions survive and whether changes in visual coverage track the alignment score.
+
+PLATFORM:
+[[Thick Prompting as Method]]
+
+LINKS:
+[[IMG-JEPA-02]]
+[[Caption Order]]
+[[Salience in Imagetext]]
+
+BIBTEX:
+@misc{huh2024platonic,
+  author = {Huh, Minyoung and Cheung, Brian and Wang, Tongzhou and Isola, Phillip},
+  title = {The Platonic Representation Hypothesis},
+  year = {2024},
+  eprint = {2405.07987},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2405.07987}
+}</pre></article><article><h2>IMG-JEPA-02-B · Changing the evaluator changes which captions count as aligned</h2><pre>ZETTEL
+
+ID:
+IMG-JEPA-02-B
+
+TITLE:
+Changing the evaluator changes which captions count as aligned
+
+SOURCE:
+Xianhang Li et al. — What If We Recaption Billions of Web Images with LLaMA-3? — 2024 arXiv preprint — §4.2
+
+PASSAGE:
+[QUOTE] “our recaptioned content performs just comparably to the original captions (49.57 vs. 50.43).”
+[QUOTE] “the LongCLIP score of our newly generated caption impressively attains 89.91”
+
+RESEARCH OBJECT:
+A reversal in caption ranking when the evaluator changes from CLIP-Large to LongCLIP-Large.
+
+LOCAL MOVE:
+The authors evaluate the same recaptioning intervention with two vision–language scorers. Under LongCLIP, the reported score for original captions is 10.09.
+
+SOURCE TERMS:
+Semantic similarity, CLIP-large, LongCLIP-Large, recaptioned content.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] The new caption may contain more visible facts. It also has a form that the second evaluator was specifically adapted to process. The score alone cannot separate those advantages.
+
+QUESTION:
+Does LongCLIP reward an additional true visual claim more than an equally long false claim?
+
+DEEPER QUESTION:
+Can a single image–text score tell us whether the added words are supported by the image or whether the text supplies information of its own?
+
+MECHANISM:
+The scorers encode the image and caption and evaluate similarity. Changing the scorer changes the representation through which additional caption material can affect the score.
+
+FORMAL SHIFT:
+&lt;Fixed image and competing captions&gt; → &lt;scorer-specific embeddings&gt; → [similarity scoring] → &lt;caption ranking that depends on the scorer&gt;
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+NONE
+
+TENSION:
+[OUR INFERENCE] One explanation is that LongCLIP can register genuinely supported detail that standard CLIP misses. Another is that it favors properties of longer recaptions even when their added claims are unsupported.
+
+MISSING:
+An evaluation that varies the truth of an added claim independently of caption length and phrasing.
+
+BOUNDARY:
+The reported scores compare scorers and caption sets. They do not identify the contribution of any particular visual claim, and their numerical scales cannot be compared directly across scorers.
+
+CITATION TRAIL:
+[[IMG-JEPA-02]] → Recap-DataComp evaluation in §4.2 → LongCLIP, reference [76].
+
+TEST:
+Write two length-matched extensions of the same short caption. Change one visible relation in the second extension from true to false, such as inside to outside. Test both scorers on whether they prefer the true extension. Repeat with the same relation placed early and late.
+
+PLATFORM:
+[[Evaluating Imagetext]]
+
+LINKS:
+[[IMG-JEPA-02]]
+[[Evaluator Dependence]]
+[[Visual Claim Verification]]
+
+BIBTEX:
+@misc{li2024recaption,
+  author = {Li, Xianhang and Tu, Haoqin and Hui, Mude and Wang, Zeyu and Zhao, Bingchen and Xiao, Junfei and Ren, Sucheng and Mei, Jieru and Liu, Qing and Zheng, Huangjie and Zhou, Yuyin and Xie, Cihang},
+  title = {What If We Recaption Billions of Web Images with {LLaMA-3}?},
+  year = {2024},
+  eprint = {2406.08478},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/pdf/2406.08478}
+}</pre></article><article><h2>IMG-JEPA-05-A · An image-derived prefix also adapts the decoder to a captioning task</h2><pre>ZETTEL
+
+ID:
+IMG-JEPA-05-A
+
+TITLE:
+An image-derived prefix also adapts the decoder to a captioning task
+
+SOURCE:
+Ron Mokady, Amir Hertz, and Amit H. Bermano — ClipCap: CLIP Prefix for Image Captioning — 2021 — §3.3
+
+PASSAGE:
+[QUOTE] “The constant has a dual role, first, to retrieve meaningful information from CLIP embedding through the multi-head attention.”
+
+RESEARCH OBJECT:
+The learned constant supplied alongside the image embedding in ClipCap’s frozen-decoder variant.
+
+LOCAL MOVE:
+The authors give the transformer mapper both an image-dependent input and a learned constant. They assign the constant a role in extracting information and a role in adapting the frozen language model to the new data.
+
+SOURCE TERMS:
+Visual encoding, learned constant input, multi-head attention, fixed language model.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] The ancestor of the JEPA captioner’s soft-prompt technique makes two jobs visible at once. A prefix can help determine which facts reach the decoder and what kind of sentence the decoder tends to produce.
+
+QUESTION:
+Can changing the learned constant alter which visual fact the caption foregrounds while the image features, mapper, and language model stay fixed?
+
+DEEPER QUESTION:
+When a caption starts with a person, an object, or an action, how much of that choice comes from the image and how much comes from how the decoder was taught to describe images?
+
+MECHANISM:
+In this ClipCap variant, the transformer processes the visual encoding together with a learned constant. The resulting prefix conditions the frozen language model’s next-token generation.
+
+FORMAL SHIFT:
+&lt;CLIP image embedding plus learned constant&gt; → &lt;transformer-generated prefix&gt; → [frozen language-model decoding] → &lt;caption&gt;
+
+SOURCE FORMALISM:
+§3.3 specifies the two transformer inputs. §3.4 specifies autoregressive decoding conditioned on the visual prefix.
+
+OUR FORMALIZATION:
+NONE
+
+TENSION:
+[OUR INFERENCE] The constant may mostly steer caption style, or it may also change which visible distinctions reliably reach the output. A fluent caption can result in either case.
+
+MISSING:
+A controlled intervention on the constant that distinguishes a change in phrasing from a change in which visible propositions appear.
+
+BOUNDARY:
+This mechanism belongs to ClipCap’s frozen-decoder transformer variant. The JEPA paper’s scaled captioner uses a two-layer MLP and a fine-tuned Qwen2.5 decoder. The cited connection is prefix conditioning.
+
+CITATION TRAIL:
+[[IMG-JEPA-05]] → ClipCap §3.3 → Li and Liang’s prefix-tuning work, cited in ClipCap §3.2.
+
+TEST:
+Freeze a trained ClipCap transformer mapper and its decoder. Fit separate constants on the same training images with people-first and objects-first captions. Swap only the constant at inference. On held-out images, score sentence openings and supported visual propositions separately.
+
+PLATFORM:
+[[Imagetext and the Captioning Apparatus]]
+
+LINKS:
+[[IMG-JEPA-05]]
+[[Soft Prompt Conditioning]]
+[[Caption Genre]]
+
+BIBTEX:
+@misc{mokady2021clipcap,
+  author = {Mokady, Ron and Hertz, Amir and Bermano, Amit H.},
+  title = {{ClipCap}: {CLIP} Prefix for Image Captioning},
+  year = {2021},
+  eprint = {2111.09734},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/pdf/2111.09734}
+}</pre></article><article><h2>IMG-JEPA-04-A · Description has an addressee that alignment has no place for</h2><pre>ZETTEL
+
+ID:
+IMG-JEPA-04-A
+
+TITLE:
+Description has an addressee that alignment has no place for
+
+SOURCE:
+W. J. T. Mitchell — Ekphrasis and the Other — 1994 — §18
+Randall Balestriero and Yann LeCun — Proving and Improving the Platonic Representation Hypothesis with JEPAs — 2026 — §§3 and 5.1
+
+PASSAGE:
+[QUOTE — Mitchell] “the relation of the speaker and the audience or addressee of the ekphrasis”
+
+RESEARCH OBJECT:
+The addressee as a variable in deciding what a description should do.
+
+LOCAL MOVE:
+Mitchell inserts a third position into the encounter between a describer and a depicted object. The description goes to someone whose reception is part of the event.
+
+SOURCE TERMS:
+Addressee, ekphrastic hope, description, ventriloquism.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] The JEPA captioner makes the image-to-sentence step executable. Mitchell’s next step happens in reception. A sentence can retrieve the correct photograph while leaving a reader unable to imagine the relation for which the photograph was described.
+
+QUESTION:
+When is a good caption a good description for a particular person?
+
+DEEPER QUESTION:
+Can an imagetext work depend on giving one reader something to notice that another reader already sees?
+
+MECHANISM:
+In the JEPA evaluation, a candidate can succeed by ranking its associated image or caption above alternatives. In Mitchell’s account, a description also mediates between the depicted object and a listener or reader. What the reader already knows changes what the description can accomplish.
+
+FORMAL SHIFT:
+NONE
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Evaluate the same image–description pair on two axes. Measure whether it identifies the image among alternatives and whether it helps a specified reader recover a specified relation.
+
+TENSION:
+A caption that names Achilles may distinguish a Shield image in an archive. A caption that locates the elders relative to the disputants may better enable a reader to reconstruct its composition. The two tasks can favor different sentences.
+
+MISSING:
+A recipient, a purpose for describing, and evidence of what the recipient came to see.
+
+BOUNDARY:
+The comparison brings Mitchell’s account of reception to the JEPA evaluation. It establishes no line of influence between the authors.
+
+CITATION TRAIL:
+[[IMG-JEPA-04]] → Mitchell §18 on the ekphrastic triangle → §§21 onward on cups and shields.
+
+TEST:
+Write two length-matched descriptions of each Shield image, one identifying the narrative and one locating the figures. Have one group retrieve the image among distractors and another reconstruct its blocking from text alone. Compare caption rankings across the tasks.
+
+PLATFORM:
+[[Imagetext as an Addressed Act]]
+
+LINKS:
+[[IMG-JEPA-04]]
+[[Ekphrastic Triangle]]
+[[Description for Whom]]
+
+BIBTEX:
+@incollection{mitchell1994ekphrasis,
+  author = {Mitchell, W. J. T.},
+  title = {Ekphrasis and the Other},
+  booktitle = {Picture Theory: Essays on Verbal and Visual Representation},
+  publisher = {University of Chicago Press},
+  year = {1994},
+  url = {https://complit.utoronto.ca/wp-content/uploads/COL1000-Week11-Nov25_WJT_Mitchell.pdf}
+}
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}</pre></article><article><h2>IMG-JEPA-02-B-A · A detail that crosses scenes can belong to the composite work</h2><pre>ZETTEL
+
+ID:
+IMG-JEPA-02-B-A
+
+TITLE:
+A detail that crosses scenes can belong to the composite work
+
+SOURCE:
+Randall Balestriero and Yann LeCun — Proving and Improving the Platonic Representation Hypothesis with JEPAs — 2026 — §2.3 and Appendix B, Table 7
+W. J. T. Mitchell — Beyond Comparison: Picture, Text, and Method — 1994 — Picture Theory, p. 89 n. 9, as reprinted in his introduction to The Future of Text and Image
+
+PASSAGE:
+[QUOTE — Balestriero and LeCun] “alt-texts sharing a brand name”
+[QUOTE — Mitchell] “composite, synthetic works (or concepts) that combine image and text”
+
+RESEARCH OBJECT:
+A brand name that connects photographs of different scenes and also connects each photograph to the page on which it appears.
+
+LOCAL MOVE:
+The JEPA paper uses a repeated brand name to illustrate how overlapping text corruptions can create links across scenes. Mitchell’s imagetext shifts the unit of analysis to the work made by combining the verbal and visual materials.
+
+SOURCE TERMS:
+Alt-text, nuisance, induced world kernel, imagetext.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] The same word can be a shortcut for matching photographs and an indispensable part of understanding how a photograph is published. Removing it could make the text a better view of the pictured scene while making it a poorer account of the page.
+
+QUESTION:
+When does a recaption describe the photographed thing more accurately while describing the published imagetext less adequately?
+
+DEEPER QUESTION:
+Should a visible logo, a merchant name supplied by the page, and a merchant name hallucinated by the captioner count as three different kinds of evidence?
+
+MECHANISM:
+In the paper’s example, shared wording can cause corruptions of texts from distinct scenes to overlap. In a published composite, wording can intentionally connect distinct scenes through sponsorship, authorship, or a series title. The visible pixels can remain identical across those contexts.
+
+FORMAL SHIFT:
+&lt;Photograph embedded in a page&gt; → &lt;image ID and associated text strings&gt; → [caption replacement or positive pairing] → &lt;different relations become available to the encoder&gt;
+
+SOURCE FORMALISM:
+The induced world kernel gives the probability that a positive pair joins observations of two specified states.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Give each phrase separate provenance labels for pixel evidence and page evidence. Keep unsupported claims distinct from supported claims that require the page.
+
+TENSION:
+Table 7 favors different caption mixtures on Flickr retrieval and WIT alignment. That difference makes the target worth specifying. It does not explain whether the difference comes from literalness, caption genre, or another property of the data.
+
+MISSING:
+The original page as evidence alongside the isolated image and its text fields.
+
+BOUNDARY:
+The brand example illustrates an alignment mechanism. It cannot establish that a given brand term is irrelevant to the artifact or that alt-text ordinarily functions as a public caption.
+
+CITATION TRAIL:
+[[IMG-JEPA-02-B]] → JEPA §2.3 on the brand-name example → Mitchell’s distinction among imagetext, image-text, and image/text.
+
+TEST:
+Take one identical photograph published on two pages under different, verifiable sponsorships. Compare literal recaptions with page-aware descriptions. Test scene retrieval and publication attribution separately. Include a case where the sponsor is visible in the image to test whether the two tasks can coincide.
+
+PLATFORM:
+[[The Published Imagetext]]
+
+LINKS:
+[[IMG-JEPA-02-B]]
+[[IMG-JEPA-01]]
+[[Scene Versus Page]]
+[[Description Provenance]]
+
+BIBTEX:
+@article{mitchell1994beyond,
+  author = {Mitchell, W. J. T.},
+  title = {Beyond Comparison: Picture, Text and Method},
+  journal = {Interfaces},
+  volume = {5},
+  pages = {13--38},
+  year = {1994},
+  doi = {10.3406/inter.1994.932},
+  note = {The quoted Picture Theory note is reproduced in Mitchell&#x27;s introduction to The Future of Text and Image},
+  url = {https://www.cambridgescholars.com/resources/pdfs/978-1-4438-3640-1-sample.pdf}
+}
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}</pre></article><article><h2>IMG-JEPA-05-A-A · A sheep-shaped cake puts the object and its depiction in the same frame</h2><pre>ZETTEL
+
+ID:
+IMG-JEPA-05-A-A
+
+TITLE:
+A sheep-shaped cake puts the object and its depiction in the same frame
+
+SOURCE:
+Randall Balestriero and Yann LeCun — Proving and Improving the Platonic Representation Hypothesis with JEPAs — 2026 — appendix passage “Scaling the captioner”
+W. J. T. Mitchell — Ekphrasis and the Other — 1994 — §21
+
+PASSAGE:
+[QUOTE — Balestriero and LeCun] “a cake shaped like a sheep”
+[QUOTE — Mitchell] “utilitarian objects that happen to have ornamental or symbolic visual representations attached to them”
+
+RESEARCH OBJECT:
+An artifact that resembles one thing while being another, photographed for captioning.
+
+LOCAL MOVE:
+The JEPA authors mention the sheep-shaped cake in a qualitative report about additional decoder pretraining. Mitchell uses artifacts such as cups and shields to locate early ekphrastic objects within practices of making and use.
+
+SOURCE TERMS:
+Recaptions, decoder, ornamental or symbolic visual representations, ekphrastic objects.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] A caption for the cake may need to distinguish three things: the photograph, the object photographed, and the figure the object presents. A caption can name both cake and sheep while still getting their relation wrong.
+
+QUESTION:
+Can the captioner distinguish resemblance, depiction, and physical presence when the same nouns fit all three?
+
+DEEPER QUESTION:
+When a model calls something a sheep, is it describing what is present in the photographed space or what an artifact in that space represents?
+
+MECHANISM:
+The vision encoder supplies features to a mapped embedding. The decoder turns those features into a sentence. An object-level description must assign different roles to the visible material and to the figure it resembles or depicts.
+
+FORMAL SHIFT:
+&lt;Photograph of a representational artifact&gt; → &lt;visual embedding and mapped text embedding&gt; → [caption decoding] → &lt;a sentence that may preserve or collapse representational levels&gt;
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Use separate labels for the physical bearer, the represented figure, and the relation between them. For example, cake / sheep / shaped like differs from cake / sheep / printed on and cake / sheep / next to.
+
+TENSION:
+The paper reports that extra pretraining helps some unusual examples without improving Flickr or COCO transfer. The reported example could indicate better recognition of an uncommon artifact or better description of its representational structure.
+
+MISSING:
+The specific candidate captions and a controlled comparison that keeps the named objects fixed while changing their relation.
+
+BOUNDARY:
+The authors’ phrase identifies an example. It is not a transcript of the model’s caption or a quantified result about representational nesting.
+
+CITATION TRAIL:
+[[IMG-JEPA-05-A]] → the JEPA appendix’s qualitative example → Mitchell §21 on the objects of ekphrasis → the Shield as an artifact bearing scenes.
+
+TEST:
+Compare a sheep-shaped cake, a cake with a printed sheep, and a plain cake beside a toy sheep. Score noun recognition and relation recognition separately. Repeat with the same Shield scene embossed on metal, printed on a poster, and staged by actors. Ask whether each caption tells the reader where the depicted figures exist.
+
+PLATFORM:
+[[Imagetext and Representational Nesting]]
+
+LINKS:
+[[IMG-JEPA-05-A]]
+[[Shield of Achilles]]
+[[Bearer and Depicted Figure]]
+[[Description of a Representation]]
+
+BIBTEX:
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}
+@incollection{mitchell1994ekphrasis,
+  author = {Mitchell, W. J. T.},
+  title = {Ekphrasis and the Other},
+  booktitle = {Picture Theory: Essays on Verbal and Visual Representation},
+  publisher = {University of Chicago Press},
+  year = {1994},
+  url = {https://complit.utoronto.ca/wp-content/uploads/COL1000-Week11-Nov25_WJT_Mitchell.pdf}
+}</pre></article><article><h2>IMG-JEPA-04-A-A · An image must leave something out to remain an image</h2><pre>ZETTEL
+
+ID:
+IMG-JEPA-04-A-A
+
+TITLE:
+An image must leave something out to remain an image
+
+SOURCE:
+Plato — Cratylus — 432b–433a — translated by David Horan
+
+PASSAGE:
+[QUOTE] “Would there then be Cratylus and his image, or would there be two Cratyluses?”
+
+RESEARCH OBJECT:
+Omission as a condition of representation, with a separate question about which omissions count as errors.
+
+LOCAL MOVE:
+Socrates imagines a god reproducing Cratylus down to his interior, warmth, motion, soul, and intelligence. Cratylus accepts that the result would be two Cratyluses. Socrates uses this concession to reopen what correctness can mean for an image, then carries the argument into names and sentences.
+
+SOURCE TERMS:
+Image, imitation, correctness, name, impression.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] The question for imagetext is more exact than how much of the object can survive translation. Some differences make the description usable as a description. Others remove the very feature it was meant to bring forward. Counting omissions treats those cases alike.
+
+QUESTION:
+Can a description become more exact by omitting a true feature?
+
+DEEPER QUESTION:
+Does correctness belong to the description by itself, or to what a reader can do with that description in a particular situation?
+
+MECHANISM:
+Socrates first tests complete resemblance by asking what kind of thing it would produce. He then allows that a name or sentence can contain an unsuitable element and still name or speak of its object. Identifying what the description concerns and judging how well it describes it become separable acts.
+
+FORMAL SHIFT:
+NONE
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+For each description, distinguish reference, accuracy of individual claims, and adequacy for the reader’s task. Score each independently.
+
+TENSION:
+A sparse description may identify the right image while omitting a crucial relation. A detailed description with one false claim may still let the reader reconstruct the scene more accurately. A single alignment score can rank either one first.
+
+MISSING:
+A criterion for deciding which omissions matter before comparing descriptions.
+
+BOUNDARY:
+The doubling argument concerns complete duplication. The JEPA theorem concerns alignment of embeddings up to rotation under specified assumptions. The comparison opens a question about selective representation without equating the two kinds of sameness.
+
+CITATION TRAIL:
+[[IMG-JEPA-04-A]] → Cratylus 432b–433a → Mitchell’s account of the addressee in Ekphrasis and the Other §18.
+
+TEST:
+Use one image and two tasks: identify it among alternatives, then reconstruct one spatial relation. Compare a sparse accurate caption, a detailed caption with one false claim, and a caption that omits the diagnostic relation. Ask which caption is best under each task and which error causes each reversal.
+
+PLATFORM:
+[[Correctness of Description]]
+
+LINKS:
+[[IMG-JEPA-04-A]]
+[[IMG-JEPA-04]]
+[[Omission as Selection]]
+[[Reference Versus Adequacy]]
+
+BIBTEX:
+@book{platoCratylusHoran,
+  author = {Plato},
+  title = {Cratylus},
+  translator = {Horan, David},
+  note = {Stephanus 432b--433a},
+  url = {https://www.platonicfoundation.org/media/2025/06/platos-cratylus-english-translation-by-david-horan.pdf}
+}</pre></article><article><h2>IMG-JEPA-03-A · A correction to the object can be a distortion from another viewpoint</h2><pre>ZETTEL
+
+ID:
+IMG-JEPA-03-A
+
+TITLE:
+A correction to the object can be a distortion from another viewpoint
+
+SOURCE:
+Plato — Sophist — 235d–236c — translated by Benjamin Jowett
+Randall Balestriero and Yann LeCun — Proving and Improving the Platonic Representation Hypothesis with JEPAs — 2026 — §2.3
+
+PASSAGE:
+[QUOTE — Plato, Jowett translation] “make only the proportions which appear to be beautiful, disregarding the real ones.”
+
+RESEARCH OBJECT:
+The large sculpture whose proportions are altered for the spectator’s position.
+
+LOCAL MOVE:
+The Stranger distinguishes likeness-making from appearance-making. A maker can enlarge distant parts so they look proportionate from below. The passage presents this as abandoning true proportions, even though the alteration is what gives the intended spectator a proportionate appearance.
+
+SOURCE TERMS:
+Likeness-making, appearances, proportions, position of the spectator, viewpoint, nuisance.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] In JEPA §2.3, viewpoint can vary across observations of a fixed object. In the sculpture example, the maker alters the object in anticipation of the viewpoint. What the spectator can see helps determine what gets made.
+
+QUESTION:
+When a prompt says “make the figure look proportionate from below,” what should a caption critic check: the dimensions of the figure or the appearance from below?
+
+DEEPER QUESTION:
+Could two images agree on a visible relation precisely because the objects they depict differ?
+
+MECHANISM:
+Geometry and viewing position jointly determine apparent proportions. A maker can change one to compensate for the other. A verbal description can specify either the construction or the desired appearance, and those instructions can call for different objects.
+
+FORMAL SHIFT:
+&lt;Object proportions and spectator position&gt; → &lt;projected proportions&gt; → [alter the object for the intended view] → &lt;appearance that may cease to match from another position&gt;
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Label a description’s target as object geometry, projected appearance from a specified view, or appearance across views.
+
+TENSION:
+The Stranger’s classification gives priority to actual proportions. A description written for the person standing below the sculpture could be correct about appearance while being wrong if read as a statement about dimensions.
+
+MISSING:
+A way for the critic to tell which level the words specify before it scores a match.
+
+BOUNDARY:
+Plato gives an example of making appearances, with no claim about learned invariance. The connection to the JEPA nuisance variable is an analytical comparison.
+
+CITATION TRAIL:
+[[IMG-JEPA-03]] → JEPA §2.3 on viewpoint → Sophist 235d–236c → Republic X 598a–b on the couch seen from different positions.
+
+TEST:
+Make two renders from below: one of a proportionate figure and one of a figure whose upper body has been enlarged to compensate for perspective. Render each again from eye level. Ask critics to evaluate separately whether the head is oversized and whether it looks oversized from below. Record whether their judgments follow the object or the view.
+
+PLATFORM:
+[[Viewpoint and Description]]
+
+LINKS:
+[[IMG-JEPA-03]]
+[[Likeness and Appearance]]
+[[Cinepromptography]]
+[[Spectator Position]]
+
+BIBTEX:
+@book{platoSophistJowett,
+  author = {Plato},
+  title = {Sophist},
+  translator = {Jowett, Benjamin},
+  note = {Stephanus 235d--236c},
+  url = {https://en.wikisource.org/wiki/Sophist_(Jowett)}
+}
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}</pre></article><article><h2>IMG-JEPA-01-A · The cave analogy leaves open who made the shadows agree</h2><pre>ZETTEL
+
+ID:
+IMG-JEPA-01-A
+
+TITLE:
+The cave analogy leaves open who made the shadows agree
+
+SOURCE:
+Minyoung Huh, Brian Cheung, Tongzhou Wang, and Phillip Isola — The Platonic Representation Hypothesis — 2024 — §1, Figure 1, §4.1 and note 4
+Randall Balestriero and Yann LeCun — Proving and Improving the Platonic Representation Hypothesis with JEPAs — 2026 — §§2.1–2.3, §7
+
+PASSAGE:
+[QUOTE — Huh et al.] “The training data for our algorithms are shadows on the cave wall”
+[QUOTE — Huh et al.] “the joint distribution of observation indices is itself the platonic reality.”
+
+RESEARCH OBJECT:
+Two readings of the latent state in the paper that supplies the JEPA paper’s term “Platonic.”
+
+LOCAL MOVE:
+Huh et al. explicitly invoke Plato’s cave in their introduction. Their formal setup later allows an event to be an index for observations without further physical meaning. Note 4 entertains a statistical reading of what counts as reality.
+
+SOURCE TERMS:
+Platonic representation, observation, event, joint distribution, positive-pair distribution.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] A photograph and its machine-written caption can agree because the caption was produced from that very photograph. That agreement can be real and useful while leaving open whether a second camera or witness would support the same account.
+
+QUESTION:
+When text and image align, what evidence distinguishes independent access to a scene from descent through the same representational artifact?
+
+DEEPER QUESTION:
+If an image generates its own descriptions and those descriptions later supervise another model, which part of the resulting agreement belongs to the photographed event and which part belongs to the image’s circulation?
+
+MECHANISM:
+Huh et al.’s Figure 1 allows a description to be produced from an existing measurement or mediated by a different measurement. The JEPA study’s recaptioned corpus gives the first path a concrete implementation. The text encoder can train without pixel inputs while its examples still carry information derived from pixels.
+
+FORMAL SHIFT:
+&lt;Scene&gt; → &lt;one photograph or independently obtained views&gt; → [captioning and pairing] → &lt;agreement with different evidentiary histories&gt;
+
+SOURCE FORMALISM:
+Huh et al. model observations as bijective deterministic functions of discrete events in §4.1. Balestriero and LeCun model positive pairs as a distribution over world states in §2.1.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+For each positive pair, record the nearest common source: event, photograph, or prior description. Evaluate on held-out evidence produced before the descriptions can influence it.
+
+TENSION:
+Reading A treats cross-modal agreement as evidence of recovery of a shared event. Reading B treats it as recovery of structure already stabilized by the photograph and its captions. An evaluation built around the same photographs can support both readings.
+
+MISSING:
+A benchmark in which the description must answer to an observation outside its own production chain.
+
+BOUNDARY:
+The genealogy verified here is the original PRH paper’s explicit citation of Plato’s cave. The claim about shared representational ancestry is a proposed test of alignment evidence.
+
+CITATION TRAIL:
+[[IMG-JEPA-01]] → Huh et al. §1 and §4.1 note 4 → Plato’s Republic VII → the Nettleship reading cited in the note.
+
+TEST:
+Photograph a staged scene from two angles. Pair one caption with the first photograph from which it was written, and obtain another description from a witness or second camera. Keep the pairs separate. Test which details transfer to a held-out view, especially details visible in only one original view.
+
+PLATFORM:
+[[Genealogy of the Platonic Representation Hypothesis]]
+
+LINKS:
+[[IMG-JEPA-01]]
+[[IMG-JEPA-02]]
+[[Independent Observation]]
+[[Imagetext Provenance]]
+
+BIBTEX:
+@misc{huh2024platonic,
+  author = {Huh, Minyoung and Cheung, Brian and Wang, Tongzhou and Isola, Phillip},
+  title = {The Platonic Representation Hypothesis},
+  year = {2024},
+  eprint = {2405.07987},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2405.07987}
+}
+@misc{balestriero2026platonic,
+  author = {Balestriero, Randall and LeCun, Yann},
+  title = {Proving and Improving the Platonic Representation Hypothesis with {JEPAs}},
+  year = {2026},
+  eprint = {2610.39302},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/html/2610.39302v1}
+}</pre></article><article><h2>WT-SHIELD-13-A · Choosing a translation can change the hearing before the world model renders it</h2><pre>ZETTEL
+
+ID:
+WT-SHIELD-13-A
+
+TITLE:
+Choosing a translation can change the hearing before the world model renders it
+
+SOURCE:
+Homer — Iliad 18.497–501 — translated by A. T. Murray
+https://www.theoi.com/Text/HomerIliad18.html
+Homer — Iliad 18.497–501 — translated by Samuel Butler
+https://beta.perseus.tufts.edu/urn%3Acts%3AgreekLit%3Atlg0012.tlg001.perseus-eng4%3A18.497/
+
+PASSAGE:
+[QUOTE — Murray] “he had paid all”
+[QUOTE — Butler] “he had the right to pay off the damages in full”
+
+RESEARCH OBJECT:
+A single bible entry describing what the first disputant claims.
+
+LOCAL MOVE:
+Murray gives the speaker a claim about a completed payment. Butler gives him a claim about his right to make a payment.
+
+SOURCE TERMS:
+Blood-price, payment, right to pay, assembly.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] The parent keeps the verdict open while treating the case as settled enough to stage. These translations differ earlier. In one adaptation, a witness who saw money change hands could matter. In the other, even an undisputed record of payment would leave the right to settle in question.
+
+QUESTION:
+Can a Worldtext bible preserve rival accounts of what the hearing is about before it branches on the verdict?
+
+DEEPER QUESTION:
+At what point does a production summary become a ruling on the source?
+
+MECHANISM:
+A translation supplies the dispute’s operative proposition. A bible entry carries that proposition into the scene packet. The packet then shapes which witnesses, props, and actions a writer or model introduces as relevant.
+
+FORMAL SHIFT:
+&lt;Passage with divergent translations&gt; → &lt;Competing descriptions of the dispute&gt; → [Select or retain a reading in the bible] → &lt;Different evidence becomes relevant in the hearing&gt;
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Give each adaptation premise a translation reference and scope. Record completed payment and right to settle as different propositions. Preserve the speaker attribution in both.
+
+TENSION:
+A production can choose one translation to give the scene a clear dramatic question. A comparative Worldtext can retain both and let the reader discover that changing the translation changes what would settle the case.
+
+MISSING:
+A reading of the Greek and its interpretive history that evaluates the two translations.
+
+BOUNDARY:
+The excerpts establish a consequential difference between English renderings. They do not settle the Greek or establish that the first speaker’s claim is true within the scene.
+
+CITATION TRAIL:
+[[WT-SHIELD-13]] → Murray and Butler on Iliad 18.497–501 → [[WT-ROLE-03]] on how translation changes the variables an inquiry needs.
+
+TEST:
+Give two writers the same blocking and ending constraint. Give one Murray’s formulation and the other Butler’s. Ask each to write one question an elder would ask and name one piece of evidence that could answer it. Then introduce the same receipt in both scenes and see what it actually resolves.
+
+PLATFORM:
+[[Worldtext and the Authority of the World Bible]]
+
+LINKS:
+[[WT-SHIELD-13]]
+[[WT-SHIELD-10]]
+[[WT-ROLE-03]]
+
+BIBTEX:
+@book{homerIliadMurray,
+  author = {Homer},
+  title = {Iliad},
+  translator = {Murray, A. T.},
+  note = {Book 18, lines 497--501},
+  url = {https://www.theoi.com/Text/HomerIliad18.html}
+}
+@book{homerIliadButler,
+  author = {Homer},
+  title = {Iliad},
+  translator = {Butler, Samuel},
+  note = {Book 18, lines 497--501},
+  url = {https://beta.perseus.tufts.edu/urn%3Acts%3AgreekLit%3Atlg0012.tlg001.perseus-eng4%3A18.497/}
+}</pre></article><article><h2>WT-SHIELD-09-A · Moving the herald’s staff can change who appears entitled to speak</h2><pre>ZETTEL
+
+ID:
+WT-SHIELD-09-A
+
+TITLE:
+Moving the herald’s staff can change who appears entitled to speak
+
+SOURCE:
+Homer — Iliad 18.502–506 — translated by A. T. Murray
+https://www.theoi.com/Text/HomerIliad18.html
+
+PASSAGE:
+[QUOTE] “give judgment, each in turn”
+[PARAPHRASE] The heralds restrain the crowd. The elders sit in a sacred circle, hold the heralds’ staves, and rise to give judgment.
+
+RESEARCH OBJECT:
+An interactive staff that can be picked up by an elder, a spectator, or the reader.
+
+LOCAL MOVE:
+The passage places objects, positions, and turns of speech in the same description of the hearing.
+
+SOURCE TERMS:
+Heralds, elders, sacred circle, staves, judgment, turn.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] The parent asks what happens when the reader crosses the circle. Picking up a staff poses a sharper question. An interactive world must decide whether the reader can handle a prop, interrupt a proceeding, or acquire a recognized role. Those consequences can look identical in the first frame after pickup.
+
+QUESTION:
+When a medium lets the reader move an object, what relation to that object is the movement allowed to change?
+
+DEEPER QUESTION:
+Can the reader possess an object while the world still refuses the authority they take it to signify?
+
+MECHANISM:
+The physical state changes when the staff changes hands. A separate response by the heralds and elders determines whether the assembly treats that change as relevant to who can speak.
+
+FORMAL SHIFT:
+&lt;Staff depicted in a hearing&gt; → &lt;Object with a holder and a procedural context&gt; → [Reader takes the staff] → &lt;Physical possession with possible recognition, interruption, or refusal&gt;
+
+SOURCE FORMALISM:
+NONE
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Track staff possession, recognized speaking turn, and audience response separately. Specify in the scene packet which of those states a pickup can change.
+
+TENSION:
+READING A: The staff helps make an already authorized speaker’s turn visible.
+READING B: In the adaptation, acquiring the staff can itself confer or contest a turn.
+The same image of a person holding the staff can fit both.
+
+MISSING:
+Evidence for how audiences infer authority from the relation among the staff, the holder, and the assembly’s response.
+
+BOUNDARY:
+Homer’s description associates staves with elders giving judgment. It supplies no rule saying that any holder acquires authority or that an outsider who takes a staff becomes a judge.
+
+CITATION TRAIL:
+[[WT-SHIELD-09]] → Iliad 18.502–506 → [[WT-ROLE-09-A-A]] on what remains possible after an action.
+
+TEST:
+Build two branches with the same pickup animation. In one, the herald recognizes the reader and yields the floor. In the other, the herald asks for the staff back and the elders continue. Ask when the reader believed they acquired a turn: at pickup, at recognition, or only when the assembly listened.
+
+PLATFORM:
+[[Action-text and Procedural Authority]]
+
+LINKS:
+[[WT-SHIELD-09]]
+[[WT-SHIELD-14]]
+[[WT-ROLE-09-A-A]]
+
+BIBTEX:
+@book{homerIliadMurray,
+  author = {Homer},
+  title = {Iliad},
+  translator = {Murray, A. T.},
+  note = {Book 18, lines 502--506},
+  url = {https://www.theoi.com/Text/HomerIliad18.html}
+}</pre></article><article><h2>WT-SHIELD-05-A · Following the gold can turn an award for judgment into the disputed payment</h2><pre>ZETTEL
+
+ID:
+WT-SHIELD-05-A
+
+TITLE:
+Following the gold can turn an award for judgment into the disputed payment
+
+SOURCE:
+Homer — Iliad 18.497–508 — translated by A. T. Murray
+https://www.theoi.com/Text/HomerIliad18.html
+OpenTimelineIO — Writing an OTIO Adapter — “Source Range vs Available Range”
+https://opentimelineio.readthedocs.io/en/latest/tutorials/write-an-adapter.html
+
+PASSAGE:
+[QUOTE — Murray] “two talents of gold”
+[PARAPHRASE — Murray] The hearing concerns blood-price. The passage later describes the gold in connection with whoever gives the most just judgment.
+
+RESEARCH OBJECT:
+A close-up of gold inserted immediately after a disputant asserts that he paid.
+
+LOCAL MOVE:
+Murray’s rendering gives the disputed payment and the gold in the assembly different roles. An edit can place the image of one alongside words about the other.
+
+SOURCE TERMS:
+Blood-price, gold, judgment, source range, clip occurrence.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] The parent’s frown acquires a new apparent cause through a cut. Here the cut does something different. It can make the gold appear to be the very payment under dispute. Two things can become one referent without the script ever asserting their identity.
+
+QUESTION:
+How can a videotext expose an identity claim made by an edit?
+
+DEEPER QUESTION:
+When a text and image appear together, what leads readers to infer “this is what the speaker means” rather than “this is another thing of the same kind”?
+
+MECHANISM:
+A spoken reference leaves room for a visual referent. An inserted shot offers a candidate at the moment the viewer is looking for one. Repositioning the same shot can change which proposition it seems to illustrate.
+
+FORMAL SHIFT:
+&lt;Speech about payment and image of gold&gt; → &lt;Separate audio and image intervals&gt; → [Align the insert to a line] → &lt;An inferred identity between visible gold and the payment&gt;
+
+SOURCE FORMALISM:
+OpenTimelineIO represents a clip’s selected range separately from its referenced media. It supplies no formal semantics for what an insert appears to identify.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Give the visible prop, the spoken referent, and the proposed identity between them separate records. Let a reader inspect the edit occurrence where the identity first becomes plausible.
+
+TENSION:
+The insert could make the role of the gold easier to understand. It could also substitute a more legible object for a payment whose material form the adaptation has left unspecified.
+
+MISSING:
+A test of whether readers infer identity from adjacency even when the words supply different roles for the objects.
+
+BOUNDARY:
+This card concerns the distinction as rendered by Murray and a proposed edit. It does not settle every interpretation of the gold in the Greek passage.
+
+CITATION TRAIL:
+[[WT-SHIELD-05]] → Murray on the dispute and the award → [[WT-ROLE-11]] on claims made by an assembly.
+
+TEST:
+Use the same close-up and dialogue in two cuts. Place the gold after “I paid” in one and after “for the most just judgment” in the other. Ask “What is this gold?” before showing the passage. Then give readers access to the edit and ask them to identify what changed their answer.
+
+PLATFORM:
+[[Videotext and Editorial Reference]]
+
+LINKS:
+[[WT-SHIELD-05]]
+[[WT-SHIELD-06]]
+[[WT-SHIELD-13-A]]
+[[WT-ROLE-11]]
+
+BIBTEX:
+@book{homerIliadMurray,
+  author = {Homer},
+  title = {Iliad},
+  translator = {Murray, A. T.},
+  note = {Book 18, lines 497--508},
+  url = {https://www.theoi.com/Text/HomerIliad18.html}
+}
+@misc{otioWritingAdapter,
+  author = {{OpenTimelineIO}},
+  title = {Writing an OTIO Adapter},
+  url = {https://opentimelineio.readthedocs.io/en/latest/tutorials/write-an-adapter.html}
+}</pre></article><article><h2>WT-SHIELD-12-A · Making the shield walkable can turn a border into a coastline</h2><pre>ZETTEL
+
+ID:
+WT-SHIELD-12-A
+
+TITLE:
+Making the shield walkable can turn a border into a coastline
+
+SOURCE:
+Homer — Iliad 18.606–608 — translated by A. T. Murray
+https://www.theoi.com/Text/HomerIliad18.html
+World Labs Team — Atlas: A World Model for Spatial Intelligence — 2026 — “Generating with Spatial Context”
+https://www.worldlabs.ai/blog/atlas
+
+PASSAGE:
+[QUOTE — Murray] “around the uttermost rim”
+[PARAPHRASE — World Labs] Atlas can place separate references in a common spatial context and generate transitions between them.
+
+RESEARCH OBJECT:
+What a reader reaches by walking outward from the hearing toward Ocean.
+
+LOCAL MOVE:
+The poem locates Ocean at the shield’s rim. A spatial model asks a maker to decide how that placement becomes navigable.
+
+SOURCE TERMS:
+Oceanus, rim, spatial context, camera pose.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] From outside the shield, Ocean can organize the surface as a border. From inside the city, the same feature can become a body of water reachable by a road. A reader who walks there may learn the adaptation’s geography while losing the relation Homer gives between Ocean and the artifact.
+
+QUESTION:
+What should survive when Worldtext translates a relation on an artifact into a relation within an inhabited place?
+
+DEEPER QUESTION:
+Can a reader move between the two scales without the medium deciding that they are one continuous geography?
+
+MECHANISM:
+An adaptation can treat proximity on the shield as adjacency inside the city, supply a transition between the scales, or let the reader leave the city view before encountering the rim.
+
+FORMAL SHIFT:
+&lt;Ocean at the rim of a shield&gt; → &lt;Separate artifact and inhabited-space frames of reference&gt; → [Choose a transition between frames] → &lt;A boundary experienced as coastline, artifact edge, or both&gt;
+
+SOURCE FORMALISM:
+Atlas positions image references in spatial context and can synthesize views between them. The source supplies no rule for deciding whether two references belong to the same representational scale.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Give every location a frame of reference. Type the passage from the hearing to the rim as a change of scale unless the adaptation explicitly asserts a road within the city.
+
+TENSION:
+A seamless walk can be a compelling way to experience the world Hephaestus makes. A visible change of scale can preserve something that walk smooths away: Ocean is located relative to the shield’s edge.
+
+MISSING:
+Evidence about whether readers understand a traversable route as an adaptation choice or as geography supplied by the poem.
+
+BOUNDARY:
+The passage places Ocean at the shield’s rim. The road, the coastline, and the method for moving between scales are proposed adaptations.
+
+CITATION TRAIL:
+[[WT-SHIELD-12]] → Iliad 18.606–608 → [[WT-ATLAS-01]] on placement as an editorial act → [[IMG-JEPA-05-A-A]] on bearer and represented figure.
+
+TEST:
+Build two routes from the same hearing to the same depiction of Ocean. One follows a continuous road. The other pulls back from the hearing to show the shield’s rim. Ask readers to draw where Ocean is relative to the city and relative to the shield. Then ask which relation the passage establishes.
+
+PLATFORM:
+[[Spatialtext and Changes of Scale]]
+
+LINKS:
+[[WT-SHIELD-12]]
+[[WT-ATLAS-01]]
+[[IMG-JEPA-05-A-A]]
+
+BIBTEX:
+@book{homerIliadMurray,
+  author = {Homer},
+  title = {Iliad},
+  translator = {Murray, A. T.},
+  note = {Book 18, lines 606--608},
+  url = {https://www.theoi.com/Text/HomerIliad18.html}
+}
+@article{worldlabs2026atlas,
+  author = {{World Labs Team}},
+  title = {Atlas: A World Model for Spatial Intelligence},
+  journal = {World Labs Blog},
+  year = {2026},
+  url = {https://www.worldlabs.ai/blog/atlas}
+}</pre></article><article><h2>WT-SHIELD-20-A · A false verdict can change the city without becoming its verdict</h2><pre>ZETTEL
+
+ID:
+WT-SHIELD-20-A
+
+TITLE:
+A false verdict can change the city without becoming its verdict
+
+SOURCE:
+Homer — Iliad 18.497–508 — translated by A. T. Murray
+https://www.theoi.com/Text/HomerIliad18.html
+Joon Sung Park et al. — Generative Agents: Interactive Simulacra of Human Behavior — 2023 — abstract
+https://arxiv.org/abs/2304.03442
+
+PASSAGE:
+[QUOTE — Park et al.] “they remember and reflect on days past as they plan the next day.”
+[PARAPHRASE — Homer, trans. Murray] The crowd favors both sides. The passage describes the elders giving judgments in turn and leaves the outcome of the dispute unstated.
+
+RESEARCH OBJECT:
+A spectator’s false announcement of a verdict and the action another character takes because of it.
+
+LOCAL MOVE:
+Park and colleagues make remembered experience available for reflection and planning. Their architecture opens a route from what a character encounters to what that character later does.
+
+SOURCE TERMS:
+Memory, reflection, planning, judgment, crowd.
+
+WHAT BECAME STRANGE:
+[OUR INFERENCE] The parent restricts an invented theft to one account. That restriction could accidentally erase its consequences. If a spectator tells a shopkeeper that the elders awarded the gold, the shopkeeper can close early to join the celebration. The closure can be an event in the shared adaptation even while the announced verdict remains false.
+
+QUESTION:
+Can Worldtext keep a claim local to a character’s account while letting actions taken on that claim enter shared history?
+
+DEEPER QUESTION:
+After a correction, what should change in the character’s memory, and what should persist as something the character did?
+
+MECHANISM:
+An agent retrieves an attributed report and plans in response. The action changes shared scene state. A correction can revise what the agent believes while preserving the earlier action and the report that occasioned it.
+
+FORMAL SHIFT:
+&lt;Attributed false verdict&gt; → &lt;Character memory available to planning&gt; → [Act on the report and later receive a correction] → &lt;Revised belief with a persistent consequence&gt;
+
+SOURCE FORMALISM:
+Park and colleagues describe an architecture that stores experiences in natural language, synthesizes reflections, and retrieves memories for planning.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+Record the report, the recipient’s belief, the action, and the correction separately. A continuity ruling can reject the report as a fact about the hearing and accept the closure as a fact about what followed.
+
+TENSION:
+Propagating the rumor as world truth invents a verdict. Quarantining it so completely that no other character can act on it removes a consequence of the speech. A third design lets the report travel as testimony and lets its consequences travel as events.
+
+MISSING:
+A test of whether later LLM summaries and world-model scenes preserve the false premise alongside its actual consequences.
+
+BOUNDARY:
+The rumor, shopkeeper, and closure are invented for the adaptation. The agent paper motivates the memory-to-action mechanism and does not establish that its implementation preserves these distinctions.
+
+CITATION TRAIL:
+[[WT-SHIELD-20]] → Park et al. on remembered experience and planning → [[WT-L3G-02-A-A]] on recovering what was available at decision time.
+
+TEST:
+Run the same hearing twice. Let a rumor of a verdict reach the shopkeeper in one run and withhold it in the other. After any closure occurs, have a herald publicly correct the rumor. Ask the system for the hearing outcome, the shop’s history, and the shopkeeper’s reason for closing. A successful account leaves the verdict unissued, preserves the closure where it occurred, and attributes the action to the report available at the time.
+
+PLATFORM:
+[[Worldtext and the Consequences of Testimony]]
+
+LINKS:
+[[WT-SHIELD-20]]
+[[WT-SHIELD-16]]
+[[WT-SHIELD-18]]
+[[WT-L3G-02-A-A]]
+
+BIBTEX:
+@book{homerIliadMurray,
+  author = {Homer},
+  title = {Iliad},
+  translator = {Murray, A. T.},
+  note = {Book 18, lines 497--508},
+  url = {https://www.theoi.com/Text/HomerIliad18.html}
+}
+@misc{park2023generativeAgents,
+  author = {Park, Joon Sung and O&#x27;Brien, Joseph C. and Cai, Carrie J. and Morris, Meredith Ringel and Liang, Percy and Bernstein, Michael S.},
+  title = {Generative Agents: Interactive Simulacra of Human Behavior},
+  year = {2023},
+  eprint = {2304.03442},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/abs/2304.03442}
+}</pre></article><article><h2>BAJOHR-01 · The author can carry a character across generations</h2><pre>ZETTEL
+
+ID: BAJOHR-01
+TITLE: The author can carry a character across generations
+SOURCE: Hannes Bajohr — “The Latent Space of Meaning and the Novel,” Venice, 2025, composition of (Berlin, Miami). Checked against Bajohr’s production note in Ensemble Park, 2024.
+
+PASSAGE: [PARAPHRASE] The talk describes iterative sentence completion. In his production note, Bajohr recalls encountering a pregnancy elsewhere in the text, typing “Jawling pregnancies,” and generating an account of the creature’s reproductive cycle.
+
+RESEARCH OBJECT: A manually reintroduced fact that makes two passages appear to belong to the same world.
+LOCAL MOVE: The production note documents one intervention inside the completion process that the lecture describes at a higher level.
+SOURCE TERMS: “Jawling pregnancies,” iterative sentence completion.
+WHAT BECAME STRANGE: A few typed words can do more for continuity than hundreds of generated tokens.
+QUESTION: Which apparent acts of character memory in the published novel came from information the author reintroduced?
+MECHANISM: The author notices an earlier detail, selects it for reuse, and supplies it as text that conditions a new continuation.
+FORMAL SHIFT: &lt;earlier fictional fact&gt; → &lt;author-supplied phrase&gt; → [condition another completion] → &lt;possible continuity across passages&gt;.
+SOURCE FORMALISM: The production note reports generation in chunks of 200 tokens and supplies this intervention. It leaves the effective context for this run unspecified.
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Annotate each recurrence with where its antecedent was available: active prefix, author-supplied cue, both, or unknown.
+TENSION: A. The cue revived an association the model was already likely to develop. B. The cue supplied continuity that otherwise would have disappeared.
+MISSING: The full prefix, rejected continuations, sampling settings, and exact checkpoint. The talk calls the model GPT-J, while the production note says GPT-J/GPT-NeoX.
+BOUNDARY: One documented intervention establishes a route by which continuity can enter the book. Its frequency across the book remains open.
+CITATION TRAIL: Compare the German edition, the English Ensemble Park excerpt, and any surviving generation records.
+TEST: If the run can be reconstructed, sample matched continuations with and without the cue. Score preservation of the earlier pregnancy separately from mere reuse of the character’s name.
+PLATFORM: [[Where fictional state lives]]
+LINKS: [[BAJOHR-02]] [[BAJOHR-04]]
+
+BIBTEX:
+@article{bajohr2024berlinmiami,
+  author = {Bajohr, Hannes},
+  title = {{(Berlin, Miami)}},
+  journal = {Ensemble Park},
+  number = {1},
+  year = {2024},
+  url = {https://www.ensemblepark.com/issues/ensemble_park_1.pdf}
+}
+</pre></article><article><h2>BAJOHR-02 · A shared cast can survive incompatible readings of what happened</h2><pre>ZETTEL
+
+ID: BAJOHR-02
+TITLE: A shared cast can survive incompatible readings of what happened
+SOURCE: Hannes Bajohr — “The Latent Space of Meaning and the Novel,” Venice, 2025, discussion of (Berlin, Miami).
+
+PASSAGE: [QUOTE — supplied transcript] “The text hangs together somehow, just not strongly.”
+[PARAPHRASE] Recurring people, places, and things remain recognizable even as the reader supplies motives and smooths over temporal discontinuities.
+
+RESEARCH OBJECT: Agreement about who and what belongs to a world alongside disagreement about what caused its events.
+LOCAL MOVE: Bajohr uses the book’s partial legibility to separate worldness from the strength of its plot.
+SOURCE TERMS: Weak force, worldness, interpretive labor.
+WHAT BECAME STRANGE: Readers may agree they entered the same world while constructing mutually incompatible stories about it.
+QUESTION: Does weak coherence name a property readers agree on, or the feeling that their individually repaired stories make sense?
+MECHANISM: Recurring names and motifs cue readers to identify entities across passages. Readers can then supply different links among those entities and events.
+FORMAL SHIFT: &lt;passages&gt; → &lt;reader-identified entities and events&gt; → [link recurrences and infer causes] → &lt;reconstructed story&gt;.
+SOURCE FORMALISM: NONE.
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Elicit entity matches and causal links as separate annotations. Measure agreement on each.
+TENSION: A. Entity agreement survives causal disagreement. B. Readers infer a private plot first and identify entities through it.
+MISSING: Independent reader accounts elicited before exposure to Bajohr’s synopsis.
+BOUNDARY: The lecturer’s reading supplies the distinction. Its distribution across readers is unmeasured.
+CITATION TRAIL: Angus Fletcher’s 2021 essay “Why Computers Will Never Write Good Novels” and Bajohr’s account of readers repairing inconsistencies in Ensemble Park.
+TEST: Give readers either an original sequence or one with selected recurring names consistently replaced by scene-specific aliases. Keep event order fixed. Compare shared entity maps, causal maps, and perceived world coherence.
+PLATFORM: [[Weak coherence]]
+LINKS: [[BAJOHR-01]] [[BAJOHR-08]]
+
+BIBTEX:
+@misc{bajohr2025latent,
+  author = {Bajohr, Hannes},
+  title = {The Latent Space of Meaning and the Novel: World Models in {AI} and Literature},
+  year = {2025},
+  howpublished = {Talk at Chat Token Vector, Ca&#x27; Foscari University of Venice, June 12},
+  url = {https://www.unive.it/web/en/14779/home}
+}
+</pre></article><article><h2>BAJOHR-03 · The box fits the pen only under ordinary circumstances</h2><pre>ZETTEL
+
+ID: BAJOHR-03
+TITLE: The box fits the pen only under ordinary circumstances
+SOURCE: Yehoshua Bar-Hillel — “The Present Status of Automatic Translation of Languages,” 1960, Appendix III. Revisited by Bajohr in the Venice talk, 2025.
+
+PASSAGE: [QUOTE — Bar-Hillel] “The box was in the pen.”
+[PARAPHRASE] The paragraph supplies a child and a toy box. Bar-Hillel explicitly allows that the same paragraph might occur inside a fairy tale or dream.
+
+RESEARCH OBJECT: The defeasible assumption that ordinary relative sizes govern this particular story.
+LOCAL MOVE: The talk pairs Bar-Hillel’s containment ambiguity with Winograd’s car and street example. Bar-Hillel’s own qualification brings genre into the inference.
+SOURCE TERMS: “ordinary circumstances,” relative sizes, semantic ambiguity.
+WHAT BECAME STRANGE: Knowing the usual dimensions of a pen and a toy box still leaves open whether this passage licenses those dimensions.
+QUESTION: Can a system use ordinary containment as a default and reverse it when the story supplies contrary evidence?
+MECHANISM: Infer the kind of situation, provisionally apply its size and containment expectations, then revise the selected sense if the passage defeats those expectations.
+FORMAL SHIFT: &lt;ambiguous occurrence&gt; → &lt;candidate senses and story premises&gt; → [apply or override a containment default] → &lt;contextual sense&gt;.
+SOURCE FORMALISM: The example stipulates two senses of “pen.” It supplies no executable rule for overriding the default.
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Cross an ordinary or fantastic setting with the presence or absence of an explicit miniature box and hollow writing pen.
+TENSION: A. A model uses the actual containment relation. B. It follows lexical cues such as “toy,” “child,” or “fairy tale.”
+MISSING: A comparison where genre cues and containment evidence point in opposite directions.
+BOUNDARY: Getting the familiar sentence right establishes performance on that item. Transfer to altered story premises is a separate result.
+CITATION TRAIL: Bar-Hillel’s discussion of Warren Weaver’s window of context, then Terry Winograd’s Understanding Natural Language.
+TEST: Hold “The box was in the pen” fixed. In one version establish a play enclosure. In another establish a toy box small enough to fit inside a hollow fountain pen. Include fantastic versions where the play enclosure is still the answer.
+PLATFORM: [[World knowledge as defeasible inference]]
+LINKS: [[BAJOHR-07]] [[BAJOHR-08]]
+
+BIBTEX:
+@incollection{barhillel1960translation,
+  author = {Bar-Hillel, Yehoshua},
+  title = {The Present Status of Automatic Translation of Languages},
+  booktitle = {Advances in Computers},
+  volume = {1},
+  pages = {91--163},
+  year = {1960},
+  url = {https://aclanthology.org/www.mt-archive.info/50/Bar-Hillel-1960.pdf}
+}
+</pre></article><article><h2>BAJOHR-04 · A plot can change the next prediction while the weights stay fixed</h2><pre>ZETTEL
+
+ID: BAJOHR-04
+TITLE: A plot can change the next prediction while the weights stay fixed
+SOURCE: Hannes Bajohr — “The Latent Space of Meaning and the Novel,” Venice, 2025, discussion of the “frozen world state.”
+
+PASSAGE: [QUOTE — supplied transcript] “no plot can leave a mark in the latent space once training is complete.”
+[PARAPHRASE] Earlier in the talk, Bajohr describes token representations as dynamically computed in context.
+
+RESEARCH OBJECT: The difference between a parameter update and a plot event continuing to constrain generation.
+LOCAL MOVE: The talk uses the fixity of the trained system to explain why narrative change may be hard to sustain.
+SOURCE TERMS: Frozen world state, contextual embeddings, trajectory.
+WHAT BECAME STRANGE: The talk gives context the power to change what a token means, then makes the absence of permanent change do explanatory work about plot.
+QUESTION: What has to persist for a fictional event to count as a change of world state?
+MECHANISM: A generated or supplied event changes the available prefix. That prefix can change later predictions under the same trained parameters. Truncation, resetting the prefix, or failing to use the information can break the dependency.
+FORMAL SHIFT: &lt;event in prefix&gt; → &lt;context-conditioned representation&gt; → [compute continuation] → &lt;changed downstream possibilities&gt;.
+SOURCE FORMALISM: The talk describes next prediction and contextual representations. It supplies no run-level state trace.
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Hold weights fixed. Change one prior event and measure how long its consequences alter later predictions.
+TENSION: A. Coherence fails because the workflow loses access to a prior event. B. The event stays available, but the model fails to apply its consequences.
+MISSING: The actual context retention and reset policy used for (Berlin, Miami).
+BOUNDARY: A successful short-context intervention would establish a way for plot to affect generation. It would leave novel-length persistence open.
+CITATION TRAIL: Bajohr’s production note in Ensemble Park. Compare Kenneth Li and colleagues’ “Emergent World Representations” for an intervention in a bounded game domain.
+TEST: Run the same later scene after two prefixes in which a named character either survives or dies. Repeat with the decisive sentence in view, truncated, and restored through a neutral summary.
+PLATFORM: [[Where fictional state lives]]
+LINKS: [[BAJOHR-01]] [[BAJOHR-07]]
+
+BIBTEX:
+@misc{bajohr2025latent,
+  author = {Bajohr, Hannes},
+  title = {The Latent Space of Meaning and the Novel: World Models in {AI} and Literature},
+  year = {2025},
+  howpublished = {Talk at Chat Token Vector, Ca&#x27; Foscari University of Venice, June 12},
+  url = {https://www.unive.it/web/en/14779/home}
+}
+</pre></article><article><h2>BAJOHR-05 · The whole inside the model and the whole assembled by a reader</h2><pre>ZETTEL
+
+ID: BAJOHR-05
+TITLE: The whole inside the model and the whole assembled by a reader
+SOURCE: M. Beatrice Fazi — “The Computational Search for Unity,” online first 2024, discussion of the model’s representational world. Read alongside Bajohr’s Venice talk, 2025.
+
+PASSAGE: [QUOTE — Fazi] “a togetherness of distributed representations.”
+[PARAPHRASE] Fazi locates this unity inside computation. Bajohr brings it alongside Blumenberg’s novel, whose context becomes perceptible in time and across perspectives.
+
+RESEARCH OBJECT: The change in what “a world” denotes when the phrase travels from a model to a novel.
+LOCAL MOVE: Bajohr uses Fazi’s computational whole to make comparison with the literary whole possible.
+SOURCE TERMS: Synthesis, representational reality, realized context, worldness.
+WHAT BECAME STRANGE: A single trained model can support many mutually incompatible stories. A reader normally encounters one unfolding configuration at a time.
+QUESTION: Which relation has to survive the move from the computational whole to the literary whole for the analogy to explain anything?
+MECHANISM: The model structures possibilities for continuation. A realized sequence exposes some of those possibilities to a reader, who can link passages and revise earlier inferences.
+FORMAL SHIFT: &lt;relational possibilities&gt; → &lt;selected sequence&gt; → [interpret across passages] → &lt;provisional fictional context&gt;.
+SOURCE FORMALISM: NONE. The sources offer accounts of synthesis and context, with no shared metric.
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Track three objects separately: the distribution of continuations, the dependencies in one realized text, and the dependencies readers reconstruct.
+TENSION: A. A specific dependency inside the model can explain a dependency readers recover. B. “World” connects forms of unity that can vary independently.
+MISSING: A traced relation connecting a model-side dependency to a textual dependency and a reader inference.
+BOUNDARY: The shared vocabulary licenses a comparison. It leaves the correspondence between the three objects to be shown.
+CITATION TRAIL: Hans Blumenberg’s “The Concept of Reality and the Possibility of the Novel” and Fazi’s account of the model as its own world model.
+TEST: Generate several continuations from the same checkpoint and opening. Locate a relation that varies across outputs, such as which character knows a secret. Ask what evidence readers use to recover the relation in each version, then test whether changing that evidence changes their inference.
+PLATFORM: [[Kinds of worldness]]
+LINKS: [[BAJOHR-02]] [[BAJOHR-04]]
+
+BIBTEX:
+@article{fazi2024unity,
+  author = {Fazi, M. Beatrice},
+  title = {The Computational Search for Unity: Synthesis in Generative {AI}},
+  journal = {Journal of Continental Philosophy},
+  year = {2024},
+  note = {Online first, November 9},
+  doi = {10.5840/jcp202411652}
+}
+</pre></article><article><h2>BAJOHR-06 · Shared coordinates still leave a direction of travel</h2><pre>ZETTEL
+
+ID: BAJOHR-06
+TITLE: Shared coordinates still leave a direction of travel
+SOURCE: Hannes Bajohr — “Operative Ekphrasis,” 2024, and Venice talk, 2025. Checked against Ramesh et al., “Hierarchical Text-Conditional Image Generation with CLIP Latents,” 2022.
+
+PASSAGE: [QUOTE — supplied transcript] “language produces images.”
+[PARAPHRASE] Bajohr distinguishes the prompt’s production of an image from the claim that shared latent representation destabilizes the identity of the two media.
+
+RESEARCH OBJECT: The modality-specific operations that remain after text and image representations have been aligned.
+LOCAL MOVE: Bajohr uses text-to-image generation to turn ekphrasis into an operation and then draws a stronger claim about what counts as text or image inside the system.
+SOURCE TERMS: Operative ekphrasis, shared latent space, text caption, image embedding, prior, decoder.
+WHAT BECAME STRANGE: In DALL·E 2, the shared CLIP space coexists with an explicitly directional generation pipeline. The prior predicts an image embedding conditioned on text, and the decoder produces pixels.
+QUESTION: At which interface does the distinction between text and image weaken, and at which does the system require it?
+MECHANISM: Alignment makes representations comparable. The prior maps caption information into a predicted image embedding. The decoder turns that embedding into a visual sample.
+FORMAL SHIFT: &lt;caption&gt; → &lt;text conditioning&gt; → [predict image embedding and decode] → &lt;image&gt;.
+SOURCE FORMALISM: Ramesh et al. specify the two-stage prior and decoder. The lecture supplies the aesthetic interpretation.
+OUR FORMALIZATION: NONE.
+TENSION: A. The collapse is local to an aligned representation. B. It extends to the operative substitutability of the two modalities.
+MISSING: A substitution test at a specified architectural interface.
+BOUNDARY: DALL·E 2 supplies one architectural case. The comparison leaves other multimodal architectures open.
+CITATION TRAIL: Bajohr, Word &amp; Image 40(2), doi:10.1080/02666286.2024.2330335. Then Ramesh et al., especially the separation of prior and decoder.
+TEST: Inspect what the decoder accepts from the text and image encoders. Try substituting a caption embedding for an image embedding at that interface without an adapter. Separate input compatibility from preservation of the intended visual content.
+PLATFORM: [[What travels between media]]
+LINKS: [[BAJOHR-05]]
+
+BIBTEX:
+@misc{ramesh2022clip,
+  author = {Ramesh, Aditya and Dhariwal, Prafulla and Nichol, Alex and Chu, Casey and Chen, Mark},
+  title = {Hierarchical Text-Conditional Image Generation with {CLIP} Latents},
+  year = {2022},
+  eprint = {2204.06125},
+  archivePrefix = {arXiv},
+  url = {https://arxiv.org/abs/2204.06125}
+}
+</pre></article><article><h2>BAJOHR-07 · An action can look right while leaving the object unchanged</h2><pre>ZETTEL
+
+ID: BAJOHR-07
+TITLE: An action can look right while leaving the object unchanged
+SOURCE: OpenAI — “Video Generation Models as World Simulators,” 2024, Discussion. Read against Bajohr’s use of Sora in the Venice talk, 2025.
+
+PASSAGE: [PARAPHRASE] OpenAI reports that eating can fail to produce the expected change in the food’s state. The same report presents scaling as a promising route toward capable simulators.
+
+RESEARCH OBJECT: The persistence of an action’s consequence through a change of view.
+LOCAL MOVE: The report’s failure case gives Bajohr’s general contrast between statistical regularity and causality an observable target.
+SOURCE TERMS: Changes in object state, simulator, physical interaction.
+WHAT BECAME STRANGE: An eating gesture can be convincing enough to identify even when the food offers no durable evidence that eating happened.
+QUESTION: What happens when a later shot depends on an earlier action’s material consequence?
+MECHANISM: A bite should alter the same object. That alteration should survive occlusion, a camera move, and the object’s return to view.
+FORMAL SHIFT: &lt;whole object plus action&gt; → &lt;changed object&gt; → [preserve identity and state across views] → &lt;reappearance consistent with the action&gt;.
+SOURCE FORMALISM: The report documents the failure class. It supplies no explicit object-state update rule for this case.
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Score action recognizability, immediate state change, and persistence after reappearance as separate outcomes.
+TENSION: A. The model maintains an object state across the sequence. B. Each moment is visually plausible while the relation between moments is fragile.
+MISSING: A matched no-action condition and systematic variation of occlusion and camera movement.
+BOUNDARY: An output test can establish persistence under the tested conditions. Identifying the internal representation requires further evidence.
+CITATION TRAIL: The report’s eating, shattering, and spontaneous-object examples. Compare the intervention method in Li et al., arXiv:2210.13382, within its bounded Othello setting.
+TEST: Compare clips in which a person bites a marked apple or only raises it to their lips, hides it behind a cup, then reveals the same side. Score whether the mark and bite state persist together.
+PLATFORM: [[Evidence for operative world models]]
+LINKS: [[BAJOHR-03]] [[BAJOHR-04]]
+
+BIBTEX:
+@misc{openai2024worldsimulators,
+  author = {{OpenAI}},
+  title = {Video Generation Models as World Simulators},
+  year = {2024},
+  url = {https://openai.com/index/video-generation-models-as-world-simulators/}
+}
+</pre></article><article><h2>BAJOHR-08 · A world can defeat its inhabitants’ experiments</h2><pre>ZETTEL
+
+ID: BAJOHR-08
+TITLE: A world can defeat its inhabitants’ experiments
+SOURCE: Hannes Bajohr — “The Latent Space of Meaning and the Novel,” Venice, 2025, closing comparison with Quentin Meillassoux’s Science Fiction and Extro-Science Fiction.
+
+PASSAGE: [PARAPHRASE] Bajohr compares partly intelligible AI fiction to Meillassoux’s Type 2 worlds. The decisive distinction in Meillassoux is whether stable natural laws can be investigated from within the fiction.
+
+RESEARCH OBJECT: A failure of causal inquiry inside the story world versus a failure of continuity in the telling.
+LOCAL MOVE: The talk moves from generated discontinuities to a literary category in which the conditions of scientific inquiry can break down.
+SOURCE TERMS: Extro-science fiction, Type 2, regularity, causal order.
+WHAT BECAME STRANGE: A reader can explain a disappearing object as a narration error while a character, faced with the same disappearance, might have to revise what they think can be known.
+QUESTION: When does a generated discontinuity become an event that the fictional world has to live with?
+MECHANISM: The text establishes an expectation, stages a breach, and lets later action or inquiry depend on the breach. Repeated failed attempts to predict it can make the limits of inquiry part of the fiction.
+FORMAL SHIFT: &lt;apparent discontinuity&gt; → &lt;event acknowledged within the fiction&gt; → [attempt explanation or replication] → &lt;consequences for what characters can know&gt;.
+SOURCE FORMALISM: A philosophical typology. The sources supply no classification procedure for generated passages.
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Distinguish the reader’s attribution of a glitch from the characters’ ability to observe, revisit, or act on its effects.
+TENSION: A. The passage makes the failure of prediction part of the world. B. An ordinary fictional world can be recovered by repairing a gap in the narration.
+MISSING: A passage-level demonstration that later scenes take an apparent rupture as a premise.
+BOUNDARY: A single inexplicable event is compatible with omitted information, unreliable narration, or a stable law the characters have yet to discover.
+CITATION TRAIL: Meillassoux’s distinction between a world with unusual laws and a world in which science becomes impossible.
+TEST: Take one discontinuity and keep the rupture fixed across two versions. In one, later scenes silently restore continuity. In the other, characters observe its effects and fail to reproduce it under matched conditions. Ask readers where they locate the failure and what evidence could change that reading.
+PLATFORM: [[Literary consequences of generated discontinuity]]
+LINKS: [[BAJOHR-02]] [[BAJOHR-07]]
+
+BIBTEX:
+@book{meillassoux2015extroscience,
+  author = {Meillassoux, Quentin},
+  title = {Science Fiction and Extro-Science Fiction},
+  translator = {Edlebi, Alyosha},
+  publisher = {Univocal},
+  year = {2015},
+  isbn = {9781937561482},
+  url = {https://www.upress.umn.edu/9781937561482/science-fiction-and-extro-science-fiction/}
+}
+</pre></article><article><h2>WTW-01 · A name can hold a world together while its history breaks</h2><pre>ZETTEL
+
+ID: WTW-01
+TITLE: A name can hold a world together while its history breaks
+SOURCE: Hannes Bajohr, “The Latent Space of Meaning and the Novel: World Models in AI and Literature,” Chat Token Vector, Ca’ Foscari, June 12, 2025. Supplied transcript and recording description.
+
+PASSAGE:
+[QUOTE — supplied transcript] “The text hangs together somehow, just not strongly.”
+[PARAPHRASE] In (Berlin, Miami), recurring people, places, and things give the reader a sense of the world even as motives, timelines, and consequences become difficult to reconcile.
+
+RESEARCH OBJECT:
+The recurrence of a fictional entity without a stable account of what happened to it.
+
+LOCAL MOVE:
+Bajohr uses his novel to ask how much coherence a text needs before a reader can experience it as a world. He treats “worldness without a world” as a tentative limit and entertains degrees of worldness.
+
+SOURCE TERMS:
+Weak force, worldness, interpretive labor, realized context.
+
+WHAT BECAME STRANGE:
+Readers might agree that two appearances belong to the same character while disagreeing about what that character knows, remembers, or has done.
+
+QUESTION:
+What is the smallest relation that words must carry across passages for readers to experience those passages as one world?
+
+MECHANISM:
+A recurring name cues identification. Readers connect scenes through that identity and supply some missing causal links. In the production account, Bajohr himself carries an earlier detail forward by typing “Jawling pregnancies” to steer another completion.
+
+FORMAL SHIFT:
+&lt;earlier passage&gt; → &lt;remembered entity and attribute&gt; → [reader links or author reintroduces] → &lt;continuity across passages&gt;.
+
+SOURCE FORMALISM:
+Iterative sentence completion is the reported writing procedure. The talk supplies no operational measure of worldness.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX] Score agreement about entity identity separately from agreement about event order and causal consequences.
+
+TENSION:
+A. The text supplies enough recurrence to establish a shared world.
+B. Readers supply different reconstructions that each feel coherent on their own.
+
+MISSING:
+Independent reader reconstructions and a record of which continuities Bajohr seeded during composition.
+
+BOUNDARY:
+The experiment concerns literary worldness. Whether the model can preserve state across interventions is a separate question. The supplied transcript contains no direct discussion of Ha and Schmidhuber or Wong and Tenenbaum’s framework.
+
+CITATION TRAIL:
+Bajohr’s production note in Ensemble Park no. 1 (2024). Compare Wong et al., From Word Models to World Models (2023), for a system that makes some consequences explicit and queryable.
+
+TEST:
+Give readers the same set of passages with the recurring character names either preserved or replaced by scene-specific aliases. Ask who is the same across scenes and what happened to them. Check whether the two judgments move together.
+
+PLATFORM:
+[[Operation / Describe]]
+
+LINKS:
+[[WTW-02]] [[WTW-03]] [[BAJOHR-01]]
+
+BIBTEX:
+@misc{bajohr2025latentvenice,
+  author = {Bajohr, Hannes},
+  title = {The Latent Space of Meaning and the Novel: World Models in {AI} and Literature},
+  year = {2025},
+  howpublished = {Chat Token Vector, Ca&#x27; Foscari University of Venice, June 12},
+  url = {https://www.youtube.com/watch?v=hmchpa_Ek20}
+}
+</pre></article><article><h2>WTW-02 · Chance acts inside a cabinet someone has already designed</h2><pre>ZETTEL
+
+ID: WTW-02
+TITLE: Chance acts inside a cabinet someone has already designed
+SOURCE: Michael Newman, “Art as ‘Operation’: from Lovelace and Mallarmé to Adversarial Poetry,” Adversarial Poetry symposium, Ca’ Foscari, October 1, 2026. Recording description and conference programme. The spoken transcript was unavailable.
+
+PASSAGE:
+[PARAPHRASE — recording description] In Mallarmé’s notes for Le Livre, an operator places pages in a lacquer cabinet by chance within a designated numerical constraint. Newman reads the arrangement alongside Lovelace’s account of operations that alter relations among things.
+
+RESEARCH OBJECT:
+The division between selecting the possible arrangements and selecting a particular arrangement.
+
+LOCAL MOVE:
+Newman places the making of the work in the execution of a procedure. The page, cabinet, numerical constraint, and operator all participate.
+
+SOURCE TERMS:
+Operator, operating notation, contingency, calculation, Le Livre.
+
+WHAT BECAME STRANGE:
+The author’s withdrawal from choosing each arrangement can make earlier choices about the procedure more consequential. Someone still decides what can move and under what conditions.
+
+QUESTION:
+When a prompt delegates a decision to chance, where does the user specify the boundary of that delegation?
+
+MECHANISM:
+A rule sets the range of allowable moves. An operator makes a contingent choice within that range. The material arrangement determines how that choice becomes available to a reader or audience.
+
+FORMAL SHIFT:
+&lt;pages and cabinet&gt; → &lt;allowable placements&gt; → [select and execute one arrangement] → &lt;performed book&gt;.
+
+SOURCE FORMALISM:
+The description specifies page placement and a numerical constraint. It leaves the exact selection procedure and distribution open.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX] Separate the units that may change, the constraints that persist, and the action that selects one realized outcome.
+
+TENSION:
+A. An operative description can carry the work across executors.
+B. The cabinet and the performer’s handling are part of what makes the result this work.
+
+MISSING:
+Which constraints are explicit in Mallarmé’s notes and which belong to Newman’s reconstruction.
+
+BOUNDARY:
+Newman’s comparison puts Lovelace and Mallarmé in relation. It supplies no evidence of direct influence. The Le Livre procedure concerns a projected performance described in notes.
+
+CITATION TRAIL:
+Mallarmé’s Le Livre notes, Lovelace’s 1843 Notes on the Analytical Engine, and Sol LeWitt’s wall-drawing instructions as a comparison for how much discretion a score gives its executor.
+
+TEST:
+Have two operators follow the same page arrangement rule. Repeat with a paper cabinet and a digital one. Record which decisions transfer with the rule and which have to be made again because the medium changed.
+
+PLATFORM:
+[[Operation / Describe]]
+
+LINKS:
+[[WTW-01]] [[WTW-04]] [[Score and execution]]
+
+BIBTEX:
+@misc{newman2026operation,
+  author = {Newman, Michael},
+  title = {Art as `{Operation}&#x27;: From Lovelace and Mallarm{\&#x27;e} to Adversarial Poetry},
+  year = {2026},
+  howpublished = {Adversarial Poetry symposium, Ca&#x27; Foscari University of Venice, October 1},
+  url = {https://www.youtube.com/watch?v=ce3rNpXdu30}
+}
+</pre></article><article><h2>WTW-03 · The alien needed something the actors could respond to</h2><pre>ZETTEL
+
+ID: WTW-03
+TITLE: The alien needed something the actors could respond to
+SOURCE: Denis Villeneuve and Nina Beguš, Arrival anniversary conversation, Academy Museum, November 2, 2026. Recording, approximately 15:25–17:30.
+
+PASSAGE:
+[PARAPHRASE — recording transcript] Beguš asks how Villeneuve brought the aliens to life. Villeneuve describes puppeteers casting shadows on the screen during shooting so Amy Adams and Jeremy Renner had a presence to act against.
+
+RESEARCH OBJECT:
+An on-set cue that gives an actor a counterpart before the audience sees the finished creature.
+
+LOCAL MOVE:
+Asked how the film made the aliens believable, Villeneuve gives a production account centered on the actors’ capacity to enter a relationship with a presence.
+
+SOURCE TERMS:
+Shadows, screen, presence, belief, relationship.
+
+WHAT BECAME STRANGE:
+A shadow can be visually underspecified and still tell an actor something precise about when and where to attend.
+
+QUESTION:
+What does a scene description have to turn into so a performer can respond as if another being is there?
+
+MECHANISM:
+Puppeteers produce a perceptible event on the set. The actors can use its location, timing, and movement in their performance. The audience later encounters the creature partly through those recorded responses.
+
+FORMAL SHIFT:
+&lt;fictional encounter&gt; → &lt;shadow moving on the screen&gt; → [actor attends and responds] → &lt;recorded encounter&gt;.
+
+SOURCE FORMALISM:
+NONE. The conversation supplies a production procedure and Villeneuve’s interpretation of its effect.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX] Separate the cue available to the performer from the image available to the audience. Track which cues the performance visibly depends on.
+
+TENSION:
+A. The shadow shaped the actors’ timing and attention.
+B. The performers could have produced a comparably convincing encounter from a static mark and verbal direction.
+
+MISSING:
+Rehearsal footage or matched takes showing which actions responded to the puppetry.
+
+BOUNDARY:
+Villeneuve’s account establishes what was done on set. Its causal contribution to the finished performance remains a testable inference.
+
+CITATION TRAIL:
+The Academy Museum event page and the film’s production material. Compare the filmed performances with the physical cues available during shooting.
+
+TEST:
+Stage the same first-contact beat twice with identical dialogue, blocking, and camera placement. Give one performer a live moving shadow and the other a fixed eyeline mark. Compare the timing of gaze, pauses, and reciprocal gestures.
+
+PLATFORM:
+[[Operation / Describe]]
+
+LINKS:
+[[WTW-01]] [[WTW-02]] [[Scene as interface]]
+
+BIBTEX:
+@misc{villeneuvebegus2026arrival,
+  author = {Villeneuve, Denis and Begu{\v{s}}, Nina},
+  title = {{Arrival}: A Conversation with Denis Villeneuve and Dr. Nina Begu{\v{s}}},
+  year = {2026},
+  howpublished = {Academy Museum of Motion Pictures, November 2},
+  url = {https://www.youtube.com/watch?v=7QoS5uK52DY}
+}
+</pre></article><article><h2>WTW-04 · Before a task can be automated, someone decides what counts as a step</h2><pre>ZETTEL
+
+ID: WTW-04
+TITLE: Before a task can be automated, someone decides what counts as a step
+SOURCE: ERC AIMODELS, “The Culture of Algorithmic Models: Advancing the Historical Epistemology of Artificial Intelligence,” project homepage, Ca’ Foscari University of Venice, 2024–2028.
+
+PASSAGE:
+[PARAPHRASE] The project links automation to earlier practices of formalizing and measuring labor, language, knowledge, and social relations. Its Babbage example connects the organization of mental work to the design of calculating machinery.
+
+RESEARCH OBJECT:
+A division of work that becomes a division of operations in a machine.
+
+LOCAL MOVE:
+AIMODELS traces models of intelligence through the practices that made work countable, divisible, and comparable.
+
+SOURCE TERMS:
+Formalisation, measurement, division of labour, models of intelligence, historical epistemology.
+
+WHAT BECAME STRANGE:
+A prompt can appear to begin the operation even when the available actions and measures of success were established long before anyone wrote it.
+
+QUESTION:
+Which parts of a supposedly new linguistic operation inherit a prior division of labor, and which parts reorganize it?
+
+MECHANISM:
+A practice is divided into tasks. Some distinctions become records, measures, or instructions. A technical system can execute the represented steps while other decisions remain with operators, editors, or evaluators.
+
+FORMAL SHIFT:
+&lt;organized work&gt; → &lt;named and measurable tasks&gt; → [encode selected steps and criteria] → &lt;executable operation with remaining human decisions&gt;.
+
+SOURCE FORMALISM:
+NONE. The homepage proposes a historical research programme.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX] For a single operation, trace who supplies the input, defines a successful result, and repairs exceptions before and after automation.
+
+TENSION:
+A. The machine inherits a preexisting organization of work.
+B. The machine’s requirements produce new tasks and new divisions of responsibility.
+
+MISSING:
+An artifact-level chain connecting a specific work instruction or measurement practice to a specific machine operation.
+
+BOUNDARY:
+The homepage motivates the genealogy. Each historical connection still needs documentary evidence of what traveled and through which artifact.
+
+CITATION TRAIL:
+Follow the project’s Babbage references and its account of Peter Damerow. Within the conference record, trace the move from language automation at Chat Token Vector (2025) to poetry as a way of probing linguistic operations at Adversarial Poetry (2026).
+
+TEST:
+Choose one calculation in the Babbage case. Compare the human work instructions, recorded intermediate results, and corresponding machine procedure. Mark every decision that survives, disappears, or changes hands.
+
+PLATFORM:
+[[Historical epistemology of operations]]
+
+LINKS:
+[[WTW-02]] [[Operation / Describe]] [[Who defines the operator?]]
+
+BIBTEX:
+@misc{aimodelsProject,
+  author = {{ERC AIMODELS}},
+  title = {The Culture of Algorithmic Models: Advancing the Historical Epistemology of Artificial Intelligence},
+  howpublished = {Ca&#x27; Foscari University of Venice, ERC grant 101088645},
+  note = {Project period 2024--2028},
+  url = {https://pric.unive.it/projects/ai-models/home}
+}
+</pre></article><article><h2>AP-01 · The cabinet fixes the destinations and leaves the allocation open</h2><pre>ZETTEL
+
+ID: AP-01
+TITLE: The cabinet fixes the destinations and leaves the allocation open
+
+SOURCE: Michael Newman — Art as ‘Operation’: from Lovelace and Mallarmé to Adversarial Poetry — 2026 — discussion of Le Livre in the supplied transcript. Ca’ Foscari’s program verifies the attribution and date.
+
+PASSAGE: [QUOTE, supplied transcript] “which shelves the pages are to be placed on would be decided by a personage.” Newman says the shelf count and the number of pages per shelf are fixed.
+
+RESEARCH OBJECT: The rule that assigns a page to a shelf.
+
+LOCAL MOVE: Newman reads the cabinet, pages, operator, and attendees as an apparatus that brings the book into existence through performance.
+
+SOURCE TERMS: Le Lecteur, L’Opérateur, chance, “total format.”
+
+WHAT BECAME STRANGE: A fixed number of destinations and places per destination leaves open how anyone chooses among eligible destinations. The gap is precisely where the reader becomes an operator.
+
+QUESTION: Does the operator draw lots, exercise judgment, or follow a sequencing rule that Newman has compressed into “chance”?
+
+DEEPER QUESTION: If two allocation rules produce the same arrangement, do they realize the same book?
+
+MECHANISM: The cabinet limits the possible allocations. The operator assigns pages within those limits. The significance of the resulting placement still depends on what the performance does with it.
+
+FORMAL SHIFT: &lt;loose pages&gt; → &lt;pages eligible for placement in fixed-capacity slots&gt; → [allocate under constraints] → &lt;a realized arrangement&gt;
+
+SOURCE FORMALISM: Newman reports quantities and roles. The talk supplies no sampling rule.
+
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Model shelf capacity and the rule for selecting the next shelf as independent variables.
+
+TENSION: Newman likens the cabinet to a Wooton filing desk. Filing ordinarily preserves an address for retrieval. The proposed performance may use placement to create a sequence for reading. The same compartments could support either operation.
+
+MISSING: A manuscript instruction specifying how placement is chosen and what placement does to reading order. Newman’s Wooton date also needs checking against the specific model: the cited secretary design was patented in 1874.
+
+BOUNDARY: The comparison establishes a functional resemblance worth testing. Direct influence from Wooton, Babbage, or Lovelace remains unverified.
+
+CITATION TRAIL: Scherer’s 1957 edition of the Livre materials, as catalogued by the BnF. Wooton’s U.S. Patent 155,604, especially its specification for the compartments.
+
+TEST: Find one manuscript leaf that permits two legal placements. Check whether an adjacent instruction specifies how the operator chooses between them and whether that choice changes the performance.
+
+PLATFORM: [[Authorship as control of conditions]]
+LINKS: [[Allocation versus retrieval]] · [[Chance and standards]] · [[Execution as interpretation]]
+
+BIBTEX:
+@misc{Newman2026Operation,
+  author = {Newman, Michael},
+  title = {Art as `Operation&#x27;: from Lovelace and Mallarmé to Adversarial Poetry},
+  year = {2026},
+  howpublished = {Adversarial Poetry symposium, Ca&#x27; Foscari University of Venice, 1 October},
+  note = {Supplied talk transcript. URL identifies the program},
+  url = {https://www.unive.it/web/en/19108/home}
+}
+@book{Scherer1957Livre,
+  author = {Scherer, Jacques},
+  title = {Le ``Livre&#x27;&#x27; de Mallarmé: Premières recherches sur des documents inédits},
+  publisher = {Gallimard},
+  year = {1957},
+  url = {https://catalogue.bnf.fr/ark:/12148/cb326102938}
+}
+@misc{Wooton1874Secretaries,
+  author = {Wooton, William S.},
+  title = {Improvement in Secretaries},
+  year = {1874},
+  howpublished = {U.S. Patent 155,604},
+  url = {https://patents.google.com/patent/US155604A/en}
+}</pre></article><article><h2>AP-02 · The work of making a relation executable can change what people see in it</h2><pre>ZETTEL
+
+ID: AP-02
+TITLE: The work of making a relation executable can change what people see in it
+
+SOURCE: Ada Lovelace — Notes to Menabrea’s Sketch of the Analytical Engine — 1843 — Note G. Newman quotes the opening claim about origination in his 2026 talk.
+
+PASSAGE: [QUOTE] “it is likely to exert an indirect and reciprocal influence on science itself in another manner.”
+
+RESEARCH OBJECT: The feedback from preparing a formalism for execution to investigating the subject being formalized.
+
+LOCAL MOVE: After assigning executive powers to the engine, Lovelace considers what reorganizing mathematical relations for the engine might do to mathematical inquiry.
+
+SOURCE TERMS: “executive faculties,” “mechanical combinations,” “reciprocal influence.”
+
+WHAT BECAME STRANGE: The discovery Lovelace imagines can begin while people are deciding how to express the relations for the machine. It need never appear in an output.
+
+QUESTION: Where should a history of computational origination look for a new idea: in the machine’s result, in the representation built for it, or in the subsequent work of interpreting either?
+
+MECHANISM: People reorganize formulae for mechanical combination. The reorganization makes different relations available for inspection. Investigators can pursue a relation that was harder to see in its previous form.
+
+FORMAL SHIFT: &lt;known mathematical relations&gt; → &lt;arrangement suitable for the engine&gt; → [redistribute and combine] → &lt;relations newly exposed to inquiry&gt;
+
+SOURCE FORMALISM: Note G gives a conceptual account of this feedback and separately works through the Bernoulli-number example. It presents the scientific feedback as a speculative consequence.
+
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Record what becomes visible at three points: writing the representation, executing it, and examining the result.
+
+TENSION: Newman invokes origination to ask whether a machine can discover or adopt a new frame. Note G also locates changes of frame in the work people do to make calculation possible.
+
+MISSING: A documented case where the preparation for execution produced an identifiable mathematical insight.
+
+BOUNDARY: The passage proposes a mechanism for discovery across people and machinery. Its operation in any particular case requires evidence.
+
+CITATION TRAIL: Read the opening of Note G with its paragraphs on reciprocal influence. Compare Turing’s treatment of the Lovelace objection and his turn toward surprise in §6(6).
+
+TEST: Reconstruct one dependency in the Bernoulli calculation twice, first from the algebra and then from Lovelace’s table. Identify a relation visible in one representation and see whether the other already makes it explicit.
+
+PLATFORM: [[Where computational discovery happens]]
+LINKS: [[Authorship as control of conditions]] · [[Representation as research labor]] · [[Origination and surprise]]
+
+BIBTEX:
+@misc{Lovelace1843Notes,
+  author = {Lovelace, Ada},
+  title = {Notes to Menabrea&#x27;s Sketch of the Analytical Engine},
+  year = {1843},
+  note = {Note G},
+  url = {https://psychclassics.yorku.ca/Lovelace/lovelace.htm}
+}
+@article{Turing1950Computing,
+  author = {Turing, Alan M.},
+  title = {Computing Machinery and Intelligence},
+  journal = {Mind},
+  year = {1950},
+  volume = {59},
+  number = {236},
+  pages = {433--460},
+  doi = {10.1093/mind/LIX.236.433}
+}</pre></article><article><h2>AP-03 · Chance supplies a curve that someone must authorize as a standard</h2><pre>ZETTEL
+
+ID: AP-03
+TITLE: Chance supplies a curve that someone must authorize as a standard
+
+SOURCE: Michael Newman — Art as ‘Operation’ — 2026 — discussion of Duchamp’s 3 Standard Stoppages in the supplied transcript. MoMA’s object record identifies the threads and wooden templates.
+
+PASSAGE: [QUOTE, supplied transcript] “what constitutes a standard is a result of a performative that is ultimately a social act.”
+
+RESEARCH OBJECT: The adoption of a contingent trace as an instrument of measure.
+
+LOCAL MOVE: Newman separates the fall of the thread from the act of taking its shape as a standard.
+
+SOURCE TERMS: chance, measure, standard, performative, contingency.
+
+WHAT BECAME STRANGE: The procedure begins with the meter already in force. The fixed unit supplies the material for making a rival instrument that looks like it could authorize a unit of its own.
+
+QUESTION: Where does the work’s claim to authority reside: in the drop protocol, the transfer to a template, the presentation of the object, or someone’s willingness to measure with it?
+
+MECHANISM: A one-meter thread takes a shape. The shape is preserved and transferred to wood. The new template makes the trace available for repeated use and invites a comparison with a conventional standard.
+
+FORMAL SHIFT: &lt;unit-length thread&gt; → &lt;preserved curve&gt; → [transfer to a template and designate] → &lt;candidate standard&gt;
+
+SOURCE FORMALISM: The museum account specifies the thread length and drop height and describes the transfer of the curve. The process for authorizing a new standard is Newman&#x27;s interpretive question.
+
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Distinguish generating a trace, preserving it, and authorizing reuse. Any of those steps could vary independently.
+
+TENSION: The strongest rival reading is that the authority is deliberately theatrical. The templates can expose the contingency of standards even if nobody could or would use them as standards.
+
+MISSING: Evidence about which features of the preserved traces resulted from the drop and which resulted from mounting or selection.
+
+BOUNDARY: The finished objects show preservation and transfer. The fidelity of each trace to an unaided fall requires separate evidence.
+
+CITATION TRAIL: Compare MoMA’s object record with Duchamp’s questionnaire and Herbert Molderings’s reconstruction of the work.
+
+TEST: Take one feature visible in the surviving assembly and ask whether it could distinguish a free-fall trace from a mounted or adjusted one. Then ask which reading of the work, if either, actually depends on that distinction.
+
+PLATFORM: [[Chance and standards]]
+LINKS: [[Allocation versus retrieval]] · [[Protocol versus authorization]] · [[Contingency in executable art]]
+
+BIBTEX:
+@misc{Newman2026Operation,
+  author = {Newman, Michael},
+  title = {Art as `Operation&#x27;: from Lovelace and Mallarmé to Adversarial Poetry},
+  year = {2026},
+  note = {Supplied talk transcript, Duchamp discussion},
+  url = {https://www.unive.it/web/en/19108/home}
+}
+@misc{MoMAStoppages,
+  author = {{Museum of Modern Art}},
+  title = {Marcel Duchamp: 3 Standard Stoppages},
+  note = {Collection object 78990},
+  url = {https://www.moma.org/collection/works/78990}
+}</pre></article><article><h2>AP-04 · A score can specify the boundary of an event and leave its contents to the room</h2><pre>ZETTEL
+
+ID: AP-04
+TITLE: A score can specify the boundary of an event and leave its contents to the room
+
+SOURCE: Michael Newman — Art as ‘Operation’ — 2026 — Cage discussion in the supplied transcript. John Cage — 4′33″ (In Proportional Notation) — MoMA collection record.
+
+PASSAGE: [PARAPHRASE] Newman treats Tudor’s piano-lid movements as temporal markers that draw attention to sounds occurring within the marked interval. MoMA distinguishes the premiere from the surviving proportional score, where spatial distances encode durations.
+
+RESEARCH OBJECT: The relation between a score’s duration, the performer’s boundary cues, and the listener’s attention.
+
+LOCAL MOVE: Newman treats strict timing and environmental contingency as mutually enabling.
+
+SOURCE TERMS: measures, contingency, graphic score, interpretation.
+
+WHAT BECAME STRANGE: The score, the gestures that announce its sections, and the audible event can vary independently. A system can reproduce the duration and leave listeners unable to tell when the work begins.
+
+QUESTION: Which part of a performance makes incidental sound available as something an audience can hear as the work?
+
+MECHANISM: A score specifies temporal divisions. A performer makes divisions perceptible. Listeners may then attend to sounds they would otherwise treat as interruptions or background.
+
+FORMAL SHIFT: &lt;duration&gt; → &lt;spatial intervals on the surviving score&gt; → [mark an interval in performance] → &lt;occasion for listening&gt;
+
+SOURCE FORMALISM: The surviving score maps spacing to duration. Tudor’s lid gestures are documented performance actions.
+
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Separate the timer, the boundary cue, the acoustic field, and the listener’s uptake.
+
+TENSION: Newman contrasts graphic scores with player-piano instructions. This particular graphic score encodes timing precisely. The openness under examination lies in the room and in how performers and listeners take up the frame.
+
+MISSING: A way to distinguish what changes because a cue is perceived from what changes because people already know they are at a performance of Cage.
+
+BOUNDARY: The piano lid documents one realization. Its necessity for the work is an open question.
+
+CITATION TRAIL: Compare the MoMA manuscript and performance account with Irwin Kremen’s discussion of proportional notation at the John Cage Trust.
+
+TEST: Present the same recording with and without perceptible movement boundaries. Ask listeners to mark when a given ambient sound became part of the event, then compare their accounts with their prior knowledge of the piece.
+
+PLATFORM: [[Scores that delegate to an environment]]
+LINKS: [[Execution as interpretation]] · [[Same words under a different frame]] · [[Contingency in executable art]]
+
+BIBTEX:
+@misc{Newman2026Operation,
+  author = {Newman, Michael},
+  title = {Art as `Operation&#x27;: from Lovelace and Mallarmé to Adversarial Poetry},
+  year = {2026},
+  note = {Supplied talk transcript, Cage discussion},
+  url = {https://www.unive.it/web/en/19108/home}
+}
+@misc{Cage433Proportional,
+  author = {Cage, John},
+  title = {4&#x27;33&#x27;&#x27; (In Proportional Notation)},
+  year = {1953},
+  note = {Surviving proportional score, Museum of Modern Art object 1636.2012},
+  url = {https://www.moma.org/collection/works/163616}
+}</pre></article><article><h2>AP-05 · A line can obey the instruction and fail the installation</h2><pre>ZETTEL
+
+ID: AP-05
+TITLE: A line can obey the instruction and fail the installation
+
+SOURCE: Michael Newman — Art as ‘Operation’ — 2026 — LeWitt discussion in the supplied transcript. MASS MoCA — Wall Drawing 159 — installation account.
+
+PASSAGE: [QUOTE, supplied transcript] “the concept is material and the execution by hand involves embodied intellect.”
+
+RESEARCH OBJECT: A decision the draftsman makes on site that a written instruction delegates.
+
+LOCAL MOVE: Newman complicates the division between conception and execution. MASS MoCA’s account supplies an instance where earlier solutions can serve as templates while later draftspeople still interpret the instruction.
+
+SOURCE TERMS: conception, execution, embodied intellect, architectural context, draftsman.
+
+WHAT BECAME STRANGE: Two installations might satisfy a geometric reading of the instruction and differ in whether they qualify as realizations of the same work. Exact geometric compliance and institutional acceptance are separate questions.
+
+QUESTION: Which choices are left to the draftsman, and who decides whether a choice exceeds that discretion?
+
+MECHANISM: The instruction refers to geometric features. A draftsman identifies those features in a material setting, resolves ambiguities, and draws. The installation is then taken up as a realization of the work.
+
+FORMAL SHIFT: &lt;written geometric instruction&gt; → &lt;references located in a wall drawing&gt; → [interpret and draw] → &lt;site-specific realization&gt;
+
+SOURCE FORMALISM: MASS MoCA describes constructions using corners, side midpoints, and the center. Its public account does not provide a complete acceptance procedure.
+
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Give one implementation an explicit rule for every geometric ambiguity. Ask an experienced draftsman to mark the cases in which following that rule would produce a doubtful realization.
+
+TENSION: Newman calls the LeWitt instruction algorithm-like and the Fluxus score prompt-like. A LeWitt instruction can already delegate interpretation. Degree and location of delegation may distinguish particular works better than those two labels.
+
+MISSING: An example of an installation decision that was rejected, revised, or explicitly accepted after disagreement.
+
+BOUNDARY: Physical variation alone cannot tell us which choices were understood as interpretation, error, or authorized adaptation.
+
+CITATION TRAIL: MASS MoCA’s account of Wall Drawing 159. Follow the first-installation documentation and later installation records for the same work.
+
+TEST: Compare two documented realizations. Find one visible difference and trace it back to the instruction, the local surface, or an installer’s recorded decision.
+
+PLATFORM: [[Execution as interpretation]]
+LINKS: [[Scores that delegate to an environment]] · [[Protocol versus authorization]] · [[Authorship as control of conditions]]
+
+BIBTEX:
+@misc{Newman2026Operation,
+  author = {Newman, Michael},
+  title = {Art as `Operation&#x27;: from Lovelace and Mallarmé to Adversarial Poetry},
+  year = {2026},
+  note = {Supplied talk transcript, LeWitt discussion},
+  url = {https://www.unive.it/web/en/19108/home}
+}
+@misc{MASSMoCALeWitt159,
+  author = {{MASS MoCA}},
+  title = {Wall Drawing 159},
+  note = {Installation account for Sol LeWitt&#x27;s April 1973 work},
+  url = {https://massmoca.org/event/walldrawing159/}
+}</pre></article><article><h2>AP-06 · In The House of Dust, selection turns one generated result into a score</h2><pre>ZETTEL
+
+ID: AP-06
+TITLE: In The House of Dust, selection turns one generated result into a score
+
+SOURCE: Michael Newman — Art as ‘Operation’ — 2026 — Knowles discussion in the supplied transcript. BAMPFA exhibition materials and the CalArts account supply the four fields, James Tenney’s role, and the selection of one quatrain for construction.
+
+PASSAGE: [PARAPHRASE] Knowles and Tenney generated quatrains from lists of materials, sites, light sources, and inhabitants. One quatrain became the basis of a public structure that hosted further work.
+
+RESEARCH OBJECT: The decision to give a sampled line or stanza a new status.
+
+LOCAL MOVE: Newman follows a generated poem into a structure and the social activities it accommodates.
+
+SOURCE TERMS: operation, conviviality, open structure. The BAMPFA account describes the selected quatrain as a score.
+
+WHAT BECAME STRANGE: “Inhabitants” begins as a field in a vocabulary list. After construction, people can inhabit the structure, organize events, contest its presence, or leave. The building gives the word consequences the list did not have to specify.
+
+QUESTION: Did the selected quatrain prescribe the built work, or did its selection authorize a new design process?
+
+MECHANISM: Compile lists → generate quatrains → select one → interpret it as a design brief → build a structure → open it to further activity. The transition from sampling to selection changes who can act on the work.
+
+FORMAL SHIFT: &lt;lists of phrases&gt; → &lt;generated quatrain&gt; → [select and interpret as a score] → &lt;site for participation&gt;
+
+SOURCE FORMALISM: Four ordered fields with random selection are documented. The sources consulted do not specify the random-number procedure or a translation algorithm from verse to building.
+
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Follow each line through the stages and mark when it functions as a descriptor, a constraint, an affordance, or an invitation.
+
+TENSION: The CalArts account describes both opposition at the New York site and later performances at CalArts. Conviviality was a possible outcome of the social setting. It was never guaranteed by the generated text.
+
+MISSING: A record of why this quatrain was selected and what the builders regarded as binding in each line.
+
+BOUNDARY: The quatrain’s role as a score is documented. A one-to-one correspondence between its fields and the installation’s features remains to be established.
+
+CITATION TRAIL: Compare the surviving printout, construction records, and evidence of activations at the two sites. Check the programming history for Tenney’s role before assigning the computational work.
+
+TEST: Choose the light-source line. Find a drawing or installation description and determine whether the line prescribed lighting, suggested a sensor input, or acquired a different function during design.
+
+PLATFORM: [[When a generated result becomes an instruction]]
+LINKS: [[Scores that delegate to an environment]] · [[Selection after chance]] · [[Participation after execution]]
+
+BIBTEX:
+@misc{Newman2026Operation,
+  author = {Newman, Michael},
+  title = {Art as `Operation&#x27;: from Lovelace and Mallarmé to Adversarial Poetry},
+  year = {2026},
+  note = {Supplied talk transcript, Knowles discussion},
+  url = {https://www.unive.it/web/en/19108/home}
+}
+@misc{Taylor2009HouseOfDust,
+  author = {Taylor, Scott},
+  title = {Alison Knowles, James Tenney and the House of Dust at CalArts},
+  year = {2009},
+  url = {https://blog.calarts.edu/2009/09/10/alison-knowles-james-tenney-and-the-house-of-dust-at-calarts/}
+}</pre></article><article><h2>AP-07 · The same image can guide, document, and expose an operation</h2><pre>ZETTEL
+
+ID: AP-07
+TITLE: The same image can guide, document, and expose an operation
+
+SOURCE: Michael Newman — Art as ‘Operation’ — 2026 — Farocki discussion in the supplied transcript. Citation trail verified to Harun Farocki’s “Phantom Images.”
+
+PASSAGE: [QUOTE, supplied transcript] “what an image does or activates within a technical circuit.”
+
+RESEARCH OBJECT: The role a particular copy or feed plays in an operation.
+
+LOCAL MOVE: Newman follows the move from an image’s depicted content to its causal function, then invokes broadcast and gallery contexts that give the footage new audiences.
+
+SOURCE TERMS: operational image, feedback, technical circuit, machines for machines.
+
+WHAT BECAME STRANGE: A visually unchanged sequence can participate in guidance, be released as evidence, and become material for a critical montage. Its operative status can change at each handoff.
+
+QUESTION: Which copy of the image entered the guidance circuit, and what can the televised copy establish about that role?
+
+MECHANISM: A feed can inform an action when it reaches an operator or component able to change a state. A recording or copy can later be routed to viewers and used to support a different claim or action.
+
+FORMAL SHIFT: &lt;sensor image&gt; → &lt;signal, record, or broadcast copy&gt; → [route to a recipient able to act] → &lt;guidance, public narration, or critical scrutiny&gt;
+
+SOURCE FORMALISM: The supplied talk describes the guidance function. It gives no system diagram identifying the consumers of the signal or the point where a recording was made.
+
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Treat “operational” as a relation among an image, a recipient, and an action at a specified stage.
+
+TENSION: The phrase “machines for machines” directs attention to automation. Depending on the system, human operators, telemetry, autonomous guidance, and public-affairs personnel can occupy different points in the image’s path.
+
+MISSING: Provenance for one specific sequence and technical evidence identifying the actors or components that used its live feed.
+
+BOUNDARY: A broadcast clip establishes that footage reached a public circuit. Its role in steering or targeting requires evidence from the original system.
+
+CITATION TRAIL: Farocki’s “Phantom Images,” p. 17, then the provenance and documentation of a single sequence reused in Eye/Machine.
+
+TEST: Trace one clip from acquisition through release. At each documented handoff, ask what decision or physical action would have changed if the feed or copy had been withheld.
+
+PLATFORM: [[The same artifact in several circuits]]
+LINKS: [[A score becomes an event]] · [[Adversarial for whom]] · [[Where an operation happens]]
+
+BIBTEX:
+@misc{Newman2026Operation,
+  author = {Newman, Michael},
+  title = {Art as `Operation&#x27;: from Lovelace and Mallarmé to Adversarial Poetry},
+  year = {2026},
+  note = {Supplied talk transcript, Farocki discussion},
+  url = {https://www.unive.it/web/en/19108/home}
+}
+@article{Farocki2004Phantom,
+  author = {Farocki, Harun},
+  title = {Phantom Images},
+  journal = {Public},
+  year = {2004},
+  number = {29},
+  pages = {12--22}
+}</pre></article><article><h2>AP-08 · Fooling a discriminator and bypassing a refusal count as different successes</h2><pre>ZETTEL
+
+ID: AP-08
+TITLE: Fooling a discriminator and bypassing a refusal count as different successes
+
+SOURCE: Michael Newman — Art as ‘Operation’ — 2026 — Paglen discussion in the supplied transcript. Trevor Paglen — Hallucinations — 2020 — artist’s account. Bisconti et al. — Adversarial Poetry — 2026 revision — §5.3.
+
+PASSAGE: [PARAPHRASE] Newman asks whether Paglen’s synthetic images and adversarial poems both reveal a failure to recognize what kind of thing is being presented.
+
+RESEARCH OBJECT: The evaluator whose response defines success in each adversarial setup.
+
+LOCAL MOVE: Newman uses an artistic experiment with machine vision to pose a question about generic recognition in language models.
+
+SOURCE TERMS: generator, discriminator, hallucination, generic categorization, illicit request.
+
+WHAT BECAME STRANGE: The discriminator’s acceptance can be the intended outcome of the GAN’s training game. In the poetry benchmark, an unsafe response becomes an attack success through a separate evaluation of the target’s output.
+
+QUESTION: At what point in either system does a machine have to misidentify the genre of the input for the observed result to occur?
+
+MECHANISM: Paglen describes a generator repeatedly producing images against a discriminator trained on a curated corpus. In the poetry benchmark, the target responds to a single input and an evaluator labels the resulting answer.
+
+FORMAL SHIFT: &lt;generated candidate&gt; → &lt;input to a decision process&gt; → [apply the task’s success criterion] → &lt;discriminator acceptance or externally scored unsafe output&gt;
+
+SOURCE FORMALISM: Paglen supplies a description of the generator and discriminator roles. Bisconti et al. define attack success rate as the proportion of outputs labeled unsafe.
+
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Draw the producer, target, and evaluator separately for each setup. Mark where feedback enters and whose objective the result satisfies.
+
+TENSION: A model could correctly identify an input as verse and correctly identify what is being requested, then still choose an inappropriate response. A synthetic image can satisfy a discriminator without demonstrating an error about whether its depicted subject exists.
+
+MISSING: Independent observations of genre recognition, intent recognition, and decision policy for the same language-model outputs.
+
+BOUNDARY: The parallel supports comparing evaluation arrangements. A shared failure of metacognition remains a hypothesis.
+
+CITATION TRAIL: Paglen’s account of his curated corpora and the generator’s interaction with the discriminator. Bisconti et al., §§5.3 and 6.5, for the separation of measurement and mechanism.
+
+TEST: In a harmless surrogate task, score genre recognition, requested-action recognition, and permission compliance separately. A correctly identified poem with a correctly identified request and the wrong permission decision is enough to defeat a genre-misidentification requirement.
+
+PLATFORM: [[Adversarial for whom]]
+LINKS: [[What the verse rewrite changes]] · [[Recognition versus control]] · [[The same artifact in several circuits]]
+
+BIBTEX:
+@misc{Newman2026Operation,
+  author = {Newman, Michael},
+  title = {Art as `Operation&#x27;: from Lovelace and Mallarmé to Adversarial Poetry},
+  year = {2026},
+  note = {Supplied talk transcript, Paglen discussion},
+  url = {https://www.unive.it/web/en/19108/home}
+}
+@misc{Paglen2020Hallucinations,
+  author = {Paglen, Trevor},
+  title = {Hallucinations},
+  year = {2020},
+  url = {https://paglen.studio/2020/04/09/hallucinations/}
+}
+@misc{Bisconti2026Poetry,
+  author = {Bisconti, Piercosma and others},
+  title = {Adversarial Poetry as a Universal Single-Turn Jailbreak Mechanism in Large Language Models},
+  year = {2026},
+  note = {arXiv:2511.15304, version 3},
+  url = {https://arxiv.org/html/2511.15304v3}
+}</pre></article><article><h2>AP-09 · The verse rewrite changes more than the shape of the lines</h2><pre>ZETTEL
+
+ID: AP-09
+TITLE: The verse rewrite changes more than the shape of the lines
+
+SOURCE: Piercosma Bisconti et al. — Adversarial Poetry as a Universal Single-Turn Jailbreak Mechanism in Large Language Models — 2026 revision — §§5.2, 5.3, 6.5. Read against Newman’s discussion of the duck-rabbit and prose poetry.
+
+PASSAGE: [QUOTE] The exemplars include “the pattern of concluding with a clear instruction line.”
+
+RESEARCH OBJECT: The set of features changed together by the prose-to-verse transformation.
+
+LOCAL MOVE: The benchmark creates paired inputs and checks preservation of the hazard category. Its methods describe a transformation that can also change imagery, rhythm, narrative setup, and the location of the directive.
+
+SOURCE TERMS: stylistic exemplars, original task intent, taxonomy preservation, attack success rate.
+
+WHAT BECAME STRANGE: A poem can make the request more legible by putting it at the end of an elaborate frame. The performance difference can coexist with clearer wording of the actual directive.
+
+QUESTION: How much of the effect travels with poetic form, and how much travels with the placement or pragmatic force of the request?
+
+MECHANISM: The rewrite changes several features at once. The target receives the whole rewritten input. Output scoring captures the combined behavioral effect of those changes.
+
+FORMAL SHIFT: &lt;baseline request&gt; → &lt;paired rewritten input&gt; → [score the resulting response] → &lt;estimated effect of the rewrite bundle&gt;
+
+SOURCE FORMALISM: One standardized generation procedure, category-preservation checks, single-turn trials, and output scoring. Section 6.5 explicitly leaves the contribution of individual features unresolved.
+
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Cross lineation, figurative wording, and directive position. Measure perceived genre and perceived request strength independently before scoring responses.
+
+TENSION: The prose-poetry case makes genre possible without recognizable verse markers. The benchmark’s operational definition may capture a reproducible family of rewrites while leaving that literary distinction open.
+
+MISSING: Crossed controls that preserve the exact directive and independently vary visible verse form, figurative language, and framing.
+
+BOUNDARY: The paired results establish a vulnerability to the tested transformation. A single causal property called “poetry” remains unidentified.
+
+CITATION TRAIL: Bisconti et al., §§5.2 and 6.5. Newman’s question about whether prose poetry can be identified through stylistic features supplies the boundary case.
+
+TEST: Use an inert permission task. Compare an identical directive in prose and verse layouts, each with the directive either embedded or placed at the end. Have blinded readers rate the perceived request and genre separately.
+
+PLATFORM: [[What the verse rewrite changes]]
+LINKS: [[Same words under a different frame]] · [[Recognition versus control]] · [[Adversarial for whom]]
+
+BIBTEX:
+@misc{Bisconti2026Poetry,
+  author = {Bisconti, Piercosma and others},
+  title = {Adversarial Poetry as a Universal Single-Turn Jailbreak Mechanism in Large Language Models},
+  year = {2026},
+  note = {arXiv:2511.15304, version 3},
+  url = {https://arxiv.org/html/2511.15304v3}
+}
+@misc{Newman2026Operation,
+  author = {Newman, Michael},
+  title = {Art as `Operation&#x27;: from Lovelace and Mallarmé to Adversarial Poetry},
+  year = {2026},
+  note = {Supplied talk transcript, prose poetry and duck-rabbit discussion},
+  url = {https://www.unive.it/web/en/19108/home}
+}</pre></article><article><h2>AP-10 · Recognizing a new frame and acting under it can come apart</h2><pre>ZETTEL
+
+ID: AP-10
+TITLE: Recognizing a new frame and acting under it can come apart
+
+SOURCE: Michael Newman — Art as ‘Operation’ — 2026 — concluding discussion in the supplied transcript. Johnson et al. — Imagining and Building Wise Machines — 2026 — independent citation trail on metacognition, coauthored by Melanie Mitchell.
+
+PASSAGE: [QUOTE, supplied transcript] “AI can produce metacognitive talk from its training, but lacks metacognitive control.” Newman attributes this distinction to Mitchell. The quoted wording is from Newman’s talk.
+
+RESEARCH OBJECT: An observable change in what a system does after it receives evidence that a different frame applies.
+
+LOCAL MOVE: Newman moves from failures of refusal toward a question about changing perspectives and selecting among models of a situation.
+
+SOURCE TERMS: “metacognitive talk,” “metacognitive control,” code switching, context adaptability, meta-relation.
+
+WHAT BECAME STRANGE: A system can explain a distinction convincingly and continue to act under the wrong rule. It can also act under the appropriate rule without giving a convincing explanation. A fluent transcript can conceal either pattern.
+
+QUESTION: What would show that a system can revise the frame governing its behavior when the evidence for the original frame no longer holds?
+
+DEEPER QUESTION: In code switching, a person may understand which norm applies and decline to follow it. How could a test distinguish perspective taking from compliance?
+
+MECHANISM: Evidence about provenance, authority, or purpose changes. A system interprets what that change means, selects or retains a rule, and acts. Those stages can be evaluated separately.
+
+FORMAL SHIFT: &lt;same utterance under changed circumstances&gt; → &lt;evidence about provenance and authority&gt; → [retain or revise the governing rule] → &lt;changed or stable action&gt;
+
+SOURCE FORMALISM: Newman proposes the distinction and cites examples. The transcript supplies no operational test or verified citation for the precise claim he attributes to Mitchell.
+
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Give the same sentence two roles, a quoted specimen and a live request. Change credible role evidence while holding the sentence constant. Score the action separately from the explanation and check whether the system can reverse its choice when the evidence changes again.
+
+TENSION: A system that passes may be applying a learned provenance cue. Transfer to unfamiliar kinds of evidence would support a broader interpretation. The talk’s question about social stakes and corporeality would still require a different kind of evidence.
+
+MISSING: The criterion that separates local rule switching, a general ability to reconsider a frame, and the social capacity to contest who gets to set it.
+
+BOUNDARY: The proposed test can establish behavioral sensitivity to a change of frame in specified conditions. It leaves the question of a fundamental human–machine boundary open.
+
+CITATION TRAIL: Johnson et al. for candidate definitions of metacognition. Return to the symposium materials to identify the exact Mitchell source behind Newman’s attribution.
+
+TEST: Run one harmless task with three steps: frame A, credible evidence for frame B, and a correction restoring A. Score the action at each step, then repeat with a different kind of provenance evidence. A polished explanation with an unchanged action separates two capacities the talk puts under pressure.
+
+PLATFORM: [[Recognition versus control]]
+LINKS: [[Same words under a different frame]] · [[Protocol versus authorization]] · [[What the verse rewrite changes]]
+
+BIBTEX:
+@misc{Newman2026Operation,
+  author = {Newman, Michael},
+  title = {Art as `Operation&#x27;: from Lovelace and Mallarmé to Adversarial Poetry},
+  year = {2026},
+  note = {Supplied talk transcript, concluding discussion},
+  url = {https://www.unive.it/web/en/19108/home}
+}
+@article{Johnson2026Metacognition,
+  author = {Johnson, Samuel G. B. and Karimi, Amir-Hossein and Bengio, Yoshua and Chater, Nick and Gerstenberg, Tobias and Larson, Kate and Levine, Sydney and Mitchell, Melanie and Rahwan, Iyad and Schölkopf, Bernhard and Grossmann, Igor},
+  title = {Imagining and Building Wise Machines: The Centrality of AI Metacognition},
+  journal = {Trends in Cognitive Sciences},
+  year = {2026},
+  volume = {30},
+  number = {10},
+  pages = {854--868},
+  doi = {10.1016/j.tics.2026.01.002}
+}</pre></article><article><h2>OD-01 · “Architectural points” tells the operator what to look for before it tells anyone what to draw</h2><pre>ZETTEL
+
+ID: OD-01
+
+TITLE: “Architectural points” tells the operator what to look for before it tells anyone what to draw
+
+SOURCE: Sol LeWitt — Wall Drawing 51 — 1970 — instruction and installation account at MASS MoCA. Michael Newman — Art as ‘Operation’ — 2026 — LeWitt discussion. Jay David Bolter and Watson Hartsoe — Operative Ekphrasis: From Imagetext to Worldtext — §6.
+
+PASSAGE: [QUOTE] “All architectural points connected by straight lines.” The museum documents lines involving features such as door frames, fire alarms, and electrical sockets.
+
+RESEARCH OBJECT: The operation that makes an existing feature available as an endpoint.
+
+LOCAL MOVE: LeWitt specifies a relation to draw and names a class of things to which that relation applies. The installation supplies the instances.
+
+SOURCE TERMS: architectural points, straight lines, blue snap lines, pre-existing space.
+
+WHAT BECAME STRANGE: “All” sounds exhaustive. Its scope becomes determinate only after someone decides whether a socket, a seam, or a repair counts. A thick description of the wall could change the drawing before the first line is snapped.
+
+QUESTION: In word-to-world work, who decides which things in the current scene the words refer to before the system changes anything?
+
+DEEPER QUESTION: When a scene offers two plausible referents, should the operator choose one, preserve both readings, or return the decision to the person holding the controller?
+
+MECHANISM: The draftspeople inspect a site, recognize candidate features as architectural points, and use the snap line to connect them. In a proposed digital analogue, a scene interpreter would identify candidate features and an editor would apply the operation to the selected ones.
+
+FORMAL SHIFT: &lt;wall with architectural features&gt; → &lt;registered endpoints&gt; → [connect eligible points] → &lt;site-specific drawing&gt;
+
+SOURCE FORMALISM: LeWitt gives a connection rule. The museum describes chalk-line execution and site-dependent endpoints. The public instruction gives no exhaustive test for endpoint eligibility.
+
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] For a Memory Weaver scene, try “Connect every place where the damaged frame meets a repair. Leave decorative seams alone.” Record the candidate object IDs and the evidence for classifying each before drawing any connections.
+
+TENSION: A procedural reading treats selection as setup and line drawing as the main operation. A descriptive reading locates the consequential decision in what the operator notices and counts. Once the points are fixed, both readings can produce the same lines.
+
+MISSING: A record of how two LeWitt installation teams handled a marginal feature and whether their choices were considered equally valid.
+
+BOUNDARY: Site dependence is documented. The claim that the draftspeople explicitly negotiated ambiguous features needs installation evidence.
+
+CITATION TRAIL: [[AP-05]] → Wall Drawing 51’s two simultaneous Turin installations → surviving endpoint marks, photographs, or installation notes.
+
+TEST: Give two operators the same room containing a doorframe, a socket, a patched hole, and a painted fake vent. Compare their endpoint sets before either makes a mark. Then give both the same endpoint set and compare the remaining differences.
+
+PLATFORM: [[Operation Describe]]
+
+LINKS: [[AP-05]] · [[AP-01]] · [[OD-02]] · [[World-to-word before word-to-world]]
+
+BIBTEX:
+@misc{LeWitt1970WallDrawing51,
+  author = {LeWitt, Sol},
+  title = {Wall Drawing 51},
+  year = {1970},
+  note = {Instruction and installation account at MASS MoCA},
+  url = {https://massmoca.org/event/walldrawing51/}
+}
+@misc{BolterHartsoe2026Operative,
+  author = {Bolter, Jay David and Hartsoe, Watson},
+  title = {Operative Ekphrasis: From Imagetext to Worldtext},
+  year = {2026},
+  url = {https://hartswf0.github.io/operation-describe/Dry-Dock/FINAL_SHIPWORTHY.html}
+}</pre></article><article><h2>OD-02 · The person who judges the installation can overrule the person who executed it</h2><pre>ZETTEL
+
+ID: OD-02
+
+TITLE: The person who judges the installation can overrule the person who executed it
+
+SOURCE: Sol LeWitt — Doing Wall Drawings — 1971. MASS MoCA — Wall Drawing 1180 — installation account with testimony from senior drafter John Hogan.
+
+PASSAGE: [QUOTE] LeWitt writes, “All wall drawings contain errors, they are part of the work.” [PARAPHRASE] Hogan identifies the clipping of the circle and unequal distribution of lines in Beirut as installation errors. MASS MoCA describes its later realization as an opportunity to update the Estate’s record.
+
+RESEARCH OBJECT: The authority to distinguish an admissible difference from a violation of the plan.
+
+LOCAL MOVE: LeWitt’s essay allows unforeseen decisions and errors within a realization. The installation record gives the parent zettel a concrete case where variation prompted a new realization.
+
+SOURCE TERMS: plan, draftsman, violation, randomly spaced, equally distributed.
+
+WHAT BECAME STRANGE: The same account leaves marker-tip width open, describes the drafter judging density by eye and hand, and treats the clipped circle as an error. Each decision belongs to a different part of the work.
+
+QUESTION: In thick prompting, who gets to say “keep that accident” and who can require the scene to be run again?
+
+DEEPER QUESTION: Does operator name the actor that changes the artifact or the actor whose judgment determines whether that change stands?
+
+MECHANISM: A plan sets conditions. A drafter chooses how to realize them in the available space. A later evaluator compares the installation with the plan, and an institution can commission another realization or update the record. These roles may be held by different people.
+
+FORMAL SHIFT: &lt;instruction and site&gt; → &lt;candidate realization&gt; → [judge differences against the plan] → &lt;accepted realization or reason to remake&gt;
+
+SOURCE FORMALISM: The instruction sets a four-meter circle, two line classes of 10,000 each, random spacing, and equal distribution. Hogan describes increasing density over successive passes. No quantitative tolerance for evenness appears in the public account.
+
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] In an orb-editing session, declare “the entire orbit remains traversable” as a condition of acceptance. Delegate surface wear to the renderer and the judgment of whether an unexpected trace belongs to the scene to the director. Log who made each decision.
+
+TENSION: Hogan’s judgment could be explained by an invariant already in the score, by a studio convention learned through practice, or by both. The circle’s clipping and the density judgment may belong to different categories.
+
+MISSING: How Hogan and other drafters distinguish small departures that belong to a realization from violations that require correction.
+
+BOUNDARY: The documented case establishes that a named drafter judged the earlier installation incorrect. It leaves open how that judgment was shared, contested, or formally authorized.
+
+CITATION TRAIL: [[AP-05]] → LeWitt’s distinction between error and violation → Hogan’s Beirut and North Adams comparison → Estate installation records.
+
+TEST: Show independent reviewers three versions of the same score realization: intact boundary with variable marks, intact boundary with visibly uneven density, and clipped boundary. Ask which they would accept and which source of authority they used to decide.
+
+PLATFORM: [[Who is the operator in a thick prompt]]
+
+LINKS: [[AP-05]] · [[AP-03]] · [[OD-01]] · [[OD-08]]
+
+BIBTEX:
+@article{LeWitt1971Doing,
+  author = {LeWitt, Sol},
+  title = {Doing Wall Drawings},
+  journal = {Art Now},
+  year = {1971},
+  month = jun,
+  note = {Reprinted in the Museum of Modern Art catalogue, p. 169},
+  url = {https://www.moma.org/documents/moma_catalogue_1971_300297572.pdf}
+}
+@misc{MASSMoCA1180,
+  author = {{MASS MoCA}},
+  title = {Wall Drawing 1180},
+  note = {Installation account and John Hogan testimony},
+  url = {https://massmoca.org/event/wall-drawing-1180/}
+}</pre></article><article><h2>OD-03 · A copy becomes operative when the next person has to copy it</h2><pre>ZETTEL
+
+ID: OD-03
+
+TITLE: A copy becomes operative when the next person has to copy it
+
+SOURCE: Sol LeWitt — Wall Drawing 797 — 1995 — score and installation account at MASS MoCA. Bolter and Hartsoe — Operative Ekphrasis: From Imagetext to Worldtext — §3.
+
+PASSAGE: [QUOTE] The score directs drafters to copy “the last line drawn.” [PARAPHRASE] At MASS MoCA the head drafter first tested several lines on paper to see how they would evolve under copying.
+
+RESEARCH OBJECT: The choice of which prior artifact becomes the next instruction’s referent.
+
+LOCAL MOVE: LeWitt turns an instruction to copy into a chain in which each new line becomes the source for another drafter. The installation adds a rehearsal in which possible first lines are evaluated by running that chain.
+
+SOURCE TERMS: copy, last line drawn, test lines, irregular horizontal line.
+
+WHAT BECAME STRANGE: Choosing the first line is already a judgment about the future behavior of the whole procedure. Later drafters can faithfully copy their immediate predecessors while collectively moving far from the first line.
+
+QUESTION: When a generated image comes back as feedback, what will the next operator take as authoritative: the original description, the last image, or a newly selected feature of that image?
+
+MECHANISM: The previous mark supplies the local target. The next drafter interprets it under the score and draws another mark. That output becomes the next target. The visible chain retains evidence of changes that a workflow showing only the latest render would hide.
+
+FORMAL SHIFT: &lt;drawn line&gt; → &lt;visible reference for the next drafter&gt; → [copy with a new hand and color] → &lt;new line that becomes a reference&gt;
+
+SOURCE FORMALISM: A starting line, an ordered marker sequence, a non-touching condition for the first copy, repeated copying of the last line, and the wall’s bottom as the stopping boundary.
+
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Use a single starting image of an irregular orb rim. In one chain, each round refers to the previous output. In a second, every round refers back to the starting image. In a third, the operator explicitly promotes one accidental mark to a requirement for subsequent rounds.
+
+TENSION: Feedback can help diagnose a default, as Operation Describe argues. The same feedback path can also stabilize an unnoticed deviation. LeWitt makes cumulative variation part of the drawing, which makes it a useful counterexample to treating all drift as failure.
+
+MISSING: A way to tell from the work trace which deviations were noticed and adopted, which were tolerated, and which passed unseen.
+
+BOUNDARY: The score establishes a dependency between successive marks. It provides no evidence that diffusion or a human hand reproduces that dependency in the same way.
+
+CITATION TRAIL: [[AP-05]] → Wall Drawing 797 → the head drafter’s test sheets → Operation Describe’s account of the image as a diagnostic return.
+
+TEST: Run the three chains for five rounds using identical edit wording and compare contour displacement. Ask the operator at each round which feature they accepted as a new constraint. Check whether the output history alone would have revealed that decision.
+
+PLATFORM: [[Thick prompting as recursive practice]]
+
+LINKS: [[AP-05]] · [[AP-02]] · [[OD-02]] · [[OD-08]]
+
+BIBTEX:
+@misc{LeWitt1995WallDrawing797,
+  author = {LeWitt, Sol},
+  title = {Wall Drawing 797},
+  year = {1995},
+  note = {Instruction and installation account at MASS MoCA},
+  url = {https://massmoca.org/event/walldrawing797/}
+}
+@misc{BolterHartsoe2026Operative,
+  author = {Bolter, Jay David and Hartsoe, Watson},
+  title = {Operative Ekphrasis: From Imagetext to Worldtext},
+  year = {2026},
+  url = {https://hartswf0.github.io/operation-describe/Dry-Dock/FINAL_SHIPWORTHY.html}
+}</pre></article><article><h2>OD-04 · In The House of Dust, “dust” changes from a material entry to a surface someone has to make</h2><pre>ZETTEL
+
+ID: OD-04
+
+TITLE: In The House of Dust, “dust” changes from a material entry to a surface someone has to make
+
+SOURCE: Alison Knowles — interview with Janet Sarbanes — conducted 2011 — account of fabricating and using The House of Dust. Museum of Modern Art — Thinking Machines extended labels — account of the four lists and Tenney’s FORTRAN implementation. Michael Newman — Art as ‘Operation’ — 2026 — Knowles discussion.
+
+PASSAGE: [QUOTE] Knowles recalls using finely ground material on the exterior so it had “this sort of pavementlike quality.” [PARAPHRASE] She describes a fabricated shell, struts, wood blocks, poured cement, and stone or gravel chips.
+
+RESEARCH OBJECT: The conversion of a material word into a decision about what a building can be made of and how its surface reads.
+
+LOCAL MOVE: Newman follows computer-generated verse into built form. Knowles’s account identifies a material negotiation inside that passage.
+
+SOURCE TERMS: material, shell, cement, gravel, foundry, pavementlike.
+
+WHAT BECAME STRANGE: In the poem generator, dust is a selectable material entry. In the fabricated work, it can become an account of a surface rather than the load-bearing substance. Fidelity can involve changing what kind of constraint the word expresses.
+
+QUESTION: Who decides that a word has changed jobs when a description moves from one medium to another?
+
+MECHANISM: Knowles supplies the vocabulary. Tenney implements a combinatorial procedure. A run produces a stanza. Knowles selects and works through the stanza in a fabrication setting. The material response is produced through decisions involving construction and perceptual effect.
+
+FORMAL SHIFT: &lt;material word in a list&gt; → &lt;selected line in a stanza&gt; → [interpret under fabrication conditions] → &lt;surface and structure with distinct roles&gt;
+
+SOURCE FORMALISM: Four lists and a computer-generated quatrain are documented. The construction account supplies materials and fabrication steps. It does not provide a rule mapping a stanza entry to a building specification.
+
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Use “an orb made of memory ash.” Ask for a working scene that specifies separately what holds the orb together, what its surface looks like, and what happens when it is touched. Require the operator to record which meaning of “ash” each decision preserves.
+
+TENSION: The gritty surface can be read as a material translation of dust. It could also be a practical or aesthetic choice reached for independent reasons. The interview verifies the materials but leaves the decision’s genealogy open.
+
+MISSING: A dated fabrication sketch, letter, or interview passage explicitly connecting the poem’s material entry to a particular construction decision.
+
+BOUNDARY: The word-to-material shift is our reconstruction. Knowles’s account supports the difference between the stanza’s material description and the documented build.
+
+CITATION TRAIL: [[AP-06]] → Knowles’s fabrication account → surviving drawings and correspondence in the Archives of American Art → evidence of how the stanza was used as a brief.
+
+TEST: Locate one drawing or construction note that mentions dust, aggregate, or the surface. Check whether the word appears as a requirement, a proposed effect, or a retrospective description. Use the result to revise the role assigned to the fabrication operator.
+
+PLATFORM: [[Word-to-world translation]]
+
+LINKS: [[AP-06]] · [[AP-02]] · [[OD-05]] · [[OD-08]]
+
+BIBTEX:
+@misc{KnowlesSarbanesCalArts,
+  author = {Knowles, Alison and Sarbanes, Janet},
+  title = {A School Based on What Artists Wanted to Do: Alison Knowles on CalArts},
+  note = {Interview conducted in June 2011, East of Borneo},
+  url = {https://eastofborneo.org/articles/a-school-based-on-what-artists-wanted-to-do-alison-knowles-on-calarts/}
+}
+@misc{MoMAThinkingMachinesLabels,
+  author = {{Museum of Modern Art}},
+  title = {Thinking Machines: Extended Labels},
+  note = {A House of Dust label},
+  url = {https://press.moma.org/wp-content/files_mf/thinking_machines_ext_labels_r8.pdf}
+}</pre></article><article><h2>OD-05 · “Inhabited by” moves from a line of verse to a question of who can initiate an event</h2><pre>ZETTEL
+
+ID: OD-05
+
+TITLE: “Inhabited by” moves from a line of verse to a question of who can initiate an event
+
+SOURCE: Alison Knowles — interview with Janet Sarbanes — conducted 2011 — CalArts account. Newman — Art as ‘Operation’ — 2026 — discussion of the open structure and conviviality. Bolter and Hartsoe — Operative Ekphrasis — §§6–7.
+
+PASSAGE: [QUOTE] Knowles says the structures “had to be activated.” [PARAPHRASE] She describes classes and readings, a rail for sound lines, food events, early-morning use of the light entering through a hole in the roof, and students proposing activities.
+
+RESEARCH OBJECT: The capacity of occupants to initiate and alter the activities of a described place.
+
+LOCAL MOVE: Knowles’s account takes the inquiry beyond the stanza’s population field and beyond the construction of a shell. It shows how time, access, equipment, and permission entered the work.
+
+SOURCE TERMS: activated, inhabitants, readings, Gift Event II, conviviality.
+
+WHAT BECAME STRANGE: The program can name inhabitants before any exist. Once people arrive, they can become operators who choose what happens there. Which activities can occur depends partly on conditions no inhabitant label specifies.
+
+QUESTION: What can inhabitants do in a worldtext that the original describer did not already decide for them?
+
+DEEPER QUESTION: Who can change the conditions of participation when occupants want to use the world differently?
+
+MECHANISM: The opening admits changing light. Sound lines make certain gatherings possible. Knowles and participants organize activities. Access, funding, and institutional tolerance help determine which activities can continue. The computer generates the stanza. The activation depends on other operators.
+
+FORMAL SHIFT: &lt;inhabitants as a phrase in a quatrain&gt; → &lt;people with situated access and equipment&gt; → [initiate or adapt an activity] → &lt;a place with a use history&gt;
+
+SOURCE FORMALISM: The sources document activities and infrastructure. No fixed program of participant roles or complete access protocol is supplied.
+
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Try “A room lit by a moving opening, inhabited by two people who remember the event differently. Either person may start a replay. Each can leave a visible annotation for the other, and each can hide their own annotation without deleting it.” Trace which actor can do what and what persists after each action.
+
+TENSION: The house may have actively elicited uses through its geometry and setting. It may also have served as a container for an unusually permissive teaching practice. Knowles’s light and sound examples make both readings testable.
+
+MISSING: An activation history detailed enough to separate what depended on the built features from what depended on Knowles, the participants, or CalArts.
+
+BOUNDARY: The interview establishes that activation involved people and infrastructure. It does not establish that the selected stanza caused any one use.
+
+CITATION TRAIL: [[AP-06]] → the interview’s roof opening, sound lines, and student initiatives → an event flyer, photograph, or participant account that documents one use.
+
+TEST: Reconstruct one activation from three traces: the relevant line in the stanza, a physical feature of the installation, and a record of what someone did. Ask which link in the proposed chain is evidenced. In the digital analogue, see whether a second participant can initiate an unplanned use and leave a state another participant can encounter.
+
+PLATFORM: [[What a worldtext lets its inhabitants do]]
+
+LINKS: [[AP-06]] · [[AP-04]] · [[OD-04]] · [[OD-07]]
+
+BIBTEX:
+@misc{KnowlesSarbanesCalArts,
+  author = {Knowles, Alison and Sarbanes, Janet},
+  title = {A School Based on What Artists Wanted to Do: Alison Knowles on CalArts},
+  note = {Interview conducted in June 2011, East of Borneo},
+  url = {https://eastofborneo.org/articles/a-school-based-on-what-artists-wanted-to-do-alison-knowles-on-calarts/}
+}
+@misc{Newman2026Operation,
+  author = {Newman, Michael},
+  title = {Art as `Operation&#x27;: from Lovelace and Mallarmé to Adversarial Poetry},
+  year = {2026},
+  note = {Supplied talk transcript, Knowles discussion. URL identifies the program},
+  url = {https://www.unive.it/web/en/19108/home}
+}</pre></article><article><h2>OD-06 · A description can operate by finding an event that already exists</h2><pre>ZETTEL
+
+ID: OD-06
+
+TITLE: A description can operate by finding an event that already exists
+
+SOURCE: George Brecht — Drip Music (Drip Event) — 1959–62 — score and performance history in Getty’s The Scores Project. Newman — Art as ‘Operation’ — 2026 — discussion of Brecht framing ordinary phenomena.
+
+PASSAGE: [QUOTE] “Second version: Dripping.” [PARAPHRASE] Getty documents constructed realizations and Brecht’s retrospective designation of Pollock’s drip paintings as performances of the second version.
+
+RESEARCH OBJECT: The choice among finding an event, making one occur, and designating an existing trace as an instance.
+
+LOCAL MOVE: Newman treats the Fluxus score as prompt-like. Brecht’s second version complicates what a prompt can ask an operator to do with an existing world.
+
+SOURCE TERMS: event score, dripping, temporal readymade, realization.
+
+WHAT BECAME STRANGE: “Dripping” can be operationally precise enough to redirect attention while leaving the physical scene untouched. Its addressee may have to search, listen, or reclassify before anyone builds an apparatus.
+
+QUESTION: When a user describes an event, what makes an interface treat the description as a request to find it, stage it, or mark something that has already happened?
+
+MECHANISM: A search binds the words to an existing event. Staging changes the scene to make an event possible. Designation changes an existing event’s status in a work or archive. The visible event can be similar across all three routes.
+
+FORMAL SHIFT: &lt;description of a possible event&gt; → &lt;candidate occurrence or record&gt; → [find, stage, or designate] → &lt;event available for attention or further action&gt;
+
+SOURCE FORMALISM: The first version relates a source of water to an empty vessel. The second version names the phenomenon. The sources document multiple ways of taking up the score.
+
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] A Memory Weaver user says “the moment the room goes quiet.” Test that sentence as a search over existing material, a direction to change sound in the current scene, and a title attached to a selected instant. Show the mode and the state it will change before acting.
+
+TENSION: A generative interface can interpret every description as a production request. A score can also direct a person to attend to what is already occurring. The distinction becomes consequential when generating would overwrite or obscure an existing event.
+
+MISSING: The cues by which a reader decides whether a description is a command, an invitation to notice, or a label.
+
+BOUNDARY: Brecht’s practices demonstrate several kinds of uptake. They leave open how a software interface ought to infer the intended one.
+
+CITATION TRAIL: [[AP-04]] → Newman’s comparison of Cage and Fluxus → Getty’s documentation of found, constructed, and retrospectively designated realizations.
+
+TEST: Give the same description to operators in three scenes: one containing the event now, one containing a record of it, and one containing neither. Ask what they would do and what evidence would make them switch modes.
+
+PLATFORM: [[Description as an operation on an existing world]]
+
+LINKS: [[AP-04]] · [[AP-07]] · [[OD-01]] · [[OD-07]]
+
+BIBTEX:
+@misc{BrechtDripMusic,
+  author = {Brecht, George},
+  title = {Drip Music (Drip Event)},
+  note = {1959--62. Getty Research Institute, Jean Brown Papers, 890164, box 127},
+  url = {https://www.getty.edu/publications/scores/object-index/346/}
+}</pre></article><article><h2>OD-07 · Cohen’s sheep test who can make a description take effect</h2><pre>ZETTEL
+
+ID: OD-07
+
+TITLE: Cohen’s sheep test who can make a description take effect
+
+SOURCE: Clifford Geertz — Thick Description: Toward an Interpretive Theory of Culture — 1973 — Cohen episode. Operation Describe — The Thick Prompt and The Cohen Case. Newman — Art as ‘Operation’ — 2026 — discussion of code switching and context.
+
+PASSAGE: [PARAPHRASE] Cohen describes the sheep as his indemnity. French authorities treat him as a suspected spy, imprison him, and confiscate the flock. The Thick Prompt synthesis proposes that Cohen could have anticipated reclassification and framed the claim in terms legible to both orders.
+
+RESEARCH OBJECT: The difference between describing an act in another code and gaining standing for that description.
+
+LOCAL MOVE: Operation Describe makes reclassification a layer of thick prompting. Geertz’s account puts pressure on where the difficulty sits. The colonial authorities can impose the consequences of their reading.
+
+SOURCE TERMS: ‘ar, indemnity, mezrag, reclassification, stakes.
+
+WHAT BECAME STRANGE: Better phrasing might let the authorities understand Cohen’s claim perfectly while leaving them free to reject it. What travels across the boundary is a flock and a claim. The authority that made the claim effective may fail to travel with them.
+
+QUESTION: When a thick prompt specifies two incompatible readings, who gets to decide which reading governs the next action?
+
+DEEPER QUESTION: Can a worldtext hold incompatible accounts of the same event while preserving the unequal power of their interpreters?
+
+MECHANISM: A claim has standing in one social order. At a boundary, another authority can reclassify the act and enforce a new outcome. The authority that controls custody changes the world even when the parties can paraphrase each other accurately.
+
+FORMAL SHIFT: &lt;flock and indemnity claim&gt; → &lt;case under another jurisdiction&gt; → [accept, reject, or reclassify under unequal authority] → &lt;changed custody and recourse&gt;
+
+SOURCE FORMALISM: Geertz supplies the narrative and the conflicting interpretations. Operation Describe supplies a six-layer design heuristic. Neither supplies a jurisdiction engine.
+
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Keep one flock and one history. Give the claimant and the authorities separate accounts of its status. Encode who can seize it, who can contest the seizure, and where a refusal is recorded. Treat those permissions as additional to the descriptive prompt.
+
+TENSION: The synthesis reads the encounter as a problem of anticipating rival codes. Geertz’s account supports a rival hypothesis in which accurate translation leaves the imbalance of power intact. Both mechanisms could be present.
+
+MISSING: Evidence that a differently presented claim could have changed the colonial decision in that setting.
+
+BOUNDARY: The episode warrants questioning the phrase “thin prompting” as an explanation of Cohen’s predicament. It leaves the counterfactual outcome unresolved.
+
+CITATION TRAIL: [[AP-10]] → Newman’s code-switching example → Geertz’s sequence of award, seizure, and appeal → Operation Describe’s sixth layer.
+
+TEST: Compare two versions of an interactive scene. In one, improve the explanation of the claim while keeping authority fixed. In the other, keep the wording fixed and add an enforceable appeal. Track comprehension and custody separately. The difference identifies what belongs to description and what belongs to the world’s distribution of power.
+
+PLATFORM: [[Thick prompting and reclassification]]
+
+LINKS: [[AP-10]] · [[AP-03]] · [[OD-05]] · [[OD-09]]
+
+BIBTEX:
+@incollection{Geertz1973ThickDescription,
+  author = {Geertz, Clifford},
+  title = {Thick Description: Toward an Interpretive Theory of Culture},
+  booktitle = {The Interpretation of Cultures},
+  publisher = {Basic Books},
+  year = {1973},
+  url = {https://people.ucsc.edu/~ktellez/geertz1973.pdf}
+}
+@misc{OperationDescribeThickPrompt,
+  title = {The Thick Prompt: Geertz&#x27;s Six Layers as Prompt Architecture},
+  howpublished = {Operation Describe},
+  note = {Site revision dated 14 April 2026},
+  url = {https://hartswf0.github.io/operation-describe/worldtext/syntheses/thick-prompt.md}
+}</pre></article><article><h2>OD-08 · A procedural first pass can lose authority during visual refinement</h2><pre>ZETTEL
+
+ID: OD-08
+
+TITLE: A procedural first pass can lose authority during visual refinement
+
+SOURCE: Bolter and Hartsoe — Operative Ekphrasis: From Imagetext to Worldtext — §6 — the Shield of Achilles workflow using B-flix, ABC-Flix, and a vision model. Newman — Art as ‘Operation’ — 2026 — LeWitt discussion of conception and realization.
+
+PASSAGE: [PARAPHRASE] The paper describes sending passages from the Shield to a language model that emits B-flix commands, rendering them into an animated contact sheet, and giving that sheet and the Homeric text to a vision model for refinement.
+
+RESEARCH OBJECT: What survives as a binding constraint across a transition from executable marks to a generated image sequence.
+
+LOCAL MOVE: Operation Describe makes the relation among text, executable notation, and image unusually concrete. The second model receives both the original text and the render, which opens a question about which source controls a disputed detail.
+
+SOURCE TERMS: B-flix, `PNT`, `LIN`, `REC`, animated contact sheet, refinement, control signal.
+
+WHAT BECAME STRANGE: The same feature can be enforced by code in the contact sheet and merely suggested by pixels in the next pass. The workflow may preserve its look while losing its ability to constrain later states.
+
+QUESTION: When the poem and the procedural render pull in different directions, which one can require the next operator to preserve a relation?
+
+MECHANISM: The language model proposes a representation. The renderer executes it. The vision model interprets a visual result alongside the source text. A reviewing operator must decide what survives, unless that requirement is represented and checked by another part of the system.
+
+FORMAL SHIFT: &lt;Homeric passage&gt; → &lt;B-flix commands&gt; → [render into a reference and reinterpret] → &lt;refined sequence whose procedural fidelity can be tested&gt;
+
+SOURCE FORMALISM: The paper documents the command examples, rendering step, and feedback of the contact sheet with the original passage. Section 6 supplies no preservation check for the second pass.
+
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] Assign one invariant at three levels: visible object identity, temporal order, and later consequence. For the trial scene, keep the same pair of disputants, preserve the elders’ successive turns, and keep the case unresolved until an authorized decision. Compare visual refinement with a variant that also supplies those conditions as explicit state.
+
+TENSION: The contact sheet can function as a compositional reference or as evidence of rules the next stage should preserve. LeWitt’s distinction between authorized interpretation and violation makes the difference consequential.
+
+MISSING: Paired intermediate and refined outputs with enough trace information to show what the second pass preserved, changed, or invented.
+
+BOUNDARY: The paper establishes the reported workflow. Procedural continuity through the second pass remains to be demonstrated for a specific sequence.
+
+CITATION TRAIL: [[AP-02]] and [[AP-05]] → Operation Describe §6 → the B-flix source, raw ABC-Flix contact sheet, and corresponding refined sequence for the same Homeric zone.
+
+TEST: Inspect one matched pair. Choose a relation with a visible consequence, such as whose turn follows whose. Mark the first stage where that relation can change without producing an error. Then repeat with an explicit check at that stage.
+
+PLATFORM: [[Where the operator changes hands]]
+
+LINKS: [[AP-02]] · [[AP-05]] · [[OD-02]] · [[OD-03]] · [[OD-09]]
+
+BIBTEX:
+@misc{BolterHartsoe2026Operative,
+  author = {Bolter, Jay David and Hartsoe, Watson},
+  title = {Operative Ekphrasis: From Imagetext to Worldtext},
+  year = {2026},
+  note = {Section 6, Shield of Achilles and B-flix workflow},
+  url = {https://hartswf0.github.io/operation-describe/Dry-Dock/FINAL_SHIPWORTHY.html}
+}
+@misc{Newman2026Operation,
+  author = {Newman, Michael},
+  title = {Art as `Operation&#x27;: from Lovelace and Mallarmé to Adversarial Poetry},
+  year = {2026},
+  note = {Supplied talk transcript, LeWitt discussion. URL identifies the program},
+  url = {https://www.unive.it/web/en/19108/home}
+}</pre></article><article><h2>OD-09 · The trial on Achilles’ shield gives the operator a proceeding and leaves a verdict to be made</h2><pre>ZETTEL
+
+ID: OD-09
+
+TITLE: The trial on Achilles’ shield gives the operator a proceeding and leaves a verdict to be made
+
+SOURCE: Homer — Iliad 18.497–508 — trial scene, read in Samuel Butler’s translation. Bolter and Hartsoe — Operative Ekphrasis — §6 — the shield as worldtext. Geertz — Thick Description — Cohen episode.
+
+PASSAGE: [PARAPHRASE] Two men dispute a blood-price, spectators take sides, heralds restrain the crowd, and elders take turns offering judgments. The passage depicts a proceeding without reporting its final verdict.
+
+RESEARCH OBJECT: A consequential transition whose participants and partial procedure are described while its outcome remains open.
+
+LOCAL MOVE: Operation Describe reads the shield as a world that exceeds its visible surface. The trial makes it possible to ask exactly what its description gives someone enough information to enact.
+
+SOURCE TERMS: blood-price, assembly, heralds, elders, judgment, worldtext.
+
+WHAT BECAME STRANGE: A rendering can visibly include the men, the crowd, the circle, and the gold while silently deciding whose account is true. A playable version can preserve the dispute by tracking what each person claims, who has heard it, and whether anyone authorized a judgment.
+
+QUESTION: What should a world-making operator do when the source describes an institution in action and leaves a consequential decision underdetermined?
+
+DEEPER QUESTION: Who gets to complete the world where the source is silent: the compiler, the author, the people inhabiting it, or the authority represented inside it?
+
+MECHANISM: Describe actors and their positions. Bind speech and action to roles. Record competing claims without resolving them by default. A hearing can then advance through publicly observable turns. Any verdict requires an additional rule, a delegated judgment, or a deliberate decision to leave the case open.
+
+FORMAL SHIFT: &lt;described dispute&gt; → &lt;roles, claims, turns, and unresolved status&gt; → [hear, contest, and possibly adjudicate] → &lt;persistent case history&gt;
+
+SOURCE FORMALISM: The passage gives an order of activity, distinct roles, and the presence of gold. It does not supply a full adjudication procedure. Translations differ on the force of one party’s claim about payment.
+
+OUR FORMALIZATION: [OUR FORMALIZATION — NOT SOURCE SYNTAX] “The claimant says the blood-price remains unsettled. The other party makes a competing claim. The crowd may react but cannot settle the case. Give each elder a turn. Record the claims and reactions. Leave the outcome pending unless an authorized participant supplies a decision.” The last two rules are design choices to make the passage playable.
+
+TENSION: Filling the gap can create a usable simulation and quietly resolve a contested reading. Leaving the gap open can preserve the text’s uncertainty and produce a world whose inhabitants need some other means of acting.
+
+MISSING: A criterion for when a completion counts as interpretation that should be visible to the user, versus a routine implementation decision.
+
+BOUNDARY: The procedural reconstruction can test worldtext’s claim about rules, memory, and consequence. It cannot establish a definitive account of Homeric legal procedure.
+
+CITATION TRAIL: [[AP-10]] and [[AP-06]] → Iliad 18.497–508 → compare Butler with Walter Leaf’s “The Trial Scene in Iliad XVIII” → test what each reading changes in the initial state.
+
+TEST: Build two paper walkthroughs from the same passage. In one, treat payment as alleged to have occurred. In the other, treat payment as an offer whose acceptance is disputed. Give participants the same roles and turns. Compare which questions they ask and what decisions become possible before any visual differences are introduced.
+
+PLATFORM: [[Word-to-world as the specification of consequences]]
+
+LINKS: [[AP-10]] · [[AP-06]] · [[OD-05]] · [[OD-07]] · [[OD-08]]
+
+BIBTEX:
+@book{HomerIliadButler,
+  author = {Homer},
+  title = {The Iliad of Homer},
+  translator = {Butler, Samuel},
+  year = {1898},
+  note = {Book 18, lines 497--508},
+  url = {https://beta.perseus.tufts.edu/urn%3Acts%3AgreekLit%3Atlg0012.tlg001.perseus-eng4%3A18.497/}
+}
+@article{Leaf1887Trial,
+  author = {Leaf, Walter},
+  title = {The Trial Scene in Iliad XVIII},
+  journal = {The Journal of Hellenic Studies},
+  volume = {8},
+  pages = {122--132},
+  year = {1887},
+  doi = {10.2307/623454}
+}
+@misc{BolterHartsoe2026Operative,
+  author = {Bolter, Jay David and Hartsoe, Watson},
+  title = {Operative Ekphrasis: From Imagetext to Worldtext},
+  year = {2026},
+  url = {https://hartswf0.github.io/operation-describe/Dry-Dock/FINAL_SHIPWORTHY.html}
+}</pre></article></html>

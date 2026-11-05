@@ -1,0 +1,170 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1.02in,includefoot,footskip=0.36in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath}
+\usepackage[round,authoryear]{natbib}
+\usepackage{booktabs,tabularx,array}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage[breaklinks=true,colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue!50!black,pdftitle={Who Operates the Worldtext},pdfauthor={Watson Hartsoe}]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 1pt}
+\setlength{\emergencystretch}{2em}
+\linespread{1.09}
+\raggedbottom
+\clubpenalty=10000
+\widowpenalty=10000
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[L]{\small\color{black!68} WHO OPERATES THE WORLDTEXT}
+\fancyfoot[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{14pt}
+\newcommand{\work}[1]{\textit{#1}}
+\newcommand{\src}[2]{\href{#1}{#2}}
+\begin{document}
+{\small\sffamily\bfseries WORKING PAPER \hfill NOVEMBER 2026\par}
+\vspace{1.1em}
+{\fontsize{29}{33}\selectfont\bfseries Who Operates the Worldtext?\par}
+\vspace{0.25em}
+{\large Thick Prompting and the Authority to Change a World\par}
+\vspace{0.7em}
+{\large Watson Hartsoe\par}
+\vspace{0.5em}
+
+\textbf{Abstract.} A description can evoke a world, inform a model of it, or change what can happen inside it. Generative interfaces bring these effects into one workflow, where they can be difficult to distinguish. I develop an account of thick prompting through Sol LeWitt’s wall drawings and Alison Knowles and James Tenney’s \work{The House of Dust}, read alongside Michael Newman’s talk on art as operation. LeWitt shows that identifying what a description refers to and judging whether its realization counts can require different operators. Knowles and Tenney show how a generated description can become a building brief, then yield to the actions of people using the place. I distinguish this account of the worldtext from learned dynamics in Ha and Schmidhuber and language-informed probabilistic inference in Wong and colleagues. A worked reading of the dispute on Achilles’ shield proposes a test: can an implementation preserve disagreement, give actors different rights to intervene, and carry the effects of an authorized act forward? Thick prompting, on this account, is the practice of making consequential interpretations and their authority available for inspection and revision.
+
+\textbf{Keywords.} Operative ekphrasis, worldtext, thick prompting, event scores, conceptual art, world models, generative interfaces
+
+\section{The description leaves work to do}
+
+Sol LeWitt’s instruction for \work{Wall Drawing 51} is a sentence: “All architectural points connected by straight lines.” At two venues in Turin in 1970, that sentence yielded two drawings. The venue made a difference before anyone drew a line. A draftsman had to find what counted as an architectural point there. The procedure specifies a relation, while the wall and the people looking at it supply the particulars. A socket can become an endpoint. An installer’s treatment of the socket then changes every line drawn to or from it \citep{LeWitt51}.
+
+This is a problem for any interface that promises to turn words into worlds. An interface may plausibly depict what a sentence describes while making quite different decisions about what exists, how things relate, and who can act. Consider a room with a locked door. The image can show the lock. An interactive room has to do something when an inhabitant turns the handle. Whether the handle moves, whether the door opens, who can authorize an exception, and what a later visitor finds are distinct questions. Some can be answered by a description. Others require commitments that the description leaves open.
+
+I call a \emph{worldtext} an arrangement in which descriptions can inform a persistent, inhabitable state and be tested by acting in it. This develops the concept in \work{Operative Ekphrasis: From Imagetext to Worldtext}, where the prompt functions as one regulatory input alongside learned distributions, system instructions, and procedural rules \citep{BolterHartsoe}. The term concerns a relationship among language, an environment, and its occupants. A painting, a novel, or an oral performance can evoke a world without being evaluated under this particular design criterion. The criterion applies when a work or interface promises that an inhabitant can intervene and encounter a consequence.
+
+This use of \emph{operative} draws on two distinct arguments. Bajohr locates operative ekphrasis in the technical conditions that allow a multimodal system to process verbal and visual material together. Farocki’s operational image directs attention to an image’s place in a procedure. A generated image can answer the first description as an effect of a prompt and acquire a different operative role when an editor uses it to decide what to preserve. Even the same image file can be a result for one stage and a reference for the next. Word-to-world work extends this question of placement. At which point does a description, image, or interpretation acquire the power to change the state that another participant encounters? \citep{Bajohr2024,Farocki2004,BolterHartsoe}
+
+The wager is that \emph{thick prompting distributes the work of making a description consequential}. Someone or something binds words to what exists. An executor applies or stages a change. An authority determines which proposal counts and what it can change. Inhabitants discover effects and may make further changes. One person can occupy several roles. Software can perform some of them. The important distinction is between roles, since the system may let one actor propose a change and reserve the power to commit it for another.
+
+\section{Newman’s question about the operator}
+
+Michael Newman’s “Art as ‘Operation’” was delivered at \work{Adversarial Poetry}, the October 2026 symposium organized by Ca’ Foscari’s AIMODELS project and ICARO Lab. The conference set single-turn jailbreak research alongside histories of algorithmic literature, semiotics, and critical humanities in STEM. Days earlier, the project’s \work{Dysphoria Mundi} symposium asked what becomes visible when world models misfit the people expected to inhabit them. Both meetings belong to a research program that puts the formalization of labor, language, and knowledge before and alongside automation. Their adjacency makes a comparison possible. The public programs establish separate events with different questions \citep{AIMODELS,VenicePoetry,VeniceDysphoria,VogmanPasquinelli2026}.
+
+Newman begins with the proposal that adversarial poetry merits attention as a poetic practice as well as a technique for eliciting unsafe responses. In his account of Mallarmé’s unrealized \work{Le Livre}, a person named both reader and operator places pages in a cabinet. Numbers of places and pages constrain the arrangement. Chance enters within the arrangement’s conditions. Newman compares this setup with an engine and draws on Babbage’s abstraction of mental labor and Lovelace’s more general account of operations. He then qualifies the apparent disappearance of the author. Someone still designs, frames, or supervises what the operator does. An anonymous reader can execute part of the work while its conditions remain authored. The talk makes a historical proposal about computing and artistic procedure. The cabinet comparison gives that proposal an operational shape without independently establishing a line of transmission \citep{Newman2026,Scherer1957,Lovelace1843}.
+
+Lovelace gives this distinction a second direction. In Note G she assigns the Analytical Engine executive capacities and then considers how making mathematical relations amenable to its operations could feed back into inquiry. Preparing a problem for execution can expose relations to human investigation. Thus the choice of representation can be part of where a discovery happens, even before the engine produces a result. The operator’s work includes making an operation possible, as well as carrying it out \citep[Note G]{Lovelace1843}.
+
+Newman’s closing use of “world models” comes at a different point in the talk. His examples of code switching, scientific paradigm change, and reflexive art ask how an agent recognizes which frame applies and whether it can change its relation to that frame. He links this to metacognitive control and asks whether the ability depends on experience of social and corporeal life. In the supplied transcript he names neither Ha and Schmidhuber nor Wong or Tenenbaum. He presents no learned dynamics architecture or program-based language interpreter. His claim about the possible limits of AI remains a question. His contribution to word-to-world research lies in asking what equips an operator to recognize or contest the conditions under which a description takes effect \citep{Newman2026}.
+
+This framing makes a sharper use of the jailbreak evidence. Bisconti and colleagues test single-turn behavior after a standardized rewrite that can change imagery, rhythm, stanza organization, and the placement of a directive. They score the answer that comes back. Their paper acknowledges that the contribution of individual poetic features remains unresolved. A system might recognize both the verse and the action requested, then make an inappropriate permission decision. Genre recognition, understanding a request, and enforcing a rule should therefore be measured separately. The benchmark gives a reason to investigate these distinctions. A claim about the impossibility of machine metacognition would require different evidence \citep[\S\S 5.2--5.3, 6.5]{Bisconti2026}.
+
+\section{What LeWitt’s draftspeople operate}
+
+In “Doing Wall Drawings,” LeWitt says decisions belong to the draftsman within the plan. He allows for differing interpretations and even errors while distinguishing them from a violation that changes the status of the resulting work \citep{LeWitt1971}. Newman draws on this reciprocal relation between material conception and embodied execution. Three installations make the allocation of decisions more specific.
+
+In \work{Wall Drawing 51}, the draftspeople encounter an existing site and determine which features enter the work. Call this \emph{binding}. A digital counterpart would be an instruction to connect each repair in an orb’s frame. Before any line appears, the interface has to decide whether a scar, a material seam, and a decorative mark each count as a repair. An interface that displays candidate endpoints exposes one part of the interpretation while it can still be changed. If another operator starts from the same approved endpoints, their differences in execution become easier to locate. In this case the world has to be described before it can be changed \citep{LeWitt51}.
+
+In \work{Wall Drawing 1180}, the score calls for a four-meter circle with specified counts of straight and nonstraight lines, randomly spaced and equally distributed. Senior drafter John Hogan describes building density by eye and hand over successive passes. He also identifies a clipped boundary and unequal distribution in the first installation in Beirut as errors. The MASS MoCA account leaves marker-tip width unspecified and describes the later installation as an opportunity to update the Estate’s record. This is a case where \emph{adjudication} is visible. The drafter can exercise judgment over the marks while someone reviewing the realization can require it to be done again. An aesthetic tolerance and a condition of acceptance may even appear in the same sentence of a score \citep{LeWitt1180}.
+
+\work{Wall Drawing 797} shows a further role for execution. A drafter copies the last line drawn, turning each result into the next reference. Before choosing the opening line at MASS MoCA, the head drafter tried lines on paper and examined how they evolved through copying. The test changed which first line was selected. Fidelity to each immediate predecessor can produce divergence from the first one. Whether that divergence is a failure depends on what the score asks the chain to preserve. A generative editor likewise needs to distinguish the previous render as a reference from an original instruction that remains binding. Keeping the previous output in view does not settle that priority \citep{LeWitt797,BolterHartsoe}.
+
+These cases give the operator a practical meaning. For a specified transition, the operator is the person, practice, or mechanism whose choice determines how that transition is made. An endpoint choice, a chalk mark, and a judgment that the circle is clipped are different transitions. Referring to the model as the operator may be adequate when the question concerns generation. It is inadequate when the question concerns who decides that a given mark is a repair or who can authorize making it permanent.
+
+\section{When a stanza becomes a place}
+
+In \work{The House of Dust}, Knowles and Tenney’s computer procedure selected phrases from four lists: material, site, light source, and inhabitants. Tenney implemented the procedure in FORTRAN. A selected quatrain subsequently became the basis of a sculpture. The selection matters because it gave one generated description a new job. The machine had produced a candidate dwelling in language. Making a structure called for decisions about fabrication and use that the four lists had no reason to settle \citep{MoMAKnowles,Taylor2009,KnowlesSarbanes}.
+
+Knowles’s interview with Janet Sarbanes describes a shell, struts, wood blocks, cement, and finely ground exterior stone. A phrase about a house of dust can guide what the surface should suggest even when the structure requires other materials. The interview documents the fabrication decisions. It leaves open whether Knowles explicitly understood the fine exterior material as translating the word “dust.” The distinction matters because word-to-world work includes just this sort of reallocation. A term can cease to specify substance and begin to specify appearance, wear, or behavior. The model that sampled the word and the maker who decides how it applies to a structure have different responsibilities \citep{KnowlesSarbanes}.
+
+“Inhabited by” undergoes a more consequential change. Knowles describes running sound lines for readings, holding food events and classes, and visitors using the light through a roof opening early in the morning. Students could propose what to do there. The account places fabrication beside maintenance, funding, equipment, and permission. A hole in the roof affords changing light. A cable makes amplified activities possible. People make a class or a gathering happen. Here the inhabitant becomes an operator because the work can take a course that the generated stanza did not determine \citep{KnowlesSarbanes,Taylor2009}.
+
+There are limits to the analogy with an interactive simulation. A built place has material and institutional conditions of its own. Software can make some conditions explicit and can hide others in defaults, permissions, or infrastructure. The comparison gives a concrete question to ask of any generated place. Can a second participant begin an activity the first person did not prescribe, leave a trace, and make that trace available to someone who arrives later? A system that can depict a gathering and a system that gives inhabitants the means to organize one make different kinds of world available.
+
+George Brecht’s \work{Drip Music} supplies a limiting case. Its second version names a phenomenon, “Dripping.” Getty documents both staged realizations and Brecht’s retrospective designation of Pollock’s drip paintings as performances of that version. An operator can seek an occurrence, arrange for one, or give a past event a new status. Only one of those actions requires producing the event anew. In a memory interface, “the moment the room goes quiet” could retrieve an existing passage, cue a sound change, or title a point already selected. The ambiguity is about what operation to perform, even when the description is understood \citep{Brecht1959}.
+
+\section{Three meanings of world model}
+
+For Ha and Schmidhuber, a world model learns compressed dynamics from an environment. A visual encoder produces latent observations, a recurrent model predicts a distribution over what follows, and a controller chooses actions from learned features. Their VizDoom example is especially relevant. At low sampling temperature, the learned simulator rarely produces fireballs and a policy can score well in the simulator while failing in the original environment. The external environment provides a check on what the model has learned. The lesson for a worldtext is that the effects of an intervention can reveal distinctions a plausible observation conceals. The system neither starts from a linguistic description of a world nor needs a social authority to recognize a verdict \citep{HaSchmidhuber2018}.
+
+Wong and colleagues start with language. In \work{From Word Models to World Models}, a language model translates utterances into expressions in a probabilistic language of thought. Probabilistic programs support inference given prior knowledge and evidence. Wong’s subsequent thesis, \work{From Words to Worlds}, also studies how people can learn new concepts and theories through language. Tenenbaum coauthored the earlier article, advised the thesis with Jacob Andreas, and later described the research in his own account. This work offers word-to-world research a specific mechanism: distinguish translation from inference and give the translation an inspectable target. In its examples, a sentence can update beliefs about a possible world. That operation differs from granting someone permission to alter the shared environment they inhabit \citep{WongEtAl2023,Wong2024,Tenenbaum2026}.
+
+Newman’s question concerns what would let an operator recognize that a different world model or interpretive frame applies. A worldtext adds a design question about when an interpretation can become a committed change in an environment. A single system might use learned dynamics to predict a change, a probabilistic program to interpret a claim about it, and a separate procedure to decide whether a user is entitled to make it. The comparisons matter precisely because those capacities can come apart. One can understand an utterance, predict what would follow if it were acted on, and still have no standing to act on it.
+
+\section{Thick description and the power to commit}
+
+Geertz’s account of the merchant Cohen makes the last distinction concrete. Cohen receives sheep as indemnity in one social order. French colonial authorities treat his return with the flock as grounds for suspicion, imprison him, and take the sheep. Operation Describe’s thick-prompt synthesis treats the episode as a case of reclassification across contexts and suggests anticipating the second code. The account admits a harder possibility. The authorities could understand Cohen’s description and still have the power to reject his claim and retain custody. Changing what someone understands and changing what their institution will recognize are separate interventions \citep{Geertz1973,ThickPrompt}.
+
+Geertz’s wink offers the same problem at a smaller scale. The eyelid movement alone leaves open whether someone twitched, signaled, rehearsed a signal, or parodied one. A prompt can thicken the image with lighting and gestures, but a worldtext can also give different people different evidence of the act and let what they do next matter. For example, a recipient who knows the code can take the wink as a signal and leave, while another character who saw the same motion can remain. Their difference is available in the world as an action and an altered history, even when it was invisible in the initial frame. A system that shows both characters winking back because that looks legible would resolve the wrong part of the problem \citep{Geertz1973,ThickPrompt}.
+
+Thickness is consequently a property of a description in use. A short instruction can require substantial interpretation when it can draw on a site and skilled people, as in LeWitt. A long prompt can leave a consequential choice to a platform default. For a given task, the useful context is the context that can change how an act is identified, whose account of it matters, or what follows. An author may wish to keep some decisions open. Describing that openness can be as important as specifying an invariant.
+
+\section{A trial that remains a trial after rendering}
+
+The dispute on Achilles’ shield offers a test with more structure than a general instruction to generate an ancient city. The passage describes two men contending over a blood-price, supporters taking sides, heralds restraining the crowd, and elders offering judgments in turn. It leaves the final verdict unreported. Even the status of payment admits competing readings. Butler renders one party as asserting a right to pay in full, while Walter Leaf quotes a reading in which that party claims already to have paid. An implementation that supplies a single settled state at the start may silently choose between these accounts \citep[18.497--508]{HomerButler}\citep{Leaf1887}.
+
+A thick prompt for a playable realization could read as follows:
+
+\begin{quote}
+The two parties disagree about whether the blood-price is settled. Keep each claim attached to the person who makes it. People in the crowd can hear, support, or dispute a claim. The heralds can open a turn. Let the elders speak in order. Keep the case pending until an elder assigned authority to decide records a judgment. A visitor who comes back should find the claims, the turns that occurred, and any judgment that was entered.
+\end{quote}
+
+This prompt contains interpretive and design decisions. Assigning a deciding elder and making the record available to returning visitors are design choices that go beyond Homer’s description. The important thing is to expose the choices that make a meaningful difference. A version could keep the case open indefinitely or allow a different role to decide. The realized worlds could share the same image and still afford different actions. Conversely, different visual treatments can realize the same proceeding.
+
+For that purpose the work of interpretation can be split in a way that is legible at runtime. With \(S_t\) the current state, \(d\) a description, and \(r\) an actor’s role, one possible arrangement is
+\[
+\begin{aligned}
+ p &\in \operatorname{Interpret}(d,S_t,r), \\
+ (S_{t+1},e_t) &= \operatorname{Commit}(S_t,p,r).
+\end{aligned}
+\]
+Here \(p\) is a candidate action or change with bound referents, and \(e_t\) records the disposition, including a denial, an ambiguity, or an approved change. A rejected proposal leaves the disputed state in place, while its denial can still enter the event record. A change of interpretation can generate another proposal. This notation specifies a design distinction, and it imposes no claim about the internal workings of a neural model.
+
+Operation Describe’s B-flix workflow gives this proposal a particular place to intervene. The existing paper describes an LLM translating Homeric zones into commands such as \texttt{PNT}, \texttt{LIN}, and \texttt{REC}. ABC-Flix renders an animated contact sheet, and a vision model receives that sheet alongside the Homeric passage to refine the sequence. A relation can be enforced by the first sequence and become only a visual cue in the second. The appropriate test is to inspect a matched pair for continuity of something consequential, such as which elder speaks next, and to locate where the relation can change silently. A second version can carry the proceeding’s state separately from the visual reference. Comparing them would test whether giving the refinement stage access to that state protects the relation better than providing the same guidance as prose alone \citep[\S 6 and plate B]{BolterHartsoe}.
+
+A small evaluation can separate the effects. Give participants or agents the same initial scene and an identical disputed utterance. Present it once as a quotation, once as a claimant’s statement, and once as a decision entered by an authorized role. Ask them to identify the speaker’s act, show the proposed update, and carry it through a return visit. Score referent and act recognition, permitted state change, and persistence independently. Then change the evidence about the speaker’s authority and see whether the system can reverse or suspend its interpretation. If the image and paraphrase are accurate but the shared case closes on a quotation, the failure is in commitment. If an authorized decision is applied to the wrong dispute, the failure is in binding. The cases call for different repairs.
+
+\section{Limits and conclusion}
+
+These comparisons are selective. LeWitt, Knowles, and Brecht offer documented arrangements for distributing interpretation and labor. The argument does not require their works to be early versions of contemporary machine learning. Newman is read through a supplied transcript and checked against the event program. The cited computational studies enter as comparisons. The trial and its evaluation are proposals, and no user-study result or model-performance claim is inferred from them. The model of a recorded and enforceable decision can also be too narrow for works that deliberately leave uptake tacit, temporary, or contested. Explicit records are useful where a downstream action depends on distinguishing a suggestion from a binding decision.
+
+A description becomes operative in a particular respect when someone or something can act on it. LeWitt shows how the site participates in determining what the act is about, and how the person reviewing a work can exercise authority distinct from the person making its marks. Knowles shows how a computed stanza can support a place whose occupants introduce purposes of their own. Together these cases change the question from whether the prompt can contain a whole world to how a world allocates the work that the prompt leaves to do. A worldtext can make that allocation available for inquiry by letting an inhabitant encounter the consequence, see whose interpretation governs it, and discover which conditions are open to change.
+
+\clearpage
+\begin{thebibliography}{99}
+\small\raggedright
+\setlength{\itemsep}{4pt}
+\bibitem[AIMODELS(n.d.)]{AIMODELS} AIMODELS. n.d. “Advancing the Historical Epistemology of Artificial Intelligence.” ERC project, Ca’ Foscari University of Venice. \src{https://pric.unive.it/projects/ai-models/home}{Project statement}.
+\bibitem[Bajohr(2024)]{Bajohr2024} Bajohr, Hannes. 2024. “Operative Ekphrasis: The Collapse of the Text/Image Distinction in Multimodal AI.” \work{Word \& Image} 40 (2): 77–90. \src{https://doi.org/10.1080/02666286.2024.2330335}{doi:10.1080/02666286.2024.2330335}.
+\bibitem[Bisconti et~al.(2026)]{Bisconti2026} Bisconti, Piercosma, et al. 2026. “Adversarial Poetry as a Universal Single-Turn Jailbreak Mechanism in Large Language Models.” arXiv:2511.15304, v3. \src{https://arxiv.org/html/2511.15304v3}{Preprint}.
+\bibitem[Bolter and Hartsoe(2026)]{BolterHartsoe} Bolter, Jay David, and Watson Hartsoe. 2026. \work{Operative Ekphrasis: From Imagetext to Worldtext}. Operation Describe. \src{https://hartswf0.github.io/operation-describe/Dry-Dock/FINAL_SHIPWORTHY.html}{Online manuscript}.
+\bibitem[Brecht(1959--62)]{Brecht1959} Brecht, George. 1959–62. \work{Drip Music (Drip Event)}. Jean Brown Papers, 890164, box 127. Getty Research Institute. \src{https://www.getty.edu/publications/scores/object-index/346/}{Score record} and \src{https://www.getty.edu/publications/scores/06/commentary/}{performance commentary}.
+\bibitem[Ca’ Foscari University of Venice(2026a)]{VenicePoetry} Ca’ Foscari University of Venice. 2026a. \work{Adversarial Poetry: Critical Humanities and the Limits of Artificial Intelligence}. \src{https://www.unive.it/web/en/19108/home/}{Symposium program}.
+\bibitem[Ca’ Foscari University of Venice(2026b)]{VeniceDysphoria} Ca’ Foscari University of Venice. 2026b. \work{Dysphoria Mundi: Making and Breaking World Models}. \src{https://www.unive.it/data/33113/8/118968}{Event description}.
+\bibitem[Farocki(2004)]{Farocki2004} Farocki, Harun. 2004. “Phantom Images.” Translated by Brian Poole. \work{Public} 29: 12–24. \src{https://archiv.harun-farocki-institut.org/en/bibliografie/text/phantom-images/}{Harun Farocki Institut bibliography}.
+\bibitem[Geertz(1973)]{Geertz1973} Geertz, Clifford. 1973. “Thick Description: Toward an Interpretive Theory of Culture.” In \work{The Interpretation of Cultures}. New York: Basic Books. \src{https://people.ucsc.edu/~ktellez/geertz1973.pdf}{Chapter text}.
+\bibitem[Ha and Schmidhuber(2018)]{HaSchmidhuber2018} Ha, David, and Jürgen Schmidhuber. 2018. “World Models.” arXiv:1803.10122. \src{https://worldmodels.github.io/}{Interactive article}.
+\bibitem[Homer(1898)]{HomerButler} Homer. 1898. \work{The Iliad of Homer}. Translated by Samuel Butler. Longmans, Green, and Co. \src{https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0012.tlg001.perseus-eng4:18.497/}{Book 18, Perseus edition}.
+\bibitem[Knowles and Sarbanes(n.d.)]{KnowlesSarbanes} Knowles, Alison, and Janet Sarbanes. n.d. “A School Based on What Artists Wanted to Do: Alison Knowles on CalArts.” Interview conducted June 2011. \src{https://eastofborneo.org/articles/a-school-based-on-what-artists-wanted-to-do-alison-knowles-on-calarts/}{East of Borneo}.
+\bibitem[Leaf(1887)]{Leaf1887} Leaf, Walter. 1887. “The Trial Scene in Iliad XVIII.” \work{Journal of Hellenic Studies} 8: 122–132. \src{https://doi.org/10.2307/623454}{doi:10.2307/623454}.
+\bibitem[LeWitt(1970)]{LeWitt51} LeWitt, Sol. 1970. \work{Wall Drawing 51}. \src{https://massmoca.org/event/walldrawing51/}{Instruction and installation account at MASS MoCA}.
+\bibitem[LeWitt(1971)]{LeWitt1971} LeWitt, Sol. 1971. “Doing Wall Drawings.” \work{Art Now}, June. Reprinted in \work{Sol LeWitt}, Museum of Modern Art, p. 169. \src{https://www.moma.org/documents/moma_catalogue_1971_300297572.pdf}{Catalogue}.
+\bibitem[LeWitt(1995)]{LeWitt797} LeWitt, Sol. 1995. \work{Wall Drawing 797}. \src{https://massmoca.org/event/walldrawing797/}{Instruction and installation account at MASS MoCA}.
+\bibitem[LeWitt(2005)]{LeWitt1180} LeWitt, Sol. 2005. \work{Wall Drawing 1180}. \src{https://massmoca.org/event/wall-drawing-1180/}{Instruction and installation account with John Hogan’s testimony}.
+\bibitem[Lovelace(1843)]{Lovelace1843} Lovelace, Ada. 1843. Notes to L. F. Menabrea’s “Sketch of the Analytical Engine Invented by Charles Babbage, Esq.” \work{Scientific Memoirs} 3. \src{https://psychclassics.yorku.ca/Lovelace/lovelace.htm}{Notes A–G}.
+\bibitem[Museum of Modern Art(2017)]{MoMAKnowles} Museum of Modern Art. 2017. \work{Thinking Machines}. \src{https://press.moma.org/wp-content/files_mf/thinking_machines_ext_labels_r8.pdf}{Extended label for A House of Dust}.
+\bibitem[Newman(2026)]{Newman2026} Newman, Michael. 2026. “Art as ‘Operation’: from Lovelace and Mallarmé to Adversarial Poetry.” Talk at \work{Adversarial Poetry}, Ca’ Foscari University of Venice, October 1. Supplied transcript. \src{https://www.unive.it/web/en/19108/home/}{Program listing}.
+\bibitem[Operation Describe(2026)]{ThickPrompt} Operation Describe. 2026. “The Thick Prompt: Geertz’s Six Layers as Prompt Architecture.” Revision of April 14. \src{https://hartswf0.github.io/operation-describe/worldtext/syntheses/thick-prompt.md}{Synthesis}.
+\bibitem[Scherer(1957)]{Scherer1957} Scherer, Jacques. 1957. \work{Le « Livre » de Mallarmé: premières recherches sur des documents inédits}. Paris: Gallimard. \src{https://catalogue.bnf.fr/ark:/12148/cb326102938}{BnF catalogue record}.
+\bibitem[Taylor(2009)]{Taylor2009} Taylor, Scott. 2009. “Alison Knowles, James Tenney and the House of Dust at CalArts.” \src{https://blog.calarts.edu/2009/09/10/alison-knowles-james-tenney-and-the-house-of-dust-at-calarts/}{CalArts}.
+\bibitem[Tenenbaum(2026)]{Tenenbaum2026} Tenenbaum, Joshua B. 2026. “Language Is Not All You Need …” \work{Dædalus} 155 (1–2). \src{https://doi.org/10.1162/DAED.a.980}{doi:10.1162/DAED.a.980}.
+\bibitem[Vogman and Pasquinelli(2026)]{VogmanPasquinelli2026} Vogman, Elena, and Matteo Pasquinelli. 2026. “Editorial: ‘Operativism: Labor, Automation, Agitation.’” \work{e-flux journal} 162. \src{https://www.e-flux.com/journal/162/6776875/editorial-operativism-labor-automation-agitation}{Editorial}.
+\bibitem[Wong(2024)]{Wong2024} Wong, Lionel Catherine. 2024. \work{From Words to Worlds: Bridging Language and Thought}. PhD dissertation, MIT. \src{https://hdl.handle.net/1721.1/157326}{MIT Open Scholarship}.
+\bibitem[Wong et~al.(2023)]{WongEtAl2023} Wong, Lionel, Gabriel Grand, Alexander K. Lew, Noah D. Goodman, Vikash K. Mansinghka, Jacob Andreas, and Joshua B. Tenenbaum. 2023. “From Word Models to World Models: Translating from Natural Language to the Probabilistic Language of Thought.” \src{https://arxiv.org/abs/2306.12672}{arXiv:2306.12672}.
+\end{thebibliography}
+
+\section*{Appendix\enspace Evidence and replication}
+The companion source packet contains the editable TeX, claim-to-source map, making history, the supplied assembly instrument, and the transcript used for the close reading. Compile the manuscript with pdfLaTeX twice to resolve the in-text citations. The appendix in the source packet identifies the evidence required to replicate the proposed scene test and distinguishes it from the evidence already examined.
+
+\end{document}
