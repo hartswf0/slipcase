@@ -1,0 +1,585 @@
+```text
+ZETTEL
+
+ID: CALVINO-001
+
+TITLE:
+The 1967 literary machine was supposed to rebel against its own rules.
+
+SOURCE:
+Italo Calvino — "Cybernetics and Ghosts" — 1967.
+English translation: The Uses of Literature (1986), pp. 10–11.
+
+PASSAGE:
+[PARAPHRASE]
+Calvino distinguishes machines that produce formally correct works from a more ambitious literary machine capable of revising its own conventions. Such a machine might turn against its established literary procedures and invent new ones.
+
+RESEARCH OBJECT:
+A distinction between generating unusual outputs within an established system and transforming the system that determines which outputs are possible.
+
+LOCAL MOVE:
+Calvino rejects mechanical classicism as the ultimate achievement of computational literature. He imagines machines capable of learning and transforming their own programs.
+
+SOURCE TERMS:
+"literature-machine"; "classicism"; "disorder";
+"learning"; "changing their own programs."
+
+WHAT BECAME STRANGE:
+The research note treats creative deviation primarily as a later complication of Calvino's mechanical combinatorics. But the possibility of machine-initiated formal innovation was already present in 1967.
+
+QUESTION:
+Does contemporary generative AI fulfill Calvino's prediction if it produces novel artifacts without independently changing its generative conventions?
+
+DEEPER QUESTION:
+Is creativity a property of an output, a generative procedure, or the capacity to challenge and replace that procedure?
+
+MECHANISM:
+The distinction is between variation under fixed rules and changes to the rules governing variation.
+
+FORMAL SHIFT:
+Literary convention
+→ executable generative rules
+→ [machine revises its own rules]
+→ changed space of possible literature.
+
+SOURCE FORMALISM:
+NONE. Calvino describes a hypothetical capability, not a working algorithm.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Level 1: y = G(theta, x, z)
+Level 2: theta' = U(theta, history, criterion)
+
+The second level changes generative behavior rather than merely selecting another sample.
+
+TENSION:
+A stochastic model can produce radical variation without ever revising its learned parameters. Conversely, a self-modifying machine might become more conservative.
+
+MISSING:
+What triggers dissatisfaction? What evaluates formal innovation? Who establishes the criterion for changing the generator?
+
+BOUNDARY:
+The passage does not demonstrate machine autonomy, aesthetic judgment, consciousness, or a historical influence on modern AI.
+
+CITATION TRAIL:
+Calvino, "Cybernetics and Ghosts," pp. 10–13.
+Calvino's earlier writings on literary experimentation.
+Oulipian distinctions between constraint and exception.
+
+TEST:
+Compare fixed-weight sampling, adaptive decoding, and systems that revise their own generative procedures. Determine which operation, if any, corresponds to Calvino's proposed machine.
+
+PLATFORM:
+[[Calvino's Anticombinatorics and Contemporary Generative AI]]
+
+LINKS:
+[[CALVINO-002]]
+[[CALVINO-007]]
+[[CALVINO-009]]
+
+BIBTEX:
+@incollection{calvino1986cybernetics,
+  author    = {Calvino, Italo},
+  title     = {Cybernetics and Ghosts},
+  booktitle = {The Uses of Literature: Essays},
+  translator = {Patrick Creagh},
+  publisher = {Harcourt Brace Jovanovich},
+  year      = {1986},
+  pages     = {3--27},
+  note      = {Lecture delivered in November 1967},
+  url       = {https://www.jfki.fu-berlin.de/academics/SummerSchool/Dateien2011/Reading_Assignments/iuli_reader2.pdf}
+}
+```
+
+```text
+ZETTEL
+
+ID: CALVINO-002
+
+TITLE:
+The reader was the decisive literary machine before the clinamen returned to the author.
+
+SOURCE:
+Italo Calvino — "Cybernetics and Ghosts" — 1967,
+pp. 13–14, 19–20.
+
+PASSAGE:
+[PARAPHRASE]
+Calvino suggests that mechanizing composition would make reading the decisive event in literary life. A permutation acquires literary significance through its effect on a historically situated person and society.
+
+RESEARCH OBJECT:
+A displacement of aesthetic significance from the mechanism of production to the event of reception.
+
+LOCAL MOVE:
+Calvino removes the privileged author without reducing literature to formal syntax. Meaning arises when a combination acquires significance beyond the operation that produced it.
+
+SOURCE TERMS:
+"reading"; "permutations"; "poetic result";
+"consciousness"; "unconscious"; "ghosts."
+
+WHAT BECAME STRANGE:
+The question "Can a machine create literature?" may already be badly formed. Calvino's earlier essay places literary significance in the encounter between an artifact and its readers.
+
+QUESTION:
+What would it mean to evaluate an AI-generated work without treating either its human prompter or its computational producer as the unique location of creativity?
+
+DEEPER QUESTION:
+Can a literary event be computationally produced without its significance being computationally determined?
+
+MECHANISM:
+Generation makes combinations available. Interpretation activates meanings that may not have been specified in the procedure.
+
+FORMAL SHIFT:
+Generated artifact
+→ historically situated encounter
+→ [interpretation]
+→ literary significance.
+
+SOURCE FORMALISM:
+NONE.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Meaning = R(work, reader, historical_context)
+
+R is not a metric supplied by Calvino. It designates a relation that cannot be reduced to the work's generation probability.
+
+TENSION:
+The later "Prose and Anticombinatorics" assigns the clinamen an exceptional place in the artist's creative work. Dennis Duncan interprets this as a change in Calvino's conception of authorship.
+
+MISSING:
+An account of how reception feeds back into the construction, circulation, and revision of a work.
+
+BOUNDARY:
+This passage does not establish that readers alone create literary value or that the original author is irrelevant.
+
+CITATION TRAIL:
+Calvino, "Cybernetics and Ghosts."
+Calvino, "Prose and Anticombinatorics."
+Dennis Duncan, "Calvino, Llull, Lucretius" (2012).
+
+TEST:
+Read the 1967 and 1977/1981 formulations together. Track where each locates the operation that transforms a formally produced text into literature: generator, author, reader, or social context.
+
+PLATFORM:
+[[Computational Creativity and Aesthetic Reception]]
+
+LINKS:
+[[CALVINO-001]]
+[[CALVINO-006]]
+[[CALVINO-010]]
+
+BIBTEX:
+@incollection{calvino1986cybernetics,
+  author     = {Calvino, Italo},
+  title      = {Cybernetics and Ghosts},
+  booktitle  = {The Uses of Literature: Essays},
+  translator = {Patrick Creagh},
+  publisher  = {Harcourt Brace Jovanovich},
+  year       = {1986},
+  pages      = {3--27},
+  note       = {Original lecture, 1967},
+  url        = {https://www.jfki.fu-berlin.de/academics/SummerSchool/Dateien2011/Reading_Assignments/iuli_reader2.pdf}
+}
+```
+
+```text
+ZETTEL
+
+ID: CALVINO-003
+
+TITLE:
+Anticombinatorics meant explicit constraint construction, not simply choosing from many possibilities.
+
+SOURCE:
+Paul Braffort — "L'ordre dans le crime: Une expérience cybernétique avec Italo Calvino" — Europe, no. 815, March 1997, sections 2–3.
+
+PASSAGE:
+[PARAPHRASE]
+Braffort describes writing programs that eliminated incompatible narrative combinations through logical and semantic compatibility matrices. The resulting filters did not adequately control combinatorial explosion.
+
+RESEARCH OBJECT:
+The difference between constraints that define admissible narrative states and probabilities that favor particular generated sequences.
+
+LOCAL MOVE:
+Braffort identifies anticombinatorial work with the explicit specification of structures, rules, and constraints. His account gives the term a narrower operational meaning than general selection from possibility.
+
+SOURCE TERMS:
+"filtres anti-combinatoires";
+"matrices de compatibilité";
+"contraintes objectives";
+"contraintes subjectives."
+
+WHAT BECAME STRANGE:
+The apparent equivalence between anticombinatorics and probabilistic generation disappears when the systems' operations are compared.
+
+QUESTION:
+What would a modern generative model need to represent before it could perform Calvino's anticombinatorial operations rather than merely resemble their outcomes?
+
+DEEPER QUESTION:
+Can narrative admissibility be learned statistically, or does it require explicit representations of causality, action, time, and changing world states?
+
+MECHANISM:
+Calvino–Braffort:
+Define candidate relations, then test their compatibility.
+
+Autoregressive language modeling:
+Estimate a conditional distribution over subsequent tokens.
+
+FORMAL SHIFT:
+Narrative actions
+→ character/action relations
+→ [compatibility tests]
+→ admissible sequences.
+
+SOURCE FORMALISM:
+Four characters; twelve specified actions; pairwise relations; logical and semantic filters.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Constraint system:
+C(sequence, world_state) ∈ {0,1}
+
+Language model:
+P(token_t | token_<t, context)
+
+A highly probable token sequence is not necessarily an admissible event sequence.
+
+TENSION:
+A learned model can approximate constraints without implementing an explicit logical verifier. A constraint engine can enforce consistency without producing interesting prose.
+
+MISSING:
+A shared representation that permits both learned generation and verification of narrative state transitions.
+
+BOUNDARY:
+Braffort's surviving account does not supply a complete executable implementation or evidence that the intended novel was successfully generated.
+
+CITATION TRAIL:
+Braffort, section 2, objective and subjective constraints.
+Calvino, "Prose et anticombinatoire," pp. 319–331.
+Meehan, TALE-SPIN (1977).
+
+TEST:
+Construct a small four-character narrative corpus. Compare free generation, probabilistic reranking, and explicit state-based constraint checking. Measure violations separately from aesthetic preferences.
+
+PLATFORM:
+[[Narrative Constraint Engines]]
+
+LINKS:
+[[CALVINO-004]]
+[[CALVINO-005]]
+[[CALVINO-008]]
+
+BIBTEX:
+@article{braffort1997ordre,
+  author  = {Braffort, Paul},
+  title   = {L'ordre dans le crime: Une expérience cybernétique avec Italo Calvino},
+  journal = {Europe},
+  number  = {815},
+  month   = mar,
+  year    = {1997},
+  url     = {https://www.paulbraffort.net/litterature/critique/calvino_crime.html}
+}
+```
+
+```text
+ZETTEL
+
+ID: CALVINO-004
+
+TITLE:
+The foundational combinatorial calculation contains a numerical error.
+
+SOURCE:
+Paolo Alessandrini — "La matematica di Italo Calvino" — Archimede 3 (2023), p. 160.
+
+PASSAGE:
+[PARAPHRASE]
+Alessandrini identifies an arithmetic mistake in Calvino's calculation of the possible crime configurations. The combinatorial expression is correct; the printed numerical result is not.
+
+RESEARCH OBJECT:
+A discrepancy between the formal specification of a possibility space and its stated cardinality.
+
+LOCAL MOVE:
+Alessandrini separates the mathematical structure of the crime problem from the numerical result attributed to it.
+
+SOURCE TERMS:
+"disposizioni con ripetizione"; "coppie ordinate";
+"schemi"; "12 alla dodicesima potenza."
+
+WHAT BECAME STRANGE:
+A story concerned with the computational mastery of possibility contains an error in its most conspicuous calculation.
+
+QUESTION:
+Does the error matter only as arithmetic, or does it expose a broader ambiguity between the mathematical possibility space and the actual narrative problem?
+
+DEEPER QUESTION:
+How much of the apparent rigor of computational literature survives when we audit its representations instead of accepting its stated numbers?
+
+MECHANISM:
+Four distinct people produce twelve possible ordered, nonreflexive pairs. Twelve independently assigned actions therefore produce 12^12 assignments.
+
+FORMAL SHIFT:
+4 characters
+→ 4 × 3 ordered pairs
+→ 12 choices for each of 12 actions
+→ 12^12 assignments.
+
+SOURCE FORMALISM:
+12^12 = 8,916,100,448,256
+
+Printed in Calvino:
+8,874,296,672,256
+
+Difference:
+41,803,776,000
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+The initial search space assumes:
+1. Exactly twelve action occurrences.
+2. One ordered character pair per action.
+3. No self-directed actions.
+4. Independent assignment before compatibility constraints.
+
+The counting rule does not establish that all these assignments represent narratable stories.
+
+TENSION:
+The equation counts assignments, not distinct plots under interpretation, causal equivalence, or narrative redundancy.
+
+MISSING:
+Evidence identifying the origin of the arithmetic mistake; a specification of when two assignments should count as the same narrative.
+
+BOUNDARY:
+The error does not invalidate the combinatorial construction itself or establish a general failure of computational approaches to literature.
+
+CITATION TRAIL:
+Alessandrini (2023), p. 160.
+Calvino, "The Burning of the Abominable House" (1995 translation), p. 157.
+Braffort (1997), section 2.
+
+TEST:
+Reproduce the count, then calculate how it changes under explicit restrictions on reciprocal relations, character mortality, duplicated motives, and permutation equivalence. Compare the different meanings of "possible story."
+
+PLATFORM:
+[[Formal Audits of Computational Literature]]
+
+LINKS:
+[[CALVINO-003]]
+[[CALVINO-005]]
+
+BIBTEX:
+@article{alessandrini2023matematica,
+  author  = {Alessandrini, Paolo},
+  title   = {La matematica di Italo Calvino},
+  journal = {Archimede},
+  number  = {3},
+  year    = {2023},
+  pages   = {157--163},
+  url     = {https://riviste.mondadorieducation.it/archimede/wp-content/uploads/sites/2/2023/12/0060.ARCH3_23_ARch_Cultura_Alessandrini_157_163.pdf}
+}
+```
+
+```text
+ZETTEL
+
+ID: CALVINO-005
+
+TITLE:
+Calvino identified character transformation and then excluded it from the computation.
+
+SOURCE:
+Paul Braffort — "L'ordre dans le crime" — 1997, section 2, discussion of subjective constraints.
+
+PASSAGE:
+[QUOTE]
+"Pour le moment on renonce à explorer ce domaine."
+
+[PARAPHRASE]
+Calvino allows that characters could acquire or lose incompatibilities through actions they perform or undergo, but sets that possibility aside.
+
+RESEARCH OBJECT:
+Dynamic narrative constraints that change as a consequence of the narrative itself.
+
+LOCAL MOVE:
+The project confronts the possibility that characters cannot be modeled adequately through fixed attributes and compatibility relations.
+
+SOURCE TERMS:
+"contraintes subjectives";
+"changer dans le déroulement de l'histoire";
+"incompatibilités."
+
+WHAT BECAME STRANGE:
+The most promising computational problem may be the one Calvino explicitly declined to explore.
+
+QUESTION:
+What if narrative possibility is not a fixed search space, but a space whose constraints are continually rewritten by the story's events?
+
+DEEPER QUESTION:
+Can the possibility space change during narrative generation without making the model's consistency criteria arbitrary?
+
+MECHANISM:
+An event changes character attributes, relationships, obligations, or capabilities. Those changes alter which subsequent events are possible or plausible.
+
+FORMAL SHIFT:
+Character state at t
+→ event
+→ [update attributes and relations]
+→ revised possibilities at t+1.
+
+SOURCE FORMALISM:
+Braffort reports the possibility of changing incompatibilities, but supplies no completed procedure for implementing this domain.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+S(t+1) = T(S(t), action(t))
+
+C(t+1) = Constraints(S(t+1))
+
+AvailableActions(t+1) =
+  {a : C(t+1, a) = true}
+
+An action changes not only the story but also its future possibility space.
+
+TENSION:
+Strict filtering presupposes stable constraints. Character development can invalidate assumptions that were previously useful for excluding combinations.
+
+MISSING:
+A representation for belief revision, learning, changing motives, transformations of relationships, and conflicting character perspectives.
+
+BOUNDARY:
+Calvino anticipated the problem. The source does not demonstrate that he solved it.
+
+CITATION TRAIL:
+Braffort's unpublished synopsis, quoted in the 1997 essay.
+Narrative planning and character-state modeling.
+Meehan, TALE-SPIN (1977).
+Riedl and Young (2010).
+
+TEST:
+Run the same twelve-action narrative under two conditions: fixed character compatibility and compatibility updated after every event. Compare which plots become newly possible and which contradictions disappear.
+
+PLATFORM:
+[[Evolving Narrative Possibility Spaces]]
+
+LINKS:
+[[CALVINO-003]]
+[[CALVINO-008]]
+[[CALVINO-016]]
+
+BIBTEX:
+@article{braffort1997ordre,
+  author  = {Braffort, Paul},
+  title   = {L'ordre dans le crime: Une expérience cybernétique avec Italo Calvino},
+  journal = {Europe},
+  number  = {815},
+  month   = mar,
+  year    = {1997},
+  url     = {https://www.paulbraffort.net/litterature/critique/calvino_crime.html}
+}
+```
+
+```text
+ZETTEL
+
+ID: CALVINO-006
+
+TITLE:
+The machine becomes a character in a story whose algorithm never included it.
+
+SOURCE:
+Paul Braffort — "L'ordre dans le crime" — 1997, section 2, description of the additional plot.
+
+PASSAGE:
+[PARAPHRASE]
+Waldemar's suspicion introduces Skiller and Waldemar himself into the original four-person mystery. Braffort goes further, counting two programs among the resulting eight actants, one of which may be imaginary.
+
+RESEARCH OBJECT:
+An expanding narrative ontology that incorporates its own computational machinery.
+
+LOCAL MOVE:
+Braffort distinguishes the basic combinatorial plot from an additional plot in which the investigator, his employer, and the programs become implicated in the crime.
+
+SOURCE TERMS:
+"intrigue de base"; "intrigue surajoutée";
+"actants"; "programmes"; "machination."
+
+WHAT BECAME STRANGE:
+The computational model is designed for four people, but the fiction becomes interesting precisely when the machinery constructing the model enters the modeled world.
+
+QUESTION:
+Is the failure to include the investigator and programs a limitation of the algorithm, or the device that makes Calvino's story literary?
+
+DEEPER QUESTION:
+How can a narrative system represent an observer whose investigation changes the events being investigated?
+
+MECHANISM:
+The original crime generates an investigation. The investigation creates new suspicions and actions. Those actions make the investigator a participant in another possible crime.
+
+FORMAL SHIFT:
+Four-person crime model
+→ investigation
+→ [investigator and programs become actants]
+→ expanded and recursive narrative model.
+
+SOURCE FORMALISM:
+Initial combinatorial specification:
+4 characters, 12 actions.
+
+The expanded eight-actant structure is described by Braffort, not implemented as a completed computational model.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+World W0 contains characters A–D.
+
+Model M observes W0.
+Observer O executes M.
+Events implicate O and M.
+
+W1 = W0 ∪ {O, M, new_events}
+
+The system's representation becomes part of the world it must represent.
+
+TENSION:
+Natalie Dehn's later AUTHOR model distinguishes the author from the storyworld. Calvino's fiction destabilizes that distinction by making the investigator's modeling operations part of the story.
+
+MISSING:
+An operational account of recursive representation, unreliable observation, and the causal effects of investigation.
+
+BOUNDARY:
+Braffort's count of eight actants is a retrospective analysis of the fiction, not evidence of an eight-actant program.
+
+CITATION TRAIL:
+Calvino, "The Burning of the Abominable House."
+Braffort's working synopsis.
+Dehn, "Story Generation After TALE-SPIN" (1981).
+Borges, "The Garden of Forking Paths."
+
+TEST:
+Build the four-person model, then introduce the investigator's actions as events. Determine whether the original constraints can still describe the expanded narrative without adding a higher-order representational layer.
+
+PLATFORM:
+[[Self-Referential Narrative Systems]]
+
+LINKS:
+[[CALVINO-003]]
+[[CALVINO-009]]
+[[CALVINO-014]]
+
+BIBTEX:
+@article{braffort1997ordre,
+  author  = {Braffort, Paul},
+  title   = {L'ordre dans le crime: Une expérience cybernétique avec Italo Calvino},
+  journal = {Europe},
+  number  = {815},
+  month   = mar,
+  year    = {1997},
+  url     = {https://www.paulbraffort.net/litterature/critique/calvino_crime.html}
+}
+```

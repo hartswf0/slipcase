@@ -1,0 +1,967 @@
+```text
+ZETTEL
+
+ID: CALVINO-005.01
+
+TITLE:
+Calvino excluded changing personalities, not all changing constraints.
+
+SOURCE:
+Italo Calvino — Working synopsis for L'ordre dans le crime — reproduced by Paul Braffort in "L'ordre dans le crime: Une expérience cybernétique avec Italo Calvino" — Europe, no. 815 (1997), section 2.
+
+PASSAGE:
+[QUOTE]
+"Dans chaque permutation, après qu’une action de meurtre a eu lieu, la victime ne peut plus accomplir ni subir aucune action."
+
+[QUOTE]
+"Chaque personnage pourrait changer dans le déroulement de l’histoire [...] : perdre certaines incompatibilités pu en acquérir d’autres!!!!!!!!"
+
+[QUOTE]
+"Pour le moment on renonce à explorer ce domaine."
+
+RESEARCH OBJECT:
+A previously obscured distinction between event-dependent constraints on physical states and event-dependent transformations of character dispositions.
+
+LOCAL MOVE:
+Calvino already requires an action's occurrence to change what subsequent actions are permissible. Murder changes the availability of a character for subsequent events.
+
+What he postpones is a different problem: actions that transform the character's psychological or interpersonal compatibility conditions.
+
+SOURCE TERMS:
+"Ordre des séquences";
+"contraintes objectives";
+"contraintes subjectives";
+"incompatibilités";
+"déroulement de l’histoire."
+
+WHAT BECAME STRANGE:
+The parent zettel describes a transition from fixed constraints to evolving constraints. But Calvino's original procedure already depends on evolving physical conditions.
+
+The actual omission is narrower and more interesting: the system can represent a character becoming dead but not becoming different.
+
+QUESTION:
+What distinguishes updating a character's physical availability from updating the dispositions that determine which actions the character might perform?
+
+DEEPER QUESTION:
+Why do discrete physical transformations fit the combinatorial specification more readily than transformations of character, motive, or social relationship?
+
+MECHANISM:
+An event changes the conditions against which later events are evaluated.
+
+Physical constraint:
+A murdered character cannot subsequently act.
+
+Dispositional constraint:
+A previously incompatible action could become compatible following an intervening experience.
+
+The first is included in Calvino's specification. The second is explicitly deferred.
+
+FORMAL SHIFT:
+Action sequence
+→ current physical conditions
+→ [event-dependent exclusion]
+→ permissible subsequent actions.
+
+Character experience
+→ changed dispositions
+→ [recompute subjective compatibility]
+→ changed narrative possibilities.
+
+SOURCE FORMALISM:
+Twelve named actions distributed among four characters.
+
+Sequential compatibility constraints.
+
+After a murder, its victim cannot participate in subsequent actions.
+
+Calvino explicitly identifies, but does not implement, the acquisition and loss of subjective incompatibilities.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Separate:
+
+P(t) = physical state
+D(t) = character dispositions
+
+P(t+1) = PhysicalEffects(action(t), P(t))
+
+D(t+1) = DispositionalEffects(action(t), D(t), P(t))
+
+Admissible(action, t)
+  = PhysicalCompatibility(action, P(t))
+    AND
+    CharacterCompatibility(action, D(t))
+
+Calvino specifies operations resembling the first update, but leaves the second unresolved.
+
+TENSION:
+A psychological disposition might change because of an event, without that change being reducible to the event's physical effects.
+
+Conversely, some apparently psychological constraints can be represented through ordinary state variables.
+
+MISSING:
+Criteria for distinguishing dispositions from temporary intentions, beliefs, relationships, and physical capacities.
+
+A representation of which experiences produce which changes, including changes that cannot be inferred from observable actions alone.
+
+BOUNDARY:
+The synopsis demonstrates that Calvino identified dynamic character incompatibilities. It does not establish that every psychological variable was intended to be computationally modeled.
+
+CITATION TRAIL:
+[[CALVINO-005]]
+→ Calvino's original synopsis, quoted by Braffort
+→ distinction between physical and subjective constraints
+→ Brenner, "Creating Dynamic Story Plots with Continual Multiagent Planning" (2010)
+→ Young, "Sketching a Generative Model of Intention Management" (2017).
+
+TEST:
+Implement the original four-character, twelve-action system under three conditions:
+
+A. Static compatibility rules.
+
+B. Physical state changes only.
+
+C. Physical and dispositional state changes.
+
+Use identical starting characters and action inventories.
+
+Identify which sequences become valid or invalid, and which kinds of character development remain impossible to represent.
+
+PLATFORM:
+[[Evolving Narrative Possibility Spaces]]
+
+LINKS:
+[[CALVINO-005]]
+[[CALVINO-003]]
+[[CALVINO-013]]
+[[CALVINO-016]]
+
+BIBTEX:
+@article{braffort1997ordre,
+  author  = {Braffort, Paul},
+  title   = {L'ordre dans le crime: Une expérience cybernétique avec Italo Calvino},
+  journal = {Europe},
+  number  = {815},
+  year    = {1997},
+  month   = mar,
+  url     = {https://www.paulbraffort.net/litterature/critique/calvino_crime.html},
+  note    = {Section 2 reproduces passages from Calvino's working synopsis}
+}
+```
+
+```text
+ZETTEL
+
+ID: CALVINO-005.02
+
+TITLE:
+The narrative requires identifiable secrets that its original combinatorial vocabulary does not represent.
+
+SOURCE:
+Italo Calvino — Working synopsis for L'ordre dans le crime — reproduced in Paul Braffort, "L'ordre dans le crime" (1997), section 2, compatibility rules for the appropriation of secrets and wills.
+
+PASSAGE:
+[QUOTE]
+"La réversibilité des actes d’appropriation de secret est possible, s’il se trouve des deux côtés des secrets différents."
+
+[PARAPHRASE]
+A character who has obtained another's secret need not obtain that same secret again, but may obtain a different secret through another action.
+
+RESEARCH OBJECT:
+An implicit narrative entity that must be represented before the stated compatibility rule can be executed correctly.
+
+LOCAL MOVE:
+Calvino treats the appropriation of a secret as an action between two characters while simultaneously requiring the computer to distinguish one secret from another.
+
+The basic combinatorial model identifies the action and its participants. The semantic rule requires an additional identity relation.
+
+SOURCE TERMS:
+"appropriation d’un secret";
+"secrets différents";
+"réversibilité";
+"relations";
+"compatibilité."
+
+WHAT BECAME STRANGE:
+The first representation problem is not necessarily how to make characters change.
+
+It is how to represent what their actions are about.
+
+The phrase "a different secret" introduces an entity whose identity is not contained in the action's original binary character relation.
+
+QUESTION:
+What additional entities must be introduced before Calvino's supposedly simple compatibility rules can be implemented?
+
+DEEPER QUESTION:
+At what point does a finite combinatorial inventory turn into an open-ended ontology of objects, knowledge, obligations, and relationships?
+
+MECHANISM:
+The system must determine whether two actions concern the same information.
+
+Without secret identity, it cannot distinguish obtaining the same secret repeatedly from obtaining several different secrets.
+
+The corresponding problem recurs for distinct wills, motivations, and interpersonal commitments.
+
+FORMAL SHIFT:
+Binary character relation
+→ action with an additional semantic object
+→ [compare object identity and possession]
+→ determine whether repetition is redundant or consequential.
+
+SOURCE FORMALISM:
+Four characters.
+
+Twelve actions.
+
+Each action is assigned an ordered pair of distinct characters.
+
+The synopsis additionally distinguishes the same secret from different secrets, without supplying an explicit datatype for secret identity in the reported initial enumeration.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Initial event:
+E = (actor, action, patient)
+
+Required richer event:
+E = (actor, action, patient, object)
+
+For secret acquisition:
+
+E1 = (A, discovers, B, secret_1)
+E2 = (A, extracts, B, secret_2)
+
+The redundancy judgment depends on:
+
+secret_1 == secret_2
+
+It cannot be determined from actor, action, and patient alone.
+
+TENSION:
+The additional object can make semantic compatibility computable, but every introduced entity creates further questions.
+
+Who possesses the secret?
+Who knows it?
+Can two characters independently discover it?
+Does revealing it change its status?
+Can the content of a secret itself change?
+
+MISSING:
+A specification of secret identity, ownership, knowledge, disclosure, and temporal persistence.
+
+Evidence about whether Braffort's implemented matrices represented these semantic objects or only approximated their effects.
+
+BOUNDARY:
+The original enumeration omits explicit secret identifiers. This does not prove that Braffort's programs lacked all auxiliary representations; their complete source code has not been established.
+
+CITATION TRAIL:
+[[CALVINO-005]]
+→ Calvino's rules for secret appropriation
+→ the semantic identity missing from binary action representation
+→ research on epistemic planning
+→ formal representations of knowledge and belief in multiagent systems.
+
+TEST:
+Construct two distinct twelve-action sequences that have identical actor-action-patient assignments but differ in whether a later acquisition concerns the same secret.
+
+Try to classify both using only the original event vocabulary.
+
+Introduce explicit secret identifiers and repeat.
+
+The resulting difference establishes the minimum additional representational requirement.
+
+PLATFORM:
+[[Narrative Ontology and Hidden State]]
+[[Formal Audits of Computational Literature]]
+
+LINKS:
+[[CALVINO-005]]
+[[CALVINO-003]]
+[[CALVINO-013]]
+[[CALVINO-014]]
+
+BIBTEX:
+@article{braffort1997ordre,
+  author  = {Braffort, Paul},
+  title   = {L'ordre dans le crime: Une expérience cybernétique avec Italo Calvino},
+  journal = {Europe},
+  number  = {815},
+  year    = {1997},
+  month   = mar,
+  url     = {https://www.paulbraffort.net/litterature/critique/calvino_crime.html},
+  note    = {Contains excerpts from Calvino's synopsis concerning secrets, wills, and action compatibility}
+}
+```
+
+```text
+ZETTEL
+
+ID: CALVINO-005.03
+
+TITLE:
+An unknown condition is not a false condition, and narrative action depends on who knows the difference.
+
+SOURCE:
+Michael Brenner — "Creating Dynamic Story Plots with Continual Multiagent Planning" — Proceedings of AAAI-10 (2010), pp. 1517–1522, especially pp. 1518–1519.
+
+PASSAGE:
+[PARAPHRASE]
+Brenner's Multiagent Planning Language (MAPL) uses multi-valued state variables that can include an unknown value. Characters possess beliefs about the world and may acquire information through sensing, copresence, and communication.
+
+An action depends not only on its physical preconditions but also on what its controlling agent knows. Plans can be revised when observations or communications change an agent's available information.
+
+RESEARCH OBJECT:
+Epistemic availability as a distinct condition of narrative action.
+
+LOCAL MOVE:
+Brenner separates the physical conditions under which an action is possible from the knowledge conditions under which a character can deliberately execute it.
+
+This makes different characters' beliefs part of the machinery of plot construction.
+
+SOURCE TERMS:
+"Multiagent Planning Language";
+"multi-valued state variables";
+"unknown";
+"knowledge preconditions";
+"copresence";
+"communication";
+"temporary subgoals";
+"Continual Multiagent Planning."
+
+WHAT BECAME STRANGE:
+Calvino asks whether particular actions are compatible.
+
+Brenner's architecture makes that question insufficient.
+
+An action may be physically possible but unavailable to a character because the character does not know how to perform it or does not know that its preconditions hold.
+
+The same physical world can therefore contain different actionable possibility spaces for different characters.
+
+QUESTION:
+Should narrative anticombinatorics eliminate impossible events, or eliminate events that particular characters cannot knowingly undertake from their situated perspectives?
+
+DEEPER QUESTION:
+Does narrative possibility belong to the world, the character's representation of the world, or the relation between them?
+
+MECHANISM:
+A character maintains beliefs about relevant variables.
+
+Perception and communication can update those beliefs.
+
+Changed beliefs can activate goals, invalidate plans, or permit actions previously unavailable to the character.
+
+Continual planning alternates between planning, execution, observation, and revision.
+
+FORMAL SHIFT:
+Shared physical environment
+→ agent-specific beliefs and goals
+→ [perception, communication, planning]
+→ agent-specific action availability
+→ revised beliefs and plans.
+
+SOURCE FORMALISM:
+MAPL extends PDDL.
+
+It uses multi-valued state variables.
+
+It introduces knowledge and commitment preconditions for actions.
+
+It provides sensing, copresence, and communication models.
+
+Brenner presents CMP Agent(S,G), an algorithm that performs monitoring, replanning, action execution, state estimation, and processing of messages or requests.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+World state:
+W(t)
+
+Belief state of character i:
+B_i(t)
+
+Physical executability:
+Executable(a, W(t))
+
+Perceived executability:
+KnownExecutable(a, B_i(t))
+
+An action can satisfy:
+
+Executable(a, W(t)) = true
+
+while:
+
+KnownExecutable(a, B_i(t)) = false
+
+An observation can change the second condition without changing the first.
+
+TENSION:
+Brenner's MAPL places knowledge conditions on autonomous action.
+
+R. Michael Young's later HEADSPACE research explicitly accommodates actions undertaken because characters mistakenly believe their physical preconditions hold.
+
+These approaches do not treat belief-relative executability identically.
+
+MISSING:
+A mechanism for modeling actions undertaken with unjustified confidence, mistaken beliefs, incomplete knowledge, or deliberately misleading information.
+
+A criterion for deciding when an agent should act despite uncertainty.
+
+BOUNDARY:
+MAPL and CMP provide a concrete planning architecture, not a complete theory of literary interpretation or aesthetics.
+
+Brenner explicitly distinguishes the capacity to generate dynamic plots from the capacity to generate interesting ones.
+
+CITATION TRAIL:
+[[CALVINO-005]]
+→ Brenner (2010), MAPL state representation and CMP Algorithm 1
+→ Brenner and Nebel (2009), continual planning
+→ Thorne and Young (2017), false beliefs and failed actions
+→ Young (2017), HEADSPACEX.
+
+TEST:
+Create a shared narrative world containing one concealed fact and two characters.
+
+Run three conditions:
+
+A. The fact is known to both characters.
+
+B. The fact is unknown to one character.
+
+C. One character holds a false belief about the fact.
+
+Keep physical conditions identical.
+
+Compare generated plans, executed actions, failed actions, and belief revisions.
+
+Determine whether a single global compatibility matrix can reproduce the differences.
+
+PLATFORM:
+[[Situated Narrative Possibility]]
+[[Multiagent Storyworld Planning]]
+
+LINKS:
+[[CALVINO-005]]
+[[CALVINO-005.01]]
+[[CALVINO-005.02]]
+[[CALVINO-008]]
+[[CALVINO-016]]
+
+BIBTEX:
+@inproceedings{brenner2010creating,
+  author    = {Brenner, Michael},
+  title     = {Creating Dynamic Story Plots with Continual Multiagent Planning},
+  booktitle = {Proceedings of the Twenty-Fourth AAAI Conference on Artificial Intelligence},
+  pages     = {1517--1522},
+  year      = {2010},
+  publisher = {AAAI Press},
+  url       = {https://cdn.aaai.org/ojs/7567/7567-13-11097-1-2-20201228.pdf}
+}
+```
+
+```text
+ZETTEL
+
+ID: CALVINO-005.04
+
+TITLE:
+Contradictory desires can belong to one coherent character.
+
+SOURCE:
+R. Michael Young — "Sketching a Generative Model of Intention Management for Characters In Stories: Adding Intention Management to a Belief-Driven Story Planning Algorithm" — AIIDE Workshop on Intelligent Narrative Technologies (2017), pp. 281–287, especially pp. 282–284.
+
+PASSAGE:
+[PARAPHRASE]
+Young's HEADSPACEX representation permits a character to possess desires supported by inconsistent motivations and even desires for contradictory conditions.
+
+Desires become intentions when a character adopts specific goals and plans.
+
+In the initial implementation, characters revise intentions in response to new beliefs but do not freely adopt goals inconsistent with those to which they are already committed.
+
+RESEARCH OBJECT:
+A distinction between contradictory desires, contradictory intentions, and contradictory descriptions of the physical world.
+
+LOCAL MOVE:
+Young represents desires separately from intentions and allows conflicting dispositions to coexist without immediately treating them as planning inconsistencies.
+
+The model imposes stronger restrictions when desires are converted into commitments.
+
+SOURCE TERMS:
+"HEADSPACEX";
+"belief state";
+"desire";
+"intention";
+"motivations";
+"apparent solution";
+"single-minded commitment";
+"intention revision."
+
+WHAT BECAME STRANGE:
+A character who wants incompatible outcomes is not necessarily an incoherent character.
+
+Conflict between desires may be precisely what gives the character narrative interest.
+
+The parent zettel's proposed dynamic compatibility conditions therefore raise a new danger: treating psychological consistency as if it were logical consistency.
+
+QUESTION:
+When should contradictory character dispositions be preserved rather than eliminated by an anticombinatorial filter?
+
+DEEPER QUESTION:
+Can a computational character change through conflict among existing motivations rather than through a rule that directly rewrites personality attributes?
+
+MECHANISM:
+A character possesses multiple desires.
+
+Contextual conditions influence which desires become intentions.
+
+Adopted intentions organize plans.
+
+New information can invalidate those plans and trigger revision or abandonment.
+
+The resulting behavior depends on both the character's dispositions and its commitments.
+
+FORMAL SHIFT:
+Potentially conflicting desires
+→ contextual motivations
+→ [intention adoption]
+→ committed plan
+→ [new beliefs or failure]
+→ revised intention state.
+
+SOURCE FORMALISM:
+HEADSPACEX defines:
+
+Belief states containing beliefs held true, held false, or unknown.
+
+Desires as tuples of character, motivation conditions, and a desired epistemic literal.
+
+Intentions as tuples including character, adoption state, motivations, goal condition, and plan.
+
+Plans represented through partial-order causal-link structures.
+
+The paper explicitly allows inconsistent desires while limiting intention adoption through single-minded commitment.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Character c desires:
+
+D1: protect another character
+D2: expose that character's secret
+
+Both desires may remain active.
+
+Context K1 may activate D1 as an intention.
+Context K2 may activate D2.
+
+The resulting tension is not:
+
+WorldState = logically inconsistent
+
+but:
+
+CharacterDesires = potentially incompatible
+
+An intention-selection mechanism must decide which commitments become actionable.
+
+TENSION:
+A strict narrative planner can maintain consistent commitments by excluding contradictory intentions.
+
+A literary representation may instead need ambivalence, indecision, self-deception, and action inconsistent with previously stated commitments.
+
+Young's initial HEADSPACEX model uses single-minded commitment, while acknowledging the need for a wider range of character-specific commitment policies.
+
+MISSING:
+A general mechanism for representing ambivalence without forcing an immediate resolution into a single intention.
+
+An account of when contradictory behavior should count as character complexity, deception, transformation, or computational error.
+
+BOUNDARY:
+HEADSPACEX does not establish that contradiction automatically produces compelling characters.
+
+Its initial commitment policy should not be mistaken for a comprehensive psychological model.
+
+CITATION TRAIL:
+[[CALVINO-005]]
+→ Young (2017), Definitions 2–4
+→ Bratman, Intention, Plans, and Practical Reason (1987)
+→ Cohen and Levesque, "Intention Is Choice with Commitment" (1990)
+→ van der Hoek, Jamroga, and Wooldridge, "Towards a Theory of Intention Revision" (2007).
+
+TEST:
+Define a character with two conflicting desires.
+
+Compare:
+
+A. A planner that rejects contradictory desires.
+
+B. HEADSPACEX-style desire representation with single-minded commitments.
+
+C. A model permitting explicit conflict and revision among commitments.
+
+Hold narrative events constant.
+
+Measure differences in available character trajectories, failed plans, and explanations of behavior.
+
+Ask readers whether the resulting actions appear contradictory, complex, or unmotivated.
+
+PLATFORM:
+[[Computational Character Ambivalence]]
+[[Narrative Psychology and Intention Revision]]
+
+LINKS:
+[[CALVINO-005]]
+[[CALVINO-005.01]]
+[[CALVINO-005.03]]
+[[CALVINO-016]]
+
+BIBTEX:
+@inproceedings{young2017sketching,
+  author    = {Young, R. Michael},
+  title     = {Sketching a Generative Model of Intention Management for Characters In Stories: Adding Intention Management to a Belief-Driven Story Planning Algorithm},
+  booktitle = {Proceedings of the AIIDE-17 Workshop on Intelligent Narrative Technologies},
+  pages     = {281--287},
+  year      = {2017},
+  publisher = {AAAI Press},
+  url       = {https://cdn.aaai.org/ojs/12986/12986-52-16503-1-2-20201228.pdf}
+}
+```
+
+```text
+ZETTEL
+
+ID: CALVINO-005.05
+
+TITLE:
+New evidence can restore fictional worlds that previous constraints excluded.
+
+SOURCE:
+Cory Siler — "Open-World Narrative Generation to Answer Players' Questions" — Proceedings of AIIDE 2022, pp. 307–310, especially pp. 307–308.
+
+PASSAGE:
+[PARAPHRASE]
+Siler distinguishes logically possible worlds from worlds an audience considers plausible.
+
+In classical possible-worlds reasoning, new observations eliminate worlds inconsistent with the evidence.
+
+In the proposed alternative, plausibility judgments are nonmonotonic. An audience can encounter evidence that forces it to reconsider worlds previously excluded by default assumptions or genre conventions.
+
+Siler illustrates the difference through an example in which evidence about dragons changes which fictional worlds readers find plausible.
+
+RESEARCH OBJECT:
+A revision process in which new information can expand rather than merely reduce the set of considered narrative worlds.
+
+LOCAL MOVE:
+Siler questions the need for a narrative generator to settle every fact of the fictional world before the player encounters it.
+
+The paper proposes maintaining both immutable commitments established by observations and revisable hypotheses about unseen parts of the world.
+
+SOURCE TERMS:
+"open-world narrative generation";
+"immutable commitments";
+"plausible worlds";
+"nonmonotonic reasoning";
+"player beliefs";
+"implicit questions";
+"contrivance."
+
+WHAT BECAME STRANGE:
+Calvino's anticombinatorics progressively removes incompatible configurations.
+
+Siler identifies an important alternative.
+
+A fictional world initially ruled out as implausible can become plausible when the reader discovers new evidence.
+
+Narrative development may require restoring possibilities rather than only eliminating them.
+
+QUESTION:
+Can an anticombinatorial system remain useful if its candidate worlds are permitted to re-enter consideration after previously being excluded?
+
+DEEPER QUESTION:
+Should fictional-world generation seek convergence on one world, or maintain a changing family of plausible worlds whose distinctions matter to the audience?
+
+MECHANISM:
+The audience observes a narrative event.
+
+The observation changes its beliefs about the story.
+
+Previously plausible explanations may lose credibility.
+
+Previously rejected explanations may become plausible.
+
+Further events can be generated to answer questions raised by the revised beliefs.
+
+FORMAL SHIFT:
+Observed narrative evidence
+→ plausible-world hypotheses
+→ [new observation]
+→ nonmonotonic revision
+→ enlarged or altered hypothesis space.
+
+SOURCE FORMALISM:
+Siler proposes two representational layers:
+
+1. Immutable commitments that future narrative extensions must respect.
+
+2. Plausible worlds inferred beyond the player's direct observations.
+
+The proposed process models the world and player beliefs, infers implicit questions, and adds narrative material in response.
+
+The paper presents a research proposal rather than a demonstrated complete implementation.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+H(t) = plausible narrative hypotheses
+E(t) = observed evidence
+D(t) = revisable defaults
+
+Classical elimination:
+H(t+1) is a subset of H(t)
+
+Nonmonotonic revision:
+H(t+1) need not be a subset of H(t)
+
+A hypothesis excluded under an earlier default can return when new evidence defeats that default.
+
+The distinction is between logical contradiction and defeasible plausibility.
+
+TENSION:
+Allowing worlds to re-enter consideration supports revelation, ambiguity, and shifts in genre.
+
+But unrestricted revision can undermine continuity and permit arbitrary explanations.
+
+The generator must distinguish facts already shown to the audience from assumptions that the audience merely supplied.
+
+MISSING:
+A formal procedure for updating plausible-world rankings from audience behavior.
+
+A reliable distinction between revising an assumption and contradicting an established observation.
+
+A test for whether an unexpected addition enriches the fictional world or merely repairs a poorly constructed plot.
+
+BOUNDARY:
+Siler's proposal does not prove that open-world generation improves narrative quality.
+
+Nonmonotonic revision does not license changing facts already established as immutable commitments.
+
+CITATION TRAIL:
+[[CALVINO-005]]
+→ Siler (2022), Modeling section
+→ Klassen, Levesque, and McIlraith, "Towards Representing What Readers of Fiction Believe" (2017)
+→ Riedl and Young, "Open-World Planning for Story Generation" (2005)
+→ Robertson and Young, "Finding Schrödinger's Gun" (2014).
+
+TEST:
+Provide three descriptions of a fictional location.
+
+Initially, all three suggest an ordinary terrestrial city.
+
+Introduce a fourth description establishing an impossible or supernatural spatial condition.
+
+Compare:
+
+A. A system that eliminates inconsistent candidate worlds.
+
+B. A system that revises genre and plausibility assumptions.
+
+C. A system that preserves multiple competing interpretations.
+
+Record which earlier observations each system must contradict, reinterpret, or preserve.
+
+PLATFORM:
+[[Nonmonotonic Narrative Worlds]]
+[[The Foundry — Fictional Image to World]]
+
+LINKS:
+[[CALVINO-005]]
+[[CALVINO-005.03]]
+[[CALVINO-009]]
+[[CALVINO-017]]
+[[CALVINO-018]]
+
+BIBTEX:
+@inproceedings{siler2022openworld,
+  author    = {Siler, Cory},
+  title     = {Open-World Narrative Generation to Answer Players' Questions},
+  booktitle = {Proceedings of the Eighteenth AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment},
+  pages     = {307--310},
+  year      = {2022},
+  publisher = {AAAI Press},
+  url       = {https://ojs.aaai.org/index.php/AIIDE/article/download/21981/21750/26033}
+}
+```
+
+```text
+ZETTEL
+
+ID: CALVINO-005.06
+
+TITLE:
+The programmer's aesthetic constraints are not the characters' subjective constraints.
+
+SOURCE:
+Italo Calvino — Working synopsis for L'ordre dans le crime — reproduced by Paul Braffort in "L'ordre dans le crime: Une expérience cybernétique avec Italo Calvino" — Europe, no. 815 (1997), section 2.
+
+PASSAGE:
+[PARAPHRASE]
+After distinguishing objective constraints from constraints inferred from character personalities, Calvino introduces a further category: aesthetic constraints, which he also identifies as subjective constraints of the programmer.
+
+He then asks whether character-based and aesthetic constraints can be considered simultaneously.
+
+Braffort reports that the preliminary implementation remained limited to logical constraints and that its compatibility matrices did not sufficiently reduce combinatorial explosion.
+
+RESEARCH OBJECT:
+A third constraint regime that belongs neither to the storyworld's physical conditions nor to its characters' dispositions.
+
+LOCAL MOVE:
+Calvino recognizes that a sequence can satisfy narrative compatibility requirements while remaining unsatisfactory from the programmer's aesthetic perspective.
+
+The specification therefore contains distinct problems of possibility, characterization, and artistic selection.
+
+SOURCE TERMS:
+"contraintes objectives";
+"contraintes subjectives";
+"contraintes esthétiques";
+"subjectives du programmeur";
+"acceptable logiquement";
+"acceptable psychologiquement."
+
+WHAT BECAME STRANGE:
+The unresolved problem is not simply that characters need to change.
+
+Even a system that correctly models every character transformation would still not necessarily produce the narrative an artist wants.
+
+The aesthetic requirements of the programmer occupy a distinct position from those of the fictional agents.
+
+QUESTION:
+How can an author-directed generative system evaluate a developing narrative without reducing character autonomy to compliance with a predetermined plot?
+
+DEEPER QUESTION:
+What happens when the event that is most plausible for a character is the event that is least desirable for the work's aesthetic development?
+
+MECHANISM:
+Physical constraints exclude actions that violate the established world.
+
+Character constraints evaluate actions relative to dispositions and narrative motivations.
+
+Aesthetic constraints evaluate larger configurations according to artistic purposes.
+
+These evaluations can disagree.
+
+FORMAL SHIFT:
+Candidate narrative
+→ physical consistency assessment
+→ character plausibility assessment
+→ aesthetic assessment
+→ [selection, revision, or rejection]
+→ revised narrative possibilities.
+
+SOURCE FORMALISM:
+Calvino identifies objective, subjective, and aesthetic constraints.
+
+He explicitly raises the problem of considering subjective and aesthetic constraints together.
+
+Braffort describes compatibility matrices for preliminary logical and semantic filtering.
+
+The consulted account supplies no completed algorithm integrating all three constraint regimes.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let:
+
+C_world(N) = world consistency
+C_character(N) = character plausibility
+Q_aesthetic(N) = artistic evaluation
+
+Then:
+
+Generate(N)
+subject to C_world(N)
+
+Evaluate:
+C_character(N)
+Q_aesthetic(N)
+
+These evaluations need not agree.
+
+A character-plausible event may weaken aesthetic structure.
+
+An aesthetically valuable event may challenge the current character model and require its revision.
+
+TENSION:
+Michael Brenner's 2010 continual-planning framework addresses evolving beliefs, motivations, and character traits but explicitly leaves plot interestingness outside its formal machinery.
+
+This suggests that increasingly rich world simulation does not automatically resolve Calvino's separate aesthetic problem.
+
+Yet an external aesthetic optimizer may suppress unexpected developments arising from the simulated characters.
+
+MISSING:
+A representation of aesthetic criteria that permits them to change during composition.
+
+A method for distinguishing deliberate aesthetic exception from inconsistency or opportunistic constraint relaxation.
+
+An account of which aesthetic decisions should belong to the author, the generator, the reader, or their interaction.
+
+BOUNDARY:
+Calvino identifies aesthetic constraints as a problem for the programmer. The surviving specification does not demonstrate that they were implemented.
+
+The evidence does not license reducing aesthetic evaluation to a single numeric reward, nor does it establish that formal criteria can never contribute to aesthetic judgment.
+
+CITATION TRAIL:
+[[CALVINO-005]]
+→ Calvino's synopsis, aesthetic constraints
+→ Braffort (1997), section 2
+→ Brenner (2010), Discussion, pp. 1521–1522
+→ Dehn (1981), author-directed generation
+→ research on experience management and aesthetic evaluation.
+
+TEST:
+Construct a small narrative generator with independent physical, character, and aesthetic evaluators.
+
+Define an event that:
+
+A. Satisfies physical constraints.
+
+B. Is plausible for a character.
+
+C. Undermines the desired dramatic trajectory.
+
+Compare three systems:
+
+1. Reject the event through an aesthetic filter.
+
+2. Accept the event and revise subsequent narrative goals.
+
+3. Modify the character model to favor the originally desired trajectory.
+
+Determine which interventions preserve consistency, which impose authorial control, and which permit unanticipated narrative development.
+
+PLATFORM:
+[[Aesthetic Governance of Generative Systems]]
+[[Character Autonomy Versus Authorial Control]]
+
+LINKS:
+[[CALVINO-005]]
+[[CALVINO-005.01]]
+[[CALVINO-005.04]]
+[[CALVINO-002]]
+[[CALVINO-007]]
+[[CALVINO-016]]
+
+BIBTEX:
+@article{braffort1997ordre,
+  author  = {Braffort, Paul},
+  title   = {L'ordre dans le crime: Une expérience cybernétique avec Italo Calvino},
+  journal = {Europe},
+  number  = {815},
+  year    = {1997},
+  month   = mar,
+  url     = {https://www.paulbraffort.net/litterature/critique/calvino_crime.html},
+  note    = {Section 2 reproduces Calvino's distinction between objective, subjective, and aesthetic constraints}
+}
+```

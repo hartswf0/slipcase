@@ -1,0 +1,594 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>What Constraints Cannot Decide — Calvino-Open-Worlds-2026-11-23</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{max-width:790px;margin:3rem auto;padding:0 20px;background:#fdfcf9;color:#252520;font:18px/1.58 Georgia,serif}h1,h2{line-height:1.16}h1{font-size:32px}h2{margin-top:2.5em;font-size:23px}p{text-align:left}table{width:100%;border-collapse:collapse;font-size:14px}td,th{border-bottom:1px solid #bbb;padding:.5rem;text-align:left}a{color:#304451}header,footer{color:#666;font:12px system-ui}.csl-entry{margin:.6em 0;padding-left:1em;text-indent:-1em}.math{font-family:serif}</style><header><p>Calvino-Open-Worlds-2026-11-23 · Working Paper · RETURN PATH: 000__RETURN_PATH.txt</p></header><main><h1 id="introduction-a-secret-that-is-not-in-the-data">Introduction: a
+secret that is not in the data</h1>
+<p>A computer is instructed to reconstruct a story from four people and
+twelve named actions. Each action must be assigned a pair of distinct
+characters. The elementary representation looks manageable: twelve
+actions, twelve available ordered pairs of distinct characters, and
+therefore <span class="math inline">12<sup>12</sup></span> possible
+assignments before any restrictions are introduced. Yet the moment the
+machine is told that one character cannot obtain <em>the same
+secret</em> twice, its seemingly complete vocabulary fails. The action
+has an actor and a patient; it has no field in which one secret can be
+distinguished from another. The next problem is not how to search
+faster. It is what kind of thing a secret must become for a search to
+run at all.</p>
+<p>This unnoticed representational demand is a productive way to return
+to Italo Calvino’s <em>The Burning of the Abominable House</em> and his
+collaboration with Paul Braffort. The familiar story of the experiment
+emphasizes the vastness of the possibility space and the need for
+constraints to eliminate impossible combinations. Calvino, on this
+reading, anticipates generative AI by staging the progressive selection
+of a particular work from innumerable alternatives. The computer would
+handle routine combinations and leave the artist the consequential
+<em>clinamen</em>: the departure from a rule that turns an admissible
+sequence into literature <span class="citation" data-cites="braffort1997ordre duncan2012calvino">(Braffort 1997; Duncan
+2012)</span>.</p>
+<p>That comparison becomes misleading precisely where it seems easiest.
+A combinatorial solver and a probabilistic language model do not perform
+the same operation. The first needs an inventory of candidate
+assignments and explicit compatibility procedures; the second learns
+conditional distributions and generates sequences without enumerating
+all complete stories. A diffusion model likewise learns reverse
+transitions through noisy representations rather than rejecting entire
+candidate images <span class="citation" data-cites="ho2020denoising">(Ho, Jain, and Abbeel 2020)</span>. The
+weak analogy—many possibilities become one artifact—does not explain why
+some outputs count as coherent worlds, why characters act, or why a
+reader would care.</p>
+<p>The stronger historical proposition is that anticombinatorics exposes
+a problem of <strong>representational commitments</strong>. Every
+attempted reduction of possibility depends on prior decisions about the
+entities that exist, the state that persists, the observer whose
+knowledge counts, and the assumptions that can be revised. The surviving
+Calvino–Braffort material is unusually revealing because these decisions
+come apart. It handles physical consequences, gestures toward
+psychological transformation, requires semantic objects its first event
+schema does not specify, and finally distinguishes the programmer’s
+aesthetic constraints from the constraints on fictional characters. The
+projected novel did not appear, but these mismatches are evidence about
+a research problem, not merely about inadequate processing power <span class="citation" data-cites="braffort1997ordre">(Braffort
+1997)</span>.</p>
+<p>This article follows that problem into an alternative history of
+computational storytelling and returns to contemporary generative AI. It
+argues for a distinction between the consistency of an imagined world
+and the continuing freedom to revise one’s hypothesis about that world.
+The distinction matters especially when several images or episodes
+appear to suggest a single place. Such evidence can warrant a shared
+fictional world, several related worlds, or an irreducibly ambiguous
+one. An algorithm that settles the issue in advance may destroy the very
+relation the images were meant to make possible.</p>
+<h1 id="i.-the-number-and-what-it-cannot-count">I. The number and what
+it cannot count</h1>
+<p>Braffort’s retrospective account separates objects often collapsed
+into one: Calvino’s published fiction, the synopsis given to Braffort,
+the selection programs actually written, the 1977 presentation, and the
+unfinished ambition of <em>L’ordre dans le crime</em>. The paper
+presented in 1977 was assembled from Calvino’s own French translation of
+the story and the working synopsis. Braffort reports that the
+experimental programs introduced logical and semantic compatibility
+matrices but did not tame the combinatorial explosion. A completed novel
+was not the output of this machine <span class="citation" data-cites="braffort1997ordre">(Braffort 1997)</span>. Distinguishing
+narrative premise, specification, implementation, demonstration, and
+projection prevents imagined capabilities from becoming historical
+achievements.</p>
+<p>The elementary arithmetic makes the distinction tangible. Four named
+people yield <span class="math inline">4 × 3 = 12</span> ordered
+nonreflexive actor–patient pairs. Assign one such pair independently to
+each of twelve named actions, and the number of assignments is <span class="math inline">12<sup>12</sup> = 8, 916, 100, 448, 256</span>. The
+number printed in Calvino’s story is different; Alessandrini identifies
+the arithmetic discrepancy <span class="citation" data-cites="alessandrini2023matematica">(Alessandrini 2023)</span>. The
+error does not undermine the elementary combinatorics, but the correct
+number does not count literary plots either. Two assignments may
+describe equivalent narratives; one assignment may demand contradictory
+temporal states; another may be formally permissible yet dramatically
+inert. Counting assignments is not counting stories.</p>
+<p>The synopsis already tries to close that gap. It limits repeated acts
+and their reversals and demands that certain acts exclude later
+possibilities. Most plainly, once a murder occurs, the victim can no
+longer act or suffer another action in the sequence <span class="citation" data-cites="braffort1997ordre">(Braffort 1997)</span>.
+This is an event-dependent rule: whether an action is admissible depends
+on what has previously happened. It is consequently inaccurate to say
+that Calvino’s original method knew only static constraints. It knew at
+least one kind of changing state, the physical availability of a
+character.</p>
+<p>What the synopsis postpones is more precise. Characters might lose or
+acquire subjective incompatibilities after actions they perform or
+suffer. Calvino notes the possibility and explicitly declines, for the
+moment, to explore it <span class="citation" data-cites="braffort1997ordre">(Braffort 1997)</span>. The gap is not
+<em>change versus stasis</em> but one kind of change versus another. A
+murder updates a discrete condition with a comparatively stable
+interpretation. Betrayal, seduction, grief, or revelation may change
+what a character expects, intends, fears, or can imagine doing, without
+offering an equally simple transition rule. Nor need those changes
+coincide with outward acts. A person might discover a secret without
+acting on it, or act on a false assumption and never learn that it was
+false.</p>
+<p>The action schema reveals still another omission. In the rules for
+acquiring secrets, it matters whether the same secret has been obtained
+again or whether a different secret is involved. But an event
+represented only as (actor, action, patient) cannot express that
+distinction. It needs at least an object identity and some state of
+possession or knowledge. Once that object is added, further questions
+arrive: whether a secret can be independently learned, falsely believed,
+disclosed to several people, or cease to be secret. These are not
+ornamental refinements. They determine which sequences the machine can
+correctly exclude. Anticombinatorics first requires the invention of
+things whose differences have to be judged.</p>
+<h1 id="ii.-the-missing-state-is-not-only-physical">II. The missing
+state is not only physical</h1>
+<p>A parallel computational history clarifies what this invention
+entails. In 1977, the year of Calvino’s Centre Pompidou presentation,
+James Meehan published <em>TALE-SPIN</em>. Instead of filtering a
+complete inventory of crime assignments, the system generated stories
+through a problem solver, an assertion mechanism, and an inference
+mechanism. Agents pursue goals; their actions update descriptions of the
+physical and interpersonal world; inferred consequences may produce new
+goals <span class="citation" data-cites="meehan1977talespin">(Meehan
+1977)</span>. TALE-SPIN was not a completed answer to literary creation.
+Its importance here is architectural. Narrative possibility was
+organized as a sequence of world-state changes, not merely as a set of
+survivors after elimination.</p>
+<p>The chronology does not establish direct influence between Meehan and
+Calvino or Braffort. It disproves a simpler genealogy in which explicit
+combinatorics in the 1970s gives way only much later to the simulation
+of dynamic worlds. A competing representational strategy existed at the
+time. The distinction between the strategies is causal, not merely
+historical. In a compatibility filter, a candidate combination may be
+ruled out by a predicate. In a world simulator, events produce the very
+state against which later predicates are evaluated. Filtering and
+simulation can be combined, but they make different choices about what
+must be given in advance <span class="citation" data-cites="meehan1977talespin braffort1997ordre">(Meehan 1977; Braffort
+1997)</span>.</p>
+<p>In 1981 Natalie Dehn pressed a further objection. A writer does not
+always establish a world and allow its inhabitants to generate a plot.
+The writer may first want a confrontation, revelation, or reversal and
+then invent a place, relationship, or prior event that makes the desired
+scene possible. Author-directed generation therefore works backward as
+well as forward: the narrative goal can induce the construction of
+conditions under which it can occur <span class="citation" data-cites="dehn1981story">(Dehn 1981)</span>. This possibility defeats
+a common assumption shared by naive reconstruction and naive
+simulation—that there must be one preexisting world whose hidden details
+the process is recovering. In fictional creation, an apparently missing
+cause may not be waiting to be found. It may have to be invented.</p>
+<p>Later planning research formalizes some of the omitted machinery.
+Riedl and Young’s IPOCL planner distinguishes causal coherence from
+character intentionality. Actions must belong to causally intelligible
+plans and to an explanation of why particular characters perform them
+<span class="citation" data-cites="riedl2010narrative">(Riedl and Young
+2010)</span>. Brenner’s continual multiagent planning extends the state
+of a storyworld to perceptions, communication, commitments, beliefs,
+goals, and revision. A character may know, suspect, or fail to know a
+relevant precondition. Two agents can inhabit the same physical
+environment and face different actionable possibilities because their
+representations of that environment differ <span class="citation" data-cites="brenner2010creating">(Brenner 2010)</span>. These
+developments sharpen the problem Calvino deferred: not merely whether
+events are jointly possible, but for whom, at what time, and under which
+beliefs.</p>
+<p>Young’s later HEADSPACEX proposal adds a particularly useful
+distinction. A character may possess desires with incompatible ends,
+even where the system limits the intentions that can be adopted as
+commitments <span class="citation" data-cites="young2017sketching">(Young 2017)</span>. Psychological
+contradiction cannot simply be treated as logical failure. A character
+who wants to protect another person and also reveal that person’s secret
+is not necessarily malformed. The coexistence of these desires may be
+the plot’s central pressure. A system that uses consistency checks
+indiscriminately may rule out complex characters while faithfully
+enforcing its own type system.</p>
+<p>These advances do not make a simulated story aesthetically adequate.
+Brenner expressly states that plot quality or interestingness is not an
+explicit concept in the proposed system and that a model of author or
+reader judgment would be required to pursue it <span class="citation" data-cites="brenner2010creating">(Brenner 2010)</span>. Better world
+state, more precise belief state, and richer character agency do not
+decide which completed sequence counts as a work of art. This is a
+recurring separation, not a defect that disappears with each new layer
+of representation.</p>
+<h1 id="iii.-the-programmer-the-character-and-the-reader-judge-different-things">III.
+The programmer, the character, and the reader judge different
+things</h1>
+<p>Calvino’s synopsis recognizes this separation. Its categories
+distinguish objective restrictions, subjective constraints derived from
+character personalities, and aesthetic constraints—also described as
+subjective constraints of the programmer. It asks whether the latter two
+can be considered together <span class="citation" data-cites="braffort1997ordre">(Braffort 1997)</span>. The question is
+almost a diagram of the unfinished project. A rule about whether a
+corpse can act belongs to the state of the fictional world. A rule about
+whether a character would betray a friend belongs to a model of that
+character. A rule about whether the betrayal comes too early or creates
+a dull ending belongs to the maker’s aesthetic evaluation. These rules
+may overlap in practice, but they do not derive their authority from the
+same place.</p>
+<p>That difference matters for the <em>clinamen</em>. Duncan shows that
+Calvino’s early account of a literary machine in “Cybernetics and
+Ghosts” assigns a decisive role to reception, whereas the later
+anticombinatorial account returns creative privilege to the authorial
+deviation <span class="citation" data-cites="calvino1986cybernetics duncan2012calvino">(Calvino 1986;
+Duncan 2012)</span>. Within Oulipian practice, a stricter formulation of
+<em>clinamen</em> requires more than an unusual result: a compliant
+alternative must have been available and deliberately rejected for an
+aesthetic purpose <span class="citation" data-cites="duncan2012calvino">(Duncan 2012)</span>. This condition
+cannot be met merely by selecting a low-probability token. The sampled
+token is generally a valid result of the probabilistic sampling process,
+not evidence that an agent considered a known constraint, found a
+compliant solution, and chose to violate it.</p>
+<p>The strict definition must itself be handled cautiously. Berkman
+argues that Calvino’s arrangements and revisions do not always
+instantiate fixed procedures that mechanically generate the final prose.
+A diagram may organize an evolving work as much as generate it, while
+the <em>clinamen</em> may be spatial, metaphorical, or present in the
+ongoing revision of the arrangement <span class="citation" data-cites="berkman2020clinamen">(Berkman 2020)</span>. The alternative
+to equating randomness with artistic freedom is therefore not to locate
+a single, detectable exception in each work. It is to ask what rule was
+operative for which actor at which stage, how it was changed, and what
+counterfactual compliant alternative the evidence can actually
+support.</p>
+<p>There is an additional temporal complication in contemporary AI. The
+human labor of preference ranking, demonstration, filtering, and reward
+modeling can alter the distribution of future model outputs before any
+particular writer supplies a prompt <span class="citation" data-cites="ouyang2022training">(Ouyang et al. 2022)</span>. The
+evaluator may not be the same person as the prompter, reviser, reader,
+or maker of the training examples. The question of aesthetic agency
+becomes distributed, but distribution does not make the distinctions
+disappear. Rewarding instruction-following, preserving semantic
+consistency, and judging literary consequence are different operations.
+An optimized distribution can conceal, rather than remove, decisions
+about which possibilities are considered desirable.</p>
+<p>For this reason a simple labor reversal—then the human wrote, now the
+machine writes—is insufficient. Calvino already considered a machine
+that might change its own conventions, and later allowed the artist an
+exceptional role. Contemporary generation likewise encompasses distinct
+operations: pretraining, preference tuning, decoding, prompting,
+evaluation, editing, publication, and reception. The significant
+research task is to locate what each operation treats as fixed and what
+it can still revise.</p>
+<h1 id="iv.-the-world-that-evidence-does-not-yet-determine">IV. The
+world that evidence does not yet determine</h1>
+<p>The same problem changes character when the input is not a sequence
+of events but several images of an imagined place. Conventional
+reconstruction asks how multiple observations correspond to one spatial
+scene. Fictional images need not obey that presupposition. They may
+depict different times, incompatible narrative realities, allegorical
+versions of a place, or different locations joined by one name. More
+pixels or more views do not decide which hypothesis ought to be adopted.
+The question is not only the geometry implied by the image but the
+ontology and revision policy of the fictional world.</p>
+<p>Dehn’s author-directed proposal supplies one alternative to the
+assumption that a stable world must precede its episodes: the world may
+be constructed retrospectively to support a desired action <span class="citation" data-cites="dehn1981story">(Dehn 1981)</span>. Another
+comes from the different functions of Calvino’s <em>Invisible
+Cities</em>. Berkman’s account of the novel’s organization and
+Venice-related interpretive pressure does not require the fifty-five
+descriptions to resolve into one geometrically coherent Venice <span class="citation" data-cites="berkman2020clinamen">(Berkman 2020)</span>.
+A recurrence can be semantic or mnemonic, not merely spatial. Inferring
+one map from every city description would be an interpretive decision,
+not a neutral reconstruction of observations.</p>
+<p>An especially provocative proposal is Cory Siler’s open-world
+narrative generation, which distinguishes facts already established to
+an audience from further worlds it presently finds plausible <span class="citation" data-cites="siler2022openworld">(Siler 2022)</span>.
+Its key idea is nonmonotonicity: evidence can defeat an assumption that
+previously made a fictional explanation implausible. A dragon introduced
+late in the story may not contradict any earlier observation; it may
+overturn the reader’s default belief that dragons do not exist in this
+genre or setting. A purely subtractive possibility-space account cannot
+capture the return of a possibility that was rejected only
+provisionally. The distinction between an immutable observation and a
+revisable default is therefore central. This is a proposal rather than a
+demonstrated general solution, and its source remains a verification
+priority.</p>
+<p>The resulting model is neither indiscriminate openness nor the
+pursuit of a single final answer. Consider three images that suggest one
+city but disagree about a tower’s location, the coastline, and a
+building’s interior. One interpretation treats them as views of a stable
+city from different times; another treats them as distinct cities with a
+common emblem; a third treats them as mutually inconsistent but
+narratively related worlds. Each may preserve important aspects of the
+images. Before reconstructing an environment, a system should
+distinguish what was observed, what has been inferred, what has been
+stipulated for the purposes of the story, and what remains
+negotiable.</p>
+<p>This is also where the analogy with diffusion models should stop. A
+diffusion model can generate vivid landscapes through learned reverse
+dynamics <span class="citation" data-cites="ho2020denoising">(Ho, Jain,
+and Abbeel 2020)</span>. It does not follow from that fact alone that a
+set of its images describes one causal, persistent, navigable location.
+A scene may appear photographically resolved while its spatial identity
+remains underdetermined. Conversely, a world with relatively schematic
+images can possess a well-specified geography and history. The aesthetic
+resolution of an image, the computational convergence of a sampling
+trajectory, and the ontological determination of a world are different
+kinds of closure.</p>
+<h1 id="v.-an-architecture-of-qualified-commitments">V. An architecture
+of qualified commitments</h1>
+<p>The combined evidence supports a layered model rather than one
+universal consistency filter. The model is not attributed to Calvino or
+to any of the later systems; it is an analytical proposal designed to
+expose decisions usually hidden inside the language of narrative
+possibility. It separates <strong>observations</strong> from
+<strong>world hypotheses</strong>, <strong>world hypotheses</strong>
+from <strong>character beliefs</strong>, <strong>character
+beliefs</strong> from <strong>intentions</strong>, and all of these from
+<strong>aesthetic criteria</strong>. Aesthetic evaluation can propose
+revisions, but those revisions must reveal whether they change a
+previously observed fact, a defeasible inference, an agent’s belief, or
+a desired dramatic trajectory.</p>
+<table>
+<colgroup>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Layer</th>
+<th style="text-align: left;">What it represents</th>
+<th style="text-align: left;">What may change</th>
+<th style="text-align: left;">What should not be silently changed</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Observed commitments</td>
+<td style="text-align: left;">What the story has shown or explicitly
+stipulated</td>
+<td style="text-align: left;">New observations may be added</td>
+<td style="text-align: left;">Earlier observations without disclosed
+revision</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">World hypotheses</td>
+<td style="text-align: left;">Possible causal, spatial, and social
+states</td>
+<td style="text-align: left;">Defaults, inferred details, alternate
+configurations</td>
+<td style="text-align: left;">Their evidential status</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Character perspectives</td>
+<td style="text-align: left;">What each agent believes, knows, desires,
+intends</td>
+<td style="text-align: left;">Beliefs, motives, goals, commitments</td>
+<td style="text-align: left;">Attribution of one character’s belief to
+another</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Aesthetic purposes</td>
+<td style="text-align: left;">Desired rhythm, pattern, ambiguity, genre,
+surprise</td>
+<td style="text-align: left;">Preferences and priorities through
+revision</td>
+<td style="text-align: left;">Their ownership and history</td>
+</tr>
+</tbody>
+</table>
+<p>The categories are not mutually independent in lived composition. An
+aesthetic purpose may cause the author to invent a new event; the event
+may alter what a character knows; that knowledge may activate a plan;
+the plan may create an unforeseen outcome that changes the author’s
+initial purpose. The point of separation is not to make these processes
+autonomous but to make their crossings accountable. What changes, who
+authorizes the change, and which alternatives remain visible become
+first-class questions.</p>
+<p>The smallest computational test follows from the problem of the
+secret. Begin with the same twelve action assignments and compare a
+representation containing only actor, action, and patient with one that
+additionally identifies secrets and tracks who knows them. Construct two
+sequences identical at the first level but different in whether a second
+acquisition concerns the same secret. If the primitive representation
+cannot distinguish them, no amount of search-space pruning can apply the
+stipulated rule correctly. The next test gives two characters different
+beliefs about the same secret. The same world state now supports
+different available plans. A third test introduces incompatible desires
+and checks whether the system discards a potentially revealing character
+conflict. A fourth introduces a new image whose apparent contradiction
+can be resolved by revising a genre assumption, not an established
+fact.</p>
+<p>These are proposed discriminating experiments, not reported results.
+Their value is methodological. They locate an error’s level before
+turning it into a model-quality score. A semantic-object error cannot be
+repaired by more sampling; an epistemic error cannot be repaired by
+stricter global consistency; a genre-default error need not be repaired
+by changing the fictional geography; and an aesthetic disagreement may
+not be an error at all. The history of computational storytelling
+suggests that different kinds of failure demand different
+representational remedies.</p>
+<h1 id="discussion-anticombinatorics-after-generation">Discussion:
+anticombinatorics after generation</h1>
+<p>The strongest counterargument is that learned models might eventually
+absorb all these distinctions statistically. A sufficiently trained
+generative model can often maintain character identity, obey explicit
+world constraints, construct plausible causal histories, and revise a
+narrative in response to instructions. It may not need symbolic
+representations of secrets, intentions, or observation commitments to
+produce convincing outputs. This possibility should be taken seriously.
+Explicit formalisms are not the only means of achieving a behavior, and
+an architecture’s internal representations need not resemble those used
+to evaluate it.</p>
+<p>Yet there is a difference between achieving an output in one trial
+and exposing the conditions under which the output remains valid across
+revisions, characters, and contradictory observations. If the user asks
+why a once-impossible city can now contain a tower, the system must
+either articulate the changed commitments or leave the explanation
+opaque. The demand for an explicit account becomes especially strong in
+interactive worlds, where characters and users will continue to act and
+new material will be absorbed. Probabilistic fluency can postpone this
+accounting. It cannot by itself determine whether the new tower
+contradicts prior observation, replaces a provisional inference, or
+deliberately introduces a rupture in the fiction.</p>
+<p>Another counterargument is literary. Great literature may violate
+causal logic, treat location as metaphor, or cultivate characters whose
+motives never become clear. A perfectly explicit world model might
+therefore be not only unnecessary but hostile to the work. That
+challenge is consistent with the argument here. The proposed layers are
+an instrument for preserving the right kinds of ambiguity, not a demand
+to resolve everything into a database. A system can explicitly represent
+that two incompatible versions remain live, or that a narrator’s
+testimony is disputed, without deciding which is true. The failure is
+not the absence of a final answer; it is the unacknowledged conversion
+of an unresolved question into an invisible fixed assumption.</p>
+<p>Calvino’s own suspicion of the comfort offered by finite
+combinatorial order complicates any program of unlimited formalization
+<span class="citation" data-cites="calvino1986cybernetics">(Calvino
+1986)</span>. The aim should not be to inventory every conceivable
+emotional, social, or aesthetic variable. Instead, representations
+should emerge from the operations a work requires, remain contestable,
+and be revised when a new scene makes an earlier distinction inadequate.
+A model of a city may begin with shared landmarks and later require
+competing histories. A model of a character may begin with a goal and
+later require ambivalence. A model of an object may begin as a prop and
+later become the secret on which the plot turns. The research object is
+the transformation of the representation itself.</p>
+<h1 id="limitations-and-unresolved-territory">Limitations and unresolved
+territory</h1>
+<p>This argument is a close interpretive and technical comparison, not a
+reconstruction of Braffort’s executable programs. The original source
+code, exhaustive test outputs, and the complete working dossier were not
+available in the materials used here. Braffort’s account is primary
+testimony written later, and claims about implementation must remain
+narrower than claims about the synopsis <span class="citation" data-cites="braffort1997ordre">(Braffort 1997)</span>. The related
+planning systems were produced in different research communities;
+resemblance and chronological proximity do not establish direct
+influence. The discussion of Siler relies on the supplied zettel and a
+source URL that was blocked during this preparation; its details should
+be independently rechecked before publication.</p>
+<p>The proposed layered model is not a complete computational
+architecture. It lacks a general mechanism for forming or ranking world
+hypotheses, a complete treatment of unreliable perception and deliberate
+deception, and a non-arbitrary account of revising aesthetic criteria.
+It also leaves unresolved the question of whether preserving
+contradictory possible worlds improves an actual reader’s experience.
+The paper therefore proposes discriminating tests rather than claiming
+evidence of aesthetic superiority.</p>
+<h1 id="conclusion-keep-the-possibility-space-answerable">Conclusion:
+keep the possibility space answerable</h1>
+<p>The lasting difficulty in Calvino’s anticombinatorial project was not
+simply that there were too many stories to search. The rules needed
+entities the original representation could not identify, characters
+whose states changed in ways the system deferred, and aesthetic
+judgments that could not be read off the world’s physical or
+psychological constraints. Computational storytelling subsequently
+developed richer representations of goals, beliefs, and revision, but
+this progress repeatedly disclosed new questions of judgment rather than
+dissolving them.</p>
+<p>Contemporary generative AI changes the production of prose and images
+without making these questions obsolete. It can generate a compelling
+outcome without providing an explicit inventory of the possibilities
+excluded or the assumptions fixed along the way. The decisive design
+problem becomes how to preserve, contest, and revise those commitments
+as the fiction continues. An imagined world is not necessarily a latent
+object waiting for its last missing view. It can be a negotiated
+construction whose incomplete identity makes further stories possible.
+In that sense, the most fertile anticombinatorics may not be the
+operation that narrows a vast field to one survivor. It may be the
+discipline of knowing when a possibility was never represented, when it
+was provisionally excluded, and when the work requires letting it
+return.</p>
+<h1 id="references">References</h1><div class="references csl-bib-body hanging-indent" data-entry-spacing="0" id="refs" role="list">
+<div class="csl-entry" id="ref-alessandrini2023matematica" role="listitem">
+Alessandrini, Paolo. 2023. <span>“La Matematica Di Italo
+Calvino.”</span> <em>Archimede</em>, no. 3: 157–63. <a href="https://riviste.mondadorieducation.it/archimede/wp-content/uploads/sites/2/2023/12/0060.ARCH3_23_ARch_Cultura_Alessandrini_157_163.pdf">https://riviste.mondadorieducation.it/archimede/wp-content/uploads/sites/2/2023/12/0060.ARCH3_23_ARch_Cultura_Alessandrini_157_163.pdf</a>.
+</div>
+<div class="csl-entry" id="ref-berkman2020clinamen" role="listitem">
+Berkman, Natalie. 2020. <span>“Italo Calvino’s Oulipian
+Clinamen.”</span> <em>MLN</em> 135 (1): 255–80. <a href="https://doi.org/10.1353/mln.2020.0001">https://doi.org/10.1353/mln.2020.0001</a>.
+</div>
+<div class="csl-entry" id="ref-braffort1997ordre" role="listitem">
+Braffort, Paul. 1997. <span>“L’ordre Dans Le Crime: Une Expérience
+Cybernétique Avec Italo Calvino.”</span> <em>Europe</em>, no. 815
+(March). <a href="https://www.paulbraffort.net/litterature/critique/calvino_crime.html">https://www.paulbraffort.net/litterature/critique/calvino_crime.html</a>.
+</div>
+<div class="csl-entry" id="ref-brenner2010creating" role="listitem">
+Brenner, Michael. 2010. <span>“Creating Dynamic Story Plots with
+Continual Multiagent Planning.”</span> In <em>Proceedings of the
+Twenty-Fourth AAAI Conference on Artificial Intelligence</em>, 1517–22.
+AAAI Press. <a href="https://cdn.aaai.org/ojs/7567/7567-13-11097-1-2-20201228.pdf">https://cdn.aaai.org/ojs/7567/7567-13-11097-1-2-20201228.pdf</a>.
+</div>
+<div class="csl-entry" id="ref-calvino1986cybernetics" role="listitem">
+Calvino, Italo. 1986. <span>“Cybernetics and Ghosts.”</span> In <em>The
+Uses of Literature: Essays</em>, translated by Patrick Creagh, 3–27.
+Harcourt Brace Jovanovich. <a href="https://www.jfki.fu-berlin.de/academics/SummerSchool/Dateien2011/Reading_Assignments/iuli_reader2.pdf">https://www.jfki.fu-berlin.de/academics/SummerSchool/Dateien2011/Reading_Assignments/iuli_reader2.pdf</a>.
+</div>
+<div class="csl-entry" id="ref-dehn1981story" role="listitem">
+Dehn, Natalie. 1981. <span>“Story Generation After TALE-SPIN.”</span> In
+<em>Proceedings of the Seventh International Joint Conference on
+Artificial Intelligence</em>, 16–17. <a href="https://ijcai.org/proceedings/1981/4">https://ijcai.org/proceedings/1981/4</a>.
+</div>
+<div class="csl-entry" id="ref-duncan2012calvino" role="listitem">
+Duncan, Dennis. 2012. <span>“Calvino, Llull, Lucretius: Two Models of
+Literary Combinatorics.”</span> <em>Comparative Literature</em> 64 (1).
+<a href="https://doi.org/10.1215/00104124-1539226">https://doi.org/10.1215/00104124-1539226</a>.
+</div>
+<div class="csl-entry" id="ref-ho2020denoising" role="listitem">
+Ho, Jonathan, Ajay Jain, and Pieter Abbeel. 2020. <span>“Denoising
+Diffusion Probabilistic Models.”</span> In <em>Advances in Neural
+Information Processing Systems</em>. <a href="https://arxiv.org/abs/2006.11239">https://arxiv.org/abs/2006.11239</a>.
+</div>
+<div class="csl-entry" id="ref-meehan1977talespin" role="listitem">
+Meehan, James R. 1977. <span>“TALE-SPIN, an Interactive Program That
+Writes Stories.”</span> In <em>Proceedings of the Fifth International
+Joint Conference on Artificial Intelligence</em>, 91–97. <a href="https://ijcai.org/proceedings/1977/17">https://ijcai.org/proceedings/1977/17</a>.
+</div>
+<div class="csl-entry" id="ref-ouyang2022training" role="listitem">
+Ouyang, Long et al. 2022. <span>“Training Language Models to Follow
+Instructions with Human Feedback.”</span> In <em>Advances in Neural
+Information Processing Systems</em>. Vol. 35. <a href="https://arxiv.org/abs/2203.02155">https://arxiv.org/abs/2203.02155</a>.
+</div>
+<div class="csl-entry" id="ref-riedl2010narrative" role="listitem">
+Riedl, Mark O., and R. Michael Young. 2010. <span>“Narrative Planning:
+Balancing Plot and Character.”</span> <em>Journal of Artificial
+Intelligence Research</em> 39: 217–67. <a href="https://doi.org/10.1613/JAIR.2989">https://doi.org/10.1613/JAIR.2989</a>.
+</div>
+<div class="csl-entry" id="ref-siler2022openworld" role="listitem">
+Siler, Cory. 2022. <span>“Open-World Narrative Generation to Answer
+Players’ Questions.”</span> In <em>Proceedings of the Eighteenth AAAI
+Conference on Artificial Intelligence and Interactive Digital
+Entertainment</em>, 307–10. AAAI Press. <a href="https://ojs.aaai.org/index.php/AIIDE/article/download/21981/21750/26033">https://ojs.aaai.org/index.php/AIIDE/article/download/21981/21750/26033</a>.
+</div>
+<div class="csl-entry" id="ref-young2017sketching" role="listitem">
+Young, R. Michael. 2017. <span>“Sketching a Generative Model of
+Intention Management for Characters in Stories: Adding Intention
+Management to a Belief-Driven Story Planning Algorithm.”</span> In
+<em>Proceedings of the AIIDE-17 Workshop on Intelligent Narrative
+Technologies</em>, 281–87. AAAI Press. <a href="https://cdn.aaai.org/ojs/12986/12986-52-16503-1-2-20201228.pdf">https://cdn.aaai.org/ojs/12986/12986-52-16503-1-2-20201228.pdf</a>.
+</div>
+</div>
+<!-- generated by citeproc from the compiled bibliography -->
+<h1 id="appendix-a.-assembly-instrument">Appendix A. Assembly
+instrument</h1>
+<p>The exact publication prompt supplied by the researcher, version
+<strong>15.55-AM</strong>, is archived as <a href="_PROMPTS/assembly_slipcase_v15.55-AM.xml">assembly instrument</a>
+and embedded without redaction in <code>index.html</code>. Its SHA-256
+appears in <code>000__PROMPTS.txt</code> and
+<code>_SLIPCASE/MANIFEST.json</code>. This pointer is used instead of
+printing the entire long prompt in the scholarly manuscript. The paper’s
+present claims are not evidence supplied by that prompt.</p>
+<h1 id="appendix-b.-making-history">Appendix B. Making history</h1>
+<p><strong>Provided:</strong> The researcher supplied a November 2026
+note about Calvino and generative AI, twenty-four previously produced
+zettels, and three successive POML research/assembly instructions in the
+visible conversation. <strong>Preserved:</strong> Card payloads were
+staged, hashed, and copied as root TXT and Markdown mirrors; their
+BibTeX variants and link occurrences remain inspectable.
+<strong>Retrieved:</strong> During this preparation, the Braffort HTML
+account, IJCAI’s Meehan page, and the Duncan and Brenner PDFs were
+inspected. <strong>Derived:</strong> The present argument, graph, field
+arrangements, bibliographic normalization, interface, and rebuilding
+code were composed by GPT-6. <strong>Verified:</strong> Package
+integrity, local hashes, graph counts, and PDF rendering are
+computational checks recorded separately. <strong>Unverified:</strong>
+Source text fidelity against a machine-exported conversation transcript,
+complete source coverage, and original project code. No human review of
+the compiled publication is asserted.</p>
+<h1 id="appendix-c.-replication-path">Appendix C. Replication path</h1>
+<p>Open <code>index.html</code> from <code>file://</code> to inspect the
+cards and their sources. Download the embedded reconstruction JSON.
+Verify payload hashes against <code>ZETTELS.json</code>, and compare
+each root TXT card to its <code>_MD/</code> mirror. Use
+<code>_SLIPCASE/RELATIONS.jsonl</code> to trace each native address and
+<code>_SLIPCASE/BIBLIOGRAPHY_VARIANTS.json</code> to inspect
+bibliography discrepancies. The return identity is
+<code>Calvino-Open-Worlds-2026-11-23</code>; a future merged archive
+must treat SHA-256 payload identity, not original zettel ID or filename,
+as the basis for deduplication. Source bodies marked
+<code>LINK_ONLY</code> were not bundled. The working paper remains a
+revisable interpretation, not a new primary source.</p>
+
+</main><footer><p>AI-augmented research process · evidence and assembly history preserved in SLIPCASE. <img src="MARK.svg" width="20" style="float:right" alt=""></p></footer></html>

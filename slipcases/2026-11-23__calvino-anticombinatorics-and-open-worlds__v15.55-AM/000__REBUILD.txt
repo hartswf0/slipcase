@@ -1,0 +1,10 @@
+Calvino-Open-Worlds-2026-11-23 — REBUILD PROCEDURE
+
+A. For a local ZIP extract, run python compile.py . from the package root when raw/ inputs are retained. The compiler regenerates root cards and the core graph.
+B. Verify exact payloads with sha256sum against ZETTELS.json sha256; _MD mirrors must be byte-equal to each root card.
+C. Check _SLIPCASE/RELATIONS.jsonl for all PLATFORM, LINKS and other [[address]] occurrences. Do not reinterpret ambiguous IDs as exact links.
+D. In an isolated recipient context, open index.html. The embedded capsule JSON contains zettel payloads, bibliography, graph, prompts, selected resources, paper HTML, and reconstruction metadata. Press "Download reconstruction JSON" and use _SLIPCASE/rebuild_from_capsule.py to restore cards.
+E. Regenerate TeX/PDF from what_constraints_cannot_decide__2026-11-23.tex with xelatex twice. References are rendered into the TeX; named references.bib remains as source bibliography.
+F. Merge by SHA256 of payload, never ID/title. Record appearances, ambiguous IDs and citation variants independently. Re-resolve graph.
+
+LIMIT: Manual retranscription is not a verified byte-level chat export. The package supplies internal integrity and transparent provenance only.

@@ -1,0 +1,587 @@
+```text
+ZETTEL
+
+ID: CALVINO-007
+
+TITLE:
+A clinamen requires an available compliant alternative; random sampling does not.
+
+SOURCE:
+Dennis Duncan — "Calvino, Llull, Lucretius: Two Models of Literary Combinatorics" — Comparative Literature 64.1 (2012), pp. 104–106, discussing Jacques Roubaud's definition.
+
+PASSAGE:
+[PARAPHRASE — ROUBAUD AS DISCUSSED BY DUNCAN]
+A proper clinamen is an intentional departure from a literary constraint even though a satisfactory way to obey that constraint remains available.
+
+RESEARCH OBJECT:
+The counterfactual condition that distinguishes an aesthetic exception from an inability to follow a rule.
+
+LOCAL MOVE:
+Duncan places Calvino's concept alongside Roubaud's stricter Oulipian account, emphasizing the difference between constraint violation and unrestricted variation.
+
+SOURCE TERMS:
+"clinamen"; "constraint"; "intentional violation";
+"aesthetic purposes."
+
+WHAT BECAME STRANGE:
+A low-probability token is not a violation of its model's generative procedure. It is one possible result of that procedure.
+
+QUESTION:
+Can probabilistic sampling count as a clinamen when the system has not identified a rule it could have followed but deliberately chose to break?
+
+DEEPER QUESTION:
+What evidence is required to distinguish intentional exception from random deviation, model error, or unconstrained variation?
+
+MECHANISM:
+A writer establishes a rule, discovers an admissible solution, and nevertheless selects a deviation for an aesthetic reason.
+
+FORMAL SHIFT:
+Explicit constraint
+→ valid candidate
+→ [deliberate rejection for aesthetic reasons]
+→ exceptional artifact.
+
+SOURCE FORMALISM:
+The verified passage supplies a conceptual condition, not an algorithm.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Given constraint C and candidate y:
+
+C(y) = false
+
+A compliant alternative y' exists:
+C(y') = true
+
+The deviation must additionally be selected for an articulated aesthetic purpose.
+
+Low probability alone:
+P(y) ≈ 0
+
+does not satisfy these conditions.
+
+TENSION:
+Calvino uses clinamen more broadly than this strictly operational definition, as Natalie Berkman argues. Therefore the Roubaud condition should not automatically be imposed on every Calvino text.
+
+MISSING:
+A formalizable criterion for aesthetic purpose; evidence that the agent recognizes the constraint and the compliant alternative.
+
+BOUNDARY:
+The strict Oulipian clinamen and the Lucretian physical swerve are not identical. Neither should be equated with model sampling temperature.
+
+CITATION TRAIL:
+Jacques Roubaud, "The Oulipo and Combinatorial Art," in Oulipo Compendium (1998), pp. 37–44.
+Duncan (2012), pp. 104–106.
+Berkman (2020).
+
+TEST:
+Produce three artifacts: a constrained text, a randomly perturbed text, and a deliberately modified constrained text whose compliant alternative is retained. Compare whether the modifications have intelligible aesthetic functions.
+
+PLATFORM:
+[[Clinamen as Counterfactual Choice]]
+
+LINKS:
+[[CALVINO-001]]
+[[CALVINO-011]]
+[[CALVINO-015]]
+
+BIBTEX:
+@article{duncan2012calvino,
+  author  = {Duncan, Dennis},
+  title   = {Calvino, Llull, Lucretius: Two Models of Literary Combinatorics},
+  journal = {Comparative Literature},
+  volume  = {64},
+  number  = {1},
+  year    = {2012},
+  doi     = {10.1215/00104124-1539226},
+  url     = {https://www.ub.edu/llulldb/docs/Calvino.pdf}
+}
+```
+
+```text
+ZETTEL
+
+ID: CALVINO-008
+
+TITLE:
+In 1977, another story machine generated events by simulating a world instead of filtering completed plots.
+
+SOURCE:
+James R. Meehan — "TALE-SPIN, An Interactive Program that Writes Stories" — IJCAI (1977), pp. 91–97.
+
+PASSAGE:
+[PARAPHRASE]
+TALE-SPIN generates stories through problem-solving procedures, assertions about the current world, and inferences about event consequences. Characters pursue goals, and their actions change the conditions for subsequent actions.
+
+RESEARCH OBJECT:
+A contemporaneous computational genealogy based on world simulation rather than combinatorial elimination.
+
+LOCAL MOVE:
+Meehan makes the story an observable trace of characters attempting to solve problems within a simulated environment.
+
+SOURCE TERMS:
+"problem solver"; "assertion mechanism";
+"inference mechanism"; "goals"; "subgoals";
+"problem domains."
+
+WHAT BECAME STRANGE:
+The historical contrast need not be Calvino's explicit combinatorics versus today's statistical generation. A substantially different architecture for computer-generated narrative was already documented in the same year as Calvino's Centre Pompidou presentation.
+
+QUESTION:
+Why compare contemporary generative AI chiefly with Calvino's anticombinatorics when earlier computational storytelling also explored world simulation and causal inference?
+
+DEEPER QUESTION:
+Should the history of AI narrative be organized around different representations of story, rather than successive increases in computational power?
+
+MECHANISM:
+An agent has a goal. A solver selects actions or subgoals. Events update world memory. Inferences establish further consequences and possibly new goals.
+
+FORMAL SHIFT:
+Character goal
+→ world-state representation
+→ [problem solving and causal inference]
+→ updated world and narrative events.
+
+SOURCE FORMALISM:
+Problem solver.
+Assertion mechanism.
+Inference mechanism.
+Stored descriptions of physical and social state.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Goal g
+→ action a
+→ state update S'
+→ inferred consequences E
+→ new goals g'
+
+The story is a trace of state transitions, not a surviving member of an explicitly enumerated plot inventory.
+
+TENSION:
+TALE-SPIN could generate causally motivated events while producing awkward or uninteresting stories. Causal correctness and literary value remained separate problems.
+
+MISSING:
+Evidence of direct exchanges between Meehan and Calvino–Braffort. A controlled comparison of their actual programs.
+
+BOUNDARY:
+Contemporaneity does not establish influence. TALE-SPIN's architecture should not be projected backward onto Calvino's work.
+
+CITATION TRAIL:
+Meehan (1977).
+Meehan, The Metanovel (1976).
+Schank and Abelson on scripts and plans.
+Dehn (1981).
+
+TEST:
+Give TALE-SPIN-style world simulation and Calvino-style filtering identical characters, actions, and starting conditions. Compare what each can produce without adding new representations.
+
+PLATFORM:
+[[Alternative Genealogies of AI Story Generation]]
+
+LINKS:
+[[CALVINO-003]]
+[[CALVINO-005]]
+[[CALVINO-009]]
+[[CALVINO-016]]
+
+BIBTEX:
+@inproceedings{meehan1977talespin,
+  author    = {Meehan, James R.},
+  title     = {TALE-SPIN, An Interactive Program that Writes Stories},
+  booktitle = {Proceedings of the Fifth International Joint Conference on Artificial Intelligence},
+  pages     = {91--97},
+  year      = {1977},
+  url       = {https://ijcai.org/proceedings/1977/17}
+}
+```
+
+```text
+ZETTEL
+
+ID: CALVINO-009
+
+TITLE:
+A narrative can invent the world required by its desired events.
+
+SOURCE:
+Natalie Dehn — "Story Generation After TALE-SPIN" — IJCAI (1981), pp. 16–17.
+
+PASSAGE:
+[PARAPHRASE]
+Dehn challenges the assumption that authors first construct a complete fictional world and then let events unfold inside it. Writers frequently invent characters, places, and relationships to justify events they have already chosen.
+
+RESEARCH OBJECT:
+Retroactive construction of narrative worlds from desired dramatic outcomes.
+
+LOCAL MOVE:
+Dehn contrasts impartial world simulation with author-directed story generation. Her proposed AUTHOR model pursues narrative goals and reformulates them as the story develops.
+
+SOURCE TERMS:
+"author intentionality"; "conceptual reformulation";
+"reminding"; "opportunity enhancement metagoal."
+
+WHAT BECAME STRANGE:
+The author's creative act may not be the final selection of a narrative from a preexisting possibility space. It may be the invention of a possibility space in which a desired narrative becomes plausible.
+
+QUESTION:
+Could anticombinatorics operate backward, constructing the necessary world from an imagined event rather than selecting an event from an already defined world?
+
+DEEPER QUESTION:
+When a fictional city is inferred from disparate images or narrative episodes, which properties must be shared and which can be invented afterward?
+
+MECHANISM:
+A desired episode creates explanatory requirements. The author introduces places, characters, relations, and earlier events to satisfy them.
+
+FORMAL SHIFT:
+Desired dramatic event
+→ required causal conditions
+→ [retroactive world construction]
+→ supporting fictional world.
+
+SOURCE FORMALISM:
+Dehn distinguishes storyworld simulation from author-intent-based generation and describes goal reformulation and reminding. The conference paper does not supply a complete executable specification of every operation.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Given desired event E:
+
+Find or construct world W
+such that E is narratively possible in W.
+
+W* = construct_world(E, narrative_goals)
+
+This is not equivalent to reconstructing a historically real world from observations.
+
+TENSION:
+Retroactive worldbuilding risks arbitrary explanations. Forward simulation risks requiring too many irrelevant details before the story begins.
+
+MISSING:
+A method for preserving global world consistency while allowing new settings and backstories to be introduced on demand.
+
+BOUNDARY:
+Dehn's account concerns computational models of authorship. It does not establish that a generated world is geographically unique or that retrospective invention is equivalent to inference about reality.
+
+CITATION TRAIL:
+Dehn, "Story Generation After TALE-SPIN."
+Meehan (1977).
+Calvino, Invisible Cities.
+Research on abductive reasoning and narrative planning.
+
+TEST:
+Begin with three independently imagined scenes from one fictional city. Compare forward world simulation with backward construction of a shared city capable of containing all three scenes. Record required inventions, contradictions, and unresolved spatial relations.
+
+PLATFORM:
+[[Narrative World Reconstruction]]
+[[The Foundry — Imagined Place from Diverse Images]]
+
+LINKS:
+[[CALVINO-005]]
+[[CALVINO-006]]
+[[CALVINO-012]]
+[[CALVINO-017]]
+
+BIBTEX:
+@inproceedings{dehn1981story,
+  author    = {Dehn, Natalie},
+  title     = {Story Generation After TALE-SPIN},
+  booktitle = {Proceedings of the Seventh International Joint Conference on Artificial Intelligence},
+  pages     = {16--17},
+  year      = {1981},
+  url       = {https://ijcai.org/proceedings/1981/4}
+}
+```
+
+```text
+ZETTEL
+
+ID: CALVINO-010
+
+TITLE:
+Diffusion does not eliminate impossible images; it learns how to transform noisy states.
+
+SOURCE:
+Jonathan Ho, Ajay Jain, and Pieter Abbeel — "Denoising Diffusion Probabilistic Models" — 2020, sections 2–3, Algorithms 1–2.
+
+PASSAGE:
+[PARAPHRASE]
+The model is trained using a forward noising process and learns parameters for a reverse generative process. Sampling begins from a Gaussian noise state and proceeds through learned transitions toward a final image.
+
+RESEARCH OBJECT:
+The difference between rejection over symbolic candidates and learned reverse dynamics over continuous representations.
+
+LOCAL MOVE:
+Ho and colleagues specify a probabilistic generative procedure with a training objective and a reverse sampling algorithm.
+
+SOURCE TERMS:
+"forward process"; "reverse process";
+"variational bound"; "denoising score matching";
+"sampling."
+
+WHAT BECAME STRANGE:
+A noisy image is not literally an archive of fully formed candidate images awaiting elimination.
+
+QUESTION:
+What exactly is being reduced during diffusion sampling: uncertainty, entropy, noise, admissible possibilities, or distance from a learned distribution?
+
+DEEPER QUESTION:
+If an image model progressively produces visual detail without reasoning over explicit spatial objects, what warrants treating its result as an inferred narrative world?
+
+MECHANISM:
+The model estimates a reverse transition distribution from noisy examples. Sampling applies these learned transitions, often incorporating additional randomness.
+
+FORMAL SHIFT:
+Training images
+→ progressively noised training states
+→ [learn reverse transitions]
+→ generative sampling from noise.
+
+SOURCE FORMALISM:
+Forward process q.
+Learned reverse process p_theta.
+Initial sampling state x_T ~ N(0,I).
+Repeated transitions toward x_0.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Calvino-style search:
+Candidates → exclusions → surviving candidates.
+
+Diffusion:
+Noise state → learned transition → next state.
+
+The second process is not a sequence of logical rejections of complete hypothetical images.
+
+TENSION:
+Diffusion can produce a visually coherent scene without representing its causal history, object permanence, or consistency with other scenes.
+
+MISSING:
+An explicit representation of shared fictional locations, object identity, viewpoint, temporal continuity, and narrative event relations.
+
+BOUNDARY:
+This analysis concerns the DDPM mechanism. It does not describe every image-generation architecture or establish that learned models cannot be combined with explicit constraints.
+
+CITATION TRAIL:
+Ho, Jain, and Abbeel (2020).
+Ho and Salimans, "Classifier-Free Diffusion Guidance" (2022).
+Research on scene graphs, multiview generation, and world consistency.
+
+TEST:
+Generate multiple views of a purportedly shared place. Check spatial and semantic consistency independently of visual realism. Then introduce explicit world-state constraints and compare the results.
+
+PLATFORM:
+[[Generative Models Versus Narrative Reconstruction]]
+
+LINKS:
+[[CALVINO-003]]
+[[CALVINO-009]]
+[[CALVINO-016]]
+
+BIBTEX:
+@inproceedings{ho2020denoising,
+  author    = {Ho, Jonathan and Jain, Ajay and Abbeel, Pieter},
+  title     = {Denoising Diffusion Probabilistic Models},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year      = {2020},
+  eprint    = {2006.11239},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2006.11239}
+}
+```
+
+```text
+ZETTEL
+
+ID: CALVINO-011
+
+TITLE:
+Calvino's geometric structures are not necessarily generative constraints.
+
+SOURCE:
+Natalie Berkman — "Italo Calvino's Oulipian Clinamen" — MLN 135.1 (2020), pp. 255–280, especially pp. 261–267.
+
+PASSAGE:
+[PARAPHRASE]
+Berkman challenges the treatment of Calvino's tarot-card structures as strict Oulipian generative procedures. Calvino repeatedly revised the rules and arrangements while constructing his stories. His clinamen can be spatial or metaphorical rather than an identifiable violation of an executable constraint.
+
+RESEARCH OBJECT:
+The distinction between a formal structure that generates a work and a structure that organizes or interprets an already developing work.
+
+LOCAL MOVE:
+Berkman examines Calvino's actual compositional accounts instead of assuming that geometrical complexity proves procedural generation.
+
+SOURCE TERMS:
+"constraint"; "clinamen";
+"geometric structures"; "generative constraint";
+"destabilizing factor."
+
+WHAT BECAME STRANGE:
+A work can exhibit remarkable mathematical organization without having been produced by the mathematical procedure implied by its final form.
+
+QUESTION:
+When does a compositional diagram function as an algorithm, and when does it function as an explanatory representation?
+
+DEEPER QUESTION:
+Can a formal structure be aesthetically productive precisely because the artist continually revises it?
+
+MECHANISM:
+A writer arranges narrative fragments into a visible pattern, revising both fragments and pattern until they become mutually expressive.
+
+FORMAL SHIFT:
+Narrative fragments
+→ geometric arrangement
+→ [iterative restructuring]
+→ patterned literary work.
+
+SOURCE FORMALISM:
+Berkman discusses the tarot-card arrangements and the mathematical organization of Calvino's novels. These are documented structures, not evidence of a completed automatic generator.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Generative constraint:
+G(rule, inputs) → output
+
+Retrospective organization:
+organize(existing_fragments, aesthetic_goals) → structure
+
+These operations may interact, but they are not identical.
+
+TENSION:
+Dennis Duncan interprets Calvino's anticombinatorics through a historical return of authorial agency. Berkman emphasizes how Calvino's actual work complicates strict definitions of constraint and clinamen.
+
+MISSING:
+Draft sequences showing when each diagram was established relative to the prose it organizes.
+
+BOUNDARY:
+The absence of a strict generative procedure does not make the geometric structures incidental or merely decorative.
+
+CITATION TRAIL:
+Berkman (2020).
+Calvino's explanatory note to The Castle of Crossed Destinies.
+Calvino, "Comment j'ai écrit un de mes livres."
+Duncan (2012).
+
+TEST:
+Recover the documented stages of a Calvino composition. Distinguish rules fixed before drafting from diagrams revised during drafting and explanations constructed afterward.
+
+PLATFORM:
+[[Structure as Generator Versus Structure as Interpretation]]
+
+LINKS:
+[[CALVINO-001]]
+[[CALVINO-007]]
+[[CALVINO-017]]
+
+BIBTEX:
+@article{berkman2020clinamen,
+  author  = {Berkman, Natalie},
+  title   = {Italo Calvino's Oulipian Clinamen},
+  journal = {MLN},
+  volume  = {135},
+  number  = {1},
+  pages   = {255--280},
+  year    = {2020},
+  doi     = {10.1353/mln.2020.0001},
+  url     = {https://muse.jhu.edu/article/754950}
+}
+```
+
+```text
+ZETTEL
+
+ID: CALVINO-012
+
+TITLE:
+Calvino had already imagined an inverse computational method before the burning house.
+
+SOURCE:
+Italo Calvino — "Cybernetics and Ghosts" — 1967, pp. 23–24, discussion of "The Count of Monte Cristo."
+
+PASSAGE:
+[PARAPHRASE]
+Calvino describes Edmond Dantès and Abbé Faria approaching escape differently. Faria repeatedly explores possible routes; Dantès attempts to construct an imagined prison from which escape would be impossible. Any discrepancy between this imagined structure and the actual prison would identify a possible escape.
+
+RESEARCH OBJECT:
+Negative-model construction: discovering possibilities by constructing a model in which they have been eliminated.
+
+LOCAL MOVE:
+Calvino contrasts successive physical exploration with an abstract model designed to expose the limits of an actual system.
+
+SOURCE TERMS:
+"labyrinth"; "escape"; "perfect prison";
+"possible variants"; "reconstruct the plan."
+
+WHAT BECAME STRANGE:
+The 1967 lecture already contains a method closely resembling inverse constraint reasoning. The anticombinatorial impulse therefore cannot be dated exclusively to the later Braffort collaboration.
+
+QUESTION:
+Is the most productive historical connection to generative AI not filtering candidate stories, but generating a hypothetical world whose contradictions reveal something about another world?
+
+DEEPER QUESTION:
+Can impossible models become instruments for discovering previously invisible possibilities?
+
+MECHANISM:
+Construct a hypothetical system with a desired limiting property. Compare it against an observed or described system. Use discrepancies to generate candidate explanations or actions.
+
+FORMAL SHIFT:
+Actual prison
+→ hypothesized inescapable prison
+→ [compare structures]
+→ candidate escape conditions.
+
+SOURCE FORMALISM:
+Calvino offers a fictional reasoning procedure, not a formal computational algorithm.
+
+OUR FORMALIZATION:
+[OUR FORMALIZATION — NOT SOURCE SYNTAX]
+
+Let W be an incompletely known world.
+Construct W* satisfying a stronger restriction R.
+
+Find differences between W and W*.
+
+Some differences may identify possibilities that R excludes but W permits.
+
+TENSION:
+A generated hypothetical world may possess no reliable correspondence to the world being investigated. Its usefulness depends on how the comparison is grounded.
+
+MISSING:
+A representation for comparing partially known spaces and distinguishing informative discrepancies from arbitrary invented details.
+
+BOUNDARY:
+This is a conceptual reconstruction of Calvino's fictional reasoning. It is not evidence of an implemented inverse-planning algorithm.
+
+CITATION TRAIL:
+Calvino, "Cybernetics and Ghosts," section VI.
+Calvino, "The Count of Monte Cristo," in t zero.
+Research on counterfactual reasoning, model checking, and inverse planning.
+
+TEST:
+Construct multiple hypothetical maps from descriptions of the same labyrinth. Impose different impossibility constraints, compare the maps, and assess whether the resulting discrepancies provide useful spatial hypotheses.
+
+PLATFORM:
+[[Negative Models and Inverse World Construction]]
+
+LINKS:
+[[CALVINO-003]]
+[[CALVINO-009]]
+[[CALVINO-017]]
+
+BIBTEX:
+@incollection{calvino1986cybernetics,
+  author     = {Calvino, Italo},
+  title      = {Cybernetics and Ghosts},
+  booktitle  = {The Uses of Literature: Essays},
+  translator = {Patrick Creagh},
+  publisher  = {Harcourt Brace Jovanovich},
+  year       = {1986},
+  pages      = {3--27},
+  note       = {Original lecture, November 1967},
+  url        = {https://www.jfki.fu-berlin.de/academics/SummerSchool/Dateien2011/Reading_Assignments/iuli_reader2.pdf}
+}
+```

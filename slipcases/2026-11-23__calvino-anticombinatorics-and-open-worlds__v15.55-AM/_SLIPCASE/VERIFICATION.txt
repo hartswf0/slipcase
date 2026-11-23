@@ -1,0 +1,36 @@
+SLIPCASE VERIFICATION — Calvino-Open-Worlds-2026-11-23
+
+SOURCE COVERAGE: visible active conversation only. Earlier conversation history and files not queried. Manually staged from user/assistant text; no direct transcript export to byte-compare.
+
+EXTRACTION: 24 zettels admitted from 4 re-entered grouped messages; 3 consequential prompts; 1 pasted research note.
+
+DUPLICATES / ID COLLISIONS: payload duplicates 0; original ID collisions 0.
+
+PLATFORM RELATIONS: 31 occurrences, 28 unique declared platforms.
+
+LINKS RELATIONS: 85 occurrences; all resolved to exact ID in this deck.
+
+WIKILINK COVERAGE: 122 [[address]] occurrences classified (platforms + links + 6 elsewhere).
+
+GHOSTS / AMBIGUITIES / BROKEN REFERENCES: 0 unresolved native addresses, 0 ambiguous IDs, 24 derived ghost addresses from MISSING fields. Derived ghosts are not user-authored wikilinks.
+
+BIBLIOGRAPHY COVERAGE: 13 citekeys, statuses {'UNIQUE': 10, 'SHARED': 1, 'BIB-ALIAS': 2}; raw variants retained. Citation trail lines include leads without standalone BibTeX and are separately listed in TRAIL_REFERENCES.jsonl.
+
+RESOURCE COVERAGE: 14 registered. Remote bodies LINK_ONLY; supplied research note PASTED. Checked sources 4 opened (Braffort, Duncan, Brenner, Meehan), one access-denied (Siler), others NOT_OPENED.
+
+RECONSTRUCTION STATE: PASS from index.html alone using embedded JSON and included rebuild script; files restored 104; cards verified 24. index itself is self-referential and is the input, not a reconstructed output.
+
+PAPER EVIDENCE COVERAGE: 13 distinct cited keys, all ⊆ compiled 13 bibliography citekeys: True; SOURCE_MAP provides claim paths. Some cited work content remains unverified.
+
+ASSEMBLY PROMPT STATUS: provided as preserved transcription in _PROMPTS/assembly_slipcase_v15.55-AM.xml and fully embedded in index.html. Hash checks in manifest; external message equivalence unverified.
+
+MAKING HISTORY: 000__MAKING_HISTORY.txt records PROVIDED/PRESERVED/RETRIEVED/DERIVED/VERIFIED/UNVERIFIED; no human-review claim.
+
+PDF STATUS: compiled with XeLaTeX, 10 pages, citation text present and checked with pdftotext. Rendered pages inspected. No overfull box warnings in final LaTeX log; minor underfull warnings remain.
+
+ZIP STATUS: PASS, zipfile testzip = None, 108 packaged files, archive=calvino_open_worlds_slipcase_2026-11-23.zip.
+
+STRUCTURE: 24 root TXT = 24 Markdown mirrors = 24 JSON records; 106 graph nodes and 183 relations.
+
+EXACTNESS LIMIT: hashes confirm the staged payloads and mirrors. Without a machine-exported transcript, they do not prove byte identity with the original conversation display.
+
